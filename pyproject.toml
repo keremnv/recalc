@@ -1,0 +1,32 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "librecalc-mcp"
+version = "0.1.0"
+description = "An agent-native programmable LibreOffice Calc world exposed over MCP."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "mcp[cli]>=2,<3",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8",
+  "ruff>=0.6",
+]
+
+[project.scripts]
+librecalc-mcp = "librecalc_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/librecalc_mcp"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100

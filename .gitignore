@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.dist/
+dist/
+build/
+*.egg-info/
+.DS_Store
+.env
+.librecalc/
+benchmark-data/
