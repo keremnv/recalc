@@ -66,8 +66,10 @@ bridge bounded. Next experiment is a same-model A/B with vs without that shipped
 `Working Capital Schedule!G4` and `Valuation!G59` stayed blank on **both** arms. The 09_04
 near-miss is identical with or without the signal. The 01_03 modification gap is other work,
 not G4, and is one seed — do not treat it as proof the bridge helps. Keep the shipped bridge
-bounded and on; do not expand absence detectors off this A/B. Next designed experiment remains
-the Debugging no-write / read-policy ablation.
+bounded and on; do not expand absence detectors off this A/B. Next designed experiment is the
+Debugging no-write / read-policy ablation: `LIBRECALC_READ_BUDGET_ENABLED=0` / `--no-read-budget`,
+slice `benchmark/slices/debug-read-ab-two.json` (`06_01` Double Counting, `09_06` Incorrect Cross
+Sheet References). GLM 5.3. Success is workbook produced, not exact score. Do not rerun `08_03`.
 
 **Leave `Debugging:08_03`.** Bounded reads, inspect-error representatives, and capped neighboring
 context are in the world and work. The inspect-dense canary still produced no workbook: K2.7

@@ -272,6 +272,28 @@ def test_runner_allows_one_bounded_format_repair_by_default(monkeypatch) -> None
     assert args.max_requeries == 2
     assert args.execution_timeout == 180
     assert args.max_tokens is None
+    assert args.read_budget is True
+    assert args.blank_bridges is True
+
+
+def test_read_budget_flag_can_be_disabled(monkeypatch) -> None:
+    runner = _runner_module()
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "run_openrouter_slice.py",
+            "--slice",
+            "slice.json",
+            "--run-name",
+            "probe",
+            "--no-read-budget",
+        ],
+    )
+
+    args = runner._arguments()
+
+    assert args.read_budget is False
 
 
 def test_overview_only_policy_removes_read_tool_and_updates_prompt(tmp_path) -> None:

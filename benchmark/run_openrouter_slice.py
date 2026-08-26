@@ -103,6 +103,15 @@ def _arguments() -> argparse.Namespace:
         help="Attach blank_dependency_bridges on formula-patterns-v1 inspect (default on).",
     )
     parser.add_argument(
+        "--read-budget",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help=(
+            "On formula-anomalies-v1, allow one successful read batch after inspect "
+            "then block further reads (default on). Measuring instrument, not a product primitive."
+        ),
+    )
+    parser.add_argument(
         "--task",
         action="append",
         help="Run only CATEGORY:ID; repeat for multiple tasks. Defaults to the whole slice.",
@@ -673,10 +682,13 @@ def _run_task(
             **({"LIBRECALC_READ_MAX_CELLS": "none"} if args.read_policy == "thin" else {}),
         }
         if args.observation == "formula-anomalies-v1":
-            env_variables["LIBRECALC_READ_BUDGET_ENABLED"] = "1"
-            env_variables["LIBRECALC_READ_BUDGET_PATH"] = (
-                "/mnt/spreadsheet_output/.librecalc_read_budget.json"
+            env_variables["LIBRECALC_READ_BUDGET_ENABLED"] = (
+                "1" if args.read_budget else "0"
             )
+            if args.read_budget:
+                env_variables["LIBRECALC_READ_BUDGET_PATH"] = (
+                    "/mnt/spreadsheet_output/.librecalc_read_budget.json"
+                )
         command = [
             str(args.sweagent_root / ".venv" / "bin" / "sweagent"),
             "run",
@@ -782,6 +794,7 @@ def _run_task(
         "model": args.model,
         "observation_variant": args.observation,
         "blank_bridges": bool(getattr(args, "blank_bridges", True)),
+        "read_budget": bool(getattr(args, "read_budget", True)),
         "read_policy": args.read_policy,
         "execution_variant": args.execution,
         "status": status,

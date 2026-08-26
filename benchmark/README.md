@@ -79,9 +79,10 @@ Calc command wrappers keep the persistent agent shell alive when an operation is
 underlying tool emits a structured JSON error, while the wrapper normalizes its process status so
 SWE-ReX can return that error as the next observation and the model can repair its arguments.
 
-`formula-anomalies-v1` runs enable a run-scoped read budget: after `calc_inspect`, at most one
-successful `calc_read` / `calc_read_ranges` batch; further reads return a structured write-now error.
-State file: `/mnt/spreadsheet_output/.librecalc_read_budget.json`.
+`formula-anomalies-v1` runs enable a run-scoped read budget by default: after `calc_inspect`, at most
+one successful `calc_read` / `calc_read_ranges` batch; further reads return a structured write-now
+error. Disable with `--no-read-budget` / `LIBRECALC_READ_BUDGET_ENABLED=0`. Measuring instrument, not
+a product primitive. State file: `/mnt/spreadsheet_output/.librecalc_read_budget.json`.
 
 ## GLM 5.3 lane (frozen cheap compiler)
 

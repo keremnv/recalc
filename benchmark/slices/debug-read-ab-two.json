@@ -1,0 +1,16 @@
+{
+  "name": "debug-read-ab-two",
+  "purpose": "Same-model A/B for the Debugging read-budget instrument: progressive unlimited reads vs one-read/write-gate. Fresh tasks, not 08_03/02_01/03_01 or public examples. 06_01 is Double Counting (inspect-forever class of 02_01/03_01); 09_06 is Incorrect Cross Sheet References (inspect-forever class of 04_06). Success is workbook produced, not exact score.",
+  "model": "z-ai/glm-5.3",
+  "max_tool_calls_per_task": 12,
+  "isolation": {
+    "container": "official SpreadsheetBench 2 image",
+    "golden_data_available_to_agent": false,
+    "input_mount": "one exact workbook, read-only",
+    "output_mount": "one task-private directory, writable"
+  },
+  "tasks": [
+    {"category": "Debugging", "id": "06_01"},
+    {"category": "Debugging", "id": "09_06"}
+  ]
+}
