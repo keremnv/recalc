@@ -3,8 +3,6 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any, Literal, TypeAlias
 
-from .charts import ChartSpec
-
 Scalar: TypeAlias = str | int | float | bool | None
 Matrix: TypeAlias = list[list[Scalar]]
 CellFormat: TypeAlias = dict[str, str | int | float | bool | None]

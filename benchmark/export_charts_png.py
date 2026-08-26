@@ -19,7 +19,7 @@ from PIL import Image
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT / "src"))
 
-from librecalc_mcp.backend.uno import UnoCalcBackend  # noqa: E402
+from librecalc_mcp.backend.uno import UnoCalcBackend
 
 
 def _stitch(paths: list[Path], destination: Path) -> None:

@@ -6,12 +6,16 @@ from contextlib import suppress
 from pathlib import Path
 from typing import Any
 
+from librecalc_mcp.backend.uno_charts import (
+    export_charts_to_png,
+    inspect_charts_from_document,
+    upsert_chart_on_sheet,
+)
+from librecalc_mcp.domain.charts import ChartSpec
 from librecalc_mcp.domain.formulas import (
     normalize_formula_argument_separators,
     translate_a1_formula,
 )
-from librecalc_mcp.domain.charts import ChartSpec
-from librecalc_mcp.backend.uno_charts import inspect_charts_from_document, upsert_chart_on_sheet, export_charts_to_png
 from librecalc_mcp.domain.models import CalcOperation, CellFormat, Matrix, SheetInfo, WorkbookInfo
 
 _A1_RANGE = re.compile(r"^([A-Z]+)([1-9][0-9]*)(?::([A-Z]+)([1-9][0-9]*))?$", re.IGNORECASE)
@@ -157,7 +161,7 @@ class UnoCalcBackend:
         try:
             self._connect()
             return {"ok": True, "backend": "uno", "host": self.host, "port": self.port}
-        except Exception as exc:  # noqa: BLE001 - health must report every connectivity failure
+        except Exception as exc:
             return {
                 "ok": False,
                 "backend": "uno",

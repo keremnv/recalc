@@ -123,7 +123,9 @@ class ChartAxisSpec:
         if not raw:
             return None
         if not isinstance(raw, dict):
-            raise ValueError("axis spec must be an object")
+            # ValueError, not TypeError: the benchmark wrappers turn ValueError into a
+            # structured agent-recoverable observation. See calc_tool._require_neighborhood_range.
+            raise ValueError("axis spec must be an object")  # noqa: TRY004
         allowed = {item.name for item in fields(cls)}
         return cls(**{key: raw[key] for key in raw if key in allowed})
 

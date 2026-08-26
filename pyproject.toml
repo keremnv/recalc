@@ -17,7 +17,7 @@ dependencies = [
 dev = [
   "pytest>=8",
   "pyyaml>=6",
-  "ruff>=0.6",
+  "ruff>=0.16,<0.17",
 ]
 
 [project.scripts]
@@ -35,3 +35,16 @@ markers = [
 
 [tool.ruff]
 line-length = 100
+
+# Ruff's default rule set widens between minor releases, which silently moved this
+# project's hygiene bar once already. The version is pinned above and deviations are
+# enumerated here so `ruff check .` means the same thing on every machine.
+[tool.ruff.lint.per-file-ignores]
+# architecture.md designates backend/uno*.py as the only layer allowed to know
+# com.sun.star details. UNO property support is discovered at runtime, not declared,
+# so probing it requires catching bare Exception. These probes must record what they
+# dropped -- see _ApplyLog -- and must never silently pass on a write path.
+"src/librecalc_mcp/backend/uno_charts.py" = ["BLE001", "S110", "S112"]
+"src/librecalc_mcp/backend/uno.py" = ["BLE001", "S110", "S112"]
+# Optional test dependencies are probed the same way, to skip rather than error.
+"tests/**" = ["BLE001"]
