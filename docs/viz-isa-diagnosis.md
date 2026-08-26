@@ -8,9 +8,16 @@ Measured 2026-08-26 against a live LibreOffice UNO listener (`localhost:2021`).
 Raw probe log: [`viz-isa-diagnosis.json`](viz-isa-diagnosis.json).
 Re-run: `uv run python benchmark/diagnose_viz_isa.py` (needs UNO).
 
-K2.7 canary on `Visualization:Task 95` is the intelligence-vs-ISA check
-(`kimi-k2.7-viz-canary-task-95-low-1`). If the model never upserts, that is a
-compiler miss. If it upserts and the chart is still wrong, use the gaps below.
+K2.7 canary on `Visualization:Task 95` **wrote** (`kimi-k2.7-viz-canary-task-95-low-1`,
+`$0.015`, 10 calls, submitted). This is an **ISA miss**, not a compiler miss.
+
+- Tools: inspect → five neighborhood reads → `calc_upsert_chart` (bubble) → `calc_inspect_charts` → compare → submit.
+- Upsert applied title, legend off, axis titles, data_labels, 9 point_colors. Dropped series name.
+- Spec had **no `bubble_size_range`**. `values_range` was `Strategy.$N$5:$P$13` (three columns) because the third size channel cannot be named.
+- Inspect after write: `id=Object 1`, `chart_type=unknown`, no series/ranges.
+- PNG export 25 KB / 514×300 — not a postage stamp. Size ISA is fine.
+
+If it upserts and the chart is still wrong, use the gaps below.
 
 ## Already working (do not re-litigate)
 

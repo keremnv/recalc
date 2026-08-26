@@ -644,7 +644,8 @@ GLM tasks** (v4+v5) as cost/completion sample — **2/10 official exact**, ~**$0
 publish until translation matrix + agent canary complete.
 
 **Next:** K2.7 v1-five is **3/5 workbooks**. Do not start the 15 or the 297. Do not resume GLM.
-Viz remains a separate lane. Do not encode task-specific golden shortcuts.
+K2.7 viz canary Task 95 **wrote** (`$0.015`); remaining miss is ISA (bubble size unwired,
+thin inspect). Handover: [`docs/viz-isa-diagnosis.md`](viz-isa-diagnosis.md).
 
 ### High-value paths
 
