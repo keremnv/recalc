@@ -653,9 +653,10 @@ publish until translation matrix + agent canary complete.
 
 **Next:** K2.7 v1-five is **3/5 workbooks**. Do not start the 15 or the 297. Do not resume GLM.
 K2.7's final Task 95 canary **wrote** (`$0.016033`, 11 calls), isolated inspect passed every
-chart field, and GLM-4.6V scored the PNG **28/28 (100%, ACC=1)**. Task 95 is closed. Next run
-only the supported-ISA `Visualization:Task 1423401` five-chart canary; hold the multi-level,
-100%-stack, and combo tasks until their semantics are measured. Status:
+chart field, and GLM-4.6V scored the PNG **28/28 (100%, ACC=1)**. Task 95 is closed.
+Task 1423401 name_range canary wrote **5/5** charts (`$0.014233`, 7 calls); a column
+polarity fix then produced clustered-column PNGs (`$0.020078`). All five still
+stack at A1. Hold multi-level / 100%-stack / combo. Status:
 [`docs/viz-isa-diagnosis.md`](viz-isa-diagnosis.md).
 
 ### High-value paths

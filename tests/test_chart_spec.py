@@ -35,6 +35,24 @@ def test_chart_spec_accepts_x_y_axis_aliases() -> None:
     assert spec.series[0].color == "#0000FF"
 
 
+def test_sliced_series_round_trips_explicit_name_range() -> None:
+    spec = ChartSpec.from_dict(
+        {
+            "id": "slice",
+            "sheet": "Sheet1",
+            "chart_type": "column",
+            "category_range": "A22:A41",
+            "series": [
+                {"name": "Foo", "name_range": "B1", "values_range": "B22:B41"},
+                {"name": "Faa", "name_range": "C1", "values_range": "C22:C41"},
+            ],
+        }
+    )
+    assert spec.series[0].name_range == "B1"
+    assert spec.series[1].name_range == "C1"
+    assert spec.to_dict()["series"][0]["name_range"] == "B1"
+
+
 def test_chart_series_ignores_unknown_keys() -> None:
     spec = ChartSpec.from_dict(
         {
@@ -86,6 +104,7 @@ def test_bubble_chart_requires_and_round_trips_all_four_semantic_ranges() -> Non
             "series": [
                 {
                     "name": "Portfolio",
+                    "name_range": "O4",
                     "x_values_range": "N5:N13",
                     "values_range": "O5:O13",
                     "bubble_size_range": "P5:P13",
@@ -95,10 +114,12 @@ def test_bubble_chart_requires_and_round_trips_all_four_semantic_ranges() -> Non
     )
 
     assert spec.series[0].x_values_range == "N5:N13"
+    assert spec.series[0].name_range == "O4"
     assert spec.series[0].values_range == "O5:O13"
     assert spec.series[0].bubble_size_range == "P5:P13"
     assert spec.to_dict()["series"][0] == {
         "name": "Portfolio",
+        "name_range": "O4",
         "values_range": "O5:O13",
         "chart_type": None,
         "axis": "primary",
@@ -124,6 +145,20 @@ def test_bubble_chart_rejects_missing_x_or_size_range(series: dict[str, str]) ->
                 "chart_type": "bubble",
                 "category_range": "M5:M13",
                 "series": [series],
+            }
+        )
+
+
+def test_chart_spec_rejects_object_anchor() -> None:
+    with pytest.raises(ValueError, match="chart.anchor must be an A1 cell"):
+        ChartSpec.from_dict(
+            {
+                "id": "c1",
+                "sheet": "Sheet1",
+                "chart_type": "column",
+                "category_range": "A2:A5",
+                "series": [{"name": "Foo", "values_range": "B2:B5"}],
+                "anchor": {"cell": "E1"},
             }
         )
 

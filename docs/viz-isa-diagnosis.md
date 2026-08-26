@@ -43,11 +43,13 @@ them as bubble X values. `series.x_values_range` is therefore a required part of
   note.
 - `x_axis` / `y_axis.number_format` now applies through the chart number-format supplier
   and round-trips through inspect.
-- A series name is linked to the header cell immediately above its values range when that
-  header matches the requested name. Otherwise the apply log reports literal names as
-  unsupported instead of silently dropping them.
-- Bar/column creation and inspection follow UNO's `BarDiagram.Vertical` semantics; the
-  stacked-column fixture round-trips as `stacked_column`.
+- A series name is linked from `series.name_range` when provided, otherwise from the
+  header cell immediately above its values range when that header matches the requested
+  name. Literal names without either source appear in `dropped` and now mention
+  `name_range`.
+- Bar/column creation and inspection follow the empirical LibreOffice `BarDiagram.Vertical`
+  polarity (True = Excel bar / horizontal, False = Excel column / vertical) on 7.0.4 and
+  26.2, not the property name. The stacked-column fixture round-trips as `stacked_column`.
 
 Live checks:
 
@@ -99,11 +101,54 @@ The final end-to-end canary
 (`kimi-k2.7-viz-canary-task-95-lo70-labels-low-1`) cost `$0.016033` and used 11
 calls. Isolated inspect returned every range, all nine labels, the nine point colors, and
 `data_labels=true`. GLM-4.6V passed **28/28 official checklist items (100%, ACC=1)** on
-the exported PNG.
+the exported PNG. Task 95 is closed.
 
-Next, test `Task 1423401`: five ordinary clustered-column charts. It is deliberately the
-next supported-ISA case and measures multi-chart planning/placement rather than a known
-translation gap. Hold `Task 1417365` (multi-level year/quarter categories), `Task 1437004`
-(100% stack plus calculations), and `Task 1426290` (combo plus secondary axis) until each
-missing semantic is measured. Do not use Sol or Opus, raise call/token limits, or start the
-15/297 non-visual slices.
+## Task 1423401: sliced series names
+
+The first K2.7 five-chart canary
+(`kimi-k2.7-viz-task-1423401-clustered-five-low-1`) cost `$0.033581` and hit the
+12-call cap with only three charts written. That was an ISA miss, not a placement
+miss. Chart 1 (rows 2–21) linked `Foo`/`Faa` because those headers sit immediately
+above the values. Charts 2–5 use row slices (`B22:B41`, …) whose headers remain in
+`B1`/`C1`. The world could only infer the adjacent header, so those names dropped.
+K2.7 spent three calls stuffing cell refs into `series.name` (`=$B$1`, `B1`,
+`=Sheet1.$B$1`) and then copied headers beside the slices to make inference work.
+
+`ChartSeriesSpec.name_range` is now the explicit one-cell live label source.
+`name` stays the expected/readable label; adjacent-header inference remains a
+convenience fallback. Inspect returns the linked range. Dropped literal names now
+point at `name_range` instead of inviting another `name="=$B$1"` retry.
+
+Verified:
+
+```text
+uv run pytest tests/test_chart_memory.py tests/test_chart_spec.py tests/test_chart_apply_log.py -q
+LIBRECALC_RUN_UNO=1 uv run pytest tests/test_chart_translation.py -q
+# host LibreOffice 26.2: 5 passed, including sliced name_range
+
+# official spreadsheetbench-v2 image (LibreOffice 7.0.4):
+# sliced B22:B41 + name_range=B1 inspects name=Foo, name_range=$Sheet1.$B$1, dropped=[]
+```
+
+The name_range canary
+(`kimi-k2.7-viz-task-1423401-name-range-low-1`) cost `$0.014233` and used 7
+calls. K2.7 wrote all five charts in one program, saw the new drop message on
+charts 2–5, then retried with `name_range=B1/C1`. Isolated inspect returned five
+column charts, titles `Unique ID 1-20 Analysis` … `81-100 Analysis`, and
+`Foo`/`Faa` linked to `$Sheet1.$B$1` / `$Sheet1.$C$1`.
+
+That run also exposed a polarity bug: LibreOffice `BarDiagram.Vertical=True`
+draws horizontal bars on 7.0.4 and 26.2. Column charts now set `Vertical=False`
+after `setDiagram`. A follow-up canary
+(`kimi-k2.7-viz-task-1423401-name-range-columns-low-1`, `$0.020078`, 12 calls)
+wrote five clustered columns with the same linked names; per-chart PNGs are
+514×300 vertical clustered columns with Foo/Faa legends. It spent a call on
+`anchor: {cell: E1}` (now a domain ValueError) and omitted string anchors, so
+all five shapes still sit at A1. Anchor already exists; that is compiler
+placement, not a missing op. Official VLM scoring is Windows Excel COM
+multi-image routing — do not quote a Linux checklist % from these PNGs.
+
+Hold `Task 1417365` (multi-level year/quarter categories), `Task 1437004`
+(100% stack plus calculations), and `Task 1426290` (combo plus secondary axis)
+until each missing semantic is measured. Do not use Sol or Opus, raise
+call/token limits, or start the 15/297 non-visual slices.

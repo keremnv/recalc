@@ -11,8 +11,9 @@ from librecalc_mcp.backend.uno_charts import (
     _apply_axis,
     _apply_custom_point_label,
     _ApplyLog,
+    _series_name_drop_detail,
 )
-from librecalc_mcp.domain.charts import ChartAxisSpec
+from librecalc_mcp.domain.charts import ChartAxisSpec, ChartSeriesSpec
 
 
 class _TitleShape:
@@ -142,3 +143,13 @@ def test_custom_text_label_does_not_require_new_point_label_properties(monkeypat
 
     assert point.CustomLabelFields[0].value == "Product A"
     assert point.Label.ShowCategoryName is True
+
+
+def test_dropped_literal_series_name_points_at_name_range() -> None:
+    series = ChartSeriesSpec(name="Foo", values_range="B22:B41")
+    assert "name_range" in _series_name_drop_detail(series)
+
+
+def test_dropped_explicit_name_range_is_reported_as_unbound() -> None:
+    series = ChartSeriesSpec(name="Foo", values_range="B22:B41", name_range="B1")
+    assert _series_name_drop_detail(series) == "series.name_range could not be bound"

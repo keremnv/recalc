@@ -84,3 +84,26 @@ def test_memory_backend_round_trips_bubble_x_y_size_and_label_ranges() -> None:
     assert inspected[0]["series"][0]["x_values_range"] == "B2:B5"
     assert inspected[0]["series"][0]["values_range"] == "C2:C5"
     assert inspected[0]["series"][0]["bubble_size_range"] == "D2:D5"
+
+
+def test_memory_backend_round_trips_explicit_series_name_range() -> None:
+    backend = MemoryCalcBackend()
+    chart = {
+        "id": "slice",
+        "sheet": "Sheet1",
+        "chart_type": "column",
+        "category_range": "A22:A41",
+        "series": [
+            {
+                "name": "Foo",
+                "name_range": "B1",
+                "values_range": "B22:B41",
+            }
+        ],
+    }
+
+    backend.execute_program([CalcOperation.from_dict({"op": "upsert_chart", "chart": chart})])
+
+    inspected = backend.inspect_charts()
+    assert inspected[0]["series"][0]["name"] == "Foo"
+    assert inspected[0]["series"][0]["name_range"] == "B1"

@@ -9,6 +9,7 @@ from librecalc_mcp.domain.charts import (
     MIN_CHART_WIDTH_HMM,
     NATIVE_UNO_CHART_TYPES,
     ChartAxisSpec,
+    ChartSeriesSpec,
     ChartSpec,
     ChartType,
     chart_compile_note,
@@ -111,12 +112,12 @@ def _chart_type_from_diagram(diagram: Any) -> str:
     if "xy" in lowered or "scatter" in lowered:
         return "scatter"
     if "bar" in lowered:
-        vertical = getattr(diagram, "Vertical", True)
+        vertical = getattr(diagram, "Vertical", False)
         try:
             is_vertical = bool(vertical)
         except Exception:
-            is_vertical = True
-        return "column" if is_vertical else "bar"
+            is_vertical = False
+        return "bar" if is_vertical else "column"
     return "unknown"
 
 
@@ -141,10 +142,12 @@ def _chart_type_from_document(chart_doc: Any, diagram: Any) -> str:
         return "pie"
     if "column" in type_name or "bar" in type_name:
         stacked = bool(getattr(diagram, "Stacked", False))
-        vertical = bool(getattr(diagram, "Vertical", True))
+        vertical = bool(getattr(diagram, "Vertical", False))
+        # LibreOffice names this Vertical, but True draws horizontal bars on 7.0.4
+        # and 26.2. Excel/SpreadsheetBench "column" is vertical bars (Vertical=False).
         if vertical:
-            return "stacked_column" if stacked else "column"
-        return "stacked_bar" if stacked else "bar"
+            return "stacked_bar" if stacked else "bar"
+        return "stacked_column" if stacked else "column"
     return _chart_type_from_diagram(diagram)
 
 
@@ -241,16 +244,19 @@ def _parse_rgb(color: str | None) -> int | None:
 def _apply_diagram_type(chart_doc: Any, chart_type: ChartType, log: _ApplyLog) -> None:
     service = _diagram_service_name(chart_type)
     diagram = chart_doc.createInstance(service)
+    chart_doc.setDiagram(diagram)
+    live = chart_doc.getDiagram()
+    # Set orientation on the attached diagram. BarDiagram.Vertical is inverted vs
+    # Excel: True draws horizontal bars, False draws vertical columns.
     if chart_type in {"column", "clustered_column", "stacked_column"}:
         with log.probe("orientation.column"):
-            diagram.Vertical = True
+            live.Vertical = False
     if chart_type in {"bar", "stacked_bar"}:
         with log.probe("orientation.bar"):
-            diagram.Vertical = False
+            live.Vertical = True
     if chart_type in {"stacked_column", "stacked_bar"}:
         with log.probe("stacked"):
-            diagram.Stacked = True
-    chart_doc.setDiagram(diagram)
+            live.Stacked = True
 
 
 def _apply_axis(
@@ -394,6 +400,34 @@ def _header_label_range(
     return str(header.AbsoluteName)
 
 
+def _series_label_range(
+    doc: Any,
+    series_spec: ChartSeriesSpec,
+    *,
+    default_sheet: str,
+) -> str | None:
+    """Resolve an explicit live label source, or infer the adjacent header."""
+
+    if series_spec.name_range:
+        target = _range_object(doc, series_spec.name_range, default_sheet=default_sheet)
+        address = target.RangeAddress
+        if address.StartColumn != address.EndColumn or address.StartRow != address.EndRow:
+            raise ValueError("series.name_range must reference exactly one cell")
+        return str(target.AbsoluteName)
+    return _header_label_range(
+        doc,
+        series_spec.values_range,
+        default_sheet=default_sheet,
+        expected_name=series_spec.name,
+    )
+
+
+def _series_name_drop_detail(series_spec: ChartSeriesSpec) -> str:
+    if series_spec.name_range:
+        return "series.name_range could not be bound"
+    return "literal series names require a matching header cell or name_range"
+
+
 def _bind_xy_series(
     chart_doc: Any,
     spec: ChartSpec,
@@ -438,22 +472,25 @@ def _bind_xy_series(
                 (pair for pair in sequences if str(pair.getValues().Role) == label_role),
                 sequences[-1],
             )
-            label_range = _header_label_range(
-                doc,
-                series_spec.values_range,
-                default_sheet=spec.sheet,
-                expected_name=series_spec.name,
-            )
+            try:
+                label_range = _series_label_range(
+                    doc,
+                    series_spec,
+                    default_sheet=spec.sheet,
+                )
+            except ValueError as exc:
+                log.record(f"series[{index}].name", False, str(exc))
+                label_range = None
             if label_range is not None:
                 label_target.setLabel(
                     chart_doc.getDataProvider().createDataSequenceByRangeRepresentation(label_range)
                 )
                 log.record(f"series[{index}].name", True)
-            elif series_spec.name:
+            elif series_spec.name or series_spec.name_range:
                 log.record(
                     f"series[{index}].name",
                     False,
-                    "literal series names require a matching header cell",
+                    _series_name_drop_detail(series_spec),
                 )
             data_series.setData(tuple(sequences))
             bound.append(data_series)
@@ -477,14 +514,17 @@ def _apply_non_xy_series_names(
         for index, (data_series, series_spec) in enumerate(
             zip(chart_type.getDataSeries(), spec.series, strict=False)
         ):
-            if not series_spec.name:
+            if not series_spec.name and not series_spec.name_range:
                 continue
-            label_range = _header_label_range(
-                doc,
-                series_spec.values_range,
-                default_sheet=spec.sheet,
-                expected_name=series_spec.name,
-            )
+            try:
+                label_range = _series_label_range(
+                    doc,
+                    series_spec,
+                    default_sheet=spec.sheet,
+                )
+            except ValueError as exc:
+                log.record(f"series[{index}].name", False, str(exc))
+                continue
             target = next(
                 (
                     item
@@ -502,7 +542,7 @@ def _apply_non_xy_series_names(
                 log.record(
                     f"series[{index}].name",
                     False,
-                    "literal series names require a matching header cell",
+                    _series_name_drop_detail(series_spec),
                 )
     except Exception as exc:
         log.record("series.names", False, type(exc).__name__)
@@ -736,6 +776,18 @@ def _series_name(labeled_sequences: tuple[Any, ...]) -> str | None:
     return None
 
 
+def _series_name_range(labeled_sequences: tuple[Any, ...]) -> str | None:
+    for sequence in labeled_sequences:
+        try:
+            label = sequence.getLabel()
+            range_representation = _sequence_range(label) if label is not None else None
+            if range_representation:
+                return range_representation
+        except Exception:
+            continue
+    return None
+
+
 def _color_hex(value: Any) -> str | None:
     try:
         return f"#{int(value) & 0xFFFFFF:06X}"
@@ -790,6 +842,9 @@ def _inspect_series(chart_doc: Any) -> list[dict[str, object]]:
             "name": _series_name(labeled_sequences),
             "values_range": roles.get("values-y"),
         }
+        name_range = _series_name_range(labeled_sequences)
+        if name_range is not None:
+            payload["name_range"] = name_range
         if "values-x" in roles:
             payload["x_values_range"] = roles["values-x"]
         if "values-size" in roles:

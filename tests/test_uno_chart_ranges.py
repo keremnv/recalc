@@ -15,6 +15,6 @@ class _Diagram:
 
 def test_chart_type_from_diagram_mapping() -> None:
     assert _chart_type_from_diagram(_Diagram("com.sun.star.comp.chart.LineDiagram")) == "line"
-    assert _chart_type_from_diagram(_Diagram("com.sun.star.comp.chart.BarDiagram", True)) == "column"
-    assert _chart_type_from_diagram(_Diagram("com.sun.star.comp.chart.BarDiagram", False)) == "bar"
+    assert _chart_type_from_diagram(_Diagram("com.sun.star.comp.chart.BarDiagram", True)) == "bar"
+    assert _chart_type_from_diagram(_Diagram("com.sun.star.comp.chart.BarDiagram", False)) == "column"
     assert _chart_type_from_diagram(_Diagram("com.sun.star.comp.chart.DonutDiagram")) == "doughnut"

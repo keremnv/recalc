@@ -232,6 +232,7 @@ def test_uno_bubble_round_trips_x_y_size_labels_id_and_axis_format() -> None:
         assert chart["series"] == [
             {
                 "name": "Growth",
+                "name_range": "$Strategy.$C$1",
                 "values_range": "$Strategy.$C$2:$C$4",
                 "x_values_range": "$Strategy.$B$2:$B$4",
                 "bubble_size_range": "$Strategy.$D$2:$D$4",
@@ -280,3 +281,103 @@ def test_uno_bubble_round_trips_x_y_size_labels_id_and_axis_format() -> None:
             output_path=str(deleted),
         )
         assert backend.inspect_charts(str(deleted)) == []
+
+
+@pytest.mark.skipif(os.environ.get("LIBRECALC_RUN_UNO") != "1", reason="requires LibreOffice UNO")
+def test_uno_sliced_series_name_range_round_trips() -> None:
+    from openpyxl import Workbook
+
+    from librecalc_mcp.backend.uno import UnoCalcBackend
+
+    with tempfile.TemporaryDirectory() as temporary:
+        root = Path(temporary)
+        source = root / "in.xlsx"
+        dropped_output = root / "dropped.xlsx"
+        linked_output = root / "linked.xlsx"
+        workbook = Workbook()
+        sheet = workbook.active
+        sheet.title = "Sheet1"
+        sheet["A1"] = "Unique ID"
+        sheet["B1"] = "Foo"
+        sheet["C1"] = "Faa"
+        for row in range(2, 42):
+            sheet.cell(row, 1, row - 1)
+            sheet.cell(row, 2, 1)
+            sheet.cell(row, 3, 2)
+        workbook.save(source)
+
+        backend = UnoCalcBackend()
+        dropped = backend.execute_program(
+            [
+                CalcOperation.from_dict(
+                    {
+                        "op": "upsert_chart",
+                        "chart": {
+                            "id": "slice",
+                            "sheet": "Sheet1",
+                            "chart_type": "column",
+                            "category_range": "A22:A41",
+                            "series": [
+                                {"name": "Foo", "values_range": "B22:B41"},
+                                {"name": "Faa", "values_range": "C22:C41"},
+                            ],
+                            "title": "Unique ID 21-40 Analysis",
+                        },
+                    }
+                )
+            ],
+            path=str(source),
+            output_path=str(dropped_output),
+        )
+        assert dropped["operations"][0]["dropped"] == [
+            "series[0].name (literal series names require a matching header cell or name_range)",
+            "series[1].name (literal series names require a matching header cell or name_range)",
+        ]
+        assert [
+            item["name"] for item in backend.inspect_charts(str(dropped_output))[0]["series"]
+        ] == [
+            None,
+            None,
+        ]
+
+        linked = backend.execute_program(
+            [
+                CalcOperation.from_dict(
+                    {
+                        "op": "upsert_chart",
+                        "chart": {
+                            "id": "slice",
+                            "sheet": "Sheet1",
+                            "chart_type": "column",
+                            "category_range": "A22:A41",
+                            "series": [
+                                {
+                                    "name": "Foo",
+                                    "name_range": "B1",
+                                    "values_range": "B22:B41",
+                                },
+                                {
+                                    "name": "Faa",
+                                    "name_range": "C1",
+                                    "values_range": "C22:C41",
+                                },
+                            ],
+                            "title": "Unique ID 21-40 Analysis",
+                        },
+                    }
+                )
+            ],
+            path=str(source),
+            output_path=str(linked_output),
+        )
+        assert linked["operations"][0]["dropped"] == []
+        assert "series[0].name" in linked["operations"][0]["applied"]
+        assert "series[1].name" in linked["operations"][0]["applied"]
+
+        series = backend.inspect_charts(str(linked_output))[0]["series"]
+        assert [
+            (item["name"], item.get("name_range"), item["values_range"]) for item in series
+        ] == [
+            ("Foo", "$Sheet1.$B$1", "$Sheet1.$B$22:$B$41"),
+            ("Faa", "$Sheet1.$C$1", "$Sheet1.$C$22:$C$41"),
+        ]

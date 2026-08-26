@@ -91,6 +91,9 @@ def normalize_chart_size_hmm(
 class ChartSeriesSpec:
     name: str | None
     values_range: str
+    # Optional worksheet cell that supplies the live series label. This is needed
+    # when a series uses a row slice whose header is not immediately above it.
+    name_range: str | None = None
     chart_type: ChartType | None = None
     axis: AxisBinding = "primary"
     # Scatter/bubble X values are independent from category/data-label text.
@@ -173,9 +176,7 @@ class ChartSpec:
                         f"and bubble_size_range (series {index})"
                     )
         # Agents often send x_axis / y_axis; accept those aliases.
-        category_axis = ChartAxisSpec.from_dict(
-            raw.get("category_axis") or raw.get("x_axis")
-        )
+        category_axis = ChartAxisSpec.from_dict(raw.get("category_axis") or raw.get("x_axis"))
         value_axis = ChartAxisSpec.from_dict(raw.get("value_axis") or raw.get("y_axis"))
         width_hmm, height_hmm = normalize_chart_size_hmm(
             width=raw.get("width"),
@@ -183,6 +184,9 @@ class ChartSpec:
             col_span=raw.get("col_span"),
             row_span=raw.get("row_span"),
         )
+        anchor_raw = raw.get("anchor", "A1")
+        if not isinstance(anchor_raw, str):
+            raise ValueError("chart.anchor must be an A1 cell such as E1")
         return cls(
             id=str(raw["id"]),
             sheet=str(raw["sheet"]),
@@ -191,7 +195,7 @@ class ChartSpec:
             series=series,
             title=raw.get("title"),
             legend=bool(raw.get("legend", True)),
-            anchor=str(raw.get("anchor", "A1")),
+            anchor=anchor_raw,
             width=width_hmm,
             height=height_hmm,
             primary_axis_title=raw.get("primary_axis_title")
@@ -211,6 +215,7 @@ class ChartSpec:
             "series": [
                 {
                     "name": item.name,
+                    "name_range": item.name_range,
                     "values_range": item.values_range,
                     "chart_type": item.chart_type,
                     "axis": item.axis,
