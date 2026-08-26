@@ -170,4 +170,4 @@ A stock coding agent should be able to take an unfamiliar workbook and, using th
 4. recalculate/validate it,
 5. leave behind a native workbook whose formulas still work when inputs change.
 
-See `docs/roadmap.md` and `AGENTS.md` before adding scope.
+See `docs/PROJECT_CONTEXT.md` §0 and `docs/roadmap.md` before adding scope.

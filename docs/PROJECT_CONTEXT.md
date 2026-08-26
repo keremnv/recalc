@@ -8,8 +8,8 @@
 
 ## 0. Current handoff — 2026-08-25 (Codex)
 
-This section is the operator brief. Read `AGENTS.md` next. Sections below this are background;
-if they conflict with §0, §0 wins.
+This section is the operator brief. Sections below this are background; if they conflict with §0,
+§0 wins.
 
 **Mismatch census (2026-08-26).** The evaluator's first-error inventory cannot support a
 percentage claim about all wrong cells. `benchmark/mismatch_census.py` now replays official
@@ -598,7 +598,6 @@ shortcuts.
 ### High-value paths
 
 ```text
-AGENTS.md
 docs/PROJECT_CONTEXT.md          §0 is this brief; wins on conflict
 docs/benchmark-plan.md
 docs/public-trajectory-audit.md
@@ -1705,7 +1704,6 @@ Current structure:
 
 ```text
 librecalc-mcp/
-├── AGENTS.md
 ├── CONTRIBUTING.md
 ├── README.md
 ├── docs/
@@ -1988,7 +1986,7 @@ That is the deeper reason to build this.
 
 If resuming somewhere that cannot read this full file initially, paste this:
 
-> We are building `librecalc-mcp`, a benchmark-first, Calc-only MCP server that exposes LibreOffice Calc as a thick deterministic programmable world to external coding agents such as Codex/Claude Code. The MCP is not itself an agent: no LLM, web search, chat UI, or planner. UNO is only the backend; our project owns an agent-native semantic spreadsheet layer. We want both low-level inspection tools and one-call temporary program execution, because complex spreadsheet tasks should be synthesized as programs rather than hundreds of tool calls. We are optimizing v1 against SpreadsheetBench 2, using benchmark failures to discover the minimum useful primitive set. SpreadsheetBench/Verified are breadth regression suites; BlueFin is later for dynamic/living-model quality. Generic computation stays with the host agent; transformations that form persistent spreadsheet meaning should be representable in our world. Read `docs/PROJECT_CONTEXT.md`, `AGENTS.md`, `docs/roadmap.md`, and `docs/benchmark-plan.md` before making changes. The isolated harness, semantic snapshot/diff including formula errors, compact formula blocks, exact development canary, first transfer classification, and public Opus trajectory audit are complete. The official public examples are contaminated development data and include successful golden-workbook access, so competitive runs retain stricter one-input isolation. `Template:06_01` is also a confirmed defective-golden case: both Opus 4.6 and a clean Opus 5 run were penalized for generating correct formulas instead of six golden `=#REF!` cells. The immediate development ladder is `Template:01_01`, `Financial_Model:09_04`, and `Debugging:10_02`.
+> We are building `librecalc-mcp`, a benchmark-first, Calc-only MCP server that exposes LibreOffice Calc as a thick deterministic programmable world to external coding agents such as Codex/Claude Code. The MCP is not itself an agent: no LLM, web search, chat UI, or planner. UNO is only the backend; our project owns an agent-native semantic spreadsheet layer. We want both low-level inspection tools and one-call temporary program execution, because complex spreadsheet tasks should be synthesized as programs rather than hundreds of tool calls. We are optimizing v1 against SpreadsheetBench 2, using benchmark failures to discover the minimum useful primitive set. SpreadsheetBench/Verified are breadth regression suites; BlueFin is later for dynamic/living-model quality. Generic computation stays with the host agent; transformations that form persistent spreadsheet meaning should be representable in our world. Read `docs/PROJECT_CONTEXT.md` §0, `docs/roadmap.md`, and `docs/benchmark-plan.md` before making changes. The isolated harness, semantic snapshot/diff including formula errors, compact formula blocks, exact development canary, first transfer classification, and public Opus trajectory audit are complete. The official public examples are contaminated development data and include successful golden-workbook access, so competitive runs retain stricter one-input isolation. `Template:06_01` is also a confirmed defective-golden case: both Opus 4.6 and a clean Opus 5 run were penalized for generating correct formulas instead of six golden `=#REF!` cells. The immediate development ladder is `Template:01_01`, `Financial_Model:09_04`, and `Debugging:10_02`.
 
 ---
 
