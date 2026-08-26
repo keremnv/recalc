@@ -621,8 +621,10 @@ GLM tasks** (v4+v5) as cost/completion sample — **2/10 official exact**, ~**$0
 ~**$0.06/task** avg. Do not quote full-bench exact %. Visualization still out of official
 publish until translation matrix + agent canary complete.
 
-**Next:** run `kimi-v1-five.json` (K2.7, frozen interface). Do not start the 297. Do not resume
-GLM slices. Viz remains a separate lane. Do not encode task-specific golden shortcuts.
+**Next:** `kimi-v1-five` is running (`kimi-k2.7-v1-five-low-1`). If 5/5 workbooks, run
+`kimi-v2-fifteen.json` via `benchmark/run_kimi_frozen.py`; if that holds (≥12/15 workbooks),
+start `kimi-nonvisual-all.json` with `--skip-existing`. Do not resume GLM. Viz remains a
+separate lane. Do not encode task-specific golden shortcuts.
 
 ### High-value paths
 

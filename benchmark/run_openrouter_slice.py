@@ -116,6 +116,11 @@ def _arguments() -> argparse.Namespace:
         action="append",
         help="Run only CATEGORY:ID; repeat for multiple tasks. Defaults to the whole slice.",
     )
+    parser.add_argument(
+        "--skip-existing",
+        action="store_true",
+        help="Skip tasks whose run directory already exists (resume a long slice).",
+    )
     return parser.parse_args()
 
 
@@ -641,6 +646,9 @@ def _run_task(
     trace_root = task_root / "trajectory"
     output_path = task_root / "output.xlsx"
     if task_root.exists():
+        if getattr(args, "skip_existing", False):
+            print(f"SKIP {category}:{task_id} existing={task_root}", flush=True)
+            return 0
         raise FileExistsError(f"Refusing to overwrite an existing task run: {task_root}")
     task_root.mkdir(parents=True)
 

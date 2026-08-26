@@ -296,6 +296,29 @@ def test_read_budget_flag_can_be_disabled(monkeypatch) -> None:
     assert args.read_budget is False
 
 
+def test_skip_existing_flag_defaults_off(monkeypatch) -> None:
+    runner = _runner_module()
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        ["run_openrouter_slice.py", "--slice", "slice.json", "--run-name", "probe"],
+    )
+    assert runner._arguments().skip_existing is False
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "run_openrouter_slice.py",
+            "--slice",
+            "slice.json",
+            "--run-name",
+            "probe",
+            "--skip-existing",
+        ],
+    )
+    assert runner._arguments().skip_existing is True
+
+
 def test_overview_only_policy_removes_read_tool_and_updates_prompt(tmp_path) -> None:
     runner = _runner_module()
     project_root = Path(__file__).parents[1]

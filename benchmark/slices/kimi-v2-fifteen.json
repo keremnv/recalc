@@ -1,0 +1,74 @@
+{
+  "name": "kimi-v2-fifteen",
+  "purpose": "K2.7 15-task confirmation after kimi-v1-five. Fresh ids, not in prior slices or v1. Go/no-go is workbook produced, not exact.",
+  "model": "moonshotai/kimi-k2.7-code",
+  "max_tool_calls_per_task": 12,
+  "isolation": {
+    "container": "official SpreadsheetBench 2 image",
+    "golden_data_available_to_agent": false,
+    "input_mount": "one exact workbook, read-only",
+    "output_mount": "one task-private directory, writable"
+  },
+  "tasks": [
+    {
+      "category": "Template",
+      "id": "01_05"
+    },
+    {
+      "category": "Template",
+      "id": "01_06"
+    },
+    {
+      "category": "Template",
+      "id": "01_07"
+    },
+    {
+      "category": "Template",
+      "id": "01_08"
+    },
+    {
+      "category": "Template",
+      "id": "01_09"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "01_01"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "01_05"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "02_01"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "02_05"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "03_03"
+    },
+    {
+      "category": "Debugging",
+      "id": "01_01"
+    },
+    {
+      "category": "Debugging",
+      "id": "01_02"
+    },
+    {
+      "category": "Debugging",
+      "id": "01_04"
+    },
+    {
+      "category": "Debugging",
+      "id": "01_05"
+    },
+    {
+      "category": "Debugging",
+      "id": "01_06"
+    }
+  ]
+}

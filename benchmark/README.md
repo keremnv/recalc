@@ -89,7 +89,10 @@ a product primitive. State file: `/mnt/spreadsheet_output/.librecalc_read_budget
 OpenRouter `moonshotai/kimi-k2.7-code`. Frozen overlays: `formula-patterns-v1` +
 `formula-blocks-v1` for Template/FM; `formula-anomalies-v1` + blocks for Debugging.
 Held-out slice: [`benchmark/slices/kimi-v1-five.json`](slices/kimi-v1-five.json).
-GLM 5.3 is retired from this lane.
+Confirmation: [`kimi-v2-fifteen.json`](slices/kimi-v2-fifteen.json). Full non-visual:
+[`kimi-nonvisual-all.json`](slices/kimi-nonvisual-all.json) (297 tasks). Mixed-category
+slices must go through [`benchmark/run_kimi_frozen.py`](run_kimi_frozen.py) so Debugging
+gets `formula-anomalies-v1`. Use `--skip-existing` to resume. GLM 5.3 is retired from this lane.
 
 Publish **non-visual subset only** (~297 Template+FM+Debugging tasks). Visualization (24 tasks) stays
 out of scope until chart UNO→Excel translation is measured. Do not quote a full-bench exact rate
