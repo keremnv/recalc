@@ -4,8 +4,7 @@ import json
 from pathlib import Path
 
 import pytest
-
-from librecalc_mcp.domain.read_budget import (
+from read_budget import (
     consume_read_budget,
     read_budget_error,
     reset_read_budget,

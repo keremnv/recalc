@@ -27,7 +27,8 @@ librecalc-mcp = "librecalc_mcp.server:main"
 packages = ["src/librecalc_mcp"]
 
 [tool.pytest.ini_options]
-pythonpath = ["src", "."]
+# The SWE-agent bundle is not a package; tests reach its instruments directly.
+pythonpath = ["src", ".", "benchmark/sweagent/librecalc/lib"]
 testpaths = ["tests"]
 markers = [
   "uno: integration tests requiring a running LibreOffice UNO service",

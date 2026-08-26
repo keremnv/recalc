@@ -1,19 +1,55 @@
+"""Observation and diff models, exercised against the in-memory backend.
+
+These used to load the SWE-agent wrapper by file path because the models lived
+inside the harness. They are product code now, so they import normally and run
+without LibreOffice or the benchmark bundle.
+"""
+
 import importlib.util
 import json
 import urllib.parse
 from pathlib import Path
 
 from librecalc_mcp.backend.memory import MemoryCalcBackend
+from librecalc_mcp.domain import diff as diff_module
+from librecalc_mcp.domain import grid as grid_module
+from librecalc_mcp.domain import observation as observation_module
 from librecalc_mcp.domain.models import CalcOperation, SheetInfo, WorkbookInfo
 
 
-def _calc_tool_module():
+def _harness_module():
+    """Only for the argument-parsing helpers that genuinely belong to the wrapper."""
     path = Path(__file__).parents[1] / "benchmark/sweagent/librecalc/lib/calc_tool.py"
     spec = importlib.util.spec_from_file_location("benchmark_calc_tool", path)
     assert spec is not None and spec.loader is not None
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
+
+
+def _calc_tool_module():
+    """Domain models, plus the wrapper helpers these tests still cover.
+
+    The observation and diff models are product code; the argument parsing, read
+    budget, and neighborhood bound belong to the harness. Tests reach both through
+    one namespace so the split stays invisible to the assertions themselves.
+    """
+    harness = _harness_module()
+    for name, function in (
+        ("_structure_sheet_observation", observation_module._structure_sheet_observation),
+        ("_formula_anomaly_sheet", observation_module._formula_anomaly_sheet),
+        (
+            "_formula_anomaly_workbook_observation",
+            observation_module._formula_anomaly_workbook_observation,
+        ),
+        ("_blank_dependency_bridges", observation_module._blank_dependency_bridges),
+        ("_workbook_observation", observation_module.workbook_observation),
+        ("_format_read_observation", observation_module.format_read_observation),
+        ("_semantic_diff", diff_module.semantic_diff),
+        ("_a1_cell_count", grid_module.a1_cell_count),
+    ):
+        setattr(harness, name, function)
+    return harness
 
 
 def test_sparse_addressed_observation_preserves_coordinates_and_live_formulas() -> None:

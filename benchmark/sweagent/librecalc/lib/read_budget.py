@@ -1,3 +1,11 @@
+"""Post-inspect read budget: a measuring instrument, not a world primitive.
+
+Caps a Debugging run at one successful read batch after calc_inspect so that a
+model which spirals on inspection is forced to commit. It exists to isolate
+confirm-then-write behaviour in an experiment, and deliberately does not live in
+the product: nothing outside a benchmark run should have its reads rationed.
+"""
+
 from __future__ import annotations
 
 import json
