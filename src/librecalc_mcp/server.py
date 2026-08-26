@@ -45,15 +45,21 @@ def range_write(
     cell_range: str,
     values: list[list[str | int | float | bool | None]],
     path: str | None = None,
+    output_path: str | None = None,
 ) -> dict[str, object]:
-    """Write a rectangular value matrix into an A1-style Calc range and recalculate."""
-    return backend().write_range(sheet, cell_range, values, path)
+    """Write a rectangular value matrix, recalculate, and persist the workbook.
+
+    When path is provided, the source is updated in place unless output_path names a copy.
+    Without path, the active Calc document is used and is saved only when output_path is provided.
+    """
+    return backend().write_range(sheet, cell_range, values, path, output_path)
 
 
 @mcp.tool()
 def program_execute(
     operations: list[dict[str, Any]],
     path: str | None = None,
+    output_path: str | None = None,
 ) -> dict[str, object]:
     """Execute many deterministic Calc operations in one call.
 
@@ -61,11 +67,23 @@ def program_execute(
     - {"op":"create_sheet", "name":"Analysis", "index":2}
     - {"op":"write_range", "sheet":"Analysis", "range":"A1:B2", "values":[[...],[...]]}
     - {"op":"set_formula", "sheet":"Analysis", "range":"C2", "formula":"=SUM(A2:B2)"}
+    - {"op":"fill_formula", "sheet":"Analysis", "range":"C2:G2", "formula":"=SUM(A2:B2)"}
+    - {"op":"clear_range", "sheet":"Analysis", "range":"C2:G2"}
+    - {"op":"insert_row", "sheet":"Analysis", "index":5, "count":1}
+    - {"op":"delete_row", "sheet":"Analysis", "index":8, "count":1}
+    - {"op":"upsert_chart", "chart":{...ChartSpec fields...}}
+    - {"op":"delete_chart", "name":"chart_id"}
+
+    insert_row / delete_row use 1-based row numbers (index is the first affected row; count defaults
+    to 1). insert_row inserts before that row. This is geometry, not a task-specific restore.
 
     This is intentionally not arbitrary Python execution. It is the seed of the generated-program layer.
+
+    When path is provided, the source is updated in place unless output_path names a copy.
+    Without path, the active Calc document is used and is saved only when output_path is provided.
     """
     program = [CalcOperation.from_dict(operation) for operation in operations]
-    return backend().execute_program(program, path)
+    return backend().execute_program(program, path, output_path)
 
 
 def main() -> None:

@@ -1,0 +1,538 @@
+from __future__ import annotations
+
+from typing import Any
+
+from librecalc_mcp.domain.charts import (
+    MIN_CHART_HEIGHT_HMM,
+    MIN_CHART_WIDTH_HMM,
+    ChartAxisSpec,
+    ChartSpec,
+    ChartType,
+    NATIVE_UNO_CHART_TYPES,
+    chart_compile_note,
+)
+
+
+def _column_index(label: str) -> int:
+    value = 0
+    for character in label.upper():
+        value = value * 26 + ord(character) - ord("A") + 1
+    return value - 1
+
+
+def _anchor_position(anchor: str) -> tuple[int, int]:
+    letters = ""
+    digits = ""
+    for character in anchor:
+        if character.isalpha():
+            letters += character
+        elif character.isdigit():
+            digits += character
+    if not letters or not digits:
+        raise ValueError(f"invalid chart anchor: {anchor}")
+    return _column_index(letters), int(digits) - 1
+
+
+def _diagram_service_name(chart_type: ChartType) -> str:
+    mapping = {
+        "column": "com.sun.star.chart.BarDiagram",
+        "clustered_column": "com.sun.star.chart.BarDiagram",
+        "stacked_column": "com.sun.star.chart.BarDiagram",
+        "bar": "com.sun.star.chart.BarDiagram",
+        "stacked_bar": "com.sun.star.chart.BarDiagram",
+        "line": "com.sun.star.chart.LineDiagram",
+        "area": "com.sun.star.chart.AreaDiagram",
+        "pie": "com.sun.star.chart.PieDiagram",
+        "doughnut": "com.sun.star.chart.DonutDiagram",
+        "scatter": "com.sun.star.chart.XYDiagram",
+        "bubble": "com.sun.star.chart.BubbleDiagram",
+    }
+    try:
+        return mapping[chart_type]
+    except KeyError as exc:
+        raise ValueError(f"unsupported UNO chart type: {chart_type}") from exc
+
+
+def _chart_type_from_diagram(diagram: Any) -> str:
+    if diagram is None:
+        return "unknown"
+    service = ""
+    for attr in ("getImplementationName", "ImplementationName"):
+        try:
+            value = getattr(diagram, attr)
+            service = str(value() if callable(value) else value)
+            if service:
+                break
+        except Exception:
+            continue
+    lowered = service.lower()
+    if "donut" in lowered:
+        return "doughnut"
+    if "pie" in lowered:
+        return "pie"
+    if "line" in lowered:
+        return "line"
+    if "area" in lowered:
+        return "area"
+    if "bubble" in lowered:
+        return "bubble"
+    if "xy" in lowered or "scatter" in lowered:
+        return "scatter"
+    if "bar" in lowered:
+        vertical = getattr(diagram, "Vertical", True)
+        try:
+            is_vertical = bool(vertical)
+        except Exception:
+            is_vertical = True
+        return "column" if is_vertical else "bar"
+    return "unknown"
+
+
+def _split_range_reference(range_ref: str, default_sheet: str) -> tuple[str, str]:
+    if "!" in range_ref:
+        sheet_name, cell_range = range_ref.split("!", 1)
+        return sheet_name.strip("'"), cell_range
+    if "." in range_ref:
+        sheet_name, cell_range = range_ref.split(".", 1)
+        if sheet_name and cell_range[:1].isalpha():
+            return sheet_name.strip("'"), cell_range
+    return default_sheet, range_ref
+
+
+def _range_address(doc: Any, range_ref: str, *, default_sheet: str) -> Any:
+    sheet_name, cell_range = _split_range_reference(range_ref, default_sheet)
+    sheet = doc.Sheets.getByName(sheet_name)
+    return sheet.getCellRangeByName(cell_range).getRangeAddress()
+
+
+def _read_title(chart: Any, chart_doc: Any) -> str | None:
+    for owner in (chart_doc, chart):
+        if owner is None:
+            continue
+        try:
+            if getattr(owner, "HasMainTitle", False):
+                title = getattr(owner, "Title", None)
+                if title is not None and getattr(title, "String", None):
+                    return str(title.String)
+        except Exception:
+            pass
+        try:
+            title = getattr(owner, "Title", None)
+            if title is not None and getattr(title, "String", None):
+                return str(title.String)
+        except Exception:
+            pass
+    return None
+
+
+def _parse_rgb(color: str | None) -> int | None:
+    if not color:
+        return None
+    text = color.strip().lstrip("#")
+    if len(text) == 6:
+        return int(text, 16)
+    if len(text) == 8:
+        return int(text[2:], 16)
+    return None
+
+
+def _apply_diagram_type(chart_doc: Any, chart_type: ChartType) -> None:
+    service = _diagram_service_name(chart_type)
+    diagram = chart_doc.createInstance(service)
+    if chart_type in {"bar", "stacked_bar"}:
+        try:
+            diagram.Vertical = False
+        except Exception:
+            pass
+    if chart_type in {"stacked_column", "stacked_bar"}:
+        try:
+            diagram.Stacked = True
+        except Exception:
+            pass
+    chart_doc.setDiagram(diagram)
+
+
+def _apply_axis(
+    diagram: Any,
+    axis_name: str,
+    axis: ChartAxisSpec | None,
+    fallback_title: str | None,
+) -> None:
+    if axis is None and not fallback_title:
+        return
+
+    title = (axis.title if axis else None) or fallback_title
+    # LibreOffice Chart1: enable axis title shapes, then set String.
+    # (Axis.DisplayTitle / Axis.Title are unreliable across diagram types.)
+    has_attr = f"Has{axis_name}Title"
+    title_attr = f"{axis_name}Title"
+    if title:
+        try:
+            if hasattr(diagram, has_attr):
+                setattr(diagram, has_attr, True)
+            title_shape = getattr(diagram, title_attr, None)
+            if title_shape is not None and hasattr(title_shape, "String"):
+                title_shape.String = str(title)
+        except Exception:
+            pass
+        try:
+            uno_axis = getattr(diagram, axis_name)
+            if hasattr(uno_axis, "DisplayTitle"):
+                uno_axis.DisplayTitle = True
+            axis_title = getattr(uno_axis, "Title", None) or getattr(uno_axis, "AxisTitle", None)
+            if axis_title is not None and hasattr(axis_title, "String"):
+                axis_title.String = str(title)
+        except Exception:
+            pass
+
+    if axis is None:
+        return
+    try:
+        uno_axis = getattr(diagram, axis_name)
+    except Exception:
+        return
+    if axis.min is not None:
+        try:
+            uno_axis.AutoMin = False
+            uno_axis.Min = float(axis.min)
+        except Exception:
+            pass
+    if axis.max is not None:
+        try:
+            uno_axis.AutoMax = False
+            uno_axis.Max = float(axis.max)
+        except Exception:
+            pass
+    if axis.label_rotation is not None:
+        try:
+            uno_axis.TextRotation = int(axis.label_rotation) * 100
+        except Exception:
+            pass
+
+
+def _set_series_data_labels(data_row: Any, *, enabled: bool) -> None:
+    if not enabled:
+        return
+    try:
+        # ChartDataCaption flags: VALUE=1, PERCENT=2, TEXT=4 (category name).
+        data_row.DataCaption = 4  # TEXT / category
+    except Exception:
+        pass
+    try:
+        label = getattr(data_row, "Label", None)
+        if label is not None and hasattr(label, "ShowCategoryName"):
+            label.ShowCategoryName = True
+            if hasattr(data_row, "Label"):
+                data_row.Label = label
+    except Exception:
+        pass
+
+
+def _apply_point_styles_chart2(chart_doc: Any, spec: ChartSpec) -> None:
+    """Per-point FillColor / category labels via Chart2 when available."""
+    try:
+        if not chart_doc.supportsService("com.sun.star.chart2.ChartDocument"):
+            return
+        diagram2 = chart_doc.getFirstDiagram()
+        coordinate_systems = diagram2.getCoordinateSystems()
+        if not coordinate_systems:
+            return
+        chart_types = coordinate_systems[0].getChartTypes()
+        if not chart_types:
+            return
+        data_series_list = chart_types[0].getDataSeries()
+    except Exception:
+        return
+
+    for series_index, series in enumerate(spec.series):
+        if series_index >= len(data_series_list):
+            break
+        data_series = data_series_list[series_index]
+        if spec.data_labels:
+            try:
+                label = data_series.Label
+                label.ShowCategoryName = True
+                data_series.Label = label
+            except Exception:
+                pass
+        colors = series.point_colors or ()
+        for point_index, color in enumerate(colors):
+            rgb = _parse_rgb(color)
+            if rgb is None:
+                continue
+            try:
+                point = data_series.getDataPointByIndex(point_index)
+                if point is None:
+                    continue
+                point.FillColor = rgb
+                if hasattr(point, "Color"):
+                    try:
+                        point.Color = rgb
+                    except Exception:
+                        pass
+            except Exception:
+                continue
+        if spec.data_labels:
+            # Ensure labels visible even when only some points are recolored.
+            for point_index in range(len(colors) or 32):
+                try:
+                    point = data_series.getDataPointByIndex(point_index)
+                    if point is None:
+                        break
+                    label = point.Label
+                    label.ShowCategoryName = True
+                    point.Label = label
+                except Exception:
+                    break
+
+
+def _apply_point_styles_chart1(diagram: Any, spec: ChartSpec) -> None:
+    """Fallback: old Chart1 getDataPointProperties(category, series)."""
+    for series_index, series in enumerate(spec.series):
+        colors = series.point_colors or ()
+        for point_index, color in enumerate(colors):
+            rgb = _parse_rgb(color)
+            if rgb is None:
+                continue
+            try:
+                point = diagram.getDataPointProperties(point_index, series_index)
+                point.FillColor = rgb
+            except Exception:
+                continue
+
+
+def _apply_series_styles(diagram: Any, spec: ChartSpec, *, chart_doc: Any | None = None) -> None:
+    for index, series in enumerate(spec.series):
+        try:
+            data_row = diagram.getDataRowProperties(index)
+        except Exception:
+            continue
+        if series.name:
+            try:
+                data_row.CustomLabel = series.name
+            except Exception:
+                pass
+        rgb = _parse_rgb(series.color)
+        if rgb is not None:
+            for attr in ("FillColor", "Color", "LineColor"):
+                try:
+                    setattr(data_row, attr, rgb)
+                except Exception:
+                    pass
+        _set_series_data_labels(data_row, enabled=spec.data_labels)
+
+    _apply_point_styles_chart1(diagram, spec)
+    if chart_doc is not None:
+        _apply_point_styles_chart2(chart_doc, spec)
+
+def inspect_charts_from_document(doc: Any) -> list[dict[str, object]]:
+    charts: list[dict[str, object]] = []
+    sheets = doc.Sheets
+    for name in sheets.ElementNames:
+        sheet = sheets.getByName(name)
+        chart_collection = sheet.getCharts()
+        for chart_name in chart_collection.getElementNames():
+            chart = chart_collection.getByName(chart_name)
+            chart_doc = None
+            try:
+                chart_doc = chart.getEmbeddedObject()
+            except Exception:
+                chart_doc = None
+            diagram = None
+            try:
+                if chart_doc is not None:
+                    diagram = chart_doc.getDiagram()
+            except Exception:
+                diagram = None
+            charts.append(
+                {
+                    "id": str(chart_name),
+                    "sheet": str(name),
+                    "title": _read_title(chart, chart_doc),
+                    "chart_type": _chart_type_from_diagram(diagram),
+                    "has_legend": bool(
+                        getattr(chart_doc, "HasLegend", getattr(chart, "HasLegend", None))
+                    ),
+                }
+            )
+    return charts
+
+
+def upsert_chart_on_sheet(
+    sheet: Any,
+    spec: ChartSpec,
+    *,
+    doc: Any,
+    uno_module: Any,
+) -> dict[str, object]:
+    note = chart_compile_note(spec.chart_type)
+    if note == "unsupported":
+        return {"ok": False, "chart_id": spec.id, "compile_note": note}
+    if spec.chart_type not in NATIVE_UNO_CHART_TYPES:
+        return {"ok": False, "chart_id": spec.id, "compile_note": note or "unsupported"}
+
+    charts = sheet.getCharts()
+    existing_names = list(charts.getElementNames())
+    if spec.id in existing_names:
+        charts.removeByName(spec.id)
+        existing_names = list(charts.getElementNames())
+
+    col, row = _anchor_position(spec.anchor)
+    rect = uno_module.createUnoStruct("com.sun.star.awt.Rectangle")
+    rect.X = col * 2000
+    rect.Y = row * 600
+    # ChartSpec sizes are HMM; keep Excel-like floors even if a caller bypasses from_dict.
+    rect.Width = max(spec.width, MIN_CHART_WIDTH_HMM)
+    rect.Height = max(spec.height, MIN_CHART_HEIGHT_HMM)
+
+    range_address = _range_address(doc, spec.category_range, default_sheet=spec.sheet)
+    data_ranges = [
+        _range_address(doc, item.values_range, default_sheet=spec.sheet) for item in spec.series
+    ]
+    cell_range_addresses = (range_address, *data_ranges)
+
+    charts.addNewByName(
+        spec.id,
+        rect,
+        cell_range_addresses,
+        False,
+        True,
+    )
+    created_names = list(charts.getElementNames())
+    created_id = spec.id if spec.id in created_names else next(
+        (name for name in created_names if name not in existing_names),
+        created_names[-1] if created_names else spec.id,
+    )
+    if created_id != spec.id:
+        try:
+            charts.getByName(created_id).Name = spec.id
+            created_id = spec.id
+        except Exception:
+            pass
+
+    chart = charts.getByName(created_id)
+    chart_doc = chart.getEmbeddedObject() if hasattr(chart, "getEmbeddedObject") else chart
+    try:
+        _apply_diagram_type(chart_doc, spec.chart_type)
+    except Exception:
+        pass
+
+    if spec.title:
+        try:
+            if hasattr(chart_doc, "HasMainTitle"):
+                chart_doc.HasMainTitle = True
+            title = getattr(chart_doc, "Title", None)
+            if title is not None and hasattr(title, "String"):
+                title.String = spec.title
+        except Exception:
+            pass
+    try:
+        if hasattr(chart_doc, "HasLegend"):
+            chart_doc.HasLegend = spec.legend
+        elif hasattr(chart, "HasLegend"):
+            chart.HasLegend = spec.legend
+    except Exception:
+        pass
+
+    try:
+        diagram = chart_doc.getDiagram()
+        _apply_axis(diagram, "XAxis", spec.category_axis, spec.primary_axis_title)
+        _apply_axis(diagram, "YAxis", spec.value_axis, None)
+        if spec.secondary_axis_title:
+            try:
+                if hasattr(diagram, "HasSecondaryYAxis"):
+                    diagram.HasSecondaryYAxis = True
+                if hasattr(diagram, "HasSecondaryYAxisTitle"):
+                    diagram.HasSecondaryYAxisTitle = True
+                title_shape = getattr(diagram, "SecondYAxisTitle", None)
+                if title_shape is not None and hasattr(title_shape, "String"):
+                    title_shape.String = str(spec.secondary_axis_title)
+            except Exception:
+                _apply_axis(
+                    diagram,
+                    "YAxis",
+                    ChartAxisSpec(title=spec.secondary_axis_title),
+                    spec.secondary_axis_title,
+                )
+        _apply_series_styles(diagram, spec, chart_doc=chart_doc)
+    except Exception:
+        pass
+
+    return {
+        "ok": True,
+        "chart_id": created_id,
+        "requested_id": spec.id,
+        "compile_note": note,
+    }
+
+
+def export_charts_to_png(
+    doc: Any,
+    *,
+    output_dir: str,
+    file_prefix: str,
+    uno_module: Any,
+    context: Any,
+) -> list[str]:
+    """Export each Calc chart shape via native GraphicExportFilter to PNG.
+
+    LibreOffice supports this natively: setSourceDocument(draw_shape) + MediaType image/png.
+    """
+    from pathlib import Path
+
+    out = Path(output_dir)
+    out.mkdir(parents=True, exist_ok=True)
+    exported: list[str] = []
+    service_manager = context.getServiceManager()
+    exporter = service_manager.createInstanceWithContext(
+        "com.sun.star.drawing.GraphicExportFilter",
+        context,
+    )
+
+    sheets = doc.Sheets
+    chart_index = 0
+    for sheet_name in sheets.ElementNames:
+        sheet = sheets.getByName(sheet_name)
+        draw_page = sheet.getDrawPage()
+        for shape_index in range(draw_page.getCount()):
+            shape = draw_page.getByIndex(shape_index)
+            # Charts appear as OLE2Shape / chart shapes on the draw page.
+            shape_type = ""
+            try:
+                shape_type = str(shape.ShapeType)
+            except Exception:
+                pass
+            is_chart = "Chart" in shape_type or "OLE2Shape" in shape_type
+            if not is_chart:
+                try:
+                    # Fallback: shapes that expose an embedded chart document.
+                    embedded = shape.getEmbeddedObject()
+                    if embedded is None or not embedded.supportsService(
+                        "com.sun.star.chart.ChartDocument"
+                    ):
+                        continue
+                    is_chart = True
+                except Exception:
+                    continue
+            if not is_chart:
+                continue
+
+            chart_index += 1
+            target = out / f"{file_prefix}_chart_{chart_index}.png"
+            url = uno_module.systemPathToFileUrl(str(target.resolve()))
+            props = (
+                uno_module.createUnoStruct("com.sun.star.beans.PropertyValue"),
+                uno_module.createUnoStruct("com.sun.star.beans.PropertyValue"),
+            )
+            props[0].Name = "URL"
+            props[0].Value = url
+            props[1].Name = "MediaType"
+            props[1].Value = "image/png"
+            exporter.setSourceDocument(shape)
+            if not exporter.filter(props):
+                raise RuntimeError(f"GraphicExportFilter failed for chart {chart_index}")
+            if not target.is_file() or target.stat().st_size == 0:
+                raise RuntimeError(f"PNG not written for chart {chart_index}: {target}")
+            exported.append(str(target))
+
+    return exported
