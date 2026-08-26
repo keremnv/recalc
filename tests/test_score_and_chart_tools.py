@@ -74,3 +74,16 @@ def test_memory_chart_roundtrip_via_domain_ops() -> None:
     assert charts[0]["id"] == "sales_chart"
     assert charts[0]["title"] == "Revenue Trend"
     assert charts[0]["category_range"] == "A2:A5"
+
+
+def test_tool_docstrings_are_sweagent_format_safe() -> None:
+    config = yaml.safe_load(
+        (Path(__file__).parents[1] / "benchmark/sweagent/librecalc/config.yaml").read_text(
+            encoding="utf-8"
+        )
+    )
+    for name, tool in config["tools"].items():
+        try:
+            tool["docstring"].format()
+        except KeyError as exc:
+            raise AssertionError(f"{name} docstring has unescaped format field: {exc}") from exc

@@ -140,7 +140,7 @@ tools:
 
   calc_upsert_chart:
     signature: "calc_upsert_chart <path> <output_path> <chart_json>"
-    docstring: "Create or replace one chart through LibreOffice Calc and save to the private output path. chart_json follows ChartSpec: id, sheet, chart_type, category_range, series[{name,values_range,color?,point_colors?}], optional title, legend, anchor, size, data_labels, x_axis/y_axis. Size: omit width/height for Excel-like defaults (~8 cols × 15 rows). Small width+height (e.g. 16×9) are Excel column×row spans; large values are LibreOffice HMM (1/100 mm). data_labels=true shows category names on points; series.point_colors is a hex list for per-point fills."
+    docstring: "Create or replace one chart through LibreOffice Calc and save to the private output path. chart_json follows ChartSpec: id, sheet, chart_type, category_range, series[{{name,values_range,color?,point_colors?}}], optional title, legend, anchor, size, data_labels, x_axis/y_axis. Size: omit width/height for Excel-like defaults (~8 cols x 15 rows). Small width+height (e.g. 16x9) are Excel column x row spans; large values are LibreOffice HMM (1/100 mm). data_labels=true shows category names on points; series.point_colors is a hex list for per-point fills."
     arguments:
       - name: path
         type: string
