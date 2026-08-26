@@ -125,6 +125,17 @@ Gate was 5/5 writes. **Do not start `kimi-v2-fifteen` or the 297.**
 K2.7 still no-writes on some Template/FM tasks. That is a compiler write-rate, not a missing
 primitive. Do not raise limits. Do not mix this with the GLM 10-task sample.
 
+**GPT-5.6 Sol on the two v1 misses (2026-08-26).** Same frozen formula-patterns / formula-blocks
+interface, medium reasoning, `$2` / 12 calls. **2/2 workbooks**, `$0.266` total.
+
+| task | K2.7 | Sol |
+|---|---|---|
+| Template:03_02 | no workbook, format-exit | **wrote**, 6 calls, `$0.071`, inspect → read → fill → compare → submit |
+| Financial_Model:04_01 | no workbook, 12 reads | **wrote**, 8 calls, `$0.195`, inspect → reads → fill → compare → submit |
+
+Sol beat K2.7 on both write misses. Do not make Sol the cheap default. Do not start the 15 or
+the 297 off this. Do not rerun the three K2.7 writes on Sol.
+
 **Leave `Debugging:08_03`.** Bounded reads, inspect-error representatives, and capped neighboring
 context are in the world and work. The inspect-dense canary still produced no workbook: K2.7
 immediately returned to whole-region dumps, shrank one rejected range at a time for all eleven

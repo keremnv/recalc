@@ -1,0 +1,243 @@
+{
+  "native_uno_types": [
+    "area",
+    "bar",
+    "bubble",
+    "clustered_column",
+    "column",
+    "doughnut",
+    "line",
+    "pie",
+    "scatter",
+    "stacked_bar",
+    "stacked_column"
+  ],
+  "compile_notes": {
+    "column": null,
+    "clustered_column": null,
+    "stacked_column": null,
+    "bar": null,
+    "stacked_bar": null,
+    "line": null,
+    "area": null,
+    "pie": null,
+    "doughnut": null,
+    "scatter": null,
+    "bubble": null,
+    "combo": "approximated",
+    "pareto": "approximated",
+    "waterfall": "scaffold",
+    "gauge": "scaffold",
+    "sunburst": "unsupported"
+  },
+  "static_gaps": [
+    {
+      "id": "bubble_size_range_unwired",
+      "severity": "blocking",
+      "task_class": "Task 95 bubble",
+      "finding": "ChartSeriesSpec.bubble_size_range exists in the domain but uno_charts.py never reads it. addNewByName only gets category_range + values_range. Task 95 needs X=revenue, Y=growth, size=market \u2014 size cannot be expressed today."
+    },
+    {
+      "id": "axis_number_format_unwired",
+      "severity": "blocking",
+      "task_class": "Task 1411527 line dates",
+      "finding": "ChartAxisSpec.number_format is accepted on ChartSpec but _apply_axis never sets a NumberFormat / axis key. dd/mm/yyyy on the category axis cannot land."
+    },
+    {
+      "id": "uno_inspect_thin",
+      "severity": "blocking",
+      "task_class": "all viz",
+      "finding": "calc_inspect_charts docs promise category_range, series ranges, and compile_note. UNO inspect_charts_from_document only emits id, sheet, title, chart_type, has_legend. Agents cannot verify what they just upserted."
+    },
+    {
+      "id": "inspect_docstring_overclaim",
+      "severity": "docs",
+      "task_class": "all viz",
+      "finding": "Tool docstring overclaims UNO inspect payload."
+    }
+  ],
+  "uno": {
+    "ok": true,
+    "health": {
+      "ok": true,
+      "backend": "uno",
+      "host": "localhost",
+      "port": 2021
+    },
+    "fixtures": [
+      {
+        "id": "bubble_task95_shape",
+        "execute": {
+          "ok": true,
+          "operations": [
+            {
+              "op": "upsert_chart",
+              "ok": true,
+              "chart_id": "Portfolio",
+              "requested_id": "Portfolio",
+              "compile_note": null,
+              "applied": [
+                "chart_type",
+                "title",
+                "legend",
+                "series[0].data_labels.caption",
+                "series[0].data_labels.chart2",
+                "series[0].point_colors[0]",
+                "series[0].point_colors[1]",
+                "series[0].point_colors[2]",
+                "series[0].point_colors[3]"
+              ],
+              "dropped": [
+                "series[0].name (AttributeError)"
+              ]
+            }
+          ],
+          "saved_to": "/tmp/tmpx3r1zcxw/bubble_task95_shape.xlsx"
+        },
+        "inspect": [
+          {
+            "id": "Object 1",
+            "sheet": "Sheet1",
+            "title": "Product Portfolio Analysis",
+            "chart_type": "unknown",
+            "has_legend": false
+          }
+        ],
+        "png": {
+          "exported": [
+            "/tmp/tmpx3r1zcxw/bubble_task95_shape/bubble_task95_shape_chart_1.png"
+          ],
+          "sizes": [
+            {
+              "path": "/tmp/tmpx3r1zcxw/bubble_task95_shape/bubble_task95_shape_chart_1.png",
+              "bytes": 16912
+            }
+          ],
+          "error": null
+        }
+      },
+      {
+        "id": "line_task1411527_shape",
+        "execute": {
+          "ok": true,
+          "operations": [
+            {
+              "op": "upsert_chart",
+              "ok": true,
+              "chart_id": "Burndown",
+              "requested_id": "Burndown",
+              "compile_note": null,
+              "applied": [
+                "chart_type",
+                "title",
+                "legend",
+                "xaxis.label_rotation",
+                "yaxis.title",
+                "yaxis.min",
+                "yaxis.max",
+                "series[0].color",
+                "series[1].color"
+              ],
+              "dropped": [
+                "series[0].name (AttributeError)",
+                "series[1].name (AttributeError)"
+              ]
+            }
+          ],
+          "saved_to": "/tmp/tmpx3r1zcxw/line_task1411527_shape.xlsx"
+        },
+        "inspect": [
+          {
+            "id": "Object 1",
+            "sheet": "Sheet1",
+            "title": "Invoice Count Burndown August 2023",
+            "chart_type": "unknown",
+            "has_legend": true
+          }
+        ],
+        "png": {
+          "exported": [
+            "/tmp/tmpx3r1zcxw/line_task1411527_shape/line_task1411527_shape_chart_1.png"
+          ],
+          "sizes": [
+            {
+              "path": "/tmp/tmpx3r1zcxw/line_task1411527_shape/line_task1411527_shape_chart_1.png",
+              "bytes": 18255
+            }
+          ],
+          "error": null
+        }
+      },
+      {
+        "id": "stacked_task1417365_shape",
+        "execute": {
+          "ok": true,
+          "operations": [
+            {
+              "op": "upsert_chart",
+              "ok": true,
+              "chart_id": "Sales",
+              "requested_id": "Sales",
+              "compile_note": null,
+              "applied": [
+                "stacked",
+                "chart_type",
+                "title",
+                "legend",
+                "xaxis.title",
+                "yaxis.title"
+              ],
+              "dropped": [
+                "series[0].name (AttributeError)",
+                "series[1].name (AttributeError)"
+              ]
+            }
+          ],
+          "saved_to": "/tmp/tmpx3r1zcxw/stacked_task1417365_shape.xlsx"
+        },
+        "inspect": [
+          {
+            "id": "Object 1",
+            "sheet": "Sheet1",
+            "title": "Sales",
+            "chart_type": "unknown",
+            "has_legend": true
+          }
+        ],
+        "png": {
+          "exported": [
+            "/tmp/tmpx3r1zcxw/stacked_task1417365_shape/stacked_task1417365_shape_chart_1.png"
+          ],
+          "sizes": [
+            {
+              "path": "/tmp/tmpx3r1zcxw/stacked_task1417365_shape/stacked_task1417365_shape_chart_1.png",
+              "bytes": 13487
+            }
+          ],
+          "error": null
+        }
+      },
+      {
+        "id": "combo_honest_refusal",
+        "execute": {
+          "ok": true,
+          "operations": [
+            {
+              "op": "upsert_chart",
+              "ok": false,
+              "chart_id": "Combo",
+              "compile_note": "approximated"
+            }
+          ],
+          "saved_to": "/tmp/tmpx3r1zcxw/combo_honest_refusal.xlsx"
+        },
+        "inspect": [],
+        "png": {
+          "exported": [],
+          "sizes": [],
+          "error": null
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "name": "viz-canary-task-95",
+  "purpose": "K2.7 visualization canary after chart ISA v0. Task 95 is bubble + data labels + min/max point colors.",
+  "model": "moonshotai/kimi-k2.7-code",
+  "max_tool_calls_per_task": 12,
+  "isolation": {
+    "container": "official SpreadsheetBench 2 image",
+    "golden_data_available_to_agent": false,
+    "input_mount": "one exact workbook, read-only",
+    "output_mount": "one task-private directory, writable"
+  },
+  "tasks": [
+    {"category": "Visualization", "id": "Task 95"}
+  ]
+}
