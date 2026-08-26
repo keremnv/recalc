@@ -153,12 +153,32 @@ def _a1_cell_count(cell_range: str) -> int:
     return rows * columns
 
 
+def _read_neighborhood_limit() -> int | None:
+    """Cell ceiling for a single read, or None to disable it.
+
+    The 96-cell cap is an invariant of the *semantic* interface: calc_inspect already
+    supplies structure there, so a whole-sheet dump is an inspect-spiral rather than a
+    need. The thin ablation arm has no semantic inspect, so applying the same cap would
+    handicap it for a reason unrelated to interface thickness and would bias the
+    comparison toward the arm the project is arguing for.
+    """
+    raw = os.environ.get("LIBRECALC_READ_MAX_CELLS")
+    if raw is None:
+        return _READ_NEIGHBORHOOD_MAX_CELLS
+    if raw.strip().lower() in {"", "0", "none", "unbounded"}:
+        return None
+    return int(raw)
+
+
 def _require_neighborhood_range(cell_range: str, *, label: str) -> None:
+    limit = _read_neighborhood_limit()
+    if limit is None:
+        return
     count = _a1_cell_count(cell_range)
-    if count > _READ_NEIGHBORHOOD_MAX_CELLS:
+    if count > limit:
         raise ValueError(
             f"{label} {cell_range} covers {count} cells; neighborhood reads are limited to "
-            f"{_READ_NEIGHBORHOOD_MAX_CELLS} cells (a few rows or columns around a candidate). "
+            f"{limit} cells (a few rows or columns around a candidate). "
             "Narrow the range; do not dump a used range or whole sheet."
         )
 

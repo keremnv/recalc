@@ -53,8 +53,8 @@ SUPPORTED_OBSERVATIONS = (
     "semantic-snapshot-v1",
     "semantic-snapshot-v2",
 )
-SUPPORTED_EXECUTIONS = ("semantic-program-v1", "formula-blocks-v1")
-READ_POLICIES = ("progressive", "overview-only")
+SUPPORTED_EXECUTIONS = ("semantic-program-v1", "formula-blocks-v1", "cell-writes-v1")
+READ_POLICIES = ("progressive", "overview-only", "thin")
 OPENROUTER_MODELS_URL = "https://openrouter.ai/api/v1/models"
 REASONING_EFFORTS = ("none", "minimal", "low", "medium", "high", "xhigh", "max")
 
@@ -353,7 +353,11 @@ def _stage_tool_policy(
         bundle_config["path"] = str(bundle_path)
     instance_template = config["agent"]["templates"]["instance_template"]
 
-    if read_policy == "overview-only" or execution == "formula-blocks-v1":
+    strips_tools = (
+        read_policy in {"overview-only", "thin"}
+        or execution in {"formula-blocks-v1", "cell-writes-v1"}
+    )
+    if strips_tools:
         bundle_source = Path(bundle_configs[0]["path"])
         # Bundle upload paths are derived from the directory basename. Keep the stable runtime
         # name expected by LIBRECALC_TOOL_ROOT and the bundle's install script.
@@ -368,6 +372,12 @@ def _stage_tool_policy(
                 removed = tool_config["tools"].pop(tool_name, None)
                 if removed is None:
                     raise RuntimeError(f"Overview-only policy expected a {tool_name} tool")
+        if read_policy == "thin":
+            # Interface A keeps one raw read per call: no batched reads, no semantic diff.
+            for tool_name in ("calc_read_ranges", "calc_compare"):
+                removed = tool_config["tools"].pop(tool_name, None)
+                if removed is None:
+                    raise RuntimeError(f"Thin policy expected a {tool_name} tool")
         if execution == "formula-blocks-v1":
             for tool_name in (
                 "calc_write",
@@ -378,6 +388,18 @@ def _stage_tool_policy(
                 removed = tool_config["tools"].pop(tool_name, None)
                 if removed is None:
                     raise RuntimeError(f"Formula-block policy expected a {tool_name} tool")
+        if execution == "cell-writes-v1":
+            # Interfaces A and B: calc_write is the only write surface. One range per call,
+            # every formula enumerated explicitly, no relative translation, no batching.
+            for tool_name in (
+                "calc_fill_formulas",
+                "calc_program",
+                "calc_inspect_charts",
+                "calc_upsert_chart",
+            ):
+                removed = tool_config["tools"].pop(tool_name, None)
+                if removed is None:
+                    raise RuntimeError(f"Cell-write policy expected a {tool_name} tool")
         tool_config_path.write_text(yaml.safe_dump(tool_config, sort_keys=False), encoding="utf-8")
         bundle_configs[0]["path"] = str(staged_bundle)
 
@@ -441,6 +463,55 @@ def _stage_tool_policy(
                 "use calc_fill_formulas for formula-only patterned ranges.\n"
             )
         config["agent"]["templates"]["system_template"] = system_template.rstrip() + write_hint
+
+    if execution == "cell-writes-v1":
+        old_write_guidance = """4. Write the result to the exact output path. Use calc_fill_formulas for formula-only work;
+   use calc_program for mixed operations. Keep patterned edits range-based."""
+        new_write_guidance = """4. Write the result to the exact output path with calc_write. Each call writes one
+   rectangular range, and every cell must be given explicitly: a value, or a formula string
+   beginning with '=' spelled out for that exact cell. Relative fill and multi-operation
+   batching are unavailable in this run."""
+        if old_write_guidance not in instance_template:
+            raise RuntimeError("Cell-write policy could not locate the mixed-operation prompt")
+        instance_template = instance_template.replace(old_write_guidance, new_write_guidance)
+        config["agent"]["templates"]["instance_template"] = instance_template
+        system_template = config["agent"]["templates"]["system_template"]
+        system_template = system_template.replace(
+            "Prefer calc_program for related edits\nso the workbook is recalculated and saved once. "
+            "For formula-only completion, prefer\ncalc_fill_formulas with one block per patterned "
+            "range; never enumerate translated cells.\n",
+            "Write with calc_write, one rectangular range per call, enumerating every cell.\n",
+        )
+        config["agent"]["templates"]["system_template"] = system_template
+
+    if read_policy == "thin":
+        old_inspect_guidance = """1. Call calc_inspect without target sheets for the compact workbook manifest. Then call it once
+   with the exact manifest names of only the worksheets required by the instruction."""
+        new_inspect_guidance = """1. Call calc_inspect for the workbook structure."""
+        if old_inspect_guidance not in instance_template:
+            raise RuntimeError("Thin policy could not locate the scoped-inspect prompt")
+        instance_template = instance_template.replace(old_inspect_guidance, new_inspect_guidance)
+        old_read_guidance = """2. Do not reread a whole used range. Use calc_read for one focused region or calc_read_ranges
+   for several.
+   Treat inferred candidate_gaps as a heuristic checklist, not requirements; ignore obvious
+   section headers and notes."""
+        new_read_guidance = """2. Use calc_read for one region at a time. Batched reads are unavailable in this run."""
+        if old_read_guidance not in instance_template:
+            raise RuntimeError("Thin policy could not locate the progressive-read prompt")
+        instance_template = instance_template.replace(old_read_guidance, new_read_guidance)
+        old_verify_guidance = """5. Compare input and output with calc_compare. Check that exact changes match the instruction;
+   candidate gaps remain heuristic. Use focused reads only for a real unresolved ambiguity,
+   then submit."""
+        new_verify_guidance = """5. Verify with calc_read against the output path if needed, then submit.
+   Semantic comparison is unavailable in this run."""
+        if old_verify_guidance not in instance_template:
+            raise RuntimeError("Thin policy could not locate the verify prompt")
+        instance_template = instance_template.replace(old_verify_guidance, new_verify_guidance)
+        config["agent"]["templates"]["instance_template"] = instance_template
+        system_template = config["agent"]["templates"]["system_template"]
+        config["agent"]["templates"]["system_template"] = system_template.replace(
+            "When two or more focused regions are needed, use one calc_read_ranges call.\n", ""
+        )
 
     if execution == "formula-blocks-v1":
         old_write_guidance = """4. Write the result to the exact output path. Use calc_fill_formulas for formula-only work;
@@ -582,6 +653,9 @@ def _run_task(
             "LIBRECALC_SOURCE_ROOT": "/opt/librecalc/src",
             "LIBRECALC_TOOL_ROOT": "/root/tools/librecalc",
             "LIBRECALC_OBSERVATION_VARIANT": args.observation,
+            # Arm A has no semantic inspect, so the semantic lane's 96-cell read
+            # invariant would handicap it rather than measure it.
+            **({"LIBRECALC_READ_MAX_CELLS": "none"} if args.read_policy == "thin" else {}),
         }
         if args.observation == "formula-anomalies-v1":
             env_variables["LIBRECALC_READ_BUDGET_ENABLED"] = "1"
