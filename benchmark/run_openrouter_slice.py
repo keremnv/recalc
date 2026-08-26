@@ -97,6 +97,12 @@ def _arguments() -> argparse.Namespace:
     )
     parser.add_argument("--timeout", type=int, default=900)
     parser.add_argument(
+        "--blank-bridges",
+        action=argparse.BooleanOptionalAction,
+        default=True,
+        help="Attach blank_dependency_bridges on formula-patterns-v1 inspect (default on).",
+    )
+    parser.add_argument(
         "--task",
         action="append",
         help="Run only CATEGORY:ID; repeat for multiple tasks. Defaults to the whole slice.",
@@ -661,6 +667,7 @@ def _run_task(
             "LIBRECALC_SOURCE_ROOT": "/opt/librecalc/src",
             "LIBRECALC_TOOL_ROOT": "/root/tools/librecalc",
             "LIBRECALC_OBSERVATION_VARIANT": args.observation,
+            "LIBRECALC_BLANK_BRIDGES": "1" if args.blank_bridges else "0",
             # Arm A has no semantic inspect, so the semantic lane's 96-cell read
             # invariant would handicap it rather than measure it.
             **({"LIBRECALC_READ_MAX_CELLS": "none"} if args.read_policy == "thin" else {}),
@@ -774,6 +781,7 @@ def _run_task(
         "harness": "swe-agent-1.1.0",
         "model": args.model,
         "observation_variant": args.observation,
+        "blank_bridges": bool(getattr(args, "blank_bridges", True)),
         "read_policy": args.read_policy,
         "execution_variant": args.execution,
         "status": status,

@@ -15,6 +15,7 @@ must never silently become task requirements.
 from __future__ import annotations
 
 import dataclasses
+import os
 from collections import defaultdict
 from itertools import pairwise
 from typing import Any
@@ -1093,6 +1094,20 @@ def _blank_dependency_bridges(
         ),
     }
 
+def blank_bridges_enabled() -> bool:
+    """Carry-chain bridges are on by default; set LIBRECALC_BLANK_BRIDGES=0 to omit them.
+
+    The disable path exists for a same-model A/B. It is not a new observation variant.
+    """
+
+    return os.environ.get("LIBRECALC_BLANK_BRIDGES", "1").strip().lower() not in {
+        "0",
+        "false",
+        "off",
+        "no",
+    }
+
+
 def workbook_observation(
     backend: Any,
     path: str,
@@ -1192,7 +1207,7 @@ def workbook_observation(
                 }
                 for chart in charts
             ]
-    if variant == "formula-patterns-v1" and selected_sheets:
+    if variant == "formula-patterns-v1" and selected_sheets and blank_bridges_enabled():
         observation["blank_dependency_bridges"] = _blank_dependency_bridges(
             [
                 (sheet.name, sheet.used_range, results_by_sheet[sheet.name])

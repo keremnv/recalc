@@ -647,6 +647,15 @@ def test_scoped_workbook_observation_keeps_manifest_and_selected_detail() -> Non
     }
 
 
+def test_blank_bridges_can_be_disabled(monkeypatch) -> None:
+    from librecalc_mcp.domain.observation import blank_bridges_enabled
+
+    monkeypatch.delenv("LIBRECALC_BLANK_BRIDGES", raising=False)
+    assert blank_bridges_enabled() is True
+    monkeypatch.setenv("LIBRECALC_BLANK_BRIDGES", "0")
+    assert blank_bridges_enabled() is False
+
+
 def test_blank_dependency_bridge_ranks_missing_base_of_carry_forward_chain() -> None:
     calc_tool = _calc_tool_module()
     result = calc_tool._blank_dependency_bridges(

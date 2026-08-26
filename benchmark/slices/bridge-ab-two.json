@@ -1,0 +1,16 @@
+{
+  "name": "bridge-ab-two",
+  "purpose": "Same-model A/B for the shipped carry-chain bridge: 01_03 (G4 is rank-1) and 09_04 (bridges fire, G59 is not among them). Interface comparison, not a G4 hunt.",
+  "model": "z-ai/glm-5.3",
+  "max_tool_calls_per_task": 12,
+  "isolation": {
+    "container": "official SpreadsheetBench 2 image",
+    "golden_data_available_to_agent": false,
+    "input_mount": "one exact workbook, read-only",
+    "output_mount": "one task-private directory, writable"
+  },
+  "tasks": [
+    {"category": "Financial_Model", "id": "01_03"},
+    {"category": "Financial_Model", "id": "09_04"}
+  ]
+}

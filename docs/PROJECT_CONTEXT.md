@@ -52,7 +52,9 @@ the shipping bar (much smaller pool without destroying recall):
 `Working Capital Schedule!G4` is only in named-any-peer / referenced, never in the labelled
 block-hole list. Ranking raises precision by concentrating on easy clustered blanks; it does
 not surface the one-cell misses. Do not ship a labelled absence shortlist. Keep the carry-chain
-bridge bounded. Next experiment is a same-model A/B with vs without that shipped bridge.
+bridge bounded. Next experiment is a same-model A/B with vs without that shipped bridge:
+`LIBRECALC_BLANK_BRIDGES=0` / `--no-blank-bridges`, slice `benchmark/slices/bridge-ab-two.json`
+(`01_03` where G4 is rank-1, `09_04` where bridges fire but G59 is not among them). GLM 5.3.
 
 **Leave `Debugging:08_03`.** Bounded reads, inspect-error representatives, and capped neighboring
 context are in the world and work. The inspect-dense canary still produced no workbook: K2.7
