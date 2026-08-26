@@ -4,7 +4,12 @@ import re
 from copy import deepcopy
 
 from librecalc_mcp.domain.charts import ChartSpec, chart_compile_note
-from librecalc_mcp.domain.formulas import normalize_formula_argument_separators
+from librecalc_mcp.domain.formulas import (
+    is_escaped_text,
+    is_formula_text,
+    normalize_formula_argument_separators,
+    unescape_text,
+)
 from librecalc_mcp.domain.models import (
     CalcOperation,
     CellFormat,
@@ -124,12 +129,27 @@ class MemoryCalcBackend:
         path: str | None = None,
         output_path: str | None = None,
     ) -> dict[str, object]:
-        self.sheets.setdefault(sheet, {})[cell_range] = deepcopy(values)
+        stored = deepcopy(values)
+        formulas_written = 0
+        for row in stored:
+            for column, value in enumerate(row):
+                if is_formula_text(value):
+                    formulas_written += 1
+                elif is_escaped_text(value):
+                    row[column] = unescape_text(str(value))
+        if formulas_written and len(stored) == 1 and len(stored[0]) == 1:
+            # Toy single-cell model: record the formula so read_range reports it the
+            # way the UNO backend does rather than as literal text.
+            self.formulas.setdefault(sheet, {})[cell_range] = (
+                normalize_formula_argument_separators(str(stored[0][0]))
+            )
+        self.sheets.setdefault(sheet, {})[cell_range] = stored
         return {
             "ok": True,
             "sheet": sheet,
             "range": cell_range,
             "rows": len(values),
+            "formulas_written": formulas_written,
             "saved_to": output_path or path,
         }
 

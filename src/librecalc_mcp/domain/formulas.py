@@ -216,3 +216,24 @@ def normalize_formula_argument_separators(formula: str) -> str:
             normalized.append(character)
         index += 1
     return "".join(normalized)
+
+
+def is_formula_text(value: object) -> bool:
+    """Calc's own cell-entry rule: a string beginning with = is a formula.
+
+    A backend that stores such a string as literal text produces a cell whose
+    `formulas` field reads back looking correct while its calculated value is the
+    text itself. That divergence is invisible on read-back and fails value-mode
+    scoring, so every write path has to apply the same rule the Calc UI applies.
+    """
+    return isinstance(value, str) and value.startswith("=")
+
+
+def is_escaped_text(value: object) -> bool:
+    """Leading apostrophe is Calc's own escape for text that looks like a formula."""
+    return isinstance(value, str) and value.startswith("'=")
+
+
+def unescape_text(value: str) -> str:
+    """Strip Calc's leading-apostrophe escape, leaving the literal text."""
+    return value[1:] if is_escaped_text(value) else value

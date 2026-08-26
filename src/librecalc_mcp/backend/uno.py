@@ -13,8 +13,11 @@ from librecalc_mcp.backend.uno_charts import (
 )
 from librecalc_mcp.domain.charts import ChartSpec
 from librecalc_mcp.domain.formulas import (
+    is_escaped_text,
+    is_formula_text,
     normalize_formula_argument_separators,
     translate_a1_formula,
+    unescape_text,
 )
 from librecalc_mcp.domain.models import CalcOperation, CellFormat, Matrix, SheetInfo, WorkbookInfo
 
@@ -63,7 +66,10 @@ def _set_cell_value(cell: Any, value: object) -> None:
     if isinstance(value, (int, float)):
         cell.Value = float(value)
         return
-    cell.String = str(value)
+    if is_formula_text(value):
+        cell.Formula = normalize_formula_argument_separators(str(value))
+        return
+    cell.String = unescape_text(str(value))
 
 
 def _apply_values(sheet: Any, cell_range: str, values: Matrix) -> None:
@@ -75,7 +81,18 @@ def _apply_values(sheet: Any, cell_range: str, values: Matrix) -> None:
         # Container LibreOffice rejects setDataArray on ScCellObj (cellsuno.cxx:5014).
         _set_cell_value(sheet.getCellByPosition(start_col, start_row), data[0][0])
         return
+    if any(is_formula_text(cell) or is_escaped_text(cell) for row in data for cell in row):
+        # Mixed or formula-bearing matrix: setDataArray would store every formula as
+        # text, so assign cell by cell. Slower, and only on this path.
+        for row_offset, row in enumerate(data):
+            for column_offset, cell_value in enumerate(row):
+                _set_cell_value(
+                    sheet.getCellByPosition(start_col + column_offset, start_row + row_offset),
+                    cell_value,
+                )
+        return
     sheet.getCellRangeByPosition(start_col, start_row, end_col, end_row).setDataArray(data)
+
 
 
 class _DocumentContext:
