@@ -44,6 +44,9 @@ Avoid both extremes:
 
 Prefer orthogonal spreadsheet-semantic primitives that compose.
 
+Flexibility lives in programs, not in minting a tool per miss and not in a generic shell.
+Experiment overlays (for example formula-fill-only) are measurement instruments, not the product.
+
 ## Program execution
 
 `program_execute` is a first experiment in amortizing tool/model round trips. Keep it deterministic and inspectable. Do not execute arbitrary Python supplied by the model in v0.

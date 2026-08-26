@@ -34,7 +34,9 @@ Stable Python types for workbook structure, ranges, operations, and results.
 
 ### Backend interface
 
-A protocol separating spreadsheet semantics from UNO details.
+A protocol separating spreadsheet semantics from UNO details. Operations include range
+read/write, formula fill, clear, sheet create, and row insert/delete. Geometry ops are
+algebra, not task-specific restore tools.
 
 ### UNO adapter
 
