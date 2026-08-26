@@ -601,6 +601,9 @@ Chart2 role binding, stable IDs across XLSX reload, rich inspect, axis number fo
 point labels/colors, replacement, and deletion pass live UNO tests. XY point labels are a
 write-time text snapshot because live cell-range custom labels crash this LibreOffice XLSX
 exporter; inspect reports the persisted `category_labels` rather than inventing a source range.
+The official benchmark image is LibreOffice 7.0.4 and lacks
+`DataPointLabel.ShowCustomLabel`; the adapter uses its `ShowCategoryName` compatibility path.
+A direct in-image Task 95 probe renders and inspects all nine labels.
 Official VLM eval is Windows Excel COM.
 
 **GLM 5.3 Debugging probe (03_01).** `formula-anomalies-v1` + read budget + blocks,
@@ -649,9 +652,11 @@ GLM tasks** (v4+v5) as cost/completion sample — **2/10 official exact**, ~**$0
 publish until translation matrix + agent canary complete.
 
 **Next:** K2.7 v1-five is **3/5 workbooks**. Do not start the 15 or the 297. Do not resume GLM.
-K2.7 viz canary Task 95 **wrote** (`$0.015`); its four-channel bubble/inspect ISA miss is now
-implemented and live-verified. Run one K2.7 Task 95 development canary against the corrected
-contract, then score its PNG. Status: [`docs/viz-isa-diagnosis.md`](viz-isa-diagnosis.md).
+K2.7's first corrected-contract Task 95 canary **wrote** (`$0.022778`, 11 calls) and supplied
+the exact four ranges plus correct point colors on its first write. It exposed the LibreOffice
+7.0 label-visibility compatibility bug, now fixed and verified directly in the official image.
+Run one final Task 95 canary, then score its PNG. Status:
+[`docs/viz-isa-diagnosis.md`](viz-isa-diagnosis.md).
 
 ### High-value paths
 

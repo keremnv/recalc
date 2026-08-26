@@ -7,7 +7,11 @@ the distinction has to survive into the tool result.
 
 from __future__ import annotations
 
-from librecalc_mcp.backend.uno_charts import _apply_axis, _ApplyLog
+from librecalc_mcp.backend.uno_charts import (
+    _apply_axis,
+    _apply_custom_point_label,
+    _ApplyLog,
+)
 from librecalc_mcp.domain.charts import ChartAxisSpec
 
 
@@ -88,3 +92,53 @@ def test_probe_records_the_exception_type_it_absorbed() -> None:
 
     assert log.applied == []
     assert log.dropped == ["series[0].color (AttributeError)"]
+
+
+class _CustomLabelField:
+    def setFieldType(self, value: object) -> None:
+        self.field_type = value
+
+    def setString(self, value: str) -> None:
+        self.value = value
+
+
+class _ServiceManager:
+    def createInstanceWithContext(self, _name: str, _context: object) -> _CustomLabelField:
+        return _CustomLabelField()
+
+
+class _Context:
+    def getServiceManager(self) -> _ServiceManager:
+        return _ServiceManager()
+
+
+class _OldLibreOfficePoint:
+    """LibreOffice 7.0 lacks DataPointLabel.ShowCustomLabel."""
+
+    class _Label:
+        __slots__ = ("ShowCategoryName",)
+
+        def __init__(self) -> None:
+            self.ShowCategoryName = False
+
+    def __init__(self) -> None:
+        self.Label = self._Label()
+
+
+class _LabelCell:
+    String = "Product A"
+
+
+def test_custom_text_label_does_not_require_new_point_label_properties(monkeypatch) -> None:
+    class _Uno:
+        @staticmethod
+        def Enum(_name: str, value: str) -> str:
+            return value
+
+    monkeypatch.setitem(__import__("sys").modules, "uno", _Uno())
+    point = _OldLibreOfficePoint()
+
+    _apply_custom_point_label(point, _LabelCell(), context=_Context())
+
+    assert point.CustomLabelFields[0].value == "Product A"
+    assert point.Label.ShowCategoryName is True

@@ -521,13 +521,24 @@ def _apply_custom_point_label(
     field.setFieldType(uno_module.Enum("com.sun.star.chart2.DataPointCustomLabelFieldType", "TEXT"))
     field.setString(str(label_cell.String))
     point.CustomLabelFields = (field,)
-    label = point.Label
-    label.ShowCategoryName = False
-    label.ShowCustomLabel = True
-    point.Label = label
+    # LibreOffice 7.0 has no ShowCustomLabel member. There, ShowCategoryName makes
+    # CustomLabelFields render; newer releases expose the explicit custom-label flag.
+    try:
+        label = point.Label
+        if hasattr(label, "ShowCustomLabel"):
+            label.ShowCategoryName = False
+            label.ShowCustomLabel = True
+        else:
+            label.ShowCategoryName = True
+        point.Label = label
+    except AttributeError:
+        pass
     # DataLabelPlacement.RIGHT. Keep the numeric UNO constant local to avoid importing
     # generated LibreOffice Python modules outside a live UNO runtime.
-    point.LabelPlacement = 8
+    try:
+        point.LabelPlacement = 8
+    except AttributeError:
+        pass
 
 
 def _apply_point_styles_chart2(
@@ -566,6 +577,17 @@ def _apply_point_styles_chart2(
         label_range = None
         if custom_labels:
             label_range = _range_object(doc, spec.category_range, default_sheet=spec.sheet)
+            # LibreOffice 7.0 persists per-point CustomLabelFields but exposes label
+            # visibility only at series level. Newer releases also accept the per-point
+            # hint in _apply_custom_point_label.
+            with log.probe(f"series[{series_index}].data_labels.visibility"):
+                label = data_series.Label
+                if hasattr(label, "ShowCustomLabel"):
+                    label.ShowCategoryName = False
+                    label.ShowCustomLabel = True
+                else:
+                    label.ShowCategoryName = True
+                data_series.Label = label
         if spec.data_labels and not custom_labels:
             with log.probe(f"series[{series_index}].data_labels.chart2"):
                 label = data_series.Label
@@ -591,6 +613,7 @@ def _apply_point_styles_chart2(
         if spec.data_labels:
             # Ensure labels visible even when only some points are recolored.
             label_count = 0
+            labels_applied = 0
             if label_range is not None:
                 address = label_range.RangeAddress
                 label_count = (address.EndColumn - address.StartColumn + 1) * (
@@ -611,20 +634,24 @@ def _apply_point_styles_chart2(
                             point_index % width, point_index // width
                         )
                         _apply_custom_point_label(point, label_cell, context=context)
+                        labels_applied += 1
                     else:
                         label = point.Label
                         label.ShowCategoryName = True
                         point.Label = label
                 except Exception as exc:
-                    if point_index == 0:
-                        log.record(
-                            f"series[{series_index}].data_labels.per_point",
-                            False,
-                            type(exc).__name__,
-                        )
-                    break
+                    log.record(
+                        f"series[{series_index}].data_labels[{point_index}]",
+                        False,
+                        type(exc).__name__,
+                    )
             if custom_labels:
-                log.record(f"series[{series_index}].data_labels.custom_text", True)
+                complete = label_count > 0 and labels_applied == label_count
+                log.record(
+                    f"series[{series_index}].data_labels.custom_text",
+                    complete,
+                    "" if complete else f"applied {labels_applied}/{label_count}",
+                )
 
 
 def _apply_point_styles_chart1(diagram: Any, spec: ChartSpec, log: _ApplyLog) -> None:
@@ -859,20 +886,25 @@ def _requested_chart_id(sheet: Any, chart_name: str) -> str:
 
 
 def _chart_has_data_labels(chart_doc: Any) -> bool:
+    def visible(label: Any) -> bool:
+        return any(
+            bool(getattr(label, name, False))
+            for name in (
+                "ShowCategoryName",
+                "ShowCustomLabel",
+                "ShowSeriesName",
+                "ShowNumber",
+                "ShowNumberInPercent",
+            )
+        )
+
     try:
         for series in _chart2_type(chart_doc).getDataSeries():
-            label = series.Label
-            if label.ShowCategoryName or label.ShowCustomLabel or label.ShowSeriesName:
+            if visible(series.Label):
                 return True
             point = series.getDataPointByIndex(0)
-            if point is not None:
-                point_label = point.Label
-                if (
-                    point_label.ShowCategoryName
-                    or point_label.ShowCustomLabel
-                    or point_label.ShowSeriesName
-                ):
-                    return True
+            if point is not None and visible(point.Label):
+                return True
         return False
     except Exception:
         return False

@@ -73,6 +73,15 @@ size=$Strategy.$P$5:$P$13
 category_labels=[A,B,C,D,E,F,G,X,Y]
 ```
 
+The first corrected-contract K2.7 canary
+(`kimi-k2.7-viz-canary-task-95-four-channel-low-1`) cost `$0.022778` and used 11
+calls. K2.7 supplied all four ranges and the correct B-red/C-green point indices on its
+first write. It exposed one remaining backend-version defect: the official benchmark image
+uses LibreOffice 7.0.4, where `DataPointLabel.ShowCustomLabel` does not exist. The initial
+fallback persisted only label A. The adapter now uses 7.0's `ShowCategoryName` visibility
+flag with the per-point custom text fields. A direct probe inside the official image renders
+all nine labels and round-trips `data_labels=true`.
+
 ## Honest translation losses
 
 - LibreOffice aborts its XLSX exporter when per-point custom labels retain live
@@ -86,7 +95,6 @@ category_labels=[A,B,C,D,E,F,G,X,Y]
 
 ## Next measurement
 
-Run one K2.7 Task 95 development canary with the corrected tool contract. Do not use Sol or
-Opus for this probe, raise the call/token limits, or start the 15/297 slices. The canary asks
-only whether the cheap compiler now supplies the four explicit ranges and whether inspect
-lets it verify the result.
+Run one final K2.7 Task 95 development canary with the LibreOffice 7.0 visibility fallback,
+then score its PNG. Do not use Sol or Opus for this probe, raise the call/token limits, or
+start the 15/297 slices.

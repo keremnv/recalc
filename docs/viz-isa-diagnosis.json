@@ -60,6 +60,7 @@
                 "series[0].values-size",
                 "title",
                 "legend",
+                "series[0].data_labels.visibility",
                 "series[0].point_colors[0]",
                 "series[0].point_colors[1]",
                 "series[0].point_colors[2]",
@@ -71,7 +72,7 @@
               ]
             }
           ],
-          "saved_to": "/tmp/tmpqvo0i52q/bubble_task95_shape.xlsx"
+          "saved_to": "/tmp/tmp704eocfx/bubble_task95_shape.xlsx"
         },
         "inspect": [
           {
@@ -114,11 +115,11 @@
         ],
         "png": {
           "exported": [
-            "/tmp/tmpqvo0i52q/bubble_task95_shape/bubble_task95_shape_chart_1.png"
+            "/tmp/tmp704eocfx/bubble_task95_shape/bubble_task95_shape_chart_1.png"
           ],
           "sizes": [
             {
-              "path": "/tmp/tmpqvo0i52q/bubble_task95_shape/bubble_task95_shape_chart_1.png",
+              "path": "/tmp/tmp704eocfx/bubble_task95_shape/bubble_task95_shape_chart_1.png",
               "bytes": 16810
             }
           ],
@@ -156,7 +157,7 @@
               ]
             }
           ],
-          "saved_to": "/tmp/tmpqvo0i52q/line_task1411527_shape.xlsx"
+          "saved_to": "/tmp/tmp704eocfx/line_task1411527_shape.xlsx"
         },
         "inspect": [
           {
@@ -200,11 +201,11 @@
         ],
         "png": {
           "exported": [
-            "/tmp/tmpqvo0i52q/line_task1411527_shape/line_task1411527_shape_chart_1.png"
+            "/tmp/tmp704eocfx/line_task1411527_shape/line_task1411527_shape_chart_1.png"
           ],
           "sizes": [
             {
-              "path": "/tmp/tmpqvo0i52q/line_task1411527_shape/line_task1411527_shape_chart_1.png",
+              "path": "/tmp/tmp704eocfx/line_task1411527_shape/line_task1411527_shape_chart_1.png",
               "bytes": 18255
             }
           ],
@@ -239,7 +240,7 @@
               ]
             }
           ],
-          "saved_to": "/tmp/tmpqvo0i52q/stacked_task1417365_shape.xlsx"
+          "saved_to": "/tmp/tmp704eocfx/stacked_task1417365_shape.xlsx"
         },
         "inspect": [
           {
@@ -281,11 +282,11 @@
         ],
         "png": {
           "exported": [
-            "/tmp/tmpqvo0i52q/stacked_task1417365_shape/stacked_task1417365_shape_chart_1.png"
+            "/tmp/tmp704eocfx/stacked_task1417365_shape/stacked_task1417365_shape_chart_1.png"
           ],
           "sizes": [
             {
-              "path": "/tmp/tmpqvo0i52q/stacked_task1417365_shape/stacked_task1417365_shape_chart_1.png",
+              "path": "/tmp/tmp704eocfx/stacked_task1417365_shape/stacked_task1417365_shape_chart_1.png",
               "bytes": 11563
             }
           ],
@@ -304,7 +305,7 @@
               "compile_note": "approximated"
             }
           ],
-          "saved_to": "/tmp/tmpqvo0i52q/combo_honest_refusal.xlsx"
+          "saved_to": "/tmp/tmp704eocfx/combo_honest_refusal.xlsx"
         },
         "inspect": [],
         "png": {
