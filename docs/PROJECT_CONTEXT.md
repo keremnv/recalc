@@ -652,10 +652,10 @@ GLM tasks** (v4+v5) as cost/completion sample — **2/10 official exact**, ~**$0
 publish until translation matrix + agent canary complete.
 
 **Next:** K2.7 v1-five is **3/5 workbooks**. Do not start the 15 or the 297. Do not resume GLM.
-K2.7's first corrected-contract Task 95 canary **wrote** (`$0.022778`, 11 calls) and supplied
-the exact four ranges plus correct point colors on its first write. It exposed the LibreOffice
-7.0 label-visibility compatibility bug, now fixed and verified directly in the official image.
-Run one final Task 95 canary, then score its PNG. Status:
+K2.7's final Task 95 canary **wrote** (`$0.016033`, 11 calls), isolated inspect passed every
+chart field, and GLM-4.6V scored the PNG **28/28 (100%, ACC=1)**. Task 95 is closed. Next run
+only the supported-ISA `Visualization:Task 1423401` five-chart canary; hold the multi-level,
+100%-stack, and combo tasks until their semantics are measured. Status:
 [`docs/viz-isa-diagnosis.md`](viz-isa-diagnosis.md).
 
 ### High-value paths

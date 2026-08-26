@@ -95,6 +95,15 @@ all nine labels and round-trips `data_labels=true`.
 
 ## Next measurement
 
-Run one final K2.7 Task 95 development canary with the LibreOffice 7.0 visibility fallback,
-then score its PNG. Do not use Sol or Opus for this probe, raise the call/token limits, or
-start the 15/297 slices.
+The final end-to-end canary
+(`kimi-k2.7-viz-canary-task-95-lo70-labels-low-1`) cost `$0.016033` and used 11
+calls. Isolated inspect returned every range, all nine labels, the nine point colors, and
+`data_labels=true`. GLM-4.6V passed **28/28 official checklist items (100%, ACC=1)** on
+the exported PNG.
+
+Next, test `Task 1423401`: five ordinary clustered-column charts. It is deliberately the
+next supported-ISA case and measures multi-chart planning/placement rather than a known
+translation gap. Hold `Task 1417365` (multi-level year/quarter categories), `Task 1437004`
+(100% stack plus calculations), and `Task 1426290` (combo plus secondary axis) until each
+missing semantic is measured. Do not use Sol or Opus, raise call/token limits, or start the
+15/297 non-visual slices.
