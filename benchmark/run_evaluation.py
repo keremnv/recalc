@@ -6,6 +6,8 @@ evaluation.py as __main__ with argv forwarded, leaving the vendored file untouch
 
 Without it, Financial_Model 06_01..06_05 raise ParseError before any cell is compared and
 the category cannot be scored. See xlsx_metadata_repair for what is malformed and why.
+The evaluator code and grids are unchanged, but this is a metadata-tolerant local runtime,
+not an execution of the benchmark's distributed evaluator environment byte-for-byte.
 """
 
 from __future__ import annotations

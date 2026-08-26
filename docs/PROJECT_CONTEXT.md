@@ -94,6 +94,59 @@ It is already attached to scoped `formula-patterns-v1` inspect (`blank_dependenc
 encode G4/Receivables. Do not rerun `01_03` just to see if Grok notices G4; that would be tuning
 on development data.
 
+**Measurement audit (2026-08-26) — supersedes every 44% / 48.7% / 10.4% / 4.1%
+absence claim.** The official value-mode modification population mixes cells requiring a direct
+edit with unchanged formulas whose values differ after upstream golden edits (and potentially
+with stale/missing distributed caches). Equivalent raw formulas prove only that the formula cell
+needs no direct edit; they do **not** prove a cache artifact or a free scoring point. Official
+scoring remains unchanged. Offline characterization now reports three populations separately:
+
+1. direct value targets (the cell itself differs),
+2. unchanged-formula downstream value differences,
+3. value-equivalent but dynamically different formulas (important after input changes even when
+   today's value-mode score treats them as regression).
+
+Across all 100 Financial Model tasks the official modification population contains 268,035
+unchanged-formula value differences and 16,679 cache-robust direct value targets. There are also
+3,020 value-equivalent formula differences that matter dynamically but not to today's value score;
+zero have both caches absent, so none are indeterminate under this definition. Of the direct value
+targets, 11,771 are blank in the input (70.6%) and 4,908 are populated. Fifty-two tasks have only blank
+direct targets; this does not mean their whole answer ranges are blank. In the 48 mixed tasks,
+5,324/10,232 direct targets are blank (52.0%). Their blank topology is column-peer 80.4%,
+block-peer 14.1%, row-peer 4.8%, isolated 0.7%. So absence matters and column topology dominates
+mixed tasks, but neither fact identifies which blank cells the instruction wants.
+
+The broad reference-demand baseline reaches 7,042/11,771 blank direct targets (59.8%) from a pool
+of 77,088 referenced blanks: pooled target share 9.1%, per-task median 17.5%. In the 48 mixed tasks
+it reaches 77.7% of blank direct targets, with 6.9% pooled / 19.2% median target share. A referenced
+blank is evidence, not a defect by construction: optional blanks and empty-as-zero formulas are
+common. This broad pool is a superset of the shipped carry-chain bridge observation, not that
+observation's candidate pool or a ceiling on its precision.
+
+The shipped carry-chain bridge itself is a niche signal, not a general detector. With all sheets
+selected (candidate generation gold-blind, then scored offline against goldens), the 100 FM tasks
+produce 787 candidates; 429 survive
+the per-workbook cap of 12, and 50 visible candidates are direct blank targets: 11.7% pooled
+precision, 0.4% blank-target recall, with a visible hit on 17/100 tasks. It is excellent on a few
+workbooks (`01_03` remains a one-candidate/one-hit example) and silent or distracting elsewhere.
+Keep it bounded and explicitly heuristic; do not expand it as the absence solution. Whether it
+belongs in the default formula-pattern observation remains an agent-level ablation question because
+offline gold can measure candidate quality but cannot measure distraction cost.
+
+The miss inventory is also narrower than its original name implied. The evaluator stores only the
+first error for each non-exact task, so `benchmark/inventory_misses.py` inventories first-error
+signatures, not all wrong cells. It cannot support a percentage claim about all cell-level misses.
+`Template:02_05!E35` is diagnosed: GLM explicitly chose to accumulate surplus cash after debt was
+repaid, contrary to the instruction's “exactly” requirement; successful runs link ending cash to
+the operating cash requirement. Context, execution, and verification were available, so this is a
+compiler reasoning miss, not a world/ISA miss.
+
+**Financial Model `06_01..06_05` evaluator compatibility.** Their inputs alone have malformed
+`docProps/core.xml` (`dc:` is reused out of scope); every golden is valid and LibreOffice opens all
+files. The local metadata-tolerant evaluator wrapper repairs only that metadata member in a temp
+copy and labels results `metadata-tolerant-local-v1`. It does not modify grids or benchmark data,
+but such results are local-compatible scores, not the distributed evaluator runtime byte-for-byte.
+
 **`Financial_Model:02_02` is a gold-blind exact.** Grok 4.6 medium, bounded `formula-patterns-v1` +
 `formula-blocks-v1`, 8 calls, `$0.166338`. Official evaluator: exact `1.0` (regression clamped from
 `3025/3026` = `0.9997` ≥ `0.998`; modification `1126/1126`). The single regression miss is
@@ -241,7 +294,7 @@ dev/tests (`LIBRECALC_RUN_UNO=1`), not the isolated agent. Goldens are never mou
 
 - The worktree is intentionally dirty. Preserve it; do not reset or discard unrelated changes.
 - Keep spreadsheet semantics behind `CalcBackend`. New ops: memory-backend test first.
-- Local verification at this handoff: `62 passed, 4 skipped`; `ruff check .` passes.
+- Local verification at this handoff: `117 passed, 8 skipped`; `ruff check .` passes.
 - Do not encode `(-) OpEx`, nine hardcode cells, UFCF, Contract Revenue, or other
   task-specific restores. Do not expose goldens to the agent.
 

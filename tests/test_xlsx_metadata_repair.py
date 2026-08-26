@@ -47,3 +47,12 @@ def test_repair_rewrites_only_the_broken_part(tmp_path: Path) -> None:
     with zipfile.ZipFile(target) as archive:
         ET.fromstring(archive.read("docProps/core.xml"))
         assert archive.read("xl/worksheets/sheet1.xml") == b"<sheetData/>"
+
+
+def test_repair_refuses_to_rewrite_broken_workbook_content(tmp_path: Path) -> None:
+    source = tmp_path / "book.xlsx"
+    with zipfile.ZipFile(source, "w") as archive:
+        archive.writestr("docProps/core.xml", "<core/>")
+        archive.writestr("xl/worksheets/sheet1.xml", "<sheet><bad:cell/></sheet>")
+
+    assert repair(source, tmp_path / "out") is None

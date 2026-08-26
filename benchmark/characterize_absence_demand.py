@@ -6,18 +6,21 @@ of its neighbourhood (row/col/block/isolated). That is a similarity signal, and 
 precision wall in the 3-8% band because most holes in a spreadsheet are deliberate.
 
 The shipped detector (_blank_dependency_bridges) works on a different axis: it nominates a
-blank cell because a live formula *references* it. That is a demand signal -- a referenced
-blank is broken by construction, not merely unusual. This measures that axis directly:
+blank cell because a live formula *references* it and the dependent starts a carry-forward
+chain. A reference is demand evidence, not proof of a defect: spreadsheets intentionally
+reference optional blanks and often rely on empty-as-zero semantics. This measures the broad
+reference axis before the shipped detector's additional carry-chain filter:
 
   referenced    some formula elsewhere in the workbook names this cell (or a range over it)
   unreferenced  nothing points at it
 
-For a referenced blank, the candidate pool is bounded by how many blanks the workbook
-actually asks for, not by how many cells look lonely. That bound is the number reported
-here as "demand pool", and it is the ceiling on the shipped detector's precision.
+"Demand pool" is every bounded blank cell named by a formula. It is an upstream superset of
+the shipped bridge candidates, useful as a generic-reference baseline. It is neither the
+shipped detector's actual pool nor a ceiling on that detector's precision.
 
-Ground truth is the official evaluator's classify_cells_by_modification, restricted to each
-task's answer_position. No model calls.
+The scored ranges come from the benchmark. Target classification separates direct value
+targets from cells whose formulas are unchanged but whose values differ downstream. No
+model calls.
 """
 
 from __future__ import annotations
@@ -36,6 +39,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 import evaluation as ev
 import openpyxl
+from target_classification import classify_cache_robust_targets
 from xlsx_metadata_repair import install as _install_repair
 
 _install_repair()
@@ -93,12 +97,12 @@ def analyse(task: dict, data_dir: Path) -> Counter:
     wb_a = openpyxl.load_workbook(gold, data_only=not with_formula)
     wb_if = openpyxl.load_workbook(inp, data_only=False) if not with_formula else None
     wb_af = openpyxl.load_workbook(gold, data_only=False) if not with_formula else None
-    formulas = openpyxl.load_workbook(inp, data_only=False)
+    formulas = wb_if if wb_if is not None else wb_i
 
     demanded = _demanded(formulas)
     counts: Counter = Counter()
 
-    # The candidate pool the shipped detector draws from: blanks something already asks for.
+    # Broad reference baseline. The shipped detector further requires a carry-forward chain.
     for sheet_name, address in demanded:
         ws = ev._find_sheet(formulas, sheet_name)
         if ws is None:
@@ -112,9 +116,21 @@ def analyse(task: dict, data_dir: Path) -> Counter:
     for chunk in ev.parse_answer_position(task["answer_position"]):
         sheet_name, _, rng = chunk.rpartition("!")
         sheet_name = sheet_name.strip().strip("'")
-        _reg, mod = ev.classify_cells_by_modification(
-            wb_i, wb_a, sheet_name, rng, with_color, with_formula, wb_if, wb_af
+        classified = classify_cache_robust_targets(
+            ev,
+            wb_i,
+            wb_a,
+            wb_if if wb_if is not None else wb_i,
+            wb_af if wb_af is not None else wb_a,
+            sheet_name,
+            rng,
+            with_font_color=with_color,
+            with_formula=with_formula,
         )
+        mod = classified.modification
+        counts["unchanged-formula"] += len(classified.unchanged_formula_value_differences)
+        counts["dynamic-only"] += len(classified.value_equivalent_formula_differences)
+        counts["indeterminate"] += len(classified.indeterminate_uncached_formula_differences)
         if not mod:
             continue
         ws_i = ev._find_sheet(wb_i, sheet_name)
@@ -134,6 +150,8 @@ def analyse(task: dict, data_dir: Path) -> Counter:
             counts["blank"] += 1
             key = "referenced" if (resolved, cell) in demanded else "unreferenced"
             counts[key] += 1
+    for workbook in {wb_i, wb_a, formulas, wb_af} - {None}:
+        workbook.close()
     return counts
 
 
@@ -173,11 +191,14 @@ def _report(title: str, per_task: list[Counter]) -> None:
     b = total["blank"]
     print(f"\n=== {title} ===")
     print(f"blank modification targets  {b:8,}")
+    print(f"  unchanged-formula values     {total['unchanged-formula']:7,}")
+    print(f"  dynamic-only formula diffs   {total['dynamic-only']:7,}")
+    print(f"  indeterminate uncached      {total['indeterminate']:7,}")
     for key in ("referenced", "unreferenced"):
         print(f"  {key:24} {total[key]:8,}  ({total[key] / max(1, b):.1%} of blanks)")
-    print(f"demand pool (blanks named by a formula)  {total['demand pool']:8,}")
+    print(f"broad demand pool (blanks named by a formula) {total['demand pool']:8,}")
     print(
-        f"  pooled precision if the whole pool were nominated: "
+        f"  pooled target share if the whole pool were nominated: "
         f"{total['referenced'] / max(1, total['demand pool']):.1%}"
     )
     recalls = [c["referenced"] / c["blank"] for c in per_task if c["blank"]]
@@ -185,9 +206,9 @@ def _report(title: str, per_task: list[Counter]) -> None:
     if recalls:
         print(f"  per-task recall of blanks   median {statistics.median(recalls):7.1%}")
     if precs:
-        print(f"  per-task precision of pool  median {statistics.median(precs):7.1%}")
+        print(f"  per-task target share of pool median {statistics.median(precs):7.1%}")
     reach = sum(1 for c in per_task if c["referenced"])
-    print(f"  tasks where the demand signal reaches >=1 real target: {reach}/{len(per_task)}")
+    print(f"  tasks where broad demand reaches >=1 direct target: {reach}/{len(per_task)}")
 
 
 if __name__ == "__main__":

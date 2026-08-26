@@ -18,6 +18,7 @@ EVALUATION_SCRIPT = DEFAULT_BENCHMARK_ROOT / "evaluation" / "evaluation.py"
 # Invoked instead of EVALUATION_SCRIPT so that workbooks with malformed docProps metadata
 # (Financial_Model 06_01..06_05) can be scored at all. See benchmark/run_evaluation.py.
 EVALUATION_RUNNER = Path(__file__).resolve().parent / "run_evaluation.py"
+EVALUATION_RUNTIME = "metadata-tolerant-local-v1"
 
 
 def _load_json(path: Path) -> Any:
@@ -146,6 +147,7 @@ def main() -> int:
     exact = 0
     scored = 0
     print(f"RUN {run_root.name}")
+    print(f"EVALUATION_RUNTIME {EVALUATION_RUNTIME}")
     for task in tasks:
         key = f"{task['category']}:{task['id']}"
         item = score_lookup.get(key)
@@ -175,6 +177,7 @@ def main() -> int:
             row["regression_accuracy"] = item.get("regression_accuracy")
             row["modification_accuracy"] = item.get("modification_accuracy")
             row["evaluator_error"] = item.get("error_message") or None
+            row["evaluation_runtime"] = EVALUATION_RUNTIME
             with ledger_path.open("a", encoding="utf-8") as handle:
                 handle.write(json.dumps(row, ensure_ascii=False) + "\n")
         print(f"LEDGER appended scored rows to {ledger_path}")
@@ -185,6 +188,7 @@ def main() -> int:
             {
                 "run_name": run_root.name,
                 "model_name": model_name,
+                "evaluation_runtime": EVALUATION_RUNTIME,
                 "exact": exact,
                 "scored": scored,
                 "tasks": {

@@ -1,10 +1,9 @@
 """Offline characterisation of dependency-traversal ranking for Debugging tasks.
 
-Ground truth comes from the OFFICIAL evaluator, not a reimplementation: dataset.json
-supplies answer_position per task, and evaluation.classify_cells_by_modification
-decides which cells inside those ranges count as modifications. Two earlier hand-rolled
-definitions of "truth" were both wrong (ArrayFormula identity, and diffing outside the
-scored ranges), which is exactly why this uses their code.
+Scored ranges and comparison semantics come from the official evaluator. The offline
+target split separates direct edits from unchanged downstream formulas; see
+target_classification.py. Two earlier hand-rolled definitions of "truth" were both wrong
+(ArrayFormula identity, and diffing outside scored ranges).
 
 No model calls.
 """
@@ -24,6 +23,7 @@ sys.path.insert(0, str(ROOT / "src"))
 
 import evaluation as ev
 import openpyxl
+from target_classification import classify_cache_robust_targets
 from xlsx_metadata_repair import install as _install_repair
 
 _install_repair()
@@ -47,10 +47,20 @@ def truth_cells(task: dict) -> set[tuple[str, str]]:
     for chunk in ev.parse_answer_position(task["answer_position"]):
         sheet, _, rng = chunk.rpartition("!")
         sheet = sheet.strip().strip("'")
-        _reg, mod = ev.classify_cells_by_modification(
-            wb_i, wb_a, sheet, rng, with_color, with_formula, wb_if, wb_af
+        classified = classify_cache_robust_targets(
+            ev,
+            wb_i,
+            wb_a,
+            wb_if if wb_if is not None else wb_i,
+            wb_af if wb_af is not None else wb_a,
+            sheet,
+            rng,
+            with_font_color=with_color,
+            with_formula=with_formula,
         )
-        out.update((sheet, c) for c in mod)
+        out.update((sheet, c) for c in classified.modification)
+    for workbook in {wb_i, wb_a, wb_if, wb_af} - {None}:
+        workbook.close()
     return out
 
 

@@ -15,7 +15,10 @@ Nothing under benchmark-data/ is written to -- the dataset stays exactly as dist
 
 from __future__ import annotations
 
+import atexit
+import os
 import re
+import shutil
 import tempfile
 import xml.etree.ElementTree as ET
 import zipfile
@@ -37,6 +40,7 @@ NAMESPACES = {
 _PREFIX = re.compile(r"<\s*/?\s*([A-Za-z_][\w.-]*):|\s([A-Za-z_][\w.-]*):[\w.-]+\s*=")
 _ROOT = re.compile(r"<\s*([A-Za-z_][\w.:-]*)((?:\s[^<>]*?)?)(/?)>", re.DOTALL)
 _original = None
+_scratch: Path | None = None
 
 
 def _repair_part(xml: str) -> str | None:
@@ -60,7 +64,9 @@ def repair(path: Path, out_dir: Path) -> Path | None:
     repairs: dict[str, str] = {}
     with zipfile.ZipFile(path) as archive:
         for name in archive.namelist():
-            if not name.endswith(".xml") and not name.endswith(".rels"):
+            # This compatibility shim is intentionally metadata-only. A parse failure in
+            # workbook content must remain visible rather than being silently rewritten.
+            if not name.startswith("docProps/") or not name.endswith(".xml"):
                 continue
             raw = archive.read(name)
             try:
@@ -91,39 +97,42 @@ def repair(path: Path, out_dir: Path) -> Path | None:
 
 def install() -> None:
     """Patch openpyxl.load_workbook to retry once through repair(). Idempotent."""
-    global _original
+    global _original, _scratch
     if _original is not None:
         return
     _original = openpyxl.load_workbook
     cache: dict[str, Path] = {}
-    scratch = Path(tempfile.mkdtemp(prefix="xlsx-metadata-repair-"))
+    _scratch = Path(tempfile.mkdtemp(prefix="xlsx-metadata-repair-"))
 
     def load_workbook(filename, *args, **kwargs):
         try:
             return _original(filename, *args, **kwargs)
         except ET.ParseError:
+            if not isinstance(filename, (str, os.PathLike)):
+                raise
             source = Path(filename)
             key = str(source.resolve())
             if key not in cache:
-                target = repair(source, scratch)
+                target = repair(source, _scratch)
                 if target is None:
                     raise
                 cache[key] = target
             return _original(cache[key], *args, **kwargs)
 
     openpyxl.load_workbook = load_workbook
-    # The evaluator does `import openpyxl` then `openpyxl.load_workbook(...)`, so patching
-    # the module attribute reaches it too. Guard against a from-import binding just in case.
-    for module in list(__import__("sys").modules.values()):
-        if getattr(module, "load_workbook", None) is _original:
-            module.load_workbook = load_workbook
+    # The evaluator calls openpyxl.load_workbook through the module attribute, so this is
+    # sufficient and can be fully undone. Do not mutate arbitrary imported modules.
+    atexit.register(uninstall)
 
 
 def uninstall() -> None:
-    global _original
+    global _original, _scratch
     if _original is not None:
         openpyxl.load_workbook = _original
         _original = None
+    if _scratch is not None:
+        shutil.rmtree(_scratch, ignore_errors=True)
+        _scratch = None
 
 
 __all__ = ["install", "repair", "uninstall"]

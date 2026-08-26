@@ -16,12 +16,13 @@ formulas along the row and G60/G61 along the column. Reaching it was never a det
 problem. Working Capital Schedule!G4 (01_03) is col-peer -- its whole row is empty --
 which is why only the carry-chain bridge nominates it.
 
-Aggregates over a whole category are dominated by tasks whose entire answer region is
-blank ("build this sheet"), where absence carries no signal because everything is absent.
-Those are reported separately: the topology mix inverts between the two populations.
+Tasks where every direct target is blank (often "build this sheet" tasks) are reported
+separately. This does not mean the entire scored range is blank: labels, inputs, and
+intentional whitespace remain, so absence alone still cannot select the target cells.
 
-Ground truth is the official evaluator's own classify_cells_by_modification, restricted
-to each task's answer_position. No model calls.
+The scored ranges come from the benchmark. Target classification separates direct value
+targets from cells whose formulas are unchanged but whose values differ downstream. No
+model calls.
 """
 
 from __future__ import annotations
@@ -38,6 +39,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import evaluation as ev
 import openpyxl
+from target_classification import classify_cache_robust_targets
 from xlsx_metadata_repair import install as _install_repair
 
 _install_repair()
@@ -80,15 +82,27 @@ def analyse(task: dict, data_dir: Path) -> Counter:
     wb_a = openpyxl.load_workbook(gold, data_only=not with_formula)
     wb_if = openpyxl.load_workbook(inp, data_only=False) if not with_formula else None
     wb_af = openpyxl.load_workbook(gold, data_only=False) if not with_formula else None
-    formulas = openpyxl.load_workbook(inp, data_only=False)
+    formulas = wb_if if wb_if is not None else wb_i
 
     counts: Counter = Counter()
     for chunk in ev.parse_answer_position(task["answer_position"]):
         sheet_name, _, rng = chunk.rpartition("!")
         sheet_name = sheet_name.strip().strip("'")
-        _reg, mod = ev.classify_cells_by_modification(
-            wb_i, wb_a, sheet_name, rng, with_color, with_formula, wb_if, wb_af
+        classified = classify_cache_robust_targets(
+            ev,
+            wb_i,
+            wb_a,
+            wb_if if wb_if is not None else wb_i,
+            wb_af if wb_af is not None else wb_a,
+            sheet_name,
+            rng,
+            with_font_color=with_color,
+            with_formula=with_formula,
         )
+        mod = classified.modification
+        counts["unchanged-formula"] += len(classified.unchanged_formula_value_differences)
+        counts["dynamic-only"] += len(classified.value_equivalent_formula_differences)
+        counts["indeterminate"] += len(classified.indeterminate_uncached_formula_differences)
         if not mod:
             continue
         ws_i = ev._find_sheet(wb_i, sheet_name)
@@ -124,6 +138,8 @@ def analyse(task: dict, data_dir: Path) -> Counter:
                 counts["col-peer"] += 1
             else:
                 counts["isolated"] += 1
+    for workbook in {wb_i, wb_a, formulas, wb_af} - {None}:
+        workbook.close()
     return counts
 
 
@@ -153,9 +169,9 @@ def main() -> int:
     whole = [c for c in per_task if c["blank"] == c["targets"]]
     if whole and partial:
         print(
-            f"\n{len(whole)} task(s) have an entirely blank answer region "
+            f"\n{len(whole)} task(s) have only blank direct targets "
             f"({sum(c['targets'] for c in whole):,} targets). Absence carries no signal "
-            f"there -- every target is absent -- so they are excluded below."
+            f"inside the candidate blanks -- every target is absent -- so they are excluded below."
         )
         _report(f"{category}: {len(partial)} tasks with a partially populated region", partial)
     return 0
@@ -167,7 +183,10 @@ def _report(title: str, per_task: list[Counter]) -> None:
         total.update(counts)
     t, b = total["targets"], total["blank"]
     print(f"\n=== {title} ===")
-    print(f"modification targets        {t:8,}")
+    print(f"cache-robust direct value targets {t:8,}")
+    print(f"  unchanged-formula values  {total['unchanged-formula']:8,}")
+    print(f"  dynamic-only formula diffs {total['dynamic-only']:7,}")
+    print(f"  indeterminate uncached    {total['indeterminate']:8,}")
     print(
         f"  already populated         {total['populated']:8,}  ({total['populated'] / max(1, t):.1%})"
     )
