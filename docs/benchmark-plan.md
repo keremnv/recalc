@@ -671,10 +671,26 @@ win clearly on a few — `08_03` `0.95` vs `0.70`, `05_03` `0.65` vs `0.30`, `06
 **Do not ship root-error ranking.** Keep the finding, keep the tool, and keep the graph: the
 rejection is of one heuristic over the dependency structure, not of the structure itself.
 
-The read-side evidence points elsewhere. `Valuation!G59` on `Financial_Model:09_04` has now
-been missed identically by two different models (Kimi K2.7 in the record, GLM 5.3 on
-2026-08-26), both leaving it blank, both scoring modification `0.9981` with that single cell
-outstanding. `Working Capital Schedule!G4` on `Financial_Model:01_03` is the same class. Both
-are meaningful absences — blank cells that should carry a formula — which section 9.1 already
-names as first-class. That, not error-root ranking, is where a dependency-backed signal should
-be aimed, and Financial Model is where a one-cell gain converts a near miss into an exact.
+## Rejected: blank-candidate ranking / labelled block-hole shortlists
+
+Characterised offline over all 100 Financial Model tasks with
+[`benchmark/characterize_blank_ranking.py`](../benchmark/characterize_blank_ranking.py).
+Candidate generation is gold-blind (input workbook + instruction). Ground truth is cache-robust
+direct blank modification targets from the official evaluator.
+
+The hope was a small labelled list (block-hole + adjacent label, scoped to instruction-named
+sheets) that keeps `Valuation!G59` while staying cheap. That arm's pool is small (2,160
+candidates, ~22/task) and does keep G59 on `09_04`, but category recall is **0.4%** at **2.4%**
+precision (a hit on 26/100 tasks). Additive top-20 ranking reaches 32% precision only by
+selecting easy clustered blanks; it **drops G59 and G4**. Broad demand still sits on the
+precision wall (~9% target share, 60% recall).
+
+There is still no single absence signal. Completeness and a small pool do not co-exist in the
+world. Do not ship a labelled absence shortlist. Keep `blank_dependency_bridges` bounded and
+measure its distraction cost with a same-model A/B before changing the default observation.
+
+The remaining read-side question is narrower: the shipped carry-chain bridge already nominates
+`Working Capital Schedule!G4` and is silent on `Valuation!G59`. Ranking and labelled block-hole
+lists cannot close that gap without a payload of mostly noise. Keep the bridge bounded; decide
+whether it stays in the default observation with a same-model A/B, not by adding more absence
+detectors.

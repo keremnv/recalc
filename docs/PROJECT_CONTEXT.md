@@ -33,8 +33,26 @@ Never-filled blanks are a real class and include the known `Valuation!G59` miss 
 `09_04` ablation outputs plus `Working Capital Schedule!M3` on v5 `01_02`. They are **not**
 the bulk of stored misses. Absence detection can address only the 5.8% never-filled slice;
 wrong writes on blank targets are ~5× larger. Do not treat the 70.6% “direct FM targets are
-blank” gold-side figure as the miss mix. Next unpaid experiment remains offline blank-candidate
-ranking, now with this census as the denominator.
+blank” gold-side figure as the miss mix.
+
+**Blank-candidate ranking is rejected as an automatic observation (2026-08-26).**
+`benchmark/characterize_blank_ranking.py` scored gold-blind shortlists against cache-robust
+direct blank targets on all 100 Financial Model tasks (11,771 blank targets). No arm clears
+the shipping bar (much smaller pool without destroying recall):
+
+| arm | pool | precision | recall | tasks with a hit |
+|---|---:|---:|---:|---:|
+| named-block-label | 2,160 | 2.4% | 0.4% | 26/100 |
+| block-peer+label | 6,148 | 0.9% | 0.5% | 28/100 |
+| named-rank-top-20 | 2,000 | 32.0% | 5.4% | 83/100 |
+| referenced+peer | 72,077 | 9.4% | 57.9% | 99/100 |
+| named-any-peer | 419,715 | 2.1% | 74.9% | 100/100 |
+
+`Valuation!G59` survives named-block-label on `09_04` and is **dropped** by both top-20 rankers.
+`Working Capital Schedule!G4` is only in named-any-peer / referenced, never in the labelled
+block-hole list. Ranking raises precision by concentrating on easy clustered blanks; it does
+not surface the one-cell misses. Do not ship a labelled absence shortlist. Keep the carry-chain
+bridge bounded. Next experiment is a same-model A/B with vs without that shipped bridge.
 
 **Leave `Debugging:08_03`.** Bounded reads, inspect-error representatives, and capped neighboring
 context are in the world and work. The inspect-dense canary still produced no workbook: K2.7
@@ -116,8 +134,8 @@ hits the known edge:
 | `Debugging:10_02` | 0 | |
 
 It is already attached to scoped `formula-patterns-v1` inspect (`blank_dependency_bridges`). Do not
-encode G4/Receivables. Do not rerun `01_03` just to see if Grok notices G4; that would be tuning
-on development data.
+encode G4/Receivables. A same-model A/B with vs without the bridge is the next measurement; it is
+an interface comparison, not a G4 hunt. Do not expand absence detectors after the ranking rejection.
 
 **Measurement audit (2026-08-26) — supersedes every 44% / 48.7% / 10.4% / 4.1%
 absence claim.** The official value-mode modification population mixes cells requiring a direct
