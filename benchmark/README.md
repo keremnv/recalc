@@ -84,11 +84,12 @@ one successful `calc_read` / `calc_read_ranges` batch; further reads return a st
 error. Disable with `--no-read-budget` / `LIBRECALC_READ_BUDGET_ENABLED=0`. Measuring instrument, not
 a product primitive. State file: `/mnt/spreadsheet_output/.librecalc_read_budget.json`.
 
-## GLM 5.3 lane (frozen cheap compiler)
+## Kimi K2.7 Code lane (frozen cheap compiler)
 
-OpenRouter `z-ai/glm-5.3` with `tool_choice=auto` (Z.AI rejects `required`). Frozen overlays:
-`formula-patterns-v1` + `formula-blocks-v1` for Template/FM; `formula-anomalies-v1` + blocks for
-Debugging. Held-out slice: [`benchmark/slices/glm-v4-five.json`](slices/glm-v4-five.json).
+OpenRouter `moonshotai/kimi-k2.7-code`. Frozen overlays: `formula-patterns-v1` +
+`formula-blocks-v1` for Template/FM; `formula-anomalies-v1` + blocks for Debugging.
+Held-out slice: [`benchmark/slices/kimi-v1-five.json`](slices/kimi-v1-five.json).
+GLM 5.3 is retired from this lane.
 
 Publish **non-visual subset only** (~297 Template+FM+Debugging tasks). Visualization (24 tasks) stays
 out of scope until chart UNO→Excel translation is measured. Do not quote a full-bench exact rate

@@ -52,9 +52,7 @@ the shipping bar (much smaller pool without destroying recall):
 `Working Capital Schedule!G4` is only in named-any-peer / referenced, never in the labelled
 block-hole list. Ranking raises precision by concentrating on easy clustered blanks; it does
 not surface the one-cell misses. Do not ship a labelled absence shortlist. Keep the carry-chain
-bridge bounded. Next experiment is a same-model A/B with vs without that shipped bridge:
-`LIBRECALC_BLANK_BRIDGES=0` / `--no-blank-bridges`, slice `benchmark/slices/bridge-ab-two.json`
-(`01_03` where G4 is rank-1, `09_04` where bridges fire but G59 is not among them). GLM 5.3.
+bridge bounded.
 
 **Bridge A/B result (GLM 5.3, one seed, 2026-08-26).** Both arms wrote workbooks. Official scores:
 
@@ -90,6 +88,31 @@ gate fired after one successful read; K2.7 then called `calc_fill_formulas` (twi
 Same world, same task, GLM format-exited with empty completions. This is a compiler write-discipline
 gap, not a missing primitive. Do not rerun `09_06` on K2.7 (already measured as `04_06`). Do not
 raise limits.
+
+**Default cheap compiler is Kimi K2.7 Code (2026-08-26).** GLM 5.3 is retired from interface
+experiments and from the default lane. Same frozen world: Template/FM `formula-patterns-v1` +
+`formula-blocks-v1`; Debugging `formula-anomalies-v1` + blocks + read-budget instrument;
+progressive; `$2` / 12 calls / `--timeout 1200`; K2.7 `--reasoning-effort low`. Grok 4.6 stays
+parked for a later competitive threshold. Do not mix GLM and K2.7 numbers. Do not resume GLM
+slices.
+
+**Interface freeze.** Designed measurements are done. Do not add absence detectors, labelled
+shortlists, a write tool, or a higher call/token cap. Do not change default observation. Keep
+`blank_dependency_bridges` bounded and on. Keep the Debugging read budget a measuring instrument
+(default on for `formula-anomalies-v1`). Remaining Debugging zeros (`08_03`, `04_06`, `05_03`)
+are compiler/task-class caveats, not missing ops. Visualization stays out of the non-visual
+publish (~297 Template+FM+Debugging).
+
+**Path to a full non-visual run — not tonight.** GLM v4+v5 (2/10 exact, ~$0.57) is a GLM
+completion sample, not a K2.7 or 297-task claim. Next gate is a **fresh K2.7 five**
+(`benchmark/slices/kimi-v1-five.json`): ids not in grok-v1/v2/v3, glm-v4/v5, write-gates, public
+examples, or today's A/B. Go/no-go is **workbook produced on all five** (exact is secondary).
+If that holds, a 15-task confirmation, then the ~297. Serial wall clock is ~8–15 min/task
+(~40–75 h) and ~$0.07–0.20/task (~$20–60) at current K2.7 rates; the runner must resume on
+failure. Do not quote a full-bench exact % until that run exists.
+
+**Next:** run `kimi-v1-five.json`. Do not start the 297. Do not rerun GLM. Viz remains a
+separate lane.
 
 **Leave `Debugging:08_03`.** Bounded reads, inspect-error representatives, and capped neighboring
 context are in the world and work. The inspect-dense canary still produced no workbook: K2.7
@@ -598,9 +621,8 @@ GLM tasks** (v4+v5) as cost/completion sample — **2/10 official exact**, ~**$0
 ~**$0.06/task** avg. Do not quote full-bench exact %. Visualization still out of official
 publish until translation matrix + agent canary complete.
 
-**Next:** optional `viz-dev-line-one` agent run; classify v5 modification misses; no further
-GLM non-visual held-out slices until publish note lands. Do not encode task-specific golden
-shortcuts.
+**Next:** run `kimi-v1-five.json` (K2.7, frozen interface). Do not start the 297. Do not resume
+GLM slices. Viz remains a separate lane. Do not encode task-specific golden shortcuts.
 
 ### High-value paths
 
@@ -621,6 +643,7 @@ tests/test_openrouter_runner.py
 tests/test_memory_backend.py
 benchmark/slices/public-example-nonvisual-v1.json   contaminated
 benchmark/slices/grok-v2-five.json                  exhausted held-out / development
+benchmark/slices/kimi-v1-five.json                  next K2.7 held-out
 benchmark/slices/grok-v3-five.json                  exhausted held-out
 benchmark/slices/glm-v4-five.json                 exhausted held-out
 benchmark/slices/glm-v5-five.json                 exhausted held-out

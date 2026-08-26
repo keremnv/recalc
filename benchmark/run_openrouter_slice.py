@@ -45,7 +45,7 @@ def _load_dotenv(path: Path = DEFAULT_ENV_FILE) -> None:
 
 DEFAULT_SWEAGENT_ROOT = DEFAULT_BENCHMARK_ROOT / "SWE-agent"
 DEFAULT_CONFIG = PROJECT_ROOT / "benchmark" / "sweagent" / "spreadsheet.yaml"
-DEFAULT_MODEL = "google/gemini-3.7-flash"
+DEFAULT_MODEL = "moonshotai/kimi-k2.7-code"
 SUPPORTED_OBSERVATIONS = (
     "grid-v1",
     "sparse-addressed-v1",

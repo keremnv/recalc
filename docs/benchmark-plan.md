@@ -510,25 +510,27 @@ Geometry is now in the algebra (`insert_row` / `delete_row` behind `CalcBackend`
 task heuristic. Flexibility stays in programs; overlays stay measurement instruments. Next probe:
 `08_03` with unfrozen `calc_program`.
 
-## GLM 5.3 cheap compiler lane (frozen)
+## Kimi K2.7 Code cheap compiler lane (frozen)
 
-OpenRouter `z-ai/glm-5.3` is the frozen cost/intelligence compiler for non-visual work. Visualization
-uses the same OpenRouter account for agent runs and for VLM scoring via `z-ai/glm-4.6v`
-([OpenRouter model page](https://openrouter.ai/z-ai/glm-4.6v)). No separate BigModel account is
-required: pass `--base-url https://openrouter.ai/api/v1 --model z-ai/glm-4.6v` (or use
-`benchmark/score_visualization_openrouter.py`). Checklist criteria text is unchanged.
-
-Park Grok and Cursor CLI Grok for competitive runs; do not mix harness numbers.
+OpenRouter `moonshotai/kimi-k2.7-code` is the default cheap compiler for non-visual work.
+GLM 5.3 is retired from this lane. Visualization still uses the same OpenRouter account for
+VLM scoring via `z-ai/glm-4.6v`. Park Grok for a later competitive threshold; do not mix
+harness numbers.
 
 | Setting | Value |
 |---|---|
-| `tool_choice` | `auto` (Z.AI rejects `required`, same class as Muse Spark) |
 | Template / FM observation | `formula-patterns-v1` |
 | Debugging observation | `formula-anomalies-v1` (+ read-budget instrument) |
 | Execution | `formula-blocks-v1` |
 | Read policy | `progressive` |
-| Reasoning | `--reasoning-effort high` |
+| Reasoning | `--reasoning-effort low` |
 | Budget | `$2` / 12 calls / `--timeout 1200` |
+
+Next held-out: [`kimi-v1-five.json`](../benchmark/slices/kimi-v1-five.json). GLM slices
+[`glm-v4-five.json`](../benchmark/slices/glm-v4-five.json) and
+[`glm-v5-five.json`](../benchmark/slices/glm-v5-five.json) are exhausted **GLM** history.
+
+### GLM 5.3 history (retired lane)
 
 Write-gates passed on burned v3 tasks: `Template:05_01` (submitted, not exact) and
 `Financial_Model:05_01` (workbook produced; regression clamped `1.0`, modification `0.999`).

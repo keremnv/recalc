@@ -1,0 +1,19 @@
+{
+  "name": "kimi-v1-five",
+  "purpose": "Gold-blind K2.7 held-out after GLM retirement. Ids not in grok-v1/v2/v3, glm-v4/v5, write-gates, public examples, bridge A/B, or debug-read A/B. Go/no-go is workbook produced, not exact.",
+  "model": "moonshotai/kimi-k2.7-code",
+  "max_tool_calls_per_task": 12,
+  "isolation": {
+    "container": "official SpreadsheetBench 2 image",
+    "golden_data_available_to_agent": false,
+    "input_mount": "one exact workbook, read-only",
+    "output_mount": "one task-private directory, writable"
+  },
+  "tasks": [
+    {"category": "Template", "id": "03_02"},
+    {"category": "Template", "id": "04_03"},
+    {"category": "Financial_Model", "id": "03_02"},
+    {"category": "Financial_Model", "id": "04_01"},
+    {"category": "Debugging", "id": "06_02"}
+  ]
+}
