@@ -35,8 +35,12 @@ def generation_metrics(metadata: Iterable[dict[str, Any]]) -> dict[str, int | fl
     rows = list(metadata)
     return {
         "generation_records": len(rows),
-        "generation_cost_usd": sum(float(row.get("total_cost", row.get("usage", 0.0))) for row in rows),
-        "prompt_tokens": sum(int(row.get("native_tokens_prompt") or row.get("tokens_prompt") or 0) for row in rows),
+        "generation_cost_usd": sum(
+            float(row.get("total_cost", row.get("usage", 0.0))) for row in rows
+        ),
+        "prompt_tokens": sum(
+            int(row.get("native_tokens_prompt") or row.get("tokens_prompt") or 0) for row in rows
+        ),
         "completion_tokens": sum(
             int(row.get("native_tokens_completion") or row.get("tokens_completion") or 0)
             for row in rows
@@ -45,8 +49,7 @@ def generation_metrics(metadata: Iterable[dict[str, Any]]) -> dict[str, int | fl
         # Measure the cache hit rate instead of inferring it by dividing charged cost
         # by catalog price. Providers differ in which field they populate.
         "cached_prompt_tokens": sum(
-            int(row.get("native_tokens_cached") or row.get("cached_tokens") or 0)
-            for row in rows
+            int(row.get("native_tokens_cached") or row.get("cached_tokens") or 0) for row in rows
         ),
     }
 

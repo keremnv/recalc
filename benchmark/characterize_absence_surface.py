@@ -34,9 +34,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "benchmark-data/SpreadsheetBench-2/evaluation"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import evaluation as ev
 import openpyxl
+from xlsx_metadata_repair import install as _install_repair
+
+_install_repair()
 
 PEER_DISTANCE = 8
 
@@ -93,7 +97,11 @@ def analyse(task: dict, data_dir: Path) -> Counter:
             continue
         for cell in mod:
             counts["targets"] += 1
-            if ws_i[cell].value is not None:
+            # A cell is present if it holds anything at all -- a literal, or a formula that
+            # was never calculated. Many of these workbooks ship with no cached results, so
+            # testing the data_only workbook alone reports live formulas as absent and
+            # inflates the blank count by an order of magnitude.
+            if ws_i[cell].value is not None or ws_f[cell].value is not None:
                 counts["populated"] += 1
                 continue
             counts["blank"] += 1

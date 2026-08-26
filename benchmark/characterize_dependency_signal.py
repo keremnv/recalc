@@ -8,6 +8,7 @@ scored ranges), which is exactly why this uses their code.
 
 No model calls.
 """
+
 from __future__ import annotations
 
 import json
@@ -18,10 +19,14 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "benchmark-data/SpreadsheetBench-2/data/Debugging"
 sys.path.insert(0, str(ROOT / "benchmark-data/SpreadsheetBench-2/evaluation"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(ROOT / "src"))
 
 import evaluation as ev
 import openpyxl
+from xlsx_metadata_repair import install as _install_repair
+
+_install_repair()
 
 from librecalc_mcp.domain.formulas import formula_a1_references
 
@@ -112,8 +117,10 @@ def rank(task: dict):
 def main() -> int:
     tasks = json.loads((DATA / "dataset.json").read_text())
     only = sys.argv[1:] or None
-    print(f"{'task':8} {'defect':26} {'truth':>6} {'errs':>6} {'root':>6} "
-          f"{'ROOTp@20':>9} {'SHAPEp@20':>10} {'delta':>7}")
+    print(
+        f"{'task':8} {'defect':26} {'truth':>6} {'errs':>6} {'root':>6} "
+        f"{'ROOTp@20':>9} {'SHAPEp@20':>10} {'delta':>7}"
+    )
     print("-" * 88)
     for t in tasks:
         tid = t["id"]
@@ -127,12 +134,16 @@ def main() -> int:
             print(f"{tid:8} {defect[:26]:26} ERROR {type(exc).__name__}: {str(exc)[:40]}")
             continue
         if not errs:
-            print(f"{tid:8} {defect[:26]:26} {len(truth):>6} {0:>6} {0:>6}   (no errors: signal silent)")
+            print(
+                f"{tid:8} {defect[:26]:26} {len(truth):>6} {0:>6} {0:>6}   (no errors: signal silent)"
+            )
             continue
         rp = len([c for c in root_rank[:20] if c in truth]) / 20
         sp = len([c for c in shape_rank[:20] if c in truth]) / 20
-        print(f"{tid:8} {defect[:26]:26} {len(truth):>6} {len(errs):>6} {len(roots):>6} "
-              f"{rp:>9.2f} {sp:>10.2f} {rp - sp:>+7.2f}")
+        print(
+            f"{tid:8} {defect[:26]:26} {len(truth):>6} {len(errs):>6} {len(roots):>6} "
+            f"{rp:>9.2f} {sp:>10.2f} {rp - sp:>+7.2f}"
+        )
     return 0
 
 

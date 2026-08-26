@@ -15,6 +15,9 @@ from typing import Any
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_BENCHMARK_ROOT = PROJECT_ROOT / "benchmark-data" / "SpreadsheetBench-2"
 EVALUATION_SCRIPT = DEFAULT_BENCHMARK_ROOT / "evaluation" / "evaluation.py"
+# Invoked instead of EVALUATION_SCRIPT so that workbooks with malformed docProps metadata
+# (Financial_Model 06_01..06_05) can be scored at all. See benchmark/run_evaluation.py.
+EVALUATION_RUNNER = Path(__file__).resolve().parent / "run_evaluation.py"
 
 
 def _load_json(path: Path) -> Any:
@@ -65,7 +68,7 @@ def _evaluate_category(
 ) -> dict[str, Any]:
     command = [
         sys.executable,
-        str(EVALUATION_SCRIPT),
+        str(EVALUATION_RUNNER),
         "--model",
         model_name,
         "--dataset",
@@ -77,7 +80,10 @@ def _evaluate_category(
     if completed.returncode != 0:
         raise RuntimeError(f"evaluation failed for {category} with status {completed.returncode}")
     result_path = (
-        EVALUATION_SCRIPT.parent / "results" / category / f"{model_name}_{category}__regression.json"
+        EVALUATION_SCRIPT.parent
+        / "results"
+        / category
+        / f"{model_name}_{category}__regression.json"
     )
     return _load_json(result_path)
 
@@ -182,7 +188,9 @@ def main() -> int:
                 "exact": exact,
                 "scored": scored,
                 "tasks": {
-                    f"{task['category']}:{task['id']}": score_lookup.get(f"{task['category']}:{task['id']}")
+                    f"{task['category']}:{task['id']}": score_lookup.get(
+                        f"{task['category']}:{task['id']}"
+                    )
                     for task in tasks
                 },
             },

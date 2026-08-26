@@ -41,6 +41,8 @@ def _load_dotenv(path: Path = DEFAULT_ENV_FILE) -> None:
         value = value.strip().strip("'\"")
         if key and key not in os.environ:
             os.environ[key] = value
+
+
 DEFAULT_SWEAGENT_ROOT = DEFAULT_BENCHMARK_ROOT / "SWE-agent"
 DEFAULT_CONFIG = PROJECT_ROOT / "benchmark" / "sweagent" / "spreadsheet.yaml"
 DEFAULT_MODEL = "google/gemini-3.7-flash"
@@ -353,10 +355,10 @@ def _stage_tool_policy(
         bundle_config["path"] = str(bundle_path)
     instance_template = config["agent"]["templates"]["instance_template"]
 
-    strips_tools = (
-        read_policy in {"overview-only", "thin"}
-        or execution in {"formula-blocks-v1", "cell-writes-v1"}
-    )
+    strips_tools = read_policy in {"overview-only", "thin"} or execution in {
+        "formula-blocks-v1",
+        "cell-writes-v1",
+    }
     if strips_tools:
         bundle_source = Path(bundle_configs[0]["path"])
         # Bundle upload paths are derived from the directory basename. Keep the stable runtime
@@ -440,7 +442,9 @@ def _stage_tool_policy(
    a few surrounding rows or columns (reads over 96 cells are rejected). Never read a whole sheet,
    used range, or extra sheets after that. Then write."""
         if old_anomaly_guidance not in instance_template:
-            raise RuntimeError("Anomaly shortlist policy could not locate the progressive-read prompt")
+            raise RuntimeError(
+                "Anomaly shortlist policy could not locate the progressive-read prompt"
+            )
         instance_template = instance_template.replace(old_anomaly_guidance, new_anomaly_guidance)
         old_verify_guidance = """5. Compare input and output with calc_compare. Check that exact changes match the instruction;
    candidate gaps remain heuristic. Use focused reads only for a real unresolved ambiguity,
@@ -560,7 +564,9 @@ def _generation_metadata(api_key: str, generation_id: str) -> dict[str, Any]:
 
 
 def _safe_name(value: str) -> str:
-    cleaned = "".join(character if character.isalnum() or character in "-_." else "-" for character in value)
+    cleaned = "".join(
+        character if character.isalnum() or character in "-_." else "-" for character in value
+    )
     return cleaned.strip("-.")
 
 
@@ -643,7 +649,9 @@ def _run_task(
             observation=args.observation,
         )
         sweagent_overlay = _stage_sweagent_overlay(args.sweagent_root, temporary_root)
-        dataset_root = _stage_task(temporary_root / "dataset", args.benchmark_root, category, record)
+        dataset_root = _stage_task(
+            temporary_root / "dataset", args.benchmark_root, category, record
+        )
         work_root = args.sweagent_root
         previous_outputs = set(
             work_root.glob(f"trajectories/output_excel/{category}/**/{task_id}_output.xlsx")
@@ -695,9 +703,7 @@ def _run_task(
         environment = os.environ.copy()
         environment["OPENROUTER_API_KEY"] = api_key
         environment["PYTHONPATH"] = os.pathsep.join(
-            value
-            for value in (str(sweagent_overlay), environment.get("PYTHONPATH"))
-            if value
+            value for value in (str(sweagent_overlay), environment.get("PYTHONPATH")) if value
         )
         environment["SWE_AGENT_CONFIG_DIR"] = str(args.sweagent_root / "config")
         environment["SWE_AGENT_TOOLS_DIR"] = str(args.sweagent_root / "tools")

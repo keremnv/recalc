@@ -186,7 +186,9 @@ def main(argv: list[str]) -> int:
 
     if command == "compare" and len(args) == 2:
         before_path, after_path = args
-        before = _observation()[0].workbook_observation(backend, before_path, "semantic-snapshot-v2")
+        before = _observation()[0].workbook_observation(
+            backend, before_path, "semantic-snapshot-v2"
+        )
         after = _observation()[0].workbook_observation(backend, after_path, "semantic-snapshot-v2")
         _emit(_observation()[1].semantic_diff(before, after))
         return 0
@@ -237,7 +239,9 @@ def main(argv: list[str]) -> int:
 
         results = backend.read_ranges(valid_requests, path=path) if valid_requests else []
         variant = os.environ.get("LIBRECALC_OBSERVATION_VARIANT", "grid-v1")
-        for index, (request, result) in zip(valid_indexes, zip(valid_requests, results, strict=True)):
+        for index, (request, result) in zip(
+            valid_indexes, zip(valid_requests, results, strict=True)
+        ):
             sheet, cell_range = request
             observation = _observation()[0].format_read_observation(
                 result,

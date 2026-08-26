@@ -31,10 +31,14 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "benchmark-data/SpreadsheetBench-2/evaluation"))
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(ROOT / "src"))
 
 import evaluation as ev
 import openpyxl
+from xlsx_metadata_repair import install as _install_repair
+
+_install_repair()
 
 from librecalc_mcp.domain.formulas import formula_a1_references
 from librecalc_mcp.domain.grid import column_label, column_number
@@ -114,12 +118,17 @@ def analyse(task: dict, data_dir: Path) -> Counter:
         if not mod:
             continue
         ws_i = ev._find_sheet(wb_i, sheet_name)
-        if ws_i is None:
+        ws_raw = ev._find_sheet(formulas, sheet_name)
+        if ws_i is None or ws_raw is None:
             continue
         resolved = ws_i.title
         for cell in mod:
             counts["targets"] += 1
-            if ws_i[cell].value is not None:
+            # A cell is present if it holds anything at all -- a literal, or a formula that
+            # was never calculated. Many of these workbooks ship with no cached results, so
+            # testing the data_only workbook alone reports live formulas as absent and
+            # inflates the blank count by an order of magnitude.
+            if ws_i[cell].value is not None or ws_raw[cell].value is not None:
                 counts["populated"] += 1
                 continue
             counts["blank"] += 1

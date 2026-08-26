@@ -118,8 +118,7 @@ def _resume_details(trace_directory: Path, max_tool_calls: int) -> tuple[str, in
     if session_id is None:
         raise ValueError("No Cursor session id was found in the traces")
     used_calls = sum(
-        event.get("type") == "tool_call" and event.get("subtype") == "started"
-        for event in events
+        event.get("type") == "tool_call" and event.get("subtype") == "started" for event in events
     )
     remaining_calls = max_tool_calls - used_calls
     if remaining_calls <= 0:
@@ -191,7 +190,9 @@ def _run_task(
     if output_path.exists():
         raise FileExistsError(f"Refusing to overwrite an existing result: {output_path}")
     if private_output_path.exists() and not args.resume:
-        raise FileExistsError(f"Refusing to reuse an existing private output: {private_output_path}")
+        raise FileExistsError(
+            f"Refusing to reuse an existing private output: {private_output_path}"
+        )
 
     max_tool_calls = slice_data["max_tool_calls_per_task"]
     call_limit_for_attempt = max_tool_calls
@@ -267,7 +268,7 @@ def _run_task(
             "command -v calc_inspect >/dev/null && "
             "exec /opt/cursor/cursor-agent --print --output-format stream-json "
             f"--model {model} {resume_option}--force --sandbox disabled --trust "
-            "--workspace /work \"$0\""
+            '--workspace /work "$0"'
         ),
         prompt,
     ]
