@@ -635,3 +635,46 @@ exceeded ~15%, the B-to-C delta.
 
 Caveat: one task, one model, one seed. Do not quote these as benchmark performance. Extend with
 `ablation-three` before drawing a general conclusion.
+
+## Rejected: dependency root-error ranking
+
+Prototyped and characterised offline, then rejected as an automatic selector — the same
+outcome, and the same protocol, as the `Financial_Model:09_04` table-corner signal.
+
+The idea: `observation.py` already builds a full bidirectional dependency graph
+(`direct_dependencies` / `reverse_dependencies`) to compute blank-dependency bridges, then
+discards it. Calculated errors propagate along that graph, so an error cell is either a
+*root* (no erroring precedent) or *inherited*. Ranking roots by blast radius should beat
+ranking error cells by repeated formula shape, which is what `formula-anomalies-v1` ships.
+
+Characterised over all 100 Debugging tasks with
+[`benchmark/characterize_dependency_signal.py`](../benchmark/characterize_dependency_signal.py).
+Ground truth is the official evaluator's own `classify_cells_by_modification` restricted to
+each task's `answer_position`, not a reimplementation — two earlier hand-rolled definitions
+were both wrong (openpyxl `ArrayFormula` compares by identity, so every array cell looked
+modified: 30,868 false positives on `10_02` against a true set of 47; and diffing outside the
+scored ranges gave 11,966). Validated by reproducing the documented 47-cell modification set
+for `Debugging:10_02`.
+
+| | root ranking | shipped shape ranking |
+|---|---:|---:|
+| mean precision@20 | 0.321 | 0.314 |
+| mean delta | **+0.007** | |
+| better / tied / worse | 6 / 31 / 9 | |
+| signal silent | 54 of 100 tasks | |
+
+More tasks are made worse than better. Conditional slices are positive but thin: Errors class
+only `+0.075` (n=10), tasks where over half the errors are inherited `+0.067` (n=21). It does
+win clearly on a few — `08_03` `0.95` vs `0.70`, `05_03` `0.65` vs `0.30`, `06_03` `0.85` vs
+`0.55` — but a mean gain of `+0.007` across the category does not justify a new ranked signal.
+
+**Do not ship root-error ranking.** Keep the finding, keep the tool, and keep the graph: the
+rejection is of one heuristic over the dependency structure, not of the structure itself.
+
+The read-side evidence points elsewhere. `Valuation!G59` on `Financial_Model:09_04` has now
+been missed identically by two different models (Kimi K2.7 in the record, GLM 5.3 on
+2026-08-26), both leaving it blank, both scoring modification `0.9981` with that single cell
+outstanding. `Working Capital Schedule!G4` on `Financial_Model:01_03` is the same class. Both
+are meaningful absences — blank cells that should carry a formula — which section 9.1 already
+names as first-class. That, not error-root ranking, is where a dependency-backed signal should
+be aimed, and Financial Model is where a one-cell gain converts a near miss into an exact.
