@@ -591,3 +591,47 @@ uv run python benchmark/run_openrouter_slice.py \
 **Harness note:** `.env` at repo root supplies `OPENROUTER_API_KEY` (gitignored). GLM requires
 `tool_choice=auto`; enforced in `benchmark/run_openrouter_slice.py`.
 
+
+## Interface ablation — first result (canary)
+
+The comparison PROJECT_CONTEXT section 28 calls the reason to build this had never been run.
+One task, three arms, identical model (`z-ai/glm-5.3`, high reasoning), identical `$0.50` cap and
+40-call ceiling. `Template:02_05` is burned development data; that is deliberate and does not
+invalidate the experiment, because contamination is symmetric across arms. Arm C reproduced the
+known K2.5 anchor on this task, so the harness is validated.
+
+| arm | observation / write surface | exact | reg | mod | charged | calls | prompt tok | sec |
+|---|---|---|---:|---:|---:|---:|---:|---:|
+| A thin | `grid-v1`, `calc_write` only, no batched reads, no compare | no | 0.6414 | 0.0000 | `$0.0771` | 8 | 32,564 | 352 |
+| B semantic | `formula-patterns-v1` + `calc_read_ranges` + `calc_compare`, `calc_write` only | no | 1.0000 | 0.8500 | `$0.0630` | 14 | 83,539 | 621 |
+| C semantic+program | same observation, `calc_fill_formulas` | **yes** | 1.0000 | 1.0000 | **`$0.0306`** | 7 | 28,111 | 144 |
+
+Monotone in exactness, cost, and time. The two deltas do different work:
+
+**A to B — the read side prevents damage.** Arm A issued one dense `calc_write` over `B5:E35`, a
+31x4 rectangle. A rectangular write forces the agent to restate cells it does not intend to change,
+so a single row offset put `450` into the label `Cash Available for Debt Repayment`; regression fell
+to 0.6414, meaning the run was net-negative on cells that were already correct. Arm B targeted five
+precise blocks in columns C:F and never touched the label column. That targeting happened at step 5,
+before its first `calc_compare`, so it is attributable to the observation and not to verification.
+Verification then did separate work: compare at step 10 triggered a re-read and a repair write.
+Arm A read its own output back twice and still submitted the damage, because it had no semantic
+diff to tell it a label had changed.
+
+**B to C — program execution buys efficiency and completeness.** Same observation, same targets.
+The thin write surface cost five writes plus a repair; `calc_fill_formulas` expressed the same edit
+in one call. Calls 14 to 7, cost 2.1x, wall time 4.3x, and the residual 15% of modification cells
+closed.
+
+The cost mechanism is generation, not round trips. Arm A used *fewer* calls than B and *smaller*
+observations than C (7,605 vs 10,613 chars of total observation), but 13,810 completion tokens
+against C's 3,211, because the write action had to enumerate 124 cells. Completion tokens bill at
+roughly 3x prompt tokens. This predicts the gap widens with task size; `ablation-three` tests that
+on `Financial_Model:09_04`.
+
+This aligns with the published failure taxonomy for Opus 4.6 on this benchmark (arXiv 2606.29955):
+insufficient inspection ~35% and wrong target selection ~28% — the A-to-B delta — plus turn limit
+exceeded ~15%, the B-to-C delta.
+
+Caveat: one task, one model, one seed. Do not quote these as benchmark performance. Extend with
+`ablation-three` before drawing a general conclusion.
