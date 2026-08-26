@@ -10,11 +10,13 @@ readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
   "mcp[cli]>=2,<3",
+  "openai>=3.3.1",
 ]
 
 [project.optional-dependencies]
 dev = [
   "pytest>=8",
+  "pyyaml>=6",
   "ruff>=0.6",
 ]
 
@@ -25,8 +27,11 @@ librecalc-mcp = "librecalc_mcp.server:main"
 packages = ["src/librecalc_mcp"]
 
 [tool.pytest.ini_options]
-pythonpath = ["src"]
+pythonpath = ["src", "."]
 testpaths = ["tests"]
+markers = [
+  "uno: integration tests requiring a running LibreOffice UNO service",
+]
 
 [tool.ruff]
 line-length = 100
