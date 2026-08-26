@@ -111,8 +111,19 @@ If that holds, a 15-task confirmation, then the ~297. Serial wall clock is ~8–
 (~40–75 h) and ~$0.07–0.20/task (~$20–60) at current K2.7 rates; the runner must resume on
 failure. Do not quote a full-bench exact % until that run exists.
 
-**Next:** run `kimi-v1-five.json`. Do not start the 297. Do not rerun GLM. Viz remains a
-separate lane.
+**K2.7 v1-five result (2026-08-26).** `kimi-k2.7-v1-five-low-1`: **3/5 workbooks**, ~$0.44.
+Gate was 5/5 writes. **Do not start `kimi-v2-fifteen` or the 297.**
+
+| task | workbook | cost | notes |
+|---|---|---:|---|
+| Template:03_02 | no | $0.060 | format-exit after inspect/read; empty completions |
+| Template:04_03 | yes | $0.074 | |
+| Financial_Model:03_02 | yes | $0.114 | |
+| Financial_Model:04_01 | no | $0.122 | 12/12 calls, inspect then reads, no write |
+| Debugging:06_02 | yes | $0.070 | |
+
+K2.7 still no-writes on some Template/FM tasks. That is a compiler write-rate, not a missing
+primitive. Do not raise limits. Do not mix this with the GLM 10-task sample.
 
 **Leave `Debugging:08_03`.** Bounded reads, inspect-error representatives, and capped neighboring
 context are in the world and work. The inspect-dense canary still produced no workbook: K2.7
