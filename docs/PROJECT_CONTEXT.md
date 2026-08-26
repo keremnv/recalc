@@ -56,6 +56,19 @@ bridge bounded. Next experiment is a same-model A/B with vs without that shipped
 `LIBRECALC_BLANK_BRIDGES=0` / `--no-blank-bridges`, slice `benchmark/slices/bridge-ab-two.json`
 (`01_03` where G4 is rank-1, `09_04` where bridges fire but G59 is not among them). GLM 5.3.
 
+**Bridge A/B result (GLM 5.3, one seed, 2026-08-26).** Both arms wrote workbooks. Official scores:
+
+| arm | 01_03 | 09_04 | cost |
+|---|---|---|---:|
+| on (`…-high-2`) | reg 1.0 / mod **0.5909** | reg 1.0 / mod 0.9981, first miss `Valuation!G59` | $0.323 |
+| off (`…-high-2`) | reg 1.0 / mod **0.1579** | reg 1.0 / mod 0.9981, first miss `Valuation!G59` | $0.132 |
+
+`Working Capital Schedule!G4` and `Valuation!G59` stayed blank on **both** arms. The 09_04
+near-miss is identical with or without the signal. The 01_03 modification gap is other work,
+not G4, and is one seed — do not treat it as proof the bridge helps. Keep the shipped bridge
+bounded and on; do not expand absence detectors off this A/B. Next designed experiment remains
+the Debugging no-write / read-policy ablation.
+
 **Leave `Debugging:08_03`.** Bounded reads, inspect-error representatives, and capped neighboring
 context are in the world and work. The inspect-dense canary still produced no workbook: K2.7
 immediately returned to whole-region dumps, shrank one rejected range at a time for all eleven
