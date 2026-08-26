@@ -42,6 +42,12 @@ def generation_metrics(metadata: Iterable[dict[str, Any]]) -> dict[str, int | fl
             for row in rows
         ),
         "reasoning_tokens": sum(int(row.get("native_tokens_reasoning") or 0) for row in rows),
+        # Measure the cache hit rate instead of inferring it by dividing charged cost
+        # by catalog price. Providers differ in which field they populate.
+        "cached_prompt_tokens": sum(
+            int(row.get("native_tokens_cached") or row.get("cached_tokens") or 0)
+            for row in rows
+        ),
     }
 
 

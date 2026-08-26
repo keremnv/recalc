@@ -56,7 +56,12 @@ def test_generation_ids_and_authoritative_usage(tmp_path) -> None:
                 "native_tokens_reasoning": 5,
                 "total_cost": 0.001,
             },
-            {"tokens_prompt": 40, "tokens_completion": 10, "usage": 0.002},
+            {
+                "tokens_prompt": 40,
+                "tokens_completion": 10,
+                "usage": 0.002,
+                "native_tokens_cached": 32,
+            },
         ]
     ) == {
         "generation_records": 2,
@@ -64,6 +69,8 @@ def test_generation_ids_and_authoritative_usage(tmp_path) -> None:
         "prompt_tokens": 140,
         "completion_tokens": 30,
         "reasoning_tokens": 5,
+        # Cache hits are measured, not inferred from charged-vs-catalog price.
+        "cached_prompt_tokens": 32,
     }
 
 

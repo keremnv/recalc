@@ -49,6 +49,13 @@ agent:
       Output: {{output_path}}
       </instructions>
 
+    history_processors:
+      # Anthropic and Gemini require explicit cache breakpoints; Z.ai/GLM caches
+      # provider-side and ignores these. A no-op for the current lane, but without it
+      # a strong-model comparison would silently pay full price on every re-sent turn.
+      - type: cache_control
+        last_n_messages: 2
+
     next_step_template: |-
       Observation:
       {{observation}}
