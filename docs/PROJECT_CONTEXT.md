@@ -66,10 +66,23 @@ bridge bounded. Next experiment is a same-model A/B with vs without that shipped
 `Working Capital Schedule!G4` and `Valuation!G59` stayed blank on **both** arms. The 09_04
 near-miss is identical with or without the signal. The 01_03 modification gap is other work,
 not G4, and is one seed — do not treat it as proof the bridge helps. Keep the shipped bridge
-bounded and on; do not expand absence detectors off this A/B. Next designed experiment is the
-Debugging no-write / read-policy ablation: `LIBRECALC_READ_BUDGET_ENABLED=0` / `--no-read-budget`,
-slice `benchmark/slices/debug-read-ab-two.json` (`06_01` Double Counting, `09_06` Incorrect Cross
-Sheet References). GLM 5.3. Success is workbook produced, not exact score. Do not rerun `08_03`.
+bounded and on; do not expand absence detectors off this A/B.
+
+**Debugging read-budget A/B result (GLM 5.3, one seed, 2026-08-26).** Slice
+`debug-read-ab-two.json` (`06_01` Double Counting, `09_06` Incorrect Cross Sheet References).
+Success was workbook produced. **0/4 workbooks.**
+
+| arm | 06_01 | 09_06 | cost |
+|---|---|---|---:|
+| on (`…-high-1`) | no workbook, 6 calls; gate fired after one successful read | no workbook, 10 calls; gate fired | $0.248 |
+| off (`…-high-1`) | no workbook, 12/12 calls, inspect then 11 reads | no workbook, 6 calls | $0.265 |
+
+The write-now error did fire on both on-arm tasks. The compiler then format/blocklist-errored and
+autosubmitted instead of calling `calc_fill_formulas`. Off-arm `06_01` is the inspect-forever
+control (call cap, still no write). Do not raise `--call-limit` or `--max-tokens`. Do not mint a
+write tool. Keep the read budget a measuring instrument, default on for `formula-anomalies-v1`;
+it does not convert GLM confirm-then-write misses into workbooks. Do not rerun `08_03` or this
+slice. Do not change default observation off this A/B.
 
 **Leave `Debugging:08_03`.** Bounded reads, inspect-error representatives, and capped neighboring
 context are in the world and work. The inspect-dense canary still produced no workbook: K2.7
