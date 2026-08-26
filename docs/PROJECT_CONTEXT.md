@@ -84,6 +84,13 @@ write tool. Keep the read budget a measuring instrument, default on for `formula
 it does not convert GLM confirm-then-write misses into workbooks. Do not rerun `08_03` or this
 slice. Do not change default observation off this A/B.
 
+**K2.7 `06_01` canary (same frozen Debugging interface, read-budget on, 2026-08-26).**
+`kimi-k2.7-debug-06_01-readbudget-on-low-1`: **workbook produced**, `$0.068`, 8 calls. The write-now
+gate fired after one successful read; K2.7 then called `calc_fill_formulas` (twice) and `calc_compare`.
+Same world, same task, GLM format-exited with empty completions. This is a compiler write-discipline
+gap, not a missing primitive. Do not rerun `09_06` on K2.7 (already measured as `04_06`). Do not
+raise limits.
+
 **Leave `Debugging:08_03`.** Bounded reads, inspect-error representatives, and capped neighboring
 context are in the world and work. The inspect-dense canary still produced no workbook: K2.7
 immediately returned to whole-region dumps, shrank one rejected range at a time for all eleven
