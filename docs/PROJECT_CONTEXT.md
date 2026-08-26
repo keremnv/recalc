@@ -11,6 +11,31 @@
 This section is the operator brief. Read `AGENTS.md` next. Sections below this are background;
 if they conflict with §0, §0 wins.
 
+**Mismatch census (2026-08-26).** The evaluator's first-error inventory cannot support a
+percentage claim about all wrong cells. `benchmark/mismatch_census.py` now replays official
+cell comparisons over every scored range, then classifies each mismatch on the audited
+direct/downstream axis. Across 24 valid stored OpenRouter attempts (6 official exact; the
+contaminated `glm-5.3-v4-five-high-1` / `Template:01_04` copy excluded): **345** mismatch
+occurrences, **0/24** score-replay disagreements.
+
+Causal mix of those 345 cells:
+
+| class | n | share |
+|---|---:|---:|
+| downstream cascade at unchanged formula | 117 | 33.9% |
+| direct blank target: wrong edit | 94 | 27.2% |
+| regression cell over-edited | 79 | 22.9% |
+| direct blank target: unchanged | 20 | 5.8% |
+| direct populated target: unchanged | 19 | 5.5% |
+| dynamic-only regression cell over-edited | 16 | 4.6% |
+
+Never-filled blanks are a real class and include the known `Valuation!G59` miss on all three
+`09_04` ablation outputs plus `Working Capital Schedule!M3` on v5 `01_02`. They are **not**
+the bulk of stored misses. Absence detection can address only the 5.8% never-filled slice;
+wrong writes on blank targets are ~5× larger. Do not treat the 70.6% “direct FM targets are
+blank” gold-side figure as the miss mix. Next unpaid experiment remains offline blank-candidate
+ranking, now with this census as the denominator.
+
 **Leave `Debugging:08_03`.** Bounded reads, inspect-error representatives, and capped neighboring
 context are in the world and work. The inspect-dense canary still produced no workbook: K2.7
 immediately returned to whole-region dumps, shrank one rejected range at a time for all eleven
@@ -136,6 +161,8 @@ offline gold can measure candidate quality but cannot measure distraction cost.
 The miss inventory is also narrower than its original name implied. The evaluator stores only the
 first error for each non-exact task, so `benchmark/inventory_misses.py` inventories first-error
 signatures, not all wrong cells. It cannot support a percentage claim about all cell-level misses.
+The full-cell census is `benchmark/mismatch_census.py` (see §0). Known-invalid harness attempts are
+listed in `benchmark/experiment_validity.py` and excluded from both aggregates.
 `Template:02_05!E35` is diagnosed: GLM explicitly chose to accumulate surplus cash after debt was
 repaid, contrary to the instruction's “exactly” requirement; successful runs link ending cash to
 the operating cash requirement. Context, execution, and verification were available, so this is a

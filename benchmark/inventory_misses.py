@@ -33,6 +33,7 @@ sys.path.insert(0, str(ROOT / "benchmark-data/SpreadsheetBench-2/evaluation"))
 
 import evaluation as ev
 import openpyxl
+from experiment_validity import invalid_reason
 from xlsx_metadata_repair import install
 
 install()
@@ -67,7 +68,6 @@ DIAGNOSED = {
         "wrote the precedent's value as a literal (=(-0.595*...)) where the golden keeps "
         "the reference (=(-J52*J19)); numerically equal today, wrong on recalculation"
     ),
-    ("Template:01_04", ""): "required worksheet OID_Bond was never created",
     ("Template:02_05", "DebtWaterfall!E35"): (
         "GLM chose to accumulate excess cash after debt reached zero, despite the instruction "
         "requiring ending cash to equal the operating cash requirement exactly; successful "
@@ -157,7 +157,10 @@ def main() -> int:
         RUNS.glob("*/official_scores.json")
     ):
         scores = json.loads(path.read_text())
+        run_name = str(scores.get("run_name") or path.parent.name)
         for key, task in scores.get("tasks", {}).items():
+            if invalid_reason(run_name, key):
+                continue
             if task.get("accuracy") == 1.0:
                 exact += 1
                 continue
