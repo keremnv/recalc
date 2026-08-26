@@ -1,16 +1,48 @@
 from __future__ import annotations
 
+from collections.abc import Iterator
+from contextlib import contextmanager
 from typing import Any
 
 from librecalc_mcp.domain.charts import (
     MIN_CHART_HEIGHT_HMM,
     MIN_CHART_WIDTH_HMM,
+    NATIVE_UNO_CHART_TYPES,
     ChartAxisSpec,
     ChartSpec,
     ChartType,
-    NATIVE_UNO_CHART_TYPES,
     chart_compile_note,
 )
+
+
+class _ApplyLog:
+    """Records which ChartSpec fields actually reached LibreOffice.
+
+    UNO property support varies by diagram type and by version, so applying a chart
+    field is a probe rather than a guarantee. Swallowing those failures silently makes
+    an agent that under-specified a chart indistinguishable from a world that dropped
+    what the agent did specify -- the two have opposite fixes. Every probe is recorded.
+    """
+
+    def __init__(self) -> None:
+        self.applied: list[str] = []
+        self.dropped: list[str] = []
+
+    def record(self, feature: str, ok: bool, detail: str = "") -> None:
+        if ok:
+            self.applied.append(feature)
+        else:
+            self.dropped.append(f"{feature} ({detail})" if detail else feature)
+
+    @contextmanager
+    def probe(self, feature: str, *, record_success: bool = True) -> Iterator[None]:
+        try:
+            yield
+        except Exception as exc:
+            self.record(feature, False, type(exc).__name__)
+        else:
+            if record_success:
+                self.record(feature, True)
 
 
 def _column_index(label: str) -> int:
@@ -132,23 +164,20 @@ def _parse_rgb(color: str | None) -> int | None:
     if len(text) == 6:
         return int(text, 16)
     if len(text) == 8:
-        return int(text[2:], 16)
+        # 8 hex digits are ARGB; drop the alpha pair (not an 0x prefix).
+        return int(text[2:], 16)  # noqa: FURB166
     return None
 
 
-def _apply_diagram_type(chart_doc: Any, chart_type: ChartType) -> None:
+def _apply_diagram_type(chart_doc: Any, chart_type: ChartType, log: _ApplyLog) -> None:
     service = _diagram_service_name(chart_type)
     diagram = chart_doc.createInstance(service)
     if chart_type in {"bar", "stacked_bar"}:
-        try:
+        with log.probe("orientation.horizontal"):
             diagram.Vertical = False
-        except Exception:
-            pass
     if chart_type in {"stacked_column", "stacked_bar"}:
-        try:
+        with log.probe("stacked"):
             diagram.Stacked = True
-        except Exception:
-            pass
     chart_doc.setDiagram(diagram)
 
 
@@ -157,6 +186,7 @@ def _apply_axis(
     axis_name: str,
     axis: ChartAxisSpec | None,
     fallback_title: str | None,
+    log: _ApplyLog,
 ) -> None:
     if axis is None and not fallback_title:
         return
@@ -167,71 +197,71 @@ def _apply_axis(
     has_attr = f"Has{axis_name}Title"
     title_attr = f"{axis_name}Title"
     if title:
-        try:
+        feature = f"{axis_name.lower()}.title"
+        applied = False
+        with log.probe(feature, record_success=False):
             if hasattr(diagram, has_attr):
                 setattr(diagram, has_attr, True)
             title_shape = getattr(diagram, title_attr, None)
             if title_shape is not None and hasattr(title_shape, "String"):
                 title_shape.String = str(title)
-        except Exception:
-            pass
-        try:
-            uno_axis = getattr(diagram, axis_name)
-            if hasattr(uno_axis, "DisplayTitle"):
-                uno_axis.DisplayTitle = True
-            axis_title = getattr(uno_axis, "Title", None) or getattr(uno_axis, "AxisTitle", None)
-            if axis_title is not None and hasattr(axis_title, "String"):
-                axis_title.String = str(title)
-        except Exception:
-            pass
+                # Read back: setting String is accepted on shapes that never render.
+                applied = str(getattr(title_shape, "String", "")) == str(title)
+        if not applied:
+            with log.probe(f"{feature}.displaytitle", record_success=False):
+                uno_axis = getattr(diagram, axis_name)
+                if hasattr(uno_axis, "DisplayTitle"):
+                    uno_axis.DisplayTitle = True
+                axis_title = getattr(uno_axis, "Title", None) or getattr(
+                    uno_axis, "AxisTitle", None
+                )
+                if axis_title is not None and hasattr(axis_title, "String"):
+                    axis_title.String = str(title)
+                    applied = str(getattr(axis_title, "String", "")) == str(title)
+        log.record(feature, applied, "" if applied else "not accepted by diagram")
 
     if axis is None:
         return
     try:
         uno_axis = getattr(diagram, axis_name)
-    except Exception:
+    except Exception as exc:
+        log.record(f"{axis_name.lower()}.scale", False, type(exc).__name__)
         return
     if axis.min is not None:
-        try:
+        with log.probe(f"{axis_name.lower()}.min"):
             uno_axis.AutoMin = False
             uno_axis.Min = float(axis.min)
-        except Exception:
-            pass
     if axis.max is not None:
-        try:
+        with log.probe(f"{axis_name.lower()}.max"):
             uno_axis.AutoMax = False
             uno_axis.Max = float(axis.max)
-        except Exception:
-            pass
     if axis.label_rotation is not None:
-        try:
+        with log.probe(f"{axis_name.lower()}.label_rotation"):
             uno_axis.TextRotation = int(axis.label_rotation) * 100
-        except Exception:
-            pass
 
 
-def _set_series_data_labels(data_row: Any, *, enabled: bool) -> None:
+def _set_series_data_labels(data_row: Any, index: int, *, enabled: bool, log: _ApplyLog) -> None:
     if not enabled:
         return
-    try:
+    with log.probe(f"series[{index}].data_labels.caption"):
         # ChartDataCaption flags: VALUE=1, PERCENT=2, TEXT=4 (category name).
         data_row.DataCaption = 4  # TEXT / category
-    except Exception:
-        pass
-    try:
+    with log.probe(f"series[{index}].data_labels.category", record_success=False):
         label = getattr(data_row, "Label", None)
         if label is not None and hasattr(label, "ShowCategoryName"):
             label.ShowCategoryName = True
             if hasattr(data_row, "Label"):
                 data_row.Label = label
-    except Exception:
-        pass
+            log.record(f"series[{index}].data_labels.category", True)
 
 
-def _apply_point_styles_chart2(chart_doc: Any, spec: ChartSpec) -> None:
+def _apply_point_styles_chart2(chart_doc: Any, spec: ChartSpec, log: _ApplyLog) -> None:
     """Per-point FillColor / category labels via Chart2 when available."""
+    wants_points = any(series.point_colors for series in spec.series)
     try:
         if not chart_doc.supportsService("com.sun.star.chart2.ChartDocument"):
+            if wants_points:
+                log.record("point_colors.chart2", False, "no chart2 service")
             return
         diagram2 = chart_doc.getFirstDiagram()
         coordinate_systems = diagram2.getCoordinateSystems()
@@ -241,7 +271,9 @@ def _apply_point_styles_chart2(chart_doc: Any, spec: ChartSpec) -> None:
         if not chart_types:
             return
         data_series_list = chart_types[0].getDataSeries()
-    except Exception:
+    except Exception as exc:
+        if wants_points:
+            log.record("point_colors.chart2", False, type(exc).__name__)
         return
 
     for series_index, series in enumerate(spec.series):
@@ -249,29 +281,27 @@ def _apply_point_styles_chart2(chart_doc: Any, spec: ChartSpec) -> None:
             break
         data_series = data_series_list[series_index]
         if spec.data_labels:
-            try:
+            with log.probe(f"series[{series_index}].data_labels.chart2"):
                 label = data_series.Label
                 label.ShowCategoryName = True
                 data_series.Label = label
-            except Exception:
-                pass
         colors = series.point_colors or ()
         for point_index, color in enumerate(colors):
+            feature = f"series[{series_index}].point_colors[{point_index}]"
             rgb = _parse_rgb(color)
             if rgb is None:
+                log.record(feature, False, f"unparsable color {color!r}")
                 continue
-            try:
+            with log.probe(feature, record_success=False):
                 point = data_series.getDataPointByIndex(point_index)
                 if point is None:
+                    log.record(feature, False, "no such data point")
                     continue
                 point.FillColor = rgb
                 if hasattr(point, "Color"):
-                    try:
+                    with log.probe(f"{feature}.line", record_success=False):
                         point.Color = rgb
-                    except Exception:
-                        pass
-            except Exception:
-                continue
+                log.record(feature, True)
         if spec.data_labels:
             # Ensure labels visible even when only some points are recolored.
             for point_index in range(len(colors) or 32):
@@ -282,11 +312,17 @@ def _apply_point_styles_chart2(chart_doc: Any, spec: ChartSpec) -> None:
                     label = point.Label
                     label.ShowCategoryName = True
                     point.Label = label
-                except Exception:
+                except Exception as exc:
+                    if point_index == 0:
+                        log.record(
+                            f"series[{series_index}].data_labels.per_point",
+                            False,
+                            type(exc).__name__,
+                        )
                     break
 
 
-def _apply_point_styles_chart1(diagram: Any, spec: ChartSpec) -> None:
+def _apply_point_styles_chart1(diagram: Any, spec: ChartSpec, log: _ApplyLog) -> None:
     """Fallback: old Chart1 getDataPointProperties(category, series)."""
     for series_index, series in enumerate(spec.series):
         colors = series.point_colors or ()
@@ -294,36 +330,49 @@ def _apply_point_styles_chart1(diagram: Any, spec: ChartSpec) -> None:
             rgb = _parse_rgb(color)
             if rgb is None:
                 continue
-            try:
+            with log.probe(
+                f"series[{series_index}].point_colors[{point_index}].chart1",
+                record_success=False,
+            ):
                 point = diagram.getDataPointProperties(point_index, series_index)
                 point.FillColor = rgb
-            except Exception:
-                continue
 
 
-def _apply_series_styles(diagram: Any, spec: ChartSpec, *, chart_doc: Any | None = None) -> None:
+def _apply_series_styles(
+    diagram: Any,
+    spec: ChartSpec,
+    log: _ApplyLog,
+    *,
+    chart_doc: Any | None = None,
+) -> None:
     for index, series in enumerate(spec.series):
         try:
             data_row = diagram.getDataRowProperties(index)
-        except Exception:
+        except Exception as exc:
+            log.record(f"series[{index}]", False, type(exc).__name__)
             continue
         if series.name:
-            try:
+            with log.probe(f"series[{index}].name"):
                 data_row.CustomLabel = series.name
-            except Exception:
-                pass
         rgb = _parse_rgb(series.color)
         if rgb is not None:
+            applied_attrs = []
             for attr in ("FillColor", "Color", "LineColor"):
                 try:
                     setattr(data_row, attr, rgb)
                 except Exception:
-                    pass
-        _set_series_data_labels(data_row, enabled=spec.data_labels)
+                    continue
+                applied_attrs.append(attr)
+            log.record(
+                f"series[{index}].color",
+                bool(applied_attrs),
+                "" if applied_attrs else "no color property accepted",
+            )
+        _set_series_data_labels(data_row, index, enabled=spec.data_labels, log=log)
 
-    _apply_point_styles_chart1(diagram, spec)
+    _apply_point_styles_chart1(diagram, spec, log)
     if chart_doc is not None:
-        _apply_point_styles_chart2(chart_doc, spec)
+        _apply_point_styles_chart2(chart_doc, spec, log)
 
 def inspect_charts_from_document(doc: Any) -> list[dict[str, object]]:
     charts: list[dict[str, object]] = []
@@ -403,43 +452,42 @@ def upsert_chart_on_sheet(
         (name for name in created_names if name not in existing_names),
         created_names[-1] if created_names else spec.id,
     )
+    log = _ApplyLog()
     if created_id != spec.id:
-        try:
+        with log.probe("id.rename", record_success=False):
             charts.getByName(created_id).Name = spec.id
             created_id = spec.id
-        except Exception:
-            pass
 
     chart = charts.getByName(created_id)
     chart_doc = chart.getEmbeddedObject() if hasattr(chart, "getEmbeddedObject") else chart
-    try:
-        _apply_diagram_type(chart_doc, spec.chart_type)
-    except Exception:
-        pass
+    with log.probe("chart_type"):
+        _apply_diagram_type(chart_doc, spec.chart_type, log)
 
     if spec.title:
-        try:
+        with log.probe("title", record_success=False):
             if hasattr(chart_doc, "HasMainTitle"):
                 chart_doc.HasMainTitle = True
             title = getattr(chart_doc, "Title", None)
             if title is not None and hasattr(title, "String"):
                 title.String = spec.title
-        except Exception:
-            pass
-    try:
+            log.record("title", str(getattr(title, "String", "")) == str(spec.title))
+    with log.probe("legend"):
         if hasattr(chart_doc, "HasLegend"):
             chart_doc.HasLegend = spec.legend
         elif hasattr(chart, "HasLegend"):
             chart.HasLegend = spec.legend
-    except Exception:
-        pass
 
     try:
         diagram = chart_doc.getDiagram()
-        _apply_axis(diagram, "XAxis", spec.category_axis, spec.primary_axis_title)
-        _apply_axis(diagram, "YAxis", spec.value_axis, None)
+    except Exception as exc:
+        log.record("diagram", False, type(exc).__name__)
+        diagram = None
+    if diagram is not None:
+        _apply_axis(diagram, "XAxis", spec.category_axis, spec.primary_axis_title, log)
+        _apply_axis(diagram, "YAxis", spec.value_axis, None, log)
         if spec.secondary_axis_title:
-            try:
+            applied = False
+            with log.probe("secondary_axis.title", record_success=False):
                 if hasattr(diagram, "HasSecondaryYAxis"):
                     diagram.HasSecondaryYAxis = True
                 if hasattr(diagram, "HasSecondaryYAxisTitle"):
@@ -447,22 +495,25 @@ def upsert_chart_on_sheet(
                 title_shape = getattr(diagram, "SecondYAxisTitle", None)
                 if title_shape is not None and hasattr(title_shape, "String"):
                     title_shape.String = str(spec.secondary_axis_title)
-            except Exception:
+                    applied = True
+            log.record("secondary_axis.title", applied)
+            if not applied:
                 _apply_axis(
                     diagram,
                     "YAxis",
                     ChartAxisSpec(title=spec.secondary_axis_title),
                     spec.secondary_axis_title,
+                    log,
                 )
-        _apply_series_styles(diagram, spec, chart_doc=chart_doc)
-    except Exception:
-        pass
+        _apply_series_styles(diagram, spec, log, chart_doc=chart_doc)
 
     return {
         "ok": True,
         "chart_id": created_id,
         "requested_id": spec.id,
         "compile_note": note,
+        "applied": log.applied,
+        "dropped": log.dropped,
     }
 
 
