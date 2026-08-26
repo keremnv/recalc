@@ -591,13 +591,17 @@ at most one successful `calc_read` / `calc_read_ranges` batch; further reads ret
 structured “write now” error. State: `/mnt/spreadsheet_output/.librecalc_read_budget.json`.
 Not a product primitive; do not raise the 96-cell cap or call limit.
 
-**Chart ISA v0 landed (UNO-first).** Domain `ChartSpec` + program ops `upsert_chart` /
+**Chart ISA v0 landed and Task 95's four-channel gap is closed (UNO-first).** Domain `ChartSpec` + program ops `upsert_chart` /
 `delete_chart`; memory round-trip tests; UNO native line/column/pie/scatter/bubble path in
 [`uno_charts.py`](src/librecalc_mcp/backend/uno_charts.py). `sunburst` / `waterfall` /
 `gauge` return honest `compile_note` (`unsupported` / `scaffold`). Translation-loss fixture:
 [`tests/test_chart_translation.py`](tests/test_chart_translation.py) (UNO skip unless
-`LIBRECALC_RUN_UNO=1`). Visualization agent runs remain blocked until inspect+upsert are
-exercised; official VLM eval is Windows Excel COM.
+`LIBRECALC_RUN_UNO=1`). Bubble charts now name label, X, Y, and size separately;
+Chart2 role binding, stable IDs across XLSX reload, rich inspect, axis number formats,
+point labels/colors, replacement, and deletion pass live UNO tests. XY point labels are a
+write-time text snapshot because live cell-range custom labels crash this LibreOffice XLSX
+exporter; inspect reports the persisted `category_labels` rather than inventing a source range.
+Official VLM eval is Windows Excel COM.
 
 **GLM 5.3 Debugging probe (03_01).** `formula-anomalies-v1` + read budget + blocks,
 `$0.005388`, **no workbook** (inspect-only; autosubmit). Same confirm-then-write class as
@@ -635,8 +639,9 @@ PNGs were agent `width`/`height` as Excel **col×row spans** (e.g. 16×9) misrea
 `ChartSpec` now matches Excel/SpreadsheetBench defaults (~8×15 cells), treats small
 ints as spans, floors at 5×3 cm. Axis titles now use `HasX/YAxisTitle` + title shapes
 (not the unreliable Axis.DisplayTitle path); `data_labels` shows category names;
-`series.point_colors` sets per-point FillColor via Chart2. Remaining hard gaps are
-LO-vs-Excel (combo, multi-level category axes), not harness wiring.
+`series.point_colors` sets per-point FillColor via Chart2. Chart2 inspection now returns
+stable requested IDs, real chart types and X/Y/size ranges. Remaining hard gaps are
+LO-vs-Excel (combo, multi-level category axes) and static XY label snapshots, not harness wiring.
 
 **Publish:** report **non-visual subset only** (~297 Template+FM+Debugging); **10 held-out
 GLM tasks** (v4+v5) as cost/completion sample — **2/10 official exact**, ~**$0.57** total,
@@ -644,8 +649,9 @@ GLM tasks** (v4+v5) as cost/completion sample — **2/10 official exact**, ~**$0
 publish until translation matrix + agent canary complete.
 
 **Next:** K2.7 v1-five is **3/5 workbooks**. Do not start the 15 or the 297. Do not resume GLM.
-K2.7 viz canary Task 95 **wrote** (`$0.015`); remaining miss is ISA (bubble size unwired,
-thin inspect). Handover: [`docs/viz-isa-diagnosis.md`](viz-isa-diagnosis.md).
+K2.7 viz canary Task 95 **wrote** (`$0.015`); its four-channel bubble/inspect ISA miss is now
+implemented and live-verified. Run one K2.7 Task 95 development canary against the corrected
+contract, then score its PNG. Status: [`docs/viz-isa-diagnosis.md`](viz-isa-diagnosis.md).
 
 ### High-value paths
 

@@ -1,6 +1,5 @@
 import importlib.util
 import os
-import subprocess
 import tempfile
 from pathlib import Path
 
@@ -18,7 +17,9 @@ def _calc_tool_module():
     return module
 
 
-def test_calc_tool_read_budget_blocks_second_read(tmp_path: Path, monkeypatch: pytest.MonkeyPatch) -> None:
+def test_calc_tool_read_budget_blocks_second_read(
+    tmp_path: Path, monkeypatch: pytest.MonkeyPatch
+) -> None:
     calc_tool = _calc_tool_module()
     monkeypatch.setenv("LIBRECALC_READ_BUDGET_ENABLED", "1")
     monkeypatch.setenv("LIBRECALC_READ_BUDGET_PATH", str(tmp_path / "budget.json"))
@@ -34,7 +35,11 @@ def test_uno_chart_xlsx_roundtrip_openpyxl_count() -> None:
 
     with tempfile.TemporaryDirectory() as temporary:
         root = Path(temporary)
+        seed = root / "seed.xlsx"
         source = root / "chart_source.xlsx"
+        workbook = openpyxl.Workbook()
+        workbook.active.title = "Sheet1"
+        workbook.save(seed)
         backend = UnoCalcBackend()
         backend.execute_program(
             [
@@ -64,26 +69,8 @@ def test_uno_chart_xlsx_roundtrip_openpyxl_count() -> None:
                     }
                 ),
             ],
-            path=None,
+            path=str(seed),
             output_path=str(source),
-        )
-        profile = tempfile.mkdtemp()
-        subprocess.run(
-            [
-                "soffice",
-                "--headless",
-                "--nologo",
-                "--nodefault",
-                "--nofirststartwizard",
-                f"-env:UserInstallation=file://{profile}",
-                "--convert-to",
-                "xlsx",
-                "--outdir",
-                str(root),
-                str(source),
-            ],
-            check=True,
-            capture_output=True,
         )
         workbook = openpyxl.load_workbook(source)
         chart_count = sum(len(getattr(sheet, "_charts", []) or []) for sheet in workbook.worksheets)
@@ -161,9 +148,7 @@ def test_uno_chart_axis_titles_data_labels_and_point_colors() -> None:
             uno.systemPathToFileUrl(str(output.resolve())), "_blank", 0, ()
         )
         try:
-            chart_doc = (
-                doc.Sheets.getByName("Sheet1").getCharts().getByIndex(0).getEmbeddedObject()
-            )
+            chart_doc = doc.Sheets.getByName("Sheet1").getCharts().getByIndex(0).getEmbeddedObject()
             diagram = chart_doc.getDiagram()
             assert getattr(diagram, "HasXAxisTitle", False) is True
             assert diagram.XAxisTitle.String == "Category"
@@ -182,3 +167,116 @@ def test_uno_chart_axis_titles_data_labels_and_point_colors() -> None:
             assert series.getDataPointByIndex(0).Label.ShowCategoryName is True
         finally:
             doc.close(True)
+
+
+@pytest.mark.skipif(os.environ.get("LIBRECALC_RUN_UNO") != "1", reason="requires LibreOffice UNO")
+def test_uno_bubble_round_trips_x_y_size_labels_id_and_axis_format() -> None:
+    from openpyxl import Workbook
+
+    from librecalc_mcp.backend.uno import UnoCalcBackend
+
+    with tempfile.TemporaryDirectory() as temporary:
+        root = Path(temporary)
+        source = root / "in.xlsx"
+        output = root / "bubble.xlsx"
+        workbook = Workbook()
+        sheet = workbook.active
+        sheet.title = "Strategy"
+        rows = [
+            ["Product", "Revenue", "Growth", "Market Size"],
+            ["A", 10, 0.1, 500],
+            ["B", 20, 0.2, 300],
+            ["C", 30, 0.3, 1000],
+        ]
+        for row_index, row in enumerate(rows, start=1):
+            for column_index, value in enumerate(row, start=1):
+                sheet.cell(row_index, column_index, value)
+        workbook.save(source)
+
+        backend = UnoCalcBackend()
+        result = backend.execute_program(
+            [
+                CalcOperation.from_dict(
+                    {
+                        "op": "upsert_chart",
+                        "chart": {
+                            "id": "Portfolio",
+                            "sheet": "Strategy",
+                            "chart_type": "bubble",
+                            "category_range": "A2:A4",
+                            "series": [
+                                {
+                                    "name": "Growth",
+                                    "x_values_range": "B2:B4",
+                                    "values_range": "C2:C4",
+                                    "bubble_size_range": "D2:D4",
+                                    "point_colors": ["#3366FF", "#FF0000", "#00AA00"],
+                                }
+                            ],
+                            "data_labels": True,
+                            "x_axis": {"number_format": "0.0"},
+                        },
+                    }
+                )
+            ],
+            path=str(source),
+            output_path=str(output),
+        )
+        operation = result["operations"][0]
+        assert operation["dropped"] == []
+
+        chart = backend.inspect_charts(str(output))[0]
+        assert chart["id"] == "Portfolio"
+        assert chart["chart_type"] == "bubble"
+        assert chart["category_labels"] == ["A", "B", "C"]
+        assert chart["series"] == [
+            {
+                "name": "Growth",
+                "values_range": "$Strategy.$C$2:$C$4",
+                "x_values_range": "$Strategy.$B$2:$B$4",
+                "bubble_size_range": "$Strategy.$D$2:$D$4",
+                "point_colors": ["#3366FF", "#FF0000", "#00AA00"],
+            }
+        ]
+        assert chart["data_labels"] is True
+        assert chart["x_axis"]["number_format"] == "0.0"
+
+        replacement = root / "replacement.xlsx"
+        backend.execute_program(
+            [
+                CalcOperation.from_dict(
+                    {
+                        "op": "upsert_chart",
+                        "chart": {
+                            "id": "Portfolio",
+                            "sheet": "Strategy",
+                            "chart_type": "bubble",
+                            "category_range": "A2:A4",
+                            "series": [
+                                {
+                                    "name": "Growth",
+                                    "x_values_range": "B2:B4",
+                                    "values_range": "C2:C4",
+                                    "bubble_size_range": "D2:D4",
+                                }
+                            ],
+                            "title": "Replaced",
+                        },
+                    }
+                )
+            ],
+            path=str(output),
+            output_path=str(replacement),
+        )
+        replacement_charts = backend.inspect_charts(str(replacement))
+        assert len(replacement_charts) == 1
+        assert replacement_charts[0]["id"] == "Portfolio"
+        assert replacement_charts[0]["title"] == "Replaced"
+
+        deleted = root / "deleted.xlsx"
+        backend.execute_program(
+            [CalcOperation.from_dict({"op": "delete_chart", "name": "Portfolio"})],
+            path=str(replacement),
+            output_path=str(deleted),
+        )
+        assert backend.inspect_charts(str(deleted)) == []

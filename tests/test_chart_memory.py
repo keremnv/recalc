@@ -58,3 +58,29 @@ def test_memory_delete_chart() -> None:
     backend.execute_program([CalcOperation.from_dict({"op": "upsert_chart", "chart": chart})])
     backend.execute_program([CalcOperation.from_dict({"op": "delete_chart", "name": "c1"})])
     assert backend.inspect_charts() == []
+
+
+def test_memory_backend_round_trips_bubble_x_y_size_and_label_ranges() -> None:
+    backend = MemoryCalcBackend()
+    chart = {
+        "id": "portfolio",
+        "sheet": "Sheet1",
+        "chart_type": "bubble",
+        "category_range": "A2:A5",
+        "series": [
+            {
+                "name": "Products",
+                "x_values_range": "B2:B5",
+                "values_range": "C2:C5",
+                "bubble_size_range": "D2:D5",
+            }
+        ],
+    }
+
+    backend.execute_program([CalcOperation.from_dict({"op": "upsert_chart", "chart": chart})])
+
+    inspected = backend.inspect_charts()
+    assert inspected[0]["category_range"] == "A2:A5"
+    assert inspected[0]["series"][0]["x_values_range"] == "B2:B5"
+    assert inspected[0]["series"][0]["values_range"] == "C2:C5"
+    assert inspected[0]["series"][0]["bubble_size_range"] == "D2:D5"

@@ -33,17 +33,16 @@ def _static_gaps() -> list[dict[str, str]]:
     docs = TOOL_DOCS.read_text(encoding="utf-8")
     inspect_fn = source.split("def inspect_charts_from_document", 1)[-1].split("def ", 1)[0]
     gaps = []
-    if "bubble_size_range" not in source:
+    if "bubble_size_range" not in source or "x_values_range" not in source:
         gaps.append(
             {
                 "id": "bubble_size_range_unwired",
                 "severity": "blocking",
                 "task_class": "Task 95 bubble",
                 "finding": (
-                    "ChartSeriesSpec.bubble_size_range exists in the domain but "
-                    "uno_charts.py never reads it. addNewByName only gets "
-                    "category_range + values_range. Task 95 needs X=revenue, "
-                    "Y=growth, size=market — size cannot be expressed today."
+                    "Task 95 needs four independent channels: product labels, X=revenue, "
+                    "Y=growth, and size=market. ChartSeriesSpec and UNO binding must expose "
+                    "both x_values_range and bubble_size_range."
                 ),
             }
         )
@@ -114,8 +113,9 @@ def _uno_probes() -> dict[str, Any]:
                 "series": [
                     {
                         "name": "Products",
-                        "values_range": "B2:B5",
-                        "bubble_size_range": "C2:C5",
+                        "x_values_range": "B2:B5",
+                        "values_range": "C2:C5",
+                        "bubble_size_range": "D2:D5",
                         "point_colors": ["#00AA00", "#888888", "#888888", "#FF0000"],
                     }
                 ],
@@ -178,12 +178,14 @@ def _uno_probes() -> dict[str, Any]:
         sheet = workbook.active
         sheet.title = "Sheet1"
         sheet["A1"] = "Cat"
-        sheet["B1"] = "Y"
-        sheet["C1"] = "Size"
+        sheet["B1"] = "X"
+        sheet["C1"] = "Y"
+        sheet["D1"] = "Size"
         for index, label in enumerate(["A", "B", "C", "D"], start=2):
             sheet[f"A{index}"] = label
             sheet[f"B{index}"] = index * 10
             sheet[f"C{index}"] = index * 3
+            sheet[f"D{index}"] = index * 5
         workbook.save(seed)
 
         for fixture in fixtures:

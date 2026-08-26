@@ -120,6 +120,34 @@ def _chart_type_from_diagram(diagram: Any) -> str:
     return "unknown"
 
 
+def _chart_type_from_document(chart_doc: Any, diagram: Any) -> str:
+    """Read a chart type through Chart2, falling back to legacy Chart1 properties."""
+
+    try:
+        coordinate_systems = chart_doc.getFirstDiagram().getCoordinateSystems()
+        chart_types = coordinate_systems[0].getChartTypes() if coordinate_systems else ()
+        type_name = str(chart_types[0].getChartType()).lower() if chart_types else ""
+    except Exception:
+        type_name = ""
+    if "bubble" in type_name:
+        return "bubble"
+    if "scatter" in type_name:
+        return "scatter"
+    if "line" in type_name:
+        return "line"
+    if "area" in type_name:
+        return "area"
+    if "pie" in type_name:
+        return "pie"
+    if "column" in type_name or "bar" in type_name:
+        stacked = bool(getattr(diagram, "Stacked", False))
+        vertical = bool(getattr(diagram, "Vertical", True))
+        if vertical:
+            return "stacked_column" if stacked else "column"
+        return "stacked_bar" if stacked else "bar"
+    return _chart_type_from_diagram(diagram)
+
+
 def _split_range_reference(range_ref: str, default_sheet: str) -> tuple[str, str]:
     if "!" in range_ref:
         sheet_name, cell_range = range_ref.split("!", 1)
@@ -132,9 +160,50 @@ def _split_range_reference(range_ref: str, default_sheet: str) -> tuple[str, str
 
 
 def _range_address(doc: Any, range_ref: str, *, default_sheet: str) -> Any:
+    return _range_object(doc, range_ref, default_sheet=default_sheet).getRangeAddress()
+
+
+def _range_object(doc: Any, range_ref: str, *, default_sheet: str) -> Any:
     sheet_name, cell_range = _split_range_reference(range_ref, default_sheet)
     sheet = doc.Sheets.getByName(sheet_name)
-    return sheet.getCellRangeByName(cell_range).getRangeAddress()
+    return sheet.getCellRangeByName(cell_range)
+
+
+def _range_representation(doc: Any, range_ref: str, *, default_sheet: str) -> str:
+    return str(_range_object(doc, range_ref, default_sheet=default_sheet).AbsoluteName)
+
+
+def _shape_for_chart_name(sheet: Any, chart_name: str) -> Any | None:
+    page = sheet.getDrawPage()
+    for index in range(page.Count):
+        shape = page.getByIndex(index)
+        try:
+            if str(shape.PersistName) == str(chart_name):
+                return shape
+        except Exception:
+            continue
+    return None
+
+
+def chart_collection_name_for_id(sheet: Any, requested_id: str) -> str | None:
+    """Resolve a stable ChartSpec id after XLSX renames the embedded object."""
+
+    charts = sheet.getCharts()
+    if requested_id in charts.getElementNames():
+        return requested_id
+    for chart_name in charts.getElementNames():
+        shape = _shape_for_chart_name(sheet, chart_name)
+        if shape is not None and str(getattr(shape, "Name", "")) == requested_id:
+            return str(chart_name)
+    return None
+
+
+def _set_requested_chart_id(sheet: Any, chart_name: str, requested_id: str) -> bool:
+    shape = _shape_for_chart_name(sheet, chart_name)
+    if shape is None:
+        return False
+    shape.Name = requested_id
+    return str(shape.Name) == requested_id
 
 
 def _read_title(chart: Any, chart_doc: Any) -> str | None:
@@ -172,8 +241,11 @@ def _parse_rgb(color: str | None) -> int | None:
 def _apply_diagram_type(chart_doc: Any, chart_type: ChartType, log: _ApplyLog) -> None:
     service = _diagram_service_name(chart_type)
     diagram = chart_doc.createInstance(service)
+    if chart_type in {"column", "clustered_column", "stacked_column"}:
+        with log.probe("orientation.column"):
+            diagram.Vertical = True
     if chart_type in {"bar", "stacked_bar"}:
-        with log.probe("orientation.horizontal"):
+        with log.probe("orientation.bar"):
             diagram.Vertical = False
     if chart_type in {"stacked_column", "stacked_bar"}:
         with log.probe("stacked"):
@@ -187,6 +259,8 @@ def _apply_axis(
     axis: ChartAxisSpec | None,
     fallback_title: str | None,
     log: _ApplyLog,
+    *,
+    chart_doc: Any | None = None,
 ) -> None:
     if axis is None and not fallback_title:
         return
@@ -238,6 +312,25 @@ def _apply_axis(
     if axis.label_rotation is not None:
         with log.probe(f"{axis_name.lower()}.label_rotation"):
             uno_axis.TextRotation = int(axis.label_rotation) * 100
+    if axis.number_format is not None:
+        feature = f"{axis_name.lower()}.number_format"
+        with log.probe(feature, record_success=False):
+            if chart_doc is None:
+                raise ValueError("chart document unavailable")
+            formats = chart_doc.getNumberFormats()
+            current_key = int(getattr(uno_axis, "NumberFormat", 0))
+            try:
+                locale = formats.getByKey(current_key).Locale
+            except Exception:
+                locale = formats.getByKey(0).Locale
+            format_key = formats.queryKey(str(axis.number_format), locale, True)
+            if format_key == -1:
+                format_key = formats.addNew(str(axis.number_format), locale)
+            if hasattr(uno_axis, "LinkNumberFormatToSource"):
+                uno_axis.LinkNumberFormatToSource = False
+            uno_axis.NumberFormat = format_key
+            applied = formats.getByKey(int(uno_axis.NumberFormat)).FormatString
+            log.record(feature, str(applied).upper() == str(axis.number_format).upper())
 
 
 def _set_series_data_labels(data_row: Any, index: int, *, enabled: bool, log: _ApplyLog) -> None:
@@ -255,7 +348,196 @@ def _set_series_data_labels(data_row: Any, index: int, *, enabled: bool, log: _A
             log.record(f"series[{index}].data_labels.category", True)
 
 
-def _apply_point_styles_chart2(chart_doc: Any, spec: ChartSpec, log: _ApplyLog) -> None:
+def _chart2_type(chart_doc: Any) -> Any:
+    coordinate_systems = chart_doc.getFirstDiagram().getCoordinateSystems()
+    if not coordinate_systems:
+        raise ValueError("chart has no coordinate system")
+    chart_types = coordinate_systems[0].getChartTypes()
+    if not chart_types:
+        raise ValueError("chart has no chart type")
+    return chart_types[0]
+
+
+def _new_labeled_sequence(
+    chart_doc: Any,
+    context: Any,
+    range_representation: str,
+    role: str,
+) -> Any:
+    provider = chart_doc.getDataProvider()
+    values = provider.createDataSequenceByRangeRepresentation(range_representation)
+    values.Role = role
+    labeled = context.getServiceManager().createInstanceWithContext(
+        "com.sun.star.chart2.data.LabeledDataSequence", context
+    )
+    labeled.setValues(values)
+    return labeled
+
+
+def _header_label_range(
+    doc: Any,
+    range_ref: str,
+    *,
+    default_sheet: str,
+    expected_name: str | None,
+) -> str | None:
+    if not expected_name:
+        return None
+    target = _range_object(doc, range_ref, default_sheet=default_sheet)
+    address = target.RangeAddress
+    if address.StartColumn != address.EndColumn or address.StartRow <= 0:
+        return None
+    sheet = doc.Sheets.getByIndex(address.Sheet)
+    header = sheet.getCellByPosition(address.StartColumn, address.StartRow - 1)
+    if str(header.String).strip().casefold() != expected_name.strip().casefold():
+        return None
+    return str(header.AbsoluteName)
+
+
+def _bind_xy_series(
+    chart_doc: Any,
+    spec: ChartSpec,
+    *,
+    doc: Any,
+    context: Any,
+    log: _ApplyLog,
+) -> None:
+    if spec.chart_type not in {"scatter", "bubble"}:
+        return
+    try:
+        chart_type = _chart2_type(chart_doc)
+        existing = list(chart_type.getDataSeries())
+        bound = []
+        for index, series_spec in enumerate(spec.series):
+            if index < len(existing):
+                data_series = existing[index]
+            else:
+                data_series = context.getServiceManager().createInstanceWithContext(
+                    "com.sun.star.chart2.DataSeries", context
+                )
+            x_range = series_spec.x_values_range or spec.category_range
+            role_ranges = [
+                ("values-x", x_range),
+                ("values-y", series_spec.values_range),
+            ]
+            if spec.chart_type == "bubble":
+                role_ranges.append(("values-size", str(series_spec.bubble_size_range)))
+            sequences = []
+            for role, range_ref in role_ranges:
+                sequence = _new_labeled_sequence(
+                    chart_doc,
+                    context,
+                    _range_representation(doc, range_ref, default_sheet=spec.sheet),
+                    role,
+                )
+                sequences.append(sequence)
+                log.record(f"series[{index}].{role}", True)
+
+            label_role = str(chart_type.getRoleOfSequenceForSeriesLabel())
+            label_target = next(
+                (pair for pair in sequences if str(pair.getValues().Role) == label_role),
+                sequences[-1],
+            )
+            label_range = _header_label_range(
+                doc,
+                series_spec.values_range,
+                default_sheet=spec.sheet,
+                expected_name=series_spec.name,
+            )
+            if label_range is not None:
+                label_target.setLabel(
+                    chart_doc.getDataProvider().createDataSequenceByRangeRepresentation(label_range)
+                )
+                log.record(f"series[{index}].name", True)
+            elif series_spec.name:
+                log.record(
+                    f"series[{index}].name",
+                    False,
+                    "literal series names require a matching header cell",
+                )
+            data_series.setData(tuple(sequences))
+            bound.append(data_series)
+        chart_type.setDataSeries(tuple(bound))
+    except Exception as exc:
+        log.record("xy_series_binding", False, type(exc).__name__)
+
+
+def _apply_non_xy_series_names(
+    chart_doc: Any,
+    spec: ChartSpec,
+    *,
+    doc: Any,
+    log: _ApplyLog,
+) -> None:
+    if spec.chart_type in {"scatter", "bubble"}:
+        return
+    try:
+        chart_type = _chart2_type(chart_doc)
+        label_role = str(chart_type.getRoleOfSequenceForSeriesLabel())
+        for index, (data_series, series_spec) in enumerate(
+            zip(chart_type.getDataSeries(), spec.series, strict=False)
+        ):
+            if not series_spec.name:
+                continue
+            label_range = _header_label_range(
+                doc,
+                series_spec.values_range,
+                default_sheet=spec.sheet,
+                expected_name=series_spec.name,
+            )
+            target = next(
+                (
+                    item
+                    for item in data_series.getDataSequences()
+                    if str(item.getValues().Role) == label_role
+                ),
+                None,
+            )
+            if label_range is not None and target is not None:
+                target.setLabel(
+                    chart_doc.getDataProvider().createDataSequenceByRangeRepresentation(label_range)
+                )
+                log.record(f"series[{index}].name", True)
+            else:
+                log.record(
+                    f"series[{index}].name",
+                    False,
+                    "literal series names require a matching header cell",
+                )
+    except Exception as exc:
+        log.record("series.names", False, type(exc).__name__)
+
+
+def _apply_custom_point_label(
+    point: Any,
+    label_cell: Any,
+    *,
+    context: Any,
+) -> None:
+    field = context.getServiceManager().createInstanceWithContext(
+        "com.sun.star.chart2.DataPointCustomLabelField", context
+    )
+    uno_module = __import__("uno")
+    field.setFieldType(uno_module.Enum("com.sun.star.chart2.DataPointCustomLabelFieldType", "TEXT"))
+    field.setString(str(label_cell.String))
+    point.CustomLabelFields = (field,)
+    label = point.Label
+    label.ShowCategoryName = False
+    label.ShowCustomLabel = True
+    point.Label = label
+    # DataLabelPlacement.RIGHT. Keep the numeric UNO constant local to avoid importing
+    # generated LibreOffice Python modules outside a live UNO runtime.
+    point.LabelPlacement = 8
+
+
+def _apply_point_styles_chart2(
+    chart_doc: Any,
+    spec: ChartSpec,
+    log: _ApplyLog,
+    *,
+    doc: Any,
+    context: Any,
+) -> None:
     """Per-point FillColor / category labels via Chart2 when available."""
     wants_points = any(series.point_colors for series in spec.series)
     try:
@@ -280,7 +562,11 @@ def _apply_point_styles_chart2(chart_doc: Any, spec: ChartSpec, log: _ApplyLog) 
         if series_index >= len(data_series_list):
             break
         data_series = data_series_list[series_index]
-        if spec.data_labels:
+        custom_labels = spec.data_labels and spec.chart_type in {"scatter", "bubble"}
+        label_range = None
+        if custom_labels:
+            label_range = _range_object(doc, spec.category_range, default_sheet=spec.sheet)
+        if spec.data_labels and not custom_labels:
             with log.probe(f"series[{series_index}].data_labels.chart2"):
                 label = data_series.Label
                 label.ShowCategoryName = True
@@ -304,14 +590,31 @@ def _apply_point_styles_chart2(chart_doc: Any, spec: ChartSpec, log: _ApplyLog) 
                 log.record(feature, True)
         if spec.data_labels:
             # Ensure labels visible even when only some points are recolored.
-            for point_index in range(len(colors) or 32):
+            label_count = 0
+            if label_range is not None:
+                address = label_range.RangeAddress
+                label_count = (address.EndColumn - address.StartColumn + 1) * (
+                    address.EndRow - address.StartRow + 1
+                )
+            for point_index in range(len(colors) or label_count or 32):
                 try:
                     point = data_series.getDataPointByIndex(point_index)
                     if point is None:
                         break
-                    label = point.Label
-                    label.ShowCategoryName = True
-                    point.Label = label
+                    if label_range is not None:
+                        width = (
+                            label_range.RangeAddress.EndColumn
+                            - label_range.RangeAddress.StartColumn
+                            + 1
+                        )
+                        label_cell = label_range.getCellByPosition(
+                            point_index % width, point_index // width
+                        )
+                        _apply_custom_point_label(point, label_cell, context=context)
+                    else:
+                        label = point.Label
+                        label.ShowCategoryName = True
+                        point.Label = label
                 except Exception as exc:
                     if point_index == 0:
                         log.record(
@@ -320,6 +623,8 @@ def _apply_point_styles_chart2(chart_doc: Any, spec: ChartSpec, log: _ApplyLog) 
                             type(exc).__name__,
                         )
                     break
+            if custom_labels:
+                log.record(f"series[{series_index}].data_labels.custom_text", True)
 
 
 def _apply_point_styles_chart1(diagram: Any, spec: ChartSpec, log: _ApplyLog) -> None:
@@ -344,6 +649,8 @@ def _apply_series_styles(
     log: _ApplyLog,
     *,
     chart_doc: Any | None = None,
+    doc: Any | None = None,
+    context: Any | None = None,
 ) -> None:
     for index, series in enumerate(spec.series):
         try:
@@ -351,9 +658,6 @@ def _apply_series_styles(
         except Exception as exc:
             log.record(f"series[{index}]", False, type(exc).__name__)
             continue
-        if series.name:
-            with log.probe(f"series[{index}].name"):
-                data_row.CustomLabel = series.name
         rgb = _parse_rgb(series.color)
         if rgb is not None:
             applied_attrs = []
@@ -368,11 +672,235 @@ def _apply_series_styles(
                 bool(applied_attrs),
                 "" if applied_attrs else "no color property accepted",
             )
-        _set_series_data_labels(data_row, index, enabled=spec.data_labels, log=log)
+        _set_series_data_labels(
+            data_row,
+            index,
+            enabled=spec.data_labels and spec.chart_type not in {"scatter", "bubble"},
+            log=log,
+        )
 
     _apply_point_styles_chart1(diagram, spec, log)
-    if chart_doc is not None:
-        _apply_point_styles_chart2(chart_doc, spec, log)
+    if chart_doc is not None and doc is not None and context is not None:
+        _apply_point_styles_chart2(
+            chart_doc,
+            spec,
+            log,
+            doc=doc,
+            context=context,
+        )
+
+
+def _sequence_range(sequence: Any) -> str | None:
+    try:
+        return str(sequence.getSourceRangeRepresentation())
+    except Exception:
+        return None
+
+
+def _series_name(labeled_sequences: tuple[Any, ...]) -> str | None:
+    for sequence in labeled_sequences:
+        try:
+            label = sequence.getLabel()
+            data = label.getData() if label is not None else ()
+            if data and str(data[0]):
+                return str(data[0])
+        except Exception:
+            continue
+    return None
+
+
+def _color_hex(value: Any) -> str | None:
+    try:
+        return f"#{int(value) & 0xFFFFFF:06X}"
+    except (TypeError, ValueError):
+        return None
+
+
+def _series_point_colors(series: Any, point_count: int) -> list[str | None] | None:
+    """Read rendered colors for attributed points without claiming implicit defaults."""
+
+    try:
+        attributed = {int(index) for index in series.AttributedDataPoints}
+    except Exception:
+        return None
+    if not attributed:
+        return None
+    colors: list[str | None] = []
+    for index in range(point_count):
+        if index not in attributed:
+            colors.append(None)
+            continue
+        try:
+            point = series.getDataPointByIndex(index)
+            colors.append(_color_hex(point.FillColor))
+        except Exception:
+            colors.append(None)
+    return colors if any(color is not None for color in colors) else None
+
+
+def _inspect_series(chart_doc: Any) -> list[dict[str, object]]:
+    try:
+        chart_type = _chart2_type(chart_doc)
+        data_series = chart_type.getDataSeries()
+    except Exception:
+        return []
+    result: list[dict[str, object]] = []
+    for series in data_series:
+        labeled_sequences = tuple(series.getDataSequences())
+        roles: dict[str, str] = {}
+        point_count = 0
+        for sequence in labeled_sequences:
+            try:
+                values = sequence.getValues()
+                range_representation = _sequence_range(values)
+                if range_representation:
+                    roles[str(values.Role)] = range_representation
+                if str(values.Role) == "values-y":
+                    point_count = len(values.getData())
+            except Exception:
+                continue
+        payload: dict[str, object] = {
+            "name": _series_name(labeled_sequences),
+            "values_range": roles.get("values-y"),
+        }
+        if "values-x" in roles:
+            payload["x_values_range"] = roles["values-x"]
+        if "values-size" in roles:
+            payload["bubble_size_range"] = roles["values-size"]
+        point_colors = _series_point_colors(series, point_count)
+        if point_colors is not None:
+            payload["point_colors"] = point_colors
+        result.append(payload)
+    return result
+
+
+def _axis_category_range(chart_doc: Any) -> str | None:
+    try:
+        coordinate_system = chart_doc.getFirstDiagram().getCoordinateSystems()[0]
+        categories = coordinate_system.getAxisByDimension(0, 0).ScaleData.Categories
+        return _sequence_range(categories.getValues()) if categories is not None else None
+    except Exception:
+        return None
+
+
+def _collapse_custom_label_ranges(chart_doc: Any) -> str | None:
+    """Recover the contiguous category/data-label range used by XY point labels."""
+
+    try:
+        series = _chart2_type(chart_doc).getDataSeries()[0]
+        cells = []
+        for index in range(10_000):
+            point = series.getDataPointByIndex(index)
+            if point is None:
+                break
+            fields = tuple(getattr(point, "CustomLabelFields", ()) or ())
+            ranges = [str(field.getCellRange()) for field in fields if field.getDataLabelsRange()]
+            if not ranges:
+                break
+            cells.append(ranges[0])
+        if not cells:
+            return None
+        if len(cells) == 1:
+            return cells[0]
+        first_sheet, first_cell = cells[0].rsplit(".", 1)
+        last_sheet, last_cell = cells[-1].rsplit(".", 1)
+        if first_sheet != last_sheet:
+            return None
+        return f"{first_sheet}.{first_cell}:{last_cell}"
+    except Exception:
+        return None
+
+
+def _custom_point_labels(chart_doc: Any) -> list[str]:
+    try:
+        series = _chart2_type(chart_doc).getDataSeries()[0]
+        labels = []
+        for index in range(10_000):
+            point = series.getDataPointByIndex(index)
+            if point is None:
+                break
+            fields = tuple(getattr(point, "CustomLabelFields", ()) or ())
+            if not fields:
+                break
+            labels.append("".join(str(field.getString()) for field in fields))
+        return labels
+    except Exception:
+        return []
+
+
+def _inspect_axis(diagram: Any, axis_name: str, chart_doc: Any) -> dict[str, object] | None:
+    try:
+        axis = getattr(diagram, axis_name)
+    except Exception:
+        return None
+    payload: dict[str, object] = {}
+    title = getattr(diagram, f"{axis_name}Title", None)
+    if title is not None and str(getattr(title, "String", "")):
+        payload["title"] = str(title.String)
+    if getattr(axis, "AutoMin", True) is False:
+        payload["min"] = float(axis.Min)
+    if getattr(axis, "AutoMax", True) is False:
+        payload["max"] = float(axis.Max)
+    rotation = getattr(axis, "TextRotation", 0)
+    if rotation:
+        payload["label_rotation"] = float(rotation) / 100
+    try:
+        key = int(axis.NumberFormat)
+        payload["number_format"] = str(chart_doc.getNumberFormats().getByKey(key).FormatString)
+    except Exception:
+        pass
+    return payload or None
+
+
+def _requested_chart_id(sheet: Any, chart_name: str) -> str:
+    shape = _shape_for_chart_name(sheet, chart_name)
+    requested = str(getattr(shape, "Name", "")) if shape is not None else ""
+    return requested or str(chart_name)
+
+
+def _chart_has_data_labels(chart_doc: Any) -> bool:
+    try:
+        for series in _chart2_type(chart_doc).getDataSeries():
+            label = series.Label
+            if label.ShowCategoryName or label.ShowCustomLabel or label.ShowSeriesName:
+                return True
+            point = series.getDataPointByIndex(0)
+            if point is not None:
+                point_label = point.Label
+                if (
+                    point_label.ShowCategoryName
+                    or point_label.ShowCustomLabel
+                    or point_label.ShowSeriesName
+                ):
+                    return True
+        return False
+    except Exception:
+        return False
+
+
+def _initial_chart_ranges(doc: Any, spec: ChartSpec) -> tuple[Any, ...]:
+    if spec.chart_type in {"scatter", "bubble"}:
+        ranges = []
+        for series in spec.series:
+            ranges.append(
+                _range_address(
+                    doc,
+                    series.x_values_range or spec.category_range,
+                    default_sheet=spec.sheet,
+                )
+            )
+            ranges.append(_range_address(doc, series.values_range, default_sheet=spec.sheet))
+            if spec.chart_type == "bubble" and series.bubble_size_range is not None:
+                ranges.append(
+                    _range_address(doc, series.bubble_size_range, default_sheet=spec.sheet)
+                )
+        return tuple(ranges)
+    category = _range_address(doc, spec.category_range, default_sheet=spec.sheet)
+    values = tuple(
+        _range_address(doc, item.values_range, default_sheet=spec.sheet) for item in spec.series
+    )
+    return (category, *values)
+
 
 def inspect_charts_from_document(doc: Any) -> list[dict[str, object]]:
     charts: list[dict[str, object]] = []
@@ -393,15 +921,29 @@ def inspect_charts_from_document(doc: Any) -> list[dict[str, object]]:
                     diagram = chart_doc.getDiagram()
             except Exception:
                 diagram = None
+            chart_type = _chart_type_from_document(chart_doc, diagram)
+            category_range = (
+                _collapse_custom_label_ranges(chart_doc)
+                if chart_type in {"scatter", "bubble"}
+                else _axis_category_range(chart_doc)
+            )
             charts.append(
                 {
-                    "id": str(chart_name),
+                    "id": _requested_chart_id(sheet, str(chart_name)),
+                    "storage_id": str(chart_name),
                     "sheet": str(name),
                     "title": _read_title(chart, chart_doc),
-                    "chart_type": _chart_type_from_diagram(diagram),
+                    "chart_type": chart_type,
                     "has_legend": bool(
                         getattr(chart_doc, "HasLegend", getattr(chart, "HasLegend", None))
                     ),
+                    "category_range": category_range,
+                    "category_labels": _custom_point_labels(chart_doc),
+                    "series": _inspect_series(chart_doc),
+                    "data_labels": _chart_has_data_labels(chart_doc),
+                    "x_axis": _inspect_axis(diagram, "XAxis", chart_doc),
+                    "y_axis": _inspect_axis(diagram, "YAxis", chart_doc),
+                    "compile_note": chart_compile_note(chart_type),
                 }
             )
     return charts
@@ -413,6 +955,7 @@ def upsert_chart_on_sheet(
     *,
     doc: Any,
     uno_module: Any,
+    context: Any,
 ) -> dict[str, object]:
     note = chart_compile_note(spec.chart_type)
     if note == "unsupported":
@@ -422,8 +965,9 @@ def upsert_chart_on_sheet(
 
     charts = sheet.getCharts()
     existing_names = list(charts.getElementNames())
-    if spec.id in existing_names:
-        charts.removeByName(spec.id)
+    existing_id = chart_collection_name_for_id(sheet, spec.id)
+    if existing_id is not None:
+        charts.removeByName(existing_id)
         existing_names = list(charts.getElementNames())
 
     col, row = _anchor_position(spec.anchor)
@@ -434,11 +978,7 @@ def upsert_chart_on_sheet(
     rect.Width = max(spec.width, MIN_CHART_WIDTH_HMM)
     rect.Height = max(spec.height, MIN_CHART_HEIGHT_HMM)
 
-    range_address = _range_address(doc, spec.category_range, default_sheet=spec.sheet)
-    data_ranges = [
-        _range_address(doc, item.values_range, default_sheet=spec.sheet) for item in spec.series
-    ]
-    cell_range_addresses = (range_address, *data_ranges)
+    cell_range_addresses = _initial_chart_ranges(doc, spec)
 
     charts.addNewByName(
         spec.id,
@@ -448,20 +988,23 @@ def upsert_chart_on_sheet(
         True,
     )
     created_names = list(charts.getElementNames())
-    created_id = spec.id if spec.id in created_names else next(
-        (name for name in created_names if name not in existing_names),
-        created_names[-1] if created_names else spec.id,
+    created_id = (
+        spec.id
+        if spec.id in created_names
+        else next(
+            (name for name in created_names if name not in existing_names),
+            created_names[-1] if created_names else spec.id,
+        )
     )
     log = _ApplyLog()
-    if created_id != spec.id:
-        with log.probe("id.rename", record_success=False):
-            charts.getByName(created_id).Name = spec.id
-            created_id = spec.id
+    log.record("id", _set_requested_chart_id(sheet, created_id, spec.id), "shape unavailable")
 
     chart = charts.getByName(created_id)
     chart_doc = chart.getEmbeddedObject() if hasattr(chart, "getEmbeddedObject") else chart
     with log.probe("chart_type"):
         _apply_diagram_type(chart_doc, spec.chart_type, log)
+    _bind_xy_series(chart_doc, spec, doc=doc, context=context, log=log)
+    _apply_non_xy_series_names(chart_doc, spec, doc=doc, log=log)
 
     if spec.title:
         with log.probe("title", record_success=False):
@@ -483,8 +1026,22 @@ def upsert_chart_on_sheet(
         log.record("diagram", False, type(exc).__name__)
         diagram = None
     if diagram is not None:
-        _apply_axis(diagram, "XAxis", spec.category_axis, spec.primary_axis_title, log)
-        _apply_axis(diagram, "YAxis", spec.value_axis, None, log)
+        _apply_axis(
+            diagram,
+            "XAxis",
+            spec.category_axis,
+            spec.primary_axis_title,
+            log,
+            chart_doc=chart_doc,
+        )
+        _apply_axis(
+            diagram,
+            "YAxis",
+            spec.value_axis,
+            None,
+            log,
+            chart_doc=chart_doc,
+        )
         if spec.secondary_axis_title:
             applied = False
             with log.probe("secondary_axis.title", record_success=False):
@@ -504,13 +1061,22 @@ def upsert_chart_on_sheet(
                     ChartAxisSpec(title=spec.secondary_axis_title),
                     spec.secondary_axis_title,
                     log,
+                    chart_doc=chart_doc,
                 )
-        _apply_series_styles(diagram, spec, log, chart_doc=chart_doc)
+        _apply_series_styles(
+            diagram,
+            spec,
+            log,
+            chart_doc=chart_doc,
+            doc=doc,
+            context=context,
+        )
 
     return {
         "ok": True,
-        "chart_id": created_id,
+        "chart_id": spec.id,
         "requested_id": spec.id,
+        "storage_id": created_id,
         "compile_note": note,
         "applied": log.applied,
         "dropped": log.dropped,

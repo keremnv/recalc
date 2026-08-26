@@ -93,6 +93,8 @@ class ChartSeriesSpec:
     values_range: str
     chart_type: ChartType | None = None
     axis: AxisBinding = "primary"
+    # Scatter/bubble X values are independent from category/data-label text.
+    x_values_range: str | None = None
     bubble_size_range: str | None = None
     color: str | None = None
     # Per-point fill colors (hex), e.g. bubble/column point overrides.
@@ -163,6 +165,13 @@ class ChartSpec:
         if not isinstance(series_raw, list) or not series_raw:
             raise ValueError("chart.series must be a non-empty list")
         series = tuple(ChartSeriesSpec.from_dict(item) for item in series_raw)
+        if raw.get("chart_type") == "bubble":
+            for index, item in enumerate(series):
+                if item.x_values_range is None or item.bubble_size_range is None:
+                    raise ValueError(
+                        "bubble series requires x_values_range, values_range (Y), "
+                        f"and bubble_size_range (series {index})"
+                    )
         # Agents often send x_axis / y_axis; accept those aliases.
         category_axis = ChartAxisSpec.from_dict(
             raw.get("category_axis") or raw.get("x_axis")
@@ -205,6 +214,7 @@ class ChartSpec:
                     "values_range": item.values_range,
                     "chart_type": item.chart_type,
                     "axis": item.axis,
+                    "x_values_range": item.x_values_range,
                     "bubble_size_range": item.bubble_size_range,
                     "color": item.color,
                     **(

@@ -1,3 +1,5 @@
+import pytest
+
 from librecalc_mcp.domain.charts import (
     DEFAULT_CHART_HEIGHT_HMM,
     DEFAULT_CHART_WIDTH_HMM,
@@ -56,7 +58,9 @@ def test_chart_series_accepts_point_colors() -> None:
             "series": [
                 {
                     "name": "P",
-                    "values_range": "B2:B4",
+                    "x_values_range": "B2:B4",
+                    "values_range": "C2:C4",
+                    "bubble_size_range": "D2:D4",
                     "point_colors": ["#00FF00", "#FF0000", "#0000FF"],
                 }
             ],
@@ -70,6 +74,58 @@ def test_chart_series_accepts_point_colors() -> None:
         "#FF0000",
         "#0000FF",
     ]
+
+
+def test_bubble_chart_requires_and_round_trips_all_four_semantic_ranges() -> None:
+    spec = ChartSpec.from_dict(
+        {
+            "id": "portfolio",
+            "sheet": "Strategy",
+            "chart_type": "bubble",
+            "category_range": "M5:M13",
+            "series": [
+                {
+                    "name": "Portfolio",
+                    "x_values_range": "N5:N13",
+                    "values_range": "O5:O13",
+                    "bubble_size_range": "P5:P13",
+                }
+            ],
+        }
+    )
+
+    assert spec.series[0].x_values_range == "N5:N13"
+    assert spec.series[0].values_range == "O5:O13"
+    assert spec.series[0].bubble_size_range == "P5:P13"
+    assert spec.to_dict()["series"][0] == {
+        "name": "Portfolio",
+        "values_range": "O5:O13",
+        "chart_type": None,
+        "axis": "primary",
+        "x_values_range": "N5:N13",
+        "bubble_size_range": "P5:P13",
+        "color": None,
+    }
+
+
+@pytest.mark.parametrize(
+    "series",
+    [
+        {"name": "Portfolio", "values_range": "O5:O13", "bubble_size_range": "P5:P13"},
+        {"name": "Portfolio", "values_range": "O5:O13", "x_values_range": "N5:N13"},
+    ],
+)
+def test_bubble_chart_rejects_missing_x_or_size_range(series: dict[str, str]) -> None:
+    with pytest.raises(ValueError, match="bubble series requires"):
+        ChartSpec.from_dict(
+            {
+                "id": "portfolio",
+                "sheet": "Strategy",
+                "chart_type": "bubble",
+                "category_range": "M5:M13",
+                "series": [series],
+            }
+        )
 
 
 def test_chart_size_defaults_match_excel_cell_span() -> None:

@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any
 
 from librecalc_mcp.backend.uno_charts import (
+    chart_collection_name_for_id,
     export_charts_to_png,
     inspect_charts_from_document,
     upsert_chart_on_sheet,
@@ -438,7 +439,13 @@ class UnoCalcBackend:
                         raise ValueError("upsert_chart requires chart")
                     spec = ChartSpec.from_dict(operation.chart)
                     sheet = doc.Sheets.getByName(spec.sheet)
-                    result = upsert_chart_on_sheet(sheet, spec, doc=doc, uno_module=self._uno())
+                    result = upsert_chart_on_sheet(
+                        sheet,
+                        spec,
+                        doc=doc,
+                        uno_module=self._uno(),
+                        context=self._ctx,
+                    )
                     results.append({"op": operation.op, **result})
                     continue
 
@@ -447,9 +454,11 @@ class UnoCalcBackend:
                         raise ValueError("delete_chart requires name (chart id)")
                     deleted = False
                     for sheet_name in doc.Sheets.ElementNames:
-                        charts = doc.Sheets.getByName(sheet_name).getCharts()
-                        if operation.name in charts.getElementNames():
-                            charts.removeByName(operation.name)
+                        sheet = doc.Sheets.getByName(sheet_name)
+                        charts = sheet.getCharts()
+                        stored_name = chart_collection_name_for_id(sheet, operation.name)
+                        if stored_name is not None:
+                            charts.removeByName(stored_name)
                             deleted = True
                     results.append({"op": operation.op, "ok": True, "deleted": deleted})
                     continue

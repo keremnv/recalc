@@ -30,32 +30,7 @@
     "gauge": "scaffold",
     "sunburst": "unsupported"
   },
-  "static_gaps": [
-    {
-      "id": "bubble_size_range_unwired",
-      "severity": "blocking",
-      "task_class": "Task 95 bubble",
-      "finding": "ChartSeriesSpec.bubble_size_range exists in the domain but uno_charts.py never reads it. addNewByName only gets category_range + values_range. Task 95 needs X=revenue, Y=growth, size=market \u2014 size cannot be expressed today."
-    },
-    {
-      "id": "axis_number_format_unwired",
-      "severity": "blocking",
-      "task_class": "Task 1411527 line dates",
-      "finding": "ChartAxisSpec.number_format is accepted on ChartSpec but _apply_axis never sets a NumberFormat / axis key. dd/mm/yyyy on the category axis cannot land."
-    },
-    {
-      "id": "uno_inspect_thin",
-      "severity": "blocking",
-      "task_class": "all viz",
-      "finding": "calc_inspect_charts docs promise category_range, series ranges, and compile_note. UNO inspect_charts_from_document only emits id, sheet, title, chart_type, has_legend. Agents cannot verify what they just upserted."
-    },
-    {
-      "id": "inspect_docstring_overclaim",
-      "severity": "docs",
-      "task_class": "all viz",
-      "finding": "Tool docstring overclaims UNO inspect payload."
-    }
-  ],
+  "static_gaps": [],
   "uno": {
     "ok": true,
     "health": {
@@ -75,42 +50,76 @@
               "ok": true,
               "chart_id": "Portfolio",
               "requested_id": "Portfolio",
+              "storage_id": "Portfolio",
               "compile_note": null,
               "applied": [
+                "id",
                 "chart_type",
+                "series[0].values-x",
+                "series[0].values-y",
+                "series[0].values-size",
                 "title",
                 "legend",
-                "series[0].data_labels.caption",
-                "series[0].data_labels.chart2",
                 "series[0].point_colors[0]",
                 "series[0].point_colors[1]",
                 "series[0].point_colors[2]",
-                "series[0].point_colors[3]"
+                "series[0].point_colors[3]",
+                "series[0].data_labels.custom_text"
               ],
               "dropped": [
-                "series[0].name (AttributeError)"
+                "series[0].name (literal series names require a matching header cell)"
               ]
             }
           ],
-          "saved_to": "/tmp/tmpx3r1zcxw/bubble_task95_shape.xlsx"
+          "saved_to": "/tmp/tmpqvo0i52q/bubble_task95_shape.xlsx"
         },
         "inspect": [
           {
-            "id": "Object 1",
+            "id": "Portfolio",
+            "storage_id": "Object 1",
             "sheet": "Sheet1",
             "title": "Product Portfolio Analysis",
-            "chart_type": "unknown",
-            "has_legend": false
+            "chart_type": "bubble",
+            "has_legend": false,
+            "category_range": null,
+            "category_labels": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "series": [
+              {
+                "name": null,
+                "values_range": "$Sheet1.$C$2:$C$5",
+                "x_values_range": "$Sheet1.$B$2:$B$5",
+                "bubble_size_range": "$Sheet1.$D$2:$D$5",
+                "point_colors": [
+                  "#00AA00",
+                  "#888888",
+                  "#888888",
+                  "#FF0000"
+                ]
+              }
+            ],
+            "data_labels": true,
+            "x_axis": {
+              "number_format": "General"
+            },
+            "y_axis": {
+              "number_format": "General"
+            },
+            "compile_note": null
           }
         ],
         "png": {
           "exported": [
-            "/tmp/tmpx3r1zcxw/bubble_task95_shape/bubble_task95_shape_chart_1.png"
+            "/tmp/tmpqvo0i52q/bubble_task95_shape/bubble_task95_shape_chart_1.png"
           ],
           "sizes": [
             {
-              "path": "/tmp/tmpx3r1zcxw/bubble_task95_shape/bubble_task95_shape_chart_1.png",
-              "bytes": 16912
+              "path": "/tmp/tmpqvo0i52q/bubble_task95_shape/bubble_task95_shape_chart_1.png",
+              "bytes": 16810
             }
           ],
           "error": null
@@ -126,12 +135,15 @@
               "ok": true,
               "chart_id": "Burndown",
               "requested_id": "Burndown",
+              "storage_id": "Burndown",
               "compile_note": null,
               "applied": [
+                "id",
                 "chart_type",
                 "title",
                 "legend",
                 "xaxis.label_rotation",
+                "xaxis.number_format",
                 "yaxis.title",
                 "yaxis.min",
                 "yaxis.max",
@@ -139,29 +151,60 @@
                 "series[1].color"
               ],
               "dropped": [
-                "series[0].name (AttributeError)",
-                "series[1].name (AttributeError)"
+                "series[0].name (literal series names require a matching header cell)",
+                "series[1].name (literal series names require a matching header cell)"
               ]
             }
           ],
-          "saved_to": "/tmp/tmpx3r1zcxw/line_task1411527_shape.xlsx"
+          "saved_to": "/tmp/tmpqvo0i52q/line_task1411527_shape.xlsx"
         },
         "inspect": [
           {
-            "id": "Object 1",
+            "id": "Burndown",
+            "storage_id": "Object 1",
             "sheet": "Sheet1",
             "title": "Invoice Count Burndown August 2023",
-            "chart_type": "unknown",
-            "has_legend": true
+            "chart_type": "line",
+            "has_legend": true,
+            "category_range": "$Sheet1.$A$2:$A$5",
+            "category_labels": [],
+            "series": [
+              {
+                "name": null,
+                "values_range": "$Sheet1.$B$2:$B$5",
+                "point_colors": [
+                  "#808080",
+                  null,
+                  null,
+                  null
+                ]
+              },
+              {
+                "name": null,
+                "values_range": "$Sheet1.$C$2:$C$5"
+              }
+            ],
+            "data_labels": false,
+            "x_axis": {
+              "label_rotation": 45.0,
+              "number_format": "DD/MM/YYYY"
+            },
+            "y_axis": {
+              "title": "Count",
+              "min": 0.0,
+              "max": 800.0,
+              "number_format": "General"
+            },
+            "compile_note": null
           }
         ],
         "png": {
           "exported": [
-            "/tmp/tmpx3r1zcxw/line_task1411527_shape/line_task1411527_shape_chart_1.png"
+            "/tmp/tmpqvo0i52q/line_task1411527_shape/line_task1411527_shape_chart_1.png"
           ],
           "sizes": [
             {
-              "path": "/tmp/tmpx3r1zcxw/line_task1411527_shape/line_task1411527_shape_chart_1.png",
+              "path": "/tmp/tmpqvo0i52q/line_task1411527_shape/line_task1411527_shape_chart_1.png",
               "bytes": 18255
             }
           ],
@@ -178,8 +221,11 @@
               "ok": true,
               "chart_id": "Sales",
               "requested_id": "Sales",
+              "storage_id": "Sales",
               "compile_note": null,
               "applied": [
+                "id",
+                "orientation.column",
                 "stacked",
                 "chart_type",
                 "title",
@@ -188,30 +234,59 @@
                 "yaxis.title"
               ],
               "dropped": [
-                "series[0].name (AttributeError)",
-                "series[1].name (AttributeError)"
+                "series[0].name (literal series names require a matching header cell)",
+                "series[1].name (literal series names require a matching header cell)"
               ]
             }
           ],
-          "saved_to": "/tmp/tmpx3r1zcxw/stacked_task1417365_shape.xlsx"
+          "saved_to": "/tmp/tmpqvo0i52q/stacked_task1417365_shape.xlsx"
         },
         "inspect": [
           {
-            "id": "Object 1",
+            "id": "Sales",
+            "storage_id": "Object 1",
             "sheet": "Sheet1",
             "title": "Sales",
-            "chart_type": "unknown",
-            "has_legend": true
+            "chart_type": "stacked_column",
+            "has_legend": true,
+            "category_range": "$Sheet1.$A$2:$A$5",
+            "category_labels": [],
+            "series": [
+              {
+                "name": null,
+                "values_range": "$Sheet1.$B$2:$B$5",
+                "point_colors": [
+                  "#004586",
+                  null,
+                  null,
+                  null
+                ]
+              },
+              {
+                "name": null,
+                "values_range": "$Sheet1.$C$2:$C$5"
+              }
+            ],
+            "data_labels": false,
+            "x_axis": {
+              "title": "Quarter",
+              "number_format": "General"
+            },
+            "y_axis": {
+              "title": "Sales Value",
+              "number_format": "General"
+            },
+            "compile_note": null
           }
         ],
         "png": {
           "exported": [
-            "/tmp/tmpx3r1zcxw/stacked_task1417365_shape/stacked_task1417365_shape_chart_1.png"
+            "/tmp/tmpqvo0i52q/stacked_task1417365_shape/stacked_task1417365_shape_chart_1.png"
           ],
           "sizes": [
             {
-              "path": "/tmp/tmpx3r1zcxw/stacked_task1417365_shape/stacked_task1417365_shape_chart_1.png",
-              "bytes": 13487
+              "path": "/tmp/tmpqvo0i52q/stacked_task1417365_shape/stacked_task1417365_shape_chart_1.png",
+              "bytes": 11563
             }
           ],
           "error": null
@@ -229,7 +304,7 @@
               "compile_note": "approximated"
             }
           ],
-          "saved_to": "/tmp/tmpx3r1zcxw/combo_honest_refusal.xlsx"
+          "saved_to": "/tmp/tmpqvo0i52q/combo_honest_refusal.xlsx"
         },
         "inspect": [],
         "png": {

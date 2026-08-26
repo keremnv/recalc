@@ -1,98 +1,92 @@
-# Visualization ISA diagnosis (handover)
-
-**Audience:** GPT-5.6 Sol Codex implementing chart-world fixes.
-**Do not** treat this as permission to raise call limits, mint restore tools, or expand
-absence detectors. Visualization only.
+# Visualization ISA diagnosis and implementation status
 
 Measured 2026-08-26 against a live LibreOffice UNO listener (`localhost:2021`).
-Raw probe log: [`viz-isa-diagnosis.json`](viz-isa-diagnosis.json).
+Raw reproducible probe: [`viz-isa-diagnosis.json`](viz-isa-diagnosis.json).
 Re-run: `uv run python benchmark/diagnose_viz_isa.py` (needs UNO).
 
-K2.7 canary on `Visualization:Task 95` **wrote** (`kimi-k2.7-viz-canary-task-95-low-1`,
-`$0.015`, 10 calls, submitted). This is an **ISA miss**, not a compiler miss.
+## Task 95 diagnosis
 
-- Tools: inspect → five neighborhood reads → `calc_upsert_chart` (bubble) → `calc_inspect_charts` → compare → submit.
-- Upsert applied title, legend off, axis titles, data_labels, 9 point_colors. Dropped series name.
-- Spec had **no `bubble_size_range`**. `values_range` was `Strategy.$N$5:$P$13` (three columns) because the third size channel cannot be named.
-- Inspect after write: `id=Object 1`, `chart_type=unknown`, no series/ranges.
-- PNG export 25 KB / 514×300 — not a postage stamp. Size ISA is fine.
+K2.7 wrote a workbook on `Visualization:Task 95`
+(`kimi-k2.7-viz-canary-task-95-low-1`, `$0.015`, 10 calls). It correctly selected a
+bubble chart, title, labels, point colors, axis titles, and no legend. The failure was an
+ISA miss, not a compiler-intelligence miss.
 
-If it upserts and the chart is still wrong, use the gaps below.
-
-## Already working (do not re-litigate)
-
-Unit tests: 19 passed (2 UNO skipped without listener). With listener:
-`test_uno_chart_axis_titles_data_labels_and_point_colors` **passed**.
-
-Live apply_log on fixtures:
-
-| feature | result |
-|---|---|
-| Size floor / Excel spans (`width=16,height=9` → HMM) | domain tests pass; PNG exports 13–18 KB, not postage stamps |
-| Axis titles via `HasX/YAxisTitle` + title shape | applied on stacked + line Y |
-| Y min/max | applied |
-| Label rotation | applied (`xaxis.label_rotation`) |
-| Series / point colors | applied (bubble fixture 4 points) |
-| `data_labels` caption + Chart2 category names | applied |
-| Stacked column `diagram.Stacked` | applied |
-| Combo / pareto / waterfall / gauge / sunburst | honest `compile_note` (`approximated` / `scaffold` / `unsupported`); combo upsert `ok: false` |
-
-LO-vs-Excel combo and multi-level category axes stay **translation loss**, not missing
-ops. Do not fake Excel combo with a stacked column.
-
-## Blocking ISA gaps (implement these)
-
-### 1. `series.bubble_size_range` is domain-only
-
-`ChartSeriesSpec.bubble_size_range` exists. `uno_charts.py` never reads it.
-`addNewByName` gets `category_range` + `values_range` only.
-
-**Task 95** needs X=revenue, Y=growth, size=market. Size cannot be expressed.
-Wire the third range into the UNO data ranges (and inspect it back).
-
-### 2. `x_axis.number_format` is domain-only
-
-`ChartAxisSpec.number_format` is accepted. `_apply_axis` never sets a number format.
-**Task 1411527** wants `dd/mm/yyyy` on dates. Rotation already lands; format does not.
-
-### 3. UNO inspect is too thin (and lies in the tool docstring)
-
-`calc_inspect_charts` docs promise `category_range`, series ranges, `compile_note`.
-`inspect_charts_from_document` returns only:
+The old ChartSpec could name only three semantic channels:
 
 ```text
-id, sheet, title, chart_type, has_legend
+category_range + series.values_range + series.bubble_size_range
 ```
 
-Live inspect after a successful upsert:
+Task 95 needs four independent channels:
 
-- `id` is `"Object 1"`, not the requested `Portfolio` / `Burndown` / `Sales`
-- `chart_type` is `"unknown"` even for bubble/line/stacked (implementation-name
-  matching is wrong or the diagram is Chart2-only)
+```text
+product label + numeric X (revenue) + numeric Y (growth) + bubble size (market)
+```
 
-Agents cannot verify what they wrote. Expand inspect to round-trip ChartSpec
-fields that apply_log marked applied, and keep requested `id`.
+The handoff initially identified only the unwired size field. Live Chart2 inspection showed
+that this was incomplete: using product labels as `category_range` made LibreOffice consume
+them as bubble X values. `series.x_values_range` is therefore a required part of the fix.
 
-### 4. Series names drop with `AttributeError`
+## Implemented and live-verified
 
-Every fixture: `series[N].name (AttributeError)` in `dropped`. Legend still
-shows `has_legend: true` on line/stacked. Fix name apply or report it as
-unsupported honestly.
+- `ChartSeriesSpec.x_values_range` now exists. Bubble series require explicit X, Y
+  (`values_range`), and `bubble_size_range`; `category_range` remains label text.
+- UNO binds Chart2 sequences by role (`values-x`, `values-y`, `values-size`) instead of
+  relying on `addNewByName` range inference.
+- Bubble/scatter product labels are copied from `category_range` into right-positioned
+  per-point text labels.
+- Requested chart IDs persist through XLSX reload in the drawing shape name. Inspect,
+  replacement, and deletion resolve that stable ID even though LibreOffice renames the
+  embedded storage object to `Object 1`.
+- `calc_inspect_charts` now returns stable id, storage id, reliable Chart2 type, title,
+  legend, series role ranges, rendered point colors, point-label text, axes, and compile
+  note.
+- `x_axis` / `y_axis.number_format` now applies through the chart number-format supplier
+  and round-trips through inspect.
+- A series name is linked to the header cell immediately above its values range when that
+  header matches the requested name. Otherwise the apply log reports literal names as
+  unsupported instead of silently dropping them.
+- Bar/column creation and inspection follow UNO's `BarDiagram.Vertical` semantics; the
+  stacked-column fixture round-trips as `stacked_column`.
 
-## Non-goals for this handover
+Live checks:
 
-- Do not implement combo as a real dual-axis chart unless UNO can do it and
-  inspect round-trips it. The world already refuses combo.
-- Do not change the cheap compiler (K2.7) or start a 297-task run.
-- Do not raise `--call-limit` / `--max-tokens`.
-- Memory backend already round-trips full `ChartSpec`; UNO is the gap.
+```text
+LIBRECALC_RUN_UNO=1 uv run pytest tests/test_chart_translation.py -q
+4 passed
 
-## Suggested implementation order
+uv run python benchmark/diagnose_viz_isa.py
+static gaps: []
+UNO fixtures: bubble, line, stacked-column, honest combo refusal all completed
+```
 
-1. Inspect payload + requested id (otherwise agents and tests fly blind).
-2. `bubble_size_range` (unblocks Task 95).
-3. Axis `number_format` (unblocks Task 1411527).
-4. Series name apply.
-5. Re-run `LIBRECALC_RUN_UNO=1 uv run pytest tests/test_chart_translation.py`
-   and `uv run python benchmark/diagnose_viz_isa.py`.
-6. Then a K2.7 Task 95 canary, not Sol, until writes+inspect look right.
+A direct gold-blind Task 95 application produces a 514x300 PNG with the expected revenue
+X positions, growth-rate Y positions, proportional bubbles, labels A/B/C/D/E/F/G/X/Y,
+largest C green, smallest B red, and no legend. Inspect reads back:
+
+```text
+id=portfolio
+chart_type=bubble
+X=$Strategy.$N$5:$N$13
+Y=$Strategy.$O$5:$O$13
+size=$Strategy.$P$5:$P$13
+category_labels=[A,B,C,D,E,F,G,X,Y]
+```
+
+## Honest translation losses
+
+- LibreOffice aborts its XLSX exporter when per-point custom labels retain live
+  `CELLRANGE` fields in this runtime. Text custom-label fields save and reload correctly,
+  so XY labels are a write-time snapshot. UNO inspect returns `category_labels`; it cannot
+  truthfully recover `category_range` after XLSX reload and returns `null` for that field.
+- Arbitrary literal series names have no reliable Chart2 setter with an external Calc data
+  provider. Matching worksheet headers are linked; unmatched names appear in `dropped`.
+- Combo, multi-level category axes, waterfall, gauge, and sunburst remain explicit
+  translation loss / refusal. Do not fake an Excel combo with a stacked column.
+
+## Next measurement
+
+Run one K2.7 Task 95 development canary with the corrected tool contract. Do not use Sol or
+Opus for this probe, raise the call/token limits, or start the 15/297 slices. The canary asks
+only whether the cheap compiler now supplies the four explicit ranges and whether inspect
+lets it verify the result.

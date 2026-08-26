@@ -131,7 +131,7 @@ tools:
 
   calc_inspect_charts:
     signature: "calc_inspect_charts <path>"
-    docstring: "Inspect embedded charts in a workbook. Returns chart id, sheet, title, chart_type, category_range, series ranges, and compile_note when available."
+    docstring: "Inspect embedded charts in a workbook. Returns stable chart id, LibreOffice storage id, sheet, title, chart_type, category_range when recoverable, persisted category_labels, series X/Y/size ranges and rendered point_colors, axes, and compile_note."
     arguments:
       - name: path
         type: string
@@ -140,7 +140,7 @@ tools:
 
   calc_upsert_chart:
     signature: "calc_upsert_chart <path> <output_path> <chart_json>"
-    docstring: "Create or replace one chart through LibreOffice Calc and save to the private output path. chart_json follows ChartSpec: id, sheet, chart_type, category_range, series[{{name,values_range,color?,point_colors?}}], optional title, legend, anchor, size, data_labels, x_axis/y_axis. Size: omit width/height for Excel-like defaults (~8 cols x 15 rows). Small width+height (e.g. 16x9) are Excel column x row spans; large values are LibreOffice HMM (1/100 mm). data_labels=true shows category names on points; series.point_colors is a hex list for per-point fills."
+    docstring: "Create or replace one chart through LibreOffice Calc and save to the private output path. chart_json follows ChartSpec: id, sheet, chart_type, category_range, series[{{name,values_range,color?,point_colors?}}], optional title, legend, anchor, size, data_labels, x_axis/y_axis. values_range is the Y/value channel. Bubble series require separate one-column x_values_range and bubble_size_range fields; category_range supplies point-label text. Size: omit width/height for Excel-like defaults (~8 cols x 15 rows). Small width+height (e.g. 16x9) are Excel column x row spans; large values are LibreOffice HMM (1/100 mm). data_labels=true shows category names on points (XY labels persist as text snapshots); series.point_colors is a hex list for per-point fills."
     arguments:
       - name: path
         type: string
@@ -153,5 +153,5 @@ tools:
       - name: chart_json
         type: object
         argument_format: "{{ value | tojson | urlencode }}"
-        description: "ChartSpec object, for example {\"id\":\"sales\",\"sheet\":\"Sheet1\",\"chart_type\":\"line\",\"category_range\":\"A2:A5\",\"series\":[{\"name\":\"Revenue\",\"values_range\":\"B2:B5\"}],\"title\":\"Revenue Trend\",\"x_axis\":{\"title\":\"Month\"},\"y_axis\":{\"title\":\"USD\"},\"data_labels\":true}. Prefer omitting width/height; if set, use Excel-like spans (width=8,height=15) or HMM."
+        description: "ChartSpec object. Line example: {\"id\":\"sales\",\"sheet\":\"Sheet1\",\"chart_type\":\"line\",\"category_range\":\"A2:A5\",\"series\":[{\"name\":\"Revenue\",\"values_range\":\"B2:B5\"}]}. Bubble example: {\"id\":\"portfolio\",\"sheet\":\"Sheet1\",\"chart_type\":\"bubble\",\"category_range\":\"A2:A5\",\"series\":[{\"name\":\"Products\",\"x_values_range\":\"B2:B5\",\"values_range\":\"C2:C5\",\"bubble_size_range\":\"D2:D5\"}],\"data_labels\":true}. Prefer omitting width/height; if set, use Excel-like spans (width=8,height=15) or HMM."
         required: true
