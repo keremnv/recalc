@@ -1,0 +1,18 @@
+{
+  "name": "ablation-canary-one",
+  "purpose": "Single-task canary for the A/B/C interface ablation (PROJECT_CONTEXT.md section 28). Validates the arms end to end before spending on the full slice.",
+  "competitive_eligible": false,
+  "contamination": "Template:02_05 is burned development data: it was tuned on, scored, and is the frozen exact canary for the semantic-program lane. It must never be reported as held-out. It is a valid ablation task because contamination is symmetric across all three arms, so the relative comparison is unaffected.",
+  "known_reference_result": {
+    "arm": "C (semantic + program)",
+    "model": "moonshotai/kimi-k2.5",
+    "official": "exact 185/185",
+    "charged_usd": 0.00570253,
+    "model_calls": 4,
+    "note": "Sanity anchor: arm C on this task should still complete. A large deviation means the harness changed, not the interface."
+  },
+  "max_tool_calls_per_task": 40,
+  "tasks": [
+    {"category": "Template", "id": "02_05"}
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "ablation-three",
+  "purpose": "Three-task interface ablation slice spanning Template, Financial Model, and Debugging. Run each task under arms A, B, and C with an identical model, dollar cap, and call ceiling.",
+  "competitive_eligible": false,
+  "contamination": "All three tasks are burned development data with published or previously scored results. This is deliberate and does not invalidate the experiment: contamination is symmetric across arms, so the A/B/C comparison remains valid even though no arm's absolute score is a held-out result. Never quote these as benchmark performance.",
+  "known_reference_results": {
+    "Template:02_05": "arm C, Kimi K2.5: official exact 185/185, $0.0057, 4 calls",
+    "Financial_Model:09_04": "arm C, Kimi K2.7: regression 1.0, modification 0.9981, $0.068615",
+    "Debugging:07_01": "arm C, Kimi K2.7: regression 0.9966, modification 85/86 (0.9884), $0.196742"
+  },
+  "max_tool_calls_per_task": 40,
+  "tasks": [
+    {"category": "Template", "id": "02_05"},
+    {"category": "Financial_Model", "id": "09_04"},
+    {"category": "Debugging", "id": "07_01"}
+  ]
+}
