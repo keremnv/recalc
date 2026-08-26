@@ -45,7 +45,15 @@ Avoid both extremes:
 Prefer orthogonal spreadsheet-semantic primitives that compose.
 
 Flexibility lives in programs, not in minting a tool per miss and not in a generic shell.
-Experiment overlays (for example formula-fill-only) are measurement instruments, not the product.
+
+Experiment overlays (for example formula-fill-only tool sets, read budgets, prompt
+variants) are measurement instruments, not the product; they live in `benchmark/`.
+
+This does **not** apply to observation models. `formula-patterns-v1`,
+`formula-anomalies-v1`, semantic snapshots, and semantic diff are the read half of the
+world and live in `src/librecalc_mcp/domain/`. The test for which one a thing is:
+an instrument changes what the agent is *allowed* to do so we can measure it; an
+observation model changes what the agent can *see*, and ships.
 
 ## Program execution
 

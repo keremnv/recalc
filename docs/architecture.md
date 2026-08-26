@@ -32,6 +32,18 @@ Small tools for discovery/debugging plus one multi-operation execution tool.
 
 Stable Python types for workbook structure, ranges, operations, and results.
 
+Also the **observation models** (`domain/observation.py`, `domain/diff.py`,
+`domain/grid.py`): structure manifests, formula patterns, anomaly shortlists,
+dependency bridges, and semantic diff. Observation is a compiled interface, not a
+dump, and it is half the world -- so it belongs here, behind `CalcBackend`, not in a
+benchmark harness. Deterministic workbook facts stay in different fields from
+heuristic affordances, and heuristics are always labelled as such.
+
+The dividing line against the harness: anything that shapes *what the agent sees* is
+domain. Anything that rations, strips, or instruments the loop in order to measure it
+-- read budgets, tool-set overlays, prompt variants -- is a measuring instrument and
+lives in `benchmark/`.
+
 ### Backend interface
 
 A protocol separating spreadsheet semantics from UNO details. Operations include range
