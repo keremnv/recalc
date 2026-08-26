@@ -1,0 +1,19 @@
+{
+  "name": "viz-ladder-five",
+  "purpose": "Visualization development ladder after chart inspect/upsert polish; native UNO types only",
+  "model": "z-ai/glm-5.3",
+  "max_tool_calls_per_task": 12,
+  "isolation": {
+    "container": "official SpreadsheetBench 2 image",
+    "golden_data_available_to_agent": false,
+    "input_mount": "one exact workbook, read-only",
+    "output_mount": "one task-private directory, writable"
+  },
+  "tasks": [
+    {"category": "Visualization", "id": "Task 1437004"},
+    {"category": "Visualization", "id": "Task 1423401"},
+    {"category": "Visualization", "id": "Task 95"},
+    {"category": "Visualization", "id": "Task 1426290"},
+    {"category": "Visualization", "id": "Task 1417365"}
+  ]
+}

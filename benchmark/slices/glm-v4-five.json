@@ -1,0 +1,19 @@
+{
+  "name": "glm-v4-five",
+  "purpose": "Gold-blind GLM 5.3 held-out slice; task ids not in grok-v3-five",
+  "model": "z-ai/glm-5.3",
+  "max_tool_calls_per_task": 12,
+  "isolation": {
+    "container": "official SpreadsheetBench 2 image",
+    "golden_data_available_to_agent": false,
+    "input_mount": "one exact workbook, read-only",
+    "output_mount": "one task-private directory, writable"
+  },
+  "tasks": [
+    {"category": "Template", "id": "01_04"},
+    {"category": "Template", "id": "02_03"},
+    {"category": "Financial_Model", "id": "01_04"},
+    {"category": "Financial_Model", "id": "02_04"},
+    {"category": "Debugging", "id": "04_01"}
+  ]
+}

@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+tool_root=${LIBRECALC_TOOL_ROOT:-/opt/librecalc-tools/librecalc}
+python3 "$tool_root/lib/calc_tool.py" fill-formulas "$@" || :

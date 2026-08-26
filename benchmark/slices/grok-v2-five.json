@@ -1,0 +1,34 @@
+{
+  "name": "grok-v2-five",
+  "purpose": "Replacement untouched slice after two v1 Template tasks became development tasks",
+  "model": "cursor-grok-4.6-medium",
+  "max_tool_calls_per_task": 15,
+  "isolation": {
+    "container": "official SpreadsheetBench 2 image",
+    "golden_data_available_to_agent": false,
+    "input_mount": "one exact workbook, read-only",
+    "output_mount": "one task-private directory, writable"
+  },
+  "tasks": [
+    {
+      "category": "Template",
+      "id": "01_02"
+    },
+    {
+      "category": "Template",
+      "id": "02_04"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "01_03"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "02_02"
+    },
+    {
+      "category": "Debugging",
+      "id": "01_03"
+    }
+  ]
+}

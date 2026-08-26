@@ -1,0 +1,19 @@
+{
+  "name": "grok-v3-five",
+  "purpose": "Replacement untouched slice after grok-v2-five was exhausted as held-out / development",
+  "model": "cursor-grok-4.6-medium",
+  "max_tool_calls_per_task": 15,
+  "isolation": {
+    "container": "official SpreadsheetBench 2 image",
+    "golden_data_available_to_agent": false,
+    "input_mount": "one exact workbook, read-only",
+    "output_mount": "one task-private directory, writable"
+  },
+  "tasks": [
+    {"category": "Template", "id": "03_01"},
+    {"category": "Template", "id": "05_01"},
+    {"category": "Financial_Model", "id": "03_01"},
+    {"category": "Financial_Model", "id": "05_01"},
+    {"category": "Debugging", "id": "02_01"}
+  ]
+}

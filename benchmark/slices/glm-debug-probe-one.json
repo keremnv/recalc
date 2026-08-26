@@ -1,0 +1,15 @@
+{
+  "name": "glm-debug-probe-one",
+  "purpose": "Single fresh Debugging probe for GLM 5.3 (not 02_01, not glm-v4 ids)",
+  "model": "z-ai/glm-5.3",
+  "max_tool_calls_per_task": 12,
+  "isolation": {
+    "container": "official SpreadsheetBench 2 image",
+    "golden_data_available_to_agent": false,
+    "input_mount": "one exact workbook, read-only",
+    "output_mount": "one task-private directory, writable"
+  },
+  "tasks": [
+    {"category": "Debugging", "id": "03_01"}
+  ]
+}

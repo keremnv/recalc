@@ -1,0 +1,15 @@
+{
+  "name": "viz-dev-line-one",
+  "purpose": "Development canary for chart inspect+upsert on a native UNO line chart task",
+  "model": "z-ai/glm-5.3",
+  "max_tool_calls_per_task": 12,
+  "isolation": {
+    "container": "official SpreadsheetBench 2 image",
+    "golden_data_available_to_agent": false,
+    "input_mount": "one exact workbook, read-only",
+    "output_mount": "one task-private directory, writable"
+  },
+  "tasks": [
+    {"category": "Visualization", "id": "Task 1411527"}
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "public-example-nonvisual-v1",
+  "purpose": "Contaminated development suite matching the official public SpreadsheetBench 2 trajectory examples",
+  "competitive_eligible": false,
+  "contamination": "Full trajectories for these tasks are publicly available and some trajectories accessed golden workbooks. Never report this slice as held-out performance.",
+  "provenance": {
+    "dataset": "KAKA22/SpreadsheetBench-v2",
+    "artifact": "trajectory_example.zip",
+    "artifact_sha256": "73217eb9b75cc09f6a49397692560fecd0d5e073d7fd5d3c2727af686b1a3e36",
+    "models": 8,
+    "tasks_per_category": 5
+  },
+  "max_tool_calls_per_task": 50,
+  "tasks": [
+    {"category": "Template", "id": "01_01"},
+    {"category": "Template", "id": "02_02"},
+    {"category": "Template", "id": "02_04"},
+    {"category": "Template", "id": "06_01"},
+    {"category": "Template", "id": "16_08"},
+    {"category": "Financial_Model", "id": "09_01"},
+    {"category": "Financial_Model", "id": "09_02"},
+    {"category": "Financial_Model", "id": "09_03"},
+    {"category": "Financial_Model", "id": "09_04"},
+    {"category": "Financial_Model", "id": "09_05"},
+    {"category": "Debugging", "id": "04_06"},
+    {"category": "Debugging", "id": "05_03"},
+    {"category": "Debugging", "id": "07_01"},
+    {"category": "Debugging", "id": "08_03"},
+    {"category": "Debugging", "id": "10_02"}
+  ]
+}

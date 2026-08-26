@@ -1,0 +1,89 @@
+env:
+  deployment:
+    type: docker
+    image: spreadsheetbench-v2
+    pull: never
+    docker_args:
+      - -v
+      - ../../../src:/opt/librecalc/src:ro
+
+agent:
+  type: default
+  templates:
+    system_template: |-
+      You are a spreadsheet visualization engineer. Work in a strict one-tool-call-at-a-time loop.
+      Use the deterministic Calc tools for all spreadsheet inspection and chart edits. Preserve
+      existing populated cells unless the task requires changing them. Prefer calc_upsert_chart for
+      one chart specification; use calc_program when the task mixes chart edits with other workbook
+      operations. When two or more focused regions are needed, use one calc_read_ranges call.
+      Only the exact Input and Output paths in the task exist. Do not inspect directories, guess
+      sibling files, or inspect the Output path before you create it.
+
+    instance_template: |-
+      <task_context>
+      Complete the visualization task using LibreOffice Calc chart semantics.
+
+      Workflow:
+      1. Call calc_inspect once for the workbook manifest and any embedded charts listed under
+         charts. Use calc_inspect_charts when you need full chart metadata.
+      2. Use calc_read or calc_read_ranges for small source-data neighborhoods only when the
+         chart ranges are not obvious from the instruction.
+      3. Write the result with calc_upsert_chart or calc_program (upsert_chart / delete_chart).
+      4. Re-inspect charts on the output if needed, compare input and output with calc_compare,
+         then submit.
+
+      Never edit the read-only input in place. Do not use Python libraries or LibreOffice
+      command-line conversion to modify spreadsheets; those bypass the interface being evaluated.
+      </task_context>
+
+      <instructions>
+      {{instruction}}
+
+      Input: {{spreadsheet_path}}
+      Output: {{output_path}}
+      </instructions>
+
+    next_step_template: |-
+      Observation:
+      {{observation}}
+
+    next_step_no_output_template: |-
+      The last command produced no output.
+
+    strategy_template: null
+
+    demonstration_template: null
+
+    put_demos_in_history: false
+
+    max_observation_length: 100000
+
+    next_step_truncated_observation_template: |-
+      <warning>The observation was truncated.</warning>
+      <observation_head>{{observation[ : max_observation_length // 2]}}</observation_head>
+      <elided_chars>{{elided_chars}} characters elided</elided_chars>
+      <observation_tail>{{observation[- max_observation_length // 2:]}}</observation_tail>
+
+    command_cancelled_timeout_template: |-
+      The command '{{command}}' exceeded the {{timeout}} second timeout.
+
+  tools:
+    enable_bash_tool: false
+    execution_timeout: 180
+    max_consecutive_execution_timeouts: 3
+    bundles:
+      - path: ../../../benchmark/sweagent/librecalc
+      - path: tools/submit
+    parse_function:
+      type: function_calling
+    env_variables:
+      PIP_PROGRESS_BAR: "off"
+      LIBRECALC_SOURCE_ROOT: /opt/librecalc/src
+      LIBRECALC_TOOL_ROOT: /root/tools/librecalc
+      LIBRECALC_OBSERVATION_VARIANT: grid-v1
+
+  model:
+    per_instance_cost_limit: 2.0
+    per_instance_call_limit: 12
+    completion_kwargs:
+      max_tokens: 8192

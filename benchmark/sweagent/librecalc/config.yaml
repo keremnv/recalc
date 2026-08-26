@@ -1,0 +1,157 @@
+tools:
+  calc_inspect:
+    signature: "calc_inspect <path> [<target_sheets_json>]"
+    docstring: "Inspect progressively. With no target sheets, returns a compact all-sheet manifest. Pass exact names from that manifest for labels, structure, and formula patterns on only those sheets. formula-anomalies-v1 remains workbook-wide."
+    arguments:
+      - name: path
+        type: string
+        description: "Absolute path to the input or output spreadsheet."
+        required: true
+      - name: target_sheets_json
+        type: array
+        items:
+          type: string
+        argument_format: "{{ value | tojson | urlencode }}"
+        description: "Optional exact worksheet names copied from the manifest, for example [\"IS, BS, CF\",\"Ratios\"]. Omit on the first call."
+        required: false
+
+  calc_read:
+    signature: "calc_read <path> <sheet> <cell_range>"
+    docstring: "Read one small rectangular neighborhood through LibreOffice Calc. Ranges are limited to 96 cells; whole sheets and used-range dumps are rejected."
+    arguments:
+      - name: path
+        type: string
+        description: "Absolute path to the spreadsheet."
+        required: true
+      - name: sheet
+        type: string
+        description: "Exact worksheet name."
+        required: true
+      - name: cell_range
+        type: string
+        description: "A1 neighborhood of at most 96 cells, for example D35:O42. Whole sheets are rejected."
+        required: true
+
+  calc_read_ranges:
+    signature: "calc_read_ranges <path> <ranges_json>"
+    docstring: "Read several small addressed neighborhoods in one workbook pass. Each range is limited to 96 cells; used-range dumps are rejected."
+    arguments:
+      - name: path
+        type: string
+        description: "Absolute path to the spreadsheet."
+        required: true
+      - name: ranges_json
+        type: array
+        items:
+          type: object
+        argument_format: "{{ value | tojson | urlencode }}"
+        description: "Array of objects like [{\"sheet\":\"Financials\",\"range\":\"D35:O42\"},{\"sheet\":\"Valuation\",\"range\":\"C54:L59\"}]. Each range is at most 96 cells."
+        required: true
+
+  calc_compare:
+    signature: "calc_compare <before_path> <after_path>"
+    docstring: "Compare deterministically. Reports complete direct label/input/formula and error changes; unchanged-formula recalculation effects use complete counts/ranges and bounded representatives."
+    arguments:
+      - name: before_path
+        type: string
+        description: "Absolute path to the original input spreadsheet."
+        required: true
+      - name: after_path
+        type: string
+        description: "Absolute path to the edited output spreadsheet."
+        required: true
+
+  calc_write:
+    signature: "calc_write <path> <output_path> <sheet> <cell_range> <values_json>"
+    docstring: "Write a rectangular JSON matrix through LibreOffice Calc, recalculate, and save to the private output path. Preserves the input file."
+    arguments:
+      - name: path
+        type: string
+        description: "Absolute path to the read-only input spreadsheet."
+        required: true
+      - name: output_path
+        type: string
+        description: "Absolute path for the completed output spreadsheet."
+        required: true
+      - name: sheet
+        type: string
+        description: "Exact worksheet name."
+        required: true
+      - name: cell_range
+        type: string
+        description: "A1 range matching the dimensions of values_json."
+        required: true
+      - name: values_json
+        type: array
+        items:
+          type: array
+        argument_format: "{{ value | tojson | urlencode }}"
+        description: "Matrix of scalar values, for example [[1,2],[3,4]]."
+        required: true
+
+  calc_fill_formulas:
+    signature: "calc_fill_formulas <path> <output_path> <formula_blocks_json>"
+    docstring: "Fill many formula ranges and save once. Each block has sheet, range, and one top-left formula; relative A1 references are translated across/down the entire range. Use one block per patterned row/column instead of enumerating set_formula cells."
+    arguments:
+      - name: path
+        type: string
+        description: "Absolute path to the read-only input spreadsheet."
+        required: true
+      - name: output_path
+        type: string
+        description: "Absolute path for the completed output spreadsheet."
+        required: true
+      - name: formula_blocks_json
+        type: array
+        items:
+          type: object
+        argument_format: "{{ value | tojson | urlencode }}"
+        description: "Array like [{\"sheet\":\"Model\",\"range\":\"C9:F9\",\"formula\":\"=C6-C7+C8\"}]. Use ranges, never one block per cell."
+        required: true
+
+  calc_program:
+    signature: "calc_program <path> <output_path> <operations_json>"
+    docstring: "Execute a mixed ordered batch through LibreOffice Calc, recalculate once, and save to the private output path. Operations: write_range {{sheet,range,values}}; set_formula {{sheet,range,formula}} for one cell; fill_formula {{sheet,range,formula}} to autofill relative references from the range's top-left cell; clear_range {{sheet,range}} preserving formatting; create_sheet {{name,index?}}; insert_row {{sheet,index,count?}} inserts count rows (default 1) before 1-based index; delete_row {{sheet,index,count?}} removes count rows starting at 1-based index; upsert_chart {{chart:ChartSpec}}; delete_chart {{name}} removes a chart by id. For formula-only completion, prefer calc_fill_formulas. For a single chart edit, prefer calc_upsert_chart."
+    arguments:
+      - name: path
+        type: string
+        description: "Absolute path to the input spreadsheet, or to a prior output for a follow-up batch."
+        required: true
+      - name: output_path
+        type: string
+        description: "Absolute output path. It may equal path for an in-place follow-up batch."
+        required: true
+      - name: operations_json
+        type: array
+        items:
+          type: object
+        argument_format: "{{ value | tojson | urlencode }}"
+        description: "Array of operation objects, for example [{\"op\":\"set_formula\",\"sheet\":\"Model\",\"range\":\"B2\",\"formula\":\"=SUM(B3:B5)\"}]."
+        required: true
+
+  calc_inspect_charts:
+    signature: "calc_inspect_charts <path>"
+    docstring: "Inspect embedded charts in a workbook. Returns chart id, sheet, title, chart_type, category_range, series ranges, and compile_note when available."
+    arguments:
+      - name: path
+        type: string
+        description: "Absolute path to the input or output spreadsheet."
+        required: true
+
+  calc_upsert_chart:
+    signature: "calc_upsert_chart <path> <output_path> <chart_json>"
+    docstring: "Create or replace one chart through LibreOffice Calc and save to the private output path. chart_json follows ChartSpec: id, sheet, chart_type, category_range, series[{name,values_range,color?,point_colors?}], optional title, legend, anchor, size, data_labels, x_axis/y_axis. Size: omit width/height for Excel-like defaults (~8 cols × 15 rows). Small width+height (e.g. 16×9) are Excel column×row spans; large values are LibreOffice HMM (1/100 mm). data_labels=true shows category names on points; series.point_colors is a hex list for per-point fills."
+    arguments:
+      - name: path
+        type: string
+        description: "Absolute path to the read-only input spreadsheet, or a prior output for follow-up edits."
+        required: true
+      - name: output_path
+        type: string
+        description: "Absolute path for the completed output spreadsheet."
+        required: true
+      - name: chart_json
+        type: object
+        argument_format: "{{ value | tojson | urlencode }}"
+        description: "ChartSpec object, for example {\"id\":\"sales\",\"sheet\":\"Sheet1\",\"chart_type\":\"line\",\"category_range\":\"A2:A5\",\"series\":[{\"name\":\"Revenue\",\"values_range\":\"B2:B5\"}],\"title\":\"Revenue Trend\",\"x_axis\":{\"title\":\"Month\"},\"y_axis\":{\"title\":\"USD\"},\"data_labels\":true}. Prefer omitting width/height; if set, use Excel-like spans (width=8,height=15) or HMM."
+        required: true

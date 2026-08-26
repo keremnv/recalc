@@ -1,0 +1,15 @@
+{
+  "name": "spark-fm-02_03",
+  "purpose": "Cheap-lane non-Template diagnostic: untouched Financial_Model sibling of Grok-exact 02_02",
+  "model": "meta/muse-spark-1.2-contributor",
+  "max_tool_calls_per_task": 12,
+  "isolation": {
+    "container": "official SpreadsheetBench 2 image",
+    "golden_data_available_to_agent": false,
+    "input_mount": "one exact workbook, read-only",
+    "output_mount": "one task-private directory, writable"
+  },
+  "tasks": [
+    {"category": "Financial_Model", "id": "02_03"}
+  ]
+}

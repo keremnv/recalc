@@ -1,0 +1,100 @@
+env:
+  deployment:
+    type: docker
+    image: spreadsheetbench-v2
+    pull: never
+    docker_args:
+      - -v
+      - ../../../src:/opt/librecalc/src:ro
+
+agent:
+  type: default
+  templates:
+    system_template: |-
+      You are a spreadsheet automation engineer. Work in a strict one-tool-call-at-a-time loop.
+      Use the deterministic Calc tools for all spreadsheet inspection and edits. Preserve existing
+      populated cells unless the task requires changing them. Prefer calc_program for related edits
+      so the workbook is recalculated and saved once. For formula-only completion, prefer
+      calc_fill_formulas with one block per patterned range; never enumerate translated cells.
+      When two or more focused regions are needed, use one calc_read_ranges call.
+      Only the exact Input and Output paths in the task exist. Do not inspect directories, guess
+      sibling files, or inspect the Output path before you create it.
+
+    instance_template: |-
+      <task_context>
+      Complete the spreadsheet task using LibreOffice Calc semantics.
+
+      Workflow:
+      1. Call calc_inspect without target sheets for the compact workbook manifest. Then call it once
+         with the exact manifest names of only the worksheets required by the instruction.
+      2. Do not reread a whole used range. Use calc_read for one focused region or calc_read_ranges
+         for several.
+         Treat inferred candidate_gaps as a heuristic checklist, not requirements; ignore obvious
+         section headers and notes.
+      3. Infer only the missing or incorrect formulas/values required by the instruction.
+      4. Write the result to the exact output path. Use calc_fill_formulas for formula-only work;
+         use calc_program for mixed operations. Keep patterned edits range-based.
+      5. Compare input and output with calc_compare. Check that exact changes match the instruction;
+         candidate gaps remain heuristic. Use focused reads only for a real unresolved ambiguity,
+         then submit.
+
+      Never edit the read-only input in place. Do not use Python libraries or LibreOffice command-line
+      conversion to modify spreadsheets; those bypass the interface being evaluated.
+      </task_context>
+
+      <instructions>
+      {{instruction}}
+
+      Input: {{spreadsheet_path}}
+      Output: {{output_path}}
+      </instructions>
+
+    next_step_template: |-
+      Observation:
+      {{observation}}
+
+    next_step_no_output_template: |-
+      The last command produced no output.
+
+    strategy_template: null
+
+    demonstration_template: null
+
+    put_demos_in_history: false
+
+    max_observation_length: 100000
+
+    next_step_truncated_observation_template: |-
+      <warning>The observation was truncated.</warning>
+      <observation_head>{{observation[ : max_observation_length // 2]}}</observation_head>
+      <elided_chars>{{elided_chars}} characters elided</elided_chars>
+      <observation_tail>{{observation[- max_observation_length // 2:]}}</observation_tail>
+
+    command_cancelled_timeout_template: |-
+      The command '{{command}}' exceeded the {{timeout}} second timeout.
+
+  tools:
+    enable_bash_tool: false
+    execution_timeout: 60
+    max_consecutive_execution_timeouts: 3
+    bundles:
+      # Bundle paths are resolved from the vendored SWE-agent root.
+      - path: ../../../benchmark/sweagent/librecalc
+      - path: tools/submit
+    parse_function:
+      type: function_calling
+    env_variables:
+      PIP_PROGRESS_BAR: "off"
+      LIBRECALC_SOURCE_ROOT: /opt/librecalc/src
+      LIBRECALC_TOOL_ROOT: /root/tools/librecalc
+      LIBRECALC_OBSERVATION_VARIANT: grid-v1
+
+  model:
+    # SWE-agent checks limits after recording a response. These settings therefore
+    # permit at most 15 paid calls and leave one bounded call of headroom below $0.10.
+    per_instance_cost_limit: 0.085
+    per_instance_call_limit: 14
+    completion_kwargs:
+      max_tokens: 2048
+      input_cost_per_token: 0.000000375
+      output_cost_per_token: 0.000001875
