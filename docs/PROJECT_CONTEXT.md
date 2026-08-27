@@ -166,6 +166,13 @@ Parked: Sol, K2.5, iterate-five, format-conventions as 297 default, `08_03`/`01_
 colour `03_04`, K2.7 297, fake Excel combo, generic blank ranking, the 97 Template
 slice. Preserve-populated UNO `int(cell.Type)` Enum crash is **fixed**, unremeasured.
 
+**K2.7 write-commit experiment (2026-08-27).** Gold-blind. Not the 297 default.
+`--compute-read-budget` on formula-patterns (two inspects + one neighborhood read).
+Oversized dumps no longer spend the Debugging read slot; they set `write_now` so the
+next read is blocked. Date-run `boundary_continuations` are included in the same fill
+unless the instruction excludes them. Slice
+`benchmark/slices/kimi-k27-commit-write-four.json`. Do not encode cells.
+
 **Full non-visual result now exists (2026-08-27).** The isolated Sol run
 `gpt-5.6-sol-nonvisual-all-medium-1` produced **297/297 workbooks** and scored
 **59/297 official exact** for about **$28.04**. This supersedes the earlier write-rate gates and

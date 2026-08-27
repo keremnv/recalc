@@ -327,6 +327,7 @@ def test_runner_allows_one_bounded_format_repair_by_default(monkeypatch) -> None
     assert args.read_budget is True
     assert args.blank_bridges is True
     assert args.preserve_populated is False
+    assert args.compute_read_budget is False
 
 
 def test_read_budget_flag_can_be_disabled(monkeypatch) -> None:
@@ -558,6 +559,7 @@ def test_formula_anomalies_with_program_execution_allows_geometry_ops(tmp_path) 
     assert "insert_row at insert_row_index" in config["agent"]["templates"]["instance_template"]
     assert "insert_row is the write" in system
     assert "restarting from the input wipes" in system
+    assert "do not retry dumps" in system
 
 
 def test_format_conventions_prompt_uses_bounded_census_and_set_format(tmp_path) -> None:
@@ -606,3 +608,26 @@ def test_formula_anomalies_two_pass_policy_allows_one_output_reinspection(tmp_pa
     assert "third inspection or repair pass" in instance
     assert "inspect the output once" in system
     assert "Do not start another inspection" not in instance
+
+
+def test_compute_read_budget_stages_write_from_inspect_prompt(tmp_path) -> None:
+    runner = _runner_module()
+    project_root = Path(__file__).parents[1]
+    staged = runner._stage_tool_policy(
+        source_config=project_root / "benchmark/sweagent/spreadsheet.yaml",
+        sweagent_root=project_root / "benchmark-data/SpreadsheetBench-2/SWE-agent",
+        temporary_root=tmp_path,
+        read_policy="progressive",
+        execution="formula-blocks-v1",
+        observation="formula-patterns-v1",
+        compute_read_budget=True,
+    )
+
+    config = yaml.safe_load(staged.read_text(encoding="utf-8"))
+    instance = config["agent"]["templates"]["instance_template"]
+    system = config["agent"]["templates"]["system_template"]
+
+    assert "at most one calc_read_ranges batch" in instance
+    assert "Include those cells in the same calc_fill_formulas" not in instance
+    assert "Include boundary_continuations in the same fill" in instance
+    assert "write from inspect; do not dump or bash" in system

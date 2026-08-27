@@ -293,3 +293,35 @@ def test_frozen_preserve_populated_is_compute_only(
     assert "--preserve-populated" in compute
     assert "--preserve-populated" not in debugging
     assert "--read-budget" in debugging
+
+
+def test_frozen_compute_read_budget_is_compute_only(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    frozen = _module()
+    slice_path = _write_slice(tmp_path / "slice.json")
+    commands: list[list[str]] = []
+    monkeypatch.setattr(
+        frozen.subprocess,
+        "call",
+        lambda command, cwd=None: commands.append([str(part) for part in command]) or 0,
+    )
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "run_kimi_frozen.py",
+            "--slice",
+            str(slice_path),
+            "--run-name",
+            "commit-pack",
+            "--compute-read-budget",
+            "--no-score",
+        ],
+    )
+
+    assert frozen.main() == 0
+    compute, debugging = commands
+    assert "--compute-read-budget" in compute
+    assert "--compute-read-budget" not in debugging
+    assert "--read-budget" in debugging

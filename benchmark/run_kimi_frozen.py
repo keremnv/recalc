@@ -82,6 +82,14 @@ def _arguments() -> argparse.Namespace:
         ),
     )
     parser.add_argument(
+        "--compute-read-budget",
+        action="store_true",
+        help=(
+            "Forward --compute-read-budget to Template/Financial Model only. "
+            "Write-commit experiment; never the 297 default."
+        ),
+    )
+    parser.add_argument(
         "--no-score",
         action="store_true",
         help="Skip the in-run official eval pack. Default is to score after inference.",
@@ -169,8 +177,11 @@ def _run_group(
     ]
     if debugging:
         command.append("--read-budget")
-    elif args.preserve_populated:
-        command.append("--preserve-populated")
+    else:
+        if args.preserve_populated:
+            command.append("--preserve-populated")
+        if args.compute_read_budget:
+            command.append("--compute-read-budget")
     if args.skip_existing:
         command.append("--skip-existing")
     for provider in args.provider_only or []:

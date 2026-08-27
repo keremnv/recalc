@@ -158,7 +158,9 @@ def _require_neighborhood_range(cell_range: str, *, label: str) -> None:
         raise ValueError(
             f"{label} {cell_range} covers {count} cells; neighborhood reads are limited to "
             f"{limit} cells (a few rows or columns around a candidate). "
-            "Narrow the range; do not dump a used range or whole sheet."
+            "Narrow the range; do not dump a used range or whole sheet. If you cannot "
+            "narrow it, write from inspect with calc_fill_formulas or calc_program; "
+            "do not retry dumps or bash."
         )
 
 
@@ -222,10 +224,15 @@ def main(argv: list[str]) -> int:
         if _read_budget().read_budget_error() is not None:
             _emit({"ok": False, "error": _read_budget().read_budget_error()})
             return 1
-        _read_budget().consume_read_budget()
         if _observation()[2].A1_RANGE.fullmatch(cell_range.upper()) is None:
             raise ValueError(f"invalid A1 range: {cell_range}")
-        _require_neighborhood_range(cell_range, label="calc_read range")
+        try:
+            _require_neighborhood_range(cell_range, label="calc_read range")
+        except ValueError as exc:
+            _read_budget().consume_read_budget(successful=False)
+            _emit({"ok": False, "error": f"ValueError: {exc}"})
+            return 1
+        _read_budget().consume_read_budget(successful=True)
         result = backend.read_range(sheet=sheet, cell_range=cell_range, path=path)
         variant = os.environ.get("LIBRECALC_OBSERVATION_VARIANT", "grid-v1")
         _emit(
@@ -243,7 +250,6 @@ def main(argv: list[str]) -> int:
         if (budget_error := _read_budget().read_budget_error()) is not None:
             _emit({"ok": False, "error": budget_error})
             return 1
-        _read_budget().consume_read_budget()
         requests = _parse_range_requests(raw_requests)
         valid_requests: list[tuple[str, str]] = []
         valid_indexes: list[int] = []
@@ -261,6 +267,8 @@ def main(argv: list[str]) -> int:
             else:
                 valid_requests.append((sheet, cell_range))
                 valid_indexes.append(index)
+
+        _read_budget().consume_read_budget(successful=bool(valid_requests))
 
         results = backend.read_ranges(valid_requests, path=path) if valid_requests else []
         variant = os.environ.get("LIBRECALC_OBSERVATION_VARIANT", "grid-v1")

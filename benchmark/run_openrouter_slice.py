@@ -117,8 +117,17 @@ def _arguments() -> argparse.Namespace:
         default=True,
         help=(
             "On formula-anomalies-v1 and format-conventions-v1, allow one successful "
-            "read batch after inspect then block further reads (default on). Measuring "
-            "instrument, not a product primitive."
+            "neighborhood read after inspect then block further reads (default on). "
+            "Measuring instrument, not a product primitive."
+        ),
+    )
+    parser.add_argument(
+        "--compute-read-budget",
+        action="store_true",
+        help=(
+            "On formula-patterns-v1 (Template/Financial Model), allow two inspects and "
+            "one neighborhood read, then block further reads. Write-commit experiment; "
+            "not a 297 default."
         ),
     )
     parser.add_argument(
@@ -422,6 +431,7 @@ def _stage_tool_policy(
     execution_timeout: int | None = None,
     observation: str = "grid-v1",
     repair_passes: int = 1,
+    compute_read_budget: bool = False,
 ) -> Path:
     config = yaml.safe_load(source_config.read_text(encoding="utf-8"))
     if execution_timeout is not None:
@@ -488,7 +498,10 @@ def _stage_tool_policy(
         old_read_guidance = """2. Do not reread a whole used range. Use calc_read for one focused region or calc_read_ranges
    for several.
    Treat inferred candidate_gaps as a heuristic checklist, not requirements; ignore obvious
-   section headers and notes."""
+   section headers and notes. formula-patterns-v1 inspect may also list
+   boundary_continuations: one-cell date-run extensions of an existing formula.
+   Include those cells in the same calc_fill_formulas as the named work unless the
+   instruction excludes that continuation."""
         new_read_guidance = """2. Treat inferred candidate_gaps as a heuristic checklist, not requirements; ignore obvious
    section headers and notes. The semantic overview is the complete read surface for this run;
    focused range reads are intentionally unavailable."""
@@ -514,7 +527,10 @@ def _stage_tool_policy(
         old_anomaly_guidance = """2. Do not reread a whole used range. Use calc_read for one focused region or calc_read_ranges
    for several.
    Treat inferred candidate_gaps as a heuristic checklist, not requirements; ignore obvious
-   section headers and notes."""
+   section headers and notes. formula-patterns-v1 inspect may also list
+   boundary_continuations: one-cell date-run extensions of an existing formula.
+   Include those cells in the same calc_fill_formulas as the named work unless the
+   instruction excludes that continuation."""
         if repair_passes == 1:
             new_anomaly_guidance = """2. Inspect includes ranked translation/sequence candidates and a compact formula-error
    representative list. Both are heuristics, not requirements. At most one confirmation pass:
@@ -565,7 +581,9 @@ def _stage_tool_policy(
                 "If inspect listed deleted_row_geometry that matches the instruction, "
                 "insert_row is the write; do not spend the confirmation read on that sheet. "
                 "After the first save, further writes must use the output path as source; "
-                "restarting from the input wipes the restore.\n"
+                "restarting from the input wipes the restore. "
+                "If a read is rejected as too large, write from inspect; do not retry dumps "
+                "or bash.\n"
             )
         if repair_passes == 2:
             write_hint += (
@@ -588,7 +606,10 @@ def _stage_tool_policy(
                 """2. Do not reread a whole used range. Use calc_read for one focused region or calc_read_ranges
    for several.
    Treat inferred candidate_gaps as a heuristic checklist, not requirements; ignore obvious
-   section headers and notes.""",
+   section headers and notes. formula-patterns-v1 inspect may also list
+   boundary_continuations: one-cell date-run extensions of an existing formula.
+   Include those cells in the same calc_fill_formulas as the named work unless the
+   instruction excludes that continuation.""",
                 """2. Inspect reports mixed font-color convention groups and bounded minority-color ranges.
    These are heuristics, not requirements. Use at most one calc_read_ranges call covering small
    neighborhoods around ranges you intend to change (each range is capped at 96 cells).""",
@@ -655,7 +676,10 @@ def _stage_tool_policy(
         old_read_guidance = """2. Do not reread a whole used range. Use calc_read for one focused region or calc_read_ranges
    for several.
    Treat inferred candidate_gaps as a heuristic checklist, not requirements; ignore obvious
-   section headers and notes."""
+   section headers and notes. formula-patterns-v1 inspect may also list
+   boundary_continuations: one-cell date-run extensions of an existing formula.
+   Include those cells in the same calc_fill_formulas as the named work unless the
+   instruction excludes that continuation."""
         new_read_guidance = """2. Use calc_read for one region at a time. Batched reads are unavailable in this run."""
         if old_read_guidance not in instance_template:
             raise RuntimeError("Thin policy could not locate the progressive-read prompt")
@@ -689,6 +713,30 @@ def _stage_tool_policy(
         config["agent"]["templates"]["system_template"] = system_template.replace(
             "Prefer calc_program for related edits\nso the workbook is recalculated and saved once. ",
             "",
+        )
+    instance_template = config["agent"]["templates"]["instance_template"]
+    if observation == "formula-patterns-v1" and compute_read_budget and read_policy == "progressive":
+        old_read_guidance = """2. Do not reread a whole used range. Use calc_read for one focused region or calc_read_ranges
+   for several.
+   Treat inferred candidate_gaps as a heuristic checklist, not requirements; ignore obvious
+   section headers and notes. formula-patterns-v1 inspect may also list
+   boundary_continuations: one-cell date-run extensions of an existing formula.
+   Include those cells in the same calc_fill_formulas as the named work unless the
+   instruction excludes that continuation."""
+        new_read_guidance = """2. After the two inspects, at most one calc_read_ranges batch of neighborhoods
+   (each range capped at 96 cells). Then write. If a read is rejected as too large,
+   write from inspect with calc_fill_formulas; do not retry dumps or bash.
+   Treat inferred candidate_gaps as a heuristic checklist, not requirements.
+   Include boundary_continuations in the same fill unless the instruction excludes them."""
+        if old_read_guidance not in instance_template:
+            raise RuntimeError("Compute read-budget policy could not locate the progressive-read prompt")
+        instance_template = instance_template.replace(old_read_guidance, new_read_guidance)
+        config["agent"]["templates"]["instance_template"] = instance_template
+        system_template = config["agent"]["templates"]["system_template"]
+        config["agent"]["templates"]["system_template"] = (
+            system_template.rstrip()
+            + "\nAfter inspect, at most one neighborhood read, then write. "
+            "If a read is rejected as too large, write from inspect; do not dump or bash.\n"
         )
     staged_config = temporary_root / f"spreadsheet-{read_policy}-{execution}.yaml"
     staged_config.write_text(yaml.safe_dump(config, sort_keys=False), encoding="utf-8")
@@ -844,6 +892,7 @@ def _run_task(
             execution_timeout=args.execution_timeout,
             observation=args.observation,
             repair_passes=args.repair_passes,
+            compute_read_budget=bool(getattr(args, "compute_read_budget", False)),
         )
         sweagent_overlay = _stage_sweagent_overlay(args.sweagent_root, temporary_root)
         dataset_root = _stage_task(
@@ -872,6 +921,12 @@ def _run_task(
                     "/mnt/spreadsheet_output/.librecalc_read_budget.json"
                 )
                 env_variables["LIBRECALC_INSPECTION_LIMIT"] = str(args.repair_passes)
+        elif args.observation == "formula-patterns-v1" and args.compute_read_budget:
+            env_variables["LIBRECALC_READ_BUDGET_ENABLED"] = "1"
+            env_variables["LIBRECALC_READ_BUDGET_PATH"] = (
+                "/mnt/spreadsheet_output/.librecalc_read_budget.json"
+            )
+            env_variables["LIBRECALC_INSPECTION_LIMIT"] = "2"
         command = [
             str(args.sweagent_root / ".venv" / "bin" / "sweagent"),
             "run",
@@ -979,6 +1034,7 @@ def _run_task(
         "observation_variant": args.observation,
         "blank_bridges": bool(getattr(args, "blank_bridges", True)),
         "read_budget": bool(getattr(args, "read_budget", True)),
+        "compute_read_budget": bool(getattr(args, "compute_read_budget", False)),
         "repair_passes": int(getattr(args, "repair_passes", 1)),
         "read_policy": args.read_policy,
         "execution_variant": args.execution,

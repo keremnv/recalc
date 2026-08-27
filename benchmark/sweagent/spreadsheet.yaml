@@ -31,8 +31,9 @@ agent:
          for several.
          Treat inferred candidate_gaps as a heuristic checklist, not requirements; ignore obvious
          section headers and notes. formula-patterns-v1 inspect may also list
-         boundary_continuations: one-cell date-run extensions. Those are heuristics, not
-         requirements.
+         boundary_continuations: one-cell date-run extensions of an existing formula.
+         Include those cells in the same calc_fill_formulas as the named work unless the
+         instruction excludes that continuation.
       3. Infer only the missing or incorrect formulas/values required by the instruction.
       4. Write the result to the exact output path. Use calc_fill_formulas for formula-only work;
          use calc_program for mixed operations. Keep patterned edits range-based.
@@ -41,7 +42,9 @@ agent:
          then submit.
 
       Never edit the read-only input in place. After the first save, further writes must use
-      the output path as the source; restarting from the input wipes prior edits. Do not use
+      the output path as the source; restarting from the input wipes prior edits. If a tool
+      returns an error, do not emit bash or a malformed call; write from inspect with
+      calc_fill_formulas or calc_program. Do not use
       Python libraries or LibreOffice command-line
       conversion to modify spreadsheets; those bypass the interface being evaluated.
       </task_context>

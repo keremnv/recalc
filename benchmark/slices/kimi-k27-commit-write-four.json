@@ -1,0 +1,9 @@
+{
+  "description": "K2.7 write-commit canary on never-write seeds. Template/FM use formula-patterns read-budget; Debugging uses dump write_now. Not the 297.",
+  "tasks": [
+    {"category": "Template", "id": "05_01"},
+    {"category": "Template", "id": "03_02"},
+    {"category": "Financial_Model", "id": "04_01"},
+    {"category": "Debugging", "id": "05_03"}
+  ]
+}

@@ -278,7 +278,8 @@ def test_multi_range_read_returns_valid_items_alongside_oversize_errors(
                     "ValueError: ranges_json item 0 A1:I16 covers 144 cells; "
                     "neighborhood reads are limited to 96 cells (a few rows or columns "
                     "around a candidate). Narrow the range; do not dump a used range or "
-                    "whole sheet."
+                    "whole sheet. If you cannot narrow it, write from inspect with "
+                    "calc_fill_formulas or calc_program; do not retry dumps or bash."
                 ),
             },
             {
@@ -1065,6 +1066,7 @@ def test_neighborhood_reads_reject_used_range_dumps() -> None:
     except ValueError as exc:
         assert "1161 cells" in str(exc)
         assert "96 cells" in str(exc)
+        assert "write from inspect" in str(exc)
     else:
         raise AssertionError("used-range dump was accepted")
 

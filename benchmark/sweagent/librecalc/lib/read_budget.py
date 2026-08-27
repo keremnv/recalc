@@ -62,7 +62,14 @@ def begin_inspection() -> str | None:
             f"Inspection budget exhausted after {limit} pass(es). "
             "Write or submit; do not begin another inspection loop."
         )
-    _save_state(path, {"remaining": 1, "inspections": used + 1})
+    _save_state(
+        path,
+        {
+            "remaining": 1,
+            "inspections": used + 1,
+            "write_now": bool(state.get("write_now")),
+        },
+    )
     return None
 
 
@@ -72,28 +79,35 @@ def read_budget_error() -> str | None:
     path = read_budget_path()
     if path is None:
         return None
-    remaining = int(_load_state(path).get("remaining", 0))
-    if remaining <= 0:
+    state = _load_state(path)
+    remaining = int(state.get("remaining", 0))
+    write_now = bool(state.get("write_now"))
+    if remaining <= 0 or write_now:
         return (
             "Read budget exhausted after inspect. Use calc_fill_formulas or calc_program "
-            "to write; further calc_read / calc_read_ranges calls are blocked for this run."
+            "to write from inspect; further calc_read / calc_read_ranges calls are blocked "
+            "for this run. Do not retry dumps or bash."
         )
     return None
 
 
 def consume_read_budget(*, successful: bool = True) -> None:
-    """Spend the one post-inspect read slot.
+    """Spend the post-inspect confirmation slot only when a neighborhood read succeeds.
 
-    The slot is the *attempt*, not a successful neighborhood. Oversized dumps used to
-    leave remaining=1, and the cheap compiler retried until the call cap instead of writing.
-    ``successful`` is kept for callers; it does not skip the decrement.
+    Oversized dumps used to consume the slot and then format-exit (Debugging 05_03
+    low-4). A failed dump now keeps remaining=1 but sets write_now so the next read
+    is blocked and the model must write from inspect.
     """
+
     if not read_budget_enabled():
         return
     path = read_budget_path()
     if path is None:
         return
-    _ = successful
     state = _load_state(path)
-    state["remaining"] = max(0, int(state.get("remaining", 0)) - 1)
+    if successful:
+        state["remaining"] = max(0, int(state.get("remaining", 0)) - 1)
+        state["write_now"] = False
+    else:
+        state["write_now"] = True
     _save_state(path, state)
