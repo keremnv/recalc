@@ -46,7 +46,10 @@ That wall is now the non-visual cheap compiler, not viz ISA:
   Never wrote, so the wipe guard was not exercised. Still compiler. Do not
   rerun `08_03`/`01_03`.
 - **Template** overfills remain the Acc gap vs Opus (26/97 vs ~53%). Preserve-populated
-  is built and unspent.
+  canary `kimi-k2.7-template-preserve-two-low-1`: **0/2 workbooks**. `05_01` inspect/read
+  then format-exit (compiler). `06_24` reached `calc_fill_formulas` and crashed
+  `int(cell.Type)` under `LIBRECALC_PRESERVE_POPULATED=1` (UNO CellType Enum). Guard
+  did not get a valid skip measurement. Do not spend the 97.
 
 Full non-visual number is Sol **59/297 exact**, ~$28. FM is already near Opus (33 vs 34).
 Do not quote that as a K2.7 297. Do not run Sol. Do not rerun K2.5.
@@ -143,10 +146,11 @@ miss is compiler ignore of a labeled heuristic. Stop here.
 
 **Do-all remaining (in order, 2026-08-27):** (1) ~~K2.7-high Moonshot FM `01_02`~~
 done, 0/1, M3 unused; (2) ~~Debugging `05_03` follow-up-from-output~~ done, no
-workbook, guard not exercised; (3) Template preserve-populated canary
-`05_01` + `06_24` only, not the 97; (4) viz `Task 1417365` K2.7-high Moonshot after
-four-series bind. Parked: Sol, K2.5, iterate-five, format-conventions as 297 default,
-`08_03`/`01_03`, colour `03_04`, K2.7 297, fake Excel combo, generic blank ranking.
+workbook, guard not exercised; (3) ~~Template preserve-populated canary~~ done,
+0/2 workbooks; (4) viz `Task 1417365` K2.7-high Moonshot after four-series bind.
+Parked: Sol, K2.5, iterate-five, format-conventions as 297 default, `08_03`/`01_03`,
+colour `03_04`, K2.7 297, fake Excel combo, generic blank ranking, the 97 Template
+slice, `int(cell.Type)` Enum crash on preserve-populated fill.
 
 **Full non-visual result now exists (2026-08-27).** The isolated Sol run
 `gpt-5.6-sol-nonvisual-all-medium-1` produced **297/297 workbooks** and scored
@@ -238,6 +242,16 @@ skips `write_range` / `set_formula` / `fill_formula` onto non-empty cells and re
 `cells_skipped`. `--preserve-populated` on the OpenRouter and frozen runners; frozen
 forwards it to Template/FM only, never Debugging. No style/candidate gates. Implemented
 and unit-tested; **do not spend the 97 Template slice unless asked**.
+
+**K2.7 Template preserve-populated canary (2026-08-27).**
+`kimi-k2.7-template-preserve-two-low-1`, `--preserve-populated`, low reasoning,
+**0/2 workbooks**, **~$0.141**. `Template:05_01` ($0.065, 8 calls): inspect + four
+reads, then format-exit; never wrote. Compiler. `Template:06_24` ($0.077, 12 calls):
+inspected `RevenueBuild`, then `calc_fill_formulas` seven times, each
+`TypeError: int() argument ... not 'Enum'` from UNO `int(cell.Type)` on the
+preserve-populated fill path. Never saved. That is a harness crash, not a skip
+measurement. Do not spend the 97. Do not treat this canary as evidence the guard
+prevents overfill.
 
 **Format-aware `calc_compare` (2026-08-27).** Under `format-conventions-v1`, `calc_compare`
 returns `format-conventions-diff-v1` (bounded font-color range changes) instead of the
