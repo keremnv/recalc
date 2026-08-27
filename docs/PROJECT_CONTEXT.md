@@ -11,6 +11,39 @@
 This section is the operator brief. Sections below this are background; if they conflict with §0,
 §0 wins.
 
+**Visualization succeeded on the cheap compiler where the world was complete.** This is
+easy to lose because it lives in [`docs/viz-isa-diagnosis.md`](viz-isa-diagnosis.md) and
+run folders, not in the Debugging colour narrative below.
+
+| task | K2.7 result | classification |
+|---|---|---|
+| `Task 95` bubble | wrote; GLM-4.6V **28/28 ACC=1** (`kimi-k2.7-viz-canary-task-95-lo70-labels-low-1`, $0.016) | **closed.** First miss was ISA (no X/size channels, LO 7.0 labels). |
+| `Task 1423401` five clustered columns | all five charts + live `Foo`/`Faa` via `name_range` (`…-name-range-columns-low-1`, $0.020) | **ISA closed.** Remaining miss is compiler **anchor placement** (all at A1 after `{cell:E1}` was rejected). Not a missing op. |
+| `Task 1437004` | held-three: no workbook, UNO traceback leak. Later isolated replay **writes** after class-based `_DocumentContext` | **ISA closed.** Do not quote the held-three no-write as a remaining model failure. |
+| `Task 1417365` | held-three wrote; fourth series dropped. Chart2 now binds each values range + category explicitly; LO 7.0 replay has four series | **flat four-series ISA closed.** Gold still wants a multi-level category axis — honest translation loss. High replay slice exists, not run. |
+| `Task 1426290` combo/secondary axis | no workbook: inspect then over-cap reads, never wrote | **compiler no-write.** Combo was not reached. Do not mint a fake Excel combo. |
+
+Official viz scoring is Windows Excel COM. Do not quote Linux PNG checklist % except the
+Task 95 28/28 that was actually scored. Combo / multi-level axes / sunburst / waterfall /
+gauge stay refused. Do not use Sol on viz.
+
+**The operator question was: when is it model intelligence, not a niche broken thing?**
+That wall is now the non-visual cheap compiler, not viz ISA:
+
+- **FM `01_02` high / Moonshot:** K2.7 compiled every instruction-named formula (reg 1.0 /
+  mod 0.9956). Last miss `Working Capital Schedule!M3` is a sheet the instruction never
+  names — observation coverage, not formula-compilation failure.
+- **Debugging `02_03` high:** inspect listed `insert_row_index=11`; K2.7 never inserted.
+  Compiler planning. Timeout is an artifact confound.
+- **Colour `04_04`–`06_04`:** persist/compare/reads work; **0/3 exact** is targeting.
+- **Errors `05_03`:** after the commit fix K2.7 inserts (beats K2.5 no-write) then
+  re-inserts from input and wipes formulas. Still compiler.
+- **Template** overfills remain the Acc gap vs Opus (26/97 vs ~53%). Preserve-populated
+  is built and unspent.
+
+Full non-visual number is Sol **59/297 exact**, ~$28. FM is already near Opus (33 vs 34).
+Do not quote that as a K2.7 297. Do not run Sol. Do not rerun K2.5.
+
 **Codex handoff audit (2026-08-27).** Cursor's colour/structure batch is locally healthy:
 `ruff check .` passes and the suite is **174 passed, 12 skipped**. The old Visualization
 `Task 1437004` traceback-conversion failure predates the class-based `_DocumentContext`; an
