@@ -20,7 +20,7 @@ run folders, not in the Debugging colour narrative below.
 | `Task 95` bubble | wrote; GLM-4.6V **28/28 ACC=1** (`kimi-k2.7-viz-canary-task-95-lo70-labels-low-1`, $0.016) | **closed.** First miss was ISA (no X/size channels, LO 7.0 labels). |
 | `Task 1423401` five clustered columns | all five charts + live `Foo`/`Faa` via `name_range` (`…-name-range-columns-low-1`, $0.020) | **ISA closed.** Remaining miss is compiler **anchor placement** (all at A1 after `{cell:E1}` was rejected). Not a missing op. |
 | `Task 1437004` | held-three: no workbook, UNO traceback leak. Later isolated replay **writes** after class-based `_DocumentContext` | **ISA closed.** Do not quote the held-three no-write as a remaining model failure. |
-| `Task 1417365` | held-three wrote; fourth series dropped. Chart2 now binds each values range + category explicitly; LO 7.0 replay has four series | **flat four-series ISA closed.** Gold still wants a multi-level category axis — honest translation loss. High replay slice exists, not run. |
+| `Task 1417365` | high Moonshot wrote (`kimi-k2.7-high-moonshot-viz-1417365-1`, $0.081). Inspect: four series `C2:F2`…`C5:F5`, no `series[3]` drop | **flat four-series ISA closed** on the cheap-compiler replay. Remaining miss is multi-level / year-grouped stacks — refused translation loss, not another backend hole. Do not mint that axis. |
 | `Task 1426290` combo/secondary axis | no workbook: inspect then over-cap reads, never wrote | **compiler no-write.** Combo was not reached. Do not mint a fake Excel combo. |
 
 Official viz scoring is Windows Excel COM. Do not quote Linux PNG checklist % except the
@@ -147,7 +147,20 @@ miss is compiler ignore of a labeled heuristic. Stop here.
 **Do-all remaining (in order, 2026-08-27):** (1) ~~K2.7-high Moonshot FM `01_02`~~
 done, 0/1, M3 unused; (2) ~~Debugging `05_03` follow-up-from-output~~ done, no
 workbook, guard not exercised; (3) ~~Template preserve-populated canary~~ done,
-0/2 workbooks; (4) viz `Task 1417365` K2.7-high Moonshot after four-series bind.
+0/2 workbooks; (4) ~~viz `Task 1417365` K2.7-high Moonshot~~ done, four series
+bound, remaining miss is refused multi-level axis. Queue empty.
+
+**K2.7-high Moonshot viz `Task 1417365` (2026-08-27).**
+`kimi-k2.7-high-moonshot-viz-1417365-1`, **$0.081**, 12 calls, workbook produced.
+First `calc_upsert_chart` wrote four series (`C2:F2`…`C5:F5`) as stacked columns
+with category `C1:F1`. Later inspect still has four series and no
+`IndexOutOfBoundsException`. Compiler then probed `stacked_column_grouped` (not
+in the ISA), a second clustered column, and extra `test_names` / `test_grouped`
+charts; one upsert failed `ChartSeriesSpec` missing `name`. Linux inspect is not
+Excel COM. Classify: flat bind holds; gold's year-grouped stacks need a
+multi-level category axis we refuse. Do not mint it. Do not quote this as official
+viz exactness.
+
 Parked: Sol, K2.5, iterate-five, format-conventions as 297 default, `08_03`/`01_03`,
 colour `03_04`, K2.7 297, fake Excel combo, generic blank ranking, the 97 Template
 slice, `int(cell.Type)` Enum crash on preserve-populated fill.

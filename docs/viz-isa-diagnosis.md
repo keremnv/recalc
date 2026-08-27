@@ -156,9 +156,10 @@ workbooks:
   before any chart. Mixed calc + 100% stack was not reached.
 - `Task 1426290` — no workbook, 12 calls, `$0.018`. Inspect then over-cap reads;
   never wrote. Combo/secondary-axis not reached.
-- `Task 1417365` — wrote (`$0.110`, 12 calls). Stacked-column apply dropped
-  `series[3]` (`IndexOutOfBoundsException`). Gold wants year-grouped stacks with
-  quarter categories — that multi-level category axis is still translation loss.
+- `Task 1417365` — held-three wrote (`$0.110`, 12 calls) but dropped `series[3]`.
+  High Moonshot replay `kimi-k2.7-high-moonshot-viz-1417365-1` (`$0.081`) writes
+  four series `C2:F2`…`C5:F5`. Flat bind holds. Gold still wants year-grouped
+  stacks with quarter categories — multi-level category axis, refused.
 
 Do not mint a fake Excel combo or multi-level axis. Visualization is parked for a
 later optional full-bench pass. This submit is the non-visual ~297. Do not use Sol
