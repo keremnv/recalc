@@ -31,8 +31,11 @@ gauge stay refused. Do not use Sol on viz.
 That wall is now the non-visual cheap compiler, not viz ISA:
 
 - **FM `01_02` high / Moonshot:** K2.7 compiled every instruction-named formula (reg 1.0 /
-  mod 0.9956). Last miss `Working Capital Schedule!M3` is a sheet the instruction never
-  names — observation coverage, not formula-compilation failure.
+  mod 0.9956). After date+style inspect listed `Working Capital Schedule!M3` /
+  `=EOMONTH(L3,12)` on the compact first inspect, K2.7 still left M3 blank
+  (`kimi-k2.7-high-moonshot-fm-01_02-boundary-1`, **$0.089**, exact **0/1**).
+  Compiler targeting of a heuristic, not missing observation. Do not iterate
+  the signal; do not run `01_03`.
 - **Debugging `02_03` high:** inspect listed `insert_row_index=11`; K2.7 never inserted.
   Compiler planning. Timeout is an artifact confound.
 - **Colour `04_04`–`06_04`:** persist/compare/reads work; **0/3 exact** is targeting.
@@ -123,10 +126,19 @@ True positives only: `01_02` and `01_03` `Working Capital Schedule!M3`, inferred
 `formula-patterns-v1` inspect as `boundary_continuations` (product enumerator
 [`src/librecalc_mcp/domain/boundary_continuations.py`](../src/librecalc_mcp/domain/boundary_continuations.py);
 heuristic, not a requirement). Do not ship run3/style/date. Do not revive generic
-blank ranking. Remeasure is K2.7-high Moonshot FM `01_02` only.
+blank ranking.
 
-**Do-all remaining (in order, 2026-08-27):** (1) K2.7-high Moonshot FM `01_02` after the
-date+style inspect signal; (2) Debugging `05_03` after follow-up-from-output
+**K2.7-high Moonshot FM `01_02` after date+style inspect (2026-08-27).**
+`kimi-k2.7-high-moonshot-fm-01_02-boundary-1`: workbook produced, **$0.089**, official
+regression **1.0**, modification **0.9956**, exact **0/1**. Compact inspect included
+`boundary_continuations` for `Working Capital Schedule!M3` `=EOMONTH(L3,12)`; the
+second named-sheet inspect repeated it. K2.7 never mentioned M3, filled only
+instruction-named sheets, and autosubmitted at the 12-call cap. Same miss as
+`kimi-k2.7-high-moonshot-pinned-fm-01_02-4`. Observation coverage is closed; remaining
+miss is compiler ignore of a labeled heuristic. Stop here.
+
+**Do-all remaining (in order, 2026-08-27):** (1) ~~K2.7-high Moonshot FM `01_02`~~
+done, 0/1, M3 unused; (2) Debugging `05_03` after follow-up-from-output
 (`kimi-k2.7-debug-program-errors-05_03-low-4`); (3) Template preserve-populated canary
 `05_01` + `06_24` only, not the 97; (4) viz `Task 1417365` K2.7-high Moonshot after
 four-series bind. Parked: Sol, K2.5, iterate-five, format-conventions as 297 default,
