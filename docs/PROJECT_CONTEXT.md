@@ -39,8 +39,12 @@ That wall is now the non-visual cheap compiler, not viz ISA:
 - **Debugging `02_03` high:** inspect listed `insert_row_index=11`; K2.7 never inserted.
   Compiler planning. Timeout is an artifact confound.
 - **Colour `04_04`–`06_04`:** persist/compare/reads work; **0/3 exact** is targeting.
-- **Errors `05_03`:** after the commit fix K2.7 inserts (beats K2.5 no-write) then
-  re-inserts from input and wipes formulas. Still compiler.
+- **Errors `05_03`:** after the commit fix K2.7 `low-3` inserts (beats K2.5 no-write) then
+  re-inserts from input and wipes formulas. `low-4` with follow-up-from-output: **no
+  workbook**. Inspect listed FO `insert_row_index` 8 and 15; first read was an
+  oversized dump that spent the slot; second read blocked; then format-exit.
+  Never wrote, so the wipe guard was not exercised. Still compiler. Do not
+  rerun `08_03`/`01_03`.
 - **Template** overfills remain the Acc gap vs Opus (26/97 vs ~53%). Preserve-populated
   is built and unspent.
 
@@ -138,8 +142,8 @@ instruction-named sheets, and autosubmitted at the 12-call cap. Same miss as
 miss is compiler ignore of a labeled heuristic. Stop here.
 
 **Do-all remaining (in order, 2026-08-27):** (1) ~~K2.7-high Moonshot FM `01_02`~~
-done, 0/1, M3 unused; (2) Debugging `05_03` after follow-up-from-output
-(`kimi-k2.7-debug-program-errors-05_03-low-4`); (3) Template preserve-populated canary
+done, 0/1, M3 unused; (2) ~~Debugging `05_03` follow-up-from-output~~ done, no
+workbook, guard not exercised; (3) Template preserve-populated canary
 `05_01` + `06_24` only, not the 97; (4) viz `Task 1417365` K2.7-high Moonshot after
 four-series bind. Parked: Sol, K2.5, iterate-five, format-conventions as 297 default,
 `08_03`/`01_03`, colour `03_04`, K2.7 297, fake Excel combo, generic blank ranking.
@@ -322,6 +326,15 @@ dump that sheet to confirm it. Do not rerun K2.5; compare to the existing `none-
 `Model!C29` (−64.485 vs −308.126). Beats K2.5 `none-1` (no workbook) and K2.7 low-1/low-2
 (no insert / no workbook). Below accidental Sol (mod 0.3879). Late step re-inserted from the
 input path and wiped earlier formula work. Do not rerun `08_03`/`01_03`. Do not rerun K2.5.
+
+**K2.7 `05_03` follow-up-from-output (2026-08-27).**
+`kimi-k2.7-debug-program-errors-05_03-low-4`, **no workbook**, **$0.068**, 5 model
+calls. Inspect listed FO `insert_row_index` **8** (gold) and **15**. First
+`calc_read_ranges` dumped FO `A1:K20` (220 cells > 96) and that failed read spent
+the slot; second read blocked; then "repeated format/blocklist/bash syntax errors"
+and autosubmit with no file. The output-as-source guard never ran because nothing
+was saved. Same compiler class as low-2. `low-3` remains the best 05_03 write.
+Do not rerun `08_03`/`01_03`. Do not iterate the guard on this seed.
 
 The earlier **interface freeze is lifted only for these completed Debugging measurements**.
 The remaining Template gap is instruction-grounded target selection; the preserve-populated
