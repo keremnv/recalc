@@ -107,14 +107,30 @@ formula-compilation miss. Default routing caused the previous zero-write result.
 remaining diagnostic slice; the next design question is whether a bounded cross-sheet continuation
 signal can surface M3-like cells without reviving full-workbook context and false-positive floods.
 
-**Offline boundary-continuation census (2026-08-27).** Helper
-[`benchmark/boundary_continuations.py`](../benchmark/boundary_continuations.py) plus
-[`benchmark/characterize_boundary_continuations.py`](../benchmark/characterize_boundary_continuations.py).
-Gold-blind: a blank immediately right of the row's rightmost exact A1 translation run, still
-inside the used rectangle. Not a shipped observation. Codex's last session started the
-Financial Model audit (`01_02!Working Capital Schedule!M3` date+style, `13_02!Revenue Drivers!H8`
-style-only as plausible exact conversions) and died before the category precision table. Do not
-promote this into inspect until that report exists. Do not revive generic blank ranking.
+**Offline boundary-continuation census (2026-08-27).** Gold-blind: a blank immediately right of
+the row's rightmost exact A1 translation run, still inside the used rectangle. Financial Model
+100-task table (`benchmark/characterize_boundary_continuations.py`, exit 0, ~319s):
+
+| arm | pool | hits | formula | precision | hit-tasks |
+|---|---:|---:|---:|---:|---|
+| run3 | 23,454 | 112 | 35 | 0.5% | 48/100 |
+| style | 795 | 32 | 20 | 4.0% | 18/100 |
+| date | 372 | 2 | 2 | 0.5% | 2/100 |
+| **date+style** | **2** | **2** | **2** | **100%** | **2/100** |
+
+True positives only: `01_02` and `01_03` `Working Capital Schedule!M3`, inferred
+`=EOMONTH(L3,12)`. **Ship date+style only.** It is now attached on compact
+`formula-patterns-v1` inspect as `boundary_continuations` (product enumerator
+[`src/librecalc_mcp/domain/boundary_continuations.py`](../src/librecalc_mcp/domain/boundary_continuations.py);
+heuristic, not a requirement). Do not ship run3/style/date. Do not revive generic
+blank ranking. Remeasure is K2.7-high Moonshot FM `01_02` only.
+
+**Do-all remaining (in order, 2026-08-27):** (1) K2.7-high Moonshot FM `01_02` after the
+date+style inspect signal; (2) Debugging `05_03` after follow-up-from-output
+(`kimi-k2.7-debug-program-errors-05_03-low-4`); (3) Template preserve-populated canary
+`05_01` + `06_24` only, not the 97; (4) viz `Task 1417365` K2.7-high Moonshot after
+four-series bind. Parked: Sol, K2.5, iterate-five, format-conventions as 297 default,
+`08_03`/`01_03`, colour `03_04`, K2.7 297, fake Excel combo, generic blank ranking.
 
 **Full non-visual result now exists (2026-08-27).** The isolated Sol run
 `gpt-5.6-sol-nonvisual-all-medium-1` produced **297/297 workbooks** and scored

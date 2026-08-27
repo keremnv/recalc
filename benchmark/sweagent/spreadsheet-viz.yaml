@@ -32,7 +32,8 @@ agent:
       4. Re-inspect charts on the output if needed, compare input and output with calc_compare,
          then submit.
 
-      Never edit the read-only input in place. Do not use Python libraries or LibreOffice
+      Never edit the read-only input in place. After the first save, further writes must use
+      the output path as the source. Do not use Python libraries or LibreOffice
       command-line conversion to modify spreadsheets; those bypass the interface being evaluated.
       </task_context>
 

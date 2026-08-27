@@ -28,6 +28,20 @@ def test_calc_tool_read_budget_blocks_second_read(
     assert calc_tool._read_budget().read_budget_error() is not None
 
 
+def test_followup_rejects_restart_from_input_once_output_exists(tmp_path: Path) -> None:
+    calc_tool = _calc_tool_module()
+    source = tmp_path / "input.xlsx"
+    output = tmp_path / "output.xlsx"
+    source.write_bytes(b"in")
+    output.write_bytes(b"out")
+
+    assert calc_tool._followup_must_use_output(str(source), str(output)) == (
+        calc_tool._FOLLOWUP_SOURCE_ERROR
+    )
+    assert calc_tool._followup_must_use_output(str(output), str(output)) is None
+    assert calc_tool._followup_must_use_output(str(source), str(tmp_path / "missing.xlsx")) is None
+
+
 @pytest.mark.skipif(os.environ.get("LIBRECALC_RUN_UNO") != "1", reason="requires LibreOffice UNO")
 def test_uno_chart_xlsx_roundtrip_openpyxl_count() -> None:
     openpyxl = pytest.importorskip("openpyxl")

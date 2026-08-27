@@ -1,0 +1,7 @@
+{
+  "description": "Two Sol perfect-modification Template overfills for the preserve-populated canary. Not the 97.",
+  "tasks": [
+    {"category": "Template", "id": "05_01"},
+    {"category": "Template", "id": "06_24"}
+  ]
+}

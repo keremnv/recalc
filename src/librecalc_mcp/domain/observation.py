@@ -1399,6 +1399,12 @@ def format_convention_diff_from_indexes(
     }
 
 
+def _boundary_continuations_payload(path: str) -> dict[str, Any] | None:
+    from librecalc_mcp.domain.boundary_continuations import payload_from_xlsx
+
+    return payload_from_xlsx(path)
+
+
 def format_convention_diff(backend: Any, before_path: str, after_path: str) -> dict[str, Any]:
     """Compare font colors on the format-conventions-v1 census, not semantic values."""
 
@@ -1871,6 +1877,10 @@ def workbook_observation(
         "observation": variant,
         "sheets": sheet_observations,
     }
+    if variant == "formula-patterns-v1":
+        continuations = _boundary_continuations_payload(path)
+        if continuations:
+            observation["boundary_continuations"] = continuations
     if hasattr(backend, "inspect_charts"):
         charts = backend.inspect_charts(path=path)
         if charts:

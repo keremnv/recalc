@@ -811,6 +811,52 @@ def test_scoped_workbook_observation_keeps_manifest_and_selected_detail() -> Non
     }
 
 
+def test_formula_patterns_compact_inspect_includes_boundary_continuations(monkeypatch) -> None:
+    payload = {
+        "candidates": [
+            {
+                "sheet": "Working Capital Schedule",
+                "address": "M3",
+                "inferred_formula": "=EOMONTH(L3,12)",
+                "run": "D3:L3",
+                "run_length": 9,
+            }
+        ],
+        "note": "heuristic",
+    }
+    monkeypatch.setattr(
+        observation_module,
+        "_boundary_continuations_payload",
+        lambda path: payload,
+    )
+
+    class InspectMemoryBackend:
+        def inspect_workbook(self, path=None):
+            return WorkbookInfo(
+                title="input.xlsx",
+                url=None,
+                sheets=[
+                    SheetInfo(name="Model", used_range="A1:D1"),
+                    SheetInfo(name="Working Capital Schedule", used_range="A1:M7"),
+                ],
+            )
+
+        def read_ranges(self, ranges, path=None, include_errors=False):
+            return [
+                {"values": [["x"]], "formulas": [["x"]]} for _ in ranges
+            ]
+
+    observation = observation_module.workbook_observation(
+        InspectMemoryBackend(),
+        "input.xlsx",
+        "formula-patterns-v1",
+        detailed_sheets=set(),
+    )
+
+    assert observation["boundary_continuations"] == payload
+    assert all(sheet.get("detail") == "manifest-only" for sheet in observation["sheets"])
+
+
 def test_blank_bridges_can_be_disabled(monkeypatch) -> None:
     from librecalc_mcp.domain.observation import blank_bridges_enabled
 

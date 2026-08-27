@@ -12,6 +12,24 @@ from contextlib import contextmanager
 from typing import Any
 
 _READ_NEIGHBORHOOD_MAX_CELLS = 96
+_FOLLOWUP_SOURCE_ERROR = (
+    "Output already exists. Follow-up edits must use that output path as the "
+    "source; do not restart from the read-only input."
+)
+
+
+def _followup_must_use_output(path: str, output_path: str) -> str | None:
+    """After the first save, restarting from the read-only input would wipe it."""
+    if not output_path:
+        return None
+    destination = pathlib.Path(output_path)
+    source = pathlib.Path(path)
+    try:
+        if destination.is_file() and source.resolve() != destination.resolve():
+            return _FOLLOWUP_SOURCE_ERROR
+    except OSError:
+        return None
+    return None
 
 
 def _ensure_product_on_path() -> None:
@@ -265,6 +283,9 @@ def main(argv: list[str]) -> int:
 
     if command == "write" and len(args) == 5:
         path, output_path, sheet, cell_range, raw_values = args
+        if (followup_error := _followup_must_use_output(path, output_path)) is not None:
+            _emit({"ok": False, "error": followup_error})
+            return 1
         values = _parse_json(raw_values, list, "values_json")
         _emit(
             backend.write_range(
@@ -279,12 +300,18 @@ def main(argv: list[str]) -> int:
 
     if command == "fill-formulas" and len(args) == 3:
         path, output_path, raw_blocks = args
+        if (followup_error := _followup_must_use_output(path, output_path)) is not None:
+            _emit({"ok": False, "error": followup_error})
+            return 1
         operations = _formula_blocks(raw_blocks, operation_type)
         _emit(backend.execute_program(operations, path=path, output_path=output_path))
         return 0
 
     if command == "program" and len(args) == 3:
         path, output_path, raw_operations = args
+        if (followup_error := _followup_must_use_output(path, output_path)) is not None:
+            _emit({"ok": False, "error": followup_error})
+            return 1
         operation_dicts = _parse_json(raw_operations, list, "operations_json")
         operations = []
         for index, operation in enumerate(operation_dicts):
@@ -305,6 +332,9 @@ def main(argv: list[str]) -> int:
 
     if command == "upsert-chart" and len(args) == 3:
         path, output_path, raw_chart = args
+        if (followup_error := _followup_must_use_output(path, output_path)) is not None:
+            _emit({"ok": False, "error": followup_error})
+            return 1
         chart = _parse_json(raw_chart, dict, "chart_json")
         operations = [operation_type.from_dict({"op": "upsert_chart", "chart": chart})]
         _emit(backend.execute_program(operations, path=path, output_path=output_path))

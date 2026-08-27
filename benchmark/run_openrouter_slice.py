@@ -563,7 +563,9 @@ def _stage_tool_policy(
                 "Use calc_program for mixed operations including insert_row/delete_row; "
                 "use calc_fill_formulas for formula-only patterned ranges. "
                 "If inspect listed deleted_row_geometry that matches the instruction, "
-                "insert_row is the write; do not spend the confirmation read on that sheet.\n"
+                "insert_row is the write; do not spend the confirmation read on that sheet. "
+                "After the first save, further writes must use the output path as source; "
+                "restarting from the input wipes the restore.\n"
             )
         if repair_passes == 2:
             write_hint += (

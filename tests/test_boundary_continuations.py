@@ -40,6 +40,36 @@ def test_date_formula_run_nominates_styled_right_boundary() -> None:
     assert select_arm(candidates, "date+style") == candidates
 
 
+def test_payload_from_xlsx_emits_only_date_style_arm(tmp_path) -> None:
+    from librecalc_mcp.domain.boundary_continuations import payload_from_xlsx
+
+    path = tmp_path / "schedule.xlsx"
+    raw, _values = _workbooks()
+    sheet = raw.active
+    for address, formula in (
+        ("J3", "=EOMONTH(I3,12)"),
+        ("K3", "=EOMONTH(J3,12)"),
+        ("L3", "=EOMONTH(K3,12)"),
+    ):
+        sheet[address] = formula
+        sheet[address].number_format = "yyyy-mm-dd"
+    sheet["M3"].number_format = "yyyy-mm-dd"
+    raw.save(path)
+
+    payload = payload_from_xlsx(str(path))
+
+    assert payload is not None
+    assert payload["candidates"] == [
+        {
+            "sheet": "Schedule",
+            "address": "M3",
+            "inferred_formula": "=EOMONTH(L3,12)",
+            "run": "J3:L3",
+            "run_length": 3,
+        }
+    ]
+
+
 def test_internal_gap_is_not_a_right_boundary_candidate() -> None:
     raw, values = _workbooks()
     sheet = raw.active

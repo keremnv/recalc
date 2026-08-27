@@ -30,7 +30,9 @@ agent:
       2. Do not reread a whole used range. Use calc_read for one focused region or calc_read_ranges
          for several.
          Treat inferred candidate_gaps as a heuristic checklist, not requirements; ignore obvious
-         section headers and notes.
+         section headers and notes. formula-patterns-v1 inspect may also list
+         boundary_continuations: one-cell date-run extensions. Those are heuristics, not
+         requirements.
       3. Infer only the missing or incorrect formulas/values required by the instruction.
       4. Write the result to the exact output path. Use calc_fill_formulas for formula-only work;
          use calc_program for mixed operations. Keep patterned edits range-based.
@@ -38,7 +40,9 @@ agent:
          candidate gaps remain heuristic. Use focused reads only for a real unresolved ambiguity,
          then submit.
 
-      Never edit the read-only input in place. Do not use Python libraries or LibreOffice command-line
+      Never edit the read-only input in place. After the first save, further writes must use
+      the output path as the source; restarting from the input wipes prior edits. Do not use
+      Python libraries or LibreOffice command-line
       conversion to modify spreadsheets; those bypass the interface being evaluated.
       </task_context>
 

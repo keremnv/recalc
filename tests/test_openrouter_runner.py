@@ -557,6 +557,7 @@ def test_formula_anomalies_with_program_execution_allows_geometry_ops(tmp_path) 
     assert "do not dump that" in config["agent"]["templates"]["instance_template"]
     assert "insert_row at insert_row_index" in config["agent"]["templates"]["instance_template"]
     assert "insert_row is the write" in system
+    assert "restarting from the input wipes" in system
 
 
 def test_format_conventions_prompt_uses_bounded_census_and_set_format(tmp_path) -> None:
