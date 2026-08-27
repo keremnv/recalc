@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 """Run a mixed-category slice with the frozen K2.7 cheap-compiler overlays.
 
-Template and Financial Model use formula-patterns-v1. Debugging uses
-formula-anomalies-v1 plus the read-budget instrument. Both groups use
-formula-blocks-v1. Task failures do not skip the rest of the slice.
+Template and Financial Model use formula-patterns-v1. Debugging defaults to
+formula-anomalies-v1 plus the read-budget instrument. Both groups default to
+formula-blocks-v1. The isolated format arm switches Debugging to
+format-conventions-v1 and semantic-program-v1. Task failures do not skip the
+rest of the slice.
 After both groups finish, this scores the run in-process (LibreOffice refresh plus
 unmodified evaluation.py) so logs, workbooks, and official JSON come from one command.
 """
@@ -48,11 +50,28 @@ def _arguments() -> argparse.Namespace:
         help="Explicit Debugging ablation; semantic-program exposes structural and format ops.",
     )
     parser.add_argument(
+        "--debug-observation",
+        choices=("formula-anomalies-v1", "format-conventions-v1"),
+        default="formula-anomalies-v1",
+        help=(
+            "Explicit Debugging ablation. format-conventions-v1 is a gold-blind font-color "
+            "census and requires --debug-execution semantic-program-v1."
+        ),
+    )
+    parser.add_argument(
         "--debug-repair-passes",
         type=int,
         choices=(1, 2),
         default=1,
         help="Explicit Debugging ablation allowing one bounded output re-inspection.",
+    )
+    parser.add_argument(
+        "--preserve-populated",
+        action="store_true",
+        help=(
+            "Forward --preserve-populated to Template/Financial Model only. "
+            "Never applied to Debugging."
+        ),
     )
     parser.add_argument(
         "--no-score",
@@ -106,10 +125,10 @@ def _run_group(
     args: argparse.Namespace,
     observation: str,
     labels: list[str],
+    debugging: bool,
 ) -> int:
     if not labels:
         return 0
-    debugging = observation == "formula-anomalies-v1"
     execution = args.debug_execution if debugging else "formula-blocks-v1"
     repair_passes = args.debug_repair_passes if debugging else 1
     command = [
@@ -142,6 +161,8 @@ def _run_group(
     ]
     if debugging:
         command.append("--read-budget")
+    elif args.preserve_populated:
+        command.append("--preserve-populated")
     if args.skip_existing:
         command.append("--skip-existing")
     command.append("--no-score")
@@ -165,11 +186,32 @@ def _score_run(run_name: str) -> int:
 
 def main() -> int:
     args = _arguments()
+    if (
+        args.debug_observation == "format-conventions-v1"
+        and args.debug_execution != "semantic-program-v1"
+    ):
+        raise ValueError("format-conventions-v1 requires --debug-execution semantic-program-v1")
     compute, debugging = _group(_load_tasks(args.slice, args.task))
     failures = 0
-    failures += 1 if _run_group(args=args, observation="formula-patterns-v1", labels=compute) else 0
     failures += (
-        1 if _run_group(args=args, observation="formula-anomalies-v1", labels=debugging) else 0
+        1
+        if _run_group(
+            args=args,
+            observation="formula-patterns-v1",
+            labels=compute,
+            debugging=False,
+        )
+        else 0
+    )
+    failures += (
+        1
+        if _run_group(
+            args=args,
+            observation=args.debug_observation,
+            labels=debugging,
+            debugging=True,
+        )
+        else 0
     )
     score_status = 0 if args.no_score else _score_run(args.run_name)
     print(

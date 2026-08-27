@@ -381,3 +381,78 @@ def test_uno_sliced_series_name_range_round_trips() -> None:
             ("Foo", "$Sheet1.$B$1", "$Sheet1.$B$22:$B$41"),
             ("Faa", "$Sheet1.$C$1", "$Sheet1.$C$22:$C$41"),
         ]
+
+
+@pytest.mark.skipif(os.environ.get("LIBRECALC_RUN_UNO") != "1", reason="requires LibreOffice UNO")
+def test_uno_explicit_row_series_do_not_collapse_into_columns() -> None:
+    from openpyxl import Workbook
+
+    from librecalc_mcp.backend.uno import UnoCalcBackend
+
+    with tempfile.TemporaryDirectory() as temporary:
+        root = Path(temporary)
+        source = root / "in.xlsx"
+        output = root / "four-series.xlsx"
+        workbook = Workbook()
+        workbook.active.title = "Sheet1"
+        workbook.save(source)
+
+        backend = UnoCalcBackend()
+        result = backend.execute_program(
+            [
+                CalcOperation(
+                    op="write_range",
+                    sheet="Sheet1",
+                    range="A1:G5",
+                    values=[
+                        [None, None, "Q1", "Q2", "Q3", "Q4", None],
+                        [2022, "Type A", 0, 1, 0, 1, "2022 Type A"],
+                        [None, "Type B", 1, 3, 3, 3, "2022 Type B"],
+                        [2023, "Type A", 2, 7, 3, 2, "2023 Type A"],
+                        [None, "Type B", 6, 6, 2, 7, "2023 Type B"],
+                    ],
+                ),
+                CalcOperation.from_dict(
+                    {
+                        "op": "upsert_chart",
+                        "chart": {
+                            "id": "sales_chart",
+                            "sheet": "Sheet1",
+                            "chart_type": "stacked_column",
+                            "category_range": "C1:F1",
+                            "series": [
+                                {
+                                    "name": f"{year} Type {kind}",
+                                    "name_range": f"G{row}",
+                                    "values_range": f"C{row}:F{row}",
+                                }
+                                for row, year, kind in (
+                                    (2, 2022, "A"),
+                                    (3, 2022, "B"),
+                                    (4, 2023, "A"),
+                                    (5, 2023, "B"),
+                                )
+                            ],
+                        },
+                    }
+                ),
+            ],
+            path=str(source),
+            output_path=str(output),
+        )
+
+        assert result["operations"][1]["dropped"] == []
+        chart = backend.inspect_charts(str(output))[0]
+        assert chart["category_range"] == "$Sheet1.$C$1:$F$1"
+        assert [item["values_range"] for item in chart["series"]] == [
+            "$Sheet1.$C$2:$F$2",
+            "$Sheet1.$C$3:$F$3",
+            "$Sheet1.$C$4:$F$4",
+            "$Sheet1.$C$5:$F$5",
+        ]
+        assert [item["name"] for item in chart["series"]] == [
+            "2022 Type A",
+            "2022 Type B",
+            "2023 Type A",
+            "2023 Type B",
+        ]

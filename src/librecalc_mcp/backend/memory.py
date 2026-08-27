@@ -10,6 +10,7 @@ from librecalc_mcp.domain.formulas import (
     normalize_formula_argument_separators,
     unescape_text,
 )
+from librecalc_mcp.domain.grid import validate_matrix_shape
 from librecalc_mcp.domain.models import (
     CalcOperation,
     CellFormat,
@@ -17,6 +18,7 @@ from librecalc_mcp.domain.models import (
     SheetInfo,
     WorkbookInfo,
 )
+from librecalc_mcp.domain.write_policy import preserve_populated
 
 _RANGE_KEY = re.compile(
     r"^(?P<c1>\$?[A-Za-z]{1,3})(?P<r1>[1-9][0-9]*)"
@@ -98,6 +100,16 @@ def _shift_sheet_maps(
         mapping.update(shifted)
 
 
+def _matrix_cell(matrix: Matrix, index: int) -> object:
+    if not matrix or not matrix[0]:
+        return None
+    width = len(matrix[0])
+    row, column = divmod(index, width)
+    if row >= len(matrix) or column >= len(matrix[row]):
+        return None
+    return matrix[row][column]
+
+
 class MemoryCalcBackend:
     """Tiny backend for MCP/domain tests. Not a spreadsheet engine."""
 
@@ -151,6 +163,34 @@ class MemoryCalcBackend:
         del path
         return [deepcopy(self.formats.get(sheet, {}).get(address, {})) for sheet, address in cells]
 
+    def _cell_populated(self, sheet: str, address: str) -> bool:
+        if any(
+            formula and address in _range_cells(key)
+            for key, formula in self.formulas.get(sheet, {}).items()
+        ):
+            return True
+        for key, matrix in self.sheets.get(sheet, {}).items():
+            cells = _range_cells(key)
+            if address not in cells:
+                continue
+            value = _matrix_cell(matrix, cells.index(address))
+            if value not in (None, ""):
+                return True
+        return False
+
+    def _store_cell(self, sheet: str, address: str, value: object) -> int:
+        stored: Matrix = [[value]]
+        formulas_written = 0
+        if is_formula_text(value):
+            formulas_written = 1
+            self.formulas.setdefault(sheet, {})[address] = normalize_formula_argument_separators(
+                str(value)
+            )
+        elif is_escaped_text(value):
+            stored = [[unescape_text(str(value))]]
+        self.sheets.setdefault(sheet, {})[address] = stored
+        return formulas_written
+
     def write_range(
         self,
         sheet: str,
@@ -159,6 +199,31 @@ class MemoryCalcBackend:
         path: str | None = None,
         output_path: str | None = None,
     ) -> dict[str, object]:
+        validate_matrix_shape(cell_range, values)
+        skip_populated = preserve_populated()
+        cells = _range_cells(cell_range)
+        flat = [cell for row in values for cell in row]
+        skipped = 0
+        if skip_populated:
+            remaining: list[tuple[str, object]] = []
+            for address, value in zip(cells, flat, strict=False):
+                if self._cell_populated(sheet, address):
+                    skipped += 1
+                    continue
+                remaining.append((address, value))
+            if skipped:
+                formulas_written = 0
+                for address, value in remaining:
+                    formulas_written += self._store_cell(sheet, address, value)
+                return {
+                    "ok": True,
+                    "sheet": sheet,
+                    "range": cell_range,
+                    "rows": len(values),
+                    "formulas_written": formulas_written,
+                    "cells_skipped": skipped,
+                    "saved_to": output_path or path,
+                }
         stored = deepcopy(values)
         formulas_written = 0
         for row in stored:
@@ -180,6 +245,7 @@ class MemoryCalcBackend:
             "range": cell_range,
             "rows": len(values),
             "formulas_written": formulas_written,
+            "cells_skipped": skipped,
             "saved_to": output_path or path,
         }
 
@@ -207,10 +273,27 @@ class MemoryCalcBackend:
                 )
             elif operation.op in {"set_formula", "fill_formula"}:
                 assert operation.sheet and operation.range and operation.formula is not None
-                self.formulas.setdefault(operation.sheet, {})[operation.range] = (
-                    normalize_formula_argument_separators(operation.formula)
+                formula = normalize_formula_argument_separators(operation.formula)
+                skip_populated = preserve_populated()
+                addresses = (
+                    [operation.range]
+                    if operation.op == "set_formula"
+                    else _range_cells(operation.range)
                 )
-                results.append({"op": operation.op, "ok": True})
+                skipped = 0
+                kept: list[str] = []
+                for address in addresses:
+                    if skip_populated and self._cell_populated(operation.sheet, address):
+                        skipped += 1
+                        continue
+                    kept.append(address)
+                sheet_formulas = self.formulas.setdefault(operation.sheet, {})
+                if skipped == 0 and operation.op == "fill_formula":
+                    sheet_formulas[operation.range] = formula
+                else:
+                    for address in kept:
+                        sheet_formulas[address] = formula
+                results.append({"op": operation.op, "ok": True, "cells_skipped": skipped})
             elif operation.op == "set_format":
                 if not operation.sheet or not operation.range or operation.cell_format is None:
                     raise ValueError("set_format requires sheet, range, and format")

@@ -1,8 +1,8 @@
 {
-  "description": "Full-run development color tasks testing the generic set_format program operation without adding a second repair pass.",
+  "description": "Color-only Debugging tasks whose remaining gold-side modifications are font color. Isolated format-conventions-v1 plus set_format arm; does not include 03_04 (LibreOffice theme-color save regressions) or tasks that still need value/formula repairs.",
   "tasks": [
-    {"category": "Debugging", "id": "03_04"},
     {"category": "Debugging", "id": "04_04"},
-    {"category": "Debugging", "id": "10_04"}
+    {"category": "Debugging", "id": "05_04"},
+    {"category": "Debugging", "id": "06_04"}
   ]
 }

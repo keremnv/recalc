@@ -11,6 +11,31 @@
 This section is the operator brief. Sections below this are background; if they conflict with §0,
 §0 wins.
 
+**Codex handoff audit (2026-08-27).** Cursor's colour/structure batch is locally healthy:
+`ruff check .` passes and the suite is **174 passed, 12 skipped**. The old Visualization
+`Task 1437004` traceback-conversion failure predates the class-based `_DocumentContext`; an
+isolated replay on the exact input now writes successfully. It is closed, not a remaining model
+failure. `write_range` now also rejects ragged or range-mismatched matrices before touching a
+backend, so this class is an agent-recoverable `ValueError` rather than a cryptic UNO failure.
+
+The held-three `Task 1417365` fourth-series drop was a genuine chart backend defect. LibreOffice
+collapsed the explicit row ranges `C2:F2` ... `C5:F5` into `C1:F5`, interpreted columns `D:E:F`
+as three series, and lost the fourth. Non-XY charts now bind every requested values range and the
+category range explicitly through Chart2. Isolated LibreOffice 7.0 replay on the task gives four
+series, category range `C1:F1`, all four requested colors, and no `series[3]` drop. This fixes the
+flat four-series representation; it does not claim native Excel multi-level category axes.
+
+**Next compiler-threshold measurement (prepared, not yet run).** Use K2.7 high, `$2` / 12 calls,
+no fixed `--max-tokens`. Non-visual diagnostic slice
+`benchmark/slices/kimi-k27-high-diagnostic-four.json` contains K2.7-unseen structural Debugging
+`02_03`, near-exact Debugging `01_05`, Template collateral-write `05_01`, and FM one-cell miss
+`01_02`. Run Debugging with `semantic-program-v1`; `--debug-repair-passes 2` is a diagnostic
+allowance, not a promoted default. Visualization slice
+`benchmark/slices/kimi-k27-high-viz-row-series-one.json` replays `Task 1417365` after the backend
+fix. Classify each failure by whether the instruction-relevant evidence and required operation were
+available before calling it model intelligence. `OPENROUTER_API_KEY` is currently absent from the
+environment; never place it in a file or command history.
+
 **Full non-visual result now exists (2026-08-27).** The isolated Sol run
 `gpt-5.6-sol-nonvisual-all-medium-1` produced **297/297 workbooks** and scored
 **59/297 official exact** for about **$28.04**. This supersedes the earlier write-rate gates and
@@ -42,12 +67,157 @@ Next measurements are factored so their effects remain attributable:
 1. `sol-debug-iterate-five.json`: same formula-only surface, one bounded output re-inspection and
    final repair (`--debug-repair-passes 2`).
 2. `sol-debug-program-errors-three.json`: one-pass observation, existing semantic program/row ops.
-3. `sol-debug-format-three.json`: one-pass observation, generic `set_format` range operation.
+3. `sol-debug-format-three.json`: `04_04`–`06_04` only, **K2.7** frozen path
+   (not Sol). Observation `format-conventions-v1` (gold-blind bounded font-color
+   census; candidates are heuristics, not a golden list) plus `calc_program set_format`
+   with only `font_color`. Command:
+   `--debug-observation format-conventions-v1 --debug-execution semantic-program-v1`.
+   Honest ceiling is 3/10 intended color-only exacts. `03_04` is recoverable only if
+   LibreOffice theme colors survive save as the evaluator's theme map; leave it out
+   of this arm. Do not promote this observation to the 297 default. Audit:
+   `benchmark/characterize_color_failures.py`.
 
-Do not increase the call/token ceiling for these tests. The earlier **interface freeze is lifted
-only for these full-run-motivated Debugging measurements**. Template target safety is next after
-their attribution: first characterize populated-cell overwrite requirements, then test a guarded
-fill or reversible second pass. Do not combine that with the Debugging arms.
+**K2.7 format-three result (2026-08-27).** `kimi-k2.7-debug-format-three-low-1`,
+`--debug-observation format-conventions-v1 --debug-execution semantic-program-v1`,
+low reasoning, 12 calls: **0/3 exact**, **~$0.32**. Both writes used `set_format` /
+`font_color` only (no value/formula rewrites). Harvested workbooks kept input RGBs.
+
+| task | workbook | cost | official | notes |
+|---|---|---:|---|---|
+| `04_04` | yes | $0.080 | reg 1.0 / mod **0.9946** | First miss `Income Statement!B6` (values match; colour). |
+| `05_04` | yes | $0.098 | reg 1.0 / mod **0.0** | Wrote colours, including `Model!E4`; all 7 colour targets still wrong. |
+| `06_04` | no | $0.143 | missing | Inspect/reads then format-exit; never wrote. |
+
+**Colour persist (2026-08-27).** Official `compare_font_color` reads openpyxl RGB, not UNO
+`CharColor`. `set_format` now clones those fields into the saved xlsx after the document
+closes (`_persist_xlsx_formats`). An official-style LO roundtrip keeps that RGB.
+
+**K2.7 format-three after persist (2026-08-27).** `kimi-k2.7-debug-format-three-low-2`,
+same frozen flags, **0/3 exact**, **~$0.20**. Persist worked: intended `set_format`
+cells now show the requested RGB (e.g. `04_04` `B7`/`E6`/`J11`, `05_04` `E4`/`V3`).
+
+| task | workbook | cost | official | notes |
+|---|---|---:|---|---|
+| `04_04` | yes | $0.040 | reg **0.9972** / mod **0.9969** | First miss still `Income Statement!B6` (same cached value; colour). Extra `WACC!J11:J22` blue paints are the regression. |
+| `05_04` | yes | $0.044 | reg **0.9973** / mod **0.4286** | `E4`/`V3` match; `L4` painted black vs gold green; first regression `Model!I52` (values equal; extra black range). |
+| `06_04` | no | $0.115 | missing | Format-exit / requery / autosubmit; never wrote. |
+
+Do not promote `format-conventions-v1` to the 297 default. Remaining colour misses on
+this arm are compiler targeting and the no-write, not persist.
+
+**Theme restore (2026-08-27).** Container LibreOffice materializes workbook themes as RGB
+that is not the evaluator's Office map (`03_04` `LBO!C6` theme 8 + tint → `2F5597` vs
+mapped `44749F`). After save, unpatched source theme fonts are copied back into the xlsx
+(`_persist_xlsx_formats(..., source_path=)`). Container check: paint the nine gold RGB
+cells (`#7030A0` / `#0000FF`) and restore themes → **0 preserved colour regressions,
+33/33 gold colour mods**. Do not re-spend `03_04` until asked. Skip restore after
+`insert_row`/`delete_row`.
+
+**K2.7 program-errors `05_03` (2026-08-27).** `kimi-k2.7-debug-program-errors-05_03-low-1`,
+`--debug-execution semantic-program-v1`, default `formula-anomalies-v1`, low, 12 calls:
+**0/1 exact**, **$0.161**. `calc_program` was available; the compiler never issued
+`insert_row`/`delete_row`. Oversized `calc_read_ranges` burned the read budget, then
+`set_formula` / `fill_formula` / `compare` until the 12-call autosubmit.
+reg **0.9604** / mod **0.0152**. First miss `Model!E13` (127.35 vs 98.01). Do not rerun
+`08_03`/`01_03`. Unhiding row ops did not produce a row insert on this task.
+
+**Template preserve-populated guard (2026-08-27).** Optional `LIBRECALC_PRESERVE_POPULATED=1`
+skips `write_range` / `set_formula` / `fill_formula` onto non-empty cells and reports
+`cells_skipped`. `--preserve-populated` on the OpenRouter and frozen runners; frozen
+forwards it to Template/FM only, never Debugging. No style/candidate gates. Implemented
+and unit-tested; **do not spend the 97 Template slice unless asked**.
+
+**Format-aware `calc_compare` (2026-08-27).** Under `format-conventions-v1`, `calc_compare`
+returns `format-conventions-diff-v1` (bounded font-color range changes) instead of the
+semantic value/formula diff. The format prompt says compare reports colour changes and
+allows one additional `set_format` on the same output path. Neighborhood reads now accept
+this variant (they previously raised `Unsupported observation variant`). Do not promote
+the observation.
+
+**K2.7 format-three with format compare (2026-08-27).** `kimi-k2.7-debug-format-three-low-3`,
+same frozen flags, **0/3 exact**, **~$0.21**. Compare fired on `04_04`/`05_04`. Neither
+used the extra `set_format` pass. `06_04` wrote an empty program (copy of input) after
+failed reads.
+
+| task | workbook | cost | official | notes |
+|---|---|---:|---|---|
+| `04_04` | yes | $0.076 | reg **0.9972** / mod **0.9977** | Compare: 16 colour runs. Previous first miss `Income Statement!B6` was painted green. New first miss `Balance Sheet!B6` (values equal; colour). Extra `WACC` blues remain. |
+| `05_04` | yes | $0.029 | reg **1.0** / mod **0.4286** | First program used an invalid A1 list; second wrote. Compare showed `L4` blue→black. First miss `Model!I52` (values equal; colour). |
+| `06_04` | yes | $0.106 | reg **1.0** / mod **0.0** | Empty `calc_program`; no `set_format`; no compare. First miss `Revenue Build!J18` (values equal; colour). |
+
+Do not promote `format-conventions-v1`. Remaining colour misses are compiler targeting
+and the `06_04` no-paint, not persist or a silent semantic diff. Do not re-spend `03_04`
+until asked. Do not raise call/token limits. Iterate-five was already 0/5; do not promote it.
+
+**K2.7 format-three after neighborhood-read patch (2026-08-27).**
+`kimi-k2.7-debug-format-three-low-4`, same frozen flags, **0/3 exact**, **~$0.15**.
+`calc_read`/`calc_read_ranges` now accept `format-conventions-v1`. `06_04` wrote
+`set_format` and used the extra compare/`set_format` pass (was empty program / mod 0.0).
+
+| task | workbook | cost | official | notes |
+|---|---|---:|---|---|
+| `04_04` | yes | $0.027 | reg **1.0** / mod **0.9946** | Reads worked. First miss back to `Income Statement!B6` (values equal; colour). |
+| `05_04` | yes | $0.037 | reg **0.9973** / mod **0.4286** | Same targeting; first miss `Model!I52` (values equal; colour). |
+| `06_04` | yes | $0.087 | reg **0.9979** / mod **0.4643** | Painted; extra paint is the first miss `Revenue Build!D3` (values equal; colour). |
+
+**Do not use Sol going forward** (operator: expensive). Cheap compiler is K2.7; compare it to
+**Kimi 2.5** as the Debugging basis. K2.5 `none-1` colour died on a harness bug: the catalog
+advertises the whole 262k window as max output, so OpenRouter rejected
+`text+tools+max_tokens`. The budget overlay now treats full-context max-output as missing and
+caps at 8,192. Do not raise call/token limits.
+
+**K2.5 format-three (2026-08-27).** `kimi-k2.5-debug-format-three-none-2`, same frozen flags as
+K2.7 low-4 except model `moonshotai/kimi-k2.5` and `--reasoning-effort none`: **0/3 exact**,
+**~$0.082**. Three workbooks. Not better than K2.7 on this surface.
+
+| task | K2.7 low-4 | K2.5 none-2 |
+|---|---|---|
+| `04_04` | reg 1.0 / mod 0.9946 | reg 0.9948 / mod 0.9953 |
+| `05_04` | reg 0.9973 / mod 0.4286 | reg 0.9947 / mod 0.4286 |
+| `06_04` | reg 0.9979 / mod **0.4643** | reg 0.9932 / mod **0.0714** |
+
+**Accidental Sol `05_03` (do not repeat).** `gpt-5.6-sol-debug-program-errors-05_03-medium-1`,
+**0/1 exact**, **$0.16**. Did `insert_row` at Financial Overview **8** and wrote
+`Total Contract Revenue`. Official: reg **1.0** / mod **0.3879**. First miss `Model!B91`
+(`SOFR` vs empty). Anecdote only.
+
+**Deleted-row geometry (2026-08-27).** `formula-anomalies-v1` now emits `deleted_row_geometry`:
+gold-blind `#REF!` remnant rows (pure `#REF!` formulas, optional duplicate adjacent label)
+with `insert_row_index`, plus downstream `'Sheet'!#REF!` samples. Heuristic, not an auto-edit.
+The semantic-program prompt tells the compiler to restore structure with `insert_row` before
+rewriting dependents. Formula-blocks overlay still hides the op, so that sentence is
+semantic-program only.
+
+**K2.7 `05_03` after geometry (2026-08-27).** `kimi-k2.7-debug-program-errors-05_03-low-2`,
+`--debug-execution semantic-program-v1`, **no workbook**, **$0.071**. Inspect listed
+`Financial Overview` `insert_row_index` **8** (duplicate `% Growth`, 6 `#REF!` cells) — the
+gold restore. Compiler dumped FO `A1:K20` then `A6:K16` (both oversize), burned the read
+budget, format-exited. Never called `insert_row`. Un-blinding inspect did not produce a
+write. Do not rerun `08_03`/`01_03`. Do not mint `restore_UFCF_row`.
+
+**K2.5 `05_03` (2026-08-27).** `kimi-k2.5-debug-program-errors-05_03-none-1`, same surface
+as K2.7 low-2 (`formula-anomalies-v1` + `semantic-program-v1`, reasoning none): **no
+workbook**, **$0.016**. Inspect showed FO `insert_row_index` 8. Then a 12-call read spiral
+(`calc_read` / `calc_read_ranges`, several repeats of Transaction Overview `A1:F5`). Never
+`calc_program` or `insert_row`. Official missing output. Same compiler miss as K2.7 low-2,
+cheaper. Do not rerun `08_03`/`01_03`.
+
+**Cheap-compiler commit (2026-08-27).** Failed post-inspect reads now spend the read-budget
+slot, so an oversized dump cannot retry until the call cap. Semantic-program prompt: if inspect
+listed `deleted_row_geometry` that matches the instruction, `insert_row` is the write; do not
+dump that sheet to confirm it. Do not rerun K2.5; compare to the existing `none-1` / colour
+`none-2` numbers.
+
+**K2.7 `05_03` after commit (2026-08-27).** `kimi-k2.7-debug-program-errors-05_03-low-3`,
+**0/1 exact**, **$0.204**. Oversized dump spent the slot; second read was blocked; then
+`insert_row` at FO **8** and **16**. Official: reg **1.0** / mod **0.2121**. First miss
+`Model!C29` (−64.485 vs −308.126). Beats K2.5 `none-1` (no workbook) and K2.7 low-1/low-2
+(no insert / no workbook). Below accidental Sol (mod 0.3879). Late step re-inserted from the
+input path and wiped earlier formula work. Do not rerun `08_03`/`01_03`. Do not rerun K2.5.
+
+The earlier **interface freeze is lifted only for these completed Debugging measurements**.
+The remaining Template gap is instruction-grounded target selection; the preserve-populated
+guard is optional safety with small expected exact upside. Do not combine it with Debugging.
 
 **Template target-safety diagnosis.** Across all 97 tasks, 5,545/5,723 cache-robust direct
 targets (96.9%) are blank and 81 tasks require only blank direct edits. However, the current

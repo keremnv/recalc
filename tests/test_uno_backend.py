@@ -210,3 +210,12 @@ def test_program_set_format_round_trips_through_uno(tmp_path) -> None:
             "font_weight": 150.0,
         },
     ]
+
+    openpyxl = pytest.importorskip("openpyxl")
+    processed = openpyxl.load_workbook(output_path)
+    for address in ("B2", "C2"):
+        font_color = processed[sheet][address].font.color
+        assert font_color is not None and font_color.type == "rgb"
+        assert font_color.rgb[-6:] == "0000FF"
+        assert processed[sheet][address].fill.fgColor.rgb[-6:] == "FFF2CC"
+        assert processed[sheet][address].font.bold is True

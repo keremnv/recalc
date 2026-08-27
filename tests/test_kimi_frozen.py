@@ -168,4 +168,97 @@ def test_frozen_debug_ablation_changes_only_debugging_group(
     assert compute[compute.index("--execution") + 1] == "formula-blocks-v1"
     assert compute[compute.index("--repair-passes") + 1] == "1"
     assert debugging[debugging.index("--execution") + 1] == "semantic-program-v1"
+    assert debugging[debugging.index("--observation") + 1] == "formula-anomalies-v1"
     assert debugging[debugging.index("--repair-passes") + 1] == "2"
+
+
+def test_frozen_format_observation_requires_semantic_program(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    frozen = _module()
+    slice_path = _write_slice(tmp_path / "slice.json")
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "run_kimi_frozen.py",
+            "--slice",
+            str(slice_path),
+            "--run-name",
+            "debug-format",
+            "--debug-observation",
+            "format-conventions-v1",
+            "--no-score",
+        ],
+    )
+
+    with pytest.raises(ValueError, match="semantic-program-v1"):
+        frozen.main()
+
+
+def test_frozen_forwards_format_conventions_observation(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    frozen = _module()
+    slice_path = _write_slice(tmp_path / "slice.json")
+    commands: list[list[str]] = []
+    monkeypatch.setattr(
+        frozen.subprocess,
+        "call",
+        lambda command, cwd=None: commands.append([str(part) for part in command]) or 0,
+    )
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "run_kimi_frozen.py",
+            "--slice",
+            str(slice_path),
+            "--run-name",
+            "debug-format",
+            "--debug-observation",
+            "format-conventions-v1",
+            "--debug-execution",
+            "semantic-program-v1",
+            "--no-score",
+        ],
+    )
+
+    assert frozen.main() == 0
+    compute, debugging = commands
+    assert compute[compute.index("--observation") + 1] == "formula-patterns-v1"
+    assert compute[compute.index("--execution") + 1] == "formula-blocks-v1"
+    assert debugging[debugging.index("--observation") + 1] == "format-conventions-v1"
+    assert debugging[debugging.index("--execution") + 1] == "semantic-program-v1"
+
+
+def test_frozen_preserve_populated_is_compute_only(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    frozen = _module()
+    slice_path = _write_slice(tmp_path / "slice.json")
+    commands: list[list[str]] = []
+    monkeypatch.setattr(
+        frozen.subprocess,
+        "call",
+        lambda command, cwd=None: commands.append([str(part) for part in command]) or 0,
+    )
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "run_kimi_frozen.py",
+            "--slice",
+            str(slice_path),
+            "--run-name",
+            "preserve-pack",
+            "--preserve-populated",
+            "--no-score",
+        ],
+    )
+
+    assert frozen.main() == 0
+    compute, debugging = commands
+    assert "--preserve-populated" in compute
+    assert "--preserve-populated" not in debugging
+    assert "--read-budget" in debugging

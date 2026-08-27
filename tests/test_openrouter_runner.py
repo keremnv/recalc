@@ -234,6 +234,8 @@ def test_budget_overlay_derives_and_reserves_an_affordable_response() -> None:
     assert 'self.config.completion_kwargs.pop("max_tokens", None)' in patched
     assert "remaining_cost - safety_input_cost" in patched
     assert "self.model_max_output_tokens or 8192" in patched
+    assert "model_output_limit >= int(self.model_max_input_tokens)" in patched
+    assert "counted_input = int(input_tokens * 1.5)" in patched
     assert 'self.config.completion_kwargs["max_tokens"] = safety_max_output' in patched
     assert "safety_max_output * safety_output_price" in patched
     assert "exceeds per-instance cost limit before query" in patched
@@ -274,6 +276,7 @@ def test_runner_allows_one_bounded_format_repair_by_default(monkeypatch) -> None
     assert args.max_tokens is None
     assert args.read_budget is True
     assert args.blank_bridges is True
+    assert args.preserve_populated is False
 
 
 def test_read_budget_flag_can_be_disabled(monkeypatch) -> None:
@@ -500,6 +503,35 @@ def test_formula_anomalies_with_program_execution_allows_geometry_ops(tmp_path) 
     assert "calc_write" in tools
     assert "insert_row/delete_row" in system
     assert "then calc_fill_formulas." not in system
+    assert "deleted_row_geometry" in config["agent"]["templates"]["instance_template"]
+    assert "do not dump that" in config["agent"]["templates"]["instance_template"]
+    assert "insert_row at insert_row_index" in config["agent"]["templates"]["instance_template"]
+    assert "insert_row is the write" in system
+
+
+def test_format_conventions_prompt_uses_bounded_census_and_set_format(tmp_path) -> None:
+    runner = _runner_module()
+    project_root = Path(__file__).parents[1]
+    staged = runner._stage_tool_policy(
+        source_config=project_root / "benchmark/sweagent/spreadsheet.yaml",
+        sweagent_root=project_root / "benchmark-data/SpreadsheetBench-2/SWE-agent",
+        temporary_root=tmp_path,
+        read_policy="progressive",
+        execution="semantic-program-v1",
+        observation="format-conventions-v1",
+    )
+
+    config = yaml.safe_load(staged.read_text(encoding="utf-8"))
+    template = config["agent"]["templates"]["instance_template"]
+
+    assert "font-color census" in template
+    assert "Use at most one calc_read_ranges call" in template
+    assert "only font_color" in template
+    assert "Do not rewrite cell values or formulas" in template
+    assert "font-color changes as ranges" in template
+    assert "one additional set_format" in template
+    assert "empty diff" not in template
+    assert "calc_program set_format operations" in config["agent"]["templates"]["system_template"]
 
 
 def test_formula_anomalies_two_pass_policy_allows_one_output_reinspection(tmp_path) -> None:

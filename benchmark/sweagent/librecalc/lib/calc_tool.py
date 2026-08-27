@@ -188,6 +188,10 @@ def main(argv: list[str]) -> int:
 
     if command == "compare" and len(args) == 2:
         before_path, after_path = args
+        variant = os.environ.get("LIBRECALC_OBSERVATION_VARIANT", "grid-v1")
+        if variant == "format-conventions-v1":
+            _emit(_observation()[0].format_convention_diff(backend, before_path, after_path))
+            return 0
         before = _observation()[0].workbook_observation(
             backend, before_path, "semantic-snapshot-v2"
         )
@@ -200,12 +204,12 @@ def main(argv: list[str]) -> int:
         if _read_budget().read_budget_error() is not None:
             _emit({"ok": False, "error": _read_budget().read_budget_error()})
             return 1
+        _read_budget().consume_read_budget()
         if _observation()[2].A1_RANGE.fullmatch(cell_range.upper()) is None:
             raise ValueError(f"invalid A1 range: {cell_range}")
         _require_neighborhood_range(cell_range, label="calc_read range")
         result = backend.read_range(sheet=sheet, cell_range=cell_range, path=path)
         variant = os.environ.get("LIBRECALC_OBSERVATION_VARIANT", "grid-v1")
-        _read_budget().consume_read_budget(successful=True)
         _emit(
             _observation()[0].format_read_observation(
                 result,
@@ -221,6 +225,7 @@ def main(argv: list[str]) -> int:
         if (budget_error := _read_budget().read_budget_error()) is not None:
             _emit({"ok": False, "error": budget_error})
             return 1
+        _read_budget().consume_read_budget()
         requests = _parse_range_requests(raw_requests)
         valid_requests: list[tuple[str, str]] = []
         valid_indexes: list[int] = []
@@ -255,7 +260,6 @@ def main(argv: list[str]) -> int:
                 observation = {"sheet": sheet, "range": cell_range.upper(), **observation}
             formatted[index] = observation
         assert all(item is not None for item in formatted)
-        _read_budget().consume_read_budget(successful=bool(valid_requests))
         _emit({"ranges": formatted})
         return 0
 

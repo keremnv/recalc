@@ -1,0 +1,18 @@
+{
+  "name": "kimi-k27-high-diagnostic-four",
+  "purpose": "Development-only compiler-threshold audit after the format, structural, and write-state fixes. Each task is unseen by K2.7; failures are classified from trajectories, not used as a competitive score.",
+  "model": "moonshotai/kimi-k2.7-code",
+  "max_tool_calls_per_task": 12,
+  "isolation": {
+    "container": "official SpreadsheetBench 2 image",
+    "golden_data_available_to_agent": false,
+    "input_mount": "one exact workbook, read-only",
+    "output_mount": "one task-private directory, writable"
+  },
+  "tasks": [
+    {"category": "Debugging", "id": "02_03"},
+    {"category": "Debugging", "id": "01_05"},
+    {"category": "Template", "id": "05_01"},
+    {"category": "Financial_Model", "id": "01_02"}
+  ]
+}

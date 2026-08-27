@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import os
 import re
+import warnings
 from contextlib import suppress
+from copy import copy
 from pathlib import Path
 from typing import Any
 
@@ -20,7 +22,9 @@ from librecalc_mcp.domain.formulas import (
     translate_a1_formula,
     unescape_text,
 )
+from librecalc_mcp.domain.grid import column_label, validate_matrix_shape
 from librecalc_mcp.domain.models import CalcOperation, CellFormat, Matrix, SheetInfo, WorkbookInfo
+from librecalc_mcp.domain.write_policy import preserve_populated as _preserve_populated
 
 _A1_RANGE = re.compile(r"^([A-Z]+)([1-9][0-9]*)(?::([A-Z]+)([1-9][0-9]*))?$", re.IGNORECASE)
 _HEX_COLOR = re.compile(r"^#?([0-9A-F]{6})$", re.IGNORECASE)
@@ -92,13 +96,20 @@ def _format_color(value: object, *, field: str) -> int:
     raise ValueError(f"format.{field} must be a #RRGGBB color or integer")
 
 
-def _apply_format(target: Any, cell_format: CellFormat) -> int:
-    unknown = sorted(set(cell_format) - _FORMAT_FIELDS)
-    if unknown:
-        raise ValueError(f"unsupported format fields: {', '.join(unknown)}")
-    if not cell_format:
-        raise ValueError("set_format requires at least one format field")
+def _argb(value: object, *, field: str) -> str:
+    return f"FF{_format_color(value, field=field):06X}"
 
+
+def _a1_addresses(cell_range: str) -> list[str]:
+    start_col, start_row, end_col, end_row = a1_range_address(cell_range)
+    return [
+        f"{column_label(col + 1)}{row + 1}"
+        for row in range(start_row, end_row + 1)
+        for col in range(start_col, end_col + 1)
+    ]
+
+
+def _apply_format_fields(target: Any, cell_format: CellFormat) -> None:
     if "font_color" in cell_format:
         target.CharColor = _format_color(cell_format["font_color"], field="font_color")
     if "background_color" in cell_format:
@@ -118,30 +129,163 @@ def _apply_format(target: Any, cell_format: CellFormat) -> int:
             raise ValueError("format.font_weight must be numeric")
         target.CharWeight = float(weight)
 
+
+def _apply_format(target: Any, cell_format: CellFormat) -> int:
+    unknown = sorted(set(cell_format) - _FORMAT_FIELDS)
+    if unknown:
+        raise ValueError(f"unsupported format fields: {', '.join(unknown)}")
+    if not cell_format:
+        raise ValueError("set_format requires at least one format field")
+
+    # Per-cell, matching the container ScCellObj hole: a range-level CharColor set can
+    # mutate a shared xf that a later set_format reverts on export.
     address = target.RangeAddress
-    return (address.EndColumn - address.StartColumn + 1) * (address.EndRow - address.StartRow + 1)
+    width = address.EndColumn - address.StartColumn + 1
+    height = address.EndRow - address.StartRow + 1
+    for row_offset in range(height):
+        for column_offset in range(width):
+            _apply_format_fields(target.getCellByPosition(column_offset, row_offset), cell_format)
+    return width * height
 
 
-def _apply_values(sheet: Any, cell_range: str, values: Matrix) -> None:
+def _theme_spec(color: Any) -> tuple[int, float] | None:
+    if color is None or getattr(color, "type", None) != "theme":
+        return None
+    theme = color.theme
+    if not isinstance(theme, int):
+        return None
+    tint = color.tint
+    return theme, float(tint) if tint else 0.0
+
+
+def _persist_xlsx_formats(
+    path: str,
+    patches: list[tuple[str, str, CellFormat]],
+    *,
+    source_path: str | None = None,
+    restore_unpatched_themes: bool = True,
+) -> None:
+    """Write set_format RGB and put unpainted Excel theme fonts back.
+
+    UNO CharColor can be live-true after save while openpyxl still sees the input RGB.
+    Container LibreOffice also materializes workbook themes as RGB that is not the
+    evaluator's Office theme map (03_04 LBO!C6 theme 8 → 2F5597 vs mapped 44749F).
+    """
+    suffix = Path(path).suffix.lower()
+    if suffix not in {".xlsx", ".xlsm"}:
+        return
+    restore_from = (
+        source_path
+        if (
+            restore_unpatched_themes
+            and source_path
+            and Path(source_path).suffix.lower() in {".xlsx", ".xlsm"}
+            and os.path.abspath(source_path) != os.path.abspath(path)
+        )
+        else None
+    )
+    if not patches and restore_from is None:
+        return
+    try:
+        import openpyxl
+        from openpyxl.styles import Color, PatternFill
+    except ImportError:
+        return
+
+    patched: set[tuple[str, str]] = {
+        (sheet_name, address)
+        for sheet_name, cell_range, _cell_format in patches
+        for address in _a1_addresses(cell_range)
+    }
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        workbook = openpyxl.load_workbook(path, keep_vba=suffix == ".xlsm")
+        source = openpyxl.load_workbook(restore_from, read_only=False) if restore_from else None
+    try:
+        for sheet_name, cell_range, cell_format in patches:
+            worksheet = workbook[sheet_name]
+            for address in _a1_addresses(cell_range):
+                cell = worksheet[address]
+                if "font_color" in cell_format or "font_weight" in cell_format:
+                    font = copy(cell.font)
+                    if "font_color" in cell_format:
+                        font.color = Color(rgb=_argb(cell_format["font_color"], field="font_color"))
+                    if "font_weight" in cell_format:
+                        weight = cell_format["font_weight"]
+                        if isinstance(weight, bool) or not isinstance(weight, (int, float)):
+                            raise ValueError("format.font_weight must be numeric")
+                        font.bold = float(weight) >= 150
+                    cell.font = font
+                if cell_format.get("background_transparent") is True:
+                    cell.fill = PatternFill(fill_type=None)
+                elif "background_color" in cell_format:
+                    fill_color = _argb(cell_format["background_color"], field="background_color")
+                    cell.fill = PatternFill(
+                        fill_type="solid",
+                        fgColor=fill_color,
+                        bgColor=fill_color,
+                    )
+        if source is not None:
+            for source_sheet in source.worksheets:
+                if source_sheet.title not in workbook.sheetnames:
+                    continue
+                destination_sheet = workbook[source_sheet.title]
+                for row in source_sheet.iter_rows():
+                    for source_cell in row:
+                        if (
+                            source_cell.value is None
+                            and _theme_spec(source_cell.font.color) is None
+                        ):
+                            continue
+                        address = source_cell.coordinate
+                        if (source_sheet.title, address) in patched:
+                            continue
+                        spec = _theme_spec(source_cell.font.color)
+                        if spec is None:
+                            continue
+                        theme, tint = spec
+                        dest_cell = destination_sheet[address]
+                        font = copy(dest_cell.font)
+                        font.color = Color(theme=theme, tint=tint)
+                        dest_cell.font = font
+        workbook.save(path)
+    finally:
+        workbook.close()
+        if source is not None:
+            source.close()
+
+
+def _apply_values(sheet: Any, cell_range: str, values: Matrix) -> int:
     start_col, start_row, end_col, end_row = a1_range_address(cell_range)
+    validate_matrix_shape(cell_range, values)
     data = tuple(tuple(row) for row in values)
+    skip_populated = _preserve_populated()
     if start_col == end_col and start_row == end_row:
         if len(data) != 1 or len(data[0]) != 1:
             raise ValueError("single-cell range requires a 1x1 values matrix")
+        cell = sheet.getCellByPosition(start_col, start_row)
+        if skip_populated and int(cell.Type) != 0:
+            return 1
         # Container LibreOffice rejects setDataArray on ScCellObj (cellsuno.cxx:5014).
-        _set_cell_value(sheet.getCellByPosition(start_col, start_row), data[0][0])
-        return
-    if any(is_formula_text(cell) or is_escaped_text(cell) for row in data for cell in row):
-        # Mixed or formula-bearing matrix: setDataArray would store every formula as
-        # text, so assign cell by cell. Slower, and only on this path.
+        _set_cell_value(cell, data[0][0])
+        return 0
+    cell_by_cell = skip_populated or any(
+        is_formula_text(cell) or is_escaped_text(cell) for row in data for cell in row
+    )
+    if cell_by_cell:
+        # Mixed/formula-bearing matrix, or the preserve-populated guard: setDataArray
+        # would store formulas as text and would overwrite occupied cells.
+        skipped = 0
         for row_offset, row in enumerate(data):
             for column_offset, cell_value in enumerate(row):
-                _set_cell_value(
-                    sheet.getCellByPosition(start_col + column_offset, start_row + row_offset),
-                    cell_value,
-                )
-        return
+                cell = sheet.getCellByPosition(start_col + column_offset, start_row + row_offset)
+                if skip_populated and int(cell.Type) != 0:
+                    skipped += 1
+                    continue
+                _set_cell_value(cell, cell_value)
+        return skipped
     sheet.getCellRangeByPosition(start_col, start_row, end_col, end_row).setDataArray(data)
+    return 0
 
 
 class _DocumentContext:
@@ -420,16 +564,19 @@ class UnoCalcBackend:
         output_path: str | None = None,
     ) -> dict[str, object]:
         with self._document(path) as doc:
-            _apply_values(doc.Sheets.getByName(sheet), cell_range, values)
+            cells_skipped = _apply_values(doc.Sheets.getByName(sheet), cell_range, values)
             doc.calculateAll()
             saved_to = self._save_document(doc, path, output_path)
-            return {
-                "ok": True,
-                "sheet": sheet,
-                "range": cell_range,
-                "rows": len(values),
-                "saved_to": saved_to,
-            }
+        if saved_to is not None:
+            _persist_xlsx_formats(saved_to, [], source_path=path)
+        return {
+            "ok": True,
+            "sheet": sheet,
+            "range": cell_range,
+            "rows": len(values),
+            "cells_skipped": cells_skipped,
+            "saved_to": saved_to,
+        }
 
     def execute_program(
         self,
@@ -439,6 +586,8 @@ class UnoCalcBackend:
     ) -> dict[str, object]:
         with self._document(path) as doc:
             results: list[dict[str, object]] = []
+            format_patches: list[tuple[str, str, CellFormat]] = []
+            geometry_changed = False
             for operation in operations:
                 if operation.op == "create_sheet":
                     if not operation.name:
@@ -454,6 +603,7 @@ class UnoCalcBackend:
                     count = 1 if operation.count is None else operation.count
                     if operation.index < 1 or count < 1:
                         raise ValueError(f"{operation.op} requires index >= 1 and count >= 1")
+                    geometry_changed = True
                     rows = doc.Sheets.getByName(operation.sheet).Rows
                     uno_index = operation.index - 1
                     if operation.op == "insert_row":
@@ -476,12 +626,12 @@ class UnoCalcBackend:
                         raise ValueError("write_range requires sheet and range")
                     if operation.values is None:
                         raise ValueError("write_range requires values")
-                    _apply_values(
+                    cells_skipped = _apply_values(
                         doc.Sheets.getByName(operation.sheet),
                         operation.range,
                         operation.values,
                     )
-                    results.append({"op": operation.op, "ok": True})
+                    results.append({"op": operation.op, "ok": True, "cells_skipped": cells_skipped})
                     continue
 
                 if operation.op == "upsert_chart":
@@ -517,13 +667,16 @@ class UnoCalcBackend:
                     raise ValueError(f"{operation.op} requires sheet and range")
                 target = self._sheet_range(doc.Sheets.getByName(operation.sheet), operation.range)
 
+                cells_skipped = 0
                 if operation.op == "set_formula":
                     if operation.formula is None:
                         raise ValueError("set_formula requires formula")
                     # v0 deliberately restricts this op to a single-cell range.
-                    target.getCellByPosition(0, 0).Formula = normalize_formula_argument_separators(
-                        operation.formula
-                    )
+                    cell = target.getCellByPosition(0, 0)
+                    if _preserve_populated() and int(cell.Type) != 0:
+                        cells_skipped = 1
+                    else:
+                        cell.Formula = normalize_formula_argument_separators(operation.formula)
                 elif operation.op == "fill_formula":
                     if operation.formula is None:
                         raise ValueError("fill_formula requires formula")
@@ -532,18 +685,25 @@ class UnoCalcBackend:
                     height = address.EndRow - address.StartRow + 1
                     for row_offset in range(height):
                         for column_offset in range(width):
+                            cell = target.getCellByPosition(column_offset, row_offset)
+                            if _preserve_populated() and int(cell.Type) != 0:
+                                cells_skipped += 1
+                                continue
                             translated = translate_a1_formula(
                                 operation.formula,
                                 column_offset=column_offset,
                                 row_offset=row_offset,
                             )
-                            target.getCellByPosition(
-                                column_offset, row_offset
-                            ).Formula = normalize_formula_argument_separators(translated)
+                            cell.Formula = normalize_formula_argument_separators(translated)
                 elif operation.op == "set_format":
                     if operation.cell_format is None:
                         raise ValueError("set_format requires format")
+                    if not operation.sheet or not operation.range:
+                        raise ValueError("set_format requires sheet and range")
                     cells_formatted = _apply_format(target, operation.cell_format)
+                    format_patches.append(
+                        (operation.sheet, operation.range, dict(operation.cell_format))
+                    )
                     results.append(
                         {
                             "op": operation.op,
@@ -559,8 +719,19 @@ class UnoCalcBackend:
                     target.clearContents(31)
                 else:
                     raise ValueError(f"Unsupported operation: {operation.op}")
-                results.append({"op": operation.op, "ok": True})
+                result = {"op": operation.op, "ok": True}
+                if operation.op in {"set_formula", "fill_formula"}:
+                    result["cells_skipped"] = cells_skipped
+                results.append(result)
 
             doc.calculateAll()
             saved_to = self._save_document(doc, path, output_path)
-            return {"ok": True, "operations": results, "saved_to": saved_to}
+        if saved_to is not None:
+            # After close: a live LibreOffice handle can overwrite an in-place OOXML patch.
+            _persist_xlsx_formats(
+                saved_to,
+                format_patches,
+                source_path=path,
+                restore_unpatched_themes=not geometry_changed,
+            )
+        return {"ok": True, "operations": results, "saved_to": saved_to}

@@ -20,10 +20,9 @@ def _clear_read_budget_env(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> P
     return state_path
 
 
-def test_read_budget_allows_one_batch_after_inspect() -> None:
+def test_read_budget_consumes_failed_attempts() -> None:
     reset_read_budget()
-    assert read_budget_error() is None
-    consume_read_budget(successful=True)
+    consume_read_budget(successful=False)
     assert read_budget_error() is not None
 
 

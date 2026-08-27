@@ -1,0 +1,15 @@
+{
+  "name": "kimi-k27-high-viz-row-series-one",
+  "purpose": "Development-only compiler-threshold replay after explicit non-XY row-series binding fixed the held-three fourth-series drop.",
+  "model": "moonshotai/kimi-k2.7-code",
+  "max_tool_calls_per_task": 12,
+  "isolation": {
+    "container": "official SpreadsheetBench 2 image",
+    "golden_data_available_to_agent": false,
+    "input_mount": "one exact workbook, read-only",
+    "output_mount": "one task-private directory, writable"
+  },
+  "tasks": [
+    {"category": "Visualization", "id": "Task 1417365"}
+  ]
+}

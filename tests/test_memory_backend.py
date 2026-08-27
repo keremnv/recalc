@@ -1,3 +1,5 @@
+import pytest
+
 from librecalc_mcp.backend.memory import MemoryCalcBackend
 from librecalc_mcp.domain.models import CalcOperation
 
@@ -18,6 +20,21 @@ def test_program_can_create_and_write_sheet() -> None:
     read = backend.read_range("Analysis", "A1:B2")
     assert read["values"] == [[1, 2], [3, 4]]
     assert backend.read_range("Analysis", "C1")["formulas"] == [["=SUM(A1:B1)"]]
+
+
+@pytest.mark.parametrize(
+    "values",
+    (
+        [[1, 2], [3]],
+        [[1, 2]],
+        [[1, 2], [3, 4], [5, 6]],
+    ),
+)
+def test_write_range_rejects_values_that_do_not_cover_the_range(values) -> None:
+    backend = MemoryCalcBackend()
+
+    with pytest.raises(ValueError, match=r"A1:B2 requires a 2x2 values matrix"):
+        backend.write_range("Sheet1", "A1:B2", values)
 
 
 def test_inspection_lists_sheets() -> None:
@@ -206,3 +223,39 @@ def test_program_delete_row_drops_and_shifts_stored_ranges() -> None:
     assert backend.read_range("Sheet1", "A1")["values"] == [["keep"]]
     assert backend.read_range("Sheet1", "A2")["values"] == [["below"]]
     assert backend.read_range("Sheet1", "A3")["values"] == []
+
+
+def test_preserve_populated_skips_occupied_write_and_formula_cells(
+    monkeypatch,
+) -> None:
+    monkeypatch.setenv("LIBRECALC_PRESERVE_POPULATED", "1")
+    backend = MemoryCalcBackend()
+    backend.write_range("Sheet1", "A1", [["keep"]])
+    backend.write_range("Sheet1", "C1", [[2]])
+
+    write = backend.write_range("Sheet1", "A1:B1", [["overwrite", "new"]])
+    formula = backend.execute_program(
+        [
+            CalcOperation(op="set_formula", sheet="Sheet1", range="C1", formula="=1"),
+            CalcOperation(op="fill_formula", sheet="Sheet1", range="A1:B2", formula="=D1"),
+        ]
+    )
+
+    assert write["cells_skipped"] == 1
+    assert backend.read_range("Sheet1", "A1")["values"] == [["keep"]]
+    assert backend.read_range("Sheet1", "B1")["values"] == [["new"]]
+    assert formula["operations"][0]["cells_skipped"] == 1
+    assert formula["operations"][1]["cells_skipped"] == 2
+    assert backend.read_range("Sheet1", "C1")["formulas"] == []
+    assert backend.read_range("Sheet1", "B2")["formulas"] == [["=D1"]]
+    assert backend.read_range("Sheet1", "A2")["formulas"] == [["=D1"]]
+
+
+def test_preserve_populated_is_off_by_default() -> None:
+    backend = MemoryCalcBackend()
+    backend.write_range("Sheet1", "A1", [["keep"]])
+
+    result = backend.write_range("Sheet1", "A1", [["overwrite"]])
+
+    assert result["cells_skipped"] == 0
+    assert backend.read_range("Sheet1", "A1")["values"] == [["overwrite"]]

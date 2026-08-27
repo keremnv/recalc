@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import dataclasses
 import os
+import re
 from collections import defaultdict
 from itertools import pairwise
 from typing import Any
@@ -66,11 +67,42 @@ _ANOMALY_ERROR_PER_SHEET_LIMIT = 5
 
 _ANOMALY_ERROR_CONTEXT_CELL_LIMIT = 4
 
+_DELETED_ROW_REF_MIN = 2
+
+_DELETED_ROW_GLOBAL_LIMIT = 8
+
+_DELETED_ROW_PER_SHEET_LIMIT = 3
+
+_DELETED_ROW_DOWNSTREAM_SAMPLE = 4
+
+_CROSS_SHEET_REF_ERROR = re.compile(
+    r"(?:'((?:[^']|'')+)'|([A-Za-z][^'!]{0,40}))!#REF!",
+    re.IGNORECASE,
+)
+
 _DEPENDENCY_BRIDGE_GLOBAL_LIMIT = 12
 
 _DEPENDENCY_BRIDGE_MIN_CARRY = 2
 
 _DEPENDENCY_RANGE_MAX_CELLS = 500
+
+_FORMAT_CONVENTION_CELL_LIMIT = 30_000
+
+_FORMAT_CONVENTION_GROUP_LIMIT = 80
+
+_FORMAT_CONVENTION_RANGE_LIMIT = 12
+
+_FORMAT_CONVENTION_CANDIDATE_LIMIT = 40
+
+_FORMAT_CONVENTION_GLOBAL_CANDIDATE_LIMIT = 20
+
+_FORMAT_CONVENTION_PER_SHEET_CANDIDATE_LIMIT = 5
+
+_FORMAT_CONVENTION_DIFF_RUN_LIMIT = 80
+
+_FORMAT_CONVENTION_DIFF_PER_SHEET_LIMIT = 8
+
+_FORMAT_CONVENTION_WORKBOOK_SCOPE = "*"
 
 _FORMULA_ERROR_LITERALS = {
     "=#DIV/0!",
@@ -110,6 +142,7 @@ def _axis_bands(
         band_start = index
     return bands
 
+
 def _candidate_table_gaps(
     *,
     kinds: list[list[str]],
@@ -125,7 +158,9 @@ def _candidate_table_gaps(
     if not data_columns:
         return None
     data_start, data_end = min(data_columns), max(data_columns)
-    text_counts = [sum(row[column] == "text" for row in kinds) for column in range(len(column_labels))]
+    text_counts = [
+        sum(row[column] == "text" for row in kinds) for column in range(len(column_labels))
+    ]
     label_column = max(range(len(column_labels)), key=lambda column: text_counts[column])
     if text_counts[label_column] == 0 or label_column >= data_start:
         return None
@@ -168,6 +203,7 @@ def _candidate_table_gaps(
         "candidate_gaps": gaps,
         "note": "Heuristic structural gaps, not task requirements.",
     }
+
 
 def _horizontal_formula_patterns(
     *,
@@ -232,6 +268,7 @@ def _horizontal_formula_patterns(
             "remain available by focused read."
         ),
     }
+
 
 def _formula_anomaly_sheet(
     *,
@@ -307,9 +344,7 @@ def _formula_anomaly_sheet(
             value = matrix_value(values, row, column)
             if is_formula(formula):
                 formula_cells += 1
-                error_kind = spreadsheet_error_kind(
-                    formula, matrix_value(errors, row, column)
-                )
+                error_kind = spreadsheet_error_kind(formula, matrix_value(errors, row, column))
                 if error_kind is not None:
                     formula_errors.append(
                         {
@@ -396,7 +431,10 @@ def _formula_anomaly_sheet(
                     matrix_value(formulas, row, column)
                     for column in range(left_column + 1, right_column)
                 ]
-                if any(isinstance(value, bool) or not isinstance(value, (int, float)) for value in gap_values):
+                if any(
+                    isinstance(value, bool) or not isinstance(value, (int, float))
+                    for value in gap_values
+                ):
                     continue
                 if any(is_formula(formula) for formula in gap_formulas):
                     continue
@@ -449,6 +487,16 @@ def _formula_anomaly_sheet(
     sequence_gaps = sorted(
         sequence_gaps_by_address.values(), key=lambda candidate: candidate["address"]
     )
+    deleted_rows, cross_sheet_dependents = _deleted_row_signals(
+        sheet=sheet,
+        start_row=int(start_row),
+        start_column_number=start_column_number,
+        row_count=row_count,
+        column_count=column_count,
+        values=values,
+        formulas=formulas,
+        errors=errors,
+    )
     return {
         "name": sheet,
         "used_range": used_range.upper(),
@@ -460,7 +508,10 @@ def _formula_anomaly_sheet(
         "_translation_candidates": candidates,
         "_sequence_gaps": sequence_gaps,
         "_formula_errors": formula_errors,
+        "_deleted_row_candidates": deleted_rows,
+        "_cross_sheet_ref_dependents": cross_sheet_dependents,
     }
+
 
 def _formula_anomaly_workbook_observation(
     *,
@@ -517,13 +568,10 @@ def _formula_anomaly_workbook_observation(
         font_color = cell_format.get("font_color")
         if font_color == "#0000FF":
             return False
-        return not (
-            font_color == "#000000"
-            and cell_format.get("background_transparent") is True
-        )
+        return not (font_color == "#000000" and cell_format.get("background_transparent") is True)
 
-    grouped_candidates: dict[tuple[str, int, str], list[tuple[int, dict[str, Any]]]] = (
-        defaultdict(list)
+    grouped_candidates: dict[tuple[str, int, str], list[tuple[int, dict[str, Any]]]] = defaultdict(
+        list
     )
     for candidate in all_candidates:
         address_match = A1_RANGE.fullmatch(candidate["address"])
@@ -585,9 +633,7 @@ def _formula_anomaly_workbook_observation(
         if sheet["numeric_constants"] > _ANOMALY_SMALL_SHEET_NUMERIC_LIMIT:
             continue
         sheet_candidates = [
-            candidate
-            for candidate in eligible_candidates
-            if candidate["sheet"] == sheet["name"]
+            candidate for candidate in eligible_candidates if candidate["sheet"] == sheet["name"]
         ]
         for candidate in sheet_candidates[:_ANOMALY_PER_SHEET_LIMIT]:
             select(candidate, f"sheet-top-{_ANOMALY_PER_SHEET_LIMIT}")
@@ -647,7 +693,181 @@ def _formula_anomaly_workbook_observation(
             ),
         },
         "formula_errors": _formula_error_representatives(sheets),
+        "deleted_row_geometry": _deleted_row_geometry(sheets),
     }
+
+
+def _row_label_text(value: Any) -> str | None:
+    if not isinstance(value, str):
+        return None
+    cleaned = " ".join(value.split())
+    return cleaned or None
+
+
+def _formula_is_pure_ref(formula: Any) -> bool:
+    """True when the formula is only a #REF! (optionally sheet-qualified), not a mixed argument."""
+
+    if not isinstance(formula, str) or "#REF!" not in formula.upper():
+        return False
+    return not formula_a1_references(formula)
+
+
+def _cross_sheet_ref_targets(formula: str) -> list[str]:
+    targets: list[str] = []
+    for match in _CROSS_SHEET_REF_ERROR.finditer(formula):
+        quoted, bare = match.groups()
+        name = (quoted or bare or "").replace("''", "'").strip()
+        if name:
+            targets.append(name)
+    return targets
+
+
+def _deleted_row_signals(
+    *,
+    sheet: str,
+    start_row: int,
+    start_column_number: int,
+    row_count: int,
+    column_count: int,
+    values: list[Any],
+    formulas: list[Any],
+    errors: list[Any],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """Gold-blind #REF! remnant rows and cross-sheet #REF! dependents."""
+
+    del errors
+    remnants: list[dict[str, Any]] = []
+    dependents: list[dict[str, Any]] = []
+    previous_label: str | None = None
+    for row in range(row_count):
+        label: str | None = None
+        formula_count = 0
+        pure_ref_addresses: list[str] = []
+        foreign_pure = 0
+        for column in range(column_count):
+            formula = matrix_value(formulas, row, column)
+            value = matrix_value(values, row, column)
+            address = f"{column_label(start_column_number + column)}{start_row + row}"
+            if label is None:
+                label = _row_label_text(value)
+            if is_formula(formula):
+                formula_count += 1
+                targets = _cross_sheet_ref_targets(str(formula))
+                for target in targets:
+                    if target != sheet:
+                        dependents.append(
+                            {
+                                "sheet": sheet,
+                                "address": address,
+                                "formula": formula,
+                                "target_sheet": target,
+                            }
+                        )
+                if _formula_is_pure_ref(formula):
+                    pure_ref_addresses.append(address)
+                    if targets and all(target != sheet for target in targets):
+                        foreign_pure += 1
+        insert_row_index = start_row + row
+        local_ref_count = len(pure_ref_addresses) - foreign_pure
+        if (
+            formula_count
+            and local_ref_count >= _DELETED_ROW_REF_MIN
+            and len(pure_ref_addresses) * 2 >= formula_count
+        ):
+            evidence = ["ref_error_row"]
+            if (
+                previous_label is not None
+                and label is not None
+                and previous_label.casefold() == label.casefold()
+            ):
+                evidence.append("duplicate_adjacent_label")
+            remnants.append(
+                {
+                    "sheet": sheet,
+                    "insert_row_index": insert_row_index,
+                    "count": 1,
+                    "row_label": label,
+                    "previous_row_label": previous_label,
+                    "ref_error_count": len(pure_ref_addresses),
+                    "sample_addresses": pure_ref_addresses[:_DELETED_ROW_DOWNSTREAM_SAMPLE],
+                    "evidence": evidence,
+                }
+            )
+        if label is not None:
+            previous_label = label
+    return remnants, dependents
+
+
+def _deleted_row_geometry(sheets: list[dict[str, Any]]) -> dict[str, Any]:
+    """Bounded insert_row hints from #REF! remnant rows. Heuristic, not a repair."""
+
+    remnants = [
+        candidate for sheet in sheets for candidate in sheet.get("_deleted_row_candidates", [])
+    ]
+    dependents = [
+        dependent
+        for sheet in sheets
+        for dependent in sheet.get("_cross_sheet_ref_dependents", [])
+    ]
+    known_sheets = {sheet["name"] for sheet in sheets}
+    by_target: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for dependent in dependents:
+        target = dependent["target_sheet"]
+        if target in known_sheets:
+            by_target[target].append(dependent)
+    remnants_by_sheet: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for remnant in remnants:
+        remnant["downstream_ref_count"] = 0
+        remnant["downstream_sample"] = []
+        remnants_by_sheet[remnant["sheet"]].append(remnant)
+    for sheet_name, sheet_remnants in remnants_by_sheet.items():
+        best = max(sheet_remnants, key=lambda item: item["ref_error_count"])
+        deps = by_target.get(sheet_name, [])
+        best["downstream_ref_count"] = len(deps)
+        best["downstream_sample"] = [
+            {
+                "sheet": item["sheet"],
+                "address": item["address"],
+                "formula": item["formula"],
+            }
+            for item in deps[:_DELETED_ROW_DOWNSTREAM_SAMPLE]
+        ]
+    remnants.sort(
+        key=lambda candidate: (
+            -int("duplicate_adjacent_label" in candidate["evidence"]),
+            -candidate["ref_error_count"],
+            -candidate["downstream_ref_count"],
+            candidate["sheet"],
+            candidate["insert_row_index"],
+        )
+    )
+    selected: list[dict[str, Any]] = []
+    per_sheet: dict[str, int] = defaultdict(int)
+    omitted = 0
+    for remnant in remnants:
+        sheet = remnant["sheet"]
+        if (
+            len(selected) >= _DELETED_ROW_GLOBAL_LIMIT
+            or per_sheet[sheet] >= _DELETED_ROW_PER_SHEET_LIMIT
+        ):
+            omitted += 1
+            continue
+        selected.append(remnant)
+        per_sheet[sheet] += 1
+    return {
+        "candidate_count": len(remnants),
+        "selected_count": len(selected),
+        "selected_candidates": selected,
+        "candidates_omitted": omitted,
+        "note": (
+            "Gold-blind #REF! remnant rows, not a golden insert list. A duplicate adjacent "
+            "label plus a row of pure #REF! formulas often means a deleted total/header row "
+            "at insert_row_index. Downstream samples are other sheets pointing at that sheet's "
+            "#REF!. Confirm against nearby labels before inserting; do not treat this as an "
+            "auto-edit."
+        ),
+    }
+
 
 def _formula_error_representatives(sheets: list[dict[str, Any]]) -> dict[str, Any]:
     """Compact error attention: one representative per sheet/error/shape, not every cascade."""
@@ -710,6 +930,7 @@ def _formula_error_representatives(sheets: list[dict[str, Any]]) -> dict[str, An
         ),
     }
 
+
 def formula_anomaly_format_requests(sheets: list[dict[str, Any]]) -> list[tuple[str, str]]:
     saturated_sheets = {
         sheet["name"]
@@ -738,13 +959,454 @@ def formula_anomaly_format_requests(sheets: list[dict[str, Any]]) -> list[tuple[
         requests[(candidate["sheet"], candidate["address"])] = None
     for sheet in sheets:
         if sheet["numeric_constants"] <= _ANOMALY_SMALL_SHEET_NUMERIC_LIMIT:
-            for candidate in sheet["_translation_candidates"][
-                :_ANOMALY_PER_SHEET_PREFORMAT_LIMIT
-            ]:
+            for candidate in sheet["_translation_candidates"][:_ANOMALY_PER_SHEET_PREFORMAT_LIMIT]:
                 requests[(candidate["sheet"], candidate["address"])] = None
         for gap in sheet["_sequence_gaps"][:_ANOMALY_SEQUENCE_LIMIT]:
             requests[(gap["sheet"], gap["address"])] = None
     return list(requests)
+
+
+def _format_cell_kind(value: Any, formula: Any) -> str | None:
+    """Return the color-convention class for one populated cell."""
+
+    if is_formula(formula):
+        referenced_sheets = {
+            sheet
+            for sheet, _start, _end in formula_a1_references(str(formula))
+            if sheet is not None
+        }
+        return "cross_sheet_formula" if referenced_sheets else "local_formula"
+    if isinstance(value, bool):
+        return "boolean_literal"
+    if isinstance(value, (int, float)):
+        return "numeric_literal"
+    if isinstance(value, str) and value:
+        return "text_literal"
+    return None
+
+
+def _format_convention_cells(
+    sheets: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], int]:
+    """Enumerate populated cells for a bounded, workbook-wide format census."""
+
+    cells: list[dict[str, Any]] = []
+    total = 0
+    for sheet in sheets:
+        match = A1_RANGE.fullmatch(sheet["used_range"].upper())
+        if match is None:
+            continue
+        start_column, start_row, _end_column, _end_row = match.groups()
+        start_column_number = column_number(start_column)
+        values = sheet["result"].get("values", [])
+        formulas = sheet["result"].get("formulas", [])
+        row_count = max(len(values), len(formulas))
+        column_count = max(
+            (len(row) for matrix in (values, formulas) for row in matrix),
+            default=0,
+        )
+        for row in range(row_count):
+            for column in range(column_count):
+                value = matrix_value(values, row, column)
+                formula = matrix_value(formulas, row, column)
+                kind = _format_cell_kind(value, formula)
+                if kind is None:
+                    continue
+                total += 1
+                if len(cells) >= _FORMAT_CONVENTION_CELL_LIMIT:
+                    continue
+                address = f"{column_label(start_column_number + column)}{int(start_row) + row}"
+                referenced_sheets = (
+                    sorted(
+                        {
+                            reference_sheet
+                            for reference_sheet, _start, _end in formula_a1_references(str(formula))
+                            if reference_sheet is not None
+                        }
+                    )
+                    if is_formula(formula)
+                    else []
+                )
+                cells.append(
+                    {
+                        "sheet": sheet["name"],
+                        "address": address,
+                        "row": int(start_row) + row,
+                        "column": start_column_number + column,
+                        "kind": kind,
+                        "referenced_sheets": referenced_sheets,
+                    }
+                )
+    return cells, total
+
+
+def format_convention_requests(
+    sheets: list[dict[str, Any]],
+) -> tuple[list[tuple[str, str]], int]:
+    """Return bounded cells whose font colors feed format-conventions-v1."""
+
+    cells, total = _format_convention_cells(sheets)
+    return [(cell["sheet"], cell["address"]) for cell in cells], total
+
+
+def _format_color(format_value: dict[str, Any]) -> str | None:
+    color = format_value.get("font_color")
+    if not isinstance(color, str) or not color:
+        return None
+    color = color.upper()
+    return color if color.startswith("#") else f"#{color}"
+
+
+def _format_address_runs(cells: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Compress same-row, same-sheet addresses into horizontal A1 runs."""
+
+    ordered = sorted(cells, key=lambda cell: (cell["sheet"], cell["row"], cell["column"]))
+    runs: list[dict[str, Any]] = []
+    current: list[dict[str, Any]] = []
+
+    def close_run() -> None:
+        if not current:
+            return
+        start, end = current[0], current[-1]
+        address_range = (
+            start["address"]
+            if start["address"] == end["address"]
+            else f"{start['address']}:{end['address']}"
+        )
+        runs.append(
+            {
+                "sheet": start["sheet"],
+                "range": address_range,
+                "start": start,
+                "end": end,
+                "cell_count": end["column"] - start["column"] + 1,
+            }
+        )
+        current.clear()
+
+    for cell in ordered:
+        if current and (
+            cell["sheet"] != current[-1]["sheet"]
+            or cell["row"] != current[-1]["row"]
+            or cell["column"] != current[-1]["column"] + 1
+        ):
+            close_run()
+        current.append(cell)
+    close_run()
+    return runs
+
+
+def _format_convention_workbook_observation(
+    *,
+    title: str,
+    url: str | None,
+    sheets: list[dict[str, Any]],
+    formats: dict[tuple[str, str], dict[str, Any]],
+    populated_cell_count: int,
+) -> dict[str, Any]:
+    """Summarize mixed font-color conventions without declaring a golden answer."""
+
+    cells, _total = _format_convention_cells(sheets)
+    for cell in cells:
+        cell["font_color"] = _format_color(formats.get((cell["sheet"], cell["address"]), {}))
+
+    grouped: dict[tuple[str, str, str], list[dict[str, Any]]] = defaultdict(list)
+    for cell in cells:
+        grouped[(cell["sheet"], "cell_kind", cell["kind"])].append(cell)
+        grouped[(_FORMAT_CONVENTION_WORKBOOK_SCOPE, "workbook_cell_kind", cell["kind"])].append(
+            cell
+        )
+        if cell["referenced_sheets"]:
+            reference_group = ", ".join(cell["referenced_sheets"])
+            grouped[(cell["sheet"], "reference_source", reference_group)].append(cell)
+            grouped[
+                (
+                    _FORMAT_CONVENTION_WORKBOOK_SCOPE,
+                    "workbook_reference_source",
+                    reference_group,
+                )
+            ].append(cell)
+
+    mixed_groups: list[dict[str, Any]] = []
+    candidates: list[dict[str, Any]] = []
+    for (sheet, basis, group_name), group_cells in grouped.items():
+        workbook_scope = sheet == _FORMAT_CONVENTION_WORKBOOK_SCOPE
+        by_color: dict[str | None, list[dict[str, Any]]] = defaultdict(list)
+        for cell in group_cells:
+            by_color[cell["font_color"]].append(cell)
+        if len(by_color) < 2:
+            continue
+        ordered_colors = sorted(
+            by_color.items(),
+            key=lambda item: (-len(item[1]), str(item[0])),
+        )
+        dominant_color, dominant_cells = ordered_colors[0]
+        colors: list[dict[str, Any]] = []
+        for font_color, color_cells in ordered_colors:
+            runs = _format_address_runs(color_cells)
+            colors.append(
+                {
+                    "font_color": font_color,
+                    "cell_count": len(color_cells),
+                    "ranges": [
+                        f"{run['sheet']}!{run['range']}" if workbook_scope else run["range"]
+                        for run in runs[:_FORMAT_CONVENTION_RANGE_LIMIT]
+                    ],
+                    "ranges_omitted": max(0, len(runs) - _FORMAT_CONVENTION_RANGE_LIMIT),
+                }
+            )
+            if font_color == dominant_color:
+                continue
+            for run in runs:
+                candidates.append(
+                    {
+                        "sheet": run["sheet"],
+                        "range": run["range"],
+                        "cell_kind": run["start"]["kind"],
+                        "grouped_by": basis,
+                        "group": group_name,
+                        "current_font_color": font_color,
+                        "dominant_peer_font_color": dominant_color,
+                        "dominant_peer_count": len(dominant_cells),
+                        "minority_peer_count": len(color_cells),
+                        "group_cell_count": len(group_cells),
+                        "run_cell_count": run["cell_count"],
+                    }
+                )
+        mixed_groups.append(
+            {
+                "sheet": None if workbook_scope else sheet,
+                "grouped_by": basis,
+                "group": group_name,
+                "cell_count": len(group_cells),
+                "colors": colors,
+            }
+        )
+
+    mixed_groups.sort(
+        key=lambda group: (
+            group["sheet"] is None,
+            group["sheet"] or "",
+            group["grouped_by"],
+            group["group"],
+        )
+    )
+    candidates_by_range: dict[tuple[str, str, str | None, str | None], dict[str, Any]] = {}
+    for candidate in candidates:
+        key = (
+            candidate["sheet"],
+            candidate["range"],
+            candidate["current_font_color"],
+            candidate["dominant_peer_font_color"],
+        )
+        existing = candidates_by_range.get(key)
+        if existing is None:
+            candidates_by_range[key] = {
+                **candidate,
+                "evidence_groups": [candidate["grouped_by"]],
+            }
+            continue
+        existing["evidence_groups"].append(candidate["grouped_by"])
+        if candidate["dominant_peer_count"] > existing["dominant_peer_count"]:
+            for field in (
+                "grouped_by",
+                "group",
+                "dominant_peer_count",
+                "minority_peer_count",
+                "group_cell_count",
+            ):
+                existing[field] = candidate[field]
+
+    unique_candidates = list(candidates_by_range.values())
+
+    def candidate_rank(candidate: dict[str, Any]) -> tuple[Any, ...]:
+        return (
+            candidate["minority_peer_count"] / candidate["group_cell_count"],
+            -candidate["run_cell_count"],
+            -candidate["dominant_peer_count"],
+            candidate["sheet"],
+            candidate["range"],
+        )
+
+    unique_candidates.sort(key=candidate_rank)
+    selected_candidates: dict[tuple[str, str], dict[str, Any]] = {}
+
+    def select(candidate: dict[str, Any], reason: str) -> None:
+        key = (candidate["sheet"], candidate["range"])
+        if key not in selected_candidates:
+            selected_candidates[key] = {**candidate, "selected_by": []}
+        selected_candidates[key]["selected_by"].append(reason)
+
+    for candidate in unique_candidates[:_FORMAT_CONVENTION_GLOBAL_CANDIDATE_LIMIT]:
+        select(candidate, f"global-top-{_FORMAT_CONVENTION_GLOBAL_CANDIDATE_LIMIT}")
+    for sheet in sorted({candidate["sheet"] for candidate in unique_candidates}):
+        sheet_candidates = [
+            candidate for candidate in unique_candidates if candidate["sheet"] == sheet
+        ]
+        for candidate in sheet_candidates[:_FORMAT_CONVENTION_PER_SHEET_CANDIDATE_LIMIT]:
+            select(
+                candidate,
+                f"sheet-top-{_FORMAT_CONVENTION_PER_SHEET_CANDIDATE_LIMIT}",
+            )
+    ranked_candidates = sorted(selected_candidates.values(), key=candidate_rank)[
+        :_FORMAT_CONVENTION_CANDIDATE_LIMIT
+    ]
+    return {
+        "title": title,
+        "url": url,
+        "observation": "format-conventions-v1",
+        "population": {
+            "populated_cells": populated_cell_count,
+            "format_cells_read": len(cells),
+            "cells_omitted": max(0, populated_cell_count - len(cells)),
+        },
+        "mixed_color_groups": mixed_groups[:_FORMAT_CONVENTION_GROUP_LIMIT],
+        "mixed_color_groups_omitted": max(0, len(mixed_groups) - _FORMAT_CONVENTION_GROUP_LIMIT),
+        "format_outlier_candidates": ranked_candidates,
+        "format_outlier_candidates_omitted": max(
+            0, len(unique_candidates) - len(ranked_candidates)
+        ),
+        "note": (
+            "Gold-blind font-color census. Candidate ranges are minority colors relative to "
+            "same-kind or same-reference-source peers, not validation failures or auto-edits. "
+            "Confirm against nearby rows/columns and workbook conventions before writing."
+        ),
+    }
+
+
+def _format_color_index(backend: Any, path: str) -> dict[tuple[str, str], str | None]:
+    """Map census cells to font colors using the same bound as format-conventions-v1."""
+
+    workbook = backend.inspect_workbook(path=path)
+    populated_sheets = [sheet for sheet in workbook.sheets if sheet.used_range]
+    if not populated_sheets:
+        return {}
+    range_results = backend.read_ranges(
+        [(sheet.name, sheet.used_range) for sheet in populated_sheets],
+        path=path,
+        include_errors=False,
+    )
+    format_sheets = [
+        {
+            "name": sheet.name,
+            "used_range": sheet.used_range,
+            "result": result,
+        }
+        for sheet, result in zip(populated_sheets, range_results, strict=True)
+    ]
+    requests, _total = format_convention_requests(format_sheets)
+    values = backend.read_formats(requests, path=path)
+    return {
+        request: _format_color(value)
+        for request, value in zip(requests, values, strict=True)
+    }
+
+
+def _format_color_change_runs(cells: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Compress same-row, same before/after color edits into horizontal A1 runs."""
+
+    ordered = sorted(cells, key=lambda cell: (cell["sheet"], cell["row"], cell["column"]))
+    runs: list[dict[str, Any]] = []
+    current: list[dict[str, Any]] = []
+
+    def close_run() -> None:
+        if not current:
+            return
+        start, end = current[0], current[-1]
+        address_range = (
+            start["address"]
+            if start["address"] == end["address"]
+            else f"{start['address']}:{end['address']}"
+        )
+        runs.append(
+            {
+                "sheet": start["sheet"],
+                "range": address_range,
+                "cell_count": end["column"] - start["column"] + 1,
+                "before": start["before"],
+                "after": start["after"],
+            }
+        )
+        current.clear()
+
+    for cell in ordered:
+        if current and (
+            cell["sheet"] != current[-1]["sheet"]
+            or cell["row"] != current[-1]["row"]
+            or cell["column"] != current[-1]["column"] + 1
+            or cell["before"] != current[-1]["before"]
+            or cell["after"] != current[-1]["after"]
+        ):
+            close_run()
+        current.append(cell)
+    close_run()
+    return runs
+
+
+def format_convention_diff_from_indexes(
+    before: dict[tuple[str, str], str | None],
+    after: dict[tuple[str, str], str | None],
+) -> dict[str, Any]:
+    """Diff two gold-blind font-color indexes into bounded range changes."""
+
+    keys = sorted(set(before) | set(after), key=lambda item: (item[0], a1_sort_key(item[1])))
+    changed_cells: list[dict[str, Any]] = []
+    for sheet, address in keys:
+        old = before.get((sheet, address))
+        new = after.get((sheet, address))
+        if old == new:
+            continue
+        match = A1_RANGE.fullmatch(address.upper())
+        if match is None:
+            continue
+        column, row, _, _ = match.groups()
+        changed_cells.append(
+            {
+                "sheet": sheet,
+                "address": address.upper(),
+                "row": int(row),
+                "column": column_number(column),
+                "before": old,
+                "after": new,
+            }
+        )
+    runs = _format_color_change_runs(changed_cells)
+    selected: list[dict[str, Any]] = []
+    per_sheet: dict[str, int] = defaultdict(int)
+    omitted = 0
+    for run in runs:
+        sheet = run["sheet"]
+        if (
+            len(selected) >= _FORMAT_CONVENTION_DIFF_RUN_LIMIT
+            or per_sheet[sheet] >= _FORMAT_CONVENTION_DIFF_PER_SHEET_LIMIT
+        ):
+            omitted += 1
+            continue
+        selected.append(run)
+        per_sheet[sheet] += 1
+    return {
+        "observation": "format-conventions-diff-v1",
+        "summary": {
+            "font_colors_changed": len(changed_cells),
+            "font_color_runs_changed": len(runs),
+        },
+        "font_color_changes": selected,
+        "font_color_changes_omitted": omitted,
+        "note": (
+            "Font-color changes on the bounded census, not a golden list. "
+            "Values and formulas are not compared here."
+        ),
+    }
+
+
+def format_convention_diff(backend: Any, before_path: str, after_path: str) -> dict[str, Any]:
+    """Compare font colors on the format-conventions-v1 census, not semantic values."""
+
+    return format_convention_diff_from_indexes(
+        _format_color_index(backend, before_path),
+        _format_color_index(backend, after_path),
+    )
+
 
 def _structure_sheet_observation(
     *,
@@ -820,8 +1482,7 @@ def _structure_sheet_observation(
 
     row_signatures = [spans(row) for row in kinds]
     column_signatures = [
-        spans([kinds[row][column] for row in range(row_count)])
-        for column in range(column_count)
+        spans([kinds[row][column] for row in range(row_count)]) for column in range(column_count)
     ]
 
     regions = []
@@ -892,6 +1553,7 @@ def _structure_sheet_observation(
         )
     return observation
 
+
 def _sheet_manifest(
     *,
     sheet: str,
@@ -915,6 +1577,7 @@ def _sheet_manifest(
             "formula_error_cells",
         )
     } | {"detail": "manifest-only"}
+
 
 def _blank_dependency_bridges(
     sheets: list[tuple[str, str, dict[str, Any]]],
@@ -940,10 +1603,7 @@ def _blank_dependency_bridges(
         cells: dict[str, tuple[Any, Any]] = {}
         for row in range(row_count):
             for column in range(column_count):
-                address = (
-                    f"{column_label(start_column_number + column)}"
-                    f"{int(start_row) + row}"
-                )
+                address = f"{column_label(start_column_number + column)}{int(start_row) + row}"
                 value = matrix_value(values, row, column)
                 formula = matrix_value(formulas, row, column)
                 cells[address] = (value, formula)
@@ -979,9 +1639,7 @@ def _blank_dependency_bridges(
             start_column, start_row, end_column, end_row = range_match.groups()
             assert end_column is not None and end_row is not None
             for row in range(int(start_row), int(end_row) + 1):
-                for column in range(
-                    column_number(start_column), column_number(end_column) + 1
-                ):
+                for column in range(column_number(start_column), column_number(end_column) + 1):
                     reverse_dependencies[(source_sheet, f"{column_label(column)}{row}")].add(
                         dependent
                     )
@@ -1029,7 +1687,9 @@ def _blank_dependency_bridges(
         for dependent in sorted(dependents):
             right_chain = carry_chain(dependent, 1)
             left_chain = carry_chain(dependent, -1)
-            chain = right_chain if len(right_chain) >= len(left_chain) else list(reversed(left_chain))
+            chain = (
+                right_chain if len(right_chain) >= len(left_chain) else list(reversed(left_chain))
+            )
             if len(chain) > len(best_chain):
                 best_chain = chain
                 best_dependent = dependent
@@ -1094,6 +1754,7 @@ def _blank_dependency_bridges(
         ),
     }
 
+
 def blank_bridges_enabled() -> bool:
     """Carry-chain bridges are on by default; set LIBRECALC_BLANK_BRIDGES=0 to omit them.
 
@@ -1120,6 +1781,7 @@ def workbook_observation(
         "structure-first-v1",
         "formula-patterns-v1",
         "formula-anomalies-v1",
+        "format-conventions-v1",
         "semantic-snapshot-v1",
         "semantic-snapshot-v2",
     }:
@@ -1151,6 +1813,24 @@ def workbook_observation(
             sheets=anomaly_sheets,
             formats=dict(zip(format_requests, format_values, strict=True)),
         )
+    if variant == "format-conventions-v1":
+        format_sheets = [
+            {
+                "name": sheet.name,
+                "used_range": sheet.used_range,
+                "result": results_by_sheet[sheet.name],
+            }
+            for sheet in populated_sheets
+        ]
+        format_requests, populated_cell_count = format_convention_requests(format_sheets)
+        format_values = backend.read_formats(format_requests, path=path)
+        return _format_convention_workbook_observation(
+            title=workbook.title,
+            url=workbook.url,
+            sheets=format_sheets,
+            formats=dict(zip(format_requests, format_values, strict=True)),
+            populated_cell_count=populated_cell_count,
+        )
     known_sheets = {sheet.name for sheet in workbook.sheets}
     selected_sheets = known_sheets if detailed_sheets is None else detailed_sheets & known_sheets
     sheet_observations = []
@@ -1160,9 +1840,7 @@ def workbook_observation(
                 {
                     "name": sheet.name,
                     "used_range": None,
-                    "detail": (
-                        "selected" if sheet.name in selected_sheets else "manifest-only"
-                    ),
+                    "detail": ("selected" if sheet.name in selected_sheets else "manifest-only"),
                 }
             )
         elif sheet.name not in selected_sheets:
@@ -1183,9 +1861,7 @@ def workbook_observation(
                     include_candidate_gaps=variant == "semantic-snapshot-v2",
                     include_formula_patterns=variant == "formula-patterns-v1",
                     label_limit=(
-                        None
-                        if variant.startswith("semantic-snapshot-")
-                        else _STRUCTURE_LABEL_LIMIT
+                        None if variant.startswith("semantic-snapshot-") else _STRUCTURE_LABEL_LIMIT
                     ),
                 )
             )
@@ -1227,6 +1903,7 @@ def workbook_observation(
         }
     return observation
 
+
 def format_read_observation(
     result: dict[str, Any],
     *,
@@ -1241,6 +1918,7 @@ def format_read_observation(
         "structure-first-v1",
         "formula-patterns-v1",
         "formula-anomalies-v1",
+        "format-conventions-v1",
         "semantic-snapshot-v1",
         "semantic-snapshot-v2",
     }:

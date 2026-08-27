@@ -143,7 +143,9 @@ def test_structure_observation_exposes_labels_shapes_regions_and_formulas() -> N
 
 def test_structure_observation_preserves_semantic_notes_before_truncating() -> None:
     calc_tool = _calc_tool_module()
-    meaningful_note = "Cash taxes are lower because the deferred tax asset reverses at maturity. " * 3
+    meaningful_note = (
+        "Cash taxes are lower because the deferred tax asset reverses at maturity. " * 3
+    )
     observation = calc_tool._structure_sheet_observation(
         sheet="Model",
         used_range="A1:A1",
@@ -186,12 +188,7 @@ def test_semantic_snapshot_exposes_formula_errors() -> None:
 
 def test_structure_variant_uses_sparse_addressed_targeted_reads() -> None:
     calc_tool = _calc_tool_module()
-    assert calc_tool._format_read_observation(
-        {"values": [["Label", 5]], "formulas": [["Label", "=1+4"]]},
-        sheet="Sheet1",
-        cell_range="C7:D7",
-        variant="structure-first-v1",
-    ) == {
+    expected = {
         "sheet": "Sheet1",
         "range": "C7:D7",
         "cells": [
@@ -199,6 +196,25 @@ def test_structure_variant_uses_sparse_addressed_targeted_reads() -> None:
             {"address": "D7", "value": 5, "formula": "=1+4"},
         ],
     }
+    payload = {"values": [["Label", 5]], "formulas": [["Label", "=1+4"]]}
+    assert (
+        calc_tool._format_read_observation(
+            payload,
+            sheet="Sheet1",
+            cell_range="C7:D7",
+            variant="structure-first-v1",
+        )
+        == expected
+    )
+    assert (
+        calc_tool._format_read_observation(
+            payload,
+            sheet="Sheet1",
+            cell_range="C7:D7",
+            variant="format-conventions-v1",
+        )
+        == expected
+    )
 
 
 def test_multi_range_read_is_one_addressed_observation(monkeypatch, capsys) -> None:
@@ -245,8 +261,7 @@ def test_multi_range_read_returns_valid_items_alongside_oversize_errors(
     monkeypatch.setattr(calc_tool, "_load_backend_types", lambda: (lambda: backend, CalcOperation))
     monkeypatch.setenv("LIBRECALC_OBSERVATION_VARIANT", "structure-first-v1")
     requests = urllib.parse.quote(
-        '[{"sheet":"Sheet1","range":"A1:I16"},'
-        '{"sheet":"Sheet1","range":"A1:B1"}]',
+        '[{"sheet":"Sheet1","range":"A1:I16"},{"sheet":"Sheet1","range":"A1:B1"}]',
         safe="",
     )
 
@@ -439,13 +454,167 @@ def test_formula_anomaly_observation_deprioritizes_blue_financial_inputs() -> No
     )
 
     assert [
-        item["address"]
-        for item in observation["translation_consensus"]["selected_candidates"]
+        item["address"] for item in observation["translation_consensus"]["selected_candidates"]
     ] == ["B2"]
     assert [
         item["address"] for item in observation["short_sequence_gaps"]["selected_candidates"]
     ] == ["B2"]
     assert observation["translation_consensus"]["format_candidates_deprioritized"] == 1
+
+
+def test_format_convention_observation_compacts_gold_blind_color_outliers() -> None:
+    sheets = [
+        {
+            "name": "Model",
+            "used_range": "A1:F2",
+            "result": {
+                "values": [
+                    [1, 2, 3, None, None, None],
+                    [None, None, None, 10, 20, 30],
+                ],
+                "formulas": [
+                    [None, None, None, None, None, None],
+                    [None, None, None, "=Other!A1", "=Other!B1", "=Other!C1"],
+                ],
+            },
+        }
+    ]
+    requests, populated = observation_module.format_convention_requests(sheets)
+
+    assert populated == 6
+    assert requests == [
+        ("Model", "A1"),
+        ("Model", "B1"),
+        ("Model", "C1"),
+        ("Model", "D2"),
+        ("Model", "E2"),
+        ("Model", "F2"),
+    ]
+
+    observation = observation_module._format_convention_workbook_observation(
+        title="input.xlsx",
+        url=None,
+        sheets=sheets,
+        formats={
+            ("Model", "A1"): {"font_color": "#0000ff"},
+            ("Model", "B1"): {"font_color": "#0000FF"},
+            ("Model", "C1"): {"font_color": "#000000"},
+            ("Model", "D2"): {"font_color": "#00B050"},
+            ("Model", "E2"): {"font_color": "#00B050"},
+            ("Model", "F2"): {"font_color": "#000000"},
+        },
+        populated_cell_count=populated,
+    )
+
+    assert observation["observation"] == "format-conventions-v1"
+    assert observation["population"] == {
+        "populated_cells": 6,
+        "format_cells_read": 6,
+        "cells_omitted": 0,
+    }
+    candidates = {
+        candidate["range"]: candidate for candidate in observation["format_outlier_candidates"]
+    }
+    assert candidates["C1"]["dominant_peer_font_color"] == "#0000FF"
+    assert candidates["C1"]["sheet"] == "Model"
+    assert candidates["F2"]["dominant_peer_font_color"] == "#00B050"
+    assert candidates["F2"]["sheet"] == "Model"
+    assert all(
+        candidate["sheet"] not in {None, "*"}
+        for candidate in observation["format_outlier_candidates"]
+    )
+    assert all(group["sheet"] != "*" for group in observation["mixed_color_groups"])
+    workbook_groups = [
+        group for group in observation["mixed_color_groups"] if group["sheet"] is None
+    ]
+    assert workbook_groups
+    assert any(
+        range_name.startswith("Model!")
+        for group in workbook_groups
+        for color in group["colors"]
+        for range_name in color["ranges"]
+    )
+    assert "not validation failures" in observation["note"]
+
+
+def test_format_convention_diff_compacts_same_color_runs() -> None:
+    payload = observation_module.format_convention_diff_from_indexes(
+        {
+            ("Model", "A1"): "#000000",
+            ("Model", "B1"): "#000000",
+            ("Model", "C1"): "#0000FF",
+            ("Model", "A2"): "#000000",
+        },
+        {
+            ("Model", "A1"): "#00B050",
+            ("Model", "B1"): "#00B050",
+            ("Model", "C1"): "#00B050",
+            ("Model", "A2"): "#000000",
+        },
+    )
+
+    assert payload["observation"] == "format-conventions-diff-v1"
+    assert payload["summary"] == {
+        "font_colors_changed": 3,
+        "font_color_runs_changed": 2,
+    }
+    assert payload["font_color_changes"] == [
+        {
+            "sheet": "Model",
+            "range": "A1:B1",
+            "cell_count": 2,
+            "before": "#000000",
+            "after": "#00B050",
+        },
+        {
+            "sheet": "Model",
+            "range": "C1",
+            "cell_count": 1,
+            "before": "#0000FF",
+            "after": "#00B050",
+        },
+    ]
+    assert payload["font_color_changes_omitted"] == 0
+    assert "not a golden list" in payload["note"]
+
+
+def test_format_convention_observation_does_not_emit_star_worksheet_names() -> None:
+    sheets = [
+        {
+            "name": "Model",
+            "used_range": "A1:C1",
+            "result": {
+                "values": [[1, 2, 3]],
+                "formulas": [[None, None, None]],
+            },
+        },
+        {
+            "name": "Other",
+            "used_range": "A1:A1",
+            "result": {
+                "values": [[4]],
+                "formulas": [[None]],
+            },
+        },
+    ]
+    observation = observation_module._format_convention_workbook_observation(
+        title="input.xlsx",
+        url=None,
+        sheets=sheets,
+        formats={
+            ("Model", "A1"): {"font_color": "#0000FF"},
+            ("Model", "B1"): {"font_color": "#0000FF"},
+            ("Model", "C1"): {"font_color": "#000000"},
+            ("Other", "A1"): {"font_color": "#0000FF"},
+        },
+        populated_cell_count=4,
+    )
+
+    candidates = observation["format_outlier_candidates"]
+    assert candidates
+    assert all(candidate["sheet"] in {"Model", "Other"} for candidate in candidates)
+    assert ("Model", "C1") in {(candidate["sheet"], candidate["range"]) for candidate in candidates}
+    assert all(group["sheet"] != "*" for group in observation["mixed_color_groups"])
 
 
 def test_tool_json_arguments_accept_url_encoded_structures() -> None:
@@ -540,9 +709,7 @@ def test_semantic_diff_separates_exact_changes_from_heuristic_gaps() -> None:
         "E6": "=D9",
         "F6": "=E9",
     }
-    assert diff["sheet_changes"]["Model"]["formula_errors"]["added"] == {
-        "E6": "#VALUE!"
-    }
+    assert diff["sheet_changes"]["Model"]["formula_errors"]["added"] == {"E6": "#VALUE!"}
     assert diff["sheet_changes"]["Model"]["candidate_gaps"] == {
         "resolved": {"D6:F6": "Beginning cash"},
         "new": {},
@@ -553,8 +720,7 @@ def test_semantic_diff_separates_exact_changes_from_heuristic_gaps() -> None:
 def test_semantic_diff_filters_numeric_noise_and_bounds_downstream_values() -> None:
     calc_tool = _calc_tool_module()
     before_formulas = {
-        f"A{row}": {"expression": f"=B{row}", "value": float(row)}
-        for row in range(1, 102)
+        f"A{row}": {"expression": f"=B{row}", "value": float(row)} for row in range(1, 102)
     }
     after_formulas = {
         address: {**details, "value": details["value"] + 1}
@@ -587,9 +753,7 @@ def test_semantic_diff_filters_numeric_noise_and_bounds_downstream_values() -> N
     assert diff["summary"]["formula_values_changed"] == 100
     downstream = diff["downstream_formula_values"]
     assert downstream["count"] == 100
-    assert downstream["by_sheet"] == {
-        "Model": {"count": 100, "affected_range": "A2:A101"}
-    }
+    assert downstream["by_sheet"] == {"Model": {"count": 100, "affected_range": "A2:A101"}}
     assert downstream["representatives_returned"] == 8
     assert downstream["omitted"] == 92
     assert downstream["representatives"][0]["address"] == "A2"
@@ -770,9 +934,54 @@ def test_compare_tool_runs_against_an_in_memory_backend(monkeypatch, capsys) -> 
 
     assert result["observation"] == "semantic-diff-v1"
     assert result["summary"]["formulas_added"] == 1
-    assert result["sheet_changes"]["Model"]["formulas"]["added"] == {
-        "B1": "=SUM(B2:B3)"
-    }
+    assert result["sheet_changes"]["Model"]["formulas"]["added"] == {"B1": "=SUM(B2:B3)"}
+
+
+def test_compare_tool_uses_format_convention_diff_for_format_observation(
+    monkeypatch, capsys
+) -> None:
+    calc_tool = _calc_tool_module()
+
+    class FormatCompareBackend:
+        def inspect_workbook(self, path=None):
+            return WorkbookInfo(
+                title=path,
+                url=None,
+                sheets=[SheetInfo(name="Model", used_range="A1:C1")],
+            )
+
+        def read_range(self, sheet, cell_range, path=None):
+            del sheet, cell_range
+            return {
+                "values": [[1, 2, 3]],
+                "formulas": [[None, None, None]],
+            }
+
+        def read_ranges(self, ranges, path=None, include_errors=False):
+            del include_errors
+            return [self.read_range(sheet, cell_range, path) for sheet, cell_range in ranges]
+
+        def read_formats(self, cells, path=None):
+            colors = {
+                "before.xlsx": {"A1": "#000000", "B1": "#000000", "C1": "#0000FF"},
+                "after.xlsx": {"A1": "#000000", "B1": "#00B050", "C1": "#00B050"},
+            }
+            table = colors[path]
+            return [{"font_color": table[address]} for _sheet, address in cells]
+
+    monkeypatch.setenv("LIBRECALC_OBSERVATION_VARIANT", "format-conventions-v1")
+    monkeypatch.setattr(
+        calc_tool,
+        "_load_backend_types",
+        lambda: (FormatCompareBackend, CalcOperation),
+    )
+
+    assert calc_tool.main(["compare", "before.xlsx", "after.xlsx"]) == 0
+    result = json.loads(capsys.readouterr().out)
+
+    assert result["observation"] == "format-conventions-diff-v1"
+    assert result["summary"]["font_colors_changed"] == 2
+    assert [item["range"] for item in result["font_color_changes"]] == ["B1", "C1"]
 
 
 def test_formula_block_tool_uses_range_fill_on_memory_backend(monkeypatch, capsys) -> None:
@@ -806,9 +1015,7 @@ def test_neighborhood_reads_reject_used_range_dumps() -> None:
     calc_tool._require_neighborhood_range("A1:H12", label="range")
 
     try:
-        calc_tool._range_requests(
-            '[{"sheet":"Operating Model + DCF","range":"A1:AA43"}]'
-        )
+        calc_tool._range_requests('[{"sheet":"Operating Model + DCF","range":"A1:AA43"}]')
     except ValueError as exc:
         assert "1161 cells" in str(exc)
         assert "96 cells" in str(exc)
@@ -854,6 +1061,83 @@ def test_formula_anomaly_observation_surfaces_error_shape_representatives() -> N
     assert ("Model", "A3", "#DIV/0!", "=<REF>/0") in selected
     assert "not auto-edits" in errors["note"]
     assert sheet["formula_error_count"] == 7
+
+
+def test_formula_anomaly_observation_surfaces_deleted_row_geometry() -> None:
+    overview = observation_module._formula_anomaly_sheet(
+        sheet="Financial Overview",
+        used_range="B4:F9",
+        result={
+            "values": [
+                ["Energy", 1, 2, 3, 4],
+                ["% Growth", None, None, None, None],
+                ["Engineering", 5, 6, 7, 8],
+                ["% Growth", None, None, None, None],
+                ["% Growth", None, None, None, None],
+                ["% Energy", None, None, None, None],
+            ],
+            "formulas": [
+                ["", "", "", "", ""],
+                ["", "", "=(D4/C4)-1", "=(E4/D4)-1", "=(F4/E4)-1"],
+                ["", "", "", "", ""],
+                ["", "", "=(D6/C6)-1", "=(E6/D6)-1", "=(F6/E6)-1"],
+                ["", "", "=(#REF!/#REF!)-1", "=(#REF!/#REF!)-1", "=(#REF!/#REF!)-1"],
+                ["", "", "=D4/#REF!", "=E4/#REF!", "=F4/#REF!"],
+            ],
+            "errors": [
+                [None, None, None, None, None],
+                [None, None, None, None, None],
+                [None, None, None, None, None],
+                [None, None, None, None, None],
+                [None, None, "#REF!", "#REF!", "#REF!"],
+                [None, None, "#REF!", "#REF!", "#REF!"],
+            ],
+        },
+    )
+    model = observation_module._formula_anomaly_sheet(
+        sheet="Model",
+        used_range="E22:G22",
+        result={
+            "values": [[None, None, None]],
+            "formulas": [
+                [
+                    "='Financial Overview'!#REF!",
+                    "='Financial Overview'!#REF!",
+                    "='Financial Overview'!#REF!",
+                ]
+            ],
+            "errors": [["#REF!", "#REF!", "#REF!"]],
+        },
+    )
+    mixed = observation_module._formula_anomaly_sheet(
+        sheet="Debt",
+        used_range="J96:K96",
+        result={
+            "values": [[None, None]],
+            "formulas": [["=SUM($I96,#REF!)*AVERAGE(J93,J95)", "=SUM($I96,#REF!)*AVERAGE(K93,K95)"]],
+            "errors": [["#REF!", "#REF!"]],
+        },
+    )
+
+    observation = observation_module._formula_anomaly_workbook_observation(
+        title="input.xlsx",
+        url=None,
+        sheets=[overview, model, mixed],
+    )
+    geometry = observation["deleted_row_geometry"]
+    selected = geometry["selected_candidates"]
+
+    assert geometry["candidate_count"] == 1
+    assert selected[0]["sheet"] == "Financial Overview"
+    assert selected[0]["insert_row_index"] == 8
+    assert selected[0]["row_label"] == "% Growth"
+    assert selected[0]["previous_row_label"] == "% Growth"
+    assert "duplicate_adjacent_label" in selected[0]["evidence"]
+    assert selected[0]["downstream_ref_count"] == 3
+    assert selected[0]["downstream_sample"][0]["sheet"] == "Model"
+    assert "not a golden insert list" in geometry["note"]
+    assert all(candidate["sheet"] != "Debt" for candidate in selected)
+    assert all(candidate["sheet"] != "Model" for candidate in selected)
 
 
 def test_formula_error_representative_includes_capped_neighboring_literals() -> None:

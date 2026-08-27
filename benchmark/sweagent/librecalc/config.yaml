@@ -1,7 +1,7 @@
 tools:
   calc_inspect:
     signature: "calc_inspect <path> [<target_sheets_json>]"
-    docstring: "Inspect progressively. With no target sheets, returns a compact all-sheet manifest. Pass exact names from that manifest for labels, structure, and formula patterns on only those sheets. formula-anomalies-v1 remains workbook-wide."
+    docstring: "Inspect progressively. With no target sheets, returns a compact all-sheet manifest. Pass exact names from that manifest for labels, structure, and formula patterns on only those sheets. formula-anomalies-v1 and format-conventions-v1 remain workbook-wide."
     arguments:
       - name: path
         type: string

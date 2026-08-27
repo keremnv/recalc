@@ -52,6 +52,7 @@ SUPPORTED_OBSERVATIONS = (
     "structure-first-v1",
     "formula-patterns-v1",
     "formula-anomalies-v1",
+    "format-conventions-v1",
     "semantic-snapshot-v1",
     "semantic-snapshot-v2",
 )
@@ -107,8 +108,9 @@ def _arguments() -> argparse.Namespace:
         action=argparse.BooleanOptionalAction,
         default=True,
         help=(
-            "On formula-anomalies-v1, allow one successful read batch after inspect "
-            "then block further reads (default on). Measuring instrument, not a product primitive."
+            "On formula-anomalies-v1 and format-conventions-v1, allow one successful "
+            "read batch after inspect then block further reads (default on). Measuring "
+            "instrument, not a product primitive."
         ),
     )
     parser.add_argument(
@@ -119,6 +121,14 @@ def _arguments() -> argparse.Namespace:
         help=(
             "For formula-anomalies-v1, permit one write/compare pass (default) or one "
             "bounded output re-inspection and final repair pass. Does not raise call limits."
+        ),
+    )
+    parser.add_argument(
+        "--preserve-populated",
+        action="store_true",
+        help=(
+            "Skip writes to non-empty cells on write_range, set_formula, and fill_formula. "
+            "Template/Financial Model target-safety arm; Debugging groups must not set this."
         ),
     )
     parser.add_argument(
@@ -316,8 +326,14 @@ def _patch_sweagent_budget_boundary(source: str) -> str:
                 # limits used to copy affordable_output (hundreds of thousands of tokens) and the
                 # provider rejected the request. Cap missing limits at a thought-sized 8,192.
                 model_output_limit = int(self.model_max_output_tokens or 8192)
+                # Catalogs that advertise the whole context as max output are not a usable
+                # completion ceiling. OpenRouter counts max_tokens into the context window, so
+                # requesting ~context-minus-local-input overflows once tool schemas are counted.
+                if self.model_max_input_tokens and model_output_limit >= int(self.model_max_input_tokens):
+                    model_output_limit = 8192
+                counted_input = int(input_tokens * 1.5)
                 if self.model_max_input_tokens:
-                    context_output_limit = int(max(0, self.model_max_input_tokens - input_tokens))
+                    context_output_limit = int(max(0, self.model_max_input_tokens - counted_input))
                 else:
                     context_output_limit = 8192
                 safety_max_output = min(affordable_output, model_output_limit, context_output_limit)
@@ -483,6 +499,12 @@ def _stage_tool_policy(
    representative list. Both are heuristics, not requirements. For the first repair pass, use at
    most one calc_read_ranges call covering small neighborhoods around cells you intend to change
    (each range is capped at 96 cells), then write. Never read a whole sheet or used range."""
+        if execution == "semantic-program-v1":
+            new_anomaly_guidance += """
+   Inspect may include deleted_row_geometry, a heuristic that a row was deleted (a #REF! remnant,
+   sometimes with a duplicate adjacent label). If that matches the instruction, do not dump that
+   sheet to confirm the remnant. Restore structure with calc_program insert_row at insert_row_index
+   before rewriting dependent formulas."""
         if old_anomaly_guidance not in instance_template:
             raise RuntimeError(
                 "Anomaly shortlist policy could not locate the progressive-read prompt"
@@ -512,7 +534,9 @@ def _stage_tool_policy(
             write_hint = (
                 "\nAfter inspect, confirm the shortlist once if needed, then write. "
                 "Use calc_program for mixed operations including insert_row/delete_row; "
-                "use calc_fill_formulas for formula-only patterned ranges.\n"
+                "use calc_fill_formulas for formula-only patterned ranges. "
+                "If inspect listed deleted_row_geometry that matches the instruction, "
+                "insert_row is the write; do not spend the confirmation read on that sheet.\n"
             )
         if repair_passes == 2:
             write_hint += (
@@ -520,6 +544,57 @@ def _stage_tool_policy(
                 "repair before submitting.\n"
             )
         config["agent"]["templates"]["system_template"] = system_template.rstrip() + write_hint
+
+    if observation == "format-conventions-v1" and read_policy == "progressive":
+        if execution != "semantic-program-v1":
+            raise ValueError("format-conventions-v1 requires semantic-program-v1 execution")
+        replacements = (
+            (
+                """1. Call calc_inspect without target sheets for the compact workbook manifest. Then call it once
+   with the exact manifest names of only the worksheets required by the instruction.""",
+                """1. Call calc_inspect once. This format variant is already a compact workbook-wide
+   font-color census; target-sheet scoping is unnecessary.""",
+            ),
+            (
+                """2. Do not reread a whole used range. Use calc_read for one focused region or calc_read_ranges
+   for several.
+   Treat inferred candidate_gaps as a heuristic checklist, not requirements; ignore obvious
+   section headers and notes.""",
+                """2. Inspect reports mixed font-color convention groups and bounded minority-color ranges.
+   These are heuristics, not requirements. Use at most one calc_read_ranges call covering small
+   neighborhoods around ranges you intend to change (each range is capped at 96 cells).""",
+            ),
+            (
+                """3. Infer only the missing or incorrect formulas/values required by the instruction.""",
+                """3. Infer only the inconsistent font colors required by the instruction. Preserve cell
+   values, formulas, and every unrelated format property.""",
+            ),
+            (
+                """4. Write the result to the exact output path. Use calc_fill_formulas for formula-only work;
+   use calc_program for mixed operations. Keep patterned edits range-based.""",
+                """4. Write with one calc_program call using range-based set_format operations containing
+   only font_color. Do not rewrite cell values or formulas to simulate formatting.""",
+            ),
+            (
+                """5. Compare input and output with calc_compare. Check that exact changes match the instruction;
+   candidate gaps remain heuristic. Use focused reads only for a real unresolved ambiguity,
+   then submit.""",
+                """5. Compare input and output with calc_compare. It reports font-color changes as ranges
+   on the same bounded census. If colors are still wrong, make at most one additional set_format
+   on the same output path, then submit. Do not rewrite values or formulas.""",
+            ),
+        )
+        for old, new in replacements:
+            if old not in instance_template:
+                raise RuntimeError("Format-convention policy could not locate its base prompt")
+            instance_template = instance_template.replace(old, new)
+        config["agent"]["templates"]["instance_template"] = instance_template
+        system_template = config["agent"]["templates"]["system_template"]
+        config["agent"]["templates"]["system_template"] = (
+            system_template.rstrip()
+            + "\nInspect the font-color convention census, confirm only real outliers, then use "
+            "calc_program set_format operations.\n"
+        )
 
     if execution == "cell-writes-v1":
         old_write_guidance = """4. Write the result to the exact output path. Use calc_fill_formulas for formula-only work;
@@ -759,7 +834,9 @@ def _run_task(
             # invariant would handicap it rather than measure it.
             **({"LIBRECALC_READ_MAX_CELLS": "none"} if args.read_policy == "thin" else {}),
         }
-        if args.observation == "formula-anomalies-v1":
+        if args.preserve_populated and category != "Debugging":
+            env_variables["LIBRECALC_PRESERVE_POPULATED"] = "1"
+        if args.observation in {"formula-anomalies-v1", "format-conventions-v1"}:
             env_variables["LIBRECALC_READ_BUDGET_ENABLED"] = "1" if args.read_budget else "0"
             if args.read_budget:
                 env_variables["LIBRECALC_READ_BUDGET_PATH"] = (

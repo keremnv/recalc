@@ -499,11 +499,12 @@ def _bind_xy_series(
         log.record("xy_series_binding", False, type(exc).__name__)
 
 
-def _apply_non_xy_series_names(
+def _bind_non_xy_series(
     chart_doc: Any,
     spec: ChartSpec,
     *,
     doc: Any,
+    context: Any,
     log: _ApplyLog,
 ) -> None:
     if spec.chart_type in {"scatter", "bubble"}:
@@ -511,11 +512,22 @@ def _apply_non_xy_series_names(
     try:
         chart_type = _chart2_type(chart_doc)
         label_role = str(chart_type.getRoleOfSequenceForSeriesLabel())
-        for index, (data_series, series_spec) in enumerate(
-            zip(chart_type.getDataSeries(), spec.series, strict=False)
-        ):
-            if not series_spec.name and not series_spec.name_range:
-                continue
+        existing = list(chart_type.getDataSeries())
+        bound = []
+        for index, series_spec in enumerate(spec.series):
+            data_series = (
+                existing[index]
+                if index < len(existing)
+                else context.getServiceManager().createInstanceWithContext(
+                    "com.sun.star.chart2.DataSeries", context
+                )
+            )
+            values = _new_labeled_sequence(
+                chart_doc,
+                context,
+                _range_representation(doc, series_spec.values_range, default_sheet=spec.sheet),
+                label_role,
+            )
             try:
                 label_range = _series_label_range(
                     doc,
@@ -524,28 +536,34 @@ def _apply_non_xy_series_names(
                 )
             except ValueError as exc:
                 log.record(f"series[{index}].name", False, str(exc))
-                continue
-            target = next(
-                (
-                    item
-                    for item in data_series.getDataSequences()
-                    if str(item.getValues().Role) == label_role
-                ),
-                None,
-            )
-            if label_range is not None and target is not None:
-                target.setLabel(
+                label_range = None
+            if label_range is not None:
+                values.setLabel(
                     chart_doc.getDataProvider().createDataSequenceByRangeRepresentation(label_range)
                 )
                 log.record(f"series[{index}].name", True)
-            else:
+            elif series_spec.name or series_spec.name_range:
                 log.record(
                     f"series[{index}].name",
                     False,
                     _series_name_drop_detail(series_spec),
                 )
+            data_series.setData((values,))
+            bound.append(data_series)
+        chart_type.setDataSeries(tuple(bound))
+
+        coordinate_system = chart_doc.getFirstDiagram().getCoordinateSystems()[0]
+        category_axis = coordinate_system.getAxisByDimension(0, 0)
+        scale = category_axis.getScaleData()
+        scale.Categories = _new_labeled_sequence(
+            chart_doc,
+            context,
+            _range_representation(doc, spec.category_range, default_sheet=spec.sheet),
+            "categories",
+        )
+        category_axis.setScaleData(scale)
     except Exception as exc:
-        log.record("series.names", False, type(exc).__name__)
+        log.record("series.binding", False, type(exc).__name__)
 
 
 def _apply_custom_point_label(
@@ -1091,7 +1109,7 @@ def upsert_chart_on_sheet(
     with log.probe("chart_type"):
         _apply_diagram_type(chart_doc, spec.chart_type, log)
     _bind_xy_series(chart_doc, spec, doc=doc, context=context, log=log)
-    _apply_non_xy_series_names(chart_doc, spec, doc=doc, log=log)
+    _bind_non_xy_series(chart_doc, spec, doc=doc, context=context, log=log)
 
     if spec.title:
         with log.probe("title", record_success=False):

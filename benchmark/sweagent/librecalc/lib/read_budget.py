@@ -81,12 +81,19 @@ def read_budget_error() -> str | None:
     return None
 
 
-def consume_read_budget(*, successful: bool) -> None:
-    if not read_budget_enabled() or not successful:
+def consume_read_budget(*, successful: bool = True) -> None:
+    """Spend the one post-inspect read slot.
+
+    The slot is the *attempt*, not a successful neighborhood. Oversized dumps used to
+    leave remaining=1, and the cheap compiler retried until the call cap instead of writing.
+    ``successful`` is kept for callers; it does not skip the decrement.
+    """
+    if not read_budget_enabled():
         return
     path = read_budget_path()
     if path is None:
         return
+    _ = successful
     state = _load_state(path)
     state["remaining"] = max(0, int(state.get("remaining", 0)) - 1)
     _save_state(path, state)
