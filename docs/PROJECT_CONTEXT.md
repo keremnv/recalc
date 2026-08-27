@@ -74,6 +74,15 @@ formula-compilation miss. Default routing caused the previous zero-write result.
 remaining diagnostic slice; the next design question is whether a bounded cross-sheet continuation
 signal can surface M3-like cells without reviving full-workbook context and false-positive floods.
 
+**Offline boundary-continuation census (2026-08-27).** Helper
+[`benchmark/boundary_continuations.py`](../benchmark/boundary_continuations.py) plus
+[`benchmark/characterize_boundary_continuations.py`](../benchmark/characterize_boundary_continuations.py).
+Gold-blind: a blank immediately right of the row's rightmost exact A1 translation run, still
+inside the used rectangle. Not a shipped observation. Codex's last session started the
+Financial Model audit (`01_02!Working Capital Schedule!M3` date+style, `13_02!Revenue Drivers!H8`
+style-only as plausible exact conversions) and died before the category precision table. Do not
+promote this into inspect until that report exists. Do not revive generic blank ranking.
+
 **Full non-visual result now exists (2026-08-27).** The isolated Sol run
 `gpt-5.6-sol-nonvisual-all-medium-1` produced **297/297 workbooks** and scored
 **59/297 official exact** for about **$28.04**. This supersedes the earlier write-rate gates and
