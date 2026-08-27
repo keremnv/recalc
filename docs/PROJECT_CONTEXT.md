@@ -52,10 +52,27 @@ Run `kimi-k2.7-high-diagnostic-four-1` currently contains two failed tasks costi
 OpenRouter's aggregate model record is insufficient for high-reasoning attribution. Every current
 K2.7 endpoint advertises `reasoning`, `tools`, and `tool_choice`, but default routing changed provider
 within one trajectory. `run_openrouter_slice.py` and `run_kimi_frozen.py` therefore accept repeatable
-`--provider-only`; it sends `provider.only`, disables fallback, and sets `require_parameters=true`.
-This is opt-in and has not triggered another paid run. If one final A/B is authorized, repeat only
-`Financial_Model:01_02` through the official Moonshot provider (`--provider-only moonshotai`) before
-classifying that failure as a clean K2.7 intelligence result. Do not broad-run the diagnostic slice.
+`--provider-only`; it sends `provider.only` and disables fallback. Do not set
+`require_parameters=true`: SWE-agent always sends `temperature=0` and `top_p=1`, while Moonshot's
+endpoint does not advertise those controls, so OpenRouter rejects the otherwise compatible request.
+Moonshot also rejects `tool_choice=required` with thinking enabled; the pinned high combination uses
+`auto`, while the strict agent prompt still requires one tool call per turn.
+
+**Pinned K2.7-high A/B resolves the FM routing confound (2026-08-27).**
+`kimi-k2.7-high-moonshot-pinned-fm-01_02-4`, official Moonshot provider, high reasoning, 12 calls,
+no fixed max tokens: workbook produced, **$0.205**, official regression **1.0**, modification
+**0.9956**, exact **0/1**. K2.7 used focused reads, wrote all instruction-relevant Debt Schedule,
+WACC, and DCF formulas in one `calc_fill_formulas`, compared, and verified the output. It reached the
+call limit on that final verification read, so autosubmission harvested the valid workbook.
+
+The only mismatch is the already known `Working Capital Schedule!M3`: input has
+`L3=EOMONTH(K3,12)` and an empty, unstyled `M3`; gold adds `M3=EOMONTH(L3,12)` (2031-03-31) while
+`M4:M7` remain empty. The instruction never names Working Capital Schedule, and the model's detailed
+inspect correctly selected the sheets named by the instruction, so no observation exposed this
+continuation. Classify the last miss as observation coverage / implicit benchmark scope, not a K2.7
+formula-compilation miss. Default routing caused the previous zero-write result. Do not broad-run the
+remaining diagnostic slice; the next design question is whether a bounded cross-sheet continuation
+signal can surface M3-like cells without reviving full-workbook context and false-positive floods.
 
 **Full non-visual result now exists (2026-08-27).** The isolated Sol run
 `gpt-5.6-sol-nonvisual-all-medium-1` produced **297/297 workbooks** and scored

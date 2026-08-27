@@ -196,7 +196,7 @@ def test_default_response_allowance_is_derived_from_remaining_budget() -> None:
     assert "max_tokens" not in kwargs
 
 
-def test_provider_pin_disables_fallbacks_and_requires_request_parameters() -> None:
+def test_provider_pin_disables_fallbacks_and_omits_aggregate_only_parameters() -> None:
     runner = _runner_module()
     args = type(
         "Args",
@@ -208,7 +208,7 @@ def test_provider_pin_disables_fallbacks_and_requires_request_parameters() -> No
         },
     )()
     model = {
-        "supported_parameters": ["tools", "reasoning"],
+        "supported_parameters": ["tools", "reasoning", "parallel_tool_calls"],
         "safety_prompt_price_per_token": 0.000001,
         "safety_completion_price_per_token": 0.000002,
     }
@@ -218,8 +218,32 @@ def test_provider_pin_disables_fallbacks_and_requires_request_parameters() -> No
     assert kwargs["provider"] == {
         "only": ["inceptron"],
         "allow_fallbacks": False,
-        "require_parameters": True,
     }
+    assert "require_parameters" not in kwargs["provider"]
+    assert "parallel_tool_calls" not in kwargs
+
+
+def test_moonshot_pin_uses_auto_tools_with_reasoning() -> None:
+    runner = _runner_module()
+    args = type(
+        "Args",
+        (),
+        {
+            "max_tokens": None,
+            "reasoning_effort": "high",
+            "provider_only": ["moonshotai"],
+        },
+    )()
+    model = {
+        "id": "moonshotai/kimi-k2.7-code",
+        "supported_parameters": ["tools", "reasoning", "tool_choice"],
+        "safety_prompt_price_per_token": 0.000001,
+        "safety_completion_price_per_token": 0.000002,
+    }
+
+    kwargs = runner._completion_kwargs(args, model)
+
+    assert kwargs["tool_choice"] == "auto"
 
 
 def test_provider_billing_is_not_inflated_by_harness_safety_prices() -> None:

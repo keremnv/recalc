@@ -95,7 +95,7 @@ def _arguments() -> argparse.Namespace:
         action="append",
         help=(
             "Restrict OpenRouter to this provider slug; repeat to allow more than one. "
-            "Disables provider fallback and requires support for every request parameter."
+            "Disables provider fallback."
         ),
     )
     parser.add_argument(
@@ -259,12 +259,22 @@ def _tool_choice(model: dict[str, Any]) -> str:
 
 
 def _completion_kwargs(args: argparse.Namespace, model: dict[str, Any]) -> dict[str, Any]:
+    provider_only = getattr(args, "provider_only", None)
+    tool_choice = _tool_choice(model)
+    if (
+        args.reasoning_effort not in {None, "none"}
+        and provider_only
+        and any(provider.casefold() == "moonshotai" for provider in provider_only)
+    ):
+        # Moonshot's native endpoint rejects `tool_choice=required` when thinking is enabled.
+        # The strict SWE-agent prompt still requires exactly one tool call per turn.
+        tool_choice = "auto"
     kwargs: dict[str, Any] = {
         "input_cost_per_token": model["safety_prompt_price_per_token"],
         "output_cost_per_token": model["safety_completion_price_per_token"],
         # Every SWE-agent turn must execute exactly one tool. Enforce the first half of that
         # contract at the provider boundary instead of paying for a no-tool repair response.
-        "tool_choice": _tool_choice(model),
+        "tool_choice": tool_choice,
     }
     if args.max_tokens is None:
         # This private flag is consumed by the staged SWE-agent overlay before LiteLLM is called.
@@ -272,16 +282,18 @@ def _completion_kwargs(args: argparse.Namespace, model: dict[str, Any]) -> dict[
         kwargs["librecalc_budget_max_tokens"] = True
     else:
         kwargs["max_tokens"] = args.max_tokens
-    if "parallel_tool_calls" in (model.get("supported_parameters") or []):
+    # The model catalog is an aggregate across endpoints. A pinned endpoint can support tools and
+    # tool_choice without supporting parallel_tool_calls (both current Moonshot K2.7 endpoints do).
+    # Do not forward aggregate-only controls to a provider-pinned endpoint. tool_choice still
+    # enforces the one-tool side of the loop contract where the endpoint supports `required`.
+    if not provider_only and "parallel_tool_calls" in (model.get("supported_parameters") or []):
         kwargs["parallel_tool_calls"] = False
     if args.reasoning_effort:
         kwargs["reasoning"] = {"effort": args.reasoning_effort}
-    provider_only = getattr(args, "provider_only", None)
     if provider_only:
         kwargs["provider"] = {
             "only": provider_only,
             "allow_fallbacks": False,
-            "require_parameters": True,
         }
     return kwargs
 
