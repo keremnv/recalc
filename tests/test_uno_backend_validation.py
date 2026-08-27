@@ -46,3 +46,47 @@ def test_pythonize_uno_error_wraps_foreign_exceptions() -> None:
 def test_pythonize_uno_error_keeps_builtin_exceptions() -> None:
     exc = ValueError("write_range requires values")
     assert _pythonize_uno_error(exc) is exc
+
+
+def test_cell_is_populated_accepts_int_and_enum_cell_types(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    from enum import Enum
+
+    from librecalc_mcp.backend.uno import _apply_values, _cell_is_populated
+
+    class CellType(Enum):
+        EMPTY = 0
+        VALUE = 1
+        FORMULA = 3
+
+    class Cell:
+        def __init__(self, cell_type: object) -> None:
+            self.Type = cell_type
+            self.Formula = ""
+            self.Value = 0.0
+            self.String = ""
+
+        def clearContents(self, _flags: int) -> None:
+            return None
+
+    assert _cell_is_populated(Cell(0)) is False
+    assert _cell_is_populated(Cell(CellType.EMPTY)) is False
+    assert _cell_is_populated(Cell(1)) is True
+    assert _cell_is_populated(Cell(CellType.VALUE)) is True
+    assert _cell_is_populated(Cell(CellType.FORMULA)) is True
+
+    occupied = Cell(CellType.VALUE)
+    blank = Cell(CellType.EMPTY)
+
+    class Sheet:
+        def getCellByPosition(self, column: int, row: int) -> Cell:
+            return occupied if (column, row) == (0, 0) else blank
+
+    monkeypatch.setenv("LIBRECALC_PRESERVE_POPULATED", "1")
+    skipped = _apply_values(Sheet(), "A1:B1", [["overwrite", "new"]])
+
+    assert skipped == 1
+    assert occupied.String == ""
+    assert blank.String == "new"
+

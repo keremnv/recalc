@@ -66,6 +66,33 @@ def test_chart_series_ignores_unknown_keys() -> None:
     assert spec.series[0].name == "S"
 
 
+def test_chart_series_allows_name_range_without_literal_name() -> None:
+    spec = ChartSpec.from_dict(
+        {
+            "id": "c1",
+            "sheet": "Sheet1",
+            "chart_type": "column",
+            "category_range": "C1:F1",
+            "series": [{"name_range": "B2", "values_range": "C2:F2"}],
+        }
+    )
+    assert spec.series[0].name is None
+    assert spec.series[0].name_range == "B2"
+
+
+def test_chart_series_requires_values_range() -> None:
+    with pytest.raises(ValueError, match="values_range"):
+        ChartSpec.from_dict(
+            {
+                "id": "c1",
+                "sheet": "Sheet1",
+                "chart_type": "column",
+                "category_range": "A1:A2",
+                "series": [{"name": "S"}],
+            }
+        )
+
+
 def test_chart_series_accepts_point_colors() -> None:
     spec = ChartSpec.from_dict(
         {

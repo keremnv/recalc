@@ -48,8 +48,9 @@ That wall is now the non-visual cheap compiler, not viz ISA:
 - **Template** overfills remain the Acc gap vs Opus (26/97 vs ~53%). Preserve-populated
   canary `kimi-k2.7-template-preserve-two-low-1`: **0/2 workbooks**. `05_01` inspect/read
   then format-exit (compiler). `06_24` reached `calc_fill_formulas` and crashed
-  `int(cell.Type)` under `LIBRECALC_PRESERVE_POPULATED=1` (UNO CellType Enum). Guard
-  did not get a valid skip measurement. Do not spend the 97.
+  `int(cell.Type)` under `LIBRECALC_PRESERVE_POPULATED=1` (UNO CellType Enum). **Fixed:**
+  `_cell_is_populated` accepts int and `enum.Enum`. Do not spend the 97. Do not
+  treat the crashed canary as a skip measurement.
 
 Full non-visual number is Sol **59/297 exact**, ~$28. FM is already near Opus (33 vs 34).
 Do not quote that as a K2.7 297. Do not run Sol. Do not rerun K2.5.
@@ -163,7 +164,7 @@ viz exactness.
 
 Parked: Sol, K2.5, iterate-five, format-conventions as 297 default, `08_03`/`01_03`,
 colour `03_04`, K2.7 297, fake Excel combo, generic blank ranking, the 97 Template
-slice, `int(cell.Type)` Enum crash on preserve-populated fill.
+slice. Preserve-populated UNO `int(cell.Type)` Enum crash is **fixed**, unremeasured.
 
 **Full non-visual result now exists (2026-08-27).** The isolated Sol run
 `gpt-5.6-sol-nonvisual-all-medium-1` produced **297/297 workbooks** and scored
@@ -263,7 +264,8 @@ reads, then format-exit; never wrote. Compiler. `Template:06_24` ($0.077, 12 cal
 inspected `RevenueBuild`, then `calc_fill_formulas` seven times, each
 `TypeError: int() argument ... not 'Enum'` from UNO `int(cell.Type)` on the
 preserve-populated fill path. Never saved. That is a harness crash, not a skip
-measurement. Do not spend the 97. Do not treat this canary as evidence the guard
+measurement. **Fixed 2026-08-27:** `_cell_is_populated` accepts pyuno `enum.Enum`.
+Do not spend the 97. Do not treat this canary as evidence the guard
 prevents overfill.
 
 **Format-aware `calc_compare` (2026-08-27).** Under `format-conventions-v1`, `calc_compare`

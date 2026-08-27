@@ -112,6 +112,12 @@ class ChartSeriesSpec:
             if not isinstance(colors, (list, tuple)):
                 raise ValueError("series.point_colors must be a list of hex colors")
             payload["point_colors"] = tuple(str(item) for item in colors)
+        values_range = payload.get("values_range")
+        if not isinstance(values_range, str) or not values_range.strip():
+            raise ValueError("series.values_range is required")
+        # Optional in the type, but a required dataclass field; missing name used to
+        # leak TypeError from __init__ instead of an agent-recoverable ValueError.
+        payload.setdefault("name", None)
         return cls(**payload)
 
 

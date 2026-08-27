@@ -68,6 +68,33 @@ def _pythonize_uno_error(exc: BaseException) -> BaseException:
     return RuntimeError(f"{type(exc).__name__}: {exc}")
 
 
+_EMPTY_CELL_TYPE_NAMES = frozenset({"EMPTY", "CELLTYPE_EMPTY"})
+
+
+def _cell_is_populated(cell: Any) -> bool:
+    """True when UNO CellType is not EMPTY.
+
+    Container pyuno exposes CellType as ``enum.Enum``, so ``int(cell.Type)``
+    raises TypeError and aborted preserve-populated fills (Template 06_24).
+    """
+
+    cell_type = getattr(cell, "Type", 0)
+    if cell_type in (0, None):
+        return False
+    value = getattr(cell_type, "value", cell_type)
+    if value in (0, None):
+        return False
+    name = str(getattr(cell_type, "name", "")).rsplit(".", 1)[-1].upper()
+    if name in _EMPTY_CELL_TYPE_NAMES:
+        return False
+    if isinstance(value, int) and not isinstance(value, bool):
+        return value != 0
+    try:
+        return int(value) != 0
+    except (TypeError, ValueError):
+        return True
+
+
 def _set_cell_value(cell: Any, value: object) -> None:
     if value is None:
         cell.clearContents(31)
@@ -264,7 +291,7 @@ def _apply_values(sheet: Any, cell_range: str, values: Matrix) -> int:
         if len(data) != 1 or len(data[0]) != 1:
             raise ValueError("single-cell range requires a 1x1 values matrix")
         cell = sheet.getCellByPosition(start_col, start_row)
-        if skip_populated and int(cell.Type) != 0:
+        if skip_populated and _cell_is_populated(cell):
             return 1
         # Container LibreOffice rejects setDataArray on ScCellObj (cellsuno.cxx:5014).
         _set_cell_value(cell, data[0][0])
@@ -279,7 +306,7 @@ def _apply_values(sheet: Any, cell_range: str, values: Matrix) -> int:
         for row_offset, row in enumerate(data):
             for column_offset, cell_value in enumerate(row):
                 cell = sheet.getCellByPosition(start_col + column_offset, start_row + row_offset)
-                if skip_populated and int(cell.Type) != 0:
+                if skip_populated and _cell_is_populated(cell):
                     skipped += 1
                     continue
                 _set_cell_value(cell, cell_value)
@@ -673,7 +700,7 @@ class UnoCalcBackend:
                         raise ValueError("set_formula requires formula")
                     # v0 deliberately restricts this op to a single-cell range.
                     cell = target.getCellByPosition(0, 0)
-                    if _preserve_populated() and int(cell.Type) != 0:
+                    if _preserve_populated() and _cell_is_populated(cell):
                         cells_skipped = 1
                     else:
                         cell.Formula = normalize_formula_argument_separators(operation.formula)
@@ -686,7 +713,7 @@ class UnoCalcBackend:
                     for row_offset in range(height):
                         for column_offset in range(width):
                             cell = target.getCellByPosition(column_offset, row_offset)
-                            if _preserve_populated() and int(cell.Type) != 0:
+                            if _preserve_populated() and _cell_is_populated(cell):
                                 cells_skipped += 1
                                 continue
                             translated = translate_a1_formula(
