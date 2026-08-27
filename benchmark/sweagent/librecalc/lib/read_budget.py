@@ -45,6 +45,27 @@ def reset_read_budget() -> None:
     _save_state(path, {"remaining": 1})
 
 
+def begin_inspection() -> str | None:
+    """Start one inspect/read pass, respecting an optional run-scoped pass limit."""
+
+    if not read_budget_enabled():
+        return None
+    path = read_budget_path()
+    if path is None:
+        return None
+    state = _load_state(path)
+    used = int(state.get("inspections", 0))
+    raw_limit = os.environ.get("LIBRECALC_INSPECTION_LIMIT")
+    limit = int(raw_limit) if raw_limit else 0
+    if limit and used >= limit:
+        return (
+            f"Inspection budget exhausted after {limit} pass(es). "
+            "Write or submit; do not begin another inspection loop."
+        )
+    _save_state(path, {"remaining": 1, "inspections": used + 1})
+    return None
+
+
 def read_budget_error() -> str | None:
     if not read_budget_enabled():
         return None

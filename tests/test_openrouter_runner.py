@@ -319,6 +319,57 @@ def test_skip_existing_flag_defaults_off(monkeypatch) -> None:
     assert runner._arguments().skip_existing is True
 
 
+def test_resume_skips_ledgered_tasks_and_retries_incomplete_dirs(tmp_path: Path) -> None:
+    runner = _runner_module()
+    recorded = tmp_path / "Template-01_01"
+    recorded.mkdir()
+    (recorded / "output.xlsx").write_bytes(b"xlsx")
+    incomplete = tmp_path / "Template-01_02"
+    incomplete.mkdir()
+    (incomplete / "stale.txt").write_text("partial", encoding="utf-8")
+
+    assert runner._resume_action(recorded, skip_existing=True, recorded=True) == "skip"
+    assert recorded.is_dir()
+    assert runner._resume_action(incomplete, skip_existing=True, recorded=False) == "retry"
+    assert not incomplete.exists()
+    assert (
+        runner._resume_action(tmp_path / "Template-01_03", skip_existing=True, recorded=False)
+        == "run"
+    )
+
+
+def test_ledger_task_keys_read_finished_rows(tmp_path: Path) -> None:
+    runner = _runner_module()
+    (tmp_path / "ledger.jsonl").write_text(
+        '{"task":"Template:01_01","status":"completed"}\n{"task":"Template:01_02","status":"failed"}\n',
+        encoding="utf-8",
+    )
+    assert runner._ledger_task_keys(tmp_path) == {"Template:01_01", "Template:01_02"}
+
+
+def test_no_score_flag_defaults_off(monkeypatch) -> None:
+    runner = _runner_module()
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        ["run_openrouter_slice.py", "--slice", "slice.json", "--run-name", "probe"],
+    )
+    assert runner._arguments().no_score is False
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "run_openrouter_slice.py",
+            "--slice",
+            "slice.json",
+            "--run-name",
+            "probe",
+            "--no-score",
+        ],
+    )
+    assert runner._arguments().no_score is True
+
+
 def test_overview_only_policy_removes_read_tool_and_updates_prompt(tmp_path) -> None:
     runner = _runner_module()
     project_root = Path(__file__).parents[1]
@@ -338,9 +389,10 @@ def test_overview_only_policy_removes_read_tool_and_updates_prompt(tmp_path) -> 
     assert "calc_read_ranges" not in tools
     assert "calc_compare" in tools
     assert bundle.name == "librecalc"
-    assert "focused range reads are intentionally unavailable" in config["agent"]["templates"][
-        "instance_template"
-    ]
+    assert (
+        "focused range reads are intentionally unavailable"
+        in config["agent"]["templates"]["instance_template"]
+    )
     assert all(Path(item["path"]).is_absolute() for item in config["agent"]["tools"]["bundles"])
 
 
@@ -383,9 +435,10 @@ def test_formula_block_policy_exposes_only_compact_formula_writes(tmp_path) -> N
     tools = yaml.safe_load((bundle / "config.yaml").read_text(encoding="utf-8"))["tools"]
 
     assert set(tools) == {"calc_inspect", "calc_compare", "calc_fill_formulas"}
-    assert "cell-by-cell formula enumeration is unavailable" in config["agent"]["templates"][
-        "instance_template"
-    ]
+    assert (
+        "cell-by-cell formula enumeration is unavailable"
+        in config["agent"]["templates"]["instance_template"]
+    )
 
 
 def test_formula_anomalies_progressive_prompt_confirms_shortlist_then_writes(tmp_path) -> None:
@@ -417,9 +470,10 @@ def test_formula_anomalies_progressive_prompt_confirms_shortlist_then_writes(tmp
     assert "Do not start another inspection" in template
     assert "do not reread the whole used" not in template
     assert "The anomaly shortlist is the confirmation surface" not in template
-    assert "After inspect, confirm the shortlist once if needed" in config["agent"]["templates"][
-        "system_template"
-    ]
+    assert (
+        "After inspect, confirm the shortlist once if needed"
+        in config["agent"]["templates"]["system_template"]
+    )
 
 
 def test_formula_anomalies_with_program_execution_allows_geometry_ops(tmp_path) -> None:
@@ -446,3 +500,26 @@ def test_formula_anomalies_with_program_execution_allows_geometry_ops(tmp_path) 
     assert "calc_write" in tools
     assert "insert_row/delete_row" in system
     assert "then calc_fill_formulas." not in system
+
+
+def test_formula_anomalies_two_pass_policy_allows_one_output_reinspection(tmp_path) -> None:
+    runner = _runner_module()
+    project_root = Path(__file__).parents[1]
+    staged = runner._stage_tool_policy(
+        source_config=project_root / "benchmark/sweagent/spreadsheet.yaml",
+        sweagent_root=project_root / "benchmark-data/SpreadsheetBench-2/SWE-agent",
+        temporary_root=tmp_path,
+        read_policy="progressive",
+        execution="semantic-program-v1",
+        observation="formula-anomalies-v1",
+        repair_passes=2,
+    )
+
+    config = yaml.safe_load(staged.read_text(encoding="utf-8"))
+    instance = config["agent"]["templates"]["instance_template"]
+    system = config["agent"]["templates"]["system_template"]
+
+    assert "call calc_inspect once on the output" in instance
+    assert "third inspection or repair pass" in instance
+    assert "inspect the output once" in system
+    assert "Do not start another inspection" not in instance

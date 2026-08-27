@@ -1,0 +1,10 @@
+{
+  "description": "Full-run development failures testing one bounded post-write anomaly pass with the same formula-only execution surface.",
+  "tasks": [
+    {"category": "Debugging", "id": "01_05"},
+    {"category": "Debugging", "id": "02_09"},
+    {"category": "Debugging", "id": "04_06"},
+    {"category": "Debugging", "id": "07_01"},
+    {"category": "Debugging", "id": "09_07"}
+  ]
+}

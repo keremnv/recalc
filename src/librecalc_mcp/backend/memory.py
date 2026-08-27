@@ -24,6 +24,36 @@ _RANGE_KEY = re.compile(
 )
 
 
+def _column_number(label: str) -> int:
+    number = 0
+    for character in label.lstrip("$").upper():
+        number = number * 26 + ord(character) - ord("A") + 1
+    return number
+
+
+def _column_label(number: int) -> str:
+    label = ""
+    while number:
+        number, remainder = divmod(number - 1, 26)
+        label = chr(ord("A") + remainder) + label
+    return label
+
+
+def _range_cells(cell_range: str) -> list[str]:
+    match = _RANGE_KEY.fullmatch(cell_range)
+    if match is None:
+        raise ValueError(f"invalid A1 range: {cell_range}")
+    start_column = _column_number(match.group("c1"))
+    end_column = _column_number(match.group("c2") or match.group("c1"))
+    start_row = int(match.group("r1"))
+    end_row = int(match.group("r2") or match.group("r1"))
+    return [
+        f"{_column_label(column)}{row}"
+        for row in range(start_row, end_row + 1)
+        for column in range(start_column, end_column + 1)
+    ]
+
+
 def _shift_range_key(key: str, *, start_row: int, count: int, deleting: bool) -> str | None:
     match = _RANGE_KEY.fullmatch(key)
     if match is None:
@@ -140,8 +170,8 @@ class MemoryCalcBackend:
         if formulas_written and len(stored) == 1 and len(stored[0]) == 1:
             # Toy single-cell model: record the formula so read_range reports it the
             # way the UNO backend does rather than as literal text.
-            self.formulas.setdefault(sheet, {})[cell_range] = (
-                normalize_formula_argument_separators(str(stored[0][0]))
+            self.formulas.setdefault(sheet, {})[cell_range] = normalize_formula_argument_separators(
+                str(stored[0][0])
             )
         self.sheets.setdefault(sheet, {})[cell_range] = stored
         return {
@@ -181,6 +211,22 @@ class MemoryCalcBackend:
                     normalize_formula_argument_separators(operation.formula)
                 )
                 results.append({"op": operation.op, "ok": True})
+            elif operation.op == "set_format":
+                if not operation.sheet or not operation.range or operation.cell_format is None:
+                    raise ValueError("set_format requires sheet, range, and format")
+                cells = _range_cells(operation.range)
+                sheet_formats = self.formats.setdefault(operation.sheet, {})
+                for address in cells:
+                    sheet_formats.setdefault(address, {}).update(deepcopy(operation.cell_format))
+                results.append(
+                    {
+                        "op": operation.op,
+                        "ok": True,
+                        "sheet": operation.sheet,
+                        "range": operation.range,
+                        "cells_formatted": len(cells),
+                    }
+                )
             elif operation.op == "clear_range":
                 assert operation.sheet and operation.range
                 self.sheets.setdefault(operation.sheet, {}).pop(operation.range, None)

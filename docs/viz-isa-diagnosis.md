@@ -148,7 +148,18 @@ all five shapes still sit at A1. Anchor already exists; that is compiler
 placement, not a missing op. Official VLM scoring is Windows Excel COM
 multi-image routing — do not quote a Linux checklist % from these PNGs.
 
-Hold `Task 1417365` (multi-level year/quarter categories), `Task 1437004`
-(100% stack plus calculations), and `Task 1426290` (combo plus secondary axis)
-until each missing semantic is measured. Do not use Sol or Opus, raise
-call/token limits, or start the 15/297 non-visual slices.
+The K2.7 held-three canary (`kimi-k2.7-viz-held-three-low-1`, ~`$0.162`) wrote **1/3**
+workbooks:
+
+- `Task 1437004` — no workbook, 12 calls, `$0.034`. Writes failed with a UNO
+  traceback-conversion leak (`Couldn't convert <traceback object> to a UNO type`)
+  before any chart. Mixed calc + 100% stack was not reached.
+- `Task 1426290` — no workbook, 12 calls, `$0.018`. Inspect then over-cap reads;
+  never wrote. Combo/secondary-axis not reached.
+- `Task 1417365` — wrote (`$0.110`, 12 calls). Stacked-column apply dropped
+  `series[3]` (`IndexOutOfBoundsException`). Gold wants year-grouped stacks with
+  quarter categories — that multi-level category axis is still translation loss.
+
+Do not mint a fake Excel combo or multi-level axis. Visualization is parked for a
+later optional full-bench pass. This submit is the non-visual ~297. Do not use Sol
+or Opus, or raise call/token limits, on the cheap non-visual lane.

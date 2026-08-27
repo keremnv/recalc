@@ -61,6 +61,48 @@ def test_reads_cell_format_fingerprints_in_request_order() -> None:
     ]
 
 
+def test_program_can_set_observable_format_fields_on_a_range() -> None:
+    backend = MemoryCalcBackend()
+
+    result = backend.execute_program(
+        [
+            CalcOperation.from_dict(
+                {
+                    "op": "set_format",
+                    "sheet": "Sheet1",
+                    "range": "B2:C2",
+                    "format": {
+                        "font_color": "#0000FF",
+                        "background_color": "#FFF2CC",
+                        "background_transparent": False,
+                        "font_weight": 150.0,
+                    },
+                }
+            )
+        ]
+    )
+
+    assert result["operations"] == [
+        {
+            "op": "set_format",
+            "ok": True,
+            "sheet": "Sheet1",
+            "range": "B2:C2",
+            "cells_formatted": 2,
+        }
+    ]
+    expected = {
+        "font_color": "#0000FF",
+        "background_color": "#FFF2CC",
+        "background_transparent": False,
+        "font_weight": 150.0,
+    }
+    assert backend.read_formats([("Sheet1", "B2"), ("Sheet1", "C2")]) == [
+        expected,
+        expected,
+    ]
+
+
 def test_write_reports_explicit_output_path() -> None:
     backend = MemoryCalcBackend()
 
@@ -119,9 +161,7 @@ def test_program_normalizes_function_argument_separators() -> None:
         ]
     )
 
-    assert backend.read_range("Sheet1", "C31:F31")["formulas"] == [
-        ['=IF(C5="Year 4";18000;0)']
-    ]
+    assert backend.read_range("Sheet1", "C31:F31")["formulas"] == [['=IF(C5="Year 4";18000;0)']]
 
 
 def test_program_can_clear_a_range_without_removing_the_sheet() -> None:
@@ -130,9 +170,7 @@ def test_program_can_clear_a_range_without_removing_the_sheet() -> None:
         [CalcOperation(op="set_formula", sheet="Sheet1", range="B2", formula="=1+1")]
     )
 
-    result = backend.execute_program(
-        [CalcOperation(op="clear_range", sheet="Sheet1", range="B2")]
-    )
+    result = backend.execute_program([CalcOperation(op="clear_range", sheet="Sheet1", range="B2")])
 
     assert result["ok"] is True
     assert backend.read_range("Sheet1", "B2")["formulas"] == []
@@ -144,9 +182,7 @@ def test_program_insert_row_shifts_later_stored_ranges() -> None:
     backend.write_range("Sheet1", "A2", [["below"]])
     backend.formulas["Sheet1"]["B2"] = "=A2"
 
-    result = backend.execute_program(
-        [CalcOperation(op="insert_row", sheet="Sheet1", index=2)]
-    )
+    result = backend.execute_program([CalcOperation(op="insert_row", sheet="Sheet1", index=2)])
 
     assert result["ok"] is True
     assert result["operations"][0]["count"] == 1

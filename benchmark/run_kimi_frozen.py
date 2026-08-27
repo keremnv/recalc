@@ -4,6 +4,8 @@
 Template and Financial Model use formula-patterns-v1. Debugging uses
 formula-anomalies-v1 plus the read-budget instrument. Both groups use
 formula-blocks-v1. Task failures do not skip the rest of the slice.
+After both groups finish, this scores the run in-process (LibreOffice refresh plus
+unmodified evaluation.py) so logs, workbooks, and official JSON come from one command.
 """
 
 from __future__ import annotations
@@ -16,7 +18,11 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 RUNNER = PROJECT_ROOT / "benchmark" / "run_openrouter_slice.py"
+SCORER = PROJECT_ROOT / "benchmark" / "score_openrouter_run.py"
 DEFAULT_MODEL = "moonshotai/kimi-k2.7-code"
+DEFAULT_RUNS = (
+    PROJECT_ROOT / "benchmark-data" / "SpreadsheetBench-2" / "benchmark-runs" / "openrouter"
+)
 NONVISUAL = ("Template", "Financial_Model", "Debugging")
 
 
@@ -28,13 +34,44 @@ def _arguments() -> argparse.Namespace:
     parser.add_argument("--cost-limit", type=float, default=2.0)
     parser.add_argument("--call-limit", type=int, default=12)
     parser.add_argument("--timeout", type=int, default=1200)
+    parser.add_argument(
+        "--reasoning-effort",
+        choices=("none", "minimal", "low", "medium", "high", "xhigh", "max"),
+        default="low",
+        help="Forwarded to the OpenRouter runner. K2.7 stays low; Sol's measured write path used medium.",
+    )
     parser.add_argument("--skip-existing", action="store_true")
+    parser.add_argument(
+        "--debug-execution",
+        choices=("formula-blocks-v1", "semantic-program-v1"),
+        default="formula-blocks-v1",
+        help="Explicit Debugging ablation; semantic-program exposes structural and format ops.",
+    )
+    parser.add_argument(
+        "--debug-repair-passes",
+        type=int,
+        choices=(1, 2),
+        default=1,
+        help="Explicit Debugging ablation allowing one bounded output re-inspection.",
+    )
+    parser.add_argument(
+        "--no-score",
+        action="store_true",
+        help="Skip the in-run official eval pack. Default is to score after inference.",
+    )
     parser.add_argument(
         "--task",
         action="append",
         help="Run only CATEGORY:ID; repeat for multiple tasks. Defaults to the whole slice.",
     )
     return parser.parse_args()
+
+
+def _safe_name(value: str) -> str:
+    cleaned = "".join(
+        character if character.isalnum() or character in "-_." else "-" for character in value
+    )
+    return cleaned.strip("-.")
 
 
 def _load_tasks(slice_path: Path, filters: list[str] | None) -> list[dict[str, str]]:
@@ -56,14 +93,10 @@ def _load_tasks(slice_path: Path, filters: list[str] | None) -> list[dict[str, s
 
 def _group(tasks: list[dict[str, str]]) -> tuple[list[str], list[str]]:
     compute = [
-        f"{task['category']}:{task['id']}"
-        for task in tasks
-        if task["category"] != "Debugging"
+        f"{task['category']}:{task['id']}" for task in tasks if task["category"] != "Debugging"
     ]
     debugging = [
-        f"{task['category']}:{task['id']}"
-        for task in tasks
-        if task["category"] == "Debugging"
+        f"{task['category']}:{task['id']}" for task in tasks if task["category"] == "Debugging"
     ]
     return compute, debugging
 
@@ -76,6 +109,9 @@ def _run_group(
 ) -> int:
     if not labels:
         return 0
+    debugging = observation == "formula-anomalies-v1"
+    execution = args.debug_execution if debugging else "formula-blocks-v1"
+    repair_passes = args.debug_repair_passes if debugging else 1
     command = [
         sys.executable,
         str(RUNNER),
@@ -88,7 +124,7 @@ def _run_group(
         "--observation",
         observation,
         "--execution",
-        "formula-blocks-v1",
+        execution,
         "--read-policy",
         "progressive",
         "--cost-limit",
@@ -98,17 +134,32 @@ def _run_group(
         "--max-requeries",
         "2",
         "--reasoning-effort",
-        "low",
+        args.reasoning_effort,
         "--timeout",
         str(args.timeout),
+        "--repair-passes",
+        str(repair_passes),
     ]
-    if observation == "formula-anomalies-v1":
+    if debugging:
         command.append("--read-budget")
     if args.skip_existing:
         command.append("--skip-existing")
+    command.append("--no-score")
     for label in labels:
         command.extend(["--task", label])
     print(f"GROUP observation={observation} tasks={len(labels)}", flush=True)
+    return subprocess.call(command, cwd=PROJECT_ROOT)
+
+
+def _score_run(run_name: str) -> int:
+    run_root = DEFAULT_RUNS / _safe_name(run_name)
+    command = [
+        sys.executable,
+        str(SCORER),
+        str(run_root),
+        "--write-ledger",
+    ]
+    print(f"SCORE {run_root}", flush=True)
     return subprocess.call(command, cwd=PROJECT_ROOT)
 
 
@@ -117,9 +168,15 @@ def main() -> int:
     compute, debugging = _group(_load_tasks(args.slice, args.task))
     failures = 0
     failures += 1 if _run_group(args=args, observation="formula-patterns-v1", labels=compute) else 0
-    failures += 1 if _run_group(args=args, observation="formula-anomalies-v1", labels=debugging) else 0
-    print(f"FROZEN-SUMMARY groups_failed={failures} run={args.run_name}", flush=True)
-    return 1 if failures else 0
+    failures += (
+        1 if _run_group(args=args, observation="formula-anomalies-v1", labels=debugging) else 0
+    )
+    score_status = 0 if args.no_score else _score_run(args.run_name)
+    print(
+        f"FROZEN-SUMMARY groups_failed={failures} score_failed={score_status} run={args.run_name}",
+        flush=True,
+    )
+    return 1 if failures or score_status else 0
 
 
 if __name__ == "__main__":

@@ -5,6 +5,7 @@ from pathlib import Path
 
 import pytest
 from read_budget import (
+    begin_inspection,
     consume_read_budget,
     read_budget_error,
     reset_read_budget,
@@ -47,3 +48,17 @@ def test_read_budget_state_file_tracks_remaining(_clear_read_budget_env: Path) -
     consume_read_budget(successful=True)
     payload = json.loads(state_path.read_text(encoding="utf-8"))
     assert payload["remaining"] == 0
+
+
+def test_inspection_budget_allows_exact_configured_passes(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    monkeypatch.setenv("LIBRECALC_INSPECTION_LIMIT", "2")
+
+    assert begin_inspection() is None
+    consume_read_budget(successful=True)
+    assert begin_inspection() is None
+    assert begin_inspection() == (
+        "Inspection budget exhausted after 2 pass(es). "
+        "Write or submit; do not begin another inspection loop."
+    )

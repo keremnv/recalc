@@ -23,6 +23,13 @@ from librecalc_mcp.domain.formulas import (
 from librecalc_mcp.domain.models import CalcOperation, CellFormat, Matrix, SheetInfo, WorkbookInfo
 
 _A1_RANGE = re.compile(r"^([A-Z]+)([1-9][0-9]*)(?::([A-Z]+)([1-9][0-9]*))?$", re.IGNORECASE)
+_HEX_COLOR = re.compile(r"^#?([0-9A-F]{6})$", re.IGNORECASE)
+_FORMAT_FIELDS = {
+    "font_color",
+    "background_color",
+    "background_transparent",
+    "font_weight",
+}
 
 
 def _column_index(label: str) -> int:
@@ -73,6 +80,48 @@ def _set_cell_value(cell: Any, value: object) -> None:
     cell.String = unescape_text(str(value))
 
 
+def _format_color(value: object, *, field: str) -> int:
+    if isinstance(value, bool):
+        raise ValueError(  # noqa: TRY004 - agent-recoverable tool observation
+            f"format.{field} must be a #RRGGBB color or integer"
+        )
+    if isinstance(value, int) and 0 <= value <= 0xFFFFFF:
+        return value
+    if isinstance(value, str) and (match := _HEX_COLOR.fullmatch(value.strip())):
+        return int(match.group(1), 16)
+    raise ValueError(f"format.{field} must be a #RRGGBB color or integer")
+
+
+def _apply_format(target: Any, cell_format: CellFormat) -> int:
+    unknown = sorted(set(cell_format) - _FORMAT_FIELDS)
+    if unknown:
+        raise ValueError(f"unsupported format fields: {', '.join(unknown)}")
+    if not cell_format:
+        raise ValueError("set_format requires at least one format field")
+
+    if "font_color" in cell_format:
+        target.CharColor = _format_color(cell_format["font_color"], field="font_color")
+    if "background_color" in cell_format:
+        target.CellBackColor = _format_color(
+            cell_format["background_color"], field="background_color"
+        )
+        if "background_transparent" not in cell_format:
+            target.IsCellBackgroundTransparent = False
+    if "background_transparent" in cell_format:
+        transparent = cell_format["background_transparent"]
+        if not isinstance(transparent, bool):
+            raise ValueError("format.background_transparent must be boolean")
+        target.IsCellBackgroundTransparent = transparent
+    if "font_weight" in cell_format:
+        weight = cell_format["font_weight"]
+        if isinstance(weight, bool) or not isinstance(weight, (int, float)):
+            raise ValueError("format.font_weight must be numeric")
+        target.CharWeight = float(weight)
+
+    address = target.RangeAddress
+    return (address.EndColumn - address.StartColumn + 1) * (address.EndRow - address.StartRow + 1)
+
+
 def _apply_values(sheet: Any, cell_range: str, values: Matrix) -> None:
     start_col, start_row, end_col, end_row = a1_range_address(cell_range)
     data = tuple(tuple(row) for row in values)
@@ -95,7 +144,6 @@ def _apply_values(sheet: Any, cell_range: str, values: Matrix) -> None:
     sheet.getCellRangeByPosition(start_col, start_row, end_col, end_row).setDataArray(data)
 
 
-
 class _DocumentContext:
     def __init__(self, backend: UnoCalcBackend, path: str | None) -> None:
         self.backend = backend
@@ -116,7 +164,9 @@ class _DocumentContext:
             self.doc = self.backend._desktop.loadComponentFromURL(file_url, "_blank", 0, ())
         else:
             self.doc = self.backend._desktop.getCurrentComponent()
-        if self.doc is None or not self.doc.supportsService("com.sun.star.sheet.SpreadsheetDocument"):
+        if self.doc is None or not self.doc.supportsService(
+            "com.sun.star.sheet.SpreadsheetDocument"
+        ):
             if self.owned and self.doc is not None:
                 with suppress(Exception):
                     self.doc.close(True)
@@ -487,9 +537,23 @@ class UnoCalcBackend:
                                 column_offset=column_offset,
                                 row_offset=row_offset,
                             )
-                            target.getCellByPosition(column_offset, row_offset).Formula = (
-                                normalize_formula_argument_separators(translated)
-                            )
+                            target.getCellByPosition(
+                                column_offset, row_offset
+                            ).Formula = normalize_formula_argument_separators(translated)
+                elif operation.op == "set_format":
+                    if operation.cell_format is None:
+                        raise ValueError("set_format requires format")
+                    cells_formatted = _apply_format(target, operation.cell_format)
+                    results.append(
+                        {
+                            "op": operation.op,
+                            "ok": True,
+                            "sheet": operation.sheet,
+                            "range": operation.range,
+                            "cells_formatted": cells_formatted,
+                        }
+                    )
+                    continue
                 elif operation.op == "clear_range":
                     # Values, dates, strings, annotations and formulas; formatting survives.
                     target.clearContents(31)

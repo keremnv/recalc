@@ -166,3 +166,47 @@ def test_single_cell_write_range_persists(tmp_path) -> None:
 
     assert result["ok"] is True
     assert backend.read_range(sheet, "C3", str(output_path))["values"] == [[3.0]]
+
+
+def test_program_set_format_round_trips_through_uno(tmp_path) -> None:
+    backend = UnoCalcBackend()
+    assert backend.health()["ok"] is True
+    fixture_path = Path(__file__).parent / "fixtures" / "smoke.csv"
+    sheet = backend.inspect_workbook(str(fixture_path)).sheets[0].name
+    output_path = tmp_path / "formatted-output.xlsx"
+
+    result = backend.execute_program(
+        [
+            CalcOperation.from_dict(
+                {
+                    "op": "set_format",
+                    "sheet": sheet,
+                    "range": "B2:C2",
+                    "format": {
+                        "font_color": "#0000FF",
+                        "background_color": "#FFF2CC",
+                        "background_transparent": False,
+                        "font_weight": 150,
+                    },
+                }
+            )
+        ],
+        path=str(fixture_path),
+        output_path=str(output_path),
+    )
+
+    assert result["operations"][0]["cells_formatted"] == 2
+    assert backend.read_formats([(sheet, "B2"), (sheet, "C2")], path=str(output_path)) == [
+        {
+            "font_color": "#0000FF",
+            "background_color": "#FFF2CC",
+            "background_transparent": False,
+            "font_weight": 150.0,
+        },
+        {
+            "font_color": "#0000FF",
+            "background_color": "#FFF2CC",
+            "background_transparent": False,
+            "font_weight": 150.0,
+        },
+    ]

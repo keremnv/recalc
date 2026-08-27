@@ -173,7 +173,9 @@ def main(argv: list[str]) -> int:
         path = args[0]
         detailed_sheets = set(_parse_sheet_names(args[1])) if len(args) == 2 else set()
         variant = os.environ.get("LIBRECALC_OBSERVATION_VARIANT", "grid-v1")
-        _read_budget().reset_read_budget()
+        if (budget_error := _read_budget().begin_inspection()) is not None:
+            _emit({"ok": False, "error": budget_error})
+            return 1
         _emit(
             _observation()[0].workbook_observation(
                 backend,

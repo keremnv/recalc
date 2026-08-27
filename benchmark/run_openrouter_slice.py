@@ -112,6 +112,16 @@ def _arguments() -> argparse.Namespace:
         ),
     )
     parser.add_argument(
+        "--repair-passes",
+        type=int,
+        choices=(1, 2),
+        default=1,
+        help=(
+            "For formula-anomalies-v1, permit one write/compare pass (default) or one "
+            "bounded output re-inspection and final repair pass. Does not raise call limits."
+        ),
+    )
+    parser.add_argument(
         "--task",
         action="append",
         help="Run only CATEGORY:ID; repeat for multiple tasks. Defaults to the whole slice.",
@@ -120,6 +130,11 @@ def _arguments() -> argparse.Namespace:
         "--skip-existing",
         action="store_true",
         help="Skip tasks whose run directory already exists (resume a long slice).",
+    )
+    parser.add_argument(
+        "--no-score",
+        action="store_true",
+        help="Skip the in-run official eval pack. Default is to score after inference.",
     )
     return parser.parse_args()
 
@@ -363,6 +378,7 @@ def _stage_tool_policy(
     execution: str,
     execution_timeout: int | None = None,
     observation: str = "grid-v1",
+    repair_passes: int = 1,
 ) -> Path:
     config = yaml.safe_load(source_config.read_text(encoding="utf-8"))
     if execution_timeout is not None:
@@ -456,11 +472,17 @@ def _stage_tool_policy(
    for several.
    Treat inferred candidate_gaps as a heuristic checklist, not requirements; ignore obvious
    section headers and notes."""
-        new_anomaly_guidance = """2. Inspect includes ranked translation/sequence candidates and a compact formula-error
+        if repair_passes == 1:
+            new_anomaly_guidance = """2. Inspect includes ranked translation/sequence candidates and a compact formula-error
    representative list. Both are heuristics, not requirements. At most one confirmation pass:
    one calc_read_ranges call covering small neighborhoods around the cells you intend to change,
    a few surrounding rows or columns (reads over 96 cells are rejected). Never read a whole sheet,
    used range, or extra sheets after that. Then write."""
+        else:
+            new_anomaly_guidance = """2. Inspect includes ranked translation/sequence candidates and a compact formula-error
+   representative list. Both are heuristics, not requirements. For the first repair pass, use at
+   most one calc_read_ranges call covering small neighborhoods around cells you intend to change
+   (each range is capped at 96 cells), then write. Never read a whole sheet or used range."""
         if old_anomaly_guidance not in instance_template:
             raise RuntimeError(
                 "Anomaly shortlist policy could not locate the progressive-read prompt"
@@ -469,8 +491,14 @@ def _stage_tool_policy(
         old_verify_guidance = """5. Compare input and output with calc_compare. Check that exact changes match the instruction;
    candidate gaps remain heuristic. Use focused reads only for a real unresolved ambiguity,
    then submit."""
-        new_verify_guidance = """5. Compare input and output with calc_compare, then submit. Do not start another inspection
+        if repair_passes == 1:
+            new_verify_guidance = """5. Compare input and output with calc_compare, then submit. Do not start another inspection
    loop after the write."""
+        else:
+            new_verify_guidance = """5. Compare input and output with calc_compare. Then call calc_inspect once on the output
+   workbook to surface remaining anomalies. If a final repair is needed, use at most one focused
+   calc_read_ranges call, write to that same output path, and compare once more. Then submit; never
+   begin a third inspection or repair pass."""
         if old_verify_guidance not in instance_template:
             raise RuntimeError("Anomaly shortlist policy could not locate the verify prompt")
         instance_template = instance_template.replace(old_verify_guidance, new_verify_guidance)
@@ -485,6 +513,11 @@ def _stage_tool_policy(
                 "\nAfter inspect, confirm the shortlist once if needed, then write. "
                 "Use calc_program for mixed operations including insert_row/delete_row; "
                 "use calc_fill_formulas for formula-only patterned ranges.\n"
+            )
+        if repair_passes == 2:
+            write_hint += (
+                "After the first compare, inspect the output once and make at most one final "
+                "repair before submitting.\n"
             )
         config["agent"]["templates"]["system_template"] = system_template.rstrip() + write_hint
 
@@ -630,6 +663,36 @@ def _find_output(
     return outputs[-1] if outputs else None
 
 
+def _ledger_task_keys(run_root: Path) -> set[str]:
+    ledger_path = run_root / "ledger.jsonl"
+    keys: set[str] = set()
+    if not ledger_path.is_file():
+        return keys
+    for line in ledger_path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        task = json.loads(line).get("task")
+        if task:
+            keys.add(str(task))
+    return keys
+
+
+def _resume_action(task_root: Path, *, skip_existing: bool, recorded: bool) -> str:
+    """Decide whether to run, skip, or retry a task directory on resume.
+
+    A ledger row is the checkpoint. A directory with no ledger row is an interrupted
+    attempt and is removed so ``--skip-existing`` can retry it.
+    """
+    if not task_root.exists():
+        return "run"
+    if not skip_existing:
+        raise FileExistsError(f"Refusing to overwrite an existing task run: {task_root}")
+    if recorded:
+        return "skip"
+    shutil.rmtree(task_root)
+    return "retry"
+
+
 def _run_task(
     *,
     args: argparse.Namespace,
@@ -642,14 +705,20 @@ def _run_task(
     task_id = task["id"]
     record = _task_record(args.benchmark_root, category, task_id)
     task_name = f"{category}-{task_id}"
+    task_key = f"{category}:{task_id}"
     task_root = run_root / task_name
     trace_root = task_root / "trajectory"
     output_path = task_root / "output.xlsx"
-    if task_root.exists():
-        if getattr(args, "skip_existing", False):
-            print(f"SKIP {category}:{task_id} existing={task_root}", flush=True)
-            return 0
-        raise FileExistsError(f"Refusing to overwrite an existing task run: {task_root}")
+    action = _resume_action(
+        task_root,
+        skip_existing=bool(getattr(args, "skip_existing", False)),
+        recorded=task_key in _ledger_task_keys(run_root),
+    )
+    if action == "skip":
+        print(f"SKIP {task_key} existing={task_root}", flush=True)
+        return 0
+    if action == "retry":
+        print(f"RETRY {task_key} incomplete={task_root}", flush=True)
     task_root.mkdir(parents=True)
 
     before_usage = _key_usage(api_key)
@@ -670,6 +739,7 @@ def _run_task(
             execution=args.execution,
             execution_timeout=args.execution_timeout,
             observation=args.observation,
+            repair_passes=args.repair_passes,
         )
         sweagent_overlay = _stage_sweagent_overlay(args.sweagent_root, temporary_root)
         dataset_root = _stage_task(
@@ -690,13 +760,12 @@ def _run_task(
             **({"LIBRECALC_READ_MAX_CELLS": "none"} if args.read_policy == "thin" else {}),
         }
         if args.observation == "formula-anomalies-v1":
-            env_variables["LIBRECALC_READ_BUDGET_ENABLED"] = (
-                "1" if args.read_budget else "0"
-            )
+            env_variables["LIBRECALC_READ_BUDGET_ENABLED"] = "1" if args.read_budget else "0"
             if args.read_budget:
                 env_variables["LIBRECALC_READ_BUDGET_PATH"] = (
                     "/mnt/spreadsheet_output/.librecalc_read_budget.json"
                 )
+                env_variables["LIBRECALC_INSPECTION_LIMIT"] = str(args.repair_passes)
         command = [
             str(args.sweagent_root / ".venv" / "bin" / "sweagent"),
             "run",
@@ -803,6 +872,7 @@ def _run_task(
         "observation_variant": args.observation,
         "blank_bridges": bool(getattr(args, "blank_bridges", True)),
         "read_budget": bool(getattr(args, "read_budget", True)),
+        "repair_passes": int(getattr(args, "repair_passes", 1)),
         "read_policy": args.read_policy,
         "execution_variant": args.execution,
         "status": status,
@@ -906,7 +976,18 @@ def main() -> int:
         for task in tasks
     )
     print(f"SUMMARY tasks={len(tasks)} failures={failures} ledger={run_root / 'ledger.jsonl'}")
-    return 1 if failures else 0
+    score_status = 0
+    if not args.no_score:
+        score_status = subprocess.call(
+            [
+                sys.executable,
+                str(PROJECT_ROOT / "benchmark" / "score_openrouter_run.py"),
+                str(run_root),
+                "--write-ledger",
+            ],
+            cwd=PROJECT_ROOT,
+        )
+    return 1 if failures or score_status else 0
 
 
 if __name__ == "__main__":

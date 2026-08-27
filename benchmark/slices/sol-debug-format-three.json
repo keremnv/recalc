@@ -1,0 +1,8 @@
+{
+  "description": "Full-run development color tasks testing the generic set_format program operation without adding a second repair pass.",
+  "tasks": [
+    {"category": "Debugging", "id": "03_04"},
+    {"category": "Debugging", "id": "04_04"},
+    {"category": "Debugging", "id": "10_04"}
+  ]
+}

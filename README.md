@@ -46,9 +46,10 @@ The initial server exposes:
 - `program_execute` — execute a batch of deterministic Calc operations in one MCP call.
 
 `program_execute` is intentionally small. It is the seed of the future generated-program layer, not the final DSL.
-Its current operations are `write_range`, `set_formula`, `fill_formula`, `clear_range`, and
-`create_sheet`. `fill_formula` deterministically translates relative A1 references across and
-down a range, while `clear_range` removes cell contents without discarding formatting.
+Its current operations are `write_range`, `set_formula`, `fill_formula`, `set_format`,
+`clear_range`, `create_sheet`, `insert_row`, `delete_row`, `upsert_chart`, and `delete_chart`.
+`fill_formula` deterministically translates relative A1 references across and down a range,
+while `clear_range` removes cell contents without discarding formatting.
 
 ## Prerequisites
 

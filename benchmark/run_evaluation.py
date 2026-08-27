@@ -1,8 +1,9 @@
 """Run the vendored SpreadsheetBench-2 evaluator with metadata repair installed.
 
-The evaluator is invoked as a subprocess (score_openrouter_run.py:76), so an in-process
-patch of openpyxl cannot reach it. This wrapper installs the repair, then runs
-evaluation.py as __main__ with argv forwarded, leaving the vendored file untouched.
+Submission scoring uses unmodified evaluation.py. This wrapper is the local-only
+`--metadata-tolerant` path in score_openrouter_run.py so an in-process patch of openpyxl
+can reach the evaluator subprocess. It installs the repair, then runs evaluation.py as
+__main__ with argv forwarded, leaving the vendored file untouched.
 
 Without it, Financial_Model 06_01..06_05 raise ParseError before any cell is compared and
 the category cannot be scored. See xlsx_metadata_repair for what is malformed and why.

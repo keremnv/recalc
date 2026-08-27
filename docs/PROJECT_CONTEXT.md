@@ -6,10 +6,60 @@
 
 ---
 
-## 0. Current handoff — 2026-08-25 (Codex)
+## 0. Current handoff — 2026-08-27 (Codex)
 
 This section is the operator brief. Sections below this are background; if they conflict with §0,
 §0 wins.
+
+**Full non-visual result now exists (2026-08-27).** The isolated Sol run
+`gpt-5.6-sol-nonvisual-all-medium-1` produced **297/297 workbooks** and scored
+**59/297 official exact** for about **$28.04**. This supersedes the earlier write-rate gates and
+the instruction not to quote a full result.
+
+| category | exact | mean modification | median modification | mean regression |
+|---|---:|---:|---:|---:|
+| Template | 26/97 | 0.8480 | 0.9649 | 0.9940 |
+| Financial Model | 33/100 | 0.8019 | 0.9850 | 0.9490 |
+| Debugging | 0/100 | 0.4006 | 0.2714 | 0.9962 |
+
+Five Financial Model `06_*` rows are evaluator failures (`docProps/core.xml` unbound prefix),
+not model misses; the submission pack intentionally records the unmodified official evaluator's
+zero rows. Financial Model is otherwise already near the supplied Opus reference (33% vs 34%),
+with 14 non-exact tasks at regression 1.0 and modification >=0.99. Template remains the largest
+competitive gap: 34/71 misses report a regression cell first, and eight tasks have perfect
+modification but lose exactness from collateral writes.
+
+**The Debugging zero is partly an experiment-policy failure, not simply intelligence.** In 94/100
+trajectories the exact sequence is `inspect -> read_ranges -> fill_formulas -> compare -> submit`;
+the frozen prompt explicitly orders submission after one repair and the read budget permits only
+one confirmation batch. Mean use is 5.13 calls, so the 12-call ceiling is not the constraint.
+Ten tasks are inconsistent-color tasks, while the old world could read but not write formatting.
+The formula-block overlay also hid the product's existing `insert_row`/`delete_row` operations from
+the Errors family.
+
+Next measurements are factored so their effects remain attributable:
+
+1. `sol-debug-iterate-five.json`: same formula-only surface, one bounded output re-inspection and
+   final repair (`--debug-repair-passes 2`).
+2. `sol-debug-program-errors-three.json`: one-pass observation, existing semantic program/row ops.
+3. `sol-debug-format-three.json`: one-pass observation, generic `set_format` range operation.
+
+Do not increase the call/token ceiling for these tests. The earlier **interface freeze is lifted
+only for these full-run-motivated Debugging measurements**. Template target safety is next after
+their attribution: first characterize populated-cell overwrite requirements, then test a guarded
+fill or reversible second pass. Do not combine that with the Debugging arms.
+
+**Template target-safety diagnosis.** Across all 97 tasks, 5,545/5,723 cache-robust direct
+targets (96.9%) are blank and 81 tasks require only blank direct edits. However, the current
+regression problem is not mainly overwriting populated cells: 32/34 regression-first failures
+inserted a formula into an input blank that the golden preserves; only two first failures
+overwrote populated content. Just 2/34 failing addresses appeared in the initial formula-pattern
+observation, so the observation did not nominate most collateral writes—the compiler invented
+them while extrapolating from focused reads. Input style IDs distinguish only 9/32 blank
+overfills from all true blank-target styles in the same task. Therefore an optional
+preserve-populated guard is worthwhile safety but has small expected exact upside, and style
+filtering is not justified. The remaining Template gap is chiefly instruction-grounded target
+selection plus accounting/sign reasoning; do not ship an automatic style or candidate-only gate.
 
 **Mismatch census (2026-08-26).** The evaluator's first-error inventory cannot support a
 percentage claim about all wrong cells. `benchmark/mismatch_census.py` now replays official
@@ -646,17 +696,26 @@ ints as spans, floors at 5×3 cm. Axis titles now use `HasX/YAxisTitle` + title 
 stable requested IDs, real chart types and X/Y/size ranges. Remaining hard gaps are
 LO-vs-Excel (combo, multi-level category axes) and static XY label snapshots, not harness wiring.
 
-**Publish:** report **non-visual subset only** (~297 Template+FM+Debugging); **10 held-out
-GLM tasks** (v4+v5) as cost/completion sample — **2/10 official exact**, ~**$0.57** total,
-~**$0.06/task** avg. Do not quote full-bench exact %. Visualization still out of official
-publish until translation matrix + agent canary complete.
+**Publish:** this submit is the **non-visual subset only** (~297 Template+FM+Debugging).
+Visualization is parked for a later optional full-bench pass. Do not include the 24
+viz tasks. Do not quote full-bench exact %. The 10 held-out GLM tasks remain a GLM
+completion sample only — **2/10 official exact**, ~**$0.57** total — not a K2.7 297 claim.
 
-**Next:** K2.7 v1-five is **3/5 workbooks**. Do not start the 15 or the 297. Do not resume GLM.
-K2.7's final Task 95 canary **wrote** (`$0.016033`, 11 calls), isolated inspect passed every
-chart field, and GLM-4.6V scored the PNG **28/28 (100%, ACC=1)**. Task 95 is closed.
-Task 1423401 name_range canary wrote **5/5** charts (`$0.014233`, 7 calls); a column
-polarity fix then produced clustered-column PNGs (`$0.020078`). All five still
-stack at A1. Hold multi-level / 100%-stack / combo. Status:
+**Submission scope (2026-08-26 operator).** Non-visual now; viz later. Operator is
+proceeding past the K2.7 v1-five **3/5** write gate. Next is `kimi-v2-fifteen`
+(`benchmark/slices/kimi-v2-fifteen.json`) then `kimi-nonvisual-all` (297), both via
+`benchmark/run_kimi_frozen.py --skip-existing`. Frozen world unchanged: formula-patterns
+/ formula-anomalies + formula-blocks, `$2` / 12 calls, K2.7 `--reasoning-effort low`.
+Do not resume GLM. Do not raise limits. Do not make Sol the cheap default. Expect a
+no-workbook tail. One frozen command writes inference logs, `output.xlsx` when produced,
+and the official eval pack (`submission/outputs`, `submission/results`,
+`official_scores.json`) after LibreOffice refresh + unmodified `evaluation.py`. That is
+not a second model run. Do not quote exact % until that pack exists.
+
+**Sol overnight trial (2026-08-26 operator).** Same frozen overlays, separate run
+`gpt-5.6-sol-nonvisual-all-medium-1`, model `openai/gpt-5.6-sol`, `--reasoning-effort medium`
+(the 2/2 write path), `$2` / 12 calls, slice `kimi-nonvisual-all` (297). K2.7 remains the
+cheap default; this does not replace it. Resume with `--skip-existing`. Viz ISA remains at
 [`docs/viz-isa-diagnosis.md`](viz-isa-diagnosis.md).
 
 ### High-value paths

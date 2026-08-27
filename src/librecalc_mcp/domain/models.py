@@ -25,6 +25,7 @@ OperationKind = Literal[
     "write_range",
     "set_formula",
     "fill_formula",
+    "set_format",
     "clear_range",
     "create_sheet",
     "insert_row",
@@ -41,6 +42,7 @@ class CalcOperation:
     range: str | None = None
     values: Matrix | None = None
     formula: str | None = None
+    cell_format: CellFormat | None = None
     name: str | None = None
     index: int | None = None
     count: int | None = None
@@ -54,6 +56,7 @@ class CalcOperation:
             range=raw.get("range"),
             values=raw.get("values"),
             formula=raw.get("formula"),
+            cell_format=raw.get("format"),
             name=raw.get("name"),
             index=raw.get("index"),
             count=raw.get("count"),

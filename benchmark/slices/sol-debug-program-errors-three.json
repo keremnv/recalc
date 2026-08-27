@@ -1,0 +1,8 @@
+{
+  "description": "Full-run development Errors tasks testing the existing structural program operations without changing the observation loop.",
+  "tasks": [
+    {"category": "Debugging", "id": "01_03"},
+    {"category": "Debugging", "id": "05_03"},
+    {"category": "Debugging", "id": "08_03"}
+  ]
+}

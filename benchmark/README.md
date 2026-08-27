@@ -111,12 +111,23 @@ benchmark/run_openrouter_slice.py \
   --execution formula-blocks-v1
 ```
 
-Official-score completed runs:
+Inference, output workbooks, and official eval JSON are produced in the same run.
+`run_kimi_frozen.py` and `run_openrouter_slice.py` score automatically after the last
+task: LibreOffice refresh (`evaluation/open_spreadsheet.py`) then unmodified
+`evaluation/evaluation.py`. Missing workbooks stay missing and score 0. The pack lands
+at `benchmark-runs/openrouter/<run-name>/submission/` (`outputs/` + `results/`) plus
+`official_scores.json`. `--no-score` skips that step. Rescore an existing run directory
+without another model pass:
 
 ```bash
 uv run python benchmark/score_openrouter_run.py \
   benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/REPLACE-RUN-NAME
 ```
+
+Full-run Debugging development arms are deliberately separate. `--debug-repair-passes 2`
+allows one bounded output re-inspection without raising the call limit;
+`--debug-execution semantic-program-v1` exposes mixed structural and `set_format` operations.
+Use the corresponding `sol-debug-*.json` slices rather than combining arms in one run.
 
 Results are written below the ignored `benchmark-data/SpreadsheetBench-2/benchmark-runs/` tree.
 Each run has an append-only `ledger.jsonl`. The primary cost field is actual OpenRouter charged

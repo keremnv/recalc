@@ -186,7 +186,9 @@ class ChartSpec:
         )
         anchor_raw = raw.get("anchor", "A1")
         if not isinstance(anchor_raw, str):
-            raise ValueError("chart.anchor must be an A1 cell such as E1")
+            # Benchmark wrappers convert ValueError into a structured, agent-recoverable
+            # observation. A TypeError would leak out as a harness failure instead.
+            raise ValueError("chart.anchor must be an A1 cell such as E1")  # noqa: TRY004
         return cls(
             id=str(raw["id"]),
             sheet=str(raw["sheet"]),
