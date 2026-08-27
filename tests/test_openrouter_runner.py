@@ -196,6 +196,32 @@ def test_default_response_allowance_is_derived_from_remaining_budget() -> None:
     assert "max_tokens" not in kwargs
 
 
+def test_provider_pin_disables_fallbacks_and_requires_request_parameters() -> None:
+    runner = _runner_module()
+    args = type(
+        "Args",
+        (),
+        {
+            "max_tokens": None,
+            "reasoning_effort": "high",
+            "provider_only": ["inceptron"],
+        },
+    )()
+    model = {
+        "supported_parameters": ["tools", "reasoning"],
+        "safety_prompt_price_per_token": 0.000001,
+        "safety_completion_price_per_token": 0.000002,
+    }
+
+    kwargs = runner._completion_kwargs(args, model)
+
+    assert kwargs["provider"] == {
+        "only": ["inceptron"],
+        "allow_fallbacks": False,
+        "require_parameters": True,
+    }
+
+
 def test_provider_billing_is_not_inflated_by_harness_safety_prices() -> None:
     runner = _runner_module()
 

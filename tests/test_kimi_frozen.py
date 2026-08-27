@@ -106,6 +106,37 @@ def test_frozen_forwards_reasoning_effort(monkeypatch: pytest.MonkeyPatch, tmp_p
     assert all("--model" in command and "openai/gpt-5.6-sol" in command for command in commands)
 
 
+def test_frozen_forwards_provider_pin(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> None:
+    frozen = _module()
+    slice_path = _write_slice(tmp_path / "slice.json")
+    commands: list[list[str]] = []
+    monkeypatch.setattr(
+        frozen.subprocess,
+        "call",
+        lambda command, cwd=None: commands.append([str(part) for part in command]) or 0,
+    )
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "run_kimi_frozen.py",
+            "--slice",
+            str(slice_path),
+            "--run-name",
+            "kimi-pack",
+            "--provider-only",
+            "inceptron",
+            "--no-score",
+        ],
+    )
+
+    assert frozen.main() == 0
+    assert commands
+    assert all(
+        command[command.index("--provider-only") + 1] == "inceptron" for command in commands
+    )
+
+
 def test_frozen_no_score_skips_official_pack(
     monkeypatch: pytest.MonkeyPatch, tmp_path: Path
 ) -> None:

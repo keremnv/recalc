@@ -91,6 +91,14 @@ def _arguments() -> argparse.Namespace:
     )
     parser.add_argument("--reasoning-effort", choices=REASONING_EFFORTS)
     parser.add_argument(
+        "--provider-only",
+        action="append",
+        help=(
+            "Restrict OpenRouter to this provider slug; repeat to allow more than one. "
+            "Disables provider fallback and requires support for every request parameter."
+        ),
+    )
+    parser.add_argument(
         "--execution-timeout",
         type=int,
         default=180,
@@ -268,6 +276,13 @@ def _completion_kwargs(args: argparse.Namespace, model: dict[str, Any]) -> dict[
         kwargs["parallel_tool_calls"] = False
     if args.reasoning_effort:
         kwargs["reasoning"] = {"effort": args.reasoning_effort}
+    provider_only = getattr(args, "provider_only", None)
+    if provider_only:
+        kwargs["provider"] = {
+            "only": provider_only,
+            "allow_fallbacks": False,
+            "require_parameters": True,
+        }
     return kwargs
 
 
@@ -944,6 +959,7 @@ def _run_task(
         "category": category,
         "task_id": task_id,
         "provider": "openrouter",
+        "provider_only": getattr(args, "provider_only", None),
         "harness": "swe-agent-1.1.0",
         "model": args.model,
         "observation_variant": args.observation,

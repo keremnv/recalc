@@ -42,6 +42,14 @@ def _arguments() -> argparse.Namespace:
         default="low",
         help="Forwarded to the OpenRouter runner. K2.7 stays low; Sol's measured write path used medium.",
     )
+    parser.add_argument(
+        "--provider-only",
+        action="append",
+        help=(
+            "Restrict OpenRouter to this provider slug; repeat to allow more than one. "
+            "Diagnostic control only; disables provider fallbacks."
+        ),
+    )
     parser.add_argument("--skip-existing", action="store_true")
     parser.add_argument(
         "--debug-execution",
@@ -165,6 +173,8 @@ def _run_group(
         command.append("--preserve-populated")
     if args.skip_existing:
         command.append("--skip-existing")
+    for provider in args.provider_only or []:
+        command.extend(["--provider-only", provider])
     command.append("--no-score")
     for label in labels:
         command.extend(["--task", label])

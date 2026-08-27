@@ -25,16 +25,37 @@ category range explicitly through Chart2. Isolated LibreOffice 7.0 replay on the
 series, category range `C1:F1`, all four requested colors, and no `series[3]` drop. This fixes the
 flat four-series representation; it does not claim native Excel multi-level category axes.
 
-**Next compiler-threshold measurement (prepared, not yet run).** Use K2.7 high, `$2` / 12 calls,
-no fixed `--max-tokens`. Non-visual diagnostic slice
+**K2.7 high diagnostic is paused after two tasks; do not run the other two yet.** Use K2.7 high,
+`$2` / 12 calls, no fixed `--max-tokens`. Non-visual diagnostic slice
 `benchmark/slices/kimi-k27-high-diagnostic-four.json` contains K2.7-unseen structural Debugging
 `02_03`, near-exact Debugging `01_05`, Template collateral-write `05_01`, and FM one-cell miss
 `01_02`. Run Debugging with `semantic-program-v1`; `--debug-repair-passes 2` is a diagnostic
 allowance, not a promoted default. Visualization slice
 `benchmark/slices/kimi-k27-high-viz-row-series-one.json` replays `Task 1417365` after the backend
 fix. Classify each failure by whether the instruction-relevant evidence and required operation were
-available before calling it model intelligence. `OPENROUTER_API_KEY` is currently absent from the
-environment; never place it in a file or command history.
+available before calling it model intelligence. The runner loads the ignored local `.env`; never
+print, commit, or copy its `OPENROUTER_API_KEY` into a command.
+
+Run `kimi-k2.7-high-diagnostic-four-1` currently contains two failed tasks costing **$0.178** total:
+
+- `Debugging:02_03`: no workbook after the 1,200-second timeout. Inspect explicitly exposed DCF
+  `deleted_row_geometry` with `insert_row_index=11`, and the prompt said a matching candidate is
+  already enough evidence to call `insert_row`. K2.7 instead spent its read allowance, wrote five
+  piecemeal formulas, and never called `insert_row`. It received 21,397 reasoning tokens, primarily
+  through Ambient. This is strong evidence of a compiler planning failure, with timeout as an
+  artifact-production confound.
+- `Financial_Model:01_02`: no workbook, 12 calls, $0.054. It made ten repeated range reads, including
+  the same ranges after explicit 96-cell-limit errors, and made zero writes. This trajectory is a
+  provider-routing confound: call 1 used Inceptron (13 reasoning tokens), calls 2-12 used Together
+  (zero reasoning tokens on every call), despite `--reasoning-effort high`.
+
+OpenRouter's aggregate model record is insufficient for high-reasoning attribution. Every current
+K2.7 endpoint advertises `reasoning`, `tools`, and `tool_choice`, but default routing changed provider
+within one trajectory. `run_openrouter_slice.py` and `run_kimi_frozen.py` therefore accept repeatable
+`--provider-only`; it sends `provider.only`, disables fallback, and sets `require_parameters=true`.
+This is opt-in and has not triggered another paid run. If one final A/B is authorized, repeat only
+`Financial_Model:01_02` through the official Moonshot provider (`--provider-only moonshotai`) before
+classifying that failure as a clean K2.7 intelligence result. Do not broad-run the diagnostic slice.
 
 **Full non-visual result now exists (2026-08-27).** The isolated Sol run
 `gpt-5.6-sol-nonvisual-all-medium-1` produced **297/297 workbooks** and scored
