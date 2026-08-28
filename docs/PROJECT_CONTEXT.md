@@ -33,9 +33,10 @@ That wall is now the non-visual cheap compiler, not viz ISA:
 - **FM `01_02` high / Moonshot:** K2.7 compiled every instruction-named formula (reg 1.0 /
   mod 0.9956). After date+style inspect listed `Working Capital Schedule!M3` /
   `=EOMONTH(L3,12)` on the compact first inspect, K2.7 still left M3 blank
-  (`kimi-k2.7-high-moonshot-fm-01_02-boundary-1`, **$0.089**, exact **0/1**).
-  Compiler targeting of a heuristic, not missing observation. Do not iterate
-  the signal; do not run `01_03`.
+  (`kimi-k2.7-high-moonshot-fm-01_02-boundary-1` and `-boundary-2`, both **$0.089**,
+  exact **0/1**). Date-run fill wording did not change the write: six blocks on
+  Debt / WACC / DCF only. Compiler targeting of a heuristic, not missing
+  observation. Do not iterate the signal; do not run `01_03`.
 - **Debugging `02_03` high:** inspect listed `insert_row_index=11`; K2.7 never inserted.
   Compiler planning. Timeout is an artifact confound.
 - **Colour `04_04`–`06_04`:** persist/compare/reads work; **0/3 exact** is targeting.
@@ -165,13 +166,43 @@ viz exactness.
 Parked: Sol, K2.5, iterate-five, format-conventions as 297 default, `08_03`/`01_03`,
 colour `03_04`, K2.7 297, fake Excel combo, generic blank ranking, the 97 Template
 slice. Preserve-populated UNO `int(cell.Type)` Enum crash is **fixed**, unremeasured.
+Offline look at the eight Sol Template perfect-mod overfills (35 mismatch cells):
+**34/35 are input-blank fills the gold keeps empty**; the guard cannot skip them.
+The one populated overwrite is `06_08` `WorkingCapital_Forecast!B17` (footnote
+replaced with `="Accounts Payable"`). `05_01` C23/C29 and `06_24` G11:G17 are
+blank extras. Do not remasure `06_24` for exactness; the Enum unit test already
+covers the crash. Do not spend the 97.
 
 **K2.7 write-commit experiment (2026-08-27).** Gold-blind. Not the 297 default.
 `--compute-read-budget` on formula-patterns (two inspects + one neighborhood read).
-Oversized dumps no longer spend the Debugging read slot; they set `write_now` so the
-next read is blocked. Date-run `boundary_continuations` are included in the same fill
-unless the instruction excludes them. Slice
-`benchmark/slices/kimi-k27-commit-write-four.json`. Do not encode cells.
+Oversized dumps no longer spend the read slot; they set `write_now` so the next read
+is blocked. Date-run `boundary_continuations` are included in the same fill unless
+the instruction excludes them. Measured:
+
+| task | workbook | cost | note |
+|---|---|---:|---|
+| Template `05_01` | no | $0.062 | inspect → oversize dump → write_now → format-exit |
+| Template `03_02` | no | $0.061 | same |
+| FM `04_01` | no | $0.155 | reasoned about fill; never called `calc_fill_formulas` |
+| Debugging `05_03` | yes | $0.147 | insert_row then formulas; exact 0, reg 1.0, mod 0.127 |
+
+Gate stopped the dump spiral. It did not produce a Template/FM write. FM `01_02`
+`-boundary-2` (no compute-read-budget) isolated the date-run wording: M3 still
+blank. Do not encode cells. Do not promote `--compute-read-budget` to the 297
+default. World along this line is closed; remaining misses are compiler.
+
+**ISA freeze on this miss class (2026-08-28).** Do not add inspect fields, fill
+wording, write-now gates, or preserve-populated as a 297 default to chase exact.
+K2.7 already sees the cell/op and still instruction-names the write, format-exits,
+or fills gold-blank extras. Next Acc move is a **different compiler** on the
+existing wall tasks (same frozen world), not more LibreCalc primitives. Named
+parked candidate is Grok 4.6. Do not start it until asked. Do not use Sol. Do not
+rerun K2.5. Do not run K2.7 297. Discriminators if a probe is asked: FM `01_02`
+(M3 listed, still blank), Template `05_01` (never-write / C23 extra), Template
+`06_24` (G11:G17 extras), Debugging `02_03`/`05_03` (inspect listed `insert_row`).
+Success is a write where K2.7 format-exited, or a fill of an unlabeled
+continuation / skip of an unlabeled blank — not another 0/1 on M3 after more
+prompt.
 
 **Full non-visual result now exists (2026-08-27).** The isolated Sol run
 `gpt-5.6-sol-nonvisual-all-medium-1` produced **297/297 workbooks** and scored
