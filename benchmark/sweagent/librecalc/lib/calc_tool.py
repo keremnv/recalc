@@ -66,6 +66,23 @@ def _read_budget():
     return read_budget
 
 
+def _commit_gate():
+    """Sibling module in this bundle: the gate is an instrument, not a primitive."""
+    if str(pathlib.Path(__file__).parent) not in sys.path:
+        sys.path.insert(0, str(pathlib.Path(__file__).parent))
+    import commit_gate
+
+    return commit_gate
+
+
+def _commit_checks():
+    _ensure_product_on_path()
+
+    from librecalc_mcp.domain import commit_checks
+
+    return commit_checks
+
+
 def _emit(value: Any) -> None:
     print(json.dumps(value, ensure_ascii=False, separators=(",", ":")))
 
@@ -205,6 +222,21 @@ def main(argv: list[str]) -> int:
             )
         )
         return 0
+
+    if command == "commit_report" and not args:
+        gate = _commit_gate()
+        if not gate.commit_gate_enabled() or gate.already_reported():
+            return 0
+        try:
+            result = gate.evaluate(backend, _commit_checks())
+        except Exception as error:  # noqa: BLE001 - a gate must never block a submission
+            _emit({"ok": True, "reason": f"commit checks unavailable: {error}"})
+            return 0
+        if result.get("ok"):
+            return 0
+        gate.mark_reported()
+        _emit(result)
+        return 1
 
     if command == "compare" and len(args) == 2:
         before_path, after_path = args

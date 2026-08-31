@@ -82,6 +82,14 @@ def _arguments() -> argparse.Namespace:
         ),
     )
     parser.add_argument(
+        "--commit-gate",
+        action="store_true",
+        help=(
+            "Two-phase submit carrying the checks that cleared the offline gate. "
+            "Forwarded to Debugging only; never the 297 default."
+        ),
+    )
+    parser.add_argument(
         "--compute-read-budget",
         action="store_true",
         help=(
@@ -177,6 +185,10 @@ def _run_group(
     ]
     if debugging:
         command.append("--read-budget")
+        # The three checks that cleared the offline gate were all measured on Debugging
+        # output, and broken_check_cell is worthless outside repair tasks.
+        if args.commit_gate:
+            command.append("--commit-gate")
     else:
         if args.preserve_populated:
             command.append("--preserve-populated")

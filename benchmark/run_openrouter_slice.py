@@ -91,6 +91,14 @@ def _arguments() -> argparse.Namespace:
     )
     parser.add_argument("--reasoning-effort", choices=REASONING_EFFORTS)
     parser.add_argument(
+        "--commit-gate",
+        action="store_true",
+        help=(
+            "Two-phase submit: the first submit returns world-computed findings and does not "
+            "finalise. Measuring instrument; not the 297 default."
+        ),
+    )
+    parser.add_argument(
         "--provider-only",
         action="append",
         help=(
@@ -481,6 +489,7 @@ def _stage_tool_policy(
     observation: str = "grid-v1",
     repair_passes: int = 1,
     compute_read_budget: bool = False,
+    commit_gate: bool = False,
 ) -> Path:
     config = yaml.safe_load(source_config.read_text(encoding="utf-8"))
     if execution_timeout is not None:
@@ -497,7 +506,7 @@ def _stage_tool_policy(
         "formula-blocks-v1",
         "cell-writes-v1",
     }
-    if strips_tools:
+    if strips_tools or commit_gate:
         bundle_source = Path(bundle_configs[0]["path"])
         # Bundle upload paths are derived from the directory basename. Keep the stable runtime
         # name expected by LIBRECALC_TOOL_ROOT and the bundle's install script.
@@ -540,8 +549,30 @@ def _stage_tool_policy(
                 removed = tool_config["tools"].pop(tool_name, None)
                 if removed is None:
                     raise RuntimeError(f"Cell-write policy expected a {tool_name} tool")
+        if commit_gate:
+            # Shadow SWE-agent's submit. Its bundle is dropped below so only this one is
+            # registered; otherwise the agent keeps an ungated path to finalising.
+            tool_config["tools"]["submit"] = {
+                "signature": "submit",
+                "docstring": (
+                    "Submit the output workbook. The first submit returns a report of facts "
+                    "about your output that the input did not have; fix them or submit again "
+                    "to finalise."
+                ),
+                "arguments": [],
+            }
         tool_config_path.write_text(yaml.safe_dump(tool_config, sort_keys=False), encoding="utf-8")
         bundle_configs[0]["path"] = str(staged_bundle)
+
+    if commit_gate:
+        remaining = [
+            bundle_config
+            for bundle_config in bundle_configs
+            if Path(bundle_config["path"]).name != "submit"
+        ]
+        if len(remaining) == len(bundle_configs):
+            raise RuntimeError("Commit gate expected SWE-agent's submit bundle to be present")
+        config["agent"]["tools"]["bundles"] = remaining
 
     if read_policy == "overview-only":
         old_read_guidance = """2. Do not reread a whole used range. Use calc_read for one focused region or calc_read_ranges
@@ -787,6 +818,18 @@ def _stage_tool_policy(
             + "\nAfter inspect, at most one neighborhood read, then write. "
             "If a read is rejected as too large, write from inspect; do not dump or bash.\n"
         )
+    if commit_gate:
+        # Last, so the earlier read-policy and execution rewrites cannot clobber it.
+        config["agent"]["templates"]["instance_template"] = config["agent"]["templates"][
+            "instance_template"
+        ].rstrip() + (
+            "\n\nWhen you submit, the world reports facts about your output that the input did "
+            "not have: cells that now hold a formula error, cells that break a formula run the "
+            "input carried across a row, and the workbook's own check cells that no longer "
+            "balance. Read that report and repair what is wrong. Submitting again is final, so "
+            "submit unchanged only if every finding is acceptable."
+        )
+
     staged_config = temporary_root / f"spreadsheet-{read_policy}-{execution}.yaml"
     staged_config.write_text(yaml.safe_dump(config, sort_keys=False), encoding="utf-8")
     return staged_config
@@ -942,6 +985,7 @@ def _run_task(
             observation=args.observation,
             repair_passes=args.repair_passes,
             compute_read_budget=bool(getattr(args, "compute_read_budget", False)),
+            commit_gate=bool(getattr(args, "commit_gate", False)),
         )
         sweagent_overlay = _stage_sweagent_overlay(args.sweagent_root, temporary_root)
         dataset_root = _stage_task(
@@ -957,6 +1001,16 @@ def _run_task(
             "LIBRECALC_TOOL_ROOT": "/root/tools/librecalc",
             "LIBRECALC_OBSERVATION_VARIANT": args.observation,
             "LIBRECALC_BLANK_BRIDGES": "1" if args.blank_bridges else "0",
+            **(
+                {
+                    "LIBRECALC_COMMIT_GATE_ENABLED": "1",
+                    "LIBRECALC_COMMIT_GATE_PATH": (
+                        "/mnt/spreadsheet_output/.librecalc_commit_gate.json"
+                    ),
+                }
+                if getattr(args, "commit_gate", False)
+                else {}
+            ),
             # Arm A has no semantic inspect, so the semantic lane's 96-cell read
             # invariant would handicap it rather than measure it.
             **({"LIBRECALC_READ_MAX_CELLS": "none"} if args.read_policy == "thin" else {}),

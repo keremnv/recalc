@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+tool_root=${LIBRECALC_TOOL_ROOT:-/opt/librecalc-tools/librecalc}
+if python3 "$tool_root/lib/calc_tool.py" commit_report; then
+    echo "<<SWE_AGENT_SUBMISSION>>"
+fi

@@ -29,6 +29,7 @@ from .grid import (
     column_label,
     column_number,
     is_formula,
+    matrix_value,
     spreadsheet_error_kind,
 )
 
@@ -52,6 +53,39 @@ class CommitFinding:
             "address": self.address,
             "detail": self.detail,
         }
+
+
+def cell_map_from_reads(reads: list[tuple[str, str, dict[str, Any]]]) -> CellMap:
+    """Build a cell map from backend range reads.
+
+    `reads` is (sheet, cell_range, result) where result carries the "values", "formulas" and
+    "errors" matrices the backend returns. Both workbooks in a commit check are read this way,
+    through the same engine, so no representation difference between an Excel-authored file and
+    a saved one can register as a change -- the trap that dominates offline replay.
+    """
+    cells: CellMap = {}
+    for sheet, cell_range, result in reads:
+        match = A1_RANGE.fullmatch(cell_range.strip().upper())
+        if match is None:
+            continue
+        first_column = column_number(match.group(1))
+        first_row = int(match.group(2))
+        values = result.get("values") or []
+        formulas = result.get("formulas") or []
+        errors = result.get("errors") or []
+        for row_index, row in enumerate(values):
+            for column_index, value in enumerate(row):
+                formula = matrix_value(formulas, row_index, column_index)
+                error = matrix_value(errors, row_index, column_index)
+                if error:
+                    value = str(error)
+                if formula in ("", None) and (
+                    value is None or (isinstance(value, str) and not value.strip())
+                ):
+                    continue
+                address = f"{column_label(first_column + column_index)}{first_row + row_index}"
+                cells[(sheet, address)] = (value, formula or None)
+    return cells
 
 
 def expand_range(sheet: str, cell_range: str) -> set[tuple[str, str]]:

@@ -697,3 +697,58 @@ def test_sweagent_model_patches_apply_to_the_vendored_source() -> None:
     ast.parse(patched)
     assert "(no content returned)" in patched
     assert "litellm.exceptions.BadRequestError," in patched
+
+
+def test_commit_gate_shadows_submit_and_drops_the_builtin_bundle(tmp_path) -> None:
+    runner = _runner_module()
+    root = Path(__file__).parents[1]
+    source_config = root / "benchmark/sweagent/spreadsheet.yaml"
+    sweagent_root = root / "benchmark-data/SpreadsheetBench-2/SWE-agent"
+    if not source_config.is_file() or not sweagent_root.is_dir():
+        pytest.skip("benchmark checkout is not present")
+
+    staged = runner._stage_tool_policy(
+        source_config=source_config,
+        sweagent_root=sweagent_root,
+        temporary_root=tmp_path,
+        read_policy="progressive",
+        execution="semantic-program-v1",
+        observation="formula-anomalies-v1",
+        commit_gate=True,
+    )
+    config = yaml.safe_load(staged.read_text(encoding="utf-8"))
+
+    bundle_names = [Path(bundle["path"]).name for bundle in config["agent"]["tools"]["bundles"]]
+    assert "submit" not in bundle_names, "SWE-agent's ungated submit must not remain registered"
+    assert "librecalc" in bundle_names
+
+    librecalc = next(
+        Path(bundle["path"])
+        for bundle in config["agent"]["tools"]["bundles"]
+        if Path(bundle["path"]).name == "librecalc"
+    )
+    tools = yaml.safe_load((librecalc / "config.yaml").read_text(encoding="utf-8"))["tools"]
+    assert "submit" in tools
+    assert (librecalc / "bin" / "submit").is_file()
+    assert "report" in config["agent"]["templates"]["instance_template"]
+
+
+def test_commit_gate_off_leaves_the_builtin_submit_alone(tmp_path) -> None:
+    runner = _runner_module()
+    root = Path(__file__).parents[1]
+    source_config = root / "benchmark/sweagent/spreadsheet.yaml"
+    sweagent_root = root / "benchmark-data/SpreadsheetBench-2/SWE-agent"
+    if not source_config.is_file() or not sweagent_root.is_dir():
+        pytest.skip("benchmark checkout is not present")
+
+    staged = runner._stage_tool_policy(
+        source_config=source_config,
+        sweagent_root=sweagent_root,
+        temporary_root=tmp_path,
+        read_policy="progressive",
+        execution="semantic-program-v1",
+        observation="formula-anomalies-v1",
+    )
+    config = yaml.safe_load(staged.read_text(encoding="utf-8"))
+
+    assert "submit" in [Path(b["path"]).name for b in config["agent"]["tools"]["bundles"]]
