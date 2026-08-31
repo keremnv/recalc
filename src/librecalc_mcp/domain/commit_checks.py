@@ -22,6 +22,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any
 
+from .formulas import formula_a1_references, formula_a1_shape
 from .grid import (
     A1_RANGE,
     SPREADSHEET_ERROR_TOKEN,
@@ -298,15 +299,17 @@ def _looks_like_tie_out(formula: Any) -> bool:
 def broken_check_cells(before: CellMap, after: CellMap) -> list[CommitFinding]:
     """Author-built tie-outs that passed in the input and fail in the output.
 
-    MEASURED AND REJECTED (2026-08-31). The reference is sound -- the workbook's own redundancy
-    is not authored by the agent -- but it cannot be isolated without the golden. In a template
-    or forecast workbook most near-zero cells mean "not computed yet", and filling the model
-    *correctly* turns them non-zero, so the check flags right answers: 0.2% precision over 40
-    Template/Financial Model outputs. Narrowing to identity-shaped formulas cut volume 4x and
-    precision did not move (0.3% -> 0.2%), i.e. it removed signal and noise together. On
-    Debugging, where the workbook is already complete, the narrowed form finds **nothing**.
+    SCOPED TO REPAIR TASKS (2026-08-31). Rejected on completion tasks and re-admitted on repair:
 
-    Retained as the record of a rejected idea. Do not ship it.
+    - Template / Financial Model: **0.2%** precision over 40 outputs. In a workbook being filled
+      in, most near-zero cells mean "not computed yet" and a correct answer turns them non-zero,
+      so the check flags right answers. Narrowing to identity-shaped formulas cut volume 4x while
+      precision fell 0.3% -> 0.2%, removing signal and noise together.
+    - Debugging, frontier output (Sol): **0 findings**.
+    - Debugging, cheap output (K2.7, 17 outputs): **145 findings at 100%**.
+
+    So it is worthless where the task is to complete a workbook, silent where the model repairs
+    one competently, and exact where a weak model damages one. Ship it for Debugging only.
     """
     findings: list[CommitFinding] = []
     for key, (before_value, before_formula) in sorted(before.items()):
@@ -336,6 +339,113 @@ def broken_check_cells(before: CellMap, after: CellMap) -> list[CommitFinding]:
                 ),
             )
         )
+    return findings
+
+
+def referential_integrity(before: CellMap, after: CellMap) -> list[CommitFinding]:
+    """Formulas that now reference a cell which used to hold something and no longer does.
+
+    This is the cascade mechanism itself, caught at its source rather than at the thousands of
+    cells downstream of it. Independent of intent: the reference is read out of the formula the
+    output actually contains, and whether its target is empty is a fact about the two workbooks.
+    Only single-cell references are followed, so a formula over a wide range cannot flood.
+
+    MEASURED AND REJECTED (2026-08-31): **0 findings** on both Sol and K2.7 Debugging output. The
+    cascade in this dataset does not run through emptied cells; it runs through a formula that
+    still sums an now-empty block and therefore evaluates to zero (`=+SUM(D35:D40)` -> 0, so
+    `=+D51/D41` -> #DIV/0!). Widening the check to "referenced cell now evaluates to zero" would
+    match every legitimate zero, which is what killed `broken_check_cells` on completion tasks.
+    The downstream error is already caught by `new_formula_errors`. Do not revive this.
+    """
+    findings: list[CommitFinding] = []
+    for (sheet, address), (_, formula) in sorted(after.items()):
+        if not is_formula(formula):
+            continue
+        for reference_sheet, start, end in formula_a1_references(formula):
+            if end is not None:
+                continue
+            target_sheet = reference_sheet or sheet
+            target = (target_sheet, start.replace("$", ""))
+            if not _is_blank(after.get(target)) or _is_blank(before.get(target)):
+                continue
+            findings.append(
+                CommitFinding(
+                    check="referential_integrity",
+                    sheet=sheet,
+                    address=address,
+                    detail=(
+                        f"references {target_sheet}!{target[1]}, which held a value in the "
+                        f"input and is empty in your output"
+                    ),
+                )
+            )
+    return findings
+
+
+def _row_runs(cells: CellMap) -> dict[tuple[str, int], list[tuple[int, str]]]:
+    """Group formula cells by sheet and row, as (column number, shape) sorted left to right."""
+    rows: dict[tuple[str, int], list[tuple[int, str]]] = {}
+    for (sheet, address), (_, formula) in cells.items():
+        if not is_formula(formula):
+            continue
+        match = A1_RANGE.fullmatch(address.upper())
+        if match is None:
+            continue
+        column, row = match.group(1), int(match.group(2))
+        try:
+            shape = formula_a1_shape(formula)
+        except (ValueError, IndexError):
+            continue
+        rows.setdefault((sheet, row), []).append((column_number(column), shape))
+    for entries in rows.values():
+        entries.sort()
+    return rows
+
+
+def uniformity_breaks(
+    before: CellMap,
+    after: CellMap,
+    minimum_run: int = 3,
+) -> list[CommitFinding]:
+    """Cells that broke a uniform horizontal formula run the input already had.
+
+    A row of a financial model is normally one formula translated across periods. Where the input
+    carried such a run and the output no longer does, the agent has singled out one period. The
+    run is evidence the author created, not something the agent declared, and the shape
+    comparison is translation-aware so a correct fill does not register.
+    """
+    findings: list[CommitFinding] = []
+    after_rows = _row_runs(after)
+    for (sheet, row), entries in sorted(_row_runs(before).items()):
+        after_shapes = dict(after_rows.get((sheet, row), []))
+        index = 0
+        while index < len(entries):
+            shape = entries[index][1]
+            end = index
+            while (
+                end + 1 < len(entries)
+                and entries[end + 1][1] == shape
+                and entries[end + 1][0] == entries[end][0] + 1
+            ):
+                end += 1
+            if end - index + 1 >= minimum_run:
+                for column, _ in entries[index : end + 1]:
+                    after_shape = after_shapes.get(column)
+                    if after_shape is None or after_shape == shape:
+                        continue
+                    findings.append(
+                        CommitFinding(
+                            check="uniformity_break",
+                            sheet=sheet,
+                            address=f"{column_label(column)}{row}",
+                            detail=(
+                                f"the input carried one formula across "
+                                f"{end - index + 1} columns of this row; your output differs "
+                                f"here alone"
+                            ),
+                        )
+                    )
+            index = end + 1
     return findings
 
 

@@ -33,7 +33,9 @@ from librecalc_mcp.domain.commit_checks import (
     declared_targets,
     expand_range,
     new_formula_errors,
+    referential_integrity,
     unextended_continuations,
+    uniformity_breaks,
     unrequested_writes,
 )
 
@@ -183,6 +185,14 @@ def _score(
                 tally[f"{finding.check}:unscorable"] += 1
                 continue
             correct = error_kind(golden_content) is None
+        elif finding.check == "referential_integrity":
+            # Correct when the golden puts something in the reference target the output emptied.
+            target = finding.detail.split("references ", 1)[1].split(",", 1)[0]
+            target_sheet, _, target_address = target.rpartition("!")
+            correct = golden.get((target_sheet, target_address), (None, None))[0] is not None
+        elif finding.check == "uniformity_break":
+            # Correct when the golden keeps the run uniform, i.e. it did not single this cell out.
+            correct = golden.get(key, (None, None))[1] is not None
         else:
             correct = False
         tally[f"{finding.check}:{'true_positive' if correct else 'false_positive'}"] += 1
@@ -235,6 +245,8 @@ def main() -> int:
                 + new_formula_errors(before, after)
                 + broken_check_cells(before, after)
                 + unextended_continuations(after, candidates)
+                + referential_integrity(before, after)
+                + uniformity_breaks(before, after)
             )
             analysed += 1
             tally["tasks"] += 1
@@ -261,6 +273,8 @@ def main() -> int:
         "new_formula_error",
         "broken_check_cell",
         "unextended_continuation",
+        "referential_integrity",
+        "uniformity_break",
     ):
         total = tally[check]
         true_positive = tally[f"{check}:true_positive"]

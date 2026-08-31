@@ -135,6 +135,34 @@ vacuously true. Re-scored treating a golden formula with an absent cache as unsc
 **unscorable 0, precision unchanged at 91.8%** — the goldens do carry caches at the flagged
 addresses. The number is honest.
 
+**Full check measurement, including cheap-model output (2026-08-31).** Precision scored per
+check against the golden; candidate generation gold-blind. K2.7 column is 17 Debugging outputs
+across 12 stored runs; Sol columns are 40 Template/FM outputs and 20 Debugging outputs.
+
+| check | Template+FM (Sol) | Debugging (Sol) | Debugging (K2.7) | verdict |
+|---|---|---|---|---|
+| `new_formula_error` | 3,602 @ 60.1% | 650 @ **91.8%** | 310 @ **99.0%** | **ship** |
+| `uniformity_break` | — | 208 @ **76.0%** | 75 @ **97.3%** | **ship** |
+| `broken_check_cell` | 4,686 @ 0.2% | 0 findings | 145 @ **100%** | ship, Debugging only |
+| `unextended_continuation` | 2 @ 100% | 0 findings | 0 findings | ship; narrow by design |
+| `unrequested_write` | 7,516 @ 0.0% | 1,182 @ 0.0% | 13,718 @ 0.1% | rejected |
+| `referential_integrity` | — | 0 findings | 0 findings | rejected |
+
+**Every surviving check is stronger on cheap-model output than on frontier output** (99.0 vs
+91.8, 97.3 vs 76.0, and `broken_check_cell` goes from silent to 145 findings at 100%). A weak
+model damages a workbook more crudely and more often, so the world-side signal is cleaner. The
+verification loop is therefore worth most exactly where the model is weakest, which is the
+project's primary goal.
+
+`referential_integrity` is rejected: the cascade here does not run through emptied cells but
+through a formula that still sums a now-empty block and evaluates to zero, so the downstream
+error is already caught by `new_formula_error`. Widening it to "reference now evaluates to zero"
+would match every legitimate zero -- the failure that killed `broken_check_cell` on completion
+tasks. Do not revive it.
+
+`broken_check_cell` is re-admitted, scoped: worthless on completion tasks, silent on competent
+repair, exact on damaged repair. Ship for Debugging only.
+
 **Next move is the commit-time verification redesign, not another compiler.** Two-phase `submit`:
 the first call returns a gold-blind report and does not finalise. Checks, each mapped to a measured
 failure class: cells changed outside the agent's own declared write targets (22.9% over-edit;

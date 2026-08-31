@@ -102,3 +102,39 @@ def test_broken_check_cell_flags_a_tie_out_the_agent_left_alone() -> None:
     findings = broken_check_cells(before, after)
 
     assert [f.address for f in findings] == ["D9"]
+
+
+def test_uniformity_break_flags_a_cell_singled_out_of_a_uniform_run() -> None:
+    from librecalc_mcp.domain.commit_checks import uniformity_breaks
+
+    before = {
+        ("S", "B2"): (1, "=A2*2"),
+        ("S", "C2"): (2, "=B2*2"),
+        ("S", "D2"): (4, "=C2*2"),
+    }
+    # The agent replaced the last period with a constant.
+    after = {**before, ("S", "D2"): (9, "=999")}
+
+    findings = uniformity_breaks(before, after)
+
+    assert [f.address for f in findings] == ["D2"]
+    # A run shorter than the minimum is not evidence of anything.
+    assert uniformity_breaks({k: before[k] for k in [("S", "B2"), ("S", "C2")]}, after) == []
+    # A correctly translated fill keeps the shape and does not register.
+    assert uniformity_breaks(before, {**before, ("S", "D2"): (4, "=C2*2")}) == []
+
+
+def test_referential_integrity_follows_only_single_cell_references() -> None:
+    from librecalc_mcp.domain.commit_checks import referential_integrity
+
+    before = {("S", "A5"): (7, None), ("S", "A6"): (7, None)}
+    after = {
+        ("S", "E2"): (0, "=A5"),  # target emptied -> reported
+        ("S", "E3"): (0, "=SUM(A5:A6)"),  # range reference -> not followed
+        ("S", "A5"): (None, None),
+        ("S", "A6"): (None, None),
+    }
+
+    findings = referential_integrity(before, after)
+
+    assert [f.address for f in findings] == ["E2"]
