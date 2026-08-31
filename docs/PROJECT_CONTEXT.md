@@ -359,6 +359,53 @@ matters more than the budget. Do not start it while the interface is moving: `re
 and the commit gate both landed today, and a 297 on a shifting interface is not attributable.
 Freeze first, then run.
 
+**Archive sweep quantifies the overfill class (2026-08-31).** `benchmark/run_report.py` joins
+ledger, scores, trajectory and workbook into one row per task and derives a failure mode. Applied
+to the Sol 297:
+
+| | value |
+|---|---|
+| exact | **59/297** (19.9%) |
+| usable (reg and mod both >= 0.99) | **81/297** (27.3%) |
+| **regression-first** (first error is a cell that should not have been touched) | **99/297 (33.3%)** |
+| of those, modification >= 0.99 -- correct work blocked only by an overfill | **11** |
+
+**A third of the whole benchmark fails first on an overfill**, and 11 tasks are otherwise
+complete. Removing just those would take Sol from **59 to 70 exact (+3.7 points)**, which is a
+larger single move than anything else currently on the board. Eight of the eleven are Template.
+
+    Debugging:01_05        reg 1.0000 mod 0.9931   Ex 6 - Amdocs Historical M&A!J19
+    Financial_Model:02_02  reg 1.0000 mod 0.9991   IS,BS,CF!F95
+    Financial_Model:09_05  reg 1.0000 mod 0.9922   Ratio_Analysis!F37
+    Template:16_07         reg 0.9961 mod 1.0000   ValuationModel!C42
+    Template:13_06         reg 0.9953 mod 1.0000   FinancialNormalization!J42
+    Template:16_11         reg 0.9943 mod 1.0000   DCF!D36
+    Template:05_01         reg 0.9942 mod 1.0000   DeferredTax!C23
+    Template:06_08         reg 0.9921 mod 1.0000   WorkingCapital_Forecast!B17
+    Template:10_01         reg 0.9844 mod 1.0000   EPS_Accretion!D39
+    Template:06_19         reg 0.9739 mod 1.0000   IncomeStatement!G29
+    Template:06_24         reg 0.9322 mod 1.0000   RevenueBuild!G11
+
+`Template:06_24` is modification **1.0000** for Sol and misses on `G11` -- the same address GLM
+5.3 Flash overfills. Model independence now confirmed at scale, not just across three probes.
+
+Debugging is **56 modification-first / 44 regression-first, zero exact**: nearly half of that
+category's failures are also over-editing, which was not visible before this join.
+
+**Trajectory shape is now measured, not asserted.** 234 of 297 Sol trajectories are one of three
+shapes, all `inspect -> read -> fill -> compare -> submit` in 5-7 steps. The 94/100 figure quoted
+earlier in this document was derived by hand; `run_report.py` reproduces it in one command.
+
+**Metric policy fixed in code, in advance.** `usable` = regression and modification both >= 0.99,
+reported beside exact and never instead of it. Choosing it after seeing a run would be
+metric-shopping; it now lives in `run_report.py` with a test.
+
+**Commit gate for the 297: ON.** It forwards to Debugging only, so 197 of 297 tasks are
+unaffected; the remaining 100 currently score zero exact, so there is no baseline to protect; and
+it fails open in three places. In exchange every Debugging task yields a live findings record,
+which is the only honest source of check precision. Decision made on risk-tolerance grounds --
+revisit if a gated Debugging arm ever scores above zero.
+
 **Next move is the commit-time verification redesign, not another compiler.** Two-phase `submit`:
 the first call returns a gold-blind report and does not finalise. Checks, each mapped to a measured
 failure class: cells changed outside the agent's own declared write targets (22.9% over-edit;
