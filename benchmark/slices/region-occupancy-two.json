@@ -1,0 +1,11 @@
+{
+  "name": "region-occupancy-two",
+  "purpose": "Does reporting ragged region occupancy stop the bounding-box overfill? Both tasks are recorded GLM 5.3 Flash baselines: 05_01 mod 1.0000 / reg 0.9942, first miss regression DeferredTax!C23; 06_24 mod 0.3590 / reg 0.9322, first miss regression RevenueBuild!G11. Success is a higher regression accuracy, i.e. fewer cells written that the golden keeps as the input had them. 05_01 is one regression cell from exact.",
+  "model": "z-ai/glm-5.3-flash",
+  "max_tool_calls_per_task": 12,
+  "expectation": "06_24 should improve more than 05_01: its column G is populated in no input data row, while 05_01's column C is populated in rows 19-22 and only the total row omits it, so extending it is a defensible gold-blind inference.",
+  "tasks": [
+    {"category": "Template", "id": "05_01"},
+    {"category": "Template", "id": "06_24"}
+  ]
+}

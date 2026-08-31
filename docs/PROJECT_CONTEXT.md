@@ -324,6 +324,41 @@ Next measurement is a re-run of `Template:05_01` and `06_24` on GLM 5.3 Flash wi
 `region_occupancy` live, against the recorded baselines (mod 1.0000 / reg 0.9942 and mod 0.3590 /
 reg 0.9322). `05_01` is one regression cell from exact.
 
+**`region_occupancy` measured: directionally right, weak (2026-08-31).**
+`glm-5.3-flash-region-occupancy-two-1`, same config as the baseline, **$0.0033** for both tasks.
+The split predicted in advance held exactly.
+
+| task | baseline | with occupancy | delta |
+|---|---|---|---|
+| `Template:05_01` | reg 0.9942 / mod 1.0000, miss `C23` | reg 0.9942 / mod 1.0000, miss `C23` | **none** |
+| `Template:06_24` | reg 0.9322 / mod 0.3590, miss `G11` | reg **0.9435** / mod 0.3590, miss **`G12`** | reg **+0.0113** |
+
+On `06_24` the model stopped overfilling `G11` and the first miss moved one cell right, so the
+field changed behaviour in the intended direction — but it still wrote `G12` onward, so one cell
+of a seven-cell run was recovered. On `05_01` nothing moved, as expected: column C is populated in
+rows 19-22 and only the total row omits it, so extending it stays a defensible gold-blind
+inference even with the raggedness visible.
+
+Keep the field: it is cheap, silent on solid blocks, encodes no golden cell, and it moved a real
+regression. **Do not claim the overfill class is solved.** Naming a column as partial is weaker
+than the rectangle is strong; the next idea would have to make the *data* extent authoritative
+rather than merely annotated, and that is not yet designed.
+
+**Exact-match understates the work on this slice.** `Template:05_01` is modification **1.0000**
+with regression 0.9942: every cell the task asked for is correct and one extra cell was written.
+That is a usable deliverable scored as a zero. `Financial_Model:01_02` is mod 0.9956 with reg
+1.0000. Both cost about half a cent. When the result is eventually written up, report exact for
+leaderboard comparability **and** a pre-defined usable-output rate (regression and modification
+both >= 0.99) so the near-misses are visible; the same effect hides 14 Financial Model tasks in
+the Sol 297.
+
+**A full GLM 5.3 Flash 297 is now affordable — the constraint is wall clock, not money.** At the
+measured ~$0.005/task the whole non-visual set is roughly **$1.50**, against $28 for Sol. Serial
+runtime is the real cost at roughly 80-170s/task (~8-14 hours), so the runner's resume path
+matters more than the budget. Do not start it while the interface is moving: `region_occupancy`
+and the commit gate both landed today, and a 297 on a shifting interface is not attributable.
+Freeze first, then run.
+
 **Next move is the commit-time verification redesign, not another compiler.** Two-phase `submit`:
 the first call returns a gold-blind report and does not finalise. Checks, each mapped to a measured
 failure class: cells changed outside the agent's own declared write targets (22.9% over-edit;
