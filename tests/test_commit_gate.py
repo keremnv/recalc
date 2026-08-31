@@ -68,9 +68,16 @@ def test_gate_reports_a_new_error_then_lets_the_next_submit_through(tmp_path, mo
 
     assert report["ok"] is False
     assert report["checks"]["new_formula_error"]["count"] == 1
-    assert gate.already_reported() is False
-    gate.mark_reported()
-    assert gate.already_reported() is True
+    assert report["checks"]["new_formula_error"]["representatives"][0]["address"] == "A1"
+
+    # Write and submit deliveries are tracked separately: a trajectory that exhausts its call
+    # budget is autosubmitted and never reaches submit at all.
+    assert gate.already_reported("write") is False
+    gate.mark_reported("write")
+    assert gate.already_reported("write") is True
+    assert gate.already_reported("submit") is False
+    gate.mark_reported("submit")
+    assert gate.already_reported("submit") is True
 
 
 def test_gate_passes_when_there_is_nothing_to_say(tmp_path, monkeypatch) -> None:
@@ -101,3 +108,28 @@ def test_gate_is_off_unless_explicitly_enabled(monkeypatch) -> None:
     assert gate.commit_gate_enabled() is False
     monkeypatch.setenv("LIBRECALC_COMMIT_GATE_ENABLED", "1")
     assert gate.commit_gate_enabled() is True
+
+
+
+def test_report_counts_are_complete_while_addresses_are_sampled() -> None:
+    """A flat cap made the model repair exactly what it was shown and stop."""
+    gate = _gate_module()
+
+    @dataclass
+    class _Finding:
+        check: str
+        sheet: str
+        address: str
+
+        def as_dict(self):
+            return {"check": self.check, "sheet": self.sheet, "address": self.address}
+
+    findings = [_Finding("new_formula_error", "S", f"A{n}") for n in range(1, 31)]
+    findings += [_Finding("new_formula_error", "T", f"B{n}") for n in range(1, 6)]
+
+    summary = gate._summarise(findings)
+
+    assert summary["count"] == 35, "the count must be complete even when addresses are sampled"
+    assert summary["sheets"] == {"S": 30, "T": 5}
+    assert len(summary["representatives"]) == 8 + 5, "8 per sheet"
+    assert summary["representatives_are_a_sample"] is True

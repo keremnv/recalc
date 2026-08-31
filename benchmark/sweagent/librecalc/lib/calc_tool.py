@@ -193,6 +193,30 @@ def _exclusive_runtime() -> Iterator[None]:
             fcntl.flock(lock_file, fcntl.LOCK_UN)
 
 
+def _with_write_report(backend: Any, result: Any) -> Any:
+    """Attach the world's report to the first write that saves an output.
+
+    Delivered here as well as at submit because a trajectory that exhausts its call budget is
+    autosubmitted by the harness and never invokes the submit tool: the first commit-gate A/B
+    fired on one task in four for that reason. This delivery is informational and never blocks;
+    the blocking pass still happens at submit.
+    """
+    gate = _commit_gate()
+    if not gate.commit_gate_enabled() or gate.already_reported("write"):
+        return result
+    try:
+        report = gate.evaluate(backend, _commit_checks())
+    except Exception:  # noqa: BLE001 - a report must never break a successful write
+        return result
+    if report.get("ok"):
+        return result
+    gate.mark_reported("write")
+    gate.record_report(report, "write")
+    if isinstance(result, dict):
+        return {**result, "commit_checks": report}
+    return result
+
+
 def main(argv: list[str]) -> int:
     if not argv:
         raise ValueError("missing command")
@@ -225,7 +249,7 @@ def main(argv: list[str]) -> int:
 
     if command == "commit_report" and not args:
         gate = _commit_gate()
-        if not gate.commit_gate_enabled() or gate.already_reported():
+        if not gate.commit_gate_enabled() or gate.already_reported("submit"):
             return 0
         try:
             result = gate.evaluate(backend, _commit_checks())
@@ -234,7 +258,8 @@ def main(argv: list[str]) -> int:
             return 0
         if result.get("ok"):
             return 0
-        gate.mark_reported()
+        gate.mark_reported("submit")
+        gate.record_report(result, "submit")
         _emit(result)
         return 1
 
@@ -328,12 +353,15 @@ def main(argv: list[str]) -> int:
             return 1
         values = _parse_json(raw_values, list, "values_json")
         _emit(
-            backend.write_range(
-                sheet=sheet,
-                cell_range=cell_range,
-                values=values,
-                path=path,
-                output_path=output_path,
+            _with_write_report(
+                backend,
+                backend.write_range(
+                    sheet=sheet,
+                    cell_range=cell_range,
+                    values=values,
+                    path=path,
+                    output_path=output_path,
+                ),
             )
         )
         return 0
@@ -344,7 +372,11 @@ def main(argv: list[str]) -> int:
             _emit({"ok": False, "error": followup_error})
             return 1
         operations = _formula_blocks(raw_blocks, operation_type)
-        _emit(backend.execute_program(operations, path=path, output_path=output_path))
+        _emit(
+            _with_write_report(
+                backend, backend.execute_program(operations, path=path, output_path=output_path)
+            )
+        )
         return 0
 
     if command == "program" and len(args) == 3:
@@ -358,7 +390,11 @@ def main(argv: list[str]) -> int:
             if not isinstance(operation, dict):
                 raise TypeError(f"operations_json item {index} must be an object")
             operations.append(operation_type.from_dict(operation))
-        _emit(backend.execute_program(operations, path=path, output_path=output_path))
+        _emit(
+            _with_write_report(
+                backend, backend.execute_program(operations, path=path, output_path=output_path)
+            )
+        )
         return 0
 
     if command == "inspect-charts" and len(args) == 1:

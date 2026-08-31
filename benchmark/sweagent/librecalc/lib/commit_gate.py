@@ -21,7 +21,9 @@ from typing import Any
 
 INPUT_GLOB = "/mnt/spreadsheet_data/**/*_input.xlsx"
 OUTPUT_GLOB = "/mnt/spreadsheet_output/*.xlsx"
-_MAX_REPORTED_PER_CHECK = 12
+_MAX_PER_SHEET = 8
+_MAX_REPRESENTATIVES = 80
+_REPORT_FILENAME = ".librecalc_commit_report.json"
 
 
 def commit_gate_enabled() -> bool:
@@ -33,22 +35,55 @@ def commit_gate_path() -> Path | None:
     return Path(raw) if raw else None
 
 
-def already_reported() -> bool:
+def _state() -> dict[str, Any]:
     path = commit_gate_path()
     if path is None or not path.is_file():
-        return False
+        return {}
     try:
-        return bool(json.loads(path.read_text(encoding="utf-8")).get("reported"))
+        return json.loads(path.read_text(encoding="utf-8"))
     except ValueError:
-        return False
+        return {}
 
 
-def mark_reported() -> None:
+def already_reported(stage: str = "submit") -> bool:
+    """Deliveries are tracked per stage.
+
+    The write-stage report is informational and the submit-stage report blocks once. They are
+    separate because a trajectory that dies at the call cap never reaches submit at all: the
+    Phase 4 gate fired on one task in four for exactly that reason.
+    """
+    return bool(_state().get(f"reported_{stage}"))
+
+
+def mark_reported(stage: str = "submit") -> None:
     path = commit_gate_path()
     if path is None:
         return
+    state = _state()
+    state[f"reported_{stage}"] = True
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps({"reported": True}, separators=(",", ":")), encoding="utf-8")
+    path.write_text(json.dumps(state, separators=(",", ":")), encoding="utf-8")
+
+
+def record_report(report: dict[str, Any], stage: str) -> None:
+    """Persist the live findings beside the workbook so precision can be scored from them.
+
+    Offline replay reads openpyxl caches while this path reads through UNO with recalculation,
+    and the two disagree (07_01: 94 findings offline, 0 live). Only these are live numbers.
+    """
+    _, output_path = discover_paths()
+    if output_path is None:
+        return
+    destination = Path(output_path).parent / _REPORT_FILENAME
+    try:
+        existing = json.loads(destination.read_text(encoding="utf-8")) if destination.is_file() else []
+    except (OSError, ValueError):
+        existing = []
+    existing.append({"stage": stage, "report": report})
+    try:
+        destination.write_text(json.dumps(existing, separators=(",", ":")), encoding="utf-8")
+    except OSError:
+        return
 
 
 def _single(pattern: str) -> str | None:
@@ -78,6 +113,31 @@ def _read_workbook(backend: Any, path: str, commit_checks: Any) -> dict:
     )
 
 
+def _summarise(findings: list[Any]) -> dict[str, Any]:
+    """Complete counts, bounded representatives.
+
+    A flat cap taught the wrong lesson: the Phase 4 report showed 12 findings and the model
+    repaired exactly 12, so the cap and not the model bounded the repair. Counts are therefore
+    always complete and only the addresses are sampled -- the same shape `semantic_diff` uses
+    for downstream changes, which is what kept observation affordable in the first place.
+    """
+    by_sheet: dict[str, list[Any]] = {}
+    for finding in findings:
+        by_sheet.setdefault(finding.sheet, []).append(finding)
+    representatives: list[dict[str, str]] = []
+    for sheet in sorted(by_sheet):
+        for finding in by_sheet[sheet][:_MAX_PER_SHEET]:
+            if len(representatives) >= _MAX_REPRESENTATIVES:
+                break
+            representatives.append(finding.as_dict())
+    return {
+        "count": len(findings),
+        "sheets": {sheet: len(entries) for sheet, entries in sorted(by_sheet.items())},
+        "representatives": representatives,
+        "representatives_are_a_sample": len(representatives) < len(findings),
+    }
+
+
 def evaluate(backend: Any, commit_checks: Any) -> dict[str, Any]:
     """Run the checks that survived offline measurement against stored runs.
 
@@ -99,19 +159,15 @@ def evaluate(backend: Any, commit_checks: Any) -> dict[str, Any]:
     if not findings:
         return {"ok": True, "reason": "no findings"}
 
-    grouped: dict[str, list[dict[str, str]]] = {}
+    grouped: dict[str, list[Any]] = {}
     for finding in findings:
-        grouped.setdefault(finding.check, []).append(finding.as_dict())
+        grouped.setdefault(finding.check, []).append(finding)
     return {
         "ok": False,
         "schema": "commit-checks-v1",
         "finding_count": len(findings),
         "checks": {
-            name: {
-                "count": len(entries),
-                "findings": entries[:_MAX_REPORTED_PER_CHECK],
-            }
-            for name, entries in grouped.items()
+            name: _summarise(entries) for name, entries in grouped.items()
         },
         "note": (
             "These are facts about your output, not suggestions. Each names a cell whose state "

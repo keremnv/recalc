@@ -224,6 +224,36 @@ recalculation while offline replay reads openpyxl caches, so the offline precisi
 estimate of live behaviour, not a measurement of it. The live path is the trustworthy one. Do not
 quote the offline 100% for `broken_check_cell` as a live number.
 
+**Phase 4 fixes applied, and the live report settles the cap question (2026-08-31).**
+`benchmark/extract_commit_reports.py` recovers the gate's findings from stored trajectories,
+which is the durable record (the output mount is a temp directory the harness discards).
+
+Recovered from the Phase 4 ON arm, `Debugging:10_02`: the **live gate reported 30 findings**, the
+old flat cap showed the model **12**, and the model removed **exactly 12** error cells. It
+repaired 100% of what it was shown and 0% of what it was not. The cap, not the model's
+willingness, bounded the repair. Treat this as the strongest evidence yet that the commit loop
+works on a cheap compiler.
+
+**Offline replay overstates the error count by roughly 8.5x** (257 offline versus 30 live on the
+same task) because it compares openpyxl caches while the gate reads both workbooks through UNO
+with recalculation. The check *ranking* from Phase 2 probably survives, but the magnitudes do
+not. Re-derive precision from extracted live reports, never from replay.
+
+Three fixes shipped:
+
+1. **The report is delivered at the first saving write as well as at submit.** Deliveries are
+   tracked per stage (`reported_write` / `reported_submit`). The write-stage delivery is
+   informational and never blocks; submit still blocks once. This exists because SWE-agent
+   autosubmits at the call cap without ever invoking the submit tool, which is why the first A/B
+   fired on one task in four.
+2. **Complete counts, sampled addresses.** `_summarise` reports the full finding count plus
+   per-sheet totals and at most 8 representatives per sheet / 80 overall -- the same shape
+   `semantic_diff` uses for downstream changes. Replaces the flat 12-per-check cap.
+3. **Live findings are recoverable** via the extractor above, plus `record_report` writing beside
+   the workbook.
+
+Suite 209 passed / 12 skipped.
+
 **Next move is the commit-time verification redesign, not another compiler.** Two-phase `submit`:
 the first call returns a gold-blind report and does not finalise. Checks, each mapped to a measured
 failure class: cells changed outside the agent's own declared write targets (22.9% over-edit;
