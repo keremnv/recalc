@@ -74,6 +74,42 @@ data table carries the descriptor while the rest of `ref` holds bare cached resu
 validator normalises these; the live path never sees them because both workbooks come from UNO.
 Prefer round-tripping the input through LibreOffice before diffing in any future offline arm.
 
+**Phase 2 measured every candidate check (2026-08-31).** `gpt-5.6-sol-nonvisual-all-medium-1`,
+40 Template/Financial Model outputs and 20 Debugging outputs. Precision is scored per check
+against the golden; candidate generation stays gold-blind.
+
+| check | Template + FM | Debugging | verdict |
+|---|---|---|---|
+| `new_formula_error` | 3,602 findings, **60.1%** | 650 findings, **91.8%** | **ship** |
+| `unextended_continuation` | 2 findings, **100%** | 0 findings | ship; narrow by design |
+| `unrequested_write` | 7,516 findings, **0.0%** | 1,182 findings, **0.0%** | rejected (intent-relative) |
+| `broken_check_cell` | 4,686 findings, **0.2%** | 0 findings | rejected |
+
+`new_formula_error` is the first check to clear the gate, and it is strongest exactly where the
+benchmark is weakest: Debugging scores 0/100 exact and the check runs at 91.8% there. It
+references nothing the agent authored -- it is the input-to-output error delta, computed by the
+engine.
+
+`broken_check_cell` is rejected: the reference is sound (the workbook's own tie-outs) but cannot
+be isolated gold-blind. In a workbook being *filled in*, most near-zero cells mean "not computed
+yet" and a correct answer turns them non-zero, so the check flags right answers. Narrowing to
+identity-shaped formulas cut volume 4x while precision fell 0.3% -> 0.2%: signal and noise
+removed together. Do not revive it with another shape filter.
+
+**Category change-budget asymmetry.** The same check scores 60.1% on Template/FM and 91.8% on
+Debugging because the categories differ in how much legitimate change a task involves.
+Template/FM **complete** a workbook (most of it is supposed to change); Debugging **repairs** one
+(almost nothing is). "Did something change that should not have" is only a well-posed question in
+repair tasks. Commit-time verification should be category-aware, and its best expected yield is
+Debugging -- the 0/100 category.
+
+**Still unmeasured, in priority order:** (1) **uniformity breaks** -- a row whose horizontal
+formula pattern was uniform and now is not; reuses `_horizontal_formula_patterns`, is independent
+of intent, and covers row interiors rather than only right edges, so it should dominate the
+2-finding continuation check; (2) **referential integrity** -- a formula that now references a
+blank which was populated before, which is the cascade mechanism itself. Both are gold-blind and
+measurable offline with the existing harness before any API spend.
+
 **Next move is the commit-time verification redesign, not another compiler.** Two-phase `submit`:
 the first call returns a gold-blind report and does not finalise. Checks, each mapped to a measured
 failure class: cells changed outside the agent's own declared write targets (22.9% over-edit;

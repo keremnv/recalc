@@ -263,6 +263,82 @@ def unrestored_structure(
     return findings
 
 
+def _is_passing_check(value: Any) -> bool:
+    """Whether a value reads as a satisfied tie-out.
+
+    Financial models carry author-built checks that rest at zero or TRUE: balance identities,
+    sources-minus-uses, sum-versus-total rows. The convention is the author's, not ours.
+    """
+    if value is True:
+        return True
+    if isinstance(value, bool):
+        return False
+    if isinstance(value, int | float):
+        return abs(value) < 1e-6
+    if isinstance(value, str):
+        return value.strip().upper() in {"OK", "TRUE", "BALANCED"}
+    return False
+
+
+def _looks_like_tie_out(formula: Any) -> bool:
+    """Whether a formula is shaped like an author-built identity rather than an empty cell.
+
+    A tie-out asserts that two things agree, so it subtracts or compares. Without this the
+    check collapses to "was zero", which in a forecast model matches every unused period cell:
+    measured at 0.3% precision across 40 Template/Financial Model outputs.
+    """
+    if not isinstance(formula, str):
+        return False
+    body = formula.lstrip("=").upper()
+    if not body:
+        return False
+    return "-" in body or "<>" in body or body.startswith(("ABS(", "IF(", "ROUND("))
+
+
+def broken_check_cells(before: CellMap, after: CellMap) -> list[CommitFinding]:
+    """Author-built tie-outs that passed in the input and fail in the output.
+
+    MEASURED AND REJECTED (2026-08-31). The reference is sound -- the workbook's own redundancy
+    is not authored by the agent -- but it cannot be isolated without the golden. In a template
+    or forecast workbook most near-zero cells mean "not computed yet", and filling the model
+    *correctly* turns them non-zero, so the check flags right answers: 0.2% precision over 40
+    Template/Financial Model outputs. Narrowing to identity-shaped formulas cut volume 4x and
+    precision did not move (0.3% -> 0.2%), i.e. it removed signal and noise together. On
+    Debugging, where the workbook is already complete, the narrowed form finds **nothing**.
+
+    Retained as the record of a rejected idea. Do not ship it.
+    """
+    findings: list[CommitFinding] = []
+    for key, (before_value, before_formula) in sorted(before.items()):
+        if before_formula is None:
+            continue
+        after_cell = after.get(key)
+        if after_cell is None:
+            continue
+        after_value, after_formula = after_cell
+        if after_formula != before_formula:
+            continue
+        if not _looks_like_tie_out(before_formula):
+            continue
+        if not _is_passing_check(before_value):
+            continue
+        if _is_passing_check(after_value):
+            continue
+        sheet, address = key
+        findings.append(
+            CommitFinding(
+                check="broken_check_cell",
+                sheet=sheet,
+                address=address,
+                detail=(
+                    f"this cell's own formula was satisfied before your edit "
+                    f"({before_value!r}) and now reads {after_value!r}"
+                ),
+            )
+        )
+    return findings
+
+
 def report(findings: list[CommitFinding]) -> dict[str, Any]:
     """Group findings for the commit-time response."""
     grouped: dict[str, list[dict[str, str]]] = {}

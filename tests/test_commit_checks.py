@@ -82,3 +82,23 @@ def test_report_groups_findings_by_check() -> None:
     assert payload["schema"] == "commit-checks-v1"
     assert payload["finding_count"] == 1
     assert payload["checks"]["unrequested_write"][0]["address"] == "A1"
+
+
+def test_broken_check_cell_flags_a_tie_out_the_agent_left_alone() -> None:
+    """Rejected in measurement, but the logic it encodes is still pinned down here."""
+    from librecalc_mcp.domain.commit_checks import broken_check_cells
+
+    before = {
+        ("S", "D9"): (0, "=B9-C9"),  # a satisfied identity
+        ("S", "D10"): (0, "=B10"),  # zero, but not identity-shaped
+        ("S", "D11"): (0, "=B11-C11"),  # the agent rewrote this one
+    }
+    after = {
+        ("S", "D9"): (4200, "=B9-C9"),
+        ("S", "D10"): (17, "=B10"),
+        ("S", "D11"): (5, "=B11-C11+1"),
+    }
+
+    findings = broken_check_cells(before, after)
+
+    assert [f.address for f in findings] == ["D9"]

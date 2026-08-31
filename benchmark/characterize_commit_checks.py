@@ -26,11 +26,14 @@ sys.path.insert(0, str(ROOT / "src"))
 
 import openpyxl
 
+from librecalc_mcp.domain.boundary_continuations import payload_from_xlsx
 from librecalc_mcp.domain.commit_checks import (
     CommitFinding,
+    broken_check_cells,
     declared_targets,
     expand_range,
     new_formula_errors,
+    unextended_continuations,
     unrequested_writes,
 )
 
@@ -45,6 +48,7 @@ def _arguments() -> argparse.Namespace:
     parser.add_argument("--runs-dir", type=Path, default=RUNS_DIR)
     parser.add_argument("--limit", type=int, default=0, help="Analyse at most N task outputs.")
     parser.add_argument("--run", action="append", help="Restrict to these run names.")
+    parser.add_argument("--category", action="append", help="Restrict to these categories.")
     parser.add_argument("--json", type=Path, help="Write the per-finding detail here.")
     return parser.parse_args()
 
@@ -151,17 +155,31 @@ def _score(
     before: dict[tuple[str, str], tuple[Any, Any]],
     golden: dict[tuple[str, str], tuple[Any, Any]],
 ) -> Counter:
-    """A finding is correct when the golden kept the input content the agent overwrote."""
+    """Each check has its own notion of a correct finding; score them separately."""
     tally: Counter = Counter()
     for finding in findings:
         key = (finding.sheet, finding.address)
-        if key not in golden and finding.sheet not in {sheet for sheet, _ in golden}:
-            tally[f"{finding.check}:unscorable"] += 1
-            continue
-        input_content = before.get(key, (None, None))
         golden_content = golden.get(key, (None, None))
-        unchanged_in_gold = input_content == golden_content
-        tally[f"{finding.check}:{'true_positive' if unchanged_in_gold else 'false_positive'}"] += 1
+        golden_value, _ = golden_content
+        if finding.check == "unrequested_write":
+            # Correct when the golden kept the input content the agent overwrote.
+            correct = before.get(key, (None, None)) == golden_content
+        elif finding.check == "unextended_continuation":
+            # Correct when the golden puts something in the cell the agent left blank.
+            correct = golden_value is not None
+        elif finding.check == "broken_check_cell":
+            # Correct when a right answer leaves the tie-out satisfied.
+            from librecalc_mcp.domain.commit_checks import _is_passing_check
+
+            correct = _is_passing_check(golden_value)
+        elif finding.check == "new_formula_error":
+            # Correct when the golden has no error at that cell.
+            from librecalc_mcp.domain.commit_checks import error_kind
+
+            correct = error_kind(golden_content) is None
+        else:
+            correct = False
+        tally[f"{finding.check}:{'true_positive' if correct else 'false_positive'}"] += 1
     return tally
 
 
@@ -183,6 +201,8 @@ def main() -> int:
             if not output_path.is_file() or "-" not in task_dir.name:
                 continue
             category, _, task_id = task_dir.name.partition("-")
+            if args.category and category not in set(args.category):
+                continue
             task = entries.get((category, task_id))
             if task is None:
                 continue
@@ -202,7 +222,14 @@ def main() -> int:
                 detail.append({"run": run_dir.name, "task": task_dir.name, "error": str(error)[:200]})
                 continue
 
-            findings = unrequested_writes(before, after, declared) + new_formula_errors(before, after)
+            continuation_payload = payload_from_xlsx(str(DATA_DIR / category / task["spreadsheet_path"]))
+            candidates = (continuation_payload or {}).get("candidates", [])
+            findings = (
+                unrequested_writes(before, after, declared)
+                + new_formula_errors(before, after)
+                + broken_check_cells(before, after)
+                + unextended_continuations(after, candidates)
+            )
             analysed += 1
             tally["tasks"] += 1
             tally["declared_cells"] += len(declared)
@@ -223,7 +250,12 @@ def main() -> int:
 
     print(f"analysed task outputs: {tally['tasks']}")
     print(f"tasks with at least one finding: {tally['tasks_with_a_finding']}")
-    for check in ("unrequested_write", "new_formula_error"):
+    for check in (
+        "unrequested_write",
+        "new_formula_error",
+        "broken_check_cell",
+        "unextended_continuation",
+    ):
         total = tally[check]
         true_positive = tally[f"{check}:true_positive"]
         false_positive = tally[f"{check}:false_positive"]
@@ -231,7 +263,7 @@ def main() -> int:
         precision = f"{true_positive / scored:.1%}" if scored else "n/a"
         print(
             f"  {check}: {total} findings, precision {precision} "
-            f"(tp {true_positive} / fp {false_positive} / unscorable {tally[f'{check}:unscorable']})"
+            f"(tp {true_positive} / fp {false_positive})"
         )
     if tally["unreadable"]:
         print(f"unreadable artifacts skipped: {tally['unreadable']}")
