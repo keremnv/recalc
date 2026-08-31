@@ -254,6 +254,43 @@ Three fixes shipped:
 
 Suite 209 passed / 12 skipped.
 
+**GLM 5.3 Flash is the best cheap compiler measured, by a wide margin (2026-08-31).**
+`glm-5.3-flash-wall-discriminator-low-1`, `z-ai/glm-5.3-flash`, low reasoning, default routing,
+`semantic-program-v1`. **4/5 workbooks, $0.0230 total.** The runner's existing
+`tool_choice=auto` special case for `glm-5.3` covers the Flash slug, so the transport reject that
+killed the earlier GLM runs never fired. Pricing $0.075/M in, $0.250/M out.
+
+| task | workbook | reg | mod | first miss |
+|---|---|---:|---:|---|
+| `Financial_Model:01_02` | yes | **1.0000** | **0.9956** | `Working Capital Schedule!M3` |
+| `Template:05_01` | yes | 0.9942 | **1.0000** | regression `DeferredTax!C23` |
+| `Template:06_24` | yes | 0.9322 | 0.3590 | regression `RevenueBuild!G11` |
+| `Debugging:05_03` | yes | **1.0000** | 0.1091 | `Model!B91` |
+| `Debugging:02_03` | no | — | — | no workbook |
+
+Three-way comparison on the identical slice:
+
+| | workbooks | total cost | `01_02` | `05_01` |
+|---|---|---:|---|---|
+| **GLM 5.3 Flash** | **4/5** | **$0.023** | mod 0.9956 | **mod 1.0000** |
+| Qwen 3.8 27B | 3/5 | $0.202 | no workbook | mod 0.3860 |
+| K2.7 (rerun) | 2/5 | ~$0.86 | mod ~0.9956 | wrote once, historically never |
+
+GLM Flash produces the **union** of what the other two manage separately, at **9x** less than Qwen
+and **37x** less than K2.7. It matches K2.7's best `01_02` result for $0.0024 against $0.0935.
+
+**`Template:05_01` reaches modification 1.0000 and loses exactness to a single regression cell.**
+Every required edit is correct; the only defect is one overfill. That makes the overfill class the
+highest-value open problem in the project, not a curiosity -- solving it converts this task to
+exact.
+
+**The overfill addresses are model-independent.** Sol, Qwen and GLM all overfill the *same
+documented cells*: `05_01` `C23`/`C29` and `06_24` `G11:G17`. Three unrelated models landing on
+identical addresses is evidence the overfill is driven by the task and the observation, not model
+idiosyncrasy. This partially reopens the class: intent-relative checking is still refuted, but a
+reference authored by the *instruction* rather than the agent has never been tested, and the
+address stability says there is a signal to find. Do not treat "no gold-blind detector" as settled.
+
 **Next move is the commit-time verification redesign, not another compiler.** Two-phase `submit`:
 the first call returns a gold-blind report and does not finalise. Checks, each mapped to a measured
 failure class: cells changed outside the agent's own declared write targets (22.9% over-edit;
