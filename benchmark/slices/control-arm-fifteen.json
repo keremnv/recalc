@@ -1,0 +1,74 @@
+{
+  "name": "control-arm-fifteen",
+  "purpose": "The first control arm. Every LibreCalc result so far is measured against LibreCalc; this asks whether the interface buys anything at all against the harness the benchmark ships with -- bash, view_xlsx, openpyxl/pandas/LibreOffice, the official prompt. Same model and same tasks in both arms. Run it with --control for the baseline and without for ours, then compare exact counts and mean accuracies, not single tasks.",
+  "model": "z-ai/glm-5.3-flash",
+  "sampling": "Deterministic and drawn before any result was seen: within each category, task ids sorted and five taken at evenly spaced positions, with the 15 contaminated public-example tasks excluded. Not cherry-picked, and small enough that no single task's outcome should be quoted on its own.",
+  "arms": {
+    "control": "--control, official config, 50-call budget (its own native setting)",
+    "librecalc": "--observation formula-patterns-v1 --execution formula-blocks-v1 --read-policy progressive, 12-call budget (its own native setting)"
+  },
+  "reading": "A win at 12 calls against the baseline's 50 is the strong result. A loss is the more important one and must be recorded as plainly: it would mean the ISA is paying for itself in constraint rather than capability.",
+  "max_tool_calls_per_task": 12,
+  "tasks": [
+    {
+      "category": "Template",
+      "id": "04_04"
+    },
+    {
+      "category": "Template",
+      "id": "06_18"
+    },
+    {
+      "category": "Template",
+      "id": "10_02"
+    },
+    {
+      "category": "Template",
+      "id": "14_05"
+    },
+    {
+      "category": "Template",
+      "id": "16_12"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "04_04"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "08_03"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "13_02"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "17_01"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "20_05"
+    },
+    {
+      "category": "Debugging",
+      "id": "02_09"
+    },
+    {
+      "category": "Debugging",
+      "id": "04_09"
+    },
+    {
+      "category": "Debugging",
+      "id": "06_09"
+    },
+    {
+      "category": "Debugging",
+      "id": "08_10"
+    },
+    {
+      "category": "Debugging",
+      "id": "10_10"
+    }
+  ]
+}

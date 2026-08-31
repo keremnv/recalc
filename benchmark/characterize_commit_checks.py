@@ -166,53 +166,75 @@ def _cell_map(path: Path) -> dict[tuple[str, str], tuple[Any, Any]]:
     return cells
 
 
+def score_finding(
+    check: str,
+    sheet: str,
+    address: str,
+    detail: str,
+    before: dict[tuple[str, str], tuple[Any, Any]],
+    golden: dict[tuple[str, str], tuple[Any, Any]],
+) -> str:
+    """Is one finding right? Each check has its own notion, so they are judged separately.
+
+    Shared with the live scorer in `extract_commit_reports.py`. The two paths see the same
+    finding through different readers -- openpyxl caches here, UNO with recalculation there --
+    and they disagree, so the verdict rule has to be one piece of code or the numbers stop
+    being comparable.
+    """
+    key = (sheet, address)
+    golden_content = golden.get(key, (None, None))
+    golden_value, _ = golden_content
+    if check == "unrequested_write":
+        # Correct when the golden kept the input content the agent overwrote.
+        correct = before.get(key, (None, None)) == golden_content
+    elif check == "unextended_continuation":
+        # Correct when the golden puts something in the cell the agent left blank.
+        correct = golden_value is not None
+    elif check == "broken_check_cell":
+        # Correct when a right answer leaves the tie-out satisfied.
+        from librecalc_mcp.domain.commit_checks import _is_passing_check
+
+        correct = _is_passing_check(golden_value)
+    elif check == "new_formula_error":
+        from librecalc_mcp.domain.commit_checks import error_kind
+
+        golden_formula = golden_content[1]
+        if golden_formula is not None and golden_value is None:
+            # The golden carries a formula with no cached result. openpyxl cannot say what it
+            # evaluates to, so "the golden has no error here" is vacuously true and would score
+            # as a win. Offline replay cannot judge this cell.
+            return "unscorable"
+        correct = error_kind(golden_content) is None
+    elif check == "referential_integrity":
+        # Correct when the golden puts something in the reference target the output emptied.
+        try:
+            target = detail.split("references ", 1)[1].split(",", 1)[0]
+        except IndexError:
+            return "unscorable"
+        target_sheet, _, target_address = target.rpartition("!")
+        correct = golden.get((target_sheet, target_address), (None, None))[0] is not None
+    elif check == "region_width_extension":
+        # Correct when the golden leaves the cell blank, i.e. the block really did stop.
+        correct = golden_content == (None, None) or golden_value is None
+    elif check == "uniformity_break":
+        # Correct when the golden keeps the run uniform, i.e. it did not single this cell out.
+        correct = golden.get(key, (None, None))[1] is not None
+    else:
+        correct = False
+    return "true_positive" if correct else "false_positive"
+
+
 def _score(
     findings: list[CommitFinding],
     before: dict[tuple[str, str], tuple[Any, Any]],
     golden: dict[tuple[str, str], tuple[Any, Any]],
 ) -> Counter:
-    """Each check has its own notion of a correct finding; score them separately."""
     tally: Counter = Counter()
     for finding in findings:
-        key = (finding.sheet, finding.address)
-        golden_content = golden.get(key, (None, None))
-        golden_value, _ = golden_content
-        if finding.check == "unrequested_write":
-            # Correct when the golden kept the input content the agent overwrote.
-            correct = before.get(key, (None, None)) == golden_content
-        elif finding.check == "unextended_continuation":
-            # Correct when the golden puts something in the cell the agent left blank.
-            correct = golden_value is not None
-        elif finding.check == "broken_check_cell":
-            # Correct when a right answer leaves the tie-out satisfied.
-            from librecalc_mcp.domain.commit_checks import _is_passing_check
-
-            correct = _is_passing_check(golden_value)
-        elif finding.check == "new_formula_error":
-            from librecalc_mcp.domain.commit_checks import error_kind
-
-            golden_formula = golden_content[1]
-            if golden_formula is not None and golden_value is None:
-                # The golden carries a formula with no cached result. openpyxl cannot say what
-                # it evaluates to, so "the golden has no error here" is vacuously true and
-                # would score as a win. Offline replay cannot judge this cell.
-                tally[f"{finding.check}:unscorable"] += 1
-                continue
-            correct = error_kind(golden_content) is None
-        elif finding.check == "referential_integrity":
-            # Correct when the golden puts something in the reference target the output emptied.
-            target = finding.detail.split("references ", 1)[1].split(",", 1)[0]
-            target_sheet, _, target_address = target.rpartition("!")
-            correct = golden.get((target_sheet, target_address), (None, None))[0] is not None
-        elif finding.check == "region_width_extension":
-            # Correct when the golden leaves the cell blank, i.e. the block really did stop.
-            correct = golden_content == (None, None) or golden_value is None
-        elif finding.check == "uniformity_break":
-            # Correct when the golden keeps the run uniform, i.e. it did not single this cell out.
-            correct = golden.get(key, (None, None))[1] is not None
-        else:
-            correct = False
-        tally[f"{finding.check}:{'true_positive' if correct else 'false_positive'}"] += 1
+        verdict = score_finding(
+            finding.check, finding.sheet, finding.address, finding.detail, before, golden
+        )
+        tally[f"{finding.check}:{verdict}"] += 1
     return tally
 
 

@@ -13,11 +13,18 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import sys
+from collections import Counter
 from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "src"))
+sys.path.insert(0, str(ROOT / "benchmark"))
+
 RUNS_DIR = ROOT / "benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter"
+DATA_DIR = ROOT / "benchmark-data/SpreadsheetBench-2/data"
 _PAYLOAD = re.compile(r'\{"ok":false,"schema":"commit-checks-v1".*?\}(?=\s*$|\n)', re.DOTALL)
 
 
@@ -26,6 +33,15 @@ def _arguments() -> argparse.Namespace:
     parser.add_argument("--runs-dir", type=Path, default=RUNS_DIR)
     parser.add_argument("--run", action="append", help="Restrict to these run names.")
     parser.add_argument("--json", type=Path, help="Write the recovered reports here.")
+    parser.add_argument(
+        "--score",
+        action="store_true",
+        help=(
+            "Judge each recovered representative against the golden. Precision here is over "
+            "the representatives the model actually saw, not over every finding the gate "
+            "counted -- the report caps them at 8 a sheet and 80 overall."
+        ),
+    )
     return parser.parse_args()
 
 
@@ -48,6 +64,39 @@ def _reports_in(trajectory: Path) -> list[dict[str, Any]]:
             except ValueError:
                 continue
     return reports
+
+
+def _score_live(recovered: list[dict[str, Any]]) -> Counter:
+    """Judge the representatives the model was shown, using the offline verdict rule."""
+    import characterize_commit_checks as cc
+
+    datasets = cc._datasets()
+    tally: Counter = Counter()
+    for entry in recovered:
+        category, _, task_id = entry["task"].partition("-")
+        task = datasets.get((category, task_id))
+        if task is None:
+            tally["unmatched_task"] += 1
+            continue
+        try:
+            before = cc._cell_map(DATA_DIR / category / task["spreadsheet_path"])
+            golden = cc._cell_map(DATA_DIR / category / task["golden_response_path"])
+        except Exception:  # noqa: BLE001 - a stored artifact may be unreadable
+            tally["unreadable"] += 1
+            continue
+        for finding in entry["representatives"]:
+            check = finding.get("check", "")
+            verdict = cc.score_finding(
+                check,
+                finding.get("sheet", ""),
+                finding.get("address", ""),
+                finding.get("detail", ""),
+                before,
+                golden,
+            )
+            tally[f"{check}:{verdict}"] += 1
+            tally[check] += 1
+    return tally
 
 
 def main() -> int:
@@ -93,6 +142,23 @@ def main() -> int:
         )
     if not recovered:
         print("no commit-check reports found in the selected runs")
+    if args.score and recovered:
+        tally = _score_live(recovered)
+        checks = sorted({name for name in tally if ":" not in name})
+        print("\nlive precision over the representatives the model saw:")
+        for check in checks:
+            true_positive = tally[f"{check}:true_positive"]
+            false_positive = tally[f"{check}:false_positive"]
+            scored = true_positive + false_positive
+            precision = f"{true_positive / scored:.1%}" if scored else "n/a"
+            print(
+                f"  {check}: {tally[check]} representatives, precision {precision} "
+                f"(tp {true_positive} / fp {false_positive} / "
+                f"unscorable {tally[f'{check}:unscorable']})"
+            )
+        for problem in ("unmatched_task", "unreadable"):
+            if tally[problem]:
+                print(f"  {problem}: {tally[problem]}")
     if args.json:
         args.json.write_text(json.dumps(recovered, indent=2))
         print(f"detail written to {args.json}")

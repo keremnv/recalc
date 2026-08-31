@@ -752,3 +752,52 @@ def test_commit_gate_off_leaves_the_builtin_submit_alone(tmp_path) -> None:
     config = yaml.safe_load(staged.read_text(encoding="utf-8"))
 
     assert "submit" in [Path(b["path"]).name for b in config["agent"]["tools"]["bundles"]]
+
+
+def test_control_arm_stages_the_official_config_untouched(tmp_path) -> None:
+    """The control arm answers "does the ISA buy anything" against the shipped baseline.
+
+    Every prompt rewrite in the staging function is written against the LibreCalc instance
+    template. If one of them ran here it would either fail to match or quietly import our
+    guidance into the baseline, and the arm would stop being the official one.
+    """
+    runner = _runner_module()
+    project_root = Path(__file__).parents[1]
+    official = yaml.safe_load(
+        (
+            project_root / "benchmark-data/SpreadsheetBench-2/SWE-agent/config/spreadsheet.yaml"
+        ).read_text(encoding="utf-8")
+    )
+
+    staged = runner._stage_tool_policy(
+        source_config=runner.CONTROL_CONFIG,
+        sweagent_root=project_root / "benchmark-data/SpreadsheetBench-2/SWE-agent",
+        temporary_root=tmp_path,
+        read_policy="progressive",
+        execution="semantic-program-v1",
+        control=True,
+    )
+
+    config = yaml.safe_load(staged.read_text(encoding="utf-8"))
+    templates = config["agent"]["templates"]
+
+    assert templates["instance_template"] == official["agent"]["templates"]["instance_template"]
+    assert templates["system_template"] == official["agent"]["templates"]["system_template"]
+    assert config["agent"]["tools"]["enable_bash_tool"] is True
+    assert "calc_inspect" not in templates["instance_template"]
+    bundles = [Path(item["path"]) for item in config["agent"]["tools"]["bundles"]]
+    assert [bundle.name for bundle in bundles] == ["submit", "view_xlsx"]
+    assert all(bundle.is_absolute() for bundle in bundles)
+
+
+def test_control_arm_selects_the_control_config_when_none_is_named(monkeypatch) -> None:
+    runner = _runner_module()
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        ["run_openrouter_slice.py", "--slice", "slice.json", "--run-name", "probe", "--control"],
+    )
+    arguments = runner._arguments()
+
+    assert arguments.control is True
+    assert arguments.config == runner.DEFAULT_CONFIG

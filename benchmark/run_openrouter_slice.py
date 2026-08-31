@@ -45,6 +45,7 @@ def _load_dotenv(path: Path = DEFAULT_ENV_FILE) -> None:
 
 DEFAULT_SWEAGENT_ROOT = DEFAULT_BENCHMARK_ROOT / "SWE-agent"
 DEFAULT_CONFIG = PROJECT_ROOT / "benchmark" / "sweagent" / "spreadsheet.yaml"
+CONTROL_CONFIG = PROJECT_ROOT / "benchmark" / "sweagent" / "spreadsheet-control.yaml"
 DEFAULT_MODEL = "moonshotai/kimi-k2.7-code"
 SUPPORTED_OBSERVATIONS = (
     "grid-v1",
@@ -90,6 +91,15 @@ def _arguments() -> argparse.Namespace:
         ),
     )
     parser.add_argument("--reasoning-effort", choices=REASONING_EFFORTS)
+    parser.add_argument(
+        "--control",
+        action="store_true",
+        help=(
+            "Run the official bash+openpyxl baseline instead of the LibreCalc tools. "
+            "--observation/--execution/--read-policy describe an interface this arm does not "
+            "have and are ignored."
+        ),
+    )
     parser.add_argument(
         "--commit-gate",
         action="store_true",
@@ -490,6 +500,7 @@ def _stage_tool_policy(
     repair_passes: int = 1,
     compute_read_budget: bool = False,
     commit_gate: bool = False,
+    control: bool = False,
 ) -> Path:
     config = yaml.safe_load(source_config.read_text(encoding="utf-8"))
     if execution_timeout is not None:
@@ -500,6 +511,14 @@ def _stage_tool_policy(
         if not bundle_path.is_absolute():
             bundle_path = (sweagent_root / bundle_path).resolve()
         bundle_config["path"] = str(bundle_path)
+    if control:
+        # The control arm is the official config. Every rewrite below is written against the
+        # LibreCalc prompt and would either fail to match or silently import our guidance into
+        # the baseline, so none of them run here.
+        staged_control = temporary_root / "spreadsheet-control.yaml"
+        staged_control.write_text(yaml.safe_dump(config, sort_keys=False), encoding="utf-8")
+        return staged_control
+
     instance_template = config["agent"]["templates"]["instance_template"]
 
     strips_tools = read_policy in {"overview-only", "thin"} or execution in {
@@ -986,6 +1005,7 @@ def _run_task(
             repair_passes=args.repair_passes,
             compute_read_budget=bool(getattr(args, "compute_read_budget", False)),
             commit_gate=bool(getattr(args, "commit_gate", False)),
+            control=bool(getattr(args, "control", False)),
         )
         sweagent_overlay = _stage_sweagent_overlay(args.sweagent_root, temporary_root)
         dataset_root = _stage_task(
@@ -995,6 +1015,7 @@ def _run_task(
         previous_outputs = set(
             work_root.glob(f"trajectories/output_excel/{category}/**/{task_id}_output.xlsx")
         )
+        control = bool(getattr(args, "control", False))
         env_variables = {
             "PIP_PROGRESS_BAR": "off",
             "LIBRECALC_SOURCE_ROOT": "/opt/librecalc/src",
@@ -1015,6 +1036,10 @@ def _run_task(
             # invariant would handicap it rather than measure it.
             **({"LIBRECALC_READ_MAX_CELLS": "none"} if args.read_policy == "thin" else {}),
         }
+        if control:
+            # No LibreCalc tool reads these, and leaving them set would make a control
+            # trajectory look like it had an interface it never had.
+            env_variables = {"PIP_PROGRESS_BAR": "off"}
         if args.preserve_populated and category != "Debugging":
             env_variables["LIBRECALC_PRESERVE_POPULATED"] = "1"
         if args.observation in {"formula-anomalies-v1", "format-conventions-v1"}:
@@ -1134,6 +1159,9 @@ def _run_task(
         "provider_only": getattr(args, "provider_only", None),
         "harness": "swe-agent-1.1.0",
         "model": args.model,
+        # The control arm has no observation or execution variant. The fields stay for schema
+        # stability but carry the flag's answer, so a mixed ledger cannot be misread.
+        "arm": "control" if getattr(args, "control", False) else "librecalc",
         "observation_variant": args.observation,
         "blank_bridges": bool(getattr(args, "blank_bridges", True)),
         "read_budget": bool(getattr(args, "read_budget", True)),
@@ -1222,6 +1250,8 @@ def main() -> int:
     sweagent_binary = args.sweagent_root / ".venv" / "bin" / "sweagent"
     if not sweagent_binary.is_file():
         raise FileNotFoundError(f"SWE-agent environment not found: {sweagent_binary}")
+    if getattr(args, "control", False) and args.config == DEFAULT_CONFIG:
+        args.config = CONTROL_CONFIG
     run_name = _safe_name(args.run_name)
     if not run_name:
         raise ValueError("--run-name must contain a filename-safe character")
