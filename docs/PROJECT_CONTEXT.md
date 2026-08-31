@@ -477,6 +477,57 @@ forwarded to Template/FM only, which is right for Template (2/34) but leaves Fin
 16/21 unaddressed and is correctly withheld from Debugging's 42/44. The commit gate is the better
 surface there: report the count of populated cells changed and let the model review it.
 
+**THE CONTROL ARM RAN, AND IT DID NOT GO OUR WAY (2026-08-31).** The first measurement of
+LibreCalc against the harness the benchmark ships with, rather than against LibreCalc. Both arms
+are GLM 5.3 Flash on the same 15 tasks -- five per category, drawn at evenly spaced positions in
+the sorted ids before any result was seen, contaminated public-example tasks excluded
+(`benchmark/slices/control-arm-fifteen.json`). Control is the official config verbatim: bash,
+`view_xlsx`, openpyxl/pandas/LibreOffice, the official prompt, its native 50-call budget.
+
+| slice | arm | exact | mean reg | mean mod |
+|---|---|---:|---:|---:|
+| all 15 | control | **3/15** | 0.9997 | **0.7801** |
+| all 15 | LibreCalc | 2/15 | 0.8623 | 0.6012 |
+| 10 non-Debugging | control | **3/10** | 1.0000 | **0.8074** |
+| 10 non-Debugging | LibreCalc | 2/10 | 0.9935 | 0.6962 |
+
+By per-task modification accuracy the control wins 7, ties 4, and loses 4 -- and our four wins are
++0.02, +0.10, +0.03 and a tie-break, while its wins include -0.64 and -0.60. **On this sample the
+interface buys nothing.** n=15 against known large per-task variance means neither arm is
+*proven* better; what is gone is the assumption that ours is.
+
+Two handicaps in our arm are real and must be fixed before the result is quoted as final, and
+neither rescues the non-Debugging half:
+
+- **The 12-call cap starves Debugging.** The control spent 17, 19, 12, 23 and 29 calls there; our
+  cap is 12, and the two tasks it spent 17 and 29 on are exactly the two where we produced **no
+  workbook at all** (`02_09`, `10_10`, both `failed` at exactly 12 calls, return code 0). Those
+  two zeros are most of the aggregate gap. An earlier note in this session that the budgets were
+  "like-for-like" was wrong: it averaged Template and FM, where they are, over Debugging, where
+  they are not.
+- **The arm ran `formula-patterns-v1` on Debugging**, not the frozen `formula-anomalies-v1`. So
+  Debugging was handicapped twice and its five tasks should not be read as a config comparison.
+
+The non-Debugging ten carry no such excuse. Same call range (control 4-22, ours 6-10), the tuned
+observation, every workbook produced -- and the baseline still scores higher on both exact and
+modification. **Do not explain this away.** The next control arm should be larger, and should run
+our Debugging tasks through `run_kimi_frozen.py` so both halves are the frozen configuration.
+
+One finding cuts the other way and is worth keeping: the control's mean regression is 0.9997, with
+a regression error on only 3 of 15 tasks. **The overfill class we spent this session on is far
+smaller in the bash arm.** It loses on modification -- it does not damage the workbook, it fails
+to finish the job. That is a different failure profile from ours, and it is the first evidence
+that the overfill class may be something our interface induces rather than something the tasks
+impose.
+
+**The 297 is running (2026-08-31, overnight).** `glm-5.3-flash-nonvisual-297-1`, launched with
+`run_kimi_frozen.py` at **`--call-limit 24`** rather than 12, because the control arm showed 12
+produces hard no-workbook failures on Debugging tasks the baseline solved in 17-29 calls. The
+model self-limits -- our arm used 6-10 calls where it was not starved -- so the raise costs almost
+nothing on the ~250 tasks that never approach it and rescues the ones that do. Commit gate on,
+Debugging only, as the frozen runner forwards it. This breaks call-budget comparability with every
+earlier 12-call measurement; that is deliberate and is the reason it is written here.
+
 **Extents shipped and measured at n=4 per arm (2026-08-31).** `region_occupancy` now reports
 where each populated run stops -- `column_extents: {"C": "17:22"}` and `row_extents: {"11":
 "B:C"}` per region, run-grouped and capped at 16 entries a side -- replacing the `partial_columns`
