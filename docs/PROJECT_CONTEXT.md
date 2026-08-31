@@ -110,6 +110,31 @@ of intent, and covers row interiors rather than only right edges, so it should d
 blank which was populated before, which is the cascade mechanism itself. Both are gold-blind and
 measurable offline with the existing harness before any API spend.
 
+**The Debugging zero is a real gap, and it is not LibreOffice translation (2026-08-31).**
+The paper reports the best model at **34.89% overall with Debugging at 12.00%**, so the frontier
+is not near-zero on this category and our **0/100** is our gap, not a benchmark-wide wall.
+Debugging is 100 of the 297 non-visual tasks, so it is the largest identifiable headroom in the
+project.
+
+Analysis of 20 stored Sol Debugging outputs: **650 error cells present in the output that the
+input did not have, across 16/20 tasks** (~33 per task). By kind: `#VALUE!` 462, `#REF!` 96,
+`#DIV/0!` 92. **Zero `Err:NNN` codes** — LibreOffice's own parse/evaluation errors do not appear,
+so this is not a translation artifact. Attribution:
+
+| | share | meaning |
+|---|---:|---|
+| model changed the formula | 312 (48%) | the repair itself errors |
+| formula unchanged | 338 (52%) | an error the model never repaired, or cascade from a cell left at zero |
+
+Both halves are exactly what a Debugging agent needs told, and it currently gets neither. Sol
+submits workbooks carrying hundreds of error cells with no signal that they exist.
+
+Scoring caveat checked and cleared: many Debugging inputs carry formulas with **no cached value**
+(`Ex 5 - M&A!D41` is `(None, '=+SUM(D35:D40)')`), which would make "no error in the input"
+vacuously true. Re-scored treating a golden formula with an absent cache as unscorable:
+**unscorable 0, precision unchanged at 91.8%** — the goldens do carry caches at the flagged
+addresses. The number is honest.
+
 **Next move is the commit-time verification redesign, not another compiler.** Two-phase `submit`:
 the first call returns a gold-blind report and does not finalise. Checks, each mapped to a measured
 failure class: cells changed outside the agent's own declared write targets (22.9% over-edit;

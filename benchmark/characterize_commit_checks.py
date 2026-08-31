@@ -173,9 +173,15 @@ def _score(
 
             correct = _is_passing_check(golden_value)
         elif finding.check == "new_formula_error":
-            # Correct when the golden has no error at that cell.
             from librecalc_mcp.domain.commit_checks import error_kind
 
+            golden_formula = golden_content[1]
+            if golden_formula is not None and golden_value is None:
+                # The golden carries a formula with no cached result. openpyxl cannot say what
+                # it evaluates to, so "the golden has no error here" is vacuously true and
+                # would score as a win. Offline replay cannot judge this cell.
+                tally[f"{finding.check}:unscorable"] += 1
+                continue
             correct = error_kind(golden_content) is None
         else:
             correct = False
@@ -263,7 +269,8 @@ def main() -> int:
         precision = f"{true_positive / scored:.1%}" if scored else "n/a"
         print(
             f"  {check}: {total} findings, precision {precision} "
-            f"(tp {true_positive} / fp {false_positive})"
+            f"(tp {true_positive} / fp {false_positive} / "
+            f"unscorable {tally[f'{check}:unscorable']})"
         )
     if tally["unreadable"]:
         print(f"unreadable artifacts skipped: {tally['unreadable']}")
