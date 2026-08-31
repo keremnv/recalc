@@ -138,3 +138,46 @@ def test_referential_integrity_follows_only_single_cell_references() -> None:
     findings = referential_integrity(before, after)
 
     assert [f.address for f in findings] == ["E2"]
+
+
+def test_region_width_extension_names_a_column_the_block_never_populates() -> None:
+    """06_24 fills G under a header reaching G while every data block stops at F.
+
+    The inspect-time extent cannot reach this: the block it annotates does not span column G.
+    18 of Template's 32 run-extension failures have that geometry.
+    """
+    before = {
+        ("RevenueBuild", "B7"): ("Quarter", None),
+        ("RevenueBuild", "G7"): ("Total", None),
+        # A blank row 8-9 separates the header from the data block.
+        ("RevenueBuild", "B10"): ("Units", None),
+        ("RevenueBuild", "C10"): (1, None),
+        ("RevenueBuild", "F10"): (4, None),
+        ("RevenueBuild", "B11"): ("Price", None),
+        ("RevenueBuild", "C11"): (5, None),
+        ("RevenueBuild", "F11"): (8, None),
+    }
+    after = {**before, ("RevenueBuild", "G11"): (14, "=SUM(C11:F11)")}
+
+    from librecalc_mcp.domain.commit_checks import region_width_extensions
+
+    findings = region_width_extensions(before, after)
+
+    assert [finding.address for finding in findings] == ["G11"]
+    assert "populates only B:F" in findings[0].detail
+
+
+def test_region_width_extension_is_silent_inside_the_block() -> None:
+    """A blank filled inside a column the block already uses is the extent field's job."""
+    before = {
+        ("DeferredTax", "B19"): ("Jan", None),
+        ("DeferredTax", "C19"): (1, None),
+        ("DeferredTax", "B20"): ("Feb", None),
+        ("DeferredTax", "C20"): (2, None),
+        ("DeferredTax", "B21"): ("Total", None),
+    }
+    after = {**before, ("DeferredTax", "C21"): (3, "=SUM(C19:C20)")}
+
+    from librecalc_mcp.domain.commit_checks import region_width_extensions
+
+    assert region_width_extensions(before, after) == []

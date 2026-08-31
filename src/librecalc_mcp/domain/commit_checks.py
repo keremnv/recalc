@@ -483,6 +483,91 @@ def uniformity_breaks(
     return findings
 
 
+def _input_regions(before: CellMap) -> dict[str, list[tuple[int, int, set[int]]]]:
+    """Row-contiguous blocks per sheet as (first row, last row, populated columns).
+
+    Same blocks the structure observation calls `regions`, rebuilt from the input cell map so
+    the check does not depend on what the agent was shown.
+    """
+    populated: dict[str, dict[int, set[int]]] = {}
+    for (sheet, address), cell in before.items():
+        if _is_blank(cell):
+            continue
+        match = A1_RANGE.fullmatch(address.upper())
+        if match is None:
+            continue
+        rows = populated.setdefault(sheet, {})
+        rows.setdefault(int(match.group(2)), set()).add(column_number(match.group(1)))
+    regions: dict[str, list[tuple[int, int, set[int]]]] = {}
+    for sheet, rows in populated.items():
+        blocks: list[tuple[int, int, set[int]]] = []
+        start: int | None = None
+        previous: int | None = None
+        for row in sorted(rows):
+            if start is None:
+                start = row
+            elif previous is not None and row != previous + 1:
+                columns = set().union(*(rows[r] for r in range(start, previous + 1)))
+                blocks.append((start, previous, columns))
+                start = row
+            previous = row
+        if start is not None and previous is not None:
+            columns = set().union(*(rows[r] for r in range(start, previous + 1)))
+            blocks.append((start, previous, columns))
+        regions[sheet] = blocks
+    return regions
+
+
+def region_width_extensions(before: CellMap, after: CellMap) -> list[CommitFinding]:
+    """Blanks filled in a column no row of their own block populates.
+
+    MEASURED AND REJECTED (2026-08-31). Built for the 17 Template run-extension failures no
+    inspect-time extent can name -- `06_24` fills `G11` under a header reaching `G` while every
+    data block stops at `F`. Replayed across 148 stored Template outputs it returns **4586
+    findings at 5.6% precision**, firing on 132 of 148 tasks: about 31 a task. Filling a blank in
+    a column the block never populated is what a Template completion *is*, and the golden wants
+    the cell filled 94% of the time.
+
+    No narrowing survives either. Restricting to columns past the block's right edge keeps the
+    legitimate new-period writes; requiring no header above the column suppresses `06_24`, whose
+    `G7` is labelled `Total` and is precisely what invited the write. The same geometry is
+    correct in the common case and wrong in these 17, and nothing in the input separates them --
+    so this class is not detectable from inside the world, and no gate check should claim it is.
+
+    Kept, unwired, so the idea is not reinvented. Do not add it to `commit_gate.evaluate`.
+    """
+    findings: list[CommitFinding] = []
+    regions = _input_regions(before)
+    for sheet, address in sorted(changed_cells(before, after)):
+        if not _is_blank(before.get((sheet, address))):
+            continue
+        if _is_blank(after.get((sheet, address))):
+            continue
+        match = A1_RANGE.fullmatch(address.upper())
+        if match is None:
+            continue
+        column, row = column_number(match.group(1)), int(match.group(2))
+        for first_row, last_row, columns in regions.get(sheet, []):
+            if not first_row <= row <= last_row:
+                continue
+            if column in columns:
+                break
+            span = f"{column_label(min(columns))}:{column_label(max(columns))}"
+            findings.append(
+                CommitFinding(
+                    check="region_width_extension",
+                    sheet=sheet,
+                    address=address,
+                    detail=(
+                        f"filled a blank in column {column_label(column)}; the block at rows "
+                        f"{first_row}-{last_row} populates only {span}"
+                    ),
+                )
+            )
+            break
+    return findings
+
+
 def report(findings: list[CommitFinding]) -> dict[str, Any]:
     """Group findings for the commit-time response."""
     grouped: dict[str, list[dict[str, str]]] = {}

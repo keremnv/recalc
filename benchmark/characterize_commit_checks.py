@@ -34,6 +34,7 @@ from librecalc_mcp.domain.commit_checks import (
     expand_range,
     new_formula_errors,
     referential_integrity,
+    region_width_extensions,
     unextended_continuations,
     uniformity_breaks,
     unrequested_writes,
@@ -51,6 +52,11 @@ def _arguments() -> argparse.Namespace:
     parser.add_argument("--limit", type=int, default=0, help="Analyse at most N task outputs.")
     parser.add_argument("--run", action="append", help="Restrict to these run names.")
     parser.add_argument("--category", action="append", help="Restrict to these categories.")
+    parser.add_argument(
+        "--check",
+        action="append",
+        help="Restrict to these check names; measuring one new check re-runs only that one.",
+    )
     parser.add_argument("--json", type=Path, help="Write the per-finding detail here.")
     return parser.parse_args()
 
@@ -95,7 +101,14 @@ def _declared_from_trajectory(trajectory_path: Path) -> set[tuple[str, str]]:
     return declared_targets(requests)
 
 
+_CELL_MAP_CACHE: dict[Path, dict[tuple[str, str], tuple[Any, Any]]] = {}
+
+
 def _cell_map(path: Path) -> dict[tuple[str, str], tuple[Any, Any]]:
+    """Cell map for one workbook, memoized: inputs and goldens repeat across every run."""
+    cached = _CELL_MAP_CACHE.get(path)
+    if cached is not None:
+        return cached
     values = openpyxl.load_workbook(path, data_only=True)
     raw = openpyxl.load_workbook(path, data_only=False)
     cells: dict[tuple[str, str], tuple[Any, Any]] = {}
@@ -149,6 +162,7 @@ def _cell_map(path: Path) -> dict[tuple[str, str], tuple[Any, Any]]:
     for key in data_table_cells:
         if key in cells:
             cells[key] = (None, DATA_TABLE_SENTINEL)
+    _CELL_MAP_CACHE[path] = cells
     return cells
 
 
@@ -190,6 +204,9 @@ def _score(
             target = finding.detail.split("references ", 1)[1].split(",", 1)[0]
             target_sheet, _, target_address = target.rpartition("!")
             correct = golden.get((target_sheet, target_address), (None, None))[0] is not None
+        elif finding.check == "region_width_extension":
+            # Correct when the golden leaves the cell blank, i.e. the block really did stop.
+            correct = golden_content == (None, None) or golden_value is None
         elif finding.check == "uniformity_break":
             # Correct when the golden keeps the run uniform, i.e. it did not single this cell out.
             correct = golden.get(key, (None, None))[1] is not None
@@ -247,7 +264,10 @@ def main() -> int:
                 + unextended_continuations(after, candidates)
                 + referential_integrity(before, after)
                 + uniformity_breaks(before, after)
+                + region_width_extensions(before, after)
             )
+            if args.check:
+                findings = [f for f in findings if f.check in set(args.check)]
             analysed += 1
             tally["tasks"] += 1
             tally["declared_cells"] += len(declared)
@@ -275,6 +295,7 @@ def main() -> int:
         "unextended_continuation",
         "referential_integrity",
         "uniformity_break",
+        "region_width_extension",
     ):
         total = tally[check]
         true_positive = tally[f"{check}:true_positive"]

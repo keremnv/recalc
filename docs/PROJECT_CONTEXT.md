@@ -433,9 +433,12 @@ whose header is wider than its data, a column populated in every row but the tot
 stop is the same kind of gold-blind observation as marking the continuation, and it addresses the
 class rather than one of its instances. Not yet designed; do not ship an ad-hoc rule per shape.
 
-Noted in passing, unverified: `Template:16_07`'s write uses `;` argument separators
-(`=INDEX($C$6:$C$9;1;COLUMN()-2)`). `normalize_formula_argument_separators` exists and the
-separator defect is recorded as fixed, so this is probably handled -- but confirm before the 297.
+Confirmed handled (2026-08-31): `Template:16_07`'s write uses `;` argument separators
+(`=INDEX($C$6:$C$9;1;COLUMN()-2)`). `normalize_formula_argument_separators` rewrites commas and
+passes semicolons through untouched, quoted commas survive both ways, and `formula_a1_shape` /
+`formula_a1_references` parse the semicolon form correctly. The run itself is the end-to-end
+proof: `16_07` scored reg 0.9961 / mod 1.0000, so the formula landed and calculated. Closed as a
+pre-297 risk.
 
 **Overfill shapes classified across all 99 regression-first failures (2026-08-31).**
 `benchmark/characterize_overfill_shapes.py` names the shape of each wrongly written cell from the
@@ -478,7 +481,7 @@ surface there: report the count of populated cells changed and let the model rev
 where each populated run stops -- `column_extents: {"C": "17:22"}` and `row_extents: {"11":
 "B:C"}` per region, run-grouped and capped at 16 entries a side -- replacing the `partial_columns`
 counts. Extents are first-to-last populated, so a cell inside one may still be blank; the field
-stays silent on a solid block. Both arms are GLM 5.3 Flash, same config, four runs each.
+stays silent on a solid block. It costs 2.3x the bytes the counts did, which is about 600 bytes -- roughly 150 tokens -- per workbook against a ~40k-token prompt, so the verbosity is not a factor in the results below. Both arms are GLM 5.3 Flash, same config, four runs each.
 
 | task | arm | reg mean | reg best | mod mean | exact |
 |---|---|---:|---:|---:|---:|
@@ -503,12 +506,23 @@ is a miss row that spans its whole block in a column the block never populates -
 extent to print, because the region's bounding box does not include the column. The earlier claim
 that extents "cover 32/34 cases" was wrong and is corrected here.
 
-**Those 17 go to the commit gate, not to another inspect field.** `region_width_extensions` in
-`commit_checks.py` flags a filled blank whose column no row of its own block populates, naming
-the block's real span (`the block at rows 10-14 populates only B:F`). The width mismatch is
-already visible in `regions` and models write there anyway, which is the signature of a
-declinable signal; the gate is where a finding has to be answered. Wired into
-`characterize_commit_checks.py` for the same free offline scoring the other checks got.
+**The 17 were routed to a commit-time check, and the check was measured and rejected the same
+day.** `region_width_extensions` flags a filled blank whose column no row of its own block
+populates, naming the block's real span (`the block at rows 10-14 populates only B:F`). Replayed
+across **148 stored Template outputs it produces 4586 findings at 5.6% precision**, firing on 132
+of 148 tasks -- about 31 a task. The reason is not a bug: filling a blank in a column the block
+never populated is what a Template completion *is*, and the golden wants the cell filled 94% of
+the time. Neither narrowing works -- restricting to columns past the right edge keeps the
+legitimate new-period writes, and requiring no header above the column suppresses `06_24`, whose
+`G7` is labelled `Total` and is exactly what invited the write. The function stays in
+`commit_checks.py` with the numbers in its docstring, unwired, so it is not reinvented.
+
+**This is the first measured limit on the completeness thesis.** "A world is complete when every
+way of being wrong inside it is detectable from inside it" holds only where the wrong action
+differs observably from the right one. Here it does not: the same write -- fill a blank in a
+column the block does not use -- is correct in 94% of Template tasks and wrong in these 17, and
+no fact about the input separates the two. That boundary is an intelligence threshold, not a
+world defect, and it should be named as such rather than attacked with a seventh signal.
 
 **Next move is the commit-time verification redesign, not another compiler.** Two-phase `submit`:
 the first call returns a gold-blind report and does not finalise. Checks, each mapped to a measured
