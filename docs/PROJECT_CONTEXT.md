@@ -406,6 +406,37 @@ it fails open in three places. In exchange every Debugging task yields a live fi
 which is the only honest source of check precision. Decision made on risk-tolerance grounds --
 revisit if a gated Debugging arm ever scores above zero.
 
+**Standing where the model stood: the overfill is pattern completion (2026-08-31).**
+`benchmark/inspect_decision.py` takes a run and a task, finds the write that touches the address
+the evaluator names as the first miss, and prints what the model had just been shown, what it
+said it was doing, and what it then did. No golden data is read -- the address comes from the
+evaluator's own message. Swept over the eleven Sol tasks that are one overfill from exact:
+
+- `Template:06_08` -- wrote `="Accounts Payable"` into `B17`. The prior observation shows `B15`
+  "Accounts Receivable", `B16` "Inventory", and `B17` already holding **`FN: Cash flow ...`**, a
+  footnote. It overwrote a populated cell to complete a **label sequence**.
+- `Template:06_24` -- read `B7:G17` as one block whose header row runs `B7` Quarter, `C7` Q1 2023,
+  `D7` Q2 2023 ... and filled data to the header's width.
+- `Template:05_01` -- the `regions` bounding box `B16:F23`, already documented.
+- `Debugging:01_05` -- the prior observation contains a **failed** oversize read
+  (`{"ok":false,...,"error":"ValueError: ran..."}`) and the model wrote `=AVERAGE(J5:J18)` anyway.
+  It wrote blind after a rejected read.
+
+**The generalisation: the model completes whatever regularity the observation makes salient** --
+a rectangle, a header span, a label sequence. `regions` is one instance, not the whole class, which
+is why `region_occupancy` recovered only one cell of one run.
+
+**Design direction that follows: mark terminators, not just continuations.** The world already
+has `boundary_continuations`, which says where a run *should* continue. Its dual does not exist:
+where a run *ends*. A label sequence that stops because the next row is a footnote, a data band
+whose header is wider than its data, a column populated in every row but the total. Marking the
+stop is the same kind of gold-blind observation as marking the continuation, and it addresses the
+class rather than one of its instances. Not yet designed; do not ship an ad-hoc rule per shape.
+
+Noted in passing, unverified: `Template:16_07`'s write uses `;` argument separators
+(`=INDEX($C$6:$C$9;1;COLUMN()-2)`). `normalize_formula_argument_separators` exists and the
+separator defect is recorded as fixed, so this is probably handled -- but confirm before the 297.
+
 **Next move is the commit-time verification redesign, not another compiler.** Two-phase `submit`:
 the first call returns a gold-blind report and does not finalise. Checks, each mapped to a measured
 failure class: cells changed outside the agent's own declared write targets (22.9% over-edit;
