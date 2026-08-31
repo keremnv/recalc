@@ -474,6 +474,42 @@ forwarded to Template/FM only, which is right for Template (2/34) but leaves Fin
 16/21 unaddressed and is correctly withheld from Debugging's 42/44. The commit gate is the better
 surface there: report the count of populated cells changed and let the model review it.
 
+**Extents shipped and measured at n=4 per arm (2026-08-31).** `region_occupancy` now reports
+where each populated run stops -- `column_extents: {"C": "17:22"}` and `row_extents: {"11":
+"B:C"}` per region, run-grouped and capped at 16 entries a side -- replacing the `partial_columns`
+counts. Extents are first-to-last populated, so a cell inside one may still be blank; the field
+stays silent on a solid block. Both arms are GLM 5.3 Flash, same config, four runs each.
+
+| task | arm | reg mean | reg best | mod mean | exact |
+|---|---|---:|---:|---:|---:|
+| `Template:05_01` | `partial_columns` | 0.9912 | 1.0000 | 0.9737 | 1/4 |
+| `Template:05_01` | extents | 0.9934 | 1.0000 | 0.9474 | 1/4 |
+| `Template:06_24` | `partial_columns` | 0.9393 | 0.9435 | 0.4487 | 0/4 |
+| `Template:06_24` | extents | **0.9633** | **1.0000** | 0.5641 | 0/4 |
+
+`05_01` is flat: both arms hit exact once in four and differ inside the noise. `06_24` moves --
+regression mean +0.024, and one extents run reached **reg 1.0000**, which the baseline arm never
+did in four tries and which no earlier `06_24` run has ever produced. Its first miss on that run
+is a *modification* error, so the overfill class was gone from that output entirely. This is two
+tasks and eight runs, not a result to generalise from. **The variance is the headline**: the same
+task and config swings between exact and reg 0.9854 across repeats, so any single-run A/B on this
+model is uninterpretable. Run n≥4 per arm from now on.
+
+**Coverage: an extent can name 15 of Template's 32 run-extension failures, not 32.**
+`benchmark/characterize_extent_coverage.py` asks, per failure, whether either half of the field
+addresses the cell: 8 are named by a column extent that ends above the miss row, 7 by a row
+extent that ends left of the miss column, and **17 are unreachable**. The unreachable geometry
+is a miss row that spans its whole block in a column the block never populates -- there is no
+extent to print, because the region's bounding box does not include the column. The earlier claim
+that extents "cover 32/34 cases" was wrong and is corrected here.
+
+**Those 17 go to the commit gate, not to another inspect field.** `region_width_extensions` in
+`commit_checks.py` flags a filled blank whose column no row of its own block populates, naming
+the block's real span (`the block at rows 10-14 populates only B:F`). The width mismatch is
+already visible in `regions` and models write there anyway, which is the signature of a
+declinable signal; the gate is where a finding has to be answered. Wired into
+`characterize_commit_checks.py` for the same free offline scoring the other checks got.
+
 **Next move is the commit-time verification redesign, not another compiler.** Two-phase `submit`:
 the first call returns a gold-blind report and does not finalise. Checks, each mapped to a measured
 failure class: cells changed outside the agent's own declared write targets (22.9% over-edit;

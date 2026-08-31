@@ -1277,9 +1277,69 @@ def test_region_occupancy_exposes_a_ragged_block_the_bounding_box_hides() -> Non
     occupancy = {entry["range"]: entry for entry in observation["region_occupancy"]}
     assert occupancy, "a ragged region must be reported"
     entry = next(iter(occupancy.values()))
-    # C is populated in fewer rows than the region spans, so it is not a solid column.
-    assert "C" in entry["partial_columns"]
-    assert entry["partial_columns"]["C"] < entry["rows"]
+    # C stops at row 18; the bounding box runs to 19, which is the cell models overfill.
+    assert entry["column_extents"]["C"] == "17:18"
+    # D:F share one extent, so they collapse into a single run rather than three entries.
+    assert entry["column_extents"]["D:F"] == "17:19"
+    # The header row is narrower than the block, the shape that produced row_extended_right.
+    assert entry["row_extents"]["16"] == "B:B"
+    # Row 18 spans the whole block, so it is absent and it breaks the run around it.
+    assert "18" not in entry["row_extents"]
+
+
+def test_region_occupancy_reports_a_column_that_stops_before_the_block_ends() -> None:
+    """21 of Template's 34 regression-first failures are a column continued past its last row.
+
+    The extent states where the run stops. It is a fact, not an instruction: the same geometry
+    is what boundary_continuations asks models to extend.
+    """
+    calc_tool = _calc_tool_module()
+
+    observation = calc_tool._structure_sheet_observation(
+        sheet="Schedule",
+        used_range="B19:C23",
+        result={
+            "values": [
+                ["Jan", 1],
+                ["Feb", 2],
+                ["Mar", 3],
+                ["Apr", 4],
+                # C23 is the blank three models filled because the rectangle implied it.
+                ["Total", ""],
+            ],
+            "formulas": [[""] * 2 for _ in range(5)],
+            "errors": [[None] * 2 for _ in range(5)],
+        },
+    )
+
+    entry = observation["region_occupancy"][0]
+    assert entry["range"] == "B19:C23"
+    assert entry["column_extents"]["C"] == "19:22"
+
+
+def test_region_occupancy_caps_runs_and_reports_the_remainder() -> None:
+    calc_tool = _calc_tool_module()
+
+    # Alternating extents defeat run grouping, so every column is its own entry.
+    limit = observation_module._OCCUPANCY_RUN_LIMIT
+    columns = 2 * limit + 4
+    values = [
+        ["x" if row == 0 or column % 2 == row else "" for column in range(columns)]
+        for row in range(3)
+    ]
+    observation = calc_tool._structure_sheet_observation(
+        sheet="Wide",
+        used_range=f"A1:{grid_module.column_label(columns)}3",
+        result={
+            "values": values,
+            "formulas": [[""] * columns for _ in range(3)],
+            "errors": [[None] * columns for _ in range(3)],
+        },
+    )
+
+    entry = observation["region_occupancy"][0]
+    assert len(entry["column_extents"]) == limit
+    assert entry["column_extents_omitted"] > 0
 
 
 def test_region_occupancy_stays_silent_when_a_block_really_is_solid() -> None:

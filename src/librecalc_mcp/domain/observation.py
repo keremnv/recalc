@@ -43,6 +43,8 @@ _STRUCTURE_LABEL_LIMIT = 200
 
 _STRUCTURE_LABEL_LENGTH = 240
 
+_OCCUPANCY_RUN_LIMIT = 16
+
 _FORMULA_PATTERN_MIN_LENGTH = 4
 
 _ANOMALY_NEIGHBOR_DISTANCE = 4
@@ -141,6 +143,28 @@ def _axis_bands(
             bands[outer_range] = formatted_spans
         band_start = index
     return bands
+
+
+def _extent_runs(
+    labels: list[str],
+    extents: list[str | None],
+) -> tuple[dict[str, str], int]:
+    """Group consecutive equal extents into one entry keyed by the label run."""
+
+    runs: list[tuple[int, int, str]] = []
+    start: int | None = None
+    for index in range(len(labels) + 1):
+        extent = extents[index] if index < len(labels) else None
+        if start is not None and extent != extents[start]:
+            runs.append((start, index - 1, str(extents[start])))
+            start = None
+        if extent is not None and start is None:
+            start = index
+    grouped = {
+        (labels[first] if first == last else f"{labels[first]}:{labels[last]}"): extent
+        for first, last, extent in runs[:_OCCUPANCY_RUN_LIMIT]
+    }
+    return grouped, max(0, len(runs) - _OCCUPANCY_RUN_LIMIT)
 
 
 def _candidate_table_gaps(
@@ -1513,32 +1537,67 @@ def _structure_sheet_observation(
                 f"{column_labels[last_column]}{row_labels[region_end]}"
             )
             regions.append(region_range)
-            # A region is a bounding box, and a bounding box over-promises: three unrelated
-            # models filled Template 05_01 C23 and 06_24 G11:G17 because the rectangle implied
-            # cells the data never occupies. Report how many rows each column actually fills so
-            # a ragged block does not read as a solid one.
+            # A region is a bounding box, and a bounding box over-promises. Of the 99
+            # regression-first failures, 32 of Template's 34 are a model continuing a
+            # populated run past its last cell into the blank the rectangle implied. Report
+            # where each run actually stops -- as a fact, not as an instruction to stop,
+            # because boundary_continuations tells models to extend runs over the same
+            # geometry. Extents are first-to-last populated; cells inside one may be blank.
             region_rows = region_end - region_start + 1
-            column_fill = {
-                column_labels[column]: sum(
-                    1
+            region_columns = last_column - first_column + 1
+            column_extents: list[str | None] = []
+            blank_columns: list[str] = []
+            for column in range(first_column, last_column + 1):
+                filled_rows = [
+                    row
                     for row in range(region_start, region_end + 1)
                     if kinds[row][column] != "blank"
-                )
-                for column in range(first_column, last_column + 1)
-            }
-            partial = {
-                label: filled
-                for label, filled in column_fill.items()
-                if 0 < filled < region_rows
-            }
-            if partial:
-                region_occupancy.append(
-                    {
-                        "range": region_range,
-                        "rows": region_rows,
-                        "partial_columns": partial,
-                    }
-                )
+                ]
+                if not filled_rows:
+                    blank_columns.append(column_labels[column])
+                    column_extents.append(None)
+                elif len(filled_rows) == region_rows:
+                    column_extents.append(None)
+                else:
+                    column_extents.append(
+                        f"{row_labels[filled_rows[0]]}:{row_labels[filled_rows[-1]]}"
+                    )
+            row_extents: list[str | None] = []
+            for row in range(region_start, region_end + 1):
+                filled_columns = [
+                    column
+                    for column in range(first_column, last_column + 1)
+                    if kinds[row][column] != "blank"
+                ]
+                if len(filled_columns) == region_columns:
+                    row_extents.append(None)
+                else:
+                    row_extents.append(
+                        f"{column_labels[filled_columns[0]]}:{column_labels[filled_columns[-1]]}"
+                    )
+            by_column, columns_omitted = _extent_runs(
+                column_labels[first_column : last_column + 1], column_extents
+            )
+            by_row, rows_omitted = _extent_runs(
+                row_labels[region_start : region_end + 1], row_extents
+            )
+            if by_column or by_row or blank_columns:
+                entry: dict[str, Any] = {
+                    "range": region_range,
+                    "rows": region_rows,
+                    "columns": region_columns,
+                }
+                if by_column:
+                    entry["column_extents"] = by_column
+                if columns_omitted:
+                    entry["column_extents_omitted"] = columns_omitted
+                if by_row:
+                    entry["row_extents"] = by_row
+                if rows_omitted:
+                    entry["row_extents_omitted"] = rows_omitted
+                if blank_columns:
+                    entry["blank_columns"] = blank_columns[:_OCCUPANCY_RUN_LIMIT]
+                region_occupancy.append(entry)
             region_start = None
 
     total_labels = sum(kind == "text" for row in kinds for kind in row)
