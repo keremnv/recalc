@@ -1,7 +1,9 @@
+import ast
 import importlib.util
 import os
 import subprocess
 import sys
+import textwrap
 from pathlib import Path
 
 import pytest
@@ -631,3 +633,67 @@ def test_compute_read_budget_stages_write_from_inspect_prompt(tmp_path) -> None:
     assert "Include those cells in the same calc_fill_formulas" not in instance
     assert "Include boundary_continuations in the same fill" in instance
     assert "write from inspect; do not dump or bash" in system
+
+
+def test_empty_assistant_turn_is_repaired_before_the_provider_sees_it() -> None:
+    runner = _runner_module()
+    source = "        messages = self._history_to_messages(history)\n"
+
+    patched = runner._patch_sweagent_empty_assistant(source)
+
+    assert "(no content returned)" in patched
+    assert runner._patch_sweagent_empty_assistant(patched) == patched
+
+    body = textwrap.dedent(patched.split(source, 1)[1])
+    namespace = {
+        "messages": [
+            {"role": "assistant", "content": ""},
+            {"role": "assistant", "content": "   "},
+            {"role": "assistant", "content": None},
+            {"role": "assistant", "content": "", "tool_calls": [{"id": "call_1"}]},
+            {"role": "assistant", "content": "a real thought"},
+            {"role": "user", "content": ""},
+        ]
+    }
+    exec(body, namespace)  # noqa: S102
+    contents = [message["content"] for message in namespace["messages"]]
+
+    # Content-free assistant turns are repaired.
+    assert contents[0] == "(no content returned)"
+    assert contents[1] == "(no content returned)"
+    assert contents[2] == "(no content returned)"
+    # A tool-calling assistant turn is legitimately empty and must be left intact.
+    assert contents[3] == ""
+    # Real assistant content and non-assistant roles are untouched.
+    assert contents[4] == "a real thought"
+    assert contents[5] == ""
+
+
+def test_bad_request_is_not_retried() -> None:
+    runner = _runner_module()
+    source = "                    litellm.exceptions.UnsupportedParamsError,\n"
+
+    patched = runner._patch_sweagent_bad_request_retry(source)
+
+    assert "litellm.exceptions.BadRequestError," in patched
+    assert patched.index("BadRequestError") < patched.index("UnsupportedParamsError")
+    assert runner._patch_sweagent_bad_request_retry(patched) == patched
+
+
+def test_sweagent_model_patches_apply_to_the_vendored_source() -> None:
+    runner = _runner_module()
+    models_path = (
+        Path(__file__).parents[1]
+        / "benchmark-data/SpreadsheetBench-2/SWE-agent/sweagent/agent/models.py"
+    )
+    if not models_path.exists():
+        pytest.skip("vendored SWE-agent checkout is not present")
+
+    patched = runner._patch_sweagent_call_boundary(models_path.read_text(encoding="utf-8"))
+    patched = runner._patch_sweagent_budget_boundary(patched)
+    patched = runner._patch_sweagent_empty_assistant(patched)
+    patched = runner._patch_sweagent_bad_request_retry(patched)
+
+    ast.parse(patched)
+    assert "(no content returned)" in patched
+    assert "litellm.exceptions.BadRequestError," in patched

@@ -1,0 +1,25 @@
+{
+  "name": "wall-discriminator-five",
+  "purpose": "Compiler A/B on the ISA-freeze wall tasks. The world is frozen: every task here is one where K2.7 already had the observation and the operation available and still failed. Success is a write where K2.7 format-exited, an insert_row where inspect listed the index, or a skip of a gold-blank extra -- not a higher exact count. Run the same config for every compiler; do not tune the world between arms.",
+  "max_tool_calls_per_task": 12,
+  "isolation": {
+    "container": "official SpreadsheetBench 2 image",
+    "golden_data_available_to_agent": false,
+    "input_mount": "one exact workbook, read-only",
+    "output_mount": "one task-private directory, writable"
+  },
+  "discriminators": {
+    "Financial_Model:01_02": "boundary_continuations lists Working Capital Schedule!M3 =EOMONTH(L3,12) on the compact inspect. K2.7 left it blank at high/Moonshot twice ($0.089, exact 0/1). Win = M3 filled.",
+    "Template:05_01": "K2.7 inspected, read four times, then format-exited with no workbook across the preserve-populated and write-commit canaries. Win = any workbook. Secondary: no C23/C29 blank extras.",
+    "Template:06_24": "Previously crashed on the UNO CellType Enum under --preserve-populated; that is fixed and this arm does not set the flag. Win = workbook without G11:G17 blank extras.",
+    "Debugging:02_03": "Inspect listed insert_row_index=11; K2.7 never inserted and hit the 1200s timeout. Win = insert_row called.",
+    "Debugging:05_03": "Inspect listed Financial Overview insert_row_index=8 (gold). Best prior K2.7 result is low-3 (reg 1.0 / mod 0.2121) which then re-inserted from the input path and wiped its own formula work. Win = insert_row plus no self-wipe."
+  },
+  "tasks": [
+    {"category": "Financial_Model", "id": "01_02"},
+    {"category": "Template", "id": "05_01"},
+    {"category": "Template", "id": "06_24"},
+    {"category": "Debugging", "id": "02_03"},
+    {"category": "Debugging", "id": "05_03"}
+  ]
+}

@@ -11,6 +11,57 @@
 This section is the operator brief. Sections below this are background; if they conflict with §0,
 §0 wins.
 
+**Empty-completion transport bug — fixed; one run voided (2026-08-31).** A cheap compiler that
+format-exits emits an assistant turn with no content. SWE-agent appends it, and provider-pinned
+Moonshot then rejects **every** later request in that trajectory with
+`the message at position N with role 'assistant' must not be empty`. tenacity treats the 400 as
+retryable, so it replayed the same permanently-invalid history up to 20 times with exponential
+backoff and burned the 1200s task timeout. Two overlay patches in `run_openrouter_slice.py`:
+`_patch_sweagent_empty_assistant` (placeholder for content-free assistant turns; turns carrying
+`tool_calls` are legitimately empty and exempt) and `_patch_sweagent_bad_request_retry`
+(`BadRequestError` added to the tenacity exclusion tuple). Suite 192 passed / 12 skipped.
+Note the trigger: all seven prior Moonshot-pinned runs were `high`; **low reasoning produces the
+empty completions and provider pinning makes them fatal**, so the cheap lane is the configuration
+that trips it. Comparability caveat: the model now sees `(no content returned)` where earlier runs
+on tolerant providers saw an empty turn.
+
+**Archive audit (2026-08-31).** All 130 stored runs grepped for the signature. It appears in
+**exactly one run — `kimi-k2.7-wall-discriminator-low-1`** — and in zero prior Moonshot-pinned
+runs. The five other stored `BadRequestError`s are the already-documented `Tool choice must be
+auto` (GLM `template-05_01`, Spark) and the 262144-context bug (K2.5 format-three, K2.7 `10_02`).
+**The "cheap compiler format-exits and never writes" evidence base is not contaminated.** Do not
+re-audit this. If GLM `template-05_01` is ever cited as a compiler result, it is not one — it
+died on `tool_choice`.
+
+**Wall-discriminator five (2026-08-31).** `benchmark/slices/wall-discriminator-five.json`, K2.7
+low, pinned Moonshot, `semantic-program-v1`, ~$0.284 total. **1/5 valid.** Only
+`Financial_Model:01_02` is a measurement; `Template:05_01`, `Template:06_24`, `Debugging:02_03`
+and `Debugging:05_03` are **void on the transport bug above** — do not classify them, do not quote
+them as no-writes.
+
+`Financial_Model:01_02`: workbook produced, **$0.098**, 10 calls, `return_code 0`. Verified in the
+output: `Working Capital Schedule!L3 = =EOMONTH(K3,12)`, **`M3` still blank**. Trajectory is
+inspect → inspect(instruction-named sheets) → 4 reads → `calc_fill_formulas` → `calc_compare` →
+read-back of its own output → **`submit` called voluntarily at call 9 of 12**. This is the fourth
+independent M3 miss and the first with **no available excuse**: not budget exhaustion, not missing
+observation (`boundary_continuations` listed M3 on the compact inspect), not missing operation, and
+not "never verified" — it verified and was satisfied. **Agent-directed verification is
+self-confirming by construction**: `calc_compare` diffs output against input, so it reports the
+changes the agent intended and made, and is structurally incapable of surfacing a change the agent
+did not know to make. Classify as missing world-initiated verification, not compiler targeting.
+
+**Next move is the commit-time verification redesign, not another compiler.** Two-phase `submit`:
+the first call returns a gold-blind report and does not finalise. Checks, each mapped to a measured
+failure class: cells changed outside the agent's own declared write targets (22.9% over-edit;
+Template 34/35 blank extras), detected continuations left unextended (`01_02` M3), structure never
+restored (`deleted_row_geometry`; `02_03`/`05_03`), formula errors present in output but not input
+(the `05_03` self-wipe), and downstream cascade magnitude (33.9% class). Findings are stated as
+facts about the diff and must be acted on or explicitly dismissed — the six failed inspect-time
+enrichment signals all lost because they were declinable. No golden access: every check is
+computable from input + output + the agent's own declared intent. Do not re-run the wall slice on
+the old interface; the interface is about to change. Grok 4.6 stays parked. First arm is `01_02`
+alone (~$0.10, four runs establishing it never converts under hint-framing).
+
 **Visualization succeeded on the cheap compiler where the world was complete.** This is
 easy to lose because it lives in [`docs/viz-isa-diagnosis.md`](viz-isa-diagnosis.md) and
 run folders, not in the Debugging colour narrative below.

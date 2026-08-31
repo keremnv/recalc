@@ -409,6 +409,53 @@ def _patch_sweagent_budget_boundary(source: str) -> str:
     return source.replace(needle, replacement)
 
 
+def _patch_sweagent_empty_assistant(source: str) -> str:
+    """Keep an empty assistant turn from poisoning the whole conversation.
+
+    A cheap compiler that format-exits emits an assistant message with no content. Some
+    provider-pinned endpoints (Moonshot K2.7) reject *every* later request whose history
+    contains one, so a single empty completion ends the trajectory instead of costing one
+    requery. Substitute a placeholder for content-free assistant turns that carry no tool
+    call; turns that do carry one are legitimately empty and are left alone.
+    """
+    needle = """        messages = self._history_to_messages(history)
+"""
+    replacement = """        messages = self._history_to_messages(history)
+        for _message in messages:
+            if _message.get("role") != "assistant":
+                continue
+            if _message.get("tool_calls") or _message.get("function_call"):
+                continue
+            _content = _message.get("content")
+            if _content is None or (isinstance(_content, str) and not _content.strip()):
+                _message["content"] = "(no content returned)"
+"""
+    if replacement in source:
+        return source
+    if source.count(needle) != 1:
+        raise RuntimeError("Unsupported SWE-agent models.py: history-to-messages boundary was not found")
+    return source.replace(needle, replacement)
+
+
+def _patch_sweagent_bad_request_retry(source: str) -> str:
+    """Stop retrying a deterministically invalid request.
+
+    A 400 is a property of the message history, not of the network, so tenacity replays the
+    same rejected request up to twenty times with exponential backoff and burns the task
+    timeout. Fail immediately instead and let the run harvest whatever exists.
+    """
+    needle = """                    litellm.exceptions.UnsupportedParamsError,
+"""
+    replacement = """                    litellm.exceptions.BadRequestError,
+                    litellm.exceptions.UnsupportedParamsError,
+"""
+    if replacement in source:
+        return source
+    if source.count(needle) != 1:
+        raise RuntimeError("Unsupported SWE-agent models.py: retry exclusion tuple was not found")
+    return source.replace(needle, replacement)
+
+
 def _stage_sweagent_overlay(sweagent_root: Path, temporary_root: Path) -> Path:
     overlay_root = temporary_root / "sweagent-overlay"
     package_root = overlay_root / "sweagent"
@@ -417,6 +464,8 @@ def _stage_sweagent_overlay(sweagent_root: Path, temporary_root: Path) -> Path:
     model_source = models_path.read_text(encoding="utf-8")
     model_source = _patch_sweagent_call_boundary(model_source)
     model_source = _patch_sweagent_budget_boundary(model_source)
+    model_source = _patch_sweagent_empty_assistant(model_source)
+    model_source = _patch_sweagent_bad_request_retry(model_source)
     models_path.write_text(model_source, encoding="utf-8")
     return overlay_root
 
