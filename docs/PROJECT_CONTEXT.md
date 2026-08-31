@@ -190,6 +190,40 @@ does not write at all. Note the direct reversal on `Financial_Model:01_02`, wher
 reg 1.0 / mod 0.9956 and Qwen produced no workbook. Do not treat either as the better cheap
 compiler on this evidence. Write-rate and overfill are separable problems.
 
+**Phase 4 — first commit-gate A/B (2026-08-31).** `kimi-k2.7-commit-gate-off-low-1` vs
+`-on-low-1`, four Debugging tasks, identical config except `--commit-gate`, K2.7 low, pinned
+Moonshot. **Partial positive with a clear mechanism finding.**
+
+| task | gate fired | off | on |
+|---|---|---|---|
+| `10_02` | **yes** | 257 new-error cells, mod 0.2340 | **245** new-error cells, mod 0.2340 |
+| `07_01` | no findings | mod 0.0000 | mod 0.0581 |
+| `06_01` | bypassed (call cap) | mod 0.0000 | mod 0.0000 |
+| `05_03` | no workbook | mod 0.1273 | no workbook |
+
+**Where the gate fired, the model acted.** The `10_02` trajectory tail is
+`calc_compare -> submit -> calc_read -> calc_program -> submit`: it submitted, was blocked by the
+report, read the area, issued a repair, and resubmitted. That is the loop closing for the first
+time in this project on a non-visual task.
+
+**The report is capped at 12 findings per check and exactly 12 error cells were removed**
+(257 -> 245; changed cells 13,194 -> 13,182). One task, so treat the exact match as suggestive
+rather than established — but it points at the cap, not the model's willingness, as the limiting
+factor. Raising `_MAX_REPORTED_PER_CHECK` and allowing more than one pass is the obvious next
+measurement. Official score did not move, because 245 of 257 errors remained.
+
+**The gate is bypassed by the dominant failure modes.** It fired on 1 of 4 tasks:
+`06_01` hit the 12-call cap and SWE-agent autosubmitted, which never invokes the submit tool;
+`05_03` produced no workbook, where the gate correctly passes. So a verification instrument
+attached to `submit` misses exactly the trajectories that fail by never getting there. Fire the
+checks after the first write, not only at submit.
+
+**Live and offline check behaviour differ.** Offline replay finds 94 `broken_check_cell` findings
+on `07_01`; the in-container gate found none. The live path reads both workbooks through UNO with
+recalculation while offline replay reads openpyxl caches, so the offline precision figures are an
+estimate of live behaviour, not a measurement of it. The live path is the trustworthy one. Do not
+quote the offline 100% for `broken_check_cell` as a live number.
+
 **Next move is the commit-time verification redesign, not another compiler.** Two-phase `submit`:
 the first call returns a gold-blind report and does not finalise. Checks, each mapped to a measured
 failure class: cells changed outside the agent's own declared write targets (22.9% over-edit;
