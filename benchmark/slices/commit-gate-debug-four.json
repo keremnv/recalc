@@ -1,0 +1,19 @@
+{
+  "name": "commit-gate-debug-four",
+  "purpose": "Phase 4: does a cheap compiler act on the world's own commit report? Four Debugging tasks on which K2.7 reliably produces a workbook, so the gate has something to check. Run twice on the same seeds, identical except --commit-gate. Colour tasks are excluded: they run format-conventions observation and the gate's checks are formula-based.",
+  "model": "moonshotai/kimi-k2.7-code",
+  "max_tool_calls_per_task": 12,
+  "success": "Primary: fewer error cells in the output than the off arm. Exact is secondary and not expected. A finding acknowledged and repaired is the mechanism working; a finding read and dismissed is still informative.",
+  "isolation": {
+    "container": "official SpreadsheetBench 2 image",
+    "golden_data_available_to_agent": false,
+    "input_mount": "one exact workbook, read-only",
+    "output_mount": "one task-private directory, writable"
+  },
+  "tasks": [
+    {"category": "Debugging", "id": "05_03"},
+    {"category": "Debugging", "id": "06_01"},
+    {"category": "Debugging", "id": "07_01"},
+    {"category": "Debugging", "id": "10_02"}
+  ]
+}
