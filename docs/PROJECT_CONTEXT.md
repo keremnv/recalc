@@ -50,6 +50,30 @@ self-confirming by construction**: `calc_compare` diffs output against input, so
 changes the agent intended and made, and is structurally incapable of surfacing a change the agent
 did not know to make. Classify as missing world-initiated verification, not compiler targeting.
 
+**Phase 2 offline gate killed the overfill check before it cost anything (2026-08-31).**
+`benchmark/characterize_commit_checks.py` replays candidate commit checks against stored runs;
+`src/librecalc_mcp/domain/commit_checks.py` holds the pure logic. Result: `unrequested_write`
+(cells changed outside the agent's own declared write targets) returns **zero findings** on all
+three documented Sol overfills — `05_01` C23/C29, `06_24` G11:G17, `06_08`
+`WorkingCapital_Forecast!B17` — because Sol **declared** every one of them (81, 51 and 41
+declared cells respectively). The overfill class is not "wrote where it did not say it would";
+it is "said it would write, and should not have". **Declared intent is authored by the same
+faulty reasoning that produced the error**, so checking against it repeats the self-confirming
+trap `calc_compare` already falls into. Do not ship it as the overfill guard; it is retained
+only as a diagnostic for genuinely undeclared mutation.
+
+The rule this establishes: **a check only works when it references something the agent did not
+author.** The world's independent computations qualify (continuation enumerator, deleted-row
+geometry, input-to-output error delta). Declared intent does not. Style filtering was already
+rejected (9/32 discrimination), so the Template overfill class — the largest single miss class —
+may not be reachable gold-blind at all. Narrow the expected upside of the redesign accordingly.
+
+Offline replay caveat: Excel-authored inputs versus LibreOffice-saved outputs are dominated by
+openpyxl representation artifacts (`DataTableFormula` has no `.text`; only the master cell of a
+data table carries the descriptor while the rest of `ref` holds bare cached results). The
+validator normalises these; the live path never sees them because both workbooks come from UNO.
+Prefer round-tripping the input through LibreOffice before diffing in any future offline arm.
+
 **Next move is the commit-time verification redesign, not another compiler.** Two-phase `submit`:
 the first call returns a gold-blind report and does not finalise. Checks, each mapped to a measured
 failure class: cells changed outside the agent's own declared write targets (22.9% over-edit;
