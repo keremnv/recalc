@@ -163,6 +163,33 @@ tasks. Do not revive it.
 `broken_check_cell` is re-admitted, scoped: worthless on completion tasks, silent on competent
 repair, exact on damaged repair. Ship for Debugging only.
 
+**Qwen 3.8 27B on the wall discriminators (2026-08-31).**
+`qwen3.8-27b-wall-discriminator-low-1`, `qwen/qwen3.8-27b`, low reasoning, default routing,
+`semantic-program-v1`, **$0.202** total. Catalog contract is clean (tools, tool_choice, reasoning
+all supported; `max_completion_tokens` 131072 against a 1M context, so the K2.5 catalog bug cannot
+fire). Pricing $0.425/M in, $2.550/M out versus K2.7's $0.66 / $3.40. **3/5 workbooks, 0/5 exact.**
+
+| task | workbook | reg | mod | note |
+|---|---|---:|---:|---|
+| `Template:05_01` | **yes** | 0.9125 | 0.3860 | first miss is a **regression** at `DeferredTax!C10` |
+| `Template:06_24` | **yes** | 0.9718 | **0.7949** | first miss is a regression at `RevenueBuild!G14` |
+| `Debugging:05_03` | yes | 0.9979 | 0.1273 | `insert_row` called; below K2.7 low-3's mod 0.2121 |
+| `Financial_Model:01_02` | **no** | — | — | 12 calls, no workbook |
+| `Debugging:02_03` | no | — | — | no workbook |
+
+**Qwen passes the ISA-freeze discriminator and K2.7 does not.** The freeze named success as "a
+write where K2.7 format-exited"; K2.7 never wrote `05_01` or `06_24` across three separate
+configurations, and Qwen wrote both. But the first miss on both is a **regression**, i.e. an
+overfill into a cell the golden keeps empty — 31 gold-unchanged extra cells on `05_01`. That is
+precisely the class proven uncatchable gold-blind (intent-relative checking returns zero findings
+because the agent declares those cells).
+
+So the two cheap compilers have **different failure profiles, and neither dominates**: Qwen is
+willing to write and imprecise about what it writes; K2.7 is precise where it writes and often
+does not write at all. Note the direct reversal on `Financial_Model:01_02`, where K2.7 produced
+reg 1.0 / mod 0.9956 and Qwen produced no workbook. Do not treat either as the better cheap
+compiler on this evidence. Write-rate and overfill are separable problems.
+
 **Next move is the commit-time verification redesign, not another compiler.** Two-phase `submit`:
 the first call returns a gold-blind report and does not finalise. Checks, each mapped to a measured
 failure class: cells changed outside the agent's own declared write targets (22.9% over-edit;
