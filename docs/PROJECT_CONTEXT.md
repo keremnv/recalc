@@ -437,6 +437,43 @@ Noted in passing, unverified: `Template:16_07`'s write uses `;` argument separat
 (`=INDEX($C$6:$C$9;1;COLUMN()-2)`). `normalize_formula_argument_separators` exists and the
 separator defect is recorded as fixed, so this is probably handled -- but confirm before the 297.
 
+**Overfill shapes classified across all 99 regression-first failures (2026-08-31).**
+`benchmark/characterize_overfill_shapes.py` names the shape of each wrongly written cell from the
+input workbook and the evaluator's own miss address; no golden is opened. It reproduces §0's
+hand-derived Template figures exactly (2/34 populated overwrites, 32/34 blank fills), which
+validates it, and then shows what those figures hid: **the mechanism is different per category.**
+
+| shape | Template (34) | Financial Model (21) | Debugging (44) |
+|---|---:|---:|---:|
+| `populated_overwrite` | 2 (5.9%) | 16 (76.2%) | **42 (95.5%)** |
+| `column_extended_below` | **21 (61.8%)** | 1 | 1 |
+| `row_extended_right` | **11 (32.4%)** | 1 | 0 |
+| other | 0 | 3 | 1 |
+
+**There is no single overfill class.** Debugging and Financial Model over-edit by **overwriting
+content that was already there** (58 of 65); Template over-edits by **extending a run past its
+end into a blank** (32 of 34). A fix for one is irrelevant to the other, and the "terminator"
+abstraction proposed earlier spans both and should not be built as one thing.
+
+**Template is now cleanly scoped, and the design falls out.** The two shapes are duals: a column
+continued past its last populated row, and a row continued past its last populated column.
+Reporting each populated run's **extent** -- `column C: rows 19-22` rather than
+`partial_columns: {C: 4}` -- states the stop as a fact and covers 32/34 cases. This is a modest
+generalisation of the `region_occupancy` field already shipped, not a new mechanism.
+
+**Name the tension before building it: `boundary_continuations` tells models to extend a run, and
+32/34 Template regression-first failures are models extending runs.** The shipped continuation
+signal and the Template overfill class are the same geometry with opposite correct answers. That
+is an argument for reporting extents as neutral facts rather than adding a second directive
+signal that contradicts the first. Do not ship a "stop" heuristic alongside a "continue"
+heuristic without measuring them together.
+
+**Debugging cannot use preserve-populated.** Repair means overwriting broken formulas, so a guard
+against writing populated cells would block the task. `--preserve-populated` is currently
+forwarded to Template/FM only, which is right for Template (2/34) but leaves Financial Model's
+16/21 unaddressed and is correctly withheld from Debugging's 42/44. The commit gate is the better
+surface there: report the count of populated cells changed and let the model review it.
+
 **Next move is the commit-time verification redesign, not another compiler.** Two-phase `submit`:
 the first call returns a gold-blind report and does not finalise. Checks, each mapped to a measured
 failure class: cells changed outside the agent's own declared write targets (22.9% over-edit;
