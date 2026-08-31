@@ -291,6 +291,39 @@ idiosyncrasy. This partially reopens the class: intent-relative checking is stil
 reference authored by the *instruction* rather than the agent has never been tested, and the
 address stability says there is a signal to find. Do not treat "no gold-blind detector" as settled.
 
+**The Template overfill class is diagnosed: the observation over-promises (2026-08-31).**
+Sol, Qwen and GLM overfill the *same* addresses because the inspect `regions` field is a
+**bounding box** and the underlying data is ragged. Verified from the trajectories and the
+workbooks:
+
+- `Template:05_01` — inspect reports regions `B16:F23` and `B25:C29`. Gold occupancy of row 23 is
+  `B . D E F`: it fills D, E and F and **skips C23**. The rectangle implies C23 is part of the
+  block, so the models filled it. `C29` is the corner of `B25:C29` by the same mechanism.
+- `Template:06_24` — inspect reports header region `B7:G7` spanning to **G** while every data
+  region stops at **F** (`B10:F14`, `B16:F17`, `B20:F24`). Gold occupancy on every data row is
+  `B..F` with G empty. The models extended the data to the header's width and wrote `G11:G17`.
+
+**This is a world defect, not a model failure, and it explains why intent-relative checking could
+never catch it**: the agent's declared targets were correct *given what the world told it*. The
+rectangle was wrong, and the models executed it faithfully.
+
+Shipped: `region_occupancy` on structure observations. For any region where some column is
+populated in only part of the block, it reports the region range, its row count, and the
+per-column populated-row counts (`partial_columns`). A solid block reports nothing, so the field
+is silent on the common case. This does not encode any golden cell; occupancy of the *input* is
+plainly observable.
+
+Honest limit: the two sub-classes are not equally tractable. `06_24`'s header-only column G is
+clean — G is populated in no data row of the input, so presenting it as part of the data width is
+straightforwardly misleading. `05_01`'s `C23` is harder, because C **is** populated in rows 19-22
+of the input and only the total row omits it; gold-blind, extending that column by one row is a
+reasonable inference. Expect the field to help more on `06_24` than on `05_01`. Do not claim the
+overfill class is solved until measured.
+
+Next measurement is a re-run of `Template:05_01` and `06_24` on GLM 5.3 Flash with
+`region_occupancy` live, against the recorded baselines (mod 1.0000 / reg 0.9942 and mod 0.3590 /
+reg 0.9322). `05_01` is one regression cell from exact.
+
 **Next move is the commit-time verification redesign, not another compiler.** Two-phase `submit`:
 the first call returns a gold-blind report and does not finalise. Checks, each mapped to a measured
 failure class: cells changed outside the agent's own declared write targets (22.9% over-edit;

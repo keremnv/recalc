@@ -1492,6 +1492,7 @@ def _structure_sheet_observation(
     ]
 
     regions = []
+    region_occupancy: list[dict[str, Any]] = []
     region_start: int | None = None
     for row_offset in range(row_count + 1):
         populated = row_offset < row_count and bool(row_signatures[row_offset])
@@ -1505,10 +1506,39 @@ def _structure_sheet_observation(
                 for column, kind in enumerate(kinds[row])
                 if kind != "blank"
             ]
-            regions.append(
-                f"{column_labels[min(occupied_columns)]}{row_labels[region_start]}:"
-                f"{column_labels[max(occupied_columns)]}{row_labels[region_end]}"
+            first_column = min(occupied_columns)
+            last_column = max(occupied_columns)
+            region_range = (
+                f"{column_labels[first_column]}{row_labels[region_start]}:"
+                f"{column_labels[last_column]}{row_labels[region_end]}"
             )
+            regions.append(region_range)
+            # A region is a bounding box, and a bounding box over-promises: three unrelated
+            # models filled Template 05_01 C23 and 06_24 G11:G17 because the rectangle implied
+            # cells the data never occupies. Report how many rows each column actually fills so
+            # a ragged block does not read as a solid one.
+            region_rows = region_end - region_start + 1
+            column_fill = {
+                column_labels[column]: sum(
+                    1
+                    for row in range(region_start, region_end + 1)
+                    if kinds[row][column] != "blank"
+                )
+                for column in range(first_column, last_column + 1)
+            }
+            partial = {
+                label: filled
+                for label, filled in column_fill.items()
+                if 0 < filled < region_rows
+            }
+            if partial:
+                region_occupancy.append(
+                    {
+                        "range": region_range,
+                        "rows": region_rows,
+                        "partial_columns": partial,
+                    }
+                )
             region_start = None
 
     total_labels = sum(kind == "text" for row in kinds for kind in row)
@@ -1520,6 +1550,7 @@ def _structure_sheet_observation(
         "formula_cells": formula_cells,
         "formula_error_cells": formula_error_cells,
         "regions": regions,
+        "region_occupancy": region_occupancy,
         "labels": labels,
         "labels_omitted": total_labels - len(labels),
         "row_bands": _axis_bands(

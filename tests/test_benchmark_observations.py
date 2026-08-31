@@ -1248,3 +1248,51 @@ def test_formula_blocks_reject_incomplete_operations_before_execution() -> None:
         assert "requires only string fields" in str(exc)
     else:
         raise AssertionError("incomplete formula block was accepted")
+
+
+def test_region_occupancy_exposes_a_ragged_block_the_bounding_box_hides() -> None:
+    """A region is a bounding box, and three unrelated models overfilled its implied corners.
+
+    Template 05_01 C23 and 06_24 G11:G17 were both filled because the rectangle read as solid.
+    The occupancy descriptor names the columns that do not span the whole block.
+    """
+    calc_tool = _calc_tool_module()
+
+    observation = calc_tool._structure_sheet_observation(
+        sheet="DeferredTax",
+        used_range="B16:F19",
+        result={
+            "values": [
+                ["Schedule", "", "", "", ""],
+                ["", "Y1", "Y2", "Y3", "Y4"],
+                ["Opening", 10, 20, 30, 40],
+                # Row 19 is a total row: B is populated, C never is.
+                ["Total", "", 20, 30, 40],
+            ],
+            "formulas": [[""] * 5 for _ in range(4)],
+            "errors": [[None] * 5 for _ in range(4)],
+        },
+    )
+
+    occupancy = {entry["range"]: entry for entry in observation["region_occupancy"]}
+    assert occupancy, "a ragged region must be reported"
+    entry = next(iter(occupancy.values()))
+    # C is populated in fewer rows than the region spans, so it is not a solid column.
+    assert "C" in entry["partial_columns"]
+    assert entry["partial_columns"]["C"] < entry["rows"]
+
+
+def test_region_occupancy_stays_silent_when_a_block_really_is_solid() -> None:
+    calc_tool = _calc_tool_module()
+
+    observation = calc_tool._structure_sheet_observation(
+        sheet="Model",
+        used_range="B2:D3",
+        result={
+            "values": [["a", "b", "c"], ["d", "e", "f"]],
+            "formulas": [[""] * 3 for _ in range(2)],
+            "errors": [[None] * 3 for _ in range(2)],
+        },
+    )
+
+    assert observation["region_occupancy"] == []
