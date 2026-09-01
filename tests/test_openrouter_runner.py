@@ -801,3 +801,36 @@ def test_control_arm_selects_the_control_config_when_none_is_named(monkeypatch) 
 
     assert arguments.control is True
     assert arguments.config == runner.DEFAULT_CONFIG
+
+
+def _env_for(runner, monkeypatch, argv: list[str]) -> dict[str, str]:
+    """The env block the runner would hand the container, without running a task."""
+    monkeypatch.setattr(sys, "argv", ["run_openrouter_slice.py", *argv])
+    return runner._arguments()
+
+
+def test_unbounded_reads_survives_the_anomalies_budget_block(monkeypatch) -> None:
+    """The anomalies lane sets the read budget after the flag is read, so order matters.
+
+    The 96-cell ceiling and the one-shot budget are the two ways the interface refuses a
+    read, and a single oversized first read sets write_now and locks the model out of
+    reading entirely. An arm that removes one and not the other measures neither.
+    """
+    runner = _runner_module()
+    source = (
+        Path(__file__).parents[1] / "benchmark/run_openrouter_slice.py"
+    ).read_text(encoding="utf-8")
+
+    unbounded = source.index('if getattr(args, "unbounded_reads", False)')
+    anomalies = source.index('env_variables["LIBRECALC_READ_BUDGET_ENABLED"] = "1" if args.read_budget')
+    compute = source.index('env_variables["LIBRECALC_INSPECTION_LIMIT"] = "2"')
+
+    assert unbounded > anomalies, "the unbounded arm must win over the anomalies budget"
+    assert unbounded > compute, "the unbounded arm must win over the computed budget"
+
+    arguments = _env_for(
+        runner,
+        monkeypatch,
+        ["--slice", "s.json", "--run-name", "probe", "--unbounded-reads"],
+    )
+    assert arguments.unbounded_reads is True

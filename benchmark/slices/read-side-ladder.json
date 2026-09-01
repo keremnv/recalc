@@ -1,0 +1,80 @@
+{
+  "name": "read-side-ladder",
+  "purpose": "Test the premise the whole interface rests on: that the cheap model is bound by expression, not comprehension. The control arm sees 359,701 characters of workbook per task and refuses nothing; LibreCalc as shipped shows 74,459 and refuses one call in five. Four arms on the same 15 tasks and the same model separate the two candidate causes -- how much the model may see, and whether our summary is worse than raw truth.",
+  "model": "z-ai/glm-5.3-flash",
+  "arms": {
+    "A_control": "bash + view_xlsx + openpyxl, official prompt, 50 calls. MEASURED: 3/15, mod 0.7801, 359,701 chars.",
+    "B_shipped": "formula-patterns-v1 + formula-blocks-v1, 96-cell ceiling, budget as configured.",
+    "C_unbounded": "B with --unbounded-reads: no ceiling, no read budget. Isolates VOLUME.",
+    "D_raw": "grid-v1 + --unbounded-reads: manifest inspect, raw matrices, no limits. Isolates ABSTRACTION."
+  },
+  "reads": {
+    "C much better than B": "volume was the constraint; the model is comprehension-bound and the ceiling caused it.",
+    "D much better than C": "the semantic summary itself misleads; raw truth beats our abstraction.",
+    "C approx D approx B": "neither. The read side is not the lever and the interface is not what is costing us."
+  },
+  "discipline": "n=3 per arm. This model swings between exact and 0.9854 on repeat runs of one task, measured at n=4, so no single run of any arm may be quoted. The target is arm A's 3/15 and mod 0.7801; matching it is the bar, exceeding it is the claim.",
+  "max_tool_calls_per_task": 24,
+  "tasks": [
+    {
+      "category": "Template",
+      "id": "04_04"
+    },
+    {
+      "category": "Template",
+      "id": "06_18"
+    },
+    {
+      "category": "Template",
+      "id": "10_02"
+    },
+    {
+      "category": "Template",
+      "id": "14_05"
+    },
+    {
+      "category": "Template",
+      "id": "16_12"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "04_04"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "08_03"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "13_02"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "17_01"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "20_05"
+    },
+    {
+      "category": "Debugging",
+      "id": "02_09"
+    },
+    {
+      "category": "Debugging",
+      "id": "04_09"
+    },
+    {
+      "category": "Debugging",
+      "id": "06_09"
+    },
+    {
+      "category": "Debugging",
+      "id": "08_10"
+    },
+    {
+      "category": "Debugging",
+      "id": "10_10"
+    }
+  ]
+}

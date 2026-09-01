@@ -92,6 +92,14 @@ def _arguments() -> argparse.Namespace:
     )
     parser.add_argument("--reasoning-effort", choices=REASONING_EFFORTS)
     parser.add_argument(
+        "--unbounded-reads",
+        action="store_true",
+        help=(
+            "Remove the 96-cell read ceiling and the post-inspect read budget. Tests whether "
+            "the cheap model is comprehension-bound rather than expression-bound."
+        ),
+    )
+    parser.add_argument(
         "--control",
         action="store_true",
         help=(
@@ -1055,6 +1063,15 @@ def _run_task(
                 "/mnt/spreadsheet_output/.librecalc_read_budget.json"
             )
             env_variables["LIBRECALC_INSPECTION_LIMIT"] = "2"
+        if getattr(args, "unbounded_reads", False) and not control:
+            # The ceiling and the budget are the two ways the interface refuses a read. The
+            # 297 spent 19.7% of its calls on refusals, and a single oversized first read
+            # sets write_now and locks the model out of reading at all, so both come off
+            # together or the arm measures neither.
+            env_variables["LIBRECALC_READ_MAX_CELLS"] = "none"
+            env_variables["LIBRECALC_READ_BUDGET_ENABLED"] = "0"
+            env_variables.pop("LIBRECALC_READ_BUDGET_PATH", None)
+            env_variables.pop("LIBRECALC_INSPECTION_LIMIT", None)
         command = [
             str(args.sweagent_root / ".venv" / "bin" / "sweagent"),
             "run",
