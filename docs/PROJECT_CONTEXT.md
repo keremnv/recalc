@@ -520,6 +520,37 @@ to finish the job. That is a different failure profile from ours, and it is the 
 that the overfill class may be something our interface induces rather than something the tasks
 impose.
 
+**THE 297 LANDED: 24/297 = 8.08% (2026-09-01).** `glm-5.3-flash-nonvisual-297-1`, GLM 5.3 Flash
+through the frozen per-category configuration at `--call-limit 24`, commit gate on for Debugging.
+~$4.6 and about 20 hours of inference. This is the project's first full non-visual number.
+
+| category | exact | mean reg | mean mod |
+|---|---|---:|---:|
+| Template | 6/97 (6.19%) | 0.9680 | 0.6201 |
+| Financial Model | 18/100 (18.00%) | 0.9181 | 0.7247 |
+| Debugging | **0/100 (0.00%)** | 0.8769 | 0.3572 |
+| **overall** | **24/297 (8.08%)** | 0.9205 | 0.5668 |
+
+For scale: the live leaderboard is arito 45.46%, WPS AI 42.27%, Opus 4.6 + SWE-agent 34.89%.
+
+**Debugging is 0/100 again.** Not one exact in a hundred, with the tuned anomalies observation, the
+commit gate live, and double the call budget. The gate's findings were true (100% precision on 72
+`new_formula_error` representatives, 96.1% on 76 `uniformity_break`) and it still converted nothing.
+Correct information delivered at the right moment is not sufficient here; the category needs a
+different attack, not a better signal.
+
+**19 tasks produced no workbook (6.4%), and 11 of those are ours, not the model's**: 4 to the
+unrepaired `docProps` ParseError, 3 to read-cap bisection starvation, 4 to a refused read consuming
+the one-shot read budget. Excluding every zero-scoring task the number is 24/275 = 8.73%, so the
+defects cost well under a point of exact -- they are worth fixing for the trajectories they ruin,
+not because they are hiding a better score.
+
+**Against the control arm, on its own 15 tasks, the 297 run reproduces the loss**: control 3/15
+with mean modification 0.7801, this run 2/15 at 0.6486. The 15-task arm scored 2/15 at 0.6012, so
+the frozen configuration is better than that arm was -- and still behind bash with openpyxl. Two
+independent runs now say the same thing. **The interface does not currently beat the baseline for
+this model, and the full-benchmark number does not overturn that; it confirms it at scale.**
+
 **The 297 is running (2026-08-31, overnight).** `glm-5.3-flash-nonvisual-297-1`, launched with
 `run_kimi_frozen.py` at **`--call-limit 24`** rather than 12, because the control arm showed 12
 produces hard no-workbook failures on Debugging tasks the baseline solved in 17-29 calls. The
