@@ -50,10 +50,16 @@ class CalcOperation:
 
     @classmethod
     def from_dict(cls, raw: dict[str, Any]) -> CalcOperation:
+        cell_range = raw.get("range")
+        alias = raw.get("cell_range")
+        if cell_range is None:
+            cell_range = alias
+        elif alias is not None and alias != cell_range:
+            raise ValueError("operation has conflicting range and cell_range")
         return cls(
             op=raw["op"],
             sheet=raw.get("sheet"),
-            range=raw.get("range"),
+            range=cell_range,
             values=raw.get("values"),
             formula=raw.get("formula"),
             cell_format=raw.get("format"),

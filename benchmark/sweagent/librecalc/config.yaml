@@ -116,8 +116,23 @@ tools:
         type: array
         items:
           type: object
+          additionalProperties: false
+          required:
+            - sheet
+            - range
+            - formula
+          properties:
+            sheet:
+              type: string
+              description: Exact worksheet name.
+            range:
+              type: string
+              description: A1 range to fill. Use this key; cell_range is accepted as an alias.
+            formula:
+              type: string
+              description: Top-left formula; relative A1 references are translated across the range.
         argument_format: "{{ value | tojson | urlencode }}"
-        description: "Array like [{\"sheet\":\"Model\",\"range\":\"C9:F9\",\"formula\":\"=C6-C7+C8\"}]. Use ranges, never one block per cell."
+        description: "Array of {sheet, range, formula} objects, for example [{\"sheet\":\"Model\",\"range\":\"C9:F9\",\"formula\":\"=C6-C7+C8\"}]. Each item requires keys sheet, range, and formula; cell_range is accepted as an alias for range. Use ranges, never one block per cell."
         required: true
 
   calc_program:
@@ -137,7 +152,7 @@ tools:
         items:
           type: object
         argument_format: "{{ value | tojson | urlencode }}"
-        description: "Array of operation objects, for example [{\"op\":\"set_formula\",\"sheet\":\"Model\",\"range\":\"B2\",\"formula\":\"=SUM(B3:B5)\"}]."
+        description: "Array of operation objects, for example [{\"op\":\"set_formula\",\"sheet\":\"Model\",\"range\":\"B2\",\"formula\":\"=SUM(B3:B5)\"}]. Range fields may also be sent as cell_range."
         required: true
 
   calc_inspect_charts:

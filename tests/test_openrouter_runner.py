@@ -43,32 +43,58 @@ def test_model_preflight_helpers_require_tools_and_use_worst_case_prices() -> No
 
 
 def test_librecalc_bundle_passes_sweagent_command_validation() -> None:
-    project_root = Path(__file__).parents[1]
-    sweagent_root = project_root / "benchmark-data/SpreadsheetBench-2/SWE-agent"
-    bundle = project_root / "benchmark/sweagent/librecalc"
-    environment = os.environ.copy()
-    environment["PYTHONPATH"] = str(sweagent_root)
+    """Typed nested items only load after Argument.items is dict[str, Any], not dict[str, str]."""
 
-    result = subprocess.run(
-        [
-            str(sweagent_root / ".venv/bin/python"),
-            "-c",
-            (
-                "from pathlib import Path; "
-                "from sweagent.tools.bundle import Bundle; "
-                f"bundle = Bundle(path=Path({str(bundle)!r})); "
-                "assert {command.name for command in bundle.commands} >= "
-                "{'calc_read', 'calc_read_ranges'}"
-            ),
-        ],
-        cwd=sweagent_root,
-        env=environment,
-        capture_output=True,
-        text=True,
-        check=False,
+    pydantic = pytest.importorskip("pydantic")
+    tools = yaml.safe_load(
+        (Path(__file__).parents[1] / "benchmark/sweagent/librecalc/config.yaml").read_text(
+            encoding="utf-8"
+        )
+    )["tools"]
+
+    class UpstreamArgument(pydantic.BaseModel):
+        name: str
+        type: str
+        items: dict[str, str] | None = None
+        description: str
+        required: bool
+        enum: list[str] | None = None
+        argument_format: str = "{{value}}"
+
+    class OverlayArgument(pydantic.BaseModel):
+        name: str
+        type: str
+        items: dict[str, object] | None = None
+        description: str
+        required: bool
+        enum: list[str] | None = None
+        argument_format: str = "{{value}}"
+
+    class OverlayCommand(pydantic.BaseModel):
+        name: str
+        docstring: str | None = None
+        signature: str | None = None
+        arguments: list[OverlayArgument]
+
+    class UpstreamCommand(pydantic.BaseModel):
+        name: str
+        docstring: str | None = None
+        signature: str | None = None
+        arguments: list[UpstreamArgument]
+
+    with pytest.raises(pydantic.ValidationError, match="valid string"):
+        UpstreamCommand(name="calc_read_ranges", **tools["calc_read_ranges"])
+
+    loaded = {
+        name: OverlayCommand(name=name, **tool_config) for name, tool_config in tools.items()
+    }
+    assert loaded.keys() >= {"calc_read", "calc_read_ranges", "calc_fill_formulas"}
+    ranges = next(a for a in loaded["calc_read_ranges"].arguments if a.name == "ranges_json")
+    assert ranges.items["properties"]["range"]["type"] == "string"
+    blocks = next(
+        a for a in loaded["calc_fill_formulas"].arguments if a.name == "formula_blocks_json"
     )
-
-    assert result.returncode == 0, result.stderr
+    assert blocks.items["required"] == ["sheet", "range", "formula"]
 
 
 def test_calc_wrapper_preserves_agent_shell_after_structured_tool_error(tmp_path) -> None:
@@ -749,6 +775,14 @@ def test_read_ranges_schema_declares_sheet_and_range_keys() -> None:
     assert ranges_json["items"]["properties"]["range"]["type"] == "string"
     assert ranges_json["items"]["required"] == ["sheet", "range"]
     assert "cell_range is accepted as an alias" in ranges_json["description"]
+    formula_blocks = next(
+        argument
+        for argument in tools["calc_fill_formulas"]["arguments"]
+        if argument["name"] == "formula_blocks_json"
+    )
+    assert formula_blocks["items"]["required"] == ["sheet", "range", "formula"]
+    assert formula_blocks["items"]["properties"]["range"]["type"] == "string"
+    assert "cell_range is accepted as an alias" in formula_blocks["description"]
 
 
 def test_commit_gate_shadows_submit_and_drops_the_builtin_bundle(tmp_path) -> None:

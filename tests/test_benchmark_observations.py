@@ -258,7 +258,7 @@ def test_parse_range_requests_accepts_the_strict_debugging_batch_that_was_reject
 def test_parse_range_requests_rejects_missing_or_conflicting_range_keys() -> None:
     calc_tool = _calc_tool_module()
 
-    with pytest.raises(ValueError, match="sheet and range"):
+    with pytest.raises(ValueError, match="string field range"):
         calc_tool._parse_range_requests(json.dumps([{"sheet": "Revenue Build"}]))
     with pytest.raises(ValueError, match="conflicting range and cell_range"):
         calc_tool._parse_range_requests(
@@ -1290,15 +1290,25 @@ def test_formula_error_representative_includes_capped_neighboring_literals() -> 
     ]
 
 
+def test_formula_blocks_accept_cell_range_alias() -> None:
+    calc_tool = _calc_tool_module()
+    operations = calc_tool._formula_blocks(
+        json.dumps(
+            [{"sheet": "Model", "cell_range": "C9:F9", "formula": "=C6-C7+C8"}]
+        ),
+        CalcOperation,
+    )
+
+    assert operations[0].sheet == "Model"
+    assert operations[0].range == "C9:F9"
+    assert operations[0].formula == "=C6-C7+C8"
+
+
 def test_formula_blocks_reject_incomplete_operations_before_execution() -> None:
     calc_tool = _calc_tool_module()
 
-    try:
+    with pytest.raises(ValueError, match="range"):
         calc_tool._formula_blocks('[{"sheet":"Model","formula":"=1"}]', CalcOperation)
-    except ValueError as exc:
-        assert "requires only string fields" in str(exc)
-    else:
-        raise AssertionError("incomplete formula block was accepted")
 
 
 def test_region_occupancy_exposes_a_ragged_block_the_bounding_box_hides() -> None:

@@ -99,28 +99,40 @@ def _parse_json(raw: str, expected_type: type[Any], label: str) -> Any:
     return value
 
 
+def _range_alias(request: dict[str, Any], *, index: int, label: str) -> str:
+    """Accept ``range`` or the ``cell_range`` name copied from calc_read."""
+
+    cell_range = request.get("range")
+    alias = request.get("cell_range")
+    if cell_range is None:
+        cell_range = alias
+    elif alias is not None and alias != cell_range:
+        raise ValueError(f"{label} item {index} has conflicting range and cell_range")
+    if not isinstance(cell_range, str):
+        raise ValueError(  # noqa: TRY004 - agent-facing schema error, not a Python type bug
+            f"{label} item {index} requires string field range "
+            "(range may also be sent as cell_range)"
+        )
+    return cell_range
+
+
 def _parse_range_requests(raw: str) -> list[tuple[str, str]]:
     requests = _parse_json(raw, list, "ranges_json")
     parsed: list[tuple[str, str]] = []
     for index, request in enumerate(requests):
         if not isinstance(request, dict):
-            raise ValueError(f"ranges_json item {index} must be an object")
+            raise ValueError(  # noqa: TRY004 - agent-facing schema error, not a Python type bug
+                f"ranges_json item {index} must be an object"
+            )
         extra = set(request) - {"sheet", "range", "cell_range"}
         if extra:
             raise ValueError(
                 f"ranges_json item {index} has unknown fields: {sorted(extra)}"
             )
         sheet = request.get("sheet")
-        cell_range = request.get("range")
-        alias = request.get("cell_range")
-        if cell_range is None:
-            cell_range = alias
-        elif alias is not None and alias != cell_range:
-            raise ValueError(
-                f"ranges_json item {index} has conflicting range and cell_range"
-            )
-        if not isinstance(sheet, str) or not isinstance(cell_range, str):
-            raise ValueError(
+        cell_range = _range_alias(request, index=index, label="ranges_json")
+        if not isinstance(sheet, str):
+            raise ValueError(  # noqa: TRY004 - agent-facing schema error, not a Python type bug
                 f"ranges_json item {index} requires string fields sheet and range "
                 "(range may also be sent as cell_range)"
             )
@@ -154,13 +166,22 @@ def _formula_blocks(raw_blocks: str, operation_type: type[Any]) -> list[Any]:
     for index, block in enumerate(blocks):
         if not isinstance(block, dict):
             raise TypeError(f"formula_blocks_json item {index} must be an object")
-        required = {"sheet", "range", "formula"}
-        if set(block) != required or not all(isinstance(block[key], str) for key in required):
+        extra = set(block) - {"sheet", "range", "cell_range", "formula"}
+        if extra:
             raise ValueError(
-                f"formula_blocks_json item {index} requires only string fields "
-                "sheet, range, and formula"
+                f"formula_blocks_json item {index} has unknown fields: {sorted(extra)}"
             )
-        operations.append(operation_type(op="fill_formula", **block))
+        sheet = block.get("sheet")
+        formula = block.get("formula")
+        cell_range = _range_alias(block, index=index, label="formula_blocks_json")
+        if not isinstance(sheet, str) or not isinstance(formula, str):
+            raise ValueError(  # noqa: TRY004 - agent-facing schema error, not a Python type bug
+                f"formula_blocks_json item {index} requires only string fields "
+                "sheet, range, and formula (range may also be sent as cell_range)"
+            )
+        operations.append(
+            operation_type(op="fill_formula", sheet=sheet, range=cell_range, formula=formula)
+        )
     return operations
 
 
