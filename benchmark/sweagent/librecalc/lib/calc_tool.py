@@ -103,12 +103,27 @@ def _parse_range_requests(raw: str) -> list[tuple[str, str]]:
     requests = _parse_json(raw, list, "ranges_json")
     parsed: list[tuple[str, str]] = []
     for index, request in enumerate(requests):
-        if not isinstance(request, dict) or set(request) != {"sheet", "range"}:
-            raise ValueError(f"ranges_json item {index} requires only sheet and range")
-        sheet = request["sheet"]
-        cell_range = request["range"]
+        if not isinstance(request, dict):
+            raise ValueError(f"ranges_json item {index} must be an object")
+        extra = set(request) - {"sheet", "range", "cell_range"}
+        if extra:
+            raise ValueError(
+                f"ranges_json item {index} has unknown fields: {sorted(extra)}"
+            )
+        sheet = request.get("sheet")
+        cell_range = request.get("range")
+        alias = request.get("cell_range")
+        if cell_range is None:
+            cell_range = alias
+        elif alias is not None and alias != cell_range:
+            raise ValueError(
+                f"ranges_json item {index} has conflicting range and cell_range"
+            )
         if not isinstance(sheet, str) or not isinstance(cell_range, str):
-            raise TypeError(f"ranges_json item {index} fields must be strings")
+            raise ValueError(
+                f"ranges_json item {index} requires string fields sheet and range "
+                "(range may also be sent as cell_range)"
+            )
         if _observation()[2].A1_RANGE.fullmatch(cell_range.upper()) is None:
             raise ValueError(f"ranges_json item {index} has invalid A1 range: {cell_range}")
         parsed.append((sheet, cell_range))

@@ -482,6 +482,34 @@ def _patch_sweagent_bad_request_retry(source: str) -> str:
     return source.replace(needle, replacement)
 
 
+def _patch_sweagent_nested_argument_items(source: str) -> str:
+    """Allow batched object schemas to declare required keys.
+
+    Upstream Argument.items is dict[str, str], so LibreCalc could only advertise
+    ``{type: object}``. Models then copied calc_read's ``cell_range`` into the
+    untyped item and the validator rejected a semantically valid batch.
+    """
+
+    field_needle = "    items: dict[str, str] | None = None"
+    field_replacement = "    items: dict[str, Any] | None = None"
+    if field_needle in source:
+        if source.count(field_needle) != 1:
+            raise RuntimeError(
+                "Unsupported SWE-agent commands.py: Argument.items was not found exactly once"
+            )
+        source = source.replace(field_needle, field_replacement)
+    elif field_replacement not in source:
+        raise RuntimeError("Unsupported SWE-agent commands.py: Argument.items was not found")
+
+    typing_import = "from typing import Any\n"
+    if typing_import in source:
+        return source
+    marker = "from __future__ import annotations\n\n"
+    if source.count(marker) != 1:
+        raise RuntimeError("Unsupported SWE-agent commands.py: typing import site was not found")
+    return source.replace(marker, marker + typing_import, 1)
+
+
 def _stage_sweagent_overlay(sweagent_root: Path, temporary_root: Path) -> Path:
     overlay_root = temporary_root / "sweagent-overlay"
     package_root = overlay_root / "sweagent"
@@ -493,6 +521,11 @@ def _stage_sweagent_overlay(sweagent_root: Path, temporary_root: Path) -> Path:
     model_source = _patch_sweagent_empty_assistant(model_source)
     model_source = _patch_sweagent_bad_request_retry(model_source)
     models_path.write_text(model_source, encoding="utf-8")
+    commands_path = package_root / "tools" / "commands.py"
+    commands_path.write_text(
+        _patch_sweagent_nested_argument_items(commands_path.read_text(encoding="utf-8")),
+        encoding="utf-8",
+    )
     return overlay_root
 
 

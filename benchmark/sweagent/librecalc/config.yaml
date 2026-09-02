@@ -34,7 +34,7 @@ tools:
 
   calc_read_ranges:
     signature: "calc_read_ranges <path> <ranges_json>"
-    docstring: "Read several small addressed neighborhoods in one workbook pass. Each range is limited to 96 cells; used-range dumps are rejected."
+    docstring: "Read several small addressed neighborhoods in one workbook pass. Each item uses keys sheet and range. Each range is limited to 96 cells; used-range dumps are rejected."
     arguments:
       - name: path
         type: string
@@ -44,8 +44,19 @@ tools:
         type: array
         items:
           type: object
+          additionalProperties: false
+          required:
+            - sheet
+            - range
+          properties:
+            sheet:
+              type: string
+              description: Exact worksheet name.
+            range:
+              type: string
+              description: A1 range to read, for example D35:O42. Use this key; cell_range is accepted as an alias.
         argument_format: "{{ value | tojson | urlencode }}"
-        description: "Array of objects like [{\"sheet\":\"Financials\",\"range\":\"D35:O42\"},{\"sheet\":\"Valuation\",\"range\":\"C54:L59\"}]. Each range is at most 96 cells."
+        description: "Array of {sheet, range} objects, for example [{\"sheet\":\"Financials\",\"range\":\"D35:O42\"},{\"sheet\":\"Valuation\",\"range\":\"C54:L59\"}]. Each item requires keys sheet and range; cell_range is accepted as an alias for range. Each range is at most 96 cells."
         required: true
 
   calc_compare:

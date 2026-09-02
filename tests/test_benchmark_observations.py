@@ -10,6 +10,8 @@ import json
 import urllib.parse
 from pathlib import Path
 
+import pytest
+
 from librecalc_mcp.backend.memory import MemoryCalcBackend
 from librecalc_mcp.domain import diff as diff_module
 from librecalc_mcp.domain import grid as grid_module
@@ -215,6 +217,55 @@ def test_structure_variant_uses_sparse_addressed_targeted_reads() -> None:
         )
         == expected
     )
+
+
+def test_parse_range_requests_accepts_cell_range_alias() -> None:
+    calc_tool = _calc_tool_module()
+    raw = json.dumps(
+        [
+            {"sheet": "Revenue Build", "cell_range": "A1:J33"},
+            {"sheet": "Operating Model", "range": "A1:J20"},
+        ]
+    )
+
+    assert calc_tool._parse_range_requests(raw) == [
+        ("Revenue Build", "A1:J33"),
+        ("Operating Model", "A1:J20"),
+    ]
+
+
+def test_parse_range_requests_accepts_the_strict_debugging_batch_that_was_rejected() -> None:
+    """glm-optional-isa-strict-three-1 Debugging:06_09 first calc_read_ranges call."""
+
+    calc_tool = _calc_tool_module()
+    raw = json.dumps(
+        [
+            {"sheet": "Revenue Build", "cell_range": "A1:J33"},
+            {"sheet": "Revenue Build", "cell_range": "F5:J20"},
+            {"sheet": "Revenue Build", "cell_range": "W5:W20"},
+            {"sheet": "Operating Model", "cell_range": "A1:J20"},
+        ]
+    )
+
+    assert calc_tool._parse_range_requests(raw) == [
+        ("Revenue Build", "A1:J33"),
+        ("Revenue Build", "F5:J20"),
+        ("Revenue Build", "W5:W20"),
+        ("Operating Model", "A1:J20"),
+    ]
+
+
+def test_parse_range_requests_rejects_missing_or_conflicting_range_keys() -> None:
+    calc_tool = _calc_tool_module()
+
+    with pytest.raises(ValueError, match="sheet and range"):
+        calc_tool._parse_range_requests(json.dumps([{"sheet": "Revenue Build"}]))
+    with pytest.raises(ValueError, match="conflicting range and cell_range"):
+        calc_tool._parse_range_requests(
+            json.dumps(
+                [{"sheet": "Revenue Build", "range": "A1:B1", "cell_range": "A1:C1"}]
+            )
+        )
 
 
 def test_multi_range_read_is_one_addressed_observation(monkeypatch, capsys) -> None:

@@ -303,14 +303,18 @@ def test_staged_sweagent_overlay_with_dynamic_budget_compiles(tmp_path) -> None:
         tmp_path,
     )
     models_path = overlay / "sweagent/agent/models.py"
-    result = subprocess.run(
-        [sys.executable, "-m", "py_compile", str(models_path)],
-        capture_output=True,
-        text=True,
-        check=False,
-    )
-
-    assert result.returncode == 0, result.stderr
+    commands_path = overlay / "sweagent/tools/commands.py"
+    for path in (models_path, commands_path):
+        result = subprocess.run(
+            [sys.executable, "-m", "py_compile", str(path)],
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        assert result.returncode == 0, result.stderr
+    commands = commands_path.read_text(encoding="utf-8")
+    assert "items: dict[str, Any] | None = None" in commands
+    assert "from typing import Any" in commands
 
 
 def test_runner_allows_one_bounded_format_repair_by_default(monkeypatch) -> None:
@@ -697,6 +701,54 @@ def test_sweagent_model_patches_apply_to_the_vendored_source() -> None:
     ast.parse(patched)
     assert "(no content returned)" in patched
     assert "litellm.exceptions.BadRequestError," in patched
+
+
+def test_argument_items_overlay_applies_to_the_vendored_source() -> None:
+    runner = _runner_module()
+    commands_path = (
+        Path(__file__).parents[1]
+        / "benchmark-data/SpreadsheetBench-2/SWE-agent/sweagent/tools/commands.py"
+    )
+    if not commands_path.exists():
+        pytest.skip("vendored SWE-agent checkout is not present")
+
+    patched = runner._patch_sweagent_nested_argument_items(commands_path.read_text(encoding="utf-8"))
+    ast.parse(patched)
+    assert "items: dict[str, Any] | None = None" in patched
+    assert "from typing import Any" in patched
+
+
+def test_argument_items_overlay_widens_nested_object_schema() -> None:
+    runner = _runner_module()
+    source = """from __future__ import annotations
+
+class Argument:
+    items: dict[str, str] | None = None
+"""
+
+    patched = runner._patch_sweagent_nested_argument_items(source)
+
+    assert "from typing import Any" in patched
+    assert "items: dict[str, Any] | None = None" in patched
+    assert runner._patch_sweagent_nested_argument_items(patched) == patched
+
+
+def test_read_ranges_schema_declares_sheet_and_range_keys() -> None:
+    tools = yaml.safe_load(
+        (Path(__file__).parents[1] / "benchmark/sweagent/librecalc/config.yaml").read_text(
+            encoding="utf-8"
+        )
+    )["tools"]
+    ranges_json = next(
+        argument
+        for argument in tools["calc_read_ranges"]["arguments"]
+        if argument["name"] == "ranges_json"
+    )
+
+    assert ranges_json["items"]["properties"]["sheet"]["type"] == "string"
+    assert ranges_json["items"]["properties"]["range"]["type"] == "string"
+    assert ranges_json["items"]["required"] == ["sheet", "range"]
+    assert "cell_range is accepted as an alias" in ranges_json["description"]
 
 
 def test_commit_gate_shadows_submit_and_drops_the_builtin_bundle(tmp_path) -> None:
