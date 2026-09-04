@@ -191,6 +191,8 @@ def main() -> int:
         extra={
             "written_at": datetime.now(UTC).isoformat(),
             "worktree_dirty": git_dirty(),
+            "resume_after_incident": "incident-sweagent-signature.json",
+            "original_launch_commit": "20783284622db2e20652e2ae82befce866d8ddaa",
         },
     )
     print(f"ORDER jobs={len(jobs)} seed={SEED} commit={commit} file={ORDER_FILE}", flush=True)

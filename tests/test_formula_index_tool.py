@@ -129,8 +129,48 @@ def test_compress_cells_builds_rectangles() -> None:
 
 def test_cli_range_and_axis(tmp_path: Path) -> None:
     path = _xlsx(tmp_path, {("Model", "A1"): "=B1", ("Model", "A2"): "=B2"})
-    out = cli_main(["range", str(path), "Model", "A1:A2"])
-    assert out == 0
+    assert cli_main(["range", str(path), "Model", "A1:A2"]) == 0
+    assert cli_main(["axis", str(path), "Model", "--row", "1"]) == 0
+    assert cli_main(["axis", str(path), "Model", "--row", "1", "--col", "1"]) == 0
+
+
+def test_sweagent_accepts_formula_index_signature() -> None:
+    """SWE-agent requires every argument name as <name> in the signature so invoke_format keys match."""
+    import re
+    import string
+
+    import yaml
+    from jinja2 import Template
+
+    spec = yaml.safe_load(
+        (ROOT / "benchmark/sweagent/formula_index/config.yaml").read_text()
+    )["tools"]["formula_index"]
+    signature = spec["signature"]
+    names = [arg["name"] for arg in spec["arguments"]]
+    for name in names:
+        assert (
+            f"<{name}>" in signature
+            or f"[<{name}>]" in signature
+            or f"--{name}" in signature
+        ), name
+    invoke_format = re.sub(r"\[?<([a-zA-Z_][a-zA-Z0-9_-]*)>\]?", r"{\1}", signature)
+    invoke_keys = {
+        field_name
+        for _, field_name, _, _ in string.Formatter().parse(invoke_format)
+        if field_name is not None
+    }
+    assert invoke_keys == set(names)
+    row_format = next(arg["argument_format"] for arg in spec["arguments"] if arg["name"] == "row")
+    filled = {
+        "command": "axis",
+        "xlsx": "/tmp/book.xlsx",
+        "sheet": "Model",
+        "a1_range_or_eq_id": "",
+        "row": Template(row_format).render(value=10),
+        "col": "",
+    }
+    invoked = invoke_format.format(**filled).strip()
+    assert invoked == "formula_index axis /tmp/book.xlsx Model  --row 10"
 
 
 def _record(eq_id: str, formula: str, n: int = 1) -> EquivalenceClass:
