@@ -1,0 +1,137 @@
+{
+  "name": "fm-index-pilot-twenty",
+  "purpose": "Paired CONTROL vs CONTROL+formula_index pilot on Financial_Model. Tests whether a deterministic relative-formula index increases structurally correct formula completion where the correct computation already exists in the input. Not a LibreCalc experiment.",
+  "model": "z-ai/glm-5.3-flash",
+  "sampling": "Deterministic, predeclared, never historical scores. Negative controls: even-space of 3 from the 11 Gate-2 zero-recoverable FM tasks. Mechanism-positive: 2 even-spaced from the 10 fewest-family books, 2 from the 10 most-formula books, 3 from tasks with same-row non-adjacent homologues, 3 with same-column non-adjacent, 3 with cross-sheet, then even-space fill to 17.",
+  "arms": {
+    "control": "--control, official config, 50 calls, $2, reasoning low, remaining-budget",
+    "control-index": "--control-index, same budgets, plus read-only formula_index"
+  },
+  "repeats": 2,
+  "max_tool_calls_per_task": 50,
+  "cost_limit_usd": 2.0,
+  "reasoning_effort": "low",
+  "token_limit_policy": "remaining-budget",
+  "tasks": [
+    {
+      "category": "Financial_Model",
+      "id": "03_02",
+      "role": "negative_control",
+      "reason": "zero-recoverable negative control; even-space of the 11 Financial_Model tasks with no input homologue for a golden blank fill"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "09_05",
+      "role": "negative_control",
+      "reason": "zero-recoverable negative control; even-space of the 11 Financial_Model tasks with no input homologue for a golden blank fill"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "19_04",
+      "role": "negative_control",
+      "reason": "zero-recoverable negative control; even-space of the 11 Financial_Model tasks with no input homologue for a golden blank fill"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "18_02",
+      "role": "mechanism_positive",
+      "reason": "small-workbook even-space of 10 fewest-family mechanism-positive tasks"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "02_05",
+      "role": "mechanism_positive",
+      "reason": "small-workbook even-space of 10 fewest-family mechanism-positive tasks"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "08_03",
+      "role": "mechanism_positive",
+      "reason": "large-workbook even-space of 10 most-formula mechanism-positive tasks"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "04_05",
+      "role": "mechanism_positive",
+      "reason": "large-workbook even-space of 10 most-formula mechanism-positive tasks"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "01_01",
+      "role": "mechanism_positive",
+      "reason": "same-row non-adjacent even-space of mechanism-positive tasks with that nearest class"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "11_04",
+      "role": "mechanism_positive",
+      "reason": "same-row non-adjacent even-space of mechanism-positive tasks with that nearest class"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "20_05",
+      "role": "mechanism_positive",
+      "reason": "same-row non-adjacent even-space of mechanism-positive tasks with that nearest class"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "11_02",
+      "role": "mechanism_positive",
+      "reason": "same-column non-adjacent even-space of mechanism-positive tasks with that nearest class"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "11_01",
+      "role": "mechanism_positive",
+      "reason": "cross-sheet even-space of mechanism-positive tasks with that nearest class"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "20_01",
+      "role": "mechanism_positive",
+      "reason": "cross-sheet even-space of mechanism-positive tasks with that nearest class"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "01_02",
+      "role": "mechanism_positive",
+      "reason": "fill even-space of remaining mechanism-positive tasks to 17"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "04_03",
+      "role": "mechanism_positive",
+      "reason": "fill even-space of remaining mechanism-positive tasks to 17"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "07_04",
+      "role": "mechanism_positive",
+      "reason": "fill even-space of remaining mechanism-positive tasks to 17"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "10_05",
+      "role": "mechanism_positive",
+      "reason": "fill even-space of remaining mechanism-positive tasks to 17"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "14_01",
+      "role": "mechanism_positive",
+      "reason": "fill even-space of remaining mechanism-positive tasks to 17"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "16_05",
+      "role": "mechanism_positive",
+      "reason": "fill even-space of remaining mechanism-positive tasks to 17"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "20_04",
+      "role": "mechanism_positive",
+      "reason": "fill even-space of remaining mechanism-positive tasks to 17"
+    }
+  ]
+}

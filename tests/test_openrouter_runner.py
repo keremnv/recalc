@@ -759,32 +759,6 @@ class Argument:
     assert runner._patch_sweagent_nested_argument_items(patched) == patched
 
 
-def test_read_ranges_schema_declares_sheet_and_range_keys() -> None:
-    tools = yaml.safe_load(
-        (Path(__file__).parents[1] / "benchmark/sweagent/librecalc/config.yaml").read_text(
-            encoding="utf-8"
-        )
-    )["tools"]
-    ranges_json = next(
-        argument
-        for argument in tools["calc_read_ranges"]["arguments"]
-        if argument["name"] == "ranges_json"
-    )
-
-    assert ranges_json["items"]["properties"]["sheet"]["type"] == "string"
-    assert ranges_json["items"]["properties"]["range"]["type"] == "string"
-    assert ranges_json["items"]["required"] == ["sheet", "range"]
-    assert "cell_range is accepted as an alias" in ranges_json["description"]
-    formula_blocks = next(
-        argument
-        for argument in tools["calc_fill_formulas"]["arguments"]
-        if argument["name"] == "formula_blocks_json"
-    )
-    assert formula_blocks["items"]["required"] == ["sheet", "range", "formula"]
-    assert formula_blocks["items"]["properties"]["range"]["type"] == "string"
-    assert "cell_range is accepted as an alias" in formula_blocks["description"]
-
-
 def test_commit_gate_shadows_submit_and_drops_the_builtin_bundle(tmp_path) -> None:
     runner = _runner_module()
     root = Path(__file__).parents[1]
@@ -876,6 +850,61 @@ def test_control_arm_stages_the_official_config_untouched(tmp_path) -> None:
     assert all(bundle.is_absolute() for bundle in bundles)
 
 
+def test_control_index_stages_formula_index_without_touching_control_prompt(tmp_path) -> None:
+    runner = _runner_module()
+    project_root = Path(__file__).parents[1]
+    control_cfg = yaml.safe_load(runner.CONTROL_CONFIG.read_text(encoding="utf-8"))
+
+    staged = runner._stage_tool_policy(
+        source_config=runner.CONTROL_INDEX_CONFIG,
+        sweagent_root=project_root / "benchmark-data/SpreadsheetBench-2/SWE-agent",
+        temporary_root=tmp_path,
+        read_policy="progressive",
+        execution="semantic-program-v1",
+        control_index=True,
+    )
+    config = yaml.safe_load(staged.read_text(encoding="utf-8"))
+    bundles = [Path(item["path"]) for item in config["agent"]["tools"]["bundles"]]
+    assert [bundle.name for bundle in bundles] == ["submit", "view_xlsx", "formula_index"]
+    assert (project_root / "benchmark/sweagent/formula_index").resolve() in {
+        bundle.resolve() for bundle in bundles
+    }
+    assert "formula_index" in config["agent"]["templates"]["instance_template"]
+    prompt = config["agent"]["templates"]["instance_template"]
+    assert "likely" not in prompt.lower()
+    assert "complete unranked" not in prompt.lower()
+    assert "are not grouped" in prompt
+    assert "opaque" in prompt.lower()
+    assert config["agent"]["templates"]["max_observation_length"] == 10_000
+    assert config["agent"]["tools"]["enable_bash_tool"] is True
+    assert (
+        control_cfg["agent"]["templates"]["instance_template"]
+        != config["agent"]["templates"]["instance_template"]
+    )
+    assert "formula_index" not in control_cfg["agent"]["templates"]["instance_template"]
+
+
+def test_control_index_flag_selects_treatment_config(monkeypatch) -> None:
+    runner = _runner_module()
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "run_openrouter_slice.py",
+            "--slice",
+            "slice.json",
+            "--run-name",
+            "probe",
+            "--control-index",
+        ],
+    )
+    arguments = runner._arguments()
+    assert arguments.control_index is True
+    assert arguments.control is False
+    runner._apply_arm_config(arguments)
+    assert arguments.config == runner.CONTROL_INDEX_CONFIG
+
+
 def test_control_arm_selects_the_control_config_when_none_is_named(monkeypatch) -> None:
     runner = _runner_module()
     monkeypatch.setattr(
@@ -898,17 +927,18 @@ def _env_for(runner, monkeypatch, argv: list[str]) -> dict[str, str]:
 def test_unbounded_reads_survives_the_anomalies_budget_block(monkeypatch) -> None:
     """The anomalies lane sets the read budget after the flag is read, so order matters.
 
-    The 96-cell ceiling and the one-shot budget are the two ways the interface refuses a
-    read, and a single oversized first read sets write_now and locks the model out of
-    reading entirely. An arm that removes one and not the other measures neither.
+    The 96-cell ceiling and the one-shot budget are independent ways the interface refuses a
+    read. An arm that removes one and not the other measures neither.
     """
     runner = _runner_module()
-    source = (
-        Path(__file__).parents[1] / "benchmark/run_openrouter_slice.py"
-    ).read_text(encoding="utf-8")
+    source = (Path(__file__).parents[1] / "benchmark/run_openrouter_slice.py").read_text(
+        encoding="utf-8"
+    )
 
     unbounded = source.index('if getattr(args, "unbounded_reads", False)')
-    anomalies = source.index('env_variables["LIBRECALC_READ_BUDGET_ENABLED"] = "1" if args.read_budget')
+    anomalies = source.index(
+        'env_variables["LIBRECALC_READ_BUDGET_ENABLED"] = "1" if args.read_budget'
+    )
     compute = source.index('env_variables["LIBRECALC_INSPECTION_LIMIT"] = "2"')
 
     assert unbounded > anomalies, "the unbounded arm must win over the anomalies budget"
@@ -920,3 +950,99 @@ def test_unbounded_reads_survives_the_anomalies_budget_block(monkeypatch) -> Non
         ["--slice", "s.json", "--run-name", "probe", "--unbounded-reads"],
     )
     assert arguments.unbounded_reads is True
+
+
+def test_unbounded_stage_rewrites_prompt_and_native_tool_schema(tmp_path) -> None:
+    runner = _runner_module()
+    project_root = Path(__file__).parents[1]
+    staged = runner._stage_tool_policy(
+        source_config=project_root / "benchmark/sweagent/spreadsheet.yaml",
+        sweagent_root=project_root / "benchmark-data/SpreadsheetBench-2/SWE-agent",
+        temporary_root=tmp_path,
+        read_policy="progressive",
+        execution="formula-blocks-v1",
+        observation="formula-patterns-v1",
+        unbounded_reads=True,
+    )
+    config = yaml.safe_load(staged.read_text(encoding="utf-8"))
+    template = config["agent"]["templates"]["instance_template"]
+    bundle = Path(config["agent"]["tools"]["bundles"][0]["path"])
+    tools = yaml.safe_load((bundle / "config.yaml").read_text(encoding="utf-8"))["tools"]
+
+    assert "no cell-count ceiling or post-inspect read budget" in template
+    assert "reads over 96 cells are rejected" not in template
+    assert "no cell-count ceiling" in tools["calc_read"]["docstring"]
+    assert "no per-range cell-count ceiling" in tools["calc_read_ranges"]["docstring"]
+    ranges_json = next(
+        argument
+        for argument in tools["calc_read_ranges"]["arguments"]
+        if argument["name"] == "ranges_json"
+    )
+    assert ranges_json["items"]["properties"]["sheet"]["type"] == "string"
+    assert ranges_json["items"]["properties"]["range"]["type"] == "string"
+    assert ranges_json["items"]["required"] == ["sheet", "range"]
+    assert "cell_range is accepted as an alias" in ranges_json["description"]
+    formula_blocks = next(
+        argument
+        for argument in tools["calc_fill_formulas"]["arguments"]
+        if argument["name"] == "formula_blocks_json"
+    )
+    assert formula_blocks["items"]["required"] == ["sheet", "range", "formula"]
+    assert formula_blocks["items"]["properties"]["range"]["type"] == "string"
+    assert "cell_range is accepted as an alias" in formula_blocks["description"]
+
+
+def test_slice_model_mismatch_fails_closed() -> None:
+    runner = _runner_module()
+
+    runner._validate_slice_model({"model": "example/a"}, "example/a")
+    with pytest.raises(ValueError, match="Slice declares model"):
+        runner._validate_slice_model({"model": "example/a"}, "example/b")
+    runner._validate_slice_model({"model": "example/a"}, "example/b", allow_mismatch=True)
+
+
+def test_run_contract_records_effective_prompt_tools_environment_and_hash(tmp_path) -> None:
+    runner = _runner_module()
+    project_root = Path(__file__).parents[1]
+    staged = runner._stage_tool_policy(
+        source_config=project_root / "benchmark/sweagent/spreadsheet-hybrid.yaml",
+        sweagent_root=project_root / "benchmark-data/SpreadsheetBench-2/SWE-agent",
+        temporary_root=tmp_path,
+        read_policy="progressive",
+        execution="semantic-program-v1",
+        observation="formula-patterns-v1",
+        hybrid=True,
+        unbounded_reads=True,
+    )
+    args = type(
+        "Args",
+        (),
+        {
+            "control": False,
+            "hybrid": True,
+            "model": "example/model",
+            "reasoning_effort": "low",
+            "observation": "formula-patterns-v1",
+            "execution": "semantic-program-v1",
+            "read_policy": "progressive",
+            "unbounded_reads": True,
+            "read_budget": True,
+            "compute_read_budget": False,
+        },
+    )()
+    contract = runner._run_contract(
+        args=args,
+        task_key="Template:01_01",
+        staged_config=staged,
+        model_preflight={"id": "example/model"},
+        completion_kwargs={"provider": {"only": ["example"], "allow_fallbacks": False}},
+        env_variables={"LIBRECALC_READ_MAX_CELLS": "none"},
+    )
+
+    assert contract["arm"] == "hybrid"
+    assert contract["effective_environment"]["LIBRECALC_READ_MAX_CELLS"] == "none"
+    assert contract["effective_tool_schema"]["bash_enabled"] is True
+    bundle_names = {bundle["name"] for bundle in contract["effective_tool_schema"]["bundles"]}
+    assert {"librecalc", "submit", "view_xlsx"} <= bundle_names
+    assert contract["prompts"]["system_template"]
+    assert len(contract["effective_configuration_sha256"]) == 64

@@ -1,0 +1,29 @@
+tools:
+  formula_index:
+    signature: "formula_index <command> <xlsx> [<sheet>] [<a1_range_or_eq_id>] [--row N] [--col M]"
+    docstring: "Unranked index of mechanically established relative-formula equivalence in the workbook; formulas the index cannot safely canonicalize are represented as opaque and are not grouped. Commands: range (classes of formulas already present in an A1 range), axis (every class with a member on a row and/or column, including when the queried cell is blank), lookup (full compressed membership of one eq_id). A missing class is not evidence that no equivalent computation exists. No ranking or likely-match filtering. Formulas are still written with Python/openpyxl."
+    arguments:
+      - name: command
+        type: string
+        description: "range, axis, or lookup"
+        required: true
+      - name: xlsx
+        type: string
+        description: "Path to the workbook"
+        required: true
+      - name: sheet
+        type: string
+        description: "Worksheet name (range and axis)"
+        required: false
+      - name: a1_range_or_eq_id
+        type: string
+        description: "A1 range for range, or eq_id for lookup"
+        required: false
+      - name: row
+        type: integer
+        description: "1-based row for axis"
+        required: false
+      - name: col
+        type: integer
+        description: "1-based column for axis"
+        required: false

@@ -1,0 +1,200 @@
+{
+  "parser": {
+    "formula_cells": 3060793,
+    "canonical_cells": 2979461,
+    "opaque_cells": 81332,
+    "support_rate_pct": 97.34,
+    "opaque_reason_counts": {
+      "dynamic_ref": 81007,
+      "named_range": 325
+    },
+    "workbooks_with_any_opaque": 35,
+    "workbooks": 100
+  },
+  "payload_chars": {
+    "range_A1_Z50_busiest_sheet": {
+      "n": 100,
+      "mean": 3619.8,
+      "median": 2626.0,
+      "p90": 7168,
+      "max": 9972,
+      "min": 440,
+      "frac_gt_10k": 0.0
+    },
+    "axis_row_union_col_first_blank": {
+      "n": 100,
+      "mean": 2753.6,
+      "median": 2257.5,
+      "p90": 5013,
+      "max": 7898,
+      "min": 98,
+      "frac_gt_10k": 0.0
+    },
+    "lookup_first_class": {
+      "n": 100,
+      "mean": 188.3,
+      "median": 180.0,
+      "p90": 213,
+      "max": 334,
+      "min": 154,
+      "frac_gt_10k": 0.0
+    },
+    "observation_cap": 10000
+  },
+  "control": {
+    "control_sha256": "c3cc1b506956bc73a9560716e739bfb2fb19d96477df540f3837d17c3cd53c3d",
+    "instance_template_matches_official": true,
+    "system_template_matches_official": true,
+    "control_bundles": [
+      "tools/submit",
+      "tools/view_xlsx"
+    ],
+    "max_observation_length": 10000,
+    "bash_enabled": true
+  },
+  "pilot_slice_matches_frozen": true,
+  "pilot_ids": [
+    "03_02",
+    "09_05",
+    "19_04",
+    "18_02",
+    "02_05",
+    "08_03",
+    "04_05",
+    "01_01",
+    "11_04",
+    "20_05",
+    "11_02",
+    "11_01",
+    "20_01",
+    "01_02",
+    "04_03",
+    "07_04",
+    "10_05",
+    "14_01",
+    "16_05",
+    "20_04"
+  ],
+  "pilot_tasks": [
+    {
+      "category": "Financial_Model",
+      "id": "03_02",
+      "role": "negative_control",
+      "reason": "zero-recoverable negative control; even-space of the 11 Financial_Model tasks with no input homologue for a golden blank fill"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "09_05",
+      "role": "negative_control",
+      "reason": "zero-recoverable negative control; even-space of the 11 Financial_Model tasks with no input homologue for a golden blank fill"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "19_04",
+      "role": "negative_control",
+      "reason": "zero-recoverable negative control; even-space of the 11 Financial_Model tasks with no input homologue for a golden blank fill"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "18_02",
+      "role": "mechanism_positive",
+      "reason": "small-workbook even-space of 10 fewest-family mechanism-positive tasks"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "02_05",
+      "role": "mechanism_positive",
+      "reason": "small-workbook even-space of 10 fewest-family mechanism-positive tasks"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "08_03",
+      "role": "mechanism_positive",
+      "reason": "large-workbook even-space of 10 most-formula mechanism-positive tasks"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "04_05",
+      "role": "mechanism_positive",
+      "reason": "large-workbook even-space of 10 most-formula mechanism-positive tasks"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "01_01",
+      "role": "mechanism_positive",
+      "reason": "same-row non-adjacent even-space of mechanism-positive tasks with that nearest class"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "11_04",
+      "role": "mechanism_positive",
+      "reason": "same-row non-adjacent even-space of mechanism-positive tasks with that nearest class"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "20_05",
+      "role": "mechanism_positive",
+      "reason": "same-row non-adjacent even-space of mechanism-positive tasks with that nearest class"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "11_02",
+      "role": "mechanism_positive",
+      "reason": "same-column non-adjacent even-space of mechanism-positive tasks with that nearest class"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "11_01",
+      "role": "mechanism_positive",
+      "reason": "cross-sheet even-space of mechanism-positive tasks with that nearest class"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "20_01",
+      "role": "mechanism_positive",
+      "reason": "cross-sheet even-space of mechanism-positive tasks with that nearest class"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "01_02",
+      "role": "mechanism_positive",
+      "reason": "fill even-space of remaining mechanism-positive tasks to 17"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "04_03",
+      "role": "mechanism_positive",
+      "reason": "fill even-space of remaining mechanism-positive tasks to 17"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "07_04",
+      "role": "mechanism_positive",
+      "reason": "fill even-space of remaining mechanism-positive tasks to 17"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "10_05",
+      "role": "mechanism_positive",
+      "reason": "fill even-space of remaining mechanism-positive tasks to 17"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "14_01",
+      "role": "mechanism_positive",
+      "reason": "fill even-space of remaining mechanism-positive tasks to 17"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "16_05",
+      "role": "mechanism_positive",
+      "reason": "fill even-space of remaining mechanism-positive tasks to 17"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "20_04",
+      "role": "mechanism_positive",
+      "reason": "fill even-space of remaining mechanism-positive tasks to 17"
+    }
+  ]
+}

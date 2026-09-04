@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import shutil
@@ -46,6 +47,8 @@ def _load_dotenv(path: Path = DEFAULT_ENV_FILE) -> None:
 DEFAULT_SWEAGENT_ROOT = DEFAULT_BENCHMARK_ROOT / "SWE-agent"
 DEFAULT_CONFIG = PROJECT_ROOT / "benchmark" / "sweagent" / "spreadsheet.yaml"
 CONTROL_CONFIG = PROJECT_ROOT / "benchmark" / "sweagent" / "spreadsheet-control.yaml"
+CONTROL_INDEX_CONFIG = PROJECT_ROOT / "benchmark" / "sweagent" / "spreadsheet-control-index.yaml"
+HYBRID_CONFIG = PROJECT_ROOT / "benchmark" / "sweagent" / "spreadsheet-hybrid.yaml"
 DEFAULT_MODEL = "moonshotai/kimi-k2.7-code"
 SUPPORTED_OBSERVATIONS = (
     "grid-v1",
@@ -106,6 +109,30 @@ def _arguments() -> argparse.Namespace:
             "Run the official bash+openpyxl baseline instead of the LibreCalc tools. "
             "--observation/--execution/--read-policy describe an interface this arm does not "
             "have and are ignored."
+        ),
+    )
+    parser.add_argument(
+        "--control-index",
+        action="store_true",
+        help=(
+            "Control harness plus the read-only formula_index tool. Same bash/view_xlsx/submit "
+            "surface and observation cap as --control; no LibreCalc tools or read budget."
+        ),
+    )
+    parser.add_argument(
+        "--hybrid",
+        action="store_true",
+        help=(
+            "Expose the official bash+view_xlsx surface alongside LibreCalc's semantic tools. "
+            "This measures whether the primitives add capability without making the ISA compulsory."
+        ),
+    )
+    parser.add_argument(
+        "--allow-model-mismatch",
+        action="store_true",
+        help=(
+            "Allow --model to differ from a slice's declared model. This is an explicit escape "
+            "hatch for compiler comparisons; ordinary runs fail closed."
         ),
     )
     parser.add_argument(
@@ -216,6 +243,17 @@ def _selected_tasks(slice_data: dict[str, Any], filters: list[str] | None) -> li
     if missing:
         raise ValueError(f"Tasks are not in the slice: {', '.join(sorted(missing))}")
     return selected
+
+
+def _validate_slice_model(
+    slice_data: dict[str, Any], model: str, *, allow_mismatch: bool = False
+) -> None:
+    declared = slice_data.get("model")
+    if declared and declared != model and not allow_mismatch:
+        raise ValueError(
+            f"Slice declares model {declared!r}, but the run requested {model!r}. "
+            "Use --allow-model-mismatch only for an intentional compiler comparison."
+        )
 
 
 def _key_usage(api_key: str) -> float:
@@ -459,7 +497,9 @@ def _patch_sweagent_empty_assistant(source: str) -> str:
     if replacement in source:
         return source
     if source.count(needle) != 1:
-        raise RuntimeError("Unsupported SWE-agent models.py: history-to-messages boundary was not found")
+        raise RuntimeError(
+            "Unsupported SWE-agent models.py: history-to-messages boundary was not found"
+        )
     return source.replace(needle, replacement)
 
 
@@ -529,6 +569,80 @@ def _stage_sweagent_overlay(sweagent_root: Path, temporary_root: Path) -> Path:
     return overlay_root
 
 
+def _replace_workflow_step(template: str, number: int, replacement: str) -> str:
+    """Replace one numbered workflow step without depending on treatment-specific wording."""
+
+    start_marker = f"\n{number}. "
+    end_marker = f"\n{number + 1}. "
+    if template.count(start_marker) != 1 or template.count(end_marker) != 1:
+        raise RuntimeError(f"Could not locate workflow step {number} exactly once")
+    start = template.index(start_marker) + 1
+    end = template.index(end_marker)
+    return f"{template[:start]}{number}. {replacement}{template[end:]}"
+
+
+def _make_read_tools_unbounded(tool_config: dict[str, Any]) -> None:
+    """Make the staged function schema tell the truth about the unbounded treatment."""
+
+    tools = tool_config.get("tools", {})
+    read = tools.get("calc_read")
+    read_ranges = tools.get("calc_read_ranges")
+    if read is not None:
+        read["docstring"] = (
+            "Read one addressed rectangular range through LibreOffice Calc. There is no "
+            "cell-count ceiling in this run; full relevant blocks are allowed."
+        )
+        for argument in read.get("arguments", []):
+            if argument.get("name") == "cell_range":
+                argument["description"] = (
+                    "Any exact A1 range needed for the task, from a small neighborhood to a "
+                    "full relevant block."
+                )
+    if read_ranges is not None:
+        read_ranges["docstring"] = (
+            "Read several addressed ranges in one workbook pass. There is no per-range "
+            "cell-count ceiling in this run; batch every relevant block you need."
+        )
+        for argument in read_ranges.get("arguments", []):
+            if argument.get("name") == "ranges_json":
+                argument["description"] = (
+                    "Array of {sheet, range} objects. Each item requires keys sheet and range; "
+                    "cell_range is accepted as an alias for range. Ranges may cover full "
+                    "relevant blocks; there is no 96-cell ceiling in this run."
+                )
+
+
+def _make_read_tools_bounded(tool_config: dict[str, Any]) -> None:
+    """Describe the historical 96-cell treatment when the runner enables it."""
+
+    tools = tool_config.get("tools", {})
+    read = tools.get("calc_read")
+    read_ranges = tools.get("calc_read_ranges")
+    if read is not None:
+        read["docstring"] = (
+            "Read one small rectangular neighborhood through LibreOffice Calc. Ranges are "
+            "limited to 96 cells; whole sheets and used-range dumps are rejected."
+        )
+        for argument in read.get("arguments", []):
+            if argument.get("name") == "cell_range":
+                argument["description"] = (
+                    "A1 neighborhood of at most 96 cells, for example D35:O42. Whole sheets "
+                    "are rejected."
+                )
+    if read_ranges is not None:
+        read_ranges["docstring"] = (
+            "Read several small addressed neighborhoods in one workbook pass. Each range is "
+            "limited to 96 cells; used-range dumps are rejected."
+        )
+        for argument in read_ranges.get("arguments", []):
+            if argument.get("name") == "ranges_json":
+                argument["description"] = (
+                    "Array of {sheet, range} objects. Each item requires keys sheet and range; "
+                    "cell_range is accepted as an alias for range. Each range is limited to "
+                    "96 cells in this treatment."
+                )
+
+
 def _stage_tool_policy(
     *,
     source_config: Path,
@@ -542,6 +656,9 @@ def _stage_tool_policy(
     compute_read_budget: bool = False,
     commit_gate: bool = False,
     control: bool = False,
+    control_index: bool = False,
+    unbounded_reads: bool = False,
+    hybrid: bool = False,
 ) -> Path:
     config = yaml.safe_load(source_config.read_text(encoding="utf-8"))
     if execution_timeout is not None:
@@ -552,21 +669,15 @@ def _stage_tool_policy(
         if not bundle_path.is_absolute():
             bundle_path = (sweagent_root / bundle_path).resolve()
         bundle_config["path"] = str(bundle_path)
-    if control:
-        # The control arm is the official config. Every rewrite below is written against the
-        # LibreCalc prompt and would either fail to match or silently import our guidance into
-        # the baseline, so none of them run here.
-        staged_control = temporary_root / "spreadsheet-control.yaml"
-        staged_control.write_text(yaml.safe_dump(config, sort_keys=False), encoding="utf-8")
-        return staged_control
+    if control or control_index:
+        # Official-surface arms: absolutize bundle paths only. Do not rewrite the prompt.
+        staged = temporary_root / source_config.name
+        staged.write_text(yaml.safe_dump(config, sort_keys=False), encoding="utf-8")
+        return staged
 
     instance_template = config["agent"]["templates"]["instance_template"]
 
-    strips_tools = read_policy in {"overview-only", "thin"} or execution in {
-        "formula-blocks-v1",
-        "cell-writes-v1",
-    }
-    if strips_tools or commit_gate:
+    if not control:
         bundle_source = Path(bundle_configs[0]["path"])
         # Bundle upload paths are derived from the directory basename. Keep the stable runtime
         # name expected by LIBRECALC_TOOL_ROOT and the bundle's install script.
@@ -621,6 +732,10 @@ def _stage_tool_policy(
                 ),
                 "arguments": [],
             }
+        if unbounded_reads or read_policy == "thin":
+            _make_read_tools_unbounded(tool_config)
+        else:
+            _make_read_tools_bounded(tool_config)
         tool_config_path.write_text(yaml.safe_dump(tool_config, sort_keys=False), encoding="utf-8")
         bundle_configs[0]["path"] = str(staged_bundle)
 
@@ -634,7 +749,7 @@ def _stage_tool_policy(
             raise RuntimeError("Commit gate expected SWE-agent's submit bundle to be present")
         config["agent"]["tools"]["bundles"] = remaining
 
-    if read_policy == "overview-only":
+    if read_policy == "overview-only" and not hybrid:
         old_read_guidance = """2. Do not reread a whole used range. Use calc_read for one focused region or calc_read_ranges
    for several.
    Treat inferred candidate_gaps as a heuristic checklist, not requirements; ignore obvious
@@ -653,7 +768,7 @@ def _stage_tool_policy(
         )
         instance_template = config["agent"]["templates"]["instance_template"]
 
-    if observation == "formula-anomalies-v1" and read_policy == "progressive":
+    if observation == "formula-anomalies-v1" and read_policy == "progressive" and not hybrid:
         old_inspect_guidance = """1. Call calc_inspect without target sheets for the compact workbook manifest. Then call it once
    with the exact manifest names of only the worksheets required by the instruction."""
         new_inspect_guidance = """1. Call calc_inspect once. This anomaly variant is already a compact workbook-wide shortlist;
@@ -732,7 +847,7 @@ def _stage_tool_policy(
             )
         config["agent"]["templates"]["system_template"] = system_template.rstrip() + write_hint
 
-    if observation == "format-conventions-v1" and read_policy == "progressive":
+    if observation == "format-conventions-v1" and read_policy == "progressive" and not hybrid:
         if execution != "semantic-program-v1":
             raise ValueError("format-conventions-v1 requires semantic-program-v1 execution")
         replacements = (
@@ -786,7 +901,7 @@ def _stage_tool_policy(
             "calc_program set_format operations.\n"
         )
 
-    if execution == "cell-writes-v1":
+    if execution == "cell-writes-v1" and not hybrid:
         old_write_guidance = """4. Write the result to the exact output path. Use calc_fill_formulas for formula-only work;
    use calc_program for mixed operations. Keep patterned edits range-based."""
         new_write_guidance = """4. Write the result to the exact output path with calc_write. Each call writes one
@@ -806,7 +921,7 @@ def _stage_tool_policy(
         )
         config["agent"]["templates"]["system_template"] = system_template
 
-    if read_policy == "thin":
+    if read_policy == "thin" and not hybrid:
         old_inspect_guidance = """1. Call calc_inspect without target sheets for the compact workbook manifest. Then call it once
    with the exact manifest names of only the worksheets required by the instruction."""
         new_inspect_guidance = """1. Call calc_inspect for the workbook structure."""
@@ -838,7 +953,7 @@ def _stage_tool_policy(
             "When two or more focused regions are needed, use one calc_read_ranges call.\n", ""
         )
 
-    if execution == "formula-blocks-v1":
+    if execution == "formula-blocks-v1" and not hybrid:
         old_write_guidance = """4. Write the result to the exact output path. Use calc_fill_formulas for formula-only work;
    use calc_program for mixed operations. Keep patterned edits range-based."""
         new_write_guidance = """4. Write the result with one calc_fill_formulas call. Use one block per patterned range;
@@ -855,7 +970,12 @@ def _stage_tool_policy(
             "",
         )
     instance_template = config["agent"]["templates"]["instance_template"]
-    if observation == "formula-patterns-v1" and compute_read_budget and read_policy == "progressive":
+    if (
+        observation == "formula-patterns-v1"
+        and compute_read_budget
+        and read_policy == "progressive"
+        and not hybrid
+    ):
         old_read_guidance = """2. Do not reread a whole used range. Use calc_read for one focused region or calc_read_ranges
    for several.
    Treat inferred candidate_gaps as a heuristic checklist, not requirements; ignore obvious
@@ -869,7 +989,9 @@ def _stage_tool_policy(
    Treat inferred candidate_gaps as a heuristic checklist, not requirements.
    Include boundary_continuations in the same fill unless the instruction excludes them."""
         if old_read_guidance not in instance_template:
-            raise RuntimeError("Compute read-budget policy could not locate the progressive-read prompt")
+            raise RuntimeError(
+                "Compute read-budget policy could not locate the progressive-read prompt"
+            )
         instance_template = instance_template.replace(old_read_guidance, new_read_guidance)
         config["agent"]["templates"]["instance_template"] = instance_template
         system_template = config["agent"]["templates"]["system_template"]
@@ -877,6 +999,25 @@ def _stage_tool_policy(
             system_template.rstrip()
             + "\nAfter inspect, at most one neighborhood read, then write. "
             "If a read is rejected as too large, write from inspect; do not dump or bash.\n"
+        )
+    if unbounded_reads:
+        instance_template = config["agent"]["templates"]["instance_template"]
+        config["agent"]["templates"]["instance_template"] = _replace_workflow_step(
+            instance_template,
+            2,
+            (
+                "Read every exact workbook region needed to resolve the task. This arm has no "
+                "cell-count ceiling or post-inspect read budget: calc_read can return a full "
+                "relevant block, and calc_read_ranges can batch several blocks. Prefer addressed "
+                "ranges over irrelevant sheets, but do not narrow a read merely to satisfy an "
+                "interface limit. Treat any inferred candidates as heuristics, not requirements."
+            ),
+        )
+        system_template = config["agent"]["templates"]["system_template"]
+        config["agent"]["templates"]["system_template"] = (
+            system_template.rstrip()
+            + "\nReads are unbounded in this run. Request every addressed workbook block needed "
+            "to decide the correct edit.\n"
         )
     if commit_gate:
         # Last, so the earlier read-policy and execution rewrites cannot clobber it.
@@ -893,6 +1034,101 @@ def _stage_tool_policy(
     staged_config = temporary_root / f"spreadsheet-{read_policy}-{execution}.yaml"
     staged_config.write_text(yaml.safe_dump(config, sort_keys=False), encoding="utf-8")
     return staged_config
+
+
+def _effective_tool_schema(staged_config: Path) -> dict[str, Any]:
+    """Resolve the exact native tools and bash capability exposed by a staged config."""
+
+    config = yaml.safe_load(staged_config.read_text(encoding="utf-8"))
+    tool_policy = config["agent"]["tools"]
+    bundles: list[dict[str, Any]] = []
+    for bundle in tool_policy.get("bundles", []):
+        path = Path(bundle["path"])
+        config_path = path / "config.yaml"
+        bundle_tools: dict[str, Any] = {}
+        if config_path.is_file():
+            payload = yaml.safe_load(config_path.read_text(encoding="utf-8")) or {}
+            bundle_tools = payload.get("tools", {})
+        bundles.append(
+            {
+                "name": path.name,
+                "source_path": str(path),
+                "tools": bundle_tools,
+            }
+        )
+    return {
+        "bash_enabled": bool(tool_policy.get("enable_bash_tool", False)),
+        "bundles": bundles,
+    }
+
+
+def _configuration_hash(value: dict[str, Any]) -> str:
+    canonical = json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+    return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
+
+def _portable_configuration(value: dict[str, Any]) -> dict[str, Any]:
+    """Remove task identity and temporary absolute bundle paths from a hash basis."""
+
+    portable = json.loads(json.dumps(value))
+    portable.pop("task", None)
+    for bundle in portable.get("effective_tool_schema", {}).get("bundles", []):
+        bundle.pop("source_path", None)
+    staged_bundles = (
+        portable.get("staged_config", {}).get("agent", {}).get("tools", {}).get("bundles", [])
+    )
+    for bundle in staged_bundles:
+        if "path" in bundle:
+            bundle["path"] = Path(bundle["path"]).name
+    return portable
+
+
+def _run_contract(
+    *,
+    args: argparse.Namespace,
+    task_key: str,
+    staged_config: Path,
+    model_preflight: dict[str, Any],
+    completion_kwargs: dict[str, Any],
+    env_variables: dict[str, str],
+) -> dict[str, Any]:
+    """Durable, secret-free description of what the agent actually saw and could call."""
+
+    config = yaml.safe_load(staged_config.read_text(encoding="utf-8"))
+    effective = {
+        "task": task_key,
+        "arm": (
+            "control"
+            if getattr(args, "control", False)
+            else "control-index"
+            if getattr(args, "control_index", False)
+            else "hybrid"
+            if getattr(args, "hybrid", False)
+            else "librecalc"
+        ),
+        "model": args.model,
+        "model_catalog_id": model_preflight["id"],
+        "provider_policy": completion_kwargs.get("provider", {"allow_fallbacks": True}),
+        "reasoning_effort": args.reasoning_effort,
+        "observation_variant": args.observation,
+        "execution_variant": args.execution,
+        "read_policy": args.read_policy,
+        "unbounded_reads": bool(getattr(args, "unbounded_reads", False)),
+        "read_budget_requested": bool(getattr(args, "read_budget", True)),
+        "compute_read_budget_requested": bool(getattr(args, "compute_read_budget", False)),
+        "effective_environment": dict(sorted(env_variables.items())),
+        "effective_tool_schema": _effective_tool_schema(staged_config),
+        "prompts": {
+            "system_template": config["agent"]["templates"].get("system_template"),
+            "instance_template": config["agent"]["templates"].get("instance_template"),
+        },
+        "staged_config": config,
+    }
+    return {
+        "schema_version": 1,
+        "effective_configuration_sha256": _configuration_hash(_portable_configuration(effective)),
+        **effective,
+    }
 
 
 def _cost_accounting(
@@ -1032,6 +1268,7 @@ def _run_task(
     status = "failed"
     error: str | None = None
     trajectory_path: Path | None = None
+    effective_contract: dict[str, Any] = {}
 
     with tempfile.TemporaryDirectory(prefix="librecalc-openrouter-") as temporary_directory:
         temporary_root = Path(temporary_directory)
@@ -1047,6 +1284,9 @@ def _run_task(
             compute_read_budget=bool(getattr(args, "compute_read_budget", False)),
             commit_gate=bool(getattr(args, "commit_gate", False)),
             control=bool(getattr(args, "control", False)),
+            control_index=bool(getattr(args, "control_index", False)),
+            unbounded_reads=bool(getattr(args, "unbounded_reads", False)),
+            hybrid=bool(getattr(args, "hybrid", False)),
         )
         sweagent_overlay = _stage_sweagent_overlay(args.sweagent_root, temporary_root)
         dataset_root = _stage_task(
@@ -1057,6 +1297,7 @@ def _run_task(
             work_root.glob(f"trajectories/output_excel/{category}/**/{task_id}_output.xlsx")
         )
         control = bool(getattr(args, "control", False))
+        control_index = bool(getattr(args, "control_index", False))
         env_variables = {
             "PIP_PROGRESS_BAR": "off",
             "LIBRECALC_SOURCE_ROOT": "/opt/librecalc/src",
@@ -1073,11 +1314,11 @@ def _run_task(
                 if getattr(args, "commit_gate", False)
                 else {}
             ),
-            # Arm A has no semantic inspect, so the semantic lane's 96-cell read
-            # invariant would handicap it rather than measure it.
-            **({"LIBRECALC_READ_MAX_CELLS": "none"} if args.read_policy == "thin" else {}),
+            # Read rationing is an experiment treatment, not a product default. Bounded
+            # LibreCalc arms therefore request the historical ceiling explicitly.
+            "LIBRECALC_READ_MAX_CELLS": ("none" if args.read_policy == "thin" else "96"),
         }
-        if control:
+        if control or control_index:
             # No LibreCalc tool reads these, and leaving them set would make a control
             # trajectory look like it had an interface it never had.
             env_variables = {"PIP_PROGRESS_BAR": "off"}
@@ -1096,7 +1337,7 @@ def _run_task(
                 "/mnt/spreadsheet_output/.librecalc_read_budget.json"
             )
             env_variables["LIBRECALC_INSPECTION_LIMIT"] = "2"
-        if getattr(args, "unbounded_reads", False) and not control:
+        if getattr(args, "unbounded_reads", False) and not control and not control_index:
             # The ceiling and the budget are the two ways the interface refuses a read. The
             # 297 spent 19.7% of its calls on refusals, and a single oversized first read
             # sets write_now and locks the model out of reading at all, so both come off
@@ -1105,6 +1346,19 @@ def _run_task(
             env_variables["LIBRECALC_READ_BUDGET_ENABLED"] = "0"
             env_variables.pop("LIBRECALC_READ_BUDGET_PATH", None)
             env_variables.pop("LIBRECALC_INSPECTION_LIMIT", None)
+        completion_kwargs = _completion_kwargs(args, model_preflight)
+        effective_contract = _run_contract(
+            args=args,
+            task_key=task_key,
+            staged_config=staged_config,
+            model_preflight=model_preflight,
+            completion_kwargs=completion_kwargs,
+            env_variables=env_variables,
+        )
+        (task_root / "run_contract.json").write_text(
+            json.dumps(effective_contract, indent=2, ensure_ascii=False),
+            encoding="utf-8",
+        )
         command = [
             str(args.sweagent_root / ".venv" / "bin" / "sweagent"),
             "run",
@@ -1128,7 +1382,7 @@ def _run_task(
             # SWE-agent counts the initial attempt, so two permits one billable repair response.
             str(args.max_requeries),
             "--agent.model.completion_kwargs",
-            json.dumps(_completion_kwargs(args, model_preflight), separators=(",", ":")),
+            json.dumps(completion_kwargs, separators=(",", ":")),
             "--agent.tools.env_variables",
             json.dumps(
                 env_variables,
@@ -1211,11 +1465,24 @@ def _run_task(
         "model": args.model,
         # The control arm has no observation or execution variant. The fields stay for schema
         # stability but carry the flag's answer, so a mixed ledger cannot be misread.
-        "arm": "control" if getattr(args, "control", False) else "librecalc",
+        "arm": (
+            "control"
+            if getattr(args, "control", False)
+            else "control-index"
+            if getattr(args, "control_index", False)
+            else "hybrid"
+            if getattr(args, "hybrid", False)
+            else "librecalc"
+        ),
         "observation_variant": args.observation,
         "blank_bridges": bool(getattr(args, "blank_bridges", True)),
-        "read_budget": bool(getattr(args, "read_budget", True)),
-        "compute_read_budget": bool(getattr(args, "compute_read_budget", False)),
+        "read_budget": env_variables.get("LIBRECALC_READ_BUDGET_ENABLED") == "1",
+        "compute_read_budget": bool(getattr(args, "compute_read_budget", False))
+        and env_variables.get("LIBRECALC_READ_BUDGET_ENABLED") == "1",
+        "unbounded_reads": bool(getattr(args, "unbounded_reads", False)),
+        "effective_environment": effective_contract.get("effective_environment", {}),
+        "effective_tool_schema": effective_contract.get("effective_tool_schema", {}),
+        "effective_configuration_sha256": effective_contract.get("effective_configuration_sha256"),
         "repair_passes": int(getattr(args, "repair_passes", 1)),
         "read_policy": args.read_policy,
         "execution_variant": args.execution,
@@ -1259,6 +1526,17 @@ def _run_task(
     return return_code or 2
 
 
+def _apply_arm_config(args: argparse.Namespace) -> argparse.Namespace:
+    """When an arm flag is set and the caller left the default LibreCalc config, switch it."""
+    if getattr(args, "control", False) and args.config == DEFAULT_CONFIG:
+        args.config = CONTROL_CONFIG
+    if getattr(args, "control_index", False) and args.config == DEFAULT_CONFIG:
+        args.config = CONTROL_INDEX_CONFIG
+    if getattr(args, "hybrid", False) and args.config == DEFAULT_CONFIG:
+        args.config = HYBRID_CONFIG
+    return args
+
+
 def main() -> int:
     _load_dotenv()
     args = _arguments()
@@ -1278,6 +1556,12 @@ def main() -> int:
             "--call-limit must be at least 2, --max-requeries at least 1, and token/tool timeouts "
             "positive"
         )
+    if getattr(args, "control", False) and getattr(args, "hybrid", False):
+        raise ValueError("--control and --hybrid are mutually exclusive")
+    if getattr(args, "control_index", False) and getattr(args, "control", False):
+        raise ValueError("--control-index and --control are mutually exclusive")
+    if getattr(args, "control_index", False) and getattr(args, "hybrid", False):
+        raise ValueError("--control-index and --hybrid are mutually exclusive")
     if args.read_policy == "overview-only" and not args.observation.startswith(
         "semantic-snapshot-"
     ):
@@ -1289,6 +1573,12 @@ def main() -> int:
         )
     if shutil.which("docker") is None:
         raise RuntimeError("docker is required")
+    slice_data = _load_json(args.slice)
+    _validate_slice_model(
+        slice_data,
+        args.model,
+        allow_mismatch=bool(getattr(args, "allow_model_mismatch", False)),
+    )
     model_preflight = _model_preflight(args.model)
     _validate_reasoning_effort(model_preflight, args.reasoning_effort)
     print(
@@ -1300,15 +1590,13 @@ def main() -> int:
     sweagent_binary = args.sweagent_root / ".venv" / "bin" / "sweagent"
     if not sweagent_binary.is_file():
         raise FileNotFoundError(f"SWE-agent environment not found: {sweagent_binary}")
-    if getattr(args, "control", False) and args.config == DEFAULT_CONFIG:
-        args.config = CONTROL_CONFIG
+    _apply_arm_config(args)
     run_name = _safe_name(args.run_name)
     if not run_name:
         raise ValueError("--run-name must contain a filename-safe character")
     run_root = args.benchmark_root / "benchmark-runs" / "openrouter" / run_name
     run_root.mkdir(parents=True, exist_ok=True)
 
-    slice_data = _load_json(args.slice)
     tasks = _selected_tasks(slice_data, args.task)
     failures = sum(
         _run_task(
