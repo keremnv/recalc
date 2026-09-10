@@ -82,8 +82,11 @@ def build() -> str:
              ["15", "failure taxonomy", "13"],
              ["16", "scorer / value-only / regression", "14"],
              ["17", "token and cost comparison", "15"],
-             ["18", "oracle-choice ceiling", "16"],
-             ["19", "architecture verdict", "18"]]))
+             ["18", "oracle-choice ceiling", "17"],
+             ["19", "architecture verdict", "19"],
+             ["—", "retrieval usage (§24)", "16"],
+             ["—", "instrumentation defects", "18"],
+             ["—", "direct questions a-l (§29)", "20"]]))
     W("")
 
     # 1 frozen
@@ -401,8 +404,65 @@ def build() -> str:
     W("ProgramGroup, and translation still supplies every other member for free.")
     W("")
 
-    # 16 oracle
-    W("## 16. Oracle-choice ceiling (§25)")
+    # 16 retrieval
+    W("## 16. Retrieval, unchanged and reported (§24)")
+    W("")
+    W("Retrieval was not co-varied with the treatment, and the claim here is")
+    W("stronger than \"same policy\": A1 issues no query at all. It rebuilds A0's")
+    W("synthesis input from A0's own stored working set, so both arms rest on the")
+    W("identical retrieval session, query for query.")
+    W("")
+    calls, limited, truncated = [], 0, 0
+    for u in (units.get("units") or []):
+        cid = u["canonical_cell_id"]
+        nm = f"{u['task']}__{cid.replace(':', '_')}.json"
+        for d in CP.SESSION_DIRS:
+            if (d / nm).exists():
+                sess = old.load(d / nm)
+                calls.append(len([c for c in (sess.get("calls") or [])
+                                  if c.get("sql") or c.get("action")]))
+                limited += bool(sess.get("session_resource_limited"))
+                truncated += bool(sess.get("synthesis_truncated"))
+                break
+    if calls:
+        calls.sort()
+        W(table(["quantity", "value"],
+                [["shared retrieval sessions", len(calls)],
+                 ["permitted SQL calls per session", lim.get("max_sql_calls")],
+                 ["median SQL calls used", calls[len(calls) // 2]],
+                 ["sessions using 7 or 8 of the 8", sum(1 for n in calls if n >= 7)],
+                 ["sessions hitting the per-session token cap", limited],
+                 ["synthesis turns truncated at budget", truncated]]))
+        W("")
+    W(f"{sum(1 for n in calls if n == lim.get('max_sql_calls'))} of {len(calls)} sessions "
+      "used every permitted query and the remaining one used seven, so the")
+    W("budget is still binding and retrieval is still unexonerated. It cannot,")
+    W("however, explain any difference between these arms, because there is no")
+    W("difference in it to explain.")
+    W("")
+    W("§24 asks that two failures be kept apart, and on this population they")
+    W("separate cleanly:")
+    W("")
+    W(table(["failure", "where measured", "count"],
+            [["candidate recovery failed - the program is in the compiled workbook "
+              "but never reached the model-facing set",
+              "Phase A, all 34 scorable groups", 3],
+             ["program choice failed - the correct candidate was in the set and the "
+              "model did not use it",
+              "Phase B, the 7 RECOVERABLE_EXACT groups", 2]]))
+    W("")
+    W("The three recovery misses are all cross-sheet and none of them is inside the")
+    W("executed population, which by construction takes its recoverable groups from")
+    W("the class where the runtime set does contain the program. So within Phase B,")
+    W("candidate recovery never failed: every miss there was a choice.")
+    W("")
+    W("Both of the choice failures are abstentions rather than wrong picks, at")
+    W("15_04 `Consol_annual!N50` and `Consol_quarterly!E30`, with 51 and 44")
+    W("candidates on offer including the correct one.")
+    W("")
+
+    # 17 oracle
+    W("## 17. Oracle-choice ceiling (§25)")
     W("")
     orow = [r for r in rows if r["oracle_all_members_exact"] is not None]
     W(table(["task", "canonical", "required members", "A0 exact", "A1 exact",
@@ -420,7 +480,7 @@ def build() -> str:
     W("")
 
     # 17 instrumentation
-    W("## 17. Instrumentation defects found by this run")
+    W("## 18. Instrumentation defects found by this run")
     W("")
     W(table(["#", "defect", "effect", "repair"],
             [["10", "a well-formed decision returned inside a single-key envelope, "
@@ -461,7 +521,7 @@ def build() -> str:
     # 18 verdict
     rec_a0 = sum(1 for r in rec if r["A0_canonical_exact"])
     rec_a1 = sum(1 for r in rec if r["A1_canonical_exact"])
-    W("## 18. Architecture verdict (§26)")
+    W("## 19. Architecture verdict (§26)")
     W("")
     W("### `EXISTING_PROGRAM_NOT_ENOUGH` — the primary verdict")
     W("")
@@ -474,8 +534,12 @@ def build() -> str:
     W("What the gate then directs is to look past availability, and the two")
     W("abstentions say where. At 15_04 `Consol_annual!N50` and")
     W("`Consol_quarterly!E30` the model held the correct program in a list in front")
-    W("of it, in sets of 51 and 44 candidates, and declined to answer. It was not")
-    W("missing the program. It was unable to tell that it was the right one.")
+    W("of it, in sets of 51 and 44 candidates, and declined to answer. Availability")
+    W("was not the constraint. What the abstention itself shows is only that the")
+    W("model would not commit; whether it could not identify the candidate, or")
+    W("could not satisfy itself that the goal was what it looked like, this probe")
+    W("does not distinguish -- and the difference matters, so it is left open")
+    W("rather than guessed.")
     W("")
     W("### `NOVEL_SYNTHESIS_DOMINANT` — also met, and it is the durable finding")
     W("")
@@ -516,7 +580,7 @@ def build() -> str:
     W("")
 
     # 19 answers
-    W("## 19. Direct questions (§29)")
+    W("## 20. Direct questions (§29)")
     W("")
     curve = {c["mechanism"]: c for c in (pre.get("recall_curve") or [])}
     W("**a. In how many ProgramGroups does the correct canonical program already exist somewhere in the input workbook?**")
