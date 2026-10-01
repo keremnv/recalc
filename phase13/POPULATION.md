@@ -33,13 +33,14 @@
   input/gold identity. Most have .traj trajectories + ledger rows.
 - Outcome: 29 exact 1, 154 exact 0. Summed modification loss 41.4766,
   regression loss 2.122 over the 154 failures.
-- Recalc-fair status: ALREADY_RECALC_FAIR for 142 resolved pairs
-  (RECALC_NO_MATERIAL_EFFECT, scores reproduce); INCOMPATIBLE /
-  UNSUPPORTED for 41 rows (scorer/XML/LO-envelope failures — carried
-  as unresolved bounds, never as zero effect).
+- Recalc-fair status: 142 resolved (141 RECALC_NO_MATERIAL_EFFECT +
+  1 measured RECALC_REGRESSION) + 41 INCOMPATIBLE / UNSUPPORTED
+  (scorer/XML/LO-envelope failures — carried as unresolved bounds,
+  never as zero effect).
 - Role: score-mass census (all 183), full-error per-cell probe
-  (§17–18), stratified trajectory sample (18 runs) for mechanism
-  classification, matched success comparison (29 exact-1 runs).
+  (§17–18), stratified trajectory sample (19 runs: 17 fail + 2
+  success) for mechanism classification, matched success comparison
+  (29 exact-1 runs).
 
 ## What is NOT in prevalence
 

@@ -5,7 +5,7 @@
 | Run | Mode | Evidence |
 |---|---|---|
 | 04_06, 08_06 CONTROL | Stop too early (degenerate) | Submit at call 1, zero inspection, no output |
-| 12_01 CONTROL | Never submit despite valid workbook | Exact-correct output on disk; kept verifying until wall death |
+| 12_01 CONTROL | Never submit despite valid workbook | V1-exact output on disk (ambiguous class); kept verifying until wall death |
 | 17_05 CONTROL | Never submit (couldn't finish) | Call cap consumed by XML debugging; output corrupt |
 | 18_03 CONTROL | Never submit (work in progress) | Building + fixing at wall death; work in /tmp only |
 
@@ -20,7 +20,7 @@ revert restored the gold formula (correct behavior, not damage).
 No intermediate snapshots are retained (research debt #2), so this
 is indirect:
 
-- **12_01**: best state (final output.xlsx) scores V1 exact 1.0;
+- **12_01**: best state (final output.xlsx) scores V1 exact 1.0 (ambiguous class);
   submitted score 0.0 via no-submit. Best-vs-final gap = 1.0 exact.
   The ONLY proven best-state loss in the corpus.
 - **18_03**: /tmp artifacts unretained; trajectory shows a

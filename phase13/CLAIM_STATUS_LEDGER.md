@@ -45,7 +45,7 @@ NARROWLY / CONDITIONAL / FALSIFIED / CLOSED / OPEN / SUPERSEDED.
 |---|---|---|---|
 | No-submit/budget death dominates the tight-budget ordinary regime | SUPPORTED | Pop A: 28/40 without valid submission | $0.25/40-call/900s regime; GLM-5.3-flash |
 | Tight-regime no-submit runs inspected targets but never acted | SUPPORTED | Coverage probe: full mod-region coverage in most truncated runs | Pop A no-output runs |
-| Submitted Template failures in the custom harness are mostly submit hygiene | SUPPORTED | Pop A: 6/10 Template submits V1-recovered; formulas gold-correct | Phase-12 harness (no recalc-before-submit) |
+| Submitted Template failures in the custom harness show a hygiene slice + reasoning residuals | SUPPORTED | Pop A: hygiene-PRIMARY 4/10 (3 exact + 1 near V1); hygiene-involved 8/10; L5-primary partials 4/10 | Phase-12 harness (no recalc-before-submit) |
 | Archived ordinary failures are mostly small-residual reasoning errors | SUPPORTED (pending fullerr detail) | P1: mod median 0.93; recalc no-effect; sampled trajectories | Swe-agent $4 regime; recalc-fair |
 | Malformed benchmark input explains FM:06_01-class total failures | SUPPORTED | docProps dc-prefix; input fails strict parse | Known-case class; not prevalence |
 | Remaining errors are mostly model reasoning without an earned mechanical abstraction | SUPPORTED → verdict C (+D per regime) | Census rollup | See final report |

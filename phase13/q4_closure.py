@@ -57,6 +57,18 @@ def main(budget):
             if d.get('fatal'):
                 out[id] = {'fatal': d['fatal']}
                 continue
+            # skip runs needing no closure: no same-formula roots, no color
+            # roots, recalc-fair (volatility scan only matters when UNSCORABLE)
+            _c = cause.get(id, {})
+            _has_color = any(m['cls'] == 'COLOR_ONLY' for m in d.get('mm', []))
+            if (_c.get('formula_same', 1) == 0 and not _has_color
+                    and led.get(id) == 'RECALC_NO_MATERIAL_EFFECT'):
+                out[id] = {'task': task, 'upstream': 0, 'cache_suspect': 0,
+                           'dynamic': 0, 'sampled_roots': 0, 'up_edited': 0,
+                           'up_untouched': 0, 'color_missed': 0, 'color_tooling': 0,
+                           'volatile_cells': [], 'n_volatile': 0, 'skipped': True}
+                done += 1
+                continue
             try:
                 wo_f = openpyxl.load_workbook(scores[id]['V0'], data_only=False)
                 wo_v = openpyxl.load_workbook(scores[id]['V0'], data_only=True)

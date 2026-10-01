@@ -13,7 +13,7 @@ score pairs, and transcript-described (unretained) artifacts.
 
 | Run | Best state | Final submitted state | Gap cause |
 |---|---|---|---|
-| FM:12_01 CONTROL | output.xlsx on disk, V1 exact 1.0 | no-submit, exact 0 | Chose verification over submit until wall death (L7) |
+| FM:12_01 CONTROL | output.xlsx on disk, V1 exact 1.0 (ambiguous recalc class) | no-submit, exact 0 | Chose verification over submit until wall death (L7) |
 | 06_05/06_09/06_16-class (3) | /tmp LO-recalc copy, values correct (unretained) | stale output.xlsx, exact 0 | Submitted the wrong file (L0/L7) |
 | 06_25/10_02/11_01/11_03-class | /tmp copies correct-or-near (unretained) | stale output.xlsx | Same wrong-artifact pattern |
 

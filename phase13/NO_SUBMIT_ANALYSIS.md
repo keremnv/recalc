@@ -7,7 +7,7 @@
 | TRUNCATED_INSTANCE_COST | 8 | Inspection loop burned $0.25 (1.3–1.7M tokens, 30–39 calls, 0 saves) |
 | TRUNCATED_CALL_LIMIT | 4 | 40-call inspection loop (03_03, 05_04, 10_05) or XML-debug saga (17_05, output corrupt) |
 | NO_SUBMIT, no output | 14 | Wall-time death: inspection loops (11), ramble traps (01_03, 15_02, 03_01-pilot), work-in-progress (18_03) |
-| NO_SUBMIT, output on disk | 1 | 12_01: exact-correct workbook, over-verification loop, wall death |
+| NO_SUBMIT, output on disk | 1 | 12_01: V1-exact workbook (ambiguous recalc class), over-verification loop, wall death |
 | SUBMITTED, no output | 2 | 04_06, 08_06: degenerate 1-call submits |
 
 ## Mechanism split (primary L8 unless noted)
@@ -30,8 +30,9 @@
   death; recoverable with more time.
 - **Degenerate submit (04_06, 08_06)**: L7, not L8 — submitted with
   no inspection at all.
-- **Correct-work no-submit (12_01)**: L7 PRIMARY — perfect workbook,
-  chose verification over submit until wall death.
+- **Correct-work no-submit (12_01)**: L7 PRIMARY — V1-exact workbook
+  (ambiguous class; "perfect" hedged per Gate-A fix 8), chose
+  verification over submit until wall death.
 
 ## The budget-regime contrast (do not pool)
 

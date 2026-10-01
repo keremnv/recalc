@@ -18,16 +18,32 @@ pairs (Population A).
 
 ## Population B (full-error rollup complete)
 
-All-cell enumeration over 154 fails (official comparison code):
-2053 assessed roots. Class mix (roots): MOD NUMERIC_VALUE 1274,
-MOD MISSING 493 (86 partial-block, 205 untouched-block), REG
-NUMERIC 346, COLOR_ONLY 264, REG OVERFILL 170, MOD SIGN_FLIP 117,
-FORMULA_TEXT 79 (38 non-VALUE-mode audited: 5 proven-equivalent
-L0 cells, rest genuine L5), TYPE_OTHER ~100, STRING ~19.
+All-cell enumeration over 154 fails (official comparison code,
+UNCAPPED: 109,034 mismatches → 77,340 roots; 71/71 self-checks):
+MOD NUMERIC_VALUE 4,626; MOD MISSING 1,369 (330 partial-block →
+L5-omission, 1,043 untouched-block → L4); REG NUMERIC 711; MOD
+SIGN_FLIP 368; REG OVERFILL 203; MOD STRING 159; MOD OVERFILL 97;
+FORMULA_TEXT 125 (non-VALUE-mode audited: 7 proven-equivalent L0
+cells over 5 runs — RRI ×2, SUMPRODUCT ×2 (error-valued, no
+recovery), sheet-prefix ×1, C36 D8:D8 ×2 — never sole cause; rest
+genuine L5); COLOR_ONLY 69,529 (30,787 missed fixes → L5, 38,742
+pipeline-destroyed → L6, official comparator).
 
-Mod-loss allocation (sums exactly, no double count): L5 30.25
-(73%), L4 3.32 (8%), L0 2.0 (5%), UNALLOCATED 5.90 (14%,
-unverifiable-cache shares in UNSCORABLE rows).
+Root causes: 3,465 formula-differs (L5) + 23,294 formula-same +
+50,397 value-only. Same-formula interior (Q4/Q4b): 336
+upstream-proven (24 edited / 312 untouched — I29 sub-tolerance
+cascade archetype), 2,270 plain, 947 named-range, 86
+OFFSET/array, 0 dynamic-unparsed, ZERO time-volatile
+(exhaustive). Recalc-fair same-shares → L5-upstream (family
+proven by fresh caches + 22/30 agent-scale magnitude sample);
+UNSCORABLE same-shares → UNALLOCATED; named/dynamic channels →
+L5-unlocalized [PLAUSIBLE] if fair else UNALLOCATED.
+
+Mod-loss allocation (kind-pure, exact-sum 41.4766): L5 28.13
+(68%; incl. upstream + omissions + deleted-sheet cells), L4 5.26
+(13%), L0 2.34 (6%), L6 0.05, UNALLOCATED 5.69 (14%).
+REG-loss allocation (exact-sum 2.122): L0 1.00, L5 0.60, L6 0.52,
+UNALLOCATED 0.001.
 
 Sampled-trajectory forensics:
 

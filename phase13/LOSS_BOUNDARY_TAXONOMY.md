@@ -59,7 +59,12 @@
   submitted the stale file — verified the wrong artifact).
 - **L0 vs L5 (stale cache + wrong formulas)**: when recalculated
   scores still fail, the wrong formulas were written before the
-  submit boundary, so L5 is PRIMARY and L0 SECONDARY.
+  submit boundary, so L5 is PRIMARY and L0 SECONDARY. This applies
+  even to near-miss residuals (10_02 E10 omission, 11_01 K8
+  hardcode — Gate-A fix 4). Carve-out: when the V1 residual is a
+  pre-existing input/gold inconsistency the agent never touched
+  (06_25 B31 label), the run stays L0 PRIMARY — the residual is
+  benchmark state, not agent error.
 - **L3 vs L4 (Debugging misdiagnosis)**: seeing a buggy formula and not
   recognizing the bug is L3; choosing to fix a non-gold region (or
   missing an implicit target) is L4. Fixing a plausible-but-wrong bug
