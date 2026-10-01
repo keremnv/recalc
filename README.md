@@ -3,8 +3,9 @@
 An agent-native application substrate for spreadsheet work.
 
 The substrate offers two things. First, efficiency on a narrow path:
-supported repeated reads can reuse persistent, validated derived workbook
-state instead of paying the full normal parsing path again — while anything
+supported repeated reads can reuse persistent, validated workbook read
+state, decoded from the source workbook, instead of paying the full
+normal parsing path again — while anything
 unsupported or uncertain falls back to ordinary reference execution.
 Second, execution transparency: an external observer, running outside the
 agent/script process, records what ran, whether fallback occurred, what
@@ -34,7 +35,7 @@ what is not claimed is [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMI
         │   admission              before state  │
         │      ↓                       ↓         │
         │   validated              run observed  │
-        │   derived state              ↓         │
+        │   workbook read state        ↓         │
         │      ↓                   after state   │
         │   supported reads            ↓         │
         │      │                   effect capture│
@@ -49,7 +50,7 @@ what is not claimed is [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMI
 
 The agent-facing surface is the normal program and its existing interface.
 The substrate underneath has two independent sides: execution, which may
-serve supported reads from validated derived state or fall back to the
+serve supported reads from validated workbook read state or fall back to the
 reference path; and observation, which watches workbook state before and
 after the run and records the outcome in a receipt. Neither side requires
 a LibreCalc-specific workbook-intent API: the execution side changes how
@@ -62,16 +63,60 @@ Relative to running the same script directly with plain Python/openpyxl:
 
 | Reference/plain execution | With LibreCalc substrate |
 | --- | --- |
-| workbook follows normal load path | supported warm reads can reuse validated derived state |
+| workbook follows normal load path | supported warm reads can reuse persistent, validated workbook read state |
 | execution outcome is primarily process status/output | workbook effects are independently observed |
 | unsupported optimization would otherwise require special handling | uncertain/unsupported paths use reference behavior |
-| state reuse/freshness is not supplied by the execution layer | derived state is content-addressed and rebuilt when invalid |
+| state reuse/freshness is not supplied by the execution layer | workbook read state is content-addressed and rebuilt when invalid |
 | execution and post-state assurance are not separated | target and assurance outcomes are reported separately |
 
 Nothing here replaces ordinary execution: the reference path remains
 available through conservative admission and lazy fallback, and scripts
 that never touch the supported surface use reference openpyxl behavior,
 with the launcher and observer still surrounding execution.
+
+### What is actually stored
+
+```text
+persistent, content-addressed workbook read state
+├── workbook identity / freshness
+└── sheets
+    └── Forecast
+        ├── bounds
+        ├── merged ranges
+        └── cells
+            └── D12 → value + data type
+```
+
+The current persisted state is deliberately mechanical: it is decoded
+from workbook data for the validated narrow read contract and holds the
+mechanical state that contract needs — sheet names, bounds, merged
+ranges, and sparse coordinate → value/data-type entries. It is
+content-addressed and versioned, so stale or incompatible state is
+rebuilt rather than served. It is not a semantic workbook model: it
+derives no dependency graphs, no formula fingerprints as runtime
+authority, no formula intent, no task semantics, and no plans or
+mutation IR.
+
+For example, in an admitted script with an eligible workbook:
+
+```python
+ws["D12"].value
+```
+
+conceptually maps to:
+
+```text
+Forecast / D12 / value
+        ↓
+workbook read state
+        ↓
+ordinary Python value
+```
+
+The operation resolves through the narrow proxy surface to the stored
+workbook read state, and the program receives the ordinary Python value.
+When an operation cannot be served under the narrow contract, execution
+uses genuine reference openpyxl behavior.
 
 ## Current evidence snapshot
 
@@ -130,7 +175,7 @@ its normal output; `status` shows the last receipt.
   admission) decides whether the script qualifies for the direct read path.
   Uncertain or unsupported scripts are routed to ordinary openpyxl without
   ever loading the direct runtime.
-- **Source/workbook identity.** Derived state is keyed by whole-file SHA-256
+- **Source/workbook identity.** Workbook read state is keyed by whole-file SHA-256
   plus runtime/decoder/contract/format versions, so a changed workbook or a
   new package version rebuilds instead of serving stale data.
 - **Validated reuse or rebuild.** A matching artifact is validated before
@@ -146,7 +191,7 @@ its normal output; `status` shows the last receipt.
   and `python task.py` remains valid for reference execution.
 - Supported direct reads — sheet names and literal lookup, worksheet
   bounds/dimensions, literal/integer cell access, cell value and data type —
-  may be served from the persistent derived artifact instead of running the
+  may be served from the persistent read artifact instead of running the
   normal workbook parser for that load.
 - Anything outside that narrow surface — unsupported load options,
   iteration, rich objects, writes, uncertain syntax — runs on real openpyxl
@@ -196,7 +241,7 @@ unaffected.
 No extra workbook API is required. As described above, static admission
 routes each script before launch: uncertain or unsupported scripts never
 load the direct runtime, while admitted scripts may have supported reads
-served from the persistent derived artifact.
+served from the persistent read artifact.
 
 Unsupported load modes, proxy escapes, iteration, and artifact/decoder
 failures lazily use real openpyxl and are recorded in the receipt.
@@ -224,7 +269,7 @@ Default location: `$XDG_CACHE_HOME/librecalc-agent`, or
 `~/.cache/librecalc-agent`; override with `cache_dir` in `[runtime]`
 (relative paths resolve beside the config file). Layout:
 
-- `read-engine/` — persistent derived read artifacts (safe to delete while no
+- `read-engine/` — persistent read artifacts (safe to delete while no
   invocation uses them; they rebuild).
 - `runs/` — per-run receipts and debug bundles; `last_run.json` points at the
   latest run. Safe to delete; `status` then reports "none recorded".
@@ -288,7 +333,7 @@ python -m pip uninstall librecalc-agent
 rm -rf ~/.cache/librecalc-agent   # or your configured cache_dir
 ```
 
-The cache holds only diagnostics and derived state — never workbook
+The cache holds only diagnostics and workbook read state — never workbook
 authority. Deleting it cannot harm your workbooks.
 
 ## Security and resources
