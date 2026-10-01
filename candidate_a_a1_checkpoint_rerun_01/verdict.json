@@ -1,0 +1,47 @@
+{
+  "censored_primary_slots": 8,
+  "contact_tasks": [
+    "Debugging:05_02",
+    "Debugging:10_10",
+    "Financial_Model:08_01",
+    "Financial_Model:08_03",
+    "Financial_Model:10_01",
+    "Financial_Model:15_04",
+    "Template:13_08"
+  ],
+  "interpretation": "Conditional live mechanism supported on an exposure-enriched 7-task contact set; not a benchmark-wide or token/cost claim.",
+  "mechanical_effectiveness": {
+    "median_absolute_time_saved_s": 1.423197805066593,
+    "median_exact_trace_reduction_pct": 44.46306240428392,
+    "pass": true,
+    "positive_contact_tasks": 7,
+    "positive_trace_fraction": 0.9803921568627451,
+    "required_median_pct": 25,
+    "required_positive_fraction": 0.75,
+    "required_positive_tasks": 4
+  },
+  "provider_or_runner_censored": true,
+  "reliability": {
+    "candidate_a_caused_exceptions": 0,
+    "contact_tasks": [
+      "Debugging:05_02",
+      "Debugging:10_10",
+      "Financial_Model:08_01",
+      "Financial_Model:08_03",
+      "Financial_Model:10_01",
+      "Financial_Model:15_04",
+      "Template:13_08"
+    ],
+    "exact_trace_mismatches": 0,
+    "fallback_identity_corruption": 0,
+    "freshness_events": 464,
+    "identity_corruption": 0,
+    "pass": true,
+    "provider_censored_primary_slots": 6,
+    "runner_error_primary_slots": 2,
+    "semantic_substitutions": 0,
+    "stale_reads": 0,
+    "wrong_generation_reads": 0
+  },
+  "verdict": "A1_LIVE_END_TO_END_SUPPORTED"
+}

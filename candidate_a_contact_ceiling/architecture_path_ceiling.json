@@ -1,0 +1,24 @@
+{
+  "A0_frozen_whole_script": {
+    "historical_executions": 309,
+    "historical_fully_proxyable_executions": 72,
+    "live_contact_tasks": 2,
+    "mechanical_read_event_coverage_pct": 85.5
+  },
+  "A1_small_bounded_extensions": {
+    "classifier_false_positive_opportunity_turns": 34,
+    "four_task_contact_supported": false,
+    "new_independent_live_task_floor": 3,
+    "sheet_state_historical_executions": 0,
+    "worksheets_historical_executions": 9
+  },
+  "A2_safe_region": {
+    "cell_object_iterator_recovery": false,
+    "material_prefix_turns": 19,
+    "proof_status": "opportunity_only; not implemented or semantically proven"
+  },
+  "A3_lower_level": {
+    "evidence": "shadow object escape census plus Debugging iter_rows workloads",
+    "status": "plausible conditional prize; unimplemented"
+  }
+}

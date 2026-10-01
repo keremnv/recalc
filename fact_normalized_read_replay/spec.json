@@ -1,0 +1,32 @@
+{
+  "experiment": "fact_normalized_read_replay",
+  "purpose": "Zero-model adjudication of same-fact compact read efficiency.",
+  "model_inference": false,
+  "live_v1_v2": false,
+  "prompts_changed": false,
+  "helpers_added": false,
+  "semantic_boundary_changed": false,
+  "population": [
+    "Financial_Model:08_01",
+    "Debugging:10_04",
+    "Financial_Model:08_03",
+    "Financial_Model:07_01",
+    "Debugging:10_10",
+    "Financial_Model:15_04"
+  ],
+  "historical_fact_rule": "H is the non-empty cell/address/value/formula content visibly recoverable from the archived observation; capped output uses only the visible prefix/head-tail.",
+  "hindsight_rule": "Only explicit historical requests or finite ranges/predicates mechanically present before the observation are admissible; visible addresses are never used as query filters.",
+  "primary_gate": {
+    "fact_preservation": ">=4/6 tasks with >=95% fact match on candidate-comparable facts and no systematic wrong facts",
+    "query_realizability": ">=4/6 tasks with >=75% eligible observations directly/mechanically realizable",
+    "payload_materiality": ">=4/6 tasks with median >=25% reduction versus actual historical visible observation bytes",
+    "freshness": "zero stale responses, silent truncations, or systematic fidelity failures"
+  },
+  "live_phase_rule": "Run no live phase unless the repaired mechanical gate passes; this replay failed the query-realizability and raw-payload-materiality components.",
+  "source_artifacts": {
+    "population": "thin_architecture_checkpoint/population.json",
+    "ranking": "thin_architecture_checkpoint/exposure_ranking.json",
+    "historical_reconstruction": "benchmark/read_side_v2_adjudication.py"
+  },
+  "model_calls_in_replay": 0
+}

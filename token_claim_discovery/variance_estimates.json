@@ -1,0 +1,20 @@
+{
+  "call_difference_sd": 9.581514427229749,
+  "completion_by_arm": {
+    "H0": 11,
+    "H0_binomial_variance": 0.23543400713436385,
+    "H1": 9,
+    "H1_binomial_variance": 0.21403091557669443,
+    "pairs": 29
+  },
+  "design_implication": "High task-level log-ratio SD and incomplete prior arms make 15-task discovery directional, not an equivalence study.",
+  "family_log_ratio_sd": {
+    "Debugging": 0.9732263147832644,
+    "Financial_Model": 0.5323862439160563,
+    "Template": 1.0467137332414473
+  },
+  "note": "Not an effect estimate for the new factorial intervention.",
+  "paired_n": 29,
+  "source": "representative checkpoint paired H0/H1, design scale only; different mechanism",
+  "task_log_ratio_sd": 1.0273057193078243
+}

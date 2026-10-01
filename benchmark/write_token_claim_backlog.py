@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+"""Keep all frozen product claim leads visible during token discovery."""
+import json
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "token_claim_discovery"
+
+LEADS = [
+    {"claim":"Token efficiency", "status":"DISCOVERY_NEGATIVE_MIXED; NO PUBLIC CLAIM", "priority":1,
+     "best_evidence":"Frozen S×H discovery: D/A median input ratio 0.888 but driven by two Template tasks; B/A secondary reduction without broad helper adoption.",
+     "missing_evidence":"Stable observation-burden mechanism, capability guard, fresh discovery after diagnosis, independent representative holdout.",
+     "next_discriminating_test":"Independent Astra forensic review of the frozen packet; do not run the reserved holdout."},
+    {"claim":"RC-level read/runtime acceleration", "status":"MECHANICALLY_SUPPORTED_NARROWLY", "priority":2,
+     "best_evidence":"Candidate A+A1 exact-trace fidelity and representative contact; large-workbook tail savings.",
+     "missing_evidence":"Claim-specific RC-level external-workload time validation.",
+     "next_discriminating_test":"Preregister paired wall-time claim test against RC runtime-disabled reference."},
+    {"claim":"Cost reduction", "status":"DESCRIPTIVE_ONLY; CURRENT D/A UNFAVORABLE", "priority":3,
+     "best_evidence":"Historical treatment-cost differences; in token discovery D used fewer total input tokens but more uncached input/output tokens and higher provider-reported cost than A.",
+     "missing_evidence":"Stable provider accounting and capability-aware causal cost comparison on a justified integration profile.",
+     "next_discriminating_test":"Define a cost claim and preregister an independent comparison only after token-mechanism diagnosis."},
+    {"claim":"Capability-preserving efficiency", "status":"SUPPORTED_NARROWLY", "priority":4,
+     "best_evidence":"Cumulative practical-stack capability preservation; representative checkpoint neutrality narrow.",
+     "missing_evidence":"Formal equivalence not established; independent claim-specific guard.",
+     "next_discriminating_test":"Predeclared noninferiority margin and larger paired capability sample."},
+    {"claim":"Fail-closed/reference compatibility", "status":"MECHANICALLY_SUPPORTED", "priority":5,
+     "best_evidence":"Corrective fail-closed replay and frozen regression tests.",
+     "missing_evidence":"External installation/workbook diversity and broader platform matrix.",
+     "next_discriminating_test":"Adversarial optional-runtime failure suite on independent workbook fixtures."},
+    {"claim":"Mutation assurance/replayability", "status":"ASSURANCE_SUPPORTED_FAILURE_PREVENTION_NOT_ESTABLISHED", "priority":6,
+     "best_evidence":"Transparent capture validation and zero runtime failures in checkpoint; no failure-prevention witness.",
+     "missing_evidence":"Independent field reliability evidence, not a corruption-prevention claim.",
+     "next_discriminating_test":"Mechanical replay/idempotence verification on independent mutation corpus."},
+    {"claim":"Ordinary Python/openpyxl interface", "status":"EARNED", "priority":7,
+     "best_evidence":"Frozen RC presents normal Python/openpyxl; tests and minimal example.",
+     "missing_evidence":"External usability/installability only for broader product claims.",
+     "next_discriminating_test":"Fresh-user installation and ordinary task completion usability study."},
+]
+
+OUT.mkdir(exist_ok=True)
+(OUT/"claim_backlog.json").write_text(json.dumps(LEADS,indent=2)+"\n")
+lines=["# Claim backlog", "", "Architecture discovery remains closed. Claims require their own validation; this registry preserves non-token leads.", "",
+       "| Priority | Claim | Status | Best evidence | Missing evidence | Next discriminating test |",
+       "| --- | --- | --- | --- | --- | --- |"]
+for x in LEADS:
+    lines.append("| " + " | ".join(str(x[k]).replace("|","/") for k in ("priority","claim","status","best_evidence","missing_evidence","next_discriminating_test")) + " |")
+(ROOT/"CLAIM_BACKLOG.md").write_text("\n".join(lines)+"\n")
+
+if __name__ == "__main__":
+    print("wrote claim backlog")

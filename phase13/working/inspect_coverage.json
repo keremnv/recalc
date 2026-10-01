@@ -1,0 +1,3901 @@
+[
+ {
+  "pop": "pilot",
+  "task": "Debugging:09_09",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "footprint": {
+   "LBO": {
+    "min": 15,
+    "max": 216,
+    "n": 7
+   },
+   "Financials": {
+    "min": 15,
+    "max": 17,
+    "n": 2
+   },
+   "Operating Cases": {
+    "min": 27,
+    "max": 31,
+    "n": 5
+   }
+  },
+  "whole_sheets": [
+   "Financials",
+   "LBO",
+   "Operating Cases"
+  ],
+  "n_spans": 8,
+  "coverage": {
+   "LBO": 1.0,
+   "Financials": 1.0,
+   "Operating Cases": 1.0
+  }
+ },
+ {
+  "pop": "pilot",
+  "task": "Financial_Model:14_01",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "footprint": {
+   "DCF_Income Approach": {
+    "min": 27,
+    "max": 31,
+    "n": 5
+   },
+   "Peers": {
+    "min": 16,
+    "max": 16,
+    "n": 1
+   },
+   "Profit & Loss": {
+    "min": 38,
+    "max": 38,
+    "n": 1
+   },
+   "CFS": {
+    "min": 53,
+    "max": 53,
+    "n": 1
+   },
+   "WACC": {
+    "min": 9,
+    "max": 16,
+    "n": 8
+   },
+   "Product Pricing": {
+    "min": 23,
+    "max": 26,
+    "n": 4
+   },
+   "NCD": {
+    "min": 15,
+    "max": 181,
+    "n": 31
+   },
+   "TL": {
+    "min": 16,
+    "max": 344,
+    "n": 86
+   },
+   "Working Capital": {
+    "min": 32,
+    "max": 32,
+    "n": 1
+   },
+   "Tax-P&L": {
+    "min": 55,
+    "max": 55,
+    "n": 1
+   },
+   "Ann 1 & 2": {
+    "min": 6,
+    "max": 85,
+    "n": 23
+   },
+   "Ann 3": {
+    "min": 7,
+    "max": 80,
+    "n": 54
+   },
+   "Ann 5": {
+    "min": 8,
+    "max": 30,
+    "n": 16
+   },
+   "Ann 6": {
+    "min": 6,
+    "max": 14,
+    "n": 6
+   },
+   "Ann 8": {
+    "min": 4,
+    "max": 26,
+    "n": 12
+   },
+   "Ann 9": {
+    "min": 3,
+    "max": 24,
+    "n": 7
+   }
+  },
+  "whole_sheets": [
+   "CFS",
+   "Profit & Loss",
+   "Tax-P&L",
+   "WACC",
+   "Working Capital"
+  ],
+  "n_spans": 33,
+  "coverage": {
+   "DCF_Income Approach": 0.0,
+   "Peers": 1.0,
+   "Profit & Loss": 1.0,
+   "CFS": 1.0,
+   "WACC": 1.0,
+   "Product Pricing": 0.0,
+   "NCD": 0.024,
+   "TL": 0.009,
+   "Working Capital": 1.0,
+   "Tax-P&L": 1.0,
+   "Ann 1 & 2": 0.163,
+   "Ann 3": 0.162,
+   "Ann 5": 0.478,
+   "Ann 6": 1.0,
+   "Ann 8": 0.652,
+   "Ann 9": 0.727
+  }
+ },
+ {
+  "pop": "pilot",
+  "task": "Template:03_01",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "footprint": {
+   "M&A_Consolidation": {
+    "min": 12,
+    "max": 53,
+    "n": 27
+   }
+  },
+  "whole_sheets": [
+   "M&A_Consolidation"
+  ],
+  "n_spans": 2,
+  "coverage": {
+   "M&A_Consolidation": 1.0
+  }
+ },
+ {
+  "pop": "pilot_ext",
+  "task": "Template:11_01",
+  "status": "SUBMITTED",
+  "output": true,
+  "footprint": {
+   "DebtSchedule": {
+    "min": 7,
+    "max": 15,
+    "n": 7
+   }
+  },
+  "whole_sheets": [],
+  "n_spans": 2,
+  "coverage": {
+   "DebtSchedule": 0.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Debugging:01_01",
+  "status": "TRUNCATED_INSTANCE_COST",
+  "output": false,
+  "footprint": {
+   "Ex 1 - LBO": {
+    "min": 18,
+    "max": 49,
+    "n": 20
+   },
+   "Ex 5 - M&A": {
+    "min": 42,
+    "max": 72,
+    "n": 4
+   }
+  },
+  "whole_sheets": [
+   "Ex 1 - LBO",
+   "Ex 10 - Balance Sheet",
+   "Ex 11 - Income Statement",
+   "Ex 12 - Cash Flow Statement",
+   "Ex 3 - PF P&L",
+   "Ex 4 - Organic Operating Model",
+   "Ex 5 - M&A",
+   "Ex 6 - Amdocs Historical M&A",
+   "Ex 7 - SOFR",
+   "Ex 8 - Public Comps",
+   "Ex 9 - Transaction Comps"
+  ],
+  "n_spans": 39,
+  "coverage": {
+   "Ex 1 - LBO": 1.0,
+   "Ex 5 - M&A": 1.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Debugging:03_03",
+  "status": "TRUNCATED_CALL_LIMIT",
+  "output": false,
+  "footprint": {
+   "LBO": {
+    "min": 4,
+    "max": 70,
+    "n": 60
+   },
+   "Valuation Bridge": {
+    "min": 3,
+    "max": 7,
+    "n": 5
+   },
+   "Ex 8 - Stock Performance": {
+    "min": 32,
+    "max": 34,
+    "n": 3
+   },
+   "Ex 9 - Perf Metrics": {
+    "min": 19,
+    "max": 19,
+    "n": 1
+   },
+   "Ex 10 - Forecast Assumptions ": {
+    "min": 25,
+    "max": 26,
+    "n": 2
+   },
+   "Ex 12 - Debt Schedule": {
+    "min": 9,
+    "max": 23,
+    "n": 15
+   }
+  },
+  "whole_sheets": [
+   "Ex 10 - Forecast Assumptions ",
+   "Ex 10 - Proj. Income Statement",
+   "Ex 12 - Debt Schedule",
+   "Ex 2 - Income Statement",
+   "Ex 3 - Balance Sheet"
+  ],
+  "n_spans": 40,
+  "coverage": {
+   "LBO": 0.985,
+   "Valuation Bridge": 0.0,
+   "Ex 8 - Stock Performance": 0.0,
+   "Ex 9 - Perf Metrics": 0.0,
+   "Ex 10 - Forecast Assumptions ": 1.0,
+   "Ex 12 - Debt Schedule": 1.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Debugging:04_06",
+  "status": "SUBMITTED",
+  "output": false,
+  "footprint": {
+   "Assumptions": {
+    "min": 15,
+    "max": 16,
+    "n": 2
+   },
+   "Income Statement": {
+    "min": 16,
+    "max": 16,
+    "n": 1
+   },
+   "Balance Sheet": {
+    "min": 22,
+    "max": 22,
+    "n": 1
+   },
+   "Cash Flow Statement": {
+    "min": 15,
+    "max": 15,
+    "n": 1
+   },
+   "WACC": {
+    "min": 12,
+    "max": 38,
+    "n": 3
+   },
+   "DCF": {
+    "min": 15,
+    "max": 29,
+    "n": 11
+   },
+   "LBO Analysis": {
+    "min": 5,
+    "max": 5,
+    "n": 1
+   }
+  },
+  "whole_sheets": [],
+  "n_spans": 0,
+  "coverage": {
+   "Assumptions": 0.0,
+   "Income Statement": 0.0,
+   "Balance Sheet": 0.0,
+   "Cash Flow Statement": 0.0,
+   "WACC": 0.0,
+   "DCF": 0.0,
+   "LBO Analysis": 0.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Debugging:05_04",
+  "status": "TRUNCATED_CALL_LIMIT",
+  "output": false,
+  "footprint": {},
+  "whole_sheets": [
+   "Model"
+  ],
+  "n_spans": 7,
+  "coverage": {}
+ },
+ {
+  "pop": "popA",
+  "task": "Debugging:08_03",
+  "status": "TRUNCATED_INSTANCE_COST",
+  "output": false,
+  "footprint": {
+   "Operating Model + DCF": {
+    "min": 4,
+    "max": 145,
+    "n": 64
+   },
+   "Revenue Build": {
+    "min": 5,
+    "max": 44,
+    "n": 35
+   }
+  },
+  "whole_sheets": [
+   "BS",
+   "Comps + WACC",
+   "Cover",
+   "IS Annual",
+   "Key Stats",
+   "Operating Model + DCF",
+   "Revenue Build"
+  ],
+  "n_spans": 56,
+  "coverage": {
+   "Operating Model + DCF": 1.0,
+   "Revenue Build": 1.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Debugging:08_06",
+  "status": "SUBMITTED",
+  "output": false,
+  "footprint": {
+   "Operating Model + DCF": {
+    "min": 4,
+    "max": 126,
+    "n": 24
+   },
+   "Revenue Build": {
+    "min": 17,
+    "max": 17,
+    "n": 1
+   },
+   "Comps + WACC": {
+    "min": 34,
+    "max": 34,
+    "n": 1
+   }
+  },
+  "whole_sheets": [],
+  "n_spans": 0,
+  "coverage": {
+   "Operating Model + DCF": 0.0,
+   "Revenue Build": 0.0,
+   "Comps + WACC": 0.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Debugging:09_08",
+  "status": "TRUNCATED_INSTANCE_COST",
+  "output": false,
+  "footprint": {
+   "LBO": {
+    "min": 15,
+    "max": 216,
+    "n": 7
+   },
+   "Financials": {
+    "min": 17,
+    "max": 25,
+    "n": 2
+   }
+  },
+  "whole_sheets": [
+   "Financials",
+   "LBO",
+   "Operating Cases"
+  ],
+  "n_spans": 36,
+  "coverage": {
+   "LBO": 1.0,
+   "Financials": 1.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Debugging:10_03",
+  "status": "TRUNCATED_INSTANCE_COST",
+  "output": false,
+  "footprint": {
+   "Model": {
+    "min": 17,
+    "max": 335,
+    "n": 302
+   },
+   "P&L Summary": {
+    "min": 1,
+    "max": 40,
+    "n": 15
+   },
+   "4-Wall Analysis": {
+    "min": 94,
+    "max": 1442,
+    "n": 381
+   },
+   "BBC -- Backcountry + SAIL": {
+    "min": 10,
+    "max": 10,
+    "n": 1
+   },
+   "Rollup": {
+    "min": 65,
+    "max": 66,
+    "n": 2
+   },
+   "FY2023A (IS)": {
+    "min": 14,
+    "max": 69,
+    "n": 20
+   },
+   "FY2023A (Earnings)": {
+    "min": 16,
+    "max": 58,
+    "n": 17
+   },
+   "FY2023A (CF)": {
+    "min": 17,
+    "max": 59,
+    "n": 7
+   },
+   "FY23SAIL15": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY23SAIL16": {
+    "min": 15,
+    "max": 69,
+    "n": 17
+   },
+   "FY23SAIL17": {
+    "min": 14,
+    "max": 69,
+    "n": 24
+   },
+   "FY23SAIL18": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY23SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 21
+   },
+   "FY23SAIL23": {
+    "min": 15,
+    "max": 69,
+    "n": 19
+   },
+   "FY23SAIL24": {
+    "min": 14,
+    "max": 69,
+    "n": 17
+   },
+   "FY23SAIL26": {
+    "min": 15,
+    "max": 69,
+    "n": 17
+   },
+   "FY23SAIL27": {
+    "min": 14,
+    "max": 69,
+    "n": 21
+   },
+   "FY23SAIL29": {
+    "min": 11,
+    "max": 69,
+    "n": 20
+   },
+   "FY23SAIL30": {
+    "min": 15,
+    "max": 69,
+    "n": 21
+   },
+   "FY23SAIL31": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY23Web": {
+    "min": 15,
+    "max": 69,
+    "n": 23
+   },
+   "FY2024A (IS)": {
+    "min": 15,
+    "max": 72,
+    "n": 18
+   },
+   "FY2024A (Earnings)": {
+    "min": 5,
+    "max": 54,
+    "n": 17
+   },
+   "FY2024A (CF)": {
+    "min": 28,
+    "max": 59,
+    "n": 7
+   },
+   "FY24SAIL15": {
+    "min": 10,
+    "max": 69,
+    "n": 25
+   },
+   "FY24SAIL16": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL17": {
+    "min": 14,
+    "max": 69,
+    "n": 21
+   },
+   "FY24SAIL18": {
+    "min": 15,
+    "max": 69,
+    "n": 26
+   },
+   "FY24SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY24SAIL23": {
+    "min": 10,
+    "max": 69,
+    "n": 22
+   },
+   "FY24SAIL24": {
+    "min": 15,
+    "max": 69,
+    "n": 22
+   },
+   "FY24SAIL26": {
+    "min": 15,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL27": {
+    "min": 10,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL29": {
+    "min": 15,
+    "max": 69,
+    "n": 25
+   },
+   "FY24SAIL30": {
+    "min": 10,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL31": {
+    "min": 12,
+    "max": 69,
+    "n": 23
+   },
+   "FY24Web": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY24Operations": {
+    "min": 33,
+    "max": 57,
+    "n": 3
+   },
+   "FY2025A (IS)": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY2025A (Earnings)": {
+    "min": 15,
+    "max": 54,
+    "n": 17
+   },
+   "FY2025A (CF)": {
+    "min": 23,
+    "max": 59,
+    "n": 5
+   },
+   "FY25SAIL15": {
+    "min": 11,
+    "max": 69,
+    "n": 31
+   },
+   "FY25SAIL16": {
+    "min": 10,
+    "max": 69,
+    "n": 24
+   },
+   "FY25SAIL17": {
+    "min": 14,
+    "max": 69,
+    "n": 20
+   },
+   "FY25SAIL18": {
+    "min": 14,
+    "max": 69,
+    "n": 25
+   },
+   "FY25SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 21
+   },
+   "FY25SAIL23": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY25SAIL24": {
+    "min": 15,
+    "max": 69,
+    "n": 19
+   },
+   "FY25SAIL26": {
+    "min": 10,
+    "max": 69,
+    "n": 25
+   },
+   "FY25SAIL27": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY25SAIL29": {
+    "min": 12,
+    "max": 69,
+    "n": 24
+   },
+   "FY25SAIL30": {
+    "min": 15,
+    "max": 69,
+    "n": 22
+   },
+   "FY25SAIL31": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY25Web": {
+    "min": 15,
+    "max": 69,
+    "n": 23
+   },
+   "FY25Operations": {
+    "min": 14,
+    "max": 36,
+    "n": 5
+   },
+   "FY2026A (YTD IS)": {
+    "min": 15,
+    "max": 69,
+    "n": 16
+   },
+   "FY2026A (YTD Earnings)": {
+    "min": 15,
+    "max": 54,
+    "n": 15
+   },
+   "FY2026A (YTD CF)": {
+    "min": 23,
+    "max": 59,
+    "n": 6
+   },
+   "FY2026B (IS)": {
+    "min": 15,
+    "max": 72,
+    "n": 44
+   },
+   "FY2026B (Earnings)": {
+    "min": 16,
+    "max": 62,
+    "n": 27
+   },
+   "FY2026B (BS)": {
+    "min": 12,
+    "max": 74,
+    "n": 20
+   },
+   "FY2026B (CF)": {
+    "min": 11,
+    "max": 51,
+    "n": 12
+   },
+   "FY26SAIL15": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY26SAIL16": {
+    "min": 14,
+    "max": 69,
+    "n": 17
+   },
+   "FY26SAIL17": {
+    "min": 15,
+    "max": 69,
+    "n": 17
+   },
+   "FY26SAIL18": {
+    "min": 10,
+    "max": 69,
+    "n": 22
+   },
+   "FY26SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 14
+   },
+   "FY26SAIL23": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY26SAIL24": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY26SAIL26": {
+    "min": 10,
+    "max": 69,
+    "n": 22
+   },
+   "FY26SAIL27": {
+    "min": 11,
+    "max": 69,
+    "n": 20
+   },
+   "FY26SAIL29": {
+    "min": 15,
+    "max": 69,
+    "n": 19
+   },
+   "FY26SAIL30": {
+    "min": 10,
+    "max": 69,
+    "n": 23
+   },
+   "FY26SAIL31": {
+    "min": 12,
+    "max": 69,
+    "n": 18
+   },
+   "FY26Web": {
+    "min": 15,
+    "max": 69,
+    "n": 16
+   },
+   "FY26Operations": {
+    "min": 36,
+    "max": 68,
+    "n": 3
+   },
+   "FY2027P (IS)": {
+    "min": 15,
+    "max": 72,
+    "n": 42
+   },
+   "FY2027P (Earnings)": {
+    "min": 1,
+    "max": 62,
+    "n": 27
+   },
+   "FY2027P (BS)": {
+    "min": 12,
+    "max": 74,
+    "n": 22
+   },
+   "FY2027P (CF)": {
+    "min": 11,
+    "max": 51,
+    "n": 14
+   },
+   "FY2028P (IS)": {
+    "min": 3,
+    "max": 72,
+    "n": 47
+   },
+   "FY2028P (Earnings)": {
+    "min": 16,
+    "max": 62,
+    "n": 26
+   },
+   "FY2028P (BS)": {
+    "min": 12,
+    "max": 74,
+    "n": 22
+   },
+   "FY2028P (CF)": {
+    "min": 11,
+    "max": 51,
+    "n": 13
+   }
+  },
+  "whole_sheets": [
+   "ANALYSIS -->",
+   "Model"
+  ],
+  "n_spans": 5,
+  "coverage": {
+   "Model": 1.0,
+   "P&L Summary": 0.0,
+   "4-Wall Analysis": 0.0,
+   "BBC -- Backcountry + SAIL": 0.0,
+   "Rollup": 0.0,
+   "FY2023A (IS)": 0.0,
+   "FY2023A (Earnings)": 0.0,
+   "FY2023A (CF)": 0.0,
+   "FY23SAIL15": 0.0,
+   "FY23SAIL16": 0.0,
+   "FY23SAIL17": 0.0,
+   "FY23SAIL18": 0.0,
+   "FY23SAIL21": 0.0,
+   "FY23SAIL23": 0.0,
+   "FY23SAIL24": 0.0,
+   "FY23SAIL26": 0.0,
+   "FY23SAIL27": 0.0,
+   "FY23SAIL29": 0.0,
+   "FY23SAIL30": 0.0,
+   "FY23SAIL31": 0.0,
+   "FY23Web": 0.0,
+   "FY2024A (IS)": 0.0,
+   "FY2024A (Earnings)": 0.0,
+   "FY2024A (CF)": 0.0,
+   "FY24SAIL15": 0.0,
+   "FY24SAIL16": 0.0,
+   "FY24SAIL17": 0.0,
+   "FY24SAIL18": 0.0,
+   "FY24SAIL21": 0.0,
+   "FY24SAIL23": 0.0,
+   "FY24SAIL24": 0.0,
+   "FY24SAIL26": 0.0,
+   "FY24SAIL27": 0.0,
+   "FY24SAIL29": 0.0,
+   "FY24SAIL30": 0.0,
+   "FY24SAIL31": 0.0,
+   "FY24Web": 0.0,
+   "FY24Operations": 0.0,
+   "FY2025A (IS)": 0.0,
+   "FY2025A (Earnings)": 0.0,
+   "FY2025A (CF)": 0.0,
+   "FY25SAIL15": 0.0,
+   "FY25SAIL16": 0.0,
+   "FY25SAIL17": 0.0,
+   "FY25SAIL18": 0.0,
+   "FY25SAIL21": 0.0,
+   "FY25SAIL23": 0.0,
+   "FY25SAIL24": 0.0,
+   "FY25SAIL26": 0.0,
+   "FY25SAIL27": 0.0,
+   "FY25SAIL29": 0.0,
+   "FY25SAIL30": 0.0,
+   "FY25SAIL31": 0.0,
+   "FY25Web": 0.0,
+   "FY25Operations": 0.0,
+   "FY2026A (YTD IS)": 0.0,
+   "FY2026A (YTD Earnings)": 0.0,
+   "FY2026A (YTD CF)": 0.0,
+   "FY2026B (IS)": 0.0,
+   "FY2026B (Earnings)": 0.0,
+   "FY2026B (BS)": 0.0,
+   "FY2026B (CF)": 0.0,
+   "FY26SAIL15": 0.0,
+   "FY26SAIL16": 0.0,
+   "FY26SAIL17": 0.0,
+   "FY26SAIL18": 0.0,
+   "FY26SAIL21": 0.0,
+   "FY26SAIL23": 0.0,
+   "FY26SAIL24": 0.0,
+   "FY26SAIL26": 0.0,
+   "FY26SAIL27": 0.0,
+   "FY26SAIL29": 0.0,
+   "FY26SAIL30": 0.0,
+   "FY26SAIL31": 0.0,
+   "FY26Web": 0.0,
+   "FY26Operations": 0.0,
+   "FY2027P (IS)": 0.0,
+   "FY2027P (Earnings)": 0.0,
+   "FY2027P (BS)": 0.0,
+   "FY2027P (CF)": 0.0,
+   "FY2028P (IS)": 0.0,
+   "FY2028P (Earnings)": 0.0,
+   "FY2028P (BS)": 0.0,
+   "FY2028P (CF)": 0.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Financial_Model:03_02",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "footprint": {
+   "Valuation": {
+    "min": 7,
+    "max": 7,
+    "n": 1
+   },
+   "Dupont Analysis": {
+    "min": 26,
+    "max": 26,
+    "n": 1
+   },
+   "Valuation Band": {
+    "min": 3,
+    "max": 10,
+    "n": 8
+   }
+  },
+  "whole_sheets": [
+   "Du Pont",
+   "Dupont Analysis",
+   "Graphical_Representation",
+   "Valuation",
+   "Valuation Band"
+  ],
+  "n_spans": 23,
+  "coverage": {
+   "Valuation": 1.0,
+   "Dupont Analysis": 1.0,
+   "Valuation Band": 1.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Financial_Model:05_05",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "footprint": {
+   "Dashboard": {
+    "min": 8,
+    "max": 10,
+    "n": 3
+   },
+   "IRR Calculation": {
+    "min": 6,
+    "max": 19,
+    "n": 2
+   },
+   "Workings Cost Sheet": {
+    "min": 7,
+    "max": 207,
+    "n": 29
+   },
+   "IS - Mgmt Co.": {
+    "min": 50,
+    "max": 64,
+    "n": 5
+   },
+   "CF": {
+    "min": 14,
+    "max": 25,
+    "n": 3
+   },
+   "Revenue": {
+    "min": 15,
+    "max": 15,
+    "n": 1
+   },
+   "PreOp Cost": {
+    "min": 3,
+    "max": 81,
+    "n": 11
+   }
+  },
+  "whole_sheets": [
+   "Dashboard",
+   "Staff Costs",
+   "Workings Cost Sheet"
+  ],
+  "n_spans": 25,
+  "coverage": {
+   "Dashboard": 1.0,
+   "IRR Calculation": 1.0,
+   "Workings Cost Sheet": 1.0,
+   "IS - Mgmt Co.": 0.0,
+   "CF": 1.0,
+   "Revenue": 1.0,
+   "PreOp Cost": 0.747
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Financial_Model:07_01",
+  "status": "TRUNCATED_INSTANCE_COST",
+  "output": false,
+  "footprint": {
+   "Executive Summary": {
+    "min": 17,
+    "max": 33,
+    "n": 2
+   },
+   "Inputs": {
+    "min": 43,
+    "max": 49,
+    "n": 4
+   },
+   "Construction Schedule (2)": {
+    "min": 9,
+    "max": 67,
+    "n": 39
+   },
+   "Construction Schedule": {
+    "min": 10,
+    "max": 11,
+    "n": 2
+   },
+   "Sales Schedule": {
+    "min": 18,
+    "max": 102,
+    "n": 85
+   },
+   "Cashflow (Monthly)": {
+    "min": 5,
+    "max": 94,
+    "n": 4
+   },
+   "Cashflow (Quaterly)": {
+    "min": 13,
+    "max": 23,
+    "n": 7
+   }
+  },
+  "whole_sheets": [
+   "Cashflow (Monthly)",
+   "Cashflow (Quaterly)",
+   "Executive Summary"
+  ],
+  "n_spans": 37,
+  "coverage": {
+   "Executive Summary": 1.0,
+   "Inputs": 1.0,
+   "Construction Schedule (2)": 0.0,
+   "Construction Schedule": 0.0,
+   "Sales Schedule": 1.0,
+   "Cashflow (Monthly)": 1.0,
+   "Cashflow (Quaterly)": 1.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Financial_Model:07_02",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "footprint": {
+   "Executive Summary": {
+    "min": 8,
+    "max": 21,
+    "n": 4
+   },
+   "Inputs": {
+    "min": 43,
+    "max": 49,
+    "n": 4
+   },
+   "Construction Schedule (1)": {
+    "min": 9,
+    "max": 10,
+    "n": 2
+   },
+   "Construction Schedule (2)": {
+    "min": 9,
+    "max": 67,
+    "n": 39
+   },
+   "Construction Schedule": {
+    "min": 5,
+    "max": 11,
+    "n": 3
+   },
+   "Sales Schedule": {
+    "min": 18,
+    "max": 102,
+    "n": 85
+   },
+   "Cashflow (Monthly)": {
+    "min": 5,
+    "max": 94,
+    "n": 2
+   }
+  },
+  "whole_sheets": [
+   "Construction Schedule (1)",
+   "Executive Summary",
+   "Inputs"
+  ],
+  "n_spans": 19,
+  "coverage": {
+   "Executive Summary": 1.0,
+   "Inputs": 1.0,
+   "Construction Schedule (1)": 1.0,
+   "Construction Schedule (2)": 0.102,
+   "Construction Schedule": 1.0,
+   "Sales Schedule": 0.624,
+   "Cashflow (Monthly)": 0.367
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Financial_Model:12_01",
+  "status": "NO_SUBMIT",
+  "output": true,
+  "footprint": {
+   "Valuation": {
+    "min": 22,
+    "max": 26,
+    "n": 5
+   },
+   "P&L": {
+    "min": 37,
+    "max": 37,
+    "n": 1
+   },
+   "Assumption": {
+    "min": 8,
+    "max": 18,
+    "n": 2
+   },
+   "Working Capital": {
+    "min": 6,
+    "max": 30,
+    "n": 3
+   }
+  },
+  "whole_sheets": [
+   "Assets Sch.",
+   "Assumption",
+   "BS",
+   "CF",
+   "Debt Schedule",
+   "P&L",
+   "Ratio Analysis",
+   "Valuation",
+   "WACC",
+   "Working Capital"
+  ],
+  "n_spans": 41,
+  "coverage": {
+   "Valuation": 1.0,
+   "P&L": 1.0,
+   "Assumption": 1.0,
+   "Working Capital": 1.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Financial_Model:12_05",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "footprint": {
+   "Valuation": {
+    "min": 22,
+    "max": 26,
+    "n": 5
+   },
+   "Working Capital": {
+    "min": 32,
+    "max": 32,
+    "n": 1
+   },
+   "Ratio Analysis": {
+    "min": 30,
+    "max": 30,
+    "n": 1
+   },
+   "Comps": {
+    "min": 9,
+    "max": 13,
+    "n": 3
+   }
+  },
+  "whole_sheets": [
+   "Chart",
+   "Comps",
+   "Ratio Analysis",
+   "Working Capital"
+  ],
+  "n_spans": 32,
+  "coverage": {
+   "Valuation": 0.0,
+   "Working Capital": 1.0,
+   "Ratio Analysis": 1.0,
+   "Comps": 1.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Financial_Model:14_05",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "footprint": {
+   "DCF_Income Approach": {
+    "min": 10,
+    "max": 31,
+    "n": 7
+   },
+   "Peers": {
+    "min": 16,
+    "max": 16,
+    "n": 1
+   },
+   "WACC": {
+    "min": 9,
+    "max": 16,
+    "n": 8
+   },
+   "Revenue": {
+    "min": 31,
+    "max": 35,
+    "n": 3
+   },
+   "Product Pricing": {
+    "min": 23,
+    "max": 26,
+    "n": 4
+   },
+   "Fixed Asset & Depreciation": {
+    "min": 19,
+    "max": 19,
+    "n": 1
+   },
+   "NCD": {
+    "min": 15,
+    "max": 181,
+    "n": 31
+   },
+   "TL": {
+    "min": 16,
+    "max": 344,
+    "n": 86
+   },
+   "Ann 1 & 2": {
+    "min": 6,
+    "max": 85,
+    "n": 23
+   },
+   "Ann 3": {
+    "min": 7,
+    "max": 80,
+    "n": 54
+   },
+   "Ann 5": {
+    "min": 8,
+    "max": 30,
+    "n": 16
+   },
+   "Ann 6": {
+    "min": 6,
+    "max": 14,
+    "n": 6
+   },
+   "Ann 8": {
+    "min": 4,
+    "max": 26,
+    "n": 12
+   },
+   "Ann 9": {
+    "min": 3,
+    "max": 24,
+    "n": 7
+   }
+  },
+  "whole_sheets": [
+   "DCF_Income Approach",
+   "Fixed Asset & Depreciation",
+   "Fixed Asset &amp; Depreciation",
+   "Profit & Loss",
+   "Profit &amp; Loss",
+   "Revenue",
+   "Tax-DCF",
+   "WACC"
+  ],
+  "n_spans": 36,
+  "coverage": {
+   "DCF_Income Approach": 1.0,
+   "Peers": 0.0,
+   "WACC": 1.0,
+   "Revenue": 1.0,
+   "Product Pricing": 1.0,
+   "Fixed Asset & Depreciation": 1.0,
+   "NCD": 0.0,
+   "TL": 0.0,
+   "Ann 1 & 2": 0.0,
+   "Ann 3": 1.0,
+   "Ann 5": 0.0,
+   "Ann 6": 0.0,
+   "Ann 8": 0.0,
+   "Ann 9": 0.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Financial_Model:18_03",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "footprint": {
+   "P&L": {
+    "min": 13,
+    "max": 28,
+    "n": 2
+   },
+   "BS": {
+    "min": 15,
+    "max": 15,
+    "n": 1
+   },
+   "Ratio Analysis": {
+    "min": 7,
+    "max": 7,
+    "n": 1
+   }
+  },
+  "whole_sheets": [
+   "BS",
+   "Cash Flow",
+   "DSCR",
+   "P&L",
+   "Ratio Analysis"
+  ],
+  "n_spans": 29,
+  "coverage": {
+   "P&L": 1.0,
+   "BS": 1.0,
+   "Ratio Analysis": 1.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Template:01_03",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "footprint": {
+   "ZeroCouponBond": {
+    "min": 7,
+    "max": 31,
+    "n": 17
+   }
+  },
+  "whole_sheets": [
+   "ZeroCouponBond"
+  ],
+  "n_spans": 2,
+  "coverage": {
+   "ZeroCouponBond": 1.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Template:06_05",
+  "status": "SUBMITTED",
+  "output": true,
+  "footprint": {
+   "WorkingCapital": {
+    "min": 11,
+    "max": 27,
+    "n": 6
+   }
+  },
+  "whole_sheets": [
+   "WorkingCapital"
+  ],
+  "n_spans": 5,
+  "coverage": {
+   "WorkingCapital": 1.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Template:06_25",
+  "status": "SUBMITTED",
+  "output": true,
+  "footprint": {
+   "RevenueDrivers": {
+    "min": 14,
+    "max": 45,
+    "n": 11
+   }
+  },
+  "whole_sheets": [
+   "RevenueDrivers"
+  ],
+  "n_spans": 10,
+  "coverage": {
+   "RevenueDrivers": 1.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Template:10_02",
+  "status": "SUBMITTED",
+  "output": true,
+  "footprint": {
+   "EPS_Accretion": {
+    "min": 10,
+    "max": 40,
+    "n": 14
+   }
+  },
+  "whole_sheets": [
+   "EPS_Accretion"
+  ],
+  "n_spans": 7,
+  "coverage": {
+   "EPS_Accretion": 1.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Template:11_03",
+  "status": "SUBMITTED",
+  "output": true,
+  "footprint": {
+   "MergerPremium": {
+    "min": 6,
+    "max": 39,
+    "n": 23
+   }
+  },
+  "whole_sheets": [
+   "MergerPremium",
+   "SharedData"
+  ],
+  "n_spans": 9,
+  "coverage": {
+   "MergerPremium": 1.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Template:11_04",
+  "status": "SUBMITTED",
+  "output": true,
+  "footprint": {
+   "PPA": {
+    "min": 18,
+    "max": 35,
+    "n": 8
+   }
+  },
+  "whole_sheets": [
+   "PPA"
+  ],
+  "n_spans": 8,
+  "coverage": {
+   "PPA": 1.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Template:14_03",
+  "status": "SUBMITTED",
+  "output": true,
+  "footprint": {
+   "NOI_Projection": {
+    "min": 12,
+    "max": 49,
+    "n": 20
+   }
+  },
+  "whole_sheets": [],
+  "n_spans": 4,
+  "coverage": {
+   "NOI_Projection": 1.0
+  }
+ },
+ {
+  "pop": "popA",
+  "task": "Template:15_02",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "footprint": {
+   "LoanSizing": {
+    "min": 11,
+    "max": 28,
+    "n": 11
+   }
+  },
+  "whole_sheets": [],
+  "n_spans": 2,
+  "coverage": {
+   "LoanSizing": 0.0
+  }
+ },
+ {
+  "pop": "popB",
+  "task": "Debugging:10_01",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "footprint": {
+   "Model": {
+    "min": 42,
+    "max": 165,
+    "n": 34
+   },
+   "P&L Summary": {
+    "min": 13,
+    "max": 32,
+    "n": 2
+   },
+   "4-Wall Analysis": {
+    "min": 440,
+    "max": 1442,
+    "n": 378
+   },
+   "BBC -- Backcountry + SAIL": {
+    "min": 10,
+    "max": 10,
+    "n": 1
+   },
+   "FY2023A (IS)": {
+    "min": 14,
+    "max": 69,
+    "n": 20
+   },
+   "FY2023A (Earnings)": {
+    "min": 16,
+    "max": 58,
+    "n": 17
+   },
+   "FY2023A (CF)": {
+    "min": 17,
+    "max": 59,
+    "n": 7
+   },
+   "FY23SAIL15": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY23SAIL16": {
+    "min": 15,
+    "max": 69,
+    "n": 17
+   },
+   "FY23SAIL17": {
+    "min": 14,
+    "max": 69,
+    "n": 24
+   },
+   "FY23SAIL18": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY23SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 21
+   },
+   "FY23SAIL23": {
+    "min": 15,
+    "max": 69,
+    "n": 19
+   },
+   "FY23SAIL24": {
+    "min": 14,
+    "max": 69,
+    "n": 17
+   },
+   "FY23SAIL26": {
+    "min": 15,
+    "max": 69,
+    "n": 17
+   },
+   "FY23SAIL27": {
+    "min": 14,
+    "max": 69,
+    "n": 21
+   },
+   "FY23SAIL29": {
+    "min": 11,
+    "max": 69,
+    "n": 20
+   },
+   "FY23SAIL30": {
+    "min": 15,
+    "max": 69,
+    "n": 21
+   },
+   "FY23SAIL31": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY23Web": {
+    "min": 15,
+    "max": 69,
+    "n": 23
+   },
+   "FY2024A (IS)": {
+    "min": 15,
+    "max": 72,
+    "n": 18
+   },
+   "FY2024A (Earnings)": {
+    "min": 5,
+    "max": 54,
+    "n": 17
+   },
+   "FY2024A (CF)": {
+    "min": 28,
+    "max": 59,
+    "n": 7
+   },
+   "FY24SAIL15": {
+    "min": 10,
+    "max": 69,
+    "n": 25
+   },
+   "FY24SAIL16": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL17": {
+    "min": 14,
+    "max": 69,
+    "n": 21
+   },
+   "FY24SAIL18": {
+    "min": 15,
+    "max": 69,
+    "n": 26
+   },
+   "FY24SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY24SAIL23": {
+    "min": 10,
+    "max": 69,
+    "n": 22
+   },
+   "FY24SAIL24": {
+    "min": 15,
+    "max": 69,
+    "n": 22
+   },
+   "FY24SAIL26": {
+    "min": 15,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL27": {
+    "min": 10,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL29": {
+    "min": 15,
+    "max": 69,
+    "n": 25
+   },
+   "FY24SAIL30": {
+    "min": 10,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL31": {
+    "min": 12,
+    "max": 69,
+    "n": 23
+   },
+   "FY24Web": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY24Operations": {
+    "min": 33,
+    "max": 57,
+    "n": 3
+   },
+   "FY2025A (IS)": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY2025A (Earnings)": {
+    "min": 15,
+    "max": 54,
+    "n": 17
+   },
+   "FY2025A (CF)": {
+    "min": 23,
+    "max": 59,
+    "n": 5
+   },
+   "FY25SAIL15": {
+    "min": 11,
+    "max": 69,
+    "n": 31
+   },
+   "FY25SAIL16": {
+    "min": 10,
+    "max": 69,
+    "n": 24
+   },
+   "FY25SAIL17": {
+    "min": 14,
+    "max": 69,
+    "n": 20
+   },
+   "FY25SAIL18": {
+    "min": 14,
+    "max": 69,
+    "n": 25
+   },
+   "FY25SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 21
+   },
+   "FY25SAIL23": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY25SAIL24": {
+    "min": 15,
+    "max": 69,
+    "n": 19
+   },
+   "FY25SAIL26": {
+    "min": 10,
+    "max": 69,
+    "n": 25
+   },
+   "FY25SAIL27": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY25SAIL29": {
+    "min": 12,
+    "max": 69,
+    "n": 24
+   },
+   "FY25SAIL30": {
+    "min": 15,
+    "max": 69,
+    "n": 22
+   },
+   "FY25SAIL31": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY25Web": {
+    "min": 15,
+    "max": 69,
+    "n": 23
+   },
+   "FY25Operations": {
+    "min": 14,
+    "max": 36,
+    "n": 5
+   },
+   "FY2026A (YTD IS)": {
+    "min": 15,
+    "max": 69,
+    "n": 16
+   },
+   "FY2026A (YTD Earnings)": {
+    "min": 15,
+    "max": 54,
+    "n": 15
+   },
+   "FY2026A (YTD CF)": {
+    "min": 23,
+    "max": 59,
+    "n": 6
+   },
+   "FY2026B (IS)": {
+    "min": 15,
+    "max": 72,
+    "n": 44
+   },
+   "FY2026B (Earnings)": {
+    "min": 16,
+    "max": 62,
+    "n": 27
+   },
+   "FY2026B (BS)": {
+    "min": 12,
+    "max": 74,
+    "n": 20
+   },
+   "FY2026B (CF)": {
+    "min": 11,
+    "max": 51,
+    "n": 12
+   },
+   "FY26SAIL15": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY26SAIL16": {
+    "min": 14,
+    "max": 69,
+    "n": 17
+   },
+   "FY26SAIL17": {
+    "min": 15,
+    "max": 69,
+    "n": 17
+   },
+   "FY26SAIL18": {
+    "min": 10,
+    "max": 69,
+    "n": 22
+   },
+   "FY26SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 14
+   },
+   "FY26SAIL23": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY26SAIL24": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY26SAIL26": {
+    "min": 10,
+    "max": 69,
+    "n": 22
+   },
+   "FY26SAIL27": {
+    "min": 11,
+    "max": 69,
+    "n": 20
+   },
+   "FY26SAIL29": {
+    "min": 15,
+    "max": 69,
+    "n": 19
+   },
+   "FY26SAIL30": {
+    "min": 10,
+    "max": 69,
+    "n": 23
+   },
+   "FY26SAIL31": {
+    "min": 12,
+    "max": 69,
+    "n": 18
+   },
+   "FY26Web": {
+    "min": 15,
+    "max": 69,
+    "n": 16
+   },
+   "FY26Operations": {
+    "min": 36,
+    "max": 68,
+    "n": 3
+   },
+   "FY2027P (IS)": {
+    "min": 15,
+    "max": 72,
+    "n": 42
+   },
+   "FY2027P (Earnings)": {
+    "min": 1,
+    "max": 62,
+    "n": 27
+   },
+   "FY2027P (BS)": {
+    "min": 12,
+    "max": 74,
+    "n": 22
+   },
+   "FY2027P (CF)": {
+    "min": 11,
+    "max": 51,
+    "n": 14
+   },
+   "FY2028P (IS)": {
+    "min": 3,
+    "max": 72,
+    "n": 47
+   },
+   "FY2028P (Earnings)": {
+    "min": 16,
+    "max": 62,
+    "n": 26
+   },
+   "FY2028P (BS)": {
+    "min": 12,
+    "max": 74,
+    "n": 22
+   },
+   "FY2028P (CF)": {
+    "min": 11,
+    "max": 51,
+    "n": 13
+   }
+  },
+  "whole_sheets": [],
+  "n_spans": 12,
+  "coverage": {
+   "Model": 1.0,
+   "P&L Summary": 0.0,
+   "4-Wall Analysis": 0.0,
+   "BBC -- Backcountry + SAIL": 0.0,
+   "FY2023A (IS)": 0.0,
+   "FY2023A (Earnings)": 0.0,
+   "FY2023A (CF)": 0.0,
+   "FY23SAIL15": 0.0,
+   "FY23SAIL16": 0.0,
+   "FY23SAIL17": 0.0,
+   "FY23SAIL18": 0.0,
+   "FY23SAIL21": 0.0,
+   "FY23SAIL23": 0.0,
+   "FY23SAIL24": 0.0,
+   "FY23SAIL26": 0.0,
+   "FY23SAIL27": 0.0,
+   "FY23SAIL29": 0.0,
+   "FY23SAIL30": 0.0,
+   "FY23SAIL31": 0.0,
+   "FY23Web": 0.0,
+   "FY2024A (IS)": 0.0,
+   "FY2024A (Earnings)": 1.0,
+   "FY2024A (CF)": 0.0,
+   "FY24SAIL15": 0.0,
+   "FY24SAIL16": 0.0,
+   "FY24SAIL17": 0.0,
+   "FY24SAIL18": 0.0,
+   "FY24SAIL21": 0.0,
+   "FY24SAIL23": 0.0,
+   "FY24SAIL24": 0.0,
+   "FY24SAIL26": 0.0,
+   "FY24SAIL27": 0.0,
+   "FY24SAIL29": 0.0,
+   "FY24SAIL30": 0.0,
+   "FY24SAIL31": 0.0,
+   "FY24Web": 0.0,
+   "FY24Operations": 0.0,
+   "FY2025A (IS)": 0.0,
+   "FY2025A (Earnings)": 0.0,
+   "FY2025A (CF)": 0.0,
+   "FY25SAIL15": 0.0,
+   "FY25SAIL16": 0.0,
+   "FY25SAIL17": 0.0,
+   "FY25SAIL18": 0.0,
+   "FY25SAIL21": 0.0,
+   "FY25SAIL23": 0.0,
+   "FY25SAIL24": 0.0,
+   "FY25SAIL26": 0.0,
+   "FY25SAIL27": 0.0,
+   "FY25SAIL29": 0.0,
+   "FY25SAIL30": 0.0,
+   "FY25SAIL31": 0.0,
+   "FY25Web": 0.0,
+   "FY25Operations": 0.0,
+   "FY2026A (YTD IS)": 0.0,
+   "FY2026A (YTD Earnings)": 0.0,
+   "FY2026A (YTD CF)": 0.0,
+   "FY2026B (IS)": 0.0,
+   "FY2026B (Earnings)": 0.0,
+   "FY2026B (BS)": 0.0,
+   "FY2026B (CF)": 0.0,
+   "FY26SAIL15": 0.0,
+   "FY26SAIL16": 0.0,
+   "FY26SAIL17": 0.0,
+   "FY26SAIL18": 0.0,
+   "FY26SAIL21": 0.0,
+   "FY26SAIL23": 0.0,
+   "FY26SAIL24": 0.0,
+   "FY26SAIL26": 0.0,
+   "FY26SAIL27": 0.0,
+   "FY26SAIL29": 0.0,
+   "FY26SAIL30": 0.0,
+   "FY26SAIL31": 0.0,
+   "FY26Web": 0.0,
+   "FY26Operations": 0.0,
+   "FY2027P (IS)": 0.0,
+   "FY2027P (Earnings)": 0.129,
+   "FY2027P (BS)": 0.0,
+   "FY2027P (CF)": 0.0,
+   "FY2028P (IS)": 0.086,
+   "FY2028P (Earnings)": 0.0,
+   "FY2028P (BS)": 0.0,
+   "FY2028P (CF)": 0.0
+  }
+ },
+ {
+  "pop": "popB",
+  "task": "Debugging:10_04",
+  "status": "TRUNCATED_INSTANCE_COST",
+  "output": false,
+  "footprint": {
+   "Model": {
+    "min": 42,
+    "max": 165,
+    "n": 31
+   },
+   "4-Wall Analysis": {
+    "min": 440,
+    "max": 1442,
+    "n": 378
+   },
+   "BBC -- Backcountry + SAIL": {
+    "min": 10,
+    "max": 10,
+    "n": 1
+   },
+   "FY2023A (IS)": {
+    "min": 14,
+    "max": 69,
+    "n": 20
+   },
+   "FY2023A (Earnings)": {
+    "min": 16,
+    "max": 58,
+    "n": 17
+   },
+   "FY2023A (CF)": {
+    "min": 17,
+    "max": 59,
+    "n": 7
+   },
+   "FY23SAIL15": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY23SAIL16": {
+    "min": 15,
+    "max": 69,
+    "n": 17
+   },
+   "FY23SAIL17": {
+    "min": 14,
+    "max": 69,
+    "n": 24
+   },
+   "FY23SAIL18": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY23SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 21
+   },
+   "FY23SAIL23": {
+    "min": 15,
+    "max": 69,
+    "n": 19
+   },
+   "FY23SAIL24": {
+    "min": 14,
+    "max": 69,
+    "n": 17
+   },
+   "FY23SAIL26": {
+    "min": 15,
+    "max": 69,
+    "n": 17
+   },
+   "FY23SAIL27": {
+    "min": 14,
+    "max": 69,
+    "n": 21
+   },
+   "FY23SAIL29": {
+    "min": 11,
+    "max": 69,
+    "n": 20
+   },
+   "FY23SAIL30": {
+    "min": 15,
+    "max": 69,
+    "n": 21
+   },
+   "FY23SAIL31": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY23Web": {
+    "min": 15,
+    "max": 69,
+    "n": 23
+   },
+   "FY2024A (IS)": {
+    "min": 15,
+    "max": 72,
+    "n": 18
+   },
+   "FY2024A (Earnings)": {
+    "min": 5,
+    "max": 54,
+    "n": 17
+   },
+   "FY2024A (CF)": {
+    "min": 28,
+    "max": 59,
+    "n": 7
+   },
+   "FY24SAIL15": {
+    "min": 10,
+    "max": 69,
+    "n": 25
+   },
+   "FY24SAIL16": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL17": {
+    "min": 14,
+    "max": 69,
+    "n": 21
+   },
+   "FY24SAIL18": {
+    "min": 15,
+    "max": 69,
+    "n": 26
+   },
+   "FY24SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY24SAIL23": {
+    "min": 10,
+    "max": 69,
+    "n": 22
+   },
+   "FY24SAIL24": {
+    "min": 15,
+    "max": 69,
+    "n": 22
+   },
+   "FY24SAIL26": {
+    "min": 15,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL27": {
+    "min": 10,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL29": {
+    "min": 15,
+    "max": 69,
+    "n": 25
+   },
+   "FY24SAIL30": {
+    "min": 10,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL31": {
+    "min": 12,
+    "max": 69,
+    "n": 23
+   },
+   "FY24Web": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY24Operations": {
+    "min": 33,
+    "max": 57,
+    "n": 3
+   },
+   "FY2025A (IS)": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY2025A (Earnings)": {
+    "min": 15,
+    "max": 54,
+    "n": 17
+   },
+   "FY2025A (CF)": {
+    "min": 23,
+    "max": 59,
+    "n": 5
+   },
+   "FY25SAIL15": {
+    "min": 11,
+    "max": 69,
+    "n": 31
+   },
+   "FY25SAIL16": {
+    "min": 10,
+    "max": 69,
+    "n": 24
+   },
+   "FY25SAIL17": {
+    "min": 14,
+    "max": 69,
+    "n": 20
+   },
+   "FY25SAIL18": {
+    "min": 14,
+    "max": 69,
+    "n": 25
+   },
+   "FY25SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 21
+   },
+   "FY25SAIL23": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY25SAIL24": {
+    "min": 15,
+    "max": 69,
+    "n": 19
+   },
+   "FY25SAIL26": {
+    "min": 10,
+    "max": 69,
+    "n": 25
+   },
+   "FY25SAIL27": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY25SAIL29": {
+    "min": 12,
+    "max": 69,
+    "n": 24
+   },
+   "FY25SAIL30": {
+    "min": 15,
+    "max": 69,
+    "n": 22
+   },
+   "FY25SAIL31": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY25Web": {
+    "min": 15,
+    "max": 69,
+    "n": 23
+   },
+   "FY25Operations": {
+    "min": 14,
+    "max": 36,
+    "n": 5
+   },
+   "FY2026A (YTD IS)": {
+    "min": 15,
+    "max": 69,
+    "n": 16
+   },
+   "FY2026A (YTD Earnings)": {
+    "min": 15,
+    "max": 54,
+    "n": 15
+   },
+   "FY2026A (YTD CF)": {
+    "min": 23,
+    "max": 59,
+    "n": 6
+   },
+   "FY2026B (IS)": {
+    "min": 15,
+    "max": 72,
+    "n": 44
+   },
+   "FY2026B (Earnings)": {
+    "min": 16,
+    "max": 62,
+    "n": 27
+   },
+   "FY2026B (BS)": {
+    "min": 12,
+    "max": 74,
+    "n": 20
+   },
+   "FY2026B (CF)": {
+    "min": 11,
+    "max": 51,
+    "n": 12
+   },
+   "FY26SAIL15": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY26SAIL16": {
+    "min": 14,
+    "max": 69,
+    "n": 17
+   },
+   "FY26SAIL17": {
+    "min": 15,
+    "max": 69,
+    "n": 17
+   },
+   "FY26SAIL18": {
+    "min": 10,
+    "max": 69,
+    "n": 22
+   },
+   "FY26SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 14
+   },
+   "FY26SAIL23": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY26SAIL24": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY26SAIL26": {
+    "min": 10,
+    "max": 69,
+    "n": 22
+   },
+   "FY26SAIL27": {
+    "min": 11,
+    "max": 69,
+    "n": 20
+   },
+   "FY26SAIL29": {
+    "min": 15,
+    "max": 69,
+    "n": 19
+   },
+   "FY26SAIL30": {
+    "min": 10,
+    "max": 69,
+    "n": 23
+   },
+   "FY26SAIL31": {
+    "min": 12,
+    "max": 69,
+    "n": 18
+   },
+   "FY26Web": {
+    "min": 15,
+    "max": 69,
+    "n": 16
+   },
+   "FY26Operations": {
+    "min": 36,
+    "max": 68,
+    "n": 3
+   },
+   "FY2027P (IS)": {
+    "min": 15,
+    "max": 72,
+    "n": 42
+   },
+   "FY2027P (Earnings)": {
+    "min": 1,
+    "max": 62,
+    "n": 27
+   },
+   "FY2027P (BS)": {
+    "min": 12,
+    "max": 74,
+    "n": 22
+   },
+   "FY2027P (CF)": {
+    "min": 11,
+    "max": 51,
+    "n": 14
+   },
+   "FY2028P (IS)": {
+    "min": 3,
+    "max": 72,
+    "n": 47
+   },
+   "FY2028P (Earnings)": {
+    "min": 16,
+    "max": 62,
+    "n": 26
+   },
+   "FY2028P (BS)": {
+    "min": 12,
+    "max": 74,
+    "n": 22
+   },
+   "FY2028P (CF)": {
+    "min": 11,
+    "max": 51,
+    "n": 13
+   }
+  },
+  "whole_sheets": [
+   "Model",
+   "P&L Summary"
+  ],
+  "n_spans": 3,
+  "coverage": {
+   "Model": 1.0,
+   "4-Wall Analysis": 0.0,
+   "BBC -- Backcountry + SAIL": 0.0,
+   "FY2023A (IS)": 0.0,
+   "FY2023A (Earnings)": 0.0,
+   "FY2023A (CF)": 0.0,
+   "FY23SAIL15": 0.0,
+   "FY23SAIL16": 0.0,
+   "FY23SAIL17": 0.0,
+   "FY23SAIL18": 0.0,
+   "FY23SAIL21": 0.0,
+   "FY23SAIL23": 0.0,
+   "FY23SAIL24": 0.0,
+   "FY23SAIL26": 0.0,
+   "FY23SAIL27": 0.0,
+   "FY23SAIL29": 0.0,
+   "FY23SAIL30": 0.0,
+   "FY23SAIL31": 0.0,
+   "FY23Web": 0.0,
+   "FY2024A (IS)": 0.0,
+   "FY2024A (Earnings)": 0.0,
+   "FY2024A (CF)": 0.0,
+   "FY24SAIL15": 0.0,
+   "FY24SAIL16": 0.0,
+   "FY24SAIL17": 0.0,
+   "FY24SAIL18": 0.0,
+   "FY24SAIL21": 0.0,
+   "FY24SAIL23": 0.0,
+   "FY24SAIL24": 0.0,
+   "FY24SAIL26": 0.0,
+   "FY24SAIL27": 0.0,
+   "FY24SAIL29": 0.0,
+   "FY24SAIL30": 0.0,
+   "FY24SAIL31": 0.0,
+   "FY24Web": 0.0,
+   "FY24Operations": 0.0,
+   "FY2025A (IS)": 0.0,
+   "FY2025A (Earnings)": 0.0,
+   "FY2025A (CF)": 0.0,
+   "FY25SAIL15": 0.0,
+   "FY25SAIL16": 0.0,
+   "FY25SAIL17": 0.0,
+   "FY25SAIL18": 0.0,
+   "FY25SAIL21": 0.0,
+   "FY25SAIL23": 0.0,
+   "FY25SAIL24": 0.0,
+   "FY25SAIL26": 0.0,
+   "FY25SAIL27": 0.0,
+   "FY25SAIL29": 0.0,
+   "FY25SAIL30": 0.0,
+   "FY25SAIL31": 0.0,
+   "FY25Web": 0.0,
+   "FY25Operations": 0.0,
+   "FY2026A (YTD IS)": 0.0,
+   "FY2026A (YTD Earnings)": 0.0,
+   "FY2026A (YTD CF)": 0.0,
+   "FY2026B (IS)": 0.0,
+   "FY2026B (Earnings)": 0.0,
+   "FY2026B (BS)": 0.0,
+   "FY2026B (CF)": 0.0,
+   "FY26SAIL15": 0.0,
+   "FY26SAIL16": 0.0,
+   "FY26SAIL17": 0.0,
+   "FY26SAIL18": 0.0,
+   "FY26SAIL21": 0.0,
+   "FY26SAIL23": 0.0,
+   "FY26SAIL24": 0.0,
+   "FY26SAIL26": 0.0,
+   "FY26SAIL27": 0.0,
+   "FY26SAIL29": 0.0,
+   "FY26SAIL30": 0.0,
+   "FY26SAIL31": 0.0,
+   "FY26Web": 0.0,
+   "FY26Operations": 0.0,
+   "FY2027P (IS)": 0.0,
+   "FY2027P (Earnings)": 0.0,
+   "FY2027P (BS)": 0.0,
+   "FY2027P (CF)": 0.0,
+   "FY2028P (IS)": 0.0,
+   "FY2028P (Earnings)": 0.0,
+   "FY2028P (BS)": 0.0,
+   "FY2028P (CF)": 0.0
+  }
+ },
+ {
+  "pop": "popB",
+  "task": "Debugging:10_05",
+  "status": "TRUNCATED_CALL_LIMIT",
+  "output": false,
+  "footprint": {
+   "Model": {
+    "min": 42,
+    "max": 207,
+    "n": 34
+   },
+   "P&L Summary": {
+    "min": 10,
+    "max": 13,
+    "n": 2
+   },
+   "4-Wall Analysis": {
+    "min": 440,
+    "max": 1442,
+    "n": 378
+   },
+   "BBC -- Backcountry + SAIL": {
+    "min": 10,
+    "max": 10,
+    "n": 1
+   },
+   "FY2023A (IS)": {
+    "min": 14,
+    "max": 69,
+    "n": 20
+   },
+   "FY2023A (Earnings)": {
+    "min": 16,
+    "max": 58,
+    "n": 17
+   },
+   "FY2023A (CF)": {
+    "min": 17,
+    "max": 59,
+    "n": 7
+   },
+   "FY23SAIL15": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY23SAIL16": {
+    "min": 15,
+    "max": 69,
+    "n": 17
+   },
+   "FY23SAIL17": {
+    "min": 14,
+    "max": 69,
+    "n": 24
+   },
+   "FY23SAIL18": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY23SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 21
+   },
+   "FY23SAIL23": {
+    "min": 15,
+    "max": 69,
+    "n": 19
+   },
+   "FY23SAIL24": {
+    "min": 14,
+    "max": 69,
+    "n": 17
+   },
+   "FY23SAIL26": {
+    "min": 15,
+    "max": 69,
+    "n": 17
+   },
+   "FY23SAIL27": {
+    "min": 14,
+    "max": 69,
+    "n": 21
+   },
+   "FY23SAIL29": {
+    "min": 11,
+    "max": 69,
+    "n": 20
+   },
+   "FY23SAIL30": {
+    "min": 15,
+    "max": 69,
+    "n": 21
+   },
+   "FY23SAIL31": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY23Web": {
+    "min": 15,
+    "max": 69,
+    "n": 23
+   },
+   "FY2024A (IS)": {
+    "min": 15,
+    "max": 72,
+    "n": 18
+   },
+   "FY2024A (Earnings)": {
+    "min": 5,
+    "max": 54,
+    "n": 17
+   },
+   "FY2024A (CF)": {
+    "min": 28,
+    "max": 59,
+    "n": 7
+   },
+   "FY24SAIL15": {
+    "min": 10,
+    "max": 69,
+    "n": 25
+   },
+   "FY24SAIL16": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL17": {
+    "min": 14,
+    "max": 69,
+    "n": 21
+   },
+   "FY24SAIL18": {
+    "min": 15,
+    "max": 69,
+    "n": 26
+   },
+   "FY24SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY24SAIL23": {
+    "min": 10,
+    "max": 69,
+    "n": 22
+   },
+   "FY24SAIL24": {
+    "min": 15,
+    "max": 69,
+    "n": 22
+   },
+   "FY24SAIL26": {
+    "min": 15,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL27": {
+    "min": 10,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL29": {
+    "min": 15,
+    "max": 69,
+    "n": 25
+   },
+   "FY24SAIL30": {
+    "min": 10,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL31": {
+    "min": 12,
+    "max": 69,
+    "n": 23
+   },
+   "FY24Web": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY24Operations": {
+    "min": 33,
+    "max": 57,
+    "n": 3
+   },
+   "FY2025A (IS)": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY2025A (Earnings)": {
+    "min": 15,
+    "max": 54,
+    "n": 17
+   },
+   "FY2025A (CF)": {
+    "min": 23,
+    "max": 59,
+    "n": 5
+   },
+   "FY25SAIL15": {
+    "min": 11,
+    "max": 69,
+    "n": 31
+   },
+   "FY25SAIL16": {
+    "min": 10,
+    "max": 69,
+    "n": 24
+   },
+   "FY25SAIL17": {
+    "min": 14,
+    "max": 69,
+    "n": 20
+   },
+   "FY25SAIL18": {
+    "min": 14,
+    "max": 69,
+    "n": 25
+   },
+   "FY25SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 21
+   },
+   "FY25SAIL23": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY25SAIL24": {
+    "min": 15,
+    "max": 69,
+    "n": 19
+   },
+   "FY25SAIL26": {
+    "min": 10,
+    "max": 69,
+    "n": 25
+   },
+   "FY25SAIL27": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY25SAIL29": {
+    "min": 12,
+    "max": 69,
+    "n": 24
+   },
+   "FY25SAIL30": {
+    "min": 15,
+    "max": 69,
+    "n": 22
+   },
+   "FY25SAIL31": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY25Web": {
+    "min": 15,
+    "max": 69,
+    "n": 23
+   },
+   "FY25Operations": {
+    "min": 14,
+    "max": 36,
+    "n": 5
+   },
+   "FY2026A (YTD IS)": {
+    "min": 15,
+    "max": 69,
+    "n": 16
+   },
+   "FY2026A (YTD Earnings)": {
+    "min": 15,
+    "max": 54,
+    "n": 15
+   },
+   "FY2026A (YTD CF)": {
+    "min": 23,
+    "max": 59,
+    "n": 6
+   },
+   "FY2026B (IS)": {
+    "min": 15,
+    "max": 72,
+    "n": 44
+   },
+   "FY2026B (Earnings)": {
+    "min": 16,
+    "max": 62,
+    "n": 27
+   },
+   "FY2026B (BS)": {
+    "min": 12,
+    "max": 74,
+    "n": 20
+   },
+   "FY2026B (CF)": {
+    "min": 11,
+    "max": 51,
+    "n": 12
+   },
+   "FY26SAIL15": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY26SAIL16": {
+    "min": 14,
+    "max": 69,
+    "n": 17
+   },
+   "FY26SAIL17": {
+    "min": 15,
+    "max": 69,
+    "n": 17
+   },
+   "FY26SAIL18": {
+    "min": 10,
+    "max": 69,
+    "n": 22
+   },
+   "FY26SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 14
+   },
+   "FY26SAIL23": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY26SAIL24": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY26SAIL26": {
+    "min": 10,
+    "max": 69,
+    "n": 22
+   },
+   "FY26SAIL27": {
+    "min": 11,
+    "max": 69,
+    "n": 20
+   },
+   "FY26SAIL29": {
+    "min": 15,
+    "max": 69,
+    "n": 19
+   },
+   "FY26SAIL30": {
+    "min": 10,
+    "max": 69,
+    "n": 23
+   },
+   "FY26SAIL31": {
+    "min": 12,
+    "max": 69,
+    "n": 18
+   },
+   "FY26Web": {
+    "min": 15,
+    "max": 69,
+    "n": 16
+   },
+   "FY26Operations": {
+    "min": 36,
+    "max": 68,
+    "n": 3
+   },
+   "FY2027P (IS)": {
+    "min": 15,
+    "max": 72,
+    "n": 42
+   },
+   "FY2027P (Earnings)": {
+    "min": 1,
+    "max": 62,
+    "n": 27
+   },
+   "FY2027P (BS)": {
+    "min": 12,
+    "max": 74,
+    "n": 22
+   },
+   "FY2027P (CF)": {
+    "min": 11,
+    "max": 51,
+    "n": 14
+   },
+   "FY2028P (IS)": {
+    "min": 3,
+    "max": 72,
+    "n": 47
+   },
+   "FY2028P (Earnings)": {
+    "min": 16,
+    "max": 62,
+    "n": 26
+   },
+   "FY2028P (BS)": {
+    "min": 12,
+    "max": 74,
+    "n": 22
+   },
+   "FY2028P (CF)": {
+    "min": 11,
+    "max": 51,
+    "n": 13
+   }
+  },
+  "whole_sheets": [
+   "Model"
+  ],
+  "n_spans": 4,
+  "coverage": {
+   "Model": 1.0,
+   "P&L Summary": 0.0,
+   "4-Wall Analysis": 0.0,
+   "BBC -- Backcountry + SAIL": 0.0,
+   "FY2023A (IS)": 0.357,
+   "FY2023A (Earnings)": 0.465,
+   "FY2023A (CF)": 0.465,
+   "FY23SAIL15": 0.364,
+   "FY23SAIL16": 0.364,
+   "FY23SAIL17": 0.357,
+   "FY23SAIL18": 0.364,
+   "FY23SAIL21": 0.364,
+   "FY23SAIL23": 0.364,
+   "FY23SAIL24": 0.357,
+   "FY23SAIL26": 0.364,
+   "FY23SAIL27": 0.357,
+   "FY23SAIL29": 0.339,
+   "FY23SAIL30": 0.364,
+   "FY23SAIL31": 0.339,
+   "FY23Web": 0.364,
+   "FY2024A (IS)": 0.345,
+   "FY2024A (Earnings)": 0.4,
+   "FY2024A (CF)": 0.375,
+   "FY24SAIL15": 0.333,
+   "FY24SAIL16": 0.339,
+   "FY24SAIL17": 0.357,
+   "FY24SAIL18": 0.364,
+   "FY24SAIL21": 0.364,
+   "FY24SAIL23": 0.333,
+   "FY24SAIL24": 0.364,
+   "FY24SAIL26": 0.364,
+   "FY24SAIL27": 0.333,
+   "FY24SAIL29": 0.364,
+   "FY24SAIL30": 0.333,
+   "FY24SAIL31": 0.345,
+   "FY24Web": 0.364,
+   "FY24Operations": 0.28,
+   "FY2025A (IS)": 0.364,
+   "FY2025A (Earnings)": 0.5,
+   "FY2025A (CF)": 0.459,
+   "FY25SAIL15": 0.339,
+   "FY25SAIL16": 0.333,
+   "FY25SAIL17": 0.357,
+   "FY25SAIL18": 0.357,
+   "FY25SAIL21": 0.364,
+   "FY25SAIL23": 0.364,
+   "FY25SAIL24": 0.364,
+   "FY25SAIL26": 0.333,
+   "FY25SAIL27": 0.364,
+   "FY25SAIL29": 0.345,
+   "FY25SAIL30": 0.364,
+   "FY25SAIL31": 0.339,
+   "FY25Web": 0.364,
+   "FY25Operations": 0.739,
+   "FY2026A (YTD IS)": 0.364,
+   "FY2026A (YTD Earnings)": 0.5,
+   "FY2026A (YTD CF)": 0.459,
+   "FY2026B (IS)": 0.345,
+   "FY2026B (Earnings)": 0.426,
+   "FY2026B (BS)": 0.317,
+   "FY2026B (CF)": 0.488,
+   "FY26SAIL15": 0.364,
+   "FY26SAIL16": 0.357,
+   "FY26SAIL17": 0.364,
+   "FY26SAIL18": 0.333,
+   "FY26SAIL21": 0.364,
+   "FY26SAIL23": 0.364,
+   "FY26SAIL24": 0.339,
+   "FY26SAIL26": 0.333,
+   "FY26SAIL27": 0.339,
+   "FY26SAIL29": 0.364,
+   "FY26SAIL30": 0.333,
+   "FY26SAIL31": 0.345,
+   "FY26Web": 0.364,
+   "FY26Operations": 0.121,
+   "FY2027P (IS)": 0.345,
+   "FY2027P (Earnings)": 0.323,
+   "FY2027P (BS)": 0.317,
+   "FY2027P (CF)": 0.488,
+   "FY2028P (IS)": 0.286,
+   "FY2028P (Earnings)": 0.426,
+   "FY2028P (BS)": 0.317,
+   "FY2028P (CF)": 0.488
+  }
+ },
+ {
+  "pop": "popB",
+  "task": "Debugging:10_06",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "footprint": {
+   "Model": {
+    "min": 42,
+    "max": 165,
+    "n": 33
+   },
+   "4-Wall Analysis": {
+    "min": 439,
+    "max": 1442,
+    "n": 379
+   },
+   "BBC -- Backcountry + SAIL": {
+    "min": 10,
+    "max": 10,
+    "n": 1
+   },
+   "FY2023A (IS)": {
+    "min": 14,
+    "max": 69,
+    "n": 20
+   },
+   "FY2023A (Earnings)": {
+    "min": 16,
+    "max": 58,
+    "n": 17
+   },
+   "FY2023A (CF)": {
+    "min": 17,
+    "max": 59,
+    "n": 7
+   },
+   "FY23SAIL15": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY23SAIL16": {
+    "min": 15,
+    "max": 69,
+    "n": 17
+   },
+   "FY23SAIL17": {
+    "min": 14,
+    "max": 69,
+    "n": 24
+   },
+   "FY23SAIL18": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY23SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 21
+   },
+   "FY23SAIL23": {
+    "min": 15,
+    "max": 69,
+    "n": 19
+   },
+   "FY23SAIL24": {
+    "min": 14,
+    "max": 69,
+    "n": 17
+   },
+   "FY23SAIL26": {
+    "min": 15,
+    "max": 69,
+    "n": 17
+   },
+   "FY23SAIL27": {
+    "min": 14,
+    "max": 69,
+    "n": 21
+   },
+   "FY23SAIL29": {
+    "min": 11,
+    "max": 69,
+    "n": 20
+   },
+   "FY23SAIL30": {
+    "min": 15,
+    "max": 69,
+    "n": 21
+   },
+   "FY23SAIL31": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY23Web": {
+    "min": 15,
+    "max": 69,
+    "n": 23
+   },
+   "FY2024A (IS)": {
+    "min": 15,
+    "max": 72,
+    "n": 18
+   },
+   "FY2024A (Earnings)": {
+    "min": 5,
+    "max": 54,
+    "n": 17
+   },
+   "FY2024A (CF)": {
+    "min": 28,
+    "max": 59,
+    "n": 7
+   },
+   "FY24SAIL15": {
+    "min": 10,
+    "max": 69,
+    "n": 25
+   },
+   "FY24SAIL16": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL17": {
+    "min": 14,
+    "max": 69,
+    "n": 21
+   },
+   "FY24SAIL18": {
+    "min": 15,
+    "max": 69,
+    "n": 26
+   },
+   "FY24SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY24SAIL23": {
+    "min": 10,
+    "max": 69,
+    "n": 22
+   },
+   "FY24SAIL24": {
+    "min": 15,
+    "max": 69,
+    "n": 22
+   },
+   "FY24SAIL26": {
+    "min": 15,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL27": {
+    "min": 10,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL29": {
+    "min": 15,
+    "max": 69,
+    "n": 25
+   },
+   "FY24SAIL30": {
+    "min": 10,
+    "max": 69,
+    "n": 23
+   },
+   "FY24SAIL31": {
+    "min": 12,
+    "max": 69,
+    "n": 23
+   },
+   "FY24Web": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY24Operations": {
+    "min": 33,
+    "max": 57,
+    "n": 3
+   },
+   "FY2025A (IS)": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY2025A (Earnings)": {
+    "min": 15,
+    "max": 54,
+    "n": 17
+   },
+   "FY2025A (CF)": {
+    "min": 23,
+    "max": 59,
+    "n": 5
+   },
+   "FY25SAIL15": {
+    "min": 11,
+    "max": 69,
+    "n": 31
+   },
+   "FY25SAIL16": {
+    "min": 10,
+    "max": 69,
+    "n": 24
+   },
+   "FY25SAIL17": {
+    "min": 14,
+    "max": 69,
+    "n": 20
+   },
+   "FY25SAIL18": {
+    "min": 14,
+    "max": 69,
+    "n": 25
+   },
+   "FY25SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 21
+   },
+   "FY25SAIL23": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY25SAIL24": {
+    "min": 15,
+    "max": 69,
+    "n": 19
+   },
+   "FY25SAIL26": {
+    "min": 10,
+    "max": 69,
+    "n": 25
+   },
+   "FY25SAIL27": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY25SAIL29": {
+    "min": 12,
+    "max": 69,
+    "n": 24
+   },
+   "FY25SAIL30": {
+    "min": 15,
+    "max": 69,
+    "n": 22
+   },
+   "FY25SAIL31": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY25Web": {
+    "min": 15,
+    "max": 69,
+    "n": 23
+   },
+   "FY25Operations": {
+    "min": 14,
+    "max": 36,
+    "n": 5
+   },
+   "FY2026A (YTD IS)": {
+    "min": 15,
+    "max": 69,
+    "n": 16
+   },
+   "FY2026A (YTD Earnings)": {
+    "min": 15,
+    "max": 54,
+    "n": 15
+   },
+   "FY2026A (YTD CF)": {
+    "min": 23,
+    "max": 59,
+    "n": 6
+   },
+   "FY2026B (IS)": {
+    "min": 15,
+    "max": 72,
+    "n": 44
+   },
+   "FY2026B (Earnings)": {
+    "min": 16,
+    "max": 62,
+    "n": 27
+   },
+   "FY2026B (BS)": {
+    "min": 12,
+    "max": 74,
+    "n": 20
+   },
+   "FY2026B (CF)": {
+    "min": 11,
+    "max": 51,
+    "n": 12
+   },
+   "FY26SAIL15": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY26SAIL16": {
+    "min": 14,
+    "max": 69,
+    "n": 17
+   },
+   "FY26SAIL17": {
+    "min": 15,
+    "max": 69,
+    "n": 17
+   },
+   "FY26SAIL18": {
+    "min": 10,
+    "max": 69,
+    "n": 22
+   },
+   "FY26SAIL21": {
+    "min": 15,
+    "max": 69,
+    "n": 14
+   },
+   "FY26SAIL23": {
+    "min": 15,
+    "max": 69,
+    "n": 20
+   },
+   "FY26SAIL24": {
+    "min": 11,
+    "max": 69,
+    "n": 23
+   },
+   "FY26SAIL26": {
+    "min": 10,
+    "max": 69,
+    "n": 22
+   },
+   "FY26SAIL27": {
+    "min": 11,
+    "max": 69,
+    "n": 20
+   },
+   "FY26SAIL29": {
+    "min": 15,
+    "max": 69,
+    "n": 19
+   },
+   "FY26SAIL30": {
+    "min": 10,
+    "max": 69,
+    "n": 23
+   },
+   "FY26SAIL31": {
+    "min": 12,
+    "max": 69,
+    "n": 18
+   },
+   "FY26Web": {
+    "min": 15,
+    "max": 69,
+    "n": 16
+   },
+   "FY26Operations": {
+    "min": 36,
+    "max": 68,
+    "n": 3
+   },
+   "FY2027P (IS)": {
+    "min": 15,
+    "max": 72,
+    "n": 42
+   },
+   "FY2027P (Earnings)": {
+    "min": 1,
+    "max": 62,
+    "n": 27
+   },
+   "FY2027P (BS)": {
+    "min": 12,
+    "max": 74,
+    "n": 22
+   },
+   "FY2027P (CF)": {
+    "min": 11,
+    "max": 51,
+    "n": 14
+   },
+   "FY2028P (IS)": {
+    "min": 3,
+    "max": 72,
+    "n": 47
+   },
+   "FY2028P (Earnings)": {
+    "min": 16,
+    "max": 62,
+    "n": 26
+   },
+   "FY2028P (BS)": {
+    "min": 12,
+    "max": 74,
+    "n": 22
+   },
+   "FY2028P (CF)": {
+    "min": 11,
+    "max": 51,
+    "n": 13
+   }
+  },
+  "whole_sheets": [
+   "Model"
+  ],
+  "n_spans": 12,
+  "coverage": {
+   "Model": 1.0,
+   "4-Wall Analysis": 0.0,
+   "BBC -- Backcountry + SAIL": 1.0,
+   "FY2023A (IS)": 0.821,
+   "FY2023A (Earnings)": 1.0,
+   "FY2023A (CF)": 1.0,
+   "FY23SAIL15": 0.818,
+   "FY23SAIL16": 0.818,
+   "FY23SAIL17": 0.821,
+   "FY23SAIL18": 0.818,
+   "FY23SAIL21": 0.818,
+   "FY23SAIL23": 0.818,
+   "FY23SAIL24": 0.821,
+   "FY23SAIL26": 0.818,
+   "FY23SAIL27": 0.821,
+   "FY23SAIL29": 0.831,
+   "FY23SAIL30": 0.818,
+   "FY23SAIL31": 0.831,
+   "FY23Web": 0.818,
+   "FY2024A (IS)": 0.776,
+   "FY2024A (Earnings)": 1.0,
+   "FY2024A (CF)": 1.0,
+   "FY24SAIL15": 0.833,
+   "FY24SAIL16": 0.831,
+   "FY24SAIL17": 0.821,
+   "FY24SAIL18": 0.818,
+   "FY24SAIL21": 0.818,
+   "FY24SAIL23": 0.833,
+   "FY24SAIL24": 0.818,
+   "FY24SAIL26": 0.818,
+   "FY24SAIL27": 0.833,
+   "FY24SAIL29": 0.818,
+   "FY24SAIL30": 0.833,
+   "FY24SAIL31": 0.828,
+   "FY24Web": 0.818,
+   "FY24Operations": 1.0,
+   "FY2025A (IS)": 0.818,
+   "FY2025A (Earnings)": 1.0,
+   "FY2025A (CF)": 1.0,
+   "FY25SAIL15": 0.831,
+   "FY25SAIL16": 0.833,
+   "FY25SAIL17": 0.821,
+   "FY25SAIL18": 0.821,
+   "FY25SAIL21": 0.818,
+   "FY25SAIL23": 0.818,
+   "FY25SAIL24": 0.818,
+   "FY25SAIL26": 0.833,
+   "FY25SAIL27": 0.818,
+   "FY25SAIL29": 0.828,
+   "FY25SAIL30": 0.818,
+   "FY25SAIL31": 0.831,
+   "FY25Web": 0.818,
+   "FY25Operations": 1.0,
+   "FY2026A (YTD IS)": 0.818,
+   "FY2026A (YTD Earnings)": 1.0,
+   "FY2026A (YTD CF)": 1.0,
+   "FY2026B (IS)": 0.776,
+   "FY2026B (Earnings)": 0.936,
+   "FY2026B (BS)": 0.762,
+   "FY2026B (CF)": 1.0,
+   "FY26SAIL15": 0.818,
+   "FY26SAIL16": 0.821,
+   "FY26SAIL17": 0.818,
+   "FY26SAIL18": 0.833,
+   "FY26SAIL21": 0.818,
+   "FY26SAIL23": 0.818,
+   "FY26SAIL24": 0.831,
+   "FY26SAIL26": 0.833,
+   "FY26SAIL27": 0.831,
+   "FY26SAIL29": 0.818,
+   "FY26SAIL30": 0.833,
+   "FY26SAIL31": 0.828,
+   "FY26Web": 0.818,
+   "FY26Operations": 0.727,
+   "FY2027P (IS)": 0.776,
+   "FY2027P (Earnings)": 0.952,
+   "FY2027P (BS)": 0.762,
+   "FY2027P (CF)": 1.0,
+   "FY2028P (IS)": 0.814,
+   "FY2028P (Earnings)": 0.936,
+   "FY2028P (BS)": 0.762,
+   "FY2028P (CF)": 1.0
+  }
+ },
+ {
+  "pop": "popB",
+  "task": "Financial_Model:08_03",
+  "status": "TRUNCATED_INSTANCE_COST",
+  "output": false,
+  "footprint": {
+   "DCF Valuation": {
+    "min": 16,
+    "max": 54,
+    "n": 19
+   },
+   "Income Statement": {
+    "min": 69,
+    "max": 69,
+    "n": 1
+   },
+   "Balance Sheet": {
+    "min": 7,
+    "max": 7,
+    "n": 1
+   },
+   "Ratio Analysis": {
+    "min": 19,
+    "max": 19,
+    "n": 1
+   },
+   "Working Capital": {
+    "min": 44,
+    "max": 50,
+    "n": 2
+   },
+   "Assumptions - Line 01": {
+    "min": 6,
+    "max": 362,
+    "n": 61
+   },
+   "Assumptions - Line 02": {
+    "min": 6,
+    "max": 594,
+    "n": 104
+   },
+   "Assumptions - Line 03": {
+    "min": 7,
+    "max": 537,
+    "n": 86
+   },
+   "Capex and Debt Assumptions ": {
+    "min": 10,
+    "max": 166,
+    "n": 3
+   }
+  },
+  "whole_sheets": [
+   "Balance Sheet"
+  ],
+  "n_spans": 28,
+  "coverage": {
+   "DCF Valuation": 1.0,
+   "Income Statement": 0.0,
+   "Balance Sheet": 1.0,
+   "Ratio Analysis": 1.0,
+   "Working Capital": 1.0,
+   "Assumptions - Line 01": 0.0,
+   "Assumptions - Line 02": 0.0,
+   "Assumptions - Line 03": 0.0,
+   "Capex and Debt Assumptions ": 0.325
+  }
+ },
+ {
+  "pop": "popB",
+  "task": "Financial_Model:08_04",
+  "status": "TRUNCATED_INSTANCE_COST",
+  "output": false,
+  "footprint": {
+   "DCF Valuation": {
+    "min": 20,
+    "max": 54,
+    "n": 19
+   },
+   "Income Statement": {
+    "min": 69,
+    "max": 69,
+    "n": 1
+   },
+   "Balance Sheet": {
+    "min": 18,
+    "max": 34,
+    "n": 2
+   },
+   "Working Capital": {
+    "min": 68,
+    "max": 68,
+    "n": 1
+   },
+   "Assumptions - Line 01": {
+    "min": 6,
+    "max": 362,
+    "n": 61
+   },
+   "Assumptions - Line 02": {
+    "min": 6,
+    "max": 594,
+    "n": 104
+   },
+   "Assumptions - Line 03": {
+    "min": 7,
+    "max": 537,
+    "n": 86
+   },
+   "Capex and Debt Assumptions ": {
+    "min": 10,
+    "max": 166,
+    "n": 3
+   }
+  },
+  "whole_sheets": [
+   "Balance Sheet",
+   "DCF Valuation",
+   "Income Statement"
+  ],
+  "n_spans": 54,
+  "coverage": {
+   "DCF Valuation": 1.0,
+   "Income Statement": 1.0,
+   "Balance Sheet": 1.0,
+   "Working Capital": 1.0,
+   "Assumptions - Line 01": 0.048,
+   "Assumptions - Line 02": 0.0,
+   "Assumptions - Line 03": 0.024,
+   "Capex and Debt Assumptions ": 0.86
+  }
+ },
+ {
+  "pop": "popB",
+  "task": "Financial_Model:08_05",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "footprint": {
+   "DCF Valuation": {
+    "min": 28,
+    "max": 66,
+    "n": 20
+   },
+   "Balance Sheet": {
+    "min": 9,
+    "max": 20,
+    "n": 3
+   },
+   "Cashflow": {
+    "min": 30,
+    "max": 30,
+    "n": 1
+   },
+   "Ratio Analysis": {
+    "min": 19,
+    "max": 21,
+    "n": 3
+   },
+   "Working Capital": {
+    "min": 66,
+    "max": 66,
+    "n": 1
+   },
+   "Assumptions - Line 01": {
+    "min": 6,
+    "max": 362,
+    "n": 61
+   },
+   "Assumptions - Line 02": {
+    "min": 6,
+    "max": 594,
+    "n": 104
+   },
+   "Assumptions - Line 03": {
+    "min": 7,
+    "max": 537,
+    "n": 86
+   },
+   "Capex and Debt Assumptions ": {
+    "min": 10,
+    "max": 166,
+    "n": 3
+   }
+  },
+  "whole_sheets": [
+   "Balance Sheet",
+   "Cashflow",
+   "DCF Valuation"
+  ],
+  "n_spans": 20,
+  "coverage": {
+   "DCF Valuation": 1.0,
+   "Balance Sheet": 1.0,
+   "Cashflow": 1.0,
+   "Ratio Analysis": 0.0,
+   "Working Capital": 1.0,
+   "Assumptions - Line 01": 0.0,
+   "Assumptions - Line 02": 0.0,
+   "Assumptions - Line 03": 0.043,
+   "Capex and Debt Assumptions ": 0.0
+  }
+ },
+ {
+  "pop": "popB",
+  "task": "Financial_Model:17_05",
+  "status": "TRUNCATED_CALL_LIMIT",
+  "output": true,
+  "footprint": {
+   "Valuation": {
+    "min": 38,
+    "max": 80,
+    "n": 17
+   },
+   "Ratio_Analysis": {
+    "min": 19,
+    "max": 19,
+    "n": 1
+   }
+  },
+  "whole_sheets": [
+   "Graphical_representation",
+   "Ratio_Analysis",
+   "Valuation"
+  ],
+  "n_spans": 8,
+  "coverage": {
+   "Valuation": 1.0,
+   "Ratio_Analysis": 1.0
+  }
+ },
+ {
+  "pop": "popB",
+  "task": "Template:06_09",
+  "status": "SUBMITTED",
+  "output": true,
+  "footprint": {
+   "OpEx_Forecast": {
+    "min": 7,
+    "max": 28,
+    "n": 14
+   }
+  },
+  "whole_sheets": [],
+  "n_spans": 4,
+  "coverage": {
+   "OpEx_Forecast": 1.0
+  }
+ },
+ {
+  "pop": "popB",
+  "task": "Template:06_16",
+  "status": "SUBMITTED",
+  "output": true,
+  "footprint": {
+   "QuarterlyPL_Forecast": {
+    "min": 8,
+    "max": 28,
+    "n": 16
+   }
+  },
+  "whole_sheets": [
+   "QuarterlyPL_Forecast"
+  ],
+  "n_spans": 7,
+  "coverage": {
+   "QuarterlyPL_Forecast": 1.0
+  }
+ },
+ {
+  "pop": "popB",
+  "task": "Template:16_02",
+  "status": "SUBMITTED",
+  "output": true,
+  "footprint": {
+   "RentRoll": {
+    "min": 6,
+    "max": 11,
+    "n": 5
+   },
+   "DirectCap": {
+    "min": 6,
+    "max": 45,
+    "n": 18
+   }
+  },
+  "whole_sheets": [
+   "Assumptions",
+   "DirectCap",
+   "RentRoll"
+  ],
+  "n_spans": 5,
+  "coverage": {
+   "RentRoll": 1.0,
+   "DirectCap": 1.0
+  }
+ },
+ {
+  "pop": "popB",
+  "task": "Template:16_05",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "footprint": {
+   "DirectCap": {
+    "min": 11,
+    "max": 49,
+    "n": 25
+   }
+  },
+  "whole_sheets": [
+   "DirectCap",
+   "RentRoll"
+  ],
+  "n_spans": 9,
+  "coverage": {
+   "DirectCap": 1.0
+  }
+ }
+]

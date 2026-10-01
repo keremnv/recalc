@@ -1,0 +1,31 @@
+{
+  "architectural_failure": false,
+  "differential_pass_pct": 100.0,
+  "eligible_differential_cases": 71,
+  "formula_data_only_cases": 8,
+  "formula_data_only_exact": 8,
+  "formula_data_only_pass_pct": 100.0,
+  "gate_99": true,
+  "gate_99_9": true,
+  "heldout_accelerated_coverage": {
+    "eligible_scripts": 3,
+    "fully_accelerated": 1,
+    "partially_accelerated_safely": 2,
+    "predeclared_fallback": 105,
+    "semantic_mismatch": 0
+  },
+  "heldout_eligible_scripts": 3,
+  "heldout_fidelity_pct": 100.0,
+  "heldout_semantic_exact": 3,
+  "mutation_state_divergence": 0,
+  "passing_differential_cases": 71,
+  "primitive_cases": 58,
+  "primitive_exact": 58,
+  "primitive_pass_pct": 100.0,
+  "silent_identity_corruption": 0,
+  "stale_reads": 0,
+  "wrong_exception": 0,
+  "wrong_order": 0,
+  "wrong_type": 0,
+  "wrong_value": 0
+}

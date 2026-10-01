@@ -1,0 +1,126 @@
+{
+  "primary": [
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Financial_Model:07_01"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Financial_Model:07_01"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Financial_Model:08_03"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Financial_Model:08_03"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Financial_Model:08_01"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Financial_Model:08_01"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Financial_Model:15_04"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Financial_Model:15_04"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Debugging:10_10"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Debugging:10_10"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Financial_Model:06_01"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Financial_Model:06_01"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Debugging:01_06"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Debugging:01_06"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Debugging:10_04"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Debugging:10_04"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Debugging:05_02"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Debugging:05_02"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Template:13_08"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Template:13_08"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Template:03_03"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Template:03_03"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Financial_Model:10_01"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Financial_Model:10_01"
+    }
+  ],
+  "randomization": "within-task H0/H1 shuffle",
+  "seed": 20260920
+}

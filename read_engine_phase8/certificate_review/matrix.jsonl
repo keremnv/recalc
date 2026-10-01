@@ -1,0 +1,9 @@
+{"admission": "A1_ADMIT", "case": "direct_scalar", "certified": true, "expected_certificate": true, "passes_expected": true, "reason": "ALL_CELL_CALLS_TERMINAL_SCALAR"}
+{"admission": "A1_ADMIT", "case": "direct_object", "certified": false, "expected_certificate": false, "passes_expected": true, "reason": "CELL_OBJECT_NOT_TERMINAL_SCALAR"}
+{"admission": "A1_ADMIT", "case": "walrus_escape", "certified": false, "expected_certificate": false, "passes_expected": true, "reason": "CELL_OBJECT_NOT_TERMINAL_SCALAR"}
+{"admission": "A1_ADMIT", "case": "method_alias", "certified": false, "expected_certificate": false, "passes_expected": true, "reason": "CELL_OBJECT_NOT_TERMINAL_SCALAR"}
+{"admission": "A1_ADMIT", "case": "dunder_method", "certified": true, "expected_certificate": false, "passes_expected": false, "reason": "ALL_CELL_CALLS_TERMINAL_SCALAR"}
+{"admission": "A1_ADMIT", "case": "dunder_getitem", "certified": true, "expected_certificate": false, "passes_expected": false, "reason": "ALL_CELL_CALLS_TERMINAL_SCALAR"}
+{"admission": "A1_ADMIT", "case": "literal_subscript", "certified": false, "expected_certificate": false, "passes_expected": true, "reason": "WORKSHEET_SUBSCRIPT"}
+{"admission": "A1_ADMIT", "case": "worksheet_alias", "certified": false, "expected_certificate": false, "passes_expected": true, "reason": "WORKSHEET_SUBSCRIPT"}
+{"admission": "PREDECLARED_REAL_OPENPYXL", "case": "getattr_method", "certified": false, "expected_certificate": false, "passes_expected": true, "reason": "NOT_ADMITTED"}

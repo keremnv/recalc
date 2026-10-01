@@ -1,0 +1,3353 @@
+[
+ {
+  "task_id": "Financial_Model:08_03",
+  "family": "Financial_Model",
+  "obs_index": 1,
+  "tool": "view_xlsx",
+  "shape": "FORMULA_DUMP",
+  "tokens_est": 15496,
+  "bytes": 39221,
+  "n_first_seen": 1314,
+  "link_counts": {
+   "MODEL_CODE_REFERENCE_LINK": 1,
+   "NO_OBSERVED_MECHANICAL_LINK": 1109,
+   "LATER_NARROW_READ_LINK": 203,
+   "DIRECT_WRITE_LINK": 1
+  },
+  "link_tokens_est": {
+   "MODEL_CODE_REFERENCE_LINK": 11.7,
+   "NO_OBSERVED_MECHANICAL_LINK": 13022.7,
+   "LATER_NARROW_READ_LINK": 2383.8,
+   "DIRECT_WRITE_LINK": 11.7
+  },
+  "link_tokens_strict_est": {
+   "MODEL_CODE_REFERENCE_LINK": 11.7,
+   "NO_OBSERVED_MECHANICAL_LINK": 15418.3
+  }
+ },
+ {
+  "task_id": "Financial_Model:08_03",
+  "family": "Financial_Model",
+  "obs_index": 2,
+  "tool": "view_xlsx",
+  "shape": "FORMULA_DUMP",
+  "tokens_est": 180631,
+  "bytes": 441151,
+  "n_first_seen": 9223,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 1964,
+   "NO_OBSERVED_MECHANICAL_LINK": 7259
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 27452.9,
+   "NO_OBSERVED_MECHANICAL_LINK": 153106.1
+  },
+  "link_tokens_strict_est": {
+   "LATER_NARROW_READ_LINK": 19012.4,
+   "NO_OBSERVED_MECHANICAL_LINK": 161546.6
+  }
+ },
+ {
+  "task_id": "Financial_Model:08_03",
+  "family": "Financial_Model",
+  "obs_index": 4,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 523,
+  "bytes": 1812,
+  "n_first_seen": 40,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 40
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 523.0
+  },
+  "link_tokens_strict_est": {
+   "LATER_NARROW_READ_LINK": 405.3,
+   "STRUCTURAL_NAVIGATION_LINK": 52.3,
+   "NO_OBSERVED_MECHANICAL_LINK": 65.4
+  }
+ },
+ {
+  "task_id": "Financial_Model:08_03",
+  "family": "Financial_Model",
+  "obs_index": 5,
+  "tool": "python",
+  "shape": "FORMULA_DUMP",
+  "tokens_est": 19851,
+  "bytes": 41380,
+  "n_first_seen": 1451,
+  "link_counts": {
+   "REGION_LEVEL_LINK": 287,
+   "LATER_NARROW_READ_LINK": 1163,
+   "MODEL_CODE_REFERENCE_LINK": 1
+  },
+  "link_tokens_est": {
+   "REGION_LEVEL_LINK": 3910.3,
+   "LATER_NARROW_READ_LINK": 15845.4,
+   "MODEL_CODE_REFERENCE_LINK": 13.6
+  },
+  "link_tokens_strict_est": {
+   "REGION_LEVEL_LINK": 5626.9,
+   "LATER_NARROW_READ_LINK": 14142.3
+  }
+ },
+ {
+  "task_id": "Financial_Model:08_03",
+  "family": "Financial_Model",
+  "obs_index": 6,
+  "tool": "python",
+  "shape": "FORMULA_DUMP",
+  "tokens_est": 20349,
+  "bytes": 40555,
+  "n_first_seen": 513,
+  "link_counts": {
+   "REGION_LEVEL_LINK": 505,
+   "LATER_NARROW_READ_LINK": 8
+  },
+  "link_tokens_est": {
+   "REGION_LEVEL_LINK": 6778.5,
+   "LATER_NARROW_READ_LINK": 107.4
+  },
+  "link_tokens_strict_est": {
+   "REGION_LEVEL_LINK": 6778.5,
+   "LATER_NARROW_READ_LINK": 107.4
+  }
+ },
+ {
+  "task_id": "Financial_Model:08_03",
+  "family": "Financial_Model",
+  "obs_index": 9,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 14766,
+  "bytes": 30097,
+  "n_first_seen": 656,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 450,
+   "REGION_LEVEL_LINK": 205,
+   "DIRECT_FORMULA_LINK": 1
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 10129.1,
+   "REGION_LEVEL_LINK": 4614.4,
+   "DIRECT_FORMULA_LINK": 22.5
+  },
+  "link_tokens_strict_est": {
+   "MODEL_CODE_REFERENCE_LINK": 45.0,
+   "NO_OBSERVED_MECHANICAL_LINK": 14721.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:08_03",
+  "family": "Financial_Model",
+  "obs_index": 21,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 364,
+  "bytes": 855,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Financial_Model:08_03",
+  "family": "Financial_Model",
+  "obs_index": 22,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 4629,
+  "bytes": 12785,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Financial_Model:08_03",
+  "family": "Financial_Model",
+  "obs_index": 23,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 40,
+  "bytes": 123,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Financial_Model:08_04",
+  "family": "Financial_Model",
+  "obs_index": 3,
+  "tool": "view_xlsx",
+  "shape": "FORMULA_DUMP",
+  "tokens_est": 60452,
+  "bytes": 136181,
+  "n_first_seen": 4023,
+  "link_counts": {
+   "MODEL_CODE_REFERENCE_LINK": 34,
+   "NO_OBSERVED_MECHANICAL_LINK": 3985,
+   "LATER_NARROW_READ_LINK": 4
+  },
+  "link_tokens_est": {
+   "MODEL_CODE_REFERENCE_LINK": 510.3,
+   "NO_OBSERVED_MECHANICAL_LINK": 59815.6,
+   "LATER_NARROW_READ_LINK": 60.0
+  },
+  "link_tokens_strict_est": {
+   "MODEL_CODE_REFERENCE_LINK": 30.0,
+   "NO_OBSERVED_MECHANICAL_LINK": 60356.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:08_05",
+  "family": "Financial_Model",
+  "obs_index": 2,
+  "tool": "view_xlsx",
+  "shape": "FORMULA_DUMP",
+  "tokens_est": 23300,
+  "bytes": 62248,
+  "n_first_seen": 1596,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1502,
+   "LATER_NARROW_READ_LINK": 79,
+   "MODEL_CODE_REFERENCE_LINK": 15
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 21865.6,
+   "LATER_NARROW_READ_LINK": 1150.1,
+   "MODEL_CODE_REFERENCE_LINK": 218.4
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 22346.0,
+   "LATER_NARROW_READ_LINK": 873.5,
+   "MODEL_CODE_REFERENCE_LINK": 14.6
+  }
+ },
+ {
+  "task_id": "Financial_Model:08_05",
+  "family": "Financial_Model",
+  "obs_index": 3,
+  "tool": "view_xlsx",
+  "shape": "FORMULA_DUMP",
+  "tokens_est": 15640,
+  "bytes": 42169,
+  "n_first_seen": 1152,
+  "link_counts": {
+   "MODEL_CODE_REFERENCE_LINK": 12,
+   "NO_OBSERVED_MECHANICAL_LINK": 1139,
+   "LATER_NARROW_READ_LINK": 1
+  },
+  "link_tokens_est": {
+   "MODEL_CODE_REFERENCE_LINK": 162.2,
+   "NO_OBSERVED_MECHANICAL_LINK": 15398.3,
+   "LATER_NARROW_READ_LINK": 13.5
+  },
+  "link_tokens_strict_est": {
+   "MODEL_CODE_REFERENCE_LINK": 13.5,
+   "NO_OBSERVED_MECHANICAL_LINK": 15560.5
+  }
+ },
+ {
+  "task_id": "Financial_Model:08_05",
+  "family": "Financial_Model",
+  "obs_index": 13,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 1548,
+  "bytes": 5319,
+  "n_first_seen": 50,
+  "link_counts": {
+   "STRUCTURAL_NAVIGATION_LINK": 49,
+   "MODEL_CODE_REFERENCE_LINK": 1
+  },
+  "link_tokens_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 1516.1,
+   "MODEL_CODE_REFERENCE_LINK": 30.9
+  },
+  "link_tokens_strict_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 1547.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:08_05",
+  "family": "Financial_Model",
+  "obs_index": 30,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 104,
+  "bytes": 303,
+  "n_first_seen": 9,
+  "link_counts": {
+   "STRUCTURAL_NAVIGATION_LINK": 6,
+   "NO_OBSERVED_MECHANICAL_LINK": 3
+  },
+  "link_tokens_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 68.7,
+   "NO_OBSERVED_MECHANICAL_LINK": 34.3
+  },
+  "link_tokens_strict_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 68.7,
+   "NO_OBSERVED_MECHANICAL_LINK": 34.3
+  }
+ },
+ {
+  "task_id": "Financial_Model:15_04",
+  "family": "Financial_Model",
+  "obs_index": 1,
+  "tool": "view_xlsx",
+  "shape": "FORMULA_DUMP",
+  "tokens_est": 17705,
+  "bytes": 44389,
+  "n_first_seen": 1227,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 901,
+   "LATER_NARROW_READ_LINK": 322,
+   "MODEL_CODE_REFERENCE_LINK": 4
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 13074.3,
+   "LATER_NARROW_READ_LINK": 4504.4,
+   "MODEL_CODE_REFERENCE_LINK": 60.3
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 14130.4,
+   "LATER_NARROW_READ_LINK": 3389.2,
+   "MODEL_CODE_REFERENCE_LINK": 119.4
+  }
+ },
+ {
+  "task_id": "Financial_Model:15_04",
+  "family": "Financial_Model",
+  "obs_index": 41,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 178,
+  "bytes": 458,
+  "n_first_seen": 14,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 14
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 177.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 177.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:15_04",
+  "family": "Financial_Model",
+  "obs_index": 42,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 145,
+  "bytes": 316,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Financial_Model:08_02",
+  "family": "Financial_Model",
+  "obs_index": 2,
+  "tool": "view_xlsx",
+  "shape": "FORMULA_DUMP",
+  "tokens_est": 14701,
+  "bytes": 36779,
+  "n_first_seen": 1242,
+  "link_counts": {
+   "MODEL_CODE_REFERENCE_LINK": 5,
+   "NO_OBSERVED_MECHANICAL_LINK": 1206,
+   "REGION_LEVEL_LINK": 15,
+   "LATER_NARROW_READ_LINK": 16
+  },
+  "link_tokens_est": {
+   "MODEL_CODE_REFERENCE_LINK": 58.9,
+   "NO_OBSERVED_MECHANICAL_LINK": 14210.8,
+   "REGION_LEVEL_LINK": 176.8,
+   "LATER_NARROW_READ_LINK": 188.5
+  },
+  "link_tokens_strict_est": {
+   "MODEL_CODE_REFERENCE_LINK": 11.8,
+   "NO_OBSERVED_MECHANICAL_LINK": 14623.2
+  }
+ },
+ {
+  "task_id": "Financial_Model:08_02",
+  "family": "Financial_Model",
+  "obs_index": 23,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 344,
+  "bytes": 782,
+  "n_first_seen": 1,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 343.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 343.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:08_01",
+  "family": "Financial_Model",
+  "obs_index": 2,
+  "tool": "view_xlsx",
+  "shape": "FORMULA_DUMP",
+  "tokens_est": 58982,
+  "bytes": 132888,
+  "n_first_seen": 3958,
+  "link_counts": {
+   "DIRECT_WRITE_LINK": 4,
+   "REGION_LEVEL_LINK": 171,
+   "NO_OBSERVED_MECHANICAL_LINK": 3703,
+   "MODEL_CODE_REFERENCE_LINK": 78,
+   "LATER_NARROW_READ_LINK": 2
+  },
+  "link_tokens_est": {
+   "DIRECT_WRITE_LINK": 59.5,
+   "REGION_LEVEL_LINK": 2545.4,
+   "NO_OBSERVED_MECHANICAL_LINK": 55120.2,
+   "MODEL_CODE_REFERENCE_LINK": 1161.1,
+   "LATER_NARROW_READ_LINK": 29.8
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 58916.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:08_01",
+  "family": "Financial_Model",
+  "obs_index": 47,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 1729,
+  "bytes": 3565,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:10_04",
+  "family": "Debugging",
+  "obs_index": 1,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 1254,
+  "bytes": 2307,
+  "n_first_seen": 56,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 55,
+   "MODEL_CODE_REFERENCE_LINK": 1
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1230.6,
+   "MODEL_CODE_REFERENCE_LINK": 22.4
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1253.0
+  }
+ },
+ {
+  "task_id": "Debugging:10_04",
+  "family": "Debugging",
+  "obs_index": 2,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 89668,
+  "bytes": 191501,
+  "n_first_seen": 6605,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 6392,
+   "LATER_NARROW_READ_LINK": 208,
+   "MODEL_CODE_REFERENCE_LINK": 5
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 87101.4,
+   "LATER_NARROW_READ_LINK": 2452.0,
+   "MODEL_CODE_REFERENCE_LINK": 55.5
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 89609.0
+  }
+ },
+ {
+  "task_id": "Debugging:10_04",
+  "family": "Debugging",
+  "obs_index": 3,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 379,
+  "bytes": 745,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:10_04",
+  "family": "Debugging",
+  "obs_index": 4,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 1468,
+  "bytes": 3438,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:10_04",
+  "family": "Debugging",
+  "obs_index": 5,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 1498,
+  "bytes": 3017,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:10_04",
+  "family": "Debugging",
+  "obs_index": 7,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 4701,
+  "bytes": 9851,
+  "n_first_seen": 525,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 72,
+   "NO_OBSERVED_MECHANICAL_LINK": 448,
+   "MODEL_CODE_REFERENCE_LINK": 5
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 636.1,
+   "NO_OBSERVED_MECHANICAL_LINK": 3957.8,
+   "MODEL_CODE_REFERENCE_LINK": 44.2
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 4638.0
+  }
+ },
+ {
+  "task_id": "Debugging:10_04",
+  "family": "Debugging",
+  "obs_index": 8,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 1672,
+  "bytes": 3546,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:10_04",
+  "family": "Debugging",
+  "obs_index": 9,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 346,
+  "bytes": 701,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:10_04",
+  "family": "Debugging",
+  "obs_index": 13,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 257,
+  "bytes": 519,
+  "n_first_seen": 12,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 6,
+   "LATER_NARROW_READ_LINK": 6
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 128.5,
+   "LATER_NARROW_READ_LINK": 128.5
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 257.0
+  }
+ },
+ {
+  "task_id": "Debugging:10_04",
+  "family": "Debugging",
+  "obs_index": 18,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 954,
+  "bytes": 1881,
+  "n_first_seen": 91,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 91
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 954.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 954.0
+  }
+ },
+ {
+  "task_id": "Debugging:10_04",
+  "family": "Debugging",
+  "obs_index": 22,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 731,
+  "bytes": 1185,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:10_04",
+  "family": "Debugging",
+  "obs_index": 29,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 664,
+  "bytes": 1592,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:10_04",
+  "family": "Debugging",
+  "obs_index": 36,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 8,
+  "bytes": 15,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:01_01",
+  "family": "Debugging",
+  "obs_index": 0,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 12984,
+  "bytes": 31682,
+  "n_first_seen": 781,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 240,
+   "LATER_NARROW_READ_LINK": 538,
+   "MODEL_CODE_REFERENCE_LINK": 3
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 3968.1,
+   "LATER_NARROW_READ_LINK": 8895.3,
+   "MODEL_CODE_REFERENCE_LINK": 49.6
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 12202.0,
+   "LATER_NARROW_READ_LINK": 711.0
+  }
+ },
+ {
+  "task_id": "Debugging:01_01",
+  "family": "Debugging",
+  "obs_index": 1,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 167,
+  "bytes": 375,
+  "n_first_seen": 14,
+  "link_counts": {
+   "STRUCTURAL_NAVIGATION_LINK": 4,
+   "LATER_NARROW_READ_LINK": 8,
+   "NO_OBSERVED_MECHANICAL_LINK": 2
+  },
+  "link_tokens_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 47.4,
+   "LATER_NARROW_READ_LINK": 94.9,
+   "NO_OBSERVED_MECHANICAL_LINK": 23.7
+  },
+  "link_tokens_strict_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 59.3,
+   "NO_OBSERVED_MECHANICAL_LINK": 106.7
+  }
+ },
+ {
+  "task_id": "Debugging:01_01",
+  "family": "Debugging",
+  "obs_index": 2,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 1758,
+  "bytes": 3557,
+  "n_first_seen": 119,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 16,
+   "LATER_NARROW_READ_LINK": 100,
+   "CHANGED_STATE_REVISIT": 1,
+   "DIRECT_WRITE_LINK": 2
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 236.4,
+   "LATER_NARROW_READ_LINK": 1477.3,
+   "CHANGED_STATE_REVISIT": 14.8,
+   "DIRECT_WRITE_LINK": 29.5
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1669.4,
+   "LATER_NARROW_READ_LINK": 88.6
+  }
+ },
+ {
+  "task_id": "Debugging:01_01",
+  "family": "Debugging",
+  "obs_index": 3,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 17195,
+  "bytes": 33085,
+  "n_first_seen": 1588,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 1099,
+   "NO_OBSERVED_MECHANICAL_LINK": 489
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 11855.3,
+   "NO_OBSERVED_MECHANICAL_LINK": 5275.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 8867.2,
+   "LATER_NARROW_READ_LINK": 8263.1
+  }
+ },
+ {
+  "task_id": "Debugging:01_01",
+  "family": "Debugging",
+  "obs_index": 4,
+  "tool": "python",
+  "shape": "LARGE_RANGE_SCAN",
+  "tokens_est": 9200,
+  "bytes": 18347,
+  "n_first_seen": 893,
+  "link_counts": {
+   "STRUCTURAL_NAVIGATION_LINK": 433,
+   "LATER_NARROW_READ_LINK": 448,
+   "DIRECT_WRITE_LINK": 2,
+   "MODEL_CODE_REFERENCE_LINK": 10
+  },
+  "link_tokens_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 4460.9,
+   "LATER_NARROW_READ_LINK": 4615.5,
+   "DIRECT_WRITE_LINK": 20.6,
+   "MODEL_CODE_REFERENCE_LINK": 103.0
+  },
+  "link_tokens_strict_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 5460.2,
+   "LATER_NARROW_READ_LINK": 3739.8
+  }
+ },
+ {
+  "task_id": "Debugging:01_06",
+  "family": "Debugging",
+  "obs_index": 1,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 1848,
+  "bytes": 3301,
+  "n_first_seen": 97,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 96,
+   "DIRECT_WRITE_LINK": 1
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 1828.0,
+   "DIRECT_WRITE_LINK": 19.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1828.0,
+   "LATER_NARROW_READ_LINK": 19.0
+  }
+ },
+ {
+  "task_id": "Debugging:01_06",
+  "family": "Debugging",
+  "obs_index": 2,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 10,
+  "bytes": 19,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:01_06",
+  "family": "Debugging",
+  "obs_index": 4,
+  "tool": "shell",
+  "shape": "OTHER_BROAD_PROJECTION",
+  "tokens_est": 4999,
+  "bytes": 10031,
+  "n_first_seen": 499,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 233,
+   "NO_OBSERVED_MECHANICAL_LINK": 257,
+   "REGION_LEVEL_LINK": 9
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 2329.5,
+   "NO_OBSERVED_MECHANICAL_LINK": 2569.5,
+   "REGION_LEVEL_LINK": 90.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 3659.3,
+   "LATER_NARROW_READ_LINK": 1329.7
+  }
+ },
+ {
+  "task_id": "Debugging:01_06",
+  "family": "Debugging",
+  "obs_index": 7,
+  "tool": "shell",
+  "shape": "OTHER_BROAD_PROJECTION",
+  "tokens_est": 5087,
+  "bytes": 10889,
+  "n_first_seen": 591,
+  "link_counts": {
+   "REGION_LEVEL_LINK": 129,
+   "LATER_NARROW_READ_LINK": 442,
+   "DIRECT_WRITE_LINK": 2,
+   "NO_OBSERVED_MECHANICAL_LINK": 18
+  },
+  "link_tokens_est": {
+   "REGION_LEVEL_LINK": 1108.5,
+   "LATER_NARROW_READ_LINK": 3798.1,
+   "DIRECT_WRITE_LINK": 17.2,
+   "NO_OBSERVED_MECHANICAL_LINK": 154.7
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 5078.4
+  }
+ },
+ {
+  "task_id": "Debugging:02_01",
+  "family": "Debugging",
+  "obs_index": 1,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 235,
+  "bytes": 505,
+  "n_first_seen": 16,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 14,
+   "STRUCTURAL_NAVIGATION_LINK": 2
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 204.8,
+   "STRUCTURAL_NAVIGATION_LINK": 29.2
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 73.1,
+   "STRUCTURAL_NAVIGATION_LINK": 160.9
+  }
+ },
+ {
+  "task_id": "Debugging:02_01",
+  "family": "Debugging",
+  "obs_index": 2,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 2337,
+  "bytes": 4028,
+  "n_first_seen": 199,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 75,
+   "LATER_NARROW_READ_LINK": 113,
+   "MODEL_CODE_REFERENCE_LINK": 4,
+   "CHANGED_STATE_REVISIT": 4,
+   "DIRECT_FORMULA_LINK": 2,
+   "DIRECT_WRITE_LINK": 1
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 880.8,
+   "LATER_NARROW_READ_LINK": 1327.0,
+   "MODEL_CODE_REFERENCE_LINK": 47.0,
+   "CHANGED_STATE_REVISIT": 47.0,
+   "DIRECT_FORMULA_LINK": 23.5,
+   "DIRECT_WRITE_LINK": 11.7
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 2278.3,
+   "MODEL_CODE_REFERENCE_LINK": 23.5,
+   "LATER_NARROW_READ_LINK": 35.2
+  }
+ },
+ {
+  "task_id": "Debugging:02_01",
+  "family": "Debugging",
+  "obs_index": 6,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 3969,
+  "bytes": 8471,
+  "n_first_seen": 342,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 189,
+   "DIRECT_FORMULA_LINK": 10,
+   "DIRECT_WRITE_LINK": 1,
+   "NO_OBSERVED_MECHANICAL_LINK": 141,
+   "MODEL_CODE_REFERENCE_LINK": 1
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 2193.4,
+   "DIRECT_FORMULA_LINK": 116.1,
+   "DIRECT_WRITE_LINK": 11.6,
+   "NO_OBSERVED_MECHANICAL_LINK": 1636.3,
+   "MODEL_CODE_REFERENCE_LINK": 11.6
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 3887.8,
+   "LATER_NARROW_READ_LINK": 81.2
+  }
+ },
+ {
+  "task_id": "Debugging:02_01",
+  "family": "Debugging",
+  "obs_index": 12,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 178,
+  "bytes": 313,
+  "n_first_seen": 6,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 6
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 177.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 177.0
+  }
+ },
+ {
+  "task_id": "Debugging:02_01",
+  "family": "Debugging",
+  "obs_index": 18,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 33,
+  "bytes": 52,
+  "n_first_seen": 1,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 32.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 32.0
+  }
+ },
+ {
+  "task_id": "Debugging:02_06",
+  "family": "Debugging",
+  "obs_index": 1,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 1175,
+  "bytes": 1976,
+  "n_first_seen": 77,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 77
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 1174.0
+  },
+  "link_tokens_strict_est": {
+   "LATER_NARROW_READ_LINK": 1174.0
+  }
+ },
+ {
+  "task_id": "Debugging:02_06",
+  "family": "Debugging",
+  "obs_index": 2,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 8289,
+  "bytes": 13071,
+  "n_first_seen": 643,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 591,
+   "NO_OBSERVED_MECHANICAL_LINK": 43,
+   "DIRECT_FORMULA_LINK": 2,
+   "DIRECT_WRITE_LINK": 7
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 6803.9,
+   "NO_OBSERVED_MECHANICAL_LINK": 495.0,
+   "DIRECT_FORMULA_LINK": 23.0,
+   "DIRECT_WRITE_LINK": 80.6
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 7402.5
+  }
+ },
+ {
+  "task_id": "Debugging:02_06",
+  "family": "Debugging",
+  "obs_index": 3,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 2544,
+  "bytes": 5475,
+  "n_first_seen": 185,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 176,
+   "NO_OBSERVED_MECHANICAL_LINK": 8,
+   "DIRECT_WRITE_LINK": 1
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 2420.2,
+   "NO_OBSERVED_MECHANICAL_LINK": 110.0,
+   "DIRECT_WRITE_LINK": 13.8
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1856.4,
+   "LATER_NARROW_READ_LINK": 687.6
+  }
+ },
+ {
+  "task_id": "Debugging:02_06",
+  "family": "Debugging",
+  "obs_index": 5,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 4216,
+  "bytes": 8917,
+  "n_first_seen": 372,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 314,
+   "DIRECT_WRITE_LINK": 1,
+   "NO_OBSERVED_MECHANICAL_LINK": 55,
+   "MODEL_CODE_REFERENCE_LINK": 2
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 3539.6,
+   "DIRECT_WRITE_LINK": 11.3,
+   "NO_OBSERVED_MECHANICAL_LINK": 620.0,
+   "MODEL_CODE_REFERENCE_LINK": 22.5
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 4193.5
+  }
+ },
+ {
+  "task_id": "Debugging:02_06",
+  "family": "Debugging",
+  "obs_index": 6,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 5994,
+  "bytes": 13043,
+  "n_first_seen": 475,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 48,
+   "LATER_NARROW_READ_LINK": 423,
+   "DIRECT_WRITE_LINK": 4
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 605.7,
+   "LATER_NARROW_READ_LINK": 5337.8,
+   "DIRECT_WRITE_LINK": 50.5
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 4063.3,
+   "LATER_NARROW_READ_LINK": 1930.7
+  }
+ },
+ {
+  "task_id": "Debugging:02_06",
+  "family": "Debugging",
+  "obs_index": 8,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 7335,
+  "bytes": 15947,
+  "n_first_seen": 583,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 235,
+   "LATER_NARROW_READ_LINK": 340,
+   "DIRECT_WRITE_LINK": 3,
+   "DIRECT_FORMULA_LINK": 2,
+   "MODEL_CODE_REFERENCE_LINK": 3
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 2956.6,
+   "LATER_NARROW_READ_LINK": 4277.7,
+   "DIRECT_WRITE_LINK": 37.7,
+   "DIRECT_FORMULA_LINK": 25.2,
+   "MODEL_CODE_REFERENCE_LINK": 37.7
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 4567.1,
+   "MODEL_CODE_REFERENCE_LINK": 25.2,
+   "LATER_NARROW_READ_LINK": 2742.8
+  }
+ },
+ {
+  "task_id": "Debugging:02_06",
+  "family": "Debugging",
+  "obs_index": 13,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 8,
+  "bytes": 14,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:03_01",
+  "family": "Debugging",
+  "obs_index": 1,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 139,
+  "bytes": 346,
+  "n_first_seen": 13,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 9,
+   "STRUCTURAL_NAVIGATION_LINK": 4
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 95.5,
+   "STRUCTURAL_NAVIGATION_LINK": 42.5
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 21.2,
+   "STRUCTURAL_NAVIGATION_LINK": 116.8
+  }
+ },
+ {
+  "task_id": "Debugging:03_01",
+  "family": "Debugging",
+  "obs_index": 6,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 4,
+  "bytes": 5,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:03_01",
+  "family": "Debugging",
+  "obs_index": 8,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 7,
+  "bytes": 7,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:03_06",
+  "family": "Debugging",
+  "obs_index": 1,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 27341,
+  "bytes": 77184,
+  "n_first_seen": 1602,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 1540,
+   "NO_OBSERVED_MECHANICAL_LINK": 25,
+   "STRUCTURAL_NAVIGATION_LINK": 3,
+   "DIRECT_WRITE_LINK": 11,
+   "REGION_LEVEL_LINK": 23
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 26281.9,
+   "NO_OBSERVED_MECHANICAL_LINK": 426.7,
+   "STRUCTURAL_NAVIGATION_LINK": 51.2,
+   "DIRECT_WRITE_LINK": 187.7,
+   "REGION_LEVEL_LINK": 392.5
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 27015.7,
+   "STRUCTURAL_NAVIGATION_LINK": 153.6,
+   "LATER_NARROW_READ_LINK": 170.7
+  }
+ },
+ {
+  "task_id": "Debugging:03_06",
+  "family": "Debugging",
+  "obs_index": 4,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 2141,
+  "bytes": 5568,
+  "n_first_seen": 141,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 141
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 2141.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 2065.1,
+   "LATER_NARROW_READ_LINK": 75.9
+  }
+ },
+ {
+  "task_id": "Debugging:03_06",
+  "family": "Debugging",
+  "obs_index": 13,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 1683,
+  "bytes": 5100,
+  "n_first_seen": 64,
+  "link_counts": {
+   "STRUCTURAL_NAVIGATION_LINK": 2,
+   "MODEL_CODE_REFERENCE_LINK": 2,
+   "NO_OBSERVED_MECHANICAL_LINK": 59,
+   "DIRECT_WRITE_LINK": 1
+  },
+  "link_tokens_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 52.6,
+   "MODEL_CODE_REFERENCE_LINK": 52.6,
+   "NO_OBSERVED_MECHANICAL_LINK": 1550.6,
+   "DIRECT_WRITE_LINK": 26.3
+  },
+  "link_tokens_strict_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 52.6,
+   "NO_OBSERVED_MECHANICAL_LINK": 1629.4
+  }
+ },
+ {
+  "task_id": "Debugging:03_06",
+  "family": "Debugging",
+  "obs_index": 14,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 323,
+  "bytes": 857,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:04_01",
+  "family": "Debugging",
+  "obs_index": 1,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 124,
+  "bytes": 272,
+  "n_first_seen": 13,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 1,
+   "NO_OBSERVED_MECHANICAL_LINK": 9,
+   "STRUCTURAL_NAVIGATION_LINK": 3
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 9.5,
+   "NO_OBSERVED_MECHANICAL_LINK": 85.2,
+   "STRUCTURAL_NAVIGATION_LINK": 28.4
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 94.6,
+   "STRUCTURAL_NAVIGATION_LINK": 28.4
+  }
+ },
+ {
+  "task_id": "Debugging:04_01",
+  "family": "Debugging",
+  "obs_index": 2,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 6,
+  "bytes": 5,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:04_07",
+  "family": "Debugging",
+  "obs_index": 1,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 33345,
+  "bytes": 72281,
+  "n_first_seen": 3210,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 3110,
+   "NO_OBSERVED_MECHANICAL_LINK": 99,
+   "STRUCTURAL_NAVIGATION_LINK": 1
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 32306.2,
+   "NO_OBSERVED_MECHANICAL_LINK": 1028.4,
+   "STRUCTURAL_NAVIGATION_LINK": 10.4
+  },
+  "link_tokens_strict_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 20.8,
+   "NO_OBSERVED_MECHANICAL_LINK": 10294.4,
+   "MODEL_CODE_REFERENCE_LINK": 62.3,
+   "LATER_NARROW_READ_LINK": 22967.5
+  }
+ },
+ {
+  "task_id": "Debugging:04_07",
+  "family": "Debugging",
+  "obs_index": 2,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 11,
+  "bytes": 19,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:04_07",
+  "family": "Debugging",
+  "obs_index": 7,
+  "tool": "shell",
+  "shape": "LARGE_RANGE_SCAN",
+  "tokens_est": 6311,
+  "bytes": 13108,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:04_07",
+  "family": "Debugging",
+  "obs_index": 8,
+  "tool": "shell",
+  "shape": "MULTI_SHEET_ENUMERATION_WITH_VALUES",
+  "tokens_est": 7720,
+  "bytes": 18603,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:05_02",
+  "family": "Debugging",
+  "obs_index": 0,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 13337,
+  "bytes": 31242,
+  "n_first_seen": 997,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 217,
+   "NO_OBSERVED_MECHANICAL_LINK": 780
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 2686.3,
+   "NO_OBSERVED_MECHANICAL_LINK": 10591.7
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 13042.8,
+   "LATER_NARROW_READ_LINK": 235.2
+  }
+ },
+ {
+  "task_id": "Debugging:05_02",
+  "family": "Debugging",
+  "obs_index": 1,
+  "tool": "python",
+  "shape": "LARGE_RANGE_SCAN",
+  "tokens_est": 10684,
+  "bytes": 20519,
+  "n_first_seen": 1100,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 841,
+   "STRUCTURAL_NAVIGATION_LINK": 259
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 8168.4,
+   "STRUCTURAL_NAVIGATION_LINK": 2515.6
+  },
+  "link_tokens_strict_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 4079.3,
+   "LATER_NARROW_READ_LINK": 6604.7
+  }
+ },
+ {
+  "task_id": "Debugging:05_02",
+  "family": "Debugging",
+  "obs_index": 2,
+  "tool": "python",
+  "shape": "LARGE_RANGE_SCAN",
+  "tokens_est": 5609,
+  "bytes": 10285,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:05_02",
+  "family": "Debugging",
+  "obs_index": 3,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 4733,
+  "bytes": 10870,
+  "n_first_seen": 330,
+  "link_counts": {
+   "STRUCTURAL_NAVIGATION_LINK": 133,
+   "LATER_NARROW_READ_LINK": 192,
+   "NO_OBSERVED_MECHANICAL_LINK": 5
+  },
+  "link_tokens_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 1907.5,
+   "LATER_NARROW_READ_LINK": 2753.7,
+   "NO_OBSERVED_MECHANICAL_LINK": 71.7
+  },
+  "link_tokens_strict_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 4646.9,
+   "NO_OBSERVED_MECHANICAL_LINK": 86.1
+  }
+ },
+ {
+  "task_id": "Debugging:05_02",
+  "family": "Debugging",
+  "obs_index": 4,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 6898,
+  "bytes": 13576,
+  "n_first_seen": 619,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 77,
+   "REGION_LEVEL_LINK": 542
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 858.1,
+   "REGION_LEVEL_LINK": 6039.9
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 6898.0
+  }
+ },
+ {
+  "task_id": "Debugging:05_08",
+  "family": "Debugging",
+  "obs_index": 0,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 13357,
+  "bytes": 31332,
+  "n_first_seen": 997,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 703,
+   "NO_OBSERVED_MECHANICAL_LINK": 285,
+   "DIRECT_WRITE_LINK": 3,
+   "DIRECT_FORMULA_LINK": 6
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 8908.4,
+   "NO_OBSERVED_MECHANICAL_LINK": 4248.6,
+   "DIRECT_WRITE_LINK": 37.2,
+   "DIRECT_FORMULA_LINK": 105.8
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 13064.3,
+   "LATER_NARROW_READ_LINK": 235.7
+  }
+ },
+ {
+  "task_id": "Debugging:05_08",
+  "family": "Debugging",
+  "obs_index": 1,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 144,
+  "bytes": 432,
+  "n_first_seen": 8,
+  "link_counts": {
+   "STRUCTURAL_NAVIGATION_LINK": 4,
+   "LATER_NARROW_READ_LINK": 2,
+   "NO_OBSERVED_MECHANICAL_LINK": 2
+  },
+  "link_tokens_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 71.5,
+   "LATER_NARROW_READ_LINK": 35.8,
+   "NO_OBSERVED_MECHANICAL_LINK": 35.8
+  },
+  "link_tokens_strict_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 107.2,
+   "NO_OBSERVED_MECHANICAL_LINK": 35.8
+  }
+ },
+ {
+  "task_id": "Debugging:05_08",
+  "family": "Debugging",
+  "obs_index": 8,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 5757,
+  "bytes": 11055,
+  "n_first_seen": 522,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 238,
+   "LATER_NARROW_READ_LINK": 280,
+   "DIRECT_WRITE_LINK": 3,
+   "DIRECT_FORMULA_LINK": 1
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 2624.8,
+   "LATER_NARROW_READ_LINK": 3088.0,
+   "DIRECT_WRITE_LINK": 33.1,
+   "DIRECT_FORMULA_LINK": 11.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 4632.1,
+   "LATER_NARROW_READ_LINK": 1124.9
+  }
+ },
+ {
+  "task_id": "Debugging:06_02",
+  "family": "Debugging",
+  "obs_index": 1,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 163,
+  "bytes": 323,
+  "n_first_seen": 17,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 1,
+   "MODEL_CODE_REFERENCE_LINK": 15,
+   "STRUCTURAL_NAVIGATION_LINK": 1
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 9.5,
+   "MODEL_CODE_REFERENCE_LINK": 142.9,
+   "STRUCTURAL_NAVIGATION_LINK": 9.5
+  },
+  "link_tokens_strict_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 162.0
+  }
+ },
+ {
+  "task_id": "Debugging:06_02",
+  "family": "Debugging",
+  "obs_index": 2,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 8012,
+  "bytes": 17197,
+  "n_first_seen": 664,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 505,
+   "CHANGED_STATE_REVISIT": 40,
+   "MODEL_CODE_REFERENCE_LINK": 51,
+   "LATER_NARROW_READ_LINK": 62,
+   "DIRECT_FORMULA_LINK": 6
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 6093.5,
+   "CHANGED_STATE_REVISIT": 482.7,
+   "MODEL_CODE_REFERENCE_LINK": 615.4,
+   "LATER_NARROW_READ_LINK": 748.1,
+   "DIRECT_FORMULA_LINK": 72.4
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 7300.1,
+   "LATER_NARROW_READ_LINK": 711.9
+  }
+ },
+ {
+  "task_id": "Debugging:06_02",
+  "family": "Debugging",
+  "obs_index": 3,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 8,
+  "bytes": 14,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:06_02",
+  "family": "Debugging",
+  "obs_index": 25,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 2054,
+  "bytes": 3624,
+  "n_first_seen": 129,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 120,
+   "MODEL_CODE_REFERENCE_LINK": 7,
+   "LATER_NARROW_READ_LINK": 1,
+   "DIRECT_FORMULA_LINK": 1
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1311.1,
+   "MODEL_CODE_REFERENCE_LINK": 76.5,
+   "LATER_NARROW_READ_LINK": 10.9,
+   "DIRECT_FORMULA_LINK": 10.9
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1409.4
+  }
+ },
+ {
+  "task_id": "Debugging:06_07",
+  "family": "Debugging",
+  "obs_index": 1,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 181,
+  "bytes": 467,
+  "n_first_seen": 18,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 16,
+   "STRUCTURAL_NAVIGATION_LINK": 2
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 160.0,
+   "STRUCTURAL_NAVIGATION_LINK": 20.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 160.0,
+   "STRUCTURAL_NAVIGATION_LINK": 20.0
+  }
+ },
+ {
+  "task_id": "Debugging:06_07",
+  "family": "Debugging",
+  "obs_index": 2,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 0,
+  "bytes": 0,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:06_07",
+  "family": "Debugging",
+  "obs_index": 3,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 16,
+  "bytes": 52,
+  "n_first_seen": 2,
+  "link_counts": {
+   "DIRECT_WRITE_LINK": 2
+  },
+  "link_tokens_est": {
+   "DIRECT_WRITE_LINK": 16.0
+  },
+  "link_tokens_strict_est": {
+   "LATER_NARROW_READ_LINK": 16.0
+  }
+ },
+ {
+  "task_id": "Debugging:06_07",
+  "family": "Debugging",
+  "obs_index": 5,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 906,
+  "bytes": 2462,
+  "n_first_seen": 33,
+  "link_counts": {
+   "DIRECT_WRITE_LINK": 5,
+   "STRUCTURAL_NAVIGATION_LINK": 23,
+   "LATER_NARROW_READ_LINK": 5
+  },
+  "link_tokens_est": {
+   "DIRECT_WRITE_LINK": 137.3,
+   "STRUCTURAL_NAVIGATION_LINK": 631.5,
+   "LATER_NARROW_READ_LINK": 137.3
+  },
+  "link_tokens_strict_est": {
+   "MODEL_CODE_REFERENCE_LINK": 109.8,
+   "STRUCTURAL_NAVIGATION_LINK": 631.5,
+   "LATER_NARROW_READ_LINK": 164.7
+  }
+ },
+ {
+  "task_id": "Debugging:06_07",
+  "family": "Debugging",
+  "obs_index": 8,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 38,
+  "bytes": 93,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:06_07",
+  "family": "Debugging",
+  "obs_index": 9,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 42,
+  "bytes": 61,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:07_03",
+  "family": "Debugging",
+  "obs_index": 3,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 202,
+  "bytes": 416,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:07_03",
+  "family": "Debugging",
+  "obs_index": 5,
+  "tool": "shell",
+  "shape": "OTHER_BROAD_PROJECTION",
+  "tokens_est": 6823,
+  "bytes": 13099,
+  "n_first_seen": 780,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 343,
+   "NO_OBSERVED_MECHANICAL_LINK": 412,
+   "DIRECT_WRITE_LINK": 9,
+   "DIRECT_FORMULA_LINK": 16
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 2921.7,
+   "NO_OBSERVED_MECHANICAL_LINK": 3509.5,
+   "DIRECT_WRITE_LINK": 76.7,
+   "DIRECT_FORMULA_LINK": 136.3
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 5596.4,
+   "LATER_NARROW_READ_LINK": 1047.7
+  }
+ },
+ {
+  "task_id": "Debugging:07_03",
+  "family": "Debugging",
+  "obs_index": 6,
+  "tool": "shell",
+  "shape": "OTHER_BROAD_PROJECTION",
+  "tokens_est": 4723,
+  "bytes": 10375,
+  "n_first_seen": 543,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 368,
+   "LATER_NARROW_READ_LINK": 167,
+   "MODEL_CODE_REFERENCE_LINK": 5,
+   "DIRECT_WRITE_LINK": 1,
+   "DIRECT_FORMULA_LINK": 2
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 3183.3,
+   "LATER_NARROW_READ_LINK": 1444.6,
+   "MODEL_CODE_REFERENCE_LINK": 43.3,
+   "DIRECT_WRITE_LINK": 8.7,
+   "DIRECT_FORMULA_LINK": 17.3
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 4688.4,
+   "LATER_NARROW_READ_LINK": 8.7
+  }
+ },
+ {
+  "task_id": "Debugging:08_04",
+  "family": "Debugging",
+  "obs_index": 1,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 108,
+  "bytes": 230,
+  "n_first_seen": 13,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 9,
+   "LATER_NARROW_READ_LINK": 1,
+   "REGION_LEVEL_LINK": 3
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 74.1,
+   "LATER_NARROW_READ_LINK": 8.2,
+   "REGION_LEVEL_LINK": 24.7
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 74.1,
+   "LATER_NARROW_READ_LINK": 8.2,
+   "REGION_LEVEL_LINK": 24.7
+  }
+ },
+ {
+  "task_id": "Debugging:08_04",
+  "family": "Debugging",
+  "obs_index": 3,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 22773,
+  "bytes": 71473,
+  "n_first_seen": 1002,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 400,
+   "STRUCTURAL_NAVIGATION_LINK": 301,
+   "NO_OBSERVED_MECHANICAL_LINK": 301
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 9091.0,
+   "STRUCTURAL_NAVIGATION_LINK": 6841.0,
+   "NO_OBSERVED_MECHANICAL_LINK": 6841.0
+  },
+  "link_tokens_strict_est": {
+   "LATER_NARROW_READ_LINK": 8772.8,
+   "STRUCTURAL_NAVIGATION_LINK": 7068.3,
+   "NO_OBSERVED_MECHANICAL_LINK": 6931.9
+  }
+ },
+ {
+  "task_id": "Debugging:08_04",
+  "family": "Debugging",
+  "obs_index": 4,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 6295,
+  "bytes": 17405,
+  "n_first_seen": 20,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 20
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 6295.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 6295.0
+  }
+ },
+ {
+  "task_id": "Debugging:08_04",
+  "family": "Debugging",
+  "obs_index": 5,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 720,
+  "bytes": 1612,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:08_04",
+  "family": "Debugging",
+  "obs_index": 6,
+  "tool": "python",
+  "shape": "LARGE_RANGE_SCAN",
+  "tokens_est": 5554,
+  "bytes": 11802,
+  "n_first_seen": 519,
+  "link_counts": {
+   "REGION_LEVEL_LINK": 511,
+   "CHANGED_STATE_REVISIT": 8
+  },
+  "link_tokens_est": {
+   "REGION_LEVEL_LINK": 5468.4,
+   "CHANGED_STATE_REVISIT": 85.6
+  },
+  "link_tokens_strict_est": {
+   "REGION_LEVEL_LINK": 5468.4,
+   "CHANGED_STATE_REVISIT": 85.6
+  }
+ },
+ {
+  "task_id": "Debugging:08_04",
+  "family": "Debugging",
+  "obs_index": 7,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 8,
+  "bytes": 10,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:08_04",
+  "family": "Debugging",
+  "obs_index": 8,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 49,
+  "bytes": 106,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:08_04",
+  "family": "Debugging",
+  "obs_index": 9,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 687,
+  "bytes": 1955,
+  "n_first_seen": 12,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 12
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 687.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 687.0
+  }
+ },
+ {
+  "task_id": "Debugging:08_09",
+  "family": "Debugging",
+  "obs_index": 1,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 169,
+  "bytes": 403,
+  "n_first_seen": 13,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 13
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 168.0
+  },
+  "link_tokens_strict_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 168.0
+  }
+ },
+ {
+  "task_id": "Debugging:08_09",
+  "family": "Debugging",
+  "obs_index": 2,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 11,
+  "bytes": 20,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:08_09",
+  "family": "Debugging",
+  "obs_index": 7,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 3151,
+  "bytes": 5300,
+  "n_first_seen": 199,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 99,
+   "NO_OBSERVED_MECHANICAL_LINK": 100
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 1567.1,
+   "NO_OBSERVED_MECHANICAL_LINK": 1582.9
+  },
+  "link_tokens_strict_est": {
+   "LATER_NARROW_READ_LINK": 221.6,
+   "NO_OBSERVED_MECHANICAL_LINK": 2928.4
+  }
+ },
+ {
+  "task_id": "Debugging:08_09",
+  "family": "Debugging",
+  "obs_index": 11,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 4,
+  "bytes": 5,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:08_09",
+  "family": "Debugging",
+  "obs_index": 12,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 496,
+  "bytes": 1503,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:08_09",
+  "family": "Debugging",
+  "obs_index": 22,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 290,
+  "bytes": 665,
+  "n_first_seen": 12,
+  "link_counts": {
+   "STRUCTURAL_NAVIGATION_LINK": 12
+  },
+  "link_tokens_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 289.0
+  },
+  "link_tokens_strict_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 289.0
+  }
+ },
+ {
+  "task_id": "Debugging:09_04",
+  "family": "Debugging",
+  "obs_index": 0,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 20492,
+  "bytes": 50397,
+  "n_first_seen": 1323,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1323
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 20394.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 20394.0
+  }
+ },
+ {
+  "task_id": "Debugging:09_04",
+  "family": "Debugging",
+  "obs_index": 2,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 4145,
+  "bytes": 9857,
+  "n_first_seen": 268,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 268
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 4145.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 4145.0
+  }
+ },
+ {
+  "task_id": "Debugging:09_04",
+  "family": "Debugging",
+  "obs_index": 3,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 87,
+  "bytes": 172,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:09_04",
+  "family": "Debugging",
+  "obs_index": 4,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 75,
+  "bytes": 136,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:09_04",
+  "family": "Debugging",
+  "obs_index": 5,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 215,
+  "bytes": 403,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:09_09",
+  "family": "Debugging",
+  "obs_index": 0,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 20460,
+  "bytes": 50363,
+  "n_first_seen": 1323,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 225,
+   "DIRECT_FORMULA_LINK": 4,
+   "NO_OBSERVED_MECHANICAL_LINK": 1070,
+   "MODEL_CODE_REFERENCE_LINK": 23,
+   "DIRECT_WRITE_LINK": 1
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 3507.2,
+   "DIRECT_FORMULA_LINK": 62.3,
+   "NO_OBSERVED_MECHANICAL_LINK": 16424.7,
+   "MODEL_CODE_REFERENCE_LINK": 352.0,
+   "DIRECT_WRITE_LINK": 15.8
+  },
+  "link_tokens_strict_est": {
+   "LATER_NARROW_READ_LINK": 2662.7,
+   "NO_OBSERVED_MECHANICAL_LINK": 17699.3
+  }
+ },
+ {
+  "task_id": "Debugging:09_09",
+  "family": "Debugging",
+  "obs_index": 2,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 10,
+  "bytes": 23,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:09_09",
+  "family": "Debugging",
+  "obs_index": 15,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 3850,
+  "bytes": 9933,
+  "n_first_seen": 479,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 454,
+   "MODEL_CODE_REFERENCE_LINK": 24,
+   "DIRECT_WRITE_LINK": 1
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 3649.1,
+   "MODEL_CODE_REFERENCE_LINK": 192.9,
+   "DIRECT_WRITE_LINK": 8.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 3850.0
+  }
+ },
+ {
+  "task_id": "Debugging:09_09",
+  "family": "Debugging",
+  "obs_index": 16,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 342,
+  "bytes": 721,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:09_09",
+  "family": "Debugging",
+  "obs_index": 19,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 550,
+  "bytes": 1167,
+  "n_first_seen": 2,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 2
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 549.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 549.0
+  }
+ },
+ {
+  "task_id": "Debugging:10_05",
+  "family": "Debugging",
+  "obs_index": 1,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 1820697,
+  "bytes": 3684817,
+  "n_first_seen": 122177,
+  "link_counts": {
+   "CHANGED_STATE_REVISIT": 4290,
+   "NO_OBSERVED_MECHANICAL_LINK": 110545,
+   "DIRECT_FORMULA_LINK": 169,
+   "DIRECT_WRITE_LINK": 67,
+   "MODEL_CODE_REFERENCE_LINK": 1153,
+   "LATER_NARROW_READ_LINK": 3149,
+   "REGION_LEVEL_LINK": 2804
+  },
+  "link_tokens_est": {
+   "CHANGED_STATE_REVISIT": 63930.1,
+   "NO_OBSERVED_MECHANICAL_LINK": 1647355.5,
+   "DIRECT_FORMULA_LINK": 2518.5,
+   "DIRECT_WRITE_LINK": 998.4,
+   "MODEL_CODE_REFERENCE_LINK": 17182.2,
+   "LATER_NARROW_READ_LINK": 46926.8,
+   "REGION_LEVEL_LINK": 41785.6
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1815391.8,
+   "LATER_NARROW_READ_LINK": 5245.5,
+   "MODEL_CODE_REFERENCE_LINK": 59.6
+  }
+ },
+ {
+  "task_id": "Debugging:10_05",
+  "family": "Debugging",
+  "obs_index": 2,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 1488,
+  "bytes": 3447,
+  "n_first_seen": 53,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 14,
+   "MODEL_CODE_REFERENCE_LINK": 3,
+   "STRUCTURAL_NAVIGATION_LINK": 12,
+   "NO_OBSERVED_MECHANICAL_LINK": 24
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 392.8,
+   "MODEL_CODE_REFERENCE_LINK": 84.2,
+   "STRUCTURAL_NAVIGATION_LINK": 336.7,
+   "NO_OBSERVED_MECHANICAL_LINK": 673.4
+  },
+  "link_tokens_strict_est": {
+   "LATER_NARROW_READ_LINK": 392.8,
+   "STRUCTURAL_NAVIGATION_LINK": 420.8,
+   "NO_OBSERVED_MECHANICAL_LINK": 673.4
+  }
+ },
+ {
+  "task_id": "Debugging:10_05",
+  "family": "Debugging",
+  "obs_index": 6,
+  "tool": "python",
+  "shape": "FORMULA_DUMP",
+  "tokens_est": 6404,
+  "bytes": 12258,
+  "n_first_seen": 512,
+  "link_counts": {
+   "STRUCTURAL_NAVIGATION_LINK": 512
+  },
+  "link_tokens_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 6404.0
+  },
+  "link_tokens_strict_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 6404.0
+  }
+ },
+ {
+  "task_id": "Debugging:10_05",
+  "family": "Debugging",
+  "obs_index": 8,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 482,
+  "bytes": 1495,
+  "n_first_seen": 79,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 21,
+   "STRUCTURAL_NAVIGATION_LINK": 58
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 127.9,
+   "STRUCTURAL_NAVIGATION_LINK": 353.1
+  },
+  "link_tokens_strict_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 426.2,
+   "LATER_NARROW_READ_LINK": 54.8
+  }
+ },
+ {
+  "task_id": "Debugging:10_05",
+  "family": "Debugging",
+  "obs_index": 17,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 10222,
+  "bytes": 18792,
+  "n_first_seen": 120,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 65,
+   "LATER_NARROW_READ_LINK": 55
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 5150.6,
+   "LATER_NARROW_READ_LINK": 4358.2
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 6735.4,
+   "LATER_NARROW_READ_LINK": 2773.4
+  }
+ },
+ {
+  "task_id": "Debugging:10_05",
+  "family": "Debugging",
+  "obs_index": 19,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 1049,
+  "bytes": 1959,
+  "n_first_seen": 10,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 10
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1048.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1048.0
+  }
+ },
+ {
+  "task_id": "Debugging:10_05",
+  "family": "Debugging",
+  "obs_index": 21,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 917,
+  "bytes": 1870,
+  "n_first_seen": 60,
+  "link_counts": {
+   "STRUCTURAL_NAVIGATION_LINK": 60
+  },
+  "link_tokens_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 916.0
+  },
+  "link_tokens_strict_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 916.0
+  }
+ },
+ {
+  "task_id": "Debugging:10_05",
+  "family": "Debugging",
+  "obs_index": 22,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 5503,
+  "bytes": 22122,
+  "n_first_seen": 3,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 3
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 5503.0
+  },
+  "link_tokens_strict_est": {
+   "LATER_NARROW_READ_LINK": 5503.0
+  }
+ },
+ {
+  "task_id": "Debugging:10_10",
+  "family": "Debugging",
+  "obs_index": 1,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 1788851,
+  "bytes": 3684557,
+  "n_first_seen": 122178,
+  "link_counts": {
+   "REGION_LEVEL_LINK": 41701,
+   "LATER_NARROW_READ_LINK": 6174,
+   "MODEL_CODE_REFERENCE_LINK": 422,
+   "DIRECT_WRITE_LINK": 54,
+   "NO_OBSERVED_MECHANICAL_LINK": 73827
+  },
+  "link_tokens_est": {
+   "REGION_LEVEL_LINK": 610559.0,
+   "LATER_NARROW_READ_LINK": 90395.7,
+   "MODEL_CODE_REFERENCE_LINK": 6178.7,
+   "DIRECT_WRITE_LINK": 790.6,
+   "NO_OBSERVED_MECHANICAL_LINK": 1080927.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1788660.7,
+   "LATER_NARROW_READ_LINK": 190.3
+  }
+ },
+ {
+  "task_id": "Debugging:10_10",
+  "family": "Debugging",
+  "obs_index": 2,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 40,
+  "bytes": 139,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Debugging:10_10",
+  "family": "Debugging",
+  "obs_index": 3,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 3436,
+  "bytes": 6905,
+  "n_first_seen": 182,
+  "link_counts": {
+   "MODEL_CODE_REFERENCE_LINK": 1,
+   "STRUCTURAL_NAVIGATION_LINK": 177,
+   "LATER_NARROW_READ_LINK": 4
+  },
+  "link_tokens_est": {
+   "MODEL_CODE_REFERENCE_LINK": 18.9,
+   "STRUCTURAL_NAVIGATION_LINK": 3340.6,
+   "LATER_NARROW_READ_LINK": 75.5
+  },
+  "link_tokens_strict_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 3435.0
+  }
+ },
+ {
+  "task_id": "Debugging:10_10",
+  "family": "Debugging",
+  "obs_index": 4,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 6072,
+  "bytes": 23258,
+  "n_first_seen": 6,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 6
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 6072.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 6072.0
+  }
+ },
+ {
+  "task_id": "Debugging:10_10",
+  "family": "Debugging",
+  "obs_index": 7,
+  "tool": "python",
+  "shape": "LARGE_RANGE_SCAN",
+  "tokens_est": 16576,
+  "bytes": 29217,
+  "n_first_seen": 860,
+  "link_counts": {
+   "MODEL_CODE_REFERENCE_LINK": 1,
+   "DIRECT_WRITE_LINK": 1,
+   "STRUCTURAL_NAVIGATION_LINK": 858
+  },
+  "link_tokens_est": {
+   "MODEL_CODE_REFERENCE_LINK": 19.3,
+   "DIRECT_WRITE_LINK": 19.3,
+   "STRUCTURAL_NAVIGATION_LINK": 16537.5
+  },
+  "link_tokens_strict_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 16556.7,
+   "MODEL_CODE_REFERENCE_LINK": 19.3
+  }
+ },
+ {
+  "task_id": "Debugging:10_10",
+  "family": "Debugging",
+  "obs_index": 8,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 561,
+  "bytes": 1186,
+  "n_first_seen": 13,
+  "link_counts": {
+   "REGION_LEVEL_LINK": 3,
+   "NO_OBSERVED_MECHANICAL_LINK": 10
+  },
+  "link_tokens_est": {
+   "REGION_LEVEL_LINK": 129.5,
+   "NO_OBSERVED_MECHANICAL_LINK": 431.5
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 561.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:02_01",
+  "family": "Financial_Model",
+  "obs_index": 1,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 6579,
+  "bytes": 16352,
+  "n_first_seen": 623,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 598,
+   "CHANGED_STATE_REVISIT": 25
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 6265.0,
+   "CHANGED_STATE_REVISIT": 248.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 6513.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:02_01",
+  "family": "Financial_Model",
+  "obs_index": 4,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 7963,
+  "bytes": 18542,
+  "n_first_seen": 579,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 542,
+   "CHANGED_STATE_REVISIT": 35,
+   "MODEL_CODE_REFERENCE_LINK": 2
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 7392.8,
+   "CHANGED_STATE_REVISIT": 482.7,
+   "MODEL_CODE_REFERENCE_LINK": 27.6
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 7903.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:02_01",
+  "family": "Financial_Model",
+  "obs_index": 14,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 502,
+  "bytes": 766,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Financial_Model:02_01",
+  "family": "Financial_Model",
+  "obs_index": 16,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 505,
+  "bytes": 766,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Financial_Model:03_01",
+  "family": "Financial_Model",
+  "obs_index": 1,
+  "tool": "view_xlsx",
+  "shape": "FORMULA_DUMP",
+  "tokens_est": 10598,
+  "bytes": 23213,
+  "n_first_seen": 972,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 536,
+   "LATER_NARROW_READ_LINK": 434,
+   "MODEL_CODE_REFERENCE_LINK": 2
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 5809.4,
+   "LATER_NARROW_READ_LINK": 4703.9,
+   "MODEL_CODE_REFERENCE_LINK": 21.7
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 10426.6,
+   "LATER_NARROW_READ_LINK": 108.4
+  }
+ },
+ {
+  "task_id": "Financial_Model:03_01",
+  "family": "Financial_Model",
+  "obs_index": 3,
+  "tool": "python",
+  "shape": "LARGE_RANGE_SCAN",
+  "tokens_est": 12108,
+  "bytes": 28170,
+  "n_first_seen": 870,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 346,
+   "NO_OBSERVED_MECHANICAL_LINK": 167,
+   "REGION_LEVEL_LINK": 353,
+   "MODEL_CODE_REFERENCE_LINK": 4
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 4815.4,
+   "NO_OBSERVED_MECHANICAL_LINK": 2324.2,
+   "REGION_LEVEL_LINK": 4912.8,
+   "MODEL_CODE_REFERENCE_LINK": 55.7
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 11676.6,
+   "LATER_NARROW_READ_LINK": 431.4
+  }
+ },
+ {
+  "task_id": "Financial_Model:04_01",
+  "family": "Financial_Model",
+  "obs_index": 1,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 24225,
+  "bytes": 52122,
+  "n_first_seen": 1648,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1622,
+   "LATER_NARROW_READ_LINK": 9,
+   "MODEL_CODE_REFERENCE_LINK": 11,
+   "DIRECT_FORMULA_LINK": 6
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 23777.7,
+   "LATER_NARROW_READ_LINK": 133.7,
+   "MODEL_CODE_REFERENCE_LINK": 163.4,
+   "DIRECT_FORMULA_LINK": 89.1
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 24119.4,
+   "LATER_NARROW_READ_LINK": 44.6
+  }
+ },
+ {
+  "task_id": "Financial_Model:04_01",
+  "family": "Financial_Model",
+  "obs_index": 6,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 11914,
+  "bytes": 27820,
+  "n_first_seen": 939,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 929,
+   "MODEL_CODE_REFERENCE_LINK": 5,
+   "DIRECT_FORMULA_LINK": 5
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 11733.9,
+   "MODEL_CODE_REFERENCE_LINK": 58.5,
+   "DIRECT_FORMULA_LINK": 58.5
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 11839.3,
+   "MODEL_CODE_REFERENCE_LINK": 11.7
+  }
+ },
+ {
+  "task_id": "Financial_Model:05_01",
+  "family": "Financial_Model",
+  "obs_index": 1,
+  "tool": "view_xlsx",
+  "shape": "FORMULA_DUMP",
+  "tokens_est": 43336,
+  "bytes": 92359,
+  "n_first_seen": 2047,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 2030,
+   "DIRECT_WRITE_LINK": 3,
+   "DIRECT_FORMULA_LINK": 7,
+   "MODEL_CODE_REFERENCE_LINK": 7
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 42910.6,
+   "DIRECT_WRITE_LINK": 63.4,
+   "DIRECT_FORMULA_LINK": 148.0,
+   "MODEL_CODE_REFERENCE_LINK": 148.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 43270.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:07_01",
+  "family": "Financial_Model",
+  "obs_index": 2,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 34265,
+  "bytes": 65327,
+  "n_first_seen": 2735,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 543,
+   "REGION_LEVEL_LINK": 2117,
+   "LATER_NARROW_READ_LINK": 46,
+   "MODEL_CODE_REFERENCE_LINK": 22,
+   "DIRECT_WRITE_LINK": 2,
+   "CHANGED_STATE_REVISIT": 1,
+   "DIRECT_FORMULA_LINK": 4
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 6722.6,
+   "REGION_LEVEL_LINK": 26528.4,
+   "LATER_NARROW_READ_LINK": 582.1,
+   "MODEL_CODE_REFERENCE_LINK": 278.4,
+   "DIRECT_WRITE_LINK": 25.3,
+   "CHANGED_STATE_REVISIT": 12.7,
+   "DIRECT_FORMULA_LINK": 50.6
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 34060.8,
+   "MODEL_CODE_REFERENCE_LINK": 50.6,
+   "LATER_NARROW_READ_LINK": 88.6
+  }
+ },
+ {
+  "task_id": "Financial_Model:07_01",
+  "family": "Financial_Model",
+  "obs_index": 4,
+  "tool": "python",
+  "shape": "LARGE_RANGE_SCAN",
+  "tokens_est": 22402,
+  "bytes": 48403,
+  "n_first_seen": 1061,
+  "link_counts": {
+   "REGION_LEVEL_LINK": 900,
+   "MODEL_CODE_REFERENCE_LINK": 9,
+   "LATER_NARROW_READ_LINK": 23,
+   "NO_OBSERVED_MECHANICAL_LINK": 123,
+   "DIRECT_WRITE_LINK": 3,
+   "CHANGED_STATE_REVISIT": 1,
+   "DIRECT_FORMULA_LINK": 2
+  },
+  "link_tokens_est": {
+   "REGION_LEVEL_LINK": 19002.6,
+   "MODEL_CODE_REFERENCE_LINK": 190.0,
+   "LATER_NARROW_READ_LINK": 485.6,
+   "NO_OBSERVED_MECHANICAL_LINK": 2597.0,
+   "DIRECT_WRITE_LINK": 63.3,
+   "CHANGED_STATE_REVISIT": 21.1,
+   "DIRECT_FORMULA_LINK": 42.2
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 6292.0,
+   "MODEL_CODE_REFERENCE_LINK": 84.5,
+   "REGION_LEVEL_LINK": 16025.6
+  }
+ },
+ {
+  "task_id": "Financial_Model:07_01",
+  "family": "Financial_Model",
+  "obs_index": 6,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 12,
+  "bytes": 21,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Financial_Model:07_01",
+  "family": "Financial_Model",
+  "obs_index": 17,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 3257,
+  "bytes": 11100,
+  "n_first_seen": 220,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 210,
+   "CHANGED_STATE_REVISIT": 1,
+   "MODEL_CODE_REFERENCE_LINK": 7,
+   "REGION_LEVEL_LINK": 2
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 3108.0,
+   "CHANGED_STATE_REVISIT": 14.8,
+   "MODEL_CODE_REFERENCE_LINK": 103.6,
+   "REGION_LEVEL_LINK": 29.6
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 3256.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:07_01",
+  "family": "Financial_Model",
+  "obs_index": 18,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 85,
+  "bytes": 186,
+  "n_first_seen": 2,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 2
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 84.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 84.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:08_01",
+  "family": "Financial_Model",
+  "obs_index": 4,
+  "tool": "view_xlsx",
+  "shape": "FORMULA_DUMP",
+  "tokens_est": 58982,
+  "bytes": 132888,
+  "n_first_seen": 3958,
+  "link_counts": {
+   "MODEL_CODE_REFERENCE_LINK": 15,
+   "NO_OBSERVED_MECHANICAL_LINK": 408,
+   "REGION_LEVEL_LINK": 3529,
+   "DIRECT_FORMULA_LINK": 2,
+   "DIRECT_WRITE_LINK": 3,
+   "LATER_NARROW_READ_LINK": 1
+  },
+  "link_tokens_est": {
+   "MODEL_CODE_REFERENCE_LINK": 223.3,
+   "NO_OBSERVED_MECHANICAL_LINK": 6073.2,
+   "REGION_LEVEL_LINK": 52530.2,
+   "DIRECT_FORMULA_LINK": 29.8,
+   "DIRECT_WRITE_LINK": 44.7,
+   "LATER_NARROW_READ_LINK": 14.9
+  },
+  "link_tokens_strict_est": {
+   "MODEL_CODE_REFERENCE_LINK": 44.7,
+   "NO_OBSERVED_MECHANICAL_LINK": 58871.3
+  }
+ },
+ {
+  "task_id": "Financial_Model:08_01",
+  "family": "Financial_Model",
+  "obs_index": 15,
+  "tool": "view_xlsx",
+  "shape": "FORMULA_DUMP",
+  "tokens_est": 72201,
+  "bytes": 181655,
+  "n_first_seen": 3141,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 151,
+   "REGION_LEVEL_LINK": 2982,
+   "MODEL_CODE_REFERENCE_LINK": 8
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 3467.8,
+   "REGION_LEVEL_LINK": 68483.5,
+   "MODEL_CODE_REFERENCE_LINK": 183.7
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 72135.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:08_01",
+  "family": "Financial_Model",
+  "obs_index": 27,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 288,
+  "bytes": 532,
+  "n_first_seen": 3,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 3
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 288.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 288.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:10_01",
+  "family": "Financial_Model",
+  "obs_index": 1,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 29100,
+  "bytes": 59843,
+  "n_first_seen": 1872,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1044,
+   "LATER_NARROW_READ_LINK": 824,
+   "MODEL_CODE_REFERENCE_LINK": 2,
+   "DIRECT_FORMULA_LINK": 2
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 16253.2,
+   "LATER_NARROW_READ_LINK": 12720.3,
+   "MODEL_CODE_REFERENCE_LINK": 30.8,
+   "DIRECT_FORMULA_LINK": 30.8
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 23928.0,
+   "LATER_NARROW_READ_LINK": 5091.6,
+   "MODEL_CODE_REFERENCE_LINK": 15.4
+  }
+ },
+ {
+  "task_id": "Financial_Model:10_01",
+  "family": "Financial_Model",
+  "obs_index": 3,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 8250,
+  "bytes": 18431,
+  "n_first_seen": 793,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 100,
+   "LATER_NARROW_READ_LINK": 690,
+   "DIRECT_FORMULA_LINK": 2,
+   "DIRECT_WRITE_LINK": 1
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1019.6,
+   "LATER_NARROW_READ_LINK": 7131.8,
+   "DIRECT_FORMULA_LINK": 21.0,
+   "DIRECT_WRITE_LINK": 10.5
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 8163.4,
+   "LATER_NARROW_READ_LINK": 19.6
+  }
+ },
+ {
+  "task_id": "Financial_Model:10_01",
+  "family": "Financial_Model",
+  "obs_index": 5,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 21581,
+  "bytes": 47531,
+  "n_first_seen": 1625,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 1309,
+   "NO_OBSERVED_MECHANICAL_LINK": 155,
+   "REGION_LEVEL_LINK": 154,
+   "DIRECT_FORMULA_LINK": 7
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 17384.3,
+   "NO_OBSERVED_MECHANICAL_LINK": 2058.5,
+   "REGION_LEVEL_LINK": 2045.2,
+   "DIRECT_FORMULA_LINK": 93.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 8406.6,
+   "LATER_NARROW_READ_LINK": 13174.4
+  }
+ },
+ {
+  "task_id": "Financial_Model:10_01",
+  "family": "Financial_Model",
+  "obs_index": 7,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 12294,
+  "bytes": 27952,
+  "n_first_seen": 0,
+  "link_counts": {},
+  "link_tokens_est": {},
+  "link_tokens_strict_est": {}
+ },
+ {
+  "task_id": "Financial_Model:11_01",
+  "family": "Financial_Model",
+  "obs_index": 4,
+  "tool": "view_xlsx",
+  "shape": "FORMULA_DUMP",
+  "tokens_est": 6982,
+  "bytes": 15384,
+  "n_first_seen": 662,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 417,
+   "MODEL_CODE_REFERENCE_LINK": 3,
+   "DIRECT_FORMULA_LINK": 4,
+   "LATER_NARROW_READ_LINK": 237,
+   "DIRECT_WRITE_LINK": 1
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 4358.3,
+   "MODEL_CODE_REFERENCE_LINK": 31.4,
+   "DIRECT_FORMULA_LINK": 41.8,
+   "LATER_NARROW_READ_LINK": 2477.0,
+   "DIRECT_WRITE_LINK": 10.5
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 4588.3,
+   "LATER_NARROW_READ_LINK": 2330.7
+  }
+ },
+ {
+  "task_id": "Financial_Model:11_05",
+  "family": "Financial_Model",
+  "obs_index": 1,
+  "tool": "view_xlsx",
+  "shape": "FORMULA_DUMP",
+  "tokens_est": 9889,
+  "bytes": 19829,
+  "n_first_seen": 929,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 471,
+   "LATER_NARROW_READ_LINK": 457,
+   "DIRECT_FORMULA_LINK": 1
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 4980.7,
+   "LATER_NARROW_READ_LINK": 4832.7,
+   "DIRECT_FORMULA_LINK": 10.6
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 6651.6,
+   "LATER_NARROW_READ_LINK": 3172.4
+  }
+ },
+ {
+  "task_id": "Financial_Model:11_05",
+  "family": "Financial_Model",
+  "obs_index": 5,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 4388,
+  "bytes": 9195,
+  "n_first_seen": 540,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 489,
+   "MODEL_CODE_REFERENCE_LINK": 2,
+   "LATER_NARROW_READ_LINK": 48,
+   "DIRECT_WRITE_LINK": 1
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 3913.8,
+   "MODEL_CODE_REFERENCE_LINK": 16.0,
+   "LATER_NARROW_READ_LINK": 384.2,
+   "DIRECT_WRITE_LINK": 8.0
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 4218.0,
+   "MODEL_CODE_REFERENCE_LINK": 8.0,
+   "LATER_NARROW_READ_LINK": 96.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:11_05",
+  "family": "Financial_Model",
+  "obs_index": 6,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 5857,
+  "bytes": 12880,
+  "n_first_seen": 562,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 395,
+   "LATER_NARROW_READ_LINK": 167
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 4072.3,
+   "LATER_NARROW_READ_LINK": 1721.7
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 4175.4,
+   "LATER_NARROW_READ_LINK": 1618.6
+  }
+ },
+ {
+  "task_id": "Financial_Model:11_05",
+  "family": "Financial_Model",
+  "obs_index": 10,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 1022,
+  "bytes": 2369,
+  "n_first_seen": 40,
+  "link_counts": {
+   "MODEL_CODE_REFERENCE_LINK": 1,
+   "STRUCTURAL_NAVIGATION_LINK": 19,
+   "NO_OBSERVED_MECHANICAL_LINK": 20
+  },
+  "link_tokens_est": {
+   "MODEL_CODE_REFERENCE_LINK": 25.5,
+   "STRUCTURAL_NAVIGATION_LINK": 485.0,
+   "NO_OBSERVED_MECHANICAL_LINK": 510.5
+  },
+  "link_tokens_strict_est": {
+   "STRUCTURAL_NAVIGATION_LINK": 510.5,
+   "NO_OBSERVED_MECHANICAL_LINK": 510.5
+  }
+ },
+ {
+  "task_id": "Financial_Model:12_05",
+  "family": "Financial_Model",
+  "obs_index": 4,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 21074,
+  "bytes": 51157,
+  "n_first_seen": 1443,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1440,
+   "MODEL_CODE_REFERENCE_LINK": 3
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 20965.3,
+   "MODEL_CODE_REFERENCE_LINK": 43.7
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 20994.4,
+   "MODEL_CODE_REFERENCE_LINK": 14.6
+  }
+ },
+ {
+  "task_id": "Financial_Model:14_05",
+  "family": "Financial_Model",
+  "obs_index": 1,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 7245,
+  "bytes": 15269,
+  "n_first_seen": 603,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 602,
+   "DIRECT_WRITE_LINK": 1
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 7162.1,
+   "DIRECT_WRITE_LINK": 11.9
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 7174.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:14_05",
+  "family": "Financial_Model",
+  "obs_index": 6,
+  "tool": "view_xlsx",
+  "shape": "FORMULA_DUMP",
+  "tokens_est": 20152,
+  "bytes": 41677,
+  "n_first_seen": 733,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 731,
+   "DIRECT_WRITE_LINK": 1,
+   "MODEL_CODE_REFERENCE_LINK": 1
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 20035.2,
+   "DIRECT_WRITE_LINK": 27.4,
+   "MODEL_CODE_REFERENCE_LINK": 27.4
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 20090.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:15_05",
+  "family": "Financial_Model",
+  "obs_index": 1,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 20460,
+  "bytes": 52704,
+  "n_first_seen": 1244,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 1225,
+   "LATER_NARROW_READ_LINK": 17,
+   "MODEL_CODE_REFERENCE_LINK": 2
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 20086.5,
+   "LATER_NARROW_READ_LINK": 278.8,
+   "MODEL_CODE_REFERENCE_LINK": 32.8
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 20398.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:17_05",
+  "family": "Financial_Model",
+  "obs_index": 2,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 6566,
+  "bytes": 15158,
+  "n_first_seen": 511,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 392,
+   "LATER_NARROW_READ_LINK": 118,
+   "MODEL_CODE_REFERENCE_LINK": 1
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 4987.8,
+   "LATER_NARROW_READ_LINK": 1501.4,
+   "MODEL_CODE_REFERENCE_LINK": 12.7
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 5305.9,
+   "LATER_NARROW_READ_LINK": 1183.3,
+   "MODEL_CODE_REFERENCE_LINK": 12.7
+  }
+ },
+ {
+  "task_id": "Financial_Model:19_05",
+  "family": "Financial_Model",
+  "obs_index": 5,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 34415,
+  "bytes": 69518,
+  "n_first_seen": 2778,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 2777,
+   "MODEL_CODE_REFERENCE_LINK": 1
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 34337.6,
+   "MODEL_CODE_REFERENCE_LINK": 12.4
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 34350.0
+  }
+ },
+ {
+  "task_id": "Financial_Model:20_05",
+  "family": "Financial_Model",
+  "obs_index": 2,
+  "tool": "view_xlsx",
+  "shape": "WHOLE_SHEET_SCAN",
+  "tokens_est": 20470,
+  "bytes": 41965,
+  "n_first_seen": 1573,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 209,
+   "MODEL_CODE_REFERENCE_LINK": 8,
+   "REGION_LEVEL_LINK": 1356
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 2711.0,
+   "MODEL_CODE_REFERENCE_LINK": 103.8,
+   "REGION_LEVEL_LINK": 17589.2
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 20391.0,
+   "MODEL_CODE_REFERENCE_LINK": 13.0
+  }
+ },
+ {
+  "task_id": "Template:11_03",
+  "family": "Template",
+  "obs_index": 1,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 512,
+  "bytes": 1353,
+  "n_first_seen": 63,
+  "link_counts": {
+   "LATER_NARROW_READ_LINK": 56,
+   "DIRECT_FORMULA_LINK": 7
+  },
+  "link_tokens_est": {
+   "LATER_NARROW_READ_LINK": 454.2,
+   "DIRECT_FORMULA_LINK": 56.8
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 511.0
+  }
+ },
+ {
+  "task_id": "Template:16_06",
+  "family": "Template",
+  "obs_index": 4,
+  "tool": "python",
+  "shape": "WHOLE_WORKBOOK_SCAN",
+  "tokens_est": 5765,
+  "bytes": 11549,
+  "n_first_seen": 267,
+  "link_counts": {
+   "NO_OBSERVED_MECHANICAL_LINK": 156,
+   "MODEL_CODE_REFERENCE_LINK": 13,
+   "REGION_LEVEL_LINK": 43,
+   "DIRECT_FORMULA_LINK": 20,
+   "DIRECT_WRITE_LINK": 35
+  },
+  "link_tokens_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 3368.3,
+   "MODEL_CODE_REFERENCE_LINK": 280.7,
+   "REGION_LEVEL_LINK": 928.4,
+   "DIRECT_FORMULA_LINK": 431.8,
+   "DIRECT_WRITE_LINK": 755.7
+  },
+  "link_tokens_strict_est": {
+   "NO_OBSERVED_MECHANICAL_LINK": 5765.0
+  }
+ }
+]

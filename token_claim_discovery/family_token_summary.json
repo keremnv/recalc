@@ -1,0 +1,56 @@
+{
+  "Debugging": {
+    "A": {
+      "input_tokens": 5128739,
+      "valid": 2
+    },
+    "B": {
+      "input_tokens": 4692216,
+      "valid": 3
+    },
+    "C": {
+      "input_tokens": 5156549,
+      "valid": 2
+    },
+    "D": {
+      "input_tokens": 5348596,
+      "valid": 1
+    }
+  },
+  "Financial_Model": {
+    "A": {
+      "input_tokens": 2377273,
+      "valid": 4
+    },
+    "B": {
+      "input_tokens": 2242281,
+      "valid": 4
+    },
+    "C": {
+      "input_tokens": 2121178,
+      "valid": 3
+    },
+    "D": {
+      "input_tokens": 1961808,
+      "valid": 4
+    }
+  },
+  "Template": {
+    "A": {
+      "input_tokens": 452482,
+      "valid": 4
+    },
+    "B": {
+      "input_tokens": 178272,
+      "valid": 5
+    },
+    "C": {
+      "input_tokens": 1062731,
+      "valid": 3
+    },
+    "D": {
+      "input_tokens": 226754,
+      "valid": 4
+    }
+  }
+}

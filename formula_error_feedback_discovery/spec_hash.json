@@ -1,0 +1,17 @@
+{
+ "files": {
+  "formula_error_feedback_discovery/frozen_runner.py": "b284cd40b5405aadbcfaa954e7db382d6b3ed472157e998072a3350d9d3d548d",
+  "benchmark/ab_local_runner.py": "fbaec13a971c057a06e27f6057dfb4ef22f90c104491c238d7699021352b77cf",
+  "benchmark/sweagent/spreadsheet-control.yaml": "c3cc1b506956bc73a9560716e739bfb2fb19d96477df540f3837d17c3cd53c3d",
+  "formula_error_feedback_discovery/preregistered_spec.json": "1b5361342a6359926a06d19b81c0fd6a76ee782a231bb930f6b34dcc0cd5b990",
+  "formula_error_feedback_discovery/environment.json": "4995dd0871e4a9fcd643d65f6c0e153b27b754d857225d031ec27b3a0ff5f7b1",
+  "formula_error_feedback_discovery/population.json": "912c3ec3c5af6700ec8875da14dc0309f535228446fd682da70e33b56d20fab1",
+  "formula_error_feedback_discovery/exact_report_template.json": "78d5b69cb492390654f5142f2fabd7a3b9b96e00d6b7239d62645d34c782457f",
+  "formula_error_feedback_discovery/run_order.json": "b5f6457e85a2b3694f2f98d2377f614d3ab5109f833a0bc552bfd670a383b146",
+  "formula_error_feedback_discovery/confirmation_reservation_hash.json": "c9edf92351dca4181e85bef77142fab75f9eb981e07b4a267c02cdd0900270b4",
+  "src/librecalc_mcp/domain/commit_checks.py": "e0504fd26d42193f64bb3baa14553910061351898587d34715ceafe71ccbcac6",
+  "src/librecalc_mcp/backend/uno.py": "f2142f2b7c249ba24e3d1cea7e36a75936ee05557d506c620856bd07ab14f6a2",
+  "src/librecalc_mcp/domain/grid.py": "f24d9d796cea2218762b5e5d3c2fc91101cf633543dadc7618e4ca6b675d7c97"
+ },
+ "frozen_before_inference": true
+}

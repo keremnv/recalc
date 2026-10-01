@@ -1,0 +1,10 @@
+{
+  "normalized_context_rows": 403,
+  "bounded_followup_rows": 310,
+  "protected_original_files_verified": 2505,
+  "protected_changes": [],
+  "eligible_primary_replayed": 1222,
+  "ledger_ids_consistent": true,
+  "all_strong_recoveries_have_witness_identity_proof": true,
+  "frozen_protocol_unchanged": true
+}

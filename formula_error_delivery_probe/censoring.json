@@ -1,0 +1,66 @@
+{
+  "attempts": {
+    "Debugging_02_02_TREATMENT": {
+      "class": "VALID_SUBMISSION",
+      "runner_status": "SUBMITTED",
+      "reason": "submit invoked and output.xlsx exists",
+      "primary_or_replacement": "primary"
+    },
+    "Debugging_02_02_CONTROL": {
+      "class": "MODEL_NONCOMPLETION",
+      "runner_status": "TRUNCATED_CALL_LIMIT",
+      "reason": "TRUNCATED_CALL_LIMIT",
+      "primary_or_replacement": "primary"
+    },
+    "Debugging_02_05_TREATMENT": {
+      "class": "MODEL_NONCOMPLETION",
+      "runner_status": "TRUNCATED_CALL_LIMIT",
+      "reason": "TRUNCATED_CALL_LIMIT",
+      "primary_or_replacement": "primary"
+    },
+    "Debugging_02_05_CONTROL": {
+      "class": "MODEL_NONCOMPLETION",
+      "runner_status": "TRUNCATED_INSTANCE_COST",
+      "reason": "TRUNCATED_INSTANCE_COST",
+      "primary_or_replacement": "primary"
+    },
+    "Debugging_02_03_CONTROL": {
+      "class": "MODEL_NONCOMPLETION",
+      "runner_status": "TRUNCATED_INSTANCE_COST",
+      "reason": "TRUNCATED_INSTANCE_COST",
+      "primary_or_replacement": "primary"
+    },
+    "Debugging_02_03_TREATMENT": {
+      "class": "PROVIDER_CENSORED",
+      "runner_status": "PROVIDER_ERROR",
+      "reason": "provider errors after frozen retry limit",
+      "primary_or_replacement": "primary"
+    },
+    "Debugging_01_03_CONTROL": {
+      "class": "MODEL_NONCOMPLETION",
+      "runner_status": "TRUNCATED_INSTANCE_COST",
+      "reason": "TRUNCATED_INSTANCE_COST",
+      "primary_or_replacement": "primary"
+    },
+    "Debugging_01_03_TREATMENT": {
+      "class": "MODEL_NONCOMPLETION",
+      "runner_status": "SUBMITTED",
+      "reason": "submit invoked without output.xlsx",
+      "primary_or_replacement": "primary"
+    },
+    "Debugging_02_03_TREATMENT_R1": {
+      "class": "PROVIDER_CENSORED",
+      "runner_status": "PROVIDER_ERROR",
+      "reason": "provider errors after frozen retry limit",
+      "primary_or_replacement": "replacement"
+    }
+  },
+  "counts": {
+    "VALID_SUBMISSION": 1,
+    "MODEL_NONCOMPLETION": 6,
+    "PROVIDER_CENSORED": 2,
+    "RUNNER_CENSORED": 0,
+    "WORKBOOK_INFRA_CENSORED": 0,
+    "OTHER": 0
+  }
+}

@@ -1,0 +1,29 @@
+name: release-candidate
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  linux-rc:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Build native binaries (dev checkout)
+        run: sh scripts/build_native.sh
+      - name: Maintained product/process tests
+        run: PYTHONPATH=src python -m pytest -q tests/test_product_hygiene.py tests/test_product_process_semantics.py
+      - name: Full release battery
+        run: bash scripts/release-check.sh python
+      - name: Upload candidate archives + checksums
+        uses: actions/upload-artifact@v4
+        with:
+          name: release-candidate-dist
+          path: release-candidate/
+          if-no-files-found: error

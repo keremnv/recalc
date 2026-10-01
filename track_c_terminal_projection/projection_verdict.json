@@ -1,0 +1,6 @@
+{
+ "verdict": "PROJECTION_VOLUME_HIGH_BUT_NO_MECHANICAL_CUT",
+ "P2_strict_share": 0.9536174936477908,
+ "selectors_meeting_gate": [],
+ "gate": ">=25% reduction AND >=95% P0 recall on >=10 tasks"
+}

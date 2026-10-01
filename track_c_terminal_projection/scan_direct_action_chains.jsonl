@@ -1,0 +1,40 @@
+{"task_id": "Financial_Model:08_03", "scan_obs": 1, "shape": "FORMULA_DUMP", "broad_tokens_est": 15496, "write_obs": [17], "turn_distance": 16, "note": "no intervening shared narrow read"}
+{"task_id": "Financial_Model:08_03", "scan_obs": 9, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 14766, "write_obs": [17], "turn_distance": 8, "note": "no intervening shared narrow read"}
+{"task_id": "Financial_Model:08_01", "scan_obs": 2, "shape": "FORMULA_DUMP", "broad_tokens_est": 58982, "write_obs": [18, 29, 31, 34], "turn_distance": 16, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:01_01", "scan_obs": 2, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 1758, "write_obs": [10], "turn_distance": 8, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:01_01", "scan_obs": 4, "shape": "LARGE_RANGE_SCAN", "broad_tokens_est": 9200, "write_obs": [10], "turn_distance": 6, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:01_06", "scan_obs": 1, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 1848, "write_obs": [14], "turn_distance": 13, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:01_06", "scan_obs": 7, "shape": "OTHER_BROAD_PROJECTION", "broad_tokens_est": 5087, "write_obs": [14], "turn_distance": 7, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:02_01", "scan_obs": 2, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 2337, "write_obs": [11], "turn_distance": 9, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:02_01", "scan_obs": 6, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 3969, "write_obs": [11], "turn_distance": 5, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:02_06", "scan_obs": 2, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 8289, "write_obs": [11], "turn_distance": 9, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:02_06", "scan_obs": 3, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 2544, "write_obs": [11], "turn_distance": 8, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:02_06", "scan_obs": 5, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 4216, "write_obs": [11], "turn_distance": 6, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:02_06", "scan_obs": 6, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 5994, "write_obs": [11], "turn_distance": 5, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:03_06", "scan_obs": 13, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 1683, "write_obs": [14, 15], "turn_distance": 1, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:05_08", "scan_obs": 0, "shape": "WHOLE_SHEET_SCAN", "broad_tokens_est": 13357, "write_obs": [11, 13], "turn_distance": 11, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:06_02", "scan_obs": 25, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 2054, "write_obs": [47], "turn_distance": 22, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:06_07", "scan_obs": 3, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 16, "write_obs": [7, 9], "turn_distance": 4, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:06_07", "scan_obs": 5, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 906, "write_obs": [7, 9], "turn_distance": 2, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:07_03", "scan_obs": 6, "shape": "OTHER_BROAD_PROJECTION", "broad_tokens_est": 4723, "write_obs": [10], "turn_distance": 4, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:09_09", "scan_obs": 0, "shape": "WHOLE_SHEET_SCAN", "broad_tokens_est": 20460, "write_obs": [14, 18], "turn_distance": 14, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:09_09", "scan_obs": 15, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 3850, "write_obs": [18], "turn_distance": 3, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:10_10", "scan_obs": 1, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 1788851, "write_obs": [14], "turn_distance": 13, "note": "no intervening shared narrow read"}
+{"task_id": "Debugging:10_10", "scan_obs": 7, "shape": "LARGE_RANGE_SCAN", "broad_tokens_est": 16576, "write_obs": [14], "turn_distance": 7, "note": "no intervening shared narrow read"}
+{"task_id": "Financial_Model:04_01", "scan_obs": 1, "shape": "WHOLE_SHEET_SCAN", "broad_tokens_est": 24225, "write_obs": [11], "turn_distance": 10, "note": "no intervening shared narrow read"}
+{"task_id": "Financial_Model:04_01", "scan_obs": 6, "shape": "WHOLE_SHEET_SCAN", "broad_tokens_est": 11914, "write_obs": [11], "turn_distance": 5, "note": "no intervening shared narrow read"}
+{"task_id": "Financial_Model:05_01", "scan_obs": 1, "shape": "FORMULA_DUMP", "broad_tokens_est": 43336, "write_obs": [13, 17], "turn_distance": 12, "note": "no intervening shared narrow read"}
+{"task_id": "Financial_Model:07_01", "scan_obs": 2, "shape": "WHOLE_SHEET_SCAN", "broad_tokens_est": 34265, "write_obs": [16], "turn_distance": 14, "note": "no intervening shared narrow read"}
+{"task_id": "Financial_Model:07_01", "scan_obs": 4, "shape": "LARGE_RANGE_SCAN", "broad_tokens_est": 22402, "write_obs": [16], "turn_distance": 12, "note": "no intervening shared narrow read"}
+{"task_id": "Financial_Model:08_01", "scan_obs": 4, "shape": "FORMULA_DUMP", "broad_tokens_est": 881, "write_obs": [18, 29, 31, 34], "turn_distance": 14, "note": "no intervening shared narrow read"}
+{"task_id": "Financial_Model:08_01", "scan_obs": 15, "shape": "FORMULA_DUMP", "broad_tokens_est": 181, "write_obs": [18, 29, 31, 34], "turn_distance": 3, "note": "no intervening shared narrow read"}
+{"task_id": "Financial_Model:10_01", "scan_obs": 1, "shape": "WHOLE_SHEET_SCAN", "broad_tokens_est": 29100, "write_obs": [10], "turn_distance": 9, "note": "no intervening shared narrow read"}
+{"task_id": "Financial_Model:10_01", "scan_obs": 3, "shape": "WHOLE_SHEET_SCAN", "broad_tokens_est": 8250, "write_obs": [10], "turn_distance": 7, "note": "no intervening shared narrow read"}
+{"task_id": "Financial_Model:10_01", "scan_obs": 5, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 21581, "write_obs": [10], "turn_distance": 5, "note": "no intervening shared narrow read"}
+{"task_id": "Financial_Model:11_01", "scan_obs": 4, "shape": "FORMULA_DUMP", "broad_tokens_est": 6982, "write_obs": [6], "turn_distance": 2, "note": "no intervening shared narrow read"}
+{"task_id": "Financial_Model:11_05", "scan_obs": 1, "shape": "FORMULA_DUMP", "broad_tokens_est": 9889, "write_obs": [12, 16], "turn_distance": 11, "note": "no intervening shared narrow read"}
+{"task_id": "Financial_Model:11_05", "scan_obs": 5, "shape": "WHOLE_SHEET_SCAN", "broad_tokens_est": 4388, "write_obs": [12, 16], "turn_distance": 7, "note": "no intervening shared narrow read"}
+{"task_id": "Financial_Model:14_05", "scan_obs": 1, "shape": "WHOLE_SHEET_SCAN", "broad_tokens_est": 7245, "write_obs": [8], "turn_distance": 7, "note": "no intervening shared narrow read"}
+{"task_id": "Financial_Model:14_05", "scan_obs": 6, "shape": "FORMULA_DUMP", "broad_tokens_est": 20152, "write_obs": [8], "turn_distance": 2, "note": "no intervening shared narrow read"}
+{"task_id": "Template:11_03", "scan_obs": 1, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 512, "write_obs": [3, 5], "turn_distance": 2, "note": "no intervening shared narrow read"}
+{"task_id": "Template:16_06", "scan_obs": 4, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 5765, "write_obs": [6], "turn_distance": 2, "note": "no intervening shared narrow read"}

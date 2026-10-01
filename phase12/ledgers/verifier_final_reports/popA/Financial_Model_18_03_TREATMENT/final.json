@@ -1,0 +1,50 @@
+{
+ "positive": false,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [],
+   "count": 0
+  },
+  "CHG": {
+   "changed_cells": 29,
+   "sheets": 3,
+   "regions": [
+    "BS!N15",
+    "BS!O15",
+    "BS!P15",
+    "BS!Q15",
+    "BS!R15",
+    "BS!S15",
+    "BS!T15",
+    "P&L!C28",
+    "P&L!D28",
+    "P&L!E28",
+    "P&L!F28",
+    "P&L!G28",
+    "P&L!H28",
+    "P&L!I28",
+    "P&L!J28",
+    "P&L!K28",
+    "P&L!L28",
+    "P&L!M28",
+    "P&L!N28",
+    "P&L!O28"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": null,
+ "positive_families": []
+}

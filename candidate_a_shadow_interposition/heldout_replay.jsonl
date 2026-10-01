@@ -1,0 +1,108 @@
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 43, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:08_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 173, "family": "Financial_Model", "reason": "range/slice object path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 174, "family": "Financial_Model", "reason": "range/slice object path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 175, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 176, "family": "Financial_Model", "reason": "range/slice object path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 177, "family": "Financial_Model", "reason": "range/slice object path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 178, "family": "Financial_Model", "reason": "range/slice object path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 180, "family": "Financial_Model", "reason": "range/slice object path", "task_id": "Financial_Model:08_01"}
+{"classification": "SEMANTIC_EXACT", "eligible": true, "exec_id": 181, "fallback_reasons": ["unsupported load option", "Worksheet._charts"], "family": "Financial_Model", "proxy_loads": 1, "real_status": "OK", "real_stdout_sha256": "92e7df110d7131943f5af93d9582a54dbac35c870cfd0a38b8e1dd4a612e327b", "reason": null, "runtime_fallbacks": 1, "shadow_status": "OK", "shadow_stdout_sha256": "92e7df110d7131943f5af93d9582a54dbac35c870cfd0a38b8e1dd4a612e327b", "task_id": "Financial_Model:08_01"}
+{"classification": "SEMANTIC_EXACT", "eligible": true, "exec_id": 193, "fallback_reasons": [], "family": "Financial_Model", "proxy_loads": 1, "real_status": "OK", "real_stdout_sha256": "74e5118910dc5f40f7e4e899ddd84d84f64c7d139039df602c027eb189af2fe3", "reason": null, "runtime_fallbacks": 0, "shadow_status": "OK", "shadow_stdout_sha256": "74e5118910dc5f40f7e4e899ddd84d84f64c7d139039df602c027eb189af2fe3", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 195, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 197, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 199, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 201, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 202, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 203, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 204, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 205, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 210, "family": "Financial_Model", "reason": "rich or unsupported attribute", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 211, "family": "Financial_Model", "reason": "rich or unsupported attribute", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 212, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 217, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 223, "family": "Template", "reason": "mutation/package/data_only/read_only path", "task_id": "Template:06_09"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 231, "family": "Template", "reason": "mutation/package/data_only/read_only path", "task_id": "Template:06_16"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 238, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:10_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 239, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:10_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 240, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:10_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 241, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:10_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 243, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:10_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 244, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:10_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 245, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:10_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 248, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:10_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 249, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:10_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 250, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:10_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 253, "family": "Debugging", "reason": "iter_rows Cell-object path", "task_id": "Debugging:10_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 254, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:10_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 255, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:10_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 257, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:10_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 264, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:10_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 271, "family": "Debugging", "reason": "iter_rows Cell-object path", "task_id": "Debugging:10_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 273, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:10_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 274, "family": "Debugging", "reason": "mutation/package/unresolved path", "task_id": "Debugging:10_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 340, "family": "Debugging", "reason": "mutation/package/data_only/read_only path", "task_id": "Debugging:02_06"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 356, "family": "Debugging", "reason": "mutation/package/data_only/read_only path", "task_id": "Debugging:03_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 415, "family": "Debugging", "reason": "iter_rows Cell-object path", "task_id": "Debugging:05_02"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 416, "family": "Debugging", "reason": "iter_rows Cell-object path", "task_id": "Debugging:05_02"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 417, "family": "Debugging", "reason": "iter_rows Cell-object path", "task_id": "Debugging:05_02"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 418, "family": "Debugging", "reason": "iter_rows Cell-object path", "task_id": "Debugging:05_02"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 419, "family": "Debugging", "reason": "mutation/package/unresolved path", "task_id": "Debugging:05_02"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 420, "family": "Debugging", "reason": "mutation/package/unresolved path", "task_id": "Debugging:05_02"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 421, "family": "Debugging", "reason": "mutation/package/data_only/read_only path", "task_id": "Debugging:05_02"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 422, "family": "Debugging", "reason": "mutation/package/data_only/read_only path", "task_id": "Debugging:05_02"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 496, "family": "Debugging", "reason": "mutation/package/data_only/read_only path", "task_id": "Debugging:06_07"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 519, "family": "Debugging", "reason": "mutation/package/data_only/read_only path", "task_id": "Debugging:07_08"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 520, "family": "Debugging", "reason": "mutation/package/data_only/read_only path", "task_id": "Debugging:07_08"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 526, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:08_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 527, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:08_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 528, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:08_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 529, "family": "Debugging", "reason": "range/slice object path", "task_id": "Debugging:08_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 530, "family": "Debugging", "reason": "mutation/package/data_only/read_only path", "task_id": "Debugging:08_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 531, "family": "Debugging", "reason": "rich or unsupported attribute", "task_id": "Debugging:08_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 532, "family": "Debugging", "reason": "iter_rows Cell-object path", "task_id": "Debugging:08_04"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 724, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:06_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 725, "family": "Financial_Model", "reason": "range/slice object path", "task_id": "Financial_Model:06_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 726, "family": "Financial_Model", "reason": "mutation/package/unresolved path", "task_id": "Financial_Model:06_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 727, "family": "Financial_Model", "reason": "range/slice object path", "task_id": "Financial_Model:06_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 728, "family": "Financial_Model", "reason": "range/slice object path", "task_id": "Financial_Model:06_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 729, "family": "Financial_Model", "reason": "rich or unsupported attribute", "task_id": "Financial_Model:06_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 730, "family": "Financial_Model", "reason": "rich or unsupported attribute", "task_id": "Financial_Model:06_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 731, "family": "Financial_Model", "reason": "range/slice object path", "task_id": "Financial_Model:06_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 732, "family": "Financial_Model", "reason": "range/slice object path", "task_id": "Financial_Model:06_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 733, "family": "Financial_Model", "reason": "range/slice object path", "task_id": "Financial_Model:06_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 734, "family": "Financial_Model", "reason": "range/slice object path", "task_id": "Financial_Model:06_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 741, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:06_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 792, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 795, "family": "Financial_Model", "reason": "mutation/package/unresolved path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 797, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:08_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 808, "family": "Financial_Model", "reason": "iter_rows Cell-object path", "task_id": "Financial_Model:10_01"}
+{"classification": "SEMANTIC_EXACT", "eligible": true, "exec_id": 809, "fallback_reasons": ["unsupported load option", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice", "Worksheet range or slice"], "family": "Financial_Model", "proxy_loads": 1, "real_status": "OK", "real_stdout_sha256": "9529d81033b332b8b4080130586fe909c95e2e500cb97d3d999ebeca267e747a", "reason": null, "runtime_fallbacks": 1, "shadow_status": "OK", "shadow_stdout_sha256": "9529d81033b332b8b4080130586fe909c95e2e500cb97d3d999ebeca267e747a", "task_id": "Financial_Model:10_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 810, "family": "Financial_Model", "reason": "iter_rows Cell-object path", "task_id": "Financial_Model:10_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 811, "family": "Financial_Model", "reason": "range/slice object path", "task_id": "Financial_Model:10_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 812, "family": "Financial_Model", "reason": "range/slice object path", "task_id": "Financial_Model:10_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 813, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:10_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 814, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:10_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 815, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:10_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 816, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:10_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 824, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:11_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 825, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:11_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 826, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:11_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 827, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:11_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 864, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:12_05"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 887, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:14_05"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 892, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:14_05"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 928, "family": "Financial_Model", "reason": "mutation/package/data_only/read_only path", "task_id": "Financial_Model:17_05"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 1025, "family": "Template", "reason": "mutation/package/data_only/read_only path", "task_id": "Template:06_06"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 1026, "family": "Template", "reason": "mutation/package/data_only/read_only path", "task_id": "Template:06_06"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 1034, "family": "Template", "reason": "mutation/package/data_only/read_only path", "task_id": "Template:06_12"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 1042, "family": "Template", "reason": "rich or unsupported attribute", "task_id": "Template:06_17"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 1043, "family": "Template", "reason": "rich or unsupported attribute", "task_id": "Template:06_17"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 1044, "family": "Template", "reason": "mutation/package/data_only/read_only path", "task_id": "Template:06_17"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 1046, "family": "Template", "reason": "mutation/package/data_only/read_only path", "task_id": "Template:06_17"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 1122, "family": "Template", "reason": "mutation/package/data_only/read_only path", "task_id": "Template:15_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 1124, "family": "Template", "reason": "rich or unsupported attribute", "task_id": "Template:15_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 1129, "family": "Template", "reason": "mutation/package/data_only/read_only path", "task_id": "Template:16_01"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 1159, "family": "Visualization", "reason": "mutation/package/data_only/read_only path", "task_id": "glm-fill-c0-Visualization-Task-1420776-r1"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 1178, "family": "Visualization", "reason": "mutation/package/data_only/read_only path", "task_id": "glm-fill-c0-Visualization-Task-1420776-r1"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 1184, "family": "Visualization", "reason": "mutation/package/data_only/read_only path", "task_id": "glm-fill-c0-Visualization-Task-1420776-r1"}
+{"classification": "PREDECLARED_FALLBACK", "eligible": false, "exec_id": 1201, "family": "Visualization", "reason": "mutation/package/unresolved path", "task_id": "glm-fill-c0-Visualization-Task-1420776-r1"}

@@ -1,0 +1,105 @@
+{
+  "scorer": "unmodified official evaluation.py after open_spreadsheet.py refresh",
+  "rows": [
+    {
+      "task_id": "Debugging:01_03",
+      "arm": "CONTROL",
+      "effective_run": "Debugging_01_03_CONTROL",
+      "class": "MODEL_NONCOMPLETION",
+      "output_produced": false,
+      "official_modification": null,
+      "official_regression": null,
+      "official_accuracy": null,
+      "official_error_message": null,
+      "valid_for_pair": false
+    },
+    {
+      "task_id": "Debugging:01_03",
+      "arm": "TREATMENT",
+      "effective_run": "Debugging_01_03_TREATMENT",
+      "class": "MODEL_NONCOMPLETION",
+      "output_produced": false,
+      "official_modification": null,
+      "official_regression": null,
+      "official_accuracy": null,
+      "official_error_message": null,
+      "valid_for_pair": false
+    },
+    {
+      "task_id": "Debugging:02_02",
+      "arm": "CONTROL",
+      "effective_run": "Debugging_02_02_CONTROL",
+      "class": "MODEL_NONCOMPLETION",
+      "output_produced": false,
+      "official_modification": null,
+      "official_regression": null,
+      "official_accuracy": null,
+      "official_error_message": null,
+      "valid_for_pair": false
+    },
+    {
+      "task_id": "Debugging:02_02",
+      "arm": "TREATMENT",
+      "effective_run": "Debugging_02_02_TREATMENT",
+      "class": "VALID_SUBMISSION",
+      "output_produced": true,
+      "official_modification": 0.0,
+      "official_regression": 0.9851,
+      "official_accuracy": 0.0,
+      "official_error_message": "Regression error at DCF!V11: answer=57681.8724322108, output==TABLE($U$9,$C$10,$U11,$C$9,V$9)",
+      "valid_for_pair": true
+    },
+    {
+      "task_id": "Debugging:02_03",
+      "arm": "CONTROL",
+      "effective_run": "Debugging_02_03_CONTROL",
+      "class": "MODEL_NONCOMPLETION",
+      "output_produced": true,
+      "official_modification": 0.7265,
+      "official_regression": 0.9896,
+      "official_accuracy": 0.0,
+      "official_error_message": "Modification error at DCF!B9: answer=WACC, output=Terminal Value Growth Rate",
+      "valid_for_pair": false
+    },
+    {
+      "task_id": "Debugging:02_03",
+      "arm": "TREATMENT",
+      "effective_run": "Debugging_02_03_TREATMENT_R1",
+      "class": "PROVIDER_CENSORED",
+      "output_produced": false,
+      "official_modification": null,
+      "official_regression": null,
+      "official_accuracy": null,
+      "official_error_message": null,
+      "valid_for_pair": false
+    },
+    {
+      "task_id": "Debugging:02_05",
+      "arm": "CONTROL",
+      "effective_run": "Debugging_02_05_CONTROL",
+      "class": "MODEL_NONCOMPLETION",
+      "output_produced": false,
+      "official_modification": null,
+      "official_regression": null,
+      "official_accuracy": null,
+      "official_error_message": null,
+      "valid_for_pair": false
+    },
+    {
+      "task_id": "Debugging:02_05",
+      "arm": "TREATMENT",
+      "effective_run": "Debugging_02_05_TREATMENT",
+      "class": "MODEL_NONCOMPLETION",
+      "output_produced": false,
+      "official_modification": null,
+      "official_regression": null,
+      "official_accuracy": null,
+      "official_error_message": null,
+      "valid_for_pair": false
+    }
+  ],
+  "raw_scorer_paths": [
+    "score_staging/CONTROL/official_eval.json",
+    "score_staging/TREATMENT/official_eval.json"
+  ]
+}

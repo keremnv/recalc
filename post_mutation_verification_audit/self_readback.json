@@ -1,0 +1,9 @@
+{
+ "n_episodes": 232,
+ "reread_ge1_written": 24,
+ "only_written": 4,
+ "written_plus_context": 20,
+ "reread_formulas": 8,
+ "reread_values": 5,
+ "no_post_reads": 74
+}

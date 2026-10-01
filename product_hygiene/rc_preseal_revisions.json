@@ -1,0 +1,7 @@
+[
+  {
+    "provisional_source_configuration_sha256": "f7cfa13bce63ce07969f11036f7001a1ae41fe3e9a89a6e5f1d94ea5d3cf0e14",
+    "wheel_sha256": "532e493f126087a45d86117343514a9a1cd0a4e0010af89bbd1be1b271d66b2e",
+    "reason": "Final audit found test-file lint issues. Test-only cleanup before handoff; installed product code/configuration/wheel unchanged. Product tests revalidated; no claim-specific validation has begun."
+  }
+]

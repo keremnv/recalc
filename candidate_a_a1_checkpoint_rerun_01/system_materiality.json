@@ -1,0 +1,15 @@
+{
+  "contact_runs": 7,
+  "contact_tasks": 7,
+  "deterministic_trace_over_live_tool_pct": 14.3127179179358,
+  "deterministic_trace_s": 94.46272817044519,
+  "exact_trace_median_absolute_time_saved_s": 1.423197805066593,
+  "exact_trace_median_reduction_pct": 44.46306240428392,
+  "live_python_s": 568.5355350888567,
+  "live_task_s": 5690.68709516502,
+  "live_tool_s": 659.9915453658905,
+  "model_network_fraction_of_task": 0.46200983461685485,
+  "model_network_s": 2629.153403693461,
+  "provider_censored_primary_slots": 6,
+  "runner_error_primary_slots": 2
+}

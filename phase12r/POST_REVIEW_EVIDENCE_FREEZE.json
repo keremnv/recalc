@@ -1,0 +1,21 @@
+{
+  "stage": "complete primary analysis before GateC",
+  "hashes": {
+    "PRIMARY_ANALYSIS.md": "cb0f274cd1f977c254032ad77c387d685ce5a7c4d36f6347747ceb7b1bb07e15",
+    "BASELINE_CORRECTION_LEDGER_RAW.jsonl": "733f0490ef3284cf06274771a50775e0d503bea203249835e4bb8a07a19b8345",
+    "BASELINE_CORRECTION_LEDGER.jsonl": "ea0fe5392635b25a267ddc337d3acf58807d7a5642c05d78c6b946de79c55674",
+    "SCORE_REPLAY.jsonl": "7af69dbe6e67fa4a69464f3f8411c8a0ba0c07d35eb1adcf66ee42147a1ea93f",
+    "SUMMARY.json": "5f56209ec836546cc1013d49b57cd54d4ccabf087817a0da2da4edc92a276a70",
+    "LEDGER_FREEZE.json": "8c907a68f12ab8a5de42c335af4455c44f14fb2b6770a7802bf88df1f4ff309f",
+    "HISTORICAL_CLAIM_IMPACT.md": "d6aa727298aae5b69cd043881c25a3c9668e2371b9e464e2d2f16d1de5e226ec",
+    "RECALC_FAIR_BASELINE_SPEC.md": "363a2a82aad9b03b8f0cad439e2858288e8553b0e4c74f0007f3971d9ad7e248",
+    "STRONG_REVIEW_SURPRISE_RAW.md": "6e6b65cffae0b9538a8244e059b99411876c9acc6439a14a2f2862772216fe27",
+    "STRONG_REVIEW_SURPRISE.md": "3237f413022b480db32e5f3781c3bf3774ab6f99a34fb1f43e4a2b4ba5d0e047",
+    "scoring_recovery/RESULTS.jsonl": "e73f2da80c08c1c99579a862f02eea2ba1eb2cbcdcc808e27b5028ef9a5aaa07",
+    "scoring_recovery/SUMMARY.json": "8535d8b81b55d9457b2b88d66559fc84f18a14bca518822c4b4ec2ea249d43dd",
+    "scoring_recovery/IDENTITY.json": "10dbdee2daf60cb45f97cb2db26ce6225513aa00a7a3dee4927ff478f25f6c9a",
+    "followup_macro_mode/MANIFEST.json": "0de6ee0f7c0ad55f9fcfc61208d54c857cff7463fb25ed42ac308effb4be3412",
+    "followup_macro_mode/RESULTS.jsonl": "ec5d5292b40381ce0649e247169d5d61b9b8855965b13dd8855ad3d9d54075c3",
+    "followup_macro_mode/SUMMARY.json": "c4502348127bdd011d37d4b54d1ce0175ccf51bb12188dbc68f0115f142a39d4"
+  }
+}

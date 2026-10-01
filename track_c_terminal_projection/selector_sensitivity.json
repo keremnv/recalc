@@ -1,0 +1,37 @@
+{
+ "head_row_sweep_K": {
+  "5": {
+   "reduction": 0.98816157092611,
+   "P0_recall_tok": 0.02830596384026904
+  },
+  "10": {
+   "reduction": 0.9579846756946199,
+   "P0_recall_tok": 0.06450370920681951
+  },
+  "15": {
+   "reduction": 0.9093911367719189,
+   "P0_recall_tok": 0.12679478445960246
+  },
+  "25": {
+   "reduction": 0.8190778811018907,
+   "P0_recall_tok": 0.25632533429398907
+  },
+  "50": {
+   "reduction": 0.63698058989621,
+   "P0_recall_tok": 0.4943561207931323
+  },
+  "100": {
+   "reduction": 0.4992779397536356,
+   "P0_recall_tok": 0.837064068508734
+  },
+  "200": {
+   "reduction": 0.43122667974902823,
+   "P0_recall_tok": 0.9350150513557256
+  },
+  "1000000000": {
+   "reduction": 0.0,
+   "P0_recall_tok": 1.0
+  }
+ },
+ "note": "pooled (micro) recall; gate also requires per-task >=95% on >=10 tasks"
+}

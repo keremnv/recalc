@@ -1,0 +1,1347 @@
+{
+  "provenance": "benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored_merged_for_bridge/Financial_Model-04_01/result.json",
+  "note": "Input-only authority, archived earned groups and three failure outcomes. No gold, model calls, or invented formulas.",
+  "authority": [
+    {
+      "cell": [
+        "Financials",
+        11,
+        4
+      ],
+      "cell_id": "cell:s03:r11:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        11,
+        5
+      ],
+      "cell_id": "cell:s03:r11:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        11,
+        6
+      ],
+      "cell_id": "cell:s03:r11:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        12,
+        4
+      ],
+      "cell_id": "cell:s03:r12:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        12,
+        5
+      ],
+      "cell_id": "cell:s03:r12:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        12,
+        6
+      ],
+      "cell_id": "cell:s03:r12:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        15,
+        4
+      ],
+      "cell_id": "cell:s03:r15:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        15,
+        5
+      ],
+      "cell_id": "cell:s03:r15:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        15,
+        6
+      ],
+      "cell_id": "cell:s03:r15:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        16,
+        4
+      ],
+      "cell_id": "cell:s03:r16:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        16,
+        5
+      ],
+      "cell_id": "cell:s03:r16:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        16,
+        6
+      ],
+      "cell_id": "cell:s03:r16:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        19,
+        4
+      ],
+      "cell_id": "cell:s03:r19:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        19,
+        5
+      ],
+      "cell_id": "cell:s03:r19:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        19,
+        6
+      ],
+      "cell_id": "cell:s03:r19:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        22,
+        4
+      ],
+      "cell_id": "cell:s03:r22:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        22,
+        5
+      ],
+      "cell_id": "cell:s03:r22:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        22,
+        6
+      ],
+      "cell_id": "cell:s03:r22:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        23,
+        4
+      ],
+      "cell_id": "cell:s03:r23:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        23,
+        5
+      ],
+      "cell_id": "cell:s03:r23:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        23,
+        6
+      ],
+      "cell_id": "cell:s03:r23:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        26,
+        4
+      ],
+      "cell_id": "cell:s03:r26:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        26,
+        5
+      ],
+      "cell_id": "cell:s03:r26:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        26,
+        6
+      ],
+      "cell_id": "cell:s03:r26:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        27,
+        4
+      ],
+      "cell_id": "cell:s03:r27:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        27,
+        5
+      ],
+      "cell_id": "cell:s03:r27:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        27,
+        6
+      ],
+      "cell_id": "cell:s03:r27:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        36,
+        4
+      ],
+      "cell_id": "cell:s03:r36:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        36,
+        5
+      ],
+      "cell_id": "cell:s03:r36:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        36,
+        6
+      ],
+      "cell_id": "cell:s03:r36:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        39,
+        4
+      ],
+      "cell_id": "cell:s03:r39:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        39,
+        5
+      ],
+      "cell_id": "cell:s03:r39:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        39,
+        6
+      ],
+      "cell_id": "cell:s03:r39:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        42,
+        4
+      ],
+      "cell_id": "cell:s03:r42:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        42,
+        5
+      ],
+      "cell_id": "cell:s03:r42:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        42,
+        6
+      ],
+      "cell_id": "cell:s03:r42:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        45,
+        4
+      ],
+      "cell_id": "cell:s03:r45:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        45,
+        5
+      ],
+      "cell_id": "cell:s03:r45:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        45,
+        6
+      ],
+      "cell_id": "cell:s03:r45:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        47,
+        4
+      ],
+      "cell_id": "cell:s03:r47:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        47,
+        5
+      ],
+      "cell_id": "cell:s03:r47:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        47,
+        6
+      ],
+      "cell_id": "cell:s03:r47:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        51,
+        4
+      ],
+      "cell_id": "cell:s03:r51:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        51,
+        5
+      ],
+      "cell_id": "cell:s03:r51:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        51,
+        6
+      ],
+      "cell_id": "cell:s03:r51:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        52,
+        4
+      ],
+      "cell_id": "cell:s03:r52:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        52,
+        5
+      ],
+      "cell_id": "cell:s03:r52:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        52,
+        6
+      ],
+      "cell_id": "cell:s03:r52:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        58,
+        4
+      ],
+      "cell_id": "cell:s03:r58:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        58,
+        5
+      ],
+      "cell_id": "cell:s03:r58:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        58,
+        6
+      ],
+      "cell_id": "cell:s03:r58:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        59,
+        4
+      ],
+      "cell_id": "cell:s03:r59:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        59,
+        5
+      ],
+      "cell_id": "cell:s03:r59:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        59,
+        6
+      ],
+      "cell_id": "cell:s03:r59:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        68,
+        4
+      ],
+      "cell_id": "cell:s03:r68:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        68,
+        5
+      ],
+      "cell_id": "cell:s03:r68:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        68,
+        6
+      ],
+      "cell_id": "cell:s03:r68:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        6,
+        4
+      ],
+      "cell_id": "cell:s03:r6:c4",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        6,
+        5
+      ],
+      "cell_id": "cell:s03:r6:c5",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Financials",
+        6,
+        6
+      ],
+      "cell_id": "cell:s03:r6:c6",
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA"
+    },
+    {
+      "cell": [
+        "Assumptions",
+        141,
+        11
+      ],
+      "cell_id": "cell:s02:r141:c11",
+      "operation_id": "O4::op1",
+      "obligation_id": "O4",
+      "operation_kind": "FILL_FORMULA"
+    },
+    {
+      "cell": [
+        "Assumptions",
+        141,
+        12
+      ],
+      "cell_id": "cell:s02:r141:c12",
+      "operation_id": "O4::op1",
+      "obligation_id": "O4",
+      "operation_kind": "FILL_FORMULA"
+    },
+    {
+      "cell": [
+        "Assumptions",
+        141,
+        13
+      ],
+      "cell_id": "cell:s02:r141:c13",
+      "operation_id": "O4::op1",
+      "obligation_id": "O4",
+      "operation_kind": "FILL_FORMULA"
+    },
+    {
+      "cell": [
+        "Assumptions",
+        141,
+        14
+      ],
+      "cell_id": "cell:s02:r141:c14",
+      "operation_id": "O4::op1",
+      "obligation_id": "O4",
+      "operation_kind": "FILL_FORMULA"
+    },
+    {
+      "cell": [
+        "Assumptions",
+        141,
+        15
+      ],
+      "cell_id": "cell:s02:r141:c15",
+      "operation_id": "O4::op1",
+      "obligation_id": "O4",
+      "operation_kind": "FILL_FORMULA"
+    },
+    {
+      "cell": [
+        "Ratio_Analysis ",
+        12,
+        10
+      ],
+      "cell_id": "cell:s05:r12:c10",
+      "operation_id": "O6::op1",
+      "obligation_id": "O6",
+      "operation_kind": "FILL_FORMULA"
+    },
+    {
+      "cell": [
+        "Ratio_Analysis ",
+        12,
+        11
+      ],
+      "cell_id": "cell:s05:r12:c11",
+      "operation_id": "O6::op1",
+      "obligation_id": "O6",
+      "operation_kind": "FILL_FORMULA"
+    },
+    {
+      "cell": [
+        "Ratio_Analysis ",
+        12,
+        12
+      ],
+      "cell_id": "cell:s05:r12:c12",
+      "operation_id": "O6::op1",
+      "obligation_id": "O6",
+      "operation_kind": "FILL_FORMULA"
+    },
+    {
+      "cell": [
+        "Ratio_Analysis ",
+        12,
+        5
+      ],
+      "cell_id": "cell:s05:r12:c5",
+      "operation_id": "O6::op1",
+      "obligation_id": "O6",
+      "operation_kind": "FILL_FORMULA"
+    },
+    {
+      "cell": [
+        "Ratio_Analysis ",
+        12,
+        6
+      ],
+      "cell_id": "cell:s05:r12:c6",
+      "operation_id": "O6::op1",
+      "obligation_id": "O6",
+      "operation_kind": "FILL_FORMULA"
+    },
+    {
+      "cell": [
+        "Ratio_Analysis ",
+        12,
+        7
+      ],
+      "cell_id": "cell:s05:r12:c7",
+      "operation_id": "O6::op1",
+      "obligation_id": "O6",
+      "operation_kind": "FILL_FORMULA"
+    },
+    {
+      "cell": [
+        "Ratio_Analysis ",
+        12,
+        8
+      ],
+      "cell_id": "cell:s05:r12:c8",
+      "operation_id": "O6::op1",
+      "obligation_id": "O6",
+      "operation_kind": "FILL_FORMULA"
+    },
+    {
+      "cell": [
+        "Ratio_Analysis ",
+        12,
+        9
+      ],
+      "cell_id": "cell:s05:r12:c9",
+      "operation_id": "O6::op1",
+      "obligation_id": "O6",
+      "operation_kind": "FILL_FORMULA"
+    }
+  ],
+  "operations": [
+    {
+      "operation_id": "O1::op1",
+      "obligation_id": "O1",
+      "operation_kind": "SET_FORMULA",
+      "cell_ids": [
+        "cell:s03:r11:c4",
+        "cell:s03:r11:c5",
+        "cell:s03:r11:c6",
+        "cell:s03:r12:c4",
+        "cell:s03:r12:c5",
+        "cell:s03:r12:c6",
+        "cell:s03:r15:c4",
+        "cell:s03:r15:c5",
+        "cell:s03:r15:c6",
+        "cell:s03:r16:c4",
+        "cell:s03:r16:c5",
+        "cell:s03:r16:c6",
+        "cell:s03:r19:c4",
+        "cell:s03:r19:c5",
+        "cell:s03:r19:c6",
+        "cell:s03:r22:c4",
+        "cell:s03:r22:c5",
+        "cell:s03:r22:c6",
+        "cell:s03:r23:c4",
+        "cell:s03:r23:c5",
+        "cell:s03:r23:c6",
+        "cell:s03:r26:c4",
+        "cell:s03:r26:c5",
+        "cell:s03:r26:c6",
+        "cell:s03:r27:c4",
+        "cell:s03:r27:c5",
+        "cell:s03:r27:c6",
+        "cell:s03:r36:c4",
+        "cell:s03:r36:c5",
+        "cell:s03:r36:c6",
+        "cell:s03:r39:c4",
+        "cell:s03:r39:c5",
+        "cell:s03:r39:c6",
+        "cell:s03:r42:c4",
+        "cell:s03:r42:c5",
+        "cell:s03:r42:c6",
+        "cell:s03:r45:c4",
+        "cell:s03:r45:c5",
+        "cell:s03:r45:c6",
+        "cell:s03:r47:c4",
+        "cell:s03:r47:c5",
+        "cell:s03:r47:c6",
+        "cell:s03:r51:c4",
+        "cell:s03:r51:c5",
+        "cell:s03:r51:c6",
+        "cell:s03:r52:c4",
+        "cell:s03:r52:c5",
+        "cell:s03:r52:c6",
+        "cell:s03:r58:c4",
+        "cell:s03:r58:c5",
+        "cell:s03:r58:c6",
+        "cell:s03:r59:c4",
+        "cell:s03:r59:c5",
+        "cell:s03:r59:c6",
+        "cell:s03:r68:c4",
+        "cell:s03:r68:c5",
+        "cell:s03:r68:c6",
+        "cell:s03:r6:c4",
+        "cell:s03:r6:c5",
+        "cell:s03:r6:c6"
+      ]
+    },
+    {
+      "operation_id": "O4::op1",
+      "obligation_id": "O4",
+      "operation_kind": "FILL_FORMULA",
+      "cell_ids": [
+        "cell:s02:r141:c11",
+        "cell:s02:r141:c12",
+        "cell:s02:r141:c13",
+        "cell:s02:r141:c14",
+        "cell:s02:r141:c15"
+      ]
+    },
+    {
+      "operation_id": "O6::op1",
+      "obligation_id": "O6",
+      "operation_kind": "FILL_FORMULA",
+      "cell_ids": [
+        "cell:s05:r12:c10",
+        "cell:s05:r12:c11",
+        "cell:s05:r12:c12",
+        "cell:s05:r12:c5",
+        "cell:s05:r12:c6",
+        "cell:s05:r12:c7",
+        "cell:s05:r12:c8",
+        "cell:s05:r12:c9"
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "canonical_cell": [
+        "Ratio_Analysis ",
+        12,
+        6
+      ],
+      "member_cells": [
+        [
+          "Ratio_Analysis ",
+          12,
+          6
+        ],
+        [
+          "Ratio_Analysis ",
+          12,
+          7
+        ],
+        [
+          "Ratio_Analysis ",
+          12,
+          8
+        ],
+        [
+          "Ratio_Analysis ",
+          12,
+          9
+        ],
+        [
+          "Ratio_Analysis ",
+          12,
+          10
+        ],
+        [
+          "Ratio_Analysis ",
+          12,
+          11
+        ],
+        [
+          "Ratio_Analysis ",
+          12,
+          12
+        ]
+      ],
+      "operation_id": "O6::op1"
+    },
+    {
+      "canonical_cell": [
+        "Assumptions",
+        141,
+        11
+      ],
+      "member_cells": [
+        [
+          "Assumptions",
+          141,
+          11
+        ],
+        [
+          "Assumptions",
+          141,
+          12
+        ],
+        [
+          "Assumptions",
+          141,
+          13
+        ],
+        [
+          "Assumptions",
+          141,
+          14
+        ],
+        [
+          "Assumptions",
+          141,
+          15
+        ]
+      ],
+      "operation_id": "O4::op1"
+    },
+    {
+      "canonical_cell": [
+        "Financials",
+        12,
+        5
+      ],
+      "member_cells": [
+        [
+          "Financials",
+          12,
+          5
+        ],
+        [
+          "Financials",
+          12,
+          6
+        ]
+      ],
+      "operation_id": "O1::op1"
+    },
+    {
+      "canonical_cell": [
+        "Financials",
+        16,
+        5
+      ],
+      "member_cells": [
+        [
+          "Financials",
+          16,
+          5
+        ],
+        [
+          "Financials",
+          16,
+          6
+        ]
+      ],
+      "operation_id": "O1::op1"
+    },
+    {
+      "canonical_cell": [
+        "Financials",
+        19,
+        5
+      ],
+      "member_cells": [
+        [
+          "Financials",
+          19,
+          5
+        ],
+        [
+          "Financials",
+          19,
+          6
+        ]
+      ],
+      "operation_id": "O1::op1"
+    },
+    {
+      "canonical_cell": [
+        "Financials",
+        22,
+        5
+      ],
+      "member_cells": [
+        [
+          "Financials",
+          22,
+          5
+        ],
+        [
+          "Financials",
+          22,
+          6
+        ]
+      ],
+      "operation_id": "O1::op1"
+    },
+    {
+      "canonical_cell": [
+        "Financials",
+        23,
+        5
+      ],
+      "member_cells": [
+        [
+          "Financials",
+          23,
+          5
+        ],
+        [
+          "Financials",
+          23,
+          6
+        ]
+      ],
+      "operation_id": "O1::op1"
+    },
+    {
+      "canonical_cell": [
+        "Financials",
+        27,
+        5
+      ],
+      "member_cells": [
+        [
+          "Financials",
+          27,
+          5
+        ],
+        [
+          "Financials",
+          27,
+          6
+        ]
+      ],
+      "operation_id": "O1::op1"
+    },
+    {
+      "canonical_cell": [
+        "Financials",
+        36,
+        5
+      ],
+      "member_cells": [
+        [
+          "Financials",
+          36,
+          5
+        ],
+        [
+          "Financials",
+          36,
+          6
+        ]
+      ],
+      "operation_id": "O1::op1"
+    },
+    {
+      "canonical_cell": [
+        "Financials",
+        39,
+        5
+      ],
+      "member_cells": [
+        [
+          "Financials",
+          39,
+          5
+        ],
+        [
+          "Financials",
+          39,
+          6
+        ]
+      ],
+      "operation_id": "O1::op1"
+    },
+    {
+      "canonical_cell": [
+        "Financials",
+        42,
+        5
+      ],
+      "member_cells": [
+        [
+          "Financials",
+          42,
+          5
+        ],
+        [
+          "Financials",
+          42,
+          6
+        ]
+      ],
+      "operation_id": "O1::op1"
+    },
+    {
+      "canonical_cell": [
+        "Financials",
+        47,
+        5
+      ],
+      "member_cells": [
+        [
+          "Financials",
+          47,
+          5
+        ],
+        [
+          "Financials",
+          47,
+          6
+        ]
+      ],
+      "operation_id": "O1::op1"
+    },
+    {
+      "canonical_cell": [
+        "Financials",
+        52,
+        5
+      ],
+      "member_cells": [
+        [
+          "Financials",
+          52,
+          5
+        ],
+        [
+          "Financials",
+          52,
+          6
+        ]
+      ],
+      "operation_id": "O1::op1"
+    },
+    {
+      "canonical_cell": [
+        "Financials",
+        59,
+        5
+      ],
+      "member_cells": [
+        [
+          "Financials",
+          59,
+          5
+        ],
+        [
+          "Financials",
+          59,
+          6
+        ]
+      ],
+      "operation_id": "O1::op1"
+    },
+    {
+      "canonical_cell": [
+        "Financials",
+        6,
+        5
+      ],
+      "member_cells": [
+        [
+          "Financials",
+          6,
+          5
+        ],
+        [
+          "Financials",
+          6,
+          6
+        ]
+      ],
+      "operation_id": "O1::op1"
+    },
+    {
+      "canonical_cell": [
+        "Financials",
+        68,
+        5
+      ],
+      "member_cells": [
+        [
+          "Financials",
+          68,
+          5
+        ],
+        [
+          "Financials",
+          68,
+          6
+        ]
+      ],
+      "operation_id": "O1::op1"
+    }
+  ],
+  "stored_sessions": [
+    {
+      "seed": [
+        "Financials",
+        6,
+        4
+      ],
+      "target": {
+        "target_id": "cell:s03:r6:c4",
+        "cell_id": "cell:s03:r6:c4",
+        "obligation_id": "O1",
+        "sheet": "Financials",
+        "address": "D6",
+        "row": 6,
+        "col": 4,
+        "current_input_content": "%",
+        "current_input_kind": "value"
+      },
+      "formula": null,
+      "session": {
+        "synthesis": {
+          "parsed": null
+        },
+        "failure_class": "PROVIDER_TIMEOUT",
+        "calls": []
+      }
+    },
+    {
+      "seed": [
+        "Assumptions",
+        141,
+        11
+      ],
+      "target": {
+        "target_id": "cell:s02:r141:c11",
+        "cell_id": "cell:s02:r141:c11",
+        "obligation_id": "O4",
+        "sheet": "Assumptions",
+        "address": "K141",
+        "row": 141,
+        "col": 11,
+        "current_input_content": null,
+        "current_input_kind": "blank"
+      },
+      "formula": null,
+      "session": {
+        "synthesis": {
+          "parsed": null
+        },
+        "failure_class": "PROVIDER_TIMEOUT",
+        "calls": []
+      }
+    },
+    {
+      "seed": [
+        "Ratio_Analysis ",
+        12,
+        5
+      ],
+      "target": {
+        "target_id": "cell:s05:r12:c5",
+        "cell_id": "cell:s05:r12:c5",
+        "obligation_id": "O6",
+        "sheet": "Ratio_Analysis ",
+        "address": "E12",
+        "row": 12,
+        "col": 5,
+        "current_input_content": null,
+        "current_input_kind": "blank"
+      },
+      "formula": null,
+      "session": {
+        "synthesis": {
+          "parsed": null
+        },
+        "failure_class": "SESSION_RESOURCE_LIMIT",
+        "calls": []
+      }
+    }
+  ]
+}

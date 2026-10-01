@@ -1,0 +1,59 @@
+{
+  "name": "fm-ambient-six",
+  "purpose": "Forced-exposure diagnostic: conditional on formula-equivalence metadata entering context via the first view_xlsx content inspection, does structurally correct formula completion improve? Not a voluntary-tool test. Not a LibreCalc experiment.",
+  "model": "z-ai/glm-5.3-flash",
+  "sampling": "Deterministic from the frozen fm-index-pilot-twenty strata. Never historical scores. Exclude 08_03 (opaque frac 0.12). Negative: even-space of the 3 frozen Gate-2 zeros. Same-row: even-space of the 3 frozen same-row tags. Same-column: the frozen same-column tag plus even-space of remaining frozen tasks with that nearest class. Cross-sheet: even-space of the 2 frozen cross-sheet tags.",
+  "arms": {
+    "control": "--control, official config, 50 calls, $2, reasoning low, remaining-budget, no read budget",
+    "control-ambient": "--control-ambient, same prompt/budgets; first view_xlsx content inspection appends unranked formula-equivalence metadata for already-visible formulas"
+  },
+  "repeats": 1,
+  "max_tool_calls_per_task": 50,
+  "cost_limit_usd": 2.0,
+  "reasoning_effort": "low",
+  "token_limit_policy": "remaining-budget",
+  "tasks": [
+    {
+      "category": "Financial_Model",
+      "id": "03_02",
+      "role": "negative_control",
+      "stratum": "unrecoverable",
+      "reason": "zero-recoverable negative control; even-space of the frozen Gate-2 zeros"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "01_01",
+      "role": "same_row_nonadjacent",
+      "stratum": "same_row_nonadjacent",
+      "reason": "recoverable same-row non-adjacent; even-space of the frozen same-row stratum"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "20_05",
+      "role": "same_row_nonadjacent",
+      "stratum": "same_row_nonadjacent",
+      "reason": "recoverable same-row non-adjacent; even-space of the frozen same-row stratum"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "11_02",
+      "role": "same_column_nonadjacent",
+      "stratum": "same_column_nonadjacent",
+      "reason": "recoverable same-column non-adjacent; the frozen same-column tagged task"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "02_05",
+      "role": "same_column_nonadjacent",
+      "stratum": "same_column_nonadjacent",
+      "reason": "recoverable same-column non-adjacent; even-space of remaining frozen tasks with that nearest class"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "11_01",
+      "role": "cross_sheet",
+      "stratum": "cross_sheet",
+      "reason": "recoverable cross-sheet; even-space of the frozen cross-sheet stratum"
+    }
+  ]
+}

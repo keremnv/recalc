@@ -1,0 +1,7 @@
+{
+ "n_stall_episodes": 17,
+ "kinds": {
+  "repeated_broad_inspection": 4,
+  "repeated_semantic_reconsideration": 13
+ }
+}

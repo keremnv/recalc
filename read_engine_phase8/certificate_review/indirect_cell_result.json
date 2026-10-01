@@ -1,0 +1,112 @@
+{
+  "fixture_sha256": "c3710649ab3447cc4cc6ce2375bd76880ae0703de4ad2329c9bb42ae0137e117",
+  "workbook_sha256": "e95700015b6b5f26d3fd35858e453cc74b1d2714bccaf5d2d96ef3b293ecc99c",
+  "PY": {
+    "code": 0,
+    "stdout": "MergedCell <MergedCell 'Sheet'.B1>\n",
+    "stderr": ""
+  },
+  "H1": {
+    "code": 0,
+    "stdout": "ProxyCell <read_engine_phase3.runtime.ProxyCell object at 0x7be37ee374d0>\n",
+    "stderr": "",
+    "certificate": {
+      "cell_calls": 0,
+      "certified": true,
+      "reason": "ALL_CELL_CALLS_TERMINAL_SCALAR",
+      "terminals": [
+        "column",
+        "coordinate",
+        "data_type",
+        "row",
+        "value"
+      ]
+    },
+    "admitted": true,
+    "artifacts": {
+      "/home/kerem/Desktop/Personal Projects/librecalc-mcp/read_engine_phase8/certificate_review/input.xlsx": {
+        "artifact_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/read_engine_phase8/certificate_review/cache/read-engine/cd986e684a54f9c0cee8c0be7a84467a5426eae009aff9e6ef52d70a8b959069.r3jz",
+        "ensure_ns": 104511544,
+        "phases": {
+          "artifact_bytes": 498,
+          "artifact_discovery_validation_ns": 50666,
+          "artifact_hash_ns": 0,
+          "artifact_read_ns": 0,
+          "builder_import_ns": 90016434,
+          "builder_modules_present_in_parent": {
+            "lxml": true,
+            "openpyxl": true,
+            "prototype": true
+          },
+          "builder_stack_imported": true,
+          "decoder_profile": {
+            "shared_strings_s": 6.58e-07,
+            "structure_insert_s": "UNMEASURED",
+            "styles_dates_s": 0.000296679,
+            "total_decode_s": 0.001589007,
+            "value_decode_s": "UNMEASURED",
+            "workbook_relationships_s": 0.000429898,
+            "worksheet_xml_total_s": 0.000261329,
+            "zip_open_list_s": 4.248e-06
+          },
+          "direct_decode_ns": 1639828,
+          "parent_memorybook_constructed": false,
+          "parent_memorybook_construction_ns": 0,
+          "parent_schema_validation_ns": 0,
+          "parent_semantic_decompress_ns": 0,
+          "parent_semantic_json_ns": 0,
+          "publication_ns": 12267289,
+          "rebuild_reason": "invalid:FileNotFoundError",
+          "serialization_ns": 210022,
+          "sidecar_header_ns": 0
+        },
+        "source_hash_ns": 162252,
+        "source_sha256": "e95700015b6b5f26d3fd35858e453cc74b1d2714bccaf5d2d96ef3b293ecc99c",
+        "status": "BUILT"
+      }
+    },
+    "events": [
+      {
+        "admitted": true,
+        "event": "bootstrap",
+        "status": "INSTALLED"
+      },
+      {
+        "artifact_status": "BUILT",
+        "event": "direct_served_load",
+        "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/read_engine_phase8/certificate_review/input.xlsx",
+        "source_sha256": "e95700015b6b5f26d3fd35858e453cc74b1d2714bccaf5d2d96ef3b293ecc99c"
+      },
+      {
+        "column": 2,
+        "event": "merged_child_contact",
+        "row": 1,
+        "sheet": "Sheet"
+      },
+      {
+        "column": 2,
+        "event": "merged_child_direct",
+        "row": 1,
+        "sheet": "Sheet"
+      }
+    ],
+    "observer_receipt": {
+      "run_dir": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/read_engine_phase8/certificate_review/runs/run-8015It",
+      "target_exit_code": 0,
+      "target_signal": 0,
+      "pre_files": 1,
+      "post_files": 1,
+      "changed_xlsx": 0,
+      "capture_helper_exit": 0,
+      "profile_ns": {
+        "argument_run_dir": 409962,
+        "pre_snapshot": 105300,
+        "fork_launch": 141054,
+        "wait_target": 190690050,
+        "post_snapshot_compare": 279044,
+        "changed_helper_or_empty_receipt": 119276,
+        "observer_to_receipt": 191784102
+      }
+    }
+  }
+}

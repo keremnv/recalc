@@ -1,0 +1,43 @@
+{
+  "label": "TOKEN_EFFICIENCY_CLAIM_VALIDATION_RESERVED_UNRUN",
+  "seed": 20261001,
+  "selection": "independent seeded sample from dataset excluding discovery tasks; no treatment outcomes inspected",
+  "tasks": {
+    "Debugging": [
+      "Debugging:04_08",
+      "Debugging:02_02",
+      "Debugging:08_10",
+      "Debugging:07_06",
+      "Debugging:03_04",
+      "Debugging:03_09",
+      "Debugging:07_03",
+      "Debugging:09_07",
+      "Debugging:03_08",
+      "Debugging:09_10"
+    ],
+    "Financial_Model": [
+      "Financial_Model:09_05",
+      "Financial_Model:19_05",
+      "Financial_Model:05_04",
+      "Financial_Model:01_05",
+      "Financial_Model:08_01",
+      "Financial_Model:14_01",
+      "Financial_Model:10_01",
+      "Financial_Model:18_02",
+      "Financial_Model:16_05",
+      "Financial_Model:08_03"
+    ],
+    "Template": [
+      "Template:01_01",
+      "Template:16_09",
+      "Template:08_03",
+      "Template:13_02",
+      "Template:14_01",
+      "Template:02_05",
+      "Template:03_03",
+      "Template:07_02",
+      "Template:06_18",
+      "Template:13_05"
+    ]
+  }
+}

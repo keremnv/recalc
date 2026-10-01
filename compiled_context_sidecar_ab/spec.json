@@ -1,0 +1,354 @@
+{
+  "name": "compiled-context-sidecar-ab",
+  "hypothesis": "Does a general spreadsheet coding agent perform better when it has optional, well-explained, read-only access to a deterministic compiled structural model of the workbook?",
+  "mechanism_question": "When the capability is clearly explained and safe to use, does the agent actually choose to use it?",
+  "frozen_architecture": "autonomous compiled-agent (Task IR, Edit Plan, scheduler, ProgramGroups, calc_apply) is not in this experiment",
+  "model": "meta/muse-spark-1.3-contributor",
+  "identity": {
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "reasoning_effort": null,
+    "tool_choice": "auto",
+    "provider": {
+      "allow_fallbacks": true,
+      "require_parameters": true
+    },
+    "token_limit_policy": "remaining-budget",
+    "cost_limit_usd": 2.5,
+    "call_limit": 40,
+    "execution_timeout": 180,
+    "max_requeries": 2,
+    "source_run": "official-score-spark-1.3-contributor-fm-02_01",
+    "source_call_limit_note": "Source Spark control used 50 calls/$2.50; this probe keeps generation identity and uses the 40/$2.50 envelope."
+  },
+  "identity_source": {
+    "model": "meta/muse-spark-1.3-contributor",
+    "model_catalog_id": "meta/muse-spark-1.3-contributor",
+    "request_model_from_traj": "openrouter/meta/muse-spark-1.3-contributor",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "reasoning_effort": null,
+    "tool_choice": "auto",
+    "provider": {
+      "allow_fallbacks": true,
+      "require_parameters": true
+    },
+    "token_limit_policy": "remaining-budget",
+    "cost_limit_usd": 2.5,
+    "source_call_limit": 50
+  },
+  "envelope": {
+    "max_model_calls": 40,
+    "max_usd": 2.5
+  },
+  "slice": "benchmark/slices/compiled-context-sidecar-ten.json",
+  "prompt_hashes": {
+    "c0_system_sha256": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+    "c1_system_sha256": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+    "c0_instance_sha256": "a659355097d0faeeff8aeb10bb728c34e40c002cda67cd439bcc99f9da9dafa9",
+    "c1_instance_sha256": "088238307584b443653efc2a8bcd83ba794288fa5126cff9238279dc9ae45f1b",
+    "c0_config_sha256": "c3cc1b506956bc73a9560716e739bfb2fb19d96477df540f3837d17c3cd53c3d",
+    "c1_config_sha256": "bdb7702fcde649ebded7690edbd94e22230e5630a37158856db6d09c53493e4a",
+    "c1_tool_schema_sha256": "0abb2333ebe68ab0a12a6cca0176b9fc6e06389a29c8db692714b74630b5f806",
+    "c0_bundles": [
+      "tools/submit",
+      "tools/view_xlsx"
+    ],
+    "c1_bundles": [
+      "tools/submit",
+      "tools/view_xlsx",
+      "../../../benchmark/sweagent/calc_query"
+    ]
+  },
+  "jobs": [
+    {
+      "order": 1,
+      "task": "Financial_Model:13_05",
+      "category": "Financial_Model",
+      "id": "13_05",
+      "role": "primary_mechanism_witness",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c0-Financial_Model-13_05-r1",
+      "pair_key": "Financial_Model:13_05:r1"
+    },
+    {
+      "order": 2,
+      "task": "Financial_Model:13_05",
+      "category": "Financial_Model",
+      "id": "13_05",
+      "role": "primary_mechanism_witness",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c1-Financial_Model-13_05-r1",
+      "pair_key": "Financial_Model:13_05:r1"
+    },
+    {
+      "order": 3,
+      "task": "Financial_Model:13_05",
+      "category": "Financial_Model",
+      "id": "13_05",
+      "role": "primary_mechanism_witness",
+      "arm": "C1",
+      "repeat": 2,
+      "run_name": "spark-sidecar-c1-Financial_Model-13_05-r2",
+      "pair_key": "Financial_Model:13_05:r2"
+    },
+    {
+      "order": 4,
+      "task": "Financial_Model:13_05",
+      "category": "Financial_Model",
+      "id": "13_05",
+      "role": "primary_mechanism_witness",
+      "arm": "C0",
+      "repeat": 2,
+      "run_name": "spark-sidecar-c0-Financial_Model-13_05-r2",
+      "pair_key": "Financial_Model:13_05:r2"
+    },
+    {
+      "order": 5,
+      "task": "Financial_Model:13_05",
+      "category": "Financial_Model",
+      "id": "13_05",
+      "role": "primary_mechanism_witness",
+      "arm": "C0",
+      "repeat": 3,
+      "run_name": "spark-sidecar-c0-Financial_Model-13_05-r3",
+      "pair_key": "Financial_Model:13_05:r3"
+    },
+    {
+      "order": 6,
+      "task": "Financial_Model:13_05",
+      "category": "Financial_Model",
+      "id": "13_05",
+      "role": "primary_mechanism_witness",
+      "arm": "C1",
+      "repeat": 3,
+      "run_name": "spark-sidecar-c1-Financial_Model-13_05-r3",
+      "pair_key": "Financial_Model:13_05:r3"
+    },
+    {
+      "order": 7,
+      "task": "Financial_Model:13_05",
+      "category": "Financial_Model",
+      "id": "13_05",
+      "role": "primary_mechanism_witness",
+      "arm": "C1",
+      "repeat": 4,
+      "run_name": "spark-sidecar-c1-Financial_Model-13_05-r4",
+      "pair_key": "Financial_Model:13_05:r4"
+    },
+    {
+      "order": 8,
+      "task": "Financial_Model:13_05",
+      "category": "Financial_Model",
+      "id": "13_05",
+      "role": "primary_mechanism_witness",
+      "arm": "C0",
+      "repeat": 4,
+      "run_name": "spark-sidecar-c0-Financial_Model-13_05-r4",
+      "pair_key": "Financial_Model:13_05:r4"
+    },
+    {
+      "order": 9,
+      "task": "Financial_Model:05_01",
+      "category": "Financial_Model",
+      "id": "05_01",
+      "role": "generalization",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c0-Financial_Model-05_01-r1",
+      "pair_key": "Financial_Model:05_01:r1"
+    },
+    {
+      "order": 10,
+      "task": "Financial_Model:05_01",
+      "category": "Financial_Model",
+      "id": "05_01",
+      "role": "generalization",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c1-Financial_Model-05_01-r1",
+      "pair_key": "Financial_Model:05_01:r1"
+    },
+    {
+      "order": 11,
+      "task": "Financial_Model:02_01",
+      "category": "Financial_Model",
+      "id": "02_01",
+      "role": "saturation_non_harm",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c1-Financial_Model-02_01-r1",
+      "pair_key": "Financial_Model:02_01:r1"
+    },
+    {
+      "order": 12,
+      "task": "Financial_Model:02_01",
+      "category": "Financial_Model",
+      "id": "02_01",
+      "role": "saturation_non_harm",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c0-Financial_Model-02_01-r1",
+      "pair_key": "Financial_Model:02_01:r1"
+    },
+    {
+      "order": 13,
+      "task": "Financial_Model:15_05",
+      "category": "Financial_Model",
+      "id": "15_05",
+      "role": "negative_structure",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c0-Financial_Model-15_05-r1",
+      "pair_key": "Financial_Model:15_05:r1"
+    },
+    {
+      "order": 14,
+      "task": "Financial_Model:15_05",
+      "category": "Financial_Model",
+      "id": "15_05",
+      "role": "negative_structure",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c1-Financial_Model-15_05-r1",
+      "pair_key": "Financial_Model:15_05:r1"
+    },
+    {
+      "order": 15,
+      "task": "Template:03_03",
+      "category": "Template",
+      "id": "03_03",
+      "role": "generalization",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c1-Template-03_03-r1",
+      "pair_key": "Template:03_03:r1"
+    },
+    {
+      "order": 16,
+      "task": "Template:03_03",
+      "category": "Template",
+      "id": "03_03",
+      "role": "generalization",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c0-Template-03_03-r1",
+      "pair_key": "Template:03_03:r1"
+    },
+    {
+      "order": 17,
+      "task": "Template:06_17",
+      "category": "Template",
+      "id": "06_17",
+      "role": "generalization",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c0-Template-06_17-r1",
+      "pair_key": "Template:06_17:r1"
+    },
+    {
+      "order": 18,
+      "task": "Template:06_17",
+      "category": "Template",
+      "id": "06_17",
+      "role": "generalization",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c1-Template-06_17-r1",
+      "pair_key": "Template:06_17:r1"
+    },
+    {
+      "order": 19,
+      "task": "Template:16_12",
+      "category": "Template",
+      "id": "16_12",
+      "role": "generalization",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c1-Template-16_12-r1",
+      "pair_key": "Template:16_12:r1"
+    },
+    {
+      "order": 20,
+      "task": "Template:16_12",
+      "category": "Template",
+      "id": "16_12",
+      "role": "generalization",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c0-Template-16_12-r1",
+      "pair_key": "Template:16_12:r1"
+    },
+    {
+      "order": 21,
+      "task": "Debugging:01_01",
+      "category": "Debugging",
+      "id": "01_01",
+      "role": "generalization",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c0-Debugging-01_01-r1",
+      "pair_key": "Debugging:01_01:r1"
+    },
+    {
+      "order": 22,
+      "task": "Debugging:01_01",
+      "category": "Debugging",
+      "id": "01_01",
+      "role": "generalization",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c1-Debugging-01_01-r1",
+      "pair_key": "Debugging:01_01:r1"
+    },
+    {
+      "order": 23,
+      "task": "Debugging:09_04",
+      "category": "Debugging",
+      "id": "09_04",
+      "role": "generalization",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c1-Debugging-09_04-r1",
+      "pair_key": "Debugging:09_04:r1"
+    },
+    {
+      "order": 24,
+      "task": "Debugging:09_04",
+      "category": "Debugging",
+      "id": "09_04",
+      "role": "generalization",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c0-Debugging-09_04-r1",
+      "pair_key": "Debugging:09_04:r1"
+    },
+    {
+      "order": 25,
+      "task": "Debugging:10_10",
+      "category": "Debugging",
+      "id": "10_10",
+      "role": "generalization",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c0-Debugging-10_10-r1",
+      "pair_key": "Debugging:10_10:r1"
+    },
+    {
+      "order": 26,
+      "task": "Debugging:10_10",
+      "category": "Debugging",
+      "id": "10_10",
+      "role": "generalization",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "spark-sidecar-c1-Debugging-10_10-r1",
+      "pair_key": "Debugging:10_10:r1"
+    }
+  ],
+  "git_commit": "254a5c14fa74fc3534493c565de84b38e7317175"
+}

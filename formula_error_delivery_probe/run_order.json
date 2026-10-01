@@ -1,0 +1,54 @@
+{
+  "seed": 20260924,
+  "method": "Python random.Random seeded shuffle of selected task IDs and balanced two-control-first/two-treatment-first paired arm orders; pairs sequential",
+  "slots": [
+    {
+      "slot": 1,
+      "task": "Debugging:02_02",
+      "arm": "TREATMENT",
+      "run_dir": "runs/Debugging_02_02_TREATMENT"
+    },
+    {
+      "slot": 2,
+      "task": "Debugging:02_02",
+      "arm": "CONTROL",
+      "run_dir": "runs/Debugging_02_02_CONTROL"
+    },
+    {
+      "slot": 3,
+      "task": "Debugging:02_05",
+      "arm": "TREATMENT",
+      "run_dir": "runs/Debugging_02_05_TREATMENT"
+    },
+    {
+      "slot": 4,
+      "task": "Debugging:02_05",
+      "arm": "CONTROL",
+      "run_dir": "runs/Debugging_02_05_CONTROL"
+    },
+    {
+      "slot": 5,
+      "task": "Debugging:02_03",
+      "arm": "CONTROL",
+      "run_dir": "runs/Debugging_02_03_CONTROL"
+    },
+    {
+      "slot": 6,
+      "task": "Debugging:02_03",
+      "arm": "TREATMENT",
+      "run_dir": "runs/Debugging_02_03_TREATMENT"
+    },
+    {
+      "slot": 7,
+      "task": "Debugging:01_03",
+      "arm": "CONTROL",
+      "run_dir": "runs/Debugging_01_03_CONTROL"
+    },
+    {
+      "slot": 8,
+      "task": "Debugging:01_03",
+      "arm": "TREATMENT",
+      "run_dir": "runs/Debugging_01_03_TREATMENT"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+Processing /home/kerem/Desktop/Personal Projects/librecalc-mcp
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: librecalc-agent
+  Building wheel for librecalc-agent (pyproject.toml): started
+  Building wheel for librecalc-agent (pyproject.toml): finished with status 'done'
+  Created wheel for librecalc-agent: filename=librecalc_agent-0.2.0rc1-py3-none-any.whl size=43266 sha256=532e493f126087a45d86117343514a9a1cd0a4e0010af89bbd1be1b271d66b2e
+  Stored in directory: /tmp/librecalc-hygiene-rc-v55taghk/cache/pip/wheels/00/41/b1/1a86f5e219549cd2be9741eeb26d5f6f57687e3ad8e78ddc40
+Successfully built librecalc-agent
+
+[notice] A new release of pip is available: 25.3 -> 26.2.1
+[notice] To update, run: /tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python -m pip install --upgrade pip

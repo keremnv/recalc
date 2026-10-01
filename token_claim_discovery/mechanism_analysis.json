@@ -1,0 +1,217 @@
+{
+  "D_vs_A_e2_geometric_ratio": 0.8541678593824318,
+  "D_vs_A_e2_median_ratio": 0.8883627286027507,
+  "D_vs_A_without_two_extreme_template_tasks": {
+    "geometric_mean_ratio": 1.0956151184874532,
+    "median_ratio": 1.0341227007287925,
+    "n": 12,
+    "omitted": [
+      "Template:01_05",
+      "Template:04_04"
+    ]
+  },
+  "broad_view_calls_by_arm": {
+    "A": 39,
+    "B": 30,
+    "C": 24,
+    "D": 12
+  },
+  "capability": {
+    "D_vs_A_paired_modification_mean_delta": 0.0449,
+    "D_vs_A_paired_regression_mean_delta": 0.0157625,
+    "D_vs_A_submission_discordance": [
+      {
+        "control": "MODEL_NONCOMPLETION",
+        "task": "Debugging:04_07",
+        "treatment": "SUBMITTED"
+      },
+      {
+        "control": "SUBMITTED",
+        "task": "Debugging:07_05",
+        "treatment": "MODEL_NONCOMPLETION"
+      },
+      {
+        "control": "SUBMITTED",
+        "task": "Debugging:06_10",
+        "treatment": "MODEL_NONCOMPLETION"
+      }
+    ],
+    "formal_equivalence": "NOT_ESTABLISHED",
+    "submitted": {
+      "A": 10,
+      "B": 12,
+      "C": 8,
+      "D": 9
+    },
+    "valid": {
+      "A": 10,
+      "B": 12,
+      "C": 8,
+      "D": 9
+    }
+  },
+  "cumulative_prior_observation_bytes_by_arm": {
+    "A": 15308310,
+    "B": 13078795,
+    "C": 15454287,
+    "D": 13845424
+  },
+  "helper_audit": {
+    "D_arm_helper_calls": 0,
+    "arm": "B",
+    "audit_note": "Transcript shows one type/iteration probe and one loop over result-object keys before the final command printed cell hits; return code 0 alone is not useful adoption.",
+    "command_calls": 4,
+    "command_rendering_cell_hits": 1,
+    "displacement_established": false,
+    "failed_command_calls": 1,
+    "model_visible_bytes_all_helper_commands": 3599,
+    "model_visible_bytes_successful_helper_commands": 2094,
+    "reason": "One B run used the helper, but subsequent broad Python output and trajectory differences prevent mechanical attribution of the arm-level token contrast to displaced inspection.",
+    "runs_with_actual_helper_calls": 1,
+    "successful_command_calls": 3,
+    "task": "Financial_Model:09_02",
+    "type": "search"
+  },
+  "interaction": {
+    "bootstrap_95pct_ci_mean_log_effect": [
+      -0.31186822487851357,
+      0.8293788543157485
+    ],
+    "mean_log_effect": 0.24687818001953504,
+    "multiplicative_ratio": 1.280023170882372,
+    "n": 13
+  },
+  "observation_burden_hypothesis_supported": false,
+  "observation_burden_reason": "Broad view_xlsx calls fell, but total model-visible observation bytes and Python stdout bytes rose in D versus A; paired token reduction was driven mainly by fewer calls, with higher input tokens per call.",
+  "paired_trajectory_decomposition": {
+    "B_vs_A": {
+      "completion_discordances": [
+        {
+          "control": "MODEL_NONCOMPLETION",
+          "task": "Debugging:04_07",
+          "treatment": "SUBMITTED"
+        },
+        {
+          "control": "MODEL_NONCOMPLETION",
+          "task": "Debugging:09_03",
+          "treatment": "SUBMITTED"
+        },
+        {
+          "control": "SUBMITTED",
+          "task": "Debugging:06_10",
+          "treatment": "MODEL_NONCOMPLETION"
+        }
+      ],
+      "geometric_call_count_ratio": 0.7537293647587097,
+      "geometric_input_tokens_per_call_ratio": 0.9367302859196753,
+      "geometric_total_input_ratio": 0.7060411233564814,
+      "n": 14
+    },
+    "C_vs_A": {
+      "completion_discordances": [
+        {
+          "control": "SUBMITTED",
+          "task": "Template:06_02",
+          "treatment": "MODEL_NONCOMPLETION"
+        }
+      ],
+      "geometric_call_count_ratio": 0.910658961759334,
+      "geometric_input_tokens_per_call_ratio": 1.0161717943783686,
+      "geometric_total_input_ratio": 0.9253859512377245,
+      "n": 13
+    },
+    "D_vs_A": {
+      "completion_discordances": [
+        {
+          "control": "MODEL_NONCOMPLETION",
+          "task": "Debugging:04_07",
+          "treatment": "SUBMITTED"
+        },
+        {
+          "control": "SUBMITTED",
+          "task": "Debugging:07_05",
+          "treatment": "MODEL_NONCOMPLETION"
+        },
+        {
+          "control": "SUBMITTED",
+          "task": "Debugging:06_10",
+          "treatment": "MODEL_NONCOMPLETION"
+        }
+      ],
+      "geometric_call_count_ratio": 0.8206713503328866,
+      "geometric_input_tokens_per_call_ratio": 1.040815984420509,
+      "geometric_total_input_ratio": 0.8541678593824318,
+      "n": 14
+    },
+    "D_vs_C": {
+      "completion_discordances": [
+        {
+          "control": "MODEL_NONCOMPLETION",
+          "task": "Template:06_02",
+          "treatment": "SUBMITTED"
+        },
+        {
+          "control": "MODEL_NONCOMPLETION",
+          "task": "Debugging:04_07",
+          "treatment": "SUBMITTED"
+        },
+        {
+          "control": "SUBMITTED",
+          "task": "Debugging:07_05",
+          "treatment": "MODEL_NONCOMPLETION"
+        },
+        {
+          "control": "SUBMITTED",
+          "task": "Debugging:06_10",
+          "treatment": "MODEL_NONCOMPLETION"
+        }
+      ],
+      "geometric_call_count_ratio": 0.8987532138276866,
+      "geometric_input_tokens_per_call_ratio": 1.017392449416653,
+      "geometric_total_input_ratio": 0.914384733637239,
+      "n": 13
+    }
+  },
+  "per_arm_caching_and_cost": {
+    "A": {
+      "input_tokens_minus_reported_cached": 788581,
+      "provider_input_tokens": 7958494,
+      "provider_output_tokens": 130269,
+      "provider_reported_cost_usd": 0.28142232,
+      "reported_cached_input_tokens": 7169913
+    },
+    "B": {
+      "input_tokens_minus_reported_cached": 782544,
+      "provider_input_tokens": 7112769,
+      "provider_output_tokens": 108195,
+      "provider_reported_cost_usd": 0.2564394895,
+      "reported_cached_input_tokens": 6330225
+    },
+    "C": {
+      "input_tokens_minus_reported_cached": 744121,
+      "provider_input_tokens": 8340458,
+      "provider_output_tokens": 123974,
+      "provider_reported_cost_usd": 0.289061699,
+      "reported_cached_input_tokens": 7596337
+    },
+    "D": {
+      "input_tokens_minus_reported_cached": 856031,
+      "provider_input_tokens": 7537158,
+      "provider_output_tokens": 165158,
+      "provider_reported_cost_usd": 0.295384412,
+      "reported_cached_input_tokens": 6681127
+    }
+  },
+  "python_stdout_bytes_by_arm": {
+    "A": 284513,
+    "B": 336560,
+    "C": 606846,
+    "D": 685468
+  },
+  "visible_observation_bytes_by_arm": {
+    "A": 957611,
+    "B": 991270,
+    "C": 1001872,
+    "D": 1008265
+  }
+}

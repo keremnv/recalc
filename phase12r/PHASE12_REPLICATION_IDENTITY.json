@@ -1,0 +1,9 @@
+{
+  "requested_final_files": 28,
+  "replayed_final_files": 28,
+  "eligible_submissions": 23,
+  "retained_nonsubmitted_candidates": 5,
+  "manifest_hash": "5e603dae5ac2451d6bb769d1ce3d37db6c26ebe877322113e131e7197ca4d8c4",
+  "replication_ledger_hash": "62eb7c6b795abde5c8903f938c35ad09034664954e0802884cf08f99dcbf6d35",
+  "independent_prevalence": false
+}

@@ -1,0 +1,100 @@
+{
+  "families": {
+    "Debugging": {
+      "development_tasks": [
+        "Debugging:01_01",
+        "Debugging:01_06",
+        "Debugging:02_01",
+        "Debugging:03_06",
+        "Debugging:04_01",
+        "Debugging:04_07",
+        "Debugging:05_08",
+        "Debugging:06_02",
+        "Debugging:07_03",
+        "Debugging:08_09",
+        "Debugging:09_04",
+        "Debugging:09_09",
+        "Debugging:10_05",
+        "Debugging:10_10"
+      ],
+      "heldout_tasks": [
+        "Debugging:02_06",
+        "Debugging:03_01",
+        "Debugging:05_02",
+        "Debugging:06_07",
+        "Debugging:07_08",
+        "Debugging:08_04",
+        "Debugging:10_04"
+      ]
+    },
+    "Financial_Model": {
+      "development_tasks": [
+        "Financial_Model:01_01",
+        "Financial_Model:02_01",
+        "Financial_Model:03_01",
+        "Financial_Model:04_01",
+        "Financial_Model:05_01",
+        "Financial_Model:07_01",
+        "Financial_Model:08_02",
+        "Financial_Model:08_03",
+        "Financial_Model:08_05",
+        "Financial_Model:11_05",
+        "Financial_Model:13_05",
+        "Financial_Model:15_04",
+        "Financial_Model:15_05",
+        "Financial_Model:16_05",
+        "Financial_Model:18_05",
+        "Financial_Model:19_05",
+        "Financial_Model:20_05"
+      ],
+      "heldout_tasks": [
+        "Financial_Model:06_01",
+        "Financial_Model:08_01",
+        "Financial_Model:08_04",
+        "Financial_Model:10_01",
+        "Financial_Model:11_01",
+        "Financial_Model:12_05",
+        "Financial_Model:14_05",
+        "Financial_Model:17_05"
+      ]
+    },
+    "Template": {
+      "development_tasks": [
+        "Template:01_02",
+        "Template:01_07",
+        "Template:02_05",
+        "Template:03_03",
+        "Template:05_02",
+        "Template:06_21",
+        "Template:07_01",
+        "Template:08_03",
+        "Template:10_01",
+        "Template:11_03",
+        "Template:13_03",
+        "Template:13_08",
+        "Template:14_05",
+        "Template:16_06",
+        "Template:16_12"
+      ],
+      "heldout_tasks": [
+        "Template:06_06",
+        "Template:06_09",
+        "Template:06_12",
+        "Template:06_16",
+        "Template:06_17",
+        "Template:15_01",
+        "Template:16_01"
+      ]
+    },
+    "Visualization": {
+      "development_tasks": [
+        "glm-fill-c0-Visualization-Task-1426290-r1"
+      ],
+      "heldout_tasks": [
+        "glm-fill-c0-Visualization-Task-1420776-r1"
+      ]
+    }
+  },
+  "rule": "task-level stratified 70/30 split; sorted task IDs then seeded shuffle",
+  "seed": 20260920
+}

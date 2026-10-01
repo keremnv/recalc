@@ -1,0 +1,20 @@
+{
+ "note": "same classification, three accounting units; shares must agree qualitatively",
+ "correct": {
+  "tokens_est": {
+   "C0_share": 0.0164962240711828,
+   "C1_share": 0.016524353974763234,
+   "C2_share": 0.01675693641777464
+  },
+  "bytes": {
+   "C0_share": 0.0163923609676029,
+   "C1_share": 0.016438783824475844,
+   "C2_share": 0.01668536373673738
+  },
+  "chars": {
+   "C0_share": 0.016392716660743722,
+   "C1_share": 0.016439140733950575,
+   "C2_share": 0.016685727106898255
+  }
+ }
+}

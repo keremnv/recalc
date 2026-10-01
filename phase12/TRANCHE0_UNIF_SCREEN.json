@@ -1,0 +1,464 @@
+[
+ {
+  "rep": "representative_architecture_checkpoint/reps/Debugging_03_06_H1_primary_42",
+  "status": "OK",
+  "unif": 2,
+  "families": [
+   "UNIF",
+   "REF"
+  ]
+ },
+ {
+  "rep": "representative_architecture_checkpoint/reps/Debugging_06_05_H0_primary_47",
+  "status": "OK",
+  "unif": 1,
+  "families": [
+   "UNIF",
+   "REF"
+  ]
+ },
+ {
+  "rep": "representative_architecture_checkpoint/reps/Template_01_05_H0_primary_00",
+  "status": "OK",
+  "unif": 0,
+  "families": []
+ },
+ {
+  "rep": "representative_architecture_checkpoint/reps/Template_02_01_H0_primary_04",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "representative_architecture_checkpoint/reps/Template_02_01_H1_primary_05",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "representative_architecture_checkpoint/reps/Template_04_04_H0_primary_07",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "representative_architecture_checkpoint/reps/Template_04_04_H1_primary_06",
+  "status": "OK",
+  "unif": 0,
+  "families": []
+ },
+ {
+  "rep": "representative_architecture_checkpoint/reps/Template_06_02_H0_primary_08",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "representative_architecture_checkpoint/reps/Template_06_02_H1_primary_09",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "representative_architecture_checkpoint/reps/Template_06_08_H0_primary_11",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "representative_architecture_checkpoint/reps/Template_06_08_H1_primary_10",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "representative_architecture_checkpoint/reps/Template_06_23_H0_primary_12",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "representative_architecture_checkpoint/reps/Template_06_23_H1_primary_13",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "representative_architecture_checkpoint/reps/Template_16_07_H0_primary_16",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "representative_architecture_checkpoint/reps/Template_16_08_H0_primary_19",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "representative_architecture_checkpoint/reps/Template_16_08_H1_primary_18",
+  "status": "OK",
+  "unif": 1,
+  "families": [
+   "UNIF",
+   "REF"
+  ]
+ },
+ {
+  "rep": "batch_write_helper_ab/reps/Debugging_02_01_C0",
+  "status": "OK",
+  "unif": 2,
+  "families": [
+   "UNIF",
+   "REF"
+  ]
+ },
+ {
+  "rep": "batch_write_helper_ab/reps/Template_03_03_C0",
+  "status": "OK",
+  "unif": 0,
+  "families": []
+ },
+ {
+  "rep": "batch_write_helper_ab/reps/Template_03_03_C0_r2",
+  "status": "OK",
+  "unif": 0,
+  "families": []
+ },
+ {
+  "rep": "batch_write_helper_ab/reps/Template_03_03_C1",
+  "status": "OK",
+  "unif": 0,
+  "families": []
+ },
+ {
+  "rep": "batch_write_helper_ab/reps/Template_05_02_C0",
+  "status": "OK",
+  "unif": 0,
+  "families": []
+ },
+ {
+  "rep": "batch_write_helper_ab/reps/Template_10_01_C0",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "batch_write_helper_ab/reps/Template_10_01_C1",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "ERR",
+   "REF"
+  ]
+ },
+ {
+  "rep": "batch_write_helper_ab/reps/Template_15_01_C0",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "batch_write_helper_ab/reps/Template_15_01_C1",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "batch_write_helper_ab/reps/Template_16_01_C0",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "batch_write_helper_ab/reps/Template_16_01_C1",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "inspection_efficiency_ab/reps/Debugging_02_06_C0",
+  "status": "OK",
+  "unif": 1,
+  "families": [
+   "UNIF",
+   "REF"
+  ]
+ },
+ {
+  "rep": "inspection_efficiency_ab/reps/Debugging_02_06_C1",
+  "status": "OK",
+  "unif": 1,
+  "families": [
+   "UNIF",
+   "REF"
+  ]
+ },
+ {
+  "rep": "inspection_efficiency_ab/reps/Template_01_02_C0",
+  "status": "OK",
+  "unif": 0,
+  "families": []
+ },
+ {
+  "rep": "inspection_efficiency_ab/reps/Template_01_02_C0_r2",
+  "status": "OK",
+  "unif": 0,
+  "families": []
+ },
+ {
+  "rep": "inspection_efficiency_ab/reps/Template_01_02_C1_r2",
+  "status": "OK",
+  "unif": 0,
+  "families": []
+ },
+ {
+  "rep": "inspection_efficiency_ab/reps/Template_01_07_C0",
+  "status": "OK",
+  "unif": 0,
+  "families": []
+ },
+ {
+  "rep": "inspection_efficiency_ab/reps/Template_06_12_C0_r2",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "inspection_efficiency_ab/reps/Template_06_12_C1",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "inspection_efficiency_ab/reps/Template_06_12_C1_r2",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "live_transparent_runtime_ab/runs/Debugging/Debugging_02_06_H0",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "ERR"
+  ]
+ },
+ {
+  "rep": "live_transparent_runtime_ab/runs/Financial_Model/Financial_Model_01_01_H0",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "live_transparent_runtime_ab/runs/Financial_Model/Financial_Model_01_01_H1",
+  "status": "OK",
+  "unif": 6,
+  "families": [
+   "ERR",
+   "UNIF",
+   "REF"
+  ]
+ },
+ {
+  "rep": "live_transparent_runtime_ab/runs/Financial_Model/Financial_Model_02_01_H0",
+  "status": "OK",
+  "unif": 8,
+  "families": [
+   "UNIF",
+   "REF"
+  ]
+ },
+ {
+  "rep": "live_transparent_runtime_ab/runs/Financial_Model/Financial_Model_02_01_H1",
+  "status": "OK",
+  "unif": 8,
+  "families": [
+   "UNIF",
+   "REF"
+  ]
+ },
+ {
+  "rep": "live_transparent_runtime_ab/runs/Financial_Model/Financial_Model_13_05_H0",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "live_transparent_runtime_ab/runs/Financial_Model/Financial_Model_13_05_H1",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "live_transparent_runtime_ab/runs/Template/Template_01_02_H0",
+  "status": "OK",
+  "unif": 0,
+  "families": []
+ },
+ {
+  "rep": "live_transparent_runtime_ab/runs/Template/Template_01_07_H0",
+  "status": "OK",
+  "unif": 0,
+  "families": []
+ },
+ {
+  "rep": "live_transparent_runtime_ab/runs/Template/Template_06_12_H0",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "live_transparent_runtime_ab/runs/Template/Template_06_12_H1",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "token_affordance_discovery/runs/primary/01_Financial_Model_03_03_A",
+  "status": "OK",
+  "unif": 4,
+  "families": [
+   "UNIF",
+   "REF"
+  ]
+ },
+ {
+  "rep": "token_affordance_discovery/runs/primary/02_Financial_Model_03_03_B",
+  "status": "OK",
+  "unif": 5,
+  "families": [
+   "ERR",
+   "UNIF",
+   "REF"
+  ]
+ },
+ {
+  "rep": "token_affordance_discovery/runs/primary/03_Financial_Model_03_03_C",
+  "status": "OK",
+  "unif": 6,
+  "families": [
+   "UNIF",
+   "REF"
+  ]
+ },
+ {
+  "rep": "token_affordance_discovery/runs/primary/04_Financial_Model_03_03_D",
+  "status": "OK",
+  "unif": 4,
+  "families": [
+   "UNIF",
+   "REF"
+  ]
+ },
+ {
+  "rep": "token_affordance_discovery/runs/primary/37_Template_15_01_B",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "token_affordance_discovery/runs/primary/38_Template_15_01_C",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "token_affordance_discovery/runs/primary/39_Template_15_01_D",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "token_affordance_discovery/runs/primary/40_Template_15_01_A",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "token_affordance_discovery/runs/primary/45_Template_15_03_D",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "token_affordance_discovery/runs/primary/46_Template_15_03_A",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "token_affordance_discovery/runs/primary/47_Template_15_03_B",
+  "status": "OK",
+  "unif": 0,
+  "families": [
+   "REF"
+  ]
+ },
+ {
+  "rep": "token_affordance_discovery/runs/primary/48_Template_15_03_C",
+  "status": "OK",
+  "unif": 0,
+  "families": []
+ }
+]

@@ -1,0 +1,28 @@
+{
+ "local_helper_def_names": {
+  "F": 4,
+  "s": 4,
+  "f": 3,
+  "setf": 3,
+  "put": 3,
+  "g": 3,
+  "edit_sheet": 2,
+  "style_from": 2,
+  "font_color_class": 2,
+  "get_font_with_color": 2,
+  "get_xf_with_font": 2,
+  "classify_formula": 2,
+  "process_sheet": 2,
+  "repl": 2,
+  "setv": 2,
+  "set": 2,
+  "lvl_from": 2,
+  "colL": 1,
+  "esc": 1,
+  "col_letter": 1
+ },
+ "scripts_with_local_write_helper": 16,
+ "scripts_with_edits_dict": 6,
+ "scripts_with_style_copy": 8,
+ "verdict": "agents already invent write helpers + edits dicts; write_cells/write_formulas match invented abstractions"
+}

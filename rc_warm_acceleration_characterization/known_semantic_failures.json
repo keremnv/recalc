@@ -1,0 +1,57 @@
+{
+  "failure_ids": [
+    "Debugging_08_04__2dde74bd671e",
+    "Financial_Model_15_03__472e28fbd6e0",
+    "Template_06_23__fc41ad37c48b",
+    "Template_16_07__9662584ede5e"
+  ],
+  "rows": [
+    {
+      "classification": "GENUINE_SEMANTIC_OR_EXIT_MISMATCH",
+      "normalized_pairs_equal": [
+        false,
+        false,
+        false
+      ],
+      "task": "Debugging:08_04",
+      "valid_processes": true,
+      "workload_id": "Debugging_08_04__2dde74bd671e"
+    },
+    {
+      "classification": "GENUINE_SEMANTIC_OR_EXIT_MISMATCH",
+      "normalized_pairs_equal": [
+        false,
+        false,
+        false
+      ],
+      "task": "Financial_Model:15_03",
+      "valid_processes": false,
+      "workload_id": "Financial_Model_15_03__472e28fbd6e0"
+    },
+    {
+      "classification": "GENUINE_SEMANTIC_OR_EXIT_MISMATCH",
+      "normalized_pairs_equal": [
+        false,
+        false,
+        false
+      ],
+      "task": "Template:06_23",
+      "valid_processes": false,
+      "workload_id": "Template_06_23__fc41ad37c48b"
+    },
+    {
+      "classification": "GENUINE_SEMANTIC_OR_EXIT_MISMATCH",
+      "normalized_pairs_equal": [
+        false,
+        false,
+        false
+      ],
+      "task": "Template:16_07",
+      "valid_processes": false,
+      "workload_id": "Template_16_07__9662584ede5e"
+    }
+  ],
+  "source": "rc_acceleration_validation/semantic_forensics.json",
+  "source_sha256": "8905d4f484f8db13bd7401664eca137f2a9a6f9a65a209a445226e31312cfbb9",
+  "warm_status": "NOT_RUN; failures remain product limitations"
+}

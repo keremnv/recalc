@@ -1,0 +1,9 @@
+{
+  "experiment": "zero-model differential proof of AST-aware eligibility repair",
+  "model_inference": false,
+  "new_helpers": 0,
+  "pass_condition": "all repaired candidates exact against ordinary openpyxl, no stale/identity divergence",
+  "prompts_changed": false,
+  "scope": "same frozen live Python commands; ignore string/list slices; retain real workbook range, data_only, writes, rich objects, iter_rows Cell-object and escape fallback",
+  "then": "rerank the larger live checkpoint only if proof passes; Candidate B remains frozen"
+}

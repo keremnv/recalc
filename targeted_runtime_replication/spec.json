@@ -1,0 +1,17 @@
+{
+ "name": "targeted-runtime-replication-stage-a",
+ "n_reps_frozen": 2,
+ "freeze_policy": "n frozen before inference; no early stopping for favorable looks",
+ "arms": {
+  "H0": "default agent, ordinary Python/openpyxl, existing path",
+  "H1": "identical surface + transparent transaction underneath; no new model info/helpers/receipts/prompts"
+ },
+ "causal_boundary": "treatment code (h1_wrap) executes only after a bash call completes; pre-first-bash divergence cannot be runtime-caused",
+ "verdicts": [
+  "RUNTIME_CAPABILITY_PRESERVATION_SUPPORTED",
+  "RUNTIME_BEHAVIORAL_EFFECT_DETECTED",
+  "RUNTIME_CAPABILITY_LOSS",
+  "INCONCLUSIVE"
+ ],
+ "n_change_2026_09_18": "user directive: stop at n=2, do not run n=5; reps 1-2 retained, reps 3-5 never run"
+}

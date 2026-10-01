@@ -1,0 +1,90 @@
+{
+  "label": "CORRECTIVE_FAIL_CLOSED_FIX",
+  "date": "2026-09-22",
+  "new_mechanism_experiment": false,
+  "deterministic_root_cause": {
+    "task": "Financial_Model:06_01",
+    "package_part": "docProps/core.xml",
+    "defect": "dc:creator uses undeclared dc namespace prefix",
+    "exception": "XMLSyntaxError",
+    "original_message": "Namespace prefix dc on creator is not defined, line 1, column 574 (<string>, line 1)",
+    "call_chain": [
+      "representative_checkpoint.prepare_substrate",
+      "index.ensure_fresh",
+      "index.build_index",
+      "openpyxl.load_workbook(read_only=True)",
+      "package metadata XML parsing"
+    ],
+    "architecture_veto": "Uncaught eager H1-only optional build exception aborted runner before ordinary agent execution."
+  },
+  "transient": {
+    "task": "Template:06_08",
+    "exception": "UnicodeDecodeError",
+    "record": "representative_architecture_checkpoint/reps_preserved_infra_2/Template_06_08_H1_primary_10/run_record.json",
+    "root_cause": "Not established; archived record contains exception but no stack or failing intermediate bytes. Exact retained source input does not reproduce it."
+  },
+  "boundaries": [
+    "Index construction publishes only fully committed, hash-verified handles; old authority retired before rebuild.",
+    "A completion/identity row is committed atomically with cells and checked before snapshot authority.",
+    "Parent publication revokes old manifest first, backs up to temporary SQLite, then atomically publishes database and manifest.",
+    "Workbook-local failure tombstones prohibit retry on unchanged bytes; a new hash permits parent ensure_fresh rebuild. Unknown generation disables that workbook for the process lifetime.",
+    "Manifest/storage failure disables runner descendants when safe on-disk revocation cannot be guaranteed.",
+    "Runtime checks source hash, read-only database availability, schema, completion identity and post-init hash; failed workbook remains reference-only in that Python process.",
+    "Already returned proxies consult handle validity; database/read failure retires the handle and delegates to real openpyxl.",
+    "Bootstrap failure restores original load_workbook."
+  ],
+  "telemetry_fields": [
+    "exception_class",
+    "stage",
+    "path",
+    "workbook_generation",
+    "index_generation",
+    "fallback_reason",
+    "partially_initialized",
+    "accelerated_operation_already_served"
+  ],
+  "telemetry_scope": "At the failing build/snapshot boundary. Served flag records observations in that runtime process; parent initialization has served no model reads. Returned preparation failures are persisted by runner substrate telemetry; runtime emits JSONL. No task/gold/evaluator content is logged.",
+  "fallback_state": "ACCELERATION_DISABLED_FOR_RELEVANT_SCOPE",
+  "original_path_and_load_arguments_preserved": true,
+  "unchanged": [
+    "A1 classifier",
+    "admitted primitive semantic surface",
+    "model prompts/tool schemas/helper signatures",
+    "mutation capture and commit semantics",
+    "all original primary and replication evidence"
+  ],
+  "additional_corrective_finding": {
+    "case": "Empty worksheet unbounded iter_rows(values_only=True)",
+    "before": "Proxy returned [(None,)] where ordinary openpyxl returns [].",
+    "action": "Predeclared real-openpyxl fallback for that unsupported structure; no semantic surface expansion.",
+    "discovered_in": "Focused corrective fixture regression, not a new representative or live experiment.",
+    "resolved": true
+  },
+  "helper_action": "Active lx_helpers and retained runner both use reference_openpyxl; helper style reads also bypass Candidate A. Historical substrate api remains only for evidence reproduction, with disabled-index fallback.",
+  "source_sha256": {
+    "benchmark/inspection_helpers/index.py": "2b95da432222706f208c35f6277032ebffb0cf832efb3f1b0f329545679ad854",
+    "benchmark/inspection_helpers/substrate.py": "6f21c97f0666117c61cb1bcc6a80a576e16eeb9259ce7edcc180076aef4424bb",
+    "benchmark/candidate_a_live_runtime.py": "3a682694d3b76fba78a91a37b46074c8c55c0de3de6c6da21482d3d07cb38501",
+    "benchmark/candidate_a_shadow_interposition.py": "28005b240e56c66fb33fc2696006536a8428e6064260c11142791045487539b9",
+    "benchmark/candidate_a_live_treatment.py": "d6338bc898779f4eeb307d2657843106e2f916c8872cb86fe9b160c1ae93af2b",
+    "benchmark/representative_checkpoint.py": "d40e2bd73f59ccb95a1637bfb59e7f0491ab4df24a658b566486b7e7479da9dc",
+    "benchmark/inspection_helpers/lx_helpers.py": "a49bc7d9158e98c13b81afc2190e6f8a5ac2c859705a547fc6c53c694827bc98",
+    "benchmark/inspection_helpers/reference_api.py": "5d6c8cc6a4b4116f6a17d65aa356186c11824287e05ec6174692a82efc394f68",
+    "benchmark/inspection_helpers/api.py": "d22df7ac315641d82785ad193a8f9c80ce373680ebafc57cc63ef7116c950b54",
+    "benchmark/corrective_fail_closed_replay.py": "919fd3d9bbbb9beacf6f801304831e1c82da0ac3eb454d70cefc4cfb76950446",
+    "tests/test_fail_closed_substrate.py": "c79cb689447854685ea58aa908bd5aa6694236d533c4ba17c7aa48f60fc0101a"
+  },
+  "a1_classifier_sha256": "5d6a299bd8d0f8dd7e8b2609877d4bb4e08efda39bba33a87d8a18f2e03e5c86",
+  "reproduction": [
+    "python3 -m pytest tests/test_fail_closed_substrate.py tests/test_inspection_helpers.py tests/test_transparent_runtime.py -q --junitxml=final_architecture_freeze/tests.xml",
+    "python3 -m benchmark.corrective_fail_closed_replay"
+  ],
+  "not_run": [
+    "new representative benchmark",
+    "full benchmark",
+    "new model calls",
+    "new official scoring",
+    "formula-error feedback",
+    "A2/A3/B/Track C mechanism experiments"
+  ]
+}

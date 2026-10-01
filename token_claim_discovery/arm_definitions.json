@@ -1,0 +1,35 @@
+{
+  "arms": {
+    "A": {
+      "H": 0,
+      "S": 0
+    },
+    "B": {
+      "H": 1,
+      "S": 0
+    },
+    "C": {
+      "H": 0,
+      "S": 1
+    },
+    "D": {
+      "H": 1,
+      "S": 1
+    }
+  },
+  "common": {
+    "call_cap": 40,
+    "candidate_a": false,
+    "capture": false,
+    "compiled_substrate": false,
+    "freshness": "inactive",
+    "helper_backend": "reference_openpyxl",
+    "instance_cost_cap_usd": 0.25,
+    "max_tokens": 8192,
+    "model": "z-ai/glm-5.3-flash",
+    "provider_deadline_s": 240,
+    "task_deadline_s": 900,
+    "temperature": 0.0,
+    "top_p": 1.0
+  }
+}

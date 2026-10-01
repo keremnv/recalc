@@ -1,0 +1,79 @@
+{
+  "claims": [
+    {
+      "CLAIM": "Ordinary Python remains the model-facing working interface",
+      "STATUS": "EARNED",
+      "STRONGEST EVIDENCE": "OLD_HARNESS_COMPONENT_TRANSFER_AUDIT.md; THIN_ARCHITECTURE_SYSTEM_CHECKPOINT_REPORT.md",
+      "SCOPE": "Tested coding-agent scaffold",
+      "WHAT WE MUST NOT SAY": "Python is universally optimal"
+    },
+    {
+      "CLAIM": "A structured semantic waist was not required by the tested coding agent",
+      "STATUS": "SUPPORTED",
+      "STRONGEST EVIDENCE": "ARCHITECTURE_EVIDENCE_FREEZE.md; OLD_HARNESS_COMPONENT_TRANSFER_AUDIT.md",
+      "SCOPE": "Tested agent and transfer studies",
+      "WHAT WE MUST NOT SAY": "All spreadsheet agents should reject structured interfaces"
+    },
+    {
+      "CLAIM": "Transparent conservative read acceleration is exact on its earned surface",
+      "STATUS": "EARNED",
+      "STRONGEST EVIDENCE": "candidate_a_a1_checkpoint_rerun_01/exact_trace_fidelity.json; final_architecture_freeze/fail_closed_tests.json",
+      "SCOPE": "51/51 historical traces and focused primitive regressions; unsupported structures fall back",
+      "WHAT WE MUST NOT SAY": "General openpyxl replacement or all inputs proven exact"
+    },
+    {
+      "CLAIM": "Conditional read acceleration can pay materially on large-workbook tails",
+      "STATUS": "SUPPORTED",
+      "STRONGEST EVIDENCE": "CANDIDATE_A_A1_12_TASK_CHECKPOINT_RERUN_REPORT.md; representative_architecture_checkpoint/economics.json",
+      "SCOPE": "Conditional read traces and representative unit-cost estimates; tail-heavy economics",
+      "WHAT WE MUST NOT SAY": "Universally faster, total-task speedup, or compiled substrate always pays"
+    },
+    {
+      "CLAIM": "Mutation capture provides cheap deterministic assurance",
+      "STATUS": "EARNED",
+      "STRONGEST EVIDENCE": "TRANSPARENT_CAPTURE_REPLAY_REPORT.md; THIN_ARCHITECTURE_SYSTEM_CHECKPOINT_REPORT.md; representative_architecture_checkpoint/economics.json",
+      "SCOPE": "Fidelity/validation/generation checks; .34s for 16 checkpoint mutations",
+      "WHAT WE MUST NOT SAY": "Capture prevents corruption in practice or is capability-required"
+    },
+    {
+      "CLAIM": "Context repetition is not a material bottleneck in the measured corpus",
+      "STATUS": "SUPPORTED",
+      "STRONGEST EVIDENCE": "TRACK_C_TERMINAL_PROJECTION_AUDIT.md",
+      "SCOPE": "71 trajectories/70 tasks; C0/C1 ~1.65%, C2 ~1.68%",
+      "WHAT WE MUST NOT SAY": "Context repetition never matters for other agents/corpora"
+    },
+    {
+      "CLAIM": "Large first-seen context does not imply a mechanically removable projection",
+      "STATUS": "SUPPORTED",
+      "STRONGEST EVIDENCE": "TRACK_C_TERMINAL_PROJECTION_AUDIT.md",
+      "SCOPE": "Large P2 oracle mass; 9 no-hindsight selectors failed gate",
+      "WHAT WE MUST NOT SAY": "Unlinked context is useless or compressible without decision loss"
+    },
+    {
+      "CLAIM": "Unsupported optimized paths fall back rather than replacing semantics",
+      "STATUS": "SUPPORTED",
+      "STRONGEST EVIDENCE": "final_architecture_freeze/corrective_replay.json; final_architecture_freeze/fail_closed_tests.json",
+      "SCOPE": "Hardened optional index/load boundary; reference may itself reject invalid input",
+      "WHAT WE MUST NOT SAY": "Malformed workbooks are repaired or guaranteed to succeed"
+    },
+    {
+      "CLAIM": "Cumulative practical-stack capability preservation is supported",
+      "STATUS": "SUPPORTED",
+      "STRONGEST EVIDENCE": "final_architecture_freeze/cumulative_capability_evidence.json",
+      "SCOPE": "Independent tested causal scopes, corrected parser veto; checkpoint neutrality only narrow",
+      "WHAT WE MUST NOT SAY": "Better benchmark scores, formal capability equivalence, or all completion gaps disproven"
+    }
+  ],
+  "synthesis": "Preserve semantic freedom in the coding agent; move only proven mechanical work underneath its existing interface.",
+  "forbidden_global_claims": [
+    "better benchmark scores",
+    "universally faster",
+    "Python is universally optimal",
+    "formal capability equivalence",
+    "compiled substrate always pays",
+    "capture prevents corruption in practice",
+    "all spreadsheet agents should use this architecture",
+    "representative checkpoint establishes statistical equivalence",
+    "corrective replay is a new successful model treatment"
+  ]
+}

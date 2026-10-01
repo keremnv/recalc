@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import sys
+from pathlib import Path
+
+
+def _candidates() -> list[Path]:
+    paths = [Path("/opt/librecalc/benchmark")]
+    resolved = Path(__file__).resolve()
+    for parent in resolved.parents:
+        paths.append(parent / "benchmark")
+    return paths
+
+
+for candidate in _candidates():
+    if (candidate / "calc_translate_fill.py").is_file():
+        sys.path.insert(0, str(candidate))
+        sys.path.insert(0, str(candidate.parent / "src"))
+        break
+
+from calc_translate_fill import main
+
+if __name__ == "__main__":
+    raise SystemExit(main())

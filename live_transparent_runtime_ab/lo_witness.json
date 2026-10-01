@@ -1,0 +1,8 @@
+{
+ "task": "Financial_Model:08_01",
+ "coverage": "turns 42-46: agent shells to soffice --headless --convert-to xlsx; script recalculates and injects cached Equity-IRR values (rows 35-38)",
+ "question": "Does the transparent transaction boundary preserve the cached-value injection behavior observed in the original control?",
+ "status": "NOT_RUN",
+ "reason": "soffice cannot execute in this sandbox (Operation not permitted); run only where LibreOffice execution is actually supported",
+ "must_not_be_read_as": "H1 capability failure"
+}

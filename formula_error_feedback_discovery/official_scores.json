@@ -1,0 +1,32 @@
+{
+ "Debugging_07_03_TREATMENT": {
+  "acc": 0.0,
+  "reg": 0.9954,
+  "mod": 0.0029
+ },
+ "Debugging_10_10_TREATMENT": {
+  "acc": 0.0,
+  "reg": 1.0,
+  "mod": 0.242
+ },
+ "Debugging_02_09_CONTROL": {
+  "acc": 0.0,
+  "reg": 0.9956,
+  "mod": 0.8138
+ },
+ "Debugging_01_06_CONTROL_R1": {
+  "acc": 0.0,
+  "reg": 0.9775,
+  "mod": 0.7595
+ },
+ "Debugging_02_06_CONTROL_R1": {
+  "acc": 0.0,
+  "reg": 0.9961,
+  "mod": 0.3188
+ },
+ "Debugging_02_06_TREATMENT_R1": {
+  "acc": 0.0,
+  "reg": 0.9951,
+  "mod": 0.3188
+ }
+}

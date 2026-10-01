@@ -1,0 +1,11 @@
+{
+  "rows": 310,
+  "unique_source_executions": 306,
+  "unique_recalc_seconds": 336.83300937496824,
+  "recalc_statuses_unique_sources": {
+    "RECALC_PASS": 306
+  },
+  "scoring_seconds_sum": 407.691595323995,
+  "failure_policy": "one unscorable official comparison remains unresolved; no silent raw fallback",
+  "wall_seconds": 1085.515258452011
+}

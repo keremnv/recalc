@@ -1,0 +1,17 @@
+{
+ "reserved_tasks": [
+  "03_01",
+  "06_08",
+  "06_06",
+  "06_03",
+  "06_10",
+  "06_07",
+  "09_05",
+  "02_08",
+  "02_10",
+  "02_04"
+ ],
+ "probe_file": "formula_error_feedback_probe/reserved_confirmation_population.json",
+ "probe_file_sha256": "40f7926a590b1afc48d9391077e1dbb2cb8c5126d5c1fb687fca869102b742f8",
+ "untouched": true
+}

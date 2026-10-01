@@ -1,0 +1,12 @@
+{
+  "cell_id": "cell:s01:r49:c6",
+  "canonical_sha256": "3eed431c0d1153d05084f2ae5a6c953643173d16826ce7c40d5e52b942343c98",
+  "record_count": 8330,
+  "entity_id_count": 7952,
+  "equivalence": {
+    "equal": true,
+    "control_canonical_sha256": "3eed431c0d1153d05084f2ae5a6c953643173d16826ce7c40d5e52b942343c98",
+    "treatment_canonical_sha256": "3eed431c0d1153d05084f2ae5a6c953643173d16826ce7c40d5e52b942343c98",
+    "mismatches": {}
+  }
+}

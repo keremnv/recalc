@@ -1,0 +1,17 @@
+{
+  "completed_runs": [
+    {
+      "api_calls": 16,
+      "arm": "H0",
+      "completion_tokens": 13308,
+      "cost_usd": 0.044443170000000004,
+      "opens": 12,
+      "prompt_tokens": 449453,
+      "python_execs": 12,
+      "task_id": "Financial_Model:07_01",
+      "tokens": 462761,
+      "view_xlsx": 4
+    }
+  ],
+  "status": "censored"
+}

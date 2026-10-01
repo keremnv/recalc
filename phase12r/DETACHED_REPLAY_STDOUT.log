@@ -1,0 +1,79 @@
+pending 616 recovered ['acd68259c91e290e']
+{"completed_since_resume": 10, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 20, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 30, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 40, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 50, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 60, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 70, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 80, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 90, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 100, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 110, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 120, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 130, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 140, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 150, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 160, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 166, "pending_total": 616, "technical_error": "BadZipFile: File is not a zip file"}
+{"completed_since_resume": 170, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 180, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 190, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 200, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 210, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 220, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 230, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 240, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 250, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 260, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 270, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 280, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 290, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 300, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 310, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 320, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 330, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 340, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 350, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 360, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 370, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 380, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 390, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 400, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 410, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 420, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 430, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 440, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 450, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 460, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 470, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 480, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 490, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 500, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 510, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 520, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 530, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 540, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 550, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 560, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 570, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 580, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 590, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 600, "pending_total": 616, "technical_error": null}
+{"completed_since_resume": 610, "pending_total": 616, "technical_error": null}
+{
+  "started_utc": "2026-09-30T23:48:47.852924+00:00",
+  "trajectory_model_calls": 0,
+  "trajectory_model_cost_usd": 0,
+  "model_use": "independent reviews only",
+  "scheduler": "one workbook subprocess at a time",
+  "memory_limit_GiB_per_workbook": 7,
+  "workbook_timeout_seconds": 900,
+  "recovered_row_ids": [
+    "acd68259c91e290e"
+  ],
+  "execution_amendment_hash": "0f6937916d3d0d1c4983482b95db8dfb7d1f4a197449b08fad5f9e8c98a0fded",
+  "ended_utc": "2026-10-01T00:35:40.263881+00:00",
+  "total_replay_wall_seconds": 2812.410976117011,
+  "return_code": 0
+}

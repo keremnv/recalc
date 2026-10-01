@@ -1,0 +1,181 @@
+{
+ "positive": true,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [
+    {
+     "formula": "PPA!C19",
+     "blank": "PPA!C18"
+    },
+    {
+     "formula": "PPA!C20",
+     "blank": "PPA!C19"
+    },
+    {
+     "formula": "PPA!C33",
+     "blank": "PPA!C18"
+    },
+    {
+     "formula": "PPA!C34",
+     "blank": "PPA!C26"
+    },
+    {
+     "formula": "PPA!C34",
+     "blank": "PPA!C30"
+    },
+    {
+     "formula": "PPA!C35",
+     "blank": "PPA!C33"
+    },
+    {
+     "formula": "PPA!C35",
+     "blank": "PPA!C34"
+    },
+    {
+     "formula": "PPA!D33",
+     "blank": "PPA!C35"
+    },
+    {
+     "formula": "PPA!D34",
+     "blank": "PPA!C26"
+    },
+    {
+     "formula": "PPA!D34",
+     "blank": "PPA!C30"
+    },
+    {
+     "formula": "PPA!D35",
+     "blank": "PPA!D33"
+    },
+    {
+     "formula": "PPA!D35",
+     "blank": "PPA!D34"
+    },
+    {
+     "formula": "PPA!E33",
+     "blank": "PPA!D35"
+    },
+    {
+     "formula": "PPA!E34",
+     "blank": "PPA!C26"
+    },
+    {
+     "formula": "PPA!E34",
+     "blank": "PPA!C30"
+    },
+    {
+     "formula": "PPA!E35",
+     "blank": "PPA!E33"
+    },
+    {
+     "formula": "PPA!E35",
+     "blank": "PPA!E34"
+    },
+    {
+     "formula": "PPA!F33",
+     "blank": "PPA!E35"
+    },
+    {
+     "formula": "PPA!F34",
+     "blank": "PPA!C26"
+    },
+    {
+     "formula": "PPA!F34",
+     "blank": "PPA!C30"
+    },
+    {
+     "formula": "PPA!F35",
+     "blank": "PPA!F33"
+    },
+    {
+     "formula": "PPA!F35",
+     "blank": "PPA!F34"
+    },
+    {
+     "formula": "PPA!G33",
+     "blank": "PPA!F35"
+    },
+    {
+     "formula": "PPA!G34",
+     "blank": "PPA!C26"
+    },
+    {
+     "formula": "PPA!G34",
+     "blank": "PPA!C30"
+    },
+    {
+     "formula": "PPA!G35",
+     "blank": "PPA!G33"
+    },
+    {
+     "formula": "PPA!G35",
+     "blank": "PPA!G34"
+    },
+    {
+     "formula": "PPA!H33",
+     "blank": "PPA!G35"
+    },
+    {
+     "formula": "PPA!H34",
+     "blank": "PPA!C26"
+    },
+    {
+     "formula": "PPA!H34",
+     "blank": "PPA!C30"
+    },
+    {
+     "formula": "PPA!H35",
+     "blank": "PPA!H33"
+    },
+    {
+     "formula": "PPA!H35",
+     "blank": "PPA!H34"
+    }
+   ],
+   "count": 32
+  },
+  "CHG": {
+   "changed_cells": 40,
+   "sheets": 1,
+   "regions": [
+    "PPA!B37",
+    "PPA!C18",
+    "PPA!C19",
+    "PPA!C20",
+    "PPA!C24",
+    "PPA!C26",
+    "PPA!C30",
+    "PPA!C33",
+    "PPA!C34",
+    "PPA!C35",
+    "PPA!D24",
+    "PPA!D26",
+    "PPA!D30",
+    "PPA!D33",
+    "PPA!D34",
+    "PPA!D35",
+    "PPA!E24",
+    "PPA!E26",
+    "PPA!E30",
+    "PPA!E33"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": "Post-edit verification (mechanical check of the current workbook)\n\nChanged cells: 40 across 1 sheet(s).\n\nNewly blank referenced cells (32):\n- PPA!C19 now references blank PPA!C18\n- PPA!C20 now references blank PPA!C19\n- PPA!C33 now references blank PPA!C18\n- PPA!C34 now references blank PPA!C26\n- PPA!C34 now references blank PPA!C30\n- PPA!C35 now references blank PPA!C33\n- PPA!C35 now references blank PPA!C34\n- PPA!D33 now references blank PPA!C35\n- PPA!D34 now references blank PPA!C26\n- PPA!D34 now references blank PPA!C30\n- and 22 more.\n\nThis report is mechanical evidence about the current workbook state.\nReview it before deciding whether to submit or revise.",
+ "positive_families": [
+  "REF"
+ ]
+}

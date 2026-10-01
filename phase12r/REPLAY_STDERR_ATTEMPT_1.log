@@ -1,0 +1,20 @@
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Data Validation extension is not supported and will be removed
+  warn(msg)
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing1.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing3.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing1.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing3.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Data Validation extension is not supported and will be removed
+  warn(msg)
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Data Validation extension is not supported and will be removed
+  warn(msg)
+/usr/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 5 leaked semaphore objects to clean up at shutdown: {'/mp-l8j1s9y9', '/mp-y6_ur6hi', '/mp-_ywlu3m6', '/mp-lhis73ja', '/mp-xcxpyaf7'}
+  warnings.warn(

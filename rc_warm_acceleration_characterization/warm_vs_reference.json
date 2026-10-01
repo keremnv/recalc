@@ -1,0 +1,10 @@
+{
+  "bootstrap_95pct_ci": null,
+  "faster_tie_slower": null,
+  "geometric_mean_ratio": null,
+  "n_scored": 0,
+  "reason": "No index reuse; public second invocation rebuilds.",
+  "status": "NOT_MEASURABLE_ON_PUBLIC_RC",
+  "warm_ratio": null,
+  "warm_reduction": null
+}

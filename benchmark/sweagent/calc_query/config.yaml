@@ -1,0 +1,28 @@
+tools:
+  calc_query:
+    signature: "calc_query <mode> <xlsx> [<sheet>] [<target>] [<text>]"
+    docstring: "Read-only deterministic structural index of the current workbook. It has already parsed the workbook and can efficiently answer structural questions about cells, labels, periods, formulas, references/dependencies, and repeated or analogous formula patterns. Use it when this information would otherwise require exploratory workbook scanning or reconstruction. It does not decide what should be edited and cannot modify the workbook. Modes: inspect, search, periods, references, formula_pattern, analogues. Prefer calc_query for structural workbook questions that would otherwise require scanning many cells or manually reconstructing formula/reference/period relationships. Use Python/openpyxl normally for arbitrary computation and workbook modification."
+    arguments:
+      - name: mode
+        type: string
+        description: "inspect, search, periods, references, formula_pattern, or analogues"
+        required: true
+      - name: xlsx
+        type: string
+        description: "Path to the workbook to query"
+        required: true
+      - name: sheet
+        type: string
+        description: "Worksheet name (inspect, references, formula_pattern, analogues; optional for search/periods)"
+        required: false
+        argument_format: "--sheet {{value}}"
+      - name: target
+        type: string
+        description: "A1 cell or range"
+        required: false
+        argument_format: "--target {{value}}"
+      - name: text
+        type: string
+        description: "Label/text to search"
+        required: false
+        argument_format: "--text {{value}}"

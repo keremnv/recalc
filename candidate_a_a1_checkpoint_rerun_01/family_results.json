@@ -1,0 +1,20 @@
+{
+  "Debugging": {
+    "contact_tasks": 2,
+    "median_reduction_pct": 42.19882449459631,
+    "tasks": 4,
+    "traces": 10
+  },
+  "Financial_Model": {
+    "contact_tasks": 4,
+    "median_reduction_pct": 46.07647307570412,
+    "tasks": 6,
+    "traces": 40
+  },
+  "Template": {
+    "contact_tasks": 1,
+    "median_reduction_pct": 58.83823693191283,
+    "tasks": 2,
+    "traces": 1
+  }
+}

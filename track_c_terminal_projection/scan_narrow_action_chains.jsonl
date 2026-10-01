@@ -1,0 +1,6 @@
+{"task_id": "Debugging:02_06", "scan_obs": 8, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 7335, "narrow_obs": 9, "narrow_tokens_est": 2214, "intersection_cells": 1, "write_obs": [11], "turn_distance": 1}
+{"task_id": "Debugging:03_06", "scan_obs": 1, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 27341, "narrow_obs": 3, "narrow_tokens_est": 2161, "intersection_cells": 10, "write_obs": [14, 15], "turn_distance": 2}
+{"task_id": "Debugging:05_08", "scan_obs": 8, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 5757, "narrow_obs": 9, "narrow_tokens_est": 2276, "intersection_cells": 102, "write_obs": [11, 13], "turn_distance": 1}
+{"task_id": "Debugging:06_02", "scan_obs": 2, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 8012, "narrow_obs": 25, "narrow_tokens_est": 2054, "intersection_cells": 54, "write_obs": [47], "turn_distance": 23}
+{"task_id": "Debugging:07_03", "scan_obs": 5, "shape": "OTHER_BROAD_PROJECTION", "broad_tokens_est": 6823, "narrow_obs": 9, "narrow_tokens_est": 917, "intersection_cells": 120, "write_obs": [10], "turn_distance": 4}
+{"task_id": "Debugging:10_05", "scan_obs": 1, "shape": "WHOLE_WORKBOOK_SCAN", "broad_tokens_est": 1820697, "narrow_obs": 17, "narrow_tokens_est": 10222, "intersection_cells": 9, "write_obs": [25], "turn_distance": 16}

@@ -1,0 +1,48 @@
+[
+ {
+  "note": "Phase-11 error case: 23 new #VALUE!",
+  "status": "OK",
+  "positive": true,
+  "families": [
+   "ERR",
+   "REF"
+  ]
+ },
+ {
+  "note": "Phase-11 destruction case: 442 new #DIV/0!",
+  "status": "OK",
+  "positive": true,
+  "families": [
+   "ERR",
+   "UNIF",
+   "REF"
+  ]
+ },
+ {
+  "note": "Phase-11 new-error case (3 pre-existing, 0 persist)",
+  "status": "OK",
+  "positive": true,
+  "families": [
+   "ERR"
+  ]
+ },
+ {
+  "note": "Phase-11 new-error case (16 pre-existing, 0 persist)",
+  "status": "OK",
+  "positive": true,
+  "families": [
+   "ERR",
+   "UNIF",
+   "REF"
+  ]
+ },
+ {
+  "note": "Phase-11 break case: DCF!X9 post-edit break",
+  "status": "OK",
+  "positive": true,
+  "families": [
+   "UNIF",
+   "REF"
+  ]
+ }
+]

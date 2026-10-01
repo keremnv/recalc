@@ -1,0 +1,118 @@
+resuming slots [9, 10, 11, 12]
+{"slot": 9, "task": "Template:01_05", "arm": "C", "status": "SUBMITTED", "prompt_tokens": 151637, "api_calls": 18}
+
+{"slot": 12, "task": "Template:01_05", "arm": "B", "status": "SUBMITTED", "prompt_tokens": 54527, "api_calls": 10}
+
+{"slot": 11, "task": "Template:01_05", "arm": "A", "status": "SUBMITTED", "prompt_tokens": 150528, "api_calls": 19}
+
+{"slot": 10, "task": "Template:01_05", "arm": "D", "status": "SUBMITTED", "prompt_tokens": 43978, "api_calls": 9}
+
+resuming slots [13, 14, 15, 16]
+{"slot": 15, "task": "Debugging:09_03", "arm": "B", "status": "SUBMITTED", "prompt_tokens": 1345963, "api_calls": 33}
+
+{"slot": 14, "task": "Debugging:09_03", "arm": "A", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1422888, "api_calls": 40}
+
+{"slot": 16, "task": "Debugging:09_03", "arm": "C", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1605088, "api_calls": 37}
+
+{"slot": 13, "task": "Debugging:09_03", "arm": "D", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1124509, "api_calls": 32}
+
+resuming slots [17, 18, 19, 20]
+{"slot": 17, "task": "Financial_Model:18_05", "arm": "A", "status": "SUBMITTED", "prompt_tokens": 151902, "api_calls": 12}
+
+{"slot": 20, "task": "Financial_Model:18_05", "arm": "D", "status": "SUBMITTED", "prompt_tokens": 103132, "api_calls": 9}
+
+{"slot": 18, "task": "Financial_Model:18_05", "arm": "B", "status": "SUBMITTED", "prompt_tokens": 135044, "api_calls": 11}
+
+{"slot": 19, "task": "Financial_Model:18_05", "arm": "C", "status": "SUBMITTED", "prompt_tokens": 114856, "api_calls": 10}
+
+resuming slots [21, 22, 23, 24]
+{"slot": 24, "task": "Financial_Model:02_05", "arm": "A", "status": "SUBMITTED", "prompt_tokens": 88722, "api_calls": 9}
+
+{"slot": 22, "task": "Financial_Model:02_05", "arm": "C", "status": "SUBMITTED", "prompt_tokens": 103066, "api_calls": 11}
+
+{"slot": 21, "task": "Financial_Model:02_05", "arm": "B", "status": "SUBMITTED", "prompt_tokens": 104004, "api_calls": 10}
+
+{"slot": 23, "task": "Financial_Model:02_05", "arm": "D", "status": "SUBMITTED", "prompt_tokens": 97842, "api_calls": 10}
+
+resuming slots [25, 26, 27, 28]
+{"slot": 25, "task": "Template:04_04", "arm": "C", "status": "SUBMITTED", "prompt_tokens": 19391, "api_calls": 7}
+
+{"slot": 26, "task": "Template:04_04", "arm": "D", "status": "SUBMITTED", "prompt_tokens": 24153, "api_calls": 8}
+
+{"slot": 28, "task": "Template:04_04", "arm": "B", "status": "SUBMITTED", "prompt_tokens": 26604, "api_calls": 8}
+
+{"slot": 27, "task": "Template:04_04", "arm": "A", "status": "SUBMITTED", "prompt_tokens": 191814, "api_calls": 26}
+
+resuming slots [29, 30, 31, 32]
+{"slot": 31, "task": "Template:16_07", "arm": "B", "status": "SUBMITTED", "prompt_tokens": 55568, "api_calls": 10}
+
+{"slot": 32, "task": "Template:16_07", "arm": "C", "status": "SUBMITTED", "prompt_tokens": 56086, "api_calls": 10}
+
+{"slot": 29, "task": "Template:16_07", "arm": "D", "status": "SUBMITTED", "prompt_tokens": 55831, "api_calls": 11}
+
+{"slot": 30, "task": "Template:16_07", "arm": "A", "status": "SUBMITTED", "prompt_tokens": 68819, "api_calls": 13}
+
+resuming slots [33, 34, 35, 36]
+{"slot": 34, "task": "Financial_Model:15_03", "arm": "B", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1682757, "api_calls": 31}
+
+{"slot": 35, "task": "Financial_Model:15_03", "arm": "C", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1635616, "api_calls": 38}
+
+{"slot": 33, "task": "Financial_Model:15_03", "arm": "A", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1682032, "api_calls": 37}
+
+{"slot": 36, "task": "Financial_Model:15_03", "arm": "D", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1214042, "api_calls": 27}
+
+resuming slots [37, 38, 39, 40]
+{"slot": 37, "task": "Template:06_02", "arm": "B", "status": "SUBMITTED", "prompt_tokens": 25312, "api_calls": 7}
+
+{"slot": 40, "task": "Template:06_02", "arm": "A", "status": "SUBMITTED", "prompt_tokens": 36509, "api_calls": 9}
+
+{"slot": 39, "task": "Template:06_02", "arm": "D", "status": "SUBMITTED", "prompt_tokens": 86100, "api_calls": 12}
+
+{"slot": 38, "task": "Template:06_02", "arm": "C", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 827565, "api_calls": 40}
+
+resuming slots [41, 42, 43, 44]
+{"slot": 41, "task": "Financial_Model:02_04", "arm": "C", "status": "SUBMITTED", "prompt_tokens": 76684, "api_calls": 12}
+
+{"slot": 43, "task": "Financial_Model:02_04", "arm": "A", "status": "SUBMITTED", "prompt_tokens": 98268, "api_calls": 12}
+
+{"slot": 44, "task": "Financial_Model:02_04", "arm": "B", "status": "SUBMITTED", "prompt_tokens": 104378, "api_calls": 12}
+
+{"slot": 42, "task": "Financial_Model:02_04", "arm": "D", "status": "SUBMITTED", "prompt_tokens": 202754, "api_calls": 14}
+
+resuming slots [45, 46, 47, 48]
+{"slot": 48, "task": "Debugging:06_10", "arm": "C", "status": "SUBMITTED", "prompt_tokens": 325521, "api_calls": 17}
+
+{"slot": 46, "task": "Debugging:06_10", "arm": "A", "status": "SUBMITTED", "prompt_tokens": 646091, "api_calls": 23}
+
+{"slot": 45, "task": "Debugging:06_10", "arm": "D", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 908078, "api_calls": 27}
+
+{"slot": 47, "task": "Debugging:06_10", "arm": "B", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 921654, "api_calls": 26}
+
+resuming slots [49, 50, 51, 52]
+{"slot": 49, "task": "Debugging:04_07", "arm": "A", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1229271, "api_calls": 40}
+
+{"slot": 52, "task": "Debugging:04_07", "arm": "D", "status": "SUBMITTED", "prompt_tokens": 902434, "api_calls": 27}
+
+{"slot": 51, "task": "Debugging:04_07", "arm": "C", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1595231, "api_calls": 38}
+
+{"slot": 50, "task": "Debugging:04_07", "arm": "B", "status": "SUBMITTED", "prompt_tokens": 667037, "api_calls": 23}
+
+resuming slots [53, 54, 55, 56]
+{"slot": 54, "task": "Debugging:07_05", "arm": "C", "status": "SUBMITTED", "prompt_tokens": 217940, "api_calls": 13}
+
+{"slot": 53, "task": "Debugging:07_05", "arm": "B", "status": "SUBMITTED", "prompt_tokens": 295103, "api_calls": 14}
+
+{"slot": 56, "task": "Debugging:07_05", "arm": "A", "status": "SUBMITTED", "prompt_tokens": 675750, "api_calls": 26}
+
+{"slot": 55, "task": "Debugging:07_05", "arm": "D", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 949105, "api_calls": 26}
+
+resuming slots [57, 58, 59, 60]
+{"slot": 60, "task": "Debugging:01_04", "arm": "B", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1462459, "api_calls": 40}
+
+{"slot": 59, "task": "Debugging:01_04", "arm": "A", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1154739, "api_calls": 40}
+
+{"slot": 58, "task": "Debugging:01_04", "arm": "D", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1464470, "api_calls": 40}
+
+{"slot": 57, "task": "Debugging:01_04", "arm": "C", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1412769, "api_calls": 40}
+
+primary slots recorded: 60/60; missing: []

@@ -1,0 +1,18 @@
+{
+  "families": [
+    "Debugging",
+    "Financial_Model",
+    "Template",
+    "Visualization"
+  ],
+  "heldout_tasks": 23,
+  "n_inspection_executions": 258,
+  "n_source_executions": 309,
+  "n_trajectories": 71,
+  "prior_census_candidate_a_fully_proxyable_executions": 72,
+  "prior_census_candidate_a_fully_proxyable_tasks": 18,
+  "strict_heldout_eligible_executions": 3,
+  "strict_heldout_predeclared_fallback_executions": 105,
+  "no_model_inference": true,
+  "source": "frozen control_audit + prior heldout task split"
+}

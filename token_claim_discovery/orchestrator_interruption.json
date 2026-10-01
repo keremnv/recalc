@@ -1,0 +1,20 @@
+{
+  "event": "ORCHESTRATOR_SESSION_INTERRUPTED_BETWEEN_USER_TURNS",
+  "observed_utc": "2026-09-23 05:56:36 UTC",
+  "completed_primary_slots_before_interruption": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "active_slots_at_interruption": [],
+  "source_and_spec_changed": false,
+  "product_rc_changed": false,
+  "recovery": "Recreated ephemeral RC venv from frozen wheel and resumed exact frozen run order from slot 9 with four-arm concurrent blocks. No completed slot rerun.",
+  "frozen_wheel_sha256": "532e493f126087a45d86117343514a9a1cd0a4e0010af89bbd1be1b271d66b2e",
+  "spec_sha256": "9acaec8ccdb6a51161eeee6488059b043d0a92893a0ba0a5b907fd7c67f5e0d4"
+}

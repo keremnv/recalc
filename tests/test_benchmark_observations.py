@@ -311,6 +311,7 @@ def test_multi_range_read_returns_valid_items_alongside_oversize_errors(
     backend.write_range("Sheet1", "A1:B1", [["PAT", 10]])
     monkeypatch.setattr(calc_tool, "_load_backend_types", lambda: (lambda: backend, CalcOperation))
     monkeypatch.setenv("LIBRECALC_OBSERVATION_VARIANT", "structure-first-v1")
+    monkeypatch.setenv("LIBRECALC_READ_MAX_CELLS", "96")
     requests = urllib.parse.quote(
         '[{"sheet":"Sheet1","range":"A1:I16"},{"sheet":"Sheet1","range":"A1:B1"}]',
         safe="",
@@ -894,9 +895,7 @@ def test_formula_patterns_compact_inspect_includes_boundary_continuations(monkey
             )
 
         def read_ranges(self, ranges, path=None, include_errors=False):
-            return [
-                {"values": [["x"]], "formulas": [["x"]]} for _ in ranges
-            ]
+            return [{"values": [["x"]], "formulas": [["x"]]} for _ in ranges]
 
     observation = observation_module.workbook_observation(
         InspectMemoryBackend(),
@@ -1105,8 +1104,9 @@ def test_formula_block_tool_uses_range_fill_on_memory_backend(monkeypatch, capsy
     assert backend.read_range("Sheet1", "D6:F6")["formulas"] == [["=C35"]]
 
 
-def test_neighborhood_reads_reject_used_range_dumps() -> None:
+def test_bounded_treatment_rejects_used_range_dumps(monkeypatch) -> None:
     calc_tool = _calc_tool_module()
+    monkeypatch.setenv("LIBRECALC_READ_MAX_CELLS", "96")
 
     assert calc_tool._a1_cell_count("A1:H12") == 96
     assert calc_tool._a1_cell_count("A1") == 1
@@ -1213,7 +1213,9 @@ def test_formula_anomaly_observation_surfaces_deleted_row_geometry() -> None:
         used_range="J96:K96",
         result={
             "values": [[None, None]],
-            "formulas": [["=SUM($I96,#REF!)*AVERAGE(J93,J95)", "=SUM($I96,#REF!)*AVERAGE(K93,K95)"]],
+            "formulas": [
+                ["=SUM($I96,#REF!)*AVERAGE(J93,J95)", "=SUM($I96,#REF!)*AVERAGE(K93,K95)"]
+            ],
             "errors": [["#REF!", "#REF!"]],
         },
     )

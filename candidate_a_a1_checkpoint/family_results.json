@@ -1,0 +1,17 @@
+{
+  "Debugging": {
+    "completed": 0
+  },
+  "Financial_Model": {
+    "completed_h0": 1,
+    "completed_h1": 0,
+    "contact_tasks": 0
+  },
+  "Template": {
+    "completed": 0
+  },
+  "Visualization": {
+    "completed": 0
+  },
+  "status": "censored"
+}

@@ -1,0 +1,121 @@
+{
+ "enriched_contact_per_task": {
+  "02_01": {
+   "contacted": false,
+   "via": null,
+   "cells": [
+    [
+     "Debugging_02_01_TREATMENT",
+     "MODEL_NONCOMPLETION",
+     false
+    ]
+   ]
+  },
+  "02_06": {
+   "contacted": true,
+   "via": "Debugging_02_06_TREATMENT_R1",
+   "cells": [
+    [
+     "Debugging_02_06_TREATMENT",
+     "PROVIDER_CENSORED",
+     false
+    ],
+    [
+     "Debugging_02_06_TREATMENT_R1",
+     "VALID_SUBMISSION",
+     true
+    ]
+   ]
+  },
+  "02_09": {
+   "contacted": false,
+   "via": null,
+   "cells": [
+    [
+     "Debugging_02_09_TREATMENT",
+     "MODEL_NONCOMPLETION",
+     false
+    ]
+   ]
+  },
+  "04_09": {
+   "contacted": false,
+   "via": null,
+   "cells": [
+    [
+     "Debugging_04_09_TREATMENT",
+     "PROVIDER_CENSORED",
+     false
+    ],
+    [
+     "Debugging_04_09_TREATMENT_R1",
+     "PROVIDER_CENSORED",
+     false
+    ]
+   ]
+  },
+  "07_03": {
+   "contacted": true,
+   "via": "Debugging_07_03_TREATMENT",
+   "cells": [
+    [
+     "Debugging_07_03_TREATMENT",
+     "MODEL_NONCOMPLETION",
+     true
+    ]
+   ]
+  },
+  "10_05": {
+   "contacted": false,
+   "via": null,
+   "cells": [
+    [
+     "Debugging_10_05_TREATMENT",
+     "MODEL_NONCOMPLETION",
+     false
+    ]
+   ]
+  },
+  "10_10": {
+   "contacted": false,
+   "via": null,
+   "cells": [
+    [
+     "Debugging_10_10_TREATMENT",
+     "MODEL_NONCOMPLETION",
+     false
+    ]
+   ]
+  }
+ },
+ "enriched_contact_count": "2/7",
+ "contact_gate": ">=6/7",
+ "contact_gate_met": false,
+ "negative_control": {
+  "treatment_cells": [
+   [
+    "PROVIDER_CENSORED",
+    false
+   ],
+   [
+    "PROVIDER_CENSORED",
+    false
+   ]
+  ],
+  "fired": false
+ },
+ "control_invisible_contact": {
+  "02_01": [],
+  "02_06": [
+   "Debugging_02_06_CONTROL_R1"
+  ],
+  "02_09": [
+   "Debugging_02_09_CONTROL"
+  ],
+  "04_09": [],
+  "07_03": [],
+  "10_05": [],
+  "10_10": [],
+  "01_06": []
+ }
+}

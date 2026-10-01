@@ -1,0 +1,1 @@
+{"classification": "SEMANTIC_EXACT", "policy": "PREDECLARED_REAL_OPENPYXL_PATH", "real_data_only": {"type": "float", "value": 14.5}, "reason": null, "shadow_data_only": {"type": "float", "value": 14.5}, "soffice_returncode": 0, "stale": false, "status": "TESTED"}

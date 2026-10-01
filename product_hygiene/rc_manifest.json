@@ -1,0 +1,163 @@
+{
+  "boundary": "PRODUCT_HYGIENE_RC",
+  "package": "librecalc-agent",
+  "version": "0.2.0rc1",
+  "status": "FROZEN_FOR_FUTURE_CLAIM_SPECIFIC_VALIDATION",
+  "git_head": "254a5c14fa74fc3534493c565de84b38e7317175",
+  "git_head_alone_identifies_rc": false,
+  "worktree_has_preexisting_uncommitted_research_changes": true,
+  "source_configuration_sha256": "1aba31178faca5533c4a594cf1ee8bae2bf3668fcb5f7a9df65f84361f972aee",
+  "identity_algorithm": "SHA256 of JSON file->SHA256 mapping, sorted keys, compact separators; mapping below.",
+  "source_sha256": {
+    "COMPATIBILITY.md": "ba9fcf2e3f6a31542810b21f7a5d7bc39609e0635581ffd27bc5141fc66ade0b",
+    "README.md": "1d4a64dae30b49fd9726d4a2c507fe1679db0f07bf1696343002f898192834ed",
+    "examples/basic/create_input.py": "f71fbc32520d914093f87b943c7bc11d12578ed84ce5f3a403ab10f6ae350ffd",
+    "examples/basic/read.py": "4b717f0230f8efacb2a90d3d73ddb63be0574b049a1d6b0f1f3e0e42cebacd56",
+    "examples/basic/runtime.toml": "b3a12d202b4ea9bd4b6dbd20e246e14f0ed2e880d6dd8c8d33aadaee60b2bdaa",
+    "examples/basic/update.py": "1187089cedb10faf136126048ae7019c44bc06ecae10dba37aa2a9edd7bffb91",
+    "pyproject.toml": "44e628c60f1429a5f3bcca99ee9314a21d0bfd385012e6b5045dead4d66614f7",
+    "scripts/extract_product_runtime.py": "1d09745dddb393dcdae4e10e2e7e3af61ddf8f13b5413cac70a0f84144ed01f2",
+    "src/librecalc_agent/__init__.py": "db9edf66dce8a1a5b94aaba77e0f83a4f0ffa49afe93965cc4aec43bb120c1ef",
+    "src/librecalc_agent/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/librecalc_agent/_bootstrap/sitecustomize.py": "4a14d82146eca13530727ea5fff8e033e93da44c96b227dedfa35e4fca0f007d",
+    "src/librecalc_agent/_frozen/__init__.py": "cc20762ed9fa45feeb735cec3d9d1a24749271cc2e51c3a5d358446b6a7ef7cf",
+    "src/librecalc_agent/_frozen/capture.py": "61992a12f3c7427f5571a360d68e95fe4d90d99b1dcae954400ba3c3ae30f94a",
+    "src/librecalc_agent/_frozen/delta.py": "fe27a556f9415eadbb8aafd55b09b4692b0cbd72810a0a35ba2f0dca6ff61d00",
+    "src/librecalc_agent/_frozen/eligibility.py": "bcd4a0f9b1d5f5b220b95c4fd5ce54d57bd444a77bb4376e4bfc90fd4f974381",
+    "src/librecalc_agent/_frozen/helper_common.py": "c87e19294cb40760406744048cd2b4868756f43fb0a665124cb530d17b07f0d4",
+    "src/librecalc_agent/_frozen/helpers.py": "a4fd64f5bb0686dfd9008f248d2eb5c3dde2f82ee6082dc46540bed28ec14627",
+    "src/librecalc_agent/_frozen/index.py": "2b95da432222706f208c35f6277032ebffb0cf832efb3f1b0f329545679ad854",
+    "src/librecalc_agent/_frozen/period_constants.py": "7b4ded25c58c7f48f46f5896fad98ff57400c7fe4cad275caab70f7e5b1a3eff",
+    "src/librecalc_agent/_frozen/reads.py": "7aa7c155ce81932e86408a2fb3affaee82c41c99dcc252683b912fdb7d8c584c",
+    "src/librecalc_agent/_frozen/runtime.py": "84fdb05f3a2eac5deb84fcda3c58bd93274874c4d514965e6abcd1f47ae857ed",
+    "src/librecalc_agent/_frozen/substrate.py": "60bf7805e255a4c47125f7c5c8d35779d0f008bda37716370e3934683dcbdf14",
+    "src/librecalc_agent/_frozen/validate.py": "729415eafae80f265d60a4a2afac3005d437e6bdce89180b7456a136ba919207",
+    "src/librecalc_agent/cli.py": "0c5538a7faed7b00d75fca0759a84888dba50e57a7c190d21104a9d61016d94b",
+    "src/librecalc_agent/config.py": "c9351c3a80772416eea4a435cba0bc738572aa944ced68bae57f4cd2a968c43d",
+    "src/librecalc_agent/diagnostics.py": "5536d1878176d098dec54769de0b1b8489c6089b1cba1eacb9488725a55aea9d",
+    "src/librecalc_agent/runner.py": "cfcc0c8fd9f51663149af0549cad449fbc5eeab312d853e4e1b020c1aeb6726a",
+    "src/lx_helpers.py": "f010f484085391d6add83aff4b0378d944efb4ed77cae7fd0aeb44514402756f",
+    "tests/test_product_hygiene.py": "7cc7c39a81adbfefb63a61bdc6b3edc2c2080ece78f6b537f9a626f9724c9d32"
+  },
+  "wheel": {
+    "wheel": "product_hygiene/dist/librecalc_agent-0.2.0rc1-py3-none-any.whl",
+    "sha256": "532e493f126087a45d86117343514a9a1cd0a4e0010af89bbd1be1b271d66b2e",
+    "files": [
+      "librecalc_agent/__init__.py",
+      "librecalc_agent/__main__.py",
+      "librecalc_agent/cli.py",
+      "librecalc_agent/config.py",
+      "librecalc_agent/diagnostics.py",
+      "librecalc_agent/runner.py",
+      "librecalc_agent/_bootstrap/sitecustomize.py",
+      "librecalc_agent/_frozen/__init__.py",
+      "librecalc_agent/_frozen/capture.py",
+      "librecalc_agent/_frozen/delta.py",
+      "librecalc_agent/_frozen/eligibility.py",
+      "librecalc_agent/_frozen/helper_common.py",
+      "librecalc_agent/_frozen/helpers.py",
+      "librecalc_agent/_frozen/index.py",
+      "librecalc_agent/_frozen/period_constants.py",
+      "librecalc_agent/_frozen/reads.py",
+      "librecalc_agent/_frozen/runtime.py",
+      "librecalc_agent/_frozen/substrate.py",
+      "librecalc_agent/_frozen/validate.py",
+      "lx_helpers.py",
+      "librecalc_agent/example/create_input.py",
+      "librecalc_agent/example/read.py",
+      "librecalc_agent/example/runtime.toml",
+      "librecalc_agent/example/update.py",
+      "librecalc_agent-0.2.0rc1.dist-info/METADATA",
+      "librecalc_agent-0.2.0rc1.dist-info/WHEEL",
+      "librecalc_agent-0.2.0rc1.dist-info/entry_points.txt",
+      "librecalc_agent-0.2.0rc1.dist-info/RECORD"
+    ],
+    "research_excluded": true,
+    "contains_example": true
+  },
+  "default_configuration": {
+    "enabled": true,
+    "substrate": true,
+    "candidate_a": true,
+    "capture": true,
+    "verbosity": "normal",
+    "cache_dir": "${XDG_CACHE_HOME:-~/.cache}/librecalc-agent"
+  },
+  "dependency_versions": [
+    {
+      "name": "et_xmlfile",
+      "version": "2.0.0"
+    },
+    {
+      "name": "librecalc-agent",
+      "version": "0.2.0rc1"
+    },
+    {
+      "name": "lxml",
+      "version": "6.1.3"
+    },
+    {
+      "name": "openpyxl",
+      "version": "3.1.5"
+    },
+    {
+      "name": "pip",
+      "version": "25.3"
+    }
+  ],
+  "validation_dependency": "pytest==8.4.2 (not runtime requirement)",
+  "python": "3.13.12",
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.43",
+  "sqlite": "3.51.1",
+  "libreoffice_detected": {
+    "available": true,
+    "executable": "/usr/bin/libreoffice",
+    "version": "LibreOffice 26.2.5.2 620(Build:2)"
+  },
+  "runtime_flags": {
+    "runtime": true,
+    "substrate": true,
+    "candidate_a": true,
+    "capture": true,
+    "diagnostics": "normal",
+    "effective_dependency_rule": "Compiled reads/freshness require enabled AND substrate AND candidate_a plus unchanged eligibility and availability."
+  },
+  "product_surface_files": [
+    "src/librecalc_agent/__init__.py",
+    "src/librecalc_agent/__main__.py",
+    "src/librecalc_agent/_bootstrap/sitecustomize.py",
+    "src/librecalc_agent/_frozen/__init__.py",
+    "src/librecalc_agent/_frozen/capture.py",
+    "src/librecalc_agent/_frozen/delta.py",
+    "src/librecalc_agent/_frozen/eligibility.py",
+    "src/librecalc_agent/_frozen/helper_common.py",
+    "src/librecalc_agent/_frozen/helpers.py",
+    "src/librecalc_agent/_frozen/index.py",
+    "src/librecalc_agent/_frozen/period_constants.py",
+    "src/librecalc_agent/_frozen/reads.py",
+    "src/librecalc_agent/_frozen/runtime.py",
+    "src/librecalc_agent/_frozen/substrate.py",
+    "src/librecalc_agent/_frozen/validate.py",
+    "src/librecalc_agent/cli.py",
+    "src/librecalc_agent/config.py",
+    "src/librecalc_agent/diagnostics.py",
+    "src/librecalc_agent/runner.py",
+    "src/lx_helpers.py",
+    "examples/basic/create_input.py",
+    "examples/basic/read.py",
+    "examples/basic/runtime.toml",
+    "examples/basic/update.py"
+  ],
+  "deviations_from_research_checkpoint": [
+    "Dedicated librecalc-agent package/CLI; historical MCP and model SDK dependencies excluded.",
+    "Frozen definitions imported locally; no benchmark imports or import-time experimental driver.",
+    "Fresh process and derived-cache directory per Python invocation; no claim to unchanged cross-call timing/amortization.",
+    "Frozen eligibility runs on the unchanged script source; only admitted scripts receive process-scoped acceleration.",
+    "Helpers use reference openpyxl; prior rejected substrate helpers not distributed.",
+    "Normal diagnostics suppress raw internal logs; detailed fallback events remain local.",
+    "No agent/model runner, prompts, scoring, new semantics or automatic LibreOffice recalc added."
+  ],
+  "freeze_rule": "Do not modify this source/configuration/dependency/wheel boundary during claim-specific validation. Any change requires a new RC identity, documented diff and relevant mechanical revalidation.",
+  "ready_for_claim_specific_validation": true,
+  "qualification": "Mechanical installation/wiring readiness only; no new capability, speed or token claim."
+}

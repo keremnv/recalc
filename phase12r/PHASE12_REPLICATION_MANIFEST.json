@@ -1,0 +1,190 @@
+{
+  "primary_phase12_ids": [
+    "4314c4ecdf74c3f6",
+    "955ff6d7d48e6c70",
+    "e77d85a734b5f6c9",
+    "43528b3c88faefb8",
+    "b7367d71a7b49ef7",
+    "3f0d5af0729c0a88",
+    "5fd6b460f20f4625",
+    "b4657e92095fbd76",
+    "9ef6e5d3ec6edfe8",
+    "f038cc1021515828",
+    "4ab71ce77c4b5ce1",
+    "5145eab35f2bb3d3",
+    "a4950ec41bc583ac",
+    "eb94f422cf968f9b",
+    "2ca903fe77f746a3",
+    "92e51095003f9724",
+    "7de87e7ab893d642",
+    "c41490f642563fd5",
+    "aeafb1239ac9f100",
+    "1be73a00a8bade17",
+    "a381762c2924cbc8",
+    "0c83a11ca8b3bd7b",
+    "e5f5c8a1cea71fbd"
+  ],
+  "supplement": [
+    {
+      "id": "2ed6ccc1e317e1c5",
+      "run": "phase12/runs/popA/Debugging_03_03_TREATMENT",
+      "task": "Debugging:03_03",
+      "category": "Debugging",
+      "stratum": "P2_PHASE12_NON_SUBMITTED_SUPPLEMENT",
+      "status": "TRUNCATED_CALL_LIMIT",
+      "V0_source": "phase12/score_staging/popA/TREATMENT/Debugging/03_03_output.xlsx",
+      "V0_hash": "429746c05f685b8de96b29cd29406ff85425952f60829b23dbdcef85682a1c72",
+      "input": "benchmark-data/SpreadsheetBench-2/data/Debugging/spreadsheet/03_Debugging/input_files/Errors_input.xlsx",
+      "input_hash": "429746c05f685b8de96b29cd29406ff85425952f60829b23dbdcef85682a1c72",
+      "gold": "benchmark-data/SpreadsheetBench-2/data/Debugging/spreadsheet/03_Debugging/03_golden.xlsx",
+      "gold_hash": "62b00ecda6f2319b49f1992ef7c0023fbaf85e70ab780e996201f873cc60f5ae",
+      "original_score": {
+        "accuracy": 0.0,
+        "modification_accuracy": 0.0,
+        "regression_accuracy": 1.0,
+        "error_message": "Modification error at LBO!B4: answer=Master Control, output=None"
+      },
+      "score_reference": "phase12/ledgers/scorer_outcome.jsonl",
+      "score_reference_hash": "e6c34b285450a14ad7130cdfb0327a271d786439229a7146e4c820f205568363",
+      "agent_output": "phase12/runs/popA/Debugging_03_03_TREATMENT/output.xlsx",
+      "agent_output_hash": "429746c05f685b8de96b29cd29406ff85425952f60829b23dbdcef85682a1c72",
+      "historical_byte_linkage": "ARCHIVED_SUBMISSION",
+      "historical_evaluator_identity": "UNAVAILABLE_UNLESS_REPRODUCED",
+      "historical_report_references": [
+        "PHASE12_POST_EDIT_VERIFICATION_AB_REPORT.md"
+      ],
+      "phase12_discovery": true,
+      "prevalence_eligible": false,
+      "supplement_reason": "user requires all relevant Phase12 C/T final files; retained nonsubmitted candidates are not historical submissions"
+    },
+    {
+      "id": "a5e2635947267e28",
+      "run": "phase12/runs/popA/Financial_Model_12_01_CONTROL",
+      "task": "Financial_Model:12_01",
+      "category": "Financial_Model",
+      "stratum": "P2_PHASE12_NON_SUBMITTED_SUPPLEMENT",
+      "status": "NO_SUBMIT",
+      "V0_source": "phase12/score_staging/popA/CONTROL/Financial_Model/12_01_output.xlsx",
+      "V0_hash": "db1aaf481520789b5c6a3f8aba744be1ced8014be71e6d0275e4319f6f6902b3",
+      "input": "benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/12_Project Infra/12_01_Infra_input.xlsx",
+      "input_hash": "7f258ae78f7b8b7856a56b91a3a30632d1b11f02e4a50dd59be2d80e89fb42fd",
+      "gold": "benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/12_Project Infra/12_Infra_golden.xlsx",
+      "gold_hash": "5968766d75b1215931931056aba3b03eb6d0b653c8e482539061640e77679924",
+      "original_score": {
+        "accuracy": 0.0,
+        "modification_accuracy": 0.057,
+        "regression_accuracy": 1.0,
+        "error_message": "Modification error at Valuation!C5: answer=7.41408055511761, output=-3.1512804063749997"
+      },
+      "score_reference": "phase12/ledgers/scorer_outcome.jsonl",
+      "score_reference_hash": "e6c34b285450a14ad7130cdfb0327a271d786439229a7146e4c820f205568363",
+      "agent_output": "phase12/runs/popA/Financial_Model_12_01_CONTROL/output.xlsx",
+      "agent_output_hash": "db1aaf481520789b5c6a3f8aba744be1ced8014be71e6d0275e4319f6f6902b3",
+      "historical_byte_linkage": "ARCHIVED_SUBMISSION",
+      "historical_evaluator_identity": "UNAVAILABLE_UNLESS_REPRODUCED",
+      "historical_report_references": [
+        "PHASE12_POST_EDIT_VERIFICATION_AB_REPORT.md"
+      ],
+      "phase12_discovery": true,
+      "prevalence_eligible": false,
+      "supplement_reason": "user requires all relevant Phase12 C/T final files; retained nonsubmitted candidates are not historical submissions"
+    },
+    {
+      "id": "22ddd89e2eeead8f",
+      "run": "phase12/runs/popA/Financial_Model_12_01_TREATMENT",
+      "task": "Financial_Model:12_01",
+      "category": "Financial_Model",
+      "stratum": "P2_PHASE12_NON_SUBMITTED_SUPPLEMENT",
+      "status": "NO_SUBMIT",
+      "V0_source": "phase12/score_staging/popA/TREATMENT/Financial_Model/12_01_output.xlsx",
+      "V0_hash": "86f63dcfcd581e3c1f97a028944ca412c711fcc4c1e5501fdc5220bd96a39815",
+      "input": "benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/12_Project Infra/12_01_Infra_input.xlsx",
+      "input_hash": "7f258ae78f7b8b7856a56b91a3a30632d1b11f02e4a50dd59be2d80e89fb42fd",
+      "gold": "benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/12_Project Infra/12_Infra_golden.xlsx",
+      "gold_hash": "5968766d75b1215931931056aba3b03eb6d0b653c8e482539061640e77679924",
+      "original_score": {
+        "accuracy": 0.0,
+        "modification_accuracy": 0.0092,
+        "regression_accuracy": 1.0,
+        "error_message": "Modification error at Valuation!C5: answer=7.41408055511761, output=-3.1512804063749997"
+      },
+      "score_reference": "phase12/ledgers/scorer_outcome.jsonl",
+      "score_reference_hash": "e6c34b285450a14ad7130cdfb0327a271d786439229a7146e4c820f205568363",
+      "agent_output": "phase12/runs/popA/Financial_Model_12_01_TREATMENT/output.xlsx",
+      "agent_output_hash": "86f63dcfcd581e3c1f97a028944ca412c711fcc4c1e5501fdc5220bd96a39815",
+      "historical_byte_linkage": "ARCHIVED_SUBMISSION",
+      "historical_evaluator_identity": "UNAVAILABLE_UNLESS_REPRODUCED",
+      "historical_report_references": [
+        "PHASE12_POST_EDIT_VERIFICATION_AB_REPORT.md"
+      ],
+      "phase12_discovery": true,
+      "prevalence_eligible": false,
+      "supplement_reason": "user requires all relevant Phase12 C/T final files; retained nonsubmitted candidates are not historical submissions"
+    },
+    {
+      "id": "288f4efc63208494",
+      "run": "phase12/runs/popB/Financial_Model_17_05_CONTROL",
+      "task": "Financial_Model:17_05",
+      "category": "Financial_Model",
+      "stratum": "P2_PHASE12_NON_SUBMITTED_SUPPLEMENT",
+      "status": "TRUNCATED_CALL_LIMIT",
+      "V0_source": "phase12/score_staging/popB/CONTROL/Financial_Model/17_05_output.xlsx",
+      "V0_hash": "bb71aadade225fc0db504b1caf6c68880e1ec930d5dbdeb35e153a4575664d40",
+      "input": "benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/17_Project FMCG/17_05_FMCG_input.xlsx",
+      "input_hash": "b45497bce1c2c694d2b2b36966abea2d4e2108b7fcb7d3264d37468e00764ba0",
+      "gold": "benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/17_Project FMCG/17_FMCG_golden.xlsx",
+      "gold_hash": "2e496b54d24e4fd9bcd934afa9f0bc1336f5701892157f169b6e21e69e77382a",
+      "original_score": {
+        "accuracy": 0.0,
+        "modification_accuracy": 0.0,
+        "regression_accuracy": 0.0,
+        "error_message": "Namespace prefix a on off is not defined, line 1, column 5112 (<string>, line 1)"
+      },
+      "score_reference": "phase12/ledgers/scorer_outcome.jsonl",
+      "score_reference_hash": "e6c34b285450a14ad7130cdfb0327a271d786439229a7146e4c820f205568363",
+      "agent_output": "phase12/runs/popB/Financial_Model_17_05_CONTROL/output.xlsx",
+      "agent_output_hash": "bb71aadade225fc0db504b1caf6c68880e1ec930d5dbdeb35e153a4575664d40",
+      "historical_byte_linkage": "ARCHIVED_SUBMISSION",
+      "historical_evaluator_identity": "UNAVAILABLE_UNLESS_REPRODUCED",
+      "historical_report_references": [
+        "PHASE12_POST_EDIT_VERIFICATION_AB_REPORT.md"
+      ],
+      "phase12_discovery": true,
+      "prevalence_eligible": false,
+      "supplement_reason": "user requires all relevant Phase12 C/T final files; retained nonsubmitted candidates are not historical submissions"
+    },
+    {
+      "id": "616475440b3a7166",
+      "run": "phase12/runs/popB/Template_06_09_TREATMENT",
+      "task": "Template:06_09",
+      "category": "Template",
+      "stratum": "P2_PHASE12_NON_SUBMITTED_SUPPLEMENT",
+      "status": "NO_SUBMIT",
+      "V0_source": "phase12/score_staging/popB/TREATMENT/Template/06_09_output.xlsx",
+      "V0_hash": "b6495a52ba4c1d702b2f63ad4c9d84328402bf557c668621749ffde1c5f3eb3e",
+      "input": "benchmark-data/SpreadsheetBench-2/data/Template/spreadsheet/06_equity_forecast/06_09_input.xlsx",
+      "input_hash": "711ee00111390178ded38c58c7640abef3d225f4e5757dd952bd34c007380c28",
+      "gold": "benchmark-data/SpreadsheetBench-2/data/Template/spreadsheet/06_equity_forecast/06_09_golden.xlsx",
+      "gold_hash": "08fa5f1e01fc9024ac6c1d6360851671802e8ca4ee96863ab50c206ab783100f",
+      "original_score": {
+        "accuracy": 0.0,
+        "modification_accuracy": 0.958,
+        "regression_accuracy": 1.0,
+        "error_message": "Modification error at OpEx_Forecast!H8: answer=0.401596302003082, output=None"
+      },
+      "score_reference": "phase12/ledgers/scorer_outcome.jsonl",
+      "score_reference_hash": "e6c34b285450a14ad7130cdfb0327a271d786439229a7146e4c820f205568363",
+      "agent_output": "phase12/runs/popB/Template_06_09_TREATMENT/output.xlsx",
+      "agent_output_hash": "b6495a52ba4c1d702b2f63ad4c9d84328402bf557c668621749ffde1c5f3eb3e",
+      "historical_byte_linkage": "ARCHIVED_SUBMISSION",
+      "historical_evaluator_identity": "UNAVAILABLE_UNLESS_REPRODUCED",
+      "historical_report_references": [
+        "PHASE12_POST_EDIT_VERIFICATION_AB_REPORT.md"
+      ],
+      "phase12_discovery": true,
+      "prevalence_eligible": false,
+      "supplement_reason": "user requires all relevant Phase12 C/T final files; retained nonsubmitted candidates are not historical submissions"
+    }
+  ],
+  "separate_from_primary": true
+}

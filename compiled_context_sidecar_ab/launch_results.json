@@ -1,0 +1,447 @@
+{
+  "results": [
+    {
+      "job": {
+        "order": 9,
+        "task": "Financial_Model:05_01",
+        "category": "Financial_Model",
+        "id": "05_01",
+        "role": "generalization",
+        "arm": "C0",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c0-Financial_Model-05_01-r1",
+        "pair_key": "Financial_Model:05_01:r1"
+      },
+      "status": "skipped_existing",
+      "returncode": 0,
+      "failure_class": "ok"
+    },
+    {
+      "job": {
+        "order": 10,
+        "task": "Financial_Model:05_01",
+        "category": "Financial_Model",
+        "id": "05_01",
+        "role": "generalization",
+        "arm": "C1",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c1-Financial_Model-05_01-r1",
+        "pair_key": "Financial_Model:05_01:r1"
+      },
+      "status": "failed",
+      "returncode": 1,
+      "failure_class": "provider_or_infra",
+      "started_at": "2026-09-16T13:13:40.851980+00:00",
+      "finished_at": "2026-09-16T13:18:34.602220+00:00"
+    },
+    {
+      "job": {
+        "order": 1,
+        "task": "Financial_Model:13_05",
+        "category": "Financial_Model",
+        "id": "13_05",
+        "role": "primary_mechanism_witness",
+        "arm": "C0",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c0-Financial_Model-13_05-r1",
+        "pair_key": "Financial_Model:13_05:r1"
+      },
+      "status": "skipped_existing",
+      "returncode": 0,
+      "failure_class": "ok"
+    },
+    {
+      "job": {
+        "order": 2,
+        "task": "Financial_Model:13_05",
+        "category": "Financial_Model",
+        "id": "13_05",
+        "role": "primary_mechanism_witness",
+        "arm": "C1",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c1-Financial_Model-13_05-r1",
+        "pair_key": "Financial_Model:13_05:r1"
+      },
+      "status": "completed",
+      "returncode": 0,
+      "failure_class": "ok",
+      "started_at": "2026-09-16T13:13:40.852137+00:00",
+      "finished_at": "2026-09-16T13:15:19.102415+00:00"
+    },
+    {
+      "job": {
+        "order": 3,
+        "task": "Financial_Model:13_05",
+        "category": "Financial_Model",
+        "id": "13_05",
+        "role": "primary_mechanism_witness",
+        "arm": "C1",
+        "repeat": 2,
+        "run_name": "spark-sidecar-c1-Financial_Model-13_05-r2",
+        "pair_key": "Financial_Model:13_05:r2"
+      },
+      "status": "completed",
+      "returncode": 0,
+      "failure_class": "ok",
+      "started_at": "2026-09-16T13:15:19.104593+00:00",
+      "finished_at": "2026-09-16T13:17:11.033111+00:00"
+    },
+    {
+      "job": {
+        "order": 4,
+        "task": "Financial_Model:13_05",
+        "category": "Financial_Model",
+        "id": "13_05",
+        "role": "primary_mechanism_witness",
+        "arm": "C0",
+        "repeat": 2,
+        "run_name": "spark-sidecar-c0-Financial_Model-13_05-r2",
+        "pair_key": "Financial_Model:13_05:r2"
+      },
+      "status": "skipped_existing",
+      "returncode": 0,
+      "failure_class": "ok"
+    },
+    {
+      "job": {
+        "order": 5,
+        "task": "Financial_Model:13_05",
+        "category": "Financial_Model",
+        "id": "13_05",
+        "role": "primary_mechanism_witness",
+        "arm": "C0",
+        "repeat": 3,
+        "run_name": "spark-sidecar-c0-Financial_Model-13_05-r3",
+        "pair_key": "Financial_Model:13_05:r3"
+      },
+      "status": "skipped_existing",
+      "returncode": 0,
+      "failure_class": "ok"
+    },
+    {
+      "job": {
+        "order": 6,
+        "task": "Financial_Model:13_05",
+        "category": "Financial_Model",
+        "id": "13_05",
+        "role": "primary_mechanism_witness",
+        "arm": "C1",
+        "repeat": 3,
+        "run_name": "spark-sidecar-c1-Financial_Model-13_05-r3",
+        "pair_key": "Financial_Model:13_05:r3"
+      },
+      "status": "completed",
+      "returncode": 0,
+      "failure_class": "ok",
+      "started_at": "2026-09-16T13:17:11.042339+00:00",
+      "finished_at": "2026-09-16T13:18:44.832721+00:00"
+    },
+    {
+      "job": {
+        "order": 7,
+        "task": "Financial_Model:13_05",
+        "category": "Financial_Model",
+        "id": "13_05",
+        "role": "primary_mechanism_witness",
+        "arm": "C1",
+        "repeat": 4,
+        "run_name": "spark-sidecar-c1-Financial_Model-13_05-r4",
+        "pair_key": "Financial_Model:13_05:r4"
+      },
+      "status": "completed",
+      "returncode": 0,
+      "failure_class": "ok",
+      "started_at": "2026-09-16T13:18:44.842335+00:00",
+      "finished_at": "2026-09-16T13:20:24.566262+00:00"
+    },
+    {
+      "job": {
+        "order": 8,
+        "task": "Financial_Model:13_05",
+        "category": "Financial_Model",
+        "id": "13_05",
+        "role": "primary_mechanism_witness",
+        "arm": "C0",
+        "repeat": 4,
+        "run_name": "spark-sidecar-c0-Financial_Model-13_05-r4",
+        "pair_key": "Financial_Model:13_05:r4"
+      },
+      "status": "skipped_existing",
+      "returncode": 0,
+      "failure_class": "ok"
+    },
+    {
+      "job": {
+        "order": 11,
+        "task": "Financial_Model:02_01",
+        "category": "Financial_Model",
+        "id": "02_01",
+        "role": "saturation_non_harm",
+        "arm": "C1",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c1-Financial_Model-02_01-r1",
+        "pair_key": "Financial_Model:02_01:r1"
+      },
+      "status": "completed",
+      "returncode": 0,
+      "failure_class": "ok",
+      "started_at": "2026-09-16T13:18:34.603843+00:00",
+      "finished_at": "2026-09-16T13:20:46.540268+00:00"
+    },
+    {
+      "job": {
+        "order": 12,
+        "task": "Financial_Model:02_01",
+        "category": "Financial_Model",
+        "id": "02_01",
+        "role": "saturation_non_harm",
+        "arm": "C0",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c0-Financial_Model-02_01-r1",
+        "pair_key": "Financial_Model:02_01:r1"
+      },
+      "status": "skipped_existing",
+      "returncode": 0,
+      "failure_class": "ok"
+    },
+    {
+      "job": {
+        "order": 15,
+        "task": "Template:03_03",
+        "category": "Template",
+        "id": "03_03",
+        "role": "generalization",
+        "arm": "C1",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c1-Template-03_03-r1",
+        "pair_key": "Template:03_03:r1"
+      },
+      "status": "completed",
+      "returncode": 0,
+      "failure_class": "ok",
+      "started_at": "2026-09-16T13:20:46.549314+00:00",
+      "finished_at": "2026-09-16T13:24:12.213142+00:00"
+    },
+    {
+      "job": {
+        "order": 16,
+        "task": "Template:03_03",
+        "category": "Template",
+        "id": "03_03",
+        "role": "generalization",
+        "arm": "C0",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c0-Template-03_03-r1",
+        "pair_key": "Template:03_03:r1"
+      },
+      "status": "skipped_existing",
+      "returncode": 0,
+      "failure_class": "ok"
+    },
+    {
+      "job": {
+        "order": 13,
+        "task": "Financial_Model:15_05",
+        "category": "Financial_Model",
+        "id": "15_05",
+        "role": "negative_structure",
+        "arm": "C0",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c0-Financial_Model-15_05-r1",
+        "pair_key": "Financial_Model:15_05:r1"
+      },
+      "status": "skipped_existing",
+      "returncode": 0,
+      "failure_class": "ok"
+    },
+    {
+      "job": {
+        "order": 14,
+        "task": "Financial_Model:15_05",
+        "category": "Financial_Model",
+        "id": "15_05",
+        "role": "negative_structure",
+        "arm": "C1",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c1-Financial_Model-15_05-r1",
+        "pair_key": "Financial_Model:15_05:r1"
+      },
+      "status": "failed",
+      "returncode": 1,
+      "failure_class": "provider_or_infra",
+      "started_at": "2026-09-16T13:20:24.575972+00:00",
+      "finished_at": "2026-09-16T13:25:11.453772+00:00"
+    },
+    {
+      "job": {
+        "order": 17,
+        "task": "Template:06_17",
+        "category": "Template",
+        "id": "06_17",
+        "role": "generalization",
+        "arm": "C0",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c0-Template-06_17-r1",
+        "pair_key": "Template:06_17:r1"
+      },
+      "status": "skipped_existing",
+      "returncode": 0,
+      "failure_class": "ok"
+    },
+    {
+      "job": {
+        "order": 18,
+        "task": "Template:06_17",
+        "category": "Template",
+        "id": "06_17",
+        "role": "generalization",
+        "arm": "C1",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c1-Template-06_17-r1",
+        "pair_key": "Template:06_17:r1"
+      },
+      "status": "completed",
+      "returncode": 0,
+      "failure_class": "ok",
+      "started_at": "2026-09-16T13:24:12.221618+00:00",
+      "finished_at": "2026-09-16T13:26:14.949855+00:00"
+    },
+    {
+      "job": {
+        "order": 19,
+        "task": "Template:16_12",
+        "category": "Template",
+        "id": "16_12",
+        "role": "generalization",
+        "arm": "C1",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c1-Template-16_12-r1",
+        "pair_key": "Template:16_12:r1"
+      },
+      "status": "completed",
+      "returncode": 0,
+      "failure_class": "ok",
+      "started_at": "2026-09-16T13:25:11.454567+00:00",
+      "finished_at": "2026-09-16T13:27:30.764351+00:00"
+    },
+    {
+      "job": {
+        "order": 20,
+        "task": "Template:16_12",
+        "category": "Template",
+        "id": "16_12",
+        "role": "generalization",
+        "arm": "C0",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c0-Template-16_12-r1",
+        "pair_key": "Template:16_12:r1"
+      },
+      "status": "skipped_existing",
+      "returncode": 0,
+      "failure_class": "ok"
+    },
+    {
+      "job": {
+        "order": 21,
+        "task": "Debugging:01_01",
+        "category": "Debugging",
+        "id": "01_01",
+        "role": "generalization",
+        "arm": "C0",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c0-Debugging-01_01-r1",
+        "pair_key": "Debugging:01_01:r1"
+      },
+      "status": "skipped_existing",
+      "returncode": 0,
+      "failure_class": "ok"
+    },
+    {
+      "job": {
+        "order": 22,
+        "task": "Debugging:01_01",
+        "category": "Debugging",
+        "id": "01_01",
+        "role": "generalization",
+        "arm": "C1",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c1-Debugging-01_01-r1",
+        "pair_key": "Debugging:01_01:r1"
+      },
+      "status": "completed",
+      "returncode": 0,
+      "failure_class": "ok",
+      "started_at": "2026-09-16T13:26:14.958850+00:00",
+      "finished_at": "2026-09-16T13:32:43.208124+00:00"
+    },
+    {
+      "job": {
+        "order": 23,
+        "task": "Debugging:09_04",
+        "category": "Debugging",
+        "id": "09_04",
+        "role": "generalization",
+        "arm": "C1",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c1-Debugging-09_04-r1",
+        "pair_key": "Debugging:09_04:r1"
+      },
+      "status": "completed",
+      "returncode": 0,
+      "failure_class": "ok",
+      "started_at": "2026-09-16T13:27:30.773053+00:00",
+      "finished_at": "2026-09-16T13:34:28.259839+00:00"
+    },
+    {
+      "job": {
+        "order": 24,
+        "task": "Debugging:09_04",
+        "category": "Debugging",
+        "id": "09_04",
+        "role": "generalization",
+        "arm": "C0",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c0-Debugging-09_04-r1",
+        "pair_key": "Debugging:09_04:r1"
+      },
+      "status": "failed",
+      "returncode": 1,
+      "failure_class": "semantic_or_other"
+    },
+    {
+      "job": {
+        "order": 25,
+        "task": "Debugging:10_10",
+        "category": "Debugging",
+        "id": "10_10",
+        "role": "generalization",
+        "arm": "C0",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c0-Debugging-10_10-r1",
+        "pair_key": "Debugging:10_10:r1"
+      },
+      "status": "skipped_existing",
+      "returncode": 0,
+      "failure_class": "ok"
+    },
+    {
+      "job": {
+        "order": 26,
+        "task": "Debugging:10_10",
+        "category": "Debugging",
+        "id": "10_10",
+        "role": "generalization",
+        "arm": "C1",
+        "repeat": 1,
+        "run_name": "spark-sidecar-c1-Debugging-10_10-r1",
+        "pair_key": "Debugging:10_10:r1"
+      },
+      "status": "completed",
+      "returncode": 0,
+      "failure_class": "ok",
+      "started_at": "2026-09-16T13:32:43.225384+00:00",
+      "finished_at": "2026-09-16T13:49:46.319553+00:00"
+    }
+  ],
+  "finished_at": "2026-09-16T13:49:46.320396+00:00"
+}

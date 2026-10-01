@@ -1,0 +1,25 @@
+{
+ "C0_share_bytes": 0.0164,
+ "C0_share_chars": 0.0164,
+ "C0_share_tokens": 0.0165,
+ "C1_share_bytes": 0.0164,
+ "C1_share_chars": 0.0164,
+ "C1_share_tokens": 0.0165,
+ "C2_share_bytes": 0.0167,
+ "C2_share_chars": 0.0167,
+ "C2_share_tokens": 0.0168,
+ "comparison_to_prior_census": {
+  "C0": 0.0236,
+  "C1": 0.0238,
+  "C2": 0.0365
+ },
+ "diagnostic_sequential_within_obs": {
+  "C0_share_tokens": 0.0727,
+  "C1_share_tokens": 0.0737,
+  "C2_share_tokens": 0.0739
+ },
+ "granularity_correction_pp": 5.62,
+ "note": "Independent block-based implementation with action-sheet attribution + extended coord parser; C0/C1 below prior 2.36/2.38 (stricter cross-sheet identity); all gates agree.",
+ "top10_audit": "no systematic undercount; two overcount bugs found and corrected before final totals",
+ "verdict": "REPETITION_BRANCH_CLOSED"
+}

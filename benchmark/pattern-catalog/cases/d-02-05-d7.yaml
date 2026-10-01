@@ -1,0 +1,59 @@
+id: d-02-05-d7
+run: glm-5.3-flash-nonvisual-297-1
+task: Debugging:02_05
+first_miss:
+  kind: modification
+  address: WACC!D7
+  error_message: "Modification error at WACC!D7: answer=0.273318647267128, output=0.295149298732156"
+facts:
+  opened_golden: false
+  spreadsheet: Incorrect Average_input.xlsx
+  instruction: Please audit and fix this file thoroughly.
+  input_kind: formula
+  input_value: "=AVERAGE('Exhibit 6'!D36:J36)"
+  output_formula: "=AVERAGE('Exhibit 6'!D36:J36)"
+  autopsy:
+    named: false
+    read: false
+    read_attempted: false
+    written: false
+    bucket: unnamed
+  inspect_selected:
+    - {sheet: "Exhibit 9", address: N23, error: "#REF!", formula: "=(N20-N18)/(#REF!+N20-N18)"}
+  wrote: null
+claims:
+  patterns: [H-wrong-representative, read-budget]
+  nuance: open
+  mechanism: representative-selection
+  lever: information
+  lever_why: >
+    A silent wrong AVERAGE carries no error token, so the anomaly list cannot surface it; the
+    world would have to compute and report something else. uniformity_break is exactly that
+    computation and was measured at 76-97% precision on the 297 while converting zero exact.
+    This is the Debugging mass and its lever is the refuted one.
+  notes: >
+    Same filename Incorrect Average. D7 is a silent AVERAGE (no error token), unchanged.
+    Inspect selected Exhibit 9 #REF!. Trajectory repaired that sheet and WACC D14.
+    Filename plus magnitude leak suggest the planted class is the AVERAGE; not proven
+    without a golden. That is the Debugging 0/100 mass (unnamed existing formulas).
+
+    Gate result (2026-09-03, catalog-ours-eight n=2 vs catalog-control-eight n=2):
+    arm_delta induced, verdict refuted-lever. Control got D7 right in 2/2 runs; our arm
+    got it wrong in 2/2. This is the one case in the catalog with a real, repeat-stable
+    delta -- and it is blocked purely because its only candidate lever is `information`,
+    the family with the measured zero-exact-conversion record.
+
+    Read behavior across all three of our trajectories (the original 297 run plus both
+    repeats) does not converge on D7, but it does converge on WACC: 297 run read
+    nothing on that sheet; repeat 1 read WACC!A12:H16; repeat 2 read WACC!B10:H16,
+    A7:C9. All three windows sit adjacent to D7 (row 7, or rows 10-16) and none include
+    it. Three independent draws landing next to the same cell without ever naming it is
+    not the shape of a shortlist that drowned the cell (H-wrong-representative); it is a
+    read policy that samples the neighborhood of an anomaly and never audits a sheet with
+    no anomaly on it. The control almost certainly finds D7 by loading the whole workbook
+    into pandas/openpyxl and scanning every formula cell, which is a capability class our
+    interface does not expose and that none of the four lever families name: it is
+    neither the world telling (`information`), nor the world deciding (`substitution`),
+    nor the world refusing (`constraint`) or ranking (`selection`) -- it is the agent
+    running its own predicate over the whole workbook. Do not force this into an existing
+    lever to make the case survive; record it as an open question in BRIEFING.md instead.

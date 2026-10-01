@@ -1,0 +1,24 @@
+{
+  "note": "Coarse nested medians are not additive; external H1/H0 is causal authority.",
+  "reference_only_component_medians_ms": {
+    "H0_bootstrap_total_median_ms": 62.7164885,
+    "H0_config_admission_median_ms": 0.4336685,
+    "H0_observer_changed_helper_or_empty_receipt_median_ms": 0.120167,
+    "H0_observer_observer_to_receipt_median_ms": 173.608918,
+    "H0_observer_post_snapshot_compare_median_ms": 0.250865,
+    "H0_observer_pre_snapshot_median_ms": 0.10524800000000001,
+    "H0_post_bootstrap_to_exit_ns_median_ms": 72.222296,
+    "H0_pre_runtime_median_ms": 11.9028465,
+    "H0_runtime_import_install_median_ms": 50.751298000000006,
+    "H1_bootstrap_total_median_ms": 10.3191825,
+    "H1_config_admission_median_ms": 0.415218,
+    "H1_observer_changed_helper_or_empty_receipt_median_ms": 0.1134105,
+    "H1_observer_observer_to_receipt_median_ms": 177.056723,
+    "H1_observer_post_snapshot_compare_median_ms": 0.2645645,
+    "H1_observer_pre_snapshot_median_ms": 0.09706200000000001,
+    "H1_post_bootstrap_to_exit_ns_median_ms": 128.5070885,
+    "H1_pre_runtime_median_ms": 10.3191825,
+    "H1_runtime_import_install_median_ms": 0.0
+  },
+  "status": "COMPLETE"
+}

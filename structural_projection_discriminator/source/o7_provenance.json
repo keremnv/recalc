@@ -1,0 +1,243 @@
+{
+  "task": "Financial_Model:05_01",
+  "obligation": "O7",
+  "xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/05_Project AIF/05_01_AIF_input.xlsx",
+  "xlsx_sha256": "413ca0c2e6c93f520999bc017c210c414775ff2b1cd2d9571cccae191c5e2a8a",
+  "spine_sha256": "7425911128f9aea5e40c2509db8686c8e10be8f34fbd2ff255b0b24aa0a9eabc",
+  "temporal_sha256": "7cfe17eab91907f7805582739103782cb18742f190e5b167257abcffe07b34fd",
+  "verification": {
+    "sheet_title": "Workings Cost Sheet",
+    "sheet_id": "sheet:s04",
+    "verified_member_runs": {
+      "Portfolio Building MoM": "B11:B13",
+      "Portfolio Building Cumulative": "B17:B19",
+      "Ticket Size per Portfolio": "B23:B25",
+      "Total Fund Raised": "B29:B31"
+    },
+    "parent_anchors": {
+      "Portfolio Building MoM": {
+        "text": "Portfolio Building MoM",
+        "address": "B9",
+        "cell_id": "cell:s04:r9:c2",
+        "row": 9,
+        "col": 2
+      },
+      "Portfolio Building Cumulative": {
+        "text": "Portfolio Building Cumulative",
+        "address": "B15",
+        "cell_id": "cell:s04:r15:c2",
+        "row": 15,
+        "col": 2
+      },
+      "Ticket Size per Portfolio": {
+        "text": "Ticket Size per Portfolio",
+        "address": "B21",
+        "cell_id": "cell:s04:r21:c2",
+        "row": 21,
+        "col": 2
+      },
+      "Total Fund Raised": {
+        "text": "Total Fund Raised",
+        "address": "B27",
+        "cell_id": "cell:s04:r27:c2",
+        "row": 27,
+        "col": 2
+      }
+    },
+    "temporal_start": {
+      "label": "Apr-25",
+      "address": "O4",
+      "cell_id": "cell:s04:r4:c15",
+      "row": 4,
+      "col": 15,
+      "period": {
+        "year": 2025,
+        "month": 4
+      },
+      "header_text": "2025-04-30T00:00:00"
+    },
+    "temporal_end": {
+      "label": "Jun-33",
+      "address": "DI4",
+      "cell_id": "cell:s04:r4:c113",
+      "row": 4,
+      "col": 113,
+      "period": {
+        "year": 2033,
+        "month": 6
+      },
+      "header_text": "=EOMONTH(DH4,1)"
+    },
+    "gold_used": false
+  },
+  "member_runs": [
+    {
+      "orientation": "vertical",
+      "sheet_id": "sheet:s04",
+      "start_row": 11,
+      "end_row": 13,
+      "col": 2,
+      "member_cells": [
+        "B11",
+        "B12",
+        "B13"
+      ],
+      "member_cell_ids": [
+        "cell:s04:r11:c2",
+        "cell:s04:r12:c2",
+        "cell:s04:r13:c2"
+      ],
+      "member_labels": [
+        "First Tranche",
+        "Second Tranche",
+        "Third Tranche"
+      ],
+      "member_identities": [
+        "first",
+        "second",
+        "third"
+      ],
+      "parent": {
+        "text": "Portfolio Building MoM",
+        "address": "B9",
+        "cell_id": "cell:s04:r9:c2",
+        "row": 9,
+        "col": 2
+      }
+    },
+    {
+      "orientation": "vertical",
+      "sheet_id": "sheet:s04",
+      "start_row": 17,
+      "end_row": 19,
+      "col": 2,
+      "member_cells": [
+        "B17",
+        "B18",
+        "B19"
+      ],
+      "member_cell_ids": [
+        "cell:s04:r17:c2",
+        "cell:s04:r18:c2",
+        "cell:s04:r19:c2"
+      ],
+      "member_labels": [
+        "First Tranche",
+        "Second Tranche",
+        "Third Tranche"
+      ],
+      "member_identities": [
+        "first",
+        "second",
+        "third"
+      ],
+      "parent": {
+        "text": "Portfolio Building Cumulative",
+        "address": "B15",
+        "cell_id": "cell:s04:r15:c2",
+        "row": 15,
+        "col": 2
+      }
+    },
+    {
+      "orientation": "vertical",
+      "sheet_id": "sheet:s04",
+      "start_row": 23,
+      "end_row": 25,
+      "col": 2,
+      "member_cells": [
+        "B23",
+        "B24",
+        "B25"
+      ],
+      "member_cell_ids": [
+        "cell:s04:r23:c2",
+        "cell:s04:r24:c2",
+        "cell:s04:r25:c2"
+      ],
+      "member_labels": [
+        "First Tranche",
+        "Second Tranche",
+        "Third Tranche"
+      ],
+      "member_identities": [
+        "first",
+        "second",
+        "third"
+      ],
+      "parent": {
+        "text": "Ticket Size per Portfolio",
+        "address": "B21",
+        "cell_id": "cell:s04:r21:c2",
+        "row": 21,
+        "col": 2
+      }
+    },
+    {
+      "orientation": "vertical",
+      "sheet_id": "sheet:s04",
+      "start_row": 29,
+      "end_row": 31,
+      "col": 2,
+      "member_cells": [
+        "B29",
+        "B30",
+        "B31"
+      ],
+      "member_cell_ids": [
+        "cell:s04:r29:c2",
+        "cell:s04:r30:c2",
+        "cell:s04:r31:c2"
+      ],
+      "member_labels": [
+        "First Tranche",
+        "Second Tranche",
+        "Third Tranche"
+      ],
+      "member_identities": [
+        "first",
+        "second",
+        "third"
+      ],
+      "parent": {
+        "text": "Total Fund Raised",
+        "address": "B27",
+        "cell_id": "cell:s04:r27:c2",
+        "row": 27,
+        "col": 2
+      }
+    }
+  ],
+  "temporal_axis": {
+    "sheet": "Workings Cost Sheet",
+    "orientation": "column",
+    "header_row": 4,
+    "start": {
+      "label": "Apr-25",
+      "address": "O4",
+      "cell_id": "cell:s04:r4:c15",
+      "row": 4,
+      "col": 15,
+      "period": {
+        "year": 2025,
+        "month": 4
+      },
+      "header_text": "2025-04-30T00:00:00"
+    },
+    "end": {
+      "label": "Jun-33",
+      "address": "DI4",
+      "cell_id": "cell:s04:r4:c113",
+      "row": 4,
+      "col": 113,
+      "period": {
+        "year": 2033,
+        "month": 6
+      },
+      "header_text": "=EOMONTH(DH4,1)"
+    },
+    "n_coordinates": 100
+  },
+  "gold_loaded": false,
+  "written_at": "2026-09-16T14:33:43.944118+00:00"
+}

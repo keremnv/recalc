@@ -1,0 +1,131 @@
+{
+ "completed_pairs_popA": [
+  {
+   "task": "Debugging:04_06",
+   "c_exact": 0.0,
+   "t_exact": 0.0,
+   "delta": 0.0,
+   "c_mod": 0.0,
+   "t_mod": 0.0
+  },
+  {
+   "task": "Template:06_05",
+   "c_exact": 0.0,
+   "t_exact": 1.0,
+   "delta": 1.0,
+   "c_mod": 0.0,
+   "t_mod": 1.0
+  },
+  {
+   "task": "Template:06_25",
+   "c_exact": 0.0,
+   "t_exact": 0.0,
+   "delta": 0.0,
+   "c_mod": 0.0,
+   "t_mod": 0.9464
+  },
+  {
+   "task": "Template:10_02",
+   "c_exact": 0.0,
+   "t_exact": 0.0,
+   "delta": 0.0,
+   "c_mod": 0.0,
+   "t_mod": 0.6667
+  },
+  {
+   "task": "Template:11_03",
+   "c_exact": 0.0,
+   "t_exact": 0.0,
+   "delta": 0.0,
+   "c_mod": 0.0,
+   "t_mod": 0.5294
+  },
+  {
+   "task": "Template:11_04",
+   "c_exact": 0.0,
+   "t_exact": 0.0,
+   "delta": 0.0,
+   "c_mod": 0.0,
+   "t_mod": 1.0
+  },
+  {
+   "task": "Template:14_03",
+   "c_exact": 0.0,
+   "t_exact": 0.0,
+   "delta": 0.0,
+   "c_mod": 0.9818,
+   "t_mod": 0.8909
+  }
+ ],
+ "n_pairs": 7,
+ "paired_exact_delta_mean": 0.14285714285714285,
+ "paired_exact_delta_sum": 1.0,
+ "bootstrap95": [
+  0.0,
+  0.42857142857142855
+ ],
+ "harmful_submit": {
+  "popA_CONTROL": {
+   "n": 7,
+   "d": 8,
+   "rate": 0.875
+  },
+  "popA_TREATMENT": {
+   "n": 2,
+   "d": 9,
+   "rate": 0.2222222222222222
+  },
+  "popA_SHAM": {
+   "n": 1,
+   "d": 2,
+   "rate": 0.5
+  },
+  "popB_CONTROL": {
+   "n": 3,
+   "d": 3,
+   "rate": 1.0
+  },
+  "popB_TREATMENT": {
+   "n": 1,
+   "d": 2,
+   "rate": 0.5
+  },
+  "popB_SHAM": {
+   "n": 0,
+   "d": 0,
+   "rate": null
+  }
+ },
+ "uptake": {
+  "treatment_engaged": 6,
+  "treatment_pos": 6,
+  "sham_engaged": 2,
+  "sham_windows": 2
+ },
+ "nuisance_popA": {
+  "benign": 7,
+  "total": 7
+ },
+ "regressions_attributed": 0,
+ "positive_rate_popA_submits": 0.6666666666666666,
+ "rescues_exact": 1,
+ "kill": {
+  "K1_uptake": false,
+  "K2_benefit": false,
+  "K3_nuisance": true,
+  "K4_regressions": false,
+  "K5_economics": false,
+  "K6_salience": false
+ },
+ "success": {
+  "positives_on_fresh": true,
+  "uptake_ge_50": true,
+  "fewer_harmful_paired": true,
+  "no_regression_spike": true,
+  "directional_exact_gain": true,
+  "nuisance_ok": false,
+  "sham_below_or_separated": true,
+  "cost_ok": true
+ },
+ "success_all": false
+}

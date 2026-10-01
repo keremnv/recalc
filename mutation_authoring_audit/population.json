@@ -1,0 +1,14 @@
+{
+ "n_mutators": 113,
+ "families": {
+  "Financial_Model": 42,
+  "Template": 41,
+  "Debugging": 28,
+  "Visualization": 2
+ },
+ "evidence_classes": {
+  "SOURCE_ONLY": 9,
+  "SOURCE_PLUS_EFFECTS": 3,
+  "SOURCE_PLUS_EXACT_DELTA": 101
+ }
+}

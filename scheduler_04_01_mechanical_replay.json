@@ -1,0 +1,169 @@
+{
+  "task": "Financial_Model:04_01",
+  "model_calls": 0,
+  "workbook_writes": 0,
+  "archived_directory": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01",
+  "archived_evidence_unchanged": true,
+  "archive_sha256": {
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/state.json": "6e718a89e49995bd67f64d90c213fb2037cd80b172713ec9a4f60dfaa5d28729",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/output.xlsx": "778697c92c78c44e765535c4d7dd7a1bca016099500dc1cbaa161137fc66ff30",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/result.json": "6e86185b03e8bd96298f452b1db1e26b0c759ec9f2b0ed0f0f870e86139d8859",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/007_edit_plan.json": "e5885a8401f749d3b6530e35723cb2bd41922c9747e0703809ddb6f799899fc0",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/001_task_ir.json": "d1a6e5fe5b08767756731cdbeabeb5f301c5d863087b32f84cb1b223cdea8400",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/016_retrieval.json": "78ea482fc686962b378170f15ee46a41154c486b2fb8caf59bc5f8bc31b91971",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/002_edit_plan.json": "2807cb1fe40dcbef29d717ed7dddbe0525b8bf81c4c061ac6ba835f8daa56d0b",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/005_edit_plan.json": "4d8cb16454d91a6a48144eea9864e674a5369ef5ec12cab5d7baa3e9dba67ada",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/019_retrieval.json": "c0454e94045101c53d83dccc3aec4564ef75ba21806989fef7aea4c89959f4e0",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/018_retrieval.json": "91273fd292f3aadf1ad80f580583f44b08a73f8cb27714d13840a10bbdbf9329",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/013_retrieval.json": "3b467dc57071f3340647d9f8faaa7fb254e71cbcaef4020898cd747965412ef1",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/009_edit_plan.json": "3768230b59e39aab58070053de98aad046dd973fdb21a0e266222da987e3d2a6",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/012_synthesis.json": "6ff7307bb00875a7b91521db98cae7a695e2c0ab66ee818eeff48616ba80664e",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/011_retrieval.json": "27b1d92eb5a5d83070bf644fab33866727073978aef68a89f9f5cdc21e6c9358",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/010_retrieval.json": "fabf73952c4e5348a8bf9b55c6d1aa5b01511cc3bdbf7c2ccf66ab1dbee780a1",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/006_edit_plan.json": "2bdb8e369cf810c905a8408d38edef9bd3d08e48d32bd41ebf256645aa796dbb",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/023_synthesis.json": "25ea1911b5363c60acefcd1dc2d204455ba0dc6849d6abe349ed0aa63016beeb",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/004_edit_plan.json": "8e57997c2fec8b8779954735b29c0e68eae8f7e83b876aca2b4e555c077383fb",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/022_retrieval.json": "bff71147fd1426585333515f97e6f38170950d96b97241365a4306f8bba83411",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/020_retrieval.json": "ce355e10515ab175adfd46695f4def044aaf28a02e80ae927857304a3cb016e7",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/015_retrieval.json": "8084647debb674e6f22456a694cfdbfe1ac637d61cce45b9d29b6d0655141aae",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/014_synthesis.json": "f32ecf0fe1753621938a7830cd841ab2b7098776226257a9239a09657b0d4869",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/003_edit_plan.json": "77427aef8b35080b8d7031e74dc2f27ccb99e81e91b34456147e7a6a062db568",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/021_retrieval.json": "d6e6aeecf0073b5f506e464cdf2ae03e349ecc80730e50249800c10560e95ade",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/008_edit_plan.json": "942b621057b1ef5d0fe6d347ac4bfd1bb352ba7acd78b315f10f07985f076ec2",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01/calls/017_retrieval.json": "0fd8c2a60514914d39e35faad111f79bf96a6d2fb4c626a328dd9d0edca57505"
+  },
+  "authority_count": 73,
+  "program_groups_unchanged": true,
+  "independent_units": 49,
+  "retained_sessions": 3,
+  "previous_dispositions": 3,
+  "current_dispositions": 49,
+  "previous_unresolved_targets": 70,
+  "current_unresolved_targets": 24,
+  "disposition_counts": {
+    "PROVIDER_TIMEOUT": 2,
+    "REPLAY_NO_STORED_RESPONSE": 46,
+    "SESSION_RESOURCE_LIMIT": 1
+  },
+  "newly_exposed_units": [
+    "cell:s03:r11:c4",
+    "cell:s03:r11:c5",
+    "cell:s03:r11:c6",
+    "cell:s03:r12:c4",
+    "cell:s03:r12:c5",
+    "cell:s03:r15:c4",
+    "cell:s03:r15:c5",
+    "cell:s03:r15:c6",
+    "cell:s03:r16:c4",
+    "cell:s03:r16:c5",
+    "cell:s03:r19:c4",
+    "cell:s03:r19:c5",
+    "cell:s03:r22:c4",
+    "cell:s03:r22:c5",
+    "cell:s03:r23:c4",
+    "cell:s03:r23:c5",
+    "cell:s03:r26:c4",
+    "cell:s03:r26:c5",
+    "cell:s03:r26:c6",
+    "cell:s03:r27:c4",
+    "cell:s03:r27:c5",
+    "cell:s03:r36:c4",
+    "cell:s03:r36:c5",
+    "cell:s03:r39:c4",
+    "cell:s03:r39:c5",
+    "cell:s03:r42:c4",
+    "cell:s03:r42:c5",
+    "cell:s03:r45:c4",
+    "cell:s03:r45:c5",
+    "cell:s03:r45:c6",
+    "cell:s03:r47:c4",
+    "cell:s03:r47:c5",
+    "cell:s03:r51:c4",
+    "cell:s03:r51:c5",
+    "cell:s03:r51:c6",
+    "cell:s03:r52:c4",
+    "cell:s03:r52:c5",
+    "cell:s03:r58:c4",
+    "cell:s03:r58:c5",
+    "cell:s03:r58:c6",
+    "cell:s03:r59:c4",
+    "cell:s03:r59:c5",
+    "cell:s03:r68:c4",
+    "cell:s03:r68:c5",
+    "cell:s03:r6:c5",
+    "cell:s05:r12:c6"
+  ],
+  "failed_group_members_not_promoted": true,
+  "scheduled_edits": [],
+  "scheduled_edits_equal_archive": true,
+  "planning_completeness": {
+    "status": "PARTIAL",
+    "schema_valid_authority": true,
+    "all_obligations_successfully_planned": false,
+    "obligation_count": 8,
+    "obligations_with_authority": [
+      "O1",
+      "O4",
+      "O6"
+    ],
+    "obligations_without_authority": [
+      "O2",
+      "O3",
+      "O5",
+      "O7",
+      "O8"
+    ],
+    "obligations": [
+      {
+        "obligation_id": "O1",
+        "fragment_status": "VALID_PLAN",
+        "has_authority": true,
+        "successfully_planned": true
+      },
+      {
+        "obligation_id": "O2",
+        "fragment_status": "TRUNCATED_NO_CONTENT",
+        "has_authority": false,
+        "successfully_planned": false
+      },
+      {
+        "obligation_id": "O3",
+        "fragment_status": "PROVIDER_TIMEOUT",
+        "has_authority": false,
+        "successfully_planned": false
+      },
+      {
+        "obligation_id": "O4",
+        "fragment_status": "VALID_PLAN",
+        "has_authority": true,
+        "successfully_planned": true
+      },
+      {
+        "obligation_id": "O5",
+        "fragment_status": "PROVIDER_TIMEOUT",
+        "has_authority": false,
+        "successfully_planned": false
+      },
+      {
+        "obligation_id": "O6",
+        "fragment_status": "VALID_PLAN",
+        "has_authority": true,
+        "successfully_planned": true
+      },
+      {
+        "obligation_id": "O7",
+        "fragment_status": "TRUNCATED_NO_CONTENT",
+        "has_authority": false,
+        "successfully_planned": false
+      },
+      {
+        "obligation_id": "O8",
+        "fragment_status": "TRUNCATED_NO_CONTENT",
+        "has_authority": false,
+        "successfully_planned": false
+      }
+    ],
+    "semantic_completeness": "NOT_ESTABLISHED"
+  },
+  "interpretation": "Coverage replay only. Exposed units lacking saved responses are not actual model attempts or solved cells."
+}

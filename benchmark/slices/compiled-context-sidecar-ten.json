@@ -1,0 +1,85 @@
+{
+  "name": "compiled-context-sidecar-ten",
+  "purpose": "Frozen 10-task C0/C1 Spark probe: optional read-only calc_query compiled context on the official SpreadsheetBench coding-agent scaffold. Drawn from control-census-sixty. Do not substitute after seeing C1 trajectories.",
+  "model": "meta/muse-spark-1.3-contributor",
+  "identity_source_run": "official-score-spark-1.3-contributor-fm-02_01",
+  "max_tool_calls_per_task": 40,
+  "cost_limit_usd": 2.5,
+  "arms": {
+    "C0": "--control, official spreadsheet-control.yaml",
+    "C1": "--control-compiled-context, same scaffold plus read-only calc_query"
+  },
+  "population": "control-census-sixty",
+  "tasks": [
+    {
+      "category": "Financial_Model",
+      "id": "13_05",
+      "role": "primary_mechanism_witness",
+      "repeats": 4,
+      "reason": "Isolated temporal experiment moved planner authority from wrong D20:H20 to exact I20:M20 when shared period structure was exposed. Mechanism witness only; do not inject I:M, authority, or gold into C1."
+    },
+    {
+      "category": "Financial_Model",
+      "id": "05_01",
+      "role": "generalization",
+      "repeats": 1,
+      "reason": "Structural label/member/occurrence reasoning has historically been difficult."
+    },
+    {
+      "category": "Financial_Model",
+      "id": "02_01",
+      "role": "saturation_non_harm",
+      "repeats": 1,
+      "reason": "Spark already solved this on the ordinary harness; contemporaneous C0/C1 pair is still required. Do not reuse the previous exact as C0."
+    },
+    {
+      "category": "Financial_Model",
+      "id": "15_05",
+      "role": "negative_structure",
+      "repeats": 1,
+      "reason": "Some requested semantic extent was not mechanically defined; treatment must not hallucinate compiler authority."
+    },
+    {
+      "category": "Template",
+      "id": "03_03",
+      "role": "generalization",
+      "repeats": 1,
+      "reason": "Template span of historical baselines rather than only favorable cases."
+    },
+    {
+      "category": "Template",
+      "id": "06_17",
+      "role": "generalization",
+      "repeats": 1,
+      "reason": "Template span of historical baselines rather than only favorable cases."
+    },
+    {
+      "category": "Template",
+      "id": "16_12",
+      "role": "generalization",
+      "repeats": 1,
+      "reason": "Template span of historical baselines rather than only favorable cases."
+    },
+    {
+      "category": "Debugging",
+      "id": "01_01",
+      "role": "generalization",
+      "repeats": 1,
+      "reason": "Tests whether formula/reference/dependency context helps diagnosis rather than only financial-model construction."
+    },
+    {
+      "category": "Debugging",
+      "id": "09_04",
+      "role": "generalization",
+      "repeats": 1,
+      "reason": "Tests whether formula/reference/dependency context helps diagnosis rather than only financial-model construction."
+    },
+    {
+      "category": "Debugging",
+      "id": "10_10",
+      "role": "generalization",
+      "repeats": 1,
+      "reason": "Tests whether formula/reference/dependency context helps diagnosis rather than only financial-model construction."
+    }
+  ]
+}

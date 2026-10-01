@@ -1,0 +1,23 @@
+{
+ "name": "thin-architecture-system-checkpoint",
+ "h0": "default coding-agent scaffold: Python/openpyxl/bash/view_xlsx/submit",
+ "h1": "H0 + optional search/periods/inspect (note+shim) + transparent mutation runtime",
+ "model_config": "unchanged from recent live component experiments (z-ai/glm-5.3-flash, t=0, top_p=1, call cap 40, $0.25/instance)",
+ "n": 1,
+ "cohorts": {
+  "A-representative": 12,
+  "B-exposure": 12
+ },
+ "material_discordance": {
+  "output_mismatch": true,
+  "abs_mod_ge": 0.1,
+  "abs_reg_ge": 0.05,
+  "corruption": true
+ },
+ "rerun_policy": "one matched repetition per discordant task; third rep if same-direction repeat",
+ "forbidden": [
+  "new helpers",
+  "architecture changes",
+  "rescue paths"
+ ]
+}

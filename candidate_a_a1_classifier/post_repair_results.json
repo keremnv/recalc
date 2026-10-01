@@ -1,0 +1,6 @@
+{
+  "a1_historical_fully_eligible": 86,
+  "a1_known_false_positive_repaired": 20,
+  "contact_gate": true,
+  "semantic_gate": true
+}

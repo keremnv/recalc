@@ -1,0 +1,380 @@
+{
+  "model_calls": 0,
+  "live_runs": 0,
+  "workbook_writes": 0,
+  "fm20_launched": false,
+  "selected_pytest": {
+    "passed": 114,
+    "duration_seconds": 22.44,
+    "command": ".venv/bin/python -m pytest tests/test_scheduler_terminal_paths.py tests/test_integration_repairs.py tests/test_frontend_projection_and_runtime.py tests/test_workbook_spine_sqlite.py tests/test_workbook_grounding.py tests/test_task_obligation_compile.py tests/test_edit_plan.py tests/test_matched_compiled_treatment.py tests/test_matched_fm_max.py tests/test_execution_unit.py -q"
+  },
+  "baseline_check": {
+    "original_scheduler_regressions_failed_as_expected": 2,
+    "cases": [
+      "archived_fm_04_01_exhausts_independent_units_after_three_provider_failures",
+      "failed_group_members_not_promoted_by_later_dependency_or_resume"
+    ]
+  },
+  "ruff": {
+    "passed": true,
+    "command": ".venv/bin/python -m ruff check benchmark/scheduler_terminal_replay.py tests/test_scheduler_terminal_paths.py --output-format concise"
+  },
+  "runtime_file_sha256": {
+    "compiled_scheduler.py": {
+      "before": "f7ba617d1f833b0bae0fa891f897acf51bab36dfbccc9bb861605f243584a595",
+      "after": "a3219c485aaac821defb785598b971593ff47e6742702e33eb2afa2c7f085df9"
+    },
+    "matched_compiled_treatment.py": {
+      "before": "0fdf51c7f20a9ad2ef1526168f6f202bcc356e80236510f246d2d859aef40f9f",
+      "after": "826ab47efd708f8df876da011da5d9ff7edd126b0fddfe907ecf7753387849c5"
+    },
+    "workbook_grounding_spine.py": {
+      "before": "a182d3ce60d50f65af7a209a781ca4367d8e36c6a8a800387d13cf5b60fb99cd",
+      "after": "1d92113a614814851f35f08c330aafda80a7a38f1f2f02eb1ebd02a9e79034eb"
+    }
+  },
+  "unchanged_assignment_ast": {
+    "TASK_IR_SYSTEM": true,
+    "EDIT_PLAN_PROMPT": true,
+    "EDIT_PLAN_SCHEMA": true,
+    "RETRIEVAL_SYSTEM": true,
+    "SYNTHESIS_SYSTEM": true,
+    "MAX_SQL_CALLS": true,
+    "MODEL": true,
+    "REASONING": true,
+    "TEMPERATURE": true
+  },
+  "mechanical_replays": {
+    "scheduler_04_01_mechanical_replay.json": {
+      "task": "Financial_Model:04_01",
+      "model_calls": 0,
+      "workbook_writes": 0,
+      "archived_directory": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored/Financial_Model-04_01",
+      "archived_evidence_unchanged": true,
+      "authority_count": 73,
+      "program_groups_unchanged": true,
+      "independent_units": 49,
+      "retained_sessions": 3,
+      "previous_dispositions": 3,
+      "current_dispositions": 49,
+      "previous_unresolved_targets": 70,
+      "current_unresolved_targets": 24,
+      "disposition_counts": {
+        "PROVIDER_TIMEOUT": 2,
+        "REPLAY_NO_STORED_RESPONSE": 46,
+        "SESSION_RESOURCE_LIMIT": 1
+      },
+      "failed_group_members_not_promoted": true,
+      "scheduled_edits_equal_archive": true,
+      "interpretation": "Coverage replay only. Exposed units lacking saved responses are not actual model attempts or solved cells."
+    },
+    "scheduler_13_05_mechanical_control.json": {
+      "task": "Financial_Model:13_05",
+      "model_calls": 0,
+      "workbook_writes": 0,
+      "archived_directory": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored_retry/Financial_Model-13_05",
+      "archived_evidence_unchanged": true,
+      "authority_count": 19,
+      "program_groups_unchanged": true,
+      "independent_units": 6,
+      "retained_sessions": 6,
+      "previous_dispositions": 19,
+      "current_dispositions": 19,
+      "previous_unresolved_targets": 0,
+      "current_unresolved_targets": 0,
+      "disposition_counts": {
+        "NO_SEMANTIC_CHANGE": 8,
+        "PROVIDER_TIMEOUT": 1,
+        "WRITES_SCHEDULED": 2,
+        "TRANSLATED_WRITE_SCHEDULED": 8
+      },
+      "failed_group_members_not_promoted": true,
+      "scheduled_edits_equal_archive": true,
+      "interpretation": "Coverage replay only. Exposed units lacking saved responses are not actual model attempts or solved cells."
+    }
+  },
+  "archived_plan_completeness": {
+    "04_01": {
+      "status": "PARTIAL",
+      "schema_valid_authority": true,
+      "all_obligations_successfully_planned": false,
+      "obligation_count": 8,
+      "obligations_with_authority": [
+        "O1",
+        "O4",
+        "O6"
+      ],
+      "obligations_without_authority": [
+        "O2",
+        "O3",
+        "O5",
+        "O7",
+        "O8"
+      ],
+      "obligations": [
+        {
+          "obligation_id": "O1",
+          "fragment_status": "VALID_PLAN",
+          "has_authority": true,
+          "successfully_planned": true
+        },
+        {
+          "obligation_id": "O2",
+          "fragment_status": "TRUNCATED_NO_CONTENT",
+          "has_authority": false,
+          "successfully_planned": false
+        },
+        {
+          "obligation_id": "O3",
+          "fragment_status": "PROVIDER_TIMEOUT",
+          "has_authority": false,
+          "successfully_planned": false
+        },
+        {
+          "obligation_id": "O4",
+          "fragment_status": "VALID_PLAN",
+          "has_authority": true,
+          "successfully_planned": true
+        },
+        {
+          "obligation_id": "O5",
+          "fragment_status": "PROVIDER_TIMEOUT",
+          "has_authority": false,
+          "successfully_planned": false
+        },
+        {
+          "obligation_id": "O6",
+          "fragment_status": "VALID_PLAN",
+          "has_authority": true,
+          "successfully_planned": true
+        },
+        {
+          "obligation_id": "O7",
+          "fragment_status": "TRUNCATED_NO_CONTENT",
+          "has_authority": false,
+          "successfully_planned": false
+        },
+        {
+          "obligation_id": "O8",
+          "fragment_status": "TRUNCATED_NO_CONTENT",
+          "has_authority": false,
+          "successfully_planned": false
+        }
+      ],
+      "semantic_completeness": "NOT_ESTABLISHED"
+    },
+    "05_01": {
+      "status": "PARTIAL",
+      "schema_valid_authority": true,
+      "all_obligations_successfully_planned": false,
+      "obligation_count": 7,
+      "obligations_with_authority": [
+        "O3",
+        "O4",
+        "O5",
+        "O7"
+      ],
+      "obligations_without_authority": [
+        "O1",
+        "O2",
+        "O6"
+      ],
+      "obligations": [
+        {
+          "obligation_id": "O1",
+          "fragment_status": "PROVIDER_TIMEOUT",
+          "has_authority": false,
+          "successfully_planned": false
+        },
+        {
+          "obligation_id": "O2",
+          "fragment_status": "EMPTY_EXPANSION",
+          "has_authority": false,
+          "successfully_planned": false
+        },
+        {
+          "obligation_id": "O3",
+          "fragment_status": "VALID_PLAN",
+          "has_authority": true,
+          "successfully_planned": true
+        },
+        {
+          "obligation_id": "O4",
+          "fragment_status": "VALID_PLAN",
+          "has_authority": true,
+          "successfully_planned": true
+        },
+        {
+          "obligation_id": "O5",
+          "fragment_status": "VALID_PLAN",
+          "has_authority": true,
+          "successfully_planned": true
+        },
+        {
+          "obligation_id": "O6",
+          "fragment_status": "PROVIDER_TIMEOUT",
+          "has_authority": false,
+          "successfully_planned": false
+        },
+        {
+          "obligation_id": "O7",
+          "fragment_status": "VALID_PLAN",
+          "has_authority": true,
+          "successfully_planned": true
+        }
+      ],
+      "semantic_completeness": "NOT_ESTABLISHED"
+    },
+    "13_05": {
+      "status": "PARTIAL",
+      "schema_valid_authority": true,
+      "all_obligations_successfully_planned": false,
+      "obligation_count": 6,
+      "obligations_with_authority": [
+        "O2",
+        "O3",
+        "O5",
+        "O6"
+      ],
+      "obligations_without_authority": [
+        "O1",
+        "O4"
+      ],
+      "obligations": [
+        {
+          "obligation_id": "O1",
+          "fragment_status": "PROVIDER_TIMEOUT",
+          "has_authority": false,
+          "successfully_planned": false
+        },
+        {
+          "obligation_id": "O2",
+          "fragment_status": "VALID_PLAN",
+          "has_authority": true,
+          "successfully_planned": true
+        },
+        {
+          "obligation_id": "O3",
+          "fragment_status": "VALID_PLAN",
+          "has_authority": true,
+          "successfully_planned": true
+        },
+        {
+          "obligation_id": "O4",
+          "fragment_status": "PARSE_FAILURE",
+          "has_authority": false,
+          "successfully_planned": false
+        },
+        {
+          "obligation_id": "O5",
+          "fragment_status": "VALID_PLAN",
+          "has_authority": true,
+          "successfully_planned": true
+        },
+        {
+          "obligation_id": "O6",
+          "fragment_status": "VALID_PLAN",
+          "has_authority": true,
+          "successfully_planned": true
+        }
+      ],
+      "semantic_completeness": "NOT_ESTABLISHED"
+    },
+    "15_05": {
+      "status": "PARTIAL",
+      "schema_valid_authority": true,
+      "all_obligations_successfully_planned": false,
+      "obligation_count": 8,
+      "obligations_with_authority": [
+        "O1",
+        "O2",
+        "O5",
+        "O6",
+        "O7"
+      ],
+      "obligations_without_authority": [
+        "O3",
+        "O4",
+        "O8"
+      ],
+      "obligations": [
+        {
+          "obligation_id": "O1",
+          "fragment_status": "VALID_PLAN",
+          "has_authority": true,
+          "successfully_planned": true
+        },
+        {
+          "obligation_id": "O2",
+          "fragment_status": "VALID_PLAN",
+          "has_authority": true,
+          "successfully_planned": true
+        },
+        {
+          "obligation_id": "O3",
+          "fragment_status": "PARSE_FAILURE",
+          "has_authority": false,
+          "successfully_planned": false
+        },
+        {
+          "obligation_id": "O4",
+          "fragment_status": "PROVIDER_TIMEOUT",
+          "has_authority": false,
+          "successfully_planned": false
+        },
+        {
+          "obligation_id": "O5",
+          "fragment_status": "VALID_PLAN",
+          "has_authority": true,
+          "successfully_planned": true
+        },
+        {
+          "obligation_id": "O6",
+          "fragment_status": "VALID_PLAN",
+          "has_authority": true,
+          "successfully_planned": true
+        },
+        {
+          "obligation_id": "O7",
+          "fragment_status": "VALID_PLAN",
+          "has_authority": true,
+          "successfully_planned": true
+        },
+        {
+          "obligation_id": "O8",
+          "fragment_status": "PROVIDER_TIMEOUT",
+          "has_authority": false,
+          "successfully_planned": false
+        }
+      ],
+      "semantic_completeness": "NOT_ESTABLISHED"
+    }
+  },
+  "additional_fidelity_defect": {
+    "task": "Financial_Model:13_05",
+    "sheet": "Input Sheet",
+    "address": "I25",
+    "source_value": 35,
+    "frozen_record_kind": "numeric",
+    "frozen_record_payload_present": false,
+    "old_target_kind": "blank",
+    "fixed_legacy_target_kind": "value",
+    "fresh_compilation_retains_scalar": true,
+    "frozen_caches_rebuilt": false
+  },
+  "scope": {
+    "prompts_changed": false,
+    "group_algorithms_changed": false,
+    "authority_widened": false,
+    "semantic_verifier_added": false,
+    "noop_policy_changed": false,
+    "ranking_algorithm_added": false,
+    "historical_probe_artifacts_rewritten": false
+  },
+  "limitations": [
+    "Mechanical exposure is not a model attempt or scoring improvement.",
+    "Scalar fix requires isolated rebuilt caches; old caches remain frozen.",
+    "No live 04_01 continuation was performed.",
+    "Semantic completeness is not established by planning completeness metadata."
+  ]
+}

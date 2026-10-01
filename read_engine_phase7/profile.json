@@ -1,0 +1,406 @@
+{
+  "cold": {
+    "H0": {
+      "artifact_load_ms": {
+        "median": 32.0075845,
+        "range": [
+          0.759922,
+          638.492498
+        ]
+      },
+      "bootstrap_bootstrap_total": {
+        "median": 551.38311,
+        "range": [
+          127.500188,
+          3764.950201
+        ]
+      },
+      "bootstrap_config_admission": {
+        "median": 0.9314575,
+        "range": [
+          0.693408,
+          1.679952
+        ]
+      },
+      "bootstrap_discovery": {
+        "median": 0.228238,
+        "range": [
+          0.207763,
+          0.260523
+        ]
+      },
+      "bootstrap_pre_runtime": {
+        "median": 550.5991475,
+        "range": [
+          126.750511,
+          3764.064771
+        ]
+      },
+      "bootstrap_runtime_import_install": {
+        "median": 0.552726,
+        "range": [
+          0.347738,
+          0.89997
+        ]
+      },
+      "observer_argument_run_dir": {
+        "median": 0.32539450000000003,
+        "range": [
+          0.208608,
+          0.40407
+        ]
+      },
+      "observer_changed_helper_or_empty_receipt": {
+        "median": 0.11203250000000001,
+        "range": [
+          0.075878,
+          0.17728
+        ]
+      },
+      "observer_fork_launch": {
+        "median": 0.1762015,
+        "range": [
+          0.124406,
+          0.294385
+        ]
+      },
+      "observer_observer_to_receipt": {
+        "median": 688.6581289999999,
+        "range": [
+          184.45909,
+          6347.017709
+        ]
+      },
+      "observer_post_snapshot_compare": {
+        "median": 0.3943845,
+        "range": [
+          0.137137,
+          2.452256
+        ]
+      },
+      "observer_pre_snapshot": {
+        "median": 0.26833700000000005,
+        "range": [
+          0.045613,
+          1.816639
+        ]
+      },
+      "observer_wait_target": {
+        "median": 687.2695865000001,
+        "range": [
+          183.486659,
+          6343.137416
+        ]
+      },
+      "reference_parse_ms": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          2062.815033
+        ]
+      }
+    },
+    "H1": {
+      "artifact_load_ms": {
+        "median": 38.776848,
+        "range": [
+          0.768048,
+          635.493819
+        ]
+      },
+      "bootstrap_bootstrap_total": {
+        "median": 500.5649535,
+        "range": [
+          130.145783,
+          3450.329376
+        ]
+      },
+      "bootstrap_config_admission": {
+        "median": 1.3270635,
+        "range": [
+          0.798594,
+          2.40618
+        ]
+      },
+      "bootstrap_discovery": {
+        "median": 0.226163,
+        "range": [
+          0.210447,
+          0.249786
+        ]
+      },
+      "bootstrap_pre_runtime": {
+        "median": 499.744276,
+        "range": [
+          129.257493,
+          3449.615489
+        ]
+      },
+      "bootstrap_runtime_import_install": {
+        "median": 0.7025874999999999,
+        "range": [
+          0.447569,
+          0.973904
+        ]
+      },
+      "observer_argument_run_dir": {
+        "median": 0.309777,
+        "range": [
+          0.240251,
+          0.410847
+        ]
+      },
+      "observer_changed_helper_or_empty_receipt": {
+        "median": 0.1219115,
+        "range": [
+          0.070356,
+          0.223367
+        ]
+      },
+      "observer_fork_launch": {
+        "median": 0.185303,
+        "range": [
+          0.133785,
+          0.291028
+        ]
+      },
+      "observer_observer_to_receipt": {
+        "median": 676.263473,
+        "range": [
+          184.313542,
+          4159.641956
+        ]
+      },
+      "observer_post_snapshot_compare": {
+        "median": 0.4219765,
+        "range": [
+          0.132207,
+          1.624349
+        ]
+      },
+      "observer_pre_snapshot": {
+        "median": 0.3095005,
+        "range": [
+          0.042007,
+          1.8122
+        ]
+      },
+      "observer_wait_target": {
+        "median": 674.9197785,
+        "range": [
+          183.598779,
+          4154.572329
+        ]
+      },
+      "reference_parse_ms": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          196.741827
+        ]
+      }
+    }
+  },
+  "warm": {
+    "H0": {
+      "artifact_load_ms": {
+        "median": 47.198544,
+        "range": [
+          0.794874,
+          804.324307
+        ]
+      },
+      "bootstrap_bootstrap_total": {
+        "median": 112.174711,
+        "range": [
+          108.0592355,
+          120.22935899999999
+        ]
+      },
+      "bootstrap_config_admission": {
+        "median": 0.9622625,
+        "range": [
+          0.713655,
+          1.7255165
+        ]
+      },
+      "bootstrap_discovery": {
+        "median": 0.23051575000000002,
+        "range": [
+          0.21328999999999998,
+          0.2467715
+        ]
+      },
+      "bootstrap_pre_runtime": {
+        "median": 23.58082575,
+        "range": [
+          22.213914000000003,
+          29.825671
+        ]
+      },
+      "bootstrap_runtime_import_install": {
+        "median": 87.84379625,
+        "range": [
+          85.824656,
+          90.6658755
+        ]
+      },
+      "observer_argument_run_dir": {
+        "median": 0.27022275,
+        "range": [
+          0.232479,
+          0.29380649999999997
+        ]
+      },
+      "observer_changed_helper_or_empty_receipt": {
+        "median": 0.10439425,
+        "range": [
+          0.08425250000000001,
+          0.1321675
+        ]
+      },
+      "observer_fork_launch": {
+        "median": 0.185487,
+        "range": [
+          0.138944,
+          0.2729995
+        ]
+      },
+      "observer_observer_to_receipt": {
+        "median": 276.49532224999996,
+        "range": [
+          166.4149235,
+          3515.3085075
+        ]
+      },
+      "observer_post_snapshot_compare": {
+        "median": 0.38483425,
+        "range": [
+          0.1406575,
+          1.8624930000000002
+        ]
+      },
+      "observer_pre_snapshot": {
+        "median": 0.2933425,
+        "range": [
+          0.046928,
+          1.5994760000000001
+        ]
+      },
+      "observer_wait_target": {
+        "median": 275.23201725,
+        "range": [
+          165.581072,
+          3512.258592
+        ]
+      },
+      "reference_parse_ms": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          2040.1226434999999
+        ]
+      }
+    },
+    "H1": {
+      "artifact_load_ms": {
+        "median": 47.3200785,
+        "range": [
+          0.7968785,
+          801.7447
+        ]
+      },
+      "bootstrap_bootstrap_total": {
+        "median": 114.08499800000001,
+        "range": [
+          108.48095599999999,
+          121.7194905
+        ]
+      },
+      "bootstrap_config_admission": {
+        "median": 1.29437125,
+        "range": [
+          0.8625315,
+          2.5481935
+        ]
+      },
+      "bootstrap_discovery": {
+        "median": 0.22955599999999998,
+        "range": [
+          0.21628,
+          0.2525945
+        ]
+      },
+      "bootstrap_pre_runtime": {
+        "median": 24.3582705,
+        "range": [
+          23.007613499999998,
+          30.897184
+        ]
+      },
+      "bootstrap_runtime_import_install": {
+        "median": 88.4386805,
+        "range": [
+          85.348626,
+          91.5652515
+        ]
+      },
+      "observer_argument_run_dir": {
+        "median": 0.25336725,
+        "range": [
+          0.21994750000000002,
+          0.30100150000000003
+        ]
+      },
+      "observer_changed_helper_or_empty_receipt": {
+        "median": 0.11706275000000001,
+        "range": [
+          0.0966935,
+          0.1401455
+        ]
+      },
+      "observer_fork_launch": {
+        "median": 0.18827275,
+        "range": [
+          0.129996,
+          0.28841150000000004
+        ]
+      },
+      "observer_observer_to_receipt": {
+        "median": 222.95961499999999,
+        "range": [
+          165.618084,
+          1035.142149
+        ]
+      },
+      "observer_post_snapshot_compare": {
+        "median": 0.476117,
+        "range": [
+          0.13055,
+          2.003142
+        ]
+      },
+      "observer_pre_snapshot": {
+        "median": 0.2943715,
+        "range": [
+          0.046712000000000004,
+          1.682817
+        ]
+      },
+      "observer_wait_target": {
+        "median": 221.72428774999997,
+        "range": [
+          164.753156,
+          1030.813541
+        ]
+      },
+      "reference_parse_ms": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          328.3819515
+        ]
+      }
+    }
+  }
+}

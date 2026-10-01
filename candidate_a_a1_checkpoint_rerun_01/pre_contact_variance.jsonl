@@ -1,0 +1,40 @@
+{"run_id": "primary_02_Financial_Model_07_01_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Financial_Model:07_01", "turn": 4}
+{"run_id": "primary_02_Financial_Model_07_01_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Financial_Model:07_01", "turn": 5}
+{"run_id": "primary_02_Financial_Model_07_01_H1", "source_reason": "OBJECT_ESCAPE_BOUNDARY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Financial_Model:07_01", "turn": 6}
+{"run_id": "primary_02_Financial_Model_07_01_H1", "source_reason": "OBJECT_ESCAPE_BOUNDARY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Financial_Model:07_01", "turn": 7}
+{"run_id": "primary_02_Financial_Model_07_01_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Financial_Model:07_01", "turn": 8}
+{"run_id": "primary_02_Financial_Model_07_01_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Financial_Model:07_01", "turn": 9}
+{"run_id": "primary_02_Financial_Model_07_01_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Financial_Model:07_01", "turn": 10}
+{"run_id": "primary_02_Financial_Model_07_01_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Financial_Model:07_01", "turn": 11}
+{"run_id": "primary_02_Financial_Model_07_01_H1", "source_reason": "OBJECT_ESCAPE_BOUNDARY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Financial_Model:07_01", "turn": 12}
+{"run_id": "primary_02_Financial_Model_07_01_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Financial_Model:07_01", "turn": 13}
+{"run_id": "primary_02_Financial_Model_07_01_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Financial_Model:07_01", "turn": 14}
+{"run_id": "primary_02_Financial_Model_07_01_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Financial_Model:07_01", "turn": 15}
+{"run_id": "primary_02_Financial_Model_07_01_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Financial_Model:07_01", "turn": 16}
+{"run_id": "primary_10_Debugging_10_10_H1", "source_reason": "iterator shape not statically proven", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:10_10", "turn": 3}
+{"run_id": "primary_10_Debugging_10_10_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:10_10", "turn": 4}
+{"run_id": "primary_10_Debugging_10_10_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:10_10", "turn": 5}
+{"run_id": "primary_10_Debugging_10_10_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:10_10", "turn": 6}
+{"run_id": "primary_10_Debugging_10_10_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:10_10", "turn": 7}
+{"run_id": "primary_10_Debugging_10_10_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:10_10", "turn": 8}
+{"run_id": "primary_10_Debugging_10_10_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:10_10", "turn": 9}
+{"run_id": "primary_10_Debugging_10_10_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:10_10", "turn": 10}
+{"run_id": "primary_10_Debugging_10_10_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:10_10", "turn": 11}
+{"run_id": "primary_10_Debugging_10_10_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:10_10", "turn": 12}
+{"run_id": "primary_10_Debugging_10_10_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:10_10", "turn": 13}
+{"run_id": "primary_10_Debugging_10_10_H1", "source_reason": "STATIC_ANALYSIS_UNCERTAINTY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:10_10", "turn": 14}
+{"run_id": "primary_14_Debugging_01_06_H1", "source_reason": "WORKBOOK_WORKSHEETS_BOUNDARY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:01_06", "turn": 4}
+{"run_id": "primary_14_Debugging_01_06_H1", "source_reason": "CELL_OBJECT_ITERATION_BOUNDARY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:01_06", "turn": 5}
+{"run_id": "primary_14_Debugging_01_06_H1", "source_reason": "not a Python inspection command", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:01_06", "turn": 6}
+{"run_id": "primary_14_Debugging_01_06_H1", "source_reason": "not a Python inspection command", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:01_06", "turn": 7}
+{"run_id": "primary_14_Debugging_01_06_H1", "source_reason": "not a Python inspection command", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:01_06", "turn": 8}
+{"run_id": "primary_16_Debugging_10_04_H1", "source_reason": "WORKBOOK_WORKSHEETS_BOUNDARY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:10_04", "turn": 2}
+{"run_id": "primary_16_Debugging_10_04_H1", "source_reason": "CELL_OBJECT_ITERATION_BOUNDARY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:10_04", "turn": 3}
+{"run_id": "primary_16_Debugging_10_04_H1", "source_reason": "CELL_OBJECT_ITERATION_BOUNDARY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:10_04", "turn": 4}
+{"run_id": "primary_17_Debugging_05_02_H1", "source_reason": "WORKBOOK_WORKSHEETS_BOUNDARY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Debugging:05_02", "turn": 16}
+{"run_id": "primary_19_Template_13_08_H1", "source_reason": "not a Python inspection command", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Template:13_08", "turn": 4}
+{"run_id": "primary_19_Template_13_08_H1", "source_reason": "syntax parse failed", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Template:13_08", "turn": 6}
+{"run_id": "primary_19_Template_13_08_H1", "source_reason": "WRITE_BOUNDARY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Template:13_08", "turn": 7}
+{"run_id": "primary_22_Template_03_03_H1", "source_reason": "not a Python inspection command", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Template:03_03", "turn": 3}
+{"run_id": "primary_22_Template_03_03_H1", "source_reason": "DATA_ONLY_BOUNDARY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Template:03_03", "turn": 4}
+{"run_id": "primary_22_Template_03_03_H1", "source_reason": "READ_WRITE_MIXED_BOUNDARY", "source_safe": false, "status": "NO_CONTACT_YET", "task_id": "Template:03_03", "turn": 5}

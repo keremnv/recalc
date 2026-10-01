@@ -1,0 +1,23 @@
+{
+  "command_sequence": [
+    "librecalc-agent example /tmp/librecalc-example",
+    "librecalc-agent run --workdir /tmp/librecalc-example /tmp/librecalc-example/create_input.py",
+    "librecalc-agent run --workdir /tmp/librecalc-example /tmp/librecalc-example/update.py"
+  ],
+  "sources": [
+    "examples/basic/create_input.py",
+    "examples/basic/update.py",
+    "examples/basic/read.py"
+  ],
+  "installed_in_wheel": true,
+  "observed_result": {
+    "A2": 21,
+    "B2": "=A2*2"
+  },
+  "read_smoke": "A2 printed 21; one accelerated load recorded",
+  "write_smoke": "B2 = =A2*2; actual writes through ordinary openpyxl; capture bytes equal script-produced bytes",
+  "disabled_smoke": "PASS",
+  "direct_python_smoke": "PASS",
+  "no_helper_required": true,
+  "calculated_value_claim": false
+}

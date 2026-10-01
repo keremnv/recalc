@@ -1,0 +1,23 @@
+{
+  "served_models": {
+    "z-ai/glm-5.3-flash": 1306
+  },
+  "served_providers_by_arm": {
+    "A": {
+      "OpenInference": 345,
+      "Wafer": 22
+    },
+    "B": {
+      "OpenInference": 270,
+      "Wafer": 31
+    },
+    "C": {
+      "OpenInference": 286,
+      "Wafer": 35
+    },
+    "D": {
+      "OpenInference": 291,
+      "Wafer": 26
+    }
+  }
+}

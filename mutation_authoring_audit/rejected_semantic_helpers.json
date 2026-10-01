@@ -1,0 +1,15 @@
+{
+ "REJECTED_BY_EVIDENCE": [
+  "fill_formula (effect confirm ~0.1, clean boundary ~0.1)",
+  "copy_style/copy_number_format (effect confirm 0.0)",
+  "fill_value (effect confirm 0.14)"
+ ],
+ "REJECTED_BY_DESIGN": [
+  "fill_missing_formulas",
+  "repair_dependencies",
+  "complete_model",
+  "copy_correct_formula",
+  "fix_style"
+ ],
+ "design_rule": "no helper may infer targets, content, direction, or correctness"
+}

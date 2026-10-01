@@ -1,0 +1,13 @@
+{
+ "intro": "A spreadsheet recalculation found newly introduced formula errors that were not present in the input workbook.",
+ "format": "INTRO + blank + Total: N + blank + By sheet: + 4sp lines(sorted) + blank + Representative cells: + 4sp <sheet>!<addr>: <kind> lines + (blank + Note: showing R of N representative cells. iff sampled)",
+ "limits": {
+  "per_sheet": 8,
+  "total": 80,
+  "order": "findings sorted by (sheet,address) from frozen new_formula_errors; sheets ascending; first 8 per sheet; overall cap 80 in sheet order"
+ },
+ "render_report_sha256": "d2fa348e81174a809258d363ae9f5e854dea19e01057f8faf94bbf425d38ded9",
+ "select_representatives_sha256": "dd904488e41ff5ea7ada2b6806d5d50a0c57c683197784ca4d13bd0653aaf492",
+ "rendered_example": "A spreadsheet recalculation found newly introduced formula errors that were not present in the input workbook.\n\nTotal: 3\n\nBy sheet:\n    S1: 2\n    S2: 1\n\nRepresentative cells:\n    S1!A1: Err:522\n    S1!B2: Err:522\n    S2!C3: #DIV/0!",
+ "template_sha256": "e92f29a05145169b00c13c6b5e05ce6ce2f0ff4c9bd19e5aba5ec51a32f3d04a"
+}

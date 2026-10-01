@@ -1,10 +1,10 @@
 {
   "name": "read-side-ladder",
-  "purpose": "Test the premise the whole interface rests on: that the cheap model is bound by expression, not comprehension. The control arm sees 359,701 characters of workbook per task and refuses nothing; LibreCalc as shipped shows 74,459 and refuses one call in five. Four arms on the same 15 tasks and the same model separate the two candidate causes -- how much the model may see, and whether our summary is worse than raw truth.",
+  "purpose": "Test whether the cheap model is bound by visible workbook volume or by the representation it receives. The control arm sees 359,701 characters per task and refuses nothing; the universal formula-pattern/formula-block arm shows 74,459 and historically refused one call in five. This is a read-side mechanism ladder, not the shipped category-specific configuration used by the 297.",
   "model": "z-ai/glm-5.3-flash",
   "arms": {
     "A_control": "bash + view_xlsx + openpyxl, official prompt, 50 calls. MEASURED: 3/15, mod 0.7801, 359,701 chars.",
-    "B_shipped": "formula-patterns-v1 + formula-blocks-v1, 96-cell ceiling, budget as configured.",
+    "B_universal_semantic": "formula-patterns-v1 + formula-blocks-v1 for every category, 96-cell ceiling, budget as configured. This is not the category-specific 297 configuration.",
     "C_unbounded": "B with --unbounded-reads: no ceiling, no read budget. Isolates VOLUME.",
     "D_raw": "grid-v1 + --unbounded-reads: manifest inspect, raw matrices, no limits. Isolates ABSTRACTION."
   },

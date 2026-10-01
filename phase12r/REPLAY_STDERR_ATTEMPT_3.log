@@ -1,0 +1,128 @@
+/usr/lib/python3.14/multiprocessing/resource_tracker.py:396: UserWarning: resource_tracker: There appear to be 5 leaked semaphore objects to clean up at shutdown: {'/mp-o3o0ij96', '/mp-3fsrwpr_', '/mp-vpmkw1wu', '/mp-xkbr_ly7', '/mp-tmofxsvb'}
+  warnings.warn(
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId2 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId3 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId4 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId2 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId3 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId4 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId2 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId3 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId4 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId2 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId3 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId4 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId2 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId3 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId4 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId2 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId3 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId4 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId2 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId3 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId4 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId2 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId3 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId4 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId2 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId3 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId4 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId2 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId3 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId4 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Data Validation extension is not supported and will be removed
+  warn(msg)
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Data Validation extension is not supported and will be removed
+  warn(msg)
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId2 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId3 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId4 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing1.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing3.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing1.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing3.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Data Validation extension is not supported and will be removed
+  warn(msg)
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Data Validation extension is not supported and will be removed
+  warn(msg)
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Data Validation extension is not supported and will be removed
+  warn(msg)
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Data Validation extension is not supported and will be removed
+  warn(msg)
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Data Validation extension is not supported and will be removed
+  warn(msg)
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Data Validation extension is not supported and will be removed
+  warn(msg)
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Data Validation extension is not supported and will be removed
+  warn(msg)
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Data Validation extension is not supported and will be removed
+  warn(msg)

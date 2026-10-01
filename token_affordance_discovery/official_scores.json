@@ -1,0 +1,1023 @@
+{
+  "arms": {
+    "A": {
+      "evaluation_runtime": "unmodified-official-evaluation.py",
+      "exact": 0,
+      "missing_outputs": 9,
+      "model_name": "token_affordance_discovery_A",
+      "run_name": "A",
+      "scored": 12,
+      "submission": {
+        "official_json": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/token_affordance_discovery/score_staging/A/submission/results",
+        "outputs": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/token_affordance_discovery/score_staging/A/submission/outputs"
+      },
+      "tasks": {
+        "Debugging:01_08": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "01_08",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:02_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "02_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:02_06": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "02_06",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:10_10": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "10_10",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:01_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "01_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:02_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "02_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:03_03": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at Final Output!C14: answer=Market Cap (SAR mn), output=57300",
+          "id": "03_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.3725,
+          "regression_accuracy": 1.0
+        },
+        "Financial_Model:04_03": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "04_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Template:01_07": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "01_07",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Template:06_12": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "06_12",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Template:15_01": {
+          "accuracy": 0.0,
+          "error_message": "Modification error at DebtAnalysis!C40: answer=59222921.6966213, output=161848624.766726",
+          "id": "15_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.9524,
+          "regression_accuracy": 1.0
+        },
+        "Template:15_03": {
+          "accuracy": 0.0,
+          "error_message": "Modification error at LoanSizing!D38: answer=None, output=$/Unit",
+          "id": "15_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.8095,
+          "regression_accuracy": 1.0
+        }
+      }
+    },
+    "B": {
+      "evaluation_runtime": "unmodified-official-evaluation.py",
+      "exact": 0,
+      "missing_outputs": 9,
+      "model_name": "token_affordance_discovery_B",
+      "run_name": "B",
+      "scored": 12,
+      "submission": {
+        "official_json": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/token_affordance_discovery/score_staging/B/submission/results",
+        "outputs": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/token_affordance_discovery/score_staging/B/submission/outputs"
+      },
+      "tasks": {
+        "Debugging:01_08": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "01_08",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:02_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "02_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:02_06": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "02_06",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:10_10": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "10_10",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:01_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "01_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:02_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "02_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:03_03": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at Final Output!C14: answer=Market Cap (SAR mn), output=57300",
+          "id": "03_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.4706,
+          "regression_accuracy": 1.0
+        },
+        "Financial_Model:04_03": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "04_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Template:01_07": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "01_07",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Template:06_12": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "06_12",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Template:15_01": {
+          "accuracy": 0.0,
+          "error_message": "Modification error at DebtAnalysis!C28: answer=67130386.0030373, output=805564632.036447",
+          "id": "15_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.2857,
+          "regression_accuracy": 1.0
+        },
+        "Template:15_03": {
+          "accuracy": 0.0,
+          "error_message": "Modification error at LoanSizing!C44: answer=369551.282051282, output=445090.419490733",
+          "id": "15_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.4286,
+          "regression_accuracy": 1.0
+        }
+      }
+    },
+    "C": {
+      "evaluation_runtime": "unmodified-official-evaluation.py",
+      "exact": 0,
+      "missing_outputs": 9,
+      "model_name": "token_affordance_discovery_C",
+      "run_name": "C",
+      "scored": 12,
+      "submission": {
+        "official_json": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/token_affordance_discovery/score_staging/C/submission/results",
+        "outputs": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/token_affordance_discovery/score_staging/C/submission/outputs"
+      },
+      "tasks": {
+        "Debugging:01_08": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "01_08",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:02_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "02_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:02_06": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "02_06",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:10_10": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "10_10",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:01_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "01_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:02_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "02_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:03_03": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at Final Output!D14: answer=None, output=57300",
+          "id": "03_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.549,
+          "regression_accuracy": 1.0
+        },
+        "Financial_Model:04_03": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "04_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Template:01_07": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "01_07",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Template:06_12": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "06_12",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Template:15_01": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at DebtAnalysis!D40: answer=None, output=0.842377128729723",
+          "id": "15_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.7619,
+          "regression_accuracy": 0.9937
+        },
+        "Template:15_03": {
+          "accuracy": 0.0,
+          "error_message": "Modification error at LoanSizing!D38: answer=None, output=$/Unit",
+          "id": "15_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.8095,
+          "regression_accuracy": 1.0
+        }
+      }
+    },
+    "D": {
+      "evaluation_runtime": "unmodified-official-evaluation.py",
+      "exact": 1,
+      "missing_outputs": 9,
+      "model_name": "token_affordance_discovery_D",
+      "run_name": "D",
+      "scored": 12,
+      "submission": {
+        "official_json": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/token_affordance_discovery/score_staging/D/submission/results",
+        "outputs": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/token_affordance_discovery/score_staging/D/submission/outputs"
+      },
+      "tasks": {
+        "Debugging:01_08": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "01_08",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:02_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "02_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:02_06": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "02_06",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:10_10": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "10_10",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:01_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "01_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:02_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "02_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:03_03": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at Final Output!C14: answer=Market Cap (SAR mn), output=57300",
+          "id": "03_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.549,
+          "regression_accuracy": 1.0
+        },
+        "Financial_Model:04_03": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "04_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Template:01_07": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "01_07",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Template:06_12": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "06_12",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Template:15_01": {
+          "accuracy": 1.0,
+          "error_message": "",
+          "id": "15_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 1.0,
+          "regression_accuracy": 1.0
+        },
+        "Template:15_03": {
+          "accuracy": 0.0,
+          "error_message": "Modification error at LoanSizing!D38: answer=None, output=$/Unit",
+          "id": "15_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.8095,
+          "regression_accuracy": 1.0
+        }
+      }
+    }
+  },
+  "official_runtime": "unmodified official evaluator after LibreOffice refresh",
+  "rows": [
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.4706,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_diagnostic": "Regression error at Final Output!C14: answer=Market Cap (SAR mn), output=57300",
+      "submitted": true,
+      "task": "Financial_Model:03_03",
+      "valid_submission": true,
+      "workbook_scored": true
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.549,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_diagnostic": "Regression error at Final Output!D14: answer=None, output=57300",
+      "submitted": true,
+      "task": "Financial_Model:03_03",
+      "valid_submission": true,
+      "workbook_scored": true
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.3725,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_diagnostic": "Regression error at Final Output!C14: answer=Market Cap (SAR mn), output=57300",
+      "submitted": true,
+      "task": "Financial_Model:03_03",
+      "valid_submission": true,
+      "workbook_scored": true
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.549,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_diagnostic": "Regression error at Final Output!C14: answer=Market Cap (SAR mn), output=57300",
+      "submitted": true,
+      "task": "Financial_Model:03_03",
+      "valid_submission": true,
+      "workbook_scored": true
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:10_10",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:10_10",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:10_10",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:10_10",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:01_08",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:01_08",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:01_08",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:01_08",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Template:01_07",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Template:01_07",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Template:01_07",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Template:01_07",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:02_01",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:02_01",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:02_01",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:02_01",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Financial_Model:02_01",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Financial_Model:02_01",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Financial_Model:02_01",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Financial_Model:02_01",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Template:06_12",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Template:06_12",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Template:06_12",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Template:06_12",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:02_06",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:02_06",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:02_06",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:02_06",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Financial_Model:01_01",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Financial_Model:01_01",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Financial_Model:01_01",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Financial_Model:01_01",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.2857,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_diagnostic": "Modification error at DebtAnalysis!C28: answer=67130386.0030373, output=805564632.036447",
+      "submitted": true,
+      "task": "Template:15_01",
+      "valid_submission": true,
+      "workbook_scored": true
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.7619,
+      "output_exists": true,
+      "regression": 0.9937,
+      "scorer_diagnostic": "Regression error at DebtAnalysis!D40: answer=None, output=0.842377128729723",
+      "submitted": true,
+      "task": "Template:15_01",
+      "valid_submission": true,
+      "workbook_scored": true
+    },
+    {
+      "arm": "D",
+      "exact": 1.0,
+      "modification": 1.0,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_diagnostic": "",
+      "submitted": false,
+      "task": "Template:15_01",
+      "valid_submission": false,
+      "workbook_scored": true
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.9524,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_diagnostic": "Modification error at DebtAnalysis!C40: answer=59222921.6966213, output=161848624.766726",
+      "submitted": false,
+      "task": "Template:15_01",
+      "valid_submission": false,
+      "workbook_scored": true
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Financial_Model:04_03",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Financial_Model:04_03",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Financial_Model:04_03",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_diagnostic": "output file not exist",
+      "submitted": false,
+      "task": "Financial_Model:04_03",
+      "valid_submission": false,
+      "workbook_scored": false
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.8095,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_diagnostic": "Modification error at LoanSizing!D38: answer=None, output=$/Unit",
+      "submitted": true,
+      "task": "Template:15_03",
+      "valid_submission": true,
+      "workbook_scored": true
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.8095,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_diagnostic": "Modification error at LoanSizing!D38: answer=None, output=$/Unit",
+      "submitted": true,
+      "task": "Template:15_03",
+      "valid_submission": true,
+      "workbook_scored": true
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.8095,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_diagnostic": "Modification error at LoanSizing!D38: answer=None, output=$/Unit",
+      "submitted": true,
+      "task": "Template:15_03",
+      "valid_submission": true,
+      "workbook_scored": true
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.4286,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_diagnostic": "Modification error at LoanSizing!C44: answer=369551.282051282, output=445090.419490733",
+      "submitted": true,
+      "task": "Template:15_03",
+      "valid_submission": true,
+      "workbook_scored": true
+    }
+  ]
+}

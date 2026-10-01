@@ -1,0 +1,43 @@
+id: fm-01-02-m3
+run: glm-5.3-flash-nonvisual-297-1
+task: Financial_Model:01_02
+first_miss:
+  kind: modification
+  address: "Working Capital Schedule!M3"
+  error_message: "Modification error at Working Capital Schedule!M3: answer=2031-03-31 00:00:00, output=None"
+facts:
+  opened_golden: false
+  spreadsheet: 01_02_Education_input.xlsx
+  instruction: >
+    Complete the financial model... Debt Schedule interest, WACC Cost of Equity,
+    DCF Equity Value. Does not name Working Capital dates.
+  input_kind: blank
+  input_value: null
+  output_formula: null
+  autopsy:
+    named: true
+    named_sources: [boundary_continuations]
+    read: false
+    written: false
+    bucket: named_unread
+  boundary:
+    inferred_formula: "=EOMONTH(L3,12)"
+    run: D3:L3
+    note: Heuristic one-cell formula continuations... Not requirements.
+  wrote: null
+  compare: {formulas_added: 14, formula_errors_added: 0}
+claims:
+  patterns: [B-listed-continuation, K-preserve-compare]
+  nuance: open
+  mechanism: run-boundary
+  lever: substitution
+  lever_why: >
+    The information lever was already spent on this exact cell: boundary_continuations listed
+    M3 with the inferred EOMONTH and the model declined it, then verified and submitted.
+    Telling it again is refuted by its own trajectory. The only untried family is the world
+    writing the continuation. Blocked on nuance: open -- the payload note says these are not
+    requirements, so substitution would be wrong where it is right.
+  notes: >
+    v1 autopsy called this unnamed. Boundary listed M3 with the inferred EOMONTH.
+    Payload note says not requirements. Instruction names Debt/WACC/DCF; they
+    filled those 14 formulas and submitted. Golden leak wants 2031-03-31.

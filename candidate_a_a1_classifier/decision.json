@@ -1,0 +1,8 @@
+{
+  "a1_earned": true,
+  "candidate_b": "frozen/closed",
+  "decision": "A1_CLASSIFIER_REPAIR_EARNED",
+  "do_not_run_next": "larger live checkpoint is separate and is not run here",
+  "larger_live_checkpoint_justified": true,
+  "reason": "A1 changes only eligibility; all 34 false-positive turns no longer fail for the bogus range/slice reason, 20 are admitted and 14 retain legitimate blockers, controls remain fallback, newly admitted frozen Python is exact, and independent live-task opportunity rises from 2/6 to 3/6."
+}

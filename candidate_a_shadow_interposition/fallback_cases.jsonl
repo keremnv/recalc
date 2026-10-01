@@ -1,0 +1,5 @@
+{"case": "F1_defined_names_before_escape", "classification": "SEMANTIC_EXACT", "fallback_reasons": ["Workbook.defined_names"], "policy": "SAFE_LOCAL_FALLBACK", "proxy_loads": 1, "reason": null}
+{"case": "F2_primitive_then_unsupported", "classification": "SEMANTIC_EXACT", "fallback_reasons": ["Worksheet.merged_cells"], "policy": "SAFE_LOCAL_FALLBACK", "proxy_loads": 1, "reason": null}
+{"case": "F2_cell_number_format", "classification": "SEMANTIC_EXACT", "fallback_reasons": ["Cell.number_format"], "policy": "SAFE_LOCAL_FALLBACK", "proxy_loads": 1, "reason": null}
+{"case": "F3_object_escaped_then_font", "classification": "OBJECT_ESCAPE_FORCES_REAL_OPENPYXL_FROM_START", "identity_same_if_proxy_continued": false, "policy": "PREDECLARED_REAL_OPENPYXL_PATH", "reason": "proxy Cell identity is observable"}
+{"case": "F4_raw_zip_access", "classification": "PREDECLARED_REAL_OPENPYXL_PATH", "policy": "PREDECLARED_REAL_OPENPYXL_PATH", "raw_package_available": true}

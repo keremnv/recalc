@@ -1,0 +1,11 @@
+{
+ "differences_unintended": [],
+ "pass": true,
+ "intended_differences": [
+  "instance_hash",
+  "request_body.user_len",
+  "workdir lx_helpers.py (H1 only)",
+  "instance prompt + usage note (H1 only)",
+  "transparent runtime wrap (H1 only, invisible)"
+ ]
+}

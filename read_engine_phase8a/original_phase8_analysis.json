@@ -1,0 +1,44 @@
+{
+  "blocking_issue": "Phase-7 certificate admits indirect covered-cell object escape",
+  "certificate_diagnostic": {
+    "admission": true,
+    "certificate": {
+      "cell_calls": 0,
+      "certified": true,
+      "reason": "ALL_CELL_CALLS_TERMINAL_SCALAR",
+      "terminals": [
+        "column",
+        "coordinate",
+        "data_type",
+        "row",
+        "value"
+      ]
+    },
+    "events": [
+      "bootstrap",
+      "direct_served_load",
+      "merged_child_contact",
+      "merged_child_direct"
+    ],
+    "h1_stdout": "ProxyCell <read_engine_phase3.runtime.ProxyCell object at 0x7be37ee374d0>\n",
+    "matrix_cases": 9,
+    "matrix_false_positive_cases": [
+      "dunder_method",
+      "dunder_getitem"
+    ],
+    "observable_difference": true,
+    "py_stdout": "MergedCell <MergedCell 'Sheet'.B1>\n"
+  },
+  "changed_file_economics": "UNMEASURED",
+  "frozen_changed_file_fixtures": 5,
+  "frozen_representative_workloads": 30,
+  "integration_readiness_verdict": "NOT YET READY \u2014 SEMANTIC/ASSURANCE ISSUE",
+  "phase8_scored_changed_file_rows": 0,
+  "phase8_scored_representative_rows": 0,
+  "reference_only_economics": "UNMEASURED",
+  "representative_identity_verified": 30,
+  "representative_performance": "UNMEASURED",
+  "spec_sha256": "20a149e390f102d26ef259082b34948d0d9eb5b4f2029e6ae5bbf268f2c1cd11",
+  "status": "STOPPED_BEFORE_SCORING",
+  "stop_rule": "preregistered semantic gate: admitted false-positive merged-cell certificate"
+}

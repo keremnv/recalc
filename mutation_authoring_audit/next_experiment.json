@@ -1,0 +1,9 @@
+{
+ "experiment": "formula-batch helper A/B",
+ "candidates": [
+  "write_cells",
+  "write_formulas"
+ ],
+ "why": "highest measured replaceable bytes x LOW risk x effect-verified x adoption-evidenced",
+ "gate": "capability preservation first; helpers optional; Python fallback intact"
+}

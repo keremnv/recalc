@@ -1,0 +1,1459 @@
+{
+  "registry_purpose": "Preserve prior lower-token observations for a later Claim Validation Plan. No new token experiment and no product token-savings claim.",
+  "interpretation_categories": [
+    "DESCRIPTIVE_ASSOCIATION",
+    "CAUSAL_MECHANISM_PLAUSIBLE",
+    "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+    "CLAIM_READY"
+  ],
+  "current_product_token_claim_ready": false,
+  "rows": [
+    {
+      "experiment": "Inspection efficiency Stage B",
+      "source": "inspection_efficiency_ab/efficiency_metrics.json",
+      "scope": "aggregate",
+      "control_tokens": 6319843,
+      "treatment_tokens": 3760254,
+      "difference_treatment_minus_control": -2559589,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": true,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 14,
+        "independent_tasks": 9
+      },
+      "censoring": "Includes five repeated discordant pairs and different stall mix.",
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Optional helper+note changed visible evidence and backend. Later thin checkpoint attributed aggregate view shift largely to note salience; invisible acceleration cannot be credited."
+    },
+    {
+      "experiment": "Thin architecture checkpoint",
+      "source": "thin_architecture_checkpoint/efficiency_metrics.json",
+      "scope": "ALL",
+      "control_tokens": 18097832,
+      "treatment_tokens": 16258754,
+      "difference_treatment_minus_control": -1839078,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": true,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 24
+      },
+      "censoring": "Primary runs include stalls/non-output; totals are not outcome-normalized.",
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Representative non-adopters show lower tokens; exposure cohort has higher tokens. No aggregate helper/runtime attribution."
+    },
+    {
+      "experiment": "Thin architecture checkpoint",
+      "source": "thin_architecture_checkpoint/efficiency_metrics.json",
+      "scope": "A-representative",
+      "control_tokens": 7722979,
+      "treatment_tokens": 5345845,
+      "difference_treatment_minus_control": -2377134,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": true,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 12
+      },
+      "censoring": "Primary runs include stalls/non-output; totals are not outcome-normalized.",
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Representative non-adopters show lower tokens; exposure cohort has higher tokens. No aggregate helper/runtime attribution."
+    },
+    {
+      "experiment": "Thin architecture checkpoint",
+      "source": "thin_architecture_checkpoint/efficiency_metrics.json",
+      "scope": "B-exposure",
+      "control_tokens": 10374853,
+      "treatment_tokens": 10912909,
+      "difference_treatment_minus_control": 538056,
+      "treatment_lower": false,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": true,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 12
+      },
+      "censoring": "Primary runs include stalls/non-output; totals are not outcome-normalized.",
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Representative non-adopters show lower tokens; exposure cohort has higher tokens. No aggregate helper/runtime attribution."
+    },
+    {
+      "experiment": "Batch-write helpers",
+      "source": "batch_write_helper_ab/efficiency_metrics.json",
+      "scope": "aggregate",
+      "control_tokens": 4104791,
+      "treatment_tokens": 4058278,
+      "difference_treatment_minus_control": -46513,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": true,
+      "invisible_mechanism_differed": false,
+      "sample_size": {
+        "primary_pairs": 10,
+        "full_study_runs_per_arm": 13
+      },
+      "censoring": "Primary authoring/efficiency totals include stalls and truncations; study also had three replicated pairs.",
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Zero helper invocations in all 13 treatment runs. Lower total is descriptive; rejected branch remains closed."
+    },
+    {
+      "experiment": "Default-harness deterministic execution",
+      "source": "architecture_transfer_audit/control_efficiency_census.json",
+      "scope": "aggregate",
+      "control_tokens": 15731994,
+      "treatment_tokens": 14047346,
+      "difference_treatment_minus_control": -1684648,
+      "treatment_lower": true,
+      "token_measure": "provider prompt tokens",
+      "model_facing_mechanism_differed": true,
+      "invisible_mechanism_differed": false,
+      "sample_size": {
+        "matched_pairs": 12
+      },
+      "censoring": "No normalization for distinct trajectory/stall mix; 12 matched frozen-ledger pairs.",
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Executor invoked zero times; lower treatment tokens cannot be attributed to execution."
+    },
+    {
+      "experiment": "Compact evidence encoding, complete pairs",
+      "source": "COMPACT_EVIDENCE_DELIVERY_REPORT.md",
+      "scope": "aggregate",
+      "control_tokens": 5842363,
+      "treatment_tokens": 4998231,
+      "difference_treatment_minus_control": -844132,
+      "treatment_lower": true,
+      "token_measure": "provider prompt tokens",
+      "model_facing_mechanism_differed": true,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "complete_pairs": 11,
+        "attempted_pairs": 16
+      },
+      "censoring": "Five treatment-only timeouts versus zero control. Complete-pair denominator only.",
+      "interpretation": "CAUSAL_MECHANISM_PLAUSIBLE",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Explicit representation intervention makes prompt reduction plausible on completed pairs; rejected mechanism, unretained surface, timeout asymmetry. Summary raw control total 8,507,460 covers all controls and must not be paired with 11 treatment results."
+    },
+    {
+      "experiment": "Historical Phase C translation subset",
+      "source": "OLD_HARNESS_COMPONENT_TRANSFER_AUDIT.md",
+      "scope": "aggregate",
+      "control_tokens": 4170000,
+      "treatment_tokens": 2030000,
+      "difference_treatment_minus_control": -2140000,
+      "treatment_lower": true,
+      "token_measure": "input tokens (rounded summary)",
+      "model_facing_mechanism_differed": true,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "control_sessions": 32,
+        "treatment_sessions": 16,
+        "independent_tasks": "not resolved from this summary"
+      },
+      "censoring": "Same-files subset aggregation; historical summary reports rounded millions, not an RC result.",
+      "interpretation": "CAUSAL_MECHANISM_PLAUSIBLE",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Session consolidation under old edit-plan architecture; default-agent transfer not established; preserve without integrating."
+    },
+    {
+      "experiment": "Historical bounded inspection/compare, Financial_Model:01_03",
+      "source": "docs/PROJECT_CONTEXT.md",
+      "scope": "aggregate",
+      "control_tokens": 549294,
+      "treatment_tokens": 178294,
+      "difference_treatment_minus_control": -371000,
+      "treatment_lower": true,
+      "token_measure": "provider prompt tokens",
+      "model_facing_mechanism_differed": true,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1,
+        "tasks": 1
+      },
+      "censoring": "Two development trajectories, not a powered matched randomized result.",
+      "interpretation": "CAUSAL_MECHANISM_PLAUSIBLE",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "2026-08-25 Grok rerun changed visible inspection/compare payloads; reported equal workbook cell content. Historical MCP surface excluded from product."
+    },
+    {
+      "experiment": "candidate_a_live",
+      "source": "candidate_a_live/model_behavior.json",
+      "scope": "aggregate",
+      "control_tokens": 6690612,
+      "treatment_tokens": 5501280,
+      "difference_treatment_minus_control": -1189332,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "H0": 6,
+        "H1": 6
+      },
+      "censoring": {
+        "H0": {
+          "TRUNCATED_CALL_LIMIT": 2,
+          "SUBMITTED": 1,
+          "NO_SUBMIT": 2,
+          "RUNNER_ERROR": 1
+        },
+        "H1": {
+          "NO_SUBMIT": 4,
+          "RUNNER_ERROR": 1,
+          "TRUNCATED_CALL_LIMIT": 1
+        }
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Available-token run totals only; missing usage not imputed as zero. Trajectory lengths, output production and censoring differ."
+    },
+    {
+      "experiment": "candidate_a_live",
+      "source": "candidate_a_live/model_behavior.json",
+      "scope": "Financial_Model:07_01, rep=1",
+      "control_tokens": 1578900,
+      "treatment_tokens": 623794,
+      "difference_treatment_minus_control": -955106,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "TRUNCATED_CALL_LIMIT",
+        "H1": "NO_SUBMIT"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "candidate_a_live",
+      "source": "candidate_a_live/model_behavior.json",
+      "scope": "Financial_Model:08_03, rep=1",
+      "control_tokens": 1570138,
+      "treatment_tokens": 840895,
+      "difference_treatment_minus_control": -729243,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H1": "NO_SUBMIT",
+        "H0": "SUBMITTED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "candidate_a_live",
+      "source": "candidate_a_live/model_behavior.json",
+      "scope": "Financial_Model:08_01, rep=1",
+      "control_tokens": 1121419,
+      "treatment_tokens": 591418,
+      "difference_treatment_minus_control": -530001,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "NO_SUBMIT",
+        "H1": "NO_SUBMIT"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "candidate_a_live",
+      "source": "candidate_a_live/model_behavior.json",
+      "scope": "Debugging:05_02, rep=1",
+      "control_tokens": 1919447,
+      "treatment_tokens": 942741,
+      "difference_treatment_minus_control": -976706,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H1": "NO_SUBMIT",
+        "H0": "TRUNCATED_CALL_LIMIT"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "candidate_a_a1_checkpoint_rerun_01",
+      "source": "candidate_a_a1_checkpoint_rerun_01/model_behavior.json",
+      "scope": "aggregate",
+      "control_tokens": 8749268,
+      "treatment_tokens": 3565421,
+      "difference_treatment_minus_control": -5183847,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "H0": 12,
+        "H1": 12
+      },
+      "censoring": {
+        "H0": {
+          "TRUNCATED_CALL_LIMIT": 3,
+          "SUBMITTED": 3,
+          "NO_SUBMIT": 3,
+          "RUNNER_ERROR": 1,
+          "PROVIDER_CENSORED": 2
+        },
+        "H1": {
+          "NO_SUBMIT": 2,
+          "SUBMITTED": 5,
+          "PROVIDER_CENSORED": 4,
+          "RUNNER_ERROR": 1
+        }
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Available-token run totals only; missing usage not imputed as zero. Trajectory lengths, output production and censoring differ."
+    },
+    {
+      "experiment": "candidate_a_a1_checkpoint_rerun_01",
+      "source": "candidate_a_a1_checkpoint_rerun_01/model_behavior.json",
+      "scope": "Financial_Model:07_01, rep=1",
+      "control_tokens": 2346532,
+      "treatment_tokens": 373848,
+      "difference_treatment_minus_control": -1972684,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "TRUNCATED_CALL_LIMIT",
+        "H1": "NO_SUBMIT"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "candidate_a_a1_checkpoint_rerun_01",
+      "source": "candidate_a_a1_checkpoint_rerun_01/model_behavior.json",
+      "scope": "Financial_Model:08_01, rep=1",
+      "control_tokens": 706101,
+      "treatment_tokens": 394069,
+      "difference_treatment_minus_control": -312032,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "SUBMITTED",
+        "H1": "PROVIDER_CENSORED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "candidate_a_a1_checkpoint_rerun_01",
+      "source": "candidate_a_a1_checkpoint_rerun_01/model_behavior.json",
+      "scope": "Financial_Model:15_04, rep=1",
+      "control_tokens": 986394,
+      "treatment_tokens": 189559,
+      "difference_treatment_minus_control": -796835,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "NO_SUBMIT",
+        "H1": "PROVIDER_CENSORED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "candidate_a_a1_checkpoint_rerun_01",
+      "source": "candidate_a_a1_checkpoint_rerun_01/model_behavior.json",
+      "scope": "Debugging:10_10, rep=1",
+      "control_tokens": 1412745,
+      "treatment_tokens": 713339,
+      "difference_treatment_minus_control": -699406,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "TRUNCATED_CALL_LIMIT",
+        "H1": "SUBMITTED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "candidate_a_a1_checkpoint_rerun_01",
+      "source": "candidate_a_a1_checkpoint_rerun_01/model_behavior.json",
+      "scope": "Debugging:01_06, rep=1",
+      "control_tokens": 536132,
+      "treatment_tokens": 69688,
+      "difference_treatment_minus_control": -466444,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "PROVIDER_CENSORED",
+        "H1": "PROVIDER_CENSORED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "candidate_a_a1_checkpoint_rerun_01",
+      "source": "candidate_a_a1_checkpoint_rerun_01/model_behavior.json",
+      "scope": "Debugging:10_04, rep=1",
+      "control_tokens": 1111308,
+      "treatment_tokens": 26186,
+      "difference_treatment_minus_control": -1085122,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "NO_SUBMIT",
+        "H1": "SUBMITTED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "candidate_a_a1_checkpoint_rerun_01",
+      "source": "candidate_a_a1_checkpoint_rerun_01/model_behavior.json",
+      "scope": "Template:03_03, rep=1",
+      "control_tokens": 494923,
+      "treatment_tokens": 21283,
+      "difference_treatment_minus_control": -473640,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "TRUNCATED_CALL_LIMIT",
+        "H1": "SUBMITTED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "candidate_a_a1_checkpoint_rerun_01",
+      "source": "candidate_a_a1_checkpoint_rerun_01/model_behavior.json",
+      "scope": "Financial_Model:10_01, rep=1",
+      "control_tokens": 389637,
+      "treatment_tokens": 160125,
+      "difference_treatment_minus_control": -229512,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "NO_SUBMIT",
+        "H1": "PROVIDER_CENSORED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "live_transparent_runtime_ab",
+      "source": "live_transparent_runtime_ab/runs/**/run_record.json",
+      "scope": "aggregate",
+      "control_tokens": 2128686,
+      "treatment_tokens": 2163980,
+      "difference_treatment_minus_control": 35294,
+      "treatment_lower": false,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "H0": 9,
+        "H1": 9
+      },
+      "censoring": {
+        "H0": {
+          "SUBMITTED": 7,
+          "NO_SUBMIT": 2
+        },
+        "H1": {
+          "NO_SUBMIT": 5,
+          "SUBMITTED": 4
+        }
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Available-token run totals only; missing usage not imputed as zero. Trajectory lengths, output production and censoring differ."
+    },
+    {
+      "experiment": "live_transparent_runtime_ab",
+      "source": "live_transparent_runtime_ab/runs/**/run_record.json",
+      "scope": "Debugging:02_06, rep=1",
+      "control_tokens": 532524,
+      "treatment_tokens": 507946,
+      "difference_treatment_minus_control": -24578,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "SUBMITTED",
+        "H1": "NO_SUBMIT"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "live_transparent_runtime_ab",
+      "source": "live_transparent_runtime_ab/runs/**/run_record.json",
+      "scope": "Financial_Model:01_01, rep=1",
+      "control_tokens": 341483,
+      "treatment_tokens": 303001,
+      "difference_treatment_minus_control": -38482,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "SUBMITTED",
+        "H1": "SUBMITTED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "live_transparent_runtime_ab",
+      "source": "live_transparent_runtime_ab/runs/**/run_record.json",
+      "scope": "Financial_Model:02_01, rep=1",
+      "control_tokens": 209897,
+      "treatment_tokens": 100123,
+      "difference_treatment_minus_control": -109774,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "SUBMITTED",
+        "H1": "SUBMITTED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "live_transparent_runtime_ab",
+      "source": "live_transparent_runtime_ab/runs/**/run_record.json",
+      "scope": "Template:01_07, rep=1",
+      "control_tokens": 227536,
+      "treatment_tokens": 35008,
+      "difference_treatment_minus_control": -192528,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "SUBMITTED",
+        "H1": "NO_SUBMIT"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "targeted_runtime_replication",
+      "source": "targeted_runtime_replication/reps/**/run_record.json",
+      "scope": "aggregate",
+      "control_tokens": 2866299,
+      "treatment_tokens": 3072131,
+      "difference_treatment_minus_control": 205832,
+      "treatment_lower": false,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "H0": 12,
+        "H1": 12
+      },
+      "censoring": {
+        "H0": {
+          "SUBMITTED": 8,
+          "NO_SUBMIT": 4
+        },
+        "H1": {
+          "TRUNCATED_CALL_LIMIT": 1,
+          "NO_SUBMIT": 4,
+          "SUBMITTED": 7
+        }
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Available-token run totals only; missing usage not imputed as zero. Trajectory lengths, output production and censoring differ."
+    },
+    {
+      "experiment": "targeted_runtime_replication",
+      "source": "targeted_runtime_replication/reps/**/run_record.json",
+      "scope": "Debugging:02_06, rep=2",
+      "control_tokens": 630127,
+      "treatment_tokens": 615860,
+      "difference_treatment_minus_control": -14267,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "NO_SUBMIT",
+        "H1": "NO_SUBMIT"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "targeted_runtime_replication",
+      "source": "targeted_runtime_replication/reps/**/run_record.json",
+      "scope": "Financial_Model:01_01, rep=1",
+      "control_tokens": 632125,
+      "treatment_tokens": 149414,
+      "difference_treatment_minus_control": -482711,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "SUBMITTED",
+        "H1": "SUBMITTED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "targeted_runtime_replication",
+      "source": "targeted_runtime_replication/reps/**/run_record.json",
+      "scope": "Financial_Model:13_05, rep=2",
+      "control_tokens": 106838,
+      "treatment_tokens": 97434,
+      "difference_treatment_minus_control": -9404,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "SUBMITTED",
+        "H1": "SUBMITTED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "targeted_runtime_replication",
+      "source": "targeted_runtime_replication/reps/**/run_record.json",
+      "scope": "Template:01_02, rep=1",
+      "control_tokens": 35567,
+      "treatment_tokens": 26747,
+      "difference_treatment_minus_control": -8820,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "SUBMITTED",
+        "H1": "SUBMITTED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "targeted_runtime_replication",
+      "source": "targeted_runtime_replication/reps/**/run_record.json",
+      "scope": "Template:01_07, rep=2",
+      "control_tokens": 56555,
+      "treatment_tokens": 56507,
+      "difference_treatment_minus_control": -48,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "NO_SUBMIT",
+        "H1": "NO_SUBMIT"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "targeted_runtime_replication",
+      "source": "targeted_runtime_replication/reps/**/run_record.json",
+      "scope": "Template:06_12, rep=1",
+      "control_tokens": 312436,
+      "treatment_tokens": 69058,
+      "difference_treatment_minus_control": -243378,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "NO_SUBMIT",
+        "H1": "SUBMITTED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint",
+      "source": "representative_architecture_checkpoint/reps/**/run_record.json",
+      "scope": "aggregate",
+      "control_tokens": 12442045,
+      "treatment_tokens": 16942024,
+      "difference_treatment_minus_control": 4499979,
+      "treatment_lower": false,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "H0": 30,
+        "H1": 29
+      },
+      "censoring": {
+        "H0": {
+          "TRUNCATED_CALL_LIMIT": 2,
+          "PROVIDER_CENSORED": 7,
+          "NO_SUBMIT": 9,
+          "SUBMITTED": 11,
+          "TRUNCATED_INSTANCE_COST": 1
+        },
+        "H1": {
+          "NO_SUBMIT": 9,
+          "SUBMITTED": 9,
+          "TRUNCATED_INSTANCE_COST": 1,
+          "TRUNCATED_CALL_LIMIT": 4,
+          "PROVIDER_CENSORED": 6
+        }
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Available-token run totals only; missing usage not imputed as zero. Trajectory lengths, output production and censoring differ."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint",
+      "source": "representative_architecture_checkpoint/reps/**/run_record.json",
+      "scope": "Debugging:01_04, rep=1",
+      "control_tokens": 1234866,
+      "treatment_tokens": 882095,
+      "difference_treatment_minus_control": -352771,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "TRUNCATED_CALL_LIMIT",
+        "H1": "NO_SUBMIT"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint",
+      "source": "representative_architecture_checkpoint/reps/**/run_record.json",
+      "scope": "Debugging:09_03, rep=1",
+      "control_tokens": 146155,
+      "treatment_tokens": 140617,
+      "difference_treatment_minus_control": -5538,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "PROVIDER_CENSORED",
+        "H1": "PROVIDER_CENSORED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint",
+      "source": "representative_architecture_checkpoint/reps/**/run_record.json",
+      "scope": "Financial_Model:02_04, rep=1",
+      "control_tokens": 82366,
+      "treatment_tokens": 58210,
+      "difference_treatment_minus_control": -24156,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "SUBMITTED",
+        "H1": "SUBMITTED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint",
+      "source": "representative_architecture_checkpoint/reps/**/run_record.json",
+      "scope": "Financial_Model:02_05, rep=1",
+      "control_tokens": 316163,
+      "treatment_tokens": 72031,
+      "difference_treatment_minus_control": -244132,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "SUBMITTED",
+        "H1": "PROVIDER_CENSORED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint",
+      "source": "representative_architecture_checkpoint/reps/**/run_record.json",
+      "scope": "Financial_Model:08_02, rep=1",
+      "control_tokens": 684158,
+      "treatment_tokens": 590740,
+      "difference_treatment_minus_control": -93418,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "NO_SUBMIT",
+        "H1": "NO_SUBMIT"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint",
+      "source": "representative_architecture_checkpoint/reps/**/run_record.json",
+      "scope": "Financial_Model:09_02, rep=1",
+      "control_tokens": 1200846,
+      "treatment_tokens": 809662,
+      "difference_treatment_minus_control": -391184,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "NO_SUBMIT",
+        "H1": "NO_SUBMIT"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint",
+      "source": "representative_architecture_checkpoint/reps/**/run_record.json",
+      "scope": "Financial_Model:09_03, rep=1",
+      "control_tokens": 598203,
+      "treatment_tokens": 578620,
+      "difference_treatment_minus_control": -19583,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "NO_SUBMIT",
+        "H1": "NO_SUBMIT"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint",
+      "source": "representative_architecture_checkpoint/reps/**/run_record.json",
+      "scope": "Financial_Model:10_01, rep=1",
+      "control_tokens": 199876,
+      "treatment_tokens": 155416,
+      "difference_treatment_minus_control": -44460,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "PROVIDER_CENSORED",
+        "H1": "NO_SUBMIT"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint",
+      "source": "representative_architecture_checkpoint/reps/**/run_record.json",
+      "scope": "Financial_Model:15_03, rep=1",
+      "control_tokens": 1662285,
+      "treatment_tokens": 996244,
+      "difference_treatment_minus_control": -666041,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "TRUNCATED_INSTANCE_COST",
+        "H1": "NO_SUBMIT"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint",
+      "source": "representative_architecture_checkpoint/reps/**/run_record.json",
+      "scope": "Financial_Model:18_05, rep=1",
+      "control_tokens": 213308,
+      "treatment_tokens": 68241,
+      "difference_treatment_minus_control": -145067,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "SUBMITTED",
+        "H1": "SUBMITTED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint",
+      "source": "representative_architecture_checkpoint/reps/**/run_record.json",
+      "scope": "Template:06_02, rep=1",
+      "control_tokens": 29602,
+      "treatment_tokens": 16609,
+      "difference_treatment_minus_control": -12993,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "SUBMITTED",
+        "H1": "SUBMITTED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint",
+      "source": "representative_architecture_checkpoint/reps/**/run_record.json",
+      "scope": "Template:06_23, rep=1",
+      "control_tokens": 17803,
+      "treatment_tokens": 9786,
+      "difference_treatment_minus_control": -8017,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "SUBMITTED",
+        "H1": "SUBMITTED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint",
+      "source": "representative_architecture_checkpoint/reps/**/run_record.json",
+      "scope": "Template:07_02, rep=1",
+      "control_tokens": 12120,
+      "treatment_tokens": 3119,
+      "difference_treatment_minus_control": -9001,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "PROVIDER_CENSORED",
+        "H1": "PROVIDER_CENSORED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint_replication",
+      "source": "representative_architecture_checkpoint/reps_replication/**/run_record.json",
+      "scope": "aggregate",
+      "control_tokens": 1821008,
+      "treatment_tokens": 899633,
+      "difference_treatment_minus_control": -921375,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "H0": 10,
+        "H1": 10
+      },
+      "censoring": {
+        "H0": {
+          "PROVIDER_CENSORED": 4,
+          "NO_SUBMIT": 1,
+          "SUBMITTED": 5
+        },
+        "H1": {
+          "NO_SUBMIT": 3,
+          "PROVIDER_CENSORED": 5,
+          "SUBMITTED": 2
+        }
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Available-token run totals only; missing usage not imputed as zero. Trajectory lengths, output production and censoring differ."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint_replication",
+      "source": "representative_architecture_checkpoint/reps_replication/**/run_record.json",
+      "scope": "Debugging:06_05, rep=1",
+      "control_tokens": 831606,
+      "treatment_tokens": 334078,
+      "difference_treatment_minus_control": -497528,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "NO_SUBMIT",
+        "H1": "NO_SUBMIT"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint_replication",
+      "source": "representative_architecture_checkpoint/reps_replication/**/run_record.json",
+      "scope": "Financial_Model:02_05, rep=1",
+      "control_tokens": 95145,
+      "treatment_tokens": 70753,
+      "difference_treatment_minus_control": -24392,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "PROVIDER_CENSORED",
+        "H1": "PROVIDER_CENSORED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint_replication",
+      "source": "representative_architecture_checkpoint/reps_replication/**/run_record.json",
+      "scope": "Financial_Model:09_02, rep=1",
+      "control_tokens": 85292,
+      "treatment_tokens": 25018,
+      "difference_treatment_minus_control": -60274,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "PROVIDER_CENSORED",
+        "H1": "PROVIDER_CENSORED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint_replication",
+      "source": "representative_architecture_checkpoint/reps_replication/**/run_record.json",
+      "scope": "Financial_Model:11_02, rep=1",
+      "control_tokens": 505670,
+      "treatment_tokens": 3191,
+      "difference_treatment_minus_control": -502479,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "SUBMITTED",
+        "H1": "PROVIDER_CENSORED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    },
+    {
+      "experiment": "representative_architecture_checkpoint_replication",
+      "source": "representative_architecture_checkpoint/reps_replication/**/run_record.json",
+      "scope": "Financial_Model:18_05, rep=1",
+      "control_tokens": 131531,
+      "treatment_tokens": 109456,
+      "difference_treatment_minus_control": -22075,
+      "treatment_lower": true,
+      "token_measure": "total provider tokens",
+      "model_facing_mechanism_differed": false,
+      "invisible_mechanism_differed": true,
+      "sample_size": {
+        "runs_per_arm": 1
+      },
+      "censoring": {
+        "H0": "SUBMITTED",
+        "H1": "SUBMITTED"
+      },
+      "interpretation": "DESCRIPTIVE_ASSOCIATION",
+      "current_product_causal_attribution": "CAUSAL_ATTRIBUTION_NOT_ESTABLISHED",
+      "claim_ready": false,
+      "note": "Preserved lower-token observation; selected for registry, not an effect estimate or independent generalization sample."
+    }
+  ],
+  "lower_observations": 51,
+  "scope": "Frozen cumulative reports, summary ledgers and available run records for runtime/A/A1/checkpoint families, plus known historical token reductions. Includes higher arm totals for context. Not an exhaustive mining of every raw provider response.",
+  "not_token_treatment_evidence": [
+    "Track C hypothetical selector/oracle ceilings",
+    "lossless storage/serialization byte savings without measured provider usage",
+    "authoring byte/LOC ceilings"
+  ],
+  "source_sha256": {
+    "COMPACT_EVIDENCE_DELIVERY_REPORT.md": "fc72e5c4054dac9fa28afd14616cec6346062a5a869218ae0e5d2070be72c800",
+    "OLD_HARNESS_COMPONENT_TRANSFER_AUDIT.md": "ced7d68d6eaae12b2f97c665d963c0bc6a1ad467a5d2d9ba84664ed7e41eefb4",
+    "architecture_transfer_audit/control_efficiency_census.json": "89cfb8e8b957397e9fa51ed1f93c5a67a908e301750fbb858ad4e29273ed45eb",
+    "batch_write_helper_ab/efficiency_metrics.json": "6e7d5f7da578c8d5f08bcf28547e55e57799f5b1e70d7771edbe56530b20e0cf",
+    "candidate_a_a1_checkpoint/model_behavior.json": "30e16760942229d2d034a74d468f3e2d110ec92ce23ad520110f68acda66f867",
+    "candidate_a_a1_checkpoint_rerun_01/model_behavior.json": "42fd948a1a64f5a1efb174f875bbcc3a9eeffce918934fd1a92789cd7e2860b4",
+    "candidate_a_live/model_behavior.json": "8332deb9113044f8e54ee90b1019ed930d131626516889d773ec544c7537edec",
+    "docs/PROJECT_CONTEXT.md": "98533bdfdc55ce2ff8d5939bcb82db60f7f39ff24111dce3dca95b25f0752ade",
+    "inspection_efficiency_ab/efficiency_metrics.json": "c091724c351b333003d915d23c260568787494804d69cf63306264499974158f",
+    "live_transparent_runtime_ab/runs/Debugging/Debugging_02_06_H0/run_record.json": "4c7d645cc99306e738ef7c7a47f0b65747347fc1f1becd14a8505946981b0412",
+    "live_transparent_runtime_ab/runs/Debugging/Debugging_02_06_H1/run_record.json": "662752d6ee530699d538fd77d10d2611e9cf3bc47dce57d7e070df322367fccd",
+    "live_transparent_runtime_ab/runs/Debugging/Debugging_04_01_H0/run_record.json": "4bf35d2f7d3b5b49a3c1e16115631eab8a875fa4e228ef0d8e29c557512d6d4d",
+    "live_transparent_runtime_ab/runs/Debugging/Debugging_04_01_H1/run_record.json": "a446d6c4991a839eee4101fbb6e71336942e53adee8dd0311d4cea79a090d7ad",
+    "live_transparent_runtime_ab/runs/Debugging/Debugging_05_02_H0/run_record.json": "3ad2626a8761c999fac3dba35ec827bacc7d209d34beaab20032ce02313c8d3e",
+    "live_transparent_runtime_ab/runs/Debugging/Debugging_05_02_H1/run_record.json": "47d9d2e40a01c453891c88dc53543463d68839aa7267adc02025cdfcc0a92786",
+    "live_transparent_runtime_ab/runs/Financial_Model/Financial_Model_01_01_H0/run_record.json": "58c0097afdc36c04488e42a03d81dcd69aea173bedb6df94a8612e66f07c5fe1",
+    "live_transparent_runtime_ab/runs/Financial_Model/Financial_Model_01_01_H1/run_record.json": "f3aadea03bf57b96713cd6e60d1bbbf7a3c9f3e5102143db171594aceb67c0c5",
+    "live_transparent_runtime_ab/runs/Financial_Model/Financial_Model_02_01_H0/run_record.json": "39d4a150bcdeeb903b50665e442a5c5dd8174e8c2cc12147f6a497aca365ff36",
+    "live_transparent_runtime_ab/runs/Financial_Model/Financial_Model_02_01_H1/run_record.json": "d546a52bd0a120c92d8c117a0c9b2d21ada7e6c5b1cd95dfeafbcddea7f5d517",
+    "live_transparent_runtime_ab/runs/Financial_Model/Financial_Model_13_05_H0/run_record.json": "b1008298afb48d0d014225fc4bb242c4710953bb8bd01e36113f24086a7250c7",
+    "live_transparent_runtime_ab/runs/Financial_Model/Financial_Model_13_05_H1/run_record.json": "d672a7336beac067d4699526b89997fb30dd1e9631e2b7e13b3c6d7cfe5119c9",
+    "live_transparent_runtime_ab/runs/Template/Template_01_02_H0/run_record.json": "2ff4c52b8312adf7071ed0ff5750098122653ab5b6c42c02f08068fd30a8b661",
+    "live_transparent_runtime_ab/runs/Template/Template_01_02_H1/run_record.json": "0f10a385bb19248af17999441a83e5e7a6ffbc74b3eee2f33def5b3557a19caf",
+    "live_transparent_runtime_ab/runs/Template/Template_01_07_H0/run_record.json": "7c3cdf58aeb39b0114e3252021564474b21122beff5c015cb1bca82ec32f8ecb",
+    "live_transparent_runtime_ab/runs/Template/Template_01_07_H1/run_record.json": "5f98353407d68f4c2de554dc942fcbe967a7ba9f3cad0e2da15aa692d48ca387",
+    "live_transparent_runtime_ab/runs/Template/Template_06_12_H0/run_record.json": "0e7664dede6a94a0363dacb33e2599c9c818519d5bd2ca06ecb2655155d56963",
+    "live_transparent_runtime_ab/runs/Template/Template_06_12_H1/run_record.json": "5ccae7ef74d9a1814e162707da623d5224e13b13df1f7bfaeaf2bbcf1d527bc8",
+    "representative_architecture_checkpoint/reps/Debugging_01_04_H0_primary_40/run_record.json": "42584785c05492e7413ae05331e56aaee2fe0e890ff713b8de0a8ddc5362a768",
+    "representative_architecture_checkpoint/reps/Debugging_01_04_H1_primary_41/run_record.json": "4f506c9998fc86719058de8eabe7b05e367cb6a68708cdac9f09e58a0bdc6a8c",
+    "representative_architecture_checkpoint/reps/Debugging_03_06_H0_primary_43/run_record.json": "b67a03633574c4801950bbde8e0be7f9b202268eda7b1f4a1287bbec14b4b3d5",
+    "representative_architecture_checkpoint/reps/Debugging_03_06_H1_primary_42/run_record.json": "22ca4c0e1432ebd41668c141d148bfe15da016d52f86841d6cef021ee3d49bd8",
+    "representative_architecture_checkpoint/reps/Debugging_04_07_H0_primary_44/run_record.json": "ca9fb4acd15a18938f8b2b3a4793d3c4efd6dea079c71a5ffab3b0676737c16a",
+    "representative_architecture_checkpoint/reps/Debugging_04_07_H1_primary_45/run_record.json": "2387825d4d85c846350bd6102ebb03fb679d6903a4249cc5c7f60910ed39562d",
+    "representative_architecture_checkpoint/reps/Debugging_06_05_H0_primary_47/run_record.json": "8d82a833c67902104d33991bdac55e5df74a5d9f5c7a9f770e12271217707a87",
+    "representative_architecture_checkpoint/reps/Debugging_06_05_H1_primary_46/run_record.json": "d677e94888b0602da50a4f4968d61337ba888b7485385ccd6dccc101eb53dc9c",
+    "representative_architecture_checkpoint/reps/Debugging_06_10_H0_primary_48/run_record.json": "f9c5ded3056bfffd2147f87a11e7ff6559ca1f125d047e572adb3e00407bec21",
+    "representative_architecture_checkpoint/reps/Debugging_06_10_H1_primary_49/run_record.json": "3ea6412c7744445637c0fd914cb1814fa417db17f8ec780610457e7e0b0c08ed",
+    "representative_architecture_checkpoint/reps/Debugging_07_05_H0_primary_51/run_record.json": "3298100b7da89892d087ef5b28565fdd054fca6d01e81825e5e370a7bf0f117d",
+    "representative_architecture_checkpoint/reps/Debugging_07_05_H1_primary_50/run_record.json": "5170cd2496ce87ffbf1a81361b6da03cde9333c50bfbe5554018aab121025fad",
+    "representative_architecture_checkpoint/reps/Debugging_08_01_H0_primary_52/run_record.json": "cda151104e660245784b921107ebbabbbd0c6d9ab231f8ff048a2e73daac2b47",
+    "representative_architecture_checkpoint/reps/Debugging_08_01_H1_primary_53/run_record.json": "d2567fefb6ff652af214008f027313fed63691fc115558c7894ed769e0f80f90",
+    "representative_architecture_checkpoint/reps/Debugging_09_03_H0_primary_55/run_record.json": "3e42a0b96f483091b7afffe79fa1ee68070aac72c60488fdd4ce8453d31a2fcd",
+    "representative_architecture_checkpoint/reps/Debugging_09_03_H1_primary_54/run_record.json": "1f88f1b14e972cf71fdb0e780236c0bdb01c4aa4a1288c05596b93b8aeaba97e",
+    "representative_architecture_checkpoint/reps/Debugging_09_04_H0_primary_56/run_record.json": "bb14f7cb1456b288ebb66fbeea61a330a086ba264d9cc8290aa3fb147231efe6",
+    "representative_architecture_checkpoint/reps/Debugging_09_04_H1_primary_57/run_record.json": "e2a0c27a1d0703ee43c125d9162c25297d78fad22c3c121936e70afce2068e96",
+    "representative_architecture_checkpoint/reps/Debugging_10_07_H0_primary_59/run_record.json": "da5fd38df0f5e205afd9af60e298f7beb8543fb36da8bfc842f4460a76225cc6",
+    "representative_architecture_checkpoint/reps/Debugging_10_07_H1_primary_58/run_record.json": "561745138317ba1a589091c39e498f4a5e875b828bddc938215070eebcf91885",
+    "representative_architecture_checkpoint/reps/Financial_Model_02_04_H0_primary_20/run_record.json": "c9a4e28765cd5981045bd60d1830f41c801028e4606b86abba05ea8dec8d35fd",
+    "representative_architecture_checkpoint/reps/Financial_Model_02_04_H1_primary_21/run_record.json": "91db9a1d7c55ae4f8bf578e591942009a43da138902a2932e4a2f6c29d5c49b4",
+    "representative_architecture_checkpoint/reps/Financial_Model_02_05_H0_primary_23/run_record.json": "1b75584954099fe7db3cca1fbf719012f4c3191128829bc5083caf5b61a87690",
+    "representative_architecture_checkpoint/reps/Financial_Model_02_05_H1_primary_22/run_record.json": "4a0ee869858bcd03441b81c9e748ff8ed14b293adaf1cc80e6b2e51d8aa7dac5",
+    "representative_architecture_checkpoint/reps/Financial_Model_06_01_H0_primary_24/run_record.json": "7a3c4a767c51b9f0c89febf17c96044ef657955b62ca49a8e86e6f1c564c9213",
+    "representative_architecture_checkpoint/reps/Financial_Model_06_01_H1_primary_25/run_record.json": "e408e4e23f1107642aef76a4b9adaf31bc4e9111bbb614106f04c8f1c1ef047a",
+    "representative_architecture_checkpoint/reps/Financial_Model_08_02_H0_primary_27/run_record.json": "464dba69cfc99d058aa608a89c1ba5850ea6b7373f4a4d581716b45d54475f8f",
+    "representative_architecture_checkpoint/reps/Financial_Model_08_02_H1_primary_26/run_record.json": "3ef040fd430ea10fb6a49af2232c7a69077859e636148f85c170a449ba11d426",
+    "representative_architecture_checkpoint/reps/Financial_Model_09_02_H0_primary_28/run_record.json": "e6c66f23e045875c5c7f8b3615da01ea2681f3c0b4e207c3c89c8e472fc87c5d",
+    "representative_architecture_checkpoint/reps/Financial_Model_09_02_H1_primary_29/run_record.json": "0a5e34b94e95729091333f3ae4c624a8f6230cf2a7be226ab74c057924f9cd62",
+    "representative_architecture_checkpoint/reps/Financial_Model_09_03_H0_primary_31/run_record.json": "8eee84be2bd752ada17bdd99826fe4ffefe2ff46cad49d52d679bafe81bc8a3a",
+    "representative_architecture_checkpoint/reps/Financial_Model_09_03_H1_primary_30/run_record.json": "1bd760daba07d90676587e647af6ef146490b0cbb6f75bf9cfed5d49972f0809",
+    "representative_architecture_checkpoint/reps/Financial_Model_10_01_H0_primary_32/run_record.json": "95692963f901a1a0344b70ca245552a5417b69ba57f259ecb3281ffd5a578ebb",
+    "representative_architecture_checkpoint/reps/Financial_Model_10_01_H1_primary_33/run_record.json": "40cfee3eaa3de8ce60543f489f2c0122436f8d0751785999983c27f1cde1abaf",
+    "representative_architecture_checkpoint/reps/Financial_Model_11_02_H0_primary_35/run_record.json": "ff2726b7d1ee387c0a25cdf3accdc7b6fc71c1780813822407f6bf722abbb576",
+    "representative_architecture_checkpoint/reps/Financial_Model_11_02_H1_primary_34/run_record.json": "2773bf7b04582b7e9fd02a9c72785f3ee459c35565b1b8c23ca88f228a96829d",
+    "representative_architecture_checkpoint/reps/Financial_Model_15_03_H0_primary_36/run_record.json": "033a2cb5bdf9c764174d7bd5cc32a346b8c930c81ba966a8bdcab353df8da397",
+    "representative_architecture_checkpoint/reps/Financial_Model_15_03_H1_primary_37/run_record.json": "be0bb0c67357a4796e5a920e9a7d9cb7e2dc6688633ced8a05af5b6390d2f38a",
+    "representative_architecture_checkpoint/reps/Financial_Model_18_05_H0_primary_39/run_record.json": "74b8c1c329fb65eebbc7dcd6f4e2e11e89d9093036310dbdcb258ceea87d08b1",
+    "representative_architecture_checkpoint/reps/Financial_Model_18_05_H1_primary_38/run_record.json": "04760c1ed09818d77d4796e06b529dc63fa4377e1e26371a6e3535e8ad80bf9e",
+    "representative_architecture_checkpoint/reps/Template_01_05_H0_primary_00/run_record.json": "29b06038ab6c01e8f53846b22bdfd303554350b146d44a22c30da48c7b4af7ab",
+    "representative_architecture_checkpoint/reps/Template_01_05_H1_primary_01/run_record.json": "0ba3ecaa2660fae4e350bc3931cde52e870892f95e7dcdd5024f4eac1611fb2d",
+    "representative_architecture_checkpoint/reps/Template_01_06_H0_primary_03/run_record.json": "4be10ef0e04f2a1f87c37b81401d337169b2f3cee8a00a6e6c8c94941ec1ce4b",
+    "representative_architecture_checkpoint/reps/Template_01_06_H1_primary_02/run_record.json": "9a51a1ab7921c4b547eea605830be7e23244be7dc07771bfb0ceba3a1da26f09",
+    "representative_architecture_checkpoint/reps/Template_02_01_H0_primary_04/run_record.json": "3375028d3d46b7e4041a65173211549e19db18f44def7f79fd4a925b16db9473",
+    "representative_architecture_checkpoint/reps/Template_02_01_H1_primary_05/run_record.json": "ef023fff9db8646d51941cfe7492019549fbdc9558db7de319ca779bf7803a60",
+    "representative_architecture_checkpoint/reps/Template_04_04_H0_primary_07/run_record.json": "6b7ff24252f0b67638959339416193045b0d50c0ff93e85ddfb7b986cdffba6e",
+    "representative_architecture_checkpoint/reps/Template_04_04_H1_primary_06/run_record.json": "576376bfafedc76efd8879193f4e5a24bbc4b67e7282c74db18b7cc77546bdf4",
+    "representative_architecture_checkpoint/reps/Template_06_02_H0_primary_08/run_record.json": "11f0617cf9caf413e4197eb6c9ff9ebb1976eb5d9462c78dc6577759e257ed71",
+    "representative_architecture_checkpoint/reps/Template_06_02_H1_primary_09/run_record.json": "9d08273ff0dec18350c925da5be113c1657163a8901cff193982ee21f4ac7a0e",
+    "representative_architecture_checkpoint/reps/Template_06_08_H0_primary_11/run_record.json": "4ab1086a52cbac7c9ec40e26d77b2c48ed5281b6a645407142d7a278da1110f1",
+    "representative_architecture_checkpoint/reps/Template_06_08_H1_primary_10/run_record.json": "066b884d41f17b52ee596d0ccfbf1276ddecd9fadd2d0df11b0c99b2ebf7ac15",
+    "representative_architecture_checkpoint/reps/Template_06_23_H0_primary_12/run_record.json": "518dc758812b8f2f2835e6abfa1f4976c3dc724b00f1899d03b384b7ae705621",
+    "representative_architecture_checkpoint/reps/Template_06_23_H1_primary_13/run_record.json": "21bf54d189be7021d57a88a6ab4e39bb93d347951d06e53e39b62a422901f74e",
+    "representative_architecture_checkpoint/reps/Template_07_02_H0_primary_15/run_record.json": "b9e3d88fe4d4dc644a6c094ad2d742a40845a9b5206f9b8ff439fd57a266607f",
+    "representative_architecture_checkpoint/reps/Template_07_02_H1_primary_14/run_record.json": "d0ec502720d3b021140bdc1da1fbae106206a1b276c2f669364ab017ddda4f5f",
+    "representative_architecture_checkpoint/reps/Template_16_07_H0_primary_16/run_record.json": "705b016805f870bfab20a86f9d958dee18d42b4153f71a44239c920c7dd311c6",
+    "representative_architecture_checkpoint/reps/Template_16_07_H1_primary_17/run_record.json": "6884e9ab7b0ab0d1de6b67a70e732dde11fa4bb221ee37b7be70487a55439624",
+    "representative_architecture_checkpoint/reps/Template_16_08_H0_primary_19/run_record.json": "efe9d7570f8eb8e4931f86e2fe84e5aa609c905beed2b2b0be2d0a42102bf9f8",
+    "representative_architecture_checkpoint/reps/Template_16_08_H1_primary_18/run_record.json": "24575c5f469c7f6c6614ee63ea5f2e460d4f853f75a2325e62060dc84e674cc3",
+    "representative_architecture_checkpoint/reps_replication/Debugging_03_06_H0_repl_09H0/run_record.json": "22910a4c693bd2249854914aefb21adf1887f91341c84099a2594e4f3018d9ad",
+    "representative_architecture_checkpoint/reps_replication/Debugging_03_06_H1_repl_09H1/run_record.json": "8efe6508eff4fa1c2773f07b3599101628888e67445890ebc54a39b1da928cda",
+    "representative_architecture_checkpoint/reps_replication/Debugging_06_05_H0_repl_10H0/run_record.json": "0784ea04accc7fb8ead577d35471e37ca30567e4ed508f9bf6c247abe44fe11d",
+    "representative_architecture_checkpoint/reps_replication/Debugging_06_05_H1_repl_10H1/run_record.json": "5e4d00fa566592fbfe30d9eb861b54bf5848022693cd15e0f3728b6f19ffd28b",
+    "representative_architecture_checkpoint/reps_replication/Financial_Model_02_05_H0_repl_04H0/run_record.json": "d073af220203fc106d662ddef36bc4bd443c4ed443a23bb3af250da2ed4c43d0",
+    "representative_architecture_checkpoint/reps_replication/Financial_Model_02_05_H1_repl_04H1/run_record.json": "c7229a6dbb20cf1019c881d14aba464a079c6edaf049543fb1003ca31f8f8ff8",
+    "representative_architecture_checkpoint/reps_replication/Financial_Model_09_02_H0_repl_06H0/run_record.json": "1ffa7c402894f63e47138962a8db54e552d1f01e02459c54da16a228f41e0eb7",
+    "representative_architecture_checkpoint/reps_replication/Financial_Model_09_02_H1_repl_06H1/run_record.json": "690e47b6962492cfe311de0dff358405f708717aa07a6f0b9d5bfabc3ac37ddd",
+    "representative_architecture_checkpoint/reps_replication/Financial_Model_11_02_H0_repl_07H0/run_record.json": "3c283c7c9d5f317b12fcb626ff79aea32c031a8932ae25405816033e8cfa47a4",
+    "representative_architecture_checkpoint/reps_replication/Financial_Model_11_02_H1_repl_07H1/run_record.json": "b78f6bb3a2628cf78436a7ba5931e93311998d2e67bdf27f0c857b6709587c07",
+    "representative_architecture_checkpoint/reps_replication/Financial_Model_18_05_H0_repl_08H0/run_record.json": "090c363bd3bd94bd130e015bb490ce28773b2954c59ac8c944ed5d69502cc90d",
+    "representative_architecture_checkpoint/reps_replication/Financial_Model_18_05_H1_repl_08H1/run_record.json": "78c062d03b97b7273ac1c0691a24ac9d4fde9e2f742f8b48074df21797940648",
+    "representative_architecture_checkpoint/reps_replication/Template_01_05_H0_repl_00H0/run_record.json": "cf623b13f90db75275d98c4ea1b7e762284db71b2f7759d62121dc70968dba18",
+    "representative_architecture_checkpoint/reps_replication/Template_01_05_H1_repl_00H1/run_record.json": "0e8adab4d1c68b95bfedcfb489125a099214a0bec64074b1e80f1eddcf1d2f21",
+    "representative_architecture_checkpoint/reps_replication/Template_06_02_H0_repl_01H0/run_record.json": "cb6ebf700f8de803bbc084738ca26c318be0d35e26a0a368144f2fc38fda0a7b",
+    "representative_architecture_checkpoint/reps_replication/Template_06_02_H1_repl_01H1/run_record.json": "712a552bd2685b867b5dc87449d88823a029c81bcad1efba9765a2ca28466a6c",
+    "representative_architecture_checkpoint/reps_replication/Template_16_07_H0_repl_02H0/run_record.json": "4bf45dd8d781876df6636f96805e741025ab73f45d875ce68fe9799fefa41401",
+    "representative_architecture_checkpoint/reps_replication/Template_16_07_H1_repl_02H1/run_record.json": "887f38be723d030347ed6e91046d8528b8ea40ccca48e2804cb12759569d2179",
+    "representative_architecture_checkpoint/reps_replication/Template_16_08_H0_repl_03H0/run_record.json": "a0c762266cb502a430b8f74b96541363e94d211343d5bf3cc79fb06d9412db34",
+    "representative_architecture_checkpoint/reps_replication/Template_16_08_H1_repl_03H1/run_record.json": "d380b410b63cb007b24e30fa4fe700b6990fe299a657ba91419afc063ce257dc",
+    "targeted_runtime_replication/reps/Debugging_02_06_rep1_H0/run_record.json": "ba17b2a688265e59d129419d222a1c7019e4c5075cec5bd1f4af660dd688437f",
+    "targeted_runtime_replication/reps/Debugging_02_06_rep1_H1/run_record.json": "2fd12371685286457668aba583f23b46a207d3b21c6f6c4bb35aa8d1ae7007de",
+    "targeted_runtime_replication/reps/Debugging_02_06_rep2_H0/run_record.json": "5dd4d01a2baff5a77dfb2728f5c48fc3b79ab569bfd4a39508a1bb0439bbfc94",
+    "targeted_runtime_replication/reps/Debugging_02_06_rep2_H1/run_record.json": "d86b2a70f2b965fdf2c8f7da52117e467cafc0a09b7762e9f4268be6fbf6307d",
+    "targeted_runtime_replication/reps/Financial_Model_01_01_rep1_H0/run_record.json": "ae77df5ea78519f12b968811d4e4a077861c7f41745cc0dbb16fff5843c5cccc",
+    "targeted_runtime_replication/reps/Financial_Model_01_01_rep1_H1/run_record.json": "e203225014b397425cf992a9fc83f77846eba2a763fbc0b083765ae3b31fe1c7",
+    "targeted_runtime_replication/reps/Financial_Model_01_01_rep2_H0/run_record.json": "0d0c84cfdf31c168e6a7f70d8dc8b3ba1e1070138703374f59d1b8358600c23a",
+    "targeted_runtime_replication/reps/Financial_Model_01_01_rep2_H1/run_record.json": "fb55cca75aa38730d0117e4e46efcff38d1cac61a7077510edc0efc906e24562",
+    "targeted_runtime_replication/reps/Financial_Model_13_05_rep1_H0/run_record.json": "9aab77a704d4276fb13dd0f9c14d415ddbc40fb58173ec031dbbd35049e7798b",
+    "targeted_runtime_replication/reps/Financial_Model_13_05_rep1_H1/run_record.json": "9dca6d6fb8d57e1904641a04d2fe900004ca3eeabb42cb5605321cf707c4d761",
+    "targeted_runtime_replication/reps/Financial_Model_13_05_rep2_H0/run_record.json": "b1069996ed19bcc2123d7116900ebf5d0452ee04ed921de35132cb4fcc289c84",
+    "targeted_runtime_replication/reps/Financial_Model_13_05_rep2_H1/run_record.json": "cf433d4b6f043ebbf8d37810f7b38105ea736e5d39bef8fef04a512b4d3c7bb2",
+    "targeted_runtime_replication/reps/Template_01_02_rep1_H0/run_record.json": "5b0957fc550790485c6017f81e6963c959950b8f42e5c99a1731153aed451a65",
+    "targeted_runtime_replication/reps/Template_01_02_rep1_H1/run_record.json": "307efc146f3e06c52e876b4cfb2c50e02424dba19d926c81247716264d8b7fde",
+    "targeted_runtime_replication/reps/Template_01_02_rep2_H0/run_record.json": "92b6c6766e00506e8d189b867c1d70d1f094ce25b597909da8e356b9df1aadd7",
+    "targeted_runtime_replication/reps/Template_01_02_rep2_H1/run_record.json": "bf8cb7a694e7a44834cee8bf1ded12a52511612c7fb4d47a2b979aa1c6e1b9b4",
+    "targeted_runtime_replication/reps/Template_01_07_rep1_H0/run_record.json": "001adf9ab2d3d0c49613b8b146bac3c256081fa78c87cb34df61ded05b7e10a6",
+    "targeted_runtime_replication/reps/Template_01_07_rep1_H1/run_record.json": "8b77f9ba5f12b8147926009e0f442ff9a3e579d6334b897464426c6184468b57",
+    "targeted_runtime_replication/reps/Template_01_07_rep2_H0/run_record.json": "5241b4e3f6638a3e19b5c8691020210205978ae4727691a3ca9ce4431ab51e0d",
+    "targeted_runtime_replication/reps/Template_01_07_rep2_H1/run_record.json": "8c67fe0556566669f83cb23ef94788db960234814aad964ccd44e1a2060b8f9d",
+    "targeted_runtime_replication/reps/Template_06_12_rep1_H0/run_record.json": "e29dd78260bae4608884d72e114cacbe13c6b6b1a2df4fbd0c7954624485a0d2",
+    "targeted_runtime_replication/reps/Template_06_12_rep1_H1/run_record.json": "2ed79bd32bdd8ef0ef79c89838540a3e321469ed8b13339b6d95adbdb080b3d8",
+    "targeted_runtime_replication/reps/Template_06_12_rep2_H0/run_record.json": "8a36074aa77024dc12f2769d81a784553f94b07b5dfe21a244b2ca6206ea85af",
+    "targeted_runtime_replication/reps/Template_06_12_rep2_H1/run_record.json": "cb598d76c3b60825b55f1d7cabfb72219bfae89662ed9b2f9f57f558cd88c9fb",
+    "thin_architecture_checkpoint/efficiency_metrics.json": "815a1962b060b7a10d06bd8f122836bd972cee5c2687d50f55dd6f5005082da5"
+  },
+  "claim_gate": "No lower total here is a causal/claim-ready token saving for PRODUCT_HYGIENE_RC. Representation experiments make historical mechanisms plausible but do not transfer to the retained invisible product.",
+  "usage_accounting_caveat": "Archived summary rows can contain zero usage for failed/censored requests. Source-provided zeros are preserved, not interpreted as observed zero work. Missing usage fields are never newly imputed; lower totals do not establish comparable completed work.",
+  "mechanism_flag_definition": "Flags distinguish changes to visible evidence/interface from deterministic backend changes. Neither flag implies causal attribution to this RC."
+}

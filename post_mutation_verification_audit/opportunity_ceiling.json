@@ -1,0 +1,15 @@
+{
+ "TOTAL_POST_MUTATION_WORK": {
+  "tool_calls": 405,
+  "py_execs": 335,
+  "view_calls": 18,
+  "py_bytes": 157159,
+  "obs_bytes": 327107
+ },
+ "EXACTLY_REPLACEABLE_SUBSET": {
+  "tool_calls": 12,
+  "py_execs": 0,
+  "py_bytes": 0,
+  "obs_bytes": 3629
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "write_cells/write_formulas": {
+  "existing": "none (openpyxl has no batch-write API)",
+  "class": "HARNESS_HELPER_JUSTIFIED"
+ },
+ "fill_formula": {
+  "existing": "openpyxl.formula.translate.Translator",
+  "class": "DOCUMENT_EXISTING_UTILITY",
+  "note": "moot: translation rejected on effect evidence first"
+ },
+ "copy_style/copy_number_format": {
+  "existing": "copy.copy (agents already use it)",
+  "class": "NO_ACTION",
+  "note": "agents use copy.copy; effect confirmation 0.0 anyway"
+ },
+ "coordinate_conversion": {
+  "existing": "get_column_letter (agents already use it)",
+  "class": "NO_ACTION"
+ },
+ "iter_rows/range loops": {
+  "existing": "iter_rows/range (standard)",
+  "class": "NO_ACTION"
+ }
+}

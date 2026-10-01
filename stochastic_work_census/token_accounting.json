@@ -1,0 +1,28 @@
+{
+ "tokenizer": "closest-known:THUDM/glm-4-9b-chat(ChatGLM4Tokenizer); exact z-ai/glm-5.3-flash tokenizer unavailable; all token counts ESTIMATED",
+ "token_counts": "ESTIMATED",
+ "total_obs_tokens_est": 6359809,
+ "total_seg_tokens_est": 7029210,
+ "seg_vs_obs_ratio": 1.1052548905163662,
+ "note": "segment tokens counted independently; per-segment tokenizer overhead inflates seg totals vs whole-observation counts; shares are scale-free; scaled_* rescales buckets to the whole-observation total for absolute reporting",
+ "buckets_est": {
+  "total": 7029210,
+  "new": 6761824,
+  "old": 164239,
+  "derivation": 528,
+  "labels": 2840,
+  "control": 11154,
+  "old_reinspect": 88625
+ },
+ "buckets_scaled_to_obs_total_est": {
+  "total": 6359809,
+  "new": 6117887,
+  "old": 148598,
+  "derivation": 478,
+  "labels": 2570,
+  "control": 10092,
+  "old_reinspect": 80185
+ },
+ "total_bytes": 13551492,
+ "total_chars": 13551137
+}

@@ -1,0 +1,155 @@
+[
+ {
+  "task_id": "Financial_Model:17_02",
+  "cohort": "A-representative",
+  "reasons": [
+   "output_mismatch",
+   "mod_delta_1.000",
+   "reg_delta_1.000"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.0,
+   "official_regression": 0.0,
+   "output_produced": false,
+   "run_status": "NO_SUBMIT"
+  },
+  "H1": {
+   "official_exact": 1.0,
+   "official_modification": 1.0,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  }
+ },
+ {
+  "task_id": "Template:08_02",
+  "cohort": "A-representative",
+  "reasons": [
+   "output_mismatch",
+   "mod_delta_0.250",
+   "reg_delta_0.908"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.0,
+   "official_regression": 0.0,
+   "output_produced": false,
+   "run_status": "NO_SUBMIT"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.25,
+   "official_regression": 0.9076,
+   "output_produced": true,
+   "run_status": "NO_SUBMIT"
+  }
+ },
+ {
+  "task_id": "Financial_Model:08_01",
+  "cohort": "B-exposure",
+  "reasons": [
+   "output_mismatch",
+   "mod_delta_0.445",
+   "reg_delta_1.000"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.0,
+   "official_regression": 0.0,
+   "output_produced": false,
+   "run_status": "NO_SUBMIT"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.4453,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "TRUNCATED_CALL_LIMIT"
+  }
+ },
+ {
+  "task_id": "Financial_Model:15_04",
+  "cohort": "B-exposure",
+  "reasons": [
+   "mod_delta_0.329"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.5206,
+   "official_regression": 0.9977,
+   "output_produced": true,
+   "run_status": "TRUNCATED_CALL_LIMIT"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.85,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  }
+ },
+ {
+  "task_id": "Template:02_05",
+  "cohort": "B-exposure",
+  "reasons": [
+   "mod_delta_0.750"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.85,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.1,
+   "official_regression": 0.9724,
+   "output_produced": true,
+   "run_status": "NO_SUBMIT"
+  }
+ },
+ {
+  "task_id": "Template:13_08",
+  "cohort": "B-exposure",
+  "reasons": [
+   "mod_delta_0.417"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.6806,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.2639,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  }
+ },
+ {
+  "task_id": "Template:16_06",
+  "cohort": "B-exposure",
+  "reasons": [
+   "mod_delta_0.267"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.5733,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.84,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  }
+ }
+]

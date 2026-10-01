@@ -1,0 +1,17 @@
+{
+  "a1_classifier_frozen": true,
+  "arms_differ_only_by": "Candidate-A enabled flag",
+  "attempt_id": "candidate_a_a1_checkpoint_rerun_01",
+  "candidate_b": "frozen",
+  "experiment": "larger identical-interface Candidate-A+A1 live checkpoint",
+  "frozen_population_source": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/candidate_a_a1_checkpoint",
+  "model_surface_changed": false,
+  "semantic_surface_changed": false,
+  "transport_deadlines": {
+    "model_call_budget_s": 300,
+    "request_timeout_s": 90,
+    "retry_budget_s": 270,
+    "socket_timeout_s": 15,
+    "task_run_timeout_s": 900
+  }
+}

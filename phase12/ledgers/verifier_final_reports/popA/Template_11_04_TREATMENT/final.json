@@ -1,0 +1,50 @@
+{
+ "positive": false,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [],
+   "count": 0
+  },
+  "CHG": {
+   "changed_cells": 40,
+   "sheets": 1,
+   "regions": [
+    "PPA!B37",
+    "PPA!C18",
+    "PPA!C19",
+    "PPA!C20",
+    "PPA!C24",
+    "PPA!C26",
+    "PPA!C30",
+    "PPA!C33",
+    "PPA!C34",
+    "PPA!C35",
+    "PPA!D24",
+    "PPA!D26",
+    "PPA!D30",
+    "PPA!D33",
+    "PPA!D34",
+    "PPA!D35",
+    "PPA!E24",
+    "PPA!E26",
+    "PPA!E30",
+    "PPA!E33"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": null,
+ "positive_families": []
+}

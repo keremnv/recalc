@@ -1,0 +1,193 @@
+{
+  "Financial_Model:08_01": {
+    "task_id": "Financial_Model:08_01",
+    "eligible_observations": 17,
+    "realizable_observations": 12,
+    "realizability_rate": 0.7059,
+    "matched_observations": 9,
+    "eligible_visible_fact_count": 1900,
+    "comparable_visible_fact_count": 1900,
+    "comparable_matched_fact_count": 1865,
+    "query_unavailable_fact_count": 0,
+    "fact_match_rate": 0.9816,
+    "fact_match_rate_over_all_eligible": 0.9816,
+    "historical_raw_bytes": 36585,
+    "historical_normalized_fact_bytes": 124550,
+    "compact_exact_h_bytes": 53212,
+    "raw_payload_reduction_pct_median": -59.24,
+    "normalized_payload_reduction_pct_median": 57.82,
+    "raw_payload_reduction_range_pct": [
+      -79.54,
+      17.4
+    ],
+    "normalized_payload_reduction_range_pct": [
+      21.85,
+      62.82
+    ],
+    "formatting_overhead_bytes": -87965,
+    "compiled_overfetch_facts": 150,
+    "compiled_full_minus_projected_bytes": 1816,
+    "compiled_overfetch_bytes_upper_bound": 7774,
+    "eligible_class_counts": {
+      "CAPPED_VISIBLE": 4,
+      "FULL_VISIBLE": 1,
+      "RANGE_TABLE": 5,
+      "VALUE_ONLY": 7
+    }
+  },
+  "Debugging:10_04": {
+    "task_id": "Debugging:10_04",
+    "eligible_observations": 6,
+    "realizable_observations": 2,
+    "realizability_rate": 0.3333,
+    "matched_observations": 0,
+    "eligible_visible_fact_count": 1159,
+    "comparable_visible_fact_count": 195,
+    "comparable_matched_fact_count": 149,
+    "query_unavailable_fact_count": 964,
+    "fact_match_rate": 0.7641,
+    "fact_match_rate_over_all_eligible": 0.1286,
+    "historical_raw_bytes": 0,
+    "historical_normalized_fact_bytes": 0,
+    "compact_exact_h_bytes": 0,
+    "raw_payload_reduction_pct_median": null,
+    "normalized_payload_reduction_pct_median": null,
+    "raw_payload_reduction_range_pct": null,
+    "normalized_payload_reduction_range_pct": null,
+    "formatting_overhead_bytes": 0,
+    "compiled_overfetch_facts": 0,
+    "compiled_full_minus_projected_bytes": 0,
+    "compiled_overfetch_bytes_upper_bound": 0,
+    "eligible_class_counts": {
+      "CAPPED_VISIBLE": 4,
+      "VALUE_ONLY": 2
+    }
+  },
+  "Financial_Model:08_03": {
+    "task_id": "Financial_Model:08_03",
+    "eligible_observations": 10,
+    "realizable_observations": 4,
+    "realizability_rate": 0.4,
+    "matched_observations": 0,
+    "eligible_visible_fact_count": 1262,
+    "comparable_visible_fact_count": 633,
+    "comparable_matched_fact_count": 229,
+    "query_unavailable_fact_count": 629,
+    "fact_match_rate": 0.3618,
+    "fact_match_rate_over_all_eligible": 0.1815,
+    "historical_raw_bytes": 0,
+    "historical_normalized_fact_bytes": 0,
+    "compact_exact_h_bytes": 0,
+    "raw_payload_reduction_pct_median": null,
+    "normalized_payload_reduction_pct_median": null,
+    "raw_payload_reduction_range_pct": null,
+    "normalized_payload_reduction_range_pct": null,
+    "formatting_overhead_bytes": 0,
+    "compiled_overfetch_facts": 0,
+    "compiled_full_minus_projected_bytes": 0,
+    "compiled_overfetch_bytes_upper_bound": 0,
+    "eligible_class_counts": {
+      "CAPPED_VISIBLE": 4,
+      "RANGE_TABLE": 5,
+      "VALUE_ONLY": 1
+    }
+  },
+  "Financial_Model:07_01": {
+    "task_id": "Financial_Model:07_01",
+    "eligible_observations": 8,
+    "realizable_observations": 3,
+    "realizability_rate": 0.375,
+    "matched_observations": 3,
+    "eligible_visible_fact_count": 1877,
+    "comparable_visible_fact_count": 1877,
+    "comparable_matched_fact_count": 1875,
+    "query_unavailable_fact_count": 0,
+    "fact_match_rate": 0.9989,
+    "fact_match_rate_over_all_eligible": 0.9989,
+    "historical_raw_bytes": 10711,
+    "historical_normalized_fact_bytes": 49255,
+    "compact_exact_h_bytes": 21912,
+    "raw_payload_reduction_pct_median": -108.98,
+    "normalized_payload_reduction_pct_median": 55.25,
+    "raw_payload_reduction_range_pct": [
+      -112.12,
+      -87.2
+    ],
+    "normalized_payload_reduction_range_pct": [
+      53.44,
+      57.31
+    ],
+    "formatting_overhead_bytes": -38544,
+    "compiled_overfetch_facts": 0,
+    "compiled_full_minus_projected_bytes": -3842,
+    "compiled_overfetch_bytes_upper_bound": 0,
+    "eligible_class_counts": {
+      "CAPPED_VISIBLE": 4,
+      "FULL_VISIBLE": 1,
+      "VALUE_ONLY": 3
+    }
+  },
+  "Debugging:10_10": {
+    "task_id": "Debugging:10_10",
+    "eligible_observations": 19,
+    "realizable_observations": 7,
+    "realizability_rate": 0.3684,
+    "matched_observations": 3,
+    "eligible_visible_fact_count": 2931,
+    "comparable_visible_fact_count": 2120,
+    "comparable_matched_fact_count": 1798,
+    "query_unavailable_fact_count": 811,
+    "fact_match_rate": 0.8481,
+    "fact_match_rate_over_all_eligible": 0.6134,
+    "historical_raw_bytes": 19070,
+    "historical_normalized_fact_bytes": 70477,
+    "compact_exact_h_bytes": 28246,
+    "raw_payload_reduction_pct_median": -66.44,
+    "normalized_payload_reduction_pct_median": 58.21,
+    "raw_payload_reduction_range_pct": [
+      -75.69,
+      -29.87
+    ],
+    "normalized_payload_reduction_range_pct": [
+      58.19,
+      61.81
+    ],
+    "formatting_overhead_bytes": -51407,
+    "compiled_overfetch_facts": 0,
+    "compiled_full_minus_projected_bytes": -432,
+    "compiled_overfetch_bytes_upper_bound": 1020,
+    "eligible_class_counts": {
+      "CAPPED_VISIBLE": 6,
+      "RANGE_TABLE": 11,
+      "VALUE_ONLY": 2
+    }
+  },
+  "Financial_Model:15_04": {
+    "task_id": "Financial_Model:15_04",
+    "eligible_observations": 3,
+    "realizable_observations": 0,
+    "realizability_rate": 0.0,
+    "matched_observations": 0,
+    "eligible_visible_fact_count": 466,
+    "comparable_visible_fact_count": 465,
+    "comparable_matched_fact_count": 465,
+    "query_unavailable_fact_count": 1,
+    "fact_match_rate": 1.0,
+    "fact_match_rate_over_all_eligible": 0.9979,
+    "historical_raw_bytes": 0,
+    "historical_normalized_fact_bytes": 0,
+    "compact_exact_h_bytes": 0,
+    "raw_payload_reduction_pct_median": null,
+    "normalized_payload_reduction_pct_median": null,
+    "raw_payload_reduction_range_pct": null,
+    "normalized_payload_reduction_range_pct": null,
+    "formatting_overhead_bytes": 0,
+    "compiled_overfetch_facts": 0,
+    "compiled_full_minus_projected_bytes": 0,
+    "compiled_overfetch_bytes_upper_bound": 0,
+    "eligible_class_counts": {
+      "CAPPED_VISIBLE": 2,
+      "VALUE_ONLY": 1
+    }
+  }
+}

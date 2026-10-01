@@ -1,0 +1,46 @@
+{
+  "phase": "FUTURE_WORK_NOT_IMPLEMENTED",
+  "product_shape": [
+    "install",
+    "configure ordinary coding agent/model",
+    "point at workbook tasks",
+    "use ordinary Python/openpyxl",
+    "transparent deterministic runtime activates only where safe",
+    "unsupported cases automatically fall back to normal behavior"
+  ],
+  "minimum_installability_requirements": [
+    "single documented installation path",
+    "dependency/bootstrap check",
+    "LibreOffice availability check where recalc/validation is required",
+    "clear enable/disable configuration for invisible runtime",
+    "safe default behavior",
+    "fail-closed operation when optional substrate is unavailable",
+    "minimal example task",
+    "diagnostic command/status output",
+    "versioned compatibility statement"
+  ],
+  "implementation_remaining": [
+    "Review/integrate corrective source changes into the chosen maintained harness; workspace contains earlier independent research changes.",
+    "Establish supported Python/openpyxl/LibreOffice compatibility and run this focused suite in the packaged configuration.",
+    "No mechanism implementation remains required by this freeze; no new consumer, benchmark, semantic IR, A2/A3/B or feedback work is scheduled."
+  ],
+  "productization_remaining": [
+    "One install/bootstrap/configuration path, diagnostics and minimal example",
+    "Decide optional helper surface as a product question, independently of rejected substrate execution",
+    "Release/packaging compatibility documentation and safe defaults"
+  ],
+  "presentation_remaining": [
+    "Evidence-linked technical narrative using the claims registry",
+    "Keep observed fidelity, conditional timing, practical assurance and statistical uncertainty distinct",
+    "Make scopes and denominators visible; preserve negative and censored outcomes"
+  ],
+  "not_built": [
+    "installer",
+    "packaging",
+    "UI",
+    "website",
+    "marketing"
+  ],
+  "principle": "Preserve semantic freedom in the coding agent; move only proven mechanical work underneath its existing interface.",
+  "principle_status": "Research synthesis, not marketing copy."
+}

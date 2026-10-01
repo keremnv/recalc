@@ -1,0 +1,23 @@
+{
+  "architecture": "C — zero-sunk-cost rebuild",
+  "default_build": [
+    "general-purpose coding agent",
+    "ordinary Python/openpyxl + normal scaffold conveniences (view/shell/submit)",
+    "actual workbook",
+    "LibreOffice recalc / validation / official score"
+  ],
+  "assurance_choice": "Add thin transparent capture only as an explicit assurance property; ordinary writes remain authoritative, no required mutation IR.",
+  "substrate_default": "Do not rebuild generic compiled substrate by default.",
+  "conditional_build": "For a known large/repeated-workbook-read tail matching the measured resource, a minimal Candidate-A index + narrow A1 + fail-closed/freshness guards is justified conditionally. Charge all construction, maintenance and hardening costs together.",
+  "decision_evidence": "Mean-based checkpoint gross ~84s > ~25.9s build/maintenance; median ~19s < ~25.9s. Existing evidence supports tail-dependent value, not broadly self-funding rebuild.",
+  "capture_dependency": "Capture assurance does not itself justify a compiled index.",
+  "freshness_dependency": "No compiled serving => no independent compiled freshness infrastructure.",
+  "helper_choice": "Optional same helper surface can use ordinary openpyxl if product need warrants; no substrate justification.",
+  "omit": [
+    "generic compiled substrate without workload case",
+    "substrate helper backend",
+    "semantic IR / planner / scheduler",
+    "all closed or frozen branches"
+  ],
+  "no_circularity": "A conditional speedup alone does not justify substrate; assess measured savings minus shared full costs, once."
+}

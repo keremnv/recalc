@@ -1,0 +1,15 @@
+{
+  "task_id": "Financial_Model:05_01",
+  "model": "z-ai/glm-5.3-flash",
+  "provider": "openrouter",
+  "reasoning": "max",
+  "top_p": 1.0,
+  "temperature": 0.0,
+  "max_model_calls": 1,
+  "max_cost_usd": 6.0,
+  "frontend_mode": "sharded_projected",
+  "model_call_count": 1,
+  "provider_cost_usd": 0.0039884625,
+  "failure_ledger": [],
+  "last_call_hash": "84f3fdaeba271eded390db83c747b7acc4dac4a8af913f46bd9496a0aefed0e3"
+}

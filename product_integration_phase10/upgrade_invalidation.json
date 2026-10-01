@@ -1,0 +1,30 @@
+[
+  {
+    "new_path": "/tmp/tmpr0_ybjit/cache/read-engine/72c2fdf93ff2165117f920f6358e971c58b498189d300f29085c6717945dd4d6.r3jz",
+    "old_path": "/tmp/tmpr0_ybjit/cache/read-engine/90de53170d9c70adbce60e6c1823609f8454b92f39f829775188767504154d75.r3jz",
+    "pass": true,
+    "status": "BUILT",
+    "version_field": "RUNTIME_VERSION"
+  },
+  {
+    "new_path": "/tmp/tmpr0_ybjit/cache/read-engine/7e8ecef559419c10097302206a91adf87aeb5e53771b4588a9655679a3f9b5d3.r3jz",
+    "old_path": "/tmp/tmpr0_ybjit/cache/read-engine/90de53170d9c70adbce60e6c1823609f8454b92f39f829775188767504154d75.r3jz",
+    "pass": true,
+    "status": "BUILT",
+    "version_field": "DECODER"
+  },
+  {
+    "new_path": "/tmp/tmpr0_ybjit/cache/read-engine/126135b9c566a81f60e0c02e3ebdec523b33d4372979d7b1f3174bacb75c67ab.r3jz",
+    "old_path": "/tmp/tmpr0_ybjit/cache/read-engine/90de53170d9c70adbce60e6c1823609f8454b92f39f829775188767504154d75.r3jz",
+    "pass": true,
+    "status": "BUILT",
+    "version_field": "CONTRACT"
+  },
+  {
+    "new_path": "/tmp/tmpr0_ybjit/cache/read-engine/2423ff373b8bc126701fbdb2dd589494a9f3f663041804dd7dc84fd80f6b717a.r3jz",
+    "old_path": "/tmp/tmpr0_ybjit/cache/read-engine/90de53170d9c70adbce60e6c1823609f8454b92f39f829775188767504154d75.r3jz",
+    "pass": true,
+    "status": "BUILT",
+    "version_field": "FORMAT"
+  }
+]

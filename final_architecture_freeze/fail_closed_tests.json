@@ -1,0 +1,189 @@
+{
+  "label": "CORRECTIVE_FAIL_CLOSED_REGRESSION",
+  "command": "python3 -m pytest tests/test_fail_closed_substrate.py tests/test_inspection_helpers.py tests/test_transparent_runtime.py -q --junitxml=final_architecture_freeze/tests.xml",
+  "tests": 39,
+  "failures": 0,
+  "pass": true,
+  "junit": "final_architecture_freeze/tests.xml",
+  "cases": [
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_malformed_bytes_fall_back_with_reference_exception[untrusted bytes]"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_malformed_bytes_fall_back_with_reference_exception[PK\\x03\\x04truncated]"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_malformed_package_xml"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_initial_failure_is_sticky_and_reference_succeeds[parser]"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_initial_failure_is_sticky_and_reference_succeeds[database]"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_partial_build_cleanup"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_failed_refresh_retires_old_handle_and_new_generation_rebuilds"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_persistent_substrate_unavailable_reference_proceeds[missing]"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_persistent_substrate_unavailable_reference_proceeds[corrupt]"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_persistent_substrate_unavailable_reference_proceeds[stale]"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_persistent_substrate_unavailable_reference_proceeds[manifest]"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_unsupported_chartsheet_uses_reference"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_valid_candidate_surface_remains_exact"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_retired_proxy_and_sql_failure_use_reference"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_backup_failure_never_publishes_partial"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_scope_is_per_workbook"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_freshness_initialization_failure_is_sticky"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_reference_helpers_no_index_contact"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_filelike_fallback_passes_original_object"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_partial_database_without_commit_marker_rejected"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_manifest_storage_unavailable_disables_runner_scope"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_new_load_after_mutation_falls_back_until_parent_refresh"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_helpers_bypass_candidate_loader_including_styles"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_runtime_initialization_restores_original_loader"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_failed_build_retires_existing_persistent_snapshot"
+    },
+    {
+      "module": "tests.test_fail_closed_substrate",
+      "name": "test_new_loader_cannot_revive_failed_generation"
+    },
+    {
+      "module": "tests.test_inspection_helpers",
+      "name": "test_helpers_mechanical"
+    },
+    {
+      "module": "tests.test_inspection_helpers",
+      "name": "test_freshness_rebuilds_after_mutation"
+    },
+    {
+      "module": "tests.test_inspection_helpers",
+      "name": "test_freshness_fail_closed_missing"
+    },
+    {
+      "module": "tests.test_inspection_helpers",
+      "name": "test_inspect_reports_truncation_and_supports_paging"
+    },
+    {
+      "module": "tests.test_inspection_helpers",
+      "name": "test_inspect_ranges_is_compact_and_single_generation"
+    },
+    {
+      "module": "tests.test_transparent_runtime",
+      "name": "test_model_surface_byte_identical_to_h0"
+    },
+    {
+      "module": "tests.test_transparent_runtime",
+      "name": "test_value_write_committed_equals_produced"
+    },
+    {
+      "module": "tests.test_transparent_runtime",
+      "name": "test_formula_and_new_sheet_committed_equals_produced"
+    },
+    {
+      "module": "tests.test_transparent_runtime",
+      "name": "test_creation_committed_equals_produced"
+    },
+    {
+      "module": "tests.test_transparent_runtime",
+      "name": "test_opaque_parts_preserved_byte_exact"
+    },
+    {
+      "module": "tests.test_transparent_runtime",
+      "name": "test_failed_script_aborts_without_commit"
+    },
+    {
+      "module": "tests.test_transparent_runtime",
+      "name": "test_dir_entries_preserved_on_replay"
+    },
+    {
+      "module": "tests.test_transparent_runtime",
+      "name": "test_mechanical_validation_rejects_corrupt_output"
+    }
+  ],
+  "coverage": [
+    "malformed raw bytes",
+    "malformed ZIP/XML package",
+    "unexpected index parser exception",
+    "initial DB construction failure",
+    "partial build close/discard",
+    "missing/corrupt database",
+    "missing completion marker",
+    "unsupported chartsheet",
+    "manifest/substrate unavailable",
+    "bootstrap rollback",
+    "original filelike/path fallback",
+    "reference successful reads",
+    "no accelerated serving after failure",
+    "valid primitive fixture exactness and acceleration",
+    "same-generation failure stickiness",
+    "retirement of old handle on failed refresh",
+    "new-generation explicit parent rebuild",
+    "per-workbook isolation",
+    "reference helper backend including styles",
+    "existing capture/commit/freshness regressions"
+  ],
+  "limitations": "Focused deterministic safety/fidelity regressions; no performance remeasurement or statistical equivalence test."
+}

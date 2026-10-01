@@ -1,0 +1,21 @@
+{
+  "stage": "pre_repair_failed_classifier",
+  "a0": {
+    "a0_reason": "range/slice object path",
+    "historical_fully_eligible": 72,
+    "known_false_positive_rows": 34,
+    "known_false_positive_unique_turns": 34
+  },
+  "pre_repair_a1_observed": {
+    "decision": "A1_CLASSIFIER_UNSAFE",
+    "known_false_positive_repaired": 0,
+    "known_false_positive_legitimate_blocker_preserved": 34,
+    "new_false_negatives": 20,
+    "newly_admitted_semantic_cases": 0,
+    "historical_fully_eligible": 11,
+    "six_task_contact": "2/6",
+    "root_cause": "A1 incorrectly treated the required filename positional argument to load_workbook(...) as an unsupported load option."
+  },
+  "semantic_suite": "frozen prior Candidate-A semantic result retained",
+  "repair_round": "bounded repair permitted by the experiment"
+}

@@ -1,0 +1,8 @@
+{
+ "comparable_repeat_obs_tokens_est": 284812,
+ "new_changed_tokens_est": 66855,
+ "theoretical_delta_tokens_est": 67755,
+ "tokens_avoidable_oracle_est": 217060,
+ "reference_overhead_assumed_est": 10,
+ "note": "oracle ceiling only; no encoding chosen"
+}

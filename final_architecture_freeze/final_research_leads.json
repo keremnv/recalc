@@ -1,0 +1,42 @@
+{
+  "leads": [
+    {
+      "closed_loop_benefit": "UNTESTED",
+      "evidence": "as stipulated in freeze task: engine-computed input→output formula-error delta exists; historical precision materially positive, especially strong on Debugging. Adjacent workspace evidence: commit-gate detectors (reliability-only) with loop closed once live (10_02 submit→findings→repair→resubmit); detached error scan survives as L5 observation. Counterevidence: post-mutation census finds agents seek FORMULA_ERROR in 1/91 LO episodes (demand weak); push rejected.",
+      "hypothesis": "After recalc, world-initiated deterministic feedback about newly introduced formula errors may provide useful new evidence to the agent and permit a bounded repair.",
+      "lead": "gold-blind new-formula-error feedback",
+      "provenance_flag": "precision numbers not located in workspace artifacts; treat stipulated precision as UNTESTED-adjacent until cited; the closed loop is UNTESTED regardless",
+      "reopen_condition": "live causal discriminator AFTER architecture freeze / representative checkpoint unless explicitly reprioritized",
+      "status": "FROZEN_RESEARCH_LEAD"
+    },
+    {
+      "closed_loop_benefit": "UNTESTED",
+      "evidence": "transfer audit: uniformity flags pending transfer test; fingerprints conservative design proven, availability measured (10/34 exact, 24/34 shape)",
+      "hypothesis": "Uniformity/fingerprint flags may predict official misses or gate fills at runtime.",
+      "lead": "uniformity-flag transfer test",
+      "reopen_condition": "transfer test: flags predict misses or block a wrong fill",
+      "status": "FROZEN_RESEARCH_LEAD"
+    },
+    {
+      "closed_loop_benefit": "UNTESTED",
+      "evidence": "O6 output-role path 5/5 endpoints zero false positives (old harness); planner probes cashed out (planner level only)",
+      "hypothesis": "Output-role path provenance may localize regression breaks or focus repair reads.",
+      "lead": "output-role break localization",
+      "reopen_condition": "default-agent transfer test on scored workbooks",
+      "status": "FROZEN_RESEARCH_LEAD"
+    },
+    {
+      "lead": "BASIC_INSTALLABILITY_AND_PACKAGING",
+      "status": "PRODUCTIZATION_TASK",
+      "classification": "NOT_RESEARCH_MECHANISM",
+      "authorization": "Future engineering after final freeze; not implemented in this task."
+    },
+    {
+      "lead": "EVIDENCE_PRESENTATION_AND_CLAIMS",
+      "status": "COMMUNICATION_TASK",
+      "classification": "NOT_RESEARCH_MECHANISM",
+      "authorization": "Future communication after final freeze; no marketing/productization in this task."
+    }
+  ],
+  "policy": "Frozen research leads are not a scheduled discovery queue. Product/communication tasks do not reopen architecture."
+}

@@ -1,0 +1,7 @@
+{
+ "large_obs_threshold_p90_est": 4733,
+ "min_tokens": 4733,
+ "old_fraction_gate": 0.8,
+ "candidate_events": 8,
+ "tokens_potentially_avoided_est": 70906
+}

@@ -1,0 +1,88 @@
+{
+  "construction": {
+    "R0": {},
+    "R1": {
+      "backup_s": {
+        "median_s": 0.0007681419956497848,
+        "n": 114
+      },
+      "ensure_s": {
+        "median_s": 0.13738754650694318,
+        "n": 114
+      }
+    },
+    "R2": {
+      "shared_strings_s": {
+        "median_s": 0.000230856,
+        "n": 117
+      },
+      "styles_dates_s": {
+        "median_s": 0.00195135,
+        "n": 117
+      },
+      "total_decode_s": {
+        "median_s": 0.05538683,
+        "n": 117
+      },
+      "workbook_relationships_s": {
+        "median_s": 0.000469816,
+        "n": 117
+      },
+      "worksheet_xml_total_s": {
+        "median_s": 0.05190936,
+        "n": 117
+      },
+      "zip_open_list_s": {
+        "median_s": 5.498e-06,
+        "n": 117
+      }
+    },
+    "R3": {
+      "publication_s": {
+        "median_s": 4.0407e-05,
+        "n": 117
+      },
+      "shared_strings_s": {
+        "median_s": 0.000211067,
+        "n": 117
+      },
+      "sheet_metadata_insert_s": {
+        "median_s": 0.000182661,
+        "n": 117
+      },
+      "sqlite_commit_s": {
+        "median_s": 0.000261045,
+        "n": 117
+      },
+      "styles_dates_s": {
+        "median_s": 0.001979813,
+        "n": 117
+      },
+      "total_build_s": {
+        "median_s": 0.08426166799999998,
+        "n": 117
+      },
+      "total_decode_s": {
+        "median_s": 0.083747437,
+        "n": 117
+      },
+      "workbook_relationships_s": {
+        "median_s": 0.000439033,
+        "n": 117
+      },
+      "worksheet_xml_total_s": {
+        "median_s": 0.080726065,
+        "n": 117
+      },
+      "zip_open_list_s": {
+        "median_s": 5.469e-06,
+        "n": 117
+      }
+    }
+  },
+  "notes": [
+    "R1 ensure/backup are nested manifest timers; parse, traversal and insertion are UNMEASURED separately.",
+    "R2/R3 aggregate stage timers are inside construction. Per-cell decode and insertion timers were removed in v4; those components are UNMEASURED individually."
+  ],
+  "spec_sha256": "70a0bffe9402a79907aa63bdc7ae3188b758c4316cc79b91914ca5902af8a869"
+}

@@ -1,0 +1,18 @@
+{
+  "Debugging:01_06": {
+    "conclusion": "fundamental under A0",
+    "earliest": "DATA_ONLY_BOUNDARY",
+    "other": [
+      "WORKBOOK_WORKSHEETS_BOUNDARY",
+      "CELL_OBJECT_ITERATION_BOUNDARY"
+    ]
+  },
+  "Debugging:05_02": {
+    "conclusion": "requires identity-preserving iterator or fallback",
+    "earliest": "CELL_OBJECT_ITERATION_BOUNDARY",
+    "other": [
+      "OBJECT_LIFETIME_LIMITATION"
+    ]
+  },
+  "family_claim": "two live tasks do not establish family-wide null; both were outside the frozen safe primitive formula-mode surface"
+}

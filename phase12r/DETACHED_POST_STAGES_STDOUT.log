@@ -1,0 +1,11 @@
+completed analyze.py
+completed render_tables.py
+completed replicate_phase12.py
+Traceback (most recent call last):
+  File "/home/kerem/Desktop/Personal Projects/librecalc-mcp/phase12r/complete_primary_stages.py", line 20, in <module>
+    with (OUT/(stage+'.log')).open('a') as log:subprocess.run([sys.executable,str(OUT/stage)],check=True,stdout=log,stderr=log,env={**os.environ,'LC_ALL':'C.UTF-8','LANG':'C.UTF-8','TZ':'UTC'})
+                                               ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.14/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/bin/python', '/home/kerem/Desktop/Personal Projects/librecalc-mcp/phase12r/enrich_audit.py']' returned non-zero exit status 1.

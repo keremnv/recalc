@@ -1,0 +1,3 @@
+authority_count,condition,expansion_status,false_negative_cells,false_negative_count,false_positive_cells,false_positive_count,gold_count,obligation_id,operation_count,operation_target_forms,parse_valid,precision,provider_success,recall,task
+2,CONTROL,VALID_PLAN,"[""Dashboard!G43"", ""Dashboard!G44"", ""Dashboard!G45"", ""Dashboard!I43"", ""Dashboard!I44""]",5,"[""Dashboard!F39"", ""Dashboard!H39""]",2,5,O6,1,[null],True,0.0,True,0.0,Financial_Model:05_01
+5,TREATMENT,VALID_PLAN,[],0,[],0,5,O6,1,[null],True,1.0,True,1.0,Financial_Model:05_01

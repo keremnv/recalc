@@ -1,0 +1,6 @@
+{
+  "raw_ledger_hash": "733f0490ef3284cf06274771a50775e0d503bea203249835e4bb8a07a19b8345",
+  "authoritative_enriched_ledger_hash": "e879467e46dfcfcd63844ff16742a4c5ce57e00dddceca32ed9afacd14f0c020",
+  "failure_corrections_hash": "99776f835bf0435b5f861b0537650a0c2e2e08a72756dc564d42a15bea054c63",
+  "note": "raw replay frozen first; no original historical file changed; primary classifier/score outputs unchanged"
+}

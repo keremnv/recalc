@@ -1,0 +1,48 @@
+{
+ "map": {
+  "cell_value_or_formula": [
+   "cells",
+   "formulas",
+   "formula fingerprints",
+   "point references",
+   "range references",
+   "reverse dependents",
+   "text anchors"
+  ],
+  "style_only": [
+   "styles if indexed"
+  ],
+  "dims_merges_hidden": [
+   "sheet metadata"
+  ],
+  "sheet_add_remove_rename_order": [
+   "sheet metadata",
+   "cells",
+   "formulas",
+   "all references",
+   "text anchors"
+  ],
+  "defined_names": [
+   "formulas",
+   "point references",
+   "range references"
+  ],
+  "validations_cf_tables": [
+   "sheet metadata"
+  ],
+  "period_header_cells": [
+   "temporal coordinates",
+   "text anchors"
+  ],
+  "opaque_part_preserved": [
+   "no relation safely updatable from content; mark partition stale, recompile lazily"
+  ],
+  "file_created": [
+   "all relations for that workbook partition"
+  ],
+  "file_deleted": [
+   "drop all relations for that partition"
+  ]
+ },
+ "contract_note": "invalidation is keyed by delta category; recomputation is lazy and content-addressed; staleness must be impossible by construction (generation counter per partition), not by discipline"
+}

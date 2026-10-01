@@ -1,0 +1,7 @@
+{
+ "ceiling": "C1",
+ "C1_deterministic_tokens_est": 167607,
+ "C1_share": 0.023844358043080233,
+ "denominator_seg_tokens_est": 7029210,
+ "C1_rule": "C0 without verification/error/recency guards (all deterministic old+derivation+label tokens, same-gen)"
+}

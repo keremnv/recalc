@@ -1,0 +1,449 @@
+{
+ "n_replay_rows": 102,
+ "n_F1_nonempty_detail": 0,
+ "F1_part_diffs": [],
+ "n_capture_rows_with_carry_or_mismatch": 33,
+ "carry_rows": [
+  {
+   "task_id": "Financial_Model:08_01",
+   "turn": 42,
+   "rel": "out/08_01_output.xlsx",
+   "carry_parts": [
+    "xl/charts/chart8.xml",
+    "xl/charts/chart3.xml",
+    "xl/charts/chart6.xml",
+    "xl/charts/chart1.xml",
+    "docProps/core.xml",
+    "xl/worksheets/sheet3.xml",
+    "xl/charts/chart4.xml",
+    "xl/charts/chart2.xml",
+    "xl/styles.xml",
+    "xl/charts/chart9.xml",
+    "xl/worksheets/sheet2.xml",
+    "xl/charts/chart5.xml",
+    "xl/charts/chart7.xml",
+    "xl/worksheets/sheet7.xml"
+   ],
+   "trial_mismatch_parts": [
+    "xl/charts/chart8.xml",
+    "xl/charts/chart3.xml",
+    "xl/charts/chart6.xml",
+    "xl/charts/chart1.xml",
+    "docProps/core.xml",
+    "xl/worksheets/sheet3.xml",
+    "xl/charts/chart4.xml",
+    "xl/charts/chart2.xml",
+    "xl/styles.xml",
+    "xl/charts/chart9.xml",
+    "xl/worksheets/sheet2.xml",
+    "xl/charts/chart5.xml",
+    "xl/charts/chart7.xml",
+    "xl/worksheets/sheet7.xml"
+   ]
+  },
+  {
+   "task_id": "Debugging:07_03",
+   "turn": 13,
+   "rel": "out/07_03_output.xlsx",
+   "carry_parts": [
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Debugging:01_01",
+   "turn": 13,
+   "rel": "out/01_01_output.xlsx",
+   "carry_parts": [
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Debugging:02_01",
+   "turn": 13,
+   "rel": "out/02_01_output.xlsx",
+   "carry_parts": [
+    "xl/worksheets/sheet2.xml",
+    "xl/worksheets/sheet6.xml",
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "xl/worksheets/sheet2.xml",
+    "xl/worksheets/sheet6.xml",
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Debugging:09_09",
+   "turn": 18,
+   "rel": "out/09_09_output.xlsx",
+   "carry_parts": [
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Debugging:10_10",
+   "turn": 15,
+   "rel": "out/10_10_output.xlsx",
+   "carry_parts": [
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Debugging:10_10",
+   "turn": 18,
+   "rel": "out/10_10_output.xlsx",
+   "carry_parts": [
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Financial_Model:04_01",
+   "turn": 16,
+   "rel": "out/04_01_output.xlsx",
+   "carry_parts": [
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Financial_Model:04_01",
+   "turn": 19,
+   "rel": "out/04_01_output.xlsx",
+   "carry_parts": [
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Financial_Model:05_01",
+   "turn": 17,
+   "rel": "out/05_01_output.xlsx",
+   "carry_parts": [
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Financial_Model:10_01",
+   "turn": 13,
+   "rel": "out/10_01_output.xlsx",
+   "carry_parts": [
+    "xl/styles.xml",
+    "docProps/core.xml",
+    "xl/worksheets/sheet3.xml"
+   ],
+   "trial_mismatch_parts": [
+    "xl/styles.xml",
+    "docProps/core.xml",
+    "xl/worksheets/sheet3.xml"
+   ]
+  },
+  {
+   "task_id": "Financial_Model:11_01",
+   "turn": 9,
+   "rel": "out/11_01_output.xlsx",
+   "carry_parts": [
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Financial_Model:11_05",
+   "turn": 16,
+   "rel": "out/11_05_output.xlsx",
+   "carry_parts": [
+    "xl/styles.xml",
+    "xl/worksheets/sheet17.xml",
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "xl/styles.xml",
+    "xl/worksheets/sheet17.xml",
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Financial_Model:11_05",
+   "turn": 19,
+   "rel": "out/11_05_output.xlsx",
+   "carry_parts": [
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Financial_Model:14_05",
+   "turn": 13,
+   "rel": "out/14_05_output.xlsx",
+   "carry_parts": [
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Financial_Model:18_05",
+   "turn": 13,
+   "rel": "out/18_05_output.xlsx",
+   "carry_parts": [
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Financial_Model:18_05",
+   "turn": 14,
+   "rel": "out/18_05_output.xlsx",
+   "carry_parts": [
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Template:02_05",
+   "turn": 10,
+   "rel": "out/02_05_output.xlsx",
+   "carry_parts": [
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Template:03_03",
+   "turn": 5,
+   "rel": "out/03_03_output.xlsx",
+   "carry_parts": [
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Template:03_03",
+   "turn": 7,
+   "rel": "out/03_03_output.xlsx",
+   "carry_parts": [
+    "xl/styles.xml",
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "xl/styles.xml",
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Template:05_02",
+   "turn": 5,
+   "rel": "out/05_02_output.xlsx",
+   "carry_parts": [
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Template:06_21",
+   "turn": 3,
+   "rel": "out/06_21_output.xlsx",
+   "carry_parts": [
+    "xl/styles.xml",
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "xl/styles.xml",
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Template:06_21",
+   "turn": 5,
+   "rel": "out/06_21_output.xlsx",
+   "carry_parts": [
+    "xl/styles.xml",
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "xl/styles.xml",
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Template:07_01",
+   "turn": 4,
+   "rel": "out/07_01_output.xlsx",
+   "carry_parts": [
+    "xl/styles.xml",
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "xl/styles.xml",
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Template:07_01",
+   "turn": 5,
+   "rel": "out/07_01_output.xlsx",
+   "carry_parts": [
+    "xl/styles.xml",
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "xl/styles.xml",
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Template:07_01",
+   "turn": 7,
+   "rel": "out/07_01_output.xlsx",
+   "carry_parts": [
+    "xl/styles.xml",
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "xl/styles.xml",
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Template:07_01",
+   "turn": 9,
+   "rel": "out/07_01_output.xlsx",
+   "carry_parts": [
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Template:10_01",
+   "turn": 4,
+   "rel": "out/10_01_output.xlsx",
+   "carry_parts": [
+    "xl/styles.xml",
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "xl/styles.xml",
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Template:10_01",
+   "turn": 5,
+   "rel": "out/10_01_output.xlsx",
+   "carry_parts": [
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Template:10_01",
+   "turn": 6,
+   "rel": "out/10_01_output.xlsx",
+   "carry_parts": [
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Template:11_03",
+   "turn": 5,
+   "rel": "out/11_03_output.xlsx",
+   "carry_parts": [
+    "xl/worksheets/sheet1.xml",
+    "xl/styles.xml",
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "xl/worksheets/sheet1.xml",
+    "xl/styles.xml",
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Template:13_08",
+   "turn": 4,
+   "rel": "out/13_08_output.xlsx",
+   "carry_parts": [
+    "xl/styles.xml",
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "xl/styles.xml",
+    "xl/worksheets/sheet1.xml",
+    "docProps/core.xml"
+   ]
+  },
+  {
+   "task_id": "Template:13_08",
+   "turn": 7,
+   "rel": "out/13_08_output.xlsx",
+   "carry_parts": [
+    "docProps/core.xml"
+   ],
+   "trial_mismatch_parts": [
+    "docProps/core.xml"
+   ]
+  }
+ ]
+}

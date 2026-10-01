@@ -1,0 +1,301 @@
+{
+ "positive": true,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [
+    {
+     "formula": "DebtSchedule!E10",
+     "blank": "DebtSchedule!E7"
+    },
+    {
+     "formula": "DebtSchedule!E10",
+     "blank": "DebtSchedule!E9"
+    },
+    {
+     "formula": "DebtSchedule!E14",
+     "blank": "DebtSchedule!E10"
+    },
+    {
+     "formula": "DebtSchedule!E14",
+     "blank": "DebtSchedule!E7"
+    },
+    {
+     "formula": "DebtSchedule!E15",
+     "blank": "DebtSchedule!E13"
+    },
+    {
+     "formula": "DebtSchedule!E15",
+     "blank": "DebtSchedule!E14"
+    },
+    {
+     "formula": "DebtSchedule!E9",
+     "blank": "DebtSchedule!E7"
+    },
+    {
+     "formula": "DebtSchedule!E9",
+     "blank": "DebtSchedule!E8"
+    },
+    {
+     "formula": "DebtSchedule!F10",
+     "blank": "DebtSchedule!F7"
+    },
+    {
+     "formula": "DebtSchedule!F10",
+     "blank": "DebtSchedule!F9"
+    },
+    {
+     "formula": "DebtSchedule!F14",
+     "blank": "DebtSchedule!F10"
+    },
+    {
+     "formula": "DebtSchedule!F14",
+     "blank": "DebtSchedule!F7"
+    },
+    {
+     "formula": "DebtSchedule!F15",
+     "blank": "DebtSchedule!F13"
+    },
+    {
+     "formula": "DebtSchedule!F15",
+     "blank": "DebtSchedule!F14"
+    },
+    {
+     "formula": "DebtSchedule!F7",
+     "blank": "DebtSchedule!E10"
+    },
+    {
+     "formula": "DebtSchedule!F9",
+     "blank": "DebtSchedule!F7"
+    },
+    {
+     "formula": "DebtSchedule!F9",
+     "blank": "DebtSchedule!F8"
+    },
+    {
+     "formula": "DebtSchedule!G10",
+     "blank": "DebtSchedule!G7"
+    },
+    {
+     "formula": "DebtSchedule!G10",
+     "blank": "DebtSchedule!G9"
+    },
+    {
+     "formula": "DebtSchedule!G14",
+     "blank": "DebtSchedule!G10"
+    },
+    {
+     "formula": "DebtSchedule!G14",
+     "blank": "DebtSchedule!G7"
+    },
+    {
+     "formula": "DebtSchedule!G15",
+     "blank": "DebtSchedule!G13"
+    },
+    {
+     "formula": "DebtSchedule!G15",
+     "blank": "DebtSchedule!G14"
+    },
+    {
+     "formula": "DebtSchedule!G7",
+     "blank": "DebtSchedule!F10"
+    },
+    {
+     "formula": "DebtSchedule!G9",
+     "blank": "DebtSchedule!G7"
+    },
+    {
+     "formula": "DebtSchedule!G9",
+     "blank": "DebtSchedule!G8"
+    },
+    {
+     "formula": "DebtSchedule!H10",
+     "blank": "DebtSchedule!H7"
+    },
+    {
+     "formula": "DebtSchedule!H10",
+     "blank": "DebtSchedule!H9"
+    },
+    {
+     "formula": "DebtSchedule!H14",
+     "blank": "DebtSchedule!H10"
+    },
+    {
+     "formula": "DebtSchedule!H14",
+     "blank": "DebtSchedule!H7"
+    },
+    {
+     "formula": "DebtSchedule!H15",
+     "blank": "DebtSchedule!H13"
+    },
+    {
+     "formula": "DebtSchedule!H15",
+     "blank": "DebtSchedule!H14"
+    },
+    {
+     "formula": "DebtSchedule!H7",
+     "blank": "DebtSchedule!G10"
+    },
+    {
+     "formula": "DebtSchedule!H9",
+     "blank": "DebtSchedule!H7"
+    },
+    {
+     "formula": "DebtSchedule!H9",
+     "blank": "DebtSchedule!H8"
+    },
+    {
+     "formula": "DebtSchedule!I10",
+     "blank": "DebtSchedule!I7"
+    },
+    {
+     "formula": "DebtSchedule!I10",
+     "blank": "DebtSchedule!I9"
+    },
+    {
+     "formula": "DebtSchedule!I14",
+     "blank": "DebtSchedule!I10"
+    },
+    {
+     "formula": "DebtSchedule!I14",
+     "blank": "DebtSchedule!I7"
+    },
+    {
+     "formula": "DebtSchedule!I15",
+     "blank": "DebtSchedule!I13"
+    },
+    {
+     "formula": "DebtSchedule!I15",
+     "blank": "DebtSchedule!I14"
+    },
+    {
+     "formula": "DebtSchedule!I7",
+     "blank": "DebtSchedule!H10"
+    },
+    {
+     "formula": "DebtSchedule!I9",
+     "blank": "DebtSchedule!I7"
+    },
+    {
+     "formula": "DebtSchedule!I9",
+     "blank": "DebtSchedule!I8"
+    },
+    {
+     "formula": "DebtSchedule!J10",
+     "blank": "DebtSchedule!J7"
+    },
+    {
+     "formula": "DebtSchedule!J10",
+     "blank": "DebtSchedule!J9"
+    },
+    {
+     "formula": "DebtSchedule!J14",
+     "blank": "DebtSchedule!J10"
+    },
+    {
+     "formula": "DebtSchedule!J14",
+     "blank": "DebtSchedule!J7"
+    },
+    {
+     "formula": "DebtSchedule!J15",
+     "blank": "DebtSchedule!J13"
+    },
+    {
+     "formula": "DebtSchedule!J15",
+     "blank": "DebtSchedule!J14"
+    },
+    {
+     "formula": "DebtSchedule!J7",
+     "blank": "DebtSchedule!I10"
+    },
+    {
+     "formula": "DebtSchedule!J9",
+     "blank": "DebtSchedule!J7"
+    },
+    {
+     "formula": "DebtSchedule!J9",
+     "blank": "DebtSchedule!J8"
+    },
+    {
+     "formula": "DebtSchedule!K10",
+     "blank": "DebtSchedule!K7"
+    },
+    {
+     "formula": "DebtSchedule!K10",
+     "blank": "DebtSchedule!K9"
+    },
+    {
+     "formula": "DebtSchedule!K14",
+     "blank": "DebtSchedule!K10"
+    },
+    {
+     "formula": "DebtSchedule!K14",
+     "blank": "DebtSchedule!K7"
+    },
+    {
+     "formula": "DebtSchedule!K15",
+     "blank": "DebtSchedule!K13"
+    },
+    {
+     "formula": "DebtSchedule!K15",
+     "blank": "DebtSchedule!K14"
+    },
+    {
+     "formula": "DebtSchedule!K7",
+     "blank": "DebtSchedule!J10"
+    },
+    {
+     "formula": "DebtSchedule!K9",
+     "blank": "DebtSchedule!K7"
+    },
+    {
+     "formula": "DebtSchedule!K9",
+     "blank": "DebtSchedule!K8"
+    }
+   ],
+   "count": 62
+  },
+  "CHG": {
+   "changed_cells": 49,
+   "sheets": 1,
+   "regions": [
+    "DebtSchedule!E10",
+    "DebtSchedule!E13",
+    "DebtSchedule!E14",
+    "DebtSchedule!E15",
+    "DebtSchedule!E7",
+    "DebtSchedule!E8",
+    "DebtSchedule!E9",
+    "DebtSchedule!F10",
+    "DebtSchedule!F13",
+    "DebtSchedule!F14",
+    "DebtSchedule!F15",
+    "DebtSchedule!F7",
+    "DebtSchedule!F8",
+    "DebtSchedule!F9",
+    "DebtSchedule!G10",
+    "DebtSchedule!G13",
+    "DebtSchedule!G14",
+    "DebtSchedule!G15",
+    "DebtSchedule!G7",
+    "DebtSchedule!G8"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": "Post-edit verification (mechanical check of the current workbook)\n\nChanged cells: 49 across 1 sheet(s).\n\nNewly blank referenced cells (62):\n- DebtSchedule!E10 now references blank DebtSchedule!E7\n- DebtSchedule!E10 now references blank DebtSchedule!E9\n- DebtSchedule!E14 now references blank DebtSchedule!E10\n- DebtSchedule!E14 now references blank DebtSchedule!E7\n- DebtSchedule!E15 now references blank DebtSchedule!E13\n- DebtSchedule!E15 now references blank DebtSchedule!E14\n- DebtSchedule!E9 now references blank DebtSchedule!E7\n- DebtSchedule!E9 now references blank DebtSchedule!E8\n- DebtSchedule!F10 now references blank DebtSchedule!F7\n- DebtSchedule!F10 now references blank DebtSchedule!F9\n- and 52 more.\n\nThis report is mechanical evidence about the current workbook state.\nReview it before deciding whether to submit or revise.",
+ "positive_families": [
+  "REF"
+ ]
+}

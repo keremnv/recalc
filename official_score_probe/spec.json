@@ -1,0 +1,80 @@
+{
+  "generated_at": "2026-09-16T10:05:47.354418+00:00",
+  "claim": "system_benchmark_vs_published_control",
+  "not_a_causal_scaffold_claim": true,
+  "glm": {
+    "model": "z-ai/glm-5.3-flash",
+    "reasoning": "high",
+    "max_model_calls_per_task": 40,
+    "max_cost_usd_per_task": 2.5,
+    "tasks": [
+      "Template:01_02",
+      "Financial_Model:02_01",
+      "Debugging:01_01"
+    ],
+    "output_root": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/official-score-probe/glm-compiled",
+    "architecture": "compiled_matched_treatment"
+  },
+  "spark_extra": {
+    "model": "meta/muse-spark-1.3-contributor",
+    "task": "Financial_Model:02_01",
+    "scaffold": "librecalc_sweagent_harness",
+    "config": "benchmark/sweagent/spreadsheet.yaml",
+    "max_tool_calls": 50,
+    "max_cost_usd": 2.5,
+    "output_root": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/official-score-spark-1.3-contributor-fm-02_01-librecalc",
+    "label": "extra_comparison_not_causal"
+  },
+  "spark_control_kept": {
+    "model": "meta/muse-spark-1.3-contributor",
+    "task": "Financial_Model:02_01",
+    "scaffold": "published_spreadsheetbench2_control",
+    "config": "benchmark/sweagent/spreadsheet-control.yaml",
+    "max_tool_calls": 50,
+    "max_cost_usd": 2.5,
+    "output_root": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/official-score-spark-1.3-contributor-fm-02_01",
+    "label": "kept_because_already_ran",
+    "rerun": false
+  },
+  "published_control_reference": {
+    "Template:01_02": {
+      "id": "01_02",
+      "error_message": "Regression error at OID_Bond!C36: answer=0, output=1040",
+      "regression_accuracy": 0.9649,
+      "modification_accuracy": 0.9808,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "Financial_Model:02_01": {
+      "id": "02_01",
+      "error_message": "Modification error at Revenue & COGS Schedule!D4: answer=-0.251901025950513, output=None",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.9938,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "Debugging:01_01": {
+      "id": "01_01",
+      "error_message": "Regression error at Ex 1 - LBO!AC20: answer=0, output=-130.666114561455",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.9988,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    }
+  },
+  "isolation": {
+    "one_os_process_per_task": true,
+    "unique_output_roots": true,
+    "exclusive_file_locks": true,
+    "shared_prep_is_read_only": true,
+    "scoring": "sequential_after_workers",
+    "compiled_runner_max_workers": 1
+  },
+  "exclusions": {
+    "no_fm20": true,
+    "no_template_02_05": true,
+    "no_financial_model_06_01": true,
+    "no_published_control_rerun": true,
+    "no_new_frontend_ir": true
+  }
+}

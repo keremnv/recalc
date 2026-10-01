@@ -1,0 +1,3215 @@
+{
+  "experiment": "scheduler_live_validation",
+  "task": "Financial_Model:04_01",
+  "archive": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/live/repaired_treatment_credit_restored_merged_for_bridge/Financial_Model-04_01",
+  "continuation_directory": "scheduler_live_validation/Financial_Model-04_01",
+  "frontend_rerun": false,
+  "writer_called": false,
+  "libreoffice_called": false,
+  "scorer_called": false,
+  "frozen_inputs": {
+    "raw_task_sha256": "9f848fe3f1f3949310f620d1f336a3cb82f2270a26c9ea934ec37ed65c1e70db",
+    "compiler_sha256": "748880515d5bf12af8f77a0112324deaccfaa5ad6145d1ceb1005ffe403fcc30",
+    "edit_plan_sha256": "fabe7f16aa129264f09d0671ace7e79f51fed77827734fda13fb4a5ef5b2a51b",
+    "authority_cell_count": 73,
+    "authority_cell_ids_sha256": "7286fda13ea29029d512e61d1c7dd2e578583c30efef14df585010d84891d579",
+    "program_group_count": 16,
+    "archived_model_calls": 23,
+    "archived_state_model_call_count": 23,
+    "model": "z-ai/glm-5.3-flash",
+    "reasoning": "max",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_model_calls": 150,
+    "max_cost_usd": 6.0,
+    "frontend_mode": "sharded_projected",
+    "repaired_database": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/integration_autopsy/repaired_db/Financial_Model-04_01.sqlite"
+  },
+  "predicted": {
+    "independent_units": 49,
+    "archived_session_outcomes": 3,
+    "newly_exposed_units": 46
+  },
+  "observed": {
+    "independent_units": 49,
+    "archived_session_outcomes": 3,
+    "newly_exposed_units": 46,
+    "newly_attempted_units": 4,
+    "newly_unattempted_units": 42,
+    "total_model_calls_after": 56,
+    "new_persisted_model_calls": 33,
+    "provider_cost_usd_after": 0.3334175622300001,
+    "new_provider_cost_usd": 0.08120285748,
+    "terminal_status_counts": {
+      "PROVIDER_FAILURE": 3,
+      "INVALID_RESPONSE": 1,
+      "EXPLICIT_MODEL_ABSTENTION": 1,
+      "ATTEMPTED_NO_TERMINAL_DISPOSITION": 1,
+      "UNATTEMPTED_INDEPENDENT": 42,
+      "SESSION_RESOURCE_FAILURE": 1
+    },
+    "global_resource_failures": [],
+    "scheduler_exception": "TypeError: '>' not supported between instances of 'int' and 'NoneType'",
+    "scheduler_exception_trace": "Traceback (most recent call last):\n  File \"benchmark/compiled_scheduler.py\", line 207, in schedule\n    validation = m.validate_formula(task_key, proposal[\"target\"], f, cache, plan[\"spine\"])\n  File \"benchmark/matched_compiled_treatment.py\", line 919, in validate_formula\n    result = prior.synth_tools._validate_formula(row, formula, {}, spine, *cache[task_key])\n  File \"benchmark/formula_synthesis_probe.py\", line 779, in _validate_formula\n    if a and (a[0] > ws.max_column or a[1] > ws.max_row):\nTypeError: '>' not supported between instances of 'int' and 'NoneType'\n"
+  },
+  "liveness": {
+    "all_independent_units_disposed_or_explicitly_censored": false,
+    "latent_work_continued_after_terminal_dispositions": true,
+    "failed_program_group_members_promoted": false,
+    "unattempted_independent_units": [
+      {
+        "cell_id": "cell:s03:r12:c4",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          12,
+          4
+        ],
+        "label": "Financials!D12",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r12:c5",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          12,
+          5
+        ],
+        "label": "Financials!E12",
+        "unit_kind": "PROGRAM_GROUP_CANONICAL",
+        "program_group": 3
+      },
+      {
+        "cell_id": "cell:s03:r15:c4",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          15,
+          4
+        ],
+        "label": "Financials!D15",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r15:c5",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          15,
+          5
+        ],
+        "label": "Financials!E15",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r15:c6",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          15,
+          6
+        ],
+        "label": "Financials!F15",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r16:c4",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          16,
+          4
+        ],
+        "label": "Financials!D16",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r16:c5",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          16,
+          5
+        ],
+        "label": "Financials!E16",
+        "unit_kind": "PROGRAM_GROUP_CANONICAL",
+        "program_group": 4
+      },
+      {
+        "cell_id": "cell:s03:r19:c4",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          19,
+          4
+        ],
+        "label": "Financials!D19",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r19:c5",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          19,
+          5
+        ],
+        "label": "Financials!E19",
+        "unit_kind": "PROGRAM_GROUP_CANONICAL",
+        "program_group": 5
+      },
+      {
+        "cell_id": "cell:s03:r22:c4",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          22,
+          4
+        ],
+        "label": "Financials!D22",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r22:c5",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          22,
+          5
+        ],
+        "label": "Financials!E22",
+        "unit_kind": "PROGRAM_GROUP_CANONICAL",
+        "program_group": 6
+      },
+      {
+        "cell_id": "cell:s03:r23:c4",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          23,
+          4
+        ],
+        "label": "Financials!D23",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r23:c5",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          23,
+          5
+        ],
+        "label": "Financials!E23",
+        "unit_kind": "PROGRAM_GROUP_CANONICAL",
+        "program_group": 7
+      },
+      {
+        "cell_id": "cell:s03:r26:c4",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          26,
+          4
+        ],
+        "label": "Financials!D26",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r26:c5",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          26,
+          5
+        ],
+        "label": "Financials!E26",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r26:c6",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          26,
+          6
+        ],
+        "label": "Financials!F26",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r27:c4",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          27,
+          4
+        ],
+        "label": "Financials!D27",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r27:c5",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          27,
+          5
+        ],
+        "label": "Financials!E27",
+        "unit_kind": "PROGRAM_GROUP_CANONICAL",
+        "program_group": 8
+      },
+      {
+        "cell_id": "cell:s03:r36:c4",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          36,
+          4
+        ],
+        "label": "Financials!D36",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r36:c5",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          36,
+          5
+        ],
+        "label": "Financials!E36",
+        "unit_kind": "PROGRAM_GROUP_CANONICAL",
+        "program_group": 9
+      },
+      {
+        "cell_id": "cell:s03:r39:c4",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          39,
+          4
+        ],
+        "label": "Financials!D39",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r39:c5",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          39,
+          5
+        ],
+        "label": "Financials!E39",
+        "unit_kind": "PROGRAM_GROUP_CANONICAL",
+        "program_group": 10
+      },
+      {
+        "cell_id": "cell:s03:r42:c4",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          42,
+          4
+        ],
+        "label": "Financials!D42",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r42:c5",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          42,
+          5
+        ],
+        "label": "Financials!E42",
+        "unit_kind": "PROGRAM_GROUP_CANONICAL",
+        "program_group": 11
+      },
+      {
+        "cell_id": "cell:s03:r45:c4",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          45,
+          4
+        ],
+        "label": "Financials!D45",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r45:c5",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          45,
+          5
+        ],
+        "label": "Financials!E45",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r45:c6",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          45,
+          6
+        ],
+        "label": "Financials!F45",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r47:c4",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          47,
+          4
+        ],
+        "label": "Financials!D47",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r47:c5",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          47,
+          5
+        ],
+        "label": "Financials!E47",
+        "unit_kind": "PROGRAM_GROUP_CANONICAL",
+        "program_group": 12
+      },
+      {
+        "cell_id": "cell:s03:r51:c4",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          51,
+          4
+        ],
+        "label": "Financials!D51",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r51:c5",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          51,
+          5
+        ],
+        "label": "Financials!E51",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r51:c6",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          51,
+          6
+        ],
+        "label": "Financials!F51",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r52:c4",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          52,
+          4
+        ],
+        "label": "Financials!D52",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r52:c5",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          52,
+          5
+        ],
+        "label": "Financials!E52",
+        "unit_kind": "PROGRAM_GROUP_CANONICAL",
+        "program_group": 13
+      },
+      {
+        "cell_id": "cell:s03:r58:c4",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          58,
+          4
+        ],
+        "label": "Financials!D58",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r58:c5",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          58,
+          5
+        ],
+        "label": "Financials!E58",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r58:c6",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          58,
+          6
+        ],
+        "label": "Financials!F58",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r59:c4",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          59,
+          4
+        ],
+        "label": "Financials!D59",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r59:c5",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          59,
+          5
+        ],
+        "label": "Financials!E59",
+        "unit_kind": "PROGRAM_GROUP_CANONICAL",
+        "program_group": 14
+      },
+      {
+        "cell_id": "cell:s03:r68:c4",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          68,
+          4
+        ],
+        "label": "Financials!D68",
+        "unit_kind": "UNGROUPED_INDEPENDENT",
+        "program_group": null
+      },
+      {
+        "cell_id": "cell:s03:r68:c5",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Financials",
+          68,
+          5
+        ],
+        "label": "Financials!E68",
+        "unit_kind": "PROGRAM_GROUP_CANONICAL",
+        "program_group": 16
+      },
+      {
+        "cell_id": "cell:s05:r12:c6",
+        "archived_session": false,
+        "live_session_attempted": false,
+        "disposition": null,
+        "outcome_class": "UNATTEMPTED_INDEPENDENT",
+        "failure_class": null,
+        "parsed_status": null,
+        "formula_present": false,
+        "session_call_count": 0,
+        "new_calls": [],
+        "cell": [
+          "Ratio_Analysis ",
+          12,
+          6
+        ],
+        "label": "Ratio_Analysis !F12",
+        "unit_kind": "PROGRAM_GROUP_CANONICAL",
+        "program_group": 1
+      }
+    ],
+    "verdict": "SCHEDULER_LIVENESS_DEFECT_REMAINS"
+  },
+  "independent_unit_trace": [
+    {
+      "cell_id": "cell:s02:r141:c11",
+      "archived_session": true,
+      "live_session_attempted": false,
+      "disposition": {
+        "cell": [
+          "Assumptions",
+          141,
+          11
+        ],
+        "status": "ABSTAIN",
+        "failure": "PROVIDER_TIMEOUT"
+      },
+      "outcome_class": "PROVIDER_FAILURE",
+      "failure_class": "PROVIDER_TIMEOUT",
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 2,
+      "new_calls": [],
+      "cell": [
+        "Assumptions",
+        141,
+        11
+      ],
+      "label": "Assumptions!K141",
+      "unit_kind": "PROGRAM_GROUP_CANONICAL",
+      "program_group": 2
+    },
+    {
+      "cell_id": "cell:s03:r11:c4",
+      "archived_session": false,
+      "live_session_attempted": true,
+      "disposition": {
+        "cell": [
+          "Financials",
+          11,
+          4
+        ],
+        "status": "ABSTAIN",
+        "failure": null
+      },
+      "outcome_class": "INVALID_RESPONSE",
+      "failure_class": "INVALID_ACTION",
+      "parsed_status": "ABSTAIN",
+      "formula_present": false,
+      "session_call_count": 6,
+      "new_calls": [
+        {
+          "call_index": 33,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 34,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 35,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 36,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 37,
+          "stage": "retrieval",
+          "failure_class": "INVALID_ACTION",
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 38,
+          "stage": "synthesis",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        }
+      ],
+      "cell": [
+        "Financials",
+        11,
+        4
+      ],
+      "label": "Financials!D11",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r11:c5",
+      "archived_session": false,
+      "live_session_attempted": true,
+      "disposition": {
+        "cell": [
+          "Financials",
+          11,
+          5
+        ],
+        "status": "ABSTAIN",
+        "failure": null
+      },
+      "outcome_class": "EXPLICIT_MODEL_ABSTENTION",
+      "failure_class": null,
+      "parsed_status": "ABSTAIN",
+      "formula_present": false,
+      "session_call_count": 9,
+      "new_calls": [
+        {
+          "call_index": 39,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 40,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 41,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 42,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 43,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 44,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 45,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 46,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 47,
+          "stage": "synthesis",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        }
+      ],
+      "cell": [
+        "Financials",
+        11,
+        5
+      ],
+      "label": "Financials!E11",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r11:c6",
+      "archived_session": false,
+      "live_session_attempted": true,
+      "disposition": null,
+      "outcome_class": "ATTEMPTED_NO_TERMINAL_DISPOSITION",
+      "failure_class": null,
+      "parsed_status": "PROPOSED",
+      "formula_present": true,
+      "session_call_count": 9,
+      "new_calls": [
+        {
+          "call_index": 48,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 49,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 50,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 51,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 52,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 53,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 54,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 55,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 56,
+          "stage": "synthesis",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        }
+      ],
+      "cell": [
+        "Financials",
+        11,
+        6
+      ],
+      "label": "Financials!F11",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r12:c4",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        12,
+        4
+      ],
+      "label": "Financials!D12",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r12:c5",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        12,
+        5
+      ],
+      "label": "Financials!E12",
+      "unit_kind": "PROGRAM_GROUP_CANONICAL",
+      "program_group": 3
+    },
+    {
+      "cell_id": "cell:s03:r15:c4",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        15,
+        4
+      ],
+      "label": "Financials!D15",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r15:c5",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        15,
+        5
+      ],
+      "label": "Financials!E15",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r15:c6",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        15,
+        6
+      ],
+      "label": "Financials!F15",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r16:c4",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        16,
+        4
+      ],
+      "label": "Financials!D16",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r16:c5",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        16,
+        5
+      ],
+      "label": "Financials!E16",
+      "unit_kind": "PROGRAM_GROUP_CANONICAL",
+      "program_group": 4
+    },
+    {
+      "cell_id": "cell:s03:r19:c4",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        19,
+        4
+      ],
+      "label": "Financials!D19",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r19:c5",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        19,
+        5
+      ],
+      "label": "Financials!E19",
+      "unit_kind": "PROGRAM_GROUP_CANONICAL",
+      "program_group": 5
+    },
+    {
+      "cell_id": "cell:s03:r22:c4",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        22,
+        4
+      ],
+      "label": "Financials!D22",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r22:c5",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        22,
+        5
+      ],
+      "label": "Financials!E22",
+      "unit_kind": "PROGRAM_GROUP_CANONICAL",
+      "program_group": 6
+    },
+    {
+      "cell_id": "cell:s03:r23:c4",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        23,
+        4
+      ],
+      "label": "Financials!D23",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r23:c5",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        23,
+        5
+      ],
+      "label": "Financials!E23",
+      "unit_kind": "PROGRAM_GROUP_CANONICAL",
+      "program_group": 7
+    },
+    {
+      "cell_id": "cell:s03:r26:c4",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        26,
+        4
+      ],
+      "label": "Financials!D26",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r26:c5",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        26,
+        5
+      ],
+      "label": "Financials!E26",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r26:c6",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        26,
+        6
+      ],
+      "label": "Financials!F26",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r27:c4",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        27,
+        4
+      ],
+      "label": "Financials!D27",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r27:c5",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        27,
+        5
+      ],
+      "label": "Financials!E27",
+      "unit_kind": "PROGRAM_GROUP_CANONICAL",
+      "program_group": 8
+    },
+    {
+      "cell_id": "cell:s03:r36:c4",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        36,
+        4
+      ],
+      "label": "Financials!D36",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r36:c5",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        36,
+        5
+      ],
+      "label": "Financials!E36",
+      "unit_kind": "PROGRAM_GROUP_CANONICAL",
+      "program_group": 9
+    },
+    {
+      "cell_id": "cell:s03:r39:c4",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        39,
+        4
+      ],
+      "label": "Financials!D39",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r39:c5",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        39,
+        5
+      ],
+      "label": "Financials!E39",
+      "unit_kind": "PROGRAM_GROUP_CANONICAL",
+      "program_group": 10
+    },
+    {
+      "cell_id": "cell:s03:r42:c4",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        42,
+        4
+      ],
+      "label": "Financials!D42",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r42:c5",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        42,
+        5
+      ],
+      "label": "Financials!E42",
+      "unit_kind": "PROGRAM_GROUP_CANONICAL",
+      "program_group": 11
+    },
+    {
+      "cell_id": "cell:s03:r45:c4",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        45,
+        4
+      ],
+      "label": "Financials!D45",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r45:c5",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        45,
+        5
+      ],
+      "label": "Financials!E45",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r45:c6",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        45,
+        6
+      ],
+      "label": "Financials!F45",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r47:c4",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        47,
+        4
+      ],
+      "label": "Financials!D47",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r47:c5",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        47,
+        5
+      ],
+      "label": "Financials!E47",
+      "unit_kind": "PROGRAM_GROUP_CANONICAL",
+      "program_group": 12
+    },
+    {
+      "cell_id": "cell:s03:r51:c4",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        51,
+        4
+      ],
+      "label": "Financials!D51",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r51:c5",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        51,
+        5
+      ],
+      "label": "Financials!E51",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r51:c6",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        51,
+        6
+      ],
+      "label": "Financials!F51",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r52:c4",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        52,
+        4
+      ],
+      "label": "Financials!D52",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r52:c5",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        52,
+        5
+      ],
+      "label": "Financials!E52",
+      "unit_kind": "PROGRAM_GROUP_CANONICAL",
+      "program_group": 13
+    },
+    {
+      "cell_id": "cell:s03:r58:c4",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        58,
+        4
+      ],
+      "label": "Financials!D58",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r58:c5",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        58,
+        5
+      ],
+      "label": "Financials!E58",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r58:c6",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        58,
+        6
+      ],
+      "label": "Financials!F58",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r59:c4",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        59,
+        4
+      ],
+      "label": "Financials!D59",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r59:c5",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        59,
+        5
+      ],
+      "label": "Financials!E59",
+      "unit_kind": "PROGRAM_GROUP_CANONICAL",
+      "program_group": 14
+    },
+    {
+      "cell_id": "cell:s03:r68:c4",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        68,
+        4
+      ],
+      "label": "Financials!D68",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r68:c5",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        68,
+        5
+      ],
+      "label": "Financials!E68",
+      "unit_kind": "PROGRAM_GROUP_CANONICAL",
+      "program_group": 16
+    },
+    {
+      "cell_id": "cell:s03:r6:c4",
+      "archived_session": true,
+      "live_session_attempted": false,
+      "disposition": {
+        "cell": [
+          "Financials",
+          6,
+          4
+        ],
+        "status": "ABSTAIN",
+        "failure": "PROVIDER_TIMEOUT"
+      },
+      "outcome_class": "PROVIDER_FAILURE",
+      "failure_class": "PROVIDER_TIMEOUT",
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 3,
+      "new_calls": [],
+      "cell": [
+        "Financials",
+        6,
+        4
+      ],
+      "label": "Financials!D6",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s03:r6:c5",
+      "archived_session": false,
+      "live_session_attempted": true,
+      "disposition": {
+        "cell": [
+          "Financials",
+          6,
+          5
+        ],
+        "status": "PROVIDER_TIMEOUT",
+        "failure": "PROVIDER_TIMEOUT"
+      },
+      "outcome_class": "PROVIDER_FAILURE",
+      "failure_class": "PROVIDER_TIMEOUT",
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 9,
+      "new_calls": [
+        {
+          "call_index": 24,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 25,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 26,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 27,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 28,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 29,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 30,
+          "stage": "retrieval",
+          "failure_class": null,
+          "finish_reason": "stop",
+          "provider_attempt": null
+        },
+        {
+          "call_index": 31,
+          "stage": "retrieval",
+          "failure_class": "PROVIDER_TIMEOUT",
+          "finish_reason": null,
+          "provider_attempt": null
+        },
+        {
+          "call_index": 32,
+          "stage": "synthesis",
+          "failure_class": "PROVIDER_TIMEOUT",
+          "finish_reason": null,
+          "provider_attempt": null
+        }
+      ],
+      "cell": [
+        "Financials",
+        6,
+        5
+      ],
+      "label": "Financials!E6",
+      "unit_kind": "PROGRAM_GROUP_CANONICAL",
+      "program_group": 15
+    },
+    {
+      "cell_id": "cell:s05:r12:c5",
+      "archived_session": true,
+      "live_session_attempted": false,
+      "disposition": {
+        "cell": [
+          "Ratio_Analysis ",
+          12,
+          5
+        ],
+        "status": "ABSTAIN",
+        "failure": "SESSION_RESOURCE_LIMIT"
+      },
+      "outcome_class": "SESSION_RESOURCE_FAILURE",
+      "failure_class": "SESSION_RESOURCE_LIMIT",
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 9,
+      "new_calls": [],
+      "cell": [
+        "Ratio_Analysis ",
+        12,
+        5
+      ],
+      "label": "Ratio_Analysis !E12",
+      "unit_kind": "UNGROUPED_INDEPENDENT",
+      "program_group": null
+    },
+    {
+      "cell_id": "cell:s05:r12:c6",
+      "archived_session": false,
+      "live_session_attempted": false,
+      "disposition": null,
+      "outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "failure_class": null,
+      "parsed_status": null,
+      "formula_present": false,
+      "session_call_count": 0,
+      "new_calls": [],
+      "cell": [
+        "Ratio_Analysis ",
+        12,
+        6
+      ],
+      "label": "Ratio_Analysis !F12",
+      "unit_kind": "PROGRAM_GROUP_CANONICAL",
+      "program_group": 1
+    }
+  ],
+  "program_group_trace": [
+    {
+      "group_id": "G1",
+      "canonical_cell_id": "cell:s05:r12:c6",
+      "canonical_label": "Ratio_Analysis !F12",
+      "canonical_outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "canonical_disposition": null,
+      "members": [
+        {
+          "cell_id": "cell:s05:r12:c6",
+          "label": "Ratio_Analysis !F12",
+          "disposition": null,
+          "independent": true,
+          "promoted_to_independent": false,
+          "failed_canonical_member": false
+        },
+        {
+          "cell_id": "cell:s05:r12:c7",
+          "label": "Ratio_Analysis !G12",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        },
+        {
+          "cell_id": "cell:s05:r12:c8",
+          "label": "Ratio_Analysis !H12",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        },
+        {
+          "cell_id": "cell:s05:r12:c9",
+          "label": "Ratio_Analysis !I12",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        },
+        {
+          "cell_id": "cell:s05:r12:c10",
+          "label": "Ratio_Analysis !J12",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        },
+        {
+          "cell_id": "cell:s05:r12:c11",
+          "label": "Ratio_Analysis !K12",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        },
+        {
+          "cell_id": "cell:s05:r12:c12",
+          "label": "Ratio_Analysis !L12",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        }
+      ]
+    },
+    {
+      "group_id": "G2",
+      "canonical_cell_id": "cell:s02:r141:c11",
+      "canonical_label": "Assumptions!K141",
+      "canonical_outcome_class": "PROVIDER_FAILURE",
+      "canonical_disposition": {
+        "cell": [
+          "Assumptions",
+          141,
+          11
+        ],
+        "status": "ABSTAIN",
+        "failure": "PROVIDER_TIMEOUT"
+      },
+      "members": [
+        {
+          "cell_id": "cell:s02:r141:c11",
+          "label": "Assumptions!K141",
+          "disposition": {
+            "cell": [
+              "Assumptions",
+              141,
+              11
+            ],
+            "status": "ABSTAIN",
+            "failure": "PROVIDER_TIMEOUT"
+          },
+          "independent": true,
+          "promoted_to_independent": false,
+          "failed_canonical_member": false
+        },
+        {
+          "cell_id": "cell:s02:r141:c12",
+          "label": "Assumptions!L141",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        },
+        {
+          "cell_id": "cell:s02:r141:c13",
+          "label": "Assumptions!M141",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        },
+        {
+          "cell_id": "cell:s02:r141:c14",
+          "label": "Assumptions!N141",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        },
+        {
+          "cell_id": "cell:s02:r141:c15",
+          "label": "Assumptions!O141",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        }
+      ]
+    },
+    {
+      "group_id": "G3",
+      "canonical_cell_id": "cell:s03:r12:c5",
+      "canonical_label": "Financials!E12",
+      "canonical_outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "canonical_disposition": null,
+      "members": [
+        {
+          "cell_id": "cell:s03:r12:c5",
+          "label": "Financials!E12",
+          "disposition": null,
+          "independent": true,
+          "promoted_to_independent": false,
+          "failed_canonical_member": false
+        },
+        {
+          "cell_id": "cell:s03:r12:c6",
+          "label": "Financials!F12",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        }
+      ]
+    },
+    {
+      "group_id": "G4",
+      "canonical_cell_id": "cell:s03:r16:c5",
+      "canonical_label": "Financials!E16",
+      "canonical_outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "canonical_disposition": null,
+      "members": [
+        {
+          "cell_id": "cell:s03:r16:c5",
+          "label": "Financials!E16",
+          "disposition": null,
+          "independent": true,
+          "promoted_to_independent": false,
+          "failed_canonical_member": false
+        },
+        {
+          "cell_id": "cell:s03:r16:c6",
+          "label": "Financials!F16",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        }
+      ]
+    },
+    {
+      "group_id": "G5",
+      "canonical_cell_id": "cell:s03:r19:c5",
+      "canonical_label": "Financials!E19",
+      "canonical_outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "canonical_disposition": null,
+      "members": [
+        {
+          "cell_id": "cell:s03:r19:c5",
+          "label": "Financials!E19",
+          "disposition": null,
+          "independent": true,
+          "promoted_to_independent": false,
+          "failed_canonical_member": false
+        },
+        {
+          "cell_id": "cell:s03:r19:c6",
+          "label": "Financials!F19",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        }
+      ]
+    },
+    {
+      "group_id": "G6",
+      "canonical_cell_id": "cell:s03:r22:c5",
+      "canonical_label": "Financials!E22",
+      "canonical_outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "canonical_disposition": null,
+      "members": [
+        {
+          "cell_id": "cell:s03:r22:c5",
+          "label": "Financials!E22",
+          "disposition": null,
+          "independent": true,
+          "promoted_to_independent": false,
+          "failed_canonical_member": false
+        },
+        {
+          "cell_id": "cell:s03:r22:c6",
+          "label": "Financials!F22",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        }
+      ]
+    },
+    {
+      "group_id": "G7",
+      "canonical_cell_id": "cell:s03:r23:c5",
+      "canonical_label": "Financials!E23",
+      "canonical_outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "canonical_disposition": null,
+      "members": [
+        {
+          "cell_id": "cell:s03:r23:c5",
+          "label": "Financials!E23",
+          "disposition": null,
+          "independent": true,
+          "promoted_to_independent": false,
+          "failed_canonical_member": false
+        },
+        {
+          "cell_id": "cell:s03:r23:c6",
+          "label": "Financials!F23",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        }
+      ]
+    },
+    {
+      "group_id": "G8",
+      "canonical_cell_id": "cell:s03:r27:c5",
+      "canonical_label": "Financials!E27",
+      "canonical_outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "canonical_disposition": null,
+      "members": [
+        {
+          "cell_id": "cell:s03:r27:c5",
+          "label": "Financials!E27",
+          "disposition": null,
+          "independent": true,
+          "promoted_to_independent": false,
+          "failed_canonical_member": false
+        },
+        {
+          "cell_id": "cell:s03:r27:c6",
+          "label": "Financials!F27",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        }
+      ]
+    },
+    {
+      "group_id": "G9",
+      "canonical_cell_id": "cell:s03:r36:c5",
+      "canonical_label": "Financials!E36",
+      "canonical_outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "canonical_disposition": null,
+      "members": [
+        {
+          "cell_id": "cell:s03:r36:c5",
+          "label": "Financials!E36",
+          "disposition": null,
+          "independent": true,
+          "promoted_to_independent": false,
+          "failed_canonical_member": false
+        },
+        {
+          "cell_id": "cell:s03:r36:c6",
+          "label": "Financials!F36",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        }
+      ]
+    },
+    {
+      "group_id": "G10",
+      "canonical_cell_id": "cell:s03:r39:c5",
+      "canonical_label": "Financials!E39",
+      "canonical_outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "canonical_disposition": null,
+      "members": [
+        {
+          "cell_id": "cell:s03:r39:c5",
+          "label": "Financials!E39",
+          "disposition": null,
+          "independent": true,
+          "promoted_to_independent": false,
+          "failed_canonical_member": false
+        },
+        {
+          "cell_id": "cell:s03:r39:c6",
+          "label": "Financials!F39",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        }
+      ]
+    },
+    {
+      "group_id": "G11",
+      "canonical_cell_id": "cell:s03:r42:c5",
+      "canonical_label": "Financials!E42",
+      "canonical_outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "canonical_disposition": null,
+      "members": [
+        {
+          "cell_id": "cell:s03:r42:c5",
+          "label": "Financials!E42",
+          "disposition": null,
+          "independent": true,
+          "promoted_to_independent": false,
+          "failed_canonical_member": false
+        },
+        {
+          "cell_id": "cell:s03:r42:c6",
+          "label": "Financials!F42",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        }
+      ]
+    },
+    {
+      "group_id": "G12",
+      "canonical_cell_id": "cell:s03:r47:c5",
+      "canonical_label": "Financials!E47",
+      "canonical_outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "canonical_disposition": null,
+      "members": [
+        {
+          "cell_id": "cell:s03:r47:c5",
+          "label": "Financials!E47",
+          "disposition": null,
+          "independent": true,
+          "promoted_to_independent": false,
+          "failed_canonical_member": false
+        },
+        {
+          "cell_id": "cell:s03:r47:c6",
+          "label": "Financials!F47",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        }
+      ]
+    },
+    {
+      "group_id": "G13",
+      "canonical_cell_id": "cell:s03:r52:c5",
+      "canonical_label": "Financials!E52",
+      "canonical_outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "canonical_disposition": null,
+      "members": [
+        {
+          "cell_id": "cell:s03:r52:c5",
+          "label": "Financials!E52",
+          "disposition": null,
+          "independent": true,
+          "promoted_to_independent": false,
+          "failed_canonical_member": false
+        },
+        {
+          "cell_id": "cell:s03:r52:c6",
+          "label": "Financials!F52",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        }
+      ]
+    },
+    {
+      "group_id": "G14",
+      "canonical_cell_id": "cell:s03:r59:c5",
+      "canonical_label": "Financials!E59",
+      "canonical_outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "canonical_disposition": null,
+      "members": [
+        {
+          "cell_id": "cell:s03:r59:c5",
+          "label": "Financials!E59",
+          "disposition": null,
+          "independent": true,
+          "promoted_to_independent": false,
+          "failed_canonical_member": false
+        },
+        {
+          "cell_id": "cell:s03:r59:c6",
+          "label": "Financials!F59",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        }
+      ]
+    },
+    {
+      "group_id": "G15",
+      "canonical_cell_id": "cell:s03:r6:c5",
+      "canonical_label": "Financials!E6",
+      "canonical_outcome_class": "PROVIDER_FAILURE",
+      "canonical_disposition": {
+        "cell": [
+          "Financials",
+          6,
+          5
+        ],
+        "status": "PROVIDER_TIMEOUT",
+        "failure": "PROVIDER_TIMEOUT"
+      },
+      "members": [
+        {
+          "cell_id": "cell:s03:r6:c5",
+          "label": "Financials!E6",
+          "disposition": {
+            "cell": [
+              "Financials",
+              6,
+              5
+            ],
+            "status": "PROVIDER_TIMEOUT",
+            "failure": "PROVIDER_TIMEOUT"
+          },
+          "independent": true,
+          "promoted_to_independent": false,
+          "failed_canonical_member": false
+        },
+        {
+          "cell_id": "cell:s03:r6:c6",
+          "label": "Financials!F6",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        }
+      ]
+    },
+    {
+      "group_id": "G16",
+      "canonical_cell_id": "cell:s03:r68:c5",
+      "canonical_label": "Financials!E68",
+      "canonical_outcome_class": "UNATTEMPTED_INDEPENDENT",
+      "canonical_disposition": null,
+      "members": [
+        {
+          "cell_id": "cell:s03:r68:c5",
+          "label": "Financials!E68",
+          "disposition": null,
+          "independent": true,
+          "promoted_to_independent": false,
+          "failed_canonical_member": false
+        },
+        {
+          "cell_id": "cell:s03:r68:c6",
+          "label": "Financials!F68",
+          "disposition": null,
+          "independent": false,
+          "promoted_to_independent": false,
+          "failed_canonical_member": true
+        }
+      ]
+    }
+  ],
+  "calls": [
+    {
+      "call_index": 1,
+      "stage": "task_ir",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0034769,
+      "request_sha256": "788df848d04c88790f617546741fa137ccd3055dc93c9771aa8e4dfa98e02d30"
+    },
+    {
+      "call_index": 2,
+      "stage": "edit_plan",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.00781038475,
+      "request_sha256": "7ee5287771d2cd11220d55be13d056563e63d340001ffb2c6b27cc0c821461be"
+    },
+    {
+      "call_index": 3,
+      "stage": "edit_plan",
+      "failure_class": "TRUNCATED_NO_CONTENT",
+      "finish_reason": "length",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0338216,
+      "request_sha256": "60f63351c7a8c4426a40d911db86dbd4854a2d1f14bca2a4f5c4996445f599a0"
+    },
+    {
+      "call_index": 4,
+      "stage": "edit_plan",
+      "failure_class": "PROVIDER_TIMEOUT",
+      "finish_reason": null,
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0,
+      "request_sha256": "f2dcb734208c8f57a61255ddc410c6944818e43e9afbcf880520f9eac7c7666b"
+    },
+    {
+      "call_index": 5,
+      "stage": "edit_plan",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.00741155,
+      "request_sha256": "219b547f21b7164245eda77e7b47a149eac32c5e20c7bf08a5e5162b3fe50180"
+    },
+    {
+      "call_index": 6,
+      "stage": "edit_plan",
+      "failure_class": "PROVIDER_TIMEOUT",
+      "finish_reason": null,
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0,
+      "request_sha256": "54030e8488943be2cdcb29b33ad87c56c2bc6dcd6ea8dc046f421eff749f679d"
+    },
+    {
+      "call_index": 7,
+      "stage": "edit_plan",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.00828162,
+      "request_sha256": "1bc87fe4dccc88b3c45aa9d1b8f53eca0ca5948dd7d2b15ce57ee2f783de090b"
+    },
+    {
+      "call_index": 8,
+      "stage": "edit_plan",
+      "failure_class": "TRUNCATED_NO_CONTENT",
+      "finish_reason": "length",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0339923,
+      "request_sha256": "3abb8f66da6c64945cac01d77e8101df5b300fad27c3810f57de0b224553a402"
+    },
+    {
+      "call_index": 9,
+      "stage": "edit_plan",
+      "failure_class": "TRUNCATED_NO_CONTENT",
+      "finish_reason": "length",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.03384635,
+      "request_sha256": "3124357211c48582a6f9a8520440cedb7df637e6a1ab4b33e10f94d1a1090618"
+    },
+    {
+      "call_index": 10,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0056516,
+      "request_sha256": "39bc7d6654cfabdd23a007208d540eb239f7bb17f320f02e9568c637ebc55d28"
+    },
+    {
+      "call_index": 11,
+      "stage": "retrieval",
+      "failure_class": "PROVIDER_TIMEOUT",
+      "finish_reason": null,
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0,
+      "request_sha256": "9f0dce69ad9d699af793d84696a16dac33c08dfcc89e62be75924a158cac2075"
+    },
+    {
+      "call_index": 12,
+      "stage": "synthesis",
+      "failure_class": "PROVIDER_TIMEOUT",
+      "finish_reason": null,
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0,
+      "request_sha256": "7b8d399bb345ff9b77ac9791b860fa6e9f878e05ddf34d2084bc8bbff71455ab"
+    },
+    {
+      "call_index": 13,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.00335605,
+      "request_sha256": "0ee14e88579952db538e0fcf909c2c40c1c00cc82086d4cbfc8b7ce7db12ae8a"
+    },
+    {
+      "call_index": 14,
+      "stage": "synthesis",
+      "failure_class": "PROVIDER_TIMEOUT",
+      "finish_reason": null,
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0,
+      "request_sha256": "35a6812b52d21ce79dc1cb54e0d1d22e228ddce3b59dc3be8eb70dd5d267989e"
+    },
+    {
+      "call_index": 15,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0787162,
+      "request_sha256": "290d4334642c01838f6993ceebdd5bb068494af1f38817e0f2ad4e308c77393f"
+    },
+    {
+      "call_index": 16,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0006506,
+      "request_sha256": "ee844145973e855dc0606243c5798682b2049fe555366a8de694d1c1850a4238"
+    },
+    {
+      "call_index": 17,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.00131115,
+      "request_sha256": "cccf131c09f627b483bfa0bc9b6f8d8d947b6250d161426035e64367b40257d8"
+    },
+    {
+      "call_index": 18,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.013119,
+      "request_sha256": "e0bcf455d78cd15ee0dcd74a5e4c4f2ab5fa363db20a3254beaba03254bd0a7e"
+    },
+    {
+      "call_index": 19,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0070165,
+      "request_sha256": "590d4a980f3e004096cbb5010ffbe403664b6570630cce99d92fe756ac2cf606"
+    },
+    {
+      "call_index": 20,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0026656,
+      "request_sha256": "5efd8ea7477cecacea53c2d9e9fb47714e0e14941f7965c9227c2c6a8aa47b8a"
+    },
+    {
+      "call_index": 21,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0048349,
+      "request_sha256": "738cb8dbb44fcd7694f26e205eb2efa9a84b7c62854cab21b2f38d64b89147bc"
+    },
+    {
+      "call_index": 22,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0062524,
+      "request_sha256": "8affda1503cbef6d1534ea897ca21dc2bc980b3f552f70c14a27fdde353ec04f"
+    },
+    {
+      "call_index": 23,
+      "stage": "synthesis",
+      "failure_class": "SESSION_RESOURCE_LIMIT",
+      "finish_reason": null,
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0,
+      "request_sha256": "e073eb785ed66f5f2f66e170908fddcc5b8775daa4ce9bc182d9bda6298d045d"
+    },
+    {
+      "call_index": 24,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0028777125,
+      "request_sha256": "44627c3a47b8c37bc2eaaa97db05a07e2d415a4a546eb77f47065933e3dbe19f"
+    },
+    {
+      "call_index": 25,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0006144,
+      "request_sha256": "eebc9bccb57cf4b1ec73428870859ff4ac968d0d026a11d87880abac0090c8a2"
+    },
+    {
+      "call_index": 26,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.00194088,
+      "request_sha256": "acd9c408328ff1537518aa5e729d7aab9c22bb427be1216cd4e8b38b37ef90af"
+    },
+    {
+      "call_index": 27,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0008335125,
+      "request_sha256": "ef9ddf13b475abf471d218e4774f5091b287e6c6cfdee6a32a7018f2c4e32148"
+    },
+    {
+      "call_index": 28,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0013485675,
+      "request_sha256": "b469085db8b387bbdfa8688312c03856a4fc77b496ec12e1d53f4623f1e13c40"
+    },
+    {
+      "call_index": 29,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.00299805,
+      "request_sha256": "700900b1802055c757aec6e4d4980be23c472cb728853cf527de79cb64b5f1eb"
+    },
+    {
+      "call_index": 30,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0011429625,
+      "request_sha256": "2d621649b9cc19a9692e0a318d835d341ce7d05be92db5c85cd09006f165a4ba"
+    },
+    {
+      "call_index": 31,
+      "stage": "retrieval",
+      "failure_class": "PROVIDER_TIMEOUT",
+      "finish_reason": null,
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0,
+      "request_sha256": "6c0bcbfacd3188310a43b880dc02e1472722e6f5293c00251cae4fc2a2c5e14a"
+    },
+    {
+      "call_index": 32,
+      "stage": "synthesis",
+      "failure_class": "PROVIDER_TIMEOUT",
+      "finish_reason": null,
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0,
+      "request_sha256": "1c49034897db823cef92d44a3d7d237aa93cf2fbaaf4ee3ed4be3f4c20a1a685"
+    },
+    {
+      "call_index": 33,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.00389665,
+      "request_sha256": "4264221babfd5458d8ad10219b34a8d658343f2a6b69685df2ae201973a9cce6"
+    },
+    {
+      "call_index": 34,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0033020925,
+      "request_sha256": "a173770a35b24ad7962df3049f3d39abb7edacab7c79ae37a29fa108fd24790d"
+    },
+    {
+      "call_index": 35,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0018958875,
+      "request_sha256": "659b4bdcd0e5b2a00ce514431f74eced8a2033cc39a629b8e525a8918ae3c563"
+    },
+    {
+      "call_index": 36,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0030706575,
+      "request_sha256": "4c5f81a66b44ae46e8b0f78db16d546b4f1ecaeac29bd9445d22f6e279259080"
+    },
+    {
+      "call_index": 37,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0005070075,
+      "request_sha256": "06b66271922a8c0899baa511917c8eadc5ff7d6e5b2df87dcb8978516b6f8069"
+    },
+    {
+      "call_index": 38,
+      "stage": "synthesis",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0056049,
+      "request_sha256": "5a2b60255007c37bef82300c17c2550ed76a26e614001e7e4303a4ae2c49b06f"
+    },
+    {
+      "call_index": 39,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0040555125,
+      "request_sha256": "0b69a6e337485e20b739b33f4feacec9ffe11618629b048e1f76d434fd1311c2"
+    },
+    {
+      "call_index": 40,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0022750125,
+      "request_sha256": "2439c77611571e232e503b7c95bee7543c1b91aeda6ec0c9c9673e6825925584"
+    },
+    {
+      "call_index": 41,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.00043767,
+      "request_sha256": "55edac9bbe107144776b5b3737fa67768b6069a1d44f99b44defd05179e5728d"
+    },
+    {
+      "call_index": 42,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0010002,
+      "request_sha256": "e0b874cb966bd316586d088c547e9e82a6ae7d96525bd0f3dbd5f25b723ccde8"
+    },
+    {
+      "call_index": 43,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.00127169714,
+      "request_sha256": "c87c672c274d440d06083f1d85211430cac2a6185953675ba3e71ee0009bf343"
+    },
+    {
+      "call_index": 44,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.00322395815,
+      "request_sha256": "ceb0dfaf728c3fc3163dc151d960953da96cd8e64fefeccd55499777da5e6b4c"
+    },
+    {
+      "call_index": 45,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0027566945,
+      "request_sha256": "cd29cd0e1401c60cdcd40d518bd7eb8da1c4622337bafd972d75611c74f7f693"
+    },
+    {
+      "call_index": 46,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0020254875,
+      "request_sha256": "9d92468aa16f2b70644799f57877e43a9dd624146e20adf966754412d22e974a"
+    },
+    {
+      "call_index": 47,
+      "stage": "synthesis",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0075935625,
+      "request_sha256": "e1950d28cfe15b99f916e417b325c4a48378cd8080ceb3a4f70035d6943871bc"
+    },
+    {
+      "call_index": 48,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0017620125,
+      "request_sha256": "e426ca0becee373cd8abf4cd874adf5f25bce5f43bc1e14724ad66bafcd8ae86"
+    },
+    {
+      "call_index": 49,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.001683225,
+      "request_sha256": "846fcfdbf1bb2e08183c035e997e89af13df7a5307cfa7936193951250cc1e66"
+    },
+    {
+      "call_index": 50,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.004873845,
+      "request_sha256": "f0c3d15ff4bfc1a34496897c140bd1c2f1495eeaf4024fd0e3a64471de9fc705"
+    },
+    {
+      "call_index": 51,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.00114867389,
+      "request_sha256": "417e713f4d198a2e8b9147561397112e37c5d28f49ae93e1102ce764a3b048b9"
+    },
+    {
+      "call_index": 52,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0009020207,
+      "request_sha256": "70b09c43d12d0ff7d5c9011933527e12610367b890b124b870e309620ac0a754"
+    },
+    {
+      "call_index": 53,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0007844277,
+      "request_sha256": "865a99c9b33824ff04a640af7d679bd42dcb5852590445eeeeb32f499b67821f"
+    },
+    {
+      "call_index": 54,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.002124195,
+      "request_sha256": "609d57b9adb2a4fce803c8e2f5c004fcb8726a3ad03dda36d845bd4e59a1fafe"
+    },
+    {
+      "call_index": 55,
+      "stage": "retrieval",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0031378606,
+      "request_sha256": "4b8376641bd7f143759a88070630a6164730d42f1fa58a5e3a10942d3e3e900d"
+    },
+    {
+      "call_index": 56,
+      "stage": "synthesis",
+      "failure_class": null,
+      "finish_reason": "stop",
+      "provider_attempt": null,
+      "provider_cost_usd": 0.0101135223,
+      "request_sha256": "81e54077ffa76241935362431af0f20fea4499d051dc829e7bc28aa583f48fe8"
+    }
+  ],
+  "scheduler_failures": [
+    {
+      "cell": [
+        "Financials",
+        6,
+        5
+      ],
+      "stage": "synthesis",
+      "failure_class": "PROVIDER_TIMEOUT"
+    }
+  ],
+  "archive_file_sha256": {
+    "state.json": "6e718a89e49995bd67f64d90c213fb2037cd80b172713ec9a4f60dfaa5d28729",
+    "output.xlsx": "778697c92c78c44e765535c4d7dd7a1bca016099500dc1cbaa161137fc66ff30",
+    "result.json": "6e86185b03e8bd96298f452b1db1e26b0c759ec9f2b0ed0f0f870e86139d8859",
+    "calls/007_edit_plan.json": "e5885a8401f749d3b6530e35723cb2bd41922c9747e0703809ddb6f799899fc0",
+    "calls/001_task_ir.json": "d1a6e5fe5b08767756731cdbeabeb5f301c5d863087b32f84cb1b223cdea8400",
+    "calls/016_retrieval.json": "78ea482fc686962b378170f15ee46a41154c486b2fb8caf59bc5f8bc31b91971",
+    "calls/002_edit_plan.json": "2807cb1fe40dcbef29d717ed7dddbe0525b8bf81c4c061ac6ba835f8daa56d0b",
+    "calls/005_edit_plan.json": "4d8cb16454d91a6a48144eea9864e674a5369ef5ec12cab5d7baa3e9dba67ada",
+    "calls/019_retrieval.json": "c0454e94045101c53d83dccc3aec4564ef75ba21806989fef7aea4c89959f4e0",
+    "calls/018_retrieval.json": "91273fd292f3aadf1ad80f580583f44b08a73f8cb27714d13840a10bbdbf9329",
+    "calls/013_retrieval.json": "3b467dc57071f3340647d9f8faaa7fb254e71cbcaef4020898cd747965412ef1",
+    "calls/009_edit_plan.json": "3768230b59e39aab58070053de98aad046dd973fdb21a0e266222da987e3d2a6",
+    "calls/012_synthesis.json": "6ff7307bb00875a7b91521db98cae7a695e2c0ab66ee818eeff48616ba80664e",
+    "calls/011_retrieval.json": "27b1d92eb5a5d83070bf644fab33866727073978aef68a89f9f5cdc21e6c9358",
+    "calls/010_retrieval.json": "fabf73952c4e5348a8bf9b55c6d1aa5b01511cc3bdbf7c2ccf66ab1dbee780a1",
+    "calls/006_edit_plan.json": "2bdb8e369cf810c905a8408d38edef9bd3d08e48d32bd41ebf256645aa796dbb",
+    "calls/023_synthesis.json": "25ea1911b5363c60acefcd1dc2d204455ba0dc6849d6abe349ed0aa63016beeb",
+    "calls/004_edit_plan.json": "8e57997c2fec8b8779954735b29c0e68eae8f7e83b876aca2b4e555c077383fb",
+    "calls/022_retrieval.json": "bff71147fd1426585333515f97e6f38170950d96b97241365a4306f8bba83411",
+    "calls/020_retrieval.json": "ce355e10515ab175adfd46695f4def044aaf28a02e80ae927857304a3cb016e7",
+    "calls/015_retrieval.json": "8084647debb674e6f22456a694cfdbfe1ac637d61cce45b9d29b6d0655141aae",
+    "calls/014_synthesis.json": "f32ecf0fe1753621938a7830cd841ab2b7098776226257a9239a09657b0d4869",
+    "calls/003_edit_plan.json": "77427aef8b35080b8d7031e74dc2f27ccb99e81e91b34456147e7a6a062db568",
+    "calls/021_retrieval.json": "d6e6aeecf0073b5f506e464cdf2ae03e349ecc80730e50249800c10560e95ade",
+    "calls/008_edit_plan.json": "942b621057b1ef5d0fe6d347ac4bfd1bb352ba7acd78b315f10f07985f076ec2",
+    "calls/017_retrieval.json": "0fd8c2a60514914d39e35faad111f79bf96a6d2fb4c626a328dd9d0edca57505"
+  },
+  "result_schedule": {},
+  "verdict": "SCHEDULER_LIVENESS_DEFECT_REMAINS",
+  "interpretation": "This continuation validates scheduler liveness only. Formula correctness and scoring were not measured.",
+  "task_instruction": "Complete the financial model based on the provided assumptions. Ensure the existing structure, layout, and formatting of the model are preserved throughout the process.\nIn the Financials sheet, calculate CAGR for both historical and forecast periods for each relevant metric, then calculate YoY Revenue Growth, then calculate Reported EPS (Basic) growth YoY. In the Assumptions sheet, calculate Average Days Inventory and derive forecast inventory balances. In the Ratios sheet, calculate Total Asset Turnover for all periods. In the Valuation sheet, calculate Discounted FCFF for each forecast year, then calculate Present Value of Equity and Value per Share."
+}

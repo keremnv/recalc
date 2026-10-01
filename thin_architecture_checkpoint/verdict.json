@@ -1,0 +1,17 @@
+{
+ "verdict": "THIN_ARCHITECTURE_CAPABILITY_NEUTRAL_NO_EFFICIENCY_GAIN",
+ "capability_gate": "PASS: no reproducible systematic H1 degradation (7 discordances: 5 variance-resolved, 1 H1-favoring repeat, 1 third-rep joint-failure variance T:02_05)",
+ "failure_boundary_T0205": "MODEL_BEHAVIOR_VARIANCE (H0 itself 0.85/0.90/0.00 across reps; H1 failures helper-contact-free, two distinct modes)",
+ "integrity": "CLEAN: 0 runtime failures, all replay-exact, freshness perfect",
+ "adoption": "4/24 H1 runs, 21 calls, FM-only; beyond single witness but narrow",
+ "efficiency": "NO mechanism-aligned arm-level gain; aggregates confounded by note-salience + trajectory variance",
+ "positive_criteria": {
+  "1_no_degradation": true,
+  "2_no_integrity_failure": true,
+  "3_adoption_beyond_trivial": true,
+  "4_exposure_reduction_when_adopted": false,
+  "5_aggregate_non_adverse": true,
+  "6_freshness_perfect": true,
+  "note": "criterion 4 fails: B-cohort tokens +5%; adopted-run savings are authoring-only and inconsistent (09_05 inspected MORE than H0)"
+ }
+}

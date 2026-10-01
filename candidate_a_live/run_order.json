@@ -1,0 +1,66 @@
+{
+  "primary": [
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Financial_Model:07_01"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Financial_Model:07_01"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Financial_Model:08_03"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Financial_Model:08_03"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Financial_Model:08_01"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Financial_Model:08_01"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Financial_Model:06_01"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Financial_Model:06_01"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Debugging:01_06"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Debugging:01_06"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Debugging:05_02"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Debugging:05_02"
+    }
+  ],
+  "randomization": "within-task arm shuffle",
+  "seed": 20260920
+}

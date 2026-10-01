@@ -1,0 +1,1051 @@
+{
+ "method": {
+  "offline": "openpyxl cache comparison via characterize_commit_checks._cell_map + new_formula_errors (with DataTable normalization)",
+  "live_plain": "gate-_read_workbook exact: open input + saved output through UNO, read used ranges include_errors=True, cell_map_from_reads, new_formula_errors. No explicit recalc.",
+  "live_recalc_output": "open output through UNO, doc.calculateAll(), save recalculated copy to /tmp, then live_plain on (input, recalculated copy). Mirrors the live write path (calculate before save) and the task recipe step 2. REQUIRED for openpyxl-written outputs with stale/empty caches.",
+  "live_recalc_both": "recalculated copies of both input and output (sensitivity mode; used on 2 tasks, agreed with recalc-output)",
+  "engine": "LibreOffice 26.2.5.2 via pyuno, localhost:2021, isolated UserInstallation profile"
+ },
+ "mode_comparison": {
+  "finding": "plain vs recalc-output AGREE on calc-tools (UNO-written, fresh-cache) outputs AND on openpyxl outputs the agent itself ran through LO; they DISAGREE (0 vs N) on cache-less openpyxl outputs (sixty-02_06: plain 0 vs recalc 30; 10_02 OFF/ON: identical 30/18). recalc-output is the live-equivalent truth for archived ordinary-agent outputs.",
+  "pairs_compared": "10_02 ON/OFF x2 modes, 01_01, 09_09, 06_05-H0, 02_06 liveT/sixty x2 modes, Phase-4 OFF/ON all tasks x2 modes"
+ },
+ "archived_report_parity": {
+  "10_02_ON_final": "replay 18 (both modes) == archived live 30 at submit minus exactly the 12 shown repaired cells; cell SETS match (FY2024A C6:N6 gone, FY2027P/FY2028P 4+14 remain)",
+  "10_02_OFF_final": "replay 30 (both modes); cross-arm difference 30-18=12 == repaired shown set",
+  "297_submit_counts": "all LO-sampled finals match archived submit-stage counts (02_05: 30, 03_04: 12, 01_03: 4)",
+  "297_write_only_resolved": "all LO-sampled write-only-submitted finals show 0 NFE (03_01: 210->0, 06_01: 52->0, 06_02: 52->0, 06_06: 58->0, 06_09: 44->0, 09_04: 26->0, 09_08: 26->0, 09_09: 26->0, 04_04: 85->0, 07_02: 6->0, 01_02: 8->0)",
+  "kind_label_caveat": "COUNTS and CELL SETS reproduce exactly; KIND labels can shift between the live doc state and a reopened replay (10_02 archived #REF! x30 vs replay #NAME? x30; same cells). Cause: LO version/flavor mapping of =#REF! formulas across save/reload (container LO then vs LO 26.2 now). Future experiments must read kinds live, never assume them from replay."
+ },
+ "offline_vs_live_disagreement": {
+  "comparable_finals": 98,
+  "exact_agreement": 60,
+  "overcount_direction": "offline >> live when input caches are missing (Excel inputs often carry formulas with NO cached value): 09_09 458->0, 06_09 518->0, 09_04 458->0, 10_02 257->30. The offline path mistakes pre-existing input errors with absent caches for new output errors.",
+  "undercount_direction": "offline << live when output caches are stale/empty (openpyxl-written, never recalculated): 02_01/02_06/02_09 0->30, 07_03 0->36, 10_10-spark 0->147. The offline path is BLIND to genuine new errors without caches.",
+  "verdict": "raw openpyxl cache comparison is unusable for task selection in EITHER direction on this population. All selection in this probe uses live-equivalent (LO recalculated) counts only."
+ },
+ "comparable_pairs": [
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:01_01",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:01_06",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:02_01",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 30,
+   "offline_kinds": {},
+   "live_kinds": {
+    "Err:522": 30
+   },
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:02_06",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 30,
+   "offline_kinds": {},
+   "live_kinds": {
+    "Err:522": 30
+   },
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:03_01",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:03_06",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:04_01",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:04_07",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:05_02",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:05_08",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:06_02",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:06_07",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:07_03",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 36,
+   "offline_kinds": {},
+   "live_kinds": {
+    "Err:522": 36
+   },
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:07_08",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:08_04",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:08_09",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:09_04",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:09_09",
+   "mode": "recalc-output",
+   "offline_nfe": 458,
+   "live_nfe": 0,
+   "offline_kinds": {
+    "#VALUE!": 458
+   },
+   "live_kinds": {},
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:10_05",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 3,
+   "offline_kinds": {},
+   "live_kinds": {
+    "Err:522": 3
+   },
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-control-census-sixty-1||Debugging:10_10",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-fifteen-1||Debugging:02_09",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 30,
+   "offline_kinds": {},
+   "live_kinds": {
+    "Err:522": 30
+   },
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-control-fifteen-1||Debugging:04_09",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 4,
+   "offline_kinds": {},
+   "live_kinds": {
+    "#DIV/0!": 4
+   },
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-control-fifteen-1||Debugging:06_09",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-fifteen-1||Debugging:08_10",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-fifteen-1||Debugging:10_10",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-fifteen-2||Debugging:02_09",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 30,
+   "offline_kinds": {},
+   "live_kinds": {
+    "Err:522": 30
+   },
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-control-fifteen-2||Debugging:04_09",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-fifteen-2||Debugging:06_09",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-control-fifteen-2||Debugging:08_10",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-catalog-control-eight-1||Debugging:01_02",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-catalog-control-eight-1||Debugging:01_05",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-catalog-control-eight-1||Debugging:02_05",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 30,
+   "offline_kinds": {},
+   "live_kinds": {
+    "Err:522": 30
+   },
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-catalog-control-eight-1||Debugging:09_09",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-catalog-control-eight-2||Debugging:01_02",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-catalog-control-eight-2||Debugging:01_05",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-catalog-control-eight-2||Debugging:02_05",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 30,
+   "offline_kinds": {},
+   "live_kinds": {
+    "Err:522": 30
+   },
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-catalog-control-eight-2||Debugging:09_09",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-fill-c0-Debugging-10_04-r1||Debugging:10_04",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "spark-sidecar-c0-Debugging-01_01-r1||Debugging:01_01",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "spark-sidecar-c0-Debugging-10_10-r1||Debugging:10_10",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 147,
+   "offline_kinds": {},
+   "live_kinds": {
+    "Err:522": 147
+   },
+   "agree": false
+  },
+  {
+   "pair": "newscaffold||representative:H0:06_05",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "newscaffold||representative:H1:03_06",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "newscaffold||batch_write_helper_ab/reps/Debugging_02_01_C0/output.xlsx",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 30,
+   "offline_kinds": {},
+   "live_kinds": {
+    "Err:522": 30
+   },
+   "agree": false
+  },
+  {
+   "pair": "newscaffold||inspection_efficiency_ab/reps/Debugging_02_06_C0/output.xlsx",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 30,
+   "offline_kinds": {},
+   "live_kinds": {
+    "Err:522": 30
+   },
+   "agree": false
+  },
+  {
+   "pair": "newscaffold||inspection_efficiency_ab/reps/Debugging_02_06_C1/output.xlsx",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 30,
+   "offline_kinds": {},
+   "live_kinds": {
+    "Err:522": 30
+   },
+   "agree": false
+  },
+  {
+   "pair": "newscaffold||live_transparent_runtime_ab/runs/Debugging/Debugging_02_06_H0/output.xlsx",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 30,
+   "offline_kinds": {},
+   "live_kinds": {
+    "Err:522": 30
+   },
+   "agree": false
+  },
+  {
+   "pair": "newscaffold||targeted_runtime_replication/reps/Debugging_02_06_rep1_H0/output.xlsx",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 30,
+   "offline_kinds": {},
+   "live_kinds": {
+    "Err:522": 30
+   },
+   "agree": false
+  },
+  {
+   "pair": "kimi-k2.7-commit-gate-off-low-1||Debugging:05_03",
+   "mode": "plain",
+   "offline_nfe": 21,
+   "live_nfe": 21,
+   "offline_kinds": {
+    "#REF!": 14,
+    "#DIV/0!": 7
+   },
+   "live_kinds": {
+    "#NAME?": 14,
+    "#DIV/0!": 7
+   },
+   "agree": true
+  },
+  {
+   "pair": "kimi-k2.7-commit-gate-off-low-1||Debugging:05_03",
+   "mode": "recalc-output",
+   "offline_nfe": 21,
+   "live_nfe": 21,
+   "offline_kinds": {
+    "#REF!": 14,
+    "#DIV/0!": 7
+   },
+   "live_kinds": {
+    "#NAME?": 14,
+    "#DIV/0!": 7
+   },
+   "agree": true
+  },
+  {
+   "pair": "kimi-k2.7-commit-gate-off-low-1||Debugging:06_01",
+   "mode": "plain",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "kimi-k2.7-commit-gate-off-low-1||Debugging:06_01",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "kimi-k2.7-commit-gate-off-low-1||Debugging:07_01",
+   "mode": "plain",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "kimi-k2.7-commit-gate-off-low-1||Debugging:07_01",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "kimi-k2.7-commit-gate-off-low-1||Debugging:10_02",
+   "mode": "plain",
+   "offline_nfe": 257,
+   "live_nfe": 30,
+   "offline_kinds": {
+    "#REF!": 30,
+    "#VALUE!": 227
+   },
+   "live_kinds": {
+    "#NAME?": 30
+   },
+   "agree": false
+  },
+  {
+   "pair": "kimi-k2.7-commit-gate-off-low-1||Debugging:10_02",
+   "mode": "recalc-output",
+   "offline_nfe": 257,
+   "live_nfe": 30,
+   "offline_kinds": {
+    "#REF!": 30,
+    "#VALUE!": 227
+   },
+   "live_kinds": {
+    "#NAME?": 30
+   },
+   "agree": false
+  },
+  {
+   "pair": "kimi-k2.7-commit-gate-on-low-1||Debugging:06_01",
+   "mode": "plain",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "kimi-k2.7-commit-gate-on-low-1||Debugging:06_01",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "kimi-k2.7-commit-gate-on-low-1||Debugging:07_01",
+   "mode": "plain",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "kimi-k2.7-commit-gate-on-low-1||Debugging:07_01",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "kimi-k2.7-commit-gate-on-low-1||Debugging:10_02",
+   "mode": "plain",
+   "offline_nfe": 245,
+   "live_nfe": 18,
+   "offline_kinds": {
+    "#REF!": 18,
+    "#VALUE!": 227
+   },
+   "live_kinds": {
+    "#NAME?": 18
+   },
+   "agree": false
+  },
+  {
+   "pair": "kimi-k2.7-commit-gate-on-low-1||Debugging:10_02",
+   "mode": "recalc-output",
+   "offline_nfe": 245,
+   "live_nfe": 18,
+   "offline_kinds": {
+    "#REF!": 18,
+    "#VALUE!": 227
+   },
+   "live_kinds": {
+    "#NAME?": 18
+   },
+   "agree": false
+  },
+  {
+   "pair": "kimi-k2.7-commit-write-four-low-1||Debugging:05_03",
+   "mode": "plain",
+   "offline_nfe": 21,
+   "live_nfe": 21,
+   "offline_kinds": {
+    "#REF!": 14,
+    "#DIV/0!": 7
+   },
+   "live_kinds": {
+    "#NAME?": 14,
+    "#DIV/0!": 7
+   },
+   "agree": true
+  },
+  {
+   "pair": "kimi-k2.7-commit-write-four-low-1||Debugging:05_03",
+   "mode": "recalc-output",
+   "offline_nfe": 21,
+   "live_nfe": 21,
+   "offline_kinds": {
+    "#REF!": 14,
+    "#DIV/0!": 7
+   },
+   "live_kinds": {
+    "#NAME?": 14,
+    "#DIV/0!": 7
+   },
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-nonvisual-297-1||Debugging:03_01",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-nonvisual-297-1||Debugging:06_01",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-nonvisual-297-1||Debugging:06_06",
+   "mode": "recalc-output",
+   "offline_nfe": 2,
+   "live_nfe": 0,
+   "offline_kinds": {
+    "#NAME?": 2
+   },
+   "live_kinds": {},
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-nonvisual-297-1||Debugging:06_09",
+   "mode": "recalc-output",
+   "offline_nfe": 518,
+   "live_nfe": 0,
+   "offline_kinds": {
+    "#VALUE!": 516,
+    "#NAME?": 2
+   },
+   "live_kinds": {},
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-nonvisual-297-1||Debugging:09_04",
+   "mode": "recalc-output",
+   "offline_nfe": 458,
+   "live_nfe": 0,
+   "offline_kinds": {
+    "#VALUE!": 458
+   },
+   "live_kinds": {},
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-nonvisual-297-1||Debugging:04_04",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-nonvisual-297-1||Debugging:01_03",
+   "mode": "recalc-output",
+   "offline_nfe": 478,
+   "live_nfe": 4,
+   "offline_kinds": {
+    "#REF!": 478
+   },
+   "live_kinds": {
+    "#NAME?": 4
+   },
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-nonvisual-297-1||Debugging:02_05",
+   "mode": "recalc-output",
+   "offline_nfe": 30,
+   "live_nfe": 30,
+   "offline_kinds": {
+    "#VALUE!": 30
+   },
+   "live_kinds": {
+    "Err:522": 30
+   },
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-nonvisual-297-1||Debugging:02_09",
+   "mode": "recalc-output",
+   "offline_nfe": 106,
+   "live_nfe": 31,
+   "offline_kinds": {
+    "#VALUE!": 106
+   },
+   "live_kinds": {
+    "Err:522": 30,
+    "#VALUE!": 1
+   },
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-nonvisual-297-1||Debugging:10_02",
+   "mode": "recalc-output",
+   "offline_nfe": 227,
+   "live_nfe": 0,
+   "offline_kinds": {
+    "#VALUE!": 227
+   },
+   "live_kinds": {},
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-nonvisual-297-1||Debugging:01_02",
+   "mode": "recalc-output",
+   "offline_nfe": 15,
+   "live_nfe": 0,
+   "offline_kinds": {
+    "#DIV/0!": 15
+   },
+   "live_kinds": {},
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-nonvisual-297-1||Debugging:06_02",
+   "mode": "recalc-output",
+   "offline_nfe": 1,
+   "live_nfe": 0,
+   "offline_kinds": {
+    "#NAME?": 1
+   },
+   "live_kinds": {},
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-nonvisual-297-1||Debugging:09_09",
+   "mode": "recalc-output",
+   "offline_nfe": 499,
+   "live_nfe": 0,
+   "offline_kinds": {
+    "#VALUE!": 458,
+    "#DIV/0!": 41
+   },
+   "live_kinds": {},
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-nonvisual-297-1||Debugging:03_04",
+   "mode": "recalc-output",
+   "offline_nfe": 12,
+   "live_nfe": 12,
+   "offline_kinds": {
+    "#DIV/0!": 4,
+    "#VALUE!": 8
+   },
+   "live_kinds": {
+    "#DIV/0!": 4,
+    "#VALUE!": 8
+   },
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-nonvisual-297-1||Debugging:07_02",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-nonvisual-297-1||Debugging:09_08",
+   "mode": "recalc-output",
+   "offline_nfe": 458,
+   "live_nfe": 0,
+   "offline_kinds": {
+    "#VALUE!": 458
+   },
+   "live_kinds": {},
+   "agree": false
+  },
+  {
+   "pair": "gpt-5.6-sol-nonvisual-all-medium-1||Debugging:01_01",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "gpt-5.6-sol-nonvisual-all-medium-1||Debugging:02_05",
+   "mode": "recalc-output",
+   "offline_nfe": 30,
+   "live_nfe": 30,
+   "offline_kinds": {
+    "#VALUE!": 30
+   },
+   "live_kinds": {
+    "Err:522": 30
+   },
+   "agree": true
+  },
+  {
+   "pair": "gpt-5.6-sol-nonvisual-all-medium-1||Debugging:06_06",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "gpt-5.6-sol-nonvisual-all-medium-1||Debugging:09_09",
+   "mode": "recalc-output",
+   "offline_nfe": 499,
+   "live_nfe": 0,
+   "offline_kinds": {
+    "#VALUE!": 458,
+    "#DIV/0!": 41
+   },
+   "live_kinds": {},
+   "agree": false
+  },
+  {
+   "pair": "gpt-5.6-sol-nonvisual-all-medium-1||Debugging:10_02",
+   "mode": "recalc-output",
+   "offline_nfe": 227,
+   "live_nfe": 0,
+   "offline_kinds": {
+    "#VALUE!": 227
+   },
+   "live_kinds": {},
+   "agree": false
+  },
+  {
+   "pair": "gpt-5.6-sol-nonvisual-all-medium-1||Debugging:03_01",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-catalog-ours-eight-1||Debugging:01_02",
+   "mode": "recalc-output",
+   "offline_nfe": 15,
+   "live_nfe": 0,
+   "offline_kinds": {
+    "#DIV/0!": 15
+   },
+   "live_kinds": {},
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-catalog-ours-eight-1||Debugging:01_05",
+   "mode": "recalc-output",
+   "offline_nfe": 15,
+   "live_nfe": 0,
+   "offline_kinds": {
+    "#DIV/0!": 15
+   },
+   "live_kinds": {},
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-catalog-ours-eight-1||Debugging:02_05",
+   "mode": "recalc-output",
+   "offline_nfe": 30,
+   "live_nfe": 30,
+   "offline_kinds": {
+    "#VALUE!": 30
+   },
+   "live_kinds": {
+    "Err:522": 30
+   },
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-catalog-ours-eight-1||Debugging:09_09",
+   "mode": "recalc-output",
+   "offline_nfe": 499,
+   "live_nfe": 0,
+   "offline_kinds": {
+    "#VALUE!": 458,
+    "#DIV/0!": 41
+   },
+   "live_kinds": {},
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-catalog-ours-eight-2||Debugging:01_02",
+   "mode": "recalc-output",
+   "offline_nfe": 15,
+   "live_nfe": 0,
+   "offline_kinds": {
+    "#DIV/0!": 15
+   },
+   "live_kinds": {},
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-catalog-ours-eight-2||Debugging:01_05",
+   "mode": "recalc-output",
+   "offline_nfe": 15,
+   "live_nfe": 0,
+   "offline_kinds": {
+    "#DIV/0!": 15
+   },
+   "live_kinds": {},
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-catalog-ours-eight-2||Debugging:02_05",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-catalog-ours-eight-2||Debugging:09_09",
+   "mode": "recalc-output",
+   "offline_nfe": 499,
+   "live_nfe": 0,
+   "offline_kinds": {
+    "#VALUE!": 458,
+    "#DIV/0!": 41
+   },
+   "live_kinds": {},
+   "agree": false
+  },
+  {
+   "pair": "glm-5.3-flash-strict-fifteen-unbounded-1||Debugging:02_09",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-strict-fifteen-unbounded-1||Debugging:04_09",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-strict-fifteen-unbounded-1||Debugging:06_09",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-5.3-flash-strict-fifteen-unbounded-1||Debugging:08_10",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  },
+  {
+   "pair": "glm-read-ranges-schema-probe-2||Debugging:06_09",
+   "mode": "recalc-output",
+   "offline_nfe": 0,
+   "live_nfe": 0,
+   "offline_kinds": {},
+   "live_kinds": {},
+   "agree": true
+  }
+ ]
+}

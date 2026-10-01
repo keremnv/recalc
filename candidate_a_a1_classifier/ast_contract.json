@@ -1,0 +1,22 @@
+{
+  "categories": [
+    "STRING_LITERAL_WITH_COLON",
+    "PYTHON_SEQUENCE_SLICE",
+    "WORKBOOK_SINGLE_CELL_SUBSCRIPT",
+    "WORKBOOK_RANGE_SUBSCRIPT",
+    "WORKSHEET_CELL_CALL",
+    "ITER_ROWS_VALUES_ONLY",
+    "CELL_OBJECT_ITERATION",
+    "UNKNOWN_DYNAMIC_SUBSCRIPT"
+  ],
+  "fail_closed": true,
+  "provenance": [
+    "load_workbook assignment",
+    "workbook single-sheet lookup",
+    "worksheet aliases",
+    "worksheet cell alias",
+    "single cell assignment"
+  ],
+  "range_rule": "only proven worksheet range/object syntax preserves fallback; unrelated strings/sequences do not trigger range fallback",
+  "semantic_surface": "unchanged frozen A0 surface"
+}

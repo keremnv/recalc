@@ -1,0 +1,56 @@
+{
+  "coordinate_row_column": {
+    "must_match": [
+      "coordinate string",
+      "1-based row",
+      "1-based column"
+    ]
+  },
+  "data_type": {
+    "must_match": [
+      "f",
+      "s",
+      "inlineStr",
+      "n",
+      "b",
+      "d",
+      "e"
+    ]
+  },
+  "exceptions": {
+    "must_match": [
+      "missing-sheet KeyError",
+      "invalid-coordinate ValueError",
+      "no silent unsupported rewrite"
+    ]
+  },
+  "identity": {
+    "policy": "escaped proxy objects force predeclared real-openpyxl path"
+  },
+  "iter_rows_values_only": {
+    "must_match": [
+      "generator behavior",
+      "row-major order",
+      "tuple shape",
+      "blank cells",
+      "bounds"
+    ]
+  },
+  "sheetnames": {
+    "must_match": [
+      "order",
+      "metadata-only sheets",
+      "Unicode names"
+    ]
+  },
+  "value": {
+    "data_only": "predeclared real-openpyxl fallback",
+    "must_match": [
+      "Python scalar type",
+      "None/blank",
+      "formula text",
+      "error representation",
+      "date/datetime/time"
+    ]
+  }
+}

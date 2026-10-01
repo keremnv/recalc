@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/kerem/Desktop/Personal Projects/librecalc-mcp/phase12r/enrich_audit.py", line 68, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "/home/kerem/Desktop/Personal Projects/librecalc-mcp/phase12r/enrich_audit.py", line 23, in main
+    r['calculation_settings']={'V0':calc(r.get('V0_artifact') or r['V0_source']),'V1':calc(r.get('V1_artifact'))}
+                                    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kerem/Desktop/Personal Projects/librecalc-mcp/phase12r/enrich_audit.py", line 12, in calc
+    with zipfile.ZipFile(ROOT/path) as z:
+         ~~~~~~~~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.14/zipfile/__init__.py", line 1471, in __init__
+    self._RealGetContents()
+    ~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.14/zipfile/__init__.py", line 1538, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file
+history qualification added 1222 proven historical cache-sensitive scores 9

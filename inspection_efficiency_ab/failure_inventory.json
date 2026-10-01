@@ -1,0 +1,11 @@
+{
+ "runtime_telemetry_failures_post_fix": 0,
+ "delta_construction_dir_entry_bug": {
+  "found": "1 replay mismatch (Template:01_07 C0 r1, created file with explicit zip dir entries)",
+  "impact": "telemetry-only; committed bytes always == Python-produced (persisted=true); zero score effect",
+  "fix": "explicit deleted flag on ChangedPart; 8/8 runtime tests pass incl. new regression test; all 15 Stage-B outputs re-verified part-exact",
+  "boundary": "DELTA_CONSTRUCTION"
+ },
+ "helper_errors_model_visible": 0,
+ "capability_losses_attributable_to_helpers": 0
+}

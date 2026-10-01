@@ -1,0 +1,18 @@
+{
+  "code_sha256": {
+    "prototype.py": "a6e95f1503ec6090d6176065471372924bf447f907a2a428faceee12a2f72473",
+    "run_correctness.py": "998ccd11fe39b023b3889a5bc550bd971be8e83f737fb4229f70f98b8ef567de",
+    "run_timings.py": "3dcef030a51be2cd8d4a4f20eca180adb7555d049e0517920d6906225f45f80e"
+  },
+  "earlier_runs": {
+    "v1": "hardlink staging aborted before rows",
+    "v2": "partial correctness; openpyxl oracle failure discovered",
+    "v3": "complete correctness; construction stopped after profiler overhead discovered",
+    "v4": "complete correctness/timings; R3 artifact not self-contained; complete ledgers preserved"
+  },
+  "phase": "pre_correctness_gate_v5",
+  "python": "3.13.12",
+  "spec_file": "PREREGISTERED_SPEC_v5.md",
+  "spec_sha256": "70a0bffe9402a79907aa63bdc7ae3188b758c4316cc79b91914ca5902af8a869",
+  "v4_restart": "index-ready partial rows archived after server restart; complete phase rerun without code change"
+}

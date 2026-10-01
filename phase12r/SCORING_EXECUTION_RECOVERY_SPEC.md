@@ -1,0 +1,7 @@
+# Frozen scoring execution recovery
+
+Retry every primary row whose current V0 or V1 official output records the auxiliary `DimensionHolder` deserialization exception, regardless of score, category, or recalc status. Preserve all first-pass ledgers, source files, result files and their freezes. The lossless DimensionHolder reducer preserves dictionary items, attributes, graph references and default_factory; auxiliary parse cache keys include its hash. No workbook repair, recalculation change, scorer/data change, threshold change, model involvement, or new causal contrast is allowed.
+
+Use identical V0 and existing mode-4 V1 bytes, frozen replay.py classification and official evaluator. Reuse only the existing recalculation by source identity; assert V1 hash equality. Write separate scoring_recovery artifacts and normalized execution results, and add references to the correction ledger. The historical original score and first-pass values remain separate. Technical recovery is not the sole causal follow-up. Native malformed XML and unsupported cases remain explicit. Stop on source/evaluator/frozen hash drift, workbook change, parity failure, or execution limit; errors remain unresolved.
+
+Validate native-versus-wrapper score/count parity and nested serialization graph parity before execution. One subprocess per row, 7 GiB memory and 900-second row timeout. Freeze selected IDs and implementation identities before processing. Never infer semantic failure from a technical score error.

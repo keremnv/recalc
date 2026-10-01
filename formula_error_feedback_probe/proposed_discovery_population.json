@@ -1,0 +1,178 @@
+{
+ "clean_control": {
+  "01_06": {
+   "control_mods": {
+    "sixty_control": 0.9981
+   },
+   "ordinary_nfe": [
+    0
+   ],
+   "role": "negative control: expected no report, treatment==control",
+   "tier": "C"
+  }
+ },
+ "enriched": [
+  {
+   "error_kinds": [
+    "Err:522"
+   ],
+   "headroom_min_calls": 23,
+   "n_firing_ordinary_outputs": 1,
+   "ordinary_evidence": [
+    {
+     "mod": 0.2627,
+     "nfe": 3,
+     "run": "sixty-control"
+    }
+   ],
+   "task": "10_05",
+   "tier": "C"
+  },
+  {
+   "error_kinds": [
+    "Err:522"
+   ],
+   "headroom_min_calls": 35,
+   "n_firing_ordinary_outputs": 1,
+   "ordinary_evidence": [
+    {
+     "mod": 0.0,
+     "nfe": 36,
+     "run": "sixty-control"
+    }
+   ],
+   "task": "07_03",
+   "tier": "C"
+  },
+  {
+   "error_kinds": [
+    "Err:522"
+   ],
+   "headroom_min_calls": 31,
+   "n_firing_ordinary_outputs": 2,
+   "ordinary_evidence": [
+    {
+     "mod": 0.9651,
+     "nfe": 30,
+     "run": "sixty-control"
+    },
+    {
+     "mod": 0.0,
+     "nfe": 30,
+     "run": "batch-C0"
+    }
+   ],
+   "task": "02_01",
+   "tier": "B"
+  },
+  {
+   "error_kinds": [
+    "Err:522"
+   ],
+   "headroom_min_calls": 36,
+   "n_firing_ordinary_outputs": 4,
+   "ordinary_evidence": [
+    {
+     "mod": 0.1739,
+     "nfe": 30,
+     "run": "sixty-control"
+    },
+    {
+     "mod": 0.0,
+     "nfe": 30,
+     "run": "inspection-C0"
+    },
+    {
+     "mod": 0.0,
+     "nfe": 30,
+     "run": "live-transparent-H0"
+    },
+    {
+     "mod": 0.0,
+     "nfe": 30,
+     "run": "targeted-H0"
+    }
+   ],
+   "task": "02_06",
+   "tier": "B"
+  },
+  {
+   "error_kinds": [
+    "Err:522"
+   ],
+   "headroom_min_calls": 29,
+   "n_firing_ordinary_outputs": 2,
+   "ordinary_evidence": [
+    {
+     "mod": 0.9636,
+     "nfe": 30,
+     "run": "fifteen-1"
+    },
+    {
+     "mod": 0.9069,
+     "nfe": 30,
+     "run": "fifteen-2"
+    }
+   ],
+   "task": "02_09",
+   "tier": "B"
+  },
+  {
+   "error_kinds": [
+    "#DIV/0!"
+   ],
+   "headroom_min_calls": 29,
+   "n_firing_ordinary_outputs": 1,
+   "ordinary_evidence": [
+    {
+     "mod": 0.9239,
+     "nfe": 4,
+     "run": "fifteen-1"
+    },
+    {
+     "mod": 0.972,
+     "nfe": 0,
+     "run": "fifteen-2"
+    }
+   ],
+   "task": "04_09",
+   "tier": "B"
+  },
+  {
+   "error_kinds": [
+    "Err:522"
+   ],
+   "headroom_min_calls": 22,
+   "n_firing_ordinary_outputs": 1,
+   "ordinary_evidence": [
+    {
+     "mod": 0.0845,
+     "nfe": 147,
+     "run": "sidecar-C0-spark"
+    },
+    {
+     "mod": 0.3411,
+     "nfe": 0,
+     "run": "sixty-control"
+    },
+    {
+     "mod": 0.3382,
+     "nfe": 0,
+     "run": "fifteen-1"
+    }
+   ],
+   "task": "10_10",
+   "tier": "B"
+  }
+ ],
+ "error_kind_diversity": "Err:522 (6 tasks) + #DIV/0! (04_09, the only changed-formula firing) = 2 kinds",
+ "evaluation": null,
+ "family_spread": "02 x3, 04, 07, 10 x2, 01 (clean) = 5 families; no single task can dominate (LOTO gated)",
+ "n": "8 paired tasks = 16 primary slots",
+ "n_10_verdict": "CANNOT FILL HONESTLY: only 7 tasks satisfy the frozen rule; an 8th-10th enriched task would require Tier-A (mechanism-exposed) tasks or zero-firing tasks (no contact). Adding dead slots dilutes the capability read and spends 4-8 slots for no mechanism information.",
+ "n_12_verdict": "CANNOT FILL HONESTLY: same reason, worse.",
+ "n_8_verdict": "RECOMMENDED: smallest N with high expected contact (6-7/7 enriched refire at historical rates: 02_01 2/2, 02_06 4/4, 02_09 2/2, 07_03 1/1; risk points 04_09 1/2, 10_05 1/1 small-n, 10_10 model-mismatched), 2 error kinds, 5 families, and a specificity control.",
+ "note": "ordered for execution convenience only; run order must be randomized per proposed_ab_design.json",
+ "recommendation": "N=8 (7 enriched + 1 clean negative control). Prior preference 8-10 satisfied at its lower end; the census gives a clear reason against 10+ (no further qualifying tasks).",
+ "tier_sensitivity": "primary read recomputed excluding the 5 Tier-B enriched tasks (leaving 07_03, 10_05 + clean control) must be reported alongside; a PROMISING read that depends entirely on Tier-B tasks is downgraded to INCONCLUSIVE-positive-leaning"
+}

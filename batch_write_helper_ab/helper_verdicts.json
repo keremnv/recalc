@@ -1,0 +1,16 @@
+{
+ "write_cells": {
+  "verdict": "NO_GAIN",
+  "adoptions": 0,
+  "tasks_adopted": [],
+  "reason": "zero natural invocations in 13 C1 runs; agents hand-rolled dict-apply loops instead"
+ },
+ "write_formulas": {
+  "verdict": "NO_GAIN",
+  "adoptions": 0,
+  "tasks_adopted": [],
+  "reason": "zero natural invocations in 13 C1 runs, including on all 4 formula-batch-selected tasks"
+ },
+ "capability_gate": "HELPER_CAPABILITY_PRESERVED",
+ "capability_note": "no helper-attributable effect possible (zero invocations); 2/3 r1 discordances vanished on repeat; Template:03_03 C1 shortfall repeated without any helper contact inside a task whose C0 arm varies 0.106->0.808 mod across reps"
+}

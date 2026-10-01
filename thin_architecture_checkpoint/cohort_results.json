@@ -1,0 +1,26 @@
+{
+ "A-representative": {
+  "H0": {
+   "n": 12,
+   "mean_mod": 0.3522,
+   "outputs": 5
+  },
+  "H1": {
+   "n": 12,
+   "mean_mod": 0.4561,
+   "outputs": 7
+  }
+ },
+ "B-exposure": {
+  "H0": {
+   "n": 12,
+   "mean_mod": 0.3852,
+   "outputs": 6
+  },
+  "H1": {
+   "n": 12,
+   "mean_mod": 0.368,
+   "outputs": 7
+  }
+ }
+}

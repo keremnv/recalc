@@ -1,0 +1,4 @@
+{
+  "reason": "No supported reusable index across invocations. Probe diagnostics are in index_build_timings.json; prior cold decomposition remains frozen at rc_acceleration_validation/timing_decomposition.json.",
+  "warm_scored": null
+}

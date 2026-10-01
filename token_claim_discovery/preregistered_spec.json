@@ -1,0 +1,59 @@
+{
+  "analysis": "Task-level paired ratios; median, arithmetic and geometric means, percentile bootstrap 95% CI over tasks (seed 20260922, 10000 resamples), sign count, family stratification; E1 dual valid, E2 all uncensored, E3 total tokens/valid submission.",
+  "arm_definitions": {
+    "A": {
+      "H": 0,
+      "S": 0
+    },
+    "B": {
+      "H": 1,
+      "S": 0
+    },
+    "C": {
+      "H": 0,
+      "S": 1
+    },
+    "D": {
+      "H": 1,
+      "S": 1
+    }
+  },
+  "capability_guard": "Official evaluator on all submitted workbooks after LibreOffice refresh; no formal equivalence claim. Fail on reproducible treatment-specific completion or modification/regression degradation or savings from early termination.",
+  "censoring_taxonomy": [
+    "PROVIDER_CENSORED",
+    "RUNNER_CENSORED",
+    "WORKBOOK_INFRA_CENSORED",
+    "MODEL_NONCOMPLETION",
+    "VALID_SUBMISSION",
+    "INVALID_SUBMISSION",
+    "OTHER"
+  ],
+  "contrasts": [
+    "D/A",
+    "C/A",
+    "B/A",
+    "D/C",
+    "interaction=(log D-log C)-(log B-log A)"
+  ],
+  "exact_notes_file_sha256": "fad4e9a99e198c1b10387dc3a8b333f484705f4854953991e431b85d346dd0d9",
+  "gate": "TOKEN_MECHANISM_DISCOVERED requires D/A median >=10% reduction, not 1-2 pathological tasks, favorable >=2 families, capability guard, coherent telemetry, component contrast material. Strong if bootstrap CI excludes zero. Salience and helper gates follow user specification.",
+  "holdout_not_run": true,
+  "maximum_spend_usd": 25.0,
+  "model_settings_sha256": "afe5381f7f04c1245f22589c23f02db5d9389181a3cb6b3829c5e1dbfeb41d6b",
+  "no_architecture_changes": true,
+  "per_slot_cost_cap_usd": 0.25,
+  "phase": "CLAIM_DISCOVERY",
+  "population_selection_sha256": "423aedbb3c3b56d7813e696a8fa8ec18d930ffe23501a6f16349321eb4099f3a",
+  "population_sha256": "abc3b3aa19d61568a4bb8bd4a369fcb2b33175ad44f6e3a1aa0843e921f4f55e",
+  "primary_endpoint": "total provider-reported input/prompt tokens per task",
+  "primary_slots": 60,
+  "product_rc": {
+    "source_config_sha256": "1aba31178faca5533c4a594cf1ee8bae2bf3668fcb5f7a9df65f84361f972aee",
+    "version": "0.2.0rc1",
+    "wheel_sha256": "532e493f126087a45d86117343514a9a1cd0a4e0010af89bbd1be1b271d66b2e"
+  },
+  "replication": "Only one-arm provider/runner/workbook censoring, large completion or official-score discordance, or >3x token-ratio pathology; <=2 additional draws per affected arm/task. Primary frozen separately.",
+  "reservation_sha256": "b3b5bcdef583314bcdba4bcde16aa699c8c5784117513831c94ccc5bf6c49392",
+  "run_order_sha256": "decf8bf396b162cc98d43db410b3c8fa7271f7ab8817c766877bba50b4930fcd",
+  "tool_schemas_sha256": "e889d24917a3231112959a6de6c61ab5d855ee23bcca6ce9a150bb434a02139c"
+}

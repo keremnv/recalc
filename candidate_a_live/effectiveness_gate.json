@@ -1,0 +1,25 @@
+{
+  "contact_task_reductions": [
+    {
+      "h0_deterministic_tool_walltime_s": 101.04234723304398,
+      "h1_deterministic_tool_walltime_s": 49.55389438022394,
+      "reduction_pct": 50.9573008375064,
+      "task_id": "Financial_Model:08_03"
+    },
+    {
+      "h0_deterministic_tool_walltime_s": 108.34393121174071,
+      "h1_deterministic_tool_walltime_s": 71.72962468315382,
+      "reduction_pct": 33.79451540947886,
+      "task_id": "Financial_Model:08_01"
+    }
+  ],
+  "direct_workbook_read_open_time_instrumented": false,
+  "measurement_basis": "deterministic tool walltime proxy; includes Python/tool execution and does not isolate workbook load/read",
+  "measurement_note": "Small n=1 live timing is mechanism evidence, not a representative benchmark estimate.",
+  "median_comparable_read_open_reduction_pct": 50.9573008375064,
+  "note": "Primary n=1 contact comparisons only; replication is preserved separately and does not add an independent task.",
+  "pass": false,
+  "positive_tasks": 2,
+  "required_median_pct": 25,
+  "required_positive_tasks": 3
+}

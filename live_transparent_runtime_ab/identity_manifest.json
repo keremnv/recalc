@@ -1,0 +1,56 @@
+{
+ "arms": {
+  "h0": {
+   "config": "benchmark/sweagent/spreadsheet-control.yaml",
+   "model": "openrouter/z-ai/glm-5.3-flash",
+   "prompts": "official system_template + instance_template from spreadsheet-control.yaml (verbatim baseline; inspect-mutate-verify-submit workflow)",
+   "provider": {
+    "allow_fallbacks": true,
+    "require_parameters": true
+   },
+   "reasoning_effort": null,
+   "temperature": 0.0,
+   "tool_choice": "required (catalog default; auto only for muse-spark/glm-5.3 tool-choice exception paths)",
+   "tool_surface": [
+    "bash",
+    "view_xlsx",
+    "submit"
+   ],
+   "top_p": 1.0
+  },
+  "h1": {
+   "config": "benchmark/sweagent/spreadsheet-control.yaml + transparent transaction wrapper (no agent-section edits)",
+   "model": "openrouter/z-ai/glm-5.3-flash",
+   "prompts": "identical to H0, byte-identical templates (no prompt changes permitted)",
+   "provider": {
+    "allow_fallbacks": true,
+    "require_parameters": true
+   },
+   "reasoning_effort": null,
+   "temperature": 0.0,
+   "tool_choice": "same rule as H0",
+   "tool_surface": [
+    "bash",
+    "view_xlsx",
+    "submit"
+   ],
+   "top_p": 1.0,
+   "transparent_layer": "pre/post snapshots + WorkbookDelta capture/replay under the Python surface"
+  }
+ },
+ "budgets": {
+  "bump_rule": "per-instance cost/call limits identical across arms; only the $25 total cap may stop a run, and it stops both arms' accounting equally",
+  "call_limit_per_instance": 40,
+  "cost_limit_per_instance_usd": 0.25,
+  "execution_timeout_s": 180,
+  "run_timeout_s": 900,
+  "total_cap_usd": 25.0,
+  "amendment_2026_09_17": "call limit 40 and per-instance cost cap $0.25 per user directive (user overrode lineage 10/$0.03 parser defaults as too tight); applies identically to both arms; global $25 cap unchanged"
+ },
+ "declared_common": {
+  "config_source": "benchmark/run_openrouter_slice.py durable effective-contract block (top_p 1.0, temperature 0.0) and benchmark/experiment_config.py AUTHORITATIVE_EXPERIMENT_CONFIG defaults",
+  "provider": "OpenRouter",
+  "request_model": "openrouter/z-ai/glm-5.3-flash"
+ },
+ "notes": "Both arms share model, provider, sampling config, budgets, tool surface, and prompts. The ONLY declared difference is the H1 transparent capture/replay wrapper, which is model-invisible (no new tools, no prompt text, forbidden H1 info list in spec.json). Runtime ledgers record the effective per-task contract actually seen."
+}

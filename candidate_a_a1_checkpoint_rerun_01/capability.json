@@ -1,0 +1,231 @@
+{
+  "arms": {
+    "H0": {
+      "evaluation_runtime": "unmodified-official-evaluation.py",
+      "exact": 0,
+      "missing_outputs": 7,
+      "model_name": "candidate_a_a1_checkpoint_H0",
+      "run_name": "H0",
+      "scored": 12,
+      "submission": {
+        "official_json": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/candidate_a_a1_checkpoint_rerun_01/runs/H0/submission/results",
+        "outputs": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/candidate_a_a1_checkpoint_rerun_01/runs/H0/submission/outputs"
+      },
+      "tasks": {
+        "Debugging:01_06": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "01_06",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:05_02": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "05_02",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:10_04": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "10_04",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:10_10": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "10_10",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:06_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "06_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:07_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "07_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:08_01": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at DCF Valuation!B7: answer=In US$, output=None",
+          "id": "08_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0029,
+          "regression_accuracy": 0.3699
+        },
+        "Financial_Model:08_03": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at DCF Valuation!B7: answer=In US$, output=None",
+          "id": "08_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.038,
+          "regression_accuracy": 0.3697
+        },
+        "Financial_Model:10_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "10_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:15_04": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at Hospital Level Breakup!E59: answer=183279.197168759, output=None",
+          "id": "15_04",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0162,
+          "regression_accuracy": 0.7804
+        },
+        "Template:03_03": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at Consolidation!B48: answer=Cash, output=None",
+          "id": "03_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.9535
+        },
+        "Template:13_08": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at FinancialNormalization!D20: answer=36, output=None",
+          "id": "13_08",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.996
+        }
+      }
+    },
+    "H1": {
+      "evaluation_runtime": "unmodified-official-evaluation.py",
+      "exact": 0,
+      "missing_outputs": 8,
+      "model_name": "candidate_a_a1_checkpoint_H1",
+      "run_name": "H1",
+      "scored": 12,
+      "submission": {
+        "official_json": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/candidate_a_a1_checkpoint_rerun_01/runs/H1/submission/results",
+        "outputs": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/candidate_a_a1_checkpoint_rerun_01/runs/H1/submission/outputs"
+      },
+      "tasks": {
+        "Debugging:01_06": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "01_06",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:05_02": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "05_02",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:10_04": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "10_04",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:10_10": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at Model!C41: answer=217.01824304, output=None",
+          "id": "10_10",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.1137,
+          "regression_accuracy": 0.8305
+        },
+        "Financial_Model:06_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "06_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:07_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "07_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:08_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "08_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:08_03": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at DCF Valuation!B7: answer=In US$, output=None",
+          "id": "08_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.038,
+          "regression_accuracy": 0.3697
+        },
+        "Financial_Model:10_01": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "10_01",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:15_04": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "15_04",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Template:03_03": {
+          "accuracy": 0.0,
+          "error_message": "Modification error at Consolidation!C16: answer=2200, output=None",
+          "id": "03_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0213,
+          "regression_accuracy": 1.0
+        },
+        "Template:13_08": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at FinancialNormalization!F17: answer=277, output=301.4349314071559",
+          "id": "13_08",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.4444,
+          "regression_accuracy": 0.996
+        }
+      }
+    }
+  },
+  "hard_gate": "reproducible H1 degradation only with contact",
+  "provider_censored_primary_slots": 6,
+  "runner_error_primary_slots": 2,
+  "scoring": {
+    "H0": "completed before postprocessor termination",
+    "H1": "completed in a separate zero-model official scoring pass"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "cold_run": {
+    "exit_code": 0,
+    "receipt": {
+      "artifacts": {
+        "/tmp/tmp24vxw85z/task/work/input.xlsx": {
+          "artifact_path": "/tmp/tmp24vxw85z/task/xdg/librecalc-agent/read-engine/9e5a3ad7244b94a14f91658d2f4722e7fa823cd1da273eddb9021ca3b43a1656.r3jz",
+          "source_sha256": "42c0527253ed14988703bca729efd0ddaab0bb26e5612f79a71d55e4d599ec18",
+          "status": "BUILT"
+        }
+      },
+      "assurance_status": "PASS",
+      "capture_helper_exit": 0,
+      "changed_xlsx": 0,
+      "direct_served_loads": 1,
+      "fallback_reasons": [],
+      "post_files": 1,
+      "pre_files": 1,
+      "profile_ns": {
+        "argument_run_dir": 77394,
+        "changed_helper_or_empty_receipt": 41397,
+        "fork_launch": 83150,
+        "observer_to_receipt": 98867894,
+        "post_snapshot_compare": 53332,
+        "pre_snapshot": 23868,
+        "wait_target": 98575412
+      },
+      "route": "DIRECT_RUNTIME",
+      "run_dir": "/tmp/tmp24vxw85z/task/xdg/librecalc-agent/runs/run-Hf5N1L",
+      "target_exit_code": 0,
+      "target_signal": 0
+    },
+    "stderr_head": "",
+    "stdout": "21"
+  },
+  "command_executable": true,
+  "doctor": 0,
+  "example": 0,
+  "example_files": [
+    "create_input.py",
+    "read.py",
+    "runtime.toml",
+    "update.py"
+  ],
+  "observer_in_wheel": true,
+  "pass": true,
+  "reused_run": {
+    "exit_code": 0,
+    "receipt": {
+      "artifacts": {
+        "/tmp/tmp24vxw85z/task/work/input.xlsx": {
+          "artifact_path": "/tmp/tmp24vxw85z/task/xdg/librecalc-agent/read-engine/9e5a3ad7244b94a14f91658d2f4722e7fa823cd1da273eddb9021ca3b43a1656.r3jz",
+          "source_sha256": "42c0527253ed14988703bca729efd0ddaab0bb26e5612f79a71d55e4d599ec18",
+          "status": "REUSED"
+        }
+      },
+      "assurance_status": "PASS",
+      "capture_helper_exit": 0,
+      "changed_xlsx": 0,
+      "direct_served_loads": 1,
+      "fallback_reasons": [],
+      "post_files": 1,
+      "pre_files": 1,
+      "profile_ns": {
+        "argument_run_dir": 115603,
+        "changed_helper_or_empty_receipt": 45633,
+        "fork_launch": 112424,
+        "observer_to_receipt": 111448596,
+        "post_snapshot_compare": 59434,
+        "pre_snapshot": 26105,
+        "wait_target": 111078101
+      },
+      "route": "DIRECT_RUNTIME",
+      "run_dir": "/tmp/tmp24vxw85z/task/xdg/librecalc-agent/runs/run-gpJVR8",
+      "target_exit_code": 0,
+      "target_signal": 0
+    },
+    "stderr_head": "",
+    "stdout": "21"
+  },
+  "status": 0,
+  "status_route": "DIRECT_RUNTIME",
+  "wheel_installed": true
+}

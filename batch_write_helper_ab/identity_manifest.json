@@ -1,0 +1,10 @@
+{
+ "differences_unintended": [],
+ "pass": true,
+ "intended_differences": [
+  "instance_hash",
+  "request_body.user_len",
+  "lx_helpers.py content: +write_cells/write_formulas (C1)",
+  "instance prompt + batch paragraph (C1 only)"
+ ]
+}

@@ -1,0 +1,24 @@
+{
+  "affected": [
+    {
+      "arm": "C",
+      "provider_errors": 2,
+      "task": "Template:06_12"
+    },
+    {
+      "arm": "B",
+      "provider_errors": 1,
+      "task": "Financial_Model:02_01"
+    }
+  ],
+  "initial_analysis_sha256": {
+    "capability_guard_runner_status_only.json": "3374ba1c167d78dbf5f06ecb0f5d156445d94a0ddd454b4dcec571b7a5cbe7c4",
+    "censoring_runner_status_only.json": "6bf319fc188c6e8582a460bb2f403ab3116ce8c0cfa997f64b53fd9d0cddf323",
+    "concentration_sensitivity_runner_status_only.json": "b2a893353a5eff63a09ab3a0f6502979ca267c59d9618264d746ebabaffc9490",
+    "family_effects_runner_status_only.json": "edead603d9027f3ad9976bcd5607aaf8d7dd4029cad6972d3b0f7266e8c62822",
+    "token_contrasts_runner_status_only.json": "3f9b577b276d3f8a3bb038fdcabca6de3d3bc3aa4a0ad00fea3d10f777d9a25b"
+  },
+  "post_outcome_taxonomy_correction": true,
+  "primary_raw_unmodified": true,
+  "reason": "An unfinished slot with logged provider error(s) below the 40-call cap has an infrastructure-contaminated deadline. The initial runner-status-only analysis treated two such slots as model noncompletion. Correct analysis censors them; raw outcomes remain frozen."
+}

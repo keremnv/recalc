@@ -1,0 +1,247 @@
+{
+  "note": "One primary run per arm/task; censoring and pre-contact trajectory differences are not treated as Candidate-A capability loss.",
+  "pass": true,
+  "reproducible_contact_attributed_degradation": false,
+  "rows": [
+    {
+      "arm": "H0",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "TRUNCATED_CALL_LIMIT",
+      "submission_success": false,
+      "task_id": "Financial_Model:07_01"
+    },
+    {
+      "arm": "H1",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "NO_SUBMIT",
+      "submission_success": false,
+      "task_id": "Financial_Model:07_01"
+    },
+    {
+      "arm": "H0",
+      "exact": 0.0,
+      "modification": 0.038,
+      "output_produced": true,
+      "regression": 0.3697,
+      "status": "SUBMITTED",
+      "submission_success": true,
+      "task_id": "Financial_Model:08_03"
+    },
+    {
+      "arm": "H1",
+      "exact": 0.0,
+      "modification": 0.038,
+      "output_produced": true,
+      "regression": 0.3697,
+      "status": "SUBMITTED",
+      "submission_success": true,
+      "task_id": "Financial_Model:08_03"
+    },
+    {
+      "arm": "H0",
+      "exact": 0.0,
+      "modification": 0.0029,
+      "output_produced": true,
+      "regression": 0.3699,
+      "status": "SUBMITTED",
+      "submission_success": true,
+      "task_id": "Financial_Model:08_01"
+    },
+    {
+      "arm": "H1",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "PROVIDER_CENSORED",
+      "submission_success": false,
+      "task_id": "Financial_Model:08_01"
+    },
+    {
+      "arm": "H0",
+      "exact": 0.0,
+      "modification": 0.0162,
+      "output_produced": true,
+      "regression": 0.7804,
+      "status": "NO_SUBMIT",
+      "submission_success": false,
+      "task_id": "Financial_Model:15_04"
+    },
+    {
+      "arm": "H1",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "PROVIDER_CENSORED",
+      "submission_success": false,
+      "task_id": "Financial_Model:15_04"
+    },
+    {
+      "arm": "H0",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "TRUNCATED_CALL_LIMIT",
+      "submission_success": false,
+      "task_id": "Debugging:10_10"
+    },
+    {
+      "arm": "H1",
+      "exact": 0.0,
+      "modification": 0.1137,
+      "output_produced": true,
+      "regression": 0.8305,
+      "status": "SUBMITTED",
+      "submission_success": true,
+      "task_id": "Debugging:10_10"
+    },
+    {
+      "arm": "H0",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": null,
+      "regression": 0.0,
+      "status": "RUNNER_ERROR",
+      "submission_success": null,
+      "task_id": "Financial_Model:06_01"
+    },
+    {
+      "arm": "H1",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": null,
+      "regression": 0.0,
+      "status": "RUNNER_ERROR",
+      "submission_success": null,
+      "task_id": "Financial_Model:06_01"
+    },
+    {
+      "arm": "H0",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "PROVIDER_CENSORED",
+      "submission_success": false,
+      "task_id": "Debugging:01_06"
+    },
+    {
+      "arm": "H1",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "PROVIDER_CENSORED",
+      "submission_success": false,
+      "task_id": "Debugging:01_06"
+    },
+    {
+      "arm": "H0",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "NO_SUBMIT",
+      "submission_success": false,
+      "task_id": "Debugging:10_04"
+    },
+    {
+      "arm": "H1",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "SUBMITTED",
+      "submission_success": true,
+      "task_id": "Debugging:10_04"
+    },
+    {
+      "arm": "H0",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "PROVIDER_CENSORED",
+      "submission_success": false,
+      "task_id": "Debugging:05_02"
+    },
+    {
+      "arm": "H1",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "NO_SUBMIT",
+      "submission_success": false,
+      "task_id": "Debugging:05_02"
+    },
+    {
+      "arm": "H0",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": true,
+      "regression": 0.996,
+      "status": "SUBMITTED",
+      "submission_success": true,
+      "task_id": "Template:13_08"
+    },
+    {
+      "arm": "H1",
+      "exact": 0.0,
+      "modification": 0.4444,
+      "output_produced": true,
+      "regression": 0.996,
+      "status": "SUBMITTED",
+      "submission_success": true,
+      "task_id": "Template:13_08"
+    },
+    {
+      "arm": "H0",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": true,
+      "regression": 0.9535,
+      "status": "TRUNCATED_CALL_LIMIT",
+      "submission_success": false,
+      "task_id": "Template:03_03"
+    },
+    {
+      "arm": "H1",
+      "exact": 0.0,
+      "modification": 0.0213,
+      "output_produced": true,
+      "regression": 1.0,
+      "status": "SUBMITTED",
+      "submission_success": true,
+      "task_id": "Template:03_03"
+    },
+    {
+      "arm": "H0",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "NO_SUBMIT",
+      "submission_success": false,
+      "task_id": "Financial_Model:10_01"
+    },
+    {
+      "arm": "H1",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "PROVIDER_CENSORED",
+      "submission_success": false,
+      "task_id": "Financial_Model:10_01"
+    }
+  ]
+}

@@ -1,0 +1,366 @@
+{
+  "build_medians_ms": {
+    "P0": {
+      "attach_ns": 0.0,
+      "build_ns": 156.75261849999998
+    },
+    "P1": {
+      "attach_ns": 0.0,
+      "build_ns": 64.512088,
+      "decoder_profile_s": {
+        "shared_strings_s": 0.000188383,
+        "structure_insert_s": "UNMEASURED",
+        "styles_dates_s": 0.002568444,
+        "total_decode_s": 0.064377317,
+        "value_decode_s": "UNMEASURED",
+        "workbook_relationships_s": 0.000564196,
+        "worksheet_xml_total_s": 0.060051523,
+        "zip_open_list_s": 5.01e-06
+      }
+    },
+    "P2": {
+      "acquire_ns": 87.254874,
+      "attach_ns": 0.358674,
+      "build_ns": 86.879742,
+      "decode_storage_ns": 85.102989,
+      "decoder_profile_s": {
+        "shared_strings_s": 0.000186922,
+        "structure_insert_s": "UNMEASURED",
+        "styles_dates_s": 0.002491908,
+        "total_decode_s": 0.083848322,
+        "value_decode_s": "UNMEASURED",
+        "workbook_relationships_s": 0.000532601,
+        "worksheet_xml_total_s": 0.079329029,
+        "zip_open_list_s": 5.108e-06
+      },
+      "metadata_write_ns": 0.430085,
+      "publication_ns": 0.620497,
+      "source_hash_ns": 0.435379
+    },
+    "P3": {
+      "acquire_ns": 58.608111,
+      "attach_ns": 0.559921,
+      "build_ns": 57.898322,
+      "decode_ns": 55.1628,
+      "decoder_profile_s": {
+        "shared_strings_s": 0.000187794,
+        "structure_insert_s": "UNMEASURED",
+        "styles_dates_s": 0.002458918,
+        "total_decode_s": 0.054985438,
+        "value_decode_s": "UNMEASURED",
+        "workbook_relationships_s": 0.000548568,
+        "worksheet_xml_total_s": 0.050678005,
+        "zip_open_list_s": 5.072e-06
+      },
+      "publication_ns": 0.419002,
+      "serialize_ns": 1.348939,
+      "source_hash_ns": 0.443336
+    }
+  },
+  "environment": {
+    "lxml": "6.1.3",
+    "openpyxl": "3.1.5",
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.43",
+    "python": "3.13.12 | packaged by Anaconda, Inc. | (main, Feb 24 2026, 16:13:31) [GCC 14.3.0]",
+    "sqlite": "3.51.1"
+  },
+  "implementation": {
+    "PREREGISTERED_SPEC_v2.md": "227c7618a244ef9dc4960b6d1aed751165ec326bd2a6d9670895e773df7bddde",
+    "analyze.py": "d8bca63bb901c8a73b75c063faef7050ab8b44939d53fb23bb8c04756a0cfdcf",
+    "persistence.py": "3a5d7a83abe11184cfa111e39f97d013d865f523bd0f0847ae83a84dab51dc84",
+    "population.json": "6492d1cbc2163ea252c0d34cf346171d332a923bd5f05fc1fd54c3e851097afa",
+    "runner.py": "ed17ec16e2904e30dcd9b03f53c3f9d66b2102106d15fb4369f612761e9f447e"
+  },
+  "instrumentation_limits": {
+    "P3_file_read_vs_deserialize": "UNMEASURED separately; attach_ns combines both",
+    "actual_interpreter_startup": "UNMEASURED separately; process minus child engine is a residual including imports/telemetry/IPC",
+    "incremental_artifact_memory": "UNMEASURED; ru_maxrss is process high-water after trace",
+    "physical_file_reads": "UNMEASURED"
+  },
+  "protocol": "v2",
+  "snapshot_warm": [
+    {
+      "snapshot_sha256": "26f8817083ad13636971bc7fa18d75fd4a3d10111d8872fa1ab98e7cbd1aa8a7",
+      "traces": 6,
+      "variants": {
+        "P0": {
+          "engine_ms": 4364.5901525,
+          "first_operation_ms": 0.0078435,
+          "process_ms": 5974.4540015,
+          "trace_ms": 1.4723864999999998
+        },
+        "P2": {
+          "artifact_bytes": 7962624,
+          "artifact_hash_ms": 8.879718,
+          "attach_ms": 0.5222045,
+          "engine_ms": 39.47119,
+          "first_operation_ms": 0.000571,
+          "process_ms": 1143.5004159999999,
+          "source_hash_ms": 2.9760660000000003,
+          "trace_ms": 5.589755
+        },
+        "P3": {
+          "artifact_bytes": 3765782,
+          "artifact_hash_ms": 4.2345369999999996,
+          "attach_ms": 52.545024,
+          "engine_ms": 65.40737250000001,
+          "first_operation_ms": 0.003206,
+          "process_ms": 1193.05743,
+          "source_hash_ms": 2.9714975,
+          "trace_ms": 2.1194425
+        }
+      }
+    },
+    {
+      "snapshot_sha256": "2b7a84044765a4664ddb197de168fbd7feb8fff395a027a4923ee2d9ab9e8dc1",
+      "traces": 11,
+      "variants": {
+        "P0": {
+          "engine_ms": 4266.485405,
+          "first_operation_ms": 0.011729,
+          "process_ms": 5820.830604,
+          "trace_ms": 0.538108
+        },
+        "P2": {
+          "artifact_bytes": 9838592,
+          "artifact_hash_ms": 10.975443,
+          "attach_ms": 0.594486,
+          "engine_ms": 41.931591,
+          "first_operation_ms": 0.000596,
+          "process_ms": 1125.467092,
+          "source_hash_ms": 2.504404,
+          "trace_ms": 1.419144
+        },
+        "P3": {
+          "artifact_bytes": 4834276,
+          "artifact_hash_ms": 5.427843,
+          "attach_ms": 58.308665,
+          "engine_ms": 67.719287,
+          "first_operation_ms": 0.003308,
+          "process_ms": 1154.735718,
+          "source_hash_ms": 2.512039,
+          "trace_ms": 0.634245
+        }
+      }
+    },
+    {
+      "snapshot_sha256": "3d95978b76409416f96be4645daeb2e28f949c171cc159560627506ef1c7eb34",
+      "traces": 8,
+      "variants": {
+        "P0": {
+          "engine_ms": 18978.9636245,
+          "first_operation_ms": 0.0338865,
+          "process_ms": 22821.8051215,
+          "trace_ms": 0.232769
+        },
+        "P2": {
+          "artifact_bytes": 9175040,
+          "artifact_hash_ms": 10.104283500000001,
+          "attach_ms": 0.8522635000000001,
+          "engine_ms": 44.475210000000004,
+          "first_operation_ms": 0.000595,
+          "process_ms": 1132.6390415,
+          "source_hash_ms": 8.656512,
+          "trace_ms": 0.4996595
+        },
+        "P3": {
+          "artifact_bytes": 4441367,
+          "artifact_hash_ms": 4.923581,
+          "attach_ms": 56.998573,
+          "engine_ms": 71.450904,
+          "first_operation_ms": 0.0031555000000000003,
+          "process_ms": 1144.299679,
+          "source_hash_ms": 8.659818,
+          "trace_ms": 0.329349
+        }
+      }
+    },
+    {
+      "snapshot_sha256": "591b6250a393b2606573631b5a9e66f415d68704d2d95756cd1cb8bca7327343",
+      "traces": 1,
+      "variants": {
+        "P0": {
+          "engine_ms": 7.67659,
+          "first_operation_ms": 0.002533,
+          "process_ms": 1089.033608,
+          "trace_ms": 0.241211
+        },
+        "P2": {
+          "artifact_bytes": 20480,
+          "artifact_hash_ms": 0.044818,
+          "attach_ms": 0.28144,
+          "engine_ms": 2.435971,
+          "first_operation_ms": 0.000603,
+          "process_ms": 1072.896134,
+          "source_hash_ms": 0.223206,
+          "trace_ms": 0.953968
+        },
+        "P3": {
+          "artifact_bytes": 2141,
+          "artifact_hash_ms": 0.02223,
+          "attach_ms": 0.104754,
+          "engine_ms": 1.017328,
+          "first_operation_ms": 0.001367,
+          "process_ms": 1090.62876,
+          "source_hash_ms": 0.217246,
+          "trace_ms": 0.379118
+        }
+      }
+    },
+    {
+      "snapshot_sha256": "6d742f67e84fcc3d92d1dec6b285417093b99dec1469686f1c6813aee9ad2a0a",
+      "traces": 14,
+      "variants": {
+        "P0": {
+          "engine_ms": 4269.3006515,
+          "first_operation_ms": 0.011927,
+          "process_ms": 5822.3613675,
+          "trace_ms": 1.2546845
+        },
+        "P2": {
+          "artifact_bytes": 9793536,
+          "artifact_hash_ms": 10.940577000000001,
+          "attach_ms": 0.592012,
+          "engine_ms": 47.0252295,
+          "first_operation_ms": 0.00061,
+          "process_ms": 1134.693802,
+          "source_hash_ms": 2.4970305,
+          "trace_ms": 5.6669719999999995
+        },
+        "P3": {
+          "artifact_bytes": 4816205,
+          "artifact_hash_ms": 5.387176999999999,
+          "attach_ms": 57.5586195,
+          "engine_ms": 69.034769,
+          "first_operation_ms": 0.003196,
+          "process_ms": 1157.2117185,
+          "source_hash_ms": 2.4947835,
+          "trace_ms": 2.1876045
+        }
+      }
+    },
+    {
+      "snapshot_sha256": "9ff136a8008051fc400bcade977f9732fef6f3b9c3116ebc46ee366d24406f53",
+      "traces": 9,
+      "variants": {
+        "P0": {
+          "engine_ms": 379.048235,
+          "first_operation_ms": 0.004553,
+          "process_ms": 1490.079499,
+          "trace_ms": 2.852517
+        },
+        "P2": {
+          "artifact_bytes": 737280,
+          "artifact_hash_ms": 0.854328,
+          "attach_ms": 0.463377,
+          "engine_ms": 18.287094,
+          "first_operation_ms": 0.00058,
+          "process_ms": 1093.162497,
+          "source_hash_ms": 0.538878,
+          "trace_ms": 13.277774
+        },
+        "P3": {
+          "artifact_bytes": 315064,
+          "artifact_hash_ms": 0.365501,
+          "attach_ms": 2.991656,
+          "engine_ms": 8.977403,
+          "first_operation_ms": 0.001778,
+          "process_ms": 1096.254228,
+          "source_hash_ms": 0.533003,
+          "trace_ms": 4.791418
+        }
+      }
+    },
+    {
+      "snapshot_sha256": "fa7c8d05a020ef079d6330fe7d1e3de64b35be0e9cc99d413c1bc30e7e19565e",
+      "traces": 2,
+      "variants": {
+        "P0": {
+          "engine_ms": 1048.7455355000002,
+          "first_operation_ms": 0.011518,
+          "process_ms": 2282.268826,
+          "trace_ms": 2.634955
+        },
+        "P2": {
+          "artifact_bytes": 172032,
+          "artifact_hash_ms": 0.2132095,
+          "attach_ms": 0.357677,
+          "engine_ms": 14.221056999999998,
+          "first_operation_ms": 0.0006039999999999999,
+          "process_ms": 1101.1193885,
+          "source_hash_ms": 0.664965,
+          "trace_ms": 11.582056
+        },
+        "P3": {
+          "artifact_bytes": 66585,
+          "artifact_hash_ms": 0.09501200000000001,
+          "attach_ms": 0.784323,
+          "engine_ms": 5.7177515,
+          "first_operation_ms": 0.0011995,
+          "process_ms": 1077.3500635,
+          "source_hash_ms": 0.6653195000000001,
+          "trace_ms": 3.8497385
+        }
+      }
+    }
+  ],
+  "spec_sha256": "227c7618a244ef9dc4960b6d1aed751165ec326bd2a6d9670895e773df7bddde",
+  "warm_medians_ms": {
+    "P0": {
+      "acquire_ns": 0.0,
+      "artifact_hash_ns": 0.0,
+      "attach_ns": 0.0,
+      "build_ns": 4265.407193,
+      "engine_ms": 4271.484135,
+      "format_validation_ns": 0.0,
+      "manifest_discovery_ns": 0.0,
+      "process_ms": 5824.27112,
+      "rss_kib": 329440,
+      "source_hash_ns": 0.0,
+      "startup_residual_ms": 1550.014727,
+      "trace_ms": 0.789046
+    },
+    "P1": {
+      "acquire_ns": 0.0,
+      "artifact_hash_ns": 0.0,
+      "attach_ns": 0.0,
+      "build_ns": 3798.159234,
+      "engine_ms": 3803.671976,
+      "format_validation_ns": 0.0,
+      "manifest_discovery_ns": 0.0,
+      "process_ms": 4896.690832,
+      "rss_kib": 329404,
+      "source_hash_ns": 0.0,
+      "startup_residual_ms": 1088.197515,
+      "trace_ms": 1.139346
+    },
+    "P2": {
+      "acquire_ns": 39.47216,
+      "artifact_hash_ns": 10.594176,
+      "attach_ns": 0.582994,
+      "build_ns": 0.0,
+      "engine_ms": 42.521904,
+      "format_validation_ns": 24.608581,
+      "manifest_discovery_ns": 0.164957,
+      "process_ms": 1124.862491,
+      "rss_kib": 329412,
+      "source_hash_ns": 2.50502,
+      "startup_residual_ms": 1080.845044,
+      "trace_ms": 3.123306
+    },
+    "P3": {
+      "acquire_ns": 65.477143,
+      "artifact_hash_ns": 5.232898,
+      "attach_ns": 56.512889,
+      "build_ns": 0.0,
+      "engine_ms": 67.51474,
+      "format_validation_ns": 0.000526,
+      "manifest_discovery_ns": 0.166889,
+      "process_ms": 1148.339607,
+      "rss_kib": 329420,
+      "source_hash_ns": 2.504508,
+      "startup_residual_ms": 1083.90068,
+      "trace_ms": 1.220964
+    }
+  }
+}

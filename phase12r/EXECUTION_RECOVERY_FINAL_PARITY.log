@@ -1,0 +1,9 @@
+test_candidate_clones_preserve_semantic_snapshot_and_official_score (test_bounded_resume.ExecutionParity.test_candidate_clones_preserve_semantic_snapshot_and_official_score) ... ok
+test_core_metadata_equivalence_preserves_official_scores (test_bounded_resume.ExecutionParity.test_core_metadata_equivalence_preserves_official_scores) ... ok
+test_financial_reference_clones_equal_fresh_official_reads (test_bounded_resume.ExecutionParity.test_financial_reference_clones_equal_fresh_official_reads) ... ok
+test_official_capture_equals_frozen_scoring (test_bounded_resume.ExecutionParity.test_official_capture_equals_frozen_scoring) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 5.192s
+
+OK

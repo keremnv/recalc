@@ -1,0 +1,112 @@
+[
+ {
+  "task_id": "Financial_Model:01_01",
+  "arm": "C0",
+  "rep": 2,
+  "modification": 0.0,
+  "regression": 0.0,
+  "output_produced": false,
+  "completed": false,
+  "run_status": "TRUNCATED_CALL_LIMIT",
+  "model_calls": 40
+ },
+ {
+  "task_id": "Financial_Model:01_01",
+  "arm": "C1",
+  "rep": 2,
+  "modification": 0.0,
+  "regression": 0.0,
+  "output_produced": false,
+  "completed": false,
+  "run_status": "TRUNCATED_CALL_LIMIT",
+  "model_calls": 40
+ },
+ {
+  "task_id": "Financial_Model:13_05",
+  "arm": "C0",
+  "rep": 2,
+  "modification": 0.6472,
+  "regression": 0.9967,
+  "output_produced": true,
+  "completed": true,
+  "run_status": "SUBMITTED",
+  "model_calls": 16
+ },
+ {
+  "task_id": "Financial_Model:13_05",
+  "arm": "C1",
+  "rep": 2,
+  "modification": 0.0268,
+  "regression": 0.8483,
+  "output_produced": true,
+  "completed": true,
+  "run_status": "SUBMITTED",
+  "model_calls": 13
+ },
+ {
+  "task_id": "Template:01_02",
+  "arm": "C0",
+  "rep": 2,
+  "modification": 0.1154,
+  "regression": 0.8684,
+  "output_produced": true,
+  "completed": true,
+  "run_status": "SUBMITTED",
+  "model_calls": 9
+ },
+ {
+  "task_id": "Template:01_02",
+  "arm": "C1",
+  "rep": 2,
+  "modification": 0.6923,
+  "regression": 0.9693,
+  "output_produced": true,
+  "completed": true,
+  "run_status": "SUBMITTED",
+  "model_calls": 12
+ },
+ {
+  "task_id": "Template:06_12",
+  "arm": "C0",
+  "rep": 2,
+  "modification": 0.0,
+  "regression": 1.0,
+  "output_produced": true,
+  "completed": true,
+  "run_status": "SUBMITTED",
+  "model_calls": 11
+ },
+ {
+  "task_id": "Template:06_12",
+  "arm": "C1",
+  "rep": 2,
+  "modification": 0.0,
+  "regression": 1.0,
+  "output_produced": true,
+  "completed": true,
+  "run_status": "SUBMITTED",
+  "model_calls": 8
+ },
+ {
+  "task_id": "Template:01_07",
+  "arm": "C0",
+  "rep": 2,
+  "modification": 0.0,
+  "regression": 0.0,
+  "output_produced": false,
+  "completed": false,
+  "run_status": "NO_SUBMIT",
+  "model_calls": 6
+ },
+ {
+  "task_id": "Template:01_07",
+  "arm": "C1",
+  "rep": 2,
+  "modification": 0.0,
+  "regression": 0.0,
+  "output_produced": false,
+  "completed": false,
+  "run_status": "NO_SUBMIT",
+  "model_calls": 6
+ }
+]

@@ -20,16 +20,15 @@ def _clear_read_budget_env(monkeypatch: pytest.MonkeyPatch, tmp_path: Path) -> P
     return state_path
 
 
-def test_failed_dump_blocks_next_read_without_spending_the_slot(
+def test_failed_dump_leaves_confirmation_slot_available(
     _clear_read_budget_env: Path,
 ) -> None:
     reset_read_budget()
     consume_read_budget(successful=False)
-    assert read_budget_error() is not None
+    assert read_budget_error() is None
     payload = json.loads(_clear_read_budget_env.read_text(encoding="utf-8"))
     assert payload["remaining"] == 1
-    assert payload["write_now"] is True
-    assert "write from inspect" in (read_budget_error() or "")
+    assert "write_now" not in payload
 
 
 def test_successful_read_still_exhausts_the_slot() -> None:

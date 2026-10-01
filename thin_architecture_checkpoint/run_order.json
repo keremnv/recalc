@@ -1,0 +1,290 @@
+[
+ {
+  "task": "Financial_Model:03_03",
+  "arm": "H0",
+  "start_epoch": 1789820056.4362507,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Financial_Model:03_03",
+  "arm": "H1",
+  "start_epoch": 1789820200.8367088,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Financial_Model:04_03",
+  "arm": "H0",
+  "start_epoch": 1789820374.5062318,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Financial_Model:04_03",
+  "arm": "H1",
+  "start_epoch": 1789820568.1076932,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Financial_Model:09_05",
+  "arm": "H1",
+  "start_epoch": 1789820929.8273973,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Financial_Model:09_05",
+  "arm": "H0",
+  "start_epoch": 1789821147.6353476,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Financial_Model:17_02",
+  "arm": "H1",
+  "start_epoch": 1789821334.4227664,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Financial_Model:17_02",
+  "arm": "H0",
+  "start_epoch": 1789821511.1557214,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Template:06_22",
+  "arm": "H0",
+  "start_epoch": 1789822578.2635233,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Template:06_22",
+  "arm": "H1",
+  "start_epoch": 1789822818.5214043,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Template:08_02",
+  "arm": "H1",
+  "start_epoch": 1789823532.4680865,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Template:08_02",
+  "arm": "H0",
+  "start_epoch": 1789824588.4957757,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Template:15_03",
+  "arm": "H0",
+  "start_epoch": 1789825655.5547376,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Template:15_03",
+  "arm": "H1",
+  "start_epoch": 1789826038.2143154,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Template:16_11",
+  "arm": "H1",
+  "start_epoch": 1789826619.2443995,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Template:16_11",
+  "arm": "H0",
+  "start_epoch": 1789827559.0500169,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Debugging:01_08",
+  "arm": "H1",
+  "start_epoch": 1789828609.015542,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Debugging:01_08",
+  "arm": "H0",
+  "start_epoch": 1789829534.9340794,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Debugging:04_06",
+  "arm": "H1",
+  "start_epoch": 1789830627.155223,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Debugging:04_06",
+  "arm": "H0",
+  "start_epoch": 1789831578.4578943,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Debugging:08_02",
+  "arm": "H1",
+  "start_epoch": 1789832545.2262564,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Debugging:08_02",
+  "arm": "H0",
+  "start_epoch": 1789833466.76673,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Debugging:10_03",
+  "arm": "H0",
+  "start_epoch": 1789833580.5348098,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Debugging:10_03",
+  "arm": "H1",
+  "start_epoch": 1789834429.0226169,
+  "cohort": "A-representative"
+ },
+ {
+  "task": "Financial_Model:07_01",
+  "arm": "H0",
+  "start_epoch": 1789835361.4480388,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Financial_Model:07_01",
+  "arm": "H1",
+  "start_epoch": 1789836264.2480583,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Financial_Model:08_01",
+  "arm": "H1",
+  "start_epoch": 1789837330.8592906,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Financial_Model:08_01",
+  "arm": "H0",
+  "start_epoch": 1789838204.243219,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Financial_Model:08_03",
+  "arm": "H0",
+  "start_epoch": 1789839138.8710928,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Financial_Model:08_03",
+  "arm": "H1",
+  "start_epoch": 1789839628.1136026,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Financial_Model:15_04",
+  "arm": "H0",
+  "start_epoch": 1789840116.5739586,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Financial_Model:15_04",
+  "arm": "H1",
+  "start_epoch": 1789840745.6067119,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Template:02_05",
+  "arm": "H1",
+  "start_epoch": 1789841315.070427,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Template:02_05",
+  "arm": "H0",
+  "start_epoch": 1789842334.4653318,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Template:06_17",
+  "arm": "H0",
+  "start_epoch": 1789842541.021238,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Template:06_17",
+  "arm": "H1",
+  "start_epoch": 1789842571.127194,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Template:13_08",
+  "arm": "H1",
+  "start_epoch": 1789842614.4443998,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Template:13_08",
+  "arm": "H0",
+  "start_epoch": 1789842682.0362391,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Template:16_06",
+  "arm": "H1",
+  "start_epoch": 1789842752.0739827,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Template:16_06",
+  "arm": "H0",
+  "start_epoch": 1789842859.90078,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Debugging:06_02",
+  "arm": "H1",
+  "start_epoch": 1789842964.2565634,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Debugging:06_02",
+  "arm": "H0",
+  "start_epoch": 1789843669.539375,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Debugging:08_04",
+  "arm": "H0",
+  "start_epoch": 1789844404.9259353,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Debugging:08_04",
+  "arm": "H1",
+  "start_epoch": 1789845333.708561,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Debugging:10_04",
+  "arm": "H0",
+  "start_epoch": 1789846278.7882917,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Debugging:10_04",
+  "arm": "H1",
+  "start_epoch": 1789847028.2770007,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Debugging:10_10",
+  "arm": "H0",
+  "start_epoch": 1789847702.0896916,
+  "cohort": "B-exposure"
+ },
+ {
+  "task": "Debugging:10_10",
+  "arm": "H1",
+  "start_epoch": 1789848614.68689,
+  "cohort": "B-exposure"
+ }
+]

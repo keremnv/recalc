@@ -51,14 +51,21 @@ def main() -> int:
     totals: dict[str, dict[str, float]] = {}
     for run_dir in args.run_dirs:
         for row in _rows(run_dir):
-            arm = ARM_BY_CONFIG.get(
-                (
-                    row.get("observation_variant"),
-                    row.get("read_policy"),
-                    row.get("execution_variant"),
-                ),
-                "?",
-            )
+            if row.get("arm") == "control":
+                arm = "A  control"
+            elif row.get("arm") == "hybrid":
+                arm = "H  hybrid"
+            elif row.get("arm") == "librecalc":
+                arm = "S  strict"
+            else:
+                arm = ARM_BY_CONFIG.get(
+                    (
+                        row.get("observation_variant"),
+                        row.get("read_policy"),
+                        row.get("execution_variant"),
+                    ),
+                    "S  strict",
+                )
             exact = row.get("exact_success")
             print(
                 f"{arm:22} {row.get('task', ''):26} "

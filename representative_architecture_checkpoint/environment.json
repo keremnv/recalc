@@ -1,0 +1,5 @@
+{
+ "soffice_executable": true,
+ "soffice_version": "LibreOffice 26.2.5.2 620(Build:2)",
+ "scoring": "official evaluation.py WITH open_spreadsheet.py LO refresh, both arms"
+}

@@ -1,0 +1,159 @@
+{
+ "tokenizer": "closest-known:THUDM/glm-4-9b-chat; exact production tokenizer unavailable; tokens ESTIMATED",
+ "modes": {
+  "correct": {
+   "tokens_est": {
+    "C0": 104971,
+    "C1": 105150,
+    "C2": 106630,
+    "C0_share": 0.0164962240711828,
+    "C1_share": 0.016524353974763234,
+    "C2_share": 0.01675693641777464,
+    "denom": 6363335,
+    "buckets": {
+     "total": 6363335,
+     "control": 28355,
+     "new": 6228350,
+     "labels": 1656,
+     "old": 103494,
+     "old_reinspect": 1480
+    },
+    "per_class": {
+     "NEW_EVIDENCE": 5879060,
+     "CONTROL_GAP": 3347,
+     "EXACT_REPEAT": 1813,
+     "PARTIAL_OVERLAP": 466707,
+     "MECHANICAL_REFORMAT": 10928,
+     "SEMANTIC_REINSPECTION": 1480
+    }
+   },
+   "bytes": {
+    "C0": 222106,
+    "C1": 222735,
+    "C2": 226076,
+    "C0_share": 0.0163923609676029,
+    "C1_share": 0.016438783824475844,
+    "C2_share": 0.01668536373673738,
+    "denom": 13549360,
+    "buckets": {
+     "total": 13549360,
+     "control": 59538,
+     "new": 13263746,
+     "labels": 5842,
+     "old": 216893,
+     "old_reinspect": 3341
+    },
+    "per_class": {
+     "NEW_EVIDENCE": 12520683,
+     "CONTROL_GAP": 52,
+     "EXACT_REPEAT": 6444,
+     "PARTIAL_OVERLAP": 996134,
+     "MECHANICAL_REFORMAT": 22706,
+     "SEMANTIC_REINSPECTION": 3341
+    }
+   },
+   "chars": {
+    "C0": 222105,
+    "C1": 222734,
+    "C2": 226075,
+    "C0_share": 0.016392716660743722,
+    "C1_share": 0.016439140733950575,
+    "C2_share": 0.016685727106898255,
+    "denom": 13549005,
+    "buckets": {
+     "total": 13549005,
+     "control": 59538,
+     "new": 13263392,
+     "labels": 5842,
+     "old": 216892,
+     "old_reinspect": 3341
+    },
+    "per_class": {
+     "NEW_EVIDENCE": 12520387,
+     "CONTROL_GAP": 52,
+     "EXACT_REPEAT": 6444,
+     "PARTIAL_OVERLAP": 996075,
+     "MECHANICAL_REFORMAT": 22706,
+     "SEMANTIC_REINSPECTION": 3341
+    }
+   }
+  },
+  "diagnostic": {
+   "tokens_est": {
+    "C0": 462736,
+    "C1": 468784,
+    "C2": 470264,
+    "C0_share": 0.07271910091170747,
+    "C1_share": 0.07366954592206759,
+    "C2_share": 0.073902128365079,
+    "denom": 6363335,
+    "buckets": {
+     "total": 6363335,
+     "control": 27773,
+     "new": 5865298,
+     "labels": 1656,
+     "old": 467128,
+     "old_reinspect": 1480
+    },
+    "per_class": {
+     "NEW_EVIDENCE": 2044814,
+     "CONTROL_GAP": 3347,
+     "EXACT_REPEAT": 1813,
+     "PARTIAL_OVERLAP": 4300949,
+     "MECHANICAL_REFORMAT": 10932,
+     "SEMANTIC_REINSPECTION": 1480
+    }
+   },
+   "bytes": {
+    "C0": 992287,
+    "C1": 1009393,
+    "C2": 1012734,
+    "C0_share": 0.07323497198391658,
+    "C1_share": 0.07449746703903358,
+    "C2_share": 0.07474404695129512,
+    "denom": 13549360,
+    "buckets": {
+     "total": 13549360,
+     "control": 58320,
+     "new": 12478306,
+     "labels": 5842,
+     "old": 1003551,
+     "old_reinspect": 3341
+    },
+    "per_class": {
+     "NEW_EVIDENCE": 4595609,
+     "CONTROL_GAP": 52,
+     "EXACT_REPEAT": 6444,
+     "PARTIAL_OVERLAP": 8921200,
+     "MECHANICAL_REFORMAT": 22714,
+     "SEMANTIC_REINSPECTION": 3341
+    }
+   },
+   "chars": {
+    "C0": 992272,
+    "C1": 1009378,
+    "C2": 1012719,
+    "C0_share": 0.07323578373467277,
+    "C1_share": 0.07449831186865752,
+    "C2_share": 0.0747448982416052,
+    "denom": 13549005,
+    "buckets": {
+     "total": 13549005,
+     "control": 58320,
+     "new": 12477966,
+     "labels": 5842,
+     "old": 1003536,
+     "old_reinspect": 3341
+    },
+    "per_class": {
+     "NEW_EVIDENCE": 4595529,
+     "CONTROL_GAP": 52,
+     "EXACT_REPEAT": 6444,
+     "PARTIAL_OVERLAP": 8920925,
+     "MECHANICAL_REFORMAT": 22714,
+     "SEMANTIC_REINSPECTION": 3341
+    }
+   }
+  }
+ }
+}

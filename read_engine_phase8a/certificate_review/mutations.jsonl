@@ -1,0 +1,15 @@
+{"admission": "A1_ADMIT", "case": "base_terminal", "certified": true, "expected": true, "passed": true, "reason": "CLOSED_GRAMMAR_TERMINAL_CELL_PROOF"}
+{"admission": "A1_ADMIT", "case": "parenthesized", "certified": true, "expected": true, "passed": true, "reason": "CLOSED_GRAMMAR_TERMINAL_CELL_PROOF"}
+{"admission": "A1_ADMIT", "case": "safe_list_comp", "certified": true, "expected": true, "passed": true, "reason": "CLOSED_GRAMMAR_TERMINAL_CELL_PROOF"}
+{"admission": "A1_ADMIT", "case": "object_assignment", "certified": false, "expected": false, "passed": true, "reason": "UNPROVEN_CALL_DISPATCH"}
+{"admission": "A1_ADMIT", "case": "method_alias", "certified": false, "expected": false, "passed": true, "reason": "UNPROVEN_ATTRIBUTE_OR_OBJECT_ESCAPE"}
+{"admission": "A1_ADMIT", "case": "dunder_method", "certified": false, "expected": false, "passed": true, "reason": "UNPROVEN_CALL_DISPATCH"}
+{"admission": "A1_ADMIT", "case": "dunder_subscript", "certified": false, "expected": false, "passed": true, "reason": "UNPROVEN_CELL_RECEIVER"}
+{"admission": "A1_ADMIT", "case": "literal_subscript", "certified": false, "expected": false, "passed": true, "reason": "UNPROVEN_ATTRIBUTE_OR_OBJECT_ESCAPE"}
+{"admission": "PREDECLARED_REAL_OPENPYXL", "case": "helper_call", "certified": false, "expected": false, "passed": true, "reason": "NOT_ADMITTED"}
+{"admission": "A1_ADMIT", "case": "list_storage", "certified": false, "expected": false, "passed": true, "reason": "UNPROVEN_CALL_DISPATCH"}
+{"admission": "PREDECLARED_REAL_OPENPYXL", "case": "dynamic_getattr", "certified": false, "expected": false, "passed": true, "reason": "NOT_ADMITTED"}
+{"admission": "A1_ADMIT", "case": "ternary_object", "certified": false, "expected": false, "passed": true, "reason": "UNPROVEN_ATTRIBUTE_OR_OBJECT_ESCAPE"}
+{"admission": "A1_ADMIT", "case": "walrus_object", "certified": false, "expected": false, "passed": true, "reason": "UNPROVEN_ATTRIBUTE_OR_OBJECT_ESCAPE"}
+{"admission": "A1_ADMIT", "case": "generator_object", "certified": false, "expected": false, "passed": true, "reason": "CELL_CALL_SHAPE"}
+{"admission": "A1_ADMIT", "case": "no_cell", "certified": false, "expected": false, "passed": true, "reason": "UNPROVEN_ATTRIBUTE_OR_OBJECT_ESCAPE"}

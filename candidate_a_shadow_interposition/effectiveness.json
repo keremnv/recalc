@@ -1,0 +1,8 @@
+{
+  "candidate_a": "measured after reliability gate",
+  "no_model_or_token_claim": true,
+  "scenarios": [
+    "P1 incremental read-only substrate",
+    "P2 shared transparent-runtime substrate"
+  ]
+}

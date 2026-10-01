@@ -1,0 +1,80 @@
+{
+  "break_even_by_workbook": [
+    {
+      "index_build_s": 7.462073,
+      "open_plus_scan_s": 6.153929,
+      "repeated_accesses": 1.21,
+      "workbook": "Inconsistent Color Coding_input.xlsx"
+    },
+    {
+      "index_build_s": 2.772948,
+      "open_plus_scan_s": 1.68028,
+      "repeated_accesses": 1.65,
+      "workbook": "08_03_Seafood_input.xlsx"
+    },
+    {
+      "index_build_s": 2.74061,
+      "open_plus_scan_s": 1.673019,
+      "repeated_accesses": 1.64,
+      "workbook": "08_01_Seafood_input.xlsx"
+    },
+    {
+      "index_build_s": 0.004542,
+      "open_plus_scan_s": 0.003375,
+      "repeated_accesses": 1.35,
+      "workbook": "06_09_input.xlsx"
+    },
+    {
+      "index_build_s": 0.005526,
+      "open_plus_scan_s": 0.003949,
+      "repeated_accesses": 1.4,
+      "workbook": "06_16_input.xlsx"
+    },
+    {
+      "index_build_s": 0.782629,
+      "open_plus_scan_s": 0.563481,
+      "repeated_accesses": 1.39,
+      "workbook": "07_01_RealEstate_input.xlsx"
+    },
+    {
+      "index_build_s": 2.761508,
+      "open_plus_scan_s": 1.557764,
+      "repeated_accesses": 1.77,
+      "workbook": "10_01_McDonalds_input.xlsx"
+    },
+    {
+      "index_build_s": 0.004992,
+      "open_plus_scan_s": 0.003449,
+      "repeated_accesses": 1.45,
+      "workbook": "03_03_input.xlsx"
+    },
+    {
+      "index_build_s": 0.003959,
+      "open_plus_scan_s": 0.002892,
+      "repeated_accesses": 1.37,
+      "workbook": "13_08_input.xlsx"
+    },
+    {
+      "index_build_s": 0.004659,
+      "open_plus_scan_s": 0.003361,
+      "repeated_accesses": 1.39,
+      "workbook": "06_17_input.xlsx"
+    },
+    {
+      "index_build_s": 0.005039,
+      "open_plus_scan_s": 0.003416,
+      "repeated_accesses": 1.48,
+      "workbook": "11_03_input.xlsx"
+    }
+  ],
+  "break_even_repeated_reads_approx": 1.65,
+  "caveat": "index build is shared infrastructure only if already required by transparent runtime; otherwise this is incremental read-only cost",
+  "historical_repeated_open_calls_conservative": 234,
+  "historical_repeated_parse_walltime_ceiling_s": 9.1471,
+  "median_index_build_s_all": 0.0055,
+  "median_index_build_s_nontrivial": 2.7615,
+  "median_open_plus_scan_s_all": 0.0039,
+  "median_open_plus_scan_s_nontrivial": 1.673,
+  "nontrivial_workbooks_cells_ge_100k": 5,
+  "timed_workbooks": 11
+}

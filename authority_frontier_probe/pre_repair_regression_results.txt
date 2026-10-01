@@ -1,0 +1,124 @@
+FFFFFFFFFFFFF                                                            [100%]
+=================================== FAILURES ===================================
+______ test_percentage_is_not_a_year_even_when_scope_also_has_dates[10%] _______
+tests/test_authority_frontier.py:25: in test_percentage_is_not_a_year_even_when_scope_also_has_dates
+    assert parse_scope_spec(scope)['years'] == list(range(2026, 2031))
+E   assert [2010, 2011, ...14, 2015, ...] == [2026, 2027, 2028, 2029, 2030]
+E     
+E     At index 0 diff: 2010 != 2026
+E     Left contains 16 more items, first extra item: 2015
+E     Use -v to get more diff
+______ test_percentage_is_not_a_year_even_when_scope_also_has_dates[30%] _______
+tests/test_authority_frontier.py:26: in test_percentage_is_not_a_year_even_when_scope_also_has_dates
+    assert parse_scope_spec({'scope': [{'text': rate}]})['years'] == []
+E   assert [2030] == []
+E     
+E     Left contains one more item: 2030
+E     Use -v to get more diff
+_____ test_percentage_is_not_a_year_even_when_scope_also_has_dates[12.5%] ______
+tests/test_authority_frontier.py:25: in test_percentage_is_not_a_year_even_when_scope_also_has_dates
+    assert parse_scope_spec(scope)['years'] == list(range(2026, 2031))
+E   assert [2012, 2013, ...16, 2017, ...] == [2026, 2027, 2028, 2029, 2030]
+E     
+E     At index 0 diff: 2012 != 2026
+E     Left contains 14 more items, first extra item: 2017
+E     Use -v to get more diff
+_____ test_percentage_is_not_a_year_even_when_scope_also_has_dates[1,000%] _____
+tests/test_authority_frontier.py:25: in test_percentage_is_not_a_year_even_when_scope_also_has_dates
+    assert parse_scope_spec(scope)['years'] == list(range(2026, 2031))
+E   assert [2000, 2001, ...04, 2005, ...] == [2026, 2027, 2028, 2029, 2030]
+E     
+E     At index 0 diff: 2000 != 2026
+E     Left contains 26 more items, first extra item: 2005
+E     Use -v to get more diff
+______ test_percentage_is_not_a_year_even_when_scope_also_has_dates[100%] ______
+tests/test_authority_frontier.py:25: in test_percentage_is_not_a_year_even_when_scope_also_has_dates
+    assert parse_scope_spec(scope)['years'] == list(range(2026, 2031))
+E   assert [2010, 2011, ...14, 2015, ...] == [2026, 2027, 2028, 2029, 2030]
+E     
+E     At index 0 diff: 2010 != 2026
+E     Left contains 16 more items, first extra item: 2015
+E     Use -v to get more diff
+______ test_percentage_is_not_a_year_even_when_scope_also_has_dates[12 %] ______
+tests/test_authority_frontier.py:25: in test_percentage_is_not_a_year_even_when_scope_also_has_dates
+    assert parse_scope_spec(scope)['years'] == list(range(2026, 2031))
+E   assert [2012, 2013, ...16, 2017, ...] == [2026, 2027, 2028, 2029, 2030]
+E     
+E     At index 0 diff: 2012 != 2026
+E     Left contains 14 more items, first extra item: 2017
+E     Use -v to get more diff
+____ test_each_planner_mode_receives_compiled_temporal_evidence[monolithic] ____
+tests/test_authority_frontier.py:95: in test_each_planner_mode_receives_compiled_temporal_evidence
+    assert {p['period']['year'] for p in plan['packets']['O1']['scope']} == {2026, 2027}
+E   assert set() == {2026, 2027}
+E     
+E     Extra items in the right set:
+E     2026
+E     2027
+E     Use -v to get more diff
+___ test_each_planner_mode_receives_compiled_temporal_evidence[sharded_old] ____
+tests/test_authority_frontier.py:95: in test_each_planner_mode_receives_compiled_temporal_evidence
+    assert {p['period']['year'] for p in plan['packets']['O1']['scope']} == {2026, 2027}
+E   assert set() == {2026, 2027}
+E     
+E     Extra items in the right set:
+E     2026
+E     2027
+E     Use -v to get more diff
+_ test_each_planner_mode_receives_compiled_temporal_evidence[sharded_projected] _
+tests/test_authority_frontier.py:95: in test_each_planner_mode_receives_compiled_temporal_evidence
+    assert {p['period']['year'] for p in plan['packets']['O1']['scope']} == {2026, 2027}
+E   assert set() == {2026, 2027}
+E     
+E     Extra items in the right set:
+E     2026
+E     2027
+E     Use -v to get more diff
+____ test_repaired_runner_routes_to_repaired_db_and_restores_globals[False] ____
+tests/test_authority_frontier.py:115: in test_repaired_runner_routes_to_repaired_db_and_restores_globals
+    assert feasibility.run_treatment_task('04_01')['status'] == 'test-only'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pre_repair/fm_resource_feasibility.py:1008: in run_treatment_task
+    ???
+tests/test_authority_frontier.py:105: in run_one
+    assert treatment.DATABASES == tmp_path
+E   AssertionError: assert PosixPath('/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/prep/db') == PosixPath('/tmp/pytest-of-kerem/pytest-205/test_repaired_runner_routes_to0')
+E    +  where PosixPath('/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/prep/db') = treatment.DATABASES
+____ test_repaired_runner_routes_to_repaired_db_and_restores_globals[True] _____
+tests/test_authority_frontier.py:113: in test_repaired_runner_routes_to_repaired_db_and_restores_globals
+    feasibility.run_treatment_task('04_01')
+pre_repair/fm_resource_feasibility.py:1008: in run_treatment_task
+    ???
+tests/test_authority_frontier.py:105: in run_one
+    assert treatment.DATABASES == tmp_path
+E   AssertionError: assert PosixPath('/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/prep/db') == PosixPath('/tmp/pytest-of-kerem/pytest-205/test_repaired_runner_routes_to1')
+E    +  where PosixPath('/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/prep/db') = treatment.DATABASES
+__________ test_repaired_runner_does_not_silently_use_placeholder_db ___________
+tests/test_authority_frontier.py:124: in test_repaired_runner_does_not_silently_use_placeholder_db
+    feasibility.run_treatment_task('04_01')
+pre_repair/fm_resource_feasibility.py:1008: in run_treatment_task
+    ???
+tests/test_authority_frontier.py:122: in <lambda>
+    monkeypatch.setattr(treatment, 'run_one_task', lambda *a, **k: pytest.fail('No provider work without repaired world'))
+                                                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E   Failed: No provider work without repaired world
+_ test_environment_materializes_temporal_coordinates_instead_of_placeholder[True] _
+tests/test_integration_repairs.py:198: in test_environment_materializes_temporal_coordinates_instead_of_placeholder
+    assert conn.execute("SELECT COUNT(*) FROM temporal_coordinates WHERE year=2023").fetchone()[0] > 0
+E   assert 0 > 0
+=========================== short test summary info ============================
+FAILED tests/test_authority_frontier.py::test_percentage_is_not_a_year_even_when_scope_also_has_dates[10%]
+FAILED tests/test_authority_frontier.py::test_percentage_is_not_a_year_even_when_scope_also_has_dates[30%]
+FAILED tests/test_authority_frontier.py::test_percentage_is_not_a_year_even_when_scope_also_has_dates[12.5%]
+FAILED tests/test_authority_frontier.py::test_percentage_is_not_a_year_even_when_scope_also_has_dates[1,000%]
+FAILED tests/test_authority_frontier.py::test_percentage_is_not_a_year_even_when_scope_also_has_dates[100%]
+FAILED tests/test_authority_frontier.py::test_percentage_is_not_a_year_even_when_scope_also_has_dates[12 %]
+FAILED tests/test_authority_frontier.py::test_each_planner_mode_receives_compiled_temporal_evidence[monolithic]
+FAILED tests/test_authority_frontier.py::test_each_planner_mode_receives_compiled_temporal_evidence[sharded_old]
+FAILED tests/test_authority_frontier.py::test_each_planner_mode_receives_compiled_temporal_evidence[sharded_projected]
+FAILED tests/test_authority_frontier.py::test_repaired_runner_routes_to_repaired_db_and_restores_globals[False]
+FAILED tests/test_authority_frontier.py::test_repaired_runner_routes_to_repaired_db_and_restores_globals[True]
+FAILED tests/test_authority_frontier.py::test_repaired_runner_does_not_silently_use_placeholder_db
+FAILED tests/test_integration_repairs.py::test_environment_materializes_temporal_coordinates_instead_of_placeholder[True]
+13 failed in 0.12s
+BASELINE_EXIT 1

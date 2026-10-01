@@ -1,0 +1,16 @@
+{
+  "name": "official-score-three",
+  "purpose": "Prospectively specified small official-score experiment: compiled GLM 5.3 Flash / high against the published SpreadsheetBench 2 control reference on three frozen control-census-sixty tasks, one per category.",
+  "model": "z-ai/glm-5.3-flash",
+  "reasoning": "high",
+  "max_model_calls_per_task": 40,
+  "max_cost_usd_per_task": 2.5,
+  "population": "control-census-sixty",
+  "selection": "Drawn before this run from the frozen 60. One task per category. Excludes Template:02_05 (burned development data) and Financial_Model:06_01 (prior expensive O3 synthesis). Financial_Model:02_03 is not in the 60.",
+  "scoring": "Official SpreadsheetBench 2 scorer after all workers finish, sequential so LibreOffice is not shared.",
+  "tasks": [
+    {"category": "Template", "id": "01_02"},
+    {"category": "Financial_Model", "id": "02_01"},
+    {"category": "Debugging", "id": "01_01"}
+  ]
+}

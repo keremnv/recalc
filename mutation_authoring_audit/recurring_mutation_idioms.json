@@ -1,0 +1,115 @@
+{
+ "contiguous_formula_translation": {
+  "n_scripts": 18,
+  "n_tasks": 11,
+  "families": [
+   "Debugging",
+   "Financial_Model",
+   "Template"
+  ],
+  "median_loc": 7,
+  "effect_confirmation_rate": 0.111,
+  "clean_boundary_rate": 0.111
+ },
+ "contiguous_same_value_fill?": {
+  "n_scripts": 10,
+  "n_tasks": 7,
+  "families": [
+   "Debugging",
+   "Financial_Model",
+   "Visualization"
+  ],
+  "median_loc": 8,
+  "effect_confirmation_rate": 0.143,
+  "clean_boundary_rate": 0.5
+ },
+ "coordinate_conversion": {
+  "n_scripts": 25,
+  "n_tasks": 14,
+  "families": [
+   "Financial_Model",
+   "Template"
+  ],
+  "median_loc": 2,
+  "effect_confirmation_rate": 0.19,
+  "clean_boundary_rate": 0.24
+ },
+ "explicit_address_formula_batch": {
+  "n_scripts": 6,
+  "n_tasks": 4,
+  "families": [
+   "Financial_Model",
+   "Template"
+  ],
+  "median_loc": 16,
+  "effect_confirmation_rate": 0.833,
+  "clean_boundary_rate": 0.833
+ },
+ "explicit_address_value_batch": {
+  "n_scripts": 34,
+  "n_tasks": 26,
+  "families": [
+   "Debugging",
+   "Financial_Model",
+   "Template"
+  ],
+  "median_loc": 4,
+  "effect_confirmation_rate": 0.667,
+  "clean_boundary_rate": 0.382
+ },
+ "load_mutate_save_boilerplate": {
+  "n_scripts": 103,
+  "n_tasks": 63,
+  "families": [
+   "Debugging",
+   "Financial_Model",
+   "Template",
+   "Visualization"
+  ],
+  "median_loc": 2,
+  "effect_confirmation_rate": 0.681,
+  "clean_boundary_rate": 0.311
+ },
+ "number_format_copy": {
+  "n_scripts": 4,
+  "n_tasks": 3,
+  "families": [
+   "Financial_Model"
+  ],
+  "median_loc": 23,
+  "effect_confirmation_rate": 0.0,
+  "clean_boundary_rate": 0.25
+ },
+ "row_or_column_formula_fill": {
+  "n_scripts": 21,
+  "n_tasks": 15,
+  "families": [
+   "Debugging",
+   "Financial_Model",
+   "Template"
+  ],
+  "median_loc": 9,
+  "effect_confirmation_rate": 0.15,
+  "clean_boundary_rate": 0.0
+ },
+ "style_copy": {
+  "n_scripts": 4,
+  "n_tasks": 3,
+  "families": [
+   "Financial_Model"
+  ],
+  "median_loc": 23,
+  "effect_confirmation_rate": 0.0,
+  "clean_boundary_rate": 0.25
+ },
+ "style_plus_value_write": {
+  "n_scripts": 3,
+  "n_tasks": 2,
+  "families": [
+   "Financial_Model"
+  ],
+  "median_loc": 23,
+  "effect_confirmation_rate": 0.0,
+  "clean_boundary_rate": 0.333
+ }
+}

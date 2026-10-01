@@ -1,0 +1,54 @@
+{
+ "Financial_Model": {
+  "tokens_est": {
+   "total": 1742950,
+   "new": 1632941,
+   "old": 100433,
+   "derivation": 47,
+   "labels": 2218,
+   "control": 6182,
+   "old_reinspect": 1129
+  },
+  "n_segments": 18967,
+  "C1_share_of_family": 0.05892194268338162
+ },
+ "Template": {
+  "tokens_est": {
+   "total": 94678,
+   "new": 91620,
+   "old": 718,
+   "derivation": 27,
+   "labels": 386,
+   "control": 1927,
+   "old_reinspect": 0
+  },
+  "n_segments": 3694,
+  "C1_share_of_family": 0.011945752973235598
+ },
+ "Debugging": {
+  "tokens_est": {
+   "total": 5153390,
+   "new": 5001016,
+   "old": 62747,
+   "derivation": 363,
+   "labels": 112,
+   "control": 2313,
+   "old_reinspect": 86839
+  },
+  "n_segments": 311452,
+  "C1_share_of_family": 0.012268041037064923
+ },
+ "Visualization": {
+  "tokens_est": {
+   "total": 38192,
+   "new": 36247,
+   "old": 341,
+   "derivation": 91,
+   "labels": 124,
+   "control": 732,
+   "old_reinspect": 657
+  },
+  "n_segments": 1500,
+  "C1_share_of_family": 0.014558022622538752
+ }
+}

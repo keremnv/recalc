@@ -1,0 +1,8 @@
+operation,obligation,kind,intensional_target,occupancy_filter,raw_expansion,filtered_cells,ownership_after_overlap,occupancy_counts,implicit_blank_count,group_members,group_canonicals,sessions,accepted,in_any_work_request,in_accepted_work_requests
+O2::op1,O2,SET_FORMULA,"{""kind"":""UNION"",""sets"":[{""cell_id"":""cell:s09:r100:c11"",""kind"":""CELL""},{""cell_id"":""cell:s09:r100:c23"",""kind"":""CELL""},{""cell_id"":""cell:s09:r100:c35"",""kind"":""CELL""},{""cell_id"":""cell:s09:r100:c47"",""kind"":""CELL""},{""cell_id"":""cell:s09:r100:c59"",""kind"":""CELL""}]}",,5,5,5,"{""blank"":5}",0,0,0,5,0,5,5
+O3::op1,O3,FILL_FORMULA,"{""c1"":3,""c2"":23,""kind"":""RECTANGLE"",""r1"":49,""r2"":49,""sheet_id"":""sheet:s01""}",BLANK_ONLY,21,21,21,"{""blank"":21}",0,0,0,16,6,21,21
+O4::op1,O4,FILL_FORMULA,"{""kind"":""SHEET"",""sheet_id"":""sheet:s13""}",NONFORMULA_ONLY,80000,78674,78674,"{""blank"":78075,""numeric"":558,""text"":41}",7200,1814,49,0,0,7,4
+O5::op1,O5,FILL_FORMULA,"{""c1"":10,""c2"":26,""kind"":""RECTANGLE"",""r1"":31,""r2"":31,""sheet_id"":""sheet:s05""}",BLANK_ONLY,17,17,17,"{""blank"":17}",0,2,1,0,0,0,0
+O6::op1,O6,FILL_FORMULA,"{""kind"":""UNION"",""sets"":[{""c1"":10,""c2"":11,""kind"":""RECTANGLE"",""r1"":31,""r2"":31,""sheet_id"":""sheet:s05""},{""c1"":13,""c2"":26,""kind"":""RECTANGLE"",""r1"":31,""r2"":31,""sheet_id"":""sheet:s05""}]}",,16,16,0,"{""blank"":16}",0,2,1,0,0,0,0
+O7::op1,O7,SET_FORMULA,"{""cell_id"":""cell:s12:r16:c11"",""kind"":""CELL""}",,1,1,1,"{""numeric"":1}",0,0,0,0,0,0,0
+O7::op2,O7,FILL_FORMULA,"{""c1"":12,""c2"":70,""kind"":""RECTANGLE"",""r1"":16,""r2"":16,""sheet_id"":""sheet:s12""}",,59,59,59,"{""numeric"":59}",0,0,0,0,0,0,0

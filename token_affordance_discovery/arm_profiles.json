@@ -1,0 +1,87 @@
+{
+  "A": {
+    "cue": "none",
+    "helper_importable": false,
+    "preflight_observation": false
+  },
+  "B": {
+    "cue": "possible capability, verify before use",
+    "helper_importable": false,
+    "preflight_observation": false
+  },
+  "C": {
+    "cue": "helper available with names",
+    "helper_importable": true,
+    "preflight_observation": false
+  },
+  "D": {
+    "cue": "same as C",
+    "helper_importable": true,
+    "preflight_observation": true
+  },
+  "helper_backend": "frozen RC reference openpyxl",
+  "provider_tool_schemas_identical": true,
+  "provider_tools": [
+    {
+      "function": {
+        "description": "run shell commands (e.g., file operations, calling Python scripts with `python3`)",
+        "name": "bash",
+        "parameters": {
+          "properties": {
+            "command": {
+              "description": "shell command to run",
+              "type": "string"
+            }
+          },
+          "required": [
+            "command"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "view the content of an xlsx file. Can list all sheets or view a specific sheet's contents with optional row range",
+        "name": "view_xlsx",
+        "parameters": {
+          "properties": {
+            "end_row": {
+              "type": "integer"
+            },
+            "file_path": {
+              "type": "string"
+            },
+            "mode": {
+              "description": "list or content",
+              "type": "string"
+            },
+            "sheet": {
+              "type": "string"
+            },
+            "start_row": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "file_path"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "submits the current file",
+        "name": "submit",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ]
+}

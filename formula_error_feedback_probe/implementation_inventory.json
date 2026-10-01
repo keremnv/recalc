@@ -1,0 +1,128 @@
+{
+ "code_frozen": true,
+ "commit_gate_module": {
+  "blocking_submit_once": true,
+  "deliveries_tracked_per_stage": [
+   "reported_write",
+   "reported_submit"
+  ],
+  "functions": {
+   "already_reported": "bool per stage; deliveries tracked separately for write and submit",
+   "commit_gate_enabled": "true iff env LIBRECALC_COMMIT_GATE_ENABLED == '1'",
+   "commit_gate_path": "state path from env LIBRECALC_COMMIT_GATE_PATH",
+   "discover_paths": "(input, output) via INPUT_GLOB/OUTPUT_GLOB; exactly-one-mount assumption",
+   "evaluate": "runs new_formula_errors + uniformity_breaks + broken_check_cells; returns ok:false report or ok:true reason",
+   "mark_reported": "persists reported_<stage>=true as JSON state file",
+   "record_report": "appends {stage, report} to .librecalc_commit_report.json beside the workbook"
+  },
+  "inputs": {
+   "backend": "UnoCalcBackend (UNO/Calc): inspect_workbook used ranges + read_ranges include_errors=True",
+   "commit_checks": "product domain module (pure functions over cell maps)",
+   "env": [
+    "LIBRECALC_COMMIT_GATE_ENABLED",
+    "LIBRECALC_COMMIT_GATE_PATH"
+   ]
+  },
+  "note": "Three checks wired: new_formula_errors + uniformity_breaks + broken_check_cells. unrequested_write, referential_integrity, unextended_continuation, region_width_extension are NOT wired (measured and rejected, or scoped elsewhere).",
+  "outputs_report_schema": {
+   "checks": {
+    "broken_check_cell": "summarised",
+    "new_formula_error": "summarised",
+    "uniformity_break": "summarised"
+   },
+   "finding_count": "int, complete across checks",
+   "note": "facts-not-suggestions text; next submit is final",
+   "ok": false,
+   "schema": "commit-checks-v1"
+  },
+  "path": "benchmark/sweagent/librecalc/lib/commit_gate.py",
+  "sampling_capping": {
+   "max_per_sheet": 8,
+   "max_representatives": 80,
+   "representatives_are_a_sample": "bool; counts always complete, only addresses sampled"
+  }
+ },
+ "files_modified_by_this_probe": [],
+ "historical_fixes_present": {
+  "complete_finding_count": true,
+  "durable_report_recording": true,
+  "evidence": "benchmark/sweagent/librecalc/lib/commit_gate.py: _summarise (complete counts + per-sheet + sampled addresses), record_report (.librecalc_commit_report.json), already_reported/mark_reported per-stage; benchmark/sweagent/librecalc/lib/calc_tool.py: _with_write_report (write-stage) + commit_report command (submit-stage); tests/test_commit_gate.py pins all of it",
+  "per_sheet_counts": true,
+  "report_after_first_saving_write_as_well_as_submit": true,
+  "sampled_addresses_8_per_sheet_80_overall": true
+ },
+ "live_error_delta_computation": {
+  "error_origins_counted": [
+   "evaluated error value (backend errors matrix / cached value carrying an error token)",
+   "formula text already carrying a broken reference token (e.g. =#REF!)"
+  ],
+  "function": "new_formula_errors(before, after)",
+  "inputs": {
+   "after": "output cell map (same reader)",
+   "before": "input cell map {(sheet, address): (value, formula)}"
+  },
+  "normalization_rules": [
+   "both workbooks read through the SAME engine (UNO), so Excel-authored vs saved representation differences cannot register as changes",
+   "error_kind(value/formula): SPREADSHEET_ERROR_TOKEN regex on the value first, else spreadsheet_error_kind on the formula text",
+   "no DataTable/excel-artifact normalization needed live (both sides UNO); the offline replay path normalizes DataTableFormula/ArrayFormula via a sentinel and is NOT the live path",
+   "comparison is per-cell error presence, not value equality: a recalculated formula whose value moved but stayed non-error is not a finding"
+  ],
+  "outputs": "list[CommitFinding(check='new_formula_error', sheet, address, detail='output has {KIND} here; the input did not')]",
+  "path": "src/librecalc_mcp/domain/commit_checks.py:211-233",
+  "rule": "a cell is a finding iff the OUTPUT shows a spreadsheet error there and the INPUT shows none at the same (sheet, address)"
+ },
+ "product_rc_status": {
+  "commit_gate_in_current_product_package": false,
+  "detail": "No reference to commit gate/checks in src/librecalc_agent/*.py or src/librecalc_mcp/server.py. The live mechanism (gate + wiring) exists only in the old structured harness bundle (benchmark/sweagent/librecalc/) plus the frozen pure domain logic (src/librecalc_mcp/domain/commit_checks.py). The frozen architecture (FINAL_ARCHITECTURE_FREEZE.md) retains the ordinary coding-agent core and does NOT include formula-error feedback; MECHANISM_DISCOVERY is CLOSED. This probe modified nothing.",
+  "domain_logic_in_product": true,
+  "frozen_architecture": "ordinary coding-agent core + conditional hidden A+A1/capture/freshness; no feedback surface",
+  "rc_version": "0.2.0rc1 (pyproject.toml, src/librecalc_agent/__init__.py)"
+ },
+ "recognition_error_kinds": {
+  "note": "Any token matching SPREADSHEET_ERROR_TOKEN counts, including LibreOffice-native Err:NNN codes surfaced via UNO cell.Error/cell.String (live path surfaces Err:522/Err:509/Err:502; see live_offline_parity.json).",
+  "regex": "#(?:DIV/0!|N/A|NAME?|NULL!|NUM!|REF!|VALUE!)|Err:\\d+ (case-insensitive)",
+  "source": "src/librecalc_mcp/domain/grid.py:13-16 (SPREADSHEET_ERROR_TOKEN), :52-61 (spreadsheet_error_kind); src/librecalc_mcp/domain/commit_checks.py:146-158 (error_kind)"
+ },
+ "recalc_path_uno": {
+  "calculateAll_on_read": false,
+  "calculateAll_on_write": true,
+  "detail": "Reads open the document and read used ranges as-is (recalc-on-load behavior is the container/user LO default). Writes call doc.calculateAll() before saving, so live-gate reads of UNO-written outputs always see freshly calculated values. For archived OPENPYXL-written outputs (stale/empty caches), live-equivalent replay MUST recalculate-then-save-then-read; see live_offline_parity.json modes.",
+  "error_channel": "_read_target queries cell.Error per formula cell and records cell.String (the displayed error token, e.g. #VALUE!, Err:522); constants/blanks never queried",
+  "functions": {
+   "_DocumentContext": "open via loadComponentFromURL, close (no save) on read path",
+   "_save_document": "store()/storeToURL with Calc MS Excel 2007 XML filter",
+   "_sheet_range": "A1 -> getCellRangeByPosition",
+   "_used_range": "cursor gotoEndOfUsedArea -> A1:<end>",
+   "execute_program": "apply ops, calculateAll, save",
+   "inspect_workbook": "per-sheet names + used ranges",
+   "read_range(s)": "values (getDataArray) + formulas (getFormulaArray) + errors (cell-by-cell), include_errors=True",
+   "write_range": "apply values, calculateAll, save"
+  },
+  "host_port": "localhost:2021 (UnoCalcBackend defaults)",
+  "path": "src/librecalc_mcp/backend/uno.py",
+  "pyuno": "system /usr/lib/python3/dist-packages/uno.py; listener: soffice --headless --accept socket; health ok:true verified this session"
+ },
+ "report_summarisation": {
+  "function": "_summarise (commit_gate.py:116-138)",
+  "rule": "group by check; per-sheet counts complete; representatives = first <=8 per sheet (sorted), <=80 overall; representatives_are_a_sample flag"
+ },
+ "when_reports_emitted_and_blocking": {
+  "submit_stage": {
+   "blocking": "blocks ONCE: first submit returns the report (exit 1, no <<SWE_AGENT_SUBMISSION>>); next submit always succeeds (already_reported('submit'))",
+   "emit_condition": "gate enabled AND not already reported submit AND evaluate finds >=1 finding; gate errors fail open (ok:true) and never block",
+   "path": "calc_tool.py commit_report command (283-297), invoked by bin/submit wrapper; wrapper prints <<SWE_AGENT_SUBMISSION>> only when commit_report exits 0",
+   "record": "mark_reported('submit') + record_report(report,'submit')"
+  },
+  "write_stage": {
+   "blocking": "never blocks; informational only",
+   "emit_condition": "gate enabled AND not already reported write AND first saving write whose evaluate finds >=1 finding; report exceptions swallowed (write result returned unchanged); zero-finding writes pass through silently",
+   "paths": "calc_tool.py _with_write_report (229-250), attached to write, fill-formulas, and program commands (NOT upsert-chart); record via mark_reported('write') + record_report(report,'write')"
+  }
+ },
+ "related_but_distinct_surface": {
+  "calc_compare_semantic_diff": {
+   "note": "Agent-invoked self-comparison (what did I change?), NOT the world-initiated gate. Its formula_errors added/removed/changed section answers questions the agent asked, from observations the agent requested; it cannot surface edits the agent did not know to make. Sampling: downstream-values shape with bounded representatives (the shape _summarise copies).",
+   "path": "src/librecalc_mcp/domain/diff.py:164,201-203,234-235 (formula_error_delta); benchmark/sweagent/librecalc/bin/calc_compare"
+  }
+ }
+}

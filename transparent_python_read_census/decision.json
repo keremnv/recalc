@@ -1,0 +1,7 @@
+{
+  "basis": "coverage x fidelity x held-out generalisation x amortized mechanical benefit",
+  "decision": "NEED_ONE_MORE_MECHANICAL_DISCRIMINATOR",
+  "live_A_B_justified": false,
+  "live_model_test": false,
+  "next": "a throwaway shadow path only; do not wire into the model-facing runtime until fallback/generation differential tests pass"
+}

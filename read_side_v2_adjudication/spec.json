@@ -1,0 +1,43 @@
+{
+  "experiment": "read_side_v2_adjudication",
+  "question": "Can compact, batched compiled factual reads materially reduce expensive workbook inspection while preserving capability?",
+  "phase_a": {
+    "status": "complete",
+    "model_calls": 0,
+    "selection_n": 6,
+    "selection_rule": "First six rows of the frozen control-only exposure ranking restricted to the frozen thin-checkpoint population.",
+    "selection_excludes": ["gold correctness", "v2 outcomes", "future model behavior"],
+    "max_cells": 10000,
+    "mechanical_gate": {
+      "factual_tasks_required": 4,
+      "payload_or_operation_threshold_pct": 25,
+      "tasks_required_at_threshold": 4,
+      "freshness_failures_allowed": 0,
+      "systematic_fact_loss_allowed": false
+    }
+  },
+  "phase_b": {
+    "status": "GATED_OFF",
+    "reason": "Phase A mechanical gate failed",
+    "live_calls": 0,
+    "provider_censored_preprobe": true,
+    "provider_censored_preprobe_is_evidence": false
+  },
+  "architecture_freeze": {
+    "model_facing_primitives": ["search", "periods", "inspect", "inspect_ranges"],
+    "semantic_boundary_unchanged": true,
+    "forbidden_additions": [
+      "summarization", "dependency recommendations", "target inference",
+      "formula recommendations", "semantic compression", "automatic range selection"
+    ]
+  },
+  "runner_and_input_hashes": {
+    "helper_api_sha256": "ae93f4a1c2b37fee3ec6fbe282040e1a868841f887003e84467a491339e94c64",
+    "helper_index_sha256": "e437e625740caa1020ae89761587bb605acb99ae9708840b1a842f150316999a",
+    "helper_shim_sha256": "1af7186731ece25039404fa7824fa8d3839237360ad304465693e113d7a98c20",
+    "runner_sha256": "6d5b2d54fbe4dd0c6e61af23525c881ffe5ef3781567981510e9e700cc70d3fd",
+    "ranking_sha256": "62b29a7f470bf052da53338142c6775df2b19a95d11224498838f21d1b4ff1e8",
+    "population_sha256": "e9d0bf748a359c0807bfd22d2581a56d70ac51a36f9221f2e15036eda92d7d6d",
+    "adjudication_driver_sha256": "4abfaa3d6ff65a29f9e2cf20999076af626fa8d8138718670a099507a112d40d"
+  }
+}

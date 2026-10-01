@@ -1,0 +1,55 @@
+{
+ "tasks": [
+  {
+   "task_id": "Financial_Model:08_01",
+   "batch_kind": "value+formula",
+   "boundary": "EARLY"
+  },
+  {
+   "task_id": "Template:10_01",
+   "batch_kind": "formula",
+   "boundary": "EARLY"
+  },
+  {
+   "task_id": "Template:15_01",
+   "batch_kind": "formula",
+   "boundary": "EARLY"
+  },
+  {
+   "task_id": "Template:16_01",
+   "batch_kind": "formula",
+   "boundary": "EARLY"
+  },
+  {
+   "task_id": "Debugging:02_01",
+   "batch_kind": "value",
+   "boundary": "EARLY"
+  },
+  {
+   "task_id": "Template:03_03",
+   "batch_kind": "value",
+   "boundary": "EARLY"
+  },
+  {
+   "task_id": "Debugging:05_08",
+   "batch_kind": "value",
+   "boundary": "EARLY"
+  },
+  {
+   "task_id": "Template:05_02",
+   "batch_kind": "value",
+   "boundary": "EARLY"
+  },
+  {
+   "task_id": "Debugging:06_07",
+   "batch_kind": "value",
+   "boundary": "EARLY"
+  },
+  {
+   "task_id": "Financial_Model:11_01",
+   "batch_kind": "value",
+   "boundary": "PARTIAL"
+  }
+ ],
+ "selection": "mechanically from mutation_authoring_audit/source_effect_reconciliation.json: rows with an explicit_address_*_batch idiom + SOURCE_AND_EFFECT_AGREE + EARLY/PARTIAL boundary; all 4 formula-batch tasks + EARLY value-batch round-robin across families to n=10"
+}

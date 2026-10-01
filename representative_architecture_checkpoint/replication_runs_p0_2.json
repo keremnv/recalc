@@ -1,0 +1,116 @@
+[
+ {
+  "task_id": "Template:01_05",
+  "arm": "H0",
+  "run_id": "repl_00H0",
+  "reason": [
+   "output_mismatch",
+   "mod_delta_0.680",
+   "reg_delta_0.983"
+  ]
+ },
+ {
+  "task_id": "Template:01_05",
+  "arm": "H1",
+  "run_id": "repl_00H1",
+  "reason": [
+   "output_mismatch",
+   "mod_delta_0.680",
+   "reg_delta_0.983"
+  ]
+ },
+ {
+  "task_id": "Template:16_07",
+  "arm": "H0",
+  "run_id": "repl_02H0",
+  "reason": [
+   "output_mismatch",
+   "mod_delta_0.397",
+   "reg_delta_1.000"
+  ]
+ },
+ {
+  "task_id": "Template:16_07",
+  "arm": "H1",
+  "run_id": "repl_02H1",
+  "reason": [
+   "output_mismatch",
+   "mod_delta_0.397",
+   "reg_delta_1.000"
+  ]
+ },
+ {
+  "task_id": "Financial_Model:02_05",
+  "arm": "H0",
+  "run_id": "repl_04H0",
+  "reason": [
+   "output_mismatch",
+   "mod_delta_0.951",
+   "reg_delta_1.000"
+  ]
+ },
+ {
+  "task_id": "Financial_Model:02_05",
+  "arm": "H1",
+  "run_id": "repl_04H1",
+  "reason": [
+   "output_mismatch",
+   "mod_delta_0.951",
+   "reg_delta_1.000"
+  ]
+ },
+ {
+  "task_id": "Financial_Model:09_02",
+  "arm": "H0",
+  "run_id": "repl_06H0",
+  "reason": [
+   "output_mismatch",
+   "mod_delta_0.986",
+   "reg_delta_1.000"
+  ]
+ },
+ {
+  "task_id": "Financial_Model:09_02",
+  "arm": "H1",
+  "run_id": "repl_06H1",
+  "reason": [
+   "output_mismatch",
+   "mod_delta_0.986",
+   "reg_delta_1.000"
+  ]
+ },
+ {
+  "task_id": "Financial_Model:18_05",
+  "arm": "H0",
+  "run_id": "repl_08H0",
+  "reason": [
+   "mod_delta_0.459"
+  ]
+ },
+ {
+  "task_id": "Financial_Model:18_05",
+  "arm": "H1",
+  "run_id": "repl_08H1",
+  "reason": [
+   "mod_delta_0.459"
+  ]
+ },
+ {
+  "task_id": "Debugging:06_05",
+  "arm": "H0",
+  "run_id": "repl_10H0",
+  "reason": [
+   "output_mismatch",
+   "reg_delta_1.000"
+  ]
+ },
+ {
+  "task_id": "Debugging:06_05",
+  "arm": "H1",
+  "run_id": "repl_10H1",
+  "reason": [
+   "output_mismatch",
+   "reg_delta_1.000"
+  ]
+ }
+]

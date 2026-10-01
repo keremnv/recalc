@@ -1,0 +1,29 @@
+{
+  "count": 7,
+  "h1_contact_runs": 7,
+  "h1_contact_tasks": [
+    "Debugging:05_02",
+    "Debugging:10_10",
+    "Financial_Model:08_01",
+    "Financial_Model:08_03",
+    "Financial_Model:10_01",
+    "Financial_Model:15_04",
+    "Template:13_08"
+  ],
+  "pass": true,
+  "provider_censored_runs": [
+    "primary_06_Financial_Model_08_01_H1",
+    "primary_08_Financial_Model_15_04_H1",
+    "primary_13_Debugging_01_06_H0",
+    "primary_14_Debugging_01_06_H1",
+    "primary_18_Debugging_05_02_H0",
+    "primary_24_Financial_Model_10_01_H1"
+  ],
+  "required": 4,
+  "thresholds": {
+    "3": true,
+    "4": true,
+    "6": true,
+    "8": false
+  }
+}

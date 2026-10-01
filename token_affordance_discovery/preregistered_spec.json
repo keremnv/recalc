@@ -1,0 +1,91 @@
+{
+  "analysis": "Task-paired uncensored ratios and differences; dual-valid subset; 10000 task-bootstrap resamples seed 20261007; family stratification; leave-one-task/family-out; no outcome-driven exclusions.",
+  "architecture_discovery": "CLOSED",
+  "capability_guard": "Official scorer after LibreOffice refresh for submitted workbooks; report validity, modification, regression, and submission discordance. No formal equivalence claim. Savings from premature termination or materially worse edits fail.",
+  "censoring": "provider/runner/workbook infra failures censored; model noncompletion and invalid submission remain outcomes; all 48 primary slots attempted",
+  "contrasts": {
+    "B_vs_A": "textual cue",
+    "C_vs_A": "shippable announced availability",
+    "C_vs_B": "actual availability beyond cue",
+    "D_vs_A": "shippable demonstrated queryability",
+    "D_vs_C": "demonstrated queryability beyond announced availability"
+  },
+  "gates": {
+    "AFFORDANCE_EFFECT_DISCOVERED": "C or D vs A: median input reduction >=10%; geometric ratio <0.90; favorable >=2 families; favorable leave-one-task-out except <=1 mild reversal; call count favorable; capability guard; not noncompletion-driven; coherent trajectory.",
+    "AVAILABILITY_ADDS_VALUE": "C/B materially favorable",
+    "CUE_EFFECT_SUPPORTED": "B/A materially favorable plus lower calls plus capability guard",
+    "DEMONSTRATED_QUERYABILITY_ADDS_VALUE": "D/C materially favorable",
+    "stop": "If neither C nor D clears and B does not robustly replicate, TOKEN_PRODUCT_EFFECT_NOT_ROBUST; end token-mechanism discovery and do not open holdout.",
+    "strong_support": "bootstrap 95% CI for token ratio excludes one"
+  },
+  "hashes": {
+    "arm_profiles.json": "79aa62460df28e29737188cbe4c2671cb7e64233395d9e7fe61c3c2339fa5516",
+    "exact_notes.json": "0c0a85f4a421ca756b865b3a4527dba7238df299537a4fb4c59fa1d182588b1b",
+    "population.json": "3c68f62671d15a84650b78042cd6f9e4b7e02c4d321a03cfb2ed2a2f9b289d49",
+    "run_order.json": "a4adf4af468cd9440f0697cf774fb9d507d9d44e79b8bf457d50d2d998945e08",
+    "selection_manifest.json": "da1dde0f12fe42be28c9e17348e0af159776ca40f3abf29ca7d8ccdedf97d334"
+  },
+  "holdout_run": false,
+  "model_and_runtime_settings": {
+    "call_cap": 40,
+    "invisible_runtime": {
+      "candidate_a": false,
+      "capture": false,
+      "compiled_substrate": false,
+      "freshness": "inactive",
+      "runtime_enabled": false
+    },
+    "max_tokens_per_call": 8192,
+    "maximum_estimated_spend_usd": 25.0,
+    "model": "z-ai/glm-5.3-flash",
+    "parallel_tool_calls": false,
+    "per_slot_estimated_cost_cap_usd": 0.25,
+    "provider_deadline_seconds": 240,
+    "reasoning": "same unspecified/default provider setting as previous discovery",
+    "routing_policy": "same default OpenRouter routing as previous discovery; served provider recorded per call",
+    "scaffold": "same frozen bash/view_xlsx/submit tool schemas and prompt templates as previous discovery",
+    "task_deadline_seconds": 900,
+    "temperature": 0.0,
+    "tool_choice": "required",
+    "top_p": 1.0
+  },
+  "phase": "FINAL_FRESH_AFFORDANCE_CLAIM_DISCOVERY",
+  "population_label": "AFFORDANCE_DISCOVERY_FRESH_NONREPRESENTATIVE",
+  "primary_endpoints": [
+    "total provider-reported input tokens per task",
+    "model-call count per task"
+  ],
+  "primary_slots": 48,
+  "prior_population_sha256": "abc3b3aa19d61568a4bb8bd4a369fcb2b33175ad44f6e3a1aa0843e921f4f55e",
+  "product_rc": {
+    "source_config_sha256": "1aba31178faca5533c4a594cf1ee8bae2bf3668fcb5f7a9df65f84361f972aee",
+    "version": "0.2.0rc1",
+    "wheel_sha256": "532e493f126087a45d86117343514a9a1cd0a4e0010af89bbd1be1b271d66b2e"
+  },
+  "replication": "No automatic replication. Primary 48 slots frozen; only mechanical retries within original provider policy. No old-task reruns.",
+  "reserved_holdout_sha256": "b3b5bcdef583314bcdba4bcde16aa699c8c5784117513831c94ccc5bf6c49392",
+  "secondary_resources": [
+    "reported cached input",
+    "input minus cached",
+    "output tokens",
+    "billed tokens if distinct",
+    "provider-reported dollar cost"
+  ],
+  "trajectory_telemetry": [
+    "first workbook open",
+    "first recorded save",
+    "save count",
+    "workbook opens",
+    "recalc commands",
+    "post-edit reads/recalc",
+    "final-save-to-submit interval",
+    "strict repeated views/reads/observations",
+    "formula dumps",
+    "whole-workbook scans",
+    "targeted inspections",
+    "Python inspection/stdout",
+    "view/total observation bytes",
+    "helper import attempts/failures",
+    "helper calls/output"
+  ]
+}

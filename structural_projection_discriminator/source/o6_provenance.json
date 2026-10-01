@@ -1,0 +1,236 @@
+{
+  "included_occurrences": [
+    {
+      "address": "G16",
+      "cell_id": "cell:s00:r16:c7",
+      "member_identity": "second",
+      "text": "Second Tranche"
+    },
+    {
+      "address": "G17",
+      "cell_id": "cell:s00:r17:c7",
+      "member_identity": "third",
+      "text": "Third Tranche"
+    },
+    {
+      "address": "F22",
+      "cell_id": "cell:s00:r22:c6",
+      "member_identity": "second",
+      "text": "Second Tranche"
+    },
+    {
+      "address": "H22",
+      "cell_id": "cell:s00:r22:c8",
+      "member_identity": "third",
+      "text": "Third Tranche"
+    }
+  ],
+  "excluded_occurrences": [
+    {
+      "address": "G15",
+      "cell_id": "cell:s00:r15:c7",
+      "member_identity": "first",
+      "text": "First Tranche (Under construction in Tier 2 cities)"
+    },
+    {
+      "address": "D22",
+      "cell_id": "cell:s00:r22:c4",
+      "member_identity": "first",
+      "text": "First Tranche"
+    }
+  ],
+  "copied_header_paths": [
+    {
+      "start": "cell:s00:r16:c7",
+      "start_address": "G16",
+      "member_identity": "second",
+      "accepted_start": true,
+      "deterministic": true,
+      "lexical_dependency": false,
+      "relation_sequence": [],
+      "intermediate_nodes": [],
+      "endpoints": [],
+      "reason": "no_output_header_copy_dependency_from_this_occurrence"
+    },
+    {
+      "start": "cell:s00:r17:c7",
+      "start_address": "G17",
+      "member_identity": "third",
+      "accepted_start": true,
+      "deterministic": true,
+      "lexical_dependency": false,
+      "relation_sequence": [],
+      "intermediate_nodes": [],
+      "endpoints": [],
+      "reason": "no_output_header_copy_dependency_from_this_occurrence"
+    },
+    {
+      "start": "cell:s00:r22:c6",
+      "start_address": "F22",
+      "member_identity": "second",
+      "accepted_start": true,
+      "deterministic": true,
+      "lexical_dependency": false,
+      "relation_sequence": [
+        "point_dependency_header_copy",
+        "same_column_month_header",
+        "right_neighbor_numbers_header",
+        "contiguous_formula_bearing_month_rows"
+      ],
+      "intermediate_nodes": [
+        "Dashboard!F40",
+        "Dashboard!F42",
+        "Dashboard!G42"
+      ],
+      "endpoints": [
+        {
+          "endpoint": "cell:s00:r43:c7",
+          "endpoint_display": "Dashboard!G43"
+        },
+        {
+          "endpoint": "cell:s00:r44:c7",
+          "endpoint_display": "Dashboard!G44"
+        },
+        {
+          "endpoint": "cell:s00:r45:c7",
+          "endpoint_display": "Dashboard!G45"
+        }
+      ],
+      "reason": null,
+      "month_header": "Dashboard!F42",
+      "numbers_header": "Dashboard!G42",
+      "source_formula_rows": [
+        43,
+        44,
+        45
+      ]
+    },
+    {
+      "start": "cell:s00:r22:c8",
+      "start_address": "H22",
+      "member_identity": "third",
+      "accepted_start": true,
+      "deterministic": true,
+      "lexical_dependency": false,
+      "relation_sequence": [
+        "point_dependency_header_copy",
+        "same_column_month_header",
+        "right_neighbor_numbers_header",
+        "contiguous_formula_bearing_month_rows"
+      ],
+      "intermediate_nodes": [
+        "Dashboard!H40",
+        "Dashboard!H42",
+        "Dashboard!I42"
+      ],
+      "endpoints": [
+        {
+          "endpoint": "cell:s00:r43:c9",
+          "endpoint_display": "Dashboard!I43"
+        },
+        {
+          "endpoint": "cell:s00:r44:c9",
+          "endpoint_display": "Dashboard!I44"
+        }
+      ],
+      "reason": null,
+      "month_header": "Dashboard!H42",
+      "numbers_header": "Dashboard!I42",
+      "source_formula_rows": [
+        43,
+        44
+      ]
+    }
+  ],
+  "excluded_member_paths": [
+    {
+      "start": "cell:s00:r15:c7",
+      "start_address": "G15",
+      "member_identity": "first",
+      "accepted_start": false,
+      "deterministic": true,
+      "lexical_dependency": false,
+      "relation_sequence": [],
+      "intermediate_nodes": [],
+      "endpoints": [],
+      "reason": "no_output_header_copy_dependency_from_this_occurrence"
+    },
+    {
+      "start": "cell:s00:r22:c4",
+      "start_address": "D22",
+      "member_identity": "first",
+      "accepted_start": false,
+      "deterministic": true,
+      "lexical_dependency": false,
+      "relation_sequence": [
+        "point_dependency_header_copy",
+        "same_column_month_header",
+        "right_neighbor_numbers_header",
+        "contiguous_formula_bearing_month_rows"
+      ],
+      "intermediate_nodes": [
+        "Dashboard!D40",
+        "Dashboard!D42",
+        "Dashboard!E42"
+      ],
+      "endpoints": [
+        {
+          "endpoint": "cell:s00:r43:c5",
+          "endpoint_display": "Dashboard!E43"
+        },
+        {
+          "endpoint": "cell:s00:r44:c5",
+          "endpoint_display": "Dashboard!E44"
+        },
+        {
+          "endpoint": "cell:s00:r45:c5",
+          "endpoint_display": "Dashboard!E45"
+        },
+        {
+          "endpoint": "cell:s00:r46:c5",
+          "endpoint_display": "Dashboard!E46"
+        },
+        {
+          "endpoint": "cell:s00:r47:c5",
+          "endpoint_display": "Dashboard!E47"
+        },
+        {
+          "endpoint": "cell:s00:r48:c5",
+          "endpoint_display": "Dashboard!E48"
+        },
+        {
+          "endpoint": "cell:s00:r49:c5",
+          "endpoint_display": "Dashboard!E49"
+        },
+        {
+          "endpoint": "cell:s00:r50:c5",
+          "endpoint_display": "Dashboard!E50"
+        },
+        {
+          "endpoint": "cell:s00:r51:c5",
+          "endpoint_display": "Dashboard!E51"
+        },
+        {
+          "endpoint": "cell:s00:r52:c5",
+          "endpoint_display": "Dashboard!E52"
+        }
+      ],
+      "reason": null,
+      "month_header": "Dashboard!D42",
+      "numbers_header": "Dashboard!E42",
+      "source_formula_rows": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52
+      ]
+    }
+  ],
+  "gold_used": false
+}

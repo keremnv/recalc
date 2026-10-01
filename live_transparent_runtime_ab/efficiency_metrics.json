@@ -1,0 +1,54 @@
+{
+ "totals": {
+  "H0": {
+   "api_calls": 133,
+   "tokens": 2128686,
+   "cost_usd": 0.21160397999999997,
+   "walltime_s": 4279.565948963165,
+   "python_execs": 68,
+   "opens": 54,
+   "lo_invocations": 9,
+   "commits": 0,
+   "failures": 0,
+   "retries": 0
+  },
+  "H1": {
+   "api_calls": 121,
+   "tokens": 2163980,
+   "cost_usd": 0.23139312000000004,
+   "walltime_s": 6280.363296985626,
+   "python_execs": 28,
+   "opens": 64,
+   "lo_invocations": 4,
+   "commits": 5,
+   "failures": 0,
+   "retries": 0
+  }
+ },
+ "per_task_cost_usd": {
+  "Financial_Model:01_01/H0": 0.0317,
+  "Financial_Model:01_01/H1": 0.028,
+  "Financial_Model:02_01/H0": 0.0213,
+  "Financial_Model:02_01/H1": 0.0096,
+  "Financial_Model:13_05/H0": 0.0091,
+  "Financial_Model:13_05/H1": 0.0206,
+  "Template:01_02/H0": 0.0017,
+  "Template:01_02/H1": 0.0082,
+  "Template:01_07/H0": 0.0239,
+  "Template:01_07/H1": 0.0083,
+  "Template:06_12/H0": 0.005,
+  "Template:06_12/H1": 0.0087,
+  "Debugging:02_06/H0": 0.051,
+  "Debugging:02_06/H1": 0.0512,
+  "Debugging:04_01/H0": 0.0479,
+  "Debugging:04_01/H1": 0.0514,
+  "Debugging:05_02/H0": 0.0199,
+  "Debugging:05_02/H1": 0.0454
+ },
+ "experiment_spend_usd": {
+  "total_usd": 0.48411974999999985
+ },
+ "h1_runtime_commits": 5,
+ "h1_runtime_failures": 0,
+ "note": "efficiency is instrumentation only; H1 is intentionally invisible so no reduction is expected in this first experiment"
+}

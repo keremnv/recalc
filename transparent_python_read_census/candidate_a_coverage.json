@@ -1,0 +1,110 @@
+{
+  "any_proxy_reads_pct": 100.0,
+  "by_family": {
+    "Debugging": {
+      "a_class": {
+        "A_FULLY_PROXYABLE": 16,
+        "A_PROXYABLE_WITH_LAZY_FALLBACK": 61
+      },
+      "n": 77
+    },
+    "Financial_Model": {
+      "a_class": {
+        "A_FALLBACK_DOMINANT": 5,
+        "A_FULLY_PROXYABLE": 48,
+        "A_PROXYABLE_WITH_LAZY_FALLBACK": 70
+      },
+      "n": 123
+    },
+    "Template": {
+      "a_class": {
+        "A_FULLY_PROXYABLE": 5,
+        "A_PROXYABLE_WITH_LAZY_FALLBACK": 47
+      },
+      "n": 52
+    },
+    "Visualization": {
+      "a_class": {
+        "A_FULLY_PROXYABLE": 3,
+        "A_PROXYABLE_WITH_LAZY_FALLBACK": 3
+      },
+      "n": 6
+    }
+  },
+  "execution_classes": {
+    "A_FALLBACK_DOMINANT": 5,
+    "A_FULLY_PROXYABLE": 72,
+    "A_PROXYABLE_WITH_LAZY_FALLBACK": 181
+  },
+  "fully_proxyable_pct": 27.91,
+  "n_source_inspection_execs": 258,
+  "read_events": 3917,
+  "safe_event_coverage_pct": 85.5,
+  "safe_surface": [
+    "cell.column",
+    "cell.coordinate",
+    "cell.data_type",
+    "cell.row",
+    "cell.value",
+    "formula_mode",
+    "workbook.__getitem__",
+    "workbook.active",
+    "workbook.load_workbook",
+    "workbook.sheetnames",
+    "workbook.worksheets",
+    "worksheet.__getitem__",
+    "worksheet.calculate_dimension",
+    "worksheet.cell",
+    "worksheet.dimensions",
+    "worksheet.iter_cols",
+    "worksheet.iter_rows",
+    "worksheet.max_column",
+    "worksheet.max_row",
+    "worksheet.values"
+  ],
+  "surface_rule": "coverage of read API events by minimal categories ordered by execution coverage; execution-level safety reported separately",
+  "thresholds": [
+    {
+      "add_api": "worksheet.__getitem__",
+      "execution_coverage_pct": 99.22,
+      "read_event_coverage_pct": 66.56,
+      "surface": [
+        "workbook.load_workbook",
+        "workbook.__getitem__",
+        "cell.value",
+        "worksheet.__getitem__"
+      ],
+      "surface_size": 4,
+      "target_event_coverage_pct": 50
+    },
+    {
+      "add_api": "worksheet.cell",
+      "execution_coverage_pct": 100.0,
+      "read_event_coverage_pct": 81.01,
+      "surface": [
+        "workbook.load_workbook",
+        "workbook.__getitem__",
+        "cell.value",
+        "worksheet.__getitem__",
+        "worksheet.cell"
+      ],
+      "surface_size": 5,
+      "target_event_coverage_pct": 75
+    },
+    {
+      "add_api": "other.workbook_api",
+      "execution_coverage_pct": 100.0,
+      "read_event_coverage_pct": 92.88,
+      "surface": [
+        "workbook.load_workbook",
+        "workbook.__getitem__",
+        "cell.value",
+        "worksheet.__getitem__",
+        "worksheet.cell",
+        "other.workbook_api"
+      ],
+      "surface_size": 6,
+      "target_event_coverage_pct": 90
+    }
+  ]
+}

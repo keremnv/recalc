@@ -1,0 +1,68 @@
+{
+ "positive": true,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [
+    {
+     "cell": "RevenueDrivers!H50"
+    }
+   ],
+   "count": 1
+  },
+  "REF": {
+   "items": [],
+   "count": 0
+  },
+  "CHG": {
+   "changed_cells": 55,
+   "sheets": 1,
+   "regions": [
+    "RevenueDrivers!D14",
+    "RevenueDrivers!D30",
+    "RevenueDrivers!D31",
+    "RevenueDrivers!D32",
+    "RevenueDrivers!D34",
+    "RevenueDrivers!D36",
+    "RevenueDrivers!D39",
+    "RevenueDrivers!D40",
+    "RevenueDrivers!D41",
+    "RevenueDrivers!D44",
+    "RevenueDrivers!D45",
+    "RevenueDrivers!E14",
+    "RevenueDrivers!E30",
+    "RevenueDrivers!E31",
+    "RevenueDrivers!E32",
+    "RevenueDrivers!E34",
+    "RevenueDrivers!E36",
+    "RevenueDrivers!E39",
+    "RevenueDrivers!E40",
+    "RevenueDrivers!E41"
+   ]
+  }
+ },
+ "dep_context": [
+  {
+   "for": "RevenueDrivers!H50",
+   "fed_by": [
+    "RevenueDrivers!D50",
+    "RevenueDrivers!E50",
+    "RevenueDrivers!F50"
+   ],
+   "feeds": [
+    "RevenueDrivers!H45"
+   ]
+  }
+ ],
+ "model_block": "Post-edit verification (mechanical check of the current workbook)\n\nChanged cells: 55 across 1 sheet(s).\n\nNew formula-pattern breaks (1):\n- RevenueDrivers!H50 differs from the previously consistent row/column pattern.\n\nThis report is mechanical evidence about the current workbook state.\nReview it before deciding whether to submit or revise.",
+ "positive_families": [
+  "UNIF"
+ ]
+}

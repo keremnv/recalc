@@ -1,0 +1,114 @@
+{
+  "source": "REPRESENTATIVE_ARCHITECTURE_CHECKPOINT_REPORT.md",
+  "raw_economics_source": "representative_architecture_checkpoint/economics.json",
+  "primary_results_unchanged": true,
+  "capability": {
+    "status": "SUPPORTED_NARROWLY",
+    "dual_scored_pairs": 8,
+    "modification_deltas": [
+      0.003,
+      -0.459,
+      -0.042,
+      0.028,
+      -0.212,
+      0.057,
+      0,
+      0.429
+    ],
+    "systematic_score_direction": "not observed",
+    "H0_outputs": 14,
+    "H1_outputs": 9,
+    "mcnemar_p": 0.125,
+    "H0_only_outputs": 6,
+    "H1_only_outputs": 1,
+    "provider_censored": {
+      "H0": 7,
+      "H1": 6
+    },
+    "limitations": [
+      "Substantial provider/model censoring",
+      "Large within-arm stochastic variation",
+      "Template:16_07 stable completion gap in two draws; no mechanism identified, not erased",
+      "Nonsignificance is not equivalence",
+      "Historical parser veto is a real treatment-specific defect; corrective replay does not replace primary outcome"
+    ]
+  },
+  "candidate_a": {
+    "accelerated_loads": 59,
+    "loads": 282,
+    "fraction": 0.20921985815602837,
+    "saving_per_load_s": {
+      "median_approx": 0.32,
+      "mean_approx": 1.43
+    },
+    "accelerated_nonload_operations": 91231,
+    "nonload_95pct_slots": 5,
+    "H1_slots_zero_nonload": 15,
+    "H1_slots": 30,
+    "runtime_fallback_failures": 0,
+    "A1_gate": "RETAIN_NARROW_UNCHANGED",
+    "interpretation": "Representative contact is observed and uneven; contact is not universal applicability or a reason to broaden A1.",
+    "existing_substrate": "Retain: measured conditional exactness and material tail savings at low marginal cost.",
+    "zero_sunk_cost": "Mean-based estimated savings ~84s gross, ~58s after ~25.9s substrate; median-based ~19s gross, ~7s below total substrate cost. Tail-dependent, not broadly self-funding or a universal build mandate. These are checkpoint unit-cost estimates, not matched total-task causal timing."
+  },
+  "substrate": {
+    "initial_build_s": 24.7568,
+    "refresh_maintenance_s": 1.1599,
+    "total_s": 25.9167,
+    "CURRENT_PRACTICAL_RETENTION": "SUPPORTED_NARROWLY; conditional hidden read infrastructure after hardening",
+    "ZERO_SUNK_COST_BUILD_DECISION": "NOT_ESTABLISHED as a general build; conditional choice for workloads with demonstrated large/repeated-read tails",
+    "accounting": "Charge substrate fixed and maintenance costs once; A is the retained paying consumer. Freshness protects this consumer, capture earns separate assurance; rejected helper backend receives no offsetting credit."
+  },
+  "capture": {
+    "total_s": 0.3424,
+    "mutations": 16,
+    "runtime_failures": 0,
+    "validation_failures": 0,
+    "failure_prevention_witnesses": 0,
+    "ASSURANCE_VALUE": "EARNED",
+    "FAILURE_PREVENTION": "NOT_ESTABLISHED",
+    "CAPABILITY_NECESSITY": "NOT_ESTABLISHED"
+  },
+  "freshness": {
+    "refresh_s": 1.1599,
+    "refresh_calls": 493,
+    "stale_serving_where_measured": 0,
+    "status": "EARNED",
+    "conditional": "Required if substrate serves reads; no independent architecture claim if substrate serving is removed."
+  },
+  "helpers": {
+    "checkpoint_report_comparison": "substrate ~2.6s/call versus reference inspect ~0.1s/call",
+    "adoption_slots": 8,
+    "slots": 60,
+    "adoption_advantage": "none established",
+    "raw_helper_strata": {
+      "H0": {
+        "slots_with_helper_use": 2,
+        "slots_total": 30,
+        "calls": 40,
+        "mean_call_s_by_helper": {
+          "inspect": 0.1065,
+          "search": 2.6307,
+          "periods": 0.116
+        },
+        "total_backend_s": 21.9393
+      },
+      "H1": {
+        "slots_with_helper_use": 6,
+        "slots_total": 30,
+        "calls": 31,
+        "mean_call_s_by_helper": {
+          "periods": 0.8184,
+          "inspect": 2.4189,
+          "search": 1.5012
+        },
+        "total_backend_s": 61.4771
+      }
+    },
+    "precision_note": "Rounded report comparison is not a claim that all helper types cost 2.6s or that search universally speeds up. Raw stratified means are preserved.",
+    "backend_decision": "REJECTED: remove substrate-backed execution from active helper contract",
+    "active_backend": "reference_openpyxl",
+    "model_facing_surface": "unchanged; optional surface remains separately adjudicable"
+  },
+  "formal_equivalence": "NOT_ESTABLISHED"
+}

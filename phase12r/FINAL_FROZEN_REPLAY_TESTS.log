@@ -1,0 +1,12 @@
+test_boolean_cache (test_replay.ReplayTest.test_boolean_cache) ... ok
+test_formula_normalization_preserves_literals_and_absolute_refs (test_replay.ReplayTest.test_formula_normalization_preserves_literals_and_absolute_refs) ... ok
+test_noop_and_empty_string_missing_distinction (test_replay.ReplayTest.test_noop_and_empty_string_missing_distinction) ... ok
+test_semantic_change_detected_with_same_formula (test_replay.ReplayTest.test_semantic_change_detected_with_same_formula) ... ok
+test_shared_strings_resolved (test_replay.ReplayTest.test_shared_strings_resolved) ... ok
+test_transplant_typed_cache_and_no_semantic_mutation (test_replay.ReplayTest.test_transplant_typed_cache_and_no_semantic_mutation) ... ok
+test_volatile_detection_outside_strings (test_replay.ReplayTest.test_volatile_detection_outside_strings) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.049s
+
+OK

@@ -1,0 +1,36 @@
+id: t-14-05-m35
+run: glm-5.3-flash-strict-fifteen-unbounded-1
+task: Template:14_05
+control_run: glm-5.3-flash-control-fifteen-1
+first_miss:
+  kind: modification
+  address: NOI_Projection!M35
+  error_message: "Modification error at NOI_Projection!M35: answer=194185.2, output=-194185.2"
+facts:
+  opened_golden: false
+  spreadsheet: 14_05_input.xlsx
+  instruction: Complete the financial model based on the provided assumptions.
+  input_kind: blank
+  input_value: null
+  output_formula: "=-I35*$C$18"
+  autopsy:
+    named: false
+    read: false
+    written: true
+    bucket: written_wrong
+  wrote: {range: M35:M39, formula: "=-I35*$C$18"}
+  compare: {formulas_added: 65, formula_errors_added: 0}
+  related_297_miss: NOI_Projection!C35
+claims:
+  patterns: [E-mixed-sign]
+  nuance: task_nature
+  mechanism: sign-convention
+  lever: none
+  lever_why: >
+    Same magnitude, sign only, and both control runs miss it too -- the gate calls it shared. A
+    property of the task and the model, not of the interface.
+  notes: >
+    Same magnitude, sign only. Vacancy % and management % were both negated;
+    dollar opex J/K/L were left positive. Control first-miss J35 negated those
+    too. Footnote vs mixed-sign row. Do not encode a sign convention.
+    297 first-miss is C35, not this packet.

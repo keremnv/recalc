@@ -1,0 +1,11 @@
+{
+ "n_captured_mutators": 104,
+ "n_multi_file": 1,
+ "multi_file_mutators": {
+  "('P-B_sixty_control', 'Debugging:09_09', 18)": [
+   "out/09_09_output.xlsx",
+   "tmp/f.xlsx"
+  ]
+ },
+ "note": "no cross-workbook formula effects observed; each rel replays within its own workbook partition"
+}

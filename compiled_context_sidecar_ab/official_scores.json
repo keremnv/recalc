@@ -1,0 +1,314 @@
+{
+  "Financial_Model:13_05:C0:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "13_05",
+      "error_message": "Regression error at Summary Valuation!E11: answer=11.3281525647495, output=11.5097743684789",
+      "regression_accuracy": 0.9967,
+      "modification_accuracy": 0.6472,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:01<00:00,  1.75s/it]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:01<00:00,  1.76s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  65%|██████▌   | 65/100 [00:02<00:01, 31.42it/s]\nEvaluating: 100%|██████████| 100/100 [00:02<00:00, 48.33it/s]\n"
+  },
+  "Financial_Model:13_05:C1:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "13_05",
+      "error_message": "Regression error at Summary Valuation!E11: answer=11.3281525647495, output=11.5097743684789",
+      "regression_accuracy": 0.9967,
+      "modification_accuracy": 0.6472,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:01<00:00,  1.72s/it]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:01<00:00,  1.73s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  65%|██████▌   | 65/100 [00:02<00:01, 29.99it/s]\nEvaluating: 100%|██████████| 100/100 [00:02<00:00, 46.14it/s]\n"
+  },
+  "Financial_Model:13_05:C1:r2": {
+    "returncode": 0,
+    "official": {
+      "id": "13_05",
+      "error_message": "Regression error at Summary Valuation!E11: answer=11.3281525647495, output=11.5097743684789",
+      "regression_accuracy": 0.9967,
+      "modification_accuracy": 0.6472,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:01<00:00,  1.72s/it]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:01<00:00,  1.72s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  65%|██████▌   | 65/100 [00:02<00:01, 29.69it/s]\nEvaluating: 100%|██████████| 100/100 [00:02<00:00, 45.66it/s]\n"
+  },
+  "Financial_Model:13_05:C0:r2": {
+    "returncode": 0,
+    "official": {
+      "id": "13_05",
+      "error_message": "Regression error at Summary Valuation!E11: answer=11.3281525647495, output=11.5097743684789",
+      "regression_accuracy": 0.9967,
+      "modification_accuracy": 0.6472,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:01<00:00,  1.69s/it]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:01<00:00,  1.69s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  65%|██████▌   | 65/100 [00:02<00:01, 31.60it/s]\nEvaluating: 100%|██████████| 100/100 [00:02<00:00, 48.61it/s]\n"
+  },
+  "Financial_Model:13_05:C0:r3": {
+    "returncode": 0,
+    "official": {
+      "id": "13_05",
+      "error_message": "Regression error at Summary Valuation!E11: answer=11.3281525647495, output=11.5097743684789",
+      "regression_accuracy": 0.9967,
+      "modification_accuracy": 0.6472,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:01<00:00,  1.70s/it]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:01<00:00,  1.71s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  65%|██████▌   | 65/100 [00:02<00:01, 31.58it/s]\nEvaluating: 100%|██████████| 100/100 [00:02<00:00, 48.58it/s]\n"
+  },
+  "Financial_Model:13_05:C1:r3": {
+    "returncode": 0,
+    "official": {
+      "id": "13_05",
+      "error_message": "Regression error at Summary Valuation!E11: answer=11.3281525647495, output=11.5097743684789",
+      "regression_accuracy": 0.9967,
+      "modification_accuracy": 0.6472,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:01<00:00,  1.69s/it]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:01<00:00,  1.70s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  65%|██████▌   | 65/100 [00:02<00:01, 30.36it/s]\nEvaluating: 100%|██████████| 100/100 [00:02<00:00, 46.71it/s]\n"
+  },
+  "Financial_Model:13_05:C1:r4": {
+    "returncode": 0,
+    "official": {
+      "id": "13_05",
+      "error_message": "Regression error at Summary Valuation!E11: answer=11.3281525647495, output=11.5097743684789",
+      "regression_accuracy": 0.9967,
+      "modification_accuracy": 0.6472,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:01<00:00,  1.69s/it]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:01<00:00,  1.69s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  65%|██████▌   | 65/100 [00:02<00:01, 31.55it/s]\nEvaluating: 100%|██████████| 100/100 [00:02<00:00, 48.53it/s]\n"
+  },
+  "Financial_Model:13_05:C0:r4": {
+    "returncode": 0,
+    "official": {
+      "id": "13_05",
+      "error_message": "Regression error at Summary Valuation!E11: answer=11.3281525647495, output=11.5097743684789",
+      "regression_accuracy": 0.9967,
+      "modification_accuracy": 0.6472,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:01<00:00,  1.71s/it]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:01<00:00,  1.71s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  65%|██████▌   | 65/100 [00:02<00:01, 30.89it/s]\nEvaluating: 100%|██████████| 100/100 [00:02<00:00, 47.52it/s]\n"
+  },
+  "Financial_Model:05_01:C0:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "05_01",
+      "error_message": "Regression error at Dashboard!G46: answer=None, output=2",
+      "regression_accuracy": 0.9973,
+      "modification_accuracy": 0.999,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  1.31it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  1.30it/s]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  21%|██        | 21/100 [00:02<00:09,  8.19it/s]\nEvaluating: 100%|██████████| 100/100 [00:02<00:00, 38.97it/s]\n"
+  },
+  "Financial_Model:05_01:C1:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "05_01",
+      "error_message": "output file not exist",
+      "regression_accuracy": 0.0,
+      "modification_accuracy": 0.0,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating: 100%|██████████| 100/100 [00:00<00:00, 49719.11it/s]\n"
+  },
+  "Financial_Model:02_01:C1:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "02_01",
+      "error_message": "",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 1.0,
+      "accuracy": 1.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  1.89it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  1.86it/s]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:   6%|▌         | 6/100 [00:00<00:09,  9.78it/s]\nEvaluating: 100%|██████████| 100/100 [00:00<00:00, 162.92it/s]\n"
+  },
+  "Financial_Model:02_01:C0:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "02_01",
+      "error_message": "",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 1.0,
+      "accuracy": 1.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  1.95it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  1.93it/s]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:   6%|▌         | 6/100 [00:00<00:10,  9.19it/s]\nEvaluating: 100%|██████████| 100/100 [00:00<00:00, 153.06it/s]\n"
+  },
+  "Financial_Model:15_05:C0:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "15_05",
+      "error_message": "Modification error at Work Sheet!AB6: answer=20.3344221029979, output=2.25",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.2595,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  1.29it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  1.28it/s]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  75%|███████▌  | 75/100 [00:01<00:00, 46.79it/s]\nEvaluating: 100%|██████████| 100/100 [00:01<00:00, 62.38it/s]\n"
+  },
+  "Financial_Model:15_05:C1:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "15_05",
+      "error_message": "output file not exist",
+      "regression_accuracy": 0.0,
+      "modification_accuracy": 0.0,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating: 100%|██████████| 100/100 [00:00<00:00, 48221.48it/s]\n"
+  },
+  "Template:03_03:C1:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "03_03",
+      "error_message": "Regression error at Consolidation!C32: answer=None, output=630",
+      "regression_accuracy": 0.9867,
+      "modification_accuracy": 0.8936,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  3.06it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  3.01it/s]\n\nEvaluating:   0%|          | 0/97 [00:00<?, ?it/s]\nEvaluating: 100%|██████████| 97/97 [00:00<00:00, 2716.34it/s]\n"
+  },
+  "Template:03_03:C0:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "03_03",
+      "error_message": "Regression error at Consolidation!C32: answer=None, output=630",
+      "regression_accuracy": 0.99,
+      "modification_accuracy": 0.9574,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  3.03it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  2.97it/s]\n\nEvaluating:   0%|          | 0/97 [00:00<?, ?it/s]\nEvaluating: 100%|██████████| 97/97 [00:00<00:00, 3520.26it/s]\n"
+  },
+  "Template:06_17:C0:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "06_17",
+      "error_message": "",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 1.0,
+      "accuracy": 1.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  3.08it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  3.01it/s]\n\nEvaluating:   0%|          | 0/97 [00:00<?, ?it/s]\nEvaluating: 100%|██████████| 97/97 [00:00<00:00, 2876.75it/s]\n"
+  },
+  "Template:06_17:C1:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "06_17",
+      "error_message": "",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 1.0,
+      "accuracy": 1.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  3.00it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  2.94it/s]\n\nEvaluating:   0%|          | 0/97 [00:00<?, ?it/s]\nEvaluating: 100%|██████████| 97/97 [00:00<00:00, 3512.27it/s]\n"
+  },
+  "Template:16_12:C1:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "16_12",
+      "error_message": "Modification error at Valuation!C43: answer=368442.563744589, output=None",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.9792,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  2.86it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  2.81it/s]\n\nEvaluating:   0%|          | 0/97 [00:00<?, ?it/s]\nEvaluating: 100%|██████████| 97/97 [00:00<00:00, 2181.09it/s]\n"
+  },
+  "Template:16_12:C0:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "16_12",
+      "error_message": "",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 1.0,
+      "accuracy": 1.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  2.90it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  2.84it/s]\n\nEvaluating:   0%|          | 0/97 [00:00<?, ?it/s]\nEvaluating: 100%|██████████| 97/97 [00:00<00:00, 2586.74it/s]\n"
+  },
+  "Debugging:01_01:C0:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "01_01",
+      "error_message": "Regression error at Ex 1 - LBO!O80: answer=Cash Flow Available After Revolver Payment, output=Cash Flow Available After Senior Payment",
+      "regression_accuracy": 0.9871,
+      "modification_accuracy": 0.8035,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  1.35it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  1.34it/s]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:   1%|          | 1/100 [00:00<00:40,  2.47it/s]\nEvaluating: 100%|██████████| 100/100 [00:00<00:00, 246.78it/s]\n"
+  },
+  "Debugging:01_01:C1:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "01_01",
+      "error_message": "Regression error at Ex 1 - LBO!R59: answer=0, output=95.8833120588848",
+      "regression_accuracy": 0.9849,
+      "modification_accuracy": 0.7973,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  1.40it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  1.39it/s]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:   1%|          | 1/100 [00:00<00:39,  2.52it/s]\nEvaluating: 100%|██████████| 100/100 [00:00<00:00, 251.69it/s]\n"
+  },
+  "Debugging:09_04:C1:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "09_04",
+      "error_message": "Regression error at LBO!B35: answer=Revolver, output=Revolver",
+      "regression_accuracy": 0.9656,
+      "modification_accuracy": 0.9942,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  2.52it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:00<00:00,  2.48it/s]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]/home/kerem/miniconda3/lib/python3.13/site-packages/openpyxl/worksheet/_reader.py:329: UserWarning: Data Validation extension is not supported and will be removed\n  warn(msg)\n\nEvaluating:  84%|████████▍ | 84/100 [00:00<00:00, 243.68it/s]\nEvaluating: 100%|██████████| 100/100 [00:00<00:00, 289.89it/s]\n"
+  },
+  "Debugging:09_04:C0:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "09_04",
+      "error_message": "output file not exist",
+      "regression_accuracy": 0.0,
+      "modification_accuracy": 0.0,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating: 100%|██████████| 100/100 [00:00<00:00, 45363.44it/s]\n"
+  },
+  "Debugging:10_10:C0:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "10_10",
+      "error_message": "Regression error at Model!D17: answer=177.359960324625, output=179.573908194006",
+      "regression_accuracy": 0.997,
+      "modification_accuracy": 0.0845,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:04<00:00,  4.24s/it]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:04<00:00,  4.24s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating: 100%|██████████| 100/100 [01:09<00:00,  1.44it/s]\nEvaluating: 100%|██████████| 100/100 [01:09<00:00,  1.44it/s]\n"
+  },
+  "Debugging:10_10:C1:r1": {
+    "returncode": 0,
+    "official": {
+      "id": "10_10",
+      "error_message": "Regression error at Model!D17: answer=177.359960324625, output=169.837029607725",
+      "regression_accuracy": 0.9936,
+      "modification_accuracy": 0.0787,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:04<00:00,  4.38s/it]\nProcessing spreadsheets: 100%|██████████| 1/1 [00:04<00:00,  4.38s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating: 100%|██████████| 100/100 [01:10<00:00,  1.41it/s]\nEvaluating: 100%|██████████| 100/100 [01:10<00:00,  1.41it/s]\n"
+  }
+}

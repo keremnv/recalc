@@ -1,0 +1,61 @@
+{
+  "by_arm": {
+    "A": {
+      "helper_importable": false,
+      "helper_origin": null,
+      "lxml_path": "/home/kerem/miniconda3/lib/python3.13/site-packages/lxml/__init__.py",
+      "lxml_version": "6.1.3",
+      "openpyxl_path": "/home/kerem/miniconda3/lib/python3.13/site-packages/openpyxl/__init__.py",
+      "openpyxl_version": "3.1.5",
+      "runtime_flags": {
+        "CANDIDATE_A_ENABLED": "0",
+        "LIBRECALC_AGENT_CAPTURE_ENABLED": "0",
+        "LIBRECALC_AGENT_RUNTIME_ENABLED": "0",
+        "LIBRECALC_AGENT_SUBSTRATE_ENABLED": "0"
+      }
+    },
+    "B": {
+      "helper_importable": false,
+      "helper_origin": null,
+      "lxml_path": "/home/kerem/miniconda3/lib/python3.13/site-packages/lxml/__init__.py",
+      "lxml_version": "6.1.3",
+      "openpyxl_path": "/home/kerem/miniconda3/lib/python3.13/site-packages/openpyxl/__init__.py",
+      "openpyxl_version": "3.1.5",
+      "runtime_flags": {
+        "CANDIDATE_A_ENABLED": "0",
+        "LIBRECALC_AGENT_CAPTURE_ENABLED": "0",
+        "LIBRECALC_AGENT_RUNTIME_ENABLED": "0",
+        "LIBRECALC_AGENT_SUBSTRATE_ENABLED": "0"
+      }
+    },
+    "C": {
+      "helper_importable": true,
+      "helper_origin": "/tmp/librecalc-hygiene-rc-v55taghk/venv/lib/python3.13/site-packages/lx_helpers.py",
+      "lxml_path": "/tmp/librecalc-hygiene-rc-v55taghk/venv/lib/python3.13/site-packages/lxml/__init__.py",
+      "lxml_version": "6.1.3",
+      "openpyxl_path": "/tmp/librecalc-hygiene-rc-v55taghk/venv/lib/python3.13/site-packages/openpyxl/__init__.py",
+      "openpyxl_version": "3.1.5",
+      "runtime_flags": {
+        "CANDIDATE_A_ENABLED": "0",
+        "LIBRECALC_AGENT_CAPTURE_ENABLED": "0",
+        "LIBRECALC_AGENT_RUNTIME_ENABLED": "0",
+        "LIBRECALC_AGENT_SUBSTRATE_ENABLED": "0"
+      }
+    },
+    "D": {
+      "helper_importable": true,
+      "helper_origin": "/tmp/librecalc-hygiene-rc-v55taghk/venv/lib/python3.13/site-packages/lx_helpers.py",
+      "lxml_path": "/tmp/librecalc-hygiene-rc-v55taghk/venv/lib/python3.13/site-packages/lxml/__init__.py",
+      "lxml_version": "6.1.3",
+      "openpyxl_path": "/tmp/librecalc-hygiene-rc-v55taghk/venv/lib/python3.13/site-packages/openpyxl/__init__.py",
+      "openpyxl_version": "3.1.5",
+      "runtime_flags": {
+        "CANDIDATE_A_ENABLED": "0",
+        "LIBRECALC_AGENT_CAPTURE_ENABLED": "0",
+        "LIBRECALC_AGENT_RUNTIME_ENABLED": "0",
+        "LIBRECALC_AGENT_SUBSTRATE_ENABLED": "0"
+      }
+    }
+  },
+  "mechanical_post_run_recheck": true
+}

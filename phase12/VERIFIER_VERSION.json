@@ -1,0 +1,23 @@
+{
+ "config": {
+  "chg_alone_cells": 150,
+  "chg_alone_sheets": 5,
+  "dep_context_refs": 3,
+  "new_coherence_members": 2,
+  "rewrite_coverage": 0.5,
+  "sample_cap": 10,
+  "unif_scale_cap": 30
+ },
+ "files": {
+  "EVIDENCE_BLOCK_FORMAT.md": "5f676f1f1f11c68addf6e3a5dcf58e87a103798f2cddaa2ef2b217651ebadaac",
+  "UNIFORMITY_REWRITE_FILTER.md": "d7fd5a26fd9d089e6076ee321165e4861d008103b8440a83d98a001c3f645eda",
+  "VERIFIER_CONTRACT.md": "9d71f1c401af930df31456e7750b37e219069825cf80df19ea66d5f7b45fedf0",
+  "__init__.py": "cf08c2301acd57bcf3d93a7ea4ba7c7a52ebe9b44137286d478e07075e229fe6",
+  "verifier.py": "622fb72c7761208b1e85582bb97f51533b648163936c78e9927c854e97f8847c"
+ },
+ "frozen": "2026-09-29",
+ "version": "1.0.0",
+ "amendments": [
+  "rewrite_filter: added-formula breaks anchor band on post-edit neighbors (Tranche 0 fix, pre-live)"
+ ]
+}

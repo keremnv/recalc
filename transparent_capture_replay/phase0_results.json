@@ -1,0 +1,983 @@
+[
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Debugging:10_04",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-A_matched_c0/Debugging_10_04/out/10_04_output.xlsx"
+  }
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Financial_Model:08_01",
+  "phase0": "REPLAY_DIFF",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-A_matched_c0/Financial_Model_08_01/out/08_01_output.xlsx",
+   "kinds": [
+    "cells",
+    "styles"
+   ],
+   "ndiffs": 2,
+   "noise": [],
+   "diff": [
+    {
+     "kind": "cells",
+     "sheet": "DCF Valuation",
+     "only_a": {},
+     "only_b": {
+      "D35": [
+       "N",
+       "0.1800076454298821"
+      ],
+      "E35": [
+       "N",
+       "0.1512150255719141"
+      ],
+      "F35": [
+       "N",
+       "0.1250442887587299"
+      ],
+      "G35": [
+       "N",
+       "0.1010327768222704"
+      ],
+      "H35": [
+       "N",
+       "0.07883161929171478"
+      ],
+      "I35": [
+       "N",
+       "0.05817129311641811"
+      ],
+      "D36": [
+       "N",
+       "0.1800076454298821"
+      ],
+      "E36": [
+       "N",
+       "0.1512150255719141"
+      ],
+      "F36": [
+       "N",
+       "0.1250442887587299"
+      ],
+      "G36": [
+       "N",
+       "0.1010327768222704"
+      ],
+      "H36": [
+       "N",
+       "0.07883161929171478"
+      ],
+      "I36": [
+       "N",
+       "0.05817129311641811"
+      ],
+      "D37": [
+       "N",
+       "0.1800076454298821"
+      ],
+      "E37": [
+       "N",
+       "0.1512150255719141"
+      ],
+      "F37": [
+       "N",
+       "0.1250442887587299"
+      ],
+      "G37": [
+       "N",
+       "0.1010327768222704"
+      ],
+      "H37": [
+       "N",
+       "0.07883161929171478"
+      ],
+      "I37": [
+       "N",
+       "0.05817129311641811"
+      ],
+      "D38": [
+       "N",
+       "0.1800076454298821"
+      ],
+      "E38": [
+       "N",
+       "0.1512150255719141"
+      ],
+      "F38": [
+       "N",
+       "0.1250442887587299"
+      ],
+      "G38": [
+       "N",
+       "0.1010327768222704"
+      ],
+      "H38": [
+       "N",
+       "0.07883161929171478"
+      ],
+      "I38": [
+       "N",
+       "0.05817129311641811"
+      ],
+      "D50": [
+       "N",
+       "0.1429662247933093"
+      ],
+      "E50": [
+       "N",
+       "0.1184501431148274"
+      ],
+      "F50": [
+       "N",
+       "0.09577938851920076"
+      ],
+      "G50": [
+       "N",
+       "0.07467960876393909"
+      ],
+      "H50": [
+       "N",
+       "0.05493444061324648"
+      ],
+      "I50": [
+       "N",
+       "0.0363702388377235"
+      ],
+      "D51": [
+       "N",
+       "0.1514203708231857"
+      ],
+      "E51": [
+       "N",
+       "0.1259877735826321"
+      ],
+      "F51": [
+       "N",
+       "0.1025565160234377"
+      ],
+      "G51": [
+       "N",
+       "0.08081673115189603"
+      ],
+      "H51": [
+       "N",
+       "0.06052644283962383"
+      ],
+      "I51": [
+       "N",
+       "0.04149308642065075"
+      ],
+      "D52": [
+       "N",
+       "0.1603736906038752"
+      ],
+      "E52": [
+       "N",
+       "0.1339328522049273"
+      ],
+      "F52": [
+       "N",
+       "0.1096716224664099"
+      ],
+      "G52": [
+       "N",
+       "0.08723805777222748"
+      ],
+      "H52": [
+       "N",
+       "0.06636024315900657"
+      ],
+      "I52": [
+       "N",
+       "0.04682375210936318"
+      ],
+      "D53": [
+       "N",
+       "0.169881295165014"
+      ],
+      "E53": [
+       "N",
+       "0.1423262326683622"
+      ],
+      "F53": [
+       "N",
+       "0.1171557535307216"
+      ],
+      "G53": [
+       "N",
+       "0.09396767944386653"
+      ],
+      "H53": [
+       "N",
+       "0.07245487244486737"
+      ],
+      "I53": [
+       "N",
+       "0.0523775034827979"
+      ],
+      "D54": [
+       "N",
+       "0.1800076454298821"
+      ],
+      "E54": [
+       "N",
+       "0.1512150255719141"
+      ],
+      "F54": [
+       "N",
+       "0.1250442887587299"
+      ],
+      "G54": [
+       "N",
+       "0.1010327768222704"
+      ],
+      "H54": [
+       "N",
+       "0.07883161929171478"
+      ],
+      "I54": [
+       "N",
+       "0.05817129311641811"
+      ]
+     },
+     "changed": {},
+     "n_only_a": 0,
+     "n_only_b": 54,
+     "n_changed": 0
+    },
+    {
+     "kind": "styles",
+     "sheet": "DCF Valuation",
+     "n_diff": 54,
+     "sample": [
+      [
+       "F50",
+       "None",
+       "{'font': ('Calibri', 12.0, False, False, 'rgb:FF000000'), 'fill': ('solid', 'rgb:FFFFFFFF', 'rgb:FFFFFFFF'), 'border': ((None, None), (None, None), ('thin', 'rg"
+      ],
+      [
+       "F53",
+       "None",
+       "{'font': ('Calibri', 12.0, False, False, 'rgb:FF000000'), 'fill': ('solid', 'rgb:FFFFFFFF', 'rgb:FFFFFFFF'), 'border': ((None, None), (None, None), (None, None)"
+      ],
+      [
+       "G53",
+       "None",
+       "{'font': ('Calibri', 12.0, False, False, 'rgb:FF000000'), 'fill': ('solid', 'rgb:FFFFFFFF', 'rgb:FFFFFFFF'), 'border': ((None, None), (None, None), (None, None)"
+      ],
+      [
+       "I51",
+       "None",
+       "{'font': ('Calibri', 12.0, False, False, 'rgb:FF000000'), 'fill': ('solid', 'rgb:FFFFFFFF', 'rgb:FFFFFFFF'), 'border': ((None, None), ('thin', 'rgb:FF000000'), "
+      ],
+      [
+       "D36",
+       "None",
+       "{'font': ('Calibri', 12.0, False, False, 'rgb:FF000000'), 'fill': ('solid', 'rgb:FFFFFFFF', 'rgb:FFFFFFFF'), 'border': ((None, None), (None, None), (None, None)"
+      ]
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Financial_Model:08_02",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-A_matched_c0/Financial_Model_08_02/out/08_02_output.xlsx"
+  }
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Financial_Model:08_03",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-A_matched_c0/Financial_Model_08_03/out/08_03_output.xlsx"
+  }
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Financial_Model:08_04",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-A_matched_c0/Financial_Model_08_04/out/08_04_output.xlsx"
+  }
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Financial_Model:08_05",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-A_matched_c0/Financial_Model_08_05/out/08_05_output.xlsx"
+  }
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Financial_Model:15_04",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-A_matched_c0/Financial_Model_15_04/out/15_04_output.xlsx"
+  }
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Template:06_09",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-A_matched_c0/Template_06_09/out/06_09_output.xlsx"
+  }
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Template:06_16",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-A_matched_c0/Template_06_16/out/06_16_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:01_01",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_01_01/out/01_01_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:01_06",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_01_06/out/01_06_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:02_01",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_02_01/out/02_01_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:02_06",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_02_06/out/02_06_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:03_01",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_03_01/out/03_01_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:03_06",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_03_06/out/03_06_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:04_01",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_04_01/out/04_01_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:04_07",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_04_07/out/04_07_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:05_02",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_05_02/out/05_02_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:05_08",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_05_08/out/05_08_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:06_02",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_06_02/out/06_02_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:06_07",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_06_07/out/06_07_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:07_03",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_07_03/out/07_03_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:07_08",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_07_08/out/07_08_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:08_04",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_08_04/out/08_04_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:08_09",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_08_09/out/08_09_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:09_04",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_09_04/out/09_04_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:09_09",
+  "phase0": "REPLAY_EQUIVALENT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_09_09/out/09_09_output.xlsx",
+   "noise_kinds": [
+    "cells",
+    "styles",
+    "dims",
+    "cells",
+    "styles",
+    "dims",
+    "styles",
+    "dims"
+   ],
+   "ndiffs": 8
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:10_05",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_10_05/out/10_05_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:10_10",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_10_10/out/10_10_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:01_01",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_01_01/out/01_01_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:02_01",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_02_01/out/02_01_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:03_01",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_03_01/out/03_01_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:04_01",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_04_01/out/04_01_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:05_01",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_05_01/out/05_01_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:06_01",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_06_01/out/06_01_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:07_01",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_07_01/out/07_01_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:08_01",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_08_01/out/08_01_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:10_01",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_10_01/out/10_01_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:11_01",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_11_01/out/11_01_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:11_05",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_11_05/out/11_05_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:12_05",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_12_05/out/12_05_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:13_05",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_13_05/out/13_05_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:14_05",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_14_05/out/14_05_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:15_05",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_15_05/out/15_05_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:16_05",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_16_05/out/16_05_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:17_05",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_17_05/out/17_05_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:18_05",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_18_05/out/18_05_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:19_05",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_19_05/out/19_05_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:20_05",
+  "phase0": "REPLAY_DIFF",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_20_05/out/20_05_output.xlsx",
+   "kinds": [
+    "cells",
+    "dims",
+    "styles"
+   ],
+   "ndiffs": 25,
+   "noise": [
+    "styles",
+    "dims",
+    "styles",
+    "dims",
+    "styles",
+    "dims",
+    "styles",
+    "dims",
+    "dims",
+    "styles",
+    "dims",
+    "styles",
+    "dims",
+    "styles",
+    "styles",
+    "dims",
+    "styles",
+    "dims",
+    "styles",
+    "dims"
+   ],
+   "diff": [
+    {
+     "kind": "styles",
+     "sheet": "Balance Sheet Schedules",
+     "n_diff": 1287,
+     "sample": [
+      [
+       "AS15",
+       "{'font': ('Arial', 10.0, True, False, 'rgb:FF000000'), 'fill': (None, 'rgb', 'rgb'), 'border': ((None, None), (None, None), ('thin', 'indexed:64'), ('thin', 'in",
+       "{'font': ('Arial', 10.0, True, False, 'rgb:FF000000'), 'fill': (None, 'rgb', 'rgb'), 'border': ((None, None), (None, None), ('thin', None), ('thin', None), (Non"
+      ],
+      [
+       "H27",
+       "{'font': ('Arial', 10.0, False, False, 'rgb:FF0000FF'), 'fill': ('solid', 'rgb:FFE2EFDA', 'indexed:64'), 'border': ((None, None), (None, None), (None, None), (N",
+       "{'font': ('Arial', 10.0, False, False, 'rgb:FF0000FF'), 'fill': ('solid', 'rgb:FFE2F0D9', 'rgb:FFE7E6E6'), 'border': ((None, None), (None, None), (None, None), "
+      ],
+      [
+       "AF27",
+       "{'font': ('Arial', 10.0, False, False, 'rgb:FF0000FF'), 'fill': ('solid', 'rgb:FFE2EFDA', 'indexed:64'), 'border': ((None, None), (None, None), (None, None), (N",
+       "{'font': ('Arial', 10.0, False, False, 'rgb:FF0000FF'), 'fill': ('solid', 'rgb:FFE2F0D9', 'rgb:FFE7E6E6'), 'border': ((None, None), (None, None), (None, None), "
+      ],
+      [
+       "AD47",
+       "{'font': ('Arial', 10.0, False, False, 'rgb:FFFFFFFF'), 'fill': (None, 'rgb', 'rgb'), 'border': ((None, None), (None, None), ('thin', 'indexed:64'), (None, None",
+       "{'font': ('Arial', 10.0, False, False, 'rgb:FFFFFFFF'), 'fill': (None, 'rgb', 'rgb'), 'border': ((None, None), (None, None), ('thin', None), (None, None), (None"
+      ],
+      [
+       "AU22",
+       "{'font': ('Arial', 10.0, False, False, 'rgb:FF000000'), 'fill': (None, 'rgb', 'rgb'), 'border': ((None, None), (None, None), (None, None), (None, None), (None, ",
+       "{'font': ('Arial', 10.0, False, False, 'rgb:FF000000'), 'fill': (None, 'rgb', 'rgb'), 'border': ((None, None), (None, None), (None, None), (None, None), (None, "
+      ]
+     ]
+    },
+    {
+     "kind": "dims",
+     "sheet": "Balance Sheet Schedules",
+     "a": "{'row': {}, 'col': {'A': (4.0, False), 'B': (26.0, False), 'C': (12.5, False), 'G': (4.83203125, False), 'H': (12.5, False)}, 'defrow': 13.0}",
+     "b": "{'row': {2: (13.0, False), 3: (13.0, False), 5: (13.0, False), 6: (13.0, False), 8: (13.0, False), 10: (13.0, False), 11: (13.0, False), 12: (13.0, False), 13: (13.0, False), 14: (13.0, False), 15: (13.0, False), 16: (13.0, False), 17: (13.0, False), 18: (13.0, False), 20: (13.0, False), 21: (13.0, "
+    },
+    {
+     "kind": "styles",
+     "sheet": "Cover",
+     "n_diff": 16,
+     "sample": [
+      [
+       "C17",
+       "{'font': ('Calibri', 11.0, False, False, 'rgb:FF0563C1'), 'fill': ('solid', 'rgb:FFF2F2F2', 'indexed:64'), 'border': (('thin', 'indexed:64'), ('thin', 'indexed:",
+       "{'font': ('Calibri', 11.0, False, False, 'rgb:FF0563C1'), 'fill': ('solid', 'rgb:FFF2F2F2', 'rgb:FFE7E6E6'), 'border': (('thin', None), ('thin', None), ('thin',"
+      ],
+      [
+       "C16",
+       "{'font': ('Calibri', 11.0, False, False, 'rgb:FF0563C1'), 'fill': ('solid', 'rgb:FFF2F2F2', 'indexed:64'), 'border': (('thin', 'indexed:64'), ('thin', 'indexed:",
+       "{'font': ('Calibri', 11.0, False, False, 'rgb:FF0563C1'), 'fill': ('solid', 'rgb:FFF2F2F2', 'rgb:FFE7E6E6'), 'border': (('thin', None), ('thin', None), ('thin',"
+      ],
+      [
+       "C21",
+       "{'font': ('Calibri', 11.0, False, False, 'rgb:FF0563C1'), 'fill': ('solid', 'rgb:FFF2F2F2', 'indexed:64'), 'border': (('thin', 'indexed:64'), ('thin', 'indexed:",
+       "{'font': ('Calibri', 11.0, False, False, 'rgb:FF0563C1'), 'fill': ('solid', 'rgb:FFF2F2F2', 'rgb:FFE7E6E6'), 'border': (('thin', None), ('thin', None), ('thin',"
+      ],
+      [
+       "C10",
+       "{'font': ('Arial', 10.0, True, False, 'rgb:FFFFFFFF'), 'fill': ('solid', 'rgb:FF000000', 'indexed:64'), 'border': (('thin', 'indexed:64'), ('thin', 'indexed:64'",
+       "{'font': ('Arial', 10.0, True, False, 'rgb:FFFFFFFF'), 'fill': ('solid', 'rgb:FF000000', 'rgb:FF003300'), 'border': (('thin', None), ('thin', None), ('thin', No"
+      ],
+      [
+       "B7",
+       "{'font': ('Arial', 10.0, True, False, 'rgb:FF000000'), 'fill': (None, 'rgb', 'rgb'), 'border': ((None, None), (None, None), (None, None), (None, None), (None, N",
+       "{'font': ('Arial', 10.0, True, False, 'rgb:FF000000'), 'fill': (None, 'rgb', 'rgb'), 'border': ((None, None), (None, None), (None, None), (None, None), (None, N"
+      ]
+     ]
+    },
+    {
+     "kind": "dims",
+     "sheet": "Cover",
+     "a": "{'row': {11: (15.0, False), 12: (15.0, False), 13: (15.0, False), 14: (15.0, False), 15: (15.0, False), 16: (15.0, False), 17: (15.0, False), 18: (15.0, False), 19: (15.0, False), 20: (15.0, False), 21: (15.0, False)}, 'col': {'A': (4.5, False), 'B': (7.0, False), 'C': (24.5, False), 'D': (20.0, Fal",
+     "b": "{'row': {2: (13.0, False), 3: (13.0, False), 4: (13.0, False), 7: (13.0, False), 8: (13.0, False), 10: (13.0, False), 11: (15.0, False), 12: (15.0, False), 13: (15.0, False), 14: (15.0, False), 15: (15.0, False), 16: (15.0, False), 17: (15.0, False), 18: (15.0, False), 19: (15.0, False), 20: (15.0, "
+    }
+   ]
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:01_02",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_01_02/out/01_02_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:01_07",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_01_07/out/01_07_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:02_05",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_02_05/out/02_05_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:03_03",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_03_03/out/03_03_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:05_02",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_05_02/out/05_02_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:06_06",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_06_06/out/06_06_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:06_12",
+  "phase0": "REPLAY_EQUIVALENT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_06_12/out/06_12_output.xlsx",
+   "noise_kinds": [
+    "styles",
+    "dims"
+   ],
+   "ndiffs": 2
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:06_17",
+  "phase0": "REPLAY_EQUIVALENT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_06_17/out/06_17_output.xlsx",
+   "noise_kinds": [
+    "styles",
+    "dims"
+   ],
+   "ndiffs": 2
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:06_21",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_06_21/out/06_21_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:07_01",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_07_01/out/07_01_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:08_03",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_08_03/out/08_03_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:10_01",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_10_01/out/10_01_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:11_03",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_11_03/out/11_03_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:13_03",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_13_03/out/13_03_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:13_08",
+  "phase0": "REPLAY_EQUIVALENT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_13_08/out/13_08_output.xlsx",
+   "noise_kinds": [
+    "styles",
+    "dims"
+   ],
+   "ndiffs": 2
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:14_05",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_14_05/out/14_05_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:15_01",
+  "phase0": "REPLAY_EQUIVALENT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_15_01/out/15_01_output.xlsx",
+   "noise_kinds": [
+    "styles",
+    "dims"
+   ],
+   "ndiffs": 2
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:16_01",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_16_01/out/16_01_output.xlsx"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:16_06",
+  "phase0": "REPLAY_EQUIVALENT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_16_06/out/16_06_output.xlsx",
+   "noise_kinds": [
+    "cells",
+    "styles",
+    "dims",
+    "styles",
+    "dims",
+    "cells",
+    "styles",
+    "dims"
+   ],
+   "ndiffs": 8
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:16_12",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_16_12/out/16_12_output.xlsx"
+  }
+ },
+ {
+  "population": "P-C_viz",
+  "task_id": "glm-fill-c0-Visualization-Task-1420776-r1",
+  "phase0": "REPLAY_EXACT",
+  "phase0_detail": {
+   "replay": "/tmp/capreplay-sandbox/P-C_viz/glm-fill-c0-Visualization-Task-1420776-r1/out/Task 1420776_output.xlsx"
+  }
+ },
+ {
+  "population": "P-C_viz",
+  "task_id": "glm-fill-c0-Visualization-Task-1426290-r1",
+  "phase0": "NO_ARCHIVED_OUTPUT",
+  "phase0_detail": {}
+ }
+]

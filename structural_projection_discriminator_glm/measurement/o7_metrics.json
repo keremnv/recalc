@@ -1,0 +1,378 @@
+[
+  {
+    "obligation": "O7",
+    "repeat": 1,
+    "arm": "CONTROL",
+    "order": [
+      "CONTROL",
+      "TREATMENT"
+    ],
+    "censored": false,
+    "failure_class": null,
+    "declared_model": "z-ai/glm-5.3-flash",
+    "request_model": "openrouter/z-ai/glm-5.3-flash",
+    "response_model": "z-ai/glm-5.3-flash",
+    "request_sha256": "e1e0abcbc287cd0664ec8de4958a176950fb2f1aac4f3f37e6d77c45d0ec5f31",
+    "parse_valid": true,
+    "predicted_cell_count": 99,
+    "gold_cell_count": 297,
+    "true_positives": 0,
+    "false_positives": 99,
+    "false_negatives": 297,
+    "target_recall": 0.0,
+    "target_precision": 0.0,
+    "f1": null,
+    "exact_target_set_equality": false,
+    "selected_tranche_member_rows": [
+      27
+    ],
+    "selected_start_period_column": 15,
+    "selected_end_period_column": 113,
+    "gold_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "gold_start_period_column": 15,
+    "gold_end_period_column": 113,
+    "error_class": "wrong_member_run_correct_period_extent",
+    "predicted_sheet": "s04",
+    "predicted_sheet_raw": "s04",
+    "predicted_ranges": [
+      {
+        "start": "O27",
+        "end": "DI27"
+      }
+    ]
+  },
+  {
+    "obligation": "O7",
+    "repeat": 1,
+    "arm": "TREATMENT",
+    "order": [
+      "CONTROL",
+      "TREATMENT"
+    ],
+    "censored": false,
+    "failure_class": null,
+    "declared_model": "z-ai/glm-5.3-flash",
+    "request_model": "openrouter/z-ai/glm-5.3-flash",
+    "response_model": "z-ai/glm-5.3-flash",
+    "request_sha256": "76ca86e656c7ac0c138162f52993975d64f40216e28a2006910f893041b4d9db",
+    "parse_valid": true,
+    "predicted_cell_count": 99,
+    "gold_cell_count": 297,
+    "true_positives": 0,
+    "false_positives": 99,
+    "false_negatives": 297,
+    "target_recall": 0.0,
+    "target_precision": 0.0,
+    "f1": null,
+    "exact_target_set_equality": false,
+    "selected_tranche_member_rows": [
+      32
+    ],
+    "selected_start_period_column": 15,
+    "selected_end_period_column": 113,
+    "gold_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "gold_start_period_column": 15,
+    "gold_end_period_column": 113,
+    "error_class": "wrong_member_run_correct_period_extent",
+    "predicted_sheet": "Workings Cost Sheet",
+    "predicted_sheet_raw": "Workings Cost Sheet",
+    "predicted_ranges": [
+      {
+        "start": "O32",
+        "end": "DI32"
+      }
+    ]
+  },
+  {
+    "obligation": "O7",
+    "repeat": 2,
+    "arm": "CONTROL",
+    "order": [
+      "TREATMENT",
+      "CONTROL"
+    ],
+    "censored": false,
+    "failure_class": null,
+    "declared_model": "z-ai/glm-5.3-flash",
+    "request_model": "openrouter/z-ai/glm-5.3-flash",
+    "response_model": "z-ai/glm-5.3-flash",
+    "request_sha256": "e1e0abcbc287cd0664ec8de4958a176950fb2f1aac4f3f37e6d77c45d0ec5f31",
+    "parse_valid": true,
+    "predicted_cell_count": 99,
+    "gold_cell_count": 297,
+    "true_positives": 0,
+    "false_positives": 99,
+    "false_negatives": 297,
+    "target_recall": 0.0,
+    "target_precision": 0.0,
+    "f1": null,
+    "exact_target_set_equality": false,
+    "selected_tranche_member_rows": [
+      27
+    ],
+    "selected_start_period_column": 15,
+    "selected_end_period_column": 113,
+    "gold_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "gold_start_period_column": 15,
+    "gold_end_period_column": 113,
+    "error_class": "wrong_member_run_correct_period_extent",
+    "predicted_sheet": "s04",
+    "predicted_sheet_raw": "s04",
+    "predicted_ranges": [
+      {
+        "start": "O27",
+        "end": "DI27"
+      }
+    ]
+  },
+  {
+    "obligation": "O7",
+    "repeat": 2,
+    "arm": "TREATMENT",
+    "order": [
+      "TREATMENT",
+      "CONTROL"
+    ],
+    "censored": false,
+    "failure_class": null,
+    "declared_model": "z-ai/glm-5.3-flash",
+    "request_model": "openrouter/z-ai/glm-5.3-flash",
+    "response_model": "z-ai/glm-5.3-flash",
+    "request_sha256": "76ca86e656c7ac0c138162f52993975d64f40216e28a2006910f893041b4d9db",
+    "parse_valid": true,
+    "predicted_cell_count": 297,
+    "gold_cell_count": 297,
+    "true_positives": 297,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "target_recall": 1.0,
+    "target_precision": 1.0,
+    "f1": 1.0,
+    "exact_target_set_equality": true,
+    "selected_tranche_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "selected_start_period_column": 15,
+    "selected_end_period_column": 113,
+    "gold_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "gold_start_period_column": 15,
+    "gold_end_period_column": 113,
+    "error_class": "exact",
+    "predicted_sheet": "Workings Cost Sheet",
+    "predicted_sheet_raw": "Workings Cost Sheet",
+    "predicted_ranges": [
+      {
+        "start": "O29",
+        "end": "DI31"
+      }
+    ]
+  },
+  {
+    "obligation": "O7",
+    "repeat": 3,
+    "arm": "CONTROL",
+    "order": [
+      "CONTROL",
+      "TREATMENT"
+    ],
+    "censored": false,
+    "failure_class": null,
+    "declared_model": "z-ai/glm-5.3-flash",
+    "request_model": "openrouter/z-ai/glm-5.3-flash",
+    "response_model": "z-ai/glm-5.3-flash",
+    "request_sha256": "e1e0abcbc287cd0664ec8de4958a176950fb2f1aac4f3f37e6d77c45d0ec5f31",
+    "parse_valid": true,
+    "predicted_cell_count": 297,
+    "gold_cell_count": 297,
+    "true_positives": 297,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "target_recall": 1.0,
+    "target_precision": 1.0,
+    "f1": 1.0,
+    "exact_target_set_equality": true,
+    "selected_tranche_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "selected_start_period_column": 15,
+    "selected_end_period_column": 113,
+    "gold_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "gold_start_period_column": 15,
+    "gold_end_period_column": 113,
+    "error_class": "exact",
+    "predicted_sheet": "s04",
+    "predicted_sheet_raw": "s04",
+    "predicted_ranges": [
+      {
+        "start": "O29",
+        "end": "DI31"
+      }
+    ]
+  },
+  {
+    "obligation": "O7",
+    "repeat": 3,
+    "arm": "TREATMENT",
+    "order": [
+      "CONTROL",
+      "TREATMENT"
+    ],
+    "censored": false,
+    "failure_class": null,
+    "declared_model": "z-ai/glm-5.3-flash",
+    "request_model": "openrouter/z-ai/glm-5.3-flash",
+    "response_model": "z-ai/glm-5.3-flash",
+    "request_sha256": "76ca86e656c7ac0c138162f52993975d64f40216e28a2006910f893041b4d9db",
+    "parse_valid": true,
+    "predicted_cell_count": 297,
+    "gold_cell_count": 297,
+    "true_positives": 297,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "target_recall": 1.0,
+    "target_precision": 1.0,
+    "f1": 1.0,
+    "exact_target_set_equality": true,
+    "selected_tranche_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "selected_start_period_column": 15,
+    "selected_end_period_column": 113,
+    "gold_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "gold_start_period_column": 15,
+    "gold_end_period_column": 113,
+    "error_class": "exact",
+    "predicted_sheet": "Workings Cost Sheet",
+    "predicted_sheet_raw": "Workings Cost Sheet",
+    "predicted_ranges": [
+      {
+        "start": "O29",
+        "end": "DI31"
+      }
+    ]
+  },
+  {
+    "obligation": "O7",
+    "repeat": 4,
+    "arm": "CONTROL",
+    "order": [
+      "TREATMENT",
+      "CONTROL"
+    ],
+    "censored": false,
+    "failure_class": null,
+    "declared_model": "z-ai/glm-5.3-flash",
+    "request_model": "openrouter/z-ai/glm-5.3-flash",
+    "response_model": "z-ai/glm-5.3-flash",
+    "request_sha256": "e1e0abcbc287cd0664ec8de4958a176950fb2f1aac4f3f37e6d77c45d0ec5f31",
+    "parse_valid": true,
+    "predicted_cell_count": 297,
+    "gold_cell_count": 297,
+    "true_positives": 297,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "target_recall": 1.0,
+    "target_precision": 1.0,
+    "f1": 1.0,
+    "exact_target_set_equality": true,
+    "selected_tranche_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "selected_start_period_column": 15,
+    "selected_end_period_column": 113,
+    "gold_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "gold_start_period_column": 15,
+    "gold_end_period_column": 113,
+    "error_class": "exact",
+    "predicted_sheet": "s04",
+    "predicted_sheet_raw": "s04",
+    "predicted_ranges": [
+      {
+        "start": "O29",
+        "end": "DI31"
+      }
+    ]
+  },
+  {
+    "obligation": "O7",
+    "repeat": 4,
+    "arm": "TREATMENT",
+    "order": [
+      "TREATMENT",
+      "CONTROL"
+    ],
+    "censored": false,
+    "failure_class": null,
+    "declared_model": "z-ai/glm-5.3-flash",
+    "request_model": "openrouter/z-ai/glm-5.3-flash",
+    "response_model": "z-ai/glm-5.3-flash",
+    "request_sha256": "76ca86e656c7ac0c138162f52993975d64f40216e28a2006910f893041b4d9db",
+    "parse_valid": true,
+    "predicted_cell_count": 99,
+    "gold_cell_count": 297,
+    "true_positives": 0,
+    "false_positives": 99,
+    "false_negatives": 297,
+    "target_recall": 0.0,
+    "target_precision": 0.0,
+    "f1": null,
+    "exact_target_set_equality": false,
+    "selected_tranche_member_rows": [
+      32
+    ],
+    "selected_start_period_column": 15,
+    "selected_end_period_column": 113,
+    "gold_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "gold_start_period_column": 15,
+    "gold_end_period_column": 113,
+    "error_class": "wrong_member_run_correct_period_extent",
+    "predicted_sheet": "Workings Cost Sheet",
+    "predicted_sheet_raw": "Workings Cost Sheet",
+    "predicted_ranges": [
+      {
+        "start": "O32",
+        "end": "DI32"
+      }
+    ]
+  }
+]

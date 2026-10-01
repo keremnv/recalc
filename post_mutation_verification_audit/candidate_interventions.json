@@ -1,0 +1,39 @@
+{
+ "exact_replaceable_actions": 12,
+ "exact_tasks": 7,
+ "exact_families": [
+  "Financial_Model",
+  "Template",
+  "Visualization"
+ ],
+ "exact_classes": {
+  "FILE_EXISTENCE_CHECK": 12
+ },
+ "threshold": {
+  "min_tasks": 3,
+  "min_families": 2
+ },
+ "threshold_met": true,
+ "shapes_considered": [
+  "AUTO_COMMIT_RECEIPT",
+  "EXPLICIT_VERIFY_HELPER",
+  "POST_RECALC_RECEIPT",
+  "INSPECT_EXTENSION",
+  "NO_INTERVENTION"
+ ],
+ "materiality_assessment": {
+  "exact_calls": 12,
+  "exact_obs_bytes": 3629,
+  "exact_py_bytes": 0,
+  "share_of_post_calls": 0.0296,
+  "material": false,
+  "reason": "all 12 EXACTLY_REPLACEABLE actions are file-existence shell checks; no Python, no readback; a receipt would push facts agents almost never query"
+ },
+ "per_shape": {
+  "AUTO_COMMIT_RECEIPT": "REJECT: persistence facts rarely queried; agents re-read values-in-context instead",
+  "EXPLICIT_VERIFY_HELPER": "REJECT: earned inspect() already covers 58.5% of post actions on pull; no gap evidenced",
+  "POST_RECALC_RECEIPT": "REJECT here: LO branch is large but agents seek values/plausibility, not recalc attestation; soffice unavailable in this sandbox",
+  "INSPECT_EXTENSION": "REJECT: no evidenced gap beyond current inspect",
+  "NO_INTERVENTION": "ACCEPT"
+ }
+}

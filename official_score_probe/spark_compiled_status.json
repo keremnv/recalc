@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-09-16T10:21:42.703014+00:00",
+  "workers": [
+    {
+      "worker_id": "spark-compiled:Template:01_02",
+      "task": "Template:01_02",
+      "pid": 288773,
+      "started_at": "2026-09-16T10:06:16.829414+00:00",
+      "kind": "spark_compiled_discriminator",
+      "alive": false,
+      "status": "COMPLETED",
+      "model_call_count": 40,
+      "provider_cost_usd": 0.02531733399999999
+    },
+    {
+      "worker_id": "spark-compiled:Financial_Model:02_01",
+      "task": "Financial_Model:02_01",
+      "pid": 288774,
+      "started_at": "2026-09-16T10:06:16.798832+00:00",
+      "kind": "spark_compiled_discriminator",
+      "alive": false,
+      "status": "COMPLETED",
+      "model_call_count": 40,
+      "provider_cost_usd": 0.04761286000000001
+    },
+    {
+      "worker_id": "spark-compiled:Debugging:01_01",
+      "task": "Debugging:01_01",
+      "pid": 288775,
+      "started_at": "2026-09-16T10:06:16.858405+00:00",
+      "kind": "spark_compiled_discriminator",
+      "alive": false,
+      "status": "COMPLETED",
+      "model_call_count": 1,
+      "provider_cost_usd": 0.0005279
+    }
+  ],
+  "all_finished": true
+}

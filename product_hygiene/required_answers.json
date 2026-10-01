@@ -1,0 +1,147 @@
+[
+  {
+    "number": 1,
+    "question": "What exact command installs the product?",
+    "answer": "`python -m pip install .` from the repository checkout, inside `python3 -m venv .venv-product` activated with `. .venv-product/bin/activate`."
+  },
+  {
+    "number": 2,
+    "question": "What system dependencies remain?",
+    "answer": "Python with venv/pip; SQLite for optional indexing; LibreOffice Calc only for recalc/validation workflows. No UNO binding or model credentials are needed for this harness."
+  },
+  {
+    "number": 3,
+    "question": "What does a clean install require?",
+    "answer": "Checkout, supported Python, writable virtual environment and network access to resolve pinned openpyxl/lxml plus et_xmlfile and the isolated build backend. No research datasets."
+  },
+  {
+    "number": 4,
+    "question": "What command checks installation health?",
+    "answer": "`librecalc-agent doctor`; use `--require-libreoffice` when its availability is mandatory."
+  },
+  {
+    "number": 5,
+    "question": "What does that health check inspect?",
+    "answer": "Python/openpyxl/lxml versions and imports, SQLite, optional runtime imports, cache creation/writeability, config, LibreOffice executable/version. External agent credentials are not consulted."
+  },
+  {
+    "number": 6,
+    "question": "What is the default runtime configuration?",
+    "answer": "Runtime, read index, conservative Candidate A and capture enabled; normal diagnostics; XDG/home cache. Actual accelerated serving still requires the unchanged frozen eligibility gate and valid index."
+  },
+  {
+    "number": 7,
+    "question": "Can the user disable the invisible runtime?",
+    "answer": "Yes: `run --no-runtime`, or `[runtime] enabled=false`. Individual `substrate`, `candidate_a` and `capture` flags are supported."
+  },
+  {
+    "number": 8,
+    "question": "Can ordinary openpyxl operate if setup fails?",
+    "answer": "Yes. Optional import/cache/index/bootstrap failures select reference execution; valid workbook tests demonstrate successful reads. Invalid config disables optional runtime for the invocation."
+  },
+  {
+    "number": 9,
+    "question": "What happens without LibreOffice?",
+    "answer": "Ordinary edits continue. Doctor marks OPTIONAL_NOT_AVAILABLE; an explicit `--require-libreoffice` invocation fails preflight. Neither command implicitly recalculates."
+  },
+  {
+    "number": 10,
+    "question": "What is the minimal example?",
+    "answer": "`example DIR` copies normal create/read/update scripts. `run --workdir DIR DIR/update.py` loads example.xlsx, writes B2=`=A2*2`, and saves output.xlsx. No helpers are required."
+  },
+  {
+    "number": 11,
+    "question": "What is the product-facing API/surface?",
+    "answer": "Shell commands `run`, `example`, `doctor`, `status`; ordinary Python/openpyxl; optional existing lx_helpers facts. No embedded model client, SQL, IR or spreadsheet-specific planning language."
+  },
+  {
+    "number": 12,
+    "question": "Which research modules are excluded?",
+    "answer": "All benchmark/model/scoring/census runners, benchmark data/results, evidence directories and the earlier librecalc_mcp semantic/UNO server. Historical README preserved, not used as product instructions."
+  },
+  {
+    "number": 13,
+    "question": "Which components are packaged but optional?",
+    "answer": "Frozen read classifier/proxies/index/publication, scoped bootstrap, capture/delta/mechanical validation and reference factual helpers. CLI/reference operation survives optional failures."
+  },
+  {
+    "number": 14,
+    "question": "What compatibility is actually tested?",
+    "answer": "Clean Linux x86_64/POSIX, Python 3.13.12, openpyxl 3.1.5, lxml 6.1.3, SQLite 3.51.1. LibreOffice 26.2.5.2 detection. Prior 3.14/stdlib-XML boundary evidence is distinguished from this RC test."
+  },
+  {
+    "number": 15,
+    "question": "What remains untested?",
+    "answer": "RC installs on Python 3.11/3.12/3.14, Windows/macOS, containers/network filesystems, other package/LibreOffice versions, VBA/rich-content guarantees and concurrent writers."
+  },
+  {
+    "number": 16,
+    "question": "Does malformed/unsupported input still fail closed?",
+    "answer": "Yes. Installed tests cover malformed packages, unsupported chartsheets, initial failures, missing/corrupt/stale index and optional absence. Malformed input can still raise the reference openpyxl error."
+  },
+  {
+    "number": 17,
+    "question": "Do helpers use only reference openpyxl?",
+    "answer": "Yes. The wheel includes reference helper implementation plus formatting constants/utilities, with no substrate-backed helper API. Tests prohibit index and patched-loader contact, including styles."
+  },
+  {
+    "number": 18,
+    "question": "Do existing regressions pass?",
+    "answer": "Yes: 39 existing frozen tests; 27 product tests also pass against the clean installed wheel. No model/benchmark/scoring test was invoked."
+  },
+  {
+    "number": 19,
+    "question": "Did Candidate-A eligibility change?",
+    "answer": "No. Extracted A1 classifier definitions compare AST-exactly to frozen source. Existing admitted operations and rejection rules are unchanged."
+  },
+  {
+    "number": 20,
+    "question": "Did model-facing semantics change?",
+    "answer": "No new model prompts, tools, workbook semantics or mutation rules. New shell/configuration diagnostics wrap ordinary scripts. Selected capture/proxy definitions are source/AST-parity checked."
+  },
+  {
+    "number": 21,
+    "question": "Was any branch reopened?",
+    "answer": "No. Extraction, packaging, bootstrap and diagnostics are product engineering; all closed/frozen branches remain so."
+  },
+  {
+    "number": 22,
+    "question": "What lower-token observations were found?",
+    "answer": "51 lower rows in a 55-row registry, including aggregates and selected paired observations, not independent experiments. Stage B: 6,319,843→3,760,254; thin overall: 18,097,832→16,258,754; batch helpers: 4,104,791→4,058,278; default deterministic execution: 15,731,994→14,047,346 prompt tokens; Candidate A/A1 and historical representation reductions are preserved too."
+  },
+  {
+    "number": 23,
+    "question": "Which are descriptive only?",
+    "answer": "Retained invisible-stack arm/task totals, thin/helper totals and non-adopted executor/helper comparisons. Censoring, noncompletion, note salience and trajectory length prevent attribution; source-provided zero usage is not proof of zero work."
+  },
+  {
+    "number": 24,
+    "question": "Is any token claim causal/claim-ready?",
+    "answer": "None for PRODUCT_HYGIENE_RC. Historical representation/session-consolidation changes are labelled CAUSAL_MECHANISM_PLAUSIBLE where appropriate, with transfer/censoring limits; no row is promoted to CLAIM_READY."
+  },
+  {
+    "number": 25,
+    "question": "What exact source/configuration is the RC?",
+    "answer": "Package 0.2.0rc1, source/configuration SHA256 `1aba31178faca5533c4a594cf1ee8bae2bf3668fcb5f7a9df65f84361f972aee`, wheel SHA256 `532e493f126087a45d86117343514a9a1cd0a4e0010af89bbd1be1b271d66b2e`, defaults and resolved dependencies in `rc_manifest.json`. Git HEAD is recorded but does not identify this dirty worktree by itself."
+  },
+  {
+    "number": 26,
+    "question": "Is it ready for claim-specific validation?",
+    "answer": "Yes as a mechanically verified, hashed installation/runtime input. That is not evidence for a performance/capability/token claim. Changes after this boundary require a new RC identity."
+  },
+  {
+    "number": 27,
+    "question": "What product work remains before public release?",
+    "answer": "License/release policy, publication/support process, broader compatibility CI, dependency/release reproducibility, and cache-retention UX. Agent convenience integration may follow without changing the semantic interface."
+  },
+  {
+    "number": 28,
+    "question": "What research work remains?",
+    "answer": "No mechanism-discovery work is required or reopened. Future empirical work must be explicitly claim-specific and start from this fixed RC; frozen research leads are not scheduled."
+  },
+  {
+    "number": 29,
+    "question": "What should happen next?",
+    "answer": "Review the RC boundary, address public-release engineering gaps, and draft a Claim Validation Plan against explicitly scoped claims. No automatic full benchmark or new mechanism experiment."
+  }
+]

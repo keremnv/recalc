@@ -1,0 +1,71 @@
+{
+  "experiment": "spark_structural_projection_discriminator",
+  "task": "Financial_Model:05_01",
+  "primary_obligation": "O7",
+  "fallback_obligation": "O6",
+  "fallback_gate": "NO_HEADROOM_ON_O7",
+  "model": {
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "openrouter_wire_model": "meta/muse-spark-1.3-contributor",
+    "wire_model_note": "SWE-agent/LiteLLM request identity is openrouter/<declared>; direct OpenRouter chat/completions uses the declared model ID.",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "reasoning_effort": null,
+    "provider": {
+      "allow_fallbacks": true,
+      "require_parameters": true
+    },
+    "max_tokens": 4096,
+    "source_identity": "compiled_context_sidecar_ab.IDENTITY"
+  },
+  "repeats": 4,
+  "order": [
+    [
+      "CONTROL",
+      "TREATMENT"
+    ],
+    [
+      "TREATMENT",
+      "CONTROL"
+    ],
+    [
+      "CONTROL",
+      "TREATMENT"
+    ],
+    [
+      "TREATMENT",
+      "CONTROL"
+    ]
+  ],
+  "no_calc_query": true,
+  "no_task_ir": true,
+  "no_edit_plan": true,
+  "json_extract_policy": {
+    "strip_markdown_fences": true,
+    "salvage_partial_objects": false,
+    "identical_both_arms": true,
+    "frozen_before_execution": true
+  },
+  "open_product_defects": [
+    {
+      "id": "inspect_wide_range_64_cell_clip",
+      "surface": "calc_query inspect",
+      "status": "open",
+      "note": "inspect LIMIT 64 clips wide ranges (truncated:true). This probe does not call inspect and does not repair that product defect."
+    }
+  ],
+  "payload_hashes": {
+    "control": "2c5412b4f68073391a56dc059702999646aa0c3e9ab10153162ca85ba3ceea7b",
+    "treatment": "a94eddc197e9cda4a1de169f9c047b3e16cc9fd2b789be6e3af9f1e0944f00b2",
+    "common_packet": "9b8740f8c415638585a569e3ee2bb855628c20845f128b0ce2153e829d17ab89"
+  },
+  "o6_payload_hashes": {
+    "control": "12e0b562dae606abe0e94ccd831ab294d6535e84b0d0974b129399108ff24906",
+    "treatment": "d2560f9ee6d0dcb335514bdd5e2d6ddd2054b29bd8d6a1ef2ff32ae34ea6c5dc",
+    "common_packet": "1bb7dc71b79aa8803264a709286e3949648c36353ef22989d3b9ffb7d71ce608"
+  },
+  "o7_verdict": "NO_HEADROOM_ON_O7",
+  "o6_verdict": "OUTPUT_RELATION_NO_GAIN",
+  "written_at": "2026-09-16T14:33:43.945412+00:00"
+}

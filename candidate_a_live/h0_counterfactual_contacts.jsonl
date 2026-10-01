@@ -1,0 +1,12 @@
+{"arm": "H0", "counterfactual_opportunities": 11, "run_id": "primary_01_Financial_Model_07_01_H0", "task_id": "Financial_Model:07_01"}
+{"arm": "H1", "counterfactual_opportunities": 0, "run_id": "primary_02_Financial_Model_07_01_H1", "task_id": "Financial_Model:07_01"}
+{"arm": "H1", "counterfactual_opportunities": 0, "run_id": "primary_03_Financial_Model_08_03_H1", "task_id": "Financial_Model:08_03"}
+{"arm": "H0", "counterfactual_opportunities": 24, "run_id": "primary_04_Financial_Model_08_03_H0", "task_id": "Financial_Model:08_03"}
+{"arm": "H0", "counterfactual_opportunities": 29, "run_id": "primary_05_Financial_Model_08_01_H0", "task_id": "Financial_Model:08_01"}
+{"arm": "H1", "counterfactual_opportunities": 0, "run_id": "primary_06_Financial_Model_08_01_H1", "task_id": "Financial_Model:08_01"}
+{"arm": "H0", "counterfactual_opportunities": 0, "run_id": "primary_07_Financial_Model_06_01_H0", "task_id": "Financial_Model:06_01"}
+{"arm": "H1", "counterfactual_opportunities": 0, "run_id": "primary_08_Financial_Model_06_01_H1", "task_id": "Financial_Model:06_01"}
+{"arm": "H0", "counterfactual_opportunities": 4, "run_id": "primary_09_Debugging_01_06_H0", "task_id": "Debugging:01_06"}
+{"arm": "H1", "counterfactual_opportunities": 0, "run_id": "primary_10_Debugging_01_06_H1", "task_id": "Debugging:01_06"}
+{"arm": "H1", "counterfactual_opportunities": 0, "run_id": "primary_11_Debugging_05_02_H1", "task_id": "Debugging:05_02"}
+{"arm": "H0", "counterfactual_opportunities": 7, "run_id": "primary_12_Debugging_05_02_H0", "task_id": "Debugging:05_02"}

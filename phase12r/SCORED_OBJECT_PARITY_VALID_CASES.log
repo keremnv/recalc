@@ -1,0 +1,7 @@
+/home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 11.391s
+
+OK

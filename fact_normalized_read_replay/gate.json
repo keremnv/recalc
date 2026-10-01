@@ -1,0 +1,100 @@
+{
+  "tasks": 6,
+  "task_gate_rows": [
+    {
+      "task_id": "Financial_Model:08_01",
+      "fact_preservation_pass": true,
+      "query_realizability_pass": false,
+      "payload_materiality_pass": false,
+      "fact_match_rate": 0.9816,
+      "fact_match_rate_over_all_eligible": 0.9816,
+      "eligible_visible_fact_count": 1900,
+      "comparable_visible_fact_count": 1900,
+      "query_unavailable_fact_count": 0,
+      "realizability_rate": 0.7059,
+      "raw_payload_reduction_pct_median": -59.24
+    },
+    {
+      "task_id": "Debugging:10_04",
+      "fact_preservation_pass": false,
+      "query_realizability_pass": false,
+      "payload_materiality_pass": false,
+      "fact_match_rate": 0.7641,
+      "fact_match_rate_over_all_eligible": 0.1286,
+      "eligible_visible_fact_count": 1159,
+      "comparable_visible_fact_count": 195,
+      "query_unavailable_fact_count": 964,
+      "realizability_rate": 0.3333,
+      "raw_payload_reduction_pct_median": null
+    },
+    {
+      "task_id": "Financial_Model:08_03",
+      "fact_preservation_pass": false,
+      "query_realizability_pass": false,
+      "payload_materiality_pass": false,
+      "fact_match_rate": 0.3618,
+      "fact_match_rate_over_all_eligible": 0.1815,
+      "eligible_visible_fact_count": 1262,
+      "comparable_visible_fact_count": 633,
+      "query_unavailable_fact_count": 629,
+      "realizability_rate": 0.4,
+      "raw_payload_reduction_pct_median": null
+    },
+    {
+      "task_id": "Financial_Model:07_01",
+      "fact_preservation_pass": true,
+      "query_realizability_pass": false,
+      "payload_materiality_pass": false,
+      "fact_match_rate": 0.9989,
+      "fact_match_rate_over_all_eligible": 0.9989,
+      "eligible_visible_fact_count": 1877,
+      "comparable_visible_fact_count": 1877,
+      "query_unavailable_fact_count": 0,
+      "realizability_rate": 0.375,
+      "raw_payload_reduction_pct_median": -108.98
+    },
+    {
+      "task_id": "Debugging:10_10",
+      "fact_preservation_pass": false,
+      "query_realizability_pass": false,
+      "payload_materiality_pass": false,
+      "fact_match_rate": 0.8481,
+      "fact_match_rate_over_all_eligible": 0.6134,
+      "eligible_visible_fact_count": 2931,
+      "comparable_visible_fact_count": 2120,
+      "query_unavailable_fact_count": 811,
+      "realizability_rate": 0.3684,
+      "raw_payload_reduction_pct_median": -66.44
+    },
+    {
+      "task_id": "Financial_Model:15_04",
+      "fact_preservation_pass": true,
+      "query_realizability_pass": false,
+      "payload_materiality_pass": false,
+      "fact_match_rate": 1.0,
+      "fact_match_rate_over_all_eligible": 0.9979,
+      "eligible_visible_fact_count": 466,
+      "comparable_visible_fact_count": 465,
+      "query_unavailable_fact_count": 1,
+      "realizability_rate": 0.0,
+      "raw_payload_reduction_pct_median": null
+    }
+  ],
+  "tasks_fact_preservation_ge_95_pct": 3,
+  "tasks_query_realizability_ge_75_pct": 0,
+  "tasks_payload_median_reduction_ge_25_pct": 0,
+  "no_stale_or_fidelity_failure": false,
+  "no_stale_or_silent_truncation": true,
+  "primary_wrong_fact_rows": 5,
+  "primary_wrong_fact_count": 430,
+  "freshness_log_rows": 48,
+  "pass": false,
+  "failed_components": [
+    "FACT_PRESERVATION",
+    "QUERY_REALIZABILITY",
+    "PAYLOAD_MATERIALITY",
+    "FRESHNESS_OR_FIDELITY"
+  ],
+  "verdict": "FACT_NORMALIZED_READ_EFFICIENCY_NOT_GENERAL",
+  "rule": ">=4/6 tasks at >=95% facts, >=75% realizability, and median >=25% raw historical payload reduction; zero freshness/fidelity failures."
+}

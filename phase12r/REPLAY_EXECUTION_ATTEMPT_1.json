@@ -1,0 +1,10 @@
+{
+  "started_utc": "2026-09-30T14:05:28.666794+00:00",
+  "trajectory_model_calls": 0,
+  "trajectory_model_cost_usd": 0,
+  "model_use": "independent reviews only, outside scored treatment",
+  "interrupted": true,
+  "interruption_reason": "user reported application/host crash; process absent on resume",
+  "last_progress_write_utc": "2026-09-30T14:07:45.214668+00:00",
+  "active_wall_seconds_lower_bound": 136.54787349700928
+}

@@ -1,0 +1,8 @@
+{
+  "historical_execution_walltime_upper_bound_s": null,
+  "load_workbook_calls": 3,
+  "newly_admitted_historical_executions": 14,
+  "note": "source corpus preserves execution_time_s separately but this classifier replay uses source mechanics; no read-only timing is attributed",
+  "primitive_read_events_estimate": 28,
+  "repeated_open_opportunity_upper_bound": 0
+}

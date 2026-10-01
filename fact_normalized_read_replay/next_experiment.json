@@ -1,0 +1,6 @@
+{
+  "live_v1_v2_justified": false,
+  "gate_verdict": "FACT_NORMALIZED_READ_EFFICIENCY_NOT_GENERAL",
+  "next_experiment": "Run the already specified identical-documentation V1/V2 discriminator only if this gate passes; otherwise do not run live inference.",
+  "model_calls_in_this_replay": 0
+}

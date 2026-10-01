@@ -1,0 +1,557 @@
+{
+ "positive": true,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [
+    {
+     "formula": "OpEx_Forecast!H10",
+     "blank": "OpEx_Forecast!H7"
+    },
+    {
+     "formula": "OpEx_Forecast!H11",
+     "blank": "OpEx_Forecast!H10"
+    },
+    {
+     "formula": "OpEx_Forecast!H11",
+     "blank": "OpEx_Forecast!H7"
+    },
+    {
+     "formula": "OpEx_Forecast!H13",
+     "blank": "OpEx_Forecast!H10"
+    },
+    {
+     "formula": "OpEx_Forecast!H13",
+     "blank": "OpEx_Forecast!H7"
+    },
+    {
+     "formula": "OpEx_Forecast!H14",
+     "blank": "OpEx_Forecast!H13"
+    },
+    {
+     "formula": "OpEx_Forecast!H14",
+     "blank": "OpEx_Forecast!H7"
+    },
+    {
+     "formula": "OpEx_Forecast!H19",
+     "blank": "OpEx_Forecast!H18"
+    },
+    {
+     "formula": "OpEx_Forecast!H19",
+     "blank": "OpEx_Forecast!H7"
+    },
+    {
+     "formula": "OpEx_Forecast!H21",
+     "blank": "OpEx_Forecast!H7"
+    },
+    {
+     "formula": "OpEx_Forecast!H22",
+     "blank": "OpEx_Forecast!H21"
+    },
+    {
+     "formula": "OpEx_Forecast!H22",
+     "blank": "OpEx_Forecast!H7"
+    },
+    {
+     "formula": "OpEx_Forecast!H24",
+     "blank": "OpEx_Forecast!H18"
+    },
+    {
+     "formula": "OpEx_Forecast!H24",
+     "blank": "OpEx_Forecast!H21"
+    },
+    {
+     "formula": "OpEx_Forecast!H25",
+     "blank": "OpEx_Forecast!H24"
+    },
+    {
+     "formula": "OpEx_Forecast!H25",
+     "blank": "OpEx_Forecast!H7"
+    },
+    {
+     "formula": "OpEx_Forecast!H27",
+     "blank": "OpEx_Forecast!H13"
+    },
+    {
+     "formula": "OpEx_Forecast!H27",
+     "blank": "OpEx_Forecast!H24"
+    },
+    {
+     "formula": "OpEx_Forecast!H28",
+     "blank": "OpEx_Forecast!H27"
+    },
+    {
+     "formula": "OpEx_Forecast!H28",
+     "blank": "OpEx_Forecast!H7"
+    },
+    {
+     "formula": "OpEx_Forecast!H8",
+     "blank": "OpEx_Forecast!H7"
+    },
+    {
+     "formula": "OpEx_Forecast!I10",
+     "blank": "OpEx_Forecast!I7"
+    },
+    {
+     "formula": "OpEx_Forecast!I11",
+     "blank": "OpEx_Forecast!I10"
+    },
+    {
+     "formula": "OpEx_Forecast!I11",
+     "blank": "OpEx_Forecast!I7"
+    },
+    {
+     "formula": "OpEx_Forecast!I13",
+     "blank": "OpEx_Forecast!I10"
+    },
+    {
+     "formula": "OpEx_Forecast!I13",
+     "blank": "OpEx_Forecast!I7"
+    },
+    {
+     "formula": "OpEx_Forecast!I14",
+     "blank": "OpEx_Forecast!I13"
+    },
+    {
+     "formula": "OpEx_Forecast!I14",
+     "blank": "OpEx_Forecast!I7"
+    },
+    {
+     "formula": "OpEx_Forecast!I18",
+     "blank": "OpEx_Forecast!H18"
+    },
+    {
+     "formula": "OpEx_Forecast!I19",
+     "blank": "OpEx_Forecast!I18"
+    },
+    {
+     "formula": "OpEx_Forecast!I19",
+     "blank": "OpEx_Forecast!I7"
+    },
+    {
+     "formula": "OpEx_Forecast!I21",
+     "blank": "OpEx_Forecast!I7"
+    },
+    {
+     "formula": "OpEx_Forecast!I22",
+     "blank": "OpEx_Forecast!I21"
+    },
+    {
+     "formula": "OpEx_Forecast!I22",
+     "blank": "OpEx_Forecast!I7"
+    },
+    {
+     "formula": "OpEx_Forecast!I24",
+     "blank": "OpEx_Forecast!I18"
+    },
+    {
+     "formula": "OpEx_Forecast!I24",
+     "blank": "OpEx_Forecast!I21"
+    },
+    {
+     "formula": "OpEx_Forecast!I25",
+     "blank": "OpEx_Forecast!I24"
+    },
+    {
+     "formula": "OpEx_Forecast!I25",
+     "blank": "OpEx_Forecast!I7"
+    },
+    {
+     "formula": "OpEx_Forecast!I27",
+     "blank": "OpEx_Forecast!I13"
+    },
+    {
+     "formula": "OpEx_Forecast!I27",
+     "blank": "OpEx_Forecast!I24"
+    },
+    {
+     "formula": "OpEx_Forecast!I28",
+     "blank": "OpEx_Forecast!I27"
+    },
+    {
+     "formula": "OpEx_Forecast!I28",
+     "blank": "OpEx_Forecast!I7"
+    },
+    {
+     "formula": "OpEx_Forecast!I7",
+     "blank": "OpEx_Forecast!H7"
+    },
+    {
+     "formula": "OpEx_Forecast!I8",
+     "blank": "OpEx_Forecast!I7"
+    },
+    {
+     "formula": "OpEx_Forecast!J10",
+     "blank": "OpEx_Forecast!J7"
+    },
+    {
+     "formula": "OpEx_Forecast!J11",
+     "blank": "OpEx_Forecast!J10"
+    },
+    {
+     "formula": "OpEx_Forecast!J11",
+     "blank": "OpEx_Forecast!J7"
+    },
+    {
+     "formula": "OpEx_Forecast!J13",
+     "blank": "OpEx_Forecast!J10"
+    },
+    {
+     "formula": "OpEx_Forecast!J13",
+     "blank": "OpEx_Forecast!J7"
+    },
+    {
+     "formula": "OpEx_Forecast!J14",
+     "blank": "OpEx_Forecast!J13"
+    },
+    {
+     "formula": "OpEx_Forecast!J14",
+     "blank": "OpEx_Forecast!J7"
+    },
+    {
+     "formula": "OpEx_Forecast!J18",
+     "blank": "OpEx_Forecast!I18"
+    },
+    {
+     "formula": "OpEx_Forecast!J19",
+     "blank": "OpEx_Forecast!J18"
+    },
+    {
+     "formula": "OpEx_Forecast!J19",
+     "blank": "OpEx_Forecast!J7"
+    },
+    {
+     "formula": "OpEx_Forecast!J21",
+     "blank": "OpEx_Forecast!J7"
+    },
+    {
+     "formula": "OpEx_Forecast!J22",
+     "blank": "OpEx_Forecast!J21"
+    },
+    {
+     "formula": "OpEx_Forecast!J22",
+     "blank": "OpEx_Forecast!J7"
+    },
+    {
+     "formula": "OpEx_Forecast!J24",
+     "blank": "OpEx_Forecast!J18"
+    },
+    {
+     "formula": "OpEx_Forecast!J24",
+     "blank": "OpEx_Forecast!J21"
+    },
+    {
+     "formula": "OpEx_Forecast!J25",
+     "blank": "OpEx_Forecast!J24"
+    },
+    {
+     "formula": "OpEx_Forecast!J25",
+     "blank": "OpEx_Forecast!J7"
+    },
+    {
+     "formula": "OpEx_Forecast!J27",
+     "blank": "OpEx_Forecast!J13"
+    },
+    {
+     "formula": "OpEx_Forecast!J27",
+     "blank": "OpEx_Forecast!J24"
+    },
+    {
+     "formula": "OpEx_Forecast!J28",
+     "blank": "OpEx_Forecast!J27"
+    },
+    {
+     "formula": "OpEx_Forecast!J28",
+     "blank": "OpEx_Forecast!J7"
+    },
+    {
+     "formula": "OpEx_Forecast!J7",
+     "blank": "OpEx_Forecast!I7"
+    },
+    {
+     "formula": "OpEx_Forecast!J8",
+     "blank": "OpEx_Forecast!J7"
+    },
+    {
+     "formula": "OpEx_Forecast!K10",
+     "blank": "OpEx_Forecast!K7"
+    },
+    {
+     "formula": "OpEx_Forecast!K11",
+     "blank": "OpEx_Forecast!K10"
+    },
+    {
+     "formula": "OpEx_Forecast!K11",
+     "blank": "OpEx_Forecast!K7"
+    },
+    {
+     "formula": "OpEx_Forecast!K13",
+     "blank": "OpEx_Forecast!K10"
+    },
+    {
+     "formula": "OpEx_Forecast!K13",
+     "blank": "OpEx_Forecast!K7"
+    },
+    {
+     "formula": "OpEx_Forecast!K14",
+     "blank": "OpEx_Forecast!K13"
+    },
+    {
+     "formula": "OpEx_Forecast!K14",
+     "blank": "OpEx_Forecast!K7"
+    },
+    {
+     "formula": "OpEx_Forecast!K18",
+     "blank": "OpEx_Forecast!J18"
+    },
+    {
+     "formula": "OpEx_Forecast!K19",
+     "blank": "OpEx_Forecast!K18"
+    },
+    {
+     "formula": "OpEx_Forecast!K19",
+     "blank": "OpEx_Forecast!K7"
+    },
+    {
+     "formula": "OpEx_Forecast!K21",
+     "blank": "OpEx_Forecast!K7"
+    },
+    {
+     "formula": "OpEx_Forecast!K22",
+     "blank": "OpEx_Forecast!K21"
+    },
+    {
+     "formula": "OpEx_Forecast!K22",
+     "blank": "OpEx_Forecast!K7"
+    },
+    {
+     "formula": "OpEx_Forecast!K24",
+     "blank": "OpEx_Forecast!K18"
+    },
+    {
+     "formula": "OpEx_Forecast!K24",
+     "blank": "OpEx_Forecast!K21"
+    },
+    {
+     "formula": "OpEx_Forecast!K25",
+     "blank": "OpEx_Forecast!K24"
+    },
+    {
+     "formula": "OpEx_Forecast!K25",
+     "blank": "OpEx_Forecast!K7"
+    },
+    {
+     "formula": "OpEx_Forecast!K27",
+     "blank": "OpEx_Forecast!K13"
+    },
+    {
+     "formula": "OpEx_Forecast!K27",
+     "blank": "OpEx_Forecast!K24"
+    },
+    {
+     "formula": "OpEx_Forecast!K28",
+     "blank": "OpEx_Forecast!K27"
+    },
+    {
+     "formula": "OpEx_Forecast!K28",
+     "blank": "OpEx_Forecast!K7"
+    },
+    {
+     "formula": "OpEx_Forecast!K7",
+     "blank": "OpEx_Forecast!J7"
+    },
+    {
+     "formula": "OpEx_Forecast!K8",
+     "blank": "OpEx_Forecast!K7"
+    },
+    {
+     "formula": "OpEx_Forecast!L10",
+     "blank": "OpEx_Forecast!H10"
+    },
+    {
+     "formula": "OpEx_Forecast!L10",
+     "blank": "OpEx_Forecast!I10"
+    },
+    {
+     "formula": "OpEx_Forecast!L10",
+     "blank": "OpEx_Forecast!J10"
+    },
+    {
+     "formula": "OpEx_Forecast!L10",
+     "blank": "OpEx_Forecast!K10"
+    },
+    {
+     "formula": "OpEx_Forecast!L11",
+     "blank": "OpEx_Forecast!L10"
+    },
+    {
+     "formula": "OpEx_Forecast!L11",
+     "blank": "OpEx_Forecast!L7"
+    },
+    {
+     "formula": "OpEx_Forecast!L13",
+     "blank": "OpEx_Forecast!L10"
+    },
+    {
+     "formula": "OpEx_Forecast!L13",
+     "blank": "OpEx_Forecast!L7"
+    },
+    {
+     "formula": "OpEx_Forecast!L14",
+     "blank": "OpEx_Forecast!L13"
+    },
+    {
+     "formula": "OpEx_Forecast!L14",
+     "blank": "OpEx_Forecast!L7"
+    },
+    {
+     "formula": "OpEx_Forecast!L18",
+     "blank": "OpEx_Forecast!H18"
+    },
+    {
+     "formula": "OpEx_Forecast!L18",
+     "blank": "OpEx_Forecast!I18"
+    },
+    {
+     "formula": "OpEx_Forecast!L18",
+     "blank": "OpEx_Forecast!J18"
+    },
+    {
+     "formula": "OpEx_Forecast!L18",
+     "blank": "OpEx_Forecast!K18"
+    },
+    {
+     "formula": "OpEx_Forecast!L19",
+     "blank": "OpEx_Forecast!L18"
+    },
+    {
+     "formula": "OpEx_Forecast!L19",
+     "blank": "OpEx_Forecast!L7"
+    },
+    {
+     "formula": "OpEx_Forecast!L21",
+     "blank": "OpEx_Forecast!H21"
+    },
+    {
+     "formula": "OpEx_Forecast!L21",
+     "blank": "OpEx_Forecast!I21"
+    },
+    {
+     "formula": "OpEx_Forecast!L21",
+     "blank": "OpEx_Forecast!J21"
+    },
+    {
+     "formula": "OpEx_Forecast!L21",
+     "blank": "OpEx_Forecast!K21"
+    },
+    {
+     "formula": "OpEx_Forecast!L22",
+     "blank": "OpEx_Forecast!L21"
+    },
+    {
+     "formula": "OpEx_Forecast!L22",
+     "blank": "OpEx_Forecast!L7"
+    },
+    {
+     "formula": "OpEx_Forecast!L24",
+     "blank": "OpEx_Forecast!L18"
+    },
+    {
+     "formula": "OpEx_Forecast!L24",
+     "blank": "OpEx_Forecast!L21"
+    },
+    {
+     "formula": "OpEx_Forecast!L25",
+     "blank": "OpEx_Forecast!L24"
+    },
+    {
+     "formula": "OpEx_Forecast!L25",
+     "blank": "OpEx_Forecast!L7"
+    },
+    {
+     "formula": "OpEx_Forecast!L27",
+     "blank": "OpEx_Forecast!L13"
+    },
+    {
+     "formula": "OpEx_Forecast!L27",
+     "blank": "OpEx_Forecast!L24"
+    },
+    {
+     "formula": "OpEx_Forecast!L28",
+     "blank": "OpEx_Forecast!L27"
+    },
+    {
+     "formula": "OpEx_Forecast!L28",
+     "blank": "OpEx_Forecast!L7"
+    },
+    {
+     "formula": "OpEx_Forecast!L7",
+     "blank": "OpEx_Forecast!H7"
+    },
+    {
+     "formula": "OpEx_Forecast!L7",
+     "blank": "OpEx_Forecast!I7"
+    },
+    {
+     "formula": "OpEx_Forecast!L7",
+     "blank": "OpEx_Forecast!J7"
+    },
+    {
+     "formula": "OpEx_Forecast!L7",
+     "blank": "OpEx_Forecast!K7"
+    },
+    {
+     "formula": "OpEx_Forecast!L8",
+     "blank": "OpEx_Forecast!G7"
+    },
+    {
+     "formula": "OpEx_Forecast!L8",
+     "blank": "OpEx_Forecast!L7"
+    }
+   ],
+   "count": 126
+  },
+  "CHG": {
+   "changed_cells": 70,
+   "sheets": 1,
+   "regions": [
+    "OpEx_Forecast!H10",
+    "OpEx_Forecast!H11",
+    "OpEx_Forecast!H13",
+    "OpEx_Forecast!H14",
+    "OpEx_Forecast!H18",
+    "OpEx_Forecast!H19",
+    "OpEx_Forecast!H21",
+    "OpEx_Forecast!H22",
+    "OpEx_Forecast!H24",
+    "OpEx_Forecast!H25",
+    "OpEx_Forecast!H27",
+    "OpEx_Forecast!H28",
+    "OpEx_Forecast!H7",
+    "OpEx_Forecast!H8",
+    "OpEx_Forecast!I10",
+    "OpEx_Forecast!I11",
+    "OpEx_Forecast!I13",
+    "OpEx_Forecast!I14",
+    "OpEx_Forecast!I18",
+    "OpEx_Forecast!I19"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": "Post-edit verification (mechanical check of the current workbook)\n\nChanged cells: 70 across 1 sheet(s).\n\nNewly blank referenced cells (126):\n- OpEx_Forecast!H10 now references blank OpEx_Forecast!H7\n- OpEx_Forecast!H11 now references blank OpEx_Forecast!H10\n- OpEx_Forecast!H11 now references blank OpEx_Forecast!H7\n- OpEx_Forecast!H13 now references blank OpEx_Forecast!H10\n- OpEx_Forecast!H13 now references blank OpEx_Forecast!H7\n- OpEx_Forecast!H14 now references blank OpEx_Forecast!H13\n- OpEx_Forecast!H14 now references blank OpEx_Forecast!H7\n- OpEx_Forecast!H19 now references blank OpEx_Forecast!H18\n- OpEx_Forecast!H19 now references blank OpEx_Forecast!H7\n- OpEx_Forecast!H21 now references blank OpEx_Forecast!H7\n- and 116 more.\n\nThis report is mechanical evidence about the current workbook state.\nReview it before deciding whether to submit or revise.",
+ "positive_families": [
+  "REF"
+ ]
+}

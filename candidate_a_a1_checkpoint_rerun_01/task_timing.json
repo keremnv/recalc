@@ -1,0 +1,377 @@
+{
+  "common_substrate_cost_is_in_run_records": true,
+  "tasks": [
+    {
+      "exact_trace_count": 0,
+      "family": "Debugging",
+      "h0": {
+        "contact": false,
+        "contact_operations": 0,
+        "cost_usd": 0.049036649999999994,
+        "model_calls": 23,
+        "model_network_wait_s": 273.0030242691282,
+        "python_walltime_s": 4.82957131229341,
+        "real_openpyxl_parses": 22,
+        "status": "PROVIDER_CENSORED",
+        "task_walltime_s": 549.1218241699971,
+        "tokens": 536132,
+        "tool_walltime_s": 5.728472031303681
+      },
+      "h1": {
+        "contact": false,
+        "contact_operations": 0,
+        "cost_usd": 0.00642711,
+        "model_calls": 8,
+        "model_network_wait_s": 58.83239587012213,
+        "python_walltime_s": 0.441898453165777,
+        "real_openpyxl_parses": 2,
+        "status": "PROVIDER_CENSORED",
+        "task_walltime_s": 330.40668912790716,
+        "tokens": 69688,
+        "tool_walltime_s": 1.2164218291873112
+      },
+      "task_id": "Debugging:01_06"
+    },
+    {
+      "exact_trace_count": 2,
+      "family": "Debugging",
+      "h0": {
+        "contact": false,
+        "contact_operations": 0,
+        "cost_usd": 0.02247378,
+        "model_calls": 12,
+        "model_network_wait_s": 273.9548284970224,
+        "python_walltime_s": 4.679720720159821,
+        "real_openpyxl_parses": 4,
+        "status": "PROVIDER_CENSORED",
+        "task_walltime_s": 821.1193321800092,
+        "tokens": 236327,
+        "tool_walltime_s": 6.428059744066559
+      },
+      "h1": {
+        "contact": true,
+        "contact_operations": 4834,
+        "cost_usd": 0.06170712,
+        "model_calls": 25,
+        "model_network_wait_s": 332.26876799797174,
+        "python_walltime_s": 7.190948869101703,
+        "real_openpyxl_parses": 7,
+        "status": "NO_SUBMIT",
+        "task_walltime_s": 983.9995661389548,
+        "tokens": 670202,
+        "tool_walltime_s": 21.007011733949184
+      },
+      "task_id": "Debugging:05_02"
+    },
+    {
+      "exact_trace_count": 0,
+      "family": "Debugging",
+      "h0": {
+        "contact": false,
+        "contact_operations": 0,
+        "cost_usd": 0.10170192,
+        "model_calls": 30,
+        "model_network_wait_s": 362.6945149777457,
+        "python_walltime_s": 298.4393525357591,
+        "real_openpyxl_parses": 23,
+        "status": "NO_SUBMIT",
+        "task_walltime_s": 914.6043615340022,
+        "tokens": 1111308,
+        "tool_walltime_s": 408.8971913229907
+      },
+      "h1": {
+        "contact": false,
+        "contact_operations": 0,
+        "cost_usd": 0.0024961799999999998,
+        "model_calls": 5,
+        "model_network_wait_s": 61.03209403483197,
+        "python_walltime_s": 38.791110170888714,
+        "real_openpyxl_parses": 3,
+        "status": "SUBMITTED",
+        "task_walltime_s": 119.7898381339619,
+        "tokens": 26186,
+        "tool_walltime_s": 51.12138352391776
+      },
+      "task_id": "Debugging:10_04"
+    },
+    {
+      "exact_trace_count": 8,
+      "family": "Debugging",
+      "h0": {
+        "contact": false,
+        "contact_operations": 0,
+        "cost_usd": 0.12922962000000002,
+        "model_calls": 40,
+        "model_network_wait_s": 349.1677640862763,
+        "python_walltime_s": 499.19717935670633,
+        "real_openpyxl_parses": 39,
+        "status": "TRUNCATED_CALL_LIMIT",
+        "task_walltime_s": 895.209701656946,
+        "tokens": 1412745,
+        "tool_walltime_s": 523.1721592807444
+      },
+      "h1": {
+        "contact": true,
+        "contact_operations": 300,
+        "cost_usd": 0.06669573,
+        "model_calls": 30,
+        "model_network_wait_s": 423.2057170753833,
+        "python_walltime_s": 349.4446458881721,
+        "real_openpyxl_parses": 23,
+        "status": "SUBMITTED",
+        "task_walltime_s": 812.2569127099123,
+        "tokens": 713339,
+        "tool_walltime_s": 374.01615782803856
+      },
+      "task_id": "Debugging:10_10"
+    },
+    {
+      "exact_trace_count": 0,
+      "family": "Financial_Model",
+      "h0": {
+        "contact": null,
+        "contact_operations": 0,
+        "cost_usd": 0,
+        "model_calls": 0,
+        "model_network_wait_s": 0,
+        "python_walltime_s": 0,
+        "real_openpyxl_parses": 0,
+        "status": "RUNNER_ERROR",
+        "task_walltime_s": null,
+        "tokens": 0,
+        "tool_walltime_s": 0
+      },
+      "h1": {
+        "contact": null,
+        "contact_operations": 0,
+        "cost_usd": 0,
+        "model_calls": 0,
+        "model_network_wait_s": 0,
+        "python_walltime_s": 0,
+        "real_openpyxl_parses": 0,
+        "status": "RUNNER_ERROR",
+        "task_walltime_s": null,
+        "tokens": 0,
+        "tool_walltime_s": 0
+      },
+      "task_id": "Financial_Model:06_01"
+    },
+    {
+      "exact_trace_count": 0,
+      "family": "Financial_Model",
+      "h0": {
+        "contact": false,
+        "contact_operations": 0,
+        "cost_usd": 0.21478035,
+        "model_calls": 40,
+        "model_network_wait_s": 741.8114670854993,
+        "python_walltime_s": 58.542085344321094,
+        "real_openpyxl_parses": 36,
+        "status": "TRUNCATED_CALL_LIMIT",
+        "task_walltime_s": 914.3130554030649,
+        "tokens": 2346532,
+        "tool_walltime_s": 65.93756402831059
+      },
+      "h1": {
+        "contact": false,
+        "contact_operations": 0,
+        "cost_usd": 0.03707142,
+        "model_calls": 16,
+        "model_network_wait_s": 519.5465496967081,
+        "python_walltime_s": 19.744474787148647,
+        "real_openpyxl_parses": 13,
+        "status": "NO_SUBMIT",
+        "task_walltime_s": 904.6249549170025,
+        "tokens": 373848,
+        "tool_walltime_s": 23.74689888220746
+      },
+      "task_id": "Financial_Model:07_01"
+    },
+    {
+      "exact_trace_count": 14,
+      "family": "Financial_Model",
+      "h0": {
+        "contact": false,
+        "contact_operations": 0,
+        "cost_usd": 0.06626754,
+        "model_calls": 26,
+        "model_network_wait_s": 377.31878710503224,
+        "python_walltime_s": 63.044007367338054,
+        "real_openpyxl_parses": 20,
+        "status": "SUBMITTED",
+        "task_walltime_s": 561.5582373780198,
+        "tokens": 706101,
+        "tool_walltime_s": 88.11235956242308
+      },
+      "h1": {
+        "contact": true,
+        "contact_operations": 63704,
+        "cost_usd": 0.036649350000000004,
+        "model_calls": 20,
+        "model_network_wait_s": 206.57142784481402,
+        "python_walltime_s": 38.51052280922886,
+        "real_openpyxl_parses": 3,
+        "status": "PROVIDER_CENSORED",
+        "task_walltime_s": 548.6706287540728,
+        "tokens": 394069,
+        "tool_walltime_s": 52.9326358322287
+      },
+      "task_id": "Financial_Model:08_01"
+    },
+    {
+      "exact_trace_count": 11,
+      "family": "Financial_Model",
+      "h0": {
+        "contact": false,
+        "contact_operations": 0,
+        "cost_usd": 0.04736090999999999,
+        "model_calls": 22,
+        "model_network_wait_s": 259.90755499969237,
+        "python_walltime_s": 71.14906345680356,
+        "real_openpyxl_parses": 21,
+        "status": "SUBMITTED",
+        "task_walltime_s": 348.3527273769723,
+        "tokens": 503697,
+        "tool_walltime_s": 82.44497014291119
+      },
+      "h1": {
+        "contact": true,
+        "contact_operations": 12441,
+        "cost_usd": 0.08407638,
+        "model_calls": 31,
+        "model_network_wait_s": 310.71076490485575,
+        "python_walltime_s": 96.73632852709852,
+        "real_openpyxl_parses": 23,
+        "status": "SUBMITTED",
+        "task_walltime_s": 428.0642745550722,
+        "tokens": 907995,
+        "tool_walltime_s": 104.61158595222514
+      },
+      "task_id": "Financial_Model:08_03"
+    },
+    {
+      "exact_trace_count": 6,
+      "family": "Financial_Model",
+      "h0": {
+        "contact": false,
+        "contact_operations": 0,
+        "cost_usd": 0.03646698,
+        "model_calls": 15,
+        "model_network_wait_s": 297.28141577285714,
+        "python_walltime_s": 37.54578459367622,
+        "real_openpyxl_parses": 12,
+        "status": "NO_SUBMIT",
+        "task_walltime_s": 976.4076194820227,
+        "tokens": 389637,
+        "tool_walltime_s": 46.17740500252694
+      },
+      "h1": {
+        "contact": true,
+        "contact_operations": 88389,
+        "cost_usd": 0.0149142,
+        "model_calls": 10,
+        "model_network_wait_s": 245.73738992784638,
+        "python_walltime_s": 12.417123308987357,
+        "real_openpyxl_parses": 1,
+        "status": "PROVIDER_CENSORED",
+        "task_walltime_s": 633.0447005780879,
+        "tokens": 160125,
+        "tool_walltime_s": 23.883268735022284
+      },
+      "task_id": "Financial_Model:10_01"
+    },
+    {
+      "exact_trace_count": 9,
+      "family": "Financial_Model",
+      "h0": {
+        "contact": false,
+        "contact_operations": 0,
+        "cost_usd": 0.09339839999999999,
+        "model_calls": 37,
+        "model_network_wait_s": 700.0023141200654,
+        "python_walltime_s": 18.146192060783505,
+        "real_openpyxl_parses": 35,
+        "status": "NO_SUBMIT",
+        "task_walltime_s": 901.4336137420032,
+        "tokens": 986394,
+        "tool_walltime_s": 19.574177779839374
+      },
+      "h1": {
+        "contact": true,
+        "contact_operations": 31432,
+        "cost_usd": 0.01857609,
+        "model_calls": 11,
+        "model_network_wait_s": 284.47252346226014,
+        "python_walltime_s": 3.630737140076235,
+        "real_openpyxl_parses": 0,
+        "status": "PROVIDER_CENSORED",
+        "task_walltime_s": 739.5934131750837,
+        "tokens": 189559,
+        "tool_walltime_s": 4.452247123001143
+      },
+      "task_id": "Financial_Model:15_04"
+    },
+    {
+      "exact_trace_count": 0,
+      "family": "Template",
+      "h0": {
+        "contact": false,
+        "contact_operations": 0,
+        "cost_usd": 0.0474144,
+        "model_calls": 40,
+        "model_network_wait_s": 520.9386777686886,
+        "python_walltime_s": 16.254194636945613,
+        "real_openpyxl_parses": 28,
+        "status": "TRUNCATED_CALL_LIMIT",
+        "task_walltime_s": 629.137250146945,
+        "tokens": 494923,
+        "tool_walltime_s": 17.702600626973435
+      },
+      "h1": {
+        "contact": false,
+        "contact_operations": 0,
+        "cost_usd": 0.00256857,
+        "model_calls": 6,
+        "model_network_wait_s": 90.98011135286652,
+        "python_walltime_s": 1.1201368699548766,
+        "real_openpyxl_parses": 4,
+        "status": "SUBMITTED",
+        "task_walltime_s": 92.80592383595649,
+        "tokens": 21283,
+        "tool_walltime_s": 1.6189831499941647
+      },
+      "task_id": "Template:03_03"
+    },
+    {
+      "exact_trace_count": 1,
+      "family": "Template",
+      "h0": {
+        "contact": false,
+        "contact_operations": 0,
+        "cost_usd": 0.00284856,
+        "model_calls": 7,
+        "model_network_wait_s": 88.41331276483834,
+        "python_walltime_s": 0.9648655619239435,
+        "real_openpyxl_parses": 5,
+        "status": "SUBMITTED",
+        "task_walltime_s": 180.7332754349336,
+        "tokens": 25472,
+        "tool_walltime_s": 1.5080913319252431
+      },
+      "h1": {
+        "contact": true,
+        "contact_operations": 182,
+        "cost_usd": 0.00405924,
+        "model_calls": 9,
+        "model_network_wait_s": 95.79566152580082,
+        "python_walltime_s": 0.5076082650339231,
+        "real_openpyxl_parses": 2,
+        "status": "SUBMITTED",
+        "task_walltime_s": 97.43019323900808,
+        "tokens": 39127,
+        "tool_walltime_s": 1.3849507761187851
+      },
+      "task_id": "Template:13_08"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+ "verdict": "BATCH_HELPER_NO_GAIN",
+ "action": "Do not expose write_cells/write_formulas model-facing. Mutation-helper branch CLOSED.",
+ "next_cost_center": "post-mutation verification / repair / reopen loops",
+ "next_experiment": "which mechanical facts does the agent repeatedly rediscover after writing, and can the runtime return those facts directly without semantic judgment"
+}

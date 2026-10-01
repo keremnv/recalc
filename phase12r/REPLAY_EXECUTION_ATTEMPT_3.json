@@ -1,0 +1,18 @@
+{
+  "started_utc": "2026-09-30T21:39:55.480336+00:00",
+  "trajectory_model_calls": 0,
+  "trajectory_model_cost_usd": 0,
+  "model_use": "independent reviews only",
+  "scheduler": "one workbook subprocess at a time",
+  "memory_limit_GiB_per_workbook": 7,
+  "workbook_timeout_seconds": 900,
+  "recovered_row_ids": [
+    "1c50bc31672244f5",
+    "68245995533858b9"
+  ],
+  "execution_amendment_hash": "fe3855e97c3d20bfc7e4fa73cfa4e88cfc5cef4ff9cb70c4faa3adb8f78aa277",
+  "interrupted": true,
+  "interruption_reason": "server daemon restart interrupted scheduler; one surviving workbook result recovered",
+  "last_progress_write_utc": "2026-09-30T23:43:30.340176+00:00",
+  "active_wall_seconds_lower_bound": 7414.859840393066
+}

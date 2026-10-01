@@ -1,0 +1,1203 @@
+{
+  "arms": {
+    "A": {
+      "evaluation_runtime": "unmodified-official-evaluation.py",
+      "exact": 2,
+      "missing_outputs": 4,
+      "model_name": "token_claim_discovery_A",
+      "run_name": "A",
+      "scored": 15,
+      "submission": {
+        "official_json": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/token_claim_discovery/score_staging/A/submission/results",
+        "outputs": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/token_claim_discovery/score_staging/A/submission/outputs"
+      },
+      "tasks": {
+        "Debugging:01_04": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "01_04",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:04_07": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "04_07",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:06_10": {
+          "accuracy": 0.0,
+          "error_message": "Modification error at Cover!G10: answer=1.63541592509081, output=14.067176963784",
+          "id": "06_10",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.8228,
+          "regression_accuracy": 1.0
+        },
+        "Debugging:07_05": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at Football Field!E5: answer=1351.83476611251, output=1538.71914253429",
+          "id": "07_05",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.9724
+        },
+        "Debugging:09_03": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at LBO!B17: answer=Revolver Committment, output=Revolver Commitment",
+          "id": "09_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0624,
+          "regression_accuracy": 0.9644
+        },
+        "Financial_Model:02_04": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at Ratios!E24: answer=4.4x, output=17.3837904505494",
+          "id": "02_04",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.9964,
+          "regression_accuracy": 1.0
+        },
+        "Financial_Model:02_05": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at IS,BS,CF!H95: answer=0, output=-576.92",
+          "id": "02_05",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.9502,
+          "regression_accuracy": 1.0
+        },
+        "Financial_Model:09_02": {
+          "accuracy": 1.0,
+          "error_message": "",
+          "id": "09_02",
+          "interaction_turns": 0,
+          "modification_accuracy": 1.0,
+          "regression_accuracy": 1.0
+        },
+        "Financial_Model:15_03": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "15_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:18_05": {
+          "accuracy": 0.0,
+          "error_message": "Modification error at Milestones!E9: answer=251.750521875, output=#VALUE!",
+          "id": "18_05",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.6051,
+          "regression_accuracy": 1.0
+        },
+        "Template:01_05": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at BondAccounting!B34: answer=  Change in Bond Liability, output=None",
+          "id": "01_05",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.6933,
+          "regression_accuracy": 0.9465
+        },
+        "Template:04_04": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at FCF_Calc!C16: answer=None, output=93.8",
+          "id": "04_04",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.5556,
+          "regression_accuracy": 0.9638
+        },
+        "Template:06_02": {
+          "accuracy": 1.0,
+          "error_message": "",
+          "id": "06_02",
+          "interaction_turns": 0,
+          "modification_accuracy": 1.0,
+          "regression_accuracy": 1.0
+        },
+        "Template:16_07": {
+          "accuracy": 0.0,
+          "error_message": "Modification error at RentRoll!D15: answer=4290000, output=27060000",
+          "id": "16_07",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.3884,
+          "regression_accuracy": 0.9096
+        },
+        "Template:16_08": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "16_08",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        }
+      }
+    },
+    "B": {
+      "evaluation_runtime": "unmodified-official-evaluation.py",
+      "exact": 4,
+      "missing_outputs": 3,
+      "model_name": "token_claim_discovery_B",
+      "run_name": "B",
+      "scored": 15,
+      "submission": {
+        "official_json": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/token_claim_discovery/score_staging/B/submission/results",
+        "outputs": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/token_claim_discovery/score_staging/B/submission/outputs"
+      },
+      "tasks": {
+        "Debugging:01_04": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "01_04",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:04_07": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at Income Statement!J29: answer=0, output=-5.7",
+          "id": "04_07",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.868,
+          "regression_accuracy": 0.9972
+        },
+        "Debugging:06_10": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "06_10",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:07_05": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at BS & CF!N78: answer=97.25, output=18.25",
+          "id": "07_05",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.9945
+        },
+        "Debugging:09_03": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at LBO!B17: answer=Revolver Committment, output=Revolver Commitment",
+          "id": "09_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0437,
+          "regression_accuracy": 0.952
+        },
+        "Financial_Model:02_04": {
+          "accuracy": 1.0,
+          "error_message": "",
+          "id": "02_04",
+          "interaction_turns": 0,
+          "modification_accuracy": 1.0,
+          "regression_accuracy": 1.0
+        },
+        "Financial_Model:02_05": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at Ratios!J23: answer=None, output=2638.9056123536",
+          "id": "02_05",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.9858,
+          "regression_accuracy": 1.0
+        },
+        "Financial_Model:09_02": {
+          "accuracy": 1.0,
+          "error_message": "",
+          "id": "09_02",
+          "interaction_turns": 0,
+          "modification_accuracy": 1.0,
+          "regression_accuracy": 1.0
+        },
+        "Financial_Model:15_03": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "15_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:18_05": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at Cash Budget!T42: answer=0, output=#VALUE!",
+          "id": "18_05",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.9427,
+          "regression_accuracy": 1.0
+        },
+        "Template:01_05": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at BondAccounting!B33: answer=Bond Liability - Beginning, output=12480",
+          "id": "01_05",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.3733,
+          "regression_accuracy": 0.9075
+        },
+        "Template:04_04": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at FCF_Calc!C16: answer=None, output=93.8",
+          "id": "04_04",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.5556,
+          "regression_accuracy": 0.9928
+        },
+        "Template:06_02": {
+          "accuracy": 1.0,
+          "error_message": "",
+          "id": "06_02",
+          "interaction_turns": 0,
+          "modification_accuracy": 1.0,
+          "regression_accuracy": 1.0
+        },
+        "Template:16_07": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at ValuationModel!C42: answer=None, output=600300",
+          "id": "16_07",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.4959,
+          "regression_accuracy": 0.9136
+        },
+        "Template:16_08": {
+          "accuracy": 1.0,
+          "error_message": "",
+          "id": "16_08",
+          "interaction_turns": 0,
+          "modification_accuracy": 1.0,
+          "regression_accuracy": 1.0
+        }
+      }
+    },
+    "C": {
+      "evaluation_runtime": "unmodified-official-evaluation.py",
+      "exact": 1,
+      "missing_outputs": 6,
+      "model_name": "token_claim_discovery_C",
+      "run_name": "C",
+      "scored": 15,
+      "submission": {
+        "official_json": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/token_claim_discovery/score_staging/C/submission/results",
+        "outputs": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/token_claim_discovery/score_staging/C/submission/outputs"
+      },
+      "tasks": {
+        "Debugging:01_04": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "01_04",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:04_07": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "04_07",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:06_10": {
+          "accuracy": 0.0,
+          "error_message": "Modification error at Cover!G10: answer=1.63541592509081, output=14.0709847379189",
+          "id": "06_10",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.8295,
+          "regression_accuracy": 1.0
+        },
+        "Debugging:07_05": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at DCF Model!F22: answer=501, output=534",
+          "id": "07_05",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.9936
+        },
+        "Debugging:09_03": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "09_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:02_04": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at Rough Valuation!D7: answer=None, output=22500",
+          "id": "02_04",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.9929,
+          "regression_accuracy": 1.0
+        },
+        "Financial_Model:02_05": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at Ratios!E23: answer=20.7x, output=N/A",
+          "id": "02_05",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.9858,
+          "regression_accuracy": 1.0
+        },
+        "Financial_Model:09_02": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "09_02",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:15_03": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "15_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:18_05": {
+          "accuracy": 0.0,
+          "error_message": "Modification error at Cash Budget!R42: answer=80.56, output=201.4004175",
+          "id": "18_05",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.6497,
+          "regression_accuracy": 1.0
+        },
+        "Template:01_05": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at BondAccounting!B33: answer=Bond Liability - Beginning, output=12480",
+          "id": "01_05",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.6133,
+          "regression_accuracy": 0.9124
+        },
+        "Template:04_04": {
+          "accuracy": 0.0,
+          "error_message": "Modification error at FCF_Calc!D16: answer=85.47, output=78.53",
+          "id": "04_04",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.6389,
+          "regression_accuracy": 1.0
+        },
+        "Template:06_02": {
+          "accuracy": 1.0,
+          "error_message": "",
+          "id": "06_02",
+          "interaction_turns": 0,
+          "modification_accuracy": 1.0,
+          "regression_accuracy": 1.0
+        },
+        "Template:16_07": {
+          "accuracy": 0.0,
+          "error_message": "Modification error at RentRoll!C16: answer=-13500, output=-14400",
+          "id": "16_07",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.8182,
+          "regression_accuracy": 1.0
+        },
+        "Template:16_08": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "16_08",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        }
+      }
+    },
+    "D": {
+      "evaluation_runtime": "unmodified-official-evaluation.py",
+      "exact": 3,
+      "missing_outputs": 6,
+      "model_name": "token_claim_discovery_D",
+      "run_name": "D",
+      "scored": 15,
+      "submission": {
+        "official_json": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/token_claim_discovery/score_staging/D/submission/results",
+        "outputs": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/token_claim_discovery/score_staging/D/submission/outputs"
+      },
+      "tasks": {
+        "Debugging:01_04": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "01_04",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:04_07": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at Cash Flow Statement!B7: answer=E: (2019-2024), output=H: (2014-2020)  E: (2021-2025)",
+          "id": "04_07",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.9775,
+          "regression_accuracy": 1.0
+        },
+        "Debugging:06_10": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "06_10",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:07_05": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "07_05",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Debugging:09_03": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "09_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:02_04": {
+          "accuracy": 0.0,
+          "error_message": "Modification error at Ratios!F24: answer=5.72764474029077, output=8.27840358324698",
+          "id": "02_04",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.9964,
+          "regression_accuracy": 1.0
+        },
+        "Financial_Model:02_05": {
+          "accuracy": 1.0,
+          "error_message": "",
+          "id": "02_05",
+          "interaction_turns": 0,
+          "modification_accuracy": 1.0,
+          "regression_accuracy": 1.0
+        },
+        "Financial_Model:09_02": {
+          "accuracy": 1.0,
+          "error_message": "",
+          "id": "09_02",
+          "interaction_turns": 0,
+          "modification_accuracy": 1.0,
+          "regression_accuracy": 1.0
+        },
+        "Financial_Model:15_03": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "15_03",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        },
+        "Financial_Model:18_05": {
+          "accuracy": 0.0,
+          "error_message": "Modification error at Cash Budget!R42: answer=80.56, output=201.4",
+          "id": "18_05",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.6306,
+          "regression_accuracy": 1.0
+        },
+        "Template:01_05": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at BondAccounting!C5: answer=1/1/2018, output=2018-01-01 00:00:00",
+          "id": "01_05",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.4933,
+          "regression_accuracy": 0.9611
+        },
+        "Template:04_04": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at FCF_Calc!C16: answer=None, output=70.2",
+          "id": "04_04",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.4444,
+          "regression_accuracy": 0.9928
+        },
+        "Template:06_02": {
+          "accuracy": 1.0,
+          "error_message": "",
+          "id": "06_02",
+          "interaction_turns": 0,
+          "modification_accuracy": 1.0,
+          "regression_accuracy": 1.0
+        },
+        "Template:16_07": {
+          "accuracy": 0.0,
+          "error_message": "Regression error at ValuationModel!C42: answer=None, output=8004",
+          "id": "16_07",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.9835,
+          "regression_accuracy": 0.9921
+        },
+        "Template:16_08": {
+          "accuracy": 0.0,
+          "error_message": "output file not exist",
+          "id": "16_08",
+          "interaction_turns": 0,
+          "modification_accuracy": 0.0,
+          "regression_accuracy": 0.0
+        }
+      }
+    }
+  },
+  "official_runtime": "unmodified official evaluation.py after LibreOffice refresh",
+  "rows": [
+    {
+      "arm": "B",
+      "exact": 1.0,
+      "modification": 1.0,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "",
+      "submitted": true,
+      "task": "Template:16_08",
+      "valid_submission": true
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Template:16_08",
+      "valid_submission": false
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Template:16_08",
+      "valid_submission": false
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Template:16_08",
+      "valid_submission": false
+    },
+    {
+      "arm": "A",
+      "exact": 1.0,
+      "modification": 1.0,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "",
+      "submitted": true,
+      "task": "Financial_Model:09_02",
+      "valid_submission": true
+    },
+    {
+      "arm": "D",
+      "exact": 1.0,
+      "modification": 1.0,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "",
+      "submitted": true,
+      "task": "Financial_Model:09_02",
+      "valid_submission": true
+    },
+    {
+      "arm": "B",
+      "exact": 1.0,
+      "modification": 1.0,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "",
+      "submitted": true,
+      "task": "Financial_Model:09_02",
+      "valid_submission": true
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Financial_Model:09_02",
+      "valid_submission": false
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.6133,
+      "output_exists": true,
+      "regression": 0.9124,
+      "scorer_error": "Regression error at BondAccounting!B33: answer=Bond Liability - Beginning, output=12480",
+      "submitted": true,
+      "task": "Template:01_05",
+      "valid_submission": true
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.3733,
+      "output_exists": true,
+      "regression": 0.9075,
+      "scorer_error": "Regression error at BondAccounting!B33: answer=Bond Liability - Beginning, output=12480",
+      "submitted": true,
+      "task": "Template:01_05",
+      "valid_submission": true
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.6933,
+      "output_exists": true,
+      "regression": 0.9465,
+      "scorer_error": "Regression error at BondAccounting!B34: answer=  Change in Bond Liability, output=None",
+      "submitted": true,
+      "task": "Template:01_05",
+      "valid_submission": true
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.4933,
+      "output_exists": true,
+      "regression": 0.9611,
+      "scorer_error": "Regression error at BondAccounting!C5: answer=1/1/2018, output=2018-01-01 00:00:00",
+      "submitted": true,
+      "task": "Template:01_05",
+      "valid_submission": true
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.0437,
+      "output_exists": true,
+      "regression": 0.952,
+      "scorer_error": "Regression error at LBO!B17: answer=Revolver Committment, output=Revolver Commitment",
+      "submitted": true,
+      "task": "Debugging:09_03",
+      "valid_submission": true
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.0624,
+      "output_exists": true,
+      "regression": 0.9644,
+      "scorer_error": "Regression error at LBO!B17: answer=Revolver Committment, output=Revolver Commitment",
+      "submitted": false,
+      "task": "Debugging:09_03",
+      "valid_submission": false
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:09_03",
+      "valid_submission": false
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:09_03",
+      "valid_submission": false
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.6051,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "Modification error at Milestones!E9: answer=251.750521875, output=#VALUE!",
+      "submitted": true,
+      "task": "Financial_Model:18_05",
+      "valid_submission": true
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.6306,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "Modification error at Cash Budget!R42: answer=80.56, output=201.4",
+      "submitted": true,
+      "task": "Financial_Model:18_05",
+      "valid_submission": true
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.9427,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "Regression error at Cash Budget!T42: answer=0, output=#VALUE!",
+      "submitted": true,
+      "task": "Financial_Model:18_05",
+      "valid_submission": true
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.6497,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "Modification error at Cash Budget!R42: answer=80.56, output=201.4004175",
+      "submitted": true,
+      "task": "Financial_Model:18_05",
+      "valid_submission": true
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.9502,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "Regression error at IS,BS,CF!H95: answer=0, output=-576.92",
+      "submitted": true,
+      "task": "Financial_Model:02_05",
+      "valid_submission": true
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.9858,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "Regression error at Ratios!E23: answer=20.7x, output=N/A",
+      "submitted": true,
+      "task": "Financial_Model:02_05",
+      "valid_submission": true
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.9858,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "Regression error at Ratios!J23: answer=None, output=2638.9056123536",
+      "submitted": true,
+      "task": "Financial_Model:02_05",
+      "valid_submission": true
+    },
+    {
+      "arm": "D",
+      "exact": 1.0,
+      "modification": 1.0,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "",
+      "submitted": true,
+      "task": "Financial_Model:02_05",
+      "valid_submission": true
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.6389,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "Modification error at FCF_Calc!D16: answer=85.47, output=78.53",
+      "submitted": true,
+      "task": "Template:04_04",
+      "valid_submission": true
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.4444,
+      "output_exists": true,
+      "regression": 0.9928,
+      "scorer_error": "Regression error at FCF_Calc!C16: answer=None, output=70.2",
+      "submitted": true,
+      "task": "Template:04_04",
+      "valid_submission": true
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.5556,
+      "output_exists": true,
+      "regression": 0.9928,
+      "scorer_error": "Regression error at FCF_Calc!C16: answer=None, output=93.8",
+      "submitted": true,
+      "task": "Template:04_04",
+      "valid_submission": true
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.5556,
+      "output_exists": true,
+      "regression": 0.9638,
+      "scorer_error": "Regression error at FCF_Calc!C16: answer=None, output=93.8",
+      "submitted": true,
+      "task": "Template:04_04",
+      "valid_submission": true
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.4959,
+      "output_exists": true,
+      "regression": 0.9136,
+      "scorer_error": "Regression error at ValuationModel!C42: answer=None, output=600300",
+      "submitted": true,
+      "task": "Template:16_07",
+      "valid_submission": true
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.8182,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "Modification error at RentRoll!C16: answer=-13500, output=-14400",
+      "submitted": true,
+      "task": "Template:16_07",
+      "valid_submission": true
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.9835,
+      "output_exists": true,
+      "regression": 0.9921,
+      "scorer_error": "Regression error at ValuationModel!C42: answer=None, output=8004",
+      "submitted": true,
+      "task": "Template:16_07",
+      "valid_submission": true
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.3884,
+      "output_exists": true,
+      "regression": 0.9096,
+      "scorer_error": "Modification error at RentRoll!D15: answer=4290000, output=27060000",
+      "submitted": true,
+      "task": "Template:16_07",
+      "valid_submission": true
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Financial_Model:15_03",
+      "valid_submission": false
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Financial_Model:15_03",
+      "valid_submission": false
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Financial_Model:15_03",
+      "valid_submission": false
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Financial_Model:15_03",
+      "valid_submission": false
+    },
+    {
+      "arm": "B",
+      "exact": 1.0,
+      "modification": 1.0,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "",
+      "submitted": true,
+      "task": "Template:06_02",
+      "valid_submission": true
+    },
+    {
+      "arm": "A",
+      "exact": 1.0,
+      "modification": 1.0,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "",
+      "submitted": true,
+      "task": "Template:06_02",
+      "valid_submission": true
+    },
+    {
+      "arm": "D",
+      "exact": 1.0,
+      "modification": 1.0,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "",
+      "submitted": true,
+      "task": "Template:06_02",
+      "valid_submission": true
+    },
+    {
+      "arm": "C",
+      "exact": 1.0,
+      "modification": 1.0,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "",
+      "submitted": false,
+      "task": "Template:06_02",
+      "valid_submission": false
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.9929,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "Regression error at Rough Valuation!D7: answer=None, output=22500",
+      "submitted": true,
+      "task": "Financial_Model:02_04",
+      "valid_submission": true
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.9964,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "Regression error at Ratios!E24: answer=4.4x, output=17.3837904505494",
+      "submitted": true,
+      "task": "Financial_Model:02_04",
+      "valid_submission": true
+    },
+    {
+      "arm": "B",
+      "exact": 1.0,
+      "modification": 1.0,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "",
+      "submitted": true,
+      "task": "Financial_Model:02_04",
+      "valid_submission": true
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.9964,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "Modification error at Ratios!F24: answer=5.72764474029077, output=8.27840358324698",
+      "submitted": true,
+      "task": "Financial_Model:02_04",
+      "valid_submission": true
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.8295,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "Modification error at Cover!G10: answer=1.63541592509081, output=14.0709847379189",
+      "submitted": true,
+      "task": "Debugging:06_10",
+      "valid_submission": true
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.8228,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "Modification error at Cover!G10: answer=1.63541592509081, output=14.067176963784",
+      "submitted": true,
+      "task": "Debugging:06_10",
+      "valid_submission": true
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:06_10",
+      "valid_submission": false
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:06_10",
+      "valid_submission": false
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:04_07",
+      "valid_submission": false
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.9775,
+      "output_exists": true,
+      "regression": 1.0,
+      "scorer_error": "Regression error at Cash Flow Statement!B7: answer=E: (2019-2024), output=H: (2014-2020)  E: (2021-2025)",
+      "submitted": true,
+      "task": "Debugging:04_07",
+      "valid_submission": true
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:04_07",
+      "valid_submission": false
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.868,
+      "output_exists": true,
+      "regression": 0.9972,
+      "scorer_error": "Regression error at Income Statement!J29: answer=0, output=-5.7",
+      "submitted": true,
+      "task": "Debugging:04_07",
+      "valid_submission": true
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": true,
+      "regression": 0.9936,
+      "scorer_error": "Regression error at DCF Model!F22: answer=501, output=534",
+      "submitted": true,
+      "task": "Debugging:07_05",
+      "valid_submission": true
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": true,
+      "regression": 0.9945,
+      "scorer_error": "Regression error at BS & CF!N78: answer=97.25, output=18.25",
+      "submitted": true,
+      "task": "Debugging:07_05",
+      "valid_submission": true
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": true,
+      "regression": 0.9724,
+      "scorer_error": "Regression error at Football Field!E5: answer=1351.83476611251, output=1538.71914253429",
+      "submitted": true,
+      "task": "Debugging:07_05",
+      "valid_submission": true
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:07_05",
+      "valid_submission": false
+    },
+    {
+      "arm": "B",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:01_04",
+      "valid_submission": false
+    },
+    {
+      "arm": "A",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:01_04",
+      "valid_submission": false
+    },
+    {
+      "arm": "D",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:01_04",
+      "valid_submission": false
+    },
+    {
+      "arm": "C",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_exists": false,
+      "regression": 0.0,
+      "scorer_error": "output file not exist",
+      "submitted": false,
+      "task": "Debugging:01_04",
+      "valid_submission": false
+    }
+  ]
+}

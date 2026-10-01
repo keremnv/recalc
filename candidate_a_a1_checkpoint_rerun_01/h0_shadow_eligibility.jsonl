@@ -1,0 +1,12 @@
+{"classification": "WOULD_ACCELERATE", "eligible_load_opportunities": 29, "run_id": "primary_01_Financial_Model_07_01_H0", "task_id": "Financial_Model:07_01"}
+{"classification": "WOULD_ACCELERATE", "eligible_load_opportunities": 14, "run_id": "primary_04_Financial_Model_08_03_H0", "task_id": "Financial_Model:08_03"}
+{"classification": "WOULD_ACCELERATE", "eligible_load_opportunities": 15, "run_id": "primary_05_Financial_Model_08_01_H0", "task_id": "Financial_Model:08_01"}
+{"classification": "WOULD_ACCELERATE", "eligible_load_opportunities": 20, "run_id": "primary_07_Financial_Model_15_04_H0", "task_id": "Financial_Model:15_04"}
+{"classification": "WOULD_ACCELERATE", "eligible_load_opportunities": 23, "run_id": "primary_09_Debugging_10_10_H0", "task_id": "Debugging:10_10"}
+{"classification": "WOULD_FALLBACK_OR_NO_LOAD", "eligible_load_opportunities": 0, "run_id": "primary_12_Financial_Model_06_01_H0", "task_id": "Financial_Model:06_01"}
+{"classification": "WOULD_ACCELERATE", "eligible_load_opportunities": 2, "run_id": "primary_13_Debugging_01_06_H0", "task_id": "Debugging:01_06"}
+{"classification": "WOULD_FALLBACK_OR_NO_LOAD", "eligible_load_opportunities": 0, "run_id": "primary_15_Debugging_10_04_H0", "task_id": "Debugging:10_04"}
+{"classification": "WOULD_ACCELERATE", "eligible_load_opportunities": 1, "run_id": "primary_18_Debugging_05_02_H0", "task_id": "Debugging:05_02"}
+{"classification": "WOULD_ACCELERATE", "eligible_load_opportunities": 1, "run_id": "primary_20_Template_13_08_H0", "task_id": "Template:13_08"}
+{"classification": "WOULD_ACCELERATE", "eligible_load_opportunities": 4, "run_id": "primary_21_Template_03_03_H0", "task_id": "Template:03_03"}
+{"classification": "WOULD_FALLBACK_OR_NO_LOAD", "eligible_load_opportunities": 0, "run_id": "primary_23_Financial_Model_10_01_H0", "task_id": "Financial_Model:10_01"}

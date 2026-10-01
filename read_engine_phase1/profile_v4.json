@@ -1,0 +1,84 @@
+{
+  "construction": {
+    "R0": {},
+    "R1": {
+      "backup_s": {
+        "median_s": 0.0006581240013474599,
+        "n": 114
+      },
+      "ensure_s": {
+        "median_s": 0.10026603550068103,
+        "n": 114
+      }
+    },
+    "R2": {
+      "shared_strings_s": {
+        "median_s": 0.000171405,
+        "n": 117
+      },
+      "styles_dates_s": {
+        "median_s": 0.001411635,
+        "n": 117
+      },
+      "total_decode_s": {
+        "median_s": 0.052406876,
+        "n": 117
+      },
+      "workbook_relationships_s": {
+        "median_s": 0.000308611,
+        "n": 117
+      },
+      "worksheet_xml_total_s": {
+        "median_s": 0.049179679,
+        "n": 117
+      },
+      "zip_open_list_s": {
+        "median_s": 3.431e-06,
+        "n": 117
+      }
+    },
+    "R3": {
+      "publication_s": {
+        "median_s": 3.35e-05,
+        "n": 117
+      },
+      "shared_strings_s": {
+        "median_s": 0.000177311,
+        "n": 117
+      },
+      "sqlite_commit_s": {
+        "median_s": 0.000240567,
+        "n": 117
+      },
+      "styles_dates_s": {
+        "median_s": 0.001133273,
+        "n": 117
+      },
+      "total_build_s": {
+        "median_s": 0.068280512,
+        "n": 117
+      },
+      "total_decode_s": {
+        "median_s": 0.068046672,
+        "n": 117
+      },
+      "workbook_relationships_s": {
+        "median_s": 0.000280865,
+        "n": 117
+      },
+      "worksheet_xml_total_s": {
+        "median_s": 0.066751107,
+        "n": 117
+      },
+      "zip_open_list_s": {
+        "median_s": 3.081e-06,
+        "n": 117
+      }
+    }
+  },
+  "notes": [
+    "R1 ensure/backup are nested manifest timers; parse, traversal and insertion are UNMEASURED separately.",
+    "R2/R3 aggregate stage timers are inside construction. Per-cell decode and insertion timers were removed in v4; those components are UNMEASURED individually."
+  ],
+  "spec_sha256": "14481a15e5fea530b462ab36780c208f4e847e761d8bb1f7ae6c510caa6df203"
+}

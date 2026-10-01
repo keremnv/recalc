@@ -1,0 +1,96 @@
+{"slot": 2, "task": "Financial_Model:03_03", "arm": "B", "status": "SUBMITTED", "prompt_tokens": 165079, "api_calls": 11}
+
+{"slot": 3, "task": "Financial_Model:03_03", "arm": "C", "status": "SUBMITTED", "prompt_tokens": 160308, "api_calls": 11}
+
+{"slot": 1, "task": "Financial_Model:03_03", "arm": "A", "status": "SUBMITTED", "prompt_tokens": 274963, "api_calls": 14}
+
+{"slot": 4, "task": "Financial_Model:03_03", "arm": "D", "status": "SUBMITTED", "prompt_tokens": 338270, "api_calls": 17}
+
+{"slot": 6, "task": "Debugging:10_10", "arm": "C", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1048084, "api_calls": 40}
+
+{"slot": 8, "task": "Debugging:10_10", "arm": "A", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1422641, "api_calls": 40}
+
+{"slot": 5, "task": "Debugging:10_10", "arm": "B", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1117016, "api_calls": 40}
+
+{"slot": 7, "task": "Debugging:10_10", "arm": "D", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 428831, "api_calls": 23}
+
+{"slot": 10, "task": "Debugging:01_08", "arm": "D", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1308519, "api_calls": 40}
+
+{"slot": 9, "task": "Debugging:01_08", "arm": "C", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1133082, "api_calls": 40}
+
+{"slot": 11, "task": "Debugging:01_08", "arm": "A", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1250131, "api_calls": 40}
+
+{"slot": 12, "task": "Debugging:01_08", "arm": "B", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1039227, "api_calls": 40}
+
+{"slot": 14, "task": "Template:01_07", "arm": "A", "status": "PROVIDER_CENSORED", "prompt_tokens": 2348, "api_calls": 2}
+
+{"slot": 16, "task": "Template:01_07", "arm": "C", "status": "PROVIDER_CENSORED", "prompt_tokens": 2432, "api_calls": 2}
+
+{"slot": 13, "task": "Template:01_07", "arm": "D", "status": "PROVIDER_CENSORED", "prompt_tokens": 2474, "api_calls": 2}
+
+{"slot": 15, "task": "Template:01_07", "arm": "B", "status": "PROVIDER_CENSORED", "prompt_tokens": 2432, "api_calls": 2}
+
+{"slot": 17, "task": "Debugging:02_01", "arm": "A", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1103654, "api_calls": 40}
+
+{"slot": 20, "task": "Debugging:02_01", "arm": "D", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1704060, "api_calls": 40}
+
+{"slot": 19, "task": "Debugging:02_01", "arm": "C", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1506909, "api_calls": 40}
+
+{"slot": 18, "task": "Debugging:02_01", "arm": "B", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1638279, "api_calls": 40}
+
+{"slot": 22, "task": "Financial_Model:02_01", "arm": "C", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1338196, "api_calls": 40}
+
+{"slot": 24, "task": "Financial_Model:02_01", "arm": "A", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1144478, "api_calls": 40}
+
+{"slot": 23, "task": "Financial_Model:02_01", "arm": "D", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1440355, "api_calls": 36}
+
+{"slot": 21, "task": "Financial_Model:02_01", "arm": "B", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 533853, "api_calls": 25}
+
+{"slot": 28, "task": "Template:06_12", "arm": "B", "status": "PROVIDER_CENSORED", "prompt_tokens": 2442, "api_calls": 2}
+
+{"slot": 26, "task": "Template:06_12", "arm": "D", "status": "PROVIDER_CENSORED", "prompt_tokens": 5223, "api_calls": 3}
+
+{"slot": 27, "task": "Template:06_12", "arm": "A", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 674180, "api_calls": 39}
+
+{"slot": 25, "task": "Template:06_12", "arm": "C", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 39990, "api_calls": 8}
+
+{"slot": 29, "task": "Debugging:02_06", "arm": "D", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1604631, "api_calls": 40}
+
+{"slot": 31, "task": "Debugging:02_06", "arm": "B", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1056419, "api_calls": 40}
+
+{"slot": 32, "task": "Debugging:02_06", "arm": "C", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1297833, "api_calls": 40}
+
+{"slot": 30, "task": "Debugging:02_06", "arm": "A", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1158382, "api_calls": 40}
+
+{"slot": 33, "task": "Financial_Model:01_01", "arm": "A", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1689134, "api_calls": 36}
+
+{"slot": 36, "task": "Financial_Model:01_01", "arm": "D", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1693302, "api_calls": 36}
+
+{"slot": 35, "task": "Financial_Model:01_01", "arm": "C", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1689801, "api_calls": 36}
+
+{"slot": 34, "task": "Financial_Model:01_01", "arm": "B", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1690646, "api_calls": 36}
+
+{"slot": 37, "task": "Template:15_01", "arm": "B", "status": "SUBMITTED", "prompt_tokens": 10426, "api_calls": 5}
+
+{"slot": 38, "task": "Template:15_01", "arm": "C", "status": "SUBMITTED", "prompt_tokens": 67350, "api_calls": 16}
+
+{"slot": 39, "task": "Template:15_01", "arm": "D", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 235064, "api_calls": 34}
+
+{"slot": 40, "task": "Template:15_01", "arm": "A", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 214355, "api_calls": 30}
+
+{"slot": 42, "task": "Financial_Model:04_03", "arm": "D", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1705078, "api_calls": 38}
+
+{"slot": 41, "task": "Financial_Model:04_03", "arm": "C", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1675589, "api_calls": 39}
+
+{"slot": 43, "task": "Financial_Model:04_03", "arm": "A", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1703564, "api_calls": 37}
+
+{"slot": 44, "task": "Financial_Model:04_03", "arm": "B", "status": "MODEL_NONCOMPLETION", "prompt_tokens": 1730470, "api_calls": 38}
+
+{"slot": 46, "task": "Template:15_03", "arm": "A", "status": "SUBMITTED", "prompt_tokens": 46095, "api_calls": 9}
+
+{"slot": 48, "task": "Template:15_03", "arm": "C", "status": "SUBMITTED", "prompt_tokens": 44013, "api_calls": 9}
+
+{"slot": 45, "task": "Template:15_03", "arm": "D", "status": "SUBMITTED", "prompt_tokens": 37473, "api_calls": 8}
+
+{"slot": 47, "task": "Template:15_03", "arm": "B", "status": "SUBMITTED", "prompt_tokens": 262105, "api_calls": 22}
+

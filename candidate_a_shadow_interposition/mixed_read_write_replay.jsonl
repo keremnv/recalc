@@ -1,0 +1,2 @@
+{"case": "read_write_read", "classification": "SEMANTIC_EXACT", "fallback_loads": 1, "policy": "PREDECLARED_REAL_OPENPYXL_PATH", "proxy_loads": 0, "reason": null, "stale": false}
+{"case": "write_read", "classification": "SEMANTIC_EXACT", "fallback_loads": 1, "policy": "PREDECLARED_REAL_OPENPYXL_PATH", "proxy_loads": 0, "reason": null, "stale": false}

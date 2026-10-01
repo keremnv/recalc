@@ -1,0 +1,22 @@
+{
+  "name": "compiled-context-forced-05_01",
+  "purpose": "Single-task forced calc_query sidecar vs the already-run official C0 on Financial_Model:05_01. Optional C1 on this task crashed in the Docker wrapper after adopting calc_query; C0 hit the 40-call envelope. 13_05 is the wrong forced candidate because both optional arms already matched I20:M20 without calc_query. 15_05 is a negative-structure task. 09_04 C0 failed but C1 is still running on the same task id.",
+  "model": "meta/muse-spark-1.3-contributor",
+  "identity_source_run": "official-score-spark-1.3-contributor-fm-02_01",
+  "control_run": "spark-sidecar-c0-Financial_Model-05_01-r1",
+  "max_tool_calls_per_task": 40,
+  "cost_limit_usd": 2.5,
+  "arms": {
+    "C0": "existing spark-sidecar-c0-Financial_Model-05_01-r1, not rerun",
+    "C1F": "--control-compiled-context-forced, required first-pass calc_query"
+  },
+  "tasks": [
+    {
+      "category": "Financial_Model",
+      "id": "05_01",
+      "role": "forced_sidecar_vs_struggling_control",
+      "repeats": 1,
+      "reason": "C0 exhausted 40 calls. Optional C1 adopted calc_query then died on the shallow-path wrapper. Forced use tests the compiled index with a working tool against that frozen control."
+    }
+  ]
+}

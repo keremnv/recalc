@@ -1,0 +1,4 @@
+{
+ "n_paired": 1,
+ "note": "n=1 paired outcome (02_06 via replacements): leave-one-out leaves zero pairs, so LOTO means are undefined. Concentration is moot; no benefit exists to concentrate."
+}

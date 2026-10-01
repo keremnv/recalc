@@ -1,0 +1,50 @@
+{
+ "positive": false,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [],
+   "count": 0
+  },
+  "CHG": {
+   "changed_cells": 106,
+   "sheets": 1,
+   "regions": [
+    "QuarterlyPL_Forecast!C13",
+    "QuarterlyPL_Forecast!C15",
+    "QuarterlyPL_Forecast!C16",
+    "QuarterlyPL_Forecast!C17",
+    "QuarterlyPL_Forecast!C19",
+    "QuarterlyPL_Forecast!C20",
+    "QuarterlyPL_Forecast!C23",
+    "QuarterlyPL_Forecast!C25",
+    "QuarterlyPL_Forecast!C27",
+    "QuarterlyPL_Forecast!C28",
+    "QuarterlyPL_Forecast!D13",
+    "QuarterlyPL_Forecast!D15",
+    "QuarterlyPL_Forecast!D16",
+    "QuarterlyPL_Forecast!D17",
+    "QuarterlyPL_Forecast!D19",
+    "QuarterlyPL_Forecast!D20",
+    "QuarterlyPL_Forecast!D23",
+    "QuarterlyPL_Forecast!D25",
+    "QuarterlyPL_Forecast!D27",
+    "QuarterlyPL_Forecast!D28"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": null,
+ "positive_families": []
+}

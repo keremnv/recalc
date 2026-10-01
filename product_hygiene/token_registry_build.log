@@ -1,0 +1,78 @@
+{
+  "rows": 55,
+  "lower_observations": 51,
+  "aggregate_rows": [
+    {
+      "experiment": "Inspection efficiency Stage B",
+      "control_tokens": 6319843,
+      "treatment_tokens": 3760254,
+      "treatment_lower": true
+    },
+    {
+      "experiment": "Batch-write helpers",
+      "control_tokens": 4104791,
+      "treatment_tokens": 4058278,
+      "treatment_lower": true
+    },
+    {
+      "experiment": "Default-harness deterministic execution",
+      "control_tokens": 15731994,
+      "treatment_tokens": 14047346,
+      "treatment_lower": true
+    },
+    {
+      "experiment": "Compact evidence encoding, complete pairs",
+      "control_tokens": 5842363,
+      "treatment_tokens": 4998231,
+      "treatment_lower": true
+    },
+    {
+      "experiment": "Historical Phase C translation subset",
+      "control_tokens": 4170000,
+      "treatment_tokens": 2030000,
+      "treatment_lower": true
+    },
+    {
+      "experiment": "Historical bounded inspection/compare, Financial_Model:01_03",
+      "control_tokens": 549294,
+      "treatment_tokens": 178294,
+      "treatment_lower": true
+    },
+    {
+      "experiment": "candidate_a_live",
+      "control_tokens": 6690612,
+      "treatment_tokens": 5501280,
+      "treatment_lower": true
+    },
+    {
+      "experiment": "candidate_a_a1_checkpoint_rerun_01",
+      "control_tokens": 8749268,
+      "treatment_tokens": 3565421,
+      "treatment_lower": true
+    },
+    {
+      "experiment": "live_transparent_runtime_ab",
+      "control_tokens": 2128686,
+      "treatment_tokens": 2163980,
+      "treatment_lower": false
+    },
+    {
+      "experiment": "targeted_runtime_replication",
+      "control_tokens": 2866299,
+      "treatment_tokens": 3072131,
+      "treatment_lower": false
+    },
+    {
+      "experiment": "representative_architecture_checkpoint",
+      "control_tokens": 12442045,
+      "treatment_tokens": 16942024,
+      "treatment_lower": false
+    },
+    {
+      "experiment": "representative_architecture_checkpoint_replication",
+      "control_tokens": 1821008,
+      "treatment_tokens": 899633,
+      "treatment_lower": true
+    }
+  ]
+}

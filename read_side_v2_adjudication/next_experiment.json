@@ -1,0 +1,7 @@
+{
+  "status": "NO_PHASE_B_UNDER_THIS_PROTOCOL",
+  "reason": "The Phase A gate failed: 2/6 tasks cleared either the 25% payload or inspection-operation threshold, while 4/6 were required.",
+  "do_not_run": ["default-vs-v2 system A/B", "blank Phase-B evidence generation", "another helper search"],
+  "single_next_experiment_if_the_branch_is_reopened": "First redesign the read representation so a mechanically selected historical factual sequence is compared on the same visible facts and bounded observation budget; then rerun this exact Phase A gate before any live calls.",
+  "live_phase_b_justified_now": false
+}

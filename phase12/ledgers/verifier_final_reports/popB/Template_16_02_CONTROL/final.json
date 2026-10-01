@@ -1,0 +1,117 @@
+{
+ "positive": true,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [
+    {
+     "formula": "DirectCap!C10",
+     "blank": "RentRoll!N11"
+    },
+    {
+     "formula": "DirectCap!C11",
+     "blank": "RentRoll!O11"
+    },
+    {
+     "formula": "DirectCap!C12",
+     "blank": "DirectCap!C10"
+    },
+    {
+     "formula": "DirectCap!C20",
+     "blank": "DirectCap!C16"
+    },
+    {
+     "formula": "DirectCap!C20",
+     "blank": "DirectCap!C17"
+    },
+    {
+     "formula": "DirectCap!C20",
+     "blank": "DirectCap!C18"
+    },
+    {
+     "formula": "DirectCap!C20",
+     "blank": "DirectCap!C19"
+    },
+    {
+     "formula": "DirectCap!C23",
+     "blank": "DirectCap!C21"
+    },
+    {
+     "formula": "DirectCap!C24",
+     "blank": "DirectCap!C23"
+    },
+    {
+     "formula": "DirectCap!C25",
+     "blank": "DirectCap!C23"
+    },
+    {
+     "formula": "DirectCap!C25",
+     "blank": "DirectCap!C24"
+    },
+    {
+     "formula": "DirectCap!C39",
+     "blank": "DirectCap!C25"
+    },
+    {
+     "formula": "DirectCap!C41",
+     "blank": "DirectCap!C39"
+    },
+    {
+     "formula": "DirectCap!C43",
+     "blank": "DirectCap!C25"
+    },
+    {
+     "formula": "DirectCap!C43",
+     "blank": "DirectCap!C41"
+    },
+    {
+     "formula": "DirectCap!C47",
+     "blank": "DirectCap!C43"
+    }
+   ],
+   "count": 16
+  },
+  "CHG": {
+   "changed_cells": 28,
+   "sheets": 2,
+   "regions": [
+    "DirectCap!C10",
+    "DirectCap!C11",
+    "DirectCap!C12",
+    "DirectCap!C16",
+    "DirectCap!C17",
+    "DirectCap!C18",
+    "DirectCap!C19",
+    "DirectCap!C20",
+    "DirectCap!C21",
+    "DirectCap!C23",
+    "DirectCap!C24",
+    "DirectCap!C25",
+    "DirectCap!C29",
+    "DirectCap!C30",
+    "DirectCap!C31",
+    "DirectCap!C32",
+    "DirectCap!C33",
+    "DirectCap!C34",
+    "DirectCap!C35",
+    "DirectCap!C37"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": "Post-edit verification (mechanical check of the current workbook)\n\nChanged cells: 28 across 2 sheet(s).\n\nNewly blank referenced cells (16):\n- DirectCap!C10 now references blank RentRoll!N11\n- DirectCap!C11 now references blank RentRoll!O11\n- DirectCap!C12 now references blank DirectCap!C10\n- DirectCap!C20 now references blank DirectCap!C16\n- DirectCap!C20 now references blank DirectCap!C17\n- DirectCap!C20 now references blank DirectCap!C18\n- DirectCap!C20 now references blank DirectCap!C19\n- DirectCap!C23 now references blank DirectCap!C21\n- DirectCap!C24 now references blank DirectCap!C23\n- DirectCap!C25 now references blank DirectCap!C23\n- and 6 more.\n\nThis report is mechanical evidence about the current workbook state.\nReview it before deciding whether to submit or revise.",
+ "positive_families": [
+  "REF"
+ ]
+}

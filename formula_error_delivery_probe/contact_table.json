@@ -1,0 +1,59 @@
+{
+  "task_rows": [
+    {
+      "task_id": "Debugging:01_03",
+      "primary_run": "Debugging_01_03_TREATMENT",
+      "replacement_run": null,
+      "effective_run": "Debugging_01_03_TREATMENT",
+      "effective_class": "MODEL_NONCOMPLETION",
+      "observed_nonempty_save": false,
+      "delivered": false,
+      "report_call": null,
+      "calls_remaining": null,
+      "timely_contact": false,
+      "unresolved_due_to_infra": false
+    },
+    {
+      "task_id": "Debugging:02_02",
+      "primary_run": "Debugging_02_02_TREATMENT",
+      "replacement_run": null,
+      "effective_run": "Debugging_02_02_TREATMENT",
+      "effective_class": "VALID_SUBMISSION",
+      "observed_nonempty_save": true,
+      "delivered": true,
+      "report_call": 4,
+      "calls_remaining": 46,
+      "timely_contact": true,
+      "unresolved_due_to_infra": false
+    },
+    {
+      "task_id": "Debugging:02_03",
+      "primary_run": "Debugging_02_03_TREATMENT",
+      "replacement_run": "Debugging_02_03_TREATMENT_R1",
+      "effective_run": "Debugging_02_03_TREATMENT_R1",
+      "effective_class": "PROVIDER_CENSORED",
+      "observed_nonempty_save": false,
+      "delivered": false,
+      "report_call": null,
+      "calls_remaining": null,
+      "timely_contact": false,
+      "unresolved_due_to_infra": true
+    },
+    {
+      "task_id": "Debugging:02_05",
+      "primary_run": "Debugging_02_05_TREATMENT",
+      "replacement_run": null,
+      "effective_run": "Debugging_02_05_TREATMENT",
+      "effective_class": "MODEL_NONCOMPLETION",
+      "observed_nonempty_save": false,
+      "delivered": false,
+      "report_call": null,
+      "calls_remaining": null,
+      "timely_contact": false,
+      "unresolved_due_to_infra": false
+    }
+  ],
+  "observed_timely_contact": 1,
+  "maximum_timely_contact_if_censored_task_had_contact": 2,
+  "gate": ">=3/4"
+}

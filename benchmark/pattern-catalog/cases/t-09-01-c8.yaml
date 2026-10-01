@@ -1,0 +1,36 @@
+id: t-09-01-c8
+run: glm-5.3-flash-nonvisual-297-1
+task: Template:09_01
+first_miss:
+  kind: modification
+  address: DebtSchedule!C8
+  error_message: "Modification error at DebtSchedule!C8: answer=55, output=None"
+facts:
+  opened_golden: false
+  spreadsheet: 09_01_input.xlsx
+  instruction: Complete the financial model based on the provided assumptions.
+  sheet_instruction: >
+    EBITDA is only provided for select years. Calculate all cash flows, interest,
+    and debt repayments ONLY for years where EBITDA is provided.
+  input_kind: blank
+  input_value: null
+  output_formula: null
+  ebitda_row: {C8: null, D8: 62.5, E8: 68.8, F8: null, G8: 77}
+  autopsy:
+    named: false
+    read: true
+    written: false
+    bucket: read_unwritten
+  wrote: null
+  thought: "Years 0–12 in C:M; EBITDA only in years 1,2,4,6,8,10."
+claims:
+  patterns: [D-gappy-instruction]
+  nuance: task_nature
+  mechanism: instruction-scope
+  lever: none
+  lever_why: >
+    The model obeyed an on-sheet instruction and the golden contradicts it. No world-side
+    action resolves a contradiction between the instruction and the answer.
+  notes: >
+    They saw C8 blank, believed the on-sheet instruction, left year 0 empty on
+    purpose. Golden leak wants 55. Not a missed leftover like B-empty-body.

@@ -1,0 +1,47 @@
+{
+  "arithmetic_mean_ratio": 2.129489791198052,
+  "bootstrap_95pct_ci_geometric_ratio": [
+    1.879883798296246,
+    2.2851196787429853
+  ],
+  "bootstrap_95pct_ci_median_ratio": [
+    1.7594057666593526,
+    2.4869505508594587
+  ],
+  "cluster_sensitivity": {
+    "distinct_tasks": 14,
+    "task_cluster_bootstrap_95pct_ci_geometric_ratio": [
+      1.887017757027001,
+      2.3093115779261213
+    ],
+    "task_weighted_geometric_ratio": 2.0855349002153276
+  },
+  "family": {
+    "Debugging": {
+      "faster": 0,
+      "median_ratio": 2.02974088284382,
+      "n": 5,
+      "slower": 5
+    },
+    "Financial_Model": {
+      "faster": 0,
+      "median_ratio": 1.8482497505772937,
+      "n": 14,
+      "slower": 14
+    },
+    "Template": {
+      "faster": 0,
+      "median_ratio": 2.4525651104868325,
+      "n": 3,
+      "slower": 3
+    }
+  },
+  "faster": 0,
+  "geometric_mean_ratio": 2.072516764988837,
+  "median_ratio": 2.017189705504123,
+  "median_reduction_pct": -101.71897055041228,
+  "n": 22,
+  "selected_n": 22,
+  "slower": 22,
+  "tie": 0
+}

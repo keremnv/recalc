@@ -1,0 +1,19 @@
+test_color_official_parity (test_scored_object_cache.ScopedParity.test_color_official_parity) ... /home/kerem/Desktop/Personal Projects/librecalc-mcp/.venv/lib/python3.14/site-packages/openpyxl/reader/drawings.py:46: UserWarning: Unable to read chart rId1 from xl/drawings/drawing2.xml expected <class 'float'>
+  warn(f"Unable to read chart {rel.id} from {path} {e}")
+ok
+test_embedded_formula_official_parity (test_scored_object_cache.ScopedParity.test_embedded_formula_official_parity) ... ok
+test_financial_official_parity (test_scored_object_cache.ScopedParity.test_financial_official_parity) ... ok
+test_missing_named_sheet_and_target_object_identity (test_scored_object_cache.ScopedParity.test_missing_named_sheet_and_target_object_identity) ... ok
+test_template_official_parity (test_scored_object_cache.ScopedParity.test_template_official_parity) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 10.927s
+
+OK
+test_absent_factory (test_workbook_pickle_compat.GraphParity.test_absent_factory) ... ok
+test_nested_graph (test_workbook_pickle_compat.GraphParity.test_nested_graph) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.004s
+
+OK

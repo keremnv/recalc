@@ -1,0 +1,2154 @@
+[
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Debugging:10_04",
+  "turn": 28,
+  "exec_id": 263,
+  "shape": "LOOP_COMPUTED_TARGETS+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/10_04_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Debugging:10_04",
+  "turn": 29,
+  "exec_id": 264,
+  "shape": "LOOP_COMPUTED_TARGETS+COND",
+  "capture": {
+   "status": "NO_XLSX_CHANGE"
+  }
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Debugging:10_04",
+  "turn": 34,
+  "exec_id": 269,
+  "shape": "LOOP_COMPUTED_TARGETS+COND",
+  "capture": {
+   "status": "CAPTURE_EXCEPTION",
+   "error": "object of type 'NoneType' has no len()"
+  }
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Financial_Model:08_01",
+  "turn": 18,
+  "exec_id": 188,
+  "shape": "STRAIGHT_LINE_MULTI_CELL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "tmp/dt_test.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Financial_Model:08_01",
+  "turn": 25,
+  "exec_id": 195,
+  "shape": "FORMULA_TRANSLATION_LIKE+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/08_01_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Financial_Model:08_01",
+  "turn": 29,
+  "exec_id": 199,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "tmp/irrtest.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Financial_Model:08_01",
+  "turn": 31,
+  "exec_id": 201,
+  "shape": "FORMULA_TRANSLATION_LIKE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "tmp/irrtest2.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Financial_Model:08_01",
+  "turn": 34,
+  "exec_id": 204,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "NO_XLSX_CHANGE"
+  }
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Financial_Model:08_01",
+  "turn": 42,
+  "exec_id": 212,
+  "shape": "FORMULA_TRANSLATION_LIKE+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/08_01_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "xl/charts/chart8.xml",
+     "xl/charts/chart3.xml",
+     "xl/charts/chart6.xml",
+     "xl/charts/chart1.xml",
+     "docProps/core.xml",
+     "xl/worksheets/sheet3.xml",
+     "xl/charts/chart4.xml",
+     "xl/charts/chart2.xml",
+     "xl/styles.xml",
+     "xl/charts/chart9.xml",
+     "xl/worksheets/sheet2.xml",
+     "xl/charts/chart5.xml",
+     "xl/charts/chart7.xml",
+     "xl/worksheets/sheet7.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Financial_Model:08_02",
+  "turn": 32,
+  "exec_id": 161,
+  "shape": "FORMULA_TRANSLATION_LIKE+COND",
+  "capture": {
+   "status": "OK"
+  }
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Financial_Model:08_03",
+  "turn": 17,
+  "exec_id": 17,
+  "shape": "FORMULA_TRANSLATION_LIKE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/08_03_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Financial_Model:08_04",
+  "turn": 18,
+  "exec_id": 43,
+  "shape": "FORMULA_TRANSLATION_LIKE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/08_04_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Financial_Model:08_05",
+  "turn": 25,
+  "exec_id": 75,
+  "shape": "LOOP_COMPUTED_TARGETS+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/08_05_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Financial_Model:15_04",
+  "turn": 25,
+  "exec_id": 109,
+  "shape": "LOOP_COMPUTED_TARGETS+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/15_04_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Financial_Model:15_04",
+  "turn": 26,
+  "exec_id": 110,
+  "shape": "LOOP_COMPUTED_TARGETS+COND",
+  "capture": {
+   "status": "NO_XLSX_CHANGE"
+  }
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Template:06_09",
+  "turn": 3,
+  "exec_id": 223,
+  "shape": "CONTIGUOUS_FILL+STYLE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/06_09_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-A_matched_c0",
+  "task_id": "Template:06_16",
+  "turn": 3,
+  "exec_id": 231,
+  "shape": "CONTIGUOUS_FILL+STYLE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/06_16_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:01_01",
+  "turn": 10,
+  "exec_id": 286,
+  "shape": "STRAIGHT_LINE_MULTI_CELL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/01_01_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 1,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:01_01",
+  "turn": 13,
+  "exec_id": 289,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/01_01_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 1,
+    "carry": [
+     "xl/worksheets/sheet1.xml",
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:01_06",
+  "turn": 14,
+  "exec_id": 306,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/01_06_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 1,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:02_01",
+  "turn": 11,
+  "exec_id": 320,
+  "shape": "STRAIGHT_LINE_MULTI_CELL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/02_01_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 2,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:02_01",
+  "turn": 13,
+  "exec_id": 322,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/02_01_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 2,
+    "carry": [
+     "xl/worksheets/sheet2.xml",
+     "xl/worksheets/sheet6.xml",
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:02_06",
+  "turn": 11,
+  "exec_id": 340,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/02_06_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 2,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:03_01",
+  "turn": 12,
+  "exec_id": 356,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/03_01_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:03_06",
+  "turn": 15,
+  "exec_id": 375,
+  "shape": "STRAIGHT_LINE_MULTI_CELL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/03_06_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:04_01",
+  "turn": 15,
+  "exec_id": 393,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/04_01_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:04_07",
+  "turn": 14,
+  "exec_id": 411,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/04_07_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:05_02",
+  "turn": 7,
+  "exec_id": 421,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/05_02_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:05_08",
+  "turn": 11,
+  "exec_id": 435,
+  "shape": "STRAIGHT_LINE_MULTI_CELL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/05_08_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:06_02",
+  "turn": 47,
+  "exec_id": 486,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/06_02_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:06_07",
+  "turn": 7,
+  "exec_id": 496,
+  "shape": "STRAIGHT_LINE_MULTI_CELL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/06_07_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:07_03",
+  "turn": 10,
+  "exec_id": 510,
+  "shape": "CONTIGUOUS_FILL+COND",
+  "capture": {
+   "status": "NO_XLSX_CHANGE"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:07_03",
+  "turn": 13,
+  "exec_id": 513,
+  "shape": "CONTIGUOUS_FILL+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/07_03_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:07_08",
+  "turn": 3,
+  "exec_id": 519,
+  "shape": "STRAIGHT_LINE_MULTI_CELL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "tmp/test.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:07_08",
+  "turn": 4,
+  "exec_id": 520,
+  "shape": "STRAIGHT_LINE_MULTI_CELL+STYLE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/07_08_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:08_04",
+  "turn": 7,
+  "exec_id": 530,
+  "shape": "SAVE_ONLY",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/08_04_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:08_09",
+  "turn": 23,
+  "exec_id": 557,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/08_09_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:09_09",
+  "turn": 14,
+  "exec_id": 581,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/09_09_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:09_09",
+  "turn": 18,
+  "exec_id": 585,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/09_09_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "docProps/core.xml"
+    ]
+   },
+   {
+    "rel": "tmp/f.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:10_10",
+  "turn": 14,
+  "exec_id": 630,
+  "shape": "SINGLE_CELL_ASSIGNMENT",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/10_10_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:10_10",
+  "turn": 15,
+  "exec_id": 631,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/10_10_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Debugging:10_10",
+  "turn": 18,
+  "exec_id": 634,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/10_10_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:01_01",
+  "turn": 9,
+  "exec_id": 645,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/01_01_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:02_01",
+  "turn": 9,
+  "exec_id": 658,
+  "shape": "CONTIGUOUS_FILL+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/02_01_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:03_01",
+  "turn": 7,
+  "exec_id": 674,
+  "shape": "CONTIGUOUS_FILL+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/03_01_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:04_01",
+  "turn": 11,
+  "exec_id": 688,
+  "shape": "FORMULA_TRANSLATION_LIKE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/04_01_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:04_01",
+  "turn": 16,
+  "exec_id": 693,
+  "shape": "FORMULA_TRANSLATION_LIKE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/04_01_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:04_01",
+  "turn": 19,
+  "exec_id": 696,
+  "shape": "FORMULA_TRANSLATION_LIKE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/04_01_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:05_01",
+  "turn": 13,
+  "exec_id": 711,
+  "shape": "FORMULA_TRANSLATION_LIKE+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/05_01_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:05_01",
+  "turn": 17,
+  "exec_id": 715,
+  "shape": "FORMULA_TRANSLATION_LIKE+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/05_01_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:06_01",
+  "turn": 22,
+  "exec_id": 741,
+  "shape": "FORMULA_TRANSLATION_LIKE+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/06_01_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:07_01",
+  "turn": 16,
+  "exec_id": 760,
+  "shape": "FORMULA_TRANSLATION_LIKE+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/07_01_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:08_01",
+  "turn": 22,
+  "exec_id": 792,
+  "shape": "FORMULA_TRANSLATION_LIKE+COND",
+  "capture": {
+   "status": "NO_XLSX_CHANGE"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:10_01",
+  "turn": 10,
+  "exec_id": 813,
+  "shape": "FORMULA_TRANSLATION_LIKE+STYLE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/10_01_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:10_01",
+  "turn": 13,
+  "exec_id": 816,
+  "shape": "FORMULA_TRANSLATION_LIKE+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/10_01_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "xl/styles.xml",
+     "docProps/core.xml",
+     "xl/worksheets/sheet3.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:11_01",
+  "turn": 6,
+  "exec_id": 824,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/11_01_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:11_01",
+  "turn": 9,
+  "exec_id": 827,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/11_01_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:11_05",
+  "turn": 12,
+  "exec_id": 841,
+  "shape": "CONTIGUOUS_FILL+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/11_05_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:11_05",
+  "turn": 16,
+  "exec_id": 845,
+  "shape": "FORMULA_TRANSLATION_LIKE+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/11_05_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "xl/styles.xml",
+     "xl/worksheets/sheet17.xml",
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:11_05",
+  "turn": 19,
+  "exec_id": 848,
+  "shape": "FORMULA_TRANSLATION_LIKE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/11_05_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:12_05",
+  "turn": 12,
+  "exec_id": 864,
+  "shape": "LOOP_COMPUTED_VALUES",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/12_05_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:13_05",
+  "turn": 8,
+  "exec_id": 876,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/13_05_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:14_05",
+  "turn": 8,
+  "exec_id": 887,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/14_05_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:14_05",
+  "turn": 13,
+  "exec_id": 892,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/14_05_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:15_05",
+  "turn": 11,
+  "exec_id": 905,
+  "shape": "CONTIGUOUS_FILL+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/15_05_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:16_05",
+  "turn": 6,
+  "exec_id": 916,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/16_05_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:17_05",
+  "turn": 8,
+  "exec_id": 928,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/17_05_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:18_05",
+  "turn": 9,
+  "exec_id": 940,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/18_05_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:18_05",
+  "turn": 13,
+  "exec_id": 944,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/18_05_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:18_05",
+  "turn": 14,
+  "exec_id": 945,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/18_05_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:19_05",
+  "turn": 8,
+  "exec_id": 955,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/19_05_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Financial_Model:20_05",
+  "turn": 12,
+  "exec_id": 970,
+  "shape": "FORMULA_TRANSLATION_LIKE+STYLE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/20_05_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:01_02",
+  "turn": 4,
+  "exec_id": 979,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/01_02_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:01_07",
+  "turn": 8,
+  "exec_id": 990,
+  "shape": "CONTIGUOUS_FILL+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/01_07_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:02_05",
+  "turn": 3,
+  "exec_id": 998,
+  "shape": "LOOP_COMPUTED_VALUES+COND",
+  "capture": {
+   "status": "NO_XLSX_CHANGE"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:02_05",
+  "turn": 5,
+  "exec_id": 1000,
+  "shape": "CONTIGUOUS_FILL+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/02_05_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:02_05",
+  "turn": 10,
+  "exec_id": 1005,
+  "shape": "CONTIGUOUS_FILL+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/02_05_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "xl/worksheets/sheet1.xml",
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:03_03",
+  "turn": 3,
+  "exec_id": 1011,
+  "shape": "STRAIGHT_LINE_MULTI_CELL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/03_03_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:03_03",
+  "turn": 5,
+  "exec_id": 1013,
+  "shape": "STRAIGHT_LINE_MULTI_CELL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/03_03_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:03_03",
+  "turn": 7,
+  "exec_id": 1015,
+  "shape": "STRAIGHT_LINE_MULTI_CELL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/03_03_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "xl/styles.xml",
+     "xl/worksheets/sheet1.xml",
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:05_02",
+  "turn": 2,
+  "exec_id": 1019,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "NO_XLSX_CHANGE"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:05_02",
+  "turn": 3,
+  "exec_id": 1020,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/05_02_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:05_02",
+  "turn": 5,
+  "exec_id": 1022,
+  "shape": "STRAIGHT_LINE_MULTI_CELL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/05_02_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:06_06",
+  "turn": 1,
+  "exec_id": 1025,
+  "shape": "FORMULA_TRANSLATION_LIKE",
+  "capture": {
+   "status": "NO_XLSX_CHANGE"
+  }
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:06_06",
+  "turn": 2,
+  "exec_id": 1026,
+  "shape": "FORMULA_TRANSLATION_LIKE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/06_06_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:06_12",
+  "turn": 4,
+  "exec_id": 1034,
+  "shape": "CONTIGUOUS_FILL+STYLE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/06_12_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:06_17",
+  "turn": 4,
+  "exec_id": 1044,
+  "shape": "CONTIGUOUS_FILL+STYLE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/06_17_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:06_21",
+  "turn": 2,
+  "exec_id": 1050,
+  "shape": "FORMULA_TRANSLATION_LIKE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/06_21_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:06_21",
+  "turn": 3,
+  "exec_id": 1051,
+  "shape": "FORMULA_TRANSLATION_LIKE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/06_21_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "xl/styles.xml",
+     "xl/worksheets/sheet1.xml",
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:06_21",
+  "turn": 5,
+  "exec_id": 1053,
+  "shape": "FORMULA_TRANSLATION_LIKE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/06_21_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "xl/styles.xml",
+     "xl/worksheets/sheet1.xml",
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:07_01",
+  "turn": 2,
+  "exec_id": 1057,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/07_01_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:07_01",
+  "turn": 4,
+  "exec_id": 1059,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/07_01_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "xl/styles.xml",
+     "xl/worksheets/sheet1.xml",
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:07_01",
+  "turn": 5,
+  "exec_id": 1060,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/07_01_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "xl/styles.xml",
+     "xl/worksheets/sheet1.xml",
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:07_01",
+  "turn": 7,
+  "exec_id": 1062,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/07_01_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "xl/styles.xml",
+     "xl/worksheets/sheet1.xml",
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:07_01",
+  "turn": 9,
+  "exec_id": 1064,
+  "shape": "STRAIGHT_LINE_MULTI_CELL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/07_01_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:08_03",
+  "turn": 3,
+  "exec_id": 1069,
+  "shape": "CONTIGUOUS_FILL+STYLE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/08_03_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:10_01",
+  "turn": 2,
+  "exec_id": 1074,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/10_01_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:10_01",
+  "turn": 4,
+  "exec_id": 1076,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/10_01_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "xl/styles.xml",
+     "xl/worksheets/sheet1.xml",
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:10_01",
+  "turn": 5,
+  "exec_id": 1077,
+  "shape": "STRAIGHT_LINE_MULTI_CELL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/10_01_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:10_01",
+  "turn": 6,
+  "exec_id": 1078,
+  "shape": "SINGLE_CELL_ASSIGNMENT",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/10_01_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:11_03",
+  "turn": 3,
+  "exec_id": 1084,
+  "shape": "CONTIGUOUS_FILL+STYLE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/11_03_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:11_03",
+  "turn": 5,
+  "exec_id": 1086,
+  "shape": "CONTIGUOUS_FILL+STYLE",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/11_03_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "xl/worksheets/sheet1.xml",
+     "xl/styles.xml",
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:13_03",
+  "turn": 1,
+  "exec_id": 1091,
+  "shape": "CONTIGUOUS_FILL+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/13_03_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:13_08",
+  "turn": 2,
+  "exec_id": 1096,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/13_08_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:13_08",
+  "turn": 4,
+  "exec_id": 1098,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/13_08_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "xl/styles.xml",
+     "xl/worksheets/sheet1.xml",
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:13_08",
+  "turn": 7,
+  "exec_id": 1101,
+  "shape": "SAVE_ONLY",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/13_08_output.xlsx",
+    "F0": false,
+    "F1": true,
+    "F2n": 0,
+    "carry": [
+     "docProps/core.xml"
+    ]
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:14_05",
+  "turn": 2,
+  "exec_id": 1107,
+  "shape": "CONTIGUOUS_FILL+COND",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/14_05_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:15_01",
+  "turn": 8,
+  "exec_id": 1122,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/15_01_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:16_01",
+  "turn": 2,
+  "exec_id": 1129,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/16_01_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:16_06",
+  "turn": 6,
+  "exec_id": 1137,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/16_06_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-B_sixty_control",
+  "task_id": "Template:16_12",
+  "turn": 1,
+  "exec_id": 1140,
+  "shape": "CONTIGUOUS_FILL",
+  "capture": {
+   "status": "OK"
+  },
+  "file_results": [
+   {
+    "rel": "out/16_12_output.xlsx",
+    "F0": true,
+    "F1": true,
+    "F2n": 0,
+    "carry": null
+   }
+  ]
+ },
+ {
+  "population": "P-C_viz",
+  "task_id": "glm-fill-c0-Visualization-Task-1420776-r1",
+  "turn": 15,
+  "exec_id": 1159,
+  "shape": "LOOP_COMPUTED_TARGETS+COND",
+  "capture": {
+   "status": "OK"
+  }
+ },
+ {
+  "population": "P-C_viz",
+  "task_id": "glm-fill-c0-Visualization-Task-1420776-r1",
+  "turn": 34,
+  "exec_id": 1178,
+  "shape": "LOOP_COMPUTED_TARGETS+COND",
+  "capture": {
+   "status": "OK"
+  }
+ }
+]

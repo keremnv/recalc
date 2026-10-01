@@ -1,0 +1,402 @@
+[
+ {
+  "pop": "pilot",
+  "task": "Debugging:09_09",
+  "digest": "phase13/working/digests/pilot_Debugging_09_09_CONTROL.md",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "pilot",
+  "task": "Financial_Model:14_01",
+  "digest": "phase13/working/digests/pilot_Financial_Model_14_01_CONTROL.md",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "pilot",
+  "task": "Template:03_01",
+  "digest": "phase13/working/digests/pilot_Template_03_01_CONTROL.md",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "pilot_ext",
+  "task": "Template:11_01",
+  "digest": "phase13/working/digests/pilot_ext_Template_11_01_CONTROL.md",
+  "status": "SUBMITTED",
+  "output": true,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 1.0
+ },
+ {
+  "pop": "popA",
+  "task": "Debugging:01_01",
+  "digest": "phase13/working/digests/popA_Debugging_01_01_CONTROL.md",
+  "status": "TRUNCATED_INSTANCE_COST",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popA",
+  "task": "Debugging:03_03",
+  "digest": "phase13/working/digests/popA_Debugging_03_03_CONTROL.md",
+  "status": "TRUNCATED_CALL_LIMIT",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popA",
+  "task": "Debugging:04_06",
+  "digest": "phase13/working/digests/popA_Debugging_04_06_CONTROL.md",
+  "status": "SUBMITTED",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popA",
+  "task": "Debugging:05_04",
+  "digest": "phase13/working/digests/popA_Debugging_05_04_CONTROL.md",
+  "status": "TRUNCATED_CALL_LIMIT",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popA",
+  "task": "Debugging:08_03",
+  "digest": "phase13/working/digests/popA_Debugging_08_03_CONTROL.md",
+  "status": "TRUNCATED_INSTANCE_COST",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popA",
+  "task": "Debugging:08_06",
+  "digest": "phase13/working/digests/popA_Debugging_08_06_CONTROL.md",
+  "status": "SUBMITTED",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popA",
+  "task": "Debugging:09_08",
+  "digest": "phase13/working/digests/popA_Debugging_09_08_CONTROL.md",
+  "status": "TRUNCATED_INSTANCE_COST",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popA",
+  "task": "Debugging:10_03",
+  "digest": "phase13/working/digests/popA_Debugging_10_03_CONTROL.md",
+  "status": "TRUNCATED_INSTANCE_COST",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popA",
+  "task": "Financial_Model:03_02",
+  "digest": "phase13/working/digests/popA_Financial_Model_03_02_CONTROL.md",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popA",
+  "task": "Financial_Model:05_05",
+  "digest": "phase13/working/digests/popA_Financial_Model_05_05_CONTROL.md",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popA",
+  "task": "Financial_Model:07_01",
+  "digest": "phase13/working/digests/popA_Financial_Model_07_01_CONTROL.md",
+  "status": "TRUNCATED_INSTANCE_COST",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popA",
+  "task": "Financial_Model:07_02",
+  "digest": "phase13/working/digests/popA_Financial_Model_07_02_CONTROL.md",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popA",
+  "task": "Financial_Model:12_01",
+  "digest": "phase13/working/digests/popA_Financial_Model_12_01_CONTROL.md",
+  "status": "NO_SUBMIT",
+  "output": true,
+  "exact": 0.0,
+  "mod": 0.057,
+  "reg": 1.0
+ },
+ {
+  "pop": "popA",
+  "task": "Financial_Model:12_05",
+  "digest": "phase13/working/digests/popA_Financial_Model_12_05_CONTROL.md",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popA",
+  "task": "Financial_Model:14_05",
+  "digest": "phase13/working/digests/popA_Financial_Model_14_05_CONTROL.md",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popA",
+  "task": "Financial_Model:18_03",
+  "digest": "phase13/working/digests/popA_Financial_Model_18_03_CONTROL.md",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popA",
+  "task": "Template:01_03",
+  "digest": "phase13/working/digests/popA_Template_01_03_CONTROL.md",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popA",
+  "task": "Template:06_05",
+  "digest": "phase13/working/digests/popA_Template_06_05_CONTROL.md",
+  "status": "SUBMITTED",
+  "output": true,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 1.0
+ },
+ {
+  "pop": "popA",
+  "task": "Template:06_25",
+  "digest": "phase13/working/digests/popA_Template_06_25_CONTROL.md",
+  "status": "SUBMITTED",
+  "output": true,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 1.0
+ },
+ {
+  "pop": "popA",
+  "task": "Template:10_02",
+  "digest": "phase13/working/digests/popA_Template_10_02_CONTROL.md",
+  "status": "SUBMITTED",
+  "output": true,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 1.0
+ },
+ {
+  "pop": "popA",
+  "task": "Template:11_03",
+  "digest": "phase13/working/digests/popA_Template_11_03_CONTROL.md",
+  "status": "SUBMITTED",
+  "output": true,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 1.0
+ },
+ {
+  "pop": "popA",
+  "task": "Template:11_04",
+  "digest": "phase13/working/digests/popA_Template_11_04_CONTROL.md",
+  "status": "SUBMITTED",
+  "output": true,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 1.0
+ },
+ {
+  "pop": "popA",
+  "task": "Template:14_03",
+  "digest": "phase13/working/digests/popA_Template_14_03_CONTROL.md",
+  "status": "SUBMITTED",
+  "output": true,
+  "exact": 0.0,
+  "mod": 0.9818,
+  "reg": 1.0
+ },
+ {
+  "pop": "popA",
+  "task": "Template:15_02",
+  "digest": "phase13/working/digests/popA_Template_15_02_CONTROL.md",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popB",
+  "task": "Debugging:10_01",
+  "digest": "phase13/working/digests/popB_Debugging_10_01_CONTROL.md",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popB",
+  "task": "Debugging:10_04",
+  "digest": "phase13/working/digests/popB_Debugging_10_04_CONTROL.md",
+  "status": "TRUNCATED_INSTANCE_COST",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popB",
+  "task": "Debugging:10_05",
+  "digest": "phase13/working/digests/popB_Debugging_10_05_CONTROL.md",
+  "status": "TRUNCATED_CALL_LIMIT",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popB",
+  "task": "Debugging:10_06",
+  "digest": "phase13/working/digests/popB_Debugging_10_06_CONTROL.md",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popB",
+  "task": "Financial_Model:08_03",
+  "digest": "phase13/working/digests/popB_Financial_Model_08_03_CONTROL.md",
+  "status": "TRUNCATED_INSTANCE_COST",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popB",
+  "task": "Financial_Model:08_04",
+  "digest": "phase13/working/digests/popB_Financial_Model_08_04_CONTROL.md",
+  "status": "TRUNCATED_INSTANCE_COST",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popB",
+  "task": "Financial_Model:08_05",
+  "digest": "phase13/working/digests/popB_Financial_Model_08_05_CONTROL.md",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popB",
+  "task": "Financial_Model:17_05",
+  "digest": "phase13/working/digests/popB_Financial_Model_17_05_CONTROL.md",
+  "status": "TRUNCATED_CALL_LIMIT",
+  "output": true,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ },
+ {
+  "pop": "popB",
+  "task": "Template:06_09",
+  "digest": "phase13/working/digests/popB_Template_06_09_CONTROL.md",
+  "status": "SUBMITTED",
+  "output": true,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 1.0
+ },
+ {
+  "pop": "popB",
+  "task": "Template:06_16",
+  "digest": "phase13/working/digests/popB_Template_06_16_CONTROL.md",
+  "status": "SUBMITTED",
+  "output": true,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 1.0
+ },
+ {
+  "pop": "popB",
+  "task": "Template:16_02",
+  "digest": "phase13/working/digests/popB_Template_16_02_CONTROL.md",
+  "status": "SUBMITTED",
+  "output": true,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.9956
+ },
+ {
+  "pop": "popB",
+  "task": "Template:16_05",
+  "digest": "phase13/working/digests/popB_Template_16_05_CONTROL.md",
+  "status": "NO_SUBMIT",
+  "output": false,
+  "exact": 0.0,
+  "mod": 0.0,
+  "reg": 0.0
+ }
+]

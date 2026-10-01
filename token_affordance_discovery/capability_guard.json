@@ -1,0 +1,124 @@
+{
+  "by_arm": {
+    "A": {
+      "mean_modification_valid": 0.591,
+      "mean_regression_valid": 1.0,
+      "submitted": 2,
+      "valid_submission": 2
+    },
+    "B": {
+      "mean_modification_valid": 0.3949666666666667,
+      "mean_regression_valid": 1.0,
+      "submitted": 3,
+      "valid_submission": 3
+    },
+    "C": {
+      "mean_modification_valid": 0.7068,
+      "mean_regression_valid": 0.9979,
+      "submitted": 3,
+      "valid_submission": 3
+    },
+    "D": {
+      "mean_modification_valid": 0.67925,
+      "mean_regression_valid": 1.0,
+      "submitted": 2,
+      "valid_submission": 2
+    }
+  },
+  "formal_equivalence": "NOT_ESTABLISHED",
+  "paired": {
+    "B_vs_A": {
+      "completion_discordance": [
+        {
+          "cached_ratio": 0.06211842399435912,
+          "call_difference": -25,
+          "call_ratio": 0.16666666666666666,
+          "control_submitted": false,
+          "cost_ratio": 0.05220096597501417,
+          "dual_valid": false,
+          "family": "Template",
+          "final_save_to_submit_difference": null,
+          "first_save_call_difference": -1,
+          "input_per_call_ratio": 0.29183364045625243,
+          "input_ratio": 0.04863894007604208,
+          "modification_delta": null,
+          "post_edit_read_recalc_difference": -25,
+          "regression_delta": null,
+          "save_count_difference": -13,
+          "task": "Template:15_01",
+          "treatment_submitted": true,
+          "uncached_ratio": 0.032653144471298474
+        }
+      ],
+      "dual_valid_n": 2,
+      "mean_modification_delta": -0.1414,
+      "mean_regression_delta": 0.0
+    },
+    "C_vs_A": {
+      "completion_discordance": [
+        {
+          "cached_ratio": 0.520190207577347,
+          "call_difference": -14,
+          "call_ratio": 0.5333333333333333,
+          "control_submitted": false,
+          "cost_ratio": 0.24876165121166605,
+          "dual_valid": false,
+          "family": "Template",
+          "final_save_to_submit_difference": null,
+          "first_save_call_difference": -1,
+          "input_per_call_ratio": 0.589122017214434,
+          "input_ratio": 0.3141984091810315,
+          "modification_delta": null,
+          "post_edit_read_recalc_difference": -14,
+          "regression_delta": null,
+          "save_count_difference": -7,
+          "task": "Template:15_01",
+          "treatment_submitted": true,
+          "uncached_ratio": 0.06990546700523144
+        }
+      ],
+      "dual_valid_n": 2,
+      "mean_modification_delta": 0.08825000000000002,
+      "mean_regression_delta": 0.0
+    },
+    "C_vs_B": {
+      "completion_discordance": [],
+      "dual_valid_n": 3,
+      "mean_modification_delta": 0.31183333333333335,
+      "mean_regression_delta": -0.0020999999999999908
+    },
+    "D_vs_A": {
+      "completion_discordance": [],
+      "dual_valid_n": 2,
+      "mean_modification_delta": 0.08825000000000002,
+      "mean_regression_delta": 0.0
+    },
+    "D_vs_C": {
+      "completion_discordance": [
+        {
+          "cached_ratio": 1.9231010827341102,
+          "call_difference": 18,
+          "call_ratio": 2.125,
+          "control_submitted": true,
+          "cost_ratio": 4.557892212278033,
+          "dual_valid": false,
+          "family": "Template",
+          "final_save_to_submit_difference": null,
+          "first_save_call_difference": 1,
+          "input_per_call_ratio": 1.6424402812349885,
+          "input_ratio": 3.4901855976243503,
+          "modification_delta": null,
+          "post_edit_read_recalc_difference": 19,
+          "regression_delta": null,
+          "save_count_difference": 22,
+          "task": "Template:15_01",
+          "treatment_submitted": false,
+          "uncached_ratio": 17.31962071480671
+        }
+      ],
+      "dual_valid_n": 2,
+      "mean_modification_delta": 0.0,
+      "mean_regression_delta": 0.0
+    }
+  }
+}

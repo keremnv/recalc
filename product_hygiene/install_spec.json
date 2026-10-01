@@ -1,0 +1,31 @@
+{
+  "product": "librecalc-agent",
+  "version": "0.2.0rc1",
+  "canonical_command": "python -m pip install .",
+  "preparation": [
+    "python3 -m venv .venv-product",
+    ". .venv-product/bin/activate"
+  ],
+  "source": "repository checkout",
+  "supported_install_paths": 1,
+  "published_on_registry": false,
+  "runtime_dependencies": [
+    "openpyxl==3.1.5",
+    "lxml==6.1.3"
+  ],
+  "resolved_transitive_dependency": "et_xmlfile==2.0.0",
+  "build_backend": "hatchling>=1.25, PEP 517 isolated build",
+  "system_dependencies": [
+    "Python 3.11–3.14 with venv/pip; clean RC tested 3.13.12",
+    "SQLite for optional optimization; ordinary Python can continue without it",
+    "LibreOffice Calc only when recalculation/validation workflow requires it"
+  ],
+  "not_required": [
+    "model credentials for local checks",
+    "model SDK",
+    "MCP server",
+    "Python UNO bindings",
+    "benchmark datasets"
+  ],
+  "agent_configuration": "Configure an ordinary coding agent/model externally; let it execute librecalc-agent run for Python scripts. No prompt/performance change or embedded model client."
+}

@@ -1,0 +1,62 @@
+[
+ {
+  "task_id": "Template:03_03",
+  "arm": "C0",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.8085,
+  "official_regression": 1.0,
+  "run_status": "SUBMITTED",
+  "output_produced": true
+ },
+ {
+  "task_id": "Template:05_02",
+  "arm": "C0",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.0,
+  "run_status": "NO_SUBMIT",
+  "output_produced": false
+ },
+ {
+  "task_id": "Debugging:02_01",
+  "arm": "C0",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.0,
+  "run_status": "NO_SUBMIT",
+  "output_produced": false
+ },
+ {
+  "task_id": "Template:03_03",
+  "arm": "C1",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.0,
+  "run_status": "NO_SUBMIT",
+  "output_produced": false
+ },
+ {
+  "task_id": "Template:05_02",
+  "arm": "C1",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.0,
+  "run_status": "NO_SUBMIT",
+  "output_produced": false
+ },
+ {
+  "task_id": "Debugging:02_01",
+  "arm": "C1",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.0,
+  "run_status": "NO_SUBMIT",
+  "output_produced": false
+ }
+]

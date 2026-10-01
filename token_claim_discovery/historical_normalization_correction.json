@@ -1,0 +1,10 @@
+{
+  "event": "POST_PREREG_HISTORICAL_NORMALIZATION_CORRECTION",
+  "reason": "Initial summary selected registry rows with scope=aggregate and omitted the three nested Thin architecture checkpoint scopes ALL, A-representative, B-exposure.",
+  "correction": "Rebuilt historical_token_summary.json from frozen RC registry including all 15 aggregate/cohort records, with prompt/input and total-token fields separated and available calls/completion/output splits recovered from source archives.",
+  "selection_or_live_design_changed": false,
+  "selection_manifest_sha256_unchanged": true,
+  "preregistered_spec_sha256_unchanged": true,
+  "outcome_peeking_for_selection": false,
+  "interpretation": "Documentation correction; overlapping nested cohorts remain unpooled."
+}

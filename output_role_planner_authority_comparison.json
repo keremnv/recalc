@@ -1,0 +1,77 @@
+{
+  "rows": [
+    {
+      "task": "Financial_Model:05_01",
+      "obligation_id": "O6",
+      "condition": "CONTROL",
+      "provider_success": false,
+      "parse_valid": false,
+      "expansion_status": "NO_PARSED_PLAN",
+      "authority_count": 0,
+      "gold_count": 5,
+      "recall": 0.0,
+      "precision": null,
+      "false_positive_count": 0,
+      "false_negative_count": 5,
+      "false_positive_cells": [],
+      "false_negative_cells": [
+        "Dashboard!G43",
+        "Dashboard!G44",
+        "Dashboard!G45",
+        "Dashboard!I43",
+        "Dashboard!I44"
+      ],
+      "operation_count": 0,
+      "operation_target_forms": []
+    },
+    {
+      "task": "Financial_Model:05_01",
+      "obligation_id": "O6",
+      "condition": "TREATMENT",
+      "provider_success": true,
+      "parse_valid": true,
+      "expansion_status": "VALID_PLAN",
+      "authority_count": 6,
+      "gold_count": 5,
+      "recall": 1.0,
+      "precision": 0.8333333333333334,
+      "false_positive_count": 1,
+      "false_negative_count": 0,
+      "false_positive_cells": [
+        "Dashboard!I45"
+      ],
+      "false_negative_cells": [],
+      "operation_count": 1,
+      "operation_target_forms": [
+        null
+      ]
+    }
+  ],
+  "authority_delta": {
+    "control_only_cells": [],
+    "treatment_only_cells": [
+      "Dashboard!G43",
+      "Dashboard!G44",
+      "Dashboard!G45",
+      "Dashboard!I43",
+      "Dashboard!I44",
+      "Dashboard!I45"
+    ],
+    "shared_cells": []
+  },
+  "safety": {
+    "control_first_tranche_leakage": [],
+    "treatment_first_tranche_leakage": [],
+    "control_ticket_occurrence_leakage": [],
+    "treatment_ticket_occurrence_leakage": [],
+    "control_rejected_dependency_leakage": [],
+    "treatment_rejected_dependency_leakage": [],
+    "treatment_output_endpoint_intersection": [
+      "Dashboard!G43",
+      "Dashboard!G44",
+      "Dashboard!G45",
+      "Dashboard!I43",
+      "Dashboard!I44"
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "catalog-control-eight",
+  "purpose": "Give the pattern catalog its missing counterfactual. Eight of the twelve visited cases sit on tasks no control run has ever touched, so `benchmark/catalog_gate.py` returns `unjudged` for them -- including every Debugging and Financial Model case, which carry the grid's largest mass claims. This slice is the control arm for exactly those tasks. It is not a scoring slice and its aggregate is not a result: the only question asked of it is, per case, whether the official bash harness gets our first-miss cell right.",
+  "model": "z-ai/glm-5.3-flash",
+  "sampling": "Not sampled. These are the eight tasks named by cases/*.yaml that control-arm-fifteen did not cover. Selection is by which cells we already visited, so aggregate accuracy on this slice is biased by construction and must not be quoted against any other slice.",
+  "arms": {
+    "control": "--control, official config, 50-call budget, matching glm-5.3-flash-control-fifteen-1/2 exactly"
+  },
+  "discipline": "n>=2. One control run decides nothing: on `Template:16_12` control run 1 missed RentRoll!J10 and run 2 got it right, which is what put `t-16-12-j10` in the catalog as a pattern in the first place. The gate requires --min-decided 2 before it counts an arm's agreement.",
+  "max_tool_calls_per_task": 50,
+  "tasks": [
+    { "category": "Template", "id": "09_01" },
+    { "category": "Template", "id": "09_03" },
+    { "category": "Financial_Model", "id": "01_02" },
+    { "category": "Financial_Model", "id": "03_02" },
+    { "category": "Debugging", "id": "01_02" },
+    { "category": "Debugging", "id": "01_05" },
+    { "category": "Debugging", "id": "02_05" },
+    { "category": "Debugging", "id": "09_09" }
+  ]
+}

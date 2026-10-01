@@ -1,0 +1,34 @@
+{
+  "tasks": 6,
+  "exact_or_equivalent_tasks": 6,
+  "tasks_with_payload_reduction_ge_25_pct": 0,
+  "tasks_with_operation_reduction_ge_25_pct": 2,
+  "tasks_clearing_either_mechanical_threshold": 2,
+  "median_payload_reduction_pct": -463.1,
+  "payload_reduction_range_pct": [
+    -4676.29,
+    -238.49
+  ],
+  "median_operation_reduction_pct": 10.0,
+  "operation_reduction_range_pct": [
+    0.0,
+    54.72
+  ],
+  "median_compactness_reduction_pct": 60.81,
+  "compactness_reduction_range_pct": [
+    57.18,
+    63.36
+  ],
+  "median_batching_reduction_pct": -0.64,
+  "batching_reduction_range_pct": [
+    -3.8,
+    -0.48
+  ],
+  "no_stale_or_freshness_failure": true,
+  "no_silent_truncation": true,
+  "no_systematic_decision_relevant_fact_loss": true,
+  "pass": false,
+  "verdict": "V2_MECHANICAL_COMPRESSION_NOT_GENERAL",
+  "phase_b": "GATED_OFF",
+  "rule": ">=4/6 exact/equivalent; >=4/6 >=25% observation-byte or operation reduction; no stale/freshness failure; no systematic fact loss."
+}

@@ -1,0 +1,25 @@
+tools:
+  calc_translate_fill:
+    signature: "calc_translate_fill --xlsx <xlsx> --canonical-cell <canonical_cell> --canonical-formula <canonical_formula> --targets <targets>"
+    docstring: "Deterministic formula-fill helper for repeated formula regions. You provide the intended target cells and one canonical formula; it verifies that the declared targets are mechanically translation-compatible and, when safe, translates the formula across exactly those cells while preserving relative, absolute, and mixed references. It never chooses targets or formulas and never expands your requested target set. Use it when you have already decided that a repeated formula pattern should be filled across a region."
+    arguments:
+      - name: xlsx
+        type: string
+        description: "Path to the workbook to edit (typically the output workbook)"
+        required: true
+        argument_format: "--xlsx {{value}}"
+      - name: canonical_cell
+        type: string
+        description: "Sheet!A1 address of the canonical cell the supplied formula belongs to"
+        required: true
+        argument_format: "--canonical-cell {{value}}"
+      - name: canonical_formula
+        type: string
+        description: "The one formula to translate; must start with ="
+        required: true
+        argument_format: "--canonical-formula {{value}}"
+      - name: targets
+        type: string
+        description: "Explicit target set: a Sheet!A1:C5 rectangle, a Sheet!A1:A10 line, or a comma-separated list of Sheet!A1 cells. The harness will not add cells."
+        required: true
+        argument_format: "--targets {{value}}"

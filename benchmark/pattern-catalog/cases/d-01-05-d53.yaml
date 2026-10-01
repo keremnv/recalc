@@ -1,0 +1,50 @@
+id: d-01-05-d53
+run: glm-5.3-flash-nonvisual-297-1
+task: Debugging:01_05
+first_miss:
+  kind: regression
+  address: "Ex 5 - M&A!D53"
+  error_message: "Regression error at Ex 5 - M&A!D53: answer=#DIV/0!, output=None"
+facts:
+  opened_golden: false
+  spreadsheet: Incorrect Average_input.xlsx
+  instruction: Please audit and fix this file thoroughly.
+  input_kind: formula
+  input_value: "=+D52/D42"
+  output_formula: "=IFERROR(+D52/D42,\"\")"
+  autopsy:
+    named: true
+    named_sources: [formula_errors]
+    named_rank: 1
+    read: false
+    read_attempted: true
+    written: true
+    bucket: written_wrong
+  inspect_selected:
+    - {sheet: "Ex 5 - M&A", address: D53, error: "#DIV/0!", formula: "=+D52/D42"}
+    - {sheet: "Ex 5 - M&A", address: E43, error: "#DIV/0!", formula: "=+E42/D42-1"}
+  wrote: {range: D53:O53, formula: "=IFERROR(+D52/D42,\"\")"}
+  compare: {formula_errors_removed: 7, labels_changed: 1}
+claims:
+  patterns: [G-preserve-error-token, read-budget]
+  nuance: decomposable
+  mechanism: error-token-policy
+  lever: constraint
+  lever_why: >
+    Inspect named D53 rank 1 and the payload already said ranked attention, not auto-edits; the
+    model IFERROR-wiped the row anyway. Information was delivered and declined. Refusing a
+    write that removes an error token the model never successfully read is gold-blind and
+    untested.
+  notes: >
+    Filename is Incorrect Average. Inspect showed 15 #DIV/0! and selected D53 rank 1.
+    Reads exhausted; they IFERROR-wiped the tokens. Golden leak keeps #DIV/0!.
+    Observation note already said ranked attention, not auto-edits. AVERAGE never touched.
+
+    Gate result (2026-09-03, catalog-ours-eight n=2 vs catalog-control-eight n=2):
+    verdict noise. Both our-arm repeats left D53 as the plain formula, untouched -- not
+    IFERROR-wrapped, not any other write. The commit gate did not catch a wipe in either
+    repeat because there was no wipe to catch; the model simply did not act on this cell
+    on either replay. So the IFERROR-wipe recorded above is one draw of this task, not a
+    stable behavior, and the case does not establish that our interface induces the wipe.
+    Leave the pattern id in place as a description of one observed trajectory; do not cite
+    it as a design finding.

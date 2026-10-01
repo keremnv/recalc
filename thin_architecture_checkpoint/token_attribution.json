@@ -1,0 +1,36 @@
+{
+ "adopted_runs": [
+  {
+   "task_id": "Financial_Model:03_03",
+   "n_calls": 3,
+   "helper_obs_bytes_total": 618,
+   "paired_h0_python_obs_bytes": 2157,
+   "paired_h0_view_obs_bytes": 52085,
+   "verdict": "authoring compression (short calls vs scan loops); observation bytes often capped at 10KB in both arms"
+  },
+  {
+   "task_id": "Financial_Model:09_05",
+   "n_calls": 10,
+   "helper_obs_bytes_total": 16681,
+   "paired_h0_python_obs_bytes": 28831,
+   "paired_h0_view_obs_bytes": 10583,
+   "verdict": "authoring compression (short calls vs scan loops); observation bytes often capped at 10KB in both arms"
+  },
+  {
+   "task_id": "Financial_Model:17_02",
+   "n_calls": 5,
+   "helper_obs_bytes_total": 8900,
+   "paired_h0_python_obs_bytes": 0,
+   "paired_h0_view_obs_bytes": 61511,
+   "verdict": "authoring compression (short calls vs scan loops); observation bytes often capped at 10KB in both arms"
+  },
+  {
+   "task_id": "Financial_Model:08_03",
+   "n_calls": 3,
+   "helper_obs_bytes_total": 10473,
+   "paired_h0_python_obs_bytes": 97085,
+   "paired_h0_view_obs_bytes": 10740,
+   "verdict": "authoring compression (short calls vs scan loops); observation bytes often capped at 10KB in both arms"
+  }
+ ]
+}

@@ -1,0 +1,10 @@
+{
+  "break_even_N": null,
+  "equation": "I + N*C < N*A",
+  "fraction_never_breaks_even": null,
+  "interpretation": "Every public invocation rebuilds; no supported reusable C state. A finite N computed from an artificial C would misstate product economics.",
+  "per_use_saving": null,
+  "reusable_one_time_I": null,
+  "status": "NOT_ESTIMABLE_FOR_PACKAGED_RC",
+  "warm_C": null
+}

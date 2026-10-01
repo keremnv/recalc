@@ -1,0 +1,26 @@
+{
+ "name": "inspection-efficiency-ab-stage-b",
+ "gated_on": "targeted_runtime_replication/verdict.json == RUNTIME_CAPABILITY_PRESERVATION_SUPPORTED",
+ "arms": {
+  "C0": "transparent runtime + ordinary Python/openpyxl/view_xlsx",
+  "C1": "C0 + optional lx_helpers (periods/search/inspect); usage note appended to instance prompt; nothing else changes"
+ },
+ "helpers": [
+  "periods",
+  "search",
+  "inspect"
+ ],
+ "forbidden": [
+  "references()",
+  "target recommendations",
+  "likely formulas",
+  "dependency closure",
+  "correctness claims",
+  "semantic roles",
+  "mandatory syntax",
+  "tool removal"
+ ],
+ "freshness": "every call rehashes workbook; rebuild-on-mismatch; workbook/index/query generations logged; fail closed",
+ "n": 1,
+ "discordant_cell_policy": "repeat discordant cells once before concluding"
+}

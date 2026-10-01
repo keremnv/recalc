@@ -17,7 +17,7 @@ tools:
 
   calc_read:
     signature: "calc_read <path> <sheet> <cell_range>"
-    docstring: "Read one small rectangular neighborhood through LibreOffice Calc. Ranges are limited to 96 cells; whole sheets and used-range dumps are rejected."
+    docstring: "Read one addressed rectangular range through LibreOffice Calc. The product surface has no cell-count ceiling; benchmark runners may stage an explicitly bounded treatment."
     arguments:
       - name: path
         type: string
@@ -29,12 +29,12 @@ tools:
         required: true
       - name: cell_range
         type: string
-        description: "A1 neighborhood of at most 96 cells, for example D35:O42. Whole sheets are rejected."
+        description: "Any exact A1 range needed for the task, from a small neighborhood to a full relevant block."
         required: true
 
   calc_read_ranges:
     signature: "calc_read_ranges <path> <ranges_json>"
-    docstring: "Read several small addressed neighborhoods in one workbook pass. Each item uses keys sheet and range. Each range is limited to 96 cells; used-range dumps are rejected."
+    docstring: "Read several addressed ranges in one workbook pass. Each item uses keys sheet and range. The product surface has no per-range cell-count ceiling; benchmark runners may stage a bounded treatment."
     arguments:
       - name: path
         type: string
@@ -56,7 +56,7 @@ tools:
               type: string
               description: A1 range to read, for example D35:O42. Use this key; cell_range is accepted as an alias.
         argument_format: "{{ value | tojson | urlencode }}"
-        description: "Array of {sheet, range} objects, for example [{\"sheet\":\"Financials\",\"range\":\"D35:O42\"},{\"sheet\":\"Valuation\",\"range\":\"C54:L59\"}]. Each item requires keys sheet and range; cell_range is accepted as an alias for range. Each range is at most 96 cells."
+        description: "Array of {sheet, range} objects, for example [{\"sheet\":\"Financials\",\"range\":\"D35:O42\"},{\"sheet\":\"Valuation\",\"range\":\"C54:L59\"}]. Each item requires keys sheet and range; cell_range is accepted as an alias for range."
         required: true
 
   calc_compare:

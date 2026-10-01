@@ -1,0 +1,23 @@
+{
+  "A": "",
+  "B": "## Optional factual lookup\nOptional factual lookup capabilities may be available in some environments.\nIf you choose to rely on one, verify that it is available before use.\nOrdinary Python/openpyxl remains fully available.",
+  "C": "## Optional factual lookup\nOptional factual helpers are available through lx_helpers.\nAvailable functions: search(...), periods(...), inspect(...).\nYou may import them if useful. Ordinary Python/openpyxl remains fully available.",
+  "D": "## Optional factual lookup\nOptional factual helpers are available through lx_helpers.\nAvailable functions: search(...), periods(...), inspect(...).\nYou may import them if useful. Ordinary Python/openpyxl remains fully available.",
+  "D_status_local_cl100k_tokens": 15,
+  "D_status_observation": "lx_helpers availability: confirmed\nfunctions available:\nsearch\nperiods\ninspect",
+  "format": "same heading and three short factual lines in B/C/D",
+  "note_local_cl100k_tokens": {
+    "A": 0,
+    "B": 42,
+    "C": 42,
+    "D": 42
+  },
+  "placement": "append note after identical task instance; D appends a separate neutral preflight observation before first model request",
+  "preflight_command": [
+    "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+    "-c",
+    "import lx_helpers; names=('search','periods','inspect'); assert all(callable(getattr(lx_helpers,n,None)) for n in names); print('lx_helpers availability: confirmed\\nfunctions available:\\n'+'\\n'.join(names))"
+  ],
+  "preflight_stdout_sha256": "5e4d15a4a7e1228554849173354473322a79e805c6024f15962bcec90a58445d",
+  "provider_native_note_tokenization": "not exposed; record provider-reported whole first-request input separately"
+}

@@ -1,0 +1,11 @@
+{
+ "verdict": "RUNTIME_CAPABILITY_PRESERVATION_SUPPORTED",
+ "n_per_task_per_arm": 2,
+ "reps": 24,
+ "primary_statistic": {
+  "H0": 0.5,
+  "H1": 0.5
+ },
+ "runtime_failures": 0,
+ "stage_b_unlocked": true
+}

@@ -1,0 +1,32 @@
+{
+  "name": "optional-isa-sample-three",
+  "purpose": "Exploratory three-arm mechanism sample: official control, optional LibreCalc hybrid, and compulsory LibreCalc. One task per non-visual category, drawn from the already-measured deterministic control slice. This sample is development data and cannot support a performance claim; it only tests whether the semantic primitives add capability when the model retains bash/openpyxl.",
+  "model": "z-ai/glm-5.3-flash",
+  "sampling": "The middle task by sorted position within each category of control-arm-fifteen: Template:10_02, Financial_Model:13_02, Debugging:06_09. Selection is deterministic but outcomes are already known, so the sample is diagnostic rather than held-out.",
+  "arms": {
+    "A_control": "Official SpreadsheetBench 2 bash + view_xlsx + openpyxl prompt and tools.",
+    "H_hybrid": "Officially general programming plus category-specific LibreCalc observations, all deterministic LibreCalc writes, and calc_compare; LibreCalc use is optional.",
+    "S_strict": "Category-specific LibreCalc configuration with bash/view_xlsx absent; reads unbounded so known refusal failures do not confound compulsory-ISA cost."
+  },
+  "success_reading": {
+    "hybrid_beats_control": "LibreCalc adds useful capability when optional.",
+    "hybrid_beats_strict": "Compulsory loss of general programming is part of the current deficit.",
+    "hybrid_matches_control_but_is_cheaper": "The defensible benefit is efficiency, subject to quality non-inferiority in a larger run.",
+    "hybrid_does_not_help": "The current primitives or their presentation do not add measurable end-to-end value on this sample."
+  },
+  "max_tool_calls_per_task": 30,
+  "tasks": [
+    {
+      "category": "Template",
+      "id": "10_02"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "13_02"
+    },
+    {
+      "category": "Debugging",
+      "id": "06_09"
+    }
+  ]
+}

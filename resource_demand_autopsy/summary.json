@@ -1,0 +1,703 @@
+{
+  "verdict": "MULTIPLE_RESOURCE_LOSSES",
+  "model_calls": 0,
+  "workbook_writes": 0,
+  "authority": 78777,
+  "authority_sha256": "aa3b032367ae9fd0e51c80b0f2c704baddaad235dd4818cbbeac561c2da0cc48",
+  "sheet": {
+    "sheet_id": "sheet:s13",
+    "workbook_id": "wb:Financial_Model:06_01",
+    "sheet_index": 13,
+    "name": "Balancesheet Schedules",
+    "normalized_name": "balancesheet schedules",
+    "visibility": "visible",
+    "used_r1": 1,
+    "used_c1": 1,
+    "used_r2": 1000,
+    "used_c2": 80
+  },
+  "operations": [
+    {
+      "operation": "O2::op1",
+      "obligation": "O2",
+      "kind": "SET_FORMULA",
+      "intensional_target": {
+        "kind": "UNION",
+        "sets": [
+          {
+            "kind": "CELL",
+            "cell_id": "cell:s09:r100:c11"
+          },
+          {
+            "kind": "CELL",
+            "cell_id": "cell:s09:r100:c23"
+          },
+          {
+            "kind": "CELL",
+            "cell_id": "cell:s09:r100:c35"
+          },
+          {
+            "kind": "CELL",
+            "cell_id": "cell:s09:r100:c47"
+          },
+          {
+            "kind": "CELL",
+            "cell_id": "cell:s09:r100:c59"
+          }
+        ]
+      },
+      "occupancy_filter": null,
+      "raw_expansion": 5,
+      "filtered_cells": 5,
+      "ownership_after_overlap": 5,
+      "occupancy_counts": {
+        "blank": 5
+      },
+      "implicit_blank_count": 0,
+      "group_members": 0,
+      "group_canonicals": 0,
+      "sessions": 5,
+      "accepted": 0,
+      "in_any_work_request": 5,
+      "in_accepted_work_requests": 5
+    },
+    {
+      "operation": "O3::op1",
+      "obligation": "O3",
+      "kind": "FILL_FORMULA",
+      "intensional_target": {
+        "kind": "RECTANGLE",
+        "sheet_id": "sheet:s01",
+        "r1": 49,
+        "r2": 49,
+        "c1": 3,
+        "c2": 23
+      },
+      "occupancy_filter": "BLANK_ONLY",
+      "raw_expansion": 21,
+      "filtered_cells": 21,
+      "ownership_after_overlap": 21,
+      "occupancy_counts": {
+        "blank": 21
+      },
+      "implicit_blank_count": 0,
+      "group_members": 0,
+      "group_canonicals": 0,
+      "sessions": 16,
+      "accepted": 6,
+      "in_any_work_request": 21,
+      "in_accepted_work_requests": 21
+    },
+    {
+      "operation": "O4::op1",
+      "obligation": "O4",
+      "kind": "FILL_FORMULA",
+      "intensional_target": {
+        "kind": "SHEET",
+        "sheet_id": "sheet:s13"
+      },
+      "occupancy_filter": "NONFORMULA_ONLY",
+      "raw_expansion": 80000,
+      "filtered_cells": 78674,
+      "ownership_after_overlap": 78674,
+      "occupancy_counts": {
+        "blank": 78075,
+        "numeric": 558,
+        "text": 41
+      },
+      "implicit_blank_count": 7200,
+      "group_members": 1814,
+      "group_canonicals": 49,
+      "sessions": 0,
+      "accepted": 0,
+      "in_any_work_request": 7,
+      "in_accepted_work_requests": 4
+    },
+    {
+      "operation": "O5::op1",
+      "obligation": "O5",
+      "kind": "FILL_FORMULA",
+      "intensional_target": {
+        "kind": "RECTANGLE",
+        "sheet_id": "sheet:s05",
+        "r1": 31,
+        "c1": 10,
+        "r2": 31,
+        "c2": 26
+      },
+      "occupancy_filter": "BLANK_ONLY",
+      "raw_expansion": 17,
+      "filtered_cells": 17,
+      "ownership_after_overlap": 17,
+      "occupancy_counts": {
+        "blank": 17
+      },
+      "implicit_blank_count": 0,
+      "group_members": 2,
+      "group_canonicals": 1,
+      "sessions": 0,
+      "accepted": 0,
+      "in_any_work_request": 0,
+      "in_accepted_work_requests": 0
+    },
+    {
+      "operation": "O6::op1",
+      "obligation": "O6",
+      "kind": "FILL_FORMULA",
+      "intensional_target": {
+        "kind": "UNION",
+        "sets": [
+          {
+            "kind": "RECTANGLE",
+            "sheet_id": "sheet:s05",
+            "r1": 31,
+            "c1": 10,
+            "r2": 31,
+            "c2": 11
+          },
+          {
+            "kind": "RECTANGLE",
+            "sheet_id": "sheet:s05",
+            "r1": 31,
+            "c1": 13,
+            "r2": 31,
+            "c2": 26
+          }
+        ]
+      },
+      "occupancy_filter": null,
+      "raw_expansion": 16,
+      "filtered_cells": 16,
+      "ownership_after_overlap": 0,
+      "occupancy_counts": {
+        "blank": 16
+      },
+      "implicit_blank_count": 0,
+      "group_members": 2,
+      "group_canonicals": 1,
+      "sessions": 0,
+      "accepted": 0,
+      "in_any_work_request": 0,
+      "in_accepted_work_requests": 0
+    },
+    {
+      "operation": "O7::op1",
+      "obligation": "O7",
+      "kind": "SET_FORMULA",
+      "intensional_target": {
+        "kind": "CELL",
+        "cell_id": "cell:s12:r16:c11"
+      },
+      "occupancy_filter": null,
+      "raw_expansion": 1,
+      "filtered_cells": 1,
+      "ownership_after_overlap": 1,
+      "occupancy_counts": {
+        "numeric": 1
+      },
+      "implicit_blank_count": 0,
+      "group_members": 0,
+      "group_canonicals": 0,
+      "sessions": 0,
+      "accepted": 0,
+      "in_any_work_request": 0,
+      "in_accepted_work_requests": 0
+    },
+    {
+      "operation": "O7::op2",
+      "obligation": "O7",
+      "kind": "FILL_FORMULA",
+      "intensional_target": {
+        "kind": "RECTANGLE",
+        "sheet_id": "sheet:s12",
+        "r1": 16,
+        "r2": 16,
+        "c1": 12,
+        "c2": 70
+      },
+      "occupancy_filter": null,
+      "raw_expansion": 59,
+      "filtered_cells": 59,
+      "ownership_after_overlap": 59,
+      "occupancy_counts": {
+        "numeric": 59
+      },
+      "implicit_blank_count": 0,
+      "group_members": 0,
+      "group_canonicals": 0,
+      "sessions": 0,
+      "accepted": 0,
+      "in_any_work_request": 0,
+      "in_accepted_work_requests": 0
+    }
+  ],
+  "unique_group_members": 1816,
+  "program_groups": 50,
+  "residual_cells": 76961,
+  "potential_independent_units": 77011,
+  "initial_queued_units": 6,
+  "observed_distinct_decisions": 21,
+  "accepted_decisions": 6,
+  "terminal_outcomes": {
+    "PROVIDER_TIMEOUT": 12,
+    "ABSTAIN": 3,
+    "PROPOSED": 6
+  },
+  "partition_counts": {
+    "ACTIVATED_WITHOUT_EDIT": 15,
+    "ACTIVATED_ACCEPTED": 6,
+    "UNACTIVATED_RESIDUAL": 76940,
+    "UNACTIVATED_GROUP_CANONICAL": 50,
+    "UNACTIVATED_GROUP_NONCANONICAL": 1766
+  },
+  "in_any_work_request": 33,
+  "in_accepted_work_requests": 30,
+  "accepted_formula_authority_precedents": 0,
+  "not_on_direct_accepted_path": 78747,
+  "call_buckets": {
+    "FRONTEND": 7,
+    "PROVIDER_FAILURE": 28,
+    "RETRIEVAL_FOR_SEMANTIC_DECISION": 101,
+    "SEMANTIC_DECISION": 9,
+    "RESUME_DISCARDED_RETRIEVAL": 5
+  },
+  "provider_failures_by_stage": {
+    "edit_plan": 1,
+    "retrieval": 15,
+    "synthesis": 12
+  },
+  "total_calls": 150,
+  "total_cost_usd": 1.54701817185,
+  "resume_discarded_indices": [
+    111,
+    112,
+    113,
+    114,
+    115
+  ],
+  "resume_discarded_cost_usd": 0.00633863,
+  "bootstrap_field_sources": {
+    "O2": {
+      "obligation_id": {
+        "entity_ids": 0,
+        "authorised_cell_ids": 0
+      },
+      "fields": {
+        "entity_ids": 0,
+        "authorised_cell_ids": 0
+      },
+      "locus": {
+        "entity_ids": 3,
+        "authorised_cell_ids": 0
+      },
+      "subject": {
+        "entity_ids": 284,
+        "authorised_cell_ids": 0
+      },
+      "scope": {
+        "entity_ids": 378,
+        "authorised_cell_ids": 0
+      },
+      "source": {
+        "entity_ids": 0,
+        "authorised_cell_ids": 0
+      },
+      "target_cell_ids": {
+        "entity_ids": 5251,
+        "authorised_cell_ids": 5
+      },
+      "base_target_cell_ids": {
+        "entity_ids": 5251,
+        "authorised_cell_ids": 5
+      },
+      "population_member_evidence": {
+        "entity_ids": 0,
+        "authorised_cell_ids": 0
+      },
+      "output_role_evidence": {
+        "entity_ids": 0,
+        "authorised_cell_ids": 0
+      },
+      "formula_class_facts": {
+        "entity_ids": 160,
+        "authorised_cell_ids": 0
+      },
+      "dependency_facts": {
+        "entity_ids": 130,
+        "authorised_cell_ids": 0
+      },
+      "counts": {
+        "entity_ids": 0,
+        "authorised_cell_ids": 0
+      },
+      "ablation": {
+        "entity_ids": 0,
+        "authorised_cell_ids": 0
+      }
+    },
+    "O3": {
+      "obligation_id": {
+        "entity_ids": 0,
+        "authorised_cell_ids": 0
+      },
+      "fields": {
+        "entity_ids": 0,
+        "authorised_cell_ids": 0
+      },
+      "locus": {
+        "entity_ids": 3,
+        "authorised_cell_ids": 0
+      },
+      "subject": {
+        "entity_ids": 278,
+        "authorised_cell_ids": 0
+      },
+      "scope": {
+        "entity_ids": 0,
+        "authorised_cell_ids": 0
+      },
+      "source": {
+        "entity_ids": 0,
+        "authorised_cell_ids": 0
+      },
+      "target_cell_ids": {
+        "entity_ids": 7280,
+        "authorised_cell_ids": 26
+      },
+      "base_target_cell_ids": {
+        "entity_ids": 7280,
+        "authorised_cell_ids": 26
+      },
+      "population_member_evidence": {
+        "entity_ids": 0,
+        "authorised_cell_ids": 0
+      },
+      "output_role_evidence": {
+        "entity_ids": 0,
+        "authorised_cell_ids": 0
+      },
+      "formula_class_facts": {
+        "entity_ids": 160,
+        "authorised_cell_ids": 0
+      },
+      "dependency_facts": {
+        "entity_ids": 25,
+        "authorised_cell_ids": 0
+      },
+      "counts": {
+        "entity_ids": 0,
+        "authorised_cell_ids": 0
+      },
+      "ablation": {
+        "entity_ids": 0,
+        "authorised_cell_ids": 0
+      }
+    }
+  },
+  "working_set_unique_ids": 10473,
+  "working_set_id_occurrences": 156854,
+  "evidence_record_bytes": 38717242,
+  "unique_record_bytes": 2676787,
+  "duplicate_record_bytes": 36040455,
+  "lossless_record_pool_reconstruction": true,
+  "scheduler_replay": {
+    "authority_unchanged": true,
+    "edits_equal": true,
+    "dispositions_equal": true,
+    "unresolved_equal": true,
+    "model_calls": 0
+  },
+  "accepted_path_slice": {
+    "posthoc_response_conditioned": true,
+    "deployable_selector": false,
+    "sessions": 6,
+    "calls": 45,
+    "retrieval": 39,
+    "synthesis": 6,
+    "cost_usd": 0.771078542,
+    "call_indices": [
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      86,
+      87,
+      107,
+      108,
+      109,
+      144,
+      145,
+      146,
+      147,
+      148,
+      149,
+      150
+    ],
+    "omitted_post_frontend_calls": 97,
+    "authority_unchanged": true,
+    "six_formulas_reverified": true,
+    "model_choice_under_changed_prompts": "UNMEASURED",
+    "union_evidence_ids": 8761,
+    "request_bytes": 11252805,
+    "provider_failures_in_kept_paths": 2,
+    "removed_retrieval": 82,
+    "removed_synthesis": 15,
+    "kept_frontend_plus_slice_calls": 53
+  },
+  "first_unit_plus_dependencies_counterfactual": {
+    "authority_unchanged": true,
+    "retained_accepted_cells": [
+      "cell:s01:r49:c3"
+    ],
+    "lost_accepted_cells": [
+      "cell:s01:r49:c13",
+      "cell:s01:r49:c18",
+      "cell:s01:r49:c5",
+      "cell:s01:r49:c8",
+      "cell:s01:r49:c9"
+    ],
+    "accepted_dependency_units": 0,
+    "valid_six_edit_preserving_rule": false,
+    "unsampled_initial_units": "No stored responses; cannot evaluate their outcomes."
+  },
+  "writer_side_audit": [
+    {
+      "sheet": "Sales Schedule",
+      "address": "C19",
+      "formula": "=EDATE(Inputs!D7,1)",
+      "reason": "SHARED_FORMULA_MASTER: C19 is the master of shared range C19:C102",
+      "classification": "EXPECTED_WRITER_SAFETY_REJECTION",
+      "source_master_formula": "EDATE(C18,1)",
+      "source_master_attributes": {
+        "t": "shared",
+        "ref": "C19:C102",
+        "si": "4"
+      },
+      "shared_followers": 83,
+      "followers_individually_rewritten": 83,
+      "guard_reproduced": "C19 is the master of shared range C19:C102",
+      "master_preserved_in_output": true,
+      "interpretation": "Verifier permits formula semantics; writer refuses shared-master replacement to avoid orphaning followers. Explicit current contract, not stale instrumentation."
+    },
+    {
+      "sheet": "Sales Schedule",
+      "address": "L19",
+      "formula": "=D8-K19",
+      "reason": "SHARED_FORMULA_MASTER: L19 is the master of shared range L19:L102",
+      "classification": "EXPECTED_WRITER_SAFETY_REJECTION",
+      "source_master_formula": "L18-K19",
+      "source_master_attributes": {
+        "t": "shared",
+        "ref": "L19:L102",
+        "si": "5"
+      },
+      "shared_followers": 83,
+      "followers_individually_rewritten": 83,
+      "guard_reproduced": "L19 is the master of shared range L19:L102",
+      "master_preserved_in_output": true,
+      "interpretation": "Verifier permits formula semantics; writer refuses shared-master replacement to avoid orphaning followers. Explicit current contract, not stale instrumentation."
+    },
+    {
+      "sheet": "Sales Schedule",
+      "address": "M19",
+      "formula": "=F19",
+      "reason": "SHARED_FORMULA_MASTER: M19 is the master of shared range M19:M102",
+      "classification": "EXPECTED_WRITER_SAFETY_REJECTION",
+      "source_master_formula": "M18+F19",
+      "source_master_attributes": {
+        "t": "shared",
+        "ref": "M19:M102",
+        "si": "6"
+      },
+      "shared_followers": 83,
+      "followers_individually_rewritten": 83,
+      "guard_reproduced": "M19 is the master of shared range M19:M102",
+      "master_preserved_in_output": true,
+      "interpretation": "Verifier permits formula semantics; writer refuses shared-master replacement to avoid orphaning followers. Explicit current contract, not stale instrumentation."
+    }
+  ],
+  "comparison_routing_correction": {
+    "ledger_labels": {
+      "openai/gpt-5.6-sol": 92
+    },
+    "request_models": {
+      "z-ai/glm-5.3-flash": 92
+    },
+    "request_reasoning": {
+      "max": 92
+    },
+    "response_models": {
+      "z-ai/glm-5.3-flash": 88,
+      "NO_RESPONSE_MODEL": 4
+    },
+    "cost_usd": 0.74900184844,
+    "valid_GPT_comparison": false,
+    "cause": "feasibility.treatment_request_body uses its own MODEL/REASONING constants; overriding runtime.MODEL did not override wire request."
+  },
+  "serialization": {
+    "full_work_request_bytes_retained_sessions": 36994983,
+    "synthesis_evidence_bytes": 21602258,
+    "initial_bootstrap_bytes": 10845475,
+    "table_row_bytes": 18399811,
+    "unique_table_row_bytes": 1206781,
+    "duplicate_table_row_bytes": 17193030,
+    "model_token_savings_from_handle_only": null,
+    "runtime_retrieval_already_uses_delta_handles": 100,
+    "sql_calls_no_new_ids": 49,
+    "sql_calls_with_results": 101,
+    "no_new_ids_is_not_no_information": true
+  },
+  "numeric_fidelity_observations": [
+    {
+      "cell": "DCF!C51",
+      "source": {
+        "kind": "value",
+        "raw_value": 0.15
+      },
+      "archived_evidence": {
+        "address": "C51",
+        "cell_id": "cell:s01:r51:c3",
+        "col_id": "col:s01:c3",
+        "col_idx": 3,
+        "display_value": null,
+        "kind": "numeric",
+        "raw_value": null,
+        "row_id": "row:s01:r51",
+        "row_idx": 51,
+        "sheet_id": "sheet:s01"
+      }
+    },
+    {
+      "cell": "DCF!C47",
+      "source": {
+        "kind": "value",
+        "raw_value": 0.11
+      },
+      "archived_evidence": {
+        "address": "C47",
+        "cell_id": "cell:s01:r47:c3",
+        "col_id": "col:s01:c3",
+        "col_idx": 3,
+        "display_value": null,
+        "kind": "numeric",
+        "raw_value": null,
+        "row_id": "row:s01:r47",
+        "row_idx": 47,
+        "sheet_id": "sheet:s01"
+      }
+    },
+    {
+      "cell": "DCF!C48",
+      "source": {
+        "kind": "value",
+        "raw_value": 0.25
+      },
+      "archived_evidence": {
+        "address": "C48",
+        "cell_id": "cell:s01:r48:c3",
+        "col_id": "col:s01:c3",
+        "col_idx": 3,
+        "display_value": null,
+        "kind": "numeric",
+        "raw_value": null,
+        "row_id": "row:s01:r48",
+        "row_idx": 48,
+        "sheet_id": "sheet:s01"
+      }
+    }
+  ],
+  "stages": [
+    {
+      "stage": "intensional_plan_to_expanded_memberships",
+      "entering": 7,
+      "leaving": 78793,
+      "representation": "set expressions -> cell memberships",
+      "why": "SHEET/RECTANGLE/UNION expansion and occupancy filters"
+    },
+    {
+      "stage": "operation_memberships_to_unique_authority",
+      "entering": 78793,
+      "leaving": 78777,
+      "representation": "cell sets",
+      "why": "16 O6 cells overlap O5; runtime first-owner mapping gives O6 zero owned cells"
+    },
+    {
+      "stage": "authority_to_potential_semantic_units",
+      "entering": 78777,
+      "leaving": 77011,
+      "representation": "witnessed groups plus residual cell list",
+      "why": "1816 members -> 50 canonicals; 76961 residuals stay cells"
+    },
+    {
+      "stage": "potential_units_to_initial_active_queue",
+      "entering": 77011,
+      "leaving": 6,
+      "representation": "one candidate per owned operation",
+      "why": "operation-order lazy activation"
+    },
+    {
+      "stage": "queue_replenishment_to_observed_sessions",
+      "entering": 6,
+      "leaving": 21,
+      "representation": "single-cell seeds",
+      "why": "five O2 then sixteen O3 residuals; earlier operation sorts first each turn"
+    },
+    {
+      "stage": "observed_sessions_to_retrieval_attempts",
+      "entering": 21,
+      "leaving": 121,
+      "representation": "bootstrap then up to eight SQL decisions/session",
+      "why": "116 retained retrievals plus five discarded on resume"
+    },
+    {
+      "stage": "observed_sessions_to_synthesis_attempts",
+      "entering": 21,
+      "leaving": 21,
+      "representation": "complete evidence table per target",
+      "why": "one synthesis per observed seed"
+    },
+    {
+      "stage": "synthesis_to_accepted_edits",
+      "entering": 21,
+      "leaving": 6,
+      "representation": "concrete formulas",
+      "why": "12 provider timeouts; three explicit abstentions; six hard accepts"
+    },
+    {
+      "stage": "accepted_to_writer",
+      "entering": 6,
+      "leaving": 6,
+      "representation": "explicit cells/formulas",
+      "why": "no translations or dependency additions for these six seeds"
+    }
+  ]
+}

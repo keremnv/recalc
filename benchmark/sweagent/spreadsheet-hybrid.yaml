@@ -1,0 +1,96 @@
+env:
+  deployment:
+    type: docker
+    image: spreadsheetbench-v2
+    pull: never
+    docker_args:
+      - -v
+      - ../../../src:/opt/librecalc/src:ro
+
+agent:
+  type: default
+  templates:
+    system_template: |-
+      You are a spreadsheet automation engineer operating in a strict one-tool-call-at-a-time
+      loop. You have both the benchmark's general bash/openpyxl environment and deterministic
+      LibreCalc tools. Choose the surface that best expresses each part of the task. LibreCalc's
+      semantic inspection, range formula fills, recalculation, and semantic comparison are
+      optional accelerators, not restrictions. Preserve unrelated workbook content and formatting.
+
+    instance_template: |-
+      <task_context>
+      Complete the spreadsheet task and write the result to the exact Output path.
+
+      Available surfaces:
+      - bash, Python, openpyxl, pandas, and LibreOffice command-line automation;
+      - view_xlsx for the benchmark's standard workbook view;
+      - LibreCalc semantic inspection, addressed reads, compact formula fills, mixed programs,
+        recalculation, and input/output comparison.
+
+      Workflow:
+      1. Inspect the workbook with whichever read surface gives you the clearest relevant facts.
+      2. Use focused or batched reads to resolve the task. LibreCalc candidate fields are
+         heuristics, not requirements, and may be ignored.
+      3. Decide the exact required changes and preserve everything unrelated.
+      4. Execute with Python/openpyxl or LibreCalc. Prefer calc_fill_formulas for repeated formula
+         ranges and calc_program for compact mixed edits; use general code when the bounded
+         operations would make the task harder or less expressive.
+      5. Verify the output. calc_compare is available even when Python performed the write.
+      6. Submit only after the exact Output path exists.
+
+      Never edit the read-only Input in place. After a LibreCalc write creates Output, further
+      LibreCalc writes must use Output as their source. Do not inspect directories or guess sibling
+      workbook paths; only the exact Input and Output paths in this task exist.
+      </task_context>
+
+      <instructions>
+      {{instruction}}
+
+      Input: {{spreadsheet_path}}
+      Output: {{output_path}}
+      </instructions>
+
+    history_processors:
+      - type: cache_control
+        last_n_messages: 2
+
+    next_step_template: |-
+      Observation:
+      {{observation}}
+
+    next_step_no_output_template: |-
+      The last command produced no output.
+
+    strategy_template: null
+    demonstration_template: null
+    put_demos_in_history: false
+    max_observation_length: 100000
+
+    next_step_truncated_observation_template: |-
+      <warning>The observation was truncated.</warning>
+      <observation_head>{{observation[ : max_observation_length // 2]}}</observation_head>
+      <elided_chars>{{elided_chars}} characters elided</elided_chars>
+      <observation_tail>{{observation[- max_observation_length // 2:]}}</observation_tail>
+
+    command_cancelled_timeout_template: |-
+      The command '{{command}}' exceeded the {{timeout}} second timeout.
+
+  tools:
+    enable_bash_tool: true
+    execution_timeout: 60
+    max_consecutive_execution_timeouts: 3
+    bundles:
+      - path: ../../../benchmark/sweagent/librecalc
+      - path: tools/submit
+      - path: tools/view_xlsx
+    parse_function:
+      type: function_calling
+    env_variables:
+      PIP_PROGRESS_BAR: "off"
+      LIBRECALC_SOURCE_ROOT: /opt/librecalc/src
+      LIBRECALC_TOOL_ROOT: /root/tools/librecalc
+      LIBRECALC_OBSERVATION_VARIANT: grid-v1
+
+  model:
+    per_instance_cost_limit: 0
+    per_instance_call_limit: 50

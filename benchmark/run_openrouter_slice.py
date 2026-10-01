@@ -48,7 +48,57 @@ DEFAULT_SWEAGENT_ROOT = DEFAULT_BENCHMARK_ROOT / "SWE-agent"
 DEFAULT_CONFIG = PROJECT_ROOT / "benchmark" / "sweagent" / "spreadsheet.yaml"
 CONTROL_CONFIG = PROJECT_ROOT / "benchmark" / "sweagent" / "spreadsheet-control.yaml"
 CONTROL_INDEX_CONFIG = PROJECT_ROOT / "benchmark" / "sweagent" / "spreadsheet-control-index.yaml"
+CONTROL_AMBIENT_CONFIG = PROJECT_ROOT / "benchmark" / "sweagent" / "spreadsheet-control-ambient.yaml"
+CONTROL_COMPILED_CONTEXT_CONFIG = (
+    PROJECT_ROOT / "benchmark" / "sweagent" / "spreadsheet-control-compiled-context.yaml"
+)
+CONTROL_COMPILED_CONTEXT_FORCED_CONFIG = (
+    PROJECT_ROOT / "benchmark" / "sweagent" / "spreadsheet-control-compiled-context-forced.yaml"
+)
+CONTROL_TRANSLATE_FILL_CONFIG = (
+    PROJECT_ROOT / "benchmark" / "sweagent" / "spreadsheet-control-translate-fill.yaml"
+)
 HYBRID_CONFIG = PROJECT_ROOT / "benchmark" / "sweagent" / "spreadsheet-hybrid.yaml"
+
+
+def _official_surface_arm(
+    args: argparse.Namespace | None = None,
+    *,
+    control: bool = False,
+    control_index: bool = False,
+    control_ambient: bool = False,
+    control_compiled_context: bool = False,
+    control_translate_fill: bool = False,
+) -> bool:
+    if args is not None:
+        control = bool(getattr(args, "control", False))
+        control_index = bool(getattr(args, "control_index", False))
+        control_ambient = bool(getattr(args, "control_ambient", False))
+        control_compiled_context = bool(getattr(args, "control_compiled_context", False)) or bool(
+            getattr(args, "control_compiled_context_forced", False)
+        )
+        control_translate_fill = bool(getattr(args, "control_translate_fill", False))
+    return control or control_index or control_ambient or control_compiled_context or control_translate_fill
+
+
+def _arm_name(args: argparse.Namespace) -> str:
+    if getattr(args, "control", False):
+        return "control"
+    if getattr(args, "control_index", False):
+        return "control-index"
+    if getattr(args, "control_ambient", False):
+        return "control-ambient"
+    if getattr(args, "control_compiled_context_forced", False):
+        return "control-compiled-context-forced"
+    if getattr(args, "control_compiled_context", False):
+        return "control-compiled-context"
+    if getattr(args, "control_translate_fill", False):
+        return "control-translate-fill"
+    if getattr(args, "hybrid", False):
+        return "hybrid"
+    return "librecalc"
+
+
 DEFAULT_MODEL = "moonshotai/kimi-k2.7-code"
 SUPPORTED_OBSERVATIONS = (
     "grid-v1",
@@ -117,6 +167,41 @@ def _arguments() -> argparse.Namespace:
         help=(
             "Control harness plus the read-only formula_index tool. Same bash/view_xlsx/submit "
             "surface and observation cap as --control; no LibreCalc tools or read budget."
+        ),
+    )
+    parser.add_argument(
+        "--control-ambient",
+        action="store_true",
+        help=(
+            "Control harness whose first view_xlsx content inspection is appended with "
+            "unranked formula-equivalence metadata for formulas already in that window. "
+            "Same prompt, bash, submit, and budgets as --control; the agent does not call "
+            "formula_index."
+        ),
+    )
+    parser.add_argument(
+        "--control-compiled-context",
+        action="store_true",
+        help=(
+            "Control harness plus the optional read-only calc_query compiled-context tool. "
+            "Same bash/view_xlsx/submit surface and budgets as --control; no Task IR, "
+            "scheduler, or write authority."
+        ),
+    )
+    parser.add_argument(
+        "--control-compiled-context-forced",
+        action="store_true",
+        help=(
+            "Same calc_query sidecar as --control-compiled-context, but the prompt requires "
+            "calling it before any workbook modification."
+        ),
+    )
+    parser.add_argument(
+        "--control-translate-fill",
+        action="store_true",
+        help=(
+            "Control harness plus optional calc_translate_fill. Same bash/view_xlsx/submit "
+            "surface as --control; the model still chooses targets and formulas."
         ),
     )
     parser.add_argument(
@@ -326,7 +411,7 @@ def _tool_choice(model: dict[str, Any]) -> str:
     # These advertise tools but reject tool_choice=required ("only auto is supported" /
     # "Tool choice must be auto"). SWE-agent still requires one tool per turn in the prompt.
     model_id = str(model.get("id") or "")
-    if "muse-spark-1.2" in model_id or "glm-5.3" in model_id:
+    if "muse-spark-1.2" in model_id or "muse-spark-1.3" in model_id or "glm-5.3" in model_id:
         return "auto"
     return "required"
 
@@ -345,6 +430,11 @@ def _completion_kwargs(args: argparse.Namespace, model: dict[str, Any]) -> dict[
     kwargs: dict[str, Any] = {
         "input_cost_per_token": model["safety_prompt_price_per_token"],
         "output_cost_per_token": model["safety_completion_price_per_token"],
+        # Fresh max-reasoning matched/resource probes freeze the OpenRouter
+        # policy explicitly.  SWE-agent passes top_p as its model-config field;
+        # putting it in completion_kwargs as well would pass the same provider
+        # keyword twice through LiteLLM.
+        "provider": {"allow_fallbacks": True, "require_parameters": True},
         # Every SWE-agent turn must execute exactly one tool. Enforce the first half of that
         # contract at the provider boundary instead of paying for a no-tool repair response.
         "tool_choice": tool_choice,
@@ -657,6 +747,9 @@ def _stage_tool_policy(
     commit_gate: bool = False,
     control: bool = False,
     control_index: bool = False,
+    control_ambient: bool = False,
+    control_compiled_context: bool = False,
+    control_translate_fill: bool = False,
     unbounded_reads: bool = False,
     hybrid: bool = False,
 ) -> Path:
@@ -669,8 +762,27 @@ def _stage_tool_policy(
         if not bundle_path.is_absolute():
             bundle_path = (sweagent_root / bundle_path).resolve()
         bundle_config["path"] = str(bundle_path)
-    if control or control_index:
+    if control or control_index or control_ambient or control_compiled_context or control_translate_fill:
         # Official-surface arms: absolutize bundle paths only. Do not rewrite the prompt.
+        if control_compiled_context or control_translate_fill:
+            deployment = config.setdefault("env", {}).setdefault("deployment", {})
+            docker_args = list(deployment.get("docker_args") or [])
+            mounts = [
+                str(PROJECT_ROOT / "src"),
+                "/opt/librecalc/src:ro",
+                str(PROJECT_ROOT / "benchmark"),
+                "/opt/librecalc/benchmark:ro",
+            ]
+            if control_compiled_context:
+                host_cache = os.environ.get("CALC_QUERY_HOST_CACHE") or str(
+                    Path(tempfile.gettempdir()) / "calc_query_cache"
+                )
+                Path(host_cache).mkdir(parents=True, exist_ok=True)
+                mounts.extend([host_cache, "/opt/librecalc/calc_query_cache"])
+            extra: list[str] = []
+            for index in range(0, len(mounts), 2):
+                extra.extend(["-v", f"{mounts[index]}:{mounts[index + 1]}"])
+            deployment["docker_args"] = extra + docker_args
         staged = temporary_root / source_config.name
         staged.write_text(yaml.safe_dump(config, sort_keys=False), encoding="utf-8")
         return staged
@@ -1097,17 +1209,17 @@ def _run_contract(
     config = yaml.safe_load(staged_config.read_text(encoding="utf-8"))
     effective = {
         "task": task_key,
-        "arm": (
-            "control"
-            if getattr(args, "control", False)
-            else "control-index"
-            if getattr(args, "control_index", False)
-            else "hybrid"
-            if getattr(args, "hybrid", False)
-            else "librecalc"
-        ),
+        "arm": _arm_name(args),
         "model": args.model,
         "model_catalog_id": model_preflight["id"],
+        # ModelConfig supplies this explicit request field to LiteLLM.  Keep it
+        # in the durable contract without also placing it in completion_kwargs
+        # (which would pass the keyword twice).
+        "top_p": 1.0,
+        "temperature": 0.0,
+        "declared_model": args.model,
+        "request_model": f"openrouter/{args.model}",
+        "tool_choice": completion_kwargs.get("tool_choice"),
         "provider_policy": completion_kwargs.get("provider", {"allow_fallbacks": True}),
         "reasoning_effort": args.reasoning_effort,
         "observation_variant": args.observation,
@@ -1285,6 +1397,12 @@ def _run_task(
             commit_gate=bool(getattr(args, "commit_gate", False)),
             control=bool(getattr(args, "control", False)),
             control_index=bool(getattr(args, "control_index", False)),
+            control_ambient=bool(getattr(args, "control_ambient", False)),
+            control_compiled_context=bool(
+                getattr(args, "control_compiled_context", False)
+                or getattr(args, "control_compiled_context_forced", False)
+            ),
+            control_translate_fill=bool(getattr(args, "control_translate_fill", False)),
             unbounded_reads=bool(getattr(args, "unbounded_reads", False)),
             hybrid=bool(getattr(args, "hybrid", False)),
         )
@@ -1298,6 +1416,12 @@ def _run_task(
         )
         control = bool(getattr(args, "control", False))
         control_index = bool(getattr(args, "control_index", False))
+        control_ambient = bool(getattr(args, "control_ambient", False))
+        control_compiled_context = bool(
+            getattr(args, "control_compiled_context", False)
+            or getattr(args, "control_compiled_context_forced", False)
+        )
+        control_translate_fill = bool(getattr(args, "control_translate_fill", False))
         env_variables = {
             "PIP_PROGRESS_BAR": "off",
             "LIBRECALC_SOURCE_ROOT": "/opt/librecalc/src",
@@ -1318,10 +1442,16 @@ def _run_task(
             # LibreCalc arms therefore request the historical ceiling explicitly.
             "LIBRECALC_READ_MAX_CELLS": ("none" if args.read_policy == "thin" else "96"),
         }
-        if control or control_index:
+        if control or control_index or control_ambient or control_compiled_context or control_translate_fill:
             # No LibreCalc tool reads these, and leaving them set would make a control
             # trajectory look like it had an interface it never had.
             env_variables = {"PIP_PROGRESS_BAR": "off"}
+            if control_compiled_context:
+                env_variables["CALC_QUERY_CACHE_ROOT"] = "/opt/librecalc/calc_query_cache"
+            if control_translate_fill:
+                env_variables["CALC_TRANSLATE_FILL_LEDGER"] = (
+                    "/mnt/spreadsheet_output/.calc_translate_fill_ledger.jsonl"
+                )
         if args.preserve_populated and category != "Debugging":
             env_variables["LIBRECALC_PRESERVE_POPULATED"] = "1"
         if args.observation in {"formula-anomalies-v1", "format-conventions-v1"}:
@@ -1337,7 +1467,7 @@ def _run_task(
                 "/mnt/spreadsheet_output/.librecalc_read_budget.json"
             )
             env_variables["LIBRECALC_INSPECTION_LIMIT"] = "2"
-        if getattr(args, "unbounded_reads", False) and not control and not control_index:
+        if getattr(args, "unbounded_reads", False) and not control and not control_index and not control_ambient and not control_compiled_context and not control_translate_fill:
             # The ceiling and the budget are the two ways the interface refuses a read. The
             # 297 spent 19.7% of its calls on refusals, and a single oversized first read
             # sets write_now and locks the model out of reading at all, so both come off
@@ -1465,15 +1595,7 @@ def _run_task(
         "model": args.model,
         # The control arm has no observation or execution variant. The fields stay for schema
         # stability but carry the flag's answer, so a mixed ledger cannot be misread.
-        "arm": (
-            "control"
-            if getattr(args, "control", False)
-            else "control-index"
-            if getattr(args, "control_index", False)
-            else "hybrid"
-            if getattr(args, "hybrid", False)
-            else "librecalc"
-        ),
+        "arm": _arm_name(args),
         "observation_variant": args.observation,
         "blank_bridges": bool(getattr(args, "blank_bridges", True)),
         "read_budget": env_variables.get("LIBRECALC_READ_BUDGET_ENABLED") == "1",
@@ -1532,6 +1654,14 @@ def _apply_arm_config(args: argparse.Namespace) -> argparse.Namespace:
         args.config = CONTROL_CONFIG
     if getattr(args, "control_index", False) and args.config == DEFAULT_CONFIG:
         args.config = CONTROL_INDEX_CONFIG
+    if getattr(args, "control_ambient", False) and args.config == DEFAULT_CONFIG:
+        args.config = CONTROL_AMBIENT_CONFIG
+    if getattr(args, "control_compiled_context_forced", False) and args.config == DEFAULT_CONFIG:
+        args.config = CONTROL_COMPILED_CONTEXT_FORCED_CONFIG
+    if getattr(args, "control_compiled_context", False) and args.config == DEFAULT_CONFIG:
+        args.config = CONTROL_COMPILED_CONTEXT_CONFIG
+    if getattr(args, "control_translate_fill", False) and args.config == DEFAULT_CONFIG:
+        args.config = CONTROL_TRANSLATE_FILL_CONFIG
     if getattr(args, "hybrid", False) and args.config == DEFAULT_CONFIG:
         args.config = HYBRID_CONFIG
     return args
@@ -1562,6 +1692,42 @@ def main() -> int:
         raise ValueError("--control-index and --control are mutually exclusive")
     if getattr(args, "control_index", False) and getattr(args, "hybrid", False):
         raise ValueError("--control-index and --hybrid are mutually exclusive")
+    if getattr(args, "control_ambient", False) and getattr(args, "control", False):
+        raise ValueError("--control-ambient and --control are mutually exclusive")
+    if getattr(args, "control_ambient", False) and getattr(args, "control_index", False):
+        raise ValueError("--control-ambient and --control-index are mutually exclusive")
+    if getattr(args, "control_ambient", False) and getattr(args, "hybrid", False):
+        raise ValueError("--control-ambient and --hybrid are mutually exclusive")
+    if getattr(args, "control_compiled_context_forced", False) and getattr(args, "control", False):
+        raise ValueError("--control-compiled-context-forced and --control are mutually exclusive")
+    if getattr(args, "control_compiled_context_forced", False) and getattr(args, "control_index", False):
+        raise ValueError("--control-compiled-context-forced and --control-index are mutually exclusive")
+    if getattr(args, "control_compiled_context_forced", False) and getattr(args, "control_ambient", False):
+        raise ValueError("--control-compiled-context-forced and --control-ambient are mutually exclusive")
+    if getattr(args, "control_compiled_context_forced", False) and getattr(args, "control_compiled_context", False):
+        raise ValueError("--control-compiled-context-forced and --control-compiled-context are mutually exclusive")
+    if getattr(args, "control_compiled_context_forced", False) and getattr(args, "hybrid", False):
+        raise ValueError("--control-compiled-context-forced and --hybrid are mutually exclusive")
+    if getattr(args, "control_compiled_context", False) and getattr(args, "control", False):
+        raise ValueError("--control-compiled-context and --control are mutually exclusive")
+    if getattr(args, "control_compiled_context", False) and getattr(args, "control_index", False):
+        raise ValueError("--control-compiled-context and --control-index are mutually exclusive")
+    if getattr(args, "control_compiled_context", False) and getattr(args, "control_ambient", False):
+        raise ValueError("--control-compiled-context and --control-ambient are mutually exclusive")
+    if getattr(args, "control_compiled_context", False) and getattr(args, "hybrid", False):
+        raise ValueError("--control-compiled-context and --hybrid are mutually exclusive")
+    if getattr(args, "control_translate_fill", False) and getattr(args, "control", False):
+        raise ValueError("--control-translate-fill and --control are mutually exclusive")
+    if getattr(args, "control_translate_fill", False) and getattr(args, "control_index", False):
+        raise ValueError("--control-translate-fill and --control-index are mutually exclusive")
+    if getattr(args, "control_translate_fill", False) and getattr(args, "control_ambient", False):
+        raise ValueError("--control-translate-fill and --control-ambient are mutually exclusive")
+    if getattr(args, "control_translate_fill", False) and getattr(args, "control_compiled_context", False):
+        raise ValueError("--control-translate-fill and --control-compiled-context are mutually exclusive")
+    if getattr(args, "control_translate_fill", False) and getattr(args, "control_compiled_context_forced", False):
+        raise ValueError("--control-translate-fill and --control-compiled-context-forced are mutually exclusive")
+    if getattr(args, "control_translate_fill", False) and getattr(args, "hybrid", False):
+        raise ValueError("--control-translate-fill and --hybrid are mutually exclusive")
     if args.read_policy == "overview-only" and not args.observation.startswith(
         "semantic-snapshot-"
     ):

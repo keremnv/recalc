@@ -1,0 +1,32 @@
+{
+  "name": "default-harness-closure-transfer-audit",
+  "model_calls": 0,
+  "provider_inference": false,
+  "architecture": "loose default SpreadsheetBench coding-agent harness; no Task IR; no Edit Plan",
+  "closure_rule": "C1 input-side OFFSET-aware ancestors of the proposed formula's direct precedents",
+  "keep_set": "blank-on-input ∪ AUTHORED_CELL_SET (Edit-Plan-free analogue of required edits; never gold)",
+  "authority_invariant": "execution_unit(seed) = D(seed) ∩ AUTHORED_CELL_SET; never add missing members",
+  "primary_population": [
+    "Financial_Model:08_03",
+    "Financial_Model:08_04",
+    "Financial_Model:08_05",
+    "Financial_Model:15_04",
+    "Financial_Model:08_02",
+    "Financial_Model:08_01",
+    "Template:06_09",
+    "Template:06_16",
+    "Debugging:10_04"
+  ],
+  "expansion_rule": "if FORMULA_CORRECT_VALUE_WRONG seeds < 5, expand once to glm-5.3-flash-control-census-sixty-1",
+  "excluded": [
+    "Debugging:10_02 resource-censored",
+    "Visualization",
+    "C1 calc-fill prompt arm"
+  ],
+  "gold_policy": "evaluator gold loaded only after mutation reconstruction freeze; never used to construct D(seed) or choose replay edits",
+  "replay": {
+    "R0": "original mutation order via trajectory script replay",
+    "R1": "identical authored content in dependency order"
+  },
+  "written_at": "2026-09-16T20:48:18.193104+00:00"
+}

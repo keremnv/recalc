@@ -1,0 +1,10 @@
+{
+  "observed": "Public RC created fresh UUID run directory and rebuilt index on both invocations with identical workbook bytes and same XDG_CACHE_HOME. No supported warm preparation exists.",
+  "preregistered": {
+    "failure_stop_verdict": "WARM_PRODUCT_STATE_NOT_SUPPORTED_BY_RC",
+    "procedure": "Copy exact prior workload script and workbook into one workdir; invoke public RC twice with same workdir and XDG_CACHE_HOME; do not mutate workbook; inspect per-run summaries and manifests for run IDs, rebuilt flags, DB paths, acceleration contact, and output equality. Probe timings are not scored.",
+    "success_rule": "Second public invocation must use preexisting index without rebuild and without internal manifest/env overrides.",
+    "workload_id": "Template_03_03__c76ea596b408"
+  },
+  "status": "FAILED_FEASIBILITY_GATE"
+}

@@ -1,0 +1,35 @@
+{
+  "accelerated_loads": [
+    1,
+    1
+  ],
+  "code_path": {
+    "config": "src/librecalc_agent/config.py:36-38",
+    "runner": "src/librecalc_agent/runner.py:36-79",
+    "substrate": "src/librecalc_agent/_frozen/substrate.py:24-65"
+  },
+  "conclusion": "Public RC neither discovers nor reuses prior invocation index. Second run rebuilt in a new UUID directory.",
+  "db_paths": [
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/cache/librecalc-agent/runs/a3fb8dd6102e4cf98a8c745b845c477c/index/3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b.sqlite",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/cache/librecalc-agent/runs/32c833ca8ad844f698ae4856a66ee685/index/3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b.sqlite"
+  ],
+  "different_db_paths": true,
+  "different_run_directories": true,
+  "manifest_paths": [
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/cache/librecalc-agent/runs/a3fb8dd6102e4cf98a8c745b845c477c/index/manifest.json",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/cache/librecalc-agent/runs/32c833ca8ad844f698ae4856a66ee685/index/manifest.json"
+  ],
+  "rebuilt_flags": [
+    true,
+    true
+  ],
+  "run_ids": [
+    "a3fb8dd6102e4cf98a8c745b845c477c",
+    "32c833ca8ad844f698ae4856a66ee685"
+  ],
+  "same_cache": true,
+  "same_workbook_sha256": true,
+  "status": "FAILED",
+  "workbook_unchanged_each_run": true,
+  "workload_id": "Template_03_03__c76ea596b408"
+}

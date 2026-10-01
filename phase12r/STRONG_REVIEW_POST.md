@@ -1,0 +1,14 @@
+# Gate C disposition
+
+Independent review is preserved verbatim in STRONG_REVIEW_POST_RAW.md. All post-review freeze and primary interpretation hashes were checked. The reviewer used the requested inherited gpt-6-astra selection, without attestation of backend identity/strength. It wrote only its review; no output entered treatment. PRIMARY_ANALYSIS.md and all primary results/classifications remain unchanged.
+
+Accepted qualifications:
+
+- C is the preregistered **no demonstrated material baseline alteration** decision for retained archived ordinary submissions, not proof of absence in unresolved/unretained submissions or invariance to repeated recalc. No broad/narrow P1 recovery threshold was met.
+- Selective historical score qualifications are warranted; no retained task/run-specific semantic-failure diagnosis was verified as refuted. Recorded cost/tool/runtime facts survive; score-dependent utility/quality-per-token conclusions need separate endpoint linkage.
+- Final evaluator answer: **YES — RECOMMENDED BUT NARROW**. Retain the existing ordinary archive refresh and prescribe one equal calculation boundary for compatible research endpoints intended to measure evaluated formula behavior. A RECALC_PASS or score gain does not certify engine/reference compatibility; universal necessary/sufficient LibreOffice fairness is not established. The strongest numerical signal is in Template research candidates. The pre-review proposed stronger REQUIRED wording is preserved in the frozen primary analysis and policy snapshot rather than rewritten retroactively.
+- **ADD RECALC BEFORE EVALUATION ONLY** is the minimum policy supported by fixed-output evidence, not tested superiority or optimal placement. Additional submission/readback value remains untested; delivery quality is a distinct evaluation target. Preserve an already working archive refresh rather than infer duplicate exports are harmless.
+- Macro comparison:310 rows/306 unique V0 bytes, including4 nonsubmitted supplements;309 successful confirmations,1 unscorable Financial_Model:06_01 with native golden unbound-prefix failure. Formula/cache/captured semantics match in all310; two error/zero tuples are not a confirmed successful score comparison. Mode4 remains the main treatment.
+- Clarify frozen primary-analysis shorthand:39/168 excludes Phase12 only (other discovery cohorts remain); one raw-byte-identical case refers to cell formula content, not whole-workbook bytes. Nine score qualifications are not nine overturned architectural diagnoses.
+
+No reviewer recommendation was rejected. Policy/history documents receive additive final qualifications with before-review versions preserved. The report's final recommendation follows these qualifications; no workbook, scorer, threshold, population, interpretation ledger class or original historical result changes. The single bounded follow-up is consumed; no new probe or model experiment follows in this phase.

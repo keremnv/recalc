@@ -67,7 +67,6 @@ def begin_inspection() -> str | None:
         {
             "remaining": 1,
             "inspections": used + 1,
-            "write_now": bool(state.get("write_now")),
         },
     )
     return None
@@ -81,8 +80,7 @@ def read_budget_error() -> str | None:
         return None
     state = _load_state(path)
     remaining = int(state.get("remaining", 0))
-    write_now = bool(state.get("write_now"))
-    if remaining <= 0 or write_now:
+    if remaining <= 0:
         return (
             "Read budget exhausted after inspect. Use calc_fill_formulas or calc_program "
             "to write from inspect; further calc_read / calc_read_ranges calls are blocked "
@@ -94,9 +92,8 @@ def read_budget_error() -> str | None:
 def consume_read_budget(*, successful: bool = True) -> None:
     """Spend the post-inspect confirmation slot only when a neighborhood read succeeds.
 
-    Oversized dumps used to consume the slot and then format-exit (Debugging 05_03
-    low-4). A failed dump now keeps remaining=1 but sets write_now so the next read
-    is blocked and the model must write from inspect.
+    A rejected oversized request reveals no workbook content, so it must not spend or lock
+    the only confirmation slot. The caller can retry once with a valid range.
     """
 
     if not read_budget_enabled():
@@ -107,7 +104,4 @@ def consume_read_budget(*, successful: bool = True) -> None:
     state = _load_state(path)
     if successful:
         state["remaining"] = max(0, int(state.get("remaining", 0)) - 1)
-        state["write_now"] = False
-    else:
-        state["write_now"] = True
-    _save_state(path, state)
+        _save_state(path, state)

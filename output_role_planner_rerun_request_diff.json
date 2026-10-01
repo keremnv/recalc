@@ -1,0 +1,21 @@
+{
+  "request_body_shared_config_equal": true,
+  "shared_config_keys": [
+    "model",
+    "temperature",
+    "top_p",
+    "reasoning",
+    "provider",
+    "max_tokens"
+  ],
+  "system_prompt_equal": true,
+  "user_content_changed": true,
+  "changed_request_components": [
+    "messages[1].content"
+  ],
+  "control_request_sha256": "95e7ed3736a9980c493f742b2eb4ac5beebcdd3a43a299f8d4b5ea9356fb1de8",
+  "treatment_request_sha256": "2f79c5c6ee9f38984da52913b7ee2eeb3f1755924d1dffbaf13f78173e2e5570",
+  "control_user_payload_sha256": "cf3fdb3795eb92ca688bd2bfe14e64a15270da8b573ed5a101d5bdde8d0f23f4",
+  "treatment_user_payload_sha256": "d318af7db711712e70038e4deb7f0f70d538a7e942c376c14df0bbc6784e2fb8",
+  "non_user_request_components_equal": true
+}

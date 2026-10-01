@@ -1,0 +1,138 @@
+[
+ {
+  "task_id": "Debugging:03_06",
+  "family": "Debugging",
+  "reasons": [
+   "output_mismatch",
+   "mod_delta_0.966",
+   "reg_delta_1.000"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.0,
+   "official_regression": 0.0,
+   "output_produced": false,
+   "run_status": "PROVIDER_CENSORED"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.9656,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "NO_SUBMIT"
+  }
+ },
+ {
+  "task_id": "Financial_Model:11_02",
+  "family": "Financial_Model",
+  "reasons": [
+   "output_mismatch",
+   "mod_delta_0.980",
+   "reg_delta_1.000"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.9796,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.0,
+   "official_regression": 0.0,
+   "output_produced": false,
+   "run_status": "PROVIDER_CENSORED"
+  }
+ },
+ {
+  "task_id": "Template:01_05",
+  "family": "Template",
+  "reasons": [
+   "mod_delta_0.133"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.4667,
+   "official_regression": 0.9513,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.3333,
+   "official_regression": 0.9513,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  }
+ },
+ {
+  "task_id": "Template:06_02",
+  "family": "Template",
+  "reasons": [
+   "output_mismatch",
+   "mod_delta_0.500",
+   "reg_delta_0.987"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.5,
+   "official_regression": 0.9868,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.0,
+   "official_regression": 0.0,
+   "output_produced": false,
+   "run_status": "PROVIDER_CENSORED"
+  }
+ },
+ {
+  "task_id": "Template:16_07",
+  "family": "Template",
+  "reasons": [
+   "output_mismatch",
+   "mod_delta_0.901",
+   "reg_delta_0.992"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.9008,
+   "official_regression": 0.9921,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.0,
+   "official_regression": 0.0,
+   "output_produced": false,
+   "run_status": "NO_SUBMIT"
+  }
+ },
+ {
+  "task_id": "Template:16_08",
+  "family": "Template",
+  "reasons": [
+   "output_mismatch",
+   "mod_delta_0.476",
+   "reg_delta_1.000"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.0,
+   "official_regression": 0.0,
+   "output_produced": false,
+   "run_status": "PROVIDER_CENSORED"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.4762,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "PROVIDER_CENSORED"
+  }
+ }
+]

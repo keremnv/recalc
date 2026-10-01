@@ -1,0 +1,6 @@
+{
+  "candidate_B": "remain frozen",
+  "experiment": "instrumented identical-interface Candidate-A checkpoint with a larger exposure-enriched population and direct per-load/read timing; preserve conservative fallback and do not add model-facing functionality",
+  "no_new_helpers": true,
+  "reason": "primary live contact reached only 2 independent tasks and the runner measured deterministic tool walltime rather than isolated workbook-read/open time"
+}

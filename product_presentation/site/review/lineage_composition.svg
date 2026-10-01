@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 200" font-family="system-ui, -apple-system, sans-serif" role="img">
+<desc>Live H1 task-time composition: model and network wait dominate.</desc>
+<text x="12" y="22" font-size="15" font-weight="600" fill="#111">Live task time, summed over the checkpoint (seconds)</text>
+<text x="12" y="40" font-size="12" fill="#555">exact-trace savings measure the read backend only — a sliver of task time, not end-to-end speedup</text>
+<rect x="12" y="78" width="258.7" height="34" fill="#333"/>
+<rect x="270.7" y="78" width="301.3" height="34" fill="#ddd"/>
+<text x="20" y="100" font-size="13" fill="#fff">model/network wait 2,629s (46.2%)</text>
+<text x="278.7" y="100" font-size="13" fill="#111">everything else 3,062s</text>
+<text x="12" y="150" font-size="12" fill="#555">Total 5,691s across live H1 runs. Read-trace savings (median 1.4s/trace on 51 replays) sit inside the "everything else" slice.</text>
+<text x="12" y="170" font-size="12" fill="#555">Candidate-A era, 12-task checkpoint rerun — not rc2, not a task-time claim.</text>
+</svg>

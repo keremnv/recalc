@@ -1,0 +1,12 @@
+{
+  "hashes": {
+    "eligible_population.json": "b6be87f570bfd33c499038526a45b8624d7752531a79dda29a55bd9cddbcf1a8",
+    "preregistered_spec.json": "a05a71536fcc1c56aa9164ab32824116f9c05d412551308370c1944dbe7987b5",
+    "raw_timings.jsonl": "bcc30f09e0c56f10a71278a9a4f038caa949828281da61d35beaaaae7f0d8497",
+    "representative_population.json": "efc5d8c2e553ab0af90d18d45e1326817e55178a5d521fec23bde5c0c43504f5",
+    "spec_hash.json": "49420fb790b5e5eb2c694be3abdbb2bbcb52cef0948e485fcff6f4e8b989d30f",
+    "workload_manifest.json": "4d2f9ea32dce55c12f3f7e44696177979c781f32e565f0dd5c5c857e847fb3d9"
+  },
+  "phase": "PRIMARY_RAW_FROZEN_PRE_ANALYSIS",
+  "raw_rows": 384
+}

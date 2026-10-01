@@ -1,0 +1,50 @@
+{
+ "positive": false,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [],
+   "count": 0
+  },
+  "CHG": {
+   "changed_cells": 27,
+   "sheets": 1,
+   "regions": [
+    "EPS_Accretion!C24",
+    "EPS_Accretion!C25",
+    "EPS_Accretion!C28",
+    "EPS_Accretion!C29",
+    "EPS_Accretion!C30",
+    "EPS_Accretion!C31",
+    "EPS_Accretion!C32",
+    "EPS_Accretion!C33",
+    "EPS_Accretion!C34",
+    "EPS_Accretion!C35",
+    "EPS_Accretion!C38",
+    "EPS_Accretion!C39",
+    "EPS_Accretion!C40",
+    "EPS_Accretion!D24",
+    "EPS_Accretion!D25",
+    "EPS_Accretion!D28",
+    "EPS_Accretion!D29",
+    "EPS_Accretion!D30",
+    "EPS_Accretion!D31",
+    "EPS_Accretion!D32"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": null,
+ "positive_families": []
+}

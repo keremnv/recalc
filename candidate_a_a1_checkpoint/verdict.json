@@ -1,0 +1,8 @@
+{
+  "censored_runs": 1,
+  "contact_tasks": [],
+  "reason": "insufficient valid paired live evidence",
+  "unstarted_runs": 22,
+  "valid_completed_primary_runs": 1,
+  "verdict": "PROVIDER_OR_RUNNER_CENSORED"
+}

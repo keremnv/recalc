@@ -1,0 +1,56 @@
+[
+  {
+    "sheet": "Sales Schedule",
+    "address": "C19",
+    "formula": "=EDATE(Inputs!D7,1)",
+    "reason": "SHARED_FORMULA_MASTER: C19 is the master of shared range C19:C102",
+    "classification": "EXPECTED_WRITER_SAFETY_REJECTION",
+    "source_master_formula": "EDATE(C18,1)",
+    "source_master_attributes": {
+      "t": "shared",
+      "ref": "C19:C102",
+      "si": "4"
+    },
+    "shared_followers": 83,
+    "followers_individually_rewritten": 83,
+    "guard_reproduced": "C19 is the master of shared range C19:C102",
+    "master_preserved_in_output": true,
+    "interpretation": "Verifier permits formula semantics; writer refuses shared-master replacement to avoid orphaning followers. Explicit current contract, not stale instrumentation."
+  },
+  {
+    "sheet": "Sales Schedule",
+    "address": "L19",
+    "formula": "=D8-K19",
+    "reason": "SHARED_FORMULA_MASTER: L19 is the master of shared range L19:L102",
+    "classification": "EXPECTED_WRITER_SAFETY_REJECTION",
+    "source_master_formula": "L18-K19",
+    "source_master_attributes": {
+      "t": "shared",
+      "ref": "L19:L102",
+      "si": "5"
+    },
+    "shared_followers": 83,
+    "followers_individually_rewritten": 83,
+    "guard_reproduced": "L19 is the master of shared range L19:L102",
+    "master_preserved_in_output": true,
+    "interpretation": "Verifier permits formula semantics; writer refuses shared-master replacement to avoid orphaning followers. Explicit current contract, not stale instrumentation."
+  },
+  {
+    "sheet": "Sales Schedule",
+    "address": "M19",
+    "formula": "=F19",
+    "reason": "SHARED_FORMULA_MASTER: M19 is the master of shared range M19:M102",
+    "classification": "EXPECTED_WRITER_SAFETY_REJECTION",
+    "source_master_formula": "M18+F19",
+    "source_master_attributes": {
+      "t": "shared",
+      "ref": "M19:M102",
+      "si": "6"
+    },
+    "shared_followers": 83,
+    "followers_individually_rewritten": 83,
+    "guard_reproduced": "M19 is the master of shared range M19:M102",
+    "master_preserved_in_output": true,
+    "interpretation": "Verifier permits formula semantics; writer refuses shared-master replacement to avoid orphaning followers. Explicit current contract, not stale instrumentation."
+  }
+]

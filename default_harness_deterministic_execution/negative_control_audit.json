@@ -1,0 +1,5 @@
+{
+  "wrong_canonical": "Executor never ran, so it could not repair or propagate a wrong canonical. 08_04 C1 was official-exact via ordinary Python.",
+  "unsupported_homogeneity": "15_04 never invoked the tool. Static preflight still rejects holes/non-unit stride with zero writes.",
+  "regression_outside_declared_set": "Not applicable: no accepted calc_translate_fill writes."
+}

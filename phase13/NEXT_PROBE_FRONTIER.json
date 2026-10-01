@@ -1,0 +1,154 @@
+{
+ "candidates": [
+  {
+   "architectural_implication_if_positive": "Revives a detection surface the program closed twice (Ph11 accessory verdict, Ph12 D-demote). High bar.",
+   "category_spread": [
+    "Debugging"
+   ],
+   "class": "MODEL-CAPABILITY LIMIT",
+   "confidence": "STRONGLY_SUPPORTED",
+   "description": "Debugging agents fix plausible-but-wrong regions or miss bugs despite full-workbook inspection (07_03: fixed salient #REF!s, missed 1101 systematic off-by-one refs; 10_05 partial fix; 01_02 retained hardcodes). Bug recognition with evidence in context.",
+   "estimated_probe_cost": "High: needs powered recalc-fair Debugging trial with full-error endpoints; easily confounded by cache/formula-text channels.",
+   "expected_discriminating_power": "Low-medium: residuals are small (P1 Debugging mod median high); any detector re-runs Ph12 K3 risk (benign findings).",
+   "id": "C1",
+   "intervention_concept": "Live bug-detection evidence at fix time (error-pattern/uniformity flags localized to edit targets).",
+   "likely_conclusion_if_negative": "Confirms bug recognition is model reasoning; keeps formula-error feedback frozen.",
+   "loss_mass": "Debugging P1: 12.409 mod loss over 41 fails / 28 tasks, 0 exact-1; Pop-A Debugging: 8/8 no-submit (L8, not this mechanism). Within-Debugging primary mix: L5-dominant (partial fixes, wrong refs), 1 L4-wholesale (07_03), color-application residuals, formula-text artifacts (minor).",
+   "name": "Debugging misdiagnosis (seen-but-unflagged bugs, partial fixes)",
+   "risk_of_repeating_closed_hypothesis": "HIGH: renames Ph12 verifier / frozen formula-error feedback / UNIF transfer. Must predeclare benign-rate gate.",
+   "task_count": 28
+  },
+  {
+   "architectural_implication_if_positive": "A new runtime write-path primitive \u2014 but batch writers measured 0/13 adoption on exact-selected tasks.",
+   "category_spread": [
+    "Template",
+    "Financial_Model"
+   ],
+   "class": "MODEL-CAPABILITY LIMIT",
+   "confidence": "STRONGLY_SUPPORTED",
+   "description": "Sign slips (14_03 C48), scale factors (16_12 x12), wrong-row refs (11_04), omitted implicit targets (11_03 echoes). Each instance has deciding evidence in context; no shared mechanical shape.",
+   "estimated_probe_cost": "High: diffuse class needs large powered sample; per-instance rarity defeats isolation.",
+   "expected_discriminating_power": "Low: no single intervention touches sign+scale+row+omission jointly; any probe tests one rare slice.",
+   "id": "C2",
+   "intervention_concept": "No single coherent intervention (sign check? scale check? row check?) \u2014 diffuse by construction.",
+   "likely_conclusion_if_negative": "Confirms diffuse reasoning residue below probe power.",
+   "loss_mass": "L5-attributed mod loss 30.25 of 41.48 P1 total (73%); 151 runs / 85 tasks; per-instance residuals small (P1 mod median 0.93). Pop-A L5: 3 runs (11_03, 11_04, 14_03).",
+   "name": "Formula-choice residuals (sign/scale/row/omission slips)",
+   "risk_of_repeating_closed_hypothesis": "MEDIUM: a sign/scale checker reprises verifier-style diagnostics without the Ph12 gate.",
+   "task_count": 85
+  },
+  {
+   "architectural_implication_if_positive": "Scaffold budget policy + behavior shaping; not a product primitive.",
+   "category_spread": [
+    "Debugging",
+    "Financial_Model",
+    "Template"
+   ],
+   "class": "SCAFFOLD / evaluator issue (budget policy) + MODEL-CAPABILITY LIMIT (initiation gap)",
+   "confidence": "DIRECT (terminal states) / PLAUSIBLE (initiation-gap interior)",
+   "description": "28/40 Pop-A runs die (cost/call/wall) with zero writes despite mostly inspecting target regions; loose regime completes same families. Mass measures the budget; interior gap (no write by call ~10) is model initiation under uncertainty.",
+   "estimated_probe_cost": "Medium (budget sweep) to High (shaping trial); budget sweep answers the spend question but earns no primitive.",
+   "expected_discriminating_power": "High for the spend question (conversion rate vs budget), zero for mechanism (no primitive proposed).",
+   "id": "C3",
+   "intervention_concept": "Budget sweep (deterministic spend question) or write-nudge shaping (behavioral, sham-sensitive per Ph12).",
+   "likely_conclusion_if_negative": "If conversion stays low at high budget, the initiation gap is confirmed model-side; if high, the tight regime was simply starved.",
+   "loss_mass": "Pop A: 28/40 runs (70%), 28.0 mod-loss-mass-equivalent; regime-specific (loose regime completes).",
+   "name": "Tight-regime inspection-without-action (L8+L3)",
+   "risk_of_repeating_closed_hypothesis": "MEDIUM-HIGH: any helper/nudge proposal renames Stage-B inspection helpers (no arm-level gain) or Ph12 sham-sensitive nudges.",
+   "task_count": 28
+  },
+  {
+   "architectural_implication_if_positive": "None (already directed as scaffold hygiene).",
+   "category_spread": [
+    "Template",
+    "Financial_Model"
+   ],
+   "class": "ALREADY CLOSED (research) / SCAFFOLD (implementation pending)",
+   "confidence": "DIRECT",
+   "description": "Correct formulas submitted with empty caches after verifying a /tmp recalc copy; V1 recovers fully. Mechanism nailed (Ph12 S22); fix directed (recalc-before-submit). Pop-B scored bytes show no edited-cell staleness (swe-agent pipeline recalcs); the 05_08 run-dir copy with None caches is a red herring.",
+   "estimated_probe_cost": "Zero (no probe; implement the scaffold fix).",
+   "expected_discriminating_power": "N/A \u2014 closed.",
+   "id": "C4",
+   "intervention_concept": "Implement recalc-before-submit + submit-the-verified-file (Ph12 D-demote follow-on i).",
+   "likely_conclusion_if_negative": "N/A",
+   "loss_mass": "Pop A: 6 runs fully V1-recovered (3 to exact 1.0) + 3 partials (~8 V1 mod points incl. 12_01 exact); Pop-B: 0 in scored bytes.",
+   "name": "Submit-hygiene stale cache (06_05-class)",
+   "risk_of_repeating_closed_hypothesis": "N/A \u2014 correctly recognized as closed.",
+   "task_count": 6
+  },
+  {
+   "architectural_implication_if_positive": "Evaluator normalization patch (scaffold), not architecture.",
+   "category_spread": [
+    "Debugging",
+    "Template?"
+   ],
+   "class": "SCAFFOLD / evaluator issue",
+   "confidence": "DIRECT (instance) / TBD (mass)",
+   "description": "Semantically identical formula text scored wrong (D8:D8 vs D8); TODAY() vs frozen gold (16_02 B4); float-residual tolerance (P1 harm cell); malformed benchmark input (FM:06_01 dc prefix).",
+   "estimated_probe_cost": "Low (deterministic evaluator audit on frozen pairs).",
+   "expected_discriminating_power": "High for the artifact question; fixes scores without touching agents.",
+   "id": "C5",
+   "intervention_concept": "Deterministic evaluator-normalization audit: formula-text canonicalization, volatile-function policy, tolerance review, input-data repair.",
+   "likely_conclusion_if_negative": "If mass is tiny, file as known-evaluator-debt and move on.",
+   "loss_mass": "L0-attributed mod loss 2.0 (FM06_01 malformed input 1.0 + 05_08 empty-mod-set 1.0) + reg 1.0 (06_01); proven formula-equivalent cells: 5 cells (RRI x2, SUMPRODUCT x2, sheet-prefix x1) across 4 runs, never sole cause; TODAY-volatility cell (16_02 B4); P1 harm-cell float residual (known). 19/183 runs L0-involved.",
+   "name": "Evaluator-normalization artifacts (formula-text, volatility, tolerance, malformed input)",
+   "risk_of_repeating_closed_hypothesis": "LOW: explicitly scoped as evaluator audit, not agent treatment; must not become wholesale reinterpretation (Ph12R selective rule).",
+   "task_count": 6
+  },
+  {
+   "architectural_implication_if_positive": "None architectural; version-specific scaffold guardrails.",
+   "category_spread": [
+    "Template"
+   ],
+   "class": "TOO RARE + MODEL-CAPABILITY LIMIT",
+   "confidence": "DIRECT",
+   "description": "5-7 max-length generations with no tool call consume wall-time (01_03, 15_02, 03_01-pilot). Model-version-specific (Ph12 A1).",
+   "estimated_probe_cost": "Low (nudge/circuit-breaker guardrail), but result is version-specific trivia.",
+   "expected_discriminating_power": "Low: n=3; cannot distinguish guardrail value from version noise.",
+   "id": "C6",
+   "intervention_concept": "No-tool-call circuit breaker (scaffold guardrail).",
+   "likely_conclusion_if_negative": "N/A \u2014 implement cheaply or ignore.",
+   "loss_mass": "3/40 Pop-A runs.",
+   "name": "Ramble traps (max-length no-tool generations)",
+   "risk_of_repeating_closed_hypothesis": "LOW",
+   "task_count": 3
+  },
+  {
+   "architectural_implication_if_positive": "Checkpoint/oracle-adjacent machinery \u2014 disallowed without gold-blind predictor.",
+   "category_spread": [
+    "Financial_Model"
+   ],
+   "class": "TOO RARE",
+   "confidence": "STRONGLY_SUPPORTED (n=1)",
+   "description": "12_01: exact-correct workbook, never submitted (over-verification to wall death). Zero overwrite-regression cases in corpus.",
+   "estimated_probe_cost": "High (stopping trials need many completions) for n=1 mass.",
+   "expected_discriminating_power": "Nil at this prevalence.",
+   "id": "C7",
+   "intervention_concept": "None earned; no mechanical gold-blind stopping predictor observed.",
+   "likely_conclusion_if_negative": "N/A",
+   "loss_mass": "1 proven run.",
+   "name": "Over-verification stopping (12_01-class)",
+   "risk_of_repeating_closed_hypothesis": "MEDIUM: checkpoint talk drifts toward verifier/oracle revival.",
+   "task_count": 1
+  },
+  {
+   "architectural_implication_if_positive": "Chart/drawing authoring guardrail or library fix.",
+   "category_spread": [
+    "Financial_Model"
+   ],
+   "class": "TOO RARE",
+   "confidence": "STRONGLY_SUPPORTED (n=1)",
+   "description": "17_05: chart-XML namespace corruption + 40-call debug saga to cap. Single instance.",
+   "estimated_probe_cost": "Low to fix narrowly (namespace handling), but research value nil.",
+   "expected_discriminating_power": "Nil at n=1.",
+   "id": "C8",
+   "intervention_concept": "Narrow drawing-XML handling note/fix.",
+   "likely_conclusion_if_negative": "N/A",
+   "loss_mass": "1 run.",
+   "name": "Chart/drawing XML mechanics (17_05-class)",
+   "risk_of_repeating_closed_hypothesis": "LOW",
+   "task_count": 1
+  }
+ ],
+ "pareto_note": "No candidate sits on the high-mass + coherent + isolable + unclosed frontier corner. C1 has the most mass but fails coherence/isolation/closed-risk; C3 has mass but is a spend question, not a mechanism; C5 is the only cheap deterministic probe and it is an evaluator audit, not an agent treatment."
+}

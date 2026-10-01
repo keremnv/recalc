@@ -1,0 +1,47 @@
+{
+ "top5_share_of_C0": 0.48825472066988695,
+ "top10_share_of_C0": 0.6835060786708134,
+ "n_tasks": 70,
+ "top_tasks": [
+  [
+   "Financial_Model:10_01",
+   27319
+  ],
+  [
+   "Financial_Model:08_03",
+   19280
+  ],
+  [
+   "Debugging:02_06",
+   13279
+  ],
+  [
+   "Financial_Model:07_01",
+   11914
+  ],
+  [
+   "Debugging:05_02",
+   9374
+  ],
+  [
+   "Financial_Model:15_04",
+   6928
+  ],
+  [
+   "Financial_Model:11_05",
+   6819
+  ],
+  [
+   "Debugging:07_08",
+   6708
+  ],
+  [
+   "Financial_Model:04_01",
+   6247
+  ],
+  [
+   "Debugging:04_07",
+   5756
+  ]
+ ]
+}

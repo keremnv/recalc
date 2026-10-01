@@ -1,0 +1,21 @@
+{
+  "command": "pytest -q tests/test_provider_timeout_hierarchy.py tests/test_openrouter_runner.py",
+  "result": "PASS",
+  "tests_passed": 50,
+  "tests_failed": 0,
+  "transport_specific_tests": 4,
+  "cases": [
+    "response connects but never sends the next chunk",
+    "slow chunked response is bounded by the absolute request deadline",
+    "read-timeout retry succeeds on a later attempt within retry budget",
+    "outer task process exits and records provider censoring after deadline"
+  ],
+  "timeout_hierarchy_seconds": {
+    "socket_read": 15,
+    "request": 90,
+    "retry_budget": 270,
+    "model_call": 300,
+    "task_run": 900
+  },
+  "note": "Zero model inference; adversarial local mock responses only."
+}

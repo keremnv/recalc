@@ -324,6 +324,32 @@ def _dataset(data_root: Path, category: str) -> dict[str, dict[str, Any]]:
     return {str(row["id"]): row for row in rows}
 
 
+def _scored_output_path(run_root: Path, category: str, task_id: str) -> Path | None:
+    """The workbook the official evaluator actually scored, if it is on disk.
+
+    A run holds the same output twice. ``<category>-<task_id>/output.xlsx`` is what the
+    agent wrote, straight out of the container. ``submission/outputs/...`` is that file
+    after the scorer's LibreOffice refresh, and it is the one `official_scores.json`
+    describes.
+
+    They are not interchangeable for a cache-reading diff. LibreOffice writes many formula
+    cells without a cached value, so openpyxl sees ``None`` where the golden has a number
+    even when the two formulas are byte-identical. Diffing the unrefreshed copy therefore
+    reports every such cell as a mismatch: on `Debugging:01_08` the raw file carries 243
+    cached values on `Ex 1 - LBO` against the refreshed copy's 893, and the census scored
+    modification 0.0000 where the evaluator scored 0.4509.
+
+    Prefer the refreshed copy and fall back to the raw one only when a run predates the
+    submission layout -- in which case the score disagreement is the signal to distrust it.
+    """
+
+    submission = run_root / "submission" / "outputs" / category / f"{task_id}_output.xlsx"
+    if submission.is_file():
+        return submission
+    raw = run_root / f"{category}-{task_id}" / "output.xlsx"
+    return raw if raw.is_file() else None
+
+
 def discover_attempts(
     runs_root: Path,
     *,
@@ -373,15 +399,33 @@ def run_census(
         task_root = data_root / category
         input_path = task_root / task["spreadsheet_path"]
         golden_path = task_root / task["golden_response_path"]
-        output_path = run_root / f"{category}-{task_id}" / "output.xlsx"
-        if not output_path.is_file():
+        output_path = _scored_output_path(run_root, category, task_id)
+        if output_path is None:
             continue
 
         with_font_color = category == "Debugging" and "Color" in task["spreadsheet_path"]
         with_formula = category == "Debugging" and "Embedded" in task["spreadsheet_path"]
-        input_views = _load_views(input_path, with_formula=with_formula)
-        golden_views = _load_views(golden_path, with_formula=with_formula)
-        output_views = _load_views(output_path, with_formula=with_formula)
+
+        # An agent can submit a file that is not a readable workbook at all; the official
+        # evaluator already scores those as "File is not a zip file". Record them the same
+        # way the documented exclusions are recorded rather than ending the whole census,
+        # and close whatever opened before the failure.
+        opened: list[WorkbookViews] = []
+        try:
+            for path in (input_path, golden_path, output_path):
+                opened.append(_load_views(path, with_formula=with_formula))
+        except Exception as error:  # noqa: BLE001 -- a stored artifact we cannot read
+            for views in opened:
+                _close_views(views)
+            exclusions.append(
+                {
+                    "run_name": run_name,
+                    "task": task_key,
+                    "reason": f"unreadable workbook: {type(error).__name__}",
+                }
+            )
+            continue
+        input_views, golden_views, output_views = opened
         try:
             results.append(
                 census_workbooks(
@@ -397,9 +441,8 @@ def run_census(
                 )
             )
         finally:
-            _close_views(input_views)
-            _close_views(golden_views)
-            _close_views(output_views)
+            for views in opened:
+                _close_views(views)
     return results, exclusions
 
 

@@ -1,0 +1,13 @@
+{
+  "a0_fully_eligible": 72,
+  "a0_read_event_opportunity": 3349,
+  "a0_repeated_open_opportunity": 234,
+  "a1_additional_open_call_opportunity_upper_bound": 0,
+  "a1_fully_eligible": 86,
+  "a1_read_event_opportunity_estimate": 3377,
+  "additional_read_event_opportunity_estimate": 28,
+  "by_family": {},
+  "newly_fully_eligible": 14,
+  "same_generation_repeated_open_gain": "not reconstructable from source classifier alone; open-call upper bound reported separately",
+  "source_executions": 309
+}

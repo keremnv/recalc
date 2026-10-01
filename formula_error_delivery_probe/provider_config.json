@@ -1,0 +1,35 @@
+{
+  "api_url": "https://openrouter.ai/api/v1/chat/completions",
+  "model": "z-ai/glm-5.3-flash",
+  "routing": {
+    "order": [
+      "Modal",
+      "CoreWeave",
+      "DigitalOcean"
+    ],
+    "allow_fallbacks": true
+  },
+  "socket_timeout_s": 30,
+  "absolute_request_deadline_s": 120,
+  "retry_policy": "at most two retries after request errors, same message and no additional tool call; third error censors",
+  "run_timeout_s": 1800,
+  "bash_timeout_s": 180,
+  "lo_backend": "local UNO socket localhost:2021, prestarted and health-checked, same in both arms",
+  "source": "OpenRouter provider routing docs; provider endpoint latency listing checked before freeze",
+  "difference_from_prior": {
+    "provider_routing": "prior none; probe order Modal, CoreWeave, DigitalOcean with fallback",
+    "socket_timeout_s": [
+      15,
+      30
+    ],
+    "absolute_request_deadline_s": [
+      90,
+      120
+    ],
+    "run_timeout_s": [
+      900,
+      1800
+    ]
+  },
+  "provider_request_body_note": "same model and sampling parameters; provider object added arm-neutrally"
+}

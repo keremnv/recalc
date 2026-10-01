@@ -1,0 +1,6 @@
+{"classification": "SAME_PATTERN_BUT_CLASSIFIER_REJECTED", "historical": "safe primitive formula-mode cell loops", "live": "same primitive work emitted in commands rejected by lexical colon/slice classifier", "task_id": "Financial_Model:07_01"}
+{"classification": "DIFFERENT_PYTHON_EQUIVALENT_WORK", "historical": "safe primitive/read scans", "live": "mix of direct primitive contact, Cell-object iteration, dynamic inspection, and classifier-rejected forms", "task_id": "Financial_Model:08_03"}
+{"classification": "SAME_PATTERN_BUT_CLASSIFIER_REJECTED", "historical": "safe primitive cell loops", "live": "same formula-mode primitives plus data_only and lexical false-positive forms", "task_id": "Financial_Model:08_01"}
+{"classification": "UNKNOWN", "historical": "historical opportunity", "live": "malformed XML runner error", "task_id": "Financial_Model:06_01"}
+{"classification": "DIFFERENT_PYTHON_NOW_UNSAFE", "historical": "safe opportunity in census", "live": "paired data_only and Cell-object scan", "task_id": "Debugging:01_06"}
+{"classification": "DIFFERENT_PYTHON_NOW_UNSAFE", "historical": "safe opportunity in census", "live": "Cell-object iter_rows scan", "task_id": "Debugging:05_02"}

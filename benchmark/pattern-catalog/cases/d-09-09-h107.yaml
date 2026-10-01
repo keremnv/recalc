@@ -1,0 +1,37 @@
+id: d-09-09-h107
+run: glm-5.3-flash-nonvisual-297-1
+task: Debugging:09_09
+first_miss:
+  kind: modification
+  address: LBO!H107
+  error_message: "Modification error at LBO!H107: answer=1.41777782661795, output=#DIV/0!"
+facts:
+  opened_golden: false
+  spreadsheet: Relative vs Absolute References_input.xlsx
+  instruction: Please audit and fix this file thoroughly.
+  input_kind: formula
+  input_value: "=+H106/G106"
+  output_formula: "=+H106/G106"
+  autopsy:
+    named: false
+    read: false
+    read_attempted: true
+    written: false
+    bucket: unnamed
+  inspect_note: "503 errors, 21 selected; G107 circular is in the list, H107 is not"
+  wrote: null
+  wrote_instead: LBO!F90
+claims:
+  patterns: [I-sibling-representative, read-budget]
+  nuance: decomposable
+  mechanism: representative-selection
+  lever: constraint
+  lever_why: >
+    The first read was refused as oversize, which set write_now and locked the model out of
+    reading; it wrote a sibling instead. The fix is removing a constraint the world imposes,
+    and that has now been measured: ladder arm C (--unbounded-reads) moved mod +0.035 over arm
+    B and converted no additional exact.
+  notes: >
+    v1 autopsy called this read_unwritten because calc_read B60:K140 covered H107
+    in the action; the observation was ok:false oversize. They wrote F90 (circular
+    hardcode) and left H107 as #DIV/0!. Not attend-without-commit.

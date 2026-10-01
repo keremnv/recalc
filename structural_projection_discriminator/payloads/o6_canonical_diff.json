@@ -1,0 +1,8 @@
+{
+  "common_packet_sha256": "1bb7dc71b79aa8803264a709286e3949648c36353ef22989d3b9ffb7d71ce608",
+  "control_request_sha256": "12e0b562dae606abe0e94ccd831ab294d6535e84b0d0974b129399108ff24906",
+  "treatment_request_sha256": "d2560f9ee6d0dcb335514bdd5e2d6ddd2054b29bd8d6a1ef2ff32ae34ea6c5dc",
+  "treatment_only_delta": "compiled_output_occurrence_relations",
+  "gold_used_in_payloads": false,
+  "written_at": "2026-09-16T14:33:50.708075+00:00"
+}

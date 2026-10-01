@@ -1,0 +1,57 @@
+{
+  "region": "Working Capital!J44:N44",
+  "input_note": "J44:N44 empty on input; parallel row 45 is a mechanical witness",
+  "gold_formulas": {
+    "J44": "=+J35+J26+J15+J6",
+    "K44": "=+K35+K26+K15+K6",
+    "L44": "=+L35+L26+L15+L6",
+    "M44": "=+M35+M26+M15+M6",
+    "N44": "=+N35+N26+N15+N6"
+  },
+  "C0": {
+    "used_calc_translate_fill": false,
+    "formulas": {
+      "J44": "=J6+J15+J26+J35",
+      "K44": "=K6+K15+K26+K35",
+      "L44": "=L6+L15+L26+L35",
+      "M44": "=M6+M15+M26+M35",
+      "N44": "=N6+N15+N26+N35"
+    },
+    "exact_formula_members": 0,
+    "n_members": 5,
+    "translated_members_written": 5,
+    "execution_path": "openpyxl/Python fill loop",
+    "official": {
+      "id": "08_03",
+      "error_message": "Modification error at Ratio Analysis!C19: answer=6.66631169023065, output=7.44444497232591",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.9973,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    }
+  },
+  "C1": {
+    "used_calc_translate_fill": false,
+    "formulas": {
+      "J44": "=J35+J26+J15+J6",
+      "K44": "=K35+K26+K15+K6",
+      "L44": "=L35+L26+L15+L6",
+      "M44": "=M35+M26+M15+M6",
+      "N44": "=N35+N26+N15+N6"
+    },
+    "exact_formula_members": 0,
+    "n_members": 5,
+    "translated_members_written": 5,
+    "execution_path": "openpyxl/Python fill loop after considering calc_translate_fill",
+    "official": {
+      "id": "08_03",
+      "error_message": "Regression error at DCF Valuation!J16: answer=None, output=543528488.439332",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.9923,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    }
+  },
+  "headroom": "NO_REPEATED_EXECUTION_FAILURE_ON_08_03",
+  "note": "Both arms wrote all five translated members. Formula text is not gold-identical (operand order and missing unary +). Official 08_03 failures are outside this region."
+}

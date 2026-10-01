@@ -1,0 +1,4058 @@
+{
+  "generated_at": "2026-09-16T08:49:26.895568+00:00",
+  "spec": {
+    "generated_at": "2026-09-16T08:49:26.895712+00:00",
+    "claim": "system_benchmark_vs_published_control",
+    "not_a_causal_scaffold_claim": true,
+    "glm": {
+      "model": "z-ai/glm-5.3-flash",
+      "reasoning": "high",
+      "max_model_calls_per_task": 40,
+      "max_cost_usd_per_task": 2.5,
+      "tasks": [
+        "Template:01_02",
+        "Financial_Model:02_01",
+        "Debugging:01_01"
+      ],
+      "output_root": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/official-score-probe/glm-compiled",
+      "architecture": "compiled_matched_treatment"
+    },
+    "spark_extra": {
+      "model": "meta/muse-spark-1.3-contributor",
+      "task": "Financial_Model:02_01",
+      "scaffold": "published_spreadsheetbench2_control",
+      "config": "benchmark/sweagent/spreadsheet-control.yaml",
+      "max_tool_calls": 50,
+      "max_cost_usd": 2.5,
+      "output_root": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/official-score-spark-1.3-contributor-fm-02_01",
+      "label": "extra_comparison_not_causal"
+    },
+    "published_control_reference": {
+      "Template:01_02": {
+        "id": "01_02",
+        "error_message": "Regression error at OID_Bond!C36: answer=0, output=1040",
+        "regression_accuracy": 0.9649,
+        "modification_accuracy": 0.9808,
+        "accuracy": 0.0,
+        "interaction_turns": 0
+      },
+      "Financial_Model:02_01": {
+        "id": "02_01",
+        "error_message": "Modification error at Revenue & COGS Schedule!D4: answer=-0.251901025950513, output=None",
+        "regression_accuracy": 1.0,
+        "modification_accuracy": 0.9938,
+        "accuracy": 0.0,
+        "interaction_turns": 0
+      },
+      "Debugging:01_01": {
+        "id": "01_01",
+        "error_message": "Regression error at Ex 1 - LBO!AC20: answer=0, output=-130.666114561455",
+        "regression_accuracy": 1.0,
+        "modification_accuracy": 0.9988,
+        "accuracy": 0.0,
+        "interaction_turns": 0
+      }
+    },
+    "isolation": {
+      "one_os_process_per_task": true,
+      "unique_output_roots": true,
+      "exclusive_file_locks": true,
+      "shared_prep_is_read_only": true,
+      "scoring": "sequential_after_workers",
+      "compiled_runner_max_workers": 1
+    },
+    "exclusions": {
+      "no_fm20": true,
+      "no_template_02_05": true,
+      "no_financial_model_06_01": true,
+      "no_published_control_rerun": true,
+      "no_new_frontend_ir": true
+    }
+  },
+  "gates": {
+    "freeze": {
+      "manifest": {
+        "freeze_version": "matched-compiled-sixty-v1",
+        "generated_at": "2026-09-10T23:40:50.574783+00:00",
+        "run_name": "matched-glm-compiled-sixty",
+        "no_model_calls_during_freeze": true,
+        "population": {
+          "tasks": 60,
+          "task_list_sha256": "e260dcd57119af0798c38efb1febbea273e9412e7dfeefb26d0bf5342bcc2a7d",
+          "task_csv_sha256": "d4b023c5404a276ac07c7783a0c7af7f7fdcaa2eb5186c29c899f066b386b4b5",
+          "category_counts": {
+            "Template": 20,
+            "Financial_Model": 20,
+            "Debugging": 20
+          }
+        },
+        "control": {
+          "run_id": "glm-5.3-flash-control-census-sixty-1",
+          "scores_sha256": "183437c9000969c8e465fb6b3135b48f2eb4a921f445bdc249b577a5103de93b",
+          "scores_csv_sha256": "37a0234f068591c19c9d99c00d46fcf2a0d0c7e7c53def4af6760677d650c8a1",
+          "model": "z-ai/glm-5.3-flash",
+          "provider": "openrouter",
+          "reasoning": "low",
+          "temperature": 0.0,
+          "max_model_calls": 50,
+          "cost_cap_usd": 4.0,
+          "max_requeries": 2,
+          "repair_passes": 1,
+          "observation_limit": 10000,
+          "execution_timeout": 180,
+          "provider_only": null
+        },
+        "treatment": {
+          "model": "z-ai/glm-5.3-flash",
+          "provider": "openrouter",
+          "reasoning": "low",
+          "temperature": 0.0,
+          "max_model_calls": 50,
+          "cost_cap_usd": 4.0,
+          "max_sql_calls": 8,
+          "provider_only": null,
+          "no_model_quality_retries": true,
+          "formula_actuation_scope": "earned formula edits; unsupported literal/clear operations explicitly logged"
+        },
+        "prompts": {
+          "task_ir_sha256": "a408fece56083d7dc93fda7072438d2c8f1c4b2c0f107b7dd4c9619bc5b37f8a",
+          "edit_plan_sha256": "9aa38488c7f8481733a073ca59e8af8cd518b1fac6f47dd1e123084937ec416e",
+          "retrieval_sha256": "d138f0b2501b525ae4e51b55fd5bbe89c3595371bb2374b5dbfd168ef2771401",
+          "synthesis_sha256": "6bb5ca13a799b50f129d59776bc8b002176f67c7501dd7dbac67a0d7c00dd234"
+        },
+        "structural_profile": {
+          "tasks": 60,
+          "classified_tasks": 59,
+          "unclassifiable_tasks": [
+            "Financial_Model:06_01"
+          ],
+          "formula_cells": 5818,
+          "independent_programs": 1387,
+          "exact_recoverable_cells": 1416,
+          "exact_recoverable_share": 0.24338260570642833,
+          "programgroup_uniform_cells": 3549,
+          "programgroup_before_decisions": 5818,
+          "programgroup_after_decisions": 2452,
+          "programgroup_reduction": 3366,
+          "programgroup_reduction_share": 0.578549329666552,
+          "category_pg_share": {
+            "Template": 0.0,
+            "Financial_Model": 0.7378939277478862,
+            "Debugging": 0.6188714153561518
+          },
+          "source_audit_sha256": "ea742e235802a1c43cbde8c9dd320358906cf9de482e487fcced96f5c0b145fb"
+        },
+        "architecture_component_sha256": {
+          "benchmark/matched_compiled_treatment.py": "5abfcedb4f8c3a7c7a808492f7b55928529118cf8109826288c31eb1d22c0ad6",
+          "benchmark/end_to_end_composition_probe.py": "8bfeba9433465affd672e18c7ce64840f5b295a3652ccc29bcabdd2f0df23adb",
+          "benchmark/task_obligation_compile.py": "2a92b9737773461ae860c213bbdbc56fbc027ab678582765ed4a315096f46d58",
+          "benchmark/edit_plan_probe.py": "93c8b9e620ebb1aac03a6e88e700fe487fe0f4df2e718ed433a7347240a6970f",
+          "benchmark/edit_plan.py": "963b0ffeee5d909e920aa4b78398b79facab046814548892550acf20b7daf20f",
+          "benchmark/workbook_grounding.py": "18a32057861aeb3dc9acf4a13061b158d840b1474f3c4ac5fc04c61a86473d08",
+          "benchmark/workbook_grounding_spine.py": "a182d3ce60d50f65af7a209a781ca4367d8e36c6a8a800387d13cf5b60fb99cd",
+          "benchmark/workbook_spine_sqlite.py": "25bda8c25e152df3b8c5d2f96ab68a6cc079eed95876e71b0e8bf30fef37c8c9",
+          "benchmark/relational_retrieval_probe.py": "cb5bf7eb721f66ffb48e793092d591c9ca05281740c05cf138c2abfb7549009c",
+          "benchmark/composition_closure.py": "af18f1fda5185752a33f374d9e15d9da53715c95f9d219b1e26a6fe8385f9137",
+          "benchmark/execution_unit_probe.py": "9b532bc57573612e649f023398c67e85871447a4c34c2040ededad01a3b921f4",
+          "benchmark/program_group.py": "7c65ae37d5d224a9ee3e166ca6db99dd170b7a8d32417e96158e15dd88e0bb6a",
+          "benchmark/formula_verifier.py": "f9c9addaea8f945d73a3fe78f0168ee30b34b8ba40a78cc4c15c5caae158aff3",
+          "benchmark/xlsx_cell_writer.py": "dc10637f1344c460519e9f79e1662b9c84dc80bade87e7a732b553e23f4330b1",
+          "benchmark/xlsx_metadata_repair.py": "03c47c616a9ceb1f3caab487a25795160619f0da5ebe39ff61c5fbf4f0787b5b",
+          "benchmark/score_openrouter_run.py": "2ad9aa74a87e050e22ce85eee3eee05f2c4e35c99e6160a481fd80f3296b5cad",
+          "benchmark/run_evaluation.py": "c5089c5482371cd87b4834e99b05a4f9d211d0a88c81e88daa7fa9b9b5a58f71",
+          "benchmark/historical_control_audit.py": "56422e041b03952f0d3cb094a2c40c59eab9eabd26349586ce854a5e62c14032",
+          "benchmark/structural_recoverability_census.py": "082934a8b049951a84eb22d25dd52f0b5add36a37cb18a7307348868a81ea886",
+          "tests/test_matched_compiled_treatment.py": "a4c72a8f39dfd2e98f3ff7c692f1ebaad4d2cf90d2bff6d2802e7a21add42615",
+          "benchmark/sweagent/spreadsheet-control.yaml": "c3cc1b506956bc73a9560716e739bfb2fb19d96477df540f3837d17c3cd53c3d",
+          "benchmark/sweagent/spreadsheet.yaml": "9dc73a7edaf0def48d8f0e94729a2f9b658332c2a413880c0f3fef49b2eba9a3",
+          "benchmark/slices/control-census-sixty.json": "e260dcd57119af0798c38efb1febbea273e9412e7dfeefb26d0bf5342bcc2a7d",
+          "benchmark-data/SpreadsheetBench-2/benchmark-runs/mechanical/historical-control-audit/control_audit.json": "ea742e235802a1c43cbde8c9dd320358906cf9de482e487fcced96f5c0b145fb",
+          "benchmark-data/SpreadsheetBench-2/benchmark-runs/mechanical/structural-recoverability-census/tasks.json": "375f76c00c8c97326eb0bf28f8eb9cee68993c60df039d6df4a04a2651ea8e78"
+        },
+        "runtime_state_machine": [
+          "task_ir",
+          "grounding",
+          "edit_plan",
+          "deterministic_expansion",
+          "bootstrap",
+          "bounded_sql_delta_working_set",
+          "canonical_proposal",
+          "proposal_seeded_c1_closure",
+          "program_group_detection",
+          "deterministic_translation",
+          "ungrouped_synthesis",
+          "neutral_actuation",
+          "recalc",
+          "official_scoring"
+        ],
+        "invariants": [
+          "edit_plan_establishes_authority",
+          "dependency_closure_subset_of_authority",
+          "program_group_requires_input_repetition_witness",
+          "translation_is_deterministic",
+          "no_duplicate_synthesis_for_translated_cells",
+          "persistent_state_authoritative",
+          "no_candidate_interface",
+          "no_program_sketch_ir",
+          "no_operand_binding_ir",
+          "no_repair_loop"
+        ],
+        "expected_analysis_plan_sha256": "13945ec8947412f4ffeee8c252d045d6f025c502399aa6849e2173569b432f6c",
+        "freeze_requires_all_component_hashes": true
+      },
+      "hash_drift": [
+        "benchmark/matched_compiled_treatment.py",
+        "benchmark/workbook_grounding.py",
+        "benchmark/workbook_grounding_spine.py",
+        "benchmark/workbook_spine_sqlite.py",
+        "tests/test_matched_compiled_treatment.py"
+      ],
+      "missing_artifacts": [],
+      "pass": false
+    },
+    "population": {
+      "pass": true,
+      "count": 60,
+      "contains_slice": true
+    },
+    "environment_slice": {
+      "pass": true,
+      "tasks": {
+        "Template:01_02": true,
+        "Financial_Model:02_01": true,
+        "Debugging:01_01": true
+      }
+    },
+    "neutrality": {
+      "status": "PASS",
+      "tasks": 60,
+      "passing_regression": 60,
+      "regression_failures": [],
+      "official_score": {
+        "run_name": "neutrality",
+        "model_name": "matched-glm-compiled-sixty-neutrality",
+        "evaluation_runtime": "metadata-tolerant-local-v1",
+        "exact": 0,
+        "scored": 60,
+        "missing_outputs": 0,
+        "submission": {
+          "outputs": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/prep/neutrality/submission/outputs",
+          "official_json": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/prep/neutrality/submission/results"
+        },
+        "tasks": {
+          "Debugging:01_01": {
+            "id": "01_01",
+            "error_message": "Modification error at Ex 1 - LBO!B13: answer=Amdocs - Control, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:01_06": {
+            "id": "01_06",
+            "error_message": "Modification error at Ex 1 - LBO!B13: answer=Amdocs - Control, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:02_01": {
+            "id": "02_01",
+            "error_message": "Modification error at DCF!C8: answer=0.25, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:02_06": {
+            "id": "02_06",
+            "error_message": "Modification error at DCF!C10: answer=0.018, output=0.0254",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:03_01": {
+            "id": "03_01",
+            "error_message": "Modification error at LBO!C10: answer=276.775, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:03_06": {
+            "id": "03_06",
+            "error_message": "Modification error at LBO!C10: answer=276.775, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:04_01": {
+            "id": "04_01",
+            "error_message": "Modification error at Summary!H12: answer=57.968341030264, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:04_07": {
+            "id": "04_07",
+            "error_message": "Modification error at Summary!H12: answer=57.968341030264, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:05_02": {
+            "id": "05_02",
+            "error_message": "Modification error at Model!J45: answer==-J46*J44, output==-0.25*J44",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:05_08": {
+            "id": "05_08",
+            "error_message": "",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:06_02": {
+            "id": "06_02",
+            "error_message": "Modification error at DCF!E4: answer==WACC!C25, output=0.1648",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:06_07": {
+            "id": "06_07",
+            "error_message": "Modification error at Cover!G10: answer=1.63541592509081, output=1.5752767485436039",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:07_03": {
+            "id": "07_03",
+            "error_message": "Modification error at BS & CF!B55: answer=None, output=x",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:07_08": {
+            "id": "07_08",
+            "error_message": "Modification error at BS & CF!F25: answer=210, output=-210",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:08_04": {
+            "id": "08_04",
+            "error_message": "Modification error at Operating Model + DCF!C4: answer=1210.127, output=1210.127",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:08_09": {
+            "id": "08_09",
+            "error_message": "Modification error at Operating Model + DCF!C102: answer=2725.72883376226, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:09_04": {
+            "id": "09_04",
+            "error_message": "Modification error at LBO!D9: answer=2022, output=2022",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:09_09": {
+            "id": "09_09",
+            "error_message": "Modification error at LBO!D213: answer=7% / 1.4x, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:10_05": {
+            "id": "10_05",
+            "error_message": "Modification error at Model!I121: answer=-3.09278560952202, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Debugging:10_10": {
+            "id": "10_10",
+            "error_message": "Modification error at Model!D16: answer=1.43529152999999, output=0.7176457649999969",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:01_01": {
+            "id": "01_01",
+            "error_message": "Modification error at DCF Valuation!C22: answer=2425.91653544975, output=4440.18535205689",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:02_01": {
+            "id": "02_01",
+            "error_message": "Modification error at IS,BS,CF!C11: answer=69346.2, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:03_01": {
+            "id": "03_01",
+            "error_message": "Modification error at Final Output!D67: answer=0.137769808027923, output=0",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:04_01": {
+            "id": "04_01",
+            "error_message": "Modification error at Final Output!D9: answer=97.6827021092784, output=75.72899356",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:05_01": {
+            "id": "05_01",
+            "error_message": "Modification error at Dashboard!G43: answer=2, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:06_01": {
+            "id": "06_01",
+            "error_message": "Modification error at DCF!B2: answer=Project DigiMark, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:07_01": {
+            "id": "07_01",
+            "error_message": "Modification error at Executive Summary!D22: answer=6.07, output=0",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:08_01": {
+            "id": "08_01",
+            "error_message": "Modification error at DCF Valuation!C23: answer=184768555.832126, output=-289201598.6342304",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:10_01": {
+            "id": "10_01",
+            "error_message": "Modification error at Valuation!D89: answer=179.967341596345, output=8.476372465496",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:11_01": {
+            "id": "11_01",
+            "error_message": "Modification error at Summary Valuation!C10: answer=154.5178, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:11_05": {
+            "id": "11_05",
+            "error_message": "Modification error at Summary Valuation!C10: answer=154.5178, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:12_05": {
+            "id": "12_05",
+            "error_message": "Modification error at Valuation!C18: answer=48.6440905753162, output=76.77484704506988",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:13_05": {
+            "id": "13_05",
+            "error_message": "Modification error at Summary Valuation!C16: answer=0.53432417947908, output=0.5579083012857424",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:14_05": {
+            "id": "14_05",
+            "error_message": "Modification error at DCF_Income Approach!C21: answer=0.127476192037865, output=0.08560000000000001",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:15_05": {
+            "id": "15_05",
+            "error_message": "Modification error at Work Sheet!AB6: answer=20.3344221029979, output=2.25",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:16_05": {
+            "id": "16_05",
+            "error_message": "Modification error at Financials!C10: answer=76794, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:17_05": {
+            "id": "17_05",
+            "error_message": "Modification error at Valuation!D91: answer=66.9226574175157, output=0",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:18_05": {
+            "id": "18_05",
+            "error_message": "Modification error at Milestones!D18: answer=251.750521875, output=0",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:19_05": {
+            "id": "19_05",
+            "error_message": "Modification error at Summary Valuation!C9: answer=94.0733, output=0.0721",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:20_05": {
+            "id": "20_05",
+            "error_message": "Modification error at Summary!C17: answer=-12308.91255, output=0",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:01_02": {
+            "id": "01_02",
+            "error_message": "Modification error at OID_Bond!C9: answer=413.669565112777, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:01_07": {
+            "id": "01_07",
+            "error_message": "Modification error at BondAccounting!C7: answer=-212.984835930406, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:02_05": {
+            "id": "02_05",
+            "error_message": "Modification error at DebtWaterfall!C9: answer=1582, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:03_03": {
+            "id": "03_03",
+            "error_message": "Modification error at Consolidation!C16: answer=2200, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:05_02": {
+            "id": "05_02",
+            "error_message": "Modification error at DeferredTax!D8: answer=120, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:06_06": {
+            "id": "06_06",
+            "error_message": "Modification error at Revenue_Forecast!C20: answer=2945, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:06_12": {
+            "id": "06_12",
+            "error_message": "Modification error at CashFlow_Build!I9: answer=603, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:06_17": {
+            "id": "06_17",
+            "error_message": "Modification error at OpEx_Forecast!C25: answer=0.145, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:06_21": {
+            "id": "06_21",
+            "error_message": "Modification error at WorkingCapital!E19: answer=560.876712328767, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:07_01": {
+            "id": "07_01",
+            "error_message": "Modification error at EquityDRD!C14: answer=1070, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:08_03": {
+            "id": "08_03",
+            "error_message": "Modification error at IncomeProjection!C10: answer=-5852, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:10_01": {
+            "id": "10_01",
+            "error_message": "Modification error at EPS_Accretion!C15: answer=1350, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:11_03": {
+            "id": "11_03",
+            "error_message": "Modification error at MergerPremium!C6: answer=1200, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:13_03": {
+            "id": "13_03",
+            "error_message": "Modification error at FinancialNormalization!C25: answer=320, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:13_08": {
+            "id": "13_08",
+            "error_message": "Modification error at FinancialNormalization!C18: answer=94, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:14_05": {
+            "id": "14_05",
+            "error_message": "Modification error at NOI_Projection!C35: answer=4850000, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:15_01": {
+            "id": "15_01",
+            "error_message": "Modification error at DebtAnalysis!C27: answer=84000000, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:16_01": {
+            "id": "16_01",
+            "error_message": "Modification error at DirectCap!C13: answer=3.25, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:16_06": {
+            "id": "16_06",
+            "error_message": "Modification error at RentRoll!F13: answer=853.60824742268, output=2519.84536082474",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:16_12": {
+            "id": "16_12",
+            "error_message": "Modification error at RentRoll!I10: answer=982800, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          }
+        }
+      },
+      "rows": [
+        {
+          "task_key": "Template:01_02",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 5957,
+            "sheets": [
+              "OID_Bond"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "output_shape": {
+            "bytes": 5957,
+            "sheets": [
+              "OID_Bond"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:01_07",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 8941,
+            "sheets": [
+              "BondAccounting"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "output_shape": {
+            "bytes": 8941,
+            "sheets": [
+              "BondAccounting"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:02_05",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 6985,
+            "sheets": [
+              "DebtWaterfall"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "output_shape": {
+            "bytes": 6985,
+            "sheets": [
+              "DebtWaterfall"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:03_03",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 7552,
+            "sheets": [
+              "Consolidation"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "output_shape": {
+            "bytes": 7552,
+            "sheets": [
+              "Consolidation"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:05_02",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 7030,
+            "sheets": [
+              "DeferredTax"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "output_shape": {
+            "bytes": 7030,
+            "sheets": [
+              "DeferredTax"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:06_06",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 7487,
+            "sheets": [
+              "Revenue_Forecast"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "output_shape": {
+            "bytes": 7487,
+            "sheets": [
+              "Revenue_Forecast"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:06_12",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 7558,
+            "sheets": [
+              "CashFlow_Build"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "output_shape": {
+            "bytes": 7558,
+            "sheets": [
+              "CashFlow_Build"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:06_17",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 7202,
+            "sheets": [
+              "OpEx_Forecast"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 16
+          },
+          "output_shape": {
+            "bytes": 7202,
+            "sheets": [
+              "OpEx_Forecast"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 16
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:06_21",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 7062,
+            "sheets": [
+              "WorkingCapital"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "output_shape": {
+            "bytes": 7062,
+            "sheets": [
+              "WorkingCapital"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:07_01",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 7322,
+            "sheets": [
+              "EquityDRD"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "output_shape": {
+            "bytes": 7322,
+            "sheets": [
+              "EquityDRD"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:08_03",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 6250,
+            "sheets": [
+              "IncomeProjection"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "output_shape": {
+            "bytes": 6250,
+            "sheets": [
+              "IncomeProjection"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:10_01",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 7409,
+            "sheets": [
+              "EPS_Accretion"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "output_shape": {
+            "bytes": 7409,
+            "sheets": [
+              "EPS_Accretion"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:11_03",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 9617,
+            "sheets": [
+              "MergerPremium",
+              "SharedData"
+            ],
+            "sheet_count": 2,
+            "formula_xml_count": 0
+          },
+          "output_shape": {
+            "bytes": 9617,
+            "sheets": [
+              "MergerPremium",
+              "SharedData"
+            ],
+            "sheet_count": 2,
+            "formula_xml_count": 0
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:13_03",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 6219,
+            "sheets": [
+              "FinancialNormalization"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "output_shape": {
+            "bytes": 6219,
+            "sheets": [
+              "FinancialNormalization"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:13_08",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 7152,
+            "sheets": [
+              "FinancialNormalization"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "output_shape": {
+            "bytes": 7152,
+            "sheets": [
+              "FinancialNormalization"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:14_05",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 7363,
+            "sheets": [
+              "NOI_Projection"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "output_shape": {
+            "bytes": 7363,
+            "sheets": [
+              "NOI_Projection"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:15_01",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 6772,
+            "sheets": [
+              "DebtAnalysis"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "output_shape": {
+            "bytes": 6772,
+            "sheets": [
+              "DebtAnalysis"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:16_01",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 7665,
+            "sheets": [
+              "DirectCap"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "output_shape": {
+            "bytes": 7665,
+            "sheets": [
+              "DirectCap"
+            ],
+            "sheet_count": 1,
+            "formula_xml_count": 0
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:16_06",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 10885,
+            "sheets": [
+              "RentRoll",
+              "Valuation",
+              "SharedData"
+            ],
+            "sheet_count": 3,
+            "formula_xml_count": 16
+          },
+          "output_shape": {
+            "bytes": 10885,
+            "sheets": [
+              "RentRoll",
+              "Valuation",
+              "SharedData"
+            ],
+            "sheet_count": 3,
+            "formula_xml_count": 16
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Template:16_12",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 9235,
+            "sheets": [
+              "RentRoll",
+              "Valuation"
+            ],
+            "sheet_count": 2,
+            "formula_xml_count": 18
+          },
+          "output_shape": {
+            "bytes": 9235,
+            "sheets": [
+              "RentRoll",
+              "Valuation"
+            ],
+            "sheet_count": 2,
+            "formula_xml_count": 18
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:01_01",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 794948,
+            "sheets": [
+              "DCF Valuation",
+              "WACC",
+              "Consolidated P&L",
+              "Consolidated BS",
+              "Consolidated CF",
+              "Ratio Analysis",
+              "Summary",
+              "Key Assumptions",
+              "Revenue Drivers",
+              "Cost Drivers",
+              "Working Capital Schedule",
+              "Fixed Assets Schedule",
+              "Debt Schedule",
+              "P&L - Segment 1",
+              "Balance Sheet - Segment 1",
+              "P&L - Segment 2",
+              "Balance Sheet - Segment 2",
+              "P&L -Segment 3",
+              "BS - Segment 3",
+              "Client Files>>",
+              "Forecast",
+              "Investment Capex Details",
+              "Input Sheet- Branch",
+              "Comps",
+              "Txn Comps"
+            ],
+            "sheet_count": 25,
+            "formula_xml_count": 3949
+          },
+          "output_shape": {
+            "bytes": 794948,
+            "sheets": [
+              "DCF Valuation",
+              "WACC",
+              "Consolidated P&L",
+              "Consolidated BS",
+              "Consolidated CF",
+              "Ratio Analysis",
+              "Summary",
+              "Key Assumptions",
+              "Revenue Drivers",
+              "Cost Drivers",
+              "Working Capital Schedule",
+              "Fixed Assets Schedule",
+              "Debt Schedule",
+              "P&L - Segment 1",
+              "Balance Sheet - Segment 1",
+              "P&L - Segment 2",
+              "Balance Sheet - Segment 2",
+              "P&L -Segment 3",
+              "BS - Segment 3",
+              "Client Files>>",
+              "Forecast",
+              "Investment Capex Details",
+              "Input Sheet- Branch",
+              "Comps",
+              "Txn Comps"
+            ],
+            "sheet_count": 25,
+            "formula_xml_count": 3949
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:02_01",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 66494,
+            "sheets": [
+              "IS,BS,CF",
+              "Revenue & COGS Schedule",
+              "BS schedules",
+              "Ratios",
+              "Peer Comparison",
+              "Valuation snapshot",
+              "SOTP Astral",
+              "Realization & EBIT Per KG",
+              "Rough Valuation"
+            ],
+            "sheet_count": 9,
+            "formula_xml_count": 1134
+          },
+          "output_shape": {
+            "bytes": 66494,
+            "sheets": [
+              "IS,BS,CF",
+              "Revenue & COGS Schedule",
+              "BS schedules",
+              "Ratios",
+              "Peer Comparison",
+              "Valuation snapshot",
+              "SOTP Astral",
+              "Realization & EBIT Per KG",
+              "Rough Valuation"
+            ],
+            "sheet_count": 9,
+            "formula_xml_count": 1134
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:03_01",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 2020224,
+            "sheets": [
+              "Cover Page",
+              "Index",
+              "Final Output",
+              "Introduction",
+              "Industry Benchmark",
+              "Equity_Table",
+              "Macro sheet",
+              "Graphical_Representation",
+              "Balance Sheet",
+              "BS-QTR",
+              "Assumptions-BS",
+              "Income Statement",
+              "IS-QTR",
+              "Assumptions-IS",
+              "CF",
+              "Valuation",
+              "Ratios",
+              "Dupont Analysis",
+              "Du Pont",
+              "PB - Sector",
+              "Price Chart",
+              "Valuation Band"
+            ],
+            "sheet_count": 22,
+            "formula_xml_count": 28021
+          },
+          "output_shape": {
+            "bytes": 2020224,
+            "sheets": [
+              "Cover Page",
+              "Index",
+              "Final Output",
+              "Introduction",
+              "Industry Benchmark",
+              "Equity_Table",
+              "Macro sheet",
+              "Graphical_Representation",
+              "Balance Sheet",
+              "BS-QTR",
+              "Assumptions-BS",
+              "Income Statement",
+              "IS-QTR",
+              "Assumptions-IS",
+              "CF",
+              "Valuation",
+              "Ratios",
+              "Dupont Analysis",
+              "Du Pont",
+              "PB - Sector",
+              "Price Chart",
+              "Valuation Band"
+            ],
+            "sheet_count": 22,
+            "formula_xml_count": 28021
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:04_01",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 1634377,
+            "sheets": [
+              "Index ",
+              "Final Output",
+              "Assumptions",
+              "Financials",
+              "Valuation",
+              "Ratio_Analysis ",
+              "Graphical_representation",
+              "Technical Analysis",
+              "BB"
+            ],
+            "sheet_count": 9,
+            "formula_xml_count": 74464
+          },
+          "output_shape": {
+            "bytes": 1634377,
+            "sheets": [
+              "Index ",
+              "Final Output",
+              "Assumptions",
+              "Financials",
+              "Valuation",
+              "Ratio_Analysis ",
+              "Graphical_representation",
+              "Technical Analysis",
+              "BB"
+            ],
+            "sheet_count": 9,
+            "formula_xml_count": 74464
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:05_01",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 409533,
+            "sheets": [
+              "Dashboard",
+              "List - Do not Delete",
+              "Distribution Sheet-Deal By Deal",
+              "IRR Calculation",
+              "Workings Cost Sheet",
+              "IS - Mgmt Co.",
+              "BS",
+              "CF",
+              "Other Expenses",
+              "Staff Costs",
+              "Revenue",
+              "PreOp Cost"
+            ],
+            "sheet_count": 12,
+            "formula_xml_count": 25295
+          },
+          "output_shape": {
+            "bytes": 409533,
+            "sheets": [
+              "Dashboard",
+              "List - Do not Delete",
+              "Distribution Sheet-Deal By Deal",
+              "IRR Calculation",
+              "Workings Cost Sheet",
+              "IS - Mgmt Co.",
+              "BS",
+              "CF",
+              "Other Expenses",
+              "Staff Costs",
+              "Revenue",
+              "PreOp Cost"
+            ],
+            "sheet_count": 12,
+            "formula_xml_count": 25295
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:06_01",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 1924879,
+            "sheets": [
+              "Cover",
+              "DCF",
+              "Historical Data",
+              "Projections >>",
+              "Income Statement",
+              "Balance Sheet",
+              "Cashflow",
+              "Ratio Analysis",
+              "Assumptions & Drivers>>",
+              "Assumption sheet",
+              "Revenue Driver",
+              "Cost Drivers",
+              "Employees Expenses",
+              "Balancesheet Schedules"
+            ],
+            "sheet_count": 14,
+            "formula_xml_count": 23673
+          },
+          "output_shape": {
+            "bytes": 1924879,
+            "sheets": [
+              "Cover",
+              "DCF",
+              "Historical Data",
+              "Projections >>",
+              "Income Statement",
+              "Balance Sheet",
+              "Cashflow",
+              "Ratio Analysis",
+              "Assumptions & Drivers>>",
+              "Assumption sheet",
+              "Revenue Driver",
+              "Cost Drivers",
+              "Employees Expenses",
+              "Balancesheet Schedules"
+            ],
+            "sheet_count": 14,
+            "formula_xml_count": 23673
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:07_01",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 590007,
+            "sheets": [
+              "Executive Summary",
+              "Inputs",
+              "Construction Schedule (1)",
+              "Construction Schedule (2)",
+              "Construction Schedule",
+              "Sales Schedule",
+              "Cashflow (Monthly)",
+              "Cashflow (Quaterly)"
+            ],
+            "sheet_count": 8,
+            "formula_xml_count": 13825
+          },
+          "output_shape": {
+            "bytes": 590007,
+            "sheets": [
+              "Executive Summary",
+              "Inputs",
+              "Construction Schedule (1)",
+              "Construction Schedule (2)",
+              "Construction Schedule",
+              "Sales Schedule",
+              "Cashflow (Monthly)",
+              "Cashflow (Quaterly)"
+            ],
+            "sheet_count": 8,
+            "formula_xml_count": 13825
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:08_01",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 2164521,
+            "sheets": [
+              "DCF Valuation",
+              "Income Statement",
+              "Balance Sheet",
+              "Cashflow",
+              "Dashboard",
+              "Ratio Analysis",
+              "Working Capital",
+              "Assumptions - Line 01",
+              "Assumptions - Line 02",
+              "Assumptions - Line 03",
+              "Assumptions - Company Level",
+              "Capex and Debt Assumptions ",
+              "Funding Schedule"
+            ],
+            "sheet_count": 13,
+            "formula_xml_count": 133570
+          },
+          "output_shape": {
+            "bytes": 2164521,
+            "sheets": [
+              "DCF Valuation",
+              "Income Statement",
+              "Balance Sheet",
+              "Cashflow",
+              "Dashboard",
+              "Ratio Analysis",
+              "Working Capital",
+              "Assumptions - Line 01",
+              "Assumptions - Line 02",
+              "Assumptions - Line 03",
+              "Assumptions - Company Level",
+              "Capex and Debt Assumptions ",
+              "Funding Schedule"
+            ],
+            "sheet_count": 13,
+            "formula_xml_count": 133570
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:10_01",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 2600708,
+            "sheets": [
+              "Cover Page",
+              "Valuation",
+              "Financials",
+              "Assumptions",
+              "Ratio_Analysis ",
+              "Graphical_representation",
+              "Technical Analysis",
+              "BB"
+            ],
+            "sheet_count": 8,
+            "formula_xml_count": 72957
+          },
+          "output_shape": {
+            "bytes": 2600708,
+            "sheets": [
+              "Cover Page",
+              "Valuation",
+              "Financials",
+              "Assumptions",
+              "Ratio_Analysis ",
+              "Graphical_representation",
+              "Technical Analysis",
+              "BB"
+            ],
+            "sheet_count": 8,
+            "formula_xml_count": 72957
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:11_01",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 593858,
+            "sheets": [
+              "Summary Valuation",
+              "DCF",
+              "Chart",
+              "Comps",
+              "Txn Comparison",
+              "Summary",
+              "IS",
+              "CF",
+              "BS",
+              "Ratio Analysis",
+              "Input Sheet",
+              "Revenue Drivers",
+              "Cost Drivers",
+              "Working Capital",
+              "Assets Sch.",
+              "Debt Schedule",
+              "BG",
+              "WACC"
+            ],
+            "sheet_count": 18,
+            "formula_xml_count": 14585
+          },
+          "output_shape": {
+            "bytes": 593858,
+            "sheets": [
+              "Summary Valuation",
+              "DCF",
+              "Chart",
+              "Comps",
+              "Txn Comparison",
+              "Summary",
+              "IS",
+              "CF",
+              "BS",
+              "Ratio Analysis",
+              "Input Sheet",
+              "Revenue Drivers",
+              "Cost Drivers",
+              "Working Capital",
+              "Assets Sch.",
+              "Debt Schedule",
+              "BG",
+              "WACC"
+            ],
+            "sheet_count": 18,
+            "formula_xml_count": 14585
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:11_05",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 593396,
+            "sheets": [
+              "Summary Valuation",
+              "DCF",
+              "Chart",
+              "Comps",
+              "Txn Comparison",
+              "Summary",
+              "IS",
+              "CF",
+              "BS",
+              "Ratio Analysis",
+              "Input Sheet",
+              "Revenue Drivers",
+              "Cost Drivers",
+              "Working Capital",
+              "Assets Sch.",
+              "Debt Schedule",
+              "BG",
+              "WACC"
+            ],
+            "sheet_count": 18,
+            "formula_xml_count": 14532
+          },
+          "output_shape": {
+            "bytes": 593396,
+            "sheets": [
+              "Summary Valuation",
+              "DCF",
+              "Chart",
+              "Comps",
+              "Txn Comparison",
+              "Summary",
+              "IS",
+              "CF",
+              "BS",
+              "Ratio Analysis",
+              "Input Sheet",
+              "Revenue Drivers",
+              "Cost Drivers",
+              "Working Capital",
+              "Assets Sch.",
+              "Debt Schedule",
+              "BG",
+              "WACC"
+            ],
+            "sheet_count": 18,
+            "formula_xml_count": 14532
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:12_05",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 113790,
+            "sheets": [
+              "Valuation",
+              "WACC",
+              "P&L",
+              "BS",
+              "CF",
+              "Assets Sch.",
+              "Assumption",
+              "Working Capital",
+              "Debt Schedule",
+              "Ratio Analysis",
+              "Chart",
+              "Comps"
+            ],
+            "sheet_count": 12,
+            "formula_xml_count": 2020
+          },
+          "output_shape": {
+            "bytes": 113790,
+            "sheets": [
+              "Valuation",
+              "WACC",
+              "P&L",
+              "BS",
+              "CF",
+              "Assets Sch.",
+              "Assumption",
+              "Working Capital",
+              "Debt Schedule",
+              "Ratio Analysis",
+              "Chart",
+              "Comps"
+            ],
+            "sheet_count": 12,
+            "formula_xml_count": 2020
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:13_05",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 330775,
+            "sheets": [
+              "Cover Page",
+              "Summary Valuation",
+              "DCF",
+              "Summary",
+              "IS",
+              "BS",
+              "CF",
+              "Ratio Analysis",
+              "Input Sheet",
+              "Revenue Drivers",
+              "Cost Drivers",
+              "Working Capital",
+              "Assets Sch.",
+              "Debt Schedule",
+              "BG",
+              "Trading Comps",
+              "Chart",
+              "WACC",
+              "Projection Sheet(FY26 to FY28)",
+              "Segmental Breakdown"
+            ],
+            "sheet_count": 20,
+            "formula_xml_count": 3321
+          },
+          "output_shape": {
+            "bytes": 330775,
+            "sheets": [
+              "Cover Page",
+              "Summary Valuation",
+              "DCF",
+              "Summary",
+              "IS",
+              "BS",
+              "CF",
+              "Ratio Analysis",
+              "Input Sheet",
+              "Revenue Drivers",
+              "Cost Drivers",
+              "Working Capital",
+              "Assets Sch.",
+              "Debt Schedule",
+              "BG",
+              "Trading Comps",
+              "Chart",
+              "WACC",
+              "Projection Sheet(FY26 to FY28)",
+              "Segmental Breakdown"
+            ],
+            "sheet_count": 20,
+            "formula_xml_count": 3321
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:14_05",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 774502,
+            "sheets": [
+              "DCF_Income Approach",
+              "Peers",
+              "Reported Profit & Loss",
+              "Profit & Loss",
+              "Balance sheet",
+              "CFS",
+              "Cash Flow",
+              "WACC",
+              "Revenue",
+              "Refining Yield",
+              "Product Pricing",
+              "Operating Expenses",
+              "Other Income",
+              "Debt, Interest and Finance Cost",
+              "Debt Profile - 31st March 2019",
+              "Fixed Asset & Depreciation",
+              "NCD",
+              "TL",
+              "Depreciation (Companies Act)",
+              "Depreciation (IT act)",
+              "Capex details",
+              "Depn - IT _Current",
+              "Amortization with extra payment",
+              "Debt Details",
+              "Tax ( MAT)",
+              "WC workings",
+              "Working Capital",
+              "Tax-DCF",
+              "Tax-P&L",
+              "FS Notes",
+              "PL",
+              "1 - Crude Oil  Brent (... Data",
+              "1 - Crude Oil  Gulf Co... Data",
+              "Tax rates",
+              "Ann 1 & 2",
+              "Ann 3",
+              "Ann 5",
+              "Ann 6",
+              "Ann 8",
+              "Ann 9",
+              "Conversion",
+              "Crude Forecast",
+              "Forecasts_WPIUSD"
+            ],
+            "sheet_count": 43,
+            "formula_xml_count": 31139
+          },
+          "output_shape": {
+            "bytes": 774502,
+            "sheets": [
+              "DCF_Income Approach",
+              "Peers",
+              "Reported Profit & Loss",
+              "Profit & Loss",
+              "Balance sheet",
+              "CFS",
+              "Cash Flow",
+              "WACC",
+              "Revenue",
+              "Refining Yield",
+              "Product Pricing",
+              "Operating Expenses",
+              "Other Income",
+              "Debt, Interest and Finance Cost",
+              "Debt Profile - 31st March 2019",
+              "Fixed Asset & Depreciation",
+              "NCD",
+              "TL",
+              "Depreciation (Companies Act)",
+              "Depreciation (IT act)",
+              "Capex details",
+              "Depn - IT _Current",
+              "Amortization with extra payment",
+              "Debt Details",
+              "Tax ( MAT)",
+              "WC workings",
+              "Working Capital",
+              "Tax-DCF",
+              "Tax-P&L",
+              "FS Notes",
+              "PL",
+              "1 - Crude Oil  Brent (... Data",
+              "1 - Crude Oil  Gulf Co... Data",
+              "Tax rates",
+              "Ann 1 & 2",
+              "Ann 3",
+              "Ann 5",
+              "Ann 6",
+              "Ann 8",
+              "Ann 9",
+              "Conversion",
+              "Crude Forecast",
+              "Forecasts_WPIUSD"
+            ],
+            "sheet_count": 43,
+            "formula_xml_count": 31139
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:15_05",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 300632,
+            "sheets": [
+              "Hospital Level Breakup",
+              "Work Sheet",
+              "IS_BS_CF",
+              "Consol_annual",
+              "Consol_quarterly",
+              "Report Tables",
+              "Formats",
+              "Minority Interest",
+              "Pre & Post IND-AS EBITDA Calc."
+            ],
+            "sheet_count": 9,
+            "formula_xml_count": 8326
+          },
+          "output_shape": {
+            "bytes": 300632,
+            "sheets": [
+              "Hospital Level Breakup",
+              "Work Sheet",
+              "IS_BS_CF",
+              "Consol_annual",
+              "Consol_quarterly",
+              "Report Tables",
+              "Formats",
+              "Minority Interest",
+              "Pre & Post IND-AS EBITDA Calc."
+            ],
+            "sheet_count": 9,
+            "formula_xml_count": 8326
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:16_05",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 1235835,
+            "sheets": [
+              "Financials",
+              "Valuation Summary and Football",
+              "Assumptions",
+              "Synergies and Intgn Exp",
+              "Income Statement",
+              "Balance Sheet",
+              "Cash Flow",
+              "BS_Sch",
+              "Ratios",
+              "Valuation Summary",
+              "Graphs",
+              "Trading Comps",
+              "Transaction Comps",
+              ">>Client Data",
+              ">>Financials",
+              "BS",
+              "CF",
+              "P&L",
+              "Revenue Analysis",
+              ">>Client",
+              "Client Analysis",
+              ">>HR",
+              "Headcount Analysis",
+              "Certification Analysis"
+            ],
+            "sheet_count": 24,
+            "formula_xml_count": 3822
+          },
+          "output_shape": {
+            "bytes": 1235835,
+            "sheets": [
+              "Financials",
+              "Valuation Summary and Football",
+              "Assumptions",
+              "Synergies and Intgn Exp",
+              "Income Statement",
+              "Balance Sheet",
+              "Cash Flow",
+              "BS_Sch",
+              "Ratios",
+              "Valuation Summary",
+              "Graphs",
+              "Trading Comps",
+              "Transaction Comps",
+              ">>Client Data",
+              ">>Financials",
+              "BS",
+              "CF",
+              "P&L",
+              "Revenue Analysis",
+              ">>Client",
+              "Client Analysis",
+              ">>HR",
+              "Headcount Analysis",
+              "Certification Analysis"
+            ],
+            "sheet_count": 24,
+            "formula_xml_count": 3822
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:17_05",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 2115572,
+            "sheets": [
+              "Index",
+              "Financials",
+              "Assumptions",
+              "Valuation",
+              "Ratio_Analysis",
+              "Graphical_representation",
+              "Technical Analysis"
+            ],
+            "sheet_count": 7,
+            "formula_xml_count": 78398
+          },
+          "output_shape": {
+            "bytes": 2115572,
+            "sheets": [
+              "Index",
+              "Financials",
+              "Assumptions",
+              "Valuation",
+              "Ratio_Analysis",
+              "Graphical_representation",
+              "Technical Analysis"
+            ],
+            "sheet_count": 7,
+            "formula_xml_count": 78398
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:18_05",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 88645,
+            "sheets": [
+              "Basic Details",
+              "COP",
+              "Milestones",
+              "Total Project Cost",
+              "Cash Budget",
+              "P&L",
+              "BS",
+              "Cash Flow",
+              "Depreciation",
+              "Tax Calculation",
+              "Revenue",
+              "DSCR",
+              "Ratio Analysis",
+              "IRR Analysis"
+            ],
+            "sheet_count": 14,
+            "formula_xml_count": 1583
+          },
+          "output_shape": {
+            "bytes": 88645,
+            "sheets": [
+              "Basic Details",
+              "COP",
+              "Milestones",
+              "Total Project Cost",
+              "Cash Budget",
+              "P&L",
+              "BS",
+              "Cash Flow",
+              "Depreciation",
+              "Tax Calculation",
+              "Revenue",
+              "DSCR",
+              "Ratio Analysis",
+              "IRR Analysis"
+            ],
+            "sheet_count": 14,
+            "formula_xml_count": 1583
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:19_05",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 318803,
+            "sheets": [
+              "AUDIT LOG",
+              "Cover Page",
+              "Summary Valuation",
+              "DCF",
+              "WACC",
+              "IS",
+              "BS",
+              "CF",
+              "Ratio Analysis",
+              "Revenue Drivers",
+              "Cost Drivers",
+              "Working Capital",
+              "Assets Sch.",
+              "Debt Schedule",
+              "Trading Comps",
+              "Txn Comps"
+            ],
+            "sheet_count": 16,
+            "formula_xml_count": 1725
+          },
+          "output_shape": {
+            "bytes": 318803,
+            "sheets": [
+              "AUDIT LOG",
+              "Cover Page",
+              "Summary Valuation",
+              "DCF",
+              "WACC",
+              "IS",
+              "BS",
+              "CF",
+              "Ratio Analysis",
+              "Revenue Drivers",
+              "Cost Drivers",
+              "Working Capital",
+              "Assets Sch.",
+              "Debt Schedule",
+              "Trading Comps",
+              "Txn Comps"
+            ],
+            "sheet_count": 16,
+            "formula_xml_count": 1725
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Financial_Model:20_05",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 277862,
+            "sheets": [
+              "Cover",
+              "Summary",
+              "DCF",
+              "Income Statement",
+              "Cashflow",
+              "Balance Sheet",
+              "Balance Sheet Schedules",
+              "Ratio Analysis",
+              "Assumptions",
+              "Revenue Driver",
+              "Cost Drivers",
+              "Manpower Expenses"
+            ],
+            "sheet_count": 12,
+            "formula_xml_count": 17108
+          },
+          "output_shape": {
+            "bytes": 277862,
+            "sheets": [
+              "Cover",
+              "Summary",
+              "DCF",
+              "Income Statement",
+              "Cashflow",
+              "Balance Sheet",
+              "Balance Sheet Schedules",
+              "Ratio Analysis",
+              "Assumptions",
+              "Revenue Driver",
+              "Cost Drivers",
+              "Manpower Expenses"
+            ],
+            "sheet_count": 12,
+            "formula_xml_count": 17108
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:01_01",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 57760,
+            "sheets": [
+              "Ex 1 - LBO",
+              "Ex 2 - Valuation Bridge",
+              "Ex 3 - PF P&L",
+              "Ex 4 - Organic Operating Model",
+              "Ex 5 - M&A",
+              "Support >>",
+              "Ex 6 - Amdocs Historical M&A",
+              "Ex 7 - SOFR",
+              "Ex 8 - Public Comps",
+              "Ex 9 - Transaction Comps",
+              "Raw Data >>",
+              "Ex 10 - Balance Sheet",
+              "Ex 11 - Income Statement",
+              "Ex 12 - Cash Flow Statement"
+            ],
+            "sheet_count": 14,
+            "formula_xml_count": 1837
+          },
+          "output_shape": {
+            "bytes": 57760,
+            "sheets": [
+              "Ex 1 - LBO",
+              "Ex 2 - Valuation Bridge",
+              "Ex 3 - PF P&L",
+              "Ex 4 - Organic Operating Model",
+              "Ex 5 - M&A",
+              "Support >>",
+              "Ex 6 - Amdocs Historical M&A",
+              "Ex 7 - SOFR",
+              "Ex 8 - Public Comps",
+              "Ex 9 - Transaction Comps",
+              "Raw Data >>",
+              "Ex 10 - Balance Sheet",
+              "Ex 11 - Income Statement",
+              "Ex 12 - Cash Flow Statement"
+            ],
+            "sheet_count": 14,
+            "formula_xml_count": 1837
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:01_06",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 57771,
+            "sheets": [
+              "Ex 1 - LBO",
+              "Ex 2 - Valuation Bridge",
+              "Ex 3 - PF P&L",
+              "Ex 4 - Organic Operating Model",
+              "Ex 5 - M&A",
+              "Support >>",
+              "Ex 6 - Amdocs Historical M&A",
+              "Ex 7 - SOFR",
+              "Ex 8 - Public Comps",
+              "Ex 9 - Transaction Comps",
+              "Raw Data >>",
+              "Ex 10 - Balance Sheet",
+              "Ex 11 - Income Statement",
+              "Ex 12 - Cash Flow Statement"
+            ],
+            "sheet_count": 14,
+            "formula_xml_count": 1837
+          },
+          "output_shape": {
+            "bytes": 57771,
+            "sheets": [
+              "Ex 1 - LBO",
+              "Ex 2 - Valuation Bridge",
+              "Ex 3 - PF P&L",
+              "Ex 4 - Organic Operating Model",
+              "Ex 5 - M&A",
+              "Support >>",
+              "Ex 6 - Amdocs Historical M&A",
+              "Ex 7 - SOFR",
+              "Ex 8 - Public Comps",
+              "Ex 9 - Transaction Comps",
+              "Raw Data >>",
+              "Ex 10 - Balance Sheet",
+              "Ex 11 - Income Statement",
+              "Ex 12 - Cash Flow Statement"
+            ],
+            "sheet_count": 14,
+            "formula_xml_count": 1837
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:02_01",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 87772,
+            "sheets": [
+              "Cover",
+              "DCF",
+              "WACC",
+              "Synergies",
+              "Merger Model",
+              "Berk-Hath Investment Package",
+              "Raw Data >>>",
+              "Exhibit 1",
+              "Exhibit 2",
+              "Exhibit 3",
+              "Exhibit 4a",
+              "Exhibit 5",
+              "Exhibit 6",
+              "Exhibit 7",
+              "Exhibit 8b",
+              "Exhibit 9"
+            ],
+            "sheet_count": 16,
+            "formula_xml_count": 725
+          },
+          "output_shape": {
+            "bytes": 87772,
+            "sheets": [
+              "Cover",
+              "DCF",
+              "WACC",
+              "Synergies",
+              "Merger Model",
+              "Berk-Hath Investment Package",
+              "Raw Data >>>",
+              "Exhibit 1",
+              "Exhibit 2",
+              "Exhibit 3",
+              "Exhibit 4a",
+              "Exhibit 5",
+              "Exhibit 6",
+              "Exhibit 7",
+              "Exhibit 8b",
+              "Exhibit 9"
+            ],
+            "sheet_count": 16,
+            "formula_xml_count": 725
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:02_06",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 111159,
+            "sheets": [
+              "Cover",
+              "DCF",
+              "WACC",
+              "Synergies",
+              "Merger Model",
+              "Berk-Hath Investment Package",
+              "Raw Data >>>",
+              "Exhibit 1",
+              "Exhibit 2",
+              "Exhibit 3",
+              "Exhibit 4a",
+              "Exhibit 5",
+              "Exhibit 6",
+              "Exhibit 7",
+              "Exhibit 8b",
+              "Exhibit 9"
+            ],
+            "sheet_count": 16,
+            "formula_xml_count": 725
+          },
+          "output_shape": {
+            "bytes": 111159,
+            "sheets": [
+              "Cover",
+              "DCF",
+              "WACC",
+              "Synergies",
+              "Merger Model",
+              "Berk-Hath Investment Package",
+              "Raw Data >>>",
+              "Exhibit 1",
+              "Exhibit 2",
+              "Exhibit 3",
+              "Exhibit 4a",
+              "Exhibit 5",
+              "Exhibit 6",
+              "Exhibit 7",
+              "Exhibit 8b",
+              "Exhibit 9"
+            ],
+            "sheet_count": 16,
+            "formula_xml_count": 725
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:03_01",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 103345,
+            "sheets": [
+              "Cover",
+              "LBO",
+              "Valuation Bridge",
+              "Raw Data >>>",
+              "Ex 2 - Income Statement",
+              "Ex 3 - Balance Sheet",
+              "Ex 8 - Stock Performance",
+              "Ex 9 - Perf Metrics",
+              "Ex 10 - Forecast Assumptions ",
+              "Ex 10 - Proj. Income Statement",
+              "Ex 11 - Multiples",
+              "Ex 12 - Debt Schedule",
+              "Ex 13 - Transaction Comps"
+            ],
+            "sheet_count": 13,
+            "formula_xml_count": 554
+          },
+          "output_shape": {
+            "bytes": 103345,
+            "sheets": [
+              "Cover",
+              "LBO",
+              "Valuation Bridge",
+              "Raw Data >>>",
+              "Ex 2 - Income Statement",
+              "Ex 3 - Balance Sheet",
+              "Ex 8 - Stock Performance",
+              "Ex 9 - Perf Metrics",
+              "Ex 10 - Forecast Assumptions ",
+              "Ex 10 - Proj. Income Statement",
+              "Ex 11 - Multiples",
+              "Ex 12 - Debt Schedule",
+              "Ex 13 - Transaction Comps"
+            ],
+            "sheet_count": 13,
+            "formula_xml_count": 554
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:03_06",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 103312,
+            "sheets": [
+              "Cover",
+              "LBO",
+              "Valuation Bridge",
+              "Raw Data >>>",
+              "Ex 2 - Income Statement",
+              "Ex 3 - Balance Sheet",
+              "Ex 8 - Stock Performance",
+              "Ex 9 - Perf Metrics",
+              "Ex 10 - Forecast Assumptions ",
+              "Ex 10 - Proj. Income Statement",
+              "Ex 11 - Multiples",
+              "Ex 12 - Debt Schedule",
+              "Ex 13 - Transaction Comps"
+            ],
+            "sheet_count": 13,
+            "formula_xml_count": 554
+          },
+          "output_shape": {
+            "bytes": 103312,
+            "sheets": [
+              "Cover",
+              "LBO",
+              "Valuation Bridge",
+              "Raw Data >>>",
+              "Ex 2 - Income Statement",
+              "Ex 3 - Balance Sheet",
+              "Ex 8 - Stock Performance",
+              "Ex 9 - Perf Metrics",
+              "Ex 10 - Forecast Assumptions ",
+              "Ex 10 - Proj. Income Statement",
+              "Ex 11 - Multiples",
+              "Ex 12 - Debt Schedule",
+              "Ex 13 - Transaction Comps"
+            ],
+            "sheet_count": 13,
+            "formula_xml_count": 554
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:04_01",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 676489,
+            "sheets": [
+              "Control",
+              "Summary",
+              "Assumptions",
+              "Income Statement",
+              "Balance Sheet",
+              "Cash Flow Statement",
+              "PP&E, Debt, NWC",
+              "Line Item Metrics",
+              "WACC",
+              "DCF",
+              "Sources & Uses",
+              "LBO Analysis",
+              "Returns"
+            ],
+            "sheet_count": 13,
+            "formula_xml_count": 2079
+          },
+          "output_shape": {
+            "bytes": 676489,
+            "sheets": [
+              "Control",
+              "Summary",
+              "Assumptions",
+              "Income Statement",
+              "Balance Sheet",
+              "Cash Flow Statement",
+              "PP&E, Debt, NWC",
+              "Line Item Metrics",
+              "WACC",
+              "DCF",
+              "Sources & Uses",
+              "LBO Analysis",
+              "Returns"
+            ],
+            "sheet_count": 13,
+            "formula_xml_count": 2079
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:04_07",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 676567,
+            "sheets": [
+              "Control",
+              "Summary",
+              "Assumptions",
+              "Income Statement",
+              "Balance Sheet",
+              "Cash Flow Statement",
+              "PP&E, Debt, NWC",
+              "Line Item Metrics",
+              "WACC",
+              "DCF",
+              "Sources & Uses",
+              "LBO Analysis",
+              "Returns"
+            ],
+            "sheet_count": 13,
+            "formula_xml_count": 2079
+          },
+          "output_shape": {
+            "bytes": 676567,
+            "sheets": [
+              "Control",
+              "Summary",
+              "Assumptions",
+              "Income Statement",
+              "Balance Sheet",
+              "Cash Flow Statement",
+              "PP&E, Debt, NWC",
+              "Line Item Metrics",
+              "WACC",
+              "DCF",
+              "Sources & Uses",
+              "LBO Analysis",
+              "Returns"
+            ],
+            "sheet_count": 13,
+            "formula_xml_count": 2079
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:05_02",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 412320,
+            "sheets": [
+              "Model",
+              "PPT Support -->",
+              "Financial Overview",
+              "Financial Performance",
+              "Transaction Overview",
+              "Forward Curves -->",
+              "SOFR",
+              "1-month Term SOFR",
+              "3-month Term SOFR",
+              "Fed Projections"
+            ],
+            "sheet_count": 10,
+            "formula_xml_count": 1159
+          },
+          "output_shape": {
+            "bytes": 412320,
+            "sheets": [
+              "Model",
+              "PPT Support -->",
+              "Financial Overview",
+              "Financial Performance",
+              "Transaction Overview",
+              "Forward Curves -->",
+              "SOFR",
+              "1-month Term SOFR",
+              "3-month Term SOFR",
+              "Fed Projections"
+            ],
+            "sheet_count": 10,
+            "formula_xml_count": 1159
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:05_08",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 412388,
+            "sheets": [
+              "Model",
+              "PPT Support -->",
+              "Financial Overview",
+              "Financial Performance",
+              "Transaction Overview",
+              "Forward Curves -->",
+              "SOFR",
+              "1-month Term SOFR",
+              "3-month Term SOFR",
+              "Fed Projections"
+            ],
+            "sheet_count": 10,
+            "formula_xml_count": 1165
+          },
+          "output_shape": {
+            "bytes": 412388,
+            "sheets": [
+              "Model",
+              "PPT Support -->",
+              "Financial Overview",
+              "Financial Performance",
+              "Transaction Overview",
+              "Forward Curves -->",
+              "SOFR",
+              "1-month Term SOFR",
+              "3-month Term SOFR",
+              "Fed Projections"
+            ],
+            "sheet_count": 10,
+            "formula_xml_count": 1165
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:06_02",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 1059903,
+            "sheets": [
+              "Cover",
+              "Revenue Build",
+              "Operating Model",
+              "DCF",
+              "Dilution",
+              "WACC",
+              "Supporting Schedules",
+              "Comps + Beta",
+              "Supporting Tables",
+              "Appendix -->",
+              "BS Ann",
+              "BS",
+              "CFS Ann",
+              "CFS Q",
+              "IS Q",
+              "IS Ann",
+              "PTA",
+              "PTs"
+            ],
+            "sheet_count": 18,
+            "formula_xml_count": 1440
+          },
+          "output_shape": {
+            "bytes": 1059903,
+            "sheets": [
+              "Cover",
+              "Revenue Build",
+              "Operating Model",
+              "DCF",
+              "Dilution",
+              "WACC",
+              "Supporting Schedules",
+              "Comps + Beta",
+              "Supporting Tables",
+              "Appendix -->",
+              "BS Ann",
+              "BS",
+              "CFS Ann",
+              "CFS Q",
+              "IS Q",
+              "IS Ann",
+              "PTA",
+              "PTs"
+            ],
+            "sheet_count": 18,
+            "formula_xml_count": 1440
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:06_07",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 1348620,
+            "sheets": [
+              "Cover",
+              "Revenue Build",
+              "Operating Model",
+              "DCF",
+              "Dilution",
+              "WACC",
+              "Supporting Schedules",
+              "Comps + Beta",
+              "Supporting Tables",
+              "Appendix -->",
+              "BS Ann",
+              "BS",
+              "CFS Ann",
+              "CFS Q",
+              "IS Q",
+              "IS Ann",
+              "PTA",
+              "PTs"
+            ],
+            "sheet_count": 18,
+            "formula_xml_count": 1446
+          },
+          "output_shape": {
+            "bytes": 1348620,
+            "sheets": [
+              "Cover",
+              "Revenue Build",
+              "Operating Model",
+              "DCF",
+              "Dilution",
+              "WACC",
+              "Supporting Schedules",
+              "Comps + Beta",
+              "Supporting Tables",
+              "Appendix -->",
+              "BS Ann",
+              "BS",
+              "CFS Ann",
+              "CFS Q",
+              "IS Q",
+              "IS Ann",
+              "PTA",
+              "PTs"
+            ],
+            "sheet_count": 18,
+            "formula_xml_count": 1446
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:07_03",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 414412,
+            "sheets": [
+              "BS & CF",
+              "Football Field",
+              "DCF Model",
+              "Trading & Comparable Txns",
+              "Frans Shares",
+              "LBO & Lenders",
+              "Recapitalization",
+              "Equity Returns",
+              "Margin Analysis"
+            ],
+            "sheet_count": 9,
+            "formula_xml_count": 1515
+          },
+          "output_shape": {
+            "bytes": 414412,
+            "sheets": [
+              "BS & CF",
+              "Football Field",
+              "DCF Model",
+              "Trading & Comparable Txns",
+              "Frans Shares",
+              "LBO & Lenders",
+              "Recapitalization",
+              "Equity Returns",
+              "Margin Analysis"
+            ],
+            "sheet_count": 9,
+            "formula_xml_count": 1515
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:07_08",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 415262,
+            "sheets": [
+              "BS & CF",
+              "Football Field",
+              "DCF Model",
+              "Trading & Comparable Txns",
+              "Frans Shares",
+              "LBO & Lenders",
+              "Recapitalization",
+              "Equity Returns",
+              "Margin Analysis"
+            ],
+            "sheet_count": 9,
+            "formula_xml_count": 1529
+          },
+          "output_shape": {
+            "bytes": 415262,
+            "sheets": [
+              "BS & CF",
+              "Football Field",
+              "DCF Model",
+              "Trading & Comparable Txns",
+              "Frans Shares",
+              "LBO & Lenders",
+              "Recapitalization",
+              "Equity Returns",
+              "Margin Analysis"
+            ],
+            "sheet_count": 9,
+            "formula_xml_count": 1529
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:08_04",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 281911,
+            "sheets": [
+              "Cover",
+              "Operating Model + DCF",
+              "Revenue Build",
+              "Comps + WACC",
+              "ADDTL -",
+              "IS Annual",
+              "IS Quarters",
+              "IS Quarters 2",
+              "Key Stats",
+              "BS",
+              "CFS",
+              "Employees",
+              "Graphs"
+            ],
+            "sheet_count": 13,
+            "formula_xml_count": 1014
+          },
+          "output_shape": {
+            "bytes": 281911,
+            "sheets": [
+              "Cover",
+              "Operating Model + DCF",
+              "Revenue Build",
+              "Comps + WACC",
+              "ADDTL -",
+              "IS Annual",
+              "IS Quarters",
+              "IS Quarters 2",
+              "Key Stats",
+              "BS",
+              "CFS",
+              "Employees",
+              "Graphs"
+            ],
+            "sheet_count": 13,
+            "formula_xml_count": 1014
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:08_09",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 278960,
+            "sheets": [
+              "Cover",
+              "Operating Model + DCF",
+              "Revenue Build",
+              "Comps + WACC",
+              "ADDTL -",
+              "IS Annual",
+              "IS Quarters",
+              "IS Quarters 2",
+              "Key Stats",
+              "BS",
+              "CFS",
+              "Employees",
+              "Graphs"
+            ],
+            "sheet_count": 13,
+            "formula_xml_count": 1014
+          },
+          "output_shape": {
+            "bytes": 278960,
+            "sheets": [
+              "Cover",
+              "Operating Model + DCF",
+              "Revenue Build",
+              "Comps + WACC",
+              "ADDTL -",
+              "IS Annual",
+              "IS Quarters",
+              "IS Quarters 2",
+              "Key Stats",
+              "BS",
+              "CFS",
+              "Employees",
+              "Graphs"
+            ],
+            "sheet_count": 13,
+            "formula_xml_count": 1014
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:09_04",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 58348,
+            "sheets": [
+              "LBO",
+              "Financials",
+              "Operating Cases"
+            ],
+            "sheet_count": 3,
+            "formula_xml_count": 1492
+          },
+          "output_shape": {
+            "bytes": 58348,
+            "sheets": [
+              "LBO",
+              "Financials",
+              "Operating Cases"
+            ],
+            "sheet_count": 3,
+            "formula_xml_count": 1492
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:09_09",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 58386,
+            "sheets": [
+              "LBO",
+              "Financials",
+              "Operating Cases"
+            ],
+            "sheet_count": 3,
+            "formula_xml_count": 1492
+          },
+          "output_shape": {
+            "bytes": 58386,
+            "sheets": [
+              "LBO",
+              "Financials",
+              "Operating Cases"
+            ],
+            "sheet_count": 3,
+            "formula_xml_count": 1492
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:10_05",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 8319869,
+            "sheets": [
+              "ANALYSIS -->",
+              "Model",
+              "P&L Summary",
+              "4-Wall Analysis",
+              "BBC -- Backcountry + SAIL",
+              "Rollup",
+              "FORWARD CURVES -->",
+              "3-month Term SOFR",
+              "FROM DATAROOM -->",
+              "FY2023 -->",
+              "FY2023A (IS)",
+              "FY2023A (Earnings)",
+              "FY2023A (BS)",
+              "FY2023A (CF)",
+              "FY23SAIL15",
+              "FY23SAIL16",
+              "FY23SAIL17",
+              "FY23SAIL18",
+              "FY23SAIL21",
+              "FY23SAIL23",
+              "FY23SAIL24",
+              "FY23SAIL26",
+              "FY23SAIL27",
+              "FY23SAIL29",
+              "FY23SAIL30",
+              "FY23SAIL31",
+              "FY23Web",
+              "FY23Operations",
+              "FY2024 -->",
+              "FY2024A (IS)",
+              "FY2024A (Earnings)",
+              "FY2024A (BS)",
+              "FY2024A (CF)",
+              "FY24SAIL15",
+              "FY24SAIL16",
+              "FY24SAIL17",
+              "FY24SAIL18",
+              "FY24SAIL21",
+              "FY24SAIL23",
+              "FY24SAIL24",
+              "FY24SAIL26",
+              "FY24SAIL27",
+              "FY24SAIL29",
+              "FY24SAIL30",
+              "FY24SAIL31",
+              "FY24Web",
+              "FY24Operations",
+              "FY2025 -->",
+              "FY2025A (IS)",
+              "FY2025A (Earnings)",
+              "FY2025A (BS)",
+              "FY2025A (CF)",
+              "FY25SAIL15",
+              "FY25SAIL16",
+              "FY25SAIL17",
+              "FY25SAIL18",
+              "FY25SAIL21",
+              "FY25SAIL23",
+              "FY25SAIL24",
+              "FY25SAIL26",
+              "FY25SAIL27",
+              "FY25SAIL29",
+              "FY25SAIL30",
+              "FY25SAIL31",
+              "FY25Web",
+              "FY25Operations",
+              "FY2026 -->",
+              "FY2026A (YTD IS)",
+              "FY2026A (YTD Earnings)",
+              "FY2026A (YTD BS)",
+              "FY2026A (YTD CF)",
+              "FY2026B (IS)",
+              "FY2026B (Earnings)",
+              "FY2026B (BS)",
+              "FY2026B (CF)",
+              "FY26SAIL15",
+              "FY26SAIL16",
+              "FY26SAIL17",
+              "FY26SAIL18",
+              "FY26SAIL21",
+              "FY26SAIL23",
+              "FY26SAIL24",
+              "FY26SAIL26",
+              "FY26SAIL27",
+              "FY26SAIL29",
+              "FY26SAIL30",
+              "FY26SAIL31",
+              "FY26Web",
+              "FY26Operations",
+              "FY2027 -->",
+              "FY2027P (IS)",
+              "FY2027P (Earnings)",
+              "FY2027P (BS)",
+              "FY2027P (CF)",
+              "FY2028 -->",
+              "FY2028P (IS)",
+              "FY2028P (Earnings)",
+              "FY2028P (BS)",
+              "FY2028P (CF)"
+            ],
+            "sheet_count": 99,
+            "formula_xml_count": 77201
+          },
+          "output_shape": {
+            "bytes": 8319869,
+            "sheets": [
+              "ANALYSIS -->",
+              "Model",
+              "P&L Summary",
+              "4-Wall Analysis",
+              "BBC -- Backcountry + SAIL",
+              "Rollup",
+              "FORWARD CURVES -->",
+              "3-month Term SOFR",
+              "FROM DATAROOM -->",
+              "FY2023 -->",
+              "FY2023A (IS)",
+              "FY2023A (Earnings)",
+              "FY2023A (BS)",
+              "FY2023A (CF)",
+              "FY23SAIL15",
+              "FY23SAIL16",
+              "FY23SAIL17",
+              "FY23SAIL18",
+              "FY23SAIL21",
+              "FY23SAIL23",
+              "FY23SAIL24",
+              "FY23SAIL26",
+              "FY23SAIL27",
+              "FY23SAIL29",
+              "FY23SAIL30",
+              "FY23SAIL31",
+              "FY23Web",
+              "FY23Operations",
+              "FY2024 -->",
+              "FY2024A (IS)",
+              "FY2024A (Earnings)",
+              "FY2024A (BS)",
+              "FY2024A (CF)",
+              "FY24SAIL15",
+              "FY24SAIL16",
+              "FY24SAIL17",
+              "FY24SAIL18",
+              "FY24SAIL21",
+              "FY24SAIL23",
+              "FY24SAIL24",
+              "FY24SAIL26",
+              "FY24SAIL27",
+              "FY24SAIL29",
+              "FY24SAIL30",
+              "FY24SAIL31",
+              "FY24Web",
+              "FY24Operations",
+              "FY2025 -->",
+              "FY2025A (IS)",
+              "FY2025A (Earnings)",
+              "FY2025A (BS)",
+              "FY2025A (CF)",
+              "FY25SAIL15",
+              "FY25SAIL16",
+              "FY25SAIL17",
+              "FY25SAIL18",
+              "FY25SAIL21",
+              "FY25SAIL23",
+              "FY25SAIL24",
+              "FY25SAIL26",
+              "FY25SAIL27",
+              "FY25SAIL29",
+              "FY25SAIL30",
+              "FY25SAIL31",
+              "FY25Web",
+              "FY25Operations",
+              "FY2026 -->",
+              "FY2026A (YTD IS)",
+              "FY2026A (YTD Earnings)",
+              "FY2026A (YTD BS)",
+              "FY2026A (YTD CF)",
+              "FY2026B (IS)",
+              "FY2026B (Earnings)",
+              "FY2026B (BS)",
+              "FY2026B (CF)",
+              "FY26SAIL15",
+              "FY26SAIL16",
+              "FY26SAIL17",
+              "FY26SAIL18",
+              "FY26SAIL21",
+              "FY26SAIL23",
+              "FY26SAIL24",
+              "FY26SAIL26",
+              "FY26SAIL27",
+              "FY26SAIL29",
+              "FY26SAIL30",
+              "FY26SAIL31",
+              "FY26Web",
+              "FY26Operations",
+              "FY2027 -->",
+              "FY2027P (IS)",
+              "FY2027P (Earnings)",
+              "FY2027P (BS)",
+              "FY2027P (CF)",
+              "FY2028 -->",
+              "FY2028P (IS)",
+              "FY2028P (Earnings)",
+              "FY2028P (BS)",
+              "FY2028P (CF)"
+            ],
+            "sheet_count": 99,
+            "formula_xml_count": 77201
+          },
+          "byte_identical_before_recalc": true
+        },
+        {
+          "task_key": "Debugging:10_10",
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "source_shape": {
+            "bytes": 8323836,
+            "sheets": [
+              "ANALYSIS -->",
+              "Model",
+              "P&L Summary",
+              "4-Wall Analysis",
+              "BBC -- Backcountry + SAIL",
+              "Rollup",
+              "FORWARD CURVES -->",
+              "3-month Term SOFR",
+              "FROM DATAROOM -->",
+              "FY2023 -->",
+              "FY2023A (IS)",
+              "FY2023A (Earnings)",
+              "FY2023A (BS)",
+              "FY2023A (CF)",
+              "FY23SAIL15",
+              "FY23SAIL16",
+              "FY23SAIL17",
+              "FY23SAIL18",
+              "FY23SAIL21",
+              "FY23SAIL23",
+              "FY23SAIL24",
+              "FY23SAIL26",
+              "FY23SAIL27",
+              "FY23SAIL29",
+              "FY23SAIL30",
+              "FY23SAIL31",
+              "FY23Web",
+              "FY23Operations",
+              "FY2024 -->",
+              "FY2024A (IS)",
+              "FY2024A (Earnings)",
+              "FY2024A (BS)",
+              "FY2024A (CF)",
+              "FY24SAIL15",
+              "FY24SAIL16",
+              "FY24SAIL17",
+              "FY24SAIL18",
+              "FY24SAIL21",
+              "FY24SAIL23",
+              "FY24SAIL24",
+              "FY24SAIL26",
+              "FY24SAIL27",
+              "FY24SAIL29",
+              "FY24SAIL30",
+              "FY24SAIL31",
+              "FY24Web",
+              "FY24Operations",
+              "FY2025 -->",
+              "FY2025A (IS)",
+              "FY2025A (Earnings)",
+              "FY2025A (BS)",
+              "FY2025A (CF)",
+              "FY25SAIL15",
+              "FY25SAIL16",
+              "FY25SAIL17",
+              "FY25SAIL18",
+              "FY25SAIL21",
+              "FY25SAIL23",
+              "FY25SAIL24",
+              "FY25SAIL26",
+              "FY25SAIL27",
+              "FY25SAIL29",
+              "FY25SAIL30",
+              "FY25SAIL31",
+              "FY25Web",
+              "FY25Operations",
+              "FY2026 -->",
+              "FY2026A (YTD IS)",
+              "FY2026A (YTD Earnings)",
+              "FY2026A (YTD BS)",
+              "FY2026A (YTD CF)",
+              "FY2026B (IS)",
+              "FY2026B (Earnings)",
+              "FY2026B (BS)",
+              "FY2026B (CF)",
+              "FY26SAIL15",
+              "FY26SAIL16",
+              "FY26SAIL17",
+              "FY26SAIL18",
+              "FY26SAIL21",
+              "FY26SAIL23",
+              "FY26SAIL24",
+              "FY26SAIL26",
+              "FY26SAIL27",
+              "FY26SAIL29",
+              "FY26SAIL30",
+              "FY26SAIL31",
+              "FY26Web",
+              "FY26Operations",
+              "FY2027 -->",
+              "FY2027P (IS)",
+              "FY2027P (Earnings)",
+              "FY2027P (BS)",
+              "FY2027P (CF)",
+              "FY2028 -->",
+              "FY2028P (IS)",
+              "FY2028P (Earnings)",
+              "FY2028P (BS)",
+              "FY2028P (CF)"
+            ],
+            "sheet_count": 99,
+            "formula_xml_count": 77201
+          },
+          "output_shape": {
+            "bytes": 8323836,
+            "sheets": [
+              "ANALYSIS -->",
+              "Model",
+              "P&L Summary",
+              "4-Wall Analysis",
+              "BBC -- Backcountry + SAIL",
+              "Rollup",
+              "FORWARD CURVES -->",
+              "3-month Term SOFR",
+              "FROM DATAROOM -->",
+              "FY2023 -->",
+              "FY2023A (IS)",
+              "FY2023A (Earnings)",
+              "FY2023A (BS)",
+              "FY2023A (CF)",
+              "FY23SAIL15",
+              "FY23SAIL16",
+              "FY23SAIL17",
+              "FY23SAIL18",
+              "FY23SAIL21",
+              "FY23SAIL23",
+              "FY23SAIL24",
+              "FY23SAIL26",
+              "FY23SAIL27",
+              "FY23SAIL29",
+              "FY23SAIL30",
+              "FY23SAIL31",
+              "FY23Web",
+              "FY23Operations",
+              "FY2024 -->",
+              "FY2024A (IS)",
+              "FY2024A (Earnings)",
+              "FY2024A (BS)",
+              "FY2024A (CF)",
+              "FY24SAIL15",
+              "FY24SAIL16",
+              "FY24SAIL17",
+              "FY24SAIL18",
+              "FY24SAIL21",
+              "FY24SAIL23",
+              "FY24SAIL24",
+              "FY24SAIL26",
+              "FY24SAIL27",
+              "FY24SAIL29",
+              "FY24SAIL30",
+              "FY24SAIL31",
+              "FY24Web",
+              "FY24Operations",
+              "FY2025 -->",
+              "FY2025A (IS)",
+              "FY2025A (Earnings)",
+              "FY2025A (BS)",
+              "FY2025A (CF)",
+              "FY25SAIL15",
+              "FY25SAIL16",
+              "FY25SAIL17",
+              "FY25SAIL18",
+              "FY25SAIL21",
+              "FY25SAIL23",
+              "FY25SAIL24",
+              "FY25SAIL26",
+              "FY25SAIL27",
+              "FY25SAIL29",
+              "FY25SAIL30",
+              "FY25SAIL31",
+              "FY25Web",
+              "FY25Operations",
+              "FY2026 -->",
+              "FY2026A (YTD IS)",
+              "FY2026A (YTD Earnings)",
+              "FY2026A (YTD BS)",
+              "FY2026A (YTD CF)",
+              "FY2026B (IS)",
+              "FY2026B (Earnings)",
+              "FY2026B (BS)",
+              "FY2026B (CF)",
+              "FY26SAIL15",
+              "FY26SAIL16",
+              "FY26SAIL17",
+              "FY26SAIL18",
+              "FY26SAIL21",
+              "FY26SAIL23",
+              "FY26SAIL24",
+              "FY26SAIL26",
+              "FY26SAIL27",
+              "FY26SAIL29",
+              "FY26SAIL30",
+              "FY26SAIL31",
+              "FY26Web",
+              "FY26Operations",
+              "FY2027 -->",
+              "FY2027P (IS)",
+              "FY2027P (Earnings)",
+              "FY2027P (BS)",
+              "FY2027P (CF)",
+              "FY2028 -->",
+              "FY2028P (IS)",
+              "FY2028P (Earnings)",
+              "FY2028P (BS)",
+              "FY2028P (CF)"
+            ],
+            "sheet_count": 99,
+            "formula_xml_count": 77201
+          },
+          "byte_identical_before_recalc": true
+        }
+      ],
+      "writer_gate_refresh": false,
+      "recalc_path": "treatment scoring uses score_openrouter_run.py refresh; writer gate intentionally isolates archive/write neutrality"
+    },
+    "dry_run": {
+      "status": "PASS",
+      "selected": [
+        "Template:01_02",
+        "Financial_Model:01_01",
+        "Debugging:01_01"
+      ],
+      "task_results": [
+        {
+          "task_id": "Template:01_02",
+          "category": "Template",
+          "compiler": {
+            "status": "ABSTAIN",
+            "raw_task": "Complete the OID bond amortization analysis for XYZ Corporation. Calculate amortization, IS and BS results for GAAP and tax. Tax: bond at face value; OID not deductible annually.",
+            "obligations": [],
+            "call": {
+              "task_id": "Template:01_02",
+              "stage": "task_ir",
+              "call_index_within_task": 1,
+              "model": "z-ai/glm-5.3-flash",
+              "provider": "openrouter",
+              "reasoning": "low",
+              "temperature": 0.0,
+              "request_body": {
+                "model": "z-ai/glm-5.3-flash",
+                "temperature": 0.0,
+                "reasoning": {
+                  "effort": "low"
+                },
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "You compile a spreadsheet-editing TASK INSTRUCTION into clause-level obligations.\n\nYou receive only the task text. You have never seen a workbook, sheet index,\ncell address, golden answer, formula, or prior agent trace. Do not invent any\nof those.\n\nNATURAL UNIT\nA CLAUSE_OBLIGATION is one requested transformation plus the constraints\nlicensed by that same task clause. A task is a conjunction of such\nobligations. When the text states an ordering or dependency (then / from that\n/ after), record it with then_after.\n\nOUTPUT\nReturn JSON only of the form {\"obligations\": [...]}.\nEach obligation must use this shape:\n\n{\n  \"id\": \"O1\",\n  \"provenance\": [{\"text\": \"<exact substring of the task>\"}],\n  \"locus\": {\"text\": \"<exact task substring>\"} | null,\n  \"subject\": {\"text\": \"<exact task substring>\"} | null,\n  \"subject_interval\": {\n    \"from\": {\"text\": \"<exact substring>\"},\n    \"to\": {\"text\": \"<exact substring>\"}\n  } | null,\n  \"required_change\": {\"text\": \"<exact task substring>\"} | null,\n  \"scope\": [{\"text\": \"<exact task substring>\"}],\n  \"source_relation\": {\"text\": \"<exact task substring>\"} | null,\n  \"condition\": {\"text\": \"<exact task substring>\"} | null,\n  \"result_property\": {\"text\": \"<exact task substring>\"} | null,\n  \"then_after\": [\"<obligation id>\"],\n  \"occupancy_filter\": {\"text\": \"<exact task substring>\"} | null\n}\n\nFIELD MEANINGS\n- provenance: the clause span(s) this obligation comes from.\n- locus: named sheet, tab, or section where the transformation is requested.\n- subject: named line item, metric, or object of the clause (not a cell address).\n- subject_interval: ordered from–to span of subjects when the task names a\n  range of line items (not a year/date range).\n- required_change: the requested state change as written (calculate, link,\n  reference, set, hardcode, populate, create, add, check, convert, …).\n- scope: quantifier or period boundary as written (all / each / through /\n  enumerated years / historical vs forecast text).\n- source_relation: explicit using / from / based on / by applying / as a\n  percentage of / as the sum of correspondence. If the task does not name a\n  source correspondence, this must be null.\n- condition: when / where guard stated in the clause.\n- result_property: required output property (display NM/NA, nil, same as last\n  historical, percentage-of, chart encoding).\n- then_after: ids of obligations that this one follows when the text is explicit.\n- occupancy_filter: constraint over existing cell kind (for example, only cells\n  that are not hardcoded).\n\nRULES\n1. Every populated semantic field must be an exact substring of the task.\n   Copy the task's wording. Do not paraphrase into workbook language.\n2. Absent information is null or []. Do not guess.\n3. Do not resolve ambiguity with invented workbook knowledge.\n4. Multiple requested transformations stay separate obligations.\n5. Do not emit an obligation for generic openers that only say to complete a\n   model from assumptions, or to preserve structure / layout / formatting,\n   unless that sentence also names a specific transformation.\n6. Do not convert generic preservation language into a freeze-all-unmentioned-\n   cells constraint unless the task explicitly says that.\n7. Do not emit cell addresses, formulas, row numbers, or sheet names that are\n   not written in the task.\n8. If several then-clauses share a leading \"In the … sheet/tab/section\", that\n   locus applies to each of those clauses.\n9. Keep compound subjects that are one transformation together\n   (for example a list of metrics being calculated the same way).\n10. Number obligations O1, O2, … in reading order.\n\nReturn JSON only. No commentary.\n"
+                  },
+                  {
+                    "role": "user",
+                    "content": "Compile the following task instruction into TASK_OBLIGATION_SHAPE_V1 JSON.\n\nTASK INSTRUCTION:\nComplete the OID bond amortization analysis for XYZ Corporation. Calculate amortization, IS and BS results for GAAP and tax. Tax: bond at face value; OID not deductible annually."
+                  }
+                ]
+              },
+              "request_sha256": "104f6156fcb34659bee904f46d189383e1a457bd357cd75eb894681cb73e19de",
+              "user_payload_sha256": "f5caa67db13128b6dfc6af513af662b1725869df8046ed86d181324a6565b6ab",
+              "previous_persistent_state_hash": "d799104671e22d83f2d38e420c0faa95d90adb17f3caa4a1a02247ac273fa920",
+              "working_set_hash": null,
+              "evidence_hash": null,
+              "raw_response_body": {
+                "id": "stub",
+                "model": "z-ai/glm-5.3-flash",
+                "choices": [
+                  {
+                    "message": {
+                      "content": "{\"status\":\"ABSTAIN\"}"
+                    },
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 0,
+                  "completion_tokens": 0,
+                  "total_tokens": 0,
+                  "cost": 0.0
+                }
+              },
+              "raw_response_text": "{\"status\":\"ABSTAIN\"}",
+              "parsed_response": {
+                "status": "ABSTAIN"
+              },
+              "usage": {
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cost": 0.0
+              },
+              "provider_cost_usd": 0.0,
+              "finish_reason": "stop",
+              "truncation_class": null,
+              "failure_class": null
+            }
+          },
+          "edit_plan": {
+            "status": "EMPTY_EXPANSION",
+            "expansion": {
+              "status": "EMPTY_EXPANSION",
+              "cell_ids": [],
+              "operations": [],
+              "provenance": {}
+            },
+            "packets": {}
+          },
+          "schedule": {
+            "authorized_targets": 0,
+            "canonical_decisions": [],
+            "translated_formula_instances": [],
+            "proposals": [],
+            "failures": []
+          },
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/prep/dry_run/Template-01_02/output.xlsx",
+          "state": {
+            "model_call_count": 1,
+            "provider_cost_usd": 0.0
+          },
+          "status": "DRY_COMPLETED",
+          "failure_ledger": [],
+          "finished_at": "2026-09-10T16:59:39.593559+00:00"
+        },
+        {
+          "task_id": "Financial_Model:01_01",
+          "category": "Financial_Model",
+          "compiler": {
+            "status": "ABSTAIN",
+            "raw_task": "Complete the financial model based on the provided assumptions. Ensure the existing structure, layout, and formatting of the model are preserved throughout the process.\nIn the Consolidated P&L sheet, calculate the CAGR of Total Revenue from 2025 to 2030. In the Revenue Drivers sheet, reference actual Other Revenue from another tab, and then hardcode the % of Operating Revenue for the forecasted years as the same value as the last actual year’s value. From that, calculate forecasted Other Revenue. Compute operational costs for each Foundation Course line item in the cost drivers. In the Working Capital Schedule sheet, calculate changes in Working Capital for the forecast period using a roll-forward approach based on period-to-period movements in trade receivables, inventory, and trade payables. In the Fixed Assets Schedule sheet, compute depreciation by applying the 25% assumption to opening balance plus capital expenditure for the forecast period. In the Consolidated BS sheet, add a validation check for each year.",
+            "obligations": [],
+            "call": {
+              "task_id": "Financial_Model:01_01",
+              "stage": "task_ir",
+              "call_index_within_task": 1,
+              "model": "z-ai/glm-5.3-flash",
+              "provider": "openrouter",
+              "reasoning": "low",
+              "temperature": 0.0,
+              "request_body": {
+                "model": "z-ai/glm-5.3-flash",
+                "temperature": 0.0,
+                "reasoning": {
+                  "effort": "low"
+                },
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "You compile a spreadsheet-editing TASK INSTRUCTION into clause-level obligations.\n\nYou receive only the task text. You have never seen a workbook, sheet index,\ncell address, golden answer, formula, or prior agent trace. Do not invent any\nof those.\n\nNATURAL UNIT\nA CLAUSE_OBLIGATION is one requested transformation plus the constraints\nlicensed by that same task clause. A task is a conjunction of such\nobligations. When the text states an ordering or dependency (then / from that\n/ after), record it with then_after.\n\nOUTPUT\nReturn JSON only of the form {\"obligations\": [...]}.\nEach obligation must use this shape:\n\n{\n  \"id\": \"O1\",\n  \"provenance\": [{\"text\": \"<exact substring of the task>\"}],\n  \"locus\": {\"text\": \"<exact task substring>\"} | null,\n  \"subject\": {\"text\": \"<exact task substring>\"} | null,\n  \"subject_interval\": {\n    \"from\": {\"text\": \"<exact substring>\"},\n    \"to\": {\"text\": \"<exact substring>\"}\n  } | null,\n  \"required_change\": {\"text\": \"<exact task substring>\"} | null,\n  \"scope\": [{\"text\": \"<exact task substring>\"}],\n  \"source_relation\": {\"text\": \"<exact task substring>\"} | null,\n  \"condition\": {\"text\": \"<exact task substring>\"} | null,\n  \"result_property\": {\"text\": \"<exact task substring>\"} | null,\n  \"then_after\": [\"<obligation id>\"],\n  \"occupancy_filter\": {\"text\": \"<exact task substring>\"} | null\n}\n\nFIELD MEANINGS\n- provenance: the clause span(s) this obligation comes from.\n- locus: named sheet, tab, or section where the transformation is requested.\n- subject: named line item, metric, or object of the clause (not a cell address).\n- subject_interval: ordered from–to span of subjects when the task names a\n  range of line items (not a year/date range).\n- required_change: the requested state change as written (calculate, link,\n  reference, set, hardcode, populate, create, add, check, convert, …).\n- scope: quantifier or period boundary as written (all / each / through /\n  enumerated years / historical vs forecast text).\n- source_relation: explicit using / from / based on / by applying / as a\n  percentage of / as the sum of correspondence. If the task does not name a\n  source correspondence, this must be null.\n- condition: when / where guard stated in the clause.\n- result_property: required output property (display NM/NA, nil, same as last\n  historical, percentage-of, chart encoding).\n- then_after: ids of obligations that this one follows when the text is explicit.\n- occupancy_filter: constraint over existing cell kind (for example, only cells\n  that are not hardcoded).\n\nRULES\n1. Every populated semantic field must be an exact substring of the task.\n   Copy the task's wording. Do not paraphrase into workbook language.\n2. Absent information is null or []. Do not guess.\n3. Do not resolve ambiguity with invented workbook knowledge.\n4. Multiple requested transformations stay separate obligations.\n5. Do not emit an obligation for generic openers that only say to complete a\n   model from assumptions, or to preserve structure / layout / formatting,\n   unless that sentence also names a specific transformation.\n6. Do not convert generic preservation language into a freeze-all-unmentioned-\n   cells constraint unless the task explicitly says that.\n7. Do not emit cell addresses, formulas, row numbers, or sheet names that are\n   not written in the task.\n8. If several then-clauses share a leading \"In the … sheet/tab/section\", that\n   locus applies to each of those clauses.\n9. Keep compound subjects that are one transformation together\n   (for example a list of metrics being calculated the same way).\n10. Number obligations O1, O2, … in reading order.\n\nReturn JSON only. No commentary.\n"
+                  },
+                  {
+                    "role": "user",
+                    "content": "Compile the following task instruction into TASK_OBLIGATION_SHAPE_V1 JSON.\n\nTASK INSTRUCTION:\nComplete the financial model based on the provided assumptions. Ensure the existing structure, layout, and formatting of the model are preserved throughout the process.\nIn the Consolidated P&L sheet, calculate the CAGR of Total Revenue from 2025 to 2030. In the Revenue Drivers sheet, reference actual Other Revenue from another tab, and then hardcode the % of Operating Revenue for the forecasted years as the same value as the last actual year’s value. From that, calculate forecasted Other Revenue. Compute operational costs for each Foundation Course line item in the cost drivers. In the Working Capital Schedule sheet, calculate changes in Working Capital for the forecast period using a roll-forward approach based on period-to-period movements in trade receivables, inventory, and trade payables. In the Fixed Assets Schedule sheet, compute depreciation by applying the 25% assumption to opening balance plus capital expenditure for the forecast period. In the Consolidated BS sheet, add a validation check for each year."
+                  }
+                ]
+              },
+              "request_sha256": "78f4b4bf3c2b9198b9639d9a07769b96204ea82c4efda4fb5815eab49b059332",
+              "user_payload_sha256": "3a28a048fec83cd5f43f0acd5286a7c61da4829d75f1a85c9d463a7f8a20fea6",
+              "previous_persistent_state_hash": "a3221204f0fbbefe6b934c724a1565a2a13f6068a3edca21d97b5778c8b8e572",
+              "working_set_hash": null,
+              "evidence_hash": null,
+              "raw_response_body": {
+                "id": "stub",
+                "model": "z-ai/glm-5.3-flash",
+                "choices": [
+                  {
+                    "message": {
+                      "content": "{\"status\":\"ABSTAIN\"}"
+                    },
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 0,
+                  "completion_tokens": 0,
+                  "total_tokens": 0,
+                  "cost": 0.0
+                }
+              },
+              "raw_response_text": "{\"status\":\"ABSTAIN\"}",
+              "parsed_response": {
+                "status": "ABSTAIN"
+              },
+              "usage": {
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cost": 0.0
+              },
+              "provider_cost_usd": 0.0,
+              "finish_reason": "stop",
+              "truncation_class": null,
+              "failure_class": null
+            }
+          },
+          "edit_plan": {
+            "status": "EMPTY_EXPANSION",
+            "expansion": {
+              "status": "EMPTY_EXPANSION",
+              "cell_ids": [],
+              "operations": [],
+              "provenance": {}
+            },
+            "packets": {}
+          },
+          "schedule": {
+            "authorized_targets": 0,
+            "canonical_decisions": [],
+            "translated_formula_instances": [],
+            "proposals": [],
+            "failures": []
+          },
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/prep/dry_run/Financial_Model-01_01/output.xlsx",
+          "state": {
+            "model_call_count": 1,
+            "provider_cost_usd": 0.0
+          },
+          "status": "DRY_COMPLETED",
+          "failure_ledger": [],
+          "finished_at": "2026-09-10T16:59:40.311421+00:00"
+        },
+        {
+          "task_id": "Debugging:01_01",
+          "category": "Debugging",
+          "compiler": {
+            "status": "ABSTAIN",
+            "raw_task": "Please audit and fix this file thoroughly. Errors may include but are not limited to: formula logic errors or inconsistencies, hardcoded values that should be formulas, broken cell references, data validation issues, potential calculation errors, inconsistent formatting or naming conventions, best practice violations, and any other issues that could affect accuracy or maintainability.",
+            "obligations": [],
+            "call": {
+              "task_id": "Debugging:01_01",
+              "stage": "task_ir",
+              "call_index_within_task": 1,
+              "model": "z-ai/glm-5.3-flash",
+              "provider": "openrouter",
+              "reasoning": "low",
+              "temperature": 0.0,
+              "request_body": {
+                "model": "z-ai/glm-5.3-flash",
+                "temperature": 0.0,
+                "reasoning": {
+                  "effort": "low"
+                },
+                "messages": [
+                  {
+                    "role": "system",
+                    "content": "You compile a spreadsheet-editing TASK INSTRUCTION into clause-level obligations.\n\nYou receive only the task text. You have never seen a workbook, sheet index,\ncell address, golden answer, formula, or prior agent trace. Do not invent any\nof those.\n\nNATURAL UNIT\nA CLAUSE_OBLIGATION is one requested transformation plus the constraints\nlicensed by that same task clause. A task is a conjunction of such\nobligations. When the text states an ordering or dependency (then / from that\n/ after), record it with then_after.\n\nOUTPUT\nReturn JSON only of the form {\"obligations\": [...]}.\nEach obligation must use this shape:\n\n{\n  \"id\": \"O1\",\n  \"provenance\": [{\"text\": \"<exact substring of the task>\"}],\n  \"locus\": {\"text\": \"<exact task substring>\"} | null,\n  \"subject\": {\"text\": \"<exact task substring>\"} | null,\n  \"subject_interval\": {\n    \"from\": {\"text\": \"<exact substring>\"},\n    \"to\": {\"text\": \"<exact substring>\"}\n  } | null,\n  \"required_change\": {\"text\": \"<exact task substring>\"} | null,\n  \"scope\": [{\"text\": \"<exact task substring>\"}],\n  \"source_relation\": {\"text\": \"<exact task substring>\"} | null,\n  \"condition\": {\"text\": \"<exact task substring>\"} | null,\n  \"result_property\": {\"text\": \"<exact task substring>\"} | null,\n  \"then_after\": [\"<obligation id>\"],\n  \"occupancy_filter\": {\"text\": \"<exact task substring>\"} | null\n}\n\nFIELD MEANINGS\n- provenance: the clause span(s) this obligation comes from.\n- locus: named sheet, tab, or section where the transformation is requested.\n- subject: named line item, metric, or object of the clause (not a cell address).\n- subject_interval: ordered from–to span of subjects when the task names a\n  range of line items (not a year/date range).\n- required_change: the requested state change as written (calculate, link,\n  reference, set, hardcode, populate, create, add, check, convert, …).\n- scope: quantifier or period boundary as written (all / each / through /\n  enumerated years / historical vs forecast text).\n- source_relation: explicit using / from / based on / by applying / as a\n  percentage of / as the sum of correspondence. If the task does not name a\n  source correspondence, this must be null.\n- condition: when / where guard stated in the clause.\n- result_property: required output property (display NM/NA, nil, same as last\n  historical, percentage-of, chart encoding).\n- then_after: ids of obligations that this one follows when the text is explicit.\n- occupancy_filter: constraint over existing cell kind (for example, only cells\n  that are not hardcoded).\n\nRULES\n1. Every populated semantic field must be an exact substring of the task.\n   Copy the task's wording. Do not paraphrase into workbook language.\n2. Absent information is null or []. Do not guess.\n3. Do not resolve ambiguity with invented workbook knowledge.\n4. Multiple requested transformations stay separate obligations.\n5. Do not emit an obligation for generic openers that only say to complete a\n   model from assumptions, or to preserve structure / layout / formatting,\n   unless that sentence also names a specific transformation.\n6. Do not convert generic preservation language into a freeze-all-unmentioned-\n   cells constraint unless the task explicitly says that.\n7. Do not emit cell addresses, formulas, row numbers, or sheet names that are\n   not written in the task.\n8. If several then-clauses share a leading \"In the … sheet/tab/section\", that\n   locus applies to each of those clauses.\n9. Keep compound subjects that are one transformation together\n   (for example a list of metrics being calculated the same way).\n10. Number obligations O1, O2, … in reading order.\n\nReturn JSON only. No commentary.\n"
+                  },
+                  {
+                    "role": "user",
+                    "content": "Compile the following task instruction into TASK_OBLIGATION_SHAPE_V1 JSON.\n\nTASK INSTRUCTION:\nPlease audit and fix this file thoroughly. Errors may include but are not limited to: formula logic errors or inconsistencies, hardcoded values that should be formulas, broken cell references, data validation issues, potential calculation errors, inconsistent formatting or naming conventions, best practice violations, and any other issues that could affect accuracy or maintainability."
+                  }
+                ]
+              },
+              "request_sha256": "a8166a89f929b2e743d88898f9220ec75d2b27e8f83cae5013568a5120b49bf0",
+              "user_payload_sha256": "a10da16767209e2ebd2a682ef4b061f80bc92b8a79c0f835774caacdb44e05d2",
+              "previous_persistent_state_hash": "b49decec010340efbb2bce73c9fd46bac315248e1b832009ba55035d309e9ab6",
+              "working_set_hash": null,
+              "evidence_hash": null,
+              "raw_response_body": {
+                "id": "stub",
+                "model": "z-ai/glm-5.3-flash",
+                "choices": [
+                  {
+                    "message": {
+                      "content": "{\"status\":\"ABSTAIN\"}"
+                    },
+                    "finish_reason": "stop"
+                  }
+                ],
+                "usage": {
+                  "prompt_tokens": 0,
+                  "completion_tokens": 0,
+                  "total_tokens": 0,
+                  "cost": 0.0
+                }
+              },
+              "raw_response_text": "{\"status\":\"ABSTAIN\"}",
+              "parsed_response": {
+                "status": "ABSTAIN"
+              },
+              "usage": {
+                "prompt_tokens": 0,
+                "completion_tokens": 0,
+                "total_tokens": 0,
+                "cost": 0.0
+              },
+              "provider_cost_usd": 0.0,
+              "finish_reason": "stop",
+              "truncation_class": null,
+              "failure_class": null
+            }
+          },
+          "edit_plan": {
+            "status": "EMPTY_EXPANSION",
+            "expansion": {
+              "status": "EMPTY_EXPANSION",
+              "cell_ids": [],
+              "operations": [],
+              "provenance": {}
+            },
+            "packets": {}
+          },
+          "schedule": {
+            "authorized_targets": 0,
+            "canonical_decisions": [],
+            "translated_formula_instances": [],
+            "proposals": [],
+            "failures": []
+          },
+          "write_audit": {
+            "applied": [],
+            "rejected": [],
+            "byte_identical_to_source": true,
+            "rewritten_parts": []
+          },
+          "output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/prep/dry_run/Debugging-01_01/output.xlsx",
+          "state": {
+            "model_call_count": 1,
+            "provider_cost_usd": 0.0
+          },
+          "status": "DRY_COMPLETED",
+          "failure_ledger": [],
+          "finished_at": "2026-09-10T16:59:40.720497+00:00"
+        }
+      ],
+      "official_score": {
+        "run_name": "dry_run",
+        "model_name": "matched-glm-compiled-sixty-dry",
+        "evaluation_runtime": "metadata-tolerant-local-v1",
+        "exact": 0,
+        "scored": 3,
+        "missing_outputs": 0,
+        "submission": {
+          "outputs": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/prep/dry_run/submission/outputs",
+          "official_json": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/prep/dry_run/submission/results"
+        },
+        "tasks": {
+          "Debugging:01_01": {
+            "id": "01_01",
+            "error_message": "Regression error at Ex 1 - LBO!AC20: answer=0, output=-130.666114561455",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.9364,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Financial_Model:01_01": {
+            "id": "01_01",
+            "error_message": "Modification error at DCF Valuation!C22: answer=2425.91653544975, output=4440.18535205689",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          },
+          "Template:01_02": {
+            "id": "01_02",
+            "error_message": "Modification error at OID_Bond!C9: answer=413.669565112777, output=None",
+            "regression_accuracy": 1.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+          }
+        }
+      },
+      "stub_calls": true,
+      "live_model_calls": 0
+    },
+    "request_identity": {
+      "pass": true
+    },
+    "sweagent": {
+      "pass": true
+    },
+    "docker_image": {
+      "pass": true,
+      "image_id": "b047607ac623"
+    },
+    "freeze_artifacts": {
+      "pass": true,
+      "hash_drift": [
+        "benchmark/matched_compiled_treatment.py",
+        "benchmark/workbook_grounding.py",
+        "benchmark/workbook_grounding_spine.py",
+        "benchmark/workbook_spine_sqlite.py",
+        "tests/test_matched_compiled_treatment.py"
+      ],
+      "note": "Historical freeze hashes are diagnostic. Request identity is AUTHORITATIVE_EXPERIMENT_CONFIG / high, not the archived low/50/$4 freeze."
+    },
+    "pass": true
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "after_review_if_refinement_warranted": "Choose one smallest evidence-grounded model-facing integration change, assign a new RC/profile identity, use a fresh discovery cohort, and preregister again.",
+  "architecture_discovery": "CLOSED",
+  "future_validation_population": "RESERVED_UNTOUCHED",
+  "product_rc_unchanged": true,
+  "public_token_claim": "NOT_READY",
+  "single_next_action": "Independent GPT-6 Astra forensic review of the frozen packet; no live treatment or holdout calls."
+}

@@ -1,0 +1,45 @@
+{
+  "note": "Default OpenRouter routing policy is common to arms; actually served provider may vary stochastically and is reported, not treated as a factorial arm.",
+  "provider_wait_s_by_arm": {
+    "A": 4879.05176768429,
+    "B": 4048.0609026205457,
+    "C": 5016.566482827002,
+    "D": 6191.6057239495785
+  },
+  "served_models": {
+    "z-ai/glm-5.3-flash": 1167
+  },
+  "served_providers_by_arm": {
+    "A": {
+      "DeepInfra": 1,
+      "InferenceNet": 2,
+      "Morph": 7,
+      "OpenInference": 65,
+      "Phala": 13,
+      "Wafer": 241
+    },
+    "B": {
+      "DeepInfra": 2,
+      "InferenceNet": 9,
+      "Morph": 1,
+      "OpenInference": 52,
+      "Phala": 14,
+      "Wafer": 179
+    },
+    "C": {
+      "InferenceNet": 13,
+      "Morph": 1,
+      "OpenInference": 64,
+      "Phala": 26,
+      "Wafer": 202
+    },
+    "D": {
+      "DeepInfra": 1,
+      "InferenceNet": 14,
+      "Morph": 6,
+      "OpenInference": 68,
+      "Phala": 13,
+      "Wafer": 173
+    }
+  }
+}

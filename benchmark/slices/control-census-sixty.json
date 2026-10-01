@@ -1,0 +1,253 @@
+{
+  "name": "control-census-sixty",
+  "purpose": "Give the mismatch census an arm delta at population scale. The 297 census is single-arm: it says what our failures are, not whether bash has the same ones. This is the control side of a stratified 60-task sample so every causal class gets a 'does the baseline do this too' column. The class under test is Debugging's 'direct populated target: unchanged' (39.7% of Debugging mismatched cells, present in 84/88 tasks), which is the population form of the agent_scan candidate.",
+  "model": "z-ai/glm-5.3-flash",
+  "sampling": "Deterministic and drawn before any control result was seen: per category, task ids sorted and 20 taken at evenly spaced positions, with the 15 contaminated public-example tasks excluded. Our arm's 297 results were already known when this was drawn, so this slice is fair for arm comparison but is NOT an independent estimate of our own accuracy.",
+  "arms": {
+    "control": "--control, official config, 50-call budget, matching every prior control run"
+  },
+  "reading": "Per causal class, compare incidence in this control run against the same tasks in glm-5.3-flash-nonvisual-297-1. A class the control shares is a task/model property; a class only we have is interface-induced. n=1 per task -- treat a single-task difference as unproven and read the class-level aggregate.",
+  "max_tool_calls_per_task": 50,
+  "tasks": [
+    {
+      "category": "Template",
+      "id": "01_02"
+    },
+    {
+      "category": "Template",
+      "id": "01_07"
+    },
+    {
+      "category": "Template",
+      "id": "02_05"
+    },
+    {
+      "category": "Template",
+      "id": "03_03"
+    },
+    {
+      "category": "Template",
+      "id": "05_02"
+    },
+    {
+      "category": "Template",
+      "id": "06_06"
+    },
+    {
+      "category": "Template",
+      "id": "06_12"
+    },
+    {
+      "category": "Template",
+      "id": "06_17"
+    },
+    {
+      "category": "Template",
+      "id": "06_21"
+    },
+    {
+      "category": "Template",
+      "id": "07_01"
+    },
+    {
+      "category": "Template",
+      "id": "08_03"
+    },
+    {
+      "category": "Template",
+      "id": "10_01"
+    },
+    {
+      "category": "Template",
+      "id": "11_03"
+    },
+    {
+      "category": "Template",
+      "id": "13_03"
+    },
+    {
+      "category": "Template",
+      "id": "13_08"
+    },
+    {
+      "category": "Template",
+      "id": "14_05"
+    },
+    {
+      "category": "Template",
+      "id": "15_01"
+    },
+    {
+      "category": "Template",
+      "id": "16_01"
+    },
+    {
+      "category": "Template",
+      "id": "16_06"
+    },
+    {
+      "category": "Template",
+      "id": "16_12"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "01_01"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "02_01"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "03_01"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "04_01"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "05_01"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "06_01"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "07_01"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "08_01"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "10_01"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "11_01"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "11_05"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "12_05"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "13_05"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "14_05"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "15_05"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "16_05"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "17_05"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "18_05"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "19_05"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "20_05"
+    },
+    {
+      "category": "Debugging",
+      "id": "01_01"
+    },
+    {
+      "category": "Debugging",
+      "id": "01_06"
+    },
+    {
+      "category": "Debugging",
+      "id": "02_01"
+    },
+    {
+      "category": "Debugging",
+      "id": "02_06"
+    },
+    {
+      "category": "Debugging",
+      "id": "03_01"
+    },
+    {
+      "category": "Debugging",
+      "id": "03_06"
+    },
+    {
+      "category": "Debugging",
+      "id": "04_01"
+    },
+    {
+      "category": "Debugging",
+      "id": "04_07"
+    },
+    {
+      "category": "Debugging",
+      "id": "05_02"
+    },
+    {
+      "category": "Debugging",
+      "id": "05_08"
+    },
+    {
+      "category": "Debugging",
+      "id": "06_02"
+    },
+    {
+      "category": "Debugging",
+      "id": "06_07"
+    },
+    {
+      "category": "Debugging",
+      "id": "07_03"
+    },
+    {
+      "category": "Debugging",
+      "id": "07_08"
+    },
+    {
+      "category": "Debugging",
+      "id": "08_04"
+    },
+    {
+      "category": "Debugging",
+      "id": "08_09"
+    },
+    {
+      "category": "Debugging",
+      "id": "09_04"
+    },
+    {
+      "category": "Debugging",
+      "id": "09_09"
+    },
+    {
+      "category": "Debugging",
+      "id": "10_05"
+    },
+    {
+      "category": "Debugging",
+      "id": "10_10"
+    }
+  ]
+}

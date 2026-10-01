@@ -1,0 +1,5 @@
+# Archived versus agent-output stage
+
+The retained benchmark/score_openrouter_run.py stages run-local output.xlsx into submission/outputs (lines76–91), defaults refresh=True (line168), invokes evaluation/open_spreadsheet.py (lines93–104,187–189), then runs the official evaluator and copies results to the submission packet. Thus the retained pipeline explicitly includes LibreOffice before official scoring. Its current source is not independent proof of every historical execution configuration; historical evaluator/build identities are unavailable.
+
+All183 P1 raw output hashes differ from submitted archive hashes, all archived formula caches are populated, and all original numeric tuples reproduce on archived V0. These observations and the retained pipeline support stage separation. Hash differences alone do not prove that each transformation was exclusively recalc. Replay's causal contrast begins at the submitted archived bytes, not a substituted raw output. P2 byte-unverified files remain normalized-only evidence even when numeric tuples happen to match.

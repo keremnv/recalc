@@ -1,0 +1,98 @@
+{
+  "affinity_diagnostic": "[1]",
+  "note": "All scored parents and their children will inherit singleton CPU1 affinity; no per-command taskset wrapper is inside the timer.",
+  "selected_cpu": 1,
+  "selected_cpu_max_khz": 4500000,
+  "topology": [
+    {
+      "cpu": 0,
+      "governor": "powersave",
+      "max_khz": 4500000
+    },
+    {
+      "cpu": 1,
+      "governor": "powersave",
+      "max_khz": 4500000
+    },
+    {
+      "cpu": 2,
+      "governor": "powersave",
+      "max_khz": 4500000
+    },
+    {
+      "cpu": 3,
+      "governor": "powersave",
+      "max_khz": 4500000
+    },
+    {
+      "cpu": 4,
+      "governor": "powersave",
+      "max_khz": 4500000
+    },
+    {
+      "cpu": 5,
+      "governor": "powersave",
+      "max_khz": 4500000
+    },
+    {
+      "cpu": 6,
+      "governor": "powersave",
+      "max_khz": 4500000
+    },
+    {
+      "cpu": 7,
+      "governor": "powersave",
+      "max_khz": 4500000
+    },
+    {
+      "cpu": 8,
+      "governor": "powersave",
+      "max_khz": 3600000
+    },
+    {
+      "cpu": 9,
+      "governor": "powersave",
+      "max_khz": 3600000
+    },
+    {
+      "cpu": 10,
+      "governor": "powersave",
+      "max_khz": 3600000
+    },
+    {
+      "cpu": 11,
+      "governor": "powersave",
+      "max_khz": 3600000
+    },
+    {
+      "cpu": 12,
+      "governor": "powersave",
+      "max_khz": 3600000
+    },
+    {
+      "cpu": 13,
+      "governor": "powersave",
+      "max_khz": 3600000
+    },
+    {
+      "cpu": 14,
+      "governor": "powersave",
+      "max_khz": 3600000
+    },
+    {
+      "cpu": 15,
+      "governor": "powersave",
+      "max_khz": 3600000
+    },
+    {
+      "cpu": 16,
+      "governor": "powersave",
+      "max_khz": 2500000
+    },
+    {
+      "cpu": 17,
+      "governor": "powersave",
+      "max_khz": 2500000
+    }
+  ]
+}

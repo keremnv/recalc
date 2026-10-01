@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-09-16T10:06:16.476338+00:00",
+  "status": "SPARK_COMPILED_WORKERS_STARTED",
+  "claim": "model_on_fixed_compiled_architecture",
+  "not_a_scaffold_comparison": true,
+  "model": "meta/muse-spark-1.3-contributor",
+  "reasoning": "high",
+  "max_model_calls_per_task": 40,
+  "max_cost_usd_per_task": 2.5,
+  "output_root": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/official-score-probe/spark-compiled",
+  "glm_baseline_root": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/official-score-probe/glm-compiled",
+  "do_not_rerun": [
+    "published_control",
+    "glm_compiled",
+    "spark_control",
+    "spark_librecalc_harness"
+  ],
+  "workers": [
+    {
+      "worker_id": "spark-compiled:Template:01_02",
+      "pid": 288773,
+      "log": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/official-score-probe/logs/spark-compiled_Template_01_02.log",
+      "command": [
+        "spark-compiled-worker",
+        "--task",
+        "Template:01_02"
+      ]
+    },
+    {
+      "worker_id": "spark-compiled:Financial_Model:02_01",
+      "pid": 288774,
+      "log": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/official-score-probe/logs/spark-compiled_Financial_Model_02_01.log",
+      "command": [
+        "spark-compiled-worker",
+        "--task",
+        "Financial_Model:02_01"
+      ]
+    },
+    {
+      "worker_id": "spark-compiled:Debugging:01_01",
+      "pid": 288775,
+      "log": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/official-score-probe/logs/spark-compiled_Debugging_01_01.log",
+      "command": [
+        "spark-compiled-worker",
+        "--task",
+        "Debugging:01_01"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+ "name": "batch-write-helper-ab",
+ "gated_on": "mutation_authoring_audit/candidate_helpers.json: write_cells + write_formulas == LIVE_TEST; all others REJECT",
+ "arms": {
+  "C0": "transparent runtime + ordinary Python/openpyxl + earned periods/search/inspect",
+  "C1": "C0 + optional write_cells/write_formulas; usage note paragraph appended; nothing else changes"
+ },
+ "helpers": [
+  "write_cells",
+  "write_formulas"
+ ],
+ "helper_semantics": "exact map in -> exact writes out; explicit workbook path required; no inference; effects flow through the same transparent WorkbookDelta runtime",
+ "forbidden": [
+  "fill/translation/style helpers",
+  "target inference",
+  "mandatory syntax",
+  "tool removal",
+  "read-side changes"
+ ],
+ "n": 1,
+ "discordant_cell_policy": "repeat discordant cells once before concluding"
+}

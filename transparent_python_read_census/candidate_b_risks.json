@@ -1,0 +1,19 @@
+{
+  "comprehension_or_generator_cases": 93,
+  "dynamic_or_indirect_cases": 69,
+  "function_escape_cases": 64,
+  "mixed_read_write_hazards": 123,
+  "semantics_changing_rewrite_risks": [
+    "lowered reads can observe a different generation if writes occur through an alias",
+    "compiled values can be stringly typed unless substrate stores openpyxl-compatible scalar metadata",
+    "iterator/object exceptions may differ"
+  ],
+  "transformations_requiring_complex_proof": [
+    "blank-cell materialization",
+    "dates/numeric/bool scalar types",
+    "exceptions",
+    "formula/data_only cache",
+    "object identity/escape",
+    "ordering"
+  ]
+}

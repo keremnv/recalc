@@ -1,0 +1,16 @@
+{
+  "artifact_statuses": [
+    [
+      "BUILT"
+    ],
+    [
+      "REUSED"
+    ]
+  ],
+  "artifact_valid": true,
+  "exit_codes": [
+    0,
+    0
+  ],
+  "pass": true
+}

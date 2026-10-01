@@ -1,0 +1,668 @@
+[
+ {
+  "task_id": "Financial_Model:01_01",
+  "arm": "H0",
+  "official_exact": 0.0,
+  "official_modification": 0.0074,
+  "official_regression": 0.85,
+  "eval_error": "Regression error at DCF Valuation!C6: answer=2025-03-31 00:00:00, output=None",
+  "usable_workbook": true,
+  "output_produced": true,
+  "task_completed": true,
+  "run_status": "SUBMITTED",
+  "efficiency": {
+   "api_calls": 17,
+   "tokens": 341483,
+   "cost_usd": 0.031738319999999993,
+   "walltime_s": 231.79915142059326,
+   "python_execs": 3,
+   "opens": 13,
+   "saves": 0,
+   "lo_invocations": 1,
+   "commits": 0,
+   "failures": 0,
+   "retries": 0
+  },
+  "behavior": {
+   "tool_call_categories": {
+    "bash": 3,
+    "view_xlsx": 13,
+    "submit": 1
+   },
+   "python_count": 3,
+   "repair_loops": 0
+  },
+  "h1_telemetry": null
+ },
+ {
+  "task_id": "Financial_Model:02_01",
+  "arm": "H0",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 1.0,
+  "eval_error": "Modification error at IS,BS,CF!C11: answer=69346.2, output=None",
+  "usable_workbook": true,
+  "output_produced": true,
+  "task_completed": true,
+  "run_status": "SUBMITTED",
+  "efficiency": {
+   "api_calls": 14,
+   "tokens": 209897,
+   "cost_usd": 0.021316440000000002,
+   "walltime_s": 375.067724943161,
+   "python_execs": 7,
+   "opens": 6,
+   "saves": 0,
+   "lo_invocations": 4,
+   "commits": 0,
+   "failures": 0,
+   "retries": 0
+  },
+  "behavior": {
+   "tool_call_categories": {
+    "bash": 7,
+    "view_xlsx": 6,
+    "submit": 1
+   },
+   "python_count": 7,
+   "repair_loops": 0
+  },
+  "h1_telemetry": null
+ },
+ {
+  "task_id": "Financial_Model:13_05",
+  "arm": "H0",
+  "official_exact": 0.0,
+  "official_modification": 0.0268,
+  "official_regression": 0.8483,
+  "eval_error": "Regression error at Summary Valuation!C10: answer=146.6255209, output=None",
+  "usable_workbook": true,
+  "output_produced": true,
+  "task_completed": true,
+  "run_status": "SUBMITTED",
+  "efficiency": {
+   "api_calls": 9,
+   "tokens": 97470,
+   "cost_usd": 0.00912762,
+   "walltime_s": 60.544854402542114,
+   "python_execs": 3,
+   "opens": 5,
+   "saves": 0,
+   "lo_invocations": 0,
+   "commits": 0,
+   "failures": 0,
+   "retries": 0
+  },
+  "behavior": {
+   "tool_call_categories": {
+    "bash": 3,
+    "view_xlsx": 5,
+    "submit": 1
+   },
+   "python_count": 3,
+   "repair_loops": 0
+  },
+  "h1_telemetry": null
+ },
+ {
+  "task_id": "Template:01_02",
+  "arm": "H0",
+  "official_exact": 0.0,
+  "official_modification": 0.5577,
+  "official_regression": 0.9737,
+  "eval_error": "Regression error at OID_Bond!C36: answer=0, output=1040",
+  "usable_workbook": true,
+  "output_produced": true,
+  "task_completed": true,
+  "run_status": "SUBMITTED",
+  "efficiency": {
+   "api_calls": 6,
+   "tokens": 16112,
+   "cost_usd": 0.0017255999999999999,
+   "walltime_s": 43.47477626800537,
+   "python_execs": 2,
+   "opens": 3,
+   "saves": 0,
+   "lo_invocations": 0,
+   "commits": 0,
+   "failures": 0,
+   "retries": 0
+  },
+  "behavior": {
+   "tool_call_categories": {
+    "bash": 2,
+    "view_xlsx": 3,
+    "submit": 1
+   },
+   "python_count": 2,
+   "repair_loops": 0
+  },
+  "h1_telemetry": null
+ },
+ {
+  "task_id": "Template:01_07",
+  "arm": "H0",
+  "official_exact": 0.0,
+  "official_modification": 0.5579,
+  "official_regression": 0.907,
+  "eval_error": "Regression error at BondAccounting!C29: answer=None, output=354.4553074244168",
+  "usable_workbook": true,
+  "output_produced": true,
+  "task_completed": true,
+  "run_status": "SUBMITTED",
+  "efficiency": {
+   "api_calls": 25,
+   "tokens": 227536,
+   "cost_usd": 0.023949959999999996,
+   "walltime_s": 626.6352987289429,
+   "python_execs": 22,
+   "opens": 2,
+   "saves": 0,
+   "lo_invocations": 0,
+   "commits": 0,
+   "failures": 0,
+   "retries": 0
+  },
+  "behavior": {
+   "tool_call_categories": {
+    "bash": 22,
+    "view_xlsx": 2,
+    "submit": 1
+   },
+   "python_count": 22,
+   "repair_loops": 0
+  },
+  "h1_telemetry": null
+ },
+ {
+  "task_id": "Template:06_12",
+  "arm": "H0",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 1.0,
+  "eval_error": "Modification error at CashFlow_Build!I9: answer=603, output=None",
+  "usable_workbook": true,
+  "output_produced": true,
+  "task_completed": true,
+  "run_status": "SUBMITTED",
+  "efficiency": {
+   "api_calls": 10,
+   "tokens": 45866,
+   "cost_usd": 0.005037239999999999,
+   "walltime_s": 96.32962274551392,
+   "python_execs": 7,
+   "opens": 2,
+   "saves": 0,
+   "lo_invocations": 2,
+   "commits": 0,
+   "failures": 0,
+   "retries": 0
+  },
+  "behavior": {
+   "tool_call_categories": {
+    "bash": 7,
+    "view_xlsx": 2,
+    "submit": 1
+   },
+   "python_count": 7,
+   "repair_loops": 0
+  },
+  "h1_telemetry": null
+ },
+ {
+  "task_id": "Debugging:02_06",
+  "arm": "H0",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.9824,
+  "eval_error": "Regression error at DCF!B3: answer=Value of Andarko on December 31, 2018 , output=Value of Anadarko on December 31, 2018 ",
+  "usable_workbook": true,
+  "output_produced": true,
+  "task_completed": true,
+  "run_status": "SUBMITTED",
+  "efficiency": {
+   "api_calls": 20,
+   "tokens": 532524,
+   "cost_usd": 0.050992949999999995,
+   "walltime_s": 694.5356578826904,
+   "python_execs": 18,
+   "opens": 1,
+   "saves": 0,
+   "lo_invocations": 1,
+   "commits": 0,
+   "failures": 0,
+   "retries": 0
+  },
+  "behavior": {
+   "tool_call_categories": {
+    "bash": 18,
+    "view_xlsx": 1,
+    "submit": 1
+   },
+   "python_count": 18,
+   "repair_loops": 0
+  },
+  "h1_telemetry": null
+ },
+ {
+  "task_id": "Debugging:04_01",
+  "arm": "H0",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.0,
+  "eval_error": "output file not exist",
+  "usable_workbook": false,
+  "output_produced": false,
+  "task_completed": false,
+  "run_status": "NO_SUBMIT",
+  "efficiency": {
+   "api_calls": 20,
+   "tokens": 464027,
+   "cost_usd": 0.04785705,
+   "walltime_s": 978.6624636650085,
+   "python_execs": 0,
+   "opens": 17,
+   "saves": 0,
+   "lo_invocations": 0,
+   "commits": 0,
+   "failures": 0,
+   "retries": 0
+  },
+  "behavior": {
+   "tool_call_categories": {
+    "bash": 0,
+    "view_xlsx": 17,
+    "submit": 0
+   },
+   "python_count": 0,
+   "repair_loops": 0
+  },
+  "h1_telemetry": null
+ },
+ {
+  "task_id": "Debugging:05_02",
+  "arm": "H0",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.0,
+  "eval_error": "output file not exist",
+  "usable_workbook": false,
+  "output_produced": false,
+  "task_completed": false,
+  "run_status": "NO_SUBMIT",
+  "efficiency": {
+   "api_calls": 12,
+   "tokens": 193771,
+   "cost_usd": 0.0198588,
+   "walltime_s": 1172.5163989067078,
+   "python_execs": 6,
+   "opens": 5,
+   "saves": 0,
+   "lo_invocations": 1,
+   "commits": 0,
+   "failures": 0,
+   "retries": 0
+  },
+  "behavior": {
+   "tool_call_categories": {
+    "bash": 7,
+    "view_xlsx": 5,
+    "submit": 0
+   },
+   "python_count": 6,
+   "repair_loops": 0
+  },
+  "h1_telemetry": null
+ },
+ {
+  "task_id": "Financial_Model:01_01",
+  "arm": "H1",
+  "official_exact": 0.0,
+  "official_modification": 0.0074,
+  "official_regression": 0.8501,
+  "eval_error": "Regression error at DCF Valuation!C6: answer=2025-03-31 00:00:00, output=None",
+  "usable_workbook": true,
+  "output_produced": true,
+  "task_completed": true,
+  "run_status": "SUBMITTED",
+  "efficiency": {
+   "api_calls": 14,
+   "tokens": 303001,
+   "cost_usd": 0.028014539999999997,
+   "walltime_s": 207.88087940216064,
+   "python_execs": 6,
+   "opens": 5,
+   "saves": 0,
+   "lo_invocations": 0,
+   "commits": 1,
+   "failures": 0,
+   "retries": 0
+  },
+  "behavior": {
+   "tool_call_categories": {
+    "bash": 8,
+    "view_xlsx": 5,
+    "submit": 1
+   },
+   "python_count": 6,
+   "repair_loops": 0
+  },
+  "h1_telemetry": {
+   "mutations": 1,
+   "runtime_failures": 0,
+   "validation_failed": 0
+  }
+ },
+ {
+  "task_id": "Financial_Model:02_01",
+  "arm": "H1",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 1.0,
+  "eval_error": "Modification error at IS,BS,CF!C11: answer=69346.2, output=None",
+  "usable_workbook": true,
+  "output_produced": true,
+  "task_completed": true,
+  "run_status": "SUBMITTED",
+  "efficiency": {
+   "api_calls": 9,
+   "tokens": 100123,
+   "cost_usd": 0.00958878,
+   "walltime_s": 223.96834683418274,
+   "python_execs": 2,
+   "opens": 6,
+   "saves": 0,
+   "lo_invocations": 1,
+   "commits": 1,
+   "failures": 0,
+   "retries": 0
+  },
+  "behavior": {
+   "tool_call_categories": {
+    "bash": 2,
+    "view_xlsx": 6,
+    "submit": 1
+   },
+   "python_count": 2,
+   "repair_loops": 0
+  },
+  "h1_telemetry": {
+   "mutations": 1,
+   "runtime_failures": 0,
+   "validation_failed": 0
+  }
+ },
+ {
+  "task_id": "Financial_Model:13_05",
+  "arm": "H1",
+  "official_exact": 0.0,
+  "official_modification": 0.0268,
+  "official_regression": 0.8483,
+  "eval_error": "Regression error at Summary Valuation!C10: answer=146.6255209, output=None",
+  "usable_workbook": true,
+  "output_produced": true,
+  "task_completed": true,
+  "run_status": "SUBMITTED",
+  "efficiency": {
+   "api_calls": 15,
+   "tokens": 216106,
+   "cost_usd": 0.02060559,
+   "walltime_s": 477.64470744132996,
+   "python_execs": 8,
+   "opens": 6,
+   "saves": 0,
+   "lo_invocations": 2,
+   "commits": 2,
+   "failures": 0,
+   "retries": 0
+  },
+  "behavior": {
+   "tool_call_categories": {
+    "bash": 8,
+    "view_xlsx": 6,
+    "submit": 1
+   },
+   "python_count": 8,
+   "repair_loops": 0
+  },
+  "h1_telemetry": {
+   "mutations": 2,
+   "runtime_failures": 0,
+   "validation_failed": 0
+  }
+ },
+ {
+  "task_id": "Template:01_02",
+  "arm": "H1",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.0,
+  "eval_error": "output file not exist",
+  "usable_workbook": false,
+  "output_produced": false,
+  "task_completed": false,
+  "run_status": "NO_SUBMIT",
+  "efficiency": {
+   "api_calls": 5,
+   "tokens": 33977,
+   "cost_usd": 0.00824493,
+   "walltime_s": 1113.548707485199,
+   "python_execs": 0,
+   "opens": 2,
+   "saves": 0,
+   "lo_invocations": 0,
+   "commits": 0,
+   "failures": 0,
+   "retries": 0
+  },
+  "behavior": {
+   "tool_call_categories": {
+    "bash": 0,
+    "view_xlsx": 2,
+    "submit": 0
+   },
+   "python_count": 0,
+   "repair_loops": 0
+  },
+  "h1_telemetry": {
+   "mutations": 0,
+   "runtime_failures": 0,
+   "validation_failed": 0
+  }
+ },
+ {
+  "task_id": "Template:01_07",
+  "arm": "H1",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.0,
+  "eval_error": "output file not exist",
+  "usable_workbook": false,
+  "output_produced": false,
+  "task_completed": false,
+  "run_status": "NO_SUBMIT",
+  "efficiency": {
+   "api_calls": 5,
+   "tokens": 35008,
+   "cost_usd": 0.00833772,
+   "walltime_s": 945.0920977592468,
+   "python_execs": 0,
+   "opens": 2,
+   "saves": 0,
+   "lo_invocations": 0,
+   "commits": 0,
+   "failures": 0,
+   "retries": 0
+  },
+  "behavior": {
+   "tool_call_categories": {
+    "bash": 0,
+    "view_xlsx": 2,
+    "submit": 0
+   },
+   "python_count": 0,
+   "repair_loops": 0
+  },
+  "h1_telemetry": {
+   "mutations": 0,
+   "runtime_failures": 0,
+   "validation_failed": 0
+  }
+ },
+ {
+  "task_id": "Template:06_12",
+  "arm": "H1",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 1.0,
+  "eval_error": "Modification error at CashFlow_Build!I9: answer=603, output=None",
+  "usable_workbook": true,
+  "output_produced": true,
+  "task_completed": true,
+  "run_status": "SUBMITTED",
+  "efficiency": {
+   "api_calls": 10,
+   "tokens": 71185,
+   "cost_usd": 0.0086505,
+   "walltime_s": 471.13596272468567,
+   "python_execs": 7,
+   "opens": 2,
+   "saves": 0,
+   "lo_invocations": 1,
+   "commits": 1,
+   "failures": 0,
+   "retries": 0
+  },
+  "behavior": {
+   "tool_call_categories": {
+    "bash": 7,
+    "view_xlsx": 2,
+    "submit": 1
+   },
+   "python_count": 7,
+   "repair_loops": 0
+  },
+  "h1_telemetry": {
+   "mutations": 1,
+   "runtime_failures": 0,
+   "validation_failed": 0
+  }
+ },
+ {
+  "task_id": "Debugging:02_06",
+  "arm": "H1",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.0,
+  "eval_error": "output file not exist",
+  "usable_workbook": false,
+  "output_produced": false,
+  "task_completed": false,
+  "run_status": "NO_SUBMIT",
+  "efficiency": {
+   "api_calls": 24,
+   "tokens": 507946,
+   "cost_usd": 0.05117136000000001,
+   "walltime_s": 1033.2693877220154,
+   "python_execs": 0,
+   "opens": 21,
+   "saves": 0,
+   "lo_invocations": 0,
+   "commits": 0,
+   "failures": 0,
+   "retries": 0
+  },
+  "behavior": {
+   "tool_call_categories": {
+    "bash": 0,
+    "view_xlsx": 21,
+    "submit": 0
+   },
+   "python_count": 0,
+   "repair_loops": 0
+  },
+  "h1_telemetry": {
+   "mutations": 0,
+   "runtime_failures": 0,
+   "validation_failed": 0
+  }
+ },
+ {
+  "task_id": "Debugging:04_01",
+  "arm": "H1",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.0,
+  "eval_error": "output file not exist",
+  "usable_workbook": false,
+  "output_produced": false,
+  "task_completed": false,
+  "run_status": "NO_SUBMIT",
+  "efficiency": {
+   "api_calls": 21,
+   "tokens": 492044,
+   "cost_usd": 0.05140338,
+   "walltime_s": 903.7057223320007,
+   "python_execs": 0,
+   "opens": 17,
+   "saves": 0,
+   "lo_invocations": 0,
+   "commits": 0,
+   "failures": 0,
+   "retries": 0
+  },
+  "behavior": {
+   "tool_call_categories": {
+    "bash": 0,
+    "view_xlsx": 17,
+    "submit": 0
+   },
+   "python_count": 0,
+   "repair_loops": 0
+  },
+  "h1_telemetry": {
+   "mutations": 0,
+   "runtime_failures": 0,
+   "validation_failed": 0
+  }
+ },
+ {
+  "task_id": "Debugging:05_02",
+  "arm": "H1",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.0,
+  "eval_error": "output file not exist",
+  "usable_workbook": false,
+  "output_produced": false,
+  "task_completed": false,
+  "run_status": "NO_SUBMIT",
+  "efficiency": {
+   "api_calls": 18,
+   "tokens": 404590,
+   "cost_usd": 0.04537632,
+   "walltime_s": 904.1174852848053,
+   "python_execs": 5,
+   "opens": 3,
+   "saves": 0,
+   "lo_invocations": 0,
+   "commits": 0,
+   "failures": 0,
+   "retries": 0
+  },
+  "behavior": {
+   "tool_call_categories": {
+    "bash": 10,
+    "view_xlsx": 3,
+    "submit": 0
+   },
+   "python_count": 5,
+   "repair_loops": 0
+  },
+  "h1_telemetry": {
+   "mutations": 0,
+   "runtime_failures": 0,
+   "validation_failed": 0
+  }
+ }
+]

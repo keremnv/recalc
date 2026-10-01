@@ -1,0 +1,22 @@
+{
+ "mechanical_bytes_total": 20992,
+ "replaceable_bytes_total": 21150,
+ "replaceable_by_candidate": {
+  "write_cells": 8436,
+  "write_formulas": 561,
+  "fill_value": 3162,
+  "fill_formula": 5421,
+  "copy_style": 1785,
+  "copy_number_format": 1785
+ },
+ "viable_replaceable_bytes_total": 8997,
+ "viable_candidates": [
+  "write_cells",
+  "write_formulas"
+ ],
+ "fraction_replaceable_of_corpus": 0.1121,
+ "fraction_viable_of_corpus": 0.0477,
+ "fraction_replaceable_of_mechanical": 1.0075,
+ "tasks_affected": 22,
+ "note": "opportunity ceiling from source bytes; token savings not claimed"
+}

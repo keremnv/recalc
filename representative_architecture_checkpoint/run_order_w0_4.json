@@ -1,0 +1,114 @@
+[
+ {
+  "task_id": "Template:01_05",
+  "arm": "H0",
+  "slot": 0,
+  "run_id": "primary_00",
+  "status": "SUBMITTED"
+ },
+ {
+  "task_id": "Template:06_02",
+  "arm": "H0",
+  "slot": 8,
+  "run_id": "primary_08",
+  "status": "SUBMITTED"
+ },
+ {
+  "task_id": "Template:06_02",
+  "arm": "H1",
+  "slot": 9,
+  "run_id": "primary_09",
+  "status": "SUBMITTED"
+ },
+ {
+  "task_id": "Template:16_07",
+  "arm": "H0",
+  "slot": 16,
+  "run_id": "primary_16",
+  "status": "SUBMITTED"
+ },
+ {
+  "task_id": "Template:16_07",
+  "arm": "H1",
+  "slot": 17,
+  "run_id": "primary_17",
+  "status": "NO_SUBMIT"
+ },
+ {
+  "task_id": "Financial_Model:06_01",
+  "arm": "H0",
+  "slot": 24,
+  "run_id": "primary_24",
+  "status": "NO_SUBMIT"
+ },
+ {
+  "task_id": "Debugging:01_04",
+  "arm": "H0",
+  "slot": 40,
+  "run_id": "primary_40",
+  "status": "TRUNCATED_CALL_LIMIT"
+ },
+ {
+  "task_id": "Debugging:01_04",
+  "arm": "H1",
+  "slot": 41,
+  "run_id": "primary_41",
+  "status": "NO_SUBMIT"
+ },
+ {
+  "task_id": "Debugging:06_10",
+  "arm": "H0",
+  "slot": 48,
+  "run_id": "primary_48",
+  "status": "NO_SUBMIT"
+ },
+ {
+  "task_id": "Debugging:06_10",
+  "arm": "H1",
+  "slot": 49,
+  "run_id": "primary_49",
+  "status": "TRUNCATED_CALL_LIMIT"
+ },
+ {
+  "task_id": "Financial_Model:06_01",
+  "arm": "H1",
+  "slot": 25,
+  "run_id": "primary_25",
+  "status": "RUNNER_ERROR"
+ },
+ {
+  "task_id": "Template:01_05",
+  "arm": "H1",
+  "slot": 1,
+  "run_id": "primary_01",
+  "status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Financial_Model:10_01",
+  "arm": "H0",
+  "slot": 32,
+  "run_id": "primary_32",
+  "status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Financial_Model:10_01",
+  "arm": "H1",
+  "slot": 33,
+  "run_id": "primary_33",
+  "status": "NO_SUBMIT"
+ },
+ {
+  "task_id": "Debugging:09_04",
+  "arm": "H0",
+  "slot": 56,
+  "run_id": "primary_56",
+  "status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Debugging:09_04",
+  "arm": "H1",
+  "slot": 57,
+  "run_id": "primary_57",
+  "status": "TRUNCATED_CALL_LIMIT"
+ }
+]

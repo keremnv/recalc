@@ -1,0 +1,35 @@
+{
+  "a1_classifier_frozen": true,
+  "arms": {
+    "H0": "ordinary openpyxl; shared substrate common",
+    "H1": "same scaffold with frozen Candidate-A+A1 acceleration"
+  },
+  "candidate_b": "frozen",
+  "censoring": {
+    "partial_runs": 1,
+    "reason": "provider response stalled beyond practical observation window; process interrupted; no live outcomes fabricated",
+    "unstarted_primary_runs": 22,
+    "valid_completed_primary_runs": 1
+  },
+  "experiment": "larger identical-interface Candidate-A+A1 live checkpoint",
+  "model_inference_requested": true,
+  "model_surface_changed": false,
+  "requested_primary_runs": 24,
+  "selected_tasks": [
+    "Financial_Model:07_01",
+    "Financial_Model:08_03",
+    "Financial_Model:08_01",
+    "Financial_Model:15_04",
+    "Debugging:10_10",
+    "Financial_Model:06_01",
+    "Debugging:01_06",
+    "Debugging:10_04",
+    "Debugging:05_02",
+    "Template:13_08",
+    "Template:03_03",
+    "Financial_Model:10_01"
+  ],
+  "selection_rule": "top 12 by A1-eligible historical executions, repeated-open surplus, safe primitive reads, historical deterministic read/open time, task ID",
+  "semantic_surface_changed": false,
+  "shared_substrate": true
+}

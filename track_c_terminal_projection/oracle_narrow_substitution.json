@@ -1,0 +1,9 @@
+{
+ "n_scan_narrow_action_chains": 6,
+ "n_scan_direct_action": 40,
+ "n_no_lineage_scans": 56,
+ "broad_tokens_in_chains_est": 1875965,
+ "narrow_tokens_in_chains_est": 19844,
+ "oracle_avoidable_est": 1856121,
+ "warning": "HINDSIGHT ONLY. If the future narrow read had been known in advance. NOT an implementable saving."
+}

@@ -1,0 +1,391 @@
+{
+  "completed": 1222,
+  "strata": {
+    "P1": {
+      "eligible": 183,
+      "tasks": 98,
+      "scorable_pairs": 142,
+      "unscorable": 41,
+      "classifications": {
+        "RECALC_NO_MATERIAL_EFFECT": 141,
+        "UNSCORABLE": 41,
+        "RECALC_REGRESSION": 1
+      },
+      "recalc_status": {
+        "RECALC_PASS": 143,
+        "RECALC_UNSUPPORTED": 40
+      },
+      "byte_linkage": {
+        "ARCHIVED_SUBMISSION": 183
+      },
+      "score_reproduction": {
+        "True": 183
+      },
+      "formula_identity": {
+        "FORMULAS_BYTE_IDENTICAL": 143,
+        "UNDETERMINED": 40
+      },
+      "exact_0_to_1": 0,
+      "exact_1_to_0": 0,
+      "exact_unchanged": 142,
+      "modification_increase": 0,
+      "modification_decrease": 1,
+      "regression_increase": 0,
+      "regression_decrease": 1,
+      "continuous_delta_distributions": {
+        "accuracy": {
+          "n": 142,
+          "minimum": 0.0,
+          "p10": 0.0,
+          "p25": 0.0,
+          "median": 0.0,
+          "p75": 0.0,
+          "p90": 0.0,
+          "maximum": 0.0,
+          "mean": 0.0,
+          "sum": 0.0
+        },
+        "modification_accuracy": {
+          "n": 142,
+          "minimum": -0.1129,
+          "p10": 0.0,
+          "p25": 0.0,
+          "median": 0.0,
+          "p75": 0.0,
+          "p90": 0.0,
+          "maximum": 0.0,
+          "mean": -0.0007950704225352113,
+          "sum": -0.1129
+        },
+        "regression_accuracy": {
+          "n": 142,
+          "minimum": -0.012900000000000023,
+          "p10": 0.0,
+          "p25": 0.0,
+          "median": 0.0,
+          "p75": 0.0,
+          "p90": 0.0,
+          "maximum": 0.0,
+          "mean": -9.507042253521096e-05,
+          "sum": -0.013499999999999956
+        }
+      },
+      "cache_only_recoveries": 0,
+      "historically_proven_recoveries": 0,
+      "cache_only_fraction_all_eligible": 0.0,
+      "historically_proven_fraction_all_eligible": 0.0,
+      "cache_only_fraction_scorable": 0.0,
+      "cache_only_affected_tasks": 0,
+      "historically_proven_affected_tasks": 0,
+      "task_any_cache_only_fraction": 0.0,
+      "task_any_historical_proven_fraction": 0.0,
+      "unresolved_case_bound": {
+        "run_lower": 0.0,
+        "run_upper": 0.22404371584699453,
+        "task_lower": 0.0,
+        "task_upper": 0.21428571428571427
+      },
+      "any_delta": 2,
+      "mixed_signed_changes": 0,
+      "mixed_material_gain_harm": 0,
+      "workbooks_with_formula_cells": 179,
+      "V0_cache_inspection_completed": 183,
+      "formula_cells_V0_total": 3688057,
+      "formula_cells_V0_cache_absent": 0,
+      "formula_cells_V0_cache_error": 5599,
+      "formula_cells_V1_cache_present": 1737355,
+      "formula_cells_replay_changed_present_cache": 6307,
+      "workbooks_with_missing_formula_caches": 0,
+      "workbooks_with_replay_changed_present_caches": 30,
+      "workbooks_with_formula_error_caches_V0": 59,
+      "cache_only_component_endpoints": {
+        "exact_0_to_1": 0,
+        "modification_increase_ge_01": 0,
+        "regression_increase_ge_01": 0,
+        "regression_only_material_recovery": 0,
+        "historical_score_compatible_exact_0_to_1": 0
+      },
+      "cache_only_error_fallback": {
+        "workbooks_entering_formula_fallback": 0,
+        "cells_entering_formula_fallback": 0,
+        "workbooks_leaving_formula_fallback": 0,
+        "qualification": "aggregate existing frozen census only; formula-fallback recovery is official-score recovery, not proof of numerical correctness"
+      },
+      "descriptive_historical_loss_attribution_lower_bound": {
+        "original_exact_failures": 154,
+        "strong_exact_failures_recovered": 0,
+        "fraction_original_exact_failures_recovered": 0.0,
+        "original_modification_score_loss_sum": 41.4766,
+        "strong_modification_score_loss_recovered_sum": 0,
+        "fraction_original_modification_score_loss_recovered": 0.0,
+        "interpretation": "descriptive lower bound, requires archived-byte linkage and historical numeric reproduction; unresolved/drift/unverified gains not attributed; not a new decision endpoint"
+      },
+      "V0_exact_count": 29,
+      "V1_exact_count": 29
+    },
+    "P2": {
+      "eligible": 191,
+      "tasks": 60,
+      "scorable_pairs": 163,
+      "unscorable": 28,
+      "classifications": {
+        "RECALC_ASSOCIATED_BUT_NOT_CACHE_PROVEN": 65,
+        "RECALC_NO_MATERIAL_EFFECT": 35,
+        "RECALC_REGRESSION": 17,
+        "CACHE_ONLY_SCORE_RECOVERY": 46,
+        "UNSCORABLE": 28
+      },
+      "recalc_status": {
+        "RECALC_PASS": 163,
+        "RECALC_UNSUPPORTED": 28
+      },
+      "byte_linkage": {
+        "RUN_LOCAL_UNVERIFIED": 160,
+        "ARCHIVED_SUBMISSION": 31
+      },
+      "score_reproduction": {
+        "True": 85,
+        "False": 106
+      },
+      "formula_identity": {
+        "FORMULAS_CHANGED_BY_LIBREOFFICE": 31,
+        "FORMULAS_BYTE_IDENTICAL": 33,
+        "FORMULAS_SEMANTICALLY_IDENTICAL_BUT_PACKAGE_CHANGED": 99,
+        "UNDETERMINED": 28
+      },
+      "exact_0_to_1": 17,
+      "exact_1_to_0": 0,
+      "exact_unchanged": 146,
+      "modification_increase": 123,
+      "modification_decrease": 3,
+      "regression_increase": 36,
+      "regression_decrease": 14,
+      "continuous_delta_distributions": {
+        "accuracy": {
+          "n": 163,
+          "minimum": 0.0,
+          "p10": 0.0,
+          "p25": 0.0,
+          "median": 0.0,
+          "p75": 0.0,
+          "p90": 0.8000000000000114,
+          "maximum": 1.0,
+          "mean": 0.10429447852760736,
+          "sum": 17.0
+        },
+        "modification_accuracy": {
+          "n": 163,
+          "minimum": -0.3333,
+          "p10": 0.0,
+          "p25": 0.10414999999999996,
+          "median": 0.6204,
+          "p75": 0.9274,
+          "p90": 0.99856,
+          "maximum": 1.0,
+          "mean": 0.5402576687116565,
+          "sum": 88.062
+        },
+        "regression_accuracy": {
+          "n": 163,
+          "minimum": -0.06680000000000008,
+          "p10": -0.005979999999999986,
+          "p25": 0.0,
+          "median": 0.0,
+          "p75": 0.0,
+          "p90": 0.14839999999999998,
+          "maximum": 0.35509999999999997,
+          "mean": 0.031726380368098155,
+          "sum": 5.171399999999999
+        }
+      },
+      "cache_only_recoveries": 46,
+      "historically_proven_recoveries": 9,
+      "cache_only_fraction_all_eligible": 0.24083769633507854,
+      "historically_proven_fraction_all_eligible": 0.04712041884816754,
+      "cache_only_fraction_scorable": 0.2822085889570552,
+      "cache_only_affected_tasks": 21,
+      "historically_proven_affected_tasks": 9,
+      "task_any_cache_only_fraction": 0.35,
+      "task_any_historical_proven_fraction": 0.15,
+      "unresolved_case_bound": {
+        "run_lower": 0.04712041884816754,
+        "run_upper": 0.7277486910994765,
+        "task_lower": 0.15,
+        "task_upper": 0.8
+      },
+      "any_delta": 129,
+      "mixed_signed_changes": 25,
+      "mixed_material_gain_harm": 16,
+      "workbooks_with_formula_cells": 171,
+      "V0_cache_inspection_completed": 191,
+      "formula_cells_V0_total": 1956564,
+      "formula_cells_V0_cache_absent": 1936046,
+      "formula_cells_V0_cache_error": 48,
+      "formula_cells_V1_cache_present": 500770,
+      "formula_cells_replay_changed_present_cache": 4715,
+      "workbooks_with_missing_formula_caches": 153,
+      "workbooks_with_replay_changed_present_caches": 4,
+      "workbooks_with_formula_error_caches_V0": 1,
+      "cache_only_component_endpoints": {
+        "exact_0_to_1": 7,
+        "modification_increase_ge_01": 45,
+        "regression_increase_ge_01": 1,
+        "regression_only_material_recovery": 1,
+        "historical_score_compatible_exact_0_to_1": 3
+      },
+      "cache_only_error_fallback": {
+        "workbooks_entering_formula_fallback": 1,
+        "cells_entering_formula_fallback": 30,
+        "workbooks_leaving_formula_fallback": 0,
+        "qualification": "aggregate existing frozen census only; formula-fallback recovery is official-score recovery, not proof of numerical correctness"
+      },
+      "descriptive_historical_loss_attribution_lower_bound": {
+        "original_exact_failures": 175,
+        "strong_exact_failures_recovered": 3,
+        "fraction_original_exact_failures_recovered": 0.017142857142857144,
+        "original_modification_score_loss_sum": 91.2471,
+        "strong_modification_score_loss_recovered_sum": 7.615,
+        "fraction_original_modification_score_loss_recovered": 0.08345470705370363,
+        "interpretation": "descriptive lower bound, requires archived-byte linkage and historical numeric reproduction; unresolved/drift/unverified gains not attributed; not a new decision endpoint"
+      },
+      "V0_exact_count": 2,
+      "V1_exact_count": 19
+    },
+    "P3": {
+      "eligible": 848,
+      "tasks": 297,
+      "scorable_pairs": 331,
+      "unscorable": 517,
+      "classifications": {
+        "RECALC_NO_MATERIAL_EFFECT": 328,
+        "UNSCORABLE": 517,
+        "RECALC_REGRESSION": 2,
+        "RECALC_ASSOCIATED_BUT_NOT_CACHE_PROVEN": 1
+      },
+      "recalc_status": {
+        "RECALC_PASS": 663,
+        "RECALC_UNSUPPORTED": 182,
+        "NOT_ATTEMPTED": 3
+      },
+      "byte_linkage": {
+        "RUN_LOCAL_UNVERIFIED": 29,
+        "ARCHIVED_SUBMISSION": 819
+      },
+      "score_reproduction": {
+        "True": 473,
+        "False": 372,
+        "None": 3
+      },
+      "formula_identity": {
+        "FORMULAS_BYTE_IDENTICAL": 663,
+        "UNDETERMINED": 185
+      },
+      "exact_0_to_1": 0,
+      "exact_1_to_0": 0,
+      "exact_unchanged": 331,
+      "modification_increase": 1,
+      "modification_decrease": 2,
+      "regression_increase": 0,
+      "regression_decrease": 2,
+      "continuous_delta_distributions": {
+        "accuracy": {
+          "n": 331,
+          "minimum": 0.0,
+          "p10": 0.0,
+          "p25": 0.0,
+          "median": 0.0,
+          "p75": 0.0,
+          "p90": 0.0,
+          "maximum": 0.0,
+          "mean": 0.0,
+          "sum": 0.0
+        },
+        "modification_accuracy": {
+          "n": 331,
+          "minimum": -0.16579999999999995,
+          "p10": 0.0,
+          "p25": 0.0,
+          "median": 0.0,
+          "p75": 0.0,
+          "p90": 0.0,
+          "maximum": 0.0588,
+          "mean": -0.0008241691842900299,
+          "sum": -0.2727999999999999
+        },
+        "regression_accuracy": {
+          "n": 331,
+          "minimum": -0.012700000000000045,
+          "p10": 0.0,
+          "p25": 0.0,
+          "median": 0.0,
+          "p75": 0.0,
+          "p90": 0.0,
+          "maximum": 0.0,
+          "mean": -8.761329305135993e-05,
+          "sum": -0.029000000000000137
+        }
+      },
+      "cache_only_recoveries": 0,
+      "historically_proven_recoveries": 0,
+      "cache_only_fraction_all_eligible": 0.0,
+      "historically_proven_fraction_all_eligible": 0.0,
+      "cache_only_fraction_scorable": 0.0,
+      "cache_only_affected_tasks": 0,
+      "historically_proven_affected_tasks": 0,
+      "task_any_cache_only_fraction": 0.0,
+      "task_any_historical_proven_fraction": 0.0,
+      "unresolved_case_bound": {
+        "run_lower": 0.0,
+        "run_upper": 0.6108490566037735,
+        "task_lower": 0.0,
+        "task_upper": 0.7744107744107744
+      },
+      "any_delta": 8,
+      "mixed_signed_changes": 1,
+      "mixed_material_gain_harm": 0,
+      "workbooks_with_formula_cells": 845,
+      "V0_cache_inspection_completed": 845,
+      "formula_cells_V0_total": 12834123,
+      "formula_cells_V0_cache_absent": 0,
+      "formula_cells_V0_cache_error": 40147,
+      "formula_cells_V1_cache_present": 5817708,
+      "formula_cells_replay_changed_present_cache": 14381,
+      "workbooks_with_missing_formula_caches": 0,
+      "workbooks_with_replay_changed_present_caches": 57,
+      "workbooks_with_formula_error_caches_V0": 262,
+      "cache_only_component_endpoints": {
+        "exact_0_to_1": 0,
+        "modification_increase_ge_01": 0,
+        "regression_increase_ge_01": 0,
+        "regression_only_material_recovery": 0,
+        "historical_score_compatible_exact_0_to_1": 0
+      },
+      "cache_only_error_fallback": {
+        "workbooks_entering_formula_fallback": 0,
+        "cells_entering_formula_fallback": 0,
+        "workbooks_leaving_formula_fallback": 0,
+        "qualification": "aggregate existing frozen census only; formula-fallback recovery is official-score recovery, not proof of numerical correctness"
+      },
+      "descriptive_historical_loss_attribution_lower_bound": {
+        "original_exact_failures": 730,
+        "strong_exact_failures_recovered": 0,
+        "fraction_original_exact_failures_recovered": 0.0,
+        "original_modification_score_loss_sum": 273.0096,
+        "strong_modification_score_loss_recovered_sum": 0,
+        "fraction_original_modification_score_loss_recovered": 0.0,
+        "interpretation": "descriptive lower bound, requires archived-byte linkage and historical numeric reproduction; unresolved/drift/unverified gains not attributed; not a new decision endpoint"
+      },
+      "V0_exact_count": 54,
+      "V1_exact_count": 54
+    }
+  },
+  "surprise_triggers": [
+    {
+      "scope": "P2",
+      "trigger": "MATERIAL_REGRESSIONS_GE_5_PERCENT"
+    }
+  ],
+  "replay_errors": {
+    "BadZipFile: File is not a zip file": 3
+  }
+}

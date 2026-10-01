@@ -1,0 +1,714 @@
+{
+ "runs": [
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Financial_Model:08_03",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_03-r1/Financial_Model-08_03/trajectory/08_03/08_03.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 25,
+   "traj_sha256": "1933d20c29cb418d390fcdd718027828c2e549bb10a16c9460b50f331802f31e"
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Financial_Model:08_04",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_04-r1/Financial_Model-08_04/trajectory/08_04/08_04.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 25,
+   "traj_sha256": "b6366fc681146d9e48f2bc7955e5ce1d2421b18f721cfacabdaff63ded4ace88"
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Financial_Model:08_05",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_05-r1/Financial_Model-08_05/trajectory/08_05/08_05.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 34,
+   "traj_sha256": "7228bcaba39640b72b39fdf815b2a47b396c20ee694d7aae4099dc2c9253a685"
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Financial_Model:15_04",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-15_04-r1/Financial_Model-15_04/trajectory/15_04/15_04.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 45,
+   "traj_sha256": "a65c0906d3777cad2164a67ab84d3f8297bc221bc12cfe95b1a3850ee97bfad9"
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Financial_Model:08_02",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_02-r1/Financial_Model-08_02/trajectory/08_02/08_02.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 41,
+   "traj_sha256": "9ecf60a970fa951a1ce441db6a8acc68a5dbf349c965559dd3def6327f125b1b"
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Financial_Model:08_01",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_01-r1/Financial_Model-08_01/trajectory/08_01/08_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 50,
+   "traj_sha256": "21805faed2dc5b45b87e9135bec31b9ac892e96d929fd6192f63a1f77c612ed1"
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Template:06_09",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Template-06_09-r1/Template-06_09/trajectory/06_09/06_09.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 8,
+   "traj_sha256": "2375c803c227d7ea99bf8368f1762691b2774d30c0a231d5b24cf1fa082a4241"
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Template:06_16",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Template-06_16-r1/Template-06_16/trajectory/06_16/06_16.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 7,
+   "traj_sha256": "3a94cafbf78236e125ea0d8575cce1d286cc8b2d6ebb483efa737b01a1a9811b"
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Debugging:10_04",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Debugging-10_04-r1/Debugging-10_04/trajectory/10_04/10_04.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 41,
+   "traj_sha256": "232e10846b0513b4d55b30ddad8dbb76cabe3228cb9019e52b44d8c5037a0a20"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:01_01",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-01_01/trajectory/01_01/01_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 16,
+   "traj_sha256": "4243e1bf6def53cd7cb1e1f29ef6aa268dd5f695dd91b7dbb925bc5815825dff"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:01_06",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-01_06/trajectory/01_06/01_06.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 17,
+   "traj_sha256": "f2d509a2375133cf6452337740400bafabf2ded542b70b928f70e8c78c405c8b"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:02_01",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-02_01/trajectory/02_01/02_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 20,
+   "traj_sha256": "a2d5eb7c9d0f914cfb701b11cdf19fdc30e98c9553884cbe9221ba007c1e077a"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:02_06",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-02_06/trajectory/02_06/02_06.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 15,
+   "traj_sha256": "bac86d5808c89452bf31911cc3361b87369fb5aa3997d42a856909abc26770e9"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:03_01",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-03_01/trajectory/03_01/03_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 16,
+   "traj_sha256": "028844242be870735687ff8016a04d8ffdefb3e07355bcc796fef9247b573d77"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:03_06",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-03_06/trajectory/03_06/03_06.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 18,
+   "traj_sha256": "0eb227b8063d113caa72e9f68f848e3af1b7311ce463a0d5cdd3f4a797a954cf"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:04_01",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-04_01/trajectory/04_01/04_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 19,
+   "traj_sha256": "b275acee815063deac01e769836f27d17936da0a83c69465b599c6c67d5300bc"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:04_07",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-04_07/trajectory/04_07/04_07.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 17,
+   "traj_sha256": "9574831784cd98dc3afee9d869033da1e6e3bdd454a843dd1de7590bd44835ca"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:05_02",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-05_02/trajectory/05_02/05_02.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 10,
+   "traj_sha256": "2ae68ed5be3898217f50a3ba8cf646ed91b9f392683b2d3b12c16f8a19a26f6c"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:05_08",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-05_08/trajectory/05_08/05_08.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 15,
+   "traj_sha256": "cd9a954e5c03917f13b0059f6b9046204d2ae747643cbf0a5dff510dbb6b98f9"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:06_02",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-06_02/trajectory/06_02/06_02.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 50,
+   "traj_sha256": "c3e5d1f7e1fe3933033240b41e0c1a49fa355090bb1509fb6921223907dfb9eb"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:06_07",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-06_07/trajectory/06_07/06_07.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 11,
+   "traj_sha256": "263977fbfd60d9973cf66142139307714ec9d540b28c0c0c9f31354dbcdcc523"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:07_03",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-07_03/trajectory/07_03/07_03.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 16,
+   "traj_sha256": "63af21e4deeadc8c83181cc5d5de64fc67363f5c2e3bc67781a1f1b08dd9e860"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:07_08",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-07_08/trajectory/07_08/07_08.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 7,
+   "traj_sha256": "1e53096ad83444db15199da8587560e5d8143755e8173f23fba08c68d11c1c02"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:08_04",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-08_04/trajectory/08_04/08_04.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 11,
+   "traj_sha256": "9e08b0c2ee804a5b8f5b5358884e5ae47402cfac5ad0f4d80ee01d0bd588773c"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:08_09",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-08_09/trajectory/08_09/08_09.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 26,
+   "traj_sha256": "8e78fc4dba92e18480dfc7aa94131c43933aec00646a5df962201edd20058731"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:09_04",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-09_04/trajectory/09_04/09_04.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 7,
+   "traj_sha256": "3db992ffd3ce7c33f64238e38b94be6d35c586daf16e5f7822eb02fda9ce3318"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:09_09",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-09_09/trajectory/09_09/09_09.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 21,
+   "traj_sha256": "6382b928efdba3c809d5e7749a405f378dcb3c609b22e6a0a04b1bcd6e272ed5"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:10_05",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-10_05/trajectory/10_05/10_05.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 28,
+   "traj_sha256": "fd5b47adef70920543fe9737030d0942f1252f02986efe5ce4613fe25c66c72c"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:10_10",
+   "family": "Debugging",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-10_10/trajectory/10_10/10_10.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 20,
+   "traj_sha256": "fb1ea4e362144c476bedcc7ae1b8aea473384275e825d958e0c23659c16cb71a"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:01_01",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-01_01/trajectory/01_01/01_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 13,
+   "traj_sha256": "ebdb9f9ae08ecafb2040cea6cebb788f847b7a9f4082cdb5d680139a404a994e"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:02_01",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-02_01/trajectory/02_01/02_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 18,
+   "traj_sha256": "dc25282cb9a3762036fca07f0d7262ea28fa0b7d67b01c514de65990c774342a"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:03_01",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-03_01/trajectory/03_01/03_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 10,
+   "traj_sha256": "8f2e09c6142e63c8ca3c9af09e05728747b2b3fd80af227cadaf6bce465cd68d"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:04_01",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-04_01/trajectory/04_01/04_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 21,
+   "traj_sha256": "0288d10560ff74f29c6d51ab10c270eaa535271b4843393e66d95de78a50f134"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:05_01",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-05_01/trajectory/05_01/05_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 21,
+   "traj_sha256": "5c156ee692de8fd0cec72859802040b2792bc234837a5f519ed4d75febc91509"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:06_01",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-06_01/trajectory/06_01/06_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 25,
+   "traj_sha256": "517032d108a99c8d024e2782be514733ecdeb593d70c84b21457540b0103515f"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:07_01",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-07_01/trajectory/07_01/07_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 26,
+   "traj_sha256": "b7df0b6f5efa2ee7a8cb0254193846c364999de01d1b24e846409a9791b65c1c"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:08_01",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-08_01/trajectory/08_01/08_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 33,
+   "traj_sha256": "77a230aaa6e1b9c69a5c55b66d3f4a74a8eebe57db8b1abf5c9765ee375154ed"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:10_01",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-10_01/trajectory/10_01/10_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 15,
+   "traj_sha256": "2ee148cc3e5de205989a18a14c448263bdd62d679a390a6f20e7f39bb997a818"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:11_01",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-11_01/trajectory/11_01/11_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 11,
+   "traj_sha256": "e7aa246dd72e8466e6c4eb9ef9189de67249902dbf6b813b6a565731065a1c01"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:11_05",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-11_05/trajectory/11_05/11_05.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 23,
+   "traj_sha256": "f797874fbfb1ee75d8923fc09914d274d1409091cc00c48f4567bfe3550b69cd"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:12_05",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-12_05/trajectory/12_05/12_05.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 16,
+   "traj_sha256": "077508eb0a48545ad06b6d34fb4c45096c7d230b64c55c90453f15b1ce52cc8b"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:13_05",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-13_05/trajectory/13_05/13_05.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 11,
+   "traj_sha256": "5933b9a1a3cc49ed7a2ed3840177e9b3921935f686dd84c76e75f1726622de64"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:14_05",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-14_05/trajectory/14_05/14_05.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 15,
+   "traj_sha256": "4cd69015e04002b595d8739e932186ac56773777a4fe105264e4e9ae21c278c0"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:15_05",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-15_05/trajectory/15_05/15_05.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 16,
+   "traj_sha256": "701253bdc33b2b6192eca4b8e4b82871ea83fc5085de237835f9cfc77c51b70b"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:16_05",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-16_05/trajectory/16_05/16_05.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 10,
+   "traj_sha256": "9c0ea15d05873369254f326b6a3690735ce9834a69fae849f7312135167b1815"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:17_05",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-17_05/trajectory/17_05/17_05.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 11,
+   "traj_sha256": "aa4ae17a3b8ef545b080184c2d7b937ef942cefbab7b955cf1715f207ddd1ab4"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:18_05",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-18_05/trajectory/18_05/18_05.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 16,
+   "traj_sha256": "4a8e909619ec8c9d2e37a83d0187275dfaa0c3682dc9a2f9442935c500fd3832"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:19_05",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-19_05/trajectory/19_05/19_05.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 11,
+   "traj_sha256": "d83ea0d80772cefac52a6880e39af35aa28637aa1b9f843ab73d9670881cc41f"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:20_05",
+   "family": "Financial_Model",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-20_05/trajectory/20_05/20_05.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 17,
+   "traj_sha256": "6dd4f6ba22d9d5d715fa79ce760de3e9f675936377696808fdadca248d094d3c"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:01_02",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-01_02/trajectory/01_02/01_02.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 7,
+   "traj_sha256": "821c85f5188d5fb1218e65553cf3c2d5c0a78de0962510cd26471b7c5e94f9fd"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:01_07",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-01_07/trajectory/01_07/01_07.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 13,
+   "traj_sha256": "31f251bc64af72ad78415dcbee037c56c13f8f9431c7dcc2aa71b8849deda1f8"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:02_05",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-02_05/trajectory/02_05/02_05.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 13,
+   "traj_sha256": "18102093454e4532aaad4ecbf61ccb05a81471117775e3f0d198013cbfeb1640"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:03_03",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-03_03/trajectory/03_03/03_03.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 9,
+   "traj_sha256": "a3e7c111778594e9a8ee0e40e1e95e489245ce997c55bc05cca8026f937e8782"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:05_02",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-05_02/trajectory/05_02/05_02.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 7,
+   "traj_sha256": "4814d3b1905f4685c3b9213a7418566d945fe0c1c82a6e8998332ad37e7b99f4"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:06_06",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-06_06/trajectory/06_06/06_06.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 6,
+   "traj_sha256": "677f2ba0b5e773a741139361ad81c2515f3987472ee572471ff15ec284cb4035"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:06_12",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-06_12/trajectory/06_12/06_12.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 10,
+   "traj_sha256": "c4d7162cad4bc8c7335d3db6414e429967ab421ce4723a81ac73c7d743ea2cad"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:06_17",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-06_17/trajectory/06_17/06_17.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 8,
+   "traj_sha256": "dce09bc3adac975c6771ebeab7f6bdc84e0f09349a273485fc1192f3d424932b"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:06_21",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-06_21/trajectory/06_21/06_21.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 7,
+   "traj_sha256": "0e3cfff438ccdb3ba00c78926a03270cdafe63cfea84feb58baec5fcf9747525"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:07_01",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-07_01/trajectory/07_01/07_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 11,
+   "traj_sha256": "711147c16e9a1347ac5ab793a44016aa783efbd400669c2695f15ab365731432"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:08_03",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-08_03/trajectory/08_03/08_03.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 6,
+   "traj_sha256": "45323de7fb00ae66b017a5d3a6be9501eab91e950995a5362b9ddd5519782816"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:10_01",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-10_01/trajectory/10_01/10_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 9,
+   "traj_sha256": "dd2cb69a1629c72ca8b2a14f0a2b0393acf145aae36b4ecdf2e4c489afe09739"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:11_03",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-11_03/trajectory/11_03/11_03.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 9,
+   "traj_sha256": "08a98ab91b82c6738fa8b811cb80de54f463be29d538824828355632cfafdf5f"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:13_03",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-13_03/trajectory/13_03/13_03.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 4,
+   "traj_sha256": "0c47d48b22479002330655e39d7674751ffeb3c00456b28eb197d6d8c44df729"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:13_08",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-13_08/trajectory/13_08/13_08.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 11,
+   "traj_sha256": "6ab99910d53bb81efb281f68b39ad7271b8794f1c0d224178713f7bbdf50da4d"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:14_05",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-14_05/trajectory/14_05/14_05.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 9,
+   "traj_sha256": "633f4b3c7c33fcbb292ac8891da3248a4aed9b419df1a46c40b4dc71cd42cd5f"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:15_01",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-15_01/trajectory/15_01/15_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 13,
+   "traj_sha256": "e6c907b1d2c5f92ac9bc92fcb158aff384122a80893ab8dcb1a4392e40ce5cbc"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:16_01",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-16_01/trajectory/16_01/16_01.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 4,
+   "traj_sha256": "9364b19eb51f73f05b60f21c54d155513598e14453d0f2e049b7d74255c94a7c"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:16_06",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-16_06/trajectory/16_06/16_06.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 8,
+   "traj_sha256": "92f2b2a7ef768ed7ab7524afbe8c0b6ac88687d6b7ec372a6c72e4cb17796016"
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:16_12",
+   "family": "Template",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-16_12/trajectory/16_12/16_12.traj",
+   "traj_present": true,
+   "output_present": true,
+   "n_turns": 5,
+   "traj_sha256": "e8a6d0613cf672b36f8bc9239607216cee99fe595f82f31a08d141f3a57f949f"
+  },
+  {
+   "population": "P-C_viz",
+   "task_id": "glm-fill-c0-Visualization-Task-1420776-r1",
+   "family": "Visualization",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Visualization-Task-1420776-r1/Visualization-Task 1420776/trajectory/Task 1420776/Task 1420776.traj",
+   "traj_present": true,
+   "output_present": false,
+   "n_turns": 59,
+   "traj_sha256": "b266746d143a8d7c552723f3c90911bad1c159350fcd831c01df56464e06c439"
+  },
+  {
+   "population": "P-C_viz",
+   "task_id": "glm-fill-c0-Visualization-Task-1426290-r1",
+   "family": "Visualization",
+   "traj": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Visualization-Task-1426290-r1/Visualization-Task 1426290/trajectory/Task 1426290/Task 1426290.traj",
+   "traj_present": true,
+   "output_present": false,
+   "n_turns": 7,
+   "traj_sha256": "8126198bdd40dcfc344faac9caafd2006d28aa443d368700dab8d9a70425da44"
+  }
+ ]
+}

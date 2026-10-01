@@ -1,0 +1,1622 @@
+{
+ "trajectories": [
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Debugging:10_04",
+   "taskkey": "Debugging_10_04",
+   "sandbox": "/tmp/capreplay-sandbox/P-A_matched_c0/Debugging_10_04",
+   "n_turns": 41,
+   "n_py_runs": 29,
+   "uncertain_turns": [
+    25
+   ],
+   "mutator_turns": [
+    28,
+    29,
+    34
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Debugging-10_04-r1/Debugging-10_04/output.xlsx",
+   "sandbox_xlsx": [
+    "out/10_04_output.xlsx",
+    "in/spreadsheet/10_Debugging/input_files/Inconsistent Color Coding_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Financial_Model:08_01",
+   "taskkey": "Financial_Model_08_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-A_matched_c0/Financial_Model_08_01",
+   "n_turns": 50,
+   "n_py_runs": 48,
+   "uncertain_turns": [
+    12,
+    13,
+    14,
+    19,
+    20,
+    27,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    42,
+    43,
+    44,
+    45,
+    46
+   ],
+   "mutator_turns": [
+    18,
+    25,
+    29,
+    31,
+    34,
+    42
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_01-r1/Financial_Model-08_01/output.xlsx",
+   "sandbox_xlsx": [
+    "tmp/irrtest2.xlsx",
+    "tmp/irrtest.xlsx",
+    "tmp/dt_test2.xlsx",
+    "tmp/dt_test.xlsx",
+    "out/08_01_output.xlsx",
+    "in/spreadsheet/08_Project Seafood Model/08_01_Seafood_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Financial_Model:08_02",
+   "taskkey": "Financial_Model_08_02",
+   "sandbox": "/tmp/capreplay-sandbox/P-A_matched_c0/Financial_Model_08_02",
+   "n_turns": 41,
+   "n_py_runs": 35,
+   "uncertain_turns": [
+    32,
+    38,
+    39
+   ],
+   "mutator_turns": [
+    32
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_02-r1/Financial_Model-08_02/output.xlsx",
+   "sandbox_xlsx": [
+    "out/08_02_output.xlsx",
+    "in/spreadsheet/08_Project Seafood Model/08_02_Seafood_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Financial_Model:08_03",
+   "taskkey": "Financial_Model_08_03",
+   "sandbox": "/tmp/capreplay-sandbox/P-A_matched_c0/Financial_Model_08_03",
+   "n_turns": 25,
+   "n_py_runs": 19,
+   "uncertain_turns": [
+    19
+   ],
+   "mutator_turns": [
+    17
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_03-r1/Financial_Model-08_03/output.xlsx",
+   "sandbox_xlsx": [
+    "out/08_03_output.xlsx",
+    "in/spreadsheet/08_Project Seafood Model/08_03_Seafood_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Financial_Model:08_04",
+   "taskkey": "Financial_Model_08_04",
+   "sandbox": "/tmp/capreplay-sandbox/P-A_matched_c0/Financial_Model_08_04",
+   "n_turns": 25,
+   "n_py_runs": 18,
+   "uncertain_turns": [
+    21,
+    22,
+    23
+   ],
+   "mutator_turns": [
+    18
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_04-r1/Financial_Model-08_04/output.xlsx",
+   "sandbox_xlsx": [
+    "out/08_04_output.xlsx",
+    "in/spreadsheet/08_Project Seafood Model/08_04_Seafood_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Financial_Model:08_05",
+   "taskkey": "Financial_Model_08_05",
+   "sandbox": "/tmp/capreplay-sandbox/P-A_matched_c0/Financial_Model_08_05",
+   "n_turns": 34,
+   "n_py_runs": 24,
+   "uncertain_turns": [
+    28,
+    29,
+    30,
+    32
+   ],
+   "mutator_turns": [
+    25
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_05-r1/Financial_Model-08_05/output.xlsx",
+   "sandbox_xlsx": [
+    "out/08_05_output.xlsx",
+    "in/spreadsheet/08_Project Seafood Model/08_05_Seafood_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Financial_Model:15_04",
+   "taskkey": "Financial_Model_15_04",
+   "sandbox": "/tmp/capreplay-sandbox/P-A_matched_c0/Financial_Model_15_04",
+   "n_turns": 45,
+   "n_py_runs": 29,
+   "uncertain_turns": [
+    25,
+    26,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    38,
+    39,
+    41,
+    42
+   ],
+   "mutator_turns": [
+    25,
+    26
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-15_04-r1/Financial_Model-15_04/output.xlsx",
+   "sandbox_xlsx": [
+    "out/15_04_output.xlsx",
+    "in/spreadsheet/15_Project KIMS/15_04_KIMS_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Template:06_09",
+   "taskkey": "Template_06_09",
+   "sandbox": "/tmp/capreplay-sandbox/P-A_matched_c0/Template_06_09",
+   "n_turns": 8,
+   "n_py_runs": 5,
+   "uncertain_turns": [
+    5
+   ],
+   "mutator_turns": [
+    3
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Template-06_09-r1/Template-06_09/output.xlsx",
+   "sandbox_xlsx": [
+    "out/06_09_output.xlsx",
+    "in/spreadsheet/06_equity_forecast/06_09_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Template:06_16",
+   "taskkey": "Template_06_16",
+   "sandbox": "/tmp/capreplay-sandbox/P-A_matched_c0/Template_06_16",
+   "n_turns": 7,
+   "n_py_runs": 4,
+   "uncertain_turns": [
+    4
+   ],
+   "mutator_turns": [
+    3
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Template-06_16-r1/Template-06_16/output.xlsx",
+   "sandbox_xlsx": [
+    "out/06_16_output.xlsx",
+    "in/spreadsheet/06_equity_forecast/06_16_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:01_01",
+   "taskkey": "Debugging_01_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_01_01",
+   "n_turns": 16,
+   "n_py_runs": 11,
+   "uncertain_turns": [
+    4,
+    11,
+    12,
+    13,
+    14
+   ],
+   "mutator_turns": [
+    10,
+    13
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-01_01/output.xlsx",
+   "sandbox_xlsx": [
+    "out/01_01_output.xlsx",
+    "in/spreadsheet/01_Debugging/input_files/Double Counting_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:01_06",
+   "taskkey": "Debugging_01_06",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_01_06",
+   "n_turns": 17,
+   "n_py_runs": 7,
+   "uncertain_turns": [
+    2,
+    12,
+    15
+   ],
+   "mutator_turns": [
+    14
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-01_06/output.xlsx",
+   "sandbox_xlsx": [
+    "tmp/t.xlsx",
+    "out/01_06_output.xlsx",
+    "in/spreadsheet/01_Debugging/input_files/Incorrect Cross Sheet References_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:02_01",
+   "taskkey": "Debugging_02_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_02_01",
+   "n_turns": 20,
+   "n_py_runs": 12,
+   "uncertain_turns": [
+    2,
+    6,
+    12,
+    18
+   ],
+   "mutator_turns": [
+    11,
+    13
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-02_01/output.xlsx",
+   "sandbox_xlsx": [
+    "out/02_01_output.xlsx",
+    "in/spreadsheet/02_Debugging/input_files/Double Counting_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:02_06",
+   "taskkey": "Debugging_02_06",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_02_06",
+   "n_turns": 15,
+   "n_py_runs": 12,
+   "uncertain_turns": [],
+   "mutator_turns": [
+    11
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-02_06/output.xlsx",
+   "sandbox_xlsx": [
+    "out/02_06_output.xlsx",
+    "in/spreadsheet/02_Debugging/input_files/Incorrect Cross Sheet References_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:03_01",
+   "taskkey": "Debugging_03_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_03_01",
+   "n_turns": 16,
+   "n_py_runs": 10,
+   "uncertain_turns": [
+    10,
+    11,
+    13,
+    14
+   ],
+   "mutator_turns": [
+    12
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-03_01/output.xlsx",
+   "sandbox_xlsx": [
+    "tmp/chk.xlsx",
+    "tmp/wb.xlsx",
+    "out/03_01_output.xlsx",
+    "in/spreadsheet/03_Debugging/input_files/Double Counting_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:03_06",
+   "taskkey": "Debugging_03_06",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_03_06",
+   "n_turns": 18,
+   "n_py_runs": 15,
+   "uncertain_turns": [
+    2,
+    4,
+    13,
+    14,
+    16
+   ],
+   "mutator_turns": [
+    15
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-03_06/output.xlsx",
+   "sandbox_xlsx": [
+    "out/03_06_output.xlsx",
+    "in/spreadsheet/03_Debugging/input_files/Incorrect Cross Sheet References_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:04_01",
+   "taskkey": "Debugging_04_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_04_01",
+   "n_turns": 19,
+   "n_py_runs": 5,
+   "uncertain_turns": [
+    17
+   ],
+   "mutator_turns": [
+    15
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-04_01/output.xlsx",
+   "sandbox_xlsx": [
+    "out/04_01_output.xlsx",
+    "in/spreadsheet/04_Debugging/input_files/Double Counting_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:04_07",
+   "taskkey": "Debugging_04_07",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_04_07",
+   "n_turns": 17,
+   "n_py_runs": 4,
+   "uncertain_turns": [
+    2,
+    15
+   ],
+   "mutator_turns": [
+    14
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-04_07/output.xlsx",
+   "sandbox_xlsx": [
+    "tmp/t.xlsx",
+    "out/04_07_output.xlsx",
+    "in/spreadsheet/04_Debugging/input_files/Incorrect Sign Conventions_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:05_02",
+   "taskkey": "Debugging_05_02",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_05_02",
+   "n_turns": 10,
+   "n_py_runs": 8,
+   "uncertain_turns": [
+    8
+   ],
+   "mutator_turns": [
+    7
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-05_02/output.xlsx",
+   "sandbox_xlsx": [
+    "out/05_02_output.xlsx",
+    "in/spreadsheet/05_Debugging/input_files/Embedded Hardcodes_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:05_08",
+   "taskkey": "Debugging_05_08",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_05_08",
+   "n_turns": 15,
+   "n_py_runs": 9,
+   "uncertain_turns": [
+    2,
+    12,
+    13
+   ],
+   "mutator_turns": [
+    11
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-05_08/output.xlsx",
+   "sandbox_xlsx": [
+    "out/05_08_output.xlsx",
+    "in/spreadsheet/05_Debugging/input_files/Index Match_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:06_02",
+   "taskkey": "Debugging_06_02",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_06_02",
+   "n_turns": 50,
+   "n_py_runs": 11,
+   "uncertain_turns": [
+    2,
+    12,
+    17,
+    44,
+    48
+   ],
+   "mutator_turns": [
+    47
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-06_02/output.xlsx",
+   "sandbox_xlsx": [
+    "tmp/v/o.xlsx",
+    "tmp/recalc/in2.xlsx",
+    "tmp/recalc/in.xlsx",
+    "out/06_02_output.xlsx",
+    "in/spreadsheet/06_Debugging/input_files/Embedded Hardcodes_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:06_07",
+   "taskkey": "Debugging_06_07",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_06_07",
+   "n_turns": 11,
+   "n_py_runs": 10,
+   "uncertain_turns": [
+    3,
+    8,
+    9
+   ],
+   "mutator_turns": [
+    7
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-06_07/output.xlsx",
+   "sandbox_xlsx": [
+    "tmp/t.xlsx",
+    "out/06_07_output.xlsx",
+    "in/spreadsheet/06_Debugging/input_files/Incorrect Index Match_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:07_03",
+   "taskkey": "Debugging_07_03",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_07_03",
+   "n_turns": 16,
+   "n_py_runs": 7,
+   "uncertain_turns": [
+    3,
+    10,
+    14
+   ],
+   "mutator_turns": [
+    10,
+    13
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-07_03/output.xlsx",
+   "sandbox_xlsx": [
+    "out/07_03_output.xlsx",
+    "in/spreadsheet/07_Debugging/input_files/Errors_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:07_08",
+   "taskkey": "Debugging_07_08",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_07_08",
+   "n_turns": 7,
+   "n_py_runs": 4,
+   "uncertain_turns": [
+    3,
+    5
+   ],
+   "mutator_turns": [
+    3,
+    4
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-07_08/output.xlsx",
+   "sandbox_xlsx": [
+    "tmp/test.xlsx",
+    "out/07_08_output.xlsx",
+    "in/spreadsheet/07_Debugging/input_files/Incorrect Sign Conventions_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:08_04",
+   "taskkey": "Debugging_08_04",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_08_04",
+   "n_turns": 11,
+   "n_py_runs": 8,
+   "uncertain_turns": [],
+   "mutator_turns": [
+    7
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-08_04/output.xlsx",
+   "sandbox_xlsx": [
+    "out/08_04_output.xlsx",
+    "in/spreadsheet/08_Debugging/input_files/Inconsistent Color Coding_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:08_09",
+   "taskkey": "Debugging_08_09",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_08_09",
+   "n_turns": 26,
+   "n_py_runs": 8,
+   "uncertain_turns": [
+    2,
+    7,
+    12,
+    24
+   ],
+   "mutator_turns": [
+    23
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-08_09/output.xlsx",
+   "sandbox_xlsx": [
+    "out/08_09_output.xlsx",
+    "in/spreadsheet/08_Debugging/input_files/Relative vs Absolute References_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:09_04",
+   "taskkey": "Debugging_09_04",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_09_04",
+   "n_turns": 7,
+   "n_py_runs": 5,
+   "uncertain_turns": [],
+   "mutator_turns": [],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-09_04/output.xlsx",
+   "sandbox_xlsx": [
+    "out/09_04_output.xlsx",
+    "in/spreadsheet/09_Debugging/input_files/Inconsistent Color Coding_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:09_09",
+   "taskkey": "Debugging_09_09",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_09_09",
+   "n_turns": 21,
+   "n_py_runs": 8,
+   "uncertain_turns": [
+    2,
+    15,
+    16,
+    19
+   ],
+   "mutator_turns": [
+    14,
+    18
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-09_09/output.xlsx",
+   "sandbox_xlsx": [
+    "tmp/f.xlsx",
+    "tmp/o.xlsx",
+    "tmp/t.xlsx",
+    "out/09_09_output.xlsx",
+    "in/spreadsheet/09_Debugging/input_files/Relative vs Absolute References_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:10_05",
+   "taskkey": "Debugging_10_05",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_10_05",
+   "n_turns": 28,
+   "n_py_runs": 26,
+   "uncertain_turns": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    26
+   ],
+   "mutator_turns": [],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-10_05/output.xlsx",
+   "sandbox_xlsx": [
+    "tmp/calc/in.xlsx",
+    "out/10_05_output.xlsx",
+    "in/spreadsheet/10_Debugging/input_files/Incorrect Average_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:10_10",
+   "taskkey": "Debugging_10_10",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_10_10",
+   "n_turns": 20,
+   "n_py_runs": 19,
+   "uncertain_turns": [
+    6,
+    16,
+    17,
+    18
+   ],
+   "mutator_turns": [
+    14,
+    15,
+    18
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-10_10/output.xlsx",
+   "sandbox_xlsx": [
+    "out/10_10_output.xlsx",
+    "in/spreadsheet/10_Debugging/input_files/Unit Mismatch_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:01_01",
+   "taskkey": "Financial_Model_01_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_01_01",
+   "n_turns": 13,
+   "n_py_runs": 10,
+   "uncertain_turns": [
+    10,
+    11
+   ],
+   "mutator_turns": [
+    9
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-01_01/output.xlsx",
+   "sandbox_xlsx": [
+    "tmp/recalc.xlsx",
+    "out/01_01_output.xlsx",
+    "in/spreadsheet/01_Project Education/01_01_Education_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:02_01",
+   "taskkey": "Financial_Model_02_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_02_01",
+   "n_turns": 18,
+   "n_py_runs": 11,
+   "uncertain_turns": [
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+   ],
+   "mutator_turns": [
+    9
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-02_01/output.xlsx",
+   "sandbox_xlsx": [
+    "out/02_01_output.xlsx",
+    "in/spreadsheet/02_Project PP/02_01_PP_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:03_01",
+   "taskkey": "Financial_Model_03_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_03_01",
+   "n_turns": 10,
+   "n_py_runs": 5,
+   "uncertain_turns": [
+    4,
+    6,
+    8
+   ],
+   "mutator_turns": [
+    7
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-03_01/output.xlsx",
+   "sandbox_xlsx": [
+    "tmp/check.xlsx",
+    "out/03_01_output.xlsx",
+    "in/spreadsheet/03_Project Banking/03_01_Banking_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:04_01",
+   "taskkey": "Financial_Model_04_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_04_01",
+   "n_turns": 21,
+   "n_py_runs": 18,
+   "uncertain_turns": [
+    8,
+    12,
+    13,
+    14,
+    16,
+    17,
+    19
+   ],
+   "mutator_turns": [
+    11,
+    16,
+    19
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-04_01/output.xlsx",
+   "sandbox_xlsx": [
+    "out/04_01_output.xlsx",
+    "in/spreadsheet/04_Project Consumer/04_01_Consumer_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:05_01",
+   "taskkey": "Financial_Model_05_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_05_01",
+   "n_turns": 21,
+   "n_py_runs": 20,
+   "uncertain_turns": [
+    14,
+    15,
+    16,
+    17,
+    19
+   ],
+   "mutator_turns": [
+    13,
+    17
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-05_01/output.xlsx",
+   "sandbox_xlsx": [
+    "out/05_01_output.xlsx",
+    "in/spreadsheet/05_Project AIF/05_01_AIF_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:06_01",
+   "taskkey": "Financial_Model_06_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_06_01",
+   "n_turns": 25,
+   "n_py_runs": 18,
+   "uncertain_turns": [
+    12,
+    23
+   ],
+   "mutator_turns": [
+    22
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-06_01/output.xlsx",
+   "sandbox_xlsx": [
+    "tmp/fixed.xlsx",
+    "tmp/in.xlsx",
+    "out/06_01_output.xlsx",
+    "in/spreadsheet/06_Project DigiMark/06_01_DigiMark_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:07_01",
+   "taskkey": "Financial_Model_07_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_07_01",
+   "n_turns": 26,
+   "n_py_runs": 20,
+   "uncertain_turns": [
+    17,
+    18,
+    19,
+    20,
+    22,
+    23
+   ],
+   "mutator_turns": [
+    16
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-07_01/output.xlsx",
+   "sandbox_xlsx": [
+    "out/07_01_output.xlsx",
+    "in/spreadsheet/07_Project Real Estate Financial Model/07_01_RealEstate_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:08_01",
+   "taskkey": "Financial_Model_08_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_08_01",
+   "n_turns": 33,
+   "n_py_runs": 31,
+   "uncertain_turns": [
+    22,
+    23,
+    27
+   ],
+   "mutator_turns": [
+    22
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-08_01/output.xlsx",
+   "sandbox_xlsx": [
+    "out/08_01_output.xlsx",
+    "in/spreadsheet/08_Project Seafood Model/08_01_Seafood_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:10_01",
+   "taskkey": "Financial_Model_10_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_10_01",
+   "n_turns": 15,
+   "n_py_runs": 10,
+   "uncertain_turns": [
+    11,
+    12,
+    13
+   ],
+   "mutator_turns": [
+    10,
+    13
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-10_01/output.xlsx",
+   "sandbox_xlsx": [
+    "out/10_01_output.xlsx",
+    "in/spreadsheet/10_McDonalds/10_01_McDonalds_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:11_01",
+   "taskkey": "Financial_Model_11_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_11_01",
+   "n_turns": 11,
+   "n_py_runs": 5,
+   "uncertain_turns": [
+    7,
+    8,
+    9
+   ],
+   "mutator_turns": [
+    6,
+    9
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-11_01/output.xlsx",
+   "sandbox_xlsx": [
+    "out/11_01_output.xlsx",
+    "in/spreadsheet/11_Project Switchgear/11_01_Switchgear_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:11_05",
+   "taskkey": "Financial_Model_11_05",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_11_05",
+   "n_turns": 23,
+   "n_py_runs": 13,
+   "uncertain_turns": [
+    12,
+    13,
+    15,
+    16,
+    19
+   ],
+   "mutator_turns": [
+    12,
+    16,
+    19
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-11_05/output.xlsx",
+   "sandbox_xlsx": [
+    "out/11_05_output.xlsx",
+    "in/spreadsheet/11_Project Switchgear/11_05_Switchgear_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:12_05",
+   "taskkey": "Financial_Model_12_05",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_12_05",
+   "n_turns": 16,
+   "n_py_runs": 9,
+   "uncertain_turns": [
+    14
+   ],
+   "mutator_turns": [
+    12
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-12_05/output.xlsx",
+   "sandbox_xlsx": [
+    "out/12_05_output.xlsx",
+    "in/spreadsheet/12_Project Infra/12_05_Infra_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:13_05",
+   "taskkey": "Financial_Model_13_05",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_13_05",
+   "n_turns": 11,
+   "n_py_runs": 4,
+   "uncertain_turns": [
+    9
+   ],
+   "mutator_turns": [
+    8
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-13_05/output.xlsx",
+   "sandbox_xlsx": [
+    "out/13_05_output.xlsx",
+    "in/spreadsheet/13_Project Logistic/13_05_Logistic_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:14_05",
+   "taskkey": "Financial_Model_14_05",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_14_05",
+   "n_turns": 15,
+   "n_py_runs": 9,
+   "uncertain_turns": [
+    9,
+    10,
+    11,
+    13
+   ],
+   "mutator_turns": [
+    8,
+    13
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-14_05/output.xlsx",
+   "sandbox_xlsx": [
+    "out/14_05_output.xlsx",
+    "in/spreadsheet/14_Project Refinery/14_05_Refinery_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:15_05",
+   "taskkey": "Financial_Model_15_05",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_15_05",
+   "n_turns": 16,
+   "n_py_runs": 9,
+   "uncertain_turns": [
+    2,
+    12,
+    14
+   ],
+   "mutator_turns": [
+    11
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-15_05/output.xlsx",
+   "sandbox_xlsx": [
+    "out/15_05_output.xlsx",
+    "in/spreadsheet/15_Project KIMS/15_05_KIMS_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:16_05",
+   "taskkey": "Financial_Model_16_05",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_16_05",
+   "n_turns": 10,
+   "n_py_runs": 3,
+   "uncertain_turns": [
+    8
+   ],
+   "mutator_turns": [
+    6
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-16_05/output.xlsx",
+   "sandbox_xlsx": [
+    "out/16_05_output.xlsx",
+    "in/spreadsheet/16_Project Ramjet/16_05_Ramjet_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:17_05",
+   "taskkey": "Financial_Model_17_05",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_17_05",
+   "n_turns": 11,
+   "n_py_runs": 2,
+   "uncertain_turns": [
+    9
+   ],
+   "mutator_turns": [
+    8
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-17_05/output.xlsx",
+   "sandbox_xlsx": [
+    "out/17_05_output.xlsx",
+    "in/spreadsheet/17_Project FMCG/17_05_FMCG_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:18_05",
+   "taskkey": "Financial_Model_18_05",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_18_05",
+   "n_turns": 16,
+   "n_py_runs": 10,
+   "uncertain_turns": [
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "mutator_turns": [
+    9,
+    13,
+    14
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-18_05/output.xlsx",
+   "sandbox_xlsx": [
+    "out/18_05_output.xlsx",
+    "in/spreadsheet/18_Project Road Assets/18_05_RoadAssets_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:19_05",
+   "taskkey": "Financial_Model_19_05",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_19_05",
+   "n_turns": 11,
+   "n_py_runs": 4,
+   "uncertain_turns": [],
+   "mutator_turns": [
+    8
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-19_05/output.xlsx",
+   "sandbox_xlsx": [
+    "out/19_05_output.xlsx",
+    "in/spreadsheet/19_Project Transformer/19_05_Transformer_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:20_05",
+   "taskkey": "Financial_Model_20_05",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_20_05",
+   "n_turns": 17,
+   "n_py_runs": 13,
+   "uncertain_turns": [
+    14
+   ],
+   "mutator_turns": [
+    12
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-20_05/output.xlsx",
+   "sandbox_xlsx": [
+    "out/20_05_output.xlsx",
+    "in/spreadsheet/20_Project Fintech/20_05_Fintech_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:01_02",
+   "taskkey": "Template_01_02",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_01_02",
+   "n_turns": 7,
+   "n_py_runs": 3,
+   "uncertain_turns": [],
+   "mutator_turns": [
+    4
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-01_02/output.xlsx",
+   "sandbox_xlsx": [
+    "out/01_02_output.xlsx",
+    "in/spreadsheet/01_bond_accounting/01_02_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:01_07",
+   "taskkey": "Template_01_07",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_01_07",
+   "n_turns": 13,
+   "n_py_runs": 9,
+   "uncertain_turns": [],
+   "mutator_turns": [
+    8
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-01_07/output.xlsx",
+   "sandbox_xlsx": [
+    "out/01_07_output.xlsx",
+    "in/spreadsheet/01_bond_accounting/01_07_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:02_05",
+   "taskkey": "Template_02_05",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_02_05",
+   "n_turns": 13,
+   "n_py_runs": 5,
+   "uncertain_turns": [
+    3,
+    4
+   ],
+   "mutator_turns": [
+    3,
+    5,
+    10
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-02_05/output.xlsx",
+   "sandbox_xlsx": [
+    "out/02_05_output.xlsx",
+    "in/spreadsheet/02_cash_sweep/02_05_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:03_03",
+   "taskkey": "Template_03_03",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_03_03",
+   "n_turns": 9,
+   "n_py_runs": 6,
+   "uncertain_turns": [
+    4,
+    7
+   ],
+   "mutator_turns": [
+    3,
+    5,
+    7
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-03_03/output.xlsx",
+   "sandbox_xlsx": [
+    "out/03_03_output.xlsx",
+    "in/spreadsheet/03_consolidation/03_03_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:05_02",
+   "taskkey": "Template_05_02",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_05_02",
+   "n_turns": 7,
+   "n_py_runs": 4,
+   "uncertain_turns": [
+    4,
+    5
+   ],
+   "mutator_turns": [
+    2,
+    3,
+    5
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-05_02/output.xlsx",
+   "sandbox_xlsx": [
+    "out/05_02_output.xlsx",
+    "in/spreadsheet/05_deferred_tax/05_02_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:06_06",
+   "taskkey": "Template_06_06",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_06_06",
+   "n_turns": 6,
+   "n_py_runs": 5,
+   "uncertain_turns": [
+    1,
+    3,
+    4
+   ],
+   "mutator_turns": [
+    1,
+    2
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-06_06/output.xlsx",
+   "sandbox_xlsx": [
+    "out/06_06_output.xlsx",
+    "in/spreadsheet/06_equity_forecast/06_06_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:06_12",
+   "taskkey": "Template_06_12",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_06_12",
+   "n_turns": 10,
+   "n_py_runs": 8,
+   "uncertain_turns": [
+    5,
+    6,
+    7
+   ],
+   "mutator_turns": [
+    4
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-06_12/output.xlsx",
+   "sandbox_xlsx": [
+    "out/06_12_output.xlsx",
+    "in/spreadsheet/06_equity_forecast/06_12_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:06_17",
+   "taskkey": "Template_06_17",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_06_17",
+   "n_turns": 8,
+   "n_py_runs": 4,
+   "uncertain_turns": [
+    6
+   ],
+   "mutator_turns": [
+    4
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-06_17/output.xlsx",
+   "sandbox_xlsx": [
+    "out/06_17_output.xlsx",
+    "in/spreadsheet/06_equity_forecast/06_17_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:06_21",
+   "taskkey": "Template_06_21",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_06_21",
+   "n_turns": 7,
+   "n_py_runs": 8,
+   "uncertain_turns": [
+    2,
+    4,
+    5
+   ],
+   "mutator_turns": [
+    2,
+    3,
+    5
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-06_21/output.xlsx",
+   "sandbox_xlsx": [
+    "out/06_21_output.xlsx",
+    "in/spreadsheet/06_equity_forecast/06_21_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:07_01",
+   "taskkey": "Template_07_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_07_01",
+   "n_turns": 11,
+   "n_py_runs": 9,
+   "uncertain_turns": [
+    3,
+    6,
+    8,
+    9
+   ],
+   "mutator_turns": [
+    2,
+    4,
+    5,
+    7,
+    9
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-07_01/output.xlsx",
+   "sandbox_xlsx": [
+    "out/07_01_output.xlsx",
+    "in/spreadsheet/07_equity_method/07_01_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:08_03",
+   "taskkey": "Template_08_03",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_08_03",
+   "n_turns": 6,
+   "n_py_runs": 3,
+   "uncertain_turns": [
+    4
+   ],
+   "mutator_turns": [
+    3
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-08_03/output.xlsx",
+   "sandbox_xlsx": [
+    "out/08_03_output.xlsx",
+    "in/spreadsheet/08_fin_model_basics/08_03_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:10_01",
+   "taskkey": "Template_10_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_10_01",
+   "n_turns": 9,
+   "n_py_runs": 9,
+   "uncertain_turns": [
+    3,
+    4,
+    5,
+    6
+   ],
+   "mutator_turns": [
+    2,
+    4,
+    5,
+    6
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-10_01/output.xlsx",
+   "sandbox_xlsx": [
+    "out/10_01_output.xlsx",
+    "in/spreadsheet/10_ma_analysis/10_01_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:11_03",
+   "taskkey": "Template_11_03",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_11_03",
+   "n_turns": 9,
+   "n_py_runs": 6,
+   "uncertain_turns": [
+    4,
+    6
+   ],
+   "mutator_turns": [
+    3,
+    5
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-11_03/output.xlsx",
+   "sandbox_xlsx": [
+    "out/11_03_output.xlsx",
+    "in/spreadsheet/11_ma_model/11_03_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:13_03",
+   "taskkey": "Template_13_03",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_13_03",
+   "n_turns": 4,
+   "n_py_runs": 2,
+   "uncertain_turns": [],
+   "mutator_turns": [
+    1
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-13_03/output.xlsx",
+   "sandbox_xlsx": [
+    "out/13_03_output.xlsx",
+    "in/spreadsheet/13_nonrecurring/13_03_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:13_08",
+   "taskkey": "Template_13_08",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_13_08",
+   "n_turns": 11,
+   "n_py_runs": 8,
+   "uncertain_turns": [
+    3,
+    5,
+    7,
+    8
+   ],
+   "mutator_turns": [
+    2,
+    4,
+    7
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-13_08/output.xlsx",
+   "sandbox_xlsx": [
+    "out/13_08_output.xlsx",
+    "in/spreadsheet/13_nonrecurring/13_08_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:14_05",
+   "taskkey": "Template_14_05",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_14_05",
+   "n_turns": 9,
+   "n_py_runs": 7,
+   "uncertain_turns": [
+    4,
+    7
+   ],
+   "mutator_turns": [
+    2
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-14_05/output.xlsx",
+   "sandbox_xlsx": [
+    "out/14_05_output.xlsx",
+    "in/spreadsheet/14_re_dcf/14_05_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:15_01",
+   "taskkey": "Template_15_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_15_01",
+   "n_turns": 13,
+   "n_py_runs": 9,
+   "uncertain_turns": [
+    9,
+    10,
+    11
+   ],
+   "mutator_turns": [
+    8
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-15_01/output.xlsx",
+   "sandbox_xlsx": [
+    "out/15_01_output.xlsx",
+    "in/spreadsheet/15_re_debt/15_01_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:16_01",
+   "taskkey": "Template_16_01",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_16_01",
+   "n_turns": 4,
+   "n_py_runs": 4,
+   "uncertain_turns": [
+    2
+   ],
+   "mutator_turns": [
+    2
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-16_01/output.xlsx",
+   "sandbox_xlsx": [
+    "out/16_01_output.xlsx",
+    "in/spreadsheet/16_re_direct_cap/16_01_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:16_06",
+   "taskkey": "Template_16_06",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_16_06",
+   "n_turns": 8,
+   "n_py_runs": 3,
+   "uncertain_turns": [
+    6
+   ],
+   "mutator_turns": [
+    6
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-16_06/output.xlsx",
+   "sandbox_xlsx": [
+    "out/16_06_output.xlsx",
+    "in/spreadsheet/16_re_direct_cap/16_06_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:16_12",
+   "taskkey": "Template_16_12",
+   "sandbox": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_16_12",
+   "n_turns": 5,
+   "n_py_runs": 2,
+   "uncertain_turns": [
+    3
+   ],
+   "mutator_turns": [
+    1
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-16_12/output.xlsx",
+   "sandbox_xlsx": [
+    "out/16_12_output.xlsx",
+    "in/spreadsheet/16_re_direct_cap/16_12_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-C_viz",
+   "task_id": "glm-fill-c0-Visualization-Task-1420776-r1",
+   "taskkey": "glm-fill-c0-Visualization-Task-1420776-r1",
+   "sandbox": "/tmp/capreplay-sandbox/P-C_viz/glm-fill-c0-Visualization-Task-1420776-r1",
+   "n_turns": 59,
+   "n_py_runs": 39,
+   "uncertain_turns": [
+    6,
+    15,
+    21,
+    25,
+    36,
+    44,
+    45,
+    46,
+    47,
+    48
+   ],
+   "mutator_turns": [
+    15,
+    34
+   ],
+   "status": "REPLAYED",
+   "archived_output": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Visualization-Task-1420776-r1/Visualization-Task 1420776/trajectory/Task 1420776/../../output.xlsx",
+   "sandbox_xlsx": [
+    "tmp/in.xlsx",
+    "out/Task 1420776_output.xlsx",
+    "in/spreadsheet/Task 1420776/Task 1420776_input.xlsx"
+   ]
+  },
+  {
+   "population": "P-C_viz",
+   "task_id": "glm-fill-c0-Visualization-Task-1426290-r1",
+   "taskkey": "glm-fill-c0-Visualization-Task-1426290-r1",
+   "sandbox": "/tmp/capreplay-sandbox/P-C_viz/glm-fill-c0-Visualization-Task-1426290-r1",
+   "n_turns": 7,
+   "n_py_runs": 5,
+   "uncertain_turns": [
+    2
+   ],
+   "mutator_turns": [],
+   "status": "REPLAYED",
+   "archived_output": null,
+   "sandbox_xlsx": [
+    "in/spreadsheet/Task 1426290/Task 1426290_input.xlsx"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,17 @@
+[
+ {
+  "comparison": "FM:13_05 r1 C1-completed vs C0-stalled",
+  "class": "UNRELATED_MODEL_VARIANCE",
+  "reason": "r2 reversed (C0 scored .65, C1 .03, C1 r2 made 0 helper calls); helpers not implicated either direction"
+ },
+ {
+  "comparison": "Template:01_02 r2 C1 mod .69 (adopting) vs C0 .12",
+  "class": "UNRELATED_MODEL_VARIANCE",
+  "reason": "C1 r2 executed 0 helper calls (import-only); outcome within task variance"
+ },
+ {
+  "comparison": "all other discordant cells",
+  "class": "UNRELATED_MODEL_VARIANCE",
+  "reason": "every r1 split reversed or converged in r2; non-adopting runs show identical spread"
+ }
+]

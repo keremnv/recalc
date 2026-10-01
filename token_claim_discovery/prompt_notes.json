@@ -1,0 +1,10 @@
+{
+  "difference": 0,
+  "helper_addendum_estimated_tokens": 83,
+  "helper_on_addendum": "## Optional factual helpers\nYou may import `lx_helpers` in Python. Available signatures: `search(workbook, pattern, regex=False, sheet=None)`, `periods(workbook, sheet=None)`, `inspect(workbook, sheet, cell_range, with_styles=False)`. These read the workbook with ordinary openpyxl. They are optional; ordinary Python/openpyxl and view_xlsx remain available.",
+  "neutral": "## Working note\nUse the available spreadsheet tools as appropriate for the task. Check the workbook and produce the requested output. Continue until you can submit the result. Record the final output path.",
+  "neutral_estimated_tokens": 38,
+  "salience": "## Working note\nPrefer targeted inspection of needed cells or ranges using ordinary Python/openpyxl. Avoid dumping entire workbooks or sheets unless broad inspection is required. Gather evidence incrementally.",
+  "salience_estimated_tokens": 38,
+  "tokenizer": "tiktoken cl100k_base local estimate; model-native tokenizer not available"
+}

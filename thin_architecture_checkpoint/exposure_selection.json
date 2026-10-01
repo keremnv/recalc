@@ -1,0 +1,23 @@
+{
+ "selected": {
+  "Financial_Model": [
+   "Financial_Model:07_01",
+   "Financial_Model:08_01",
+   "Financial_Model:08_03",
+   "Financial_Model:15_04"
+  ],
+  "Template": [
+   "Template:02_05",
+   "Template:06_17",
+   "Template:13_08",
+   "Template:16_06"
+  ],
+  "Debugging": [
+   "Debugging:06_02",
+   "Debugging:08_04",
+   "Debugging:10_04",
+   "Debugging:10_10"
+  ]
+ },
+ "rule": "top-4 per family by exposure, skipping Cohort-A members"
+}

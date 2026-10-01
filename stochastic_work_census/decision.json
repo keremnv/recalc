@@ -1,0 +1,22 @@
+{
+ "decision": "CONTEXT_REDUNDANCY_LOW_CLOSE_BRANCH",
+ "discriminator": null,
+ "C0_share": 0.02364945705136139,
+ "C1_share": 0.023844358043080233,
+ "C2_share": 0.03645246051832283,
+ "materiality_gates": {
+  "C0>=5%": false,
+  "C1>=5%": false,
+  "C0>=10%": false,
+  "C1>=10%": false,
+  "C0>=20%": false,
+  "C1>=20%": false,
+  "C0>=30%": false,
+  "C1>=30%": false,
+  "C0>=40%": false,
+  "C1>=40%": false
+ },
+ "dominant_redundancy_class": "PARTIAL_OVERLAP",
+ "fragmented": false,
+ "top5_concentration": 0.48825472066988695
+}

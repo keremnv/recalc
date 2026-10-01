@@ -1,0 +1,34 @@
+{
+  "A": {
+    "score_floor_burden": "unavailable: no score floor was preregistered",
+    "tokens_per_valid_submission": 795849.4,
+    "total_input_tokens": 7958494,
+    "uncensored_input_tokens": 7953682,
+    "uncensored_tokens_per_valid_submission": 795368.2,
+    "valid_submissions": 10
+  },
+  "B": {
+    "score_floor_burden": "unavailable: no score floor was preregistered",
+    "tokens_per_valid_submission": 592730.75,
+    "total_input_tokens": 7112769,
+    "uncensored_input_tokens": 7112769,
+    "uncensored_tokens_per_valid_submission": 592730.75,
+    "valid_submissions": 12
+  },
+  "C": {
+    "score_floor_burden": "unavailable: no score floor was preregistered",
+    "tokens_per_valid_submission": 1042557.25,
+    "total_input_tokens": 8340458,
+    "uncensored_input_tokens": 8141450,
+    "uncensored_tokens_per_valid_submission": 1017681.25,
+    "valid_submissions": 8
+  },
+  "D": {
+    "score_floor_burden": "unavailable: no score floor was preregistered",
+    "tokens_per_valid_submission": 837462.0,
+    "total_input_tokens": 7537158,
+    "uncensored_input_tokens": 7520466,
+    "uncensored_tokens_per_valid_submission": 835607.3333333334,
+    "valid_submissions": 9
+  }
+}

@@ -1,0 +1,37 @@
+{
+ "paired_losses": [
+  {
+   "task_id": "Template:01_02",
+   "h0_status": "SUBMITTED",
+   "h1_status": "NO_SUBMIT",
+   "paired_regression_delta": -0.9737,
+   "paired_modification_delta": -0.5577,
+   "boundary": "MODEL_BEHAVIOR_DRIFT",
+   "cause": "H1 model stalled before any bash mutation (text-only turns / inspection loop); wrapper has no causal path to pre-mutation behavior; identical prompts/tools/model/sampling"
+  },
+  {
+   "task_id": "Template:01_07",
+   "h0_status": "SUBMITTED",
+   "h1_status": "NO_SUBMIT",
+   "paired_regression_delta": -0.907,
+   "paired_modification_delta": -0.5579,
+   "boundary": "MODEL_BEHAVIOR_DRIFT",
+   "cause": "H1 model stalled before any bash mutation (text-only turns / inspection loop); wrapper has no causal path to pre-mutation behavior; identical prompts/tools/model/sampling"
+  },
+  {
+   "task_id": "Debugging:02_06",
+   "h0_status": "SUBMITTED",
+   "h1_status": "NO_SUBMIT",
+   "paired_regression_delta": -0.9824,
+   "paired_modification_delta": 0,
+   "boundary": "MODEL_BEHAVIOR_DRIFT",
+   "cause": "H1 model stalled before any bash mutation (text-only turns / inspection loop); wrapper has no causal path to pre-mutation behavior; identical prompts/tools/model/sampling"
+  }
+ ],
+ "runtime_telemetry_failures": [],
+ "taxonomy_counts": {
+  "MODEL_BEHAVIOR_DRIFT": 3
+ },
+ "systematic_runtime_failure_class": false,
+ "note": "zero capture/delta/validation/opaque/commit/serialization failures; all paired losses are pre-mutation model stalls"
+}

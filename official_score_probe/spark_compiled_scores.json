@@ -1,0 +1,1688 @@
+{
+  "generated_at": "2026-09-16T10:20:41.363179+00:00",
+  "claim": "model_on_fixed_compiled_architecture",
+  "not_a_scaffold_comparison": true,
+  "verdict": "MIXED_MODEL_ARCHITECTURE_LIMITS",
+  "worker_status": {
+    "generated_at": "2026-09-16T10:20:34.455036+00:00",
+    "workers": [
+      {
+        "worker_id": "spark-compiled:Template:01_02",
+        "task": "Template:01_02",
+        "pid": 288773,
+        "started_at": "2026-09-16T10:06:16.829414+00:00",
+        "kind": "spark_compiled_discriminator",
+        "alive": false,
+        "status": "COMPLETED",
+        "model_call_count": 40,
+        "provider_cost_usd": 0.02531733399999999
+      },
+      {
+        "worker_id": "spark-compiled:Financial_Model:02_01",
+        "task": "Financial_Model:02_01",
+        "pid": 288774,
+        "started_at": "2026-09-16T10:06:16.798832+00:00",
+        "kind": "spark_compiled_discriminator",
+        "alive": false,
+        "status": "COMPLETED",
+        "model_call_count": 40,
+        "provider_cost_usd": 0.04761286000000001
+      },
+      {
+        "worker_id": "spark-compiled:Debugging:01_01",
+        "task": "Debugging:01_01",
+        "pid": 288775,
+        "started_at": "2026-09-16T10:06:16.858405+00:00",
+        "kind": "spark_compiled_discriminator",
+        "alive": false,
+        "status": "COMPLETED",
+        "model_call_count": 1,
+        "provider_cost_usd": 0.0005279
+      }
+    ],
+    "all_finished": true
+  },
+  "glm_official_scores": {
+    "run_name": "glm-compiled",
+    "model_name": "official-score-glm-compiled-three",
+    "evaluation_runtime": "metadata-tolerant-local-v1",
+    "exact": 0,
+    "scored": 3,
+    "missing_outputs": 0,
+    "submission": {
+      "outputs": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/official-score-probe/glm-compiled/submission/outputs",
+      "official_json": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/official-score-probe/glm-compiled/submission/results"
+    },
+    "tasks": {
+      "Debugging:01_01": {
+        "id": "01_01",
+        "error_message": "Regression error at Ex 1 - LBO!AC20: answer=0, output=-130.666114561455",
+        "regression_accuracy": 1.0,
+        "modification_accuracy": 0.9364,
+        "accuracy": 0.0,
+        "interaction_turns": 0
+      },
+      "Financial_Model:02_01": {
+        "id": "02_01",
+        "error_message": "Modification error at IS,BS,CF!E102: answer=2077.64005275567, output=-16184.7546366328",
+        "regression_accuracy": 1.0,
+        "modification_accuracy": 0.7351,
+        "accuracy": 0.0,
+        "interaction_turns": 0
+      },
+      "Template:01_02": {
+        "id": "01_02",
+        "error_message": "Modification error at OID_Bond!C9: answer=413.669565112777, output=450",
+        "regression_accuracy": 1.0,
+        "modification_accuracy": 0.0,
+        "accuracy": 0.0,
+        "interaction_turns": 0
+      }
+    }
+  },
+  "spark_compiled_official_scores": {
+    "run_name": "spark-compiled",
+    "model_name": "official-score-spark-compiled-three",
+    "evaluation_runtime": "metadata-tolerant-local-v1",
+    "exact": 0,
+    "scored": 3,
+    "missing_outputs": 0,
+    "submission": {
+      "outputs": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/official-score-probe/spark-compiled/submission/outputs",
+      "official_json": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/official-score-probe/spark-compiled/submission/results"
+    },
+    "tasks": {
+      "Debugging:01_01": {
+        "id": "01_01",
+        "error_message": "Regression error at Ex 1 - LBO!AC20: answer=0, output=-130.666114561455",
+        "regression_accuracy": 1.0,
+        "modification_accuracy": 0.9364,
+        "accuracy": 0.0,
+        "interaction_turns": 0
+      },
+      "Financial_Model:02_01": {
+        "id": "02_01",
+        "error_message": "Modification error at IS,BS,CF!I34: answer=23.9117096270033, output=#DIV/0!",
+        "regression_accuracy": 1.0,
+        "modification_accuracy": 0.9778,
+        "accuracy": 0.0,
+        "interaction_turns": 0
+      },
+      "Template:01_02": {
+        "id": "01_02",
+        "error_message": "Modification error at OID_Bond!C9: answer=413.669565112777, output=None",
+        "regression_accuracy": 1.0,
+        "modification_accuracy": 0.0,
+        "accuracy": 0.0,
+        "interaction_turns": 0
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "task": "Template:01_02",
+      "glm": {
+        "task": "Template:01_02",
+        "status": "COMPLETED",
+        "model": "z-ai/glm-5.3-flash",
+        "compiler_status": "OK",
+        "edit_plan_status": "VALID_PLAN",
+        "failure_ledger": [
+          {
+            "failure_class": "TASK_MODEL_CALL_LIMIT",
+            "scope": "remaining_authorized_targets",
+            "remaining_count": 181
+          }
+        ],
+        "model_call_count": 40,
+        "provider_cost_usd": 0.019492512999999996,
+        "prompt_tokens": 182578,
+        "completion_tokens": 18902,
+        "identity_ok": true,
+        "identity_failures": [],
+        "authorised_targets": 186,
+        "unresolved_authorised_targets": 181,
+        "started_at": "2026-09-16T08:41:21.465264+00:00",
+        "finished_at": "2026-09-16T08:55:53.760563+00:00",
+        "output_exists": true,
+        "terminal_stage": "resource",
+        "boundary": "TASK_MODEL_CALL_LIMIT",
+        "earliest": "TASK_MODEL_CALL_LIMIT",
+        "detail": {
+          "failure_class": "TASK_MODEL_CALL_LIMIT",
+          "scope": "remaining_authorized_targets",
+          "remaining_count": 181
+        }
+      },
+      "spark": {
+        "task": "Template:01_02",
+        "status": "COMPLETED",
+        "model": "meta/muse-spark-1.3-contributor",
+        "compiler_status": "OK",
+        "edit_plan_status": "VALID_PLAN",
+        "failure_ledger": [
+          {
+            "failure_class": "TASK_MODEL_CALL_LIMIT",
+            "scope": "remaining_authorized_targets",
+            "remaining_count": 182
+          }
+        ],
+        "model_call_count": 40,
+        "provider_cost_usd": 0.02531733399999999,
+        "prompt_tokens": 189969,
+        "completion_tokens": 40896,
+        "identity_ok": true,
+        "identity_failures": [],
+        "authorised_targets": 187,
+        "unresolved_authorised_targets": 182,
+        "started_at": "2026-09-16T10:06:16.988609+00:00",
+        "finished_at": "2026-09-16T10:14:19.413538+00:00",
+        "output_exists": true,
+        "terminal_stage": "resource",
+        "boundary": "TASK_MODEL_CALL_LIMIT",
+        "earliest": "TASK_MODEL_CALL_LIMIT",
+        "detail": {
+          "failure_class": "TASK_MODEL_CALL_LIMIT",
+          "scope": "remaining_authorized_targets",
+          "remaining_count": 182
+        }
+      },
+      "glm_official": {
+        "id": "01_02",
+        "error_message": "Modification error at OID_Bond!C9: answer=413.669565112777, output=450",
+        "regression_accuracy": 1.0,
+        "modification_accuracy": 0.0,
+        "accuracy": 0.0,
+        "interaction_turns": 0
+      },
+      "spark_official": {
+        "id": "01_02",
+        "error_message": "Modification error at OID_Bond!C9: answer=413.669565112777, output=None",
+        "regression_accuracy": 1.0,
+        "modification_accuracy": 0.0,
+        "accuracy": 0.0,
+        "interaction_turns": 0
+      }
+    },
+    {
+      "task": "Financial_Model:02_01",
+      "glm": {
+        "task": "Financial_Model:02_01",
+        "status": "COMPLETED",
+        "model": "z-ai/glm-5.3-flash",
+        "compiler_status": "OK",
+        "edit_plan_status": "PARSE_FAILURE",
+        "failure_ledger": [
+          {
+            "failure_class": "INVALID_EDIT_PLAN",
+            "status": "PARSE_FAILURE"
+          }
+        ],
+        "model_call_count": 2,
+        "provider_cost_usd": 0.002614325,
+        "prompt_tokens": 11815,
+        "completion_tokens": 3925,
+        "identity_ok": true,
+        "identity_failures": [],
+        "authorised_targets": 0,
+        "unresolved_authorised_targets": null,
+        "started_at": "2026-09-16T08:41:21.548209+00:00",
+        "finished_at": "2026-09-16T08:43:48.681882+00:00",
+        "output_exists": true,
+        "terminal_stage": "edit_plan",
+        "boundary": "PARSE_FAILURE",
+        "earliest": "edit_plan"
+      },
+      "spark": {
+        "task": "Financial_Model:02_01",
+        "status": "COMPLETED",
+        "model": "meta/muse-spark-1.3-contributor",
+        "compiler_status": "OK",
+        "edit_plan_status": "VALID_PLAN",
+        "failure_ledger": [
+          {
+            "cell": [
+              "BS schedules",
+              11,
+              11
+            ],
+            "failure_class": "HARD_VERIFIER_REJECT",
+            "validation": {
+              "formula_present": true,
+              "parser_ok": true,
+              "invalid_sheet": false,
+              "invalid_address": true,
+              "unsupported_external": false,
+              "self_reference": false,
+              "cycle": false,
+              "hard_reject": false,
+              "hard_verifier": {
+                "results": [
+                  {
+                    "checker_id": "A1",
+                    "checker_family": "A",
+                    "checker_type": "HARD",
+                    "k": null,
+                    "applicable": true,
+                    "verdict": "PASS",
+                    "support_count": 0,
+                    "support_addresses": [],
+                    "reason": "no_self_reference",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "A2",
+                    "checker_family": "A",
+                    "checker_type": "HARD",
+                    "k": null,
+                    "applicable": true,
+                    "verdict": "PASS",
+                    "support_count": 0,
+                    "support_addresses": [],
+                    "reason": "no_direct_cycle",
+                    "provenance": {
+                      "policy_primary": "A_STRICT",
+                      "input_acyclic": true,
+                      "paths": []
+                    }
+                  },
+                  {
+                    "checker_id": "A3",
+                    "checker_family": "A",
+                    "checker_type": "HARD",
+                    "k": null,
+                    "applicable": true,
+                    "verdict": "PASS",
+                    "support_count": 0,
+                    "support_addresses": [],
+                    "reason": "no_transitive_cycle",
+                    "provenance": {
+                      "input_acyclic": true
+                    }
+                  },
+                  {
+                    "checker_id": "A4",
+                    "checker_family": "A",
+                    "checker_type": "HARD",
+                    "k": null,
+                    "applicable": true,
+                    "verdict": "PASS",
+                    "support_count": 0,
+                    "support_addresses": [],
+                    "reason": "no_new_scc",
+                    "provenance": {
+                      "input_acyclic": true,
+                      "n_nontrivial_scc": 0
+                    }
+                  },
+                  {
+                    "checker_id": "A5",
+                    "checker_family": "A",
+                    "checker_type": "HARD",
+                    "k": null,
+                    "applicable": true,
+                    "verdict": "PASS",
+                    "support_count": 0,
+                    "support_addresses": [],
+                    "reason": "refs_ok",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "B1_k3",
+                    "checker_family": "B",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 3,
+                    "applicable": true,
+                    "verdict": "PASS",
+                    "support_count": 3,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11",
+                      "BS schedules!D11"
+                    ],
+                    "reason": "matches_abs_contract",
+                    "provenance": {
+                      "contract": [
+                        [
+                          "IS,BS,CF",
+                          "C9",
+                          "$$"
+                        ]
+                      ],
+                      "candidate": [
+                        [
+                          "IS,BS,CF",
+                          "C9",
+                          "$$"
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "checker_id": "B2_k3",
+                    "checker_family": "B",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 3,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 3,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11",
+                      "BS schedules!D11"
+                    ],
+                    "reason": "peers_not_unanimous",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "B3_k3",
+                    "checker_family": "B",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 3,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 3,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11",
+                      "BS schedules!D11"
+                    ],
+                    "reason": "peers_not_unanimous",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "B4_k3",
+                    "checker_family": "B",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 3,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 3,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11",
+                      "BS schedules!D11"
+                    ],
+                    "reason": "peers_not_unanimous",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "B5_k3",
+                    "checker_family": "B",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 3,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 3,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11",
+                      "BS schedules!D11"
+                    ],
+                    "reason": "peers_not_unanimous",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "C1_k3",
+                    "checker_family": "C",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 3,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 3,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11",
+                      "BS schedules!D11"
+                    ],
+                    "reason": "peers_not_unanimous",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "C2_k3",
+                    "checker_family": "C",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 3,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 3,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11",
+                      "BS schedules!D11"
+                    ],
+                    "reason": "peer_slot_count_not_unanimous",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "C3_k3",
+                    "checker_family": "C",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 3,
+                    "applicable": true,
+                    "verdict": "PASS",
+                    "support_count": 3,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11",
+                      "BS schedules!D11"
+                    ],
+                    "reason": "matches_abs_slot",
+                    "provenance": {
+                      "contract": [
+                        [
+                          "IS,BS,CF",
+                          "C9",
+                          "$$"
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "checker_id": "D1_k3",
+                    "checker_family": "D",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 3,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 2,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11"
+                    ],
+                    "reason": "insufficient_reduction_peers",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "D2_k3",
+                    "checker_family": "D",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 3,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 2,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11"
+                    ],
+                    "reason": "insufficient_reduction_peers",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "D3_k3",
+                    "checker_family": "D",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 3,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 2,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11"
+                    ],
+                    "reason": "insufficient_reduction_peers",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "D4_k3",
+                    "checker_family": "D",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 3,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 2,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11"
+                    ],
+                    "reason": "insufficient_reduction_peers",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "B1_k5",
+                    "checker_family": "B",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 5,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 3,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11",
+                      "BS schedules!D11"
+                    ],
+                    "reason": "insufficient_peers",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "B2_k5",
+                    "checker_family": "B",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 5,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 3,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11",
+                      "BS schedules!D11"
+                    ],
+                    "reason": "insufficient_peers",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "B3_k5",
+                    "checker_family": "B",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 5,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 3,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11",
+                      "BS schedules!D11"
+                    ],
+                    "reason": "insufficient_peers",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "B4_k5",
+                    "checker_family": "B",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 5,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 3,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11",
+                      "BS schedules!D11"
+                    ],
+                    "reason": "insufficient_peers",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "B5_k5",
+                    "checker_family": "B",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 5,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 3,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11",
+                      "BS schedules!D11"
+                    ],
+                    "reason": "insufficient_peers",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "C1_k5",
+                    "checker_family": "C",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 5,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 3,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11",
+                      "BS schedules!D11"
+                    ],
+                    "reason": "insufficient_peers",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "C2_k5",
+                    "checker_family": "C",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 5,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 3,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11",
+                      "BS schedules!D11"
+                    ],
+                    "reason": "insufficient_peers",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "C3_k5",
+                    "checker_family": "C",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 5,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 3,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11",
+                      "BS schedules!D11"
+                    ],
+                    "reason": "insufficient_peers",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "D1_k5",
+                    "checker_family": "D",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 5,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 2,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11"
+                    ],
+                    "reason": "insufficient_reduction_peers",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "D2_k5",
+                    "checker_family": "D",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 5,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 2,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11"
+                    ],
+                    "reason": "insufficient_reduction_peers",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "D3_k5",
+                    "checker_family": "D",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 5,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 2,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11"
+                    ],
+                    "reason": "insufficient_reduction_peers",
+                    "provenance": {}
+                  },
+                  {
+                    "checker_id": "D4_k5",
+                    "checker_family": "D",
+                    "checker_type": "EMPIRICAL_EXACT",
+                    "k": 5,
+                    "applicable": false,
+                    "verdict": "ABSTAIN",
+                    "support_count": 2,
+                    "support_addresses": [
+                      "BS schedules!F11",
+                      "BS schedules!E11"
+                    ],
+                    "reason": "insufficient_reduction_peers",
+                    "provenance": {}
+                  }
+                ],
+                "policies": [
+                  {
+                    "policy": "H",
+                    "verdict": "PASS",
+                    "reject_ids": [],
+                    "pass_ids": [
+                      "A1",
+                      "A2",
+                      "A3",
+                      "A4",
+                      "A5"
+                    ]
+                  },
+                  {
+                    "policy": "HE3",
+                    "verdict": "PASS",
+                    "reject_ids": [],
+                    "pass_ids": [
+                      "A1",
+                      "A2",
+                      "A3",
+                      "A4",
+                      "A5",
+                      "B1_k3",
+                      "C3_k3"
+                    ]
+                  },
+                  {
+                    "policy": "HE5",
+                    "verdict": "PASS",
+                    "reject_ids": [],
+                    "pass_ids": [
+                      "A1",
+                      "A2",
+                      "A3",
+                      "A4",
+                      "A5"
+                    ]
+                  }
+                ],
+                "kind": "REDUCTION_CANDIDATE",
+                "parsed": {
+                  "n_slots": 3,
+                  "opaque": false,
+                  "shape": "=AVERAGE(<REF>:<REF>)/'IS,BS,CF'!<REF>*'IS,BS,CF'!<REF>",
+                  "skeleton": "=AVERAGE(<REF>:<REF>)/<REF>*<REF>",
+                  "literals": []
+                },
+                "n_peers": 3,
+                "peer_addresses": [
+                  "BS schedules!F11",
+                  "BS schedules!E11",
+                  "BS schedules!D11"
+                ]
+              },
+              "parsed_refs": {
+                "parser_ok": true,
+                "opaque": false,
+                "opaque_reason": null,
+                "points": [
+                  {
+                    "sheet": "IS,BS,CF",
+                    "start": "L19",
+                    "end": null,
+                    "is_range": false,
+                    "cross_sheet": true,
+                    "abs_mask": "CR"
+                  },
+                  {
+                    "sheet": "IS,BS,CF",
+                    "start": "C9",
+                    "end": null,
+                    "is_range": false,
+                    "cross_sheet": true,
+                    "abs_mask": "$$"
+                  }
+                ],
+                "ranges": [
+                  {
+                    "sheet": "BS schedules",
+                    "start": "J8",
+                    "end": "K8",
+                    "is_range": true,
+                    "cross_sheet": false,
+                    "abs_mask": "CR:CR"
+                  }
+                ],
+                "cross_sheet": [
+                  {
+                    "sheet": "IS,BS,CF",
+                    "start": "L19",
+                    "end": null,
+                    "is_range": false,
+                    "cross_sheet": true,
+                    "abs_mask": "CR"
+                  },
+                  {
+                    "sheet": "IS,BS,CF",
+                    "start": "C9",
+                    "end": null,
+                    "is_range": false,
+                    "cross_sheet": true,
+                    "abs_mask": "$$"
+                  }
+                ],
+                "slots": [
+                  {
+                    "index": 0,
+                    "sheet": "BS schedules",
+                    "c1": 10,
+                    "r1": 8,
+                    "c2": 11,
+                    "r2": 8,
+                    "start": "J8",
+                    "end": "K8",
+                    "is_range": true,
+                    "cross_sheet": false,
+                    "abs_mask": "CR:CR",
+                    "dcol": -1,
+                    "drow": -3,
+                    "enclosing": {
+                      "kind": "func",
+                      "func": "AVERAGE",
+                      "op": null
+                    },
+                    "raw": "J8:K8"
+                  },
+                  {
+                    "index": 1,
+                    "sheet": "IS,BS,CF",
+                    "c1": 12,
+                    "r1": 19,
+                    "c2": 12,
+                    "r2": 19,
+                    "start": "L19",
+                    "end": null,
+                    "is_range": false,
+                    "cross_sheet": true,
+                    "abs_mask": "CR",
+                    "dcol": 1,
+                    "drow": 8,
+                    "enclosing": {
+                      "kind": "op",
+                      "func": null,
+                      "op": "/"
+                    },
+                    "raw": "'IS,BS,CF'!L19"
+                  },
+                  {
+                    "index": 2,
+                    "sheet": "IS,BS,CF",
+                    "c1": 3,
+                    "r1": 9,
+                    "c2": 3,
+                    "r2": 9,
+                    "start": "C9",
+                    "end": null,
+                    "is_range": false,
+                    "cross_sheet": true,
+                    "abs_mask": "$$",
+                    "dcol": -8,
+                    "drow": -2,
+                    "enclosing": {
+                      "kind": "op",
+                      "func": null,
+                      "op": "*"
+                    },
+                    "raw": "'IS,BS,CF'!$C$9"
+                  }
+                ]
+              },
+              "hard_verifier_result": "HARD_REJECT"
+            }
+          },
+          {
+            "failure_class": "TASK_MODEL_CALL_LIMIT",
+            "scope": "remaining_authorized_targets",
+            "remaining_count": 21
+          }
+        ],
+        "model_call_count": 40,
+        "provider_cost_usd": 0.04761286000000001,
+        "prompt_tokens": 370858,
+        "completion_tokens": 55443,
+        "identity_ok": true,
+        "identity_failures": [],
+        "authorised_targets": 33,
+        "unresolved_authorised_targets": 21,
+        "started_at": "2026-09-16T10:06:16.981899+00:00",
+        "finished_at": "2026-09-16T10:20:31.055000+00:00",
+        "output_exists": true,
+        "terminal_stage": "actuation",
+        "boundary": "HARD_VERIFIER_REJECT",
+        "earliest": "HARD_VERIFIER_REJECT",
+        "detail": {
+          "cell": [
+            "BS schedules",
+            11,
+            11
+          ],
+          "failure_class": "HARD_VERIFIER_REJECT",
+          "validation": {
+            "formula_present": true,
+            "parser_ok": true,
+            "invalid_sheet": false,
+            "invalid_address": true,
+            "unsupported_external": false,
+            "self_reference": false,
+            "cycle": false,
+            "hard_reject": false,
+            "hard_verifier": {
+              "results": [
+                {
+                  "checker_id": "A1",
+                  "checker_family": "A",
+                  "checker_type": "HARD",
+                  "k": null,
+                  "applicable": true,
+                  "verdict": "PASS",
+                  "support_count": 0,
+                  "support_addresses": [],
+                  "reason": "no_self_reference",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "A2",
+                  "checker_family": "A",
+                  "checker_type": "HARD",
+                  "k": null,
+                  "applicable": true,
+                  "verdict": "PASS",
+                  "support_count": 0,
+                  "support_addresses": [],
+                  "reason": "no_direct_cycle",
+                  "provenance": {
+                    "policy_primary": "A_STRICT",
+                    "input_acyclic": true,
+                    "paths": []
+                  }
+                },
+                {
+                  "checker_id": "A3",
+                  "checker_family": "A",
+                  "checker_type": "HARD",
+                  "k": null,
+                  "applicable": true,
+                  "verdict": "PASS",
+                  "support_count": 0,
+                  "support_addresses": [],
+                  "reason": "no_transitive_cycle",
+                  "provenance": {
+                    "input_acyclic": true
+                  }
+                },
+                {
+                  "checker_id": "A4",
+                  "checker_family": "A",
+                  "checker_type": "HARD",
+                  "k": null,
+                  "applicable": true,
+                  "verdict": "PASS",
+                  "support_count": 0,
+                  "support_addresses": [],
+                  "reason": "no_new_scc",
+                  "provenance": {
+                    "input_acyclic": true,
+                    "n_nontrivial_scc": 0
+                  }
+                },
+                {
+                  "checker_id": "A5",
+                  "checker_family": "A",
+                  "checker_type": "HARD",
+                  "k": null,
+                  "applicable": true,
+                  "verdict": "PASS",
+                  "support_count": 0,
+                  "support_addresses": [],
+                  "reason": "refs_ok",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "B1_k3",
+                  "checker_family": "B",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 3,
+                  "applicable": true,
+                  "verdict": "PASS",
+                  "support_count": 3,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11",
+                    "BS schedules!D11"
+                  ],
+                  "reason": "matches_abs_contract",
+                  "provenance": {
+                    "contract": [
+                      [
+                        "IS,BS,CF",
+                        "C9",
+                        "$$"
+                      ]
+                    ],
+                    "candidate": [
+                      [
+                        "IS,BS,CF",
+                        "C9",
+                        "$$"
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "checker_id": "B2_k3",
+                  "checker_family": "B",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 3,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 3,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11",
+                    "BS schedules!D11"
+                  ],
+                  "reason": "peers_not_unanimous",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "B3_k3",
+                  "checker_family": "B",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 3,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 3,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11",
+                    "BS schedules!D11"
+                  ],
+                  "reason": "peers_not_unanimous",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "B4_k3",
+                  "checker_family": "B",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 3,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 3,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11",
+                    "BS schedules!D11"
+                  ],
+                  "reason": "peers_not_unanimous",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "B5_k3",
+                  "checker_family": "B",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 3,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 3,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11",
+                    "BS schedules!D11"
+                  ],
+                  "reason": "peers_not_unanimous",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "C1_k3",
+                  "checker_family": "C",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 3,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 3,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11",
+                    "BS schedules!D11"
+                  ],
+                  "reason": "peers_not_unanimous",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "C2_k3",
+                  "checker_family": "C",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 3,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 3,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11",
+                    "BS schedules!D11"
+                  ],
+                  "reason": "peer_slot_count_not_unanimous",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "C3_k3",
+                  "checker_family": "C",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 3,
+                  "applicable": true,
+                  "verdict": "PASS",
+                  "support_count": 3,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11",
+                    "BS schedules!D11"
+                  ],
+                  "reason": "matches_abs_slot",
+                  "provenance": {
+                    "contract": [
+                      [
+                        "IS,BS,CF",
+                        "C9",
+                        "$$"
+                      ]
+                    ]
+                  }
+                },
+                {
+                  "checker_id": "D1_k3",
+                  "checker_family": "D",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 3,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 2,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11"
+                  ],
+                  "reason": "insufficient_reduction_peers",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "D2_k3",
+                  "checker_family": "D",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 3,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 2,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11"
+                  ],
+                  "reason": "insufficient_reduction_peers",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "D3_k3",
+                  "checker_family": "D",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 3,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 2,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11"
+                  ],
+                  "reason": "insufficient_reduction_peers",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "D4_k3",
+                  "checker_family": "D",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 3,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 2,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11"
+                  ],
+                  "reason": "insufficient_reduction_peers",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "B1_k5",
+                  "checker_family": "B",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 5,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 3,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11",
+                    "BS schedules!D11"
+                  ],
+                  "reason": "insufficient_peers",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "B2_k5",
+                  "checker_family": "B",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 5,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 3,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11",
+                    "BS schedules!D11"
+                  ],
+                  "reason": "insufficient_peers",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "B3_k5",
+                  "checker_family": "B",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 5,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 3,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11",
+                    "BS schedules!D11"
+                  ],
+                  "reason": "insufficient_peers",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "B4_k5",
+                  "checker_family": "B",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 5,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 3,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11",
+                    "BS schedules!D11"
+                  ],
+                  "reason": "insufficient_peers",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "B5_k5",
+                  "checker_family": "B",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 5,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 3,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11",
+                    "BS schedules!D11"
+                  ],
+                  "reason": "insufficient_peers",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "C1_k5",
+                  "checker_family": "C",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 5,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 3,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11",
+                    "BS schedules!D11"
+                  ],
+                  "reason": "insufficient_peers",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "C2_k5",
+                  "checker_family": "C",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 5,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 3,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11",
+                    "BS schedules!D11"
+                  ],
+                  "reason": "insufficient_peers",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "C3_k5",
+                  "checker_family": "C",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 5,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 3,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11",
+                    "BS schedules!D11"
+                  ],
+                  "reason": "insufficient_peers",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "D1_k5",
+                  "checker_family": "D",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 5,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 2,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11"
+                  ],
+                  "reason": "insufficient_reduction_peers",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "D2_k5",
+                  "checker_family": "D",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 5,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 2,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11"
+                  ],
+                  "reason": "insufficient_reduction_peers",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "D3_k5",
+                  "checker_family": "D",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 5,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 2,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11"
+                  ],
+                  "reason": "insufficient_reduction_peers",
+                  "provenance": {}
+                },
+                {
+                  "checker_id": "D4_k5",
+                  "checker_family": "D",
+                  "checker_type": "EMPIRICAL_EXACT",
+                  "k": 5,
+                  "applicable": false,
+                  "verdict": "ABSTAIN",
+                  "support_count": 2,
+                  "support_addresses": [
+                    "BS schedules!F11",
+                    "BS schedules!E11"
+                  ],
+                  "reason": "insufficient_reduction_peers",
+                  "provenance": {}
+                }
+              ],
+              "policies": [
+                {
+                  "policy": "H",
+                  "verdict": "PASS",
+                  "reject_ids": [],
+                  "pass_ids": [
+                    "A1",
+                    "A2",
+                    "A3",
+                    "A4",
+                    "A5"
+                  ]
+                },
+                {
+                  "policy": "HE3",
+                  "verdict": "PASS",
+                  "reject_ids": [],
+                  "pass_ids": [
+                    "A1",
+                    "A2",
+                    "A3",
+                    "A4",
+                    "A5",
+                    "B1_k3",
+                    "C3_k3"
+                  ]
+                },
+                {
+                  "policy": "HE5",
+                  "verdict": "PASS",
+                  "reject_ids": [],
+                  "pass_ids": [
+                    "A1",
+                    "A2",
+                    "A3",
+                    "A4",
+                    "A5"
+                  ]
+                }
+              ],
+              "kind": "REDUCTION_CANDIDATE",
+              "parsed": {
+                "n_slots": 3,
+                "opaque": false,
+                "shape": "=AVERAGE(<REF>:<REF>)/'IS,BS,CF'!<REF>*'IS,BS,CF'!<REF>",
+                "skeleton": "=AVERAGE(<REF>:<REF>)/<REF>*<REF>",
+                "literals": []
+              },
+              "n_peers": 3,
+              "peer_addresses": [
+                "BS schedules!F11",
+                "BS schedules!E11",
+                "BS schedules!D11"
+              ]
+            },
+            "parsed_refs": {
+              "parser_ok": true,
+              "opaque": false,
+              "opaque_reason": null,
+              "points": [
+                {
+                  "sheet": "IS,BS,CF",
+                  "start": "L19",
+                  "end": null,
+                  "is_range": false,
+                  "cross_sheet": true,
+                  "abs_mask": "CR"
+                },
+                {
+                  "sheet": "IS,BS,CF",
+                  "start": "C9",
+                  "end": null,
+                  "is_range": false,
+                  "cross_sheet": true,
+                  "abs_mask": "$$"
+                }
+              ],
+              "ranges": [
+                {
+                  "sheet": "BS schedules",
+                  "start": "J8",
+                  "end": "K8",
+                  "is_range": true,
+                  "cross_sheet": false,
+                  "abs_mask": "CR:CR"
+                }
+              ],
+              "cross_sheet": [
+                {
+                  "sheet": "IS,BS,CF",
+                  "start": "L19",
+                  "end": null,
+                  "is_range": false,
+                  "cross_sheet": true,
+                  "abs_mask": "CR"
+                },
+                {
+                  "sheet": "IS,BS,CF",
+                  "start": "C9",
+                  "end": null,
+                  "is_range": false,
+                  "cross_sheet": true,
+                  "abs_mask": "$$"
+                }
+              ],
+              "slots": [
+                {
+                  "index": 0,
+                  "sheet": "BS schedules",
+                  "c1": 10,
+                  "r1": 8,
+                  "c2": 11,
+                  "r2": 8,
+                  "start": "J8",
+                  "end": "K8",
+                  "is_range": true,
+                  "cross_sheet": false,
+                  "abs_mask": "CR:CR",
+                  "dcol": -1,
+                  "drow": -3,
+                  "enclosing": {
+                    "kind": "func",
+                    "func": "AVERAGE",
+                    "op": null
+                  },
+                  "raw": "J8:K8"
+                },
+                {
+                  "index": 1,
+                  "sheet": "IS,BS,CF",
+                  "c1": 12,
+                  "r1": 19,
+                  "c2": 12,
+                  "r2": 19,
+                  "start": "L19",
+                  "end": null,
+                  "is_range": false,
+                  "cross_sheet": true,
+                  "abs_mask": "CR",
+                  "dcol": 1,
+                  "drow": 8,
+                  "enclosing": {
+                    "kind": "op",
+                    "func": null,
+                    "op": "/"
+                  },
+                  "raw": "'IS,BS,CF'!L19"
+                },
+                {
+                  "index": 2,
+                  "sheet": "IS,BS,CF",
+                  "c1": 3,
+                  "r1": 9,
+                  "c2": 3,
+                  "r2": 9,
+                  "start": "C9",
+                  "end": null,
+                  "is_range": false,
+                  "cross_sheet": true,
+                  "abs_mask": "$$",
+                  "dcol": -8,
+                  "drow": -2,
+                  "enclosing": {
+                    "kind": "op",
+                    "func": null,
+                    "op": "*"
+                  },
+                  "raw": "'IS,BS,CF'!$C$9"
+                }
+              ]
+            },
+            "hard_verifier_result": "HARD_REJECT"
+          }
+        }
+      },
+      "glm_official": {
+        "id": "02_01",
+        "error_message": "Modification error at IS,BS,CF!E102: answer=2077.64005275567, output=-16184.7546366328",
+        "regression_accuracy": 1.0,
+        "modification_accuracy": 0.7351,
+        "accuracy": 0.0,
+        "interaction_turns": 0
+      },
+      "spark_official": {
+        "id": "02_01",
+        "error_message": "Modification error at IS,BS,CF!I34: answer=23.9117096270033, output=#DIV/0!",
+        "regression_accuracy": 1.0,
+        "modification_accuracy": 0.9778,
+        "accuracy": 0.0,
+        "interaction_turns": 0
+      }
+    },
+    {
+      "task": "Debugging:01_01",
+      "glm": {
+        "task": "Debugging:01_01",
+        "status": "COMPLETED",
+        "model": "z-ai/glm-5.3-flash",
+        "compiler_status": "OK",
+        "edit_plan_status": "VALID_PLAN",
+        "failure_ledger": [
+          {
+            "cell": [
+              "Ex 2 - Valuation Bridge",
+              36,
+              2
+            ],
+            "failure_class": "UNSUPPORTED_EDIT_KIND"
+          }
+        ],
+        "model_call_count": 2,
+        "provider_cost_usd": 0.0035071399999999997,
+        "prompt_tokens": 23158,
+        "completion_tokens": 3073,
+        "identity_ok": true,
+        "identity_failures": [],
+        "authorised_targets": 1,
+        "unresolved_authorised_targets": null,
+        "started_at": "2026-09-16T08:41:21.646972+00:00",
+        "finished_at": "2026-09-16T08:50:40.631967+00:00",
+        "output_exists": true,
+        "terminal_stage": "actuation",
+        "boundary": "UNSUPPORTED_EDIT_KIND",
+        "earliest": "UNSUPPORTED_EDIT_KIND",
+        "detail": {
+          "cell": [
+            "Ex 2 - Valuation Bridge",
+            36,
+            2
+          ],
+          "failure_class": "UNSUPPORTED_EDIT_KIND"
+        }
+      },
+      "spark": {
+        "task": "Debugging:01_01",
+        "status": "COMPLETED",
+        "model": "meta/muse-spark-1.3-contributor",
+        "compiler_status": "OK",
+        "edit_plan_status": "EMPTY_EXPANSION",
+        "failure_ledger": [],
+        "model_call_count": 1,
+        "provider_cost_usd": 0.0005279,
+        "prompt_tokens": 955,
+        "completion_tokens": 2162,
+        "identity_ok": true,
+        "identity_failures": [],
+        "authorised_targets": 0,
+        "unresolved_authorised_targets": null,
+        "started_at": "2026-09-16T10:06:17.027028+00:00",
+        "finished_at": "2026-09-16T10:06:50.997385+00:00",
+        "output_exists": true,
+        "terminal_stage": "completed",
+        "boundary": null,
+        "earliest": null
+      },
+      "glm_official": {
+        "id": "01_01",
+        "error_message": "Regression error at Ex 1 - LBO!AC20: answer=0, output=-130.666114561455",
+        "regression_accuracy": 1.0,
+        "modification_accuracy": 0.9364,
+        "accuracy": 0.0,
+        "interaction_turns": 0
+      },
+      "spark_official": {
+        "id": "01_01",
+        "error_message": "Regression error at Ex 1 - LBO!AC20: answer=0, output=-130.666114561455",
+        "regression_accuracy": 1.0,
+        "modification_accuracy": 0.9364,
+        "accuracy": 0.0,
+        "interaction_turns": 0
+      }
+    }
+  ],
+  "integrity": {
+    "spark_identity_ok": true,
+    "glm_identity_ok": true
+  }
+}

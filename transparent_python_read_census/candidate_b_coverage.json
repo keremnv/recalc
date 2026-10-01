@@ -1,0 +1,60 @@
+{
+  "any_lowerable_reads_pct": 100.0,
+  "by_family": {
+    "Debugging": {
+      "b_class": {
+        "B_FULLY_LOWERABLE": 12,
+        "B_MIXED_READ_WRITE_UNSAFE": 39,
+        "B_PARTIALLY_LOWERABLE": 9,
+        "B_RECOGNIZABLE_BUT_RISKY": 17
+      },
+      "n": 77
+    },
+    "Financial_Model": {
+      "b_class": {
+        "B_FULLY_LOWERABLE": 28,
+        "B_MIXED_READ_WRITE_UNSAFE": 42,
+        "B_PARTIALLY_LOWERABLE": 3,
+        "B_RECOGNIZABLE_BUT_RISKY": 50
+      },
+      "n": 123
+    },
+    "Template": {
+      "b_class": {
+        "B_FULLY_LOWERABLE": 5,
+        "B_MIXED_READ_WRITE_UNSAFE": 40,
+        "B_RECOGNIZABLE_BUT_RISKY": 7
+      },
+      "n": 52
+    },
+    "Visualization": {
+      "b_class": {
+        "B_FULLY_LOWERABLE": 1,
+        "B_MIXED_READ_WRITE_UNSAFE": 2,
+        "B_PARTIALLY_LOWERABLE": 1,
+        "B_RECOGNIZABLE_BUT_RISKY": 2
+      },
+      "n": 6
+    }
+  },
+  "execution_classes": {
+    "B_FULLY_LOWERABLE": 46,
+    "B_MIXED_READ_WRITE_UNSAFE": 123,
+    "B_PARTIALLY_LOWERABLE": 13,
+    "B_RECOGNIZABLE_BUT_RISKY": 76
+  },
+  "fully_lowerable_pct": 17.83,
+  "n_source_inspection_execs": 258,
+  "note": "recognition ceiling, not semantic proof",
+  "safe_event_coverage_pct": 83.15,
+  "safe_surface": [
+    "cell_value",
+    "dimensions",
+    "explicit_range_values",
+    "formula_value",
+    "iter_rows_values",
+    "load_workbook",
+    "sheet_lookup",
+    "sheetnames"
+  ]
+}

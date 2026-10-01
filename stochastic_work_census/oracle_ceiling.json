@@ -1,0 +1,7 @@
+{
+ "ceiling": "C2",
+ "C2_oracle_tokens_est": 256232,
+ "C2_share": 0.03645246051832283,
+ "denominator_seg_tokens_est": 7029210,
+ "C2_rule": "C1 + semantic-reinspection repeated content"
+}

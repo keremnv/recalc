@@ -1,0 +1,381 @@
+{
+ "positive": true,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [
+    {
+     "formula": "QuarterlyPL_Forecast!H12",
+     "blank": "QuarterlyPL_Forecast!H8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H13",
+     "blank": "QuarterlyPL_Forecast!H12"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H13",
+     "blank": "QuarterlyPL_Forecast!H8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H14",
+     "blank": "QuarterlyPL_Forecast!H8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H15",
+     "blank": "QuarterlyPL_Forecast!H14"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H15",
+     "blank": "QuarterlyPL_Forecast!H8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H16",
+     "blank": "QuarterlyPL_Forecast!H12"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H16",
+     "blank": "QuarterlyPL_Forecast!H14"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H17",
+     "blank": "QuarterlyPL_Forecast!H16"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H17",
+     "blank": "QuarterlyPL_Forecast!H8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H19",
+     "blank": "QuarterlyPL_Forecast!H16"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H19",
+     "blank": "QuarterlyPL_Forecast!H8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H20",
+     "blank": "QuarterlyPL_Forecast!H19"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H20",
+     "blank": "QuarterlyPL_Forecast!H8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H22",
+     "blank": "QuarterlyPL_Forecast!H8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H23",
+     "blank": "QuarterlyPL_Forecast!H22"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H23",
+     "blank": "QuarterlyPL_Forecast!H8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H24",
+     "blank": "QuarterlyPL_Forecast!H8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H25",
+     "blank": "QuarterlyPL_Forecast!H24"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H25",
+     "blank": "QuarterlyPL_Forecast!H8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H27",
+     "blank": "QuarterlyPL_Forecast!H19"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H27",
+     "blank": "QuarterlyPL_Forecast!H22"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H27",
+     "blank": "QuarterlyPL_Forecast!H24"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H28",
+     "blank": "QuarterlyPL_Forecast!H27"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H28",
+     "blank": "QuarterlyPL_Forecast!H8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!H9",
+     "blank": "QuarterlyPL_Forecast!H8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I12",
+     "blank": "QuarterlyPL_Forecast!I8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I13",
+     "blank": "QuarterlyPL_Forecast!I12"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I13",
+     "blank": "QuarterlyPL_Forecast!I8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I14",
+     "blank": "QuarterlyPL_Forecast!I8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I15",
+     "blank": "QuarterlyPL_Forecast!I14"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I15",
+     "blank": "QuarterlyPL_Forecast!I8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I16",
+     "blank": "QuarterlyPL_Forecast!I12"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I16",
+     "blank": "QuarterlyPL_Forecast!I14"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I17",
+     "blank": "QuarterlyPL_Forecast!I16"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I17",
+     "blank": "QuarterlyPL_Forecast!I8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I19",
+     "blank": "QuarterlyPL_Forecast!I16"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I19",
+     "blank": "QuarterlyPL_Forecast!I8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I20",
+     "blank": "QuarterlyPL_Forecast!I19"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I20",
+     "blank": "QuarterlyPL_Forecast!I8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I22",
+     "blank": "QuarterlyPL_Forecast!I8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I23",
+     "blank": "QuarterlyPL_Forecast!I22"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I23",
+     "blank": "QuarterlyPL_Forecast!I8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I24",
+     "blank": "QuarterlyPL_Forecast!I8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I25",
+     "blank": "QuarterlyPL_Forecast!I24"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I25",
+     "blank": "QuarterlyPL_Forecast!I8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I27",
+     "blank": "QuarterlyPL_Forecast!I19"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I27",
+     "blank": "QuarterlyPL_Forecast!I22"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I27",
+     "blank": "QuarterlyPL_Forecast!I24"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I28",
+     "blank": "QuarterlyPL_Forecast!I27"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I28",
+     "blank": "QuarterlyPL_Forecast!I8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I8",
+     "blank": "QuarterlyPL_Forecast!H8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I9",
+     "blank": "QuarterlyPL_Forecast!H8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!I9",
+     "blank": "QuarterlyPL_Forecast!I8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J12",
+     "blank": "QuarterlyPL_Forecast!J8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J13",
+     "blank": "QuarterlyPL_Forecast!J12"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J13",
+     "blank": "QuarterlyPL_Forecast!J8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J14",
+     "blank": "QuarterlyPL_Forecast!J8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J15",
+     "blank": "QuarterlyPL_Forecast!J14"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J15",
+     "blank": "QuarterlyPL_Forecast!J8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J16",
+     "blank": "QuarterlyPL_Forecast!J12"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J16",
+     "blank": "QuarterlyPL_Forecast!J14"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J17",
+     "blank": "QuarterlyPL_Forecast!J16"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J17",
+     "blank": "QuarterlyPL_Forecast!J8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J19",
+     "blank": "QuarterlyPL_Forecast!J16"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J19",
+     "blank": "QuarterlyPL_Forecast!J8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J20",
+     "blank": "QuarterlyPL_Forecast!J19"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J20",
+     "blank": "QuarterlyPL_Forecast!J8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J22",
+     "blank": "QuarterlyPL_Forecast!J8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J23",
+     "blank": "QuarterlyPL_Forecast!J22"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J23",
+     "blank": "QuarterlyPL_Forecast!J8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J24",
+     "blank": "QuarterlyPL_Forecast!J8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J25",
+     "blank": "QuarterlyPL_Forecast!J24"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J25",
+     "blank": "QuarterlyPL_Forecast!J8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J27",
+     "blank": "QuarterlyPL_Forecast!J19"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J27",
+     "blank": "QuarterlyPL_Forecast!J22"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J27",
+     "blank": "QuarterlyPL_Forecast!J24"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J28",
+     "blank": "QuarterlyPL_Forecast!J27"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J28",
+     "blank": "QuarterlyPL_Forecast!J8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J8",
+     "blank": "QuarterlyPL_Forecast!I8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J9",
+     "blank": "QuarterlyPL_Forecast!I8"
+    },
+    {
+     "formula": "QuarterlyPL_Forecast!J9",
+     "blank": "QuarterlyPL_Forecast!J8"
+    }
+   ],
+   "count": 82
+  },
+  "CHG": {
+   "changed_cells": 48,
+   "sheets": 1,
+   "regions": [
+    "QuarterlyPL_Forecast!H12",
+    "QuarterlyPL_Forecast!H13",
+    "QuarterlyPL_Forecast!H14",
+    "QuarterlyPL_Forecast!H15",
+    "QuarterlyPL_Forecast!H16",
+    "QuarterlyPL_Forecast!H17",
+    "QuarterlyPL_Forecast!H19",
+    "QuarterlyPL_Forecast!H20",
+    "QuarterlyPL_Forecast!H22",
+    "QuarterlyPL_Forecast!H23",
+    "QuarterlyPL_Forecast!H24",
+    "QuarterlyPL_Forecast!H25",
+    "QuarterlyPL_Forecast!H27",
+    "QuarterlyPL_Forecast!H28",
+    "QuarterlyPL_Forecast!H8",
+    "QuarterlyPL_Forecast!H9",
+    "QuarterlyPL_Forecast!I12",
+    "QuarterlyPL_Forecast!I13",
+    "QuarterlyPL_Forecast!I14",
+    "QuarterlyPL_Forecast!I15"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": "Post-edit verification (mechanical check of the current workbook)\n\nChanged cells: 48 across 1 sheet(s).\n\nNewly blank referenced cells (82):\n- QuarterlyPL_Forecast!H12 now references blank QuarterlyPL_Forecast!H8\n- QuarterlyPL_Forecast!H13 now references blank QuarterlyPL_Forecast!H12\n- QuarterlyPL_Forecast!H13 now references blank QuarterlyPL_Forecast!H8\n- QuarterlyPL_Forecast!H14 now references blank QuarterlyPL_Forecast!H8\n- QuarterlyPL_Forecast!H15 now references blank QuarterlyPL_Forecast!H14\n- QuarterlyPL_Forecast!H15 now references blank QuarterlyPL_Forecast!H8\n- QuarterlyPL_Forecast!H16 now references blank QuarterlyPL_Forecast!H12\n- QuarterlyPL_Forecast!H16 now references blank QuarterlyPL_Forecast!H14\n- QuarterlyPL_Forecast!H17 now references blank QuarterlyPL_Forecast!H16\n- QuarterlyPL_Forecast!H17 now references blank QuarterlyPL_Forecast!H8\n- and 72 more.\n\nThis report is mechanical evidence about the current workbook state.\nReview it before deciding whether to submit or revise.",
+ "positive_families": [
+  "REF"
+ ]
+}

@@ -1,0 +1,4 @@
+{
+ "status": "NOT_ESTABLISHED",
+ "detail": "official_scores.json has 17 entries keyed by task:arm of a different experiment; no trajectory-level join key to the frozen 71 trajectories exists. Marked NOT_ESTABLISHED rather than guessing."
+}

@@ -1,0 +1,17 @@
+{
+ "missing_outputs_staged": [
+  "H0/Debugging:03_06",
+  "H0/Debugging:06_05",
+  "H1/Debugging:06_05",
+  "H0/Financial_Model:02_05",
+  "H1/Financial_Model:02_05",
+  "H0/Financial_Model:09_02",
+  "H1/Financial_Model:09_02",
+  "H1/Financial_Model:11_02",
+  "H1/Template:06_02",
+  "H1/Template:16_07",
+  "H0/Template:16_08"
+ ],
+ "n_scored": 20,
+ "n_discordant": 6
+}

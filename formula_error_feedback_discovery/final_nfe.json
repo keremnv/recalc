@@ -1,0 +1,195 @@
+{
+ "Debugging_02_01_CONTROL": {
+  "output_exists": false,
+  "computed": false,
+  "error": null
+ },
+ "Debugging_02_01_TREATMENT": {
+  "output_exists": false,
+  "computed": false,
+  "error": null
+ },
+ "Debugging_07_03_CONTROL": {
+  "output_exists": false,
+  "computed": false,
+  "error": null
+ },
+ "Debugging_07_03_TREATMENT": {
+  "output_exists": true,
+  "computed": true,
+  "error": null,
+  "nfe_total": 0,
+  "per_sheet": {},
+  "kinds": {},
+  "changed": 0,
+  "unchanged": 0,
+  "input_errors": 41,
+  "current_errors": 0,
+  "shown_present": [],
+  "shown_absent": [
+   "LBO & Lenders!S49",
+   "LBO & Lenders!S50",
+   "LBO & Lenders!S52",
+   "LBO & Lenders!S56",
+   "LBO & Lenders!S58",
+   "LBO & Lenders!T48",
+   "LBO & Lenders!T49",
+   "LBO & Lenders!T50"
+  ],
+  "post_report_new": []
+ },
+ "Debugging_04_09_CONTROL": {
+  "output_exists": false,
+  "computed": false,
+  "error": null
+ },
+ "Debugging_04_09_TREATMENT": {
+  "output_exists": false,
+  "computed": false,
+  "error": null
+ },
+ "Debugging_10_10_CONTROL": {
+  "output_exists": false,
+  "computed": false,
+  "error": null
+ },
+ "Debugging_10_10_TREATMENT": {
+  "output_exists": true,
+  "computed": true,
+  "error": null,
+  "nfe_total": 0,
+  "per_sheet": {},
+  "kinds": {},
+  "changed": 0,
+  "unchanged": 0,
+  "input_errors": 274,
+  "current_errors": 240
+ },
+ "Debugging_01_06_CONTROL": {
+  "output_exists": false,
+  "computed": false,
+  "error": null
+ },
+ "Debugging_01_06_TREATMENT": {
+  "output_exists": false,
+  "computed": false,
+  "error": null
+ },
+ "Debugging_02_09_TREATMENT": {
+  "output_exists": false,
+  "computed": false,
+  "error": null
+ },
+ "Debugging_02_09_CONTROL": {
+  "output_exists": true,
+  "computed": true,
+  "error": null,
+  "nfe_total": 30,
+  "per_sheet": {
+   "Berk-Hath Investment Package": 30
+  },
+  "kinds": {
+   "Err:522": 30
+  },
+  "changed": 0,
+  "unchanged": 30,
+  "input_errors": 148,
+  "current_errors": 30
+ },
+ "Debugging_02_06_CONTROL": {
+  "output_exists": false,
+  "computed": false,
+  "error": null
+ },
+ "Debugging_02_06_TREATMENT": {
+  "output_exists": false,
+  "computed": false,
+  "error": null
+ },
+ "Debugging_10_05_CONTROL": {
+  "output_exists": false,
+  "computed": false,
+  "error": null
+ },
+ "Debugging_10_05_TREATMENT": {
+  "output_exists": false,
+  "computed": false,
+  "error": null
+ },
+ "Debugging_01_06_CONTROL_R1": {
+  "output_exists": true,
+  "computed": true,
+  "error": null,
+  "nfe_total": 0,
+  "per_sheet": {},
+  "kinds": {},
+  "changed": 0,
+  "unchanged": 0,
+  "input_errors": 15,
+  "current_errors": 0
+ },
+ "Debugging_01_06_TREATMENT_R1": {
+  "output_exists": false,
+  "computed": false,
+  "error": null
+ },
+ "Debugging_02_01_CONTROL_R1": {
+  "output_exists": false,
+  "computed": false,
+  "error": null
+ },
+ "Debugging_02_06_CONTROL_R1": {
+  "output_exists": true,
+  "computed": true,
+  "error": null,
+  "nfe_total": 30,
+  "per_sheet": {
+   "Berk-Hath Investment Package": 30
+  },
+  "kinds": {
+   "Err:522": 30
+  },
+  "changed": 0,
+  "unchanged": 30,
+  "input_errors": 3,
+  "current_errors": 30
+ },
+ "Debugging_02_06_TREATMENT_R1": {
+  "output_exists": true,
+  "computed": true,
+  "error": null,
+  "nfe_total": 30,
+  "per_sheet": {
+   "Berk-Hath Investment Package": 30
+  },
+  "kinds": {
+   "Err:522": 30
+  },
+  "changed": 0,
+  "unchanged": 30,
+  "input_errors": 3,
+  "current_errors": 30,
+  "shown_present": [
+   "Berk-Hath Investment Package!F10",
+   "Berk-Hath Investment Package!F11",
+   "Berk-Hath Investment Package!F12",
+   "Berk-Hath Investment Package!F13",
+   "Berk-Hath Investment Package!F14",
+   "Berk-Hath Investment Package!G10",
+   "Berk-Hath Investment Package!G11",
+   "Berk-Hath Investment Package!G12"
+  ],
+  "shown_absent": [],
+  "post_report_new": []
+ },
+ "Debugging_04_09_CONTROL_R1": {
+  "output_exists": false,
+  "computed": false,
+  "error": null
+ },
+ "Debugging_04_09_TREATMENT_R1": {
+  "output_exists": false,
+  "computed": false,
+  "error": null
+ }
+}

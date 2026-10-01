@@ -1,0 +1,30 @@
+{
+ "seed": 20260919,
+ "universe_sizes": {
+  "Financial_Model": 100,
+  "Template": 97,
+  "Debugging": 100
+ },
+ "excluded_missing_file": {},
+ "selected": {
+  "Financial_Model": [
+   "03_03",
+   "04_03",
+   "09_05",
+   "17_02"
+  ],
+  "Template": [
+   "06_22",
+   "08_02",
+   "15_03",
+   "16_11"
+  ],
+  "Debugging": [
+   "01_08",
+   "04_06",
+   "08_02",
+   "10_03"
+  ]
+ },
+ "rule": "random.Random(20260919).sample(sorted_ids, 4) per family"
+}

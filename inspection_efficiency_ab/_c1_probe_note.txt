@@ -1,0 +1,20 @@
+## Optional compact inspection helper
+
+The usual `lx_helpers.periods`, `search`, and `inspect` helpers remain
+available. For a task that needs several focused regions, use the mechanical
+batch read below rather than issuing one Python scan per region:
+
+```python
+import lx_helpers
+print(lx_helpers.inspect_ranges("input.xlsx", [
+    {"sheet": "Consolidated P&L", "range": "A1:K40"},
+    {"sheet": "Revenue Drivers", "range": "A1:K40"},
+]))
+```
+
+`inspect_ranges` accepts only explicitly named sheet/range pairs, returns
+compact address/value/formula facts, performs one freshness check, and applies
+a total result budget. It does not infer targets, rank results, or make
+semantic recommendations. Use `search` or `periods` first if the sheet or
+range is not known; use narrow ranges once it is known. Ordinary Python,
+openpyxl, and view_xlsx remain available.

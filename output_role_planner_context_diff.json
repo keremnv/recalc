@@ -1,0 +1,292 @@
+{
+  "control_context_sha256": "afab05664692c75edbac860994df5f62af757f0ccada94f57f5c51d2a77597f1",
+  "treatment_context_sha256": "c39d82e7c8b844a235a6594e5f75c60f0f4334125500e629d9d70042b4384d16",
+  "new_endpoint_ids": [
+    "cell:s00:r43:c7",
+    "cell:s00:r44:c7",
+    "cell:s00:r45:c7",
+    "cell:s00:r43:c9",
+    "cell:s00:r44:c9"
+  ],
+  "changed_paths": [
+    {
+      "path": "GROUNDING.O6.output_role_evidence",
+      "before": null,
+      "after": {
+        "relation_name": "header_copy_month_numbers_formula_extent",
+        "selection_basis": "deterministic relation from frozen member occurrences and workbook structure",
+        "provenance": [
+          {
+            "starting_member_occurrence": "F22",
+            "starting_member_cell_id": "cell:s00:r22:c6",
+            "member_identity": "second",
+            "endpoint": "Dashboard!G43",
+            "endpoint_cell_id": "cell:s00:r43:c7",
+            "path": [
+              "F22",
+              "Dashboard!F40",
+              "Dashboard!F42",
+              "Dashboard!G42",
+              "Dashboard!G43",
+              "Dashboard!G44",
+              "Dashboard!G45"
+            ],
+            "path_cell_ids": [
+              "cell:s00:r22:c6",
+              "cell:s00:r40:c6",
+              "cell:s00:r42:c6",
+              "cell:s00:r42:c7",
+              "cell:s00:r43:c7",
+              "cell:s00:r44:c7",
+              "cell:s00:r45:c7"
+            ],
+            "relation_sequence": [
+              "point_dependency_header_copy",
+              "same_column_month_header",
+              "right_neighbor_numbers_header",
+              "contiguous_formula_bearing_month_rows"
+            ],
+            "dependency_direction": "source_to_consumer_for_header_copy_then_structural_output_role",
+            "role_definition": {
+              "source_header": "Month",
+              "output_header": "Numbers",
+              "extent": "contiguous formula-bearing source-column rows",
+              "target_form": "corresponding output-column cells"
+            }
+          },
+          {
+            "starting_member_occurrence": "F22",
+            "starting_member_cell_id": "cell:s00:r22:c6",
+            "member_identity": "second",
+            "endpoint": "Dashboard!G44",
+            "endpoint_cell_id": "cell:s00:r44:c7",
+            "path": [
+              "F22",
+              "Dashboard!F40",
+              "Dashboard!F42",
+              "Dashboard!G42",
+              "Dashboard!G43",
+              "Dashboard!G44",
+              "Dashboard!G45"
+            ],
+            "path_cell_ids": [
+              "cell:s00:r22:c6",
+              "cell:s00:r40:c6",
+              "cell:s00:r42:c6",
+              "cell:s00:r42:c7",
+              "cell:s00:r43:c7",
+              "cell:s00:r44:c7",
+              "cell:s00:r45:c7"
+            ],
+            "relation_sequence": [
+              "point_dependency_header_copy",
+              "same_column_month_header",
+              "right_neighbor_numbers_header",
+              "contiguous_formula_bearing_month_rows"
+            ],
+            "dependency_direction": "source_to_consumer_for_header_copy_then_structural_output_role",
+            "role_definition": {
+              "source_header": "Month",
+              "output_header": "Numbers",
+              "extent": "contiguous formula-bearing source-column rows",
+              "target_form": "corresponding output-column cells"
+            }
+          },
+          {
+            "starting_member_occurrence": "F22",
+            "starting_member_cell_id": "cell:s00:r22:c6",
+            "member_identity": "second",
+            "endpoint": "Dashboard!G45",
+            "endpoint_cell_id": "cell:s00:r45:c7",
+            "path": [
+              "F22",
+              "Dashboard!F40",
+              "Dashboard!F42",
+              "Dashboard!G42",
+              "Dashboard!G43",
+              "Dashboard!G44",
+              "Dashboard!G45"
+            ],
+            "path_cell_ids": [
+              "cell:s00:r22:c6",
+              "cell:s00:r40:c6",
+              "cell:s00:r42:c6",
+              "cell:s00:r42:c7",
+              "cell:s00:r43:c7",
+              "cell:s00:r44:c7",
+              "cell:s00:r45:c7"
+            ],
+            "relation_sequence": [
+              "point_dependency_header_copy",
+              "same_column_month_header",
+              "right_neighbor_numbers_header",
+              "contiguous_formula_bearing_month_rows"
+            ],
+            "dependency_direction": "source_to_consumer_for_header_copy_then_structural_output_role",
+            "role_definition": {
+              "source_header": "Month",
+              "output_header": "Numbers",
+              "extent": "contiguous formula-bearing source-column rows",
+              "target_form": "corresponding output-column cells"
+            }
+          },
+          {
+            "starting_member_occurrence": "H22",
+            "starting_member_cell_id": "cell:s00:r22:c8",
+            "member_identity": "third",
+            "endpoint": "Dashboard!I43",
+            "endpoint_cell_id": "cell:s00:r43:c9",
+            "path": [
+              "H22",
+              "Dashboard!H40",
+              "Dashboard!H42",
+              "Dashboard!I42",
+              "Dashboard!I43",
+              "Dashboard!I44"
+            ],
+            "path_cell_ids": [
+              "cell:s00:r22:c8",
+              "cell:s00:r40:c8",
+              "cell:s00:r42:c8",
+              "cell:s00:r42:c9",
+              "cell:s00:r43:c9",
+              "cell:s00:r44:c9"
+            ],
+            "relation_sequence": [
+              "point_dependency_header_copy",
+              "same_column_month_header",
+              "right_neighbor_numbers_header",
+              "contiguous_formula_bearing_month_rows"
+            ],
+            "dependency_direction": "source_to_consumer_for_header_copy_then_structural_output_role",
+            "role_definition": {
+              "source_header": "Month",
+              "output_header": "Numbers",
+              "extent": "contiguous formula-bearing source-column rows",
+              "target_form": "corresponding output-column cells"
+            }
+          },
+          {
+            "starting_member_occurrence": "H22",
+            "starting_member_cell_id": "cell:s00:r22:c8",
+            "member_identity": "third",
+            "endpoint": "Dashboard!I44",
+            "endpoint_cell_id": "cell:s00:r44:c9",
+            "path": [
+              "H22",
+              "Dashboard!H40",
+              "Dashboard!H42",
+              "Dashboard!I42",
+              "Dashboard!I43",
+              "Dashboard!I44"
+            ],
+            "path_cell_ids": [
+              "cell:s00:r22:c8",
+              "cell:s00:r40:c8",
+              "cell:s00:r42:c8",
+              "cell:s00:r42:c9",
+              "cell:s00:r43:c9",
+              "cell:s00:r44:c9"
+            ],
+            "relation_sequence": [
+              "point_dependency_header_copy",
+              "same_column_month_header",
+              "right_neighbor_numbers_header",
+              "contiguous_formula_bearing_month_rows"
+            ],
+            "dependency_direction": "source_to_consumer_for_header_copy_then_structural_output_role",
+            "role_definition": {
+              "source_header": "Month",
+              "output_header": "Numbers",
+              "extent": "contiguous formula-bearing source-column rows",
+              "target_form": "corresponding output-column cells"
+            }
+          }
+        ],
+        "candidate_endpoint_ids": [
+          "cell:s00:r43:c7",
+          "cell:s00:r44:c7",
+          "cell:s00:r45:c7",
+          "cell:s00:r43:c9",
+          "cell:s00:r44:c9"
+        ],
+        "candidate_endpoint_count": 5
+      }
+    },
+    {
+      "path": "GROUNDING.O6.targets.candidate_count",
+      "before": 24,
+      "after": 29
+    },
+    {
+      "path": "GROUNDING.O6.targets.foreground_cell_ids",
+      "kind": "append_or_extend",
+      "before_length": 16,
+      "after_length": 21,
+      "appended": [
+        "cell:s00:r43:c7",
+        "cell:s00:r44:c7",
+        "cell:s00:r45:c7",
+        "cell:s00:r43:c9",
+        "cell:s00:r44:c9"
+      ]
+    },
+    {
+      "path": "GROUNDING.O6.targets.region_summaries",
+      "kind": "append_or_extend",
+      "before_length": 20,
+      "after_length": 25,
+      "appended": [
+        {
+          "kind": "RECTANGLE",
+          "sheet_id": "sheet:s00",
+          "r1": 43,
+          "c1": 7,
+          "r2": 43,
+          "c2": 7
+        },
+        {
+          "kind": "RECTANGLE",
+          "sheet_id": "sheet:s00",
+          "r1": 43,
+          "c1": 9,
+          "r2": 43,
+          "c2": 9
+        },
+        {
+          "kind": "RECTANGLE",
+          "sheet_id": "sheet:s00",
+          "r1": 44,
+          "c1": 7,
+          "r2": 44,
+          "c2": 7
+        },
+        {
+          "kind": "RECTANGLE",
+          "sheet_id": "sheet:s00",
+          "r1": 44,
+          "c1": 9,
+          "r2": 44,
+          "c2": 9
+        },
+        {
+          "kind": "RECTANGLE",
+          "sheet_id": "sheet:s00",
+          "r1": 45,
+          "c1": 7,
+          "r2": 45,
+          "c2": 7
+        }
+      ]
+    },
+    {
+      "path": "GROUNDING.O6.targets.region_summary_count",
+      "before": 20,
+      "after": 25
+    }
+  ],
+  "unexpected_changes": [],
+  "non_output_role_context_equal": true,
+  "control_target_candidate_count": 24,
+  "treatment_target_candidate_count": 29
+}

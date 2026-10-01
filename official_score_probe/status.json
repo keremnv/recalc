@@ -1,0 +1,59 @@
+{
+  "generated_at": "2026-09-16T09:27:07.008086+00:00",
+  "workers": [
+    {
+      "worker_id": "glm:Template:01_02",
+      "pid": 280234,
+      "started_at": "2026-09-16T08:49:45.294903+00:00",
+      "task": "Template:01_02",
+      "kind": "glm_compiled",
+      "alive": false,
+      "status": "COMPLETED",
+      "model_call_count": 40,
+      "provider_cost_usd": 0.019492512999999996
+    },
+    {
+      "worker_id": "glm:Financial_Model:02_01",
+      "pid": 263153,
+      "started_at": "2026-09-16T08:41:21.214213+00:00",
+      "task": "Financial_Model:02_01",
+      "kind": "glm_compiled",
+      "alive": false,
+      "status": "COMPLETED",
+      "model_call_count": 2,
+      "provider_cost_usd": 0.002614325
+    },
+    {
+      "worker_id": "glm:Debugging:01_01",
+      "pid": 280235,
+      "started_at": "2026-09-16T08:49:45.276743+00:00",
+      "task": "Debugging:01_01",
+      "kind": "glm_compiled",
+      "alive": false,
+      "status": "COMPLETED",
+      "model_call_count": 2,
+      "provider_cost_usd": 0.0035071399999999997
+    },
+    {
+      "worker_id": "spark:Financial_Model:02_01",
+      "pid": 280236,
+      "started_at": "2026-09-16T08:49:45.290447+00:00",
+      "task": "Financial_Model:02_01",
+      "kind": "spark_control_extra",
+      "alive": false,
+      "status": "COMPLETED",
+      "return_code": 0
+    },
+    {
+      "worker_id": "spark-harness:Financial_Model:02_01",
+      "pid": 282696,
+      "started_at": "2026-09-16T09:01:46.188671+00:00",
+      "task": "Financial_Model:02_01",
+      "kind": "spark_librecalc_harness",
+      "alive": false,
+      "status": "COMPLETED",
+      "return_code": 0
+    }
+  ],
+  "all_finished": true
+}

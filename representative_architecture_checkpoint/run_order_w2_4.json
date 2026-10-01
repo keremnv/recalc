@@ -1,0 +1,100 @@
+[
+ {
+  "task_id": "Template:02_01",
+  "arm": "H0",
+  "slot": 4,
+  "run_id": "primary_04",
+  "status": "SUBMITTED"
+ },
+ {
+  "task_id": "Template:02_01",
+  "arm": "H1",
+  "slot": 5,
+  "run_id": "primary_05",
+  "status": "SUBMITTED"
+ },
+ {
+  "task_id": "Template:06_23",
+  "arm": "H0",
+  "slot": 12,
+  "run_id": "primary_12",
+  "status": "SUBMITTED"
+ },
+ {
+  "task_id": "Template:06_23",
+  "arm": "H1",
+  "slot": 13,
+  "run_id": "primary_13",
+  "status": "SUBMITTED"
+ },
+ {
+  "task_id": "Financial_Model:02_04",
+  "arm": "H0",
+  "slot": 20,
+  "run_id": "primary_20",
+  "status": "SUBMITTED"
+ },
+ {
+  "task_id": "Financial_Model:02_04",
+  "arm": "H1",
+  "slot": 21,
+  "run_id": "primary_21",
+  "status": "SUBMITTED"
+ },
+ {
+  "task_id": "Financial_Model:09_02",
+  "arm": "H0",
+  "slot": 28,
+  "run_id": "primary_28",
+  "status": "NO_SUBMIT"
+ },
+ {
+  "task_id": "Financial_Model:09_02",
+  "arm": "H1",
+  "slot": 29,
+  "run_id": "primary_29",
+  "status": "NO_SUBMIT"
+ },
+ {
+  "task_id": "Financial_Model:15_03",
+  "arm": "H1",
+  "slot": 37,
+  "run_id": "primary_37",
+  "status": "NO_SUBMIT"
+ },
+ {
+  "task_id": "Debugging:04_07",
+  "arm": "H0",
+  "slot": 44,
+  "run_id": "primary_44",
+  "status": "NO_SUBMIT"
+ },
+ {
+  "task_id": "Debugging:04_07",
+  "arm": "H1",
+  "slot": 45,
+  "run_id": "primary_45",
+  "status": "NO_SUBMIT"
+ },
+ {
+  "task_id": "Debugging:08_01",
+  "arm": "H0",
+  "slot": 52,
+  "run_id": "primary_52",
+  "status": "NO_SUBMIT"
+ },
+ {
+  "task_id": "Financial_Model:15_03",
+  "arm": "H0",
+  "slot": 36,
+  "run_id": "primary_36",
+  "status": "TRUNCATED_INSTANCE_COST"
+ },
+ {
+  "task_id": "Debugging:08_01",
+  "arm": "H1",
+  "slot": 53,
+  "run_id": "primary_53",
+  "status": "TRUNCATED_CALL_LIMIT"
+ }
+]

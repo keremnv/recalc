@@ -1,0 +1,49 @@
+# Which stored runs play which role in the gate. Roles, not configurations:
+# the gate only asks "did this arm get that cell right", so a run belongs here
+# when it is a fair stand-in for its side on the tasks it covers.
+#
+# control: the harness the benchmark ships with (bash + view_xlsx + openpyxl).
+# ours:    any LibreCalc-interface run. Repeats of the same config belong here
+#          too -- self-stability is measured against them.
+
+control:
+  - glm-5.3-flash-control-fifteen-1
+  - glm-5.3-flash-control-fifteen-2
+  # The eight tasks control-arm-fifteen never covered. Landed 2026-09-03, n=2.
+  - glm-5.3-flash-catalog-control-eight-1
+  - glm-5.3-flash-catalog-control-eight-2
+
+ours:
+  - glm-5.3-flash-nonvisual-297-1
+  # Repeats of the frozen 297 configuration on the same eight tasks. Without these the
+  # gate can compute an arm delta for those cases but not a self-stability check, and an
+  # `induced` verdict with no repeat behind it is the single-draw error again.
+  # Landed 2026-09-03, n=2, frozen 297 config, --commit-gate on.
+  - glm-5.3-flash-catalog-ours-eight-1
+  - glm-5.3-flash-catalog-ours-eight-2
+  - glm-5.3-flash-strict-fifteen-unbounded-1
+  - glm-5.3-flash-librecalc-fifteen-1
+  - glm-ladder-C-unbounded-1
+  - glm-ladder-C-unbounded-2
+  - glm-ladder-C-unbounded-3
+  - glm-ladder-D-raw-1
+
+# Lever families and the measured prior on each. A case whose only lever is
+# `information` does not earn a design change: that family has been measured
+# four times and has never converted an exact.
+levers:
+  information: refuted
+  constraint: untested
+  substitution: untested
+  selection: untested
+  none: refuted
+  # Named 2026-09-03 by d-02-05-d7, the only surviving arm_delta in the full n=2/n=2
+  # gate run. Control finds WACC!D7 in 2/2 runs; our arm's read windows land next to
+  # it in 3/3 independent trajectories and never include it. Not `information` (nothing
+  # tells the model D7 is wrong -- there is no error token), not `substitution` (no
+  # single decision to make on the model's behalf), not `constraint` (nothing to
+  # refuse) and not `selection` (no candidate set to rank). The candidate mechanism is
+  # the agent running its own predicate over the whole workbook, which bash + openpyxl
+  # affords by construction and our interface does not expose. Not yet a lever with a
+  # tool behind it -- do not build one from a single case. See BRIEFING.md.
+  agent_scan: candidate

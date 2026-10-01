@@ -1,0 +1,38 @@
+{
+  "Debugging": {
+    "a0_fully_eligible": 16,
+    "a1_fully_eligible": 17,
+    "additional_open_call_opportunity_upper_bound": 0,
+    "additional_read_event_opportunity_estimate": 10,
+    "newly_fully_eligible": 1,
+    "source_executions": 86,
+    "source_family": "Debugging"
+  },
+  "Financial_Model": {
+    "a0_fully_eligible": 48,
+    "a1_fully_eligible": 52,
+    "additional_open_call_opportunity_upper_bound": 0,
+    "additional_read_event_opportunity_estimate": 18,
+    "newly_fully_eligible": 4,
+    "source_executions": 147,
+    "source_family": "Financial_Model"
+  },
+  "Template": {
+    "a0_fully_eligible": 5,
+    "a1_fully_eligible": 5,
+    "additional_open_call_opportunity_upper_bound": 0,
+    "additional_read_event_opportunity_estimate": 0,
+    "newly_fully_eligible": 0,
+    "source_executions": 54,
+    "source_family": "Template"
+  },
+  "Visualization": {
+    "a0_fully_eligible": 3,
+    "a1_fully_eligible": 12,
+    "additional_open_call_opportunity_upper_bound": 0,
+    "additional_read_event_opportunity_estimate": 0,
+    "newly_fully_eligible": 9,
+    "source_executions": 22,
+    "source_family": "Visualization"
+  }
+}

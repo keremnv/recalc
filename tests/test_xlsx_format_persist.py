@@ -7,6 +7,7 @@ SpreadsheetBench compare_font_color uses openpyxl, never LibreOffice.
 from __future__ import annotations
 
 import sys
+import zipfile
 from pathlib import Path
 
 from openpyxl import Workbook, load_workbook
@@ -18,6 +19,12 @@ sys.path.insert(0, str(ROOT / "benchmark-data/SpreadsheetBench-2/evaluation"))
 import evaluation as ev
 
 from librecalc_mcp.backend.uno import _a1_addresses, _persist_xlsx_formats
+
+UNBOUND_CORE = (
+    '<cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/'
+    'metadata/core-properties"><dc:language xmlns:dc="http://purl.org/dc/elements/1.1/">'
+    "en-US</dc:language><dc:creator>Aptura</dc:creator></cp:coreProperties>"
+)
 
 
 def test_a1_addresses_expand_ranges_in_row_major_order() -> None:
@@ -127,3 +134,28 @@ def test_persist_restores_unpatched_theme_fonts_from_source(tmp_path: Path) -> N
     assert ev.compare_font_color(golden.active["J27"].font, processed["LBO"]["J27"].font)
     assert processed["LBO"]["C6"].font.color.type == "theme"
     assert processed["LBO"]["C6"].font.color.theme == 8
+
+
+def test_persist_tolerates_malformed_source_docprops(tmp_path: Path) -> None:
+    source = tmp_path / "broken-metadata.xlsx"
+    dest = tmp_path / "output.xlsx"
+    workbook = Workbook()
+    workbook.active["A1"] = "preserved"
+    workbook.save(source)
+    workbook.save(dest)
+
+    rewritten = tmp_path / "rewritten.xlsx"
+    with (
+        zipfile.ZipFile(source) as archive,
+        zipfile.ZipFile(rewritten, "w", zipfile.ZIP_DEFLATED) as output,
+    ):
+        for item in archive.infolist():
+            data = archive.read(item.filename)
+            if item.filename == "docProps/core.xml":
+                data = UNBOUND_CORE.encode()
+            output.writestr(item, data)
+    rewritten.replace(source)
+
+    _persist_xlsx_formats(str(dest), [], source_path=str(source))
+
+    assert load_workbook(dest).active["A1"].value == "preserved"

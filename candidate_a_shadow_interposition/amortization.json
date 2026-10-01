@@ -1,0 +1,126 @@
+{
+  "P1_incremental_build_included": {
+    "06_09_input.xlsx": {
+      "observed_break_even_accesses": 5,
+      "points": [
+        {
+          "access_count": 1,
+          "candidate_a_s": 0.013728,
+          "real_s": 0.003908
+        },
+        {
+          "access_count": 2,
+          "candidate_a_s": 0.008325,
+          "real_s": 0.007353
+        },
+        {
+          "access_count": 3,
+          "candidate_a_s": 0.010288,
+          "real_s": 0.010274
+        },
+        {
+          "access_count": 5,
+          "candidate_a_s": 0.013161,
+          "real_s": 0.017535
+        },
+        {
+          "access_count": 10,
+          "candidate_a_s": 0.021426,
+          "real_s": 0.035139
+        }
+      ]
+    },
+    "08_03_Seafood_input.xlsx": {
+      "observed_break_even_accesses": null,
+      "points": [
+        {
+          "access_count": 1,
+          "candidate_a_s": 4.778463,
+          "real_s": 0.041193
+        },
+        {
+          "access_count": 2,
+          "candidate_a_s": 4.510737,
+          "real_s": 0.079337
+        },
+        {
+          "access_count": 3,
+          "candidate_a_s": 4.531527,
+          "real_s": 0.127194
+        },
+        {
+          "access_count": 5,
+          "candidate_a_s": 4.668817,
+          "real_s": 0.20905
+        },
+        {
+          "access_count": 10,
+          "candidate_a_s": 4.628203,
+          "real_s": 0.419498
+        }
+      ]
+    }
+  },
+  "P2_shared_runtime_build_excluded": {
+    "06_09_input.xlsx": {
+      "observed_break_even_accesses": 1,
+      "points": [
+        {
+          "access_count": 1,
+          "candidate_a_s": 0.001607,
+          "real_s": 0.003908
+        },
+        {
+          "access_count": 2,
+          "candidate_a_s": 0.003306,
+          "real_s": 0.007353
+        },
+        {
+          "access_count": 3,
+          "candidate_a_s": 0.004824,
+          "real_s": 0.010274
+        },
+        {
+          "access_count": 5,
+          "candidate_a_s": 0.008077,
+          "real_s": 0.017535
+        },
+        {
+          "access_count": 10,
+          "candidate_a_s": 0.016176,
+          "real_s": 0.035139
+        }
+      ]
+    },
+    "08_03_Seafood_input.xlsx": {
+      "observed_break_even_accesses": 1,
+      "points": [
+        {
+          "access_count": 1,
+          "candidate_a_s": 0.008696,
+          "real_s": 0.041193
+        },
+        {
+          "access_count": 2,
+          "candidate_a_s": 0.01732,
+          "real_s": 0.079337
+        },
+        {
+          "access_count": 3,
+          "candidate_a_s": 0.025973,
+          "real_s": 0.127194
+        },
+        {
+          "access_count": 5,
+          "candidate_a_s": 0.043361,
+          "real_s": 0.20905
+        },
+        {
+          "access_count": 10,
+          "candidate_a_s": 0.087078,
+          "real_s": 0.419498
+        }
+      ]
+    }
+  }
+}

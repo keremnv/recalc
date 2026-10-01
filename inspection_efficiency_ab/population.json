@@ -1,0 +1,50 @@
+{
+ "tasks": [
+  {
+   "task_id": "Debugging:02_06",
+   "measured_views": 72,
+   "measured_pyexecs": 69
+  },
+  {
+   "task_id": "Financial_Model:01_01",
+   "measured_views": 59,
+   "measured_pyexecs": 30
+  },
+  {
+   "task_id": "Debugging:04_01",
+   "measured_views": 34,
+   "measured_pyexecs": 0
+  },
+  {
+   "task_id": "Financial_Model:13_05",
+   "measured_views": 31,
+   "measured_pyexecs": 33
+  },
+  {
+   "task_id": "Template:01_02",
+   "measured_views": 16,
+   "measured_pyexecs": 17
+  },
+  {
+   "task_id": "Template:06_12",
+   "measured_views": 13,
+   "measured_pyexecs": 57
+  },
+  {
+   "task_id": "Template:01_07",
+   "measured_views": 13,
+   "measured_pyexecs": 25
+  },
+  {
+   "task_id": "Financial_Model:02_01",
+   "measured_views": 12,
+   "measured_pyexecs": 9
+  },
+  {
+   "task_id": "Debugging:05_02",
+   "measured_views": 8,
+   "measured_pyexecs": 11
+  }
+ ],
+ "selection": "ranked by measured inspection volume in stored Stage-1/Stage-A trajectories; no gold-peeking"
+}

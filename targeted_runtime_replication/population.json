@@ -1,0 +1,13 @@
+{
+ "discordant": [
+  "Template:01_02",
+  "Template:01_07",
+  "Debugging:02_06"
+ ],
+ "sentinels": [
+  "Financial_Model:01_01",
+  "Financial_Model:13_05",
+  "Template:06_12"
+ ],
+ "rationale": "discordant = prior H1-only pre-mutation stalls; sentinels = stable completed pairs (FM 01_01/13_05, Template 06_12)"
+}

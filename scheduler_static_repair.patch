@@ -1,0 +1,262 @@
+--- a/benchmark/compiled_scheduler.py
++++ b/benchmark/compiled_scheduler.py
+@@ -6,6 +6,24 @@
+ from __future__ import annotations
+ 
+ from collections import defaultdict
++
++
++def synthesis_outcome(session):
++    """Label the retained response without treating provider failure as abstention."""
++    parsed = (session.get("synthesis") or {}).get("parsed")
++    if isinstance(parsed, dict) and parsed.get("status") == "PROPOSED" and isinstance(parsed.get("formula"), str) and parsed["formula"]:
++        # A returned proposal still gets verified, including when accounting
++        # reports that the response crossed the task's cost ceiling.
++        return "PROPOSED"
++    failure = session.get("failure_class")
++    if not failure:
++        call = next((c for c in reversed(session.get("calls") or []) if c.get("stage") == "synthesis"), {})
++        failure = call.get("failure_class") or ("PROVIDER_ERROR" if call.get("finish_reason") == "error" else None)
++    if failure:
++        return failure
++    if isinstance(parsed, dict) and parsed.get("status") == "ABSTAIN":
++        return "ABSTAIN"
++    return "INVALID_RESPONSE"
+ 
+ 
+ def schedule(runtime, task_key, task, compiler, plan, state, task_dir, *, stub=False):
+@@ -42,7 +60,6 @@
+         operation_cells[meta[cell]["operation_id"]].append(cell)
+     # Authority is retained extensionally for safety and verifier checks, but
+     # it is no longer lowered to one eager stochastic session per cell.
+-    group_canonicals = {tuple(g["canonical_cell"]) for g in groups}
+     group_by_operation: dict[str, list[dict]] = defaultdict(list)
+     for group in groups:
+         members = {tuple(c) for c in group.get("member_cells", [])}
+@@ -57,6 +74,11 @@
+     queued: set[tuple] = set()
+ 
+     def enqueue(cell: tuple) -> None:
++        # Dependency requests address the existing semantic unit. A failed
++        # canonical must not turn its members into fresh independent sessions.
++        group = group_by_cell.get(cell)
++        if group:
++            cell = tuple(group["canonical_cell"])
+         if cell in done or cell in queued:
+             return
+         queued.add(cell)
+@@ -113,6 +135,13 @@
+         checkpoint["dispositions"][key(c)] = {"cell": list(c), "status": status, **detail}
+         done.add(c)
+ 
++    def finish_turn():
++        # All terminal paths, not just accepted formulas, replenish work.
++        # activate_available only exposes canonicals and genuine residuals;
++        # members of a failed group remain unresolved, not reclassified.
++        activate_available()
++        flush()
++
+     activate_available()
+     initial_active = len(queue)
+     deferred_residuals = sum(len(v) for v in residuals.values())
+@@ -130,19 +159,25 @@
+         candidate = queue.pop(0)
+         queued.discard(candidate)
+         if candidate in done:
++            finish_turn()
+             continue
+         if meta[candidate]["operation_kind"] == "CLEAR_CELL":
+             failures.append({"cell": list(candidate), "failure_class": "UNSUPPORTED_EDIT_KIND"})
+             disposition(candidate, "UNSUPPORTED_EDIT_KIND")
+-            flush(); continue
++            finish_turn(); continue
+         group = group_by_cell.get(candidate)
+         canon = tuple(group["canonical_cell"]) if group else candidate
+-        seed = canon if canon not in done else candidate
++        seed = canon
+         if seed in edits:
++            # Atomic checkpoints normally make this redundant with done.
++            # Recover an already scheduled write without synthesizing again.
++            disposition(seed, "WRITES_SCHEDULED")
++            finish_turn()
+             continue
+         if key(seed) not in sessions:
+             if state.get("replay_stored_sessions_only"):
+                 disposition(seed, "REPLAY_NO_STORED_RESPONSE")
++                finish_turn()
+                 continue
+             blocked = m.TaskBudget(state).failure()
+             if blocked:
+@@ -151,10 +186,10 @@
+             target = m.target_from_id(plan["spine"], key(seed), task_key, meta[seed]["obligation_id"])
+             if target is None:
+                 failures.append({"cell": list(seed), "failure_class": "INVALID_ENTITY"})
+-                disposition(seed, "INVALID_ENTITY"); flush(); continue
++                disposition(seed, "INVALID_ENTITY"); finish_turn(); continue
+             session = m.retrieval_synthesis(task_key, task, obs[meta[seed]["obligation_id"]], target, plan["packets"][meta[seed]["obligation_id"]], state, task_dir, stub=stub)
+-            parsed = session["synthesis"].get("parsed") or {}
+-            f = parsed.get("formula") if parsed.get("status") == "PROPOSED" else None
++            parsed = session["synthesis"].get("parsed")
++            f = parsed.get("formula") if synthesis_outcome(session) == "PROPOSED" else None
+             sessions[key(seed)] = {"seed": list(seed), "target": target, "session": session, "formula": f}
+             # Crash between the provider return and this checkpoint is recovered
+             # through the immutable request/response ledger, not a new call.
+@@ -162,14 +197,17 @@
+         proposal = sessions[key(seed)]
+         f = proposal.get("formula")
+         if not f:
+-            disposition(seed, "ABSTAIN", failure=proposal["session"].get("failure_class"))
+-            flush(); continue
++            outcome = synthesis_outcome(proposal["session"])
++            disposition(seed, outcome, failure=None if outcome == "ABSTAIN" else outcome)
++            if outcome != "ABSTAIN":
++                failures.append({"cell": list(seed), "stage": "synthesis", "failure_class": outcome})
++            finish_turn(); continue
+         validation = m.validate_formula(task_key, proposal["target"], f, cache, plan["spine"])
+         proposal["validation"] = validation
+         if validation.get("hard_verifier_result") != "HARD_ACCEPT":
+             disposition(seed, "REJECTED_HARD")
+             failures.append({"cell": list(seed), "failure_class": "HARD_VERIFIER_REJECT", "validation": validation})
+-            flush(); continue
++            finish_turn(); continue
+         # A valid seed is always an edit, even when its prerequisites form
+         # another ProgramGroup that needs its own canonical inference.
+         if forms.get(seed) == f:
+@@ -209,8 +247,7 @@
+         # Dependency membership schedules work; it never marks it solved.
+         for member in sorted(closure_members - done):
+             enqueue(member)
+-        activate_available()
+-        flush()
++        finish_turn()
+     flush()
+     demand = checkpoint.get("demand_accounting", {})
+     return {"authorized_targets": len(auth), "canonical_decisions": list(sessions.values()), "translated_formula_instances": [{"cell": list(c), "formula": f} for c, f in sorted(edits.items())], "groups": checkpoint["units"], "eligible_program_groups": groups, "group_refusals": refused, "failures": failures, "dispositions": checkpoint["dispositions"], "unresolved_authorised_targets": state["unresolved_authorised_targets"], "edits": state["completed_edits"], "stochastic_formula_decisions": len(sessions), "translated_count": sum(v["status"] == "TRANSLATED_WRITE_SCHEDULED" for v in checkpoint["dispositions"].values()), **demand}
+--- a/benchmark/matched_compiled_treatment.py
++++ b/benchmark/matched_compiled_treatment.py
+@@ -168,13 +168,13 @@
+ EDIT_PLAN_SCHEMA = edit_plan_probe.SCHEMA
+ 
+ NON_MODEL_FAILURES = {
+-    "MODEL_ACCESS_FAILURE", "TASK_MODEL_CALL_LIMIT", "TASK_COST_LIMIT",
++    "MODEL_ACCESS_FAILURE", "PROVIDER_ERROR", "TASK_MODEL_CALL_LIMIT", "TASK_COST_LIMIT",
+     "QUERY_TIMEOUT", "SQL_ERROR", "RESULT_TOO_LARGE", "INVALID_ACTION",
+     "INVALID_ENTITY", "INVALID_EDIT_PLAN", "ADMISSIBILITY_LIMIT",
+     "SESSION_RESOURCE_LIMIT", "TRUNCATED_AT_BUDGET", "TRUNCATED_NO_CONTENT",
+     "PARSE_FAILURE", "WRITER_FAILURE", "SCORER_FAILURE", "INFRASTRUCTURE_RETRY", "PROVIDER_TIMEOUT",
+ }
+-FATAL_TASK_FAILURES = {"MODEL_ACCESS_FAILURE", "INTEGRATION_FAILURE", "SCORER_FAILURE"}
++FATAL_TASK_FAILURES = {"MODEL_ACCESS_FAILURE", "PROVIDER_ERROR", "INTEGRATION_FAILURE", "SCORER_FAILURE"}
+ 
+ 
+ def now() -> str:
+@@ -652,12 +652,13 @@
+     elif stage == "synthesis":
+         parsed = task_compile.extract_json_object(text)
+     finish = choices[0].get("finish_reason") if choices else None
+-    failure = truncation_class(response_body, text)
++    truncation = truncation_class(response_body, text)
++    failure = "PROVIDER_ERROR" if finish == "error" else truncation
+     state["model_call_count"] = call_index
+     state["provider_cost_usd"] = budget.cost + provider_cost
+     if provider_cost and state["provider_cost_usd"] > ACTIVE_MAX_COST_USD:
+         failure = "TASK_COST_LIMIT"
+-    record.update({"raw_response_body": response_body, "raw_response_text": text, "parsed_response": parsed, "usage": usage, "provider_cost_usd": provider_cost, "finish_reason": finish, "truncation_class": failure, "failure_class": failure})
++    record.update({"raw_response_body": response_body, "raw_response_text": text, "parsed_response": parsed, "usage": usage, "provider_cost_usd": provider_cost, "finish_reason": finish, "truncation_class": truncation, "failure_class": failure})
+     return record
+ 
+ 
+@@ -823,7 +824,32 @@
+         world.close()
+ 
+ 
++def planning_completeness(compiler: dict[str, Any], plan: dict[str, Any]) -> dict[str, Any]:
++    """Report fragment/authority coverage, never infer semantic completeness."""
++    obligations = [o["id"] for o in compiler.get("obligations", [])]
++    covered = {o["obligation_id"] for o in (plan.get("expansion") or {}).get("operations", []) if o.get("cell_ids")}
++    fragments = {f["obligation_id"]: f for f in plan.get("fragments", [])}
++    rows = []
++    for oid in obligations:
++        fragment_status = fragments[oid]["status"] if oid in fragments else plan.get("status")
++        rows.append({"obligation_id": oid, "fragment_status": fragment_status, "has_authority": oid in covered,
++                     "successfully_planned": fragment_status == "VALID_PLAN" and oid in covered})
++    valid = plan.get("status") == "VALID_PLAN"
++    complete = valid and bool(rows) and all(r["successfully_planned"] for r in rows)
++    return {"status": "COMPLETE" if complete else "PARTIAL" if valid else "NO_VALID_AUTHORITY",
++            "schema_valid_authority": valid, "all_obligations_successfully_planned": complete,
++            "obligation_count": len(rows), "obligations_with_authority": [r["obligation_id"] for r in rows if r["has_authority"]],
++            "obligations_without_authority": [r["obligation_id"] for r in rows if not r["has_authority"]],
++            "obligations": rows, "semantic_completeness": "NOT_ESTABLISHED"}
++
++
+ def plan_task(task_key: str, task: dict[str, Any], compiler: dict[str, Any], state: dict[str, Any], task_dir: Path, *, stub: bool) -> dict[str, Any]:
++    plan = _plan_task(task_key, task, compiler, state, task_dir, stub=stub)
++    plan["planning_completeness"] = planning_completeness(compiler, plan)
++    return plan
++
++
++def _plan_task(task_key: str, task: dict[str, Any], compiler: dict[str, Any], state: dict[str, Any], task_dir: Path, *, stub: bool) -> dict[str, Any]:
+     if not compiler.get("obligations"):
+         return {"status": "EMPTY_EXPANSION", "parsed": {"operations": []}, "expansion": {"status": "EMPTY_EXPANSION", "cell_ids": [], "operations": [], "provenance": {}}}
+     if ACTIVE_FRONTEND_MODE in {"sharded_old", "sharded_projected"}:
+@@ -878,7 +904,10 @@
+         spine["_input_cells_by_id"] = {c["id"]: c for c in spine.get("occupied", [])}
+     cell = spine["_input_cells_by_id"].get(cell_id, {})
+     value = cell.get("payload")
+-    info = {"raw_value": value, "kind": "blank" if value is None else "formula" if isinstance(value, str) and value.startswith("=") else "value"}
++    # Legacy spines may omit a numeric payload. Its recorded occupancy still
++    # must not be reinterpreted as a blank target.
++    kind = cell.get("kind")
++    info = {"raw_value": value, "kind": "formula" if kind == "formula" or isinstance(value, str) and value.startswith("=") else "value" if kind not in (None, "blank") or value is not None else "blank"}
+     return {"target_id": cell_id, "cell_id": cell_id, "obligation_id": obligation_id, **address, "current_input_content": info["raw_value"], "current_input_kind": info["kind"]}
+ 
+ 
+@@ -936,7 +965,10 @@
+     call = call_or_stub(task_dir, task_key, "synthesis", SYNTHESIS_SYSTEM, json.dumps(transition, ensure_ascii=False, separators=(",", ":")), state, stub=stub, evidence_hash=digest(evidence), working_hash=digest(sorted(working)))
+     calls.append(call)
+     parsed = call.get("parsed_response")
+-    return {"status": "ABSTAIN" if stub else "PROPOSED" if isinstance(parsed, dict) and parsed.get("status") == "PROPOSED" else "FAILED", "target": target, "bootstrap": bootstrap, "working_set_ids": sorted(working), "evidence": evidence, "calls": calls, "synthesis": {"parsed": parsed}, "failure_class": call.get("failure_class"), "sql_calls": sum(1 for c in calls if c.get("stage") == "retrieval")}
++    from compiled_scheduler import synthesis_outcome
++    session = {"target": target, "bootstrap": bootstrap, "working_set_ids": sorted(working), "evidence": evidence, "calls": calls, "synthesis": {"parsed": parsed}, "failure_class": call.get("failure_class"), "sql_calls": sum(1 for c in calls if c.get("stage") == "retrieval")}
++    session["status"] = "ABSTAIN" if stub else synthesis_outcome(session)
++    return session
+ 
+ 
+ def authorised_cells(plan: dict[str, Any]) -> tuple[dict[closure.Cell, dict[str, Any]], dict[str, str]]:
+@@ -1087,6 +1119,7 @@
+             plan = {"status": "EMPTY_EXPANSION", "expansion": {"status": "EMPTY_EXPANSION", "cell_ids": [], "operations": [], "provenance": {}}, "packets": {}}
+         else:
+             plan = plan_task(task_key, task, compiler, state, task_dir, stub=stub)
++        plan.setdefault("planning_completeness", planning_completeness(compiler, plan))
+         state["edit_plan"] = {k: v for k, v in plan.items() if k not in ("spine", "context", "call")}
+         state["authorised_target_set"] = sorted((plan.get("expansion") or {}).get("cell_ids", []))
+         write_json(state_path, state)
+--- a/benchmark/workbook_grounding_spine.py
++++ b/benchmark/workbook_grounding_spine.py
+@@ -131,13 +131,13 @@
+     return "numeric"
+ 
+ 
+-def _payload(value: object, kind: str) -> str | None:
++def _payload(value: object, kind: str) -> str | int | float | bool | None:
+     if kind == "formula" or kind == "error":
+         return formula_text(value) or (str(value) if value is not None else None)
+     if kind == "text":
+         return as_text(value)
+     if kind == "numeric":
+-        return None
++        return value if isinstance(value, (int, float, bool)) else None
+     return None
+ 
+ 
+@@ -237,8 +237,8 @@
+                 "kind": kind,
+             }
+             payload = _payload(cell.value, kind)
+-            if payload:
+-                rec["payload"] = payload[:500]
++            if payload is not None:
++                rec["payload"] = payload[:500] if isinstance(payload, str) else payload
+             occupied[(s_i, row, col)] = rec
+             rm = row_meta.setdefault(
+                 (s_i, row),

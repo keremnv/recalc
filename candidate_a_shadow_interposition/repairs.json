@@ -1,0 +1,14 @@
+{
+  "bounded_repairs": [
+    "preserve worksheet names from workbook.xml including metadata-only sheets",
+    "match openpyxl cell-derived dimensions including empty and merged worksheet edges",
+    "preserve inlineStr cell data_type metadata for empty-string cells"
+  ],
+  "not_repaired": [
+    "rich Cell identity",
+    "compiled data_only cache",
+    "writes",
+    "ranges",
+    "styles/tables/names/package"
+  ]
+}

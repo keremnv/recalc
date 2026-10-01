@@ -1,0 +1,20 @@
+{
+  "files_sha256": {
+    "arm_profiles.json": "79aa62460df28e29737188cbe4c2671cb7e64233395d9e7fe61c3c2339fa5516",
+    "exact_notes.json": "0c0a85f4a421ca756b865b3a4527dba7238df299537a4fb4c59fa1d182588b1b",
+    "inspection_events.jsonl": "90a8830ca7aee2f34649f8d3b26bacd65912b5b094e7b4c98f6afafa05faa5f3",
+    "mechanism_events.jsonl": "17bfbea4747083d8bf72a096796c4bd224dd727fbdfec7ae329ed1a60ce1b266",
+    "population.json": "3c68f62671d15a84650b78042cd6f9e4b7e02c4d321a03cfb2ed2a2f9b289d49",
+    "preregistered_spec.json": "6fada992333be6832fe89271f631ded4ac5d11f6c6499ac62181fc64738819c7",
+    "primary_runs.jsonl": "5d666a85b3739ec0058f73d3cebd7c1e8f463213cd34495d3431df4847873f2c",
+    "provider_usage.jsonl": "4705d6bfe0b1556a7eaca1a96008a9bef63e61a72bb40f6fe0c6d2d56f4beb81",
+    "request_decomposition.jsonl": "1e7a61522bad22dda332330a479c85e2cade0134cb7d5d5e5179953afbb9bca7",
+    "run_order.json": "a4adf4af468cd9440f0697cf774fb9d507d9d44e79b8bf457d50d2d998945e08",
+    "selection_manifest.json": "da1dde0f12fe42be28c9e17348e0af159776ca40f3abf29ca7d8ccdedf97d334",
+    "spec_hash.json": "e1566d6ef699b26065ef55891d3a2c53d5ffd01e79e029b690a663070fe1cf04"
+  },
+  "phase": "PRIMARY",
+  "run_file_count": 2850,
+  "run_tree_sha256": "7af727b7793789eabd05acbf80e4311b1390ac9729b5cb9eacad046a59ac41cc",
+  "slot_count": 48
+}

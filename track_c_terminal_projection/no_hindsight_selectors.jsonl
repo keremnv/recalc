@@ -1,0 +1,9 @@
+{"selector": "S01_formulas", "description": "keep formula-kind cells only", "inputs": "task instruction text + scan-time exposed facts + mechanical structure only (no future, no gold)"}
+{"selector": "S02_task_sheets_keep_unknown", "description": "keep cells on task-named sheets; sheet-unknown always kept", "inputs": "task instruction text + scan-time exposed facts + mechanical structure only (no future, no gold)"}
+{"selector": "S03_keywords_or_sheet", "description": "keep cells whose value/sheet matches an instruction keyword", "inputs": "task instruction text + scan-time exposed facts + mechanical structure only (no future, no gold)"}
+{"selector": "S04_header_rows_10", "description": "keep rows 1..10", "inputs": "task instruction text + scan-time exposed facts + mechanical structure only (no future, no gold)"}
+{"selector": "S05_head_rows_25", "description": "keep rows 1..25", "inputs": "task instruction text + scan-time exposed facts + mechanical structure only (no future, no gold)"}
+{"selector": "S06_compact", "description": "union: formulas + keyword/sheet + header rows<=10", "inputs": "task instruction text + scan-time exposed facts + mechanical structure only (no future, no gold)"}
+{"selector": "S07_head_rows_50", "description": "keep rows 1..50", "inputs": "task instruction text + scan-time exposed facts + mechanical structure only (no future, no gold)"}
+{"selector": "S08_task_sheets_strict", "description": "keep iff sheet named in task (sheet-unknown dropped)", "inputs": "task instruction text + scan-time exposed facts + mechanical structure only (no future, no gold)"}
+{"selector": "S09_formula_or_header", "description": "keep formulas or rows<=10 (no task text)", "inputs": "task instruction text + scan-time exposed facts + mechanical structure only (no future, no gold)"}

@@ -1,0 +1,4500 @@
+{
+  "cases": [
+    {
+      "archived_authority_count": 99,
+      "archived_authority_gold_overlap": 0,
+      "candidate_target_population": [
+        "cell:s04:r29:c100",
+        "cell:s04:r29:c101",
+        "cell:s04:r29:c102",
+        "cell:s04:r29:c103",
+        "cell:s04:r29:c104",
+        "cell:s04:r29:c105",
+        "cell:s04:r29:c106",
+        "cell:s04:r29:c107",
+        "cell:s04:r29:c108",
+        "cell:s04:r29:c109",
+        "cell:s04:r29:c110",
+        "cell:s04:r29:c111",
+        "cell:s04:r29:c112",
+        "cell:s04:r29:c113",
+        "cell:s04:r29:c15",
+        "cell:s04:r29:c16",
+        "cell:s04:r29:c17",
+        "cell:s04:r29:c18",
+        "cell:s04:r29:c19",
+        "cell:s04:r29:c20",
+        "cell:s04:r29:c21",
+        "cell:s04:r29:c22",
+        "cell:s04:r29:c23",
+        "cell:s04:r29:c24",
+        "cell:s04:r29:c25",
+        "cell:s04:r29:c26",
+        "cell:s04:r29:c27",
+        "cell:s04:r29:c28",
+        "cell:s04:r29:c29",
+        "cell:s04:r29:c30",
+        "cell:s04:r29:c31",
+        "cell:s04:r29:c32",
+        "cell:s04:r29:c33",
+        "cell:s04:r29:c34",
+        "cell:s04:r29:c35",
+        "cell:s04:r29:c36",
+        "cell:s04:r29:c37",
+        "cell:s04:r29:c38",
+        "cell:s04:r29:c39",
+        "cell:s04:r29:c40",
+        "cell:s04:r29:c41",
+        "cell:s04:r29:c42",
+        "cell:s04:r29:c43",
+        "cell:s04:r29:c44",
+        "cell:s04:r29:c45",
+        "cell:s04:r29:c46",
+        "cell:s04:r29:c47",
+        "cell:s04:r29:c48",
+        "cell:s04:r29:c49",
+        "cell:s04:r29:c50",
+        "cell:s04:r29:c51",
+        "cell:s04:r29:c52",
+        "cell:s04:r29:c53",
+        "cell:s04:r29:c54",
+        "cell:s04:r29:c55",
+        "cell:s04:r29:c56",
+        "cell:s04:r29:c57",
+        "cell:s04:r29:c58",
+        "cell:s04:r29:c59",
+        "cell:s04:r29:c60",
+        "cell:s04:r29:c61",
+        "cell:s04:r29:c62",
+        "cell:s04:r29:c63",
+        "cell:s04:r29:c64",
+        "cell:s04:r29:c65",
+        "cell:s04:r29:c66",
+        "cell:s04:r29:c67",
+        "cell:s04:r29:c68",
+        "cell:s04:r29:c69",
+        "cell:s04:r29:c70",
+        "cell:s04:r29:c71",
+        "cell:s04:r29:c72",
+        "cell:s04:r29:c73",
+        "cell:s04:r29:c74",
+        "cell:s04:r29:c75",
+        "cell:s04:r29:c76",
+        "cell:s04:r29:c77",
+        "cell:s04:r29:c78",
+        "cell:s04:r29:c79",
+        "cell:s04:r29:c80",
+        "cell:s04:r29:c81",
+        "cell:s04:r29:c82",
+        "cell:s04:r29:c83",
+        "cell:s04:r29:c84",
+        "cell:s04:r29:c85",
+        "cell:s04:r29:c86",
+        "cell:s04:r29:c87",
+        "cell:s04:r29:c88",
+        "cell:s04:r29:c89",
+        "cell:s04:r29:c90",
+        "cell:s04:r29:c91",
+        "cell:s04:r29:c92",
+        "cell:s04:r29:c93",
+        "cell:s04:r29:c94",
+        "cell:s04:r29:c95",
+        "cell:s04:r29:c96",
+        "cell:s04:r29:c97",
+        "cell:s04:r29:c98",
+        "cell:s04:r29:c99",
+        "cell:s04:r30:c100",
+        "cell:s04:r30:c101",
+        "cell:s04:r30:c102",
+        "cell:s04:r30:c103",
+        "cell:s04:r30:c104",
+        "cell:s04:r30:c105",
+        "cell:s04:r30:c106",
+        "cell:s04:r30:c107",
+        "cell:s04:r30:c108",
+        "cell:s04:r30:c109",
+        "cell:s04:r30:c110",
+        "cell:s04:r30:c111",
+        "cell:s04:r30:c112",
+        "cell:s04:r30:c113",
+        "cell:s04:r30:c15",
+        "cell:s04:r30:c16",
+        "cell:s04:r30:c17",
+        "cell:s04:r30:c18",
+        "cell:s04:r30:c19",
+        "cell:s04:r30:c20",
+        "cell:s04:r30:c21",
+        "cell:s04:r30:c22",
+        "cell:s04:r30:c23",
+        "cell:s04:r30:c24",
+        "cell:s04:r30:c25",
+        "cell:s04:r30:c26",
+        "cell:s04:r30:c27",
+        "cell:s04:r30:c28",
+        "cell:s04:r30:c29",
+        "cell:s04:r30:c30",
+        "cell:s04:r30:c31",
+        "cell:s04:r30:c32",
+        "cell:s04:r30:c33",
+        "cell:s04:r30:c34",
+        "cell:s04:r30:c35",
+        "cell:s04:r30:c36",
+        "cell:s04:r30:c37",
+        "cell:s04:r30:c38",
+        "cell:s04:r30:c39",
+        "cell:s04:r30:c40",
+        "cell:s04:r30:c41",
+        "cell:s04:r30:c42",
+        "cell:s04:r30:c43",
+        "cell:s04:r30:c44",
+        "cell:s04:r30:c45",
+        "cell:s04:r30:c46",
+        "cell:s04:r30:c47",
+        "cell:s04:r30:c48",
+        "cell:s04:r30:c49",
+        "cell:s04:r30:c50",
+        "cell:s04:r30:c51",
+        "cell:s04:r30:c52",
+        "cell:s04:r30:c53",
+        "cell:s04:r30:c54",
+        "cell:s04:r30:c55",
+        "cell:s04:r30:c56",
+        "cell:s04:r30:c57",
+        "cell:s04:r30:c58",
+        "cell:s04:r30:c59",
+        "cell:s04:r30:c60",
+        "cell:s04:r30:c61",
+        "cell:s04:r30:c62",
+        "cell:s04:r30:c63",
+        "cell:s04:r30:c64",
+        "cell:s04:r30:c65",
+        "cell:s04:r30:c66",
+        "cell:s04:r30:c67",
+        "cell:s04:r30:c68",
+        "cell:s04:r30:c69",
+        "cell:s04:r30:c70",
+        "cell:s04:r30:c71",
+        "cell:s04:r30:c72",
+        "cell:s04:r30:c73",
+        "cell:s04:r30:c74",
+        "cell:s04:r30:c75",
+        "cell:s04:r30:c76",
+        "cell:s04:r30:c77",
+        "cell:s04:r30:c78",
+        "cell:s04:r30:c79",
+        "cell:s04:r30:c80",
+        "cell:s04:r30:c81",
+        "cell:s04:r30:c82",
+        "cell:s04:r30:c83",
+        "cell:s04:r30:c84",
+        "cell:s04:r30:c85",
+        "cell:s04:r30:c86",
+        "cell:s04:r30:c87",
+        "cell:s04:r30:c88",
+        "cell:s04:r30:c89",
+        "cell:s04:r30:c90",
+        "cell:s04:r30:c91",
+        "cell:s04:r30:c92",
+        "cell:s04:r30:c93",
+        "cell:s04:r30:c94",
+        "cell:s04:r30:c95",
+        "cell:s04:r30:c96",
+        "cell:s04:r30:c97",
+        "cell:s04:r30:c98",
+        "cell:s04:r30:c99",
+        "cell:s04:r31:c100",
+        "cell:s04:r31:c101",
+        "cell:s04:r31:c102",
+        "cell:s04:r31:c103",
+        "cell:s04:r31:c104",
+        "cell:s04:r31:c105",
+        "cell:s04:r31:c106",
+        "cell:s04:r31:c107",
+        "cell:s04:r31:c108",
+        "cell:s04:r31:c109",
+        "cell:s04:r31:c110",
+        "cell:s04:r31:c111",
+        "cell:s04:r31:c112",
+        "cell:s04:r31:c113",
+        "cell:s04:r31:c15",
+        "cell:s04:r31:c16",
+        "cell:s04:r31:c17",
+        "cell:s04:r31:c18",
+        "cell:s04:r31:c19",
+        "cell:s04:r31:c20",
+        "cell:s04:r31:c21",
+        "cell:s04:r31:c22",
+        "cell:s04:r31:c23",
+        "cell:s04:r31:c24",
+        "cell:s04:r31:c25",
+        "cell:s04:r31:c26",
+        "cell:s04:r31:c27",
+        "cell:s04:r31:c28",
+        "cell:s04:r31:c29",
+        "cell:s04:r31:c30",
+        "cell:s04:r31:c31",
+        "cell:s04:r31:c32",
+        "cell:s04:r31:c33",
+        "cell:s04:r31:c34",
+        "cell:s04:r31:c35",
+        "cell:s04:r31:c36",
+        "cell:s04:r31:c37",
+        "cell:s04:r31:c38",
+        "cell:s04:r31:c39",
+        "cell:s04:r31:c40",
+        "cell:s04:r31:c41",
+        "cell:s04:r31:c42",
+        "cell:s04:r31:c43",
+        "cell:s04:r31:c44",
+        "cell:s04:r31:c45",
+        "cell:s04:r31:c46",
+        "cell:s04:r31:c47",
+        "cell:s04:r31:c48",
+        "cell:s04:r31:c49",
+        "cell:s04:r31:c50",
+        "cell:s04:r31:c51",
+        "cell:s04:r31:c52",
+        "cell:s04:r31:c53",
+        "cell:s04:r31:c54",
+        "cell:s04:r31:c55",
+        "cell:s04:r31:c56",
+        "cell:s04:r31:c57",
+        "cell:s04:r31:c58",
+        "cell:s04:r31:c59",
+        "cell:s04:r31:c60",
+        "cell:s04:r31:c61",
+        "cell:s04:r31:c62",
+        "cell:s04:r31:c63",
+        "cell:s04:r31:c64",
+        "cell:s04:r31:c65",
+        "cell:s04:r31:c66",
+        "cell:s04:r31:c67",
+        "cell:s04:r31:c68",
+        "cell:s04:r31:c69",
+        "cell:s04:r31:c70",
+        "cell:s04:r31:c71",
+        "cell:s04:r31:c72",
+        "cell:s04:r31:c73",
+        "cell:s04:r31:c74",
+        "cell:s04:r31:c75",
+        "cell:s04:r31:c76",
+        "cell:s04:r31:c77",
+        "cell:s04:r31:c78",
+        "cell:s04:r31:c79",
+        "cell:s04:r31:c80",
+        "cell:s04:r31:c81",
+        "cell:s04:r31:c82",
+        "cell:s04:r31:c83",
+        "cell:s04:r31:c84",
+        "cell:s04:r31:c85",
+        "cell:s04:r31:c86",
+        "cell:s04:r31:c87",
+        "cell:s04:r31:c88",
+        "cell:s04:r31:c89",
+        "cell:s04:r31:c90",
+        "cell:s04:r31:c91",
+        "cell:s04:r31:c92",
+        "cell:s04:r31:c93",
+        "cell:s04:r31:c94",
+        "cell:s04:r31:c95",
+        "cell:s04:r31:c96",
+        "cell:s04:r31:c97",
+        "cell:s04:r31:c98",
+        "cell:s04:r31:c99"
+      ],
+      "candidate_target_population_status": "DERIVED_FROM_SUBJECT_PARENT_AND_MEMBER_RUN",
+      "deterministic_relation": {
+        "member_identity": "leading ordinal + tranche label from a text anchor",
+        "occurrence_identity": "cell ID plus same-row/same-column ordinal run; never lexical-label union",
+        "population_label": "normalized population label must match",
+        "provenance": "introducing Task IR scope span; no field union",
+        "restriction": "explicit allowed set; observed member domain minus allowed set is excluded",
+        "role_filter": "O7 only: vertical run's two-row-prior same-column anchor matches subject after simple plural normalization",
+        "target_expansion": "O7 only: selected member rows crossed with existing row-4 period-axis extent"
+      },
+      "excluded_member_survivor_count": 0,
+      "existing_packet_target_candidate_count": 1037,
+      "gold_target_cells": [
+        "cell:s04:r29:c100",
+        "cell:s04:r29:c101",
+        "cell:s04:r29:c102",
+        "cell:s04:r29:c103",
+        "cell:s04:r29:c104",
+        "cell:s04:r29:c105",
+        "cell:s04:r29:c106",
+        "cell:s04:r29:c107",
+        "cell:s04:r29:c108",
+        "cell:s04:r29:c109",
+        "cell:s04:r29:c110",
+        "cell:s04:r29:c111",
+        "cell:s04:r29:c112",
+        "cell:s04:r29:c113",
+        "cell:s04:r29:c15",
+        "cell:s04:r29:c16",
+        "cell:s04:r29:c17",
+        "cell:s04:r29:c18",
+        "cell:s04:r29:c19",
+        "cell:s04:r29:c20",
+        "cell:s04:r29:c21",
+        "cell:s04:r29:c22",
+        "cell:s04:r29:c23",
+        "cell:s04:r29:c24",
+        "cell:s04:r29:c25",
+        "cell:s04:r29:c26",
+        "cell:s04:r29:c27",
+        "cell:s04:r29:c28",
+        "cell:s04:r29:c29",
+        "cell:s04:r29:c30",
+        "cell:s04:r29:c31",
+        "cell:s04:r29:c32",
+        "cell:s04:r29:c33",
+        "cell:s04:r29:c34",
+        "cell:s04:r29:c35",
+        "cell:s04:r29:c36",
+        "cell:s04:r29:c37",
+        "cell:s04:r29:c38",
+        "cell:s04:r29:c39",
+        "cell:s04:r29:c40",
+        "cell:s04:r29:c41",
+        "cell:s04:r29:c42",
+        "cell:s04:r29:c43",
+        "cell:s04:r29:c44",
+        "cell:s04:r29:c45",
+        "cell:s04:r29:c46",
+        "cell:s04:r29:c47",
+        "cell:s04:r29:c48",
+        "cell:s04:r29:c49",
+        "cell:s04:r29:c50",
+        "cell:s04:r29:c51",
+        "cell:s04:r29:c52",
+        "cell:s04:r29:c53",
+        "cell:s04:r29:c54",
+        "cell:s04:r29:c55",
+        "cell:s04:r29:c56",
+        "cell:s04:r29:c57",
+        "cell:s04:r29:c58",
+        "cell:s04:r29:c59",
+        "cell:s04:r29:c60",
+        "cell:s04:r29:c61",
+        "cell:s04:r29:c62",
+        "cell:s04:r29:c63",
+        "cell:s04:r29:c64",
+        "cell:s04:r29:c65",
+        "cell:s04:r29:c66",
+        "cell:s04:r29:c67",
+        "cell:s04:r29:c68",
+        "cell:s04:r29:c69",
+        "cell:s04:r29:c70",
+        "cell:s04:r29:c71",
+        "cell:s04:r29:c72",
+        "cell:s04:r29:c73",
+        "cell:s04:r29:c74",
+        "cell:s04:r29:c75",
+        "cell:s04:r29:c76",
+        "cell:s04:r29:c77",
+        "cell:s04:r29:c78",
+        "cell:s04:r29:c79",
+        "cell:s04:r29:c80",
+        "cell:s04:r29:c81",
+        "cell:s04:r29:c82",
+        "cell:s04:r29:c83",
+        "cell:s04:r29:c84",
+        "cell:s04:r29:c85",
+        "cell:s04:r29:c86",
+        "cell:s04:r29:c87",
+        "cell:s04:r29:c88",
+        "cell:s04:r29:c89",
+        "cell:s04:r29:c90",
+        "cell:s04:r29:c91",
+        "cell:s04:r29:c92",
+        "cell:s04:r29:c93",
+        "cell:s04:r29:c94",
+        "cell:s04:r29:c95",
+        "cell:s04:r29:c96",
+        "cell:s04:r29:c97",
+        "cell:s04:r29:c98",
+        "cell:s04:r29:c99",
+        "cell:s04:r30:c100",
+        "cell:s04:r30:c101",
+        "cell:s04:r30:c102",
+        "cell:s04:r30:c103",
+        "cell:s04:r30:c104",
+        "cell:s04:r30:c105",
+        "cell:s04:r30:c106",
+        "cell:s04:r30:c107",
+        "cell:s04:r30:c108",
+        "cell:s04:r30:c109",
+        "cell:s04:r30:c110",
+        "cell:s04:r30:c111",
+        "cell:s04:r30:c112",
+        "cell:s04:r30:c113",
+        "cell:s04:r30:c15",
+        "cell:s04:r30:c16",
+        "cell:s04:r30:c17",
+        "cell:s04:r30:c18",
+        "cell:s04:r30:c19",
+        "cell:s04:r30:c20",
+        "cell:s04:r30:c21",
+        "cell:s04:r30:c22",
+        "cell:s04:r30:c23",
+        "cell:s04:r30:c24",
+        "cell:s04:r30:c25",
+        "cell:s04:r30:c26",
+        "cell:s04:r30:c27",
+        "cell:s04:r30:c28",
+        "cell:s04:r30:c29",
+        "cell:s04:r30:c30",
+        "cell:s04:r30:c31",
+        "cell:s04:r30:c32",
+        "cell:s04:r30:c33",
+        "cell:s04:r30:c34",
+        "cell:s04:r30:c35",
+        "cell:s04:r30:c36",
+        "cell:s04:r30:c37",
+        "cell:s04:r30:c38",
+        "cell:s04:r30:c39",
+        "cell:s04:r30:c40",
+        "cell:s04:r30:c41",
+        "cell:s04:r30:c42",
+        "cell:s04:r30:c43",
+        "cell:s04:r30:c44",
+        "cell:s04:r30:c45",
+        "cell:s04:r30:c46",
+        "cell:s04:r30:c47",
+        "cell:s04:r30:c48",
+        "cell:s04:r30:c49",
+        "cell:s04:r30:c50",
+        "cell:s04:r30:c51",
+        "cell:s04:r30:c52",
+        "cell:s04:r30:c53",
+        "cell:s04:r30:c54",
+        "cell:s04:r30:c55",
+        "cell:s04:r30:c56",
+        "cell:s04:r30:c57",
+        "cell:s04:r30:c58",
+        "cell:s04:r30:c59",
+        "cell:s04:r30:c60",
+        "cell:s04:r30:c61",
+        "cell:s04:r30:c62",
+        "cell:s04:r30:c63",
+        "cell:s04:r30:c64",
+        "cell:s04:r30:c65",
+        "cell:s04:r30:c66",
+        "cell:s04:r30:c67",
+        "cell:s04:r30:c68",
+        "cell:s04:r30:c69",
+        "cell:s04:r30:c70",
+        "cell:s04:r30:c71",
+        "cell:s04:r30:c72",
+        "cell:s04:r30:c73",
+        "cell:s04:r30:c74",
+        "cell:s04:r30:c75",
+        "cell:s04:r30:c76",
+        "cell:s04:r30:c77",
+        "cell:s04:r30:c78",
+        "cell:s04:r30:c79",
+        "cell:s04:r30:c80",
+        "cell:s04:r30:c81",
+        "cell:s04:r30:c82",
+        "cell:s04:r30:c83",
+        "cell:s04:r30:c84",
+        "cell:s04:r30:c85",
+        "cell:s04:r30:c86",
+        "cell:s04:r30:c87",
+        "cell:s04:r30:c88",
+        "cell:s04:r30:c89",
+        "cell:s04:r30:c90",
+        "cell:s04:r30:c91",
+        "cell:s04:r30:c92",
+        "cell:s04:r30:c93",
+        "cell:s04:r30:c94",
+        "cell:s04:r30:c95",
+        "cell:s04:r30:c96",
+        "cell:s04:r30:c97",
+        "cell:s04:r30:c98",
+        "cell:s04:r30:c99",
+        "cell:s04:r31:c100",
+        "cell:s04:r31:c101",
+        "cell:s04:r31:c102",
+        "cell:s04:r31:c103",
+        "cell:s04:r31:c104",
+        "cell:s04:r31:c105",
+        "cell:s04:r31:c106",
+        "cell:s04:r31:c107",
+        "cell:s04:r31:c108",
+        "cell:s04:r31:c109",
+        "cell:s04:r31:c110",
+        "cell:s04:r31:c111",
+        "cell:s04:r31:c112",
+        "cell:s04:r31:c113",
+        "cell:s04:r31:c15",
+        "cell:s04:r31:c16",
+        "cell:s04:r31:c17",
+        "cell:s04:r31:c18",
+        "cell:s04:r31:c19",
+        "cell:s04:r31:c20",
+        "cell:s04:r31:c21",
+        "cell:s04:r31:c22",
+        "cell:s04:r31:c23",
+        "cell:s04:r31:c24",
+        "cell:s04:r31:c25",
+        "cell:s04:r31:c26",
+        "cell:s04:r31:c27",
+        "cell:s04:r31:c28",
+        "cell:s04:r31:c29",
+        "cell:s04:r31:c30",
+        "cell:s04:r31:c31",
+        "cell:s04:r31:c32",
+        "cell:s04:r31:c33",
+        "cell:s04:r31:c34",
+        "cell:s04:r31:c35",
+        "cell:s04:r31:c36",
+        "cell:s04:r31:c37",
+        "cell:s04:r31:c38",
+        "cell:s04:r31:c39",
+        "cell:s04:r31:c40",
+        "cell:s04:r31:c41",
+        "cell:s04:r31:c42",
+        "cell:s04:r31:c43",
+        "cell:s04:r31:c44",
+        "cell:s04:r31:c45",
+        "cell:s04:r31:c46",
+        "cell:s04:r31:c47",
+        "cell:s04:r31:c48",
+        "cell:s04:r31:c49",
+        "cell:s04:r31:c50",
+        "cell:s04:r31:c51",
+        "cell:s04:r31:c52",
+        "cell:s04:r31:c53",
+        "cell:s04:r31:c54",
+        "cell:s04:r31:c55",
+        "cell:s04:r31:c56",
+        "cell:s04:r31:c57",
+        "cell:s04:r31:c58",
+        "cell:s04:r31:c59",
+        "cell:s04:r31:c60",
+        "cell:s04:r31:c61",
+        "cell:s04:r31:c62",
+        "cell:s04:r31:c63",
+        "cell:s04:r31:c64",
+        "cell:s04:r31:c65",
+        "cell:s04:r31:c66",
+        "cell:s04:r31:c67",
+        "cell:s04:r31:c68",
+        "cell:s04:r31:c69",
+        "cell:s04:r31:c70",
+        "cell:s04:r31:c71",
+        "cell:s04:r31:c72",
+        "cell:s04:r31:c73",
+        "cell:s04:r31:c74",
+        "cell:s04:r31:c75",
+        "cell:s04:r31:c76",
+        "cell:s04:r31:c77",
+        "cell:s04:r31:c78",
+        "cell:s04:r31:c79",
+        "cell:s04:r31:c80",
+        "cell:s04:r31:c81",
+        "cell:s04:r31:c82",
+        "cell:s04:r31:c83",
+        "cell:s04:r31:c84",
+        "cell:s04:r31:c85",
+        "cell:s04:r31:c86",
+        "cell:s04:r31:c87",
+        "cell:s04:r31:c88",
+        "cell:s04:r31:c89",
+        "cell:s04:r31:c90",
+        "cell:s04:r31:c91",
+        "cell:s04:r31:c92",
+        "cell:s04:r31:c93",
+        "cell:s04:r31:c94",
+        "cell:s04:r31:c95",
+        "cell:s04:r31:c96",
+        "cell:s04:r31:c97",
+        "cell:s04:r31:c98",
+        "cell:s04:r31:c99"
+      ],
+      "gold_target_count": 297,
+      "gold_target_diagnostics": [
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AA29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AA30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AA31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AB29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AB30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AB31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AC29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AC30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AC31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AD29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AD30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AD31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AE29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AE30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AE31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AF29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AF30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AF31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AG29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AG30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AG31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AH29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AH30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AH31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AI29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AI30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AI31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AJ29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AJ30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AJ31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AK29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AK30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AK31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AL29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AL30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AL31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AM29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AM30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AM31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AN29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AN30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AN31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AO29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AO30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AO31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AP29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AP30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AP31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AQ29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AQ30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AQ31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AR29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AR30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AR31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AS29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AS30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AS31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AT29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AT30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AT31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AU29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AU30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AU31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AV29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AV30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AV31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AW29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AW30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AW31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AX29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AX30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AX31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AY29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AY30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AY31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AZ29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AZ30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!AZ31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BA29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BA30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BA31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BB29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BB30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BB31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BC29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BC30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BC31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BD29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BD30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BD31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BE29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BE30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BE31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BF29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BF30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BF31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BG29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BG30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BG31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BH29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BH30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BH31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BI29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BI30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BI31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BJ29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BJ30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BJ31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BK29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BK30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BK31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BL29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BL30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BL31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BM29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BM30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BM31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BN29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BN30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BN31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BO29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BO30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BO31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BP29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BP30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BP31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BQ29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BQ30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BQ31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BR29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BR30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BR31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BS29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BS30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BS31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BT29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BT30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BT31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BU29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BU30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BU31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BV29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BV30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BV31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BW29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BW30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BW31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BX29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BX30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BX31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BY29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BY30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BY31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BZ29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BZ30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!BZ31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CA29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CA30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CA31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CB29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CB30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CB31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CC29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CC30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CC31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CD29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CD30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CD31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CE29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CE30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CE31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CF29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CF30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CF31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CG29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CG30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CG31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CH29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CH30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CH31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CI29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CI30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CI31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CJ29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CJ30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CJ31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CK29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CK30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CK31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CL29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CL30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CL31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CM29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CM30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CM31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CN29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CN30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CN31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CO29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CO30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CO31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CP29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CP30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CP31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CQ29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CQ30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CQ31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CR29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CR30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CR31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CS29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CS30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CS31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CT29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CT30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CT31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CU29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CU30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CU31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CV29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CV30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CV31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CW29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CW30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CW31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CX29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CX30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CX31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CY29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CY30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CY31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CZ29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CZ30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!CZ31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DA29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DA30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DA31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DB29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DB30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DB31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DC29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DC30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DC31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DD29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DD30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DD31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DE29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DE30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DE31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DF29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DF30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DF31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DG29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DG30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DG31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DH29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DH30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DH31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DI29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DI30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!DI31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!O29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!O30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!O31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!P29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!P30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!P31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!Q29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!Q30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!Q31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!R29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!R30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!R31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!S29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!S30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!S31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!T29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!T30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!T31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!U29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!U30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!U31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!V29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!V30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!V31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!W29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!W30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!W31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!X29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!X30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!X31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!Y29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!Y30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!Y31"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!Z29"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!Z30"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": true,
+          "target": "Workings Cost Sheet!Z31"
+        }
+      ],
+      "latent_facts": {
+        "occurrence_dependencies": [],
+        "planner_packet_contains_any_member_occurrence": false,
+        "relation_uses_evaluator_gold": false,
+        "required_relation_status": "new_derived_restriction_and_occurrence_relation",
+        "spine_member_labels_present": true,
+        "spine_output_occurrence_dependency_present": false,
+        "spine_population_occurrences_present": true,
+        "spine_repeated_runs_present": true,
+        "task_ir_allowed_set_structured": false,
+        "task_ir_interval_present": false,
+        "task_ir_population_span_present": true
+      },
+      "lexical_shadow": {
+        "hit_count": 14,
+        "occurrences": [
+          {
+            "address": "C30",
+            "anchor_id": "text:s02:r30:c3",
+            "cell_id": "cell:s02:r30:c3",
+            "col": 3,
+            "false_positive_class": "wrong_locus_or_repeated_semantic_block",
+            "member_identity": "third",
+            "population_relation_survives": false,
+            "role_relation_survives": false,
+            "row": 30,
+            "rules": [
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s02",
+            "sheet_title": "Distribution Sheet-Deal By Deal",
+            "text": "Third Tranche"
+          },
+          {
+            "address": "B11",
+            "anchor_id": "text:s04:r11:c2",
+            "cell_id": "cell:s04:r11:c2",
+            "col": 2,
+            "false_positive_class": "wrong_repeated_block",
+            "member_identity": "first",
+            "planner_packet_contains_occurrence": false,
+            "population_relation_survives": true,
+            "repeated_block_context": {
+              "member_run_columns": [
+                2,
+                2
+              ],
+              "member_run_extent": [
+                11,
+                13
+              ],
+              "orientation": "vertical",
+              "parent_context_anchor": {
+                "address": "B9",
+                "cell_id": "cell:s04:r9:c2",
+                "text": "Portfolio Building MoM"
+              },
+              "run_id": "sheet:s04:vertical:B11:B12:B13"
+            },
+            "role_relation_survives": false,
+            "row": 11,
+            "rules": [
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s04",
+            "sheet_title": "Workings Cost Sheet",
+            "spine_fact_present": true,
+            "text": "First Tranche"
+          },
+          {
+            "address": "B12",
+            "anchor_id": "text:s04:r12:c2",
+            "cell_id": "cell:s04:r12:c2",
+            "col": 2,
+            "false_positive_class": "wrong_repeated_block",
+            "member_identity": "second",
+            "planner_packet_contains_occurrence": false,
+            "population_relation_survives": true,
+            "repeated_block_context": {
+              "member_run_columns": [
+                2,
+                2
+              ],
+              "member_run_extent": [
+                11,
+                13
+              ],
+              "orientation": "vertical",
+              "parent_context_anchor": {
+                "address": "B9",
+                "cell_id": "cell:s04:r9:c2",
+                "text": "Portfolio Building MoM"
+              },
+              "run_id": "sheet:s04:vertical:B11:B12:B13"
+            },
+            "role_relation_survives": false,
+            "row": 12,
+            "rules": [
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s04",
+            "sheet_title": "Workings Cost Sheet",
+            "spine_fact_present": true,
+            "text": "Second Tranche"
+          },
+          {
+            "address": "B13",
+            "anchor_id": "text:s04:r13:c2",
+            "cell_id": "cell:s04:r13:c2",
+            "col": 2,
+            "false_positive_class": "wrong_repeated_block",
+            "member_identity": "third",
+            "planner_packet_contains_occurrence": false,
+            "population_relation_survives": true,
+            "repeated_block_context": {
+              "member_run_columns": [
+                2,
+                2
+              ],
+              "member_run_extent": [
+                11,
+                13
+              ],
+              "orientation": "vertical",
+              "parent_context_anchor": {
+                "address": "B9",
+                "cell_id": "cell:s04:r9:c2",
+                "text": "Portfolio Building MoM"
+              },
+              "run_id": "sheet:s04:vertical:B11:B12:B13"
+            },
+            "role_relation_survives": false,
+            "row": 13,
+            "rules": [
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s04",
+            "sheet_title": "Workings Cost Sheet",
+            "spine_fact_present": true,
+            "text": "Third Tranche"
+          },
+          {
+            "address": "B17",
+            "anchor_id": "text:s04:r17:c2",
+            "cell_id": "cell:s04:r17:c2",
+            "col": 2,
+            "false_positive_class": "wrong_repeated_block",
+            "member_identity": "first",
+            "planner_packet_contains_occurrence": false,
+            "population_relation_survives": true,
+            "repeated_block_context": {
+              "member_run_columns": [
+                2,
+                2
+              ],
+              "member_run_extent": [
+                17,
+                19
+              ],
+              "orientation": "vertical",
+              "parent_context_anchor": {
+                "address": "B15",
+                "cell_id": "cell:s04:r15:c2",
+                "text": "Portfolio Building Cumulative"
+              },
+              "run_id": "sheet:s04:vertical:B17:B18:B19"
+            },
+            "role_relation_survives": false,
+            "row": 17,
+            "rules": [
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s04",
+            "sheet_title": "Workings Cost Sheet",
+            "spine_fact_present": true,
+            "text": "First Tranche"
+          },
+          {
+            "address": "B18",
+            "anchor_id": "text:s04:r18:c2",
+            "cell_id": "cell:s04:r18:c2",
+            "col": 2,
+            "false_positive_class": "wrong_repeated_block",
+            "member_identity": "second",
+            "planner_packet_contains_occurrence": false,
+            "population_relation_survives": true,
+            "repeated_block_context": {
+              "member_run_columns": [
+                2,
+                2
+              ],
+              "member_run_extent": [
+                17,
+                19
+              ],
+              "orientation": "vertical",
+              "parent_context_anchor": {
+                "address": "B15",
+                "cell_id": "cell:s04:r15:c2",
+                "text": "Portfolio Building Cumulative"
+              },
+              "run_id": "sheet:s04:vertical:B17:B18:B19"
+            },
+            "role_relation_survives": false,
+            "row": 18,
+            "rules": [
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s04",
+            "sheet_title": "Workings Cost Sheet",
+            "spine_fact_present": true,
+            "text": "Second Tranche"
+          },
+          {
+            "address": "B19",
+            "anchor_id": "text:s04:r19:c2",
+            "cell_id": "cell:s04:r19:c2",
+            "col": 2,
+            "false_positive_class": "wrong_repeated_block",
+            "member_identity": "third",
+            "planner_packet_contains_occurrence": false,
+            "population_relation_survives": true,
+            "repeated_block_context": {
+              "member_run_columns": [
+                2,
+                2
+              ],
+              "member_run_extent": [
+                17,
+                19
+              ],
+              "orientation": "vertical",
+              "parent_context_anchor": {
+                "address": "B15",
+                "cell_id": "cell:s04:r15:c2",
+                "text": "Portfolio Building Cumulative"
+              },
+              "run_id": "sheet:s04:vertical:B17:B18:B19"
+            },
+            "role_relation_survives": false,
+            "row": 19,
+            "rules": [
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s04",
+            "sheet_title": "Workings Cost Sheet",
+            "spine_fact_present": true,
+            "text": "Third Tranche"
+          },
+          {
+            "address": "B23",
+            "anchor_id": "text:s04:r23:c2",
+            "cell_id": "cell:s04:r23:c2",
+            "col": 2,
+            "false_positive_class": "wrong_repeated_block",
+            "member_identity": "first",
+            "planner_packet_contains_occurrence": false,
+            "population_relation_survives": true,
+            "repeated_block_context": {
+              "member_run_columns": [
+                2,
+                2
+              ],
+              "member_run_extent": [
+                23,
+                25
+              ],
+              "orientation": "vertical",
+              "parent_context_anchor": {
+                "address": "B21",
+                "cell_id": "cell:s04:r21:c2",
+                "text": "Ticket Size per Portfolio"
+              },
+              "run_id": "sheet:s04:vertical:B23:B24:B25"
+            },
+            "role_relation_survives": false,
+            "row": 23,
+            "rules": [
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s04",
+            "sheet_title": "Workings Cost Sheet",
+            "spine_fact_present": true,
+            "text": "First Tranche"
+          },
+          {
+            "address": "B24",
+            "anchor_id": "text:s04:r24:c2",
+            "cell_id": "cell:s04:r24:c2",
+            "col": 2,
+            "false_positive_class": "wrong_repeated_block",
+            "member_identity": "second",
+            "planner_packet_contains_occurrence": false,
+            "population_relation_survives": true,
+            "repeated_block_context": {
+              "member_run_columns": [
+                2,
+                2
+              ],
+              "member_run_extent": [
+                23,
+                25
+              ],
+              "orientation": "vertical",
+              "parent_context_anchor": {
+                "address": "B21",
+                "cell_id": "cell:s04:r21:c2",
+                "text": "Ticket Size per Portfolio"
+              },
+              "run_id": "sheet:s04:vertical:B23:B24:B25"
+            },
+            "role_relation_survives": false,
+            "row": 24,
+            "rules": [
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s04",
+            "sheet_title": "Workings Cost Sheet",
+            "spine_fact_present": true,
+            "text": "Second Tranche"
+          },
+          {
+            "address": "B25",
+            "anchor_id": "text:s04:r25:c2",
+            "cell_id": "cell:s04:r25:c2",
+            "col": 2,
+            "false_positive_class": "wrong_repeated_block",
+            "member_identity": "third",
+            "planner_packet_contains_occurrence": false,
+            "population_relation_survives": true,
+            "repeated_block_context": {
+              "member_run_columns": [
+                2,
+                2
+              ],
+              "member_run_extent": [
+                23,
+                25
+              ],
+              "orientation": "vertical",
+              "parent_context_anchor": {
+                "address": "B21",
+                "cell_id": "cell:s04:r21:c2",
+                "text": "Ticket Size per Portfolio"
+              },
+              "run_id": "sheet:s04:vertical:B23:B24:B25"
+            },
+            "role_relation_survives": false,
+            "row": 25,
+            "rules": [
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s04",
+            "sheet_title": "Workings Cost Sheet",
+            "spine_fact_present": true,
+            "text": "Third Tranche"
+          },
+          {
+            "address": "B29",
+            "anchor_id": "text:s04:r29:c2",
+            "cell_id": "cell:s04:r29:c2",
+            "col": 2,
+            "false_positive_class": null,
+            "member_identity": "first",
+            "planner_packet_contains_occurrence": false,
+            "population_relation_survives": true,
+            "repeated_block_context": {
+              "member_run_columns": [
+                2,
+                2
+              ],
+              "member_run_extent": [
+                29,
+                31
+              ],
+              "orientation": "vertical",
+              "parent_context_anchor": {
+                "address": "B27",
+                "cell_id": "cell:s04:r27:c2",
+                "text": "Total Fund Raised"
+              },
+              "run_id": "sheet:s04:vertical:B29:B30:B31"
+            },
+            "role_relation_survives": true,
+            "row": 29,
+            "rules": [
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s04",
+            "sheet_title": "Workings Cost Sheet",
+            "spine_fact_present": true,
+            "text": "First Tranche"
+          },
+          {
+            "address": "B30",
+            "anchor_id": "text:s04:r30:c2",
+            "cell_id": "cell:s04:r30:c2",
+            "col": 2,
+            "false_positive_class": null,
+            "member_identity": "second",
+            "planner_packet_contains_occurrence": false,
+            "population_relation_survives": true,
+            "repeated_block_context": {
+              "member_run_columns": [
+                2,
+                2
+              ],
+              "member_run_extent": [
+                29,
+                31
+              ],
+              "orientation": "vertical",
+              "parent_context_anchor": {
+                "address": "B27",
+                "cell_id": "cell:s04:r27:c2",
+                "text": "Total Fund Raised"
+              },
+              "run_id": "sheet:s04:vertical:B29:B30:B31"
+            },
+            "role_relation_survives": true,
+            "row": 30,
+            "rules": [
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s04",
+            "sheet_title": "Workings Cost Sheet",
+            "spine_fact_present": true,
+            "text": "Second Tranche"
+          },
+          {
+            "address": "B31",
+            "anchor_id": "text:s04:r31:c2",
+            "cell_id": "cell:s04:r31:c2",
+            "col": 2,
+            "false_positive_class": null,
+            "member_identity": "third",
+            "planner_packet_contains_occurrence": false,
+            "population_relation_survives": true,
+            "repeated_block_context": {
+              "member_run_columns": [
+                2,
+                2
+              ],
+              "member_run_extent": [
+                29,
+                31
+              ],
+              "orientation": "vertical",
+              "parent_context_anchor": {
+                "address": "B27",
+                "cell_id": "cell:s04:r27:c2",
+                "text": "Total Fund Raised"
+              },
+              "run_id": "sheet:s04:vertical:B29:B30:B31"
+            },
+            "role_relation_survives": true,
+            "row": 31,
+            "rules": [
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s04",
+            "sheet_title": "Workings Cost Sheet",
+            "spine_fact_present": true,
+            "text": "Third Tranche"
+          },
+          {
+            "address": "F1",
+            "anchor_id": "text:s11:r1:c6",
+            "cell_id": "cell:s11:r1:c6",
+            "col": 6,
+            "false_positive_class": "wrong_locus_or_repeated_semantic_block",
+            "member_identity": null,
+            "population_relation_survives": false,
+            "role_relation_survives": false,
+            "row": 1,
+            "rules": [
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s11",
+            "sheet_title": "PreOp Cost",
+            "text": "Transfer from"
+          }
+        ]
+      },
+      "locus_sheet_ids": [
+        "sheet:s04"
+      ],
+      "locus_sheet_titles": [
+        "Workings Cost Sheet"
+      ],
+      "member_relation_survivor_count": 12,
+      "member_relation_survivor_ids": [
+        "cell:s04:r11:c2",
+        "cell:s04:r12:c2",
+        "cell:s04:r13:c2",
+        "cell:s04:r17:c2",
+        "cell:s04:r18:c2",
+        "cell:s04:r19:c2",
+        "cell:s04:r23:c2",
+        "cell:s04:r24:c2",
+        "cell:s04:r25:c2",
+        "cell:s04:r29:c2",
+        "cell:s04:r30:c2",
+        "cell:s04:r31:c2"
+      ],
+      "metrics": {
+        "excluded_member_false_positives": 0,
+        "gold_candidate_intersection": 297,
+        "gold_target_block_recall": 1.0,
+        "included_member_precision": 1.0,
+        "lexical_shadow_hits": 14,
+        "member_recall": 1.0,
+        "member_restriction_survivors": 12,
+        "repeated_block_occurrence_precision": 1.0,
+        "repeated_occurrence_identity_preserved": true,
+        "role_filtered_survivors": 3,
+        "wrong_locus_shadow_hits_rejected": 2
+      },
+      "obligation": {
+        "condition": null,
+        "id": "O7",
+        "locus": {
+          "text": "Workings Cost sheet"
+        },
+        "occupancy_filter": null,
+        "provenance": [
+          {
+            "text": "In the Workings Cost sheet, compute total funds raised for all three tranches from Apr-25 to Jun-33."
+          }
+        ],
+        "required_change": {
+          "text": "compute total funds raised for all three tranches"
+        },
+        "result_property": null,
+        "scope": [
+          {
+            "text": "for all three tranches"
+          },
+          {
+            "text": "from Apr-25 to Jun-33"
+          }
+        ],
+        "source_relation": null,
+        "subject": {
+          "text": "total funds raised"
+        },
+        "subject_interval": null,
+        "then_after": []
+      },
+      "obligation_id": "O7",
+      "population": {
+        "allowed_members": [
+          "first",
+          "second",
+          "third"
+        ],
+        "excluded_members": [],
+        "introducing_field": "scope",
+        "introducing_span": "for all three tranches",
+        "member_interval": null,
+        "population_label": "tranche",
+        "quantifier": "all"
+      },
+      "role_relation_survivor_count": 3,
+      "role_relation_survivor_ids": [
+        "cell:s04:r29:c2",
+        "cell:s04:r30:c2",
+        "cell:s04:r31:c2"
+      ],
+      "task": "Financial_Model:05_01",
+      "workbook_occurrences": [
+        {
+          "address": "C30",
+          "anchor_id": "text:s02:r30:c3",
+          "cell_id": "cell:s02:r30:c3",
+          "col": 3,
+          "false_positive_class": "wrong_locus_or_repeated_semantic_block",
+          "member_identity": "third",
+          "population_relation_survives": false,
+          "role_relation_survives": false,
+          "row": 30,
+          "rules": [
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s02",
+          "sheet_title": "Distribution Sheet-Deal By Deal",
+          "text": "Third Tranche"
+        },
+        {
+          "address": "B11",
+          "anchor_id": "text:s04:r11:c2",
+          "cell_id": "cell:s04:r11:c2",
+          "col": 2,
+          "false_positive_class": "wrong_repeated_block",
+          "member_identity": "first",
+          "planner_packet_contains_occurrence": false,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": [
+              2,
+              2
+            ],
+            "member_run_extent": [
+              11,
+              13
+            ],
+            "orientation": "vertical",
+            "parent_context_anchor": {
+              "address": "B9",
+              "cell_id": "cell:s04:r9:c2",
+              "text": "Portfolio Building MoM"
+            },
+            "run_id": "sheet:s04:vertical:B11:B12:B13"
+          },
+          "role_relation_survives": false,
+          "row": 11,
+          "rules": [
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s04",
+          "sheet_title": "Workings Cost Sheet",
+          "spine_fact_present": true,
+          "text": "First Tranche"
+        },
+        {
+          "address": "B12",
+          "anchor_id": "text:s04:r12:c2",
+          "cell_id": "cell:s04:r12:c2",
+          "col": 2,
+          "false_positive_class": "wrong_repeated_block",
+          "member_identity": "second",
+          "planner_packet_contains_occurrence": false,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": [
+              2,
+              2
+            ],
+            "member_run_extent": [
+              11,
+              13
+            ],
+            "orientation": "vertical",
+            "parent_context_anchor": {
+              "address": "B9",
+              "cell_id": "cell:s04:r9:c2",
+              "text": "Portfolio Building MoM"
+            },
+            "run_id": "sheet:s04:vertical:B11:B12:B13"
+          },
+          "role_relation_survives": false,
+          "row": 12,
+          "rules": [
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s04",
+          "sheet_title": "Workings Cost Sheet",
+          "spine_fact_present": true,
+          "text": "Second Tranche"
+        },
+        {
+          "address": "B13",
+          "anchor_id": "text:s04:r13:c2",
+          "cell_id": "cell:s04:r13:c2",
+          "col": 2,
+          "false_positive_class": "wrong_repeated_block",
+          "member_identity": "third",
+          "planner_packet_contains_occurrence": false,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": [
+              2,
+              2
+            ],
+            "member_run_extent": [
+              11,
+              13
+            ],
+            "orientation": "vertical",
+            "parent_context_anchor": {
+              "address": "B9",
+              "cell_id": "cell:s04:r9:c2",
+              "text": "Portfolio Building MoM"
+            },
+            "run_id": "sheet:s04:vertical:B11:B12:B13"
+          },
+          "role_relation_survives": false,
+          "row": 13,
+          "rules": [
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s04",
+          "sheet_title": "Workings Cost Sheet",
+          "spine_fact_present": true,
+          "text": "Third Tranche"
+        },
+        {
+          "address": "B17",
+          "anchor_id": "text:s04:r17:c2",
+          "cell_id": "cell:s04:r17:c2",
+          "col": 2,
+          "false_positive_class": "wrong_repeated_block",
+          "member_identity": "first",
+          "planner_packet_contains_occurrence": false,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": [
+              2,
+              2
+            ],
+            "member_run_extent": [
+              17,
+              19
+            ],
+            "orientation": "vertical",
+            "parent_context_anchor": {
+              "address": "B15",
+              "cell_id": "cell:s04:r15:c2",
+              "text": "Portfolio Building Cumulative"
+            },
+            "run_id": "sheet:s04:vertical:B17:B18:B19"
+          },
+          "role_relation_survives": false,
+          "row": 17,
+          "rules": [
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s04",
+          "sheet_title": "Workings Cost Sheet",
+          "spine_fact_present": true,
+          "text": "First Tranche"
+        },
+        {
+          "address": "B18",
+          "anchor_id": "text:s04:r18:c2",
+          "cell_id": "cell:s04:r18:c2",
+          "col": 2,
+          "false_positive_class": "wrong_repeated_block",
+          "member_identity": "second",
+          "planner_packet_contains_occurrence": false,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": [
+              2,
+              2
+            ],
+            "member_run_extent": [
+              17,
+              19
+            ],
+            "orientation": "vertical",
+            "parent_context_anchor": {
+              "address": "B15",
+              "cell_id": "cell:s04:r15:c2",
+              "text": "Portfolio Building Cumulative"
+            },
+            "run_id": "sheet:s04:vertical:B17:B18:B19"
+          },
+          "role_relation_survives": false,
+          "row": 18,
+          "rules": [
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s04",
+          "sheet_title": "Workings Cost Sheet",
+          "spine_fact_present": true,
+          "text": "Second Tranche"
+        },
+        {
+          "address": "B19",
+          "anchor_id": "text:s04:r19:c2",
+          "cell_id": "cell:s04:r19:c2",
+          "col": 2,
+          "false_positive_class": "wrong_repeated_block",
+          "member_identity": "third",
+          "planner_packet_contains_occurrence": false,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": [
+              2,
+              2
+            ],
+            "member_run_extent": [
+              17,
+              19
+            ],
+            "orientation": "vertical",
+            "parent_context_anchor": {
+              "address": "B15",
+              "cell_id": "cell:s04:r15:c2",
+              "text": "Portfolio Building Cumulative"
+            },
+            "run_id": "sheet:s04:vertical:B17:B18:B19"
+          },
+          "role_relation_survives": false,
+          "row": 19,
+          "rules": [
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s04",
+          "sheet_title": "Workings Cost Sheet",
+          "spine_fact_present": true,
+          "text": "Third Tranche"
+        },
+        {
+          "address": "B23",
+          "anchor_id": "text:s04:r23:c2",
+          "cell_id": "cell:s04:r23:c2",
+          "col": 2,
+          "false_positive_class": "wrong_repeated_block",
+          "member_identity": "first",
+          "planner_packet_contains_occurrence": false,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": [
+              2,
+              2
+            ],
+            "member_run_extent": [
+              23,
+              25
+            ],
+            "orientation": "vertical",
+            "parent_context_anchor": {
+              "address": "B21",
+              "cell_id": "cell:s04:r21:c2",
+              "text": "Ticket Size per Portfolio"
+            },
+            "run_id": "sheet:s04:vertical:B23:B24:B25"
+          },
+          "role_relation_survives": false,
+          "row": 23,
+          "rules": [
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s04",
+          "sheet_title": "Workings Cost Sheet",
+          "spine_fact_present": true,
+          "text": "First Tranche"
+        },
+        {
+          "address": "B24",
+          "anchor_id": "text:s04:r24:c2",
+          "cell_id": "cell:s04:r24:c2",
+          "col": 2,
+          "false_positive_class": "wrong_repeated_block",
+          "member_identity": "second",
+          "planner_packet_contains_occurrence": false,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": [
+              2,
+              2
+            ],
+            "member_run_extent": [
+              23,
+              25
+            ],
+            "orientation": "vertical",
+            "parent_context_anchor": {
+              "address": "B21",
+              "cell_id": "cell:s04:r21:c2",
+              "text": "Ticket Size per Portfolio"
+            },
+            "run_id": "sheet:s04:vertical:B23:B24:B25"
+          },
+          "role_relation_survives": false,
+          "row": 24,
+          "rules": [
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s04",
+          "sheet_title": "Workings Cost Sheet",
+          "spine_fact_present": true,
+          "text": "Second Tranche"
+        },
+        {
+          "address": "B25",
+          "anchor_id": "text:s04:r25:c2",
+          "cell_id": "cell:s04:r25:c2",
+          "col": 2,
+          "false_positive_class": "wrong_repeated_block",
+          "member_identity": "third",
+          "planner_packet_contains_occurrence": false,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": [
+              2,
+              2
+            ],
+            "member_run_extent": [
+              23,
+              25
+            ],
+            "orientation": "vertical",
+            "parent_context_anchor": {
+              "address": "B21",
+              "cell_id": "cell:s04:r21:c2",
+              "text": "Ticket Size per Portfolio"
+            },
+            "run_id": "sheet:s04:vertical:B23:B24:B25"
+          },
+          "role_relation_survives": false,
+          "row": 25,
+          "rules": [
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s04",
+          "sheet_title": "Workings Cost Sheet",
+          "spine_fact_present": true,
+          "text": "Third Tranche"
+        },
+        {
+          "address": "B29",
+          "anchor_id": "text:s04:r29:c2",
+          "cell_id": "cell:s04:r29:c2",
+          "col": 2,
+          "false_positive_class": null,
+          "member_identity": "first",
+          "planner_packet_contains_occurrence": false,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": [
+              2,
+              2
+            ],
+            "member_run_extent": [
+              29,
+              31
+            ],
+            "orientation": "vertical",
+            "parent_context_anchor": {
+              "address": "B27",
+              "cell_id": "cell:s04:r27:c2",
+              "text": "Total Fund Raised"
+            },
+            "run_id": "sheet:s04:vertical:B29:B30:B31"
+          },
+          "role_relation_survives": true,
+          "row": 29,
+          "rules": [
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s04",
+          "sheet_title": "Workings Cost Sheet",
+          "spine_fact_present": true,
+          "text": "First Tranche"
+        },
+        {
+          "address": "B30",
+          "anchor_id": "text:s04:r30:c2",
+          "cell_id": "cell:s04:r30:c2",
+          "col": 2,
+          "false_positive_class": null,
+          "member_identity": "second",
+          "planner_packet_contains_occurrence": false,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": [
+              2,
+              2
+            ],
+            "member_run_extent": [
+              29,
+              31
+            ],
+            "orientation": "vertical",
+            "parent_context_anchor": {
+              "address": "B27",
+              "cell_id": "cell:s04:r27:c2",
+              "text": "Total Fund Raised"
+            },
+            "run_id": "sheet:s04:vertical:B29:B30:B31"
+          },
+          "role_relation_survives": true,
+          "row": 30,
+          "rules": [
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s04",
+          "sheet_title": "Workings Cost Sheet",
+          "spine_fact_present": true,
+          "text": "Second Tranche"
+        },
+        {
+          "address": "B31",
+          "anchor_id": "text:s04:r31:c2",
+          "cell_id": "cell:s04:r31:c2",
+          "col": 2,
+          "false_positive_class": null,
+          "member_identity": "third",
+          "planner_packet_contains_occurrence": false,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": [
+              2,
+              2
+            ],
+            "member_run_extent": [
+              29,
+              31
+            ],
+            "orientation": "vertical",
+            "parent_context_anchor": {
+              "address": "B27",
+              "cell_id": "cell:s04:r27:c2",
+              "text": "Total Fund Raised"
+            },
+            "run_id": "sheet:s04:vertical:B29:B30:B31"
+          },
+          "role_relation_survives": true,
+          "row": 31,
+          "rules": [
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s04",
+          "sheet_title": "Workings Cost Sheet",
+          "spine_fact_present": true,
+          "text": "Third Tranche"
+        },
+        {
+          "address": "F1",
+          "anchor_id": "text:s11:r1:c6",
+          "cell_id": "cell:s11:r1:c6",
+          "col": 6,
+          "false_positive_class": "wrong_locus_or_repeated_semantic_block",
+          "member_identity": null,
+          "population_relation_survives": false,
+          "role_relation_survives": false,
+          "row": 1,
+          "rules": [
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s11",
+          "sheet_title": "PreOp Cost",
+          "text": "Transfer from"
+        }
+      ]
+    },
+    {
+      "archived_authority_count": 0,
+      "archived_authority_gold_overlap": 0,
+      "candidate_target_population": [],
+      "candidate_target_population_status": "UNRESOLVED_OUTPUT_ROLE",
+      "deterministic_relation": {
+        "member_identity": "leading ordinal + tranche label from a text anchor",
+        "occurrence_identity": "cell ID plus same-row/same-column ordinal run; never lexical-label union",
+        "population_label": "normalized population label must match",
+        "provenance": "introducing Task IR scope span; no field union",
+        "restriction": "explicit allowed set; observed member domain minus allowed set is excluded",
+        "role_filter": "O7 only: vertical run's two-row-prior same-column anchor matches subject after simple plural normalization",
+        "target_expansion": "O7 only: selected member rows crossed with existing row-4 period-axis extent"
+      },
+      "excluded_member_survivor_count": 0,
+      "existing_packet_target_candidate_count": 24,
+      "gold_target_cells": [
+        "cell:s00:r43:c7",
+        "cell:s00:r43:c9",
+        "cell:s00:r44:c7",
+        "cell:s00:r44:c9",
+        "cell:s00:r45:c7"
+      ],
+      "gold_target_count": 5,
+      "gold_target_diagnostics": [
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": false,
+          "target": "Dashboard!G43"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": false,
+          "target": "Dashboard!G44"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": false,
+          "target": "Dashboard!G45"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": false,
+          "target": "Dashboard!I43"
+        },
+        {
+          "archived_authority_contains_target": false,
+          "archived_packet_target": false,
+          "relation_candidate": false,
+          "target": "Dashboard!I44"
+        }
+      ],
+      "latent_facts": {
+        "occurrence_dependencies": [
+          {
+            "consumer_formula_id": "formula:s00:r40:c6",
+            "consumer_id": "cell:s00:r40:c6",
+            "cross_sheet": false,
+            "end": null,
+            "same_sheet": true,
+            "source_id": "cell:s00:r22:c6",
+            "source_sheet_title": "Dashboard",
+            "start": "F22",
+            "type": "POINT_REFERENCE"
+          },
+          {
+            "consumer_formula_id": "formula:s00:r40:c8",
+            "consumer_id": "cell:s00:r40:c8",
+            "cross_sheet": false,
+            "end": null,
+            "same_sheet": true,
+            "source_id": "cell:s00:r22:c8",
+            "source_sheet_title": "Dashboard",
+            "start": "H22",
+            "type": "POINT_REFERENCE"
+          },
+          {
+            "consumer_formula_id": "formula:s02:r18:c3",
+            "consumer_id": "cell:s02:r18:c3",
+            "cross_sheet": true,
+            "end": null,
+            "same_sheet": false,
+            "source_id": "cell:s00:r22:c6",
+            "source_sheet_title": "Dashboard",
+            "start": "F22",
+            "type": "POINT_REFERENCE"
+          }
+        ],
+        "planner_packet_contains_any_member_occurrence": true,
+        "relation_uses_evaluator_gold": false,
+        "required_relation_status": "new_derived_restriction_and_occurrence_relation",
+        "spine_member_labels_present": true,
+        "spine_output_occurrence_dependency_present": true,
+        "spine_population_occurrences_present": true,
+        "spine_repeated_runs_present": true,
+        "task_ir_allowed_set_structured": false,
+        "task_ir_interval_present": true,
+        "task_ir_population_span_present": true
+      },
+      "lexical_shadow": {
+        "hit_count": 2,
+        "occurrences": [
+          {
+            "address": "G15",
+            "anchor_id": "text:s00:r15:c7",
+            "cell_id": "cell:s00:r15:c7",
+            "col": 7,
+            "false_positive_class": "excluded_member",
+            "member_identity": "first",
+            "planner_packet_contains_occurrence": false,
+            "population_relation_survives": false,
+            "repeated_block_context": {
+              "member_run_columns": [
+                7,
+                7
+              ],
+              "member_run_extent": [
+                15,
+                17
+              ],
+              "orientation": "vertical",
+              "parent_context_anchor": null,
+              "run_id": "sheet:s00:vertical:G15:G16:G17"
+            },
+            "role_relation_survives": false,
+            "row": 15,
+            "rules": [
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s00",
+            "sheet_title": "Dashboard",
+            "spine_fact_present": true,
+            "text": "First Tranche (Under construction in Tier 2 cities)"
+          },
+          {
+            "address": "D22",
+            "anchor_id": "text:s00:r22:c4",
+            "cell_id": "cell:s00:r22:c4",
+            "col": 4,
+            "false_positive_class": "excluded_member",
+            "member_identity": "first",
+            "planner_packet_contains_occurrence": true,
+            "population_relation_survives": false,
+            "repeated_block_context": {
+              "member_run_columns": [
+                4,
+                8
+              ],
+              "member_run_extent": [
+                22,
+                22
+              ],
+              "orientation": "horizontal",
+              "parent_context_anchor": null,
+              "run_id": "sheet:s00:horizontal:D22:F22:H22"
+            },
+            "role_relation_survives": false,
+            "row": 22,
+            "rules": [
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s00",
+            "sheet_title": "Dashboard",
+            "spine_fact_present": true,
+            "text": "First Tranche"
+          }
+        ]
+      },
+      "locus_sheet_ids": [
+        "sheet:s00"
+      ],
+      "locus_sheet_titles": [
+        "Dashboard"
+      ],
+      "member_relation_survivor_count": 4,
+      "member_relation_survivor_ids": [
+        "cell:s00:r16:c7",
+        "cell:s00:r17:c7",
+        "cell:s00:r22:c6",
+        "cell:s00:r22:c8"
+      ],
+      "metrics": {
+        "excluded_member_false_positives": 0,
+        "gold_candidate_intersection": 0,
+        "gold_target_block_recall": null,
+        "included_member_precision": 1.0,
+        "lexical_shadow_hits": 2,
+        "member_recall": 1.0,
+        "member_restriction_survivors": 4,
+        "repeated_block_occurrence_precision": null,
+        "repeated_occurrence_identity_preserved": true,
+        "role_filtered_survivors": 0,
+        "wrong_locus_shadow_hits_rejected": 0
+      },
+      "obligation": {
+        "condition": null,
+        "id": "O6",
+        "locus": {
+          "text": "Dashboard"
+        },
+        "occupancy_filter": null,
+        "provenance": [
+          {
+            "text": "In the Dashboard"
+          },
+          {
+            "text": "update Exit Multiple for second and third tranches to 2.0x for all deals"
+          }
+        ],
+        "required_change": {
+          "text": "update Exit Multiple for second and third tranches to 2.0x for all deals"
+        },
+        "result_property": null,
+        "scope": [
+          {
+            "text": "for second and third tranches"
+          },
+          {
+            "text": "for all deals"
+          }
+        ],
+        "source_relation": null,
+        "subject": {
+          "text": "Exit Multiple"
+        },
+        "subject_interval": {
+          "from": {
+            "text": "second"
+          },
+          "to": {
+            "text": "third"
+          }
+        },
+        "then_after": []
+      },
+      "obligation_id": "O6",
+      "population": {
+        "allowed_members": [
+          "second",
+          "third"
+        ],
+        "excluded_members": [
+          "first"
+        ],
+        "introducing_field": "scope",
+        "introducing_span": "for second and third tranches",
+        "member_interval": {
+          "from": "second",
+          "introducing_field": "subject_interval",
+          "to": "third"
+        },
+        "population_label": "tranche",
+        "quantifier": "explicit_set"
+      },
+      "role_relation_survivor_count": 0,
+      "role_relation_survivor_ids": [],
+      "task": "Financial_Model:05_01",
+      "workbook_occurrences": [
+        {
+          "address": "G15",
+          "anchor_id": "text:s00:r15:c7",
+          "cell_id": "cell:s00:r15:c7",
+          "col": 7,
+          "false_positive_class": "excluded_member",
+          "member_identity": "first",
+          "planner_packet_contains_occurrence": false,
+          "population_relation_survives": false,
+          "repeated_block_context": {
+            "member_run_columns": [
+              7,
+              7
+            ],
+            "member_run_extent": [
+              15,
+              17
+            ],
+            "orientation": "vertical",
+            "parent_context_anchor": null,
+            "run_id": "sheet:s00:vertical:G15:G16:G17"
+          },
+          "role_relation_survives": false,
+          "row": 15,
+          "rules": [
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s00",
+          "sheet_title": "Dashboard",
+          "spine_fact_present": true,
+          "text": "First Tranche (Under construction in Tier 2 cities)"
+        },
+        {
+          "address": "G16",
+          "anchor_id": "text:s00:r16:c7",
+          "cell_id": "cell:s00:r16:c7",
+          "col": 7,
+          "false_positive_class": null,
+          "member_identity": "second",
+          "planner_packet_contains_occurrence": true,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": [
+              7,
+              7
+            ],
+            "member_run_extent": [
+              15,
+              17
+            ],
+            "orientation": "vertical",
+            "parent_context_anchor": null,
+            "run_id": "sheet:s00:vertical:G15:G16:G17"
+          },
+          "role_relation_survives": false,
+          "row": 16,
+          "rules": [],
+          "sheet_id": "sheet:s00",
+          "sheet_title": "Dashboard",
+          "spine_fact_present": true,
+          "text": "Second Tranche"
+        },
+        {
+          "address": "G17",
+          "anchor_id": "text:s00:r17:c7",
+          "cell_id": "cell:s00:r17:c7",
+          "col": 7,
+          "false_positive_class": null,
+          "member_identity": "third",
+          "planner_packet_contains_occurrence": true,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": [
+              7,
+              7
+            ],
+            "member_run_extent": [
+              15,
+              17
+            ],
+            "orientation": "vertical",
+            "parent_context_anchor": null,
+            "run_id": "sheet:s00:vertical:G15:G16:G17"
+          },
+          "role_relation_survives": false,
+          "row": 17,
+          "rules": [],
+          "sheet_id": "sheet:s00",
+          "sheet_title": "Dashboard",
+          "spine_fact_present": true,
+          "text": "Third Tranche"
+        },
+        {
+          "address": "D22",
+          "anchor_id": "text:s00:r22:c4",
+          "cell_id": "cell:s00:r22:c4",
+          "col": 4,
+          "false_positive_class": "excluded_member",
+          "member_identity": "first",
+          "planner_packet_contains_occurrence": true,
+          "population_relation_survives": false,
+          "repeated_block_context": {
+            "member_run_columns": [
+              4,
+              8
+            ],
+            "member_run_extent": [
+              22,
+              22
+            ],
+            "orientation": "horizontal",
+            "parent_context_anchor": null,
+            "run_id": "sheet:s00:horizontal:D22:F22:H22"
+          },
+          "role_relation_survives": false,
+          "row": 22,
+          "rules": [
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s00",
+          "sheet_title": "Dashboard",
+          "spine_fact_present": true,
+          "text": "First Tranche"
+        },
+        {
+          "address": "F22",
+          "anchor_id": "text:s00:r22:c6",
+          "cell_id": "cell:s00:r22:c6",
+          "col": 6,
+          "false_positive_class": null,
+          "member_identity": "second",
+          "planner_packet_contains_occurrence": true,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": [
+              4,
+              8
+            ],
+            "member_run_extent": [
+              22,
+              22
+            ],
+            "orientation": "horizontal",
+            "parent_context_anchor": null,
+            "run_id": "sheet:s00:horizontal:D22:F22:H22"
+          },
+          "role_relation_survives": false,
+          "row": 22,
+          "rules": [],
+          "sheet_id": "sheet:s00",
+          "sheet_title": "Dashboard",
+          "spine_fact_present": true,
+          "text": "Second Tranche"
+        },
+        {
+          "address": "H22",
+          "anchor_id": "text:s00:r22:c8",
+          "cell_id": "cell:s00:r22:c8",
+          "col": 8,
+          "false_positive_class": null,
+          "member_identity": "third",
+          "planner_packet_contains_occurrence": true,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": [
+              4,
+              8
+            ],
+            "member_run_extent": [
+              22,
+              22
+            ],
+            "orientation": "horizontal",
+            "parent_context_anchor": null,
+            "run_id": "sheet:s00:horizontal:D22:F22:H22"
+          },
+          "role_relation_survives": false,
+          "row": 22,
+          "rules": [],
+          "sheet_id": "sheet:s00",
+          "sheet_title": "Dashboard",
+          "spine_fact_present": true,
+          "text": "Third Tranche"
+        }
+      ]
+    },
+    {
+      "archived_authority_count": 0,
+      "archived_authority_gold_overlap": 0,
+      "candidate_target_population": [],
+      "candidate_target_population_status": "UNRESOLVED_LINE_ITEM_ROLE",
+      "deterministic_relation": {
+        "member_identity": "leading ordinal + tranche label from a text anchor",
+        "occurrence_identity": "cell ID plus same-row/same-column ordinal run; never lexical-label union",
+        "population_label": "normalized population label must match",
+        "provenance": "introducing Task IR scope span; no field union",
+        "restriction": "explicit allowed set; observed member domain minus allowed set is excluded",
+        "role_filter": "O7 only: vertical run's two-row-prior same-column anchor matches subject after simple plural normalization",
+        "target_expansion": "O7 only: selected member rows crossed with existing row-4 period-axis extent"
+      },
+      "excluded_member_survivor_count": 0,
+      "existing_packet_target_candidate_count": 1060,
+      "gold_target_cells": [],
+      "gold_target_count": null,
+      "gold_target_diagnostics": [],
+      "latent_facts": {
+        "occurrence_dependencies": [],
+        "planner_packet_contains_any_member_occurrence": false,
+        "relation_uses_evaluator_gold": false,
+        "required_relation_status": "new_derived_locus_and_population_occurrence_relation",
+        "spine_member_labels_present": false,
+        "spine_output_occurrence_dependency_present": false,
+        "spine_population_occurrences_present": true,
+        "spine_repeated_runs_present": false,
+        "task_ir_allowed_set_structured": false,
+        "task_ir_interval_present": false,
+        "task_ir_population_span_present": true
+      },
+      "lexical_shadow": {
+        "hit_count": 11,
+        "occurrences": [
+          {
+            "address": "B6",
+            "anchor_id": "text:s08:r6:c2",
+            "cell_id": "cell:s08:r6:c2",
+            "col": 2,
+            "false_positive_class": "wrong_locus_or_repeated_semantic_block",
+            "member_identity": null,
+            "population_relation_survives": false,
+            "role_relation_survives": false,
+            "row": 6,
+            "rules": [
+              "substring",
+              "token_prefix",
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s08",
+            "sheet_title": "Revenue Drivers",
+            "text": "Foundation Course"
+          },
+          {
+            "address": "B17",
+            "anchor_id": "text:s08:r17:c2",
+            "cell_id": "cell:s08:r17:c2",
+            "col": 2,
+            "false_positive_class": "wrong_locus_or_repeated_semantic_block",
+            "member_identity": null,
+            "population_relation_survives": false,
+            "role_relation_survives": false,
+            "row": 17,
+            "rules": [
+              "token_prefix",
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s08",
+            "sheet_title": "Revenue Drivers",
+            "text": "Total Revenue from Foundation Course Mature"
+          },
+          {
+            "address": "B29",
+            "anchor_id": "text:s08:r29:c2",
+            "cell_id": "cell:s08:r29:c2",
+            "col": 2,
+            "false_positive_class": "wrong_locus_or_repeated_semantic_block",
+            "member_identity": null,
+            "population_relation_survives": false,
+            "role_relation_survives": false,
+            "row": 29,
+            "rules": [
+              "token_prefix",
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s08",
+            "sheet_title": "Revenue Drivers",
+            "text": "Total Revenue from Foundation Course Emerging"
+          },
+          {
+            "address": "B41",
+            "anchor_id": "text:s08:r41:c2",
+            "cell_id": "cell:s08:r41:c2",
+            "col": 2,
+            "false_positive_class": "wrong_locus_or_repeated_semantic_block",
+            "member_identity": null,
+            "population_relation_survives": false,
+            "role_relation_survives": false,
+            "row": 41,
+            "rules": [
+              "token_prefix",
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s08",
+            "sheet_title": "Revenue Drivers",
+            "text": "Total Revenue from Foundation Course Lite"
+          },
+          {
+            "address": "B43",
+            "anchor_id": "text:s08:r43:c2",
+            "cell_id": "cell:s08:r43:c2",
+            "col": 2,
+            "false_positive_class": "wrong_locus_or_repeated_semantic_block",
+            "member_identity": null,
+            "population_relation_survives": false,
+            "role_relation_survives": false,
+            "row": 43,
+            "rules": [
+              "token_prefix",
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s08",
+            "sheet_title": "Revenue Drivers",
+            "text": "Total Foundation Course Revenue"
+          },
+          {
+            "address": "B141",
+            "anchor_id": "text:s08:r141:c2",
+            "cell_id": "cell:s08:r141:c2",
+            "col": 2,
+            "false_positive_class": "wrong_locus_or_repeated_semantic_block",
+            "member_identity": null,
+            "population_relation_survives": false,
+            "role_relation_survives": false,
+            "row": 141,
+            "rules": [
+              "token_prefix",
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s08",
+            "sheet_title": "Revenue Drivers",
+            "text": "Total Foundation Course Lite Branches"
+          },
+          {
+            "address": "B6",
+            "anchor_id": "text:s09:r6:c2",
+            "cell_id": "cell:s09:r6:c2",
+            "col": 2,
+            "false_positive_class": "population_label_not_target_role",
+            "member_identity": null,
+            "planner_packet_contains_occurrence": false,
+            "population_relation_survives": true,
+            "repeated_block_context": {
+              "member_run_columns": null,
+              "member_run_extent": null,
+              "orientation": null,
+              "parent_context_anchor": null,
+              "run_id": null
+            },
+            "role_relation_survives": false,
+            "row": 6,
+            "rules": [
+              "substring",
+              "token_prefix",
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s09",
+            "sheet_title": "Cost Drivers",
+            "spine_fact_present": true,
+            "text": "Foundation Course"
+          },
+          {
+            "address": "B23",
+            "anchor_id": "text:s09:r23:c2",
+            "cell_id": "cell:s09:r23:c2",
+            "col": 2,
+            "false_positive_class": "population_label_not_target_role",
+            "member_identity": null,
+            "planner_packet_contains_occurrence": false,
+            "population_relation_survives": true,
+            "repeated_block_context": {
+              "member_run_columns": null,
+              "member_run_extent": null,
+              "orientation": null,
+              "parent_context_anchor": null,
+              "run_id": null
+            },
+            "role_relation_survives": false,
+            "row": 23,
+            "rules": [
+              "token_prefix",
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s09",
+            "sheet_title": "Cost Drivers",
+            "spine_fact_present": true,
+            "text": "Total Foundation Course Mature Expenses"
+          },
+          {
+            "address": "B41",
+            "anchor_id": "text:s09:r41:c2",
+            "cell_id": "cell:s09:r41:c2",
+            "col": 2,
+            "false_positive_class": "population_label_not_target_role",
+            "member_identity": null,
+            "planner_packet_contains_occurrence": false,
+            "population_relation_survives": true,
+            "repeated_block_context": {
+              "member_run_columns": null,
+              "member_run_extent": null,
+              "orientation": null,
+              "parent_context_anchor": null,
+              "run_id": null
+            },
+            "role_relation_survives": false,
+            "row": 41,
+            "rules": [
+              "token_prefix",
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s09",
+            "sheet_title": "Cost Drivers",
+            "spine_fact_present": true,
+            "text": "Total Foundation Course Emerging Expenses"
+          },
+          {
+            "address": "B59",
+            "anchor_id": "text:s09:r59:c2",
+            "cell_id": "cell:s09:r59:c2",
+            "col": 2,
+            "false_positive_class": "population_label_not_target_role",
+            "member_identity": null,
+            "planner_packet_contains_occurrence": false,
+            "population_relation_survives": true,
+            "repeated_block_context": {
+              "member_run_columns": null,
+              "member_run_extent": null,
+              "orientation": null,
+              "parent_context_anchor": null,
+              "run_id": null
+            },
+            "role_relation_survives": false,
+            "row": 59,
+            "rules": [
+              "token_prefix",
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s09",
+            "sheet_title": "Cost Drivers",
+            "spine_fact_present": true,
+            "text": "Total Foundation Course Lite Expenses"
+          },
+          {
+            "address": "B61",
+            "anchor_id": "text:s09:r61:c2",
+            "cell_id": "cell:s09:r61:c2",
+            "col": 2,
+            "false_positive_class": "population_label_not_target_role",
+            "member_identity": null,
+            "planner_packet_contains_occurrence": false,
+            "population_relation_survives": true,
+            "repeated_block_context": {
+              "member_run_columns": null,
+              "member_run_extent": null,
+              "orientation": null,
+              "parent_context_anchor": null,
+              "run_id": null
+            },
+            "role_relation_survives": false,
+            "row": 61,
+            "rules": [
+              "token_prefix",
+              "token_prefix"
+            ],
+            "sheet_id": "sheet:s09",
+            "sheet_title": "Cost Drivers",
+            "spine_fact_present": true,
+            "text": "Total Foundation Course Expenses"
+          }
+        ]
+      },
+      "locus_sheet_ids": [
+        "sheet:s09"
+      ],
+      "locus_sheet_titles": [
+        "Cost Drivers"
+      ],
+      "member_relation_survivor_count": 5,
+      "member_relation_survivor_ids": [
+        "cell:s09:r6:c2",
+        "cell:s09:r23:c2",
+        "cell:s09:r41:c2",
+        "cell:s09:r59:c2",
+        "cell:s09:r61:c2"
+      ],
+      "metrics": {
+        "excluded_member_false_positives": 0,
+        "gold_candidate_intersection": 0,
+        "gold_target_block_recall": null,
+        "included_member_precision": null,
+        "lexical_shadow_hits": 11,
+        "member_recall": null,
+        "member_restriction_survivors": 5,
+        "repeated_block_occurrence_precision": null,
+        "repeated_occurrence_identity_preserved": true,
+        "role_filtered_survivors": 0,
+        "wrong_locus_shadow_hits_rejected": 6
+      },
+      "obligation": {
+        "condition": null,
+        "id": "O5",
+        "locus": {
+          "text": "cost drivers"
+        },
+        "occupancy_filter": null,
+        "provenance": [
+          {
+            "text": "Compute operational costs for each Foundation Course line item in the cost drivers."
+          }
+        ],
+        "required_change": {
+          "text": "Compute operational costs for each Foundation Course line item"
+        },
+        "result_property": null,
+        "scope": [
+          {
+            "text": "for each Foundation Course line item"
+          }
+        ],
+        "source_relation": null,
+        "subject": {
+          "text": "operational costs"
+        },
+        "subject_interval": null,
+        "then_after": []
+      },
+      "obligation_id": "O5",
+      "population": {
+        "allowed_members": [],
+        "excluded_members": [],
+        "introducing_field": "scope",
+        "introducing_span": "for each Foundation Course line item",
+        "member_interval": null,
+        "population_label": "foundation course",
+        "quantifier": "each"
+      },
+      "role_relation_survivor_count": 0,
+      "role_relation_survivor_ids": [],
+      "task": "Financial_Model:01_01",
+      "workbook_occurrences": [
+        {
+          "address": "B6",
+          "anchor_id": "text:s08:r6:c2",
+          "cell_id": "cell:s08:r6:c2",
+          "col": 2,
+          "false_positive_class": "wrong_locus_or_repeated_semantic_block",
+          "member_identity": null,
+          "population_relation_survives": false,
+          "role_relation_survives": false,
+          "row": 6,
+          "rules": [
+            "substring",
+            "token_prefix",
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s08",
+          "sheet_title": "Revenue Drivers",
+          "text": "Foundation Course"
+        },
+        {
+          "address": "B17",
+          "anchor_id": "text:s08:r17:c2",
+          "cell_id": "cell:s08:r17:c2",
+          "col": 2,
+          "false_positive_class": "wrong_locus_or_repeated_semantic_block",
+          "member_identity": null,
+          "population_relation_survives": false,
+          "role_relation_survives": false,
+          "row": 17,
+          "rules": [
+            "token_prefix",
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s08",
+          "sheet_title": "Revenue Drivers",
+          "text": "Total Revenue from Foundation Course Mature"
+        },
+        {
+          "address": "B29",
+          "anchor_id": "text:s08:r29:c2",
+          "cell_id": "cell:s08:r29:c2",
+          "col": 2,
+          "false_positive_class": "wrong_locus_or_repeated_semantic_block",
+          "member_identity": null,
+          "population_relation_survives": false,
+          "role_relation_survives": false,
+          "row": 29,
+          "rules": [
+            "token_prefix",
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s08",
+          "sheet_title": "Revenue Drivers",
+          "text": "Total Revenue from Foundation Course Emerging"
+        },
+        {
+          "address": "B41",
+          "anchor_id": "text:s08:r41:c2",
+          "cell_id": "cell:s08:r41:c2",
+          "col": 2,
+          "false_positive_class": "wrong_locus_or_repeated_semantic_block",
+          "member_identity": null,
+          "population_relation_survives": false,
+          "role_relation_survives": false,
+          "row": 41,
+          "rules": [
+            "token_prefix",
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s08",
+          "sheet_title": "Revenue Drivers",
+          "text": "Total Revenue from Foundation Course Lite"
+        },
+        {
+          "address": "B43",
+          "anchor_id": "text:s08:r43:c2",
+          "cell_id": "cell:s08:r43:c2",
+          "col": 2,
+          "false_positive_class": "wrong_locus_or_repeated_semantic_block",
+          "member_identity": null,
+          "population_relation_survives": false,
+          "role_relation_survives": false,
+          "row": 43,
+          "rules": [
+            "token_prefix",
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s08",
+          "sheet_title": "Revenue Drivers",
+          "text": "Total Foundation Course Revenue"
+        },
+        {
+          "address": "B141",
+          "anchor_id": "text:s08:r141:c2",
+          "cell_id": "cell:s08:r141:c2",
+          "col": 2,
+          "false_positive_class": "wrong_locus_or_repeated_semantic_block",
+          "member_identity": null,
+          "population_relation_survives": false,
+          "role_relation_survives": false,
+          "row": 141,
+          "rules": [
+            "token_prefix",
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s08",
+          "sheet_title": "Revenue Drivers",
+          "text": "Total Foundation Course Lite Branches"
+        },
+        {
+          "address": "B6",
+          "anchor_id": "text:s09:r6:c2",
+          "cell_id": "cell:s09:r6:c2",
+          "col": 2,
+          "false_positive_class": "population_label_not_target_role",
+          "member_identity": null,
+          "planner_packet_contains_occurrence": false,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": null,
+            "member_run_extent": null,
+            "orientation": null,
+            "parent_context_anchor": null,
+            "run_id": null
+          },
+          "role_relation_survives": false,
+          "row": 6,
+          "rules": [
+            "substring",
+            "token_prefix",
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s09",
+          "sheet_title": "Cost Drivers",
+          "spine_fact_present": true,
+          "text": "Foundation Course"
+        },
+        {
+          "address": "B23",
+          "anchor_id": "text:s09:r23:c2",
+          "cell_id": "cell:s09:r23:c2",
+          "col": 2,
+          "false_positive_class": "population_label_not_target_role",
+          "member_identity": null,
+          "planner_packet_contains_occurrence": false,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": null,
+            "member_run_extent": null,
+            "orientation": null,
+            "parent_context_anchor": null,
+            "run_id": null
+          },
+          "role_relation_survives": false,
+          "row": 23,
+          "rules": [
+            "token_prefix",
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s09",
+          "sheet_title": "Cost Drivers",
+          "spine_fact_present": true,
+          "text": "Total Foundation Course Mature Expenses"
+        },
+        {
+          "address": "B41",
+          "anchor_id": "text:s09:r41:c2",
+          "cell_id": "cell:s09:r41:c2",
+          "col": 2,
+          "false_positive_class": "population_label_not_target_role",
+          "member_identity": null,
+          "planner_packet_contains_occurrence": false,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": null,
+            "member_run_extent": null,
+            "orientation": null,
+            "parent_context_anchor": null,
+            "run_id": null
+          },
+          "role_relation_survives": false,
+          "row": 41,
+          "rules": [
+            "token_prefix",
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s09",
+          "sheet_title": "Cost Drivers",
+          "spine_fact_present": true,
+          "text": "Total Foundation Course Emerging Expenses"
+        },
+        {
+          "address": "B59",
+          "anchor_id": "text:s09:r59:c2",
+          "cell_id": "cell:s09:r59:c2",
+          "col": 2,
+          "false_positive_class": "population_label_not_target_role",
+          "member_identity": null,
+          "planner_packet_contains_occurrence": false,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": null,
+            "member_run_extent": null,
+            "orientation": null,
+            "parent_context_anchor": null,
+            "run_id": null
+          },
+          "role_relation_survives": false,
+          "row": 59,
+          "rules": [
+            "token_prefix",
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s09",
+          "sheet_title": "Cost Drivers",
+          "spine_fact_present": true,
+          "text": "Total Foundation Course Lite Expenses"
+        },
+        {
+          "address": "B61",
+          "anchor_id": "text:s09:r61:c2",
+          "cell_id": "cell:s09:r61:c2",
+          "col": 2,
+          "false_positive_class": "population_label_not_target_role",
+          "member_identity": null,
+          "planner_packet_contains_occurrence": false,
+          "population_relation_survives": true,
+          "repeated_block_context": {
+            "member_run_columns": null,
+            "member_run_extent": null,
+            "orientation": null,
+            "parent_context_anchor": null,
+            "run_id": null
+          },
+          "role_relation_survives": false,
+          "row": 61,
+          "rules": [
+            "token_prefix",
+            "token_prefix"
+          ],
+          "sheet_id": "sheet:s09",
+          "sheet_title": "Cost Drivers",
+          "spine_fact_present": true,
+          "text": "Total Foundation Course Expenses"
+        }
+      ]
+    }
+  ],
+  "experiment": {
+    "authority_widening": false,
+    "cases": [
+      "Financial_Model:05_01 O7",
+      "Financial_Model:05_01 O6",
+      "Financial_Model:01_01 O5"
+    ],
+    "mode": "zero-model evaluator-side static only",
+    "model_calls": 0,
+    "name": "population_member_relation_contrast",
+    "runtime_grounding_changed": false,
+    "workbook_writes": 0
+  }
+}

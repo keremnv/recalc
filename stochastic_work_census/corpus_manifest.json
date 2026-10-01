@@ -1,0 +1,17 @@
+{
+ "primary_corpus": "frozen ordinary-agent control",
+ "populations": [
+  "P-A_matched_c0",
+  "P-B_sixty_control",
+  "P-C_viz"
+ ],
+ "n_trajectories": 71,
+ "n_turns": 1210,
+ "missing_traj_files": [],
+ "tokenizer": "closest-known:THUDM/glm-4-9b-chat(ChatGLM4Tokenizer); exact z-ai/glm-5.3-flash tokenizer unavailable; all token counts ESTIMATED",
+ "token_counts": "ESTIMATED (exact provider tokenizer unavailable); byte/char counts exact",
+ "expected": {
+  "trajectories": 71,
+  "turns": 1210
+ }
+}

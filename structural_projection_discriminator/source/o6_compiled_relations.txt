@@ -1,0 +1,38 @@
+COMPILED STRUCTURAL RELATIONS
+
+occurrence identities
+  G16 second (allowed Second/Third)
+  G17 third (allowed Second/Third)
+  F22 second (allowed Second/Third)
+  H22 third (allowed Second/Third)
+  G15 first (excluded First)
+  D22 first (excluded First)
+
+copied_header_path from G16
+  sequence: 
+  intermediates: 
+  provenance: source workbook coordinates
+
+copied_header_path from G17
+  sequence: 
+  intermediates: 
+  provenance: source workbook coordinates
+
+copied_header_path from F22
+  sequence: point_dependency_header_copy, same_column_month_header, right_neighbor_numbers_header, contiguous_formula_bearing_month_rows
+  intermediates: Dashboard!F40, Dashboard!F42, Dashboard!G42
+  month_header: Dashboard!F42
+  numbers_header: Dashboard!G42
+  contiguous_formula_bearing_month_rows: 43:45
+  numbers_side_structural_endpoints: Dashboard!G43, Dashboard!G44, Dashboard!G45
+  provenance: source workbook coordinates
+
+copied_header_path from H22
+  sequence: point_dependency_header_copy, same_column_month_header, right_neighbor_numbers_header, contiguous_formula_bearing_month_rows
+  intermediates: Dashboard!H40, Dashboard!H42, Dashboard!I42
+  month_header: Dashboard!H42
+  numbers_header: Dashboard!I42
+  contiguous_formula_bearing_month_rows: 43:44
+  numbers_side_structural_endpoints: Dashboard!I43, Dashboard!I44
+  provenance: source workbook coordinates
+

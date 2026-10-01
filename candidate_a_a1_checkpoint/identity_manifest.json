@@ -1,0 +1,382 @@
+{
+  "arms_differ_only_by": "Candidate-A enabled flag plus A1 predeclared fallback decision in Python environment",
+  "candidate_b": "frozen",
+  "common_model_surface": true,
+  "order": [
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Financial_Model:07_01"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Financial_Model:07_01"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Financial_Model:08_03"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Financial_Model:08_03"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Financial_Model:08_01"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Financial_Model:08_01"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Financial_Model:15_04"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Financial_Model:15_04"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Debugging:10_10"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Debugging:10_10"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Financial_Model:06_01"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Financial_Model:06_01"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Debugging:01_06"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Debugging:01_06"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Debugging:10_04"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Debugging:10_04"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Debugging:05_02"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Debugging:05_02"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Template:13_08"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Template:13_08"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Template:03_03"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Template:03_03"
+    },
+    {
+      "arm": "H0",
+      "replication": false,
+      "task_id": "Financial_Model:10_01"
+    },
+    {
+      "arm": "H1",
+      "replication": false,
+      "task_id": "Financial_Model:10_01"
+    }
+  ],
+  "pairs": [
+    {
+      "a1_classifier_hash": "b1d90845e55e7ddc1454c89c505078a7d2f0e4910fe45160a4954a8520f303df",
+      "call_limit": 40,
+      "candidate_a_code_hash": "d02555d6612ee32a20a1fa6c20b7bce9608fc77e2f7ace9c16059c41d1b28c9e",
+      "chat_timeout_s": 90,
+      "compiled_substrate_code_hash": "e437e625740caa1020ae89761587bb605acb99ae9708840b1a842f150316999a",
+      "dollar_cap": 0.25,
+      "input_workbook_hash": "e918281d3d7072ceb87fce285e49e77fa8843a260fc827f9c554dc0b47a6b185",
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "openrouter",
+      "reasoning": null,
+      "run_timeout_s": 900,
+      "runner_hash": "b70343061ca218be0f5fb70b94de323ffe4c297cc4591e30aad19e042a4fd398",
+      "system_prompt_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+      "task_id": "Financial_Model:07_01",
+      "temperature": 0.0,
+      "tool_description_hash": "9da86bcaeb5c08f65dfdfaeceb27807970ffc7da8c0980a29fbfe395a64e8fa0",
+      "tool_timeout_s": 180,
+      "top_p": 1.0,
+      "user_prompt_hash": "30767a1fdbda8c74c5b59f768bbe9905818cc4ff8471104413dbbb32ebb8d591"
+    },
+    {
+      "a1_classifier_hash": "b1d90845e55e7ddc1454c89c505078a7d2f0e4910fe45160a4954a8520f303df",
+      "call_limit": 40,
+      "candidate_a_code_hash": "d02555d6612ee32a20a1fa6c20b7bce9608fc77e2f7ace9c16059c41d1b28c9e",
+      "chat_timeout_s": 90,
+      "compiled_substrate_code_hash": "e437e625740caa1020ae89761587bb605acb99ae9708840b1a842f150316999a",
+      "dollar_cap": 0.25,
+      "input_workbook_hash": "2b7a84044765a4664ddb197de168fbd7feb8fff395a027a4923ee2d9ab9e8dc1",
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "openrouter",
+      "reasoning": null,
+      "run_timeout_s": 900,
+      "runner_hash": "b70343061ca218be0f5fb70b94de323ffe4c297cc4591e30aad19e042a4fd398",
+      "system_prompt_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+      "task_id": "Financial_Model:08_03",
+      "temperature": 0.0,
+      "tool_description_hash": "9da86bcaeb5c08f65dfdfaeceb27807970ffc7da8c0980a29fbfe395a64e8fa0",
+      "tool_timeout_s": 180,
+      "top_p": 1.0,
+      "user_prompt_hash": "5c560036a87ad9e7a85aaf3f8df51466b65434b4d515648deb8c4f8c1f3b15b2"
+    },
+    {
+      "a1_classifier_hash": "b1d90845e55e7ddc1454c89c505078a7d2f0e4910fe45160a4954a8520f303df",
+      "call_limit": 40,
+      "candidate_a_code_hash": "d02555d6612ee32a20a1fa6c20b7bce9608fc77e2f7ace9c16059c41d1b28c9e",
+      "chat_timeout_s": 90,
+      "compiled_substrate_code_hash": "e437e625740caa1020ae89761587bb605acb99ae9708840b1a842f150316999a",
+      "dollar_cap": 0.25,
+      "input_workbook_hash": "6d742f67e84fcc3d92d1dec6b285417093b99dec1469686f1c6813aee9ad2a0a",
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "openrouter",
+      "reasoning": null,
+      "run_timeout_s": 900,
+      "runner_hash": "b70343061ca218be0f5fb70b94de323ffe4c297cc4591e30aad19e042a4fd398",
+      "system_prompt_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+      "task_id": "Financial_Model:08_01",
+      "temperature": 0.0,
+      "tool_description_hash": "9da86bcaeb5c08f65dfdfaeceb27807970ffc7da8c0980a29fbfe395a64e8fa0",
+      "tool_timeout_s": 180,
+      "top_p": 1.0,
+      "user_prompt_hash": "fbc7d25163877e858127cc84a6fbeaba889d740c10fed75ae163dd6de260b4c8"
+    },
+    {
+      "a1_classifier_hash": "b1d90845e55e7ddc1454c89c505078a7d2f0e4910fe45160a4954a8520f303df",
+      "call_limit": 40,
+      "candidate_a_code_hash": "d02555d6612ee32a20a1fa6c20b7bce9608fc77e2f7ace9c16059c41d1b28c9e",
+      "chat_timeout_s": 90,
+      "compiled_substrate_code_hash": "e437e625740caa1020ae89761587bb605acb99ae9708840b1a842f150316999a",
+      "dollar_cap": 0.25,
+      "input_workbook_hash": "9ff136a8008051fc400bcade977f9732fef6f3b9c3116ebc46ee366d24406f53",
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "openrouter",
+      "reasoning": null,
+      "run_timeout_s": 900,
+      "runner_hash": "b70343061ca218be0f5fb70b94de323ffe4c297cc4591e30aad19e042a4fd398",
+      "system_prompt_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+      "task_id": "Financial_Model:15_04",
+      "temperature": 0.0,
+      "tool_description_hash": "9da86bcaeb5c08f65dfdfaeceb27807970ffc7da8c0980a29fbfe395a64e8fa0",
+      "tool_timeout_s": 180,
+      "top_p": 1.0,
+      "user_prompt_hash": "6e599259da79768d65d500b2aa98cc6d1eff916e4687496fbc2f450e84baa2dd"
+    },
+    {
+      "a1_classifier_hash": "b1d90845e55e7ddc1454c89c505078a7d2f0e4910fe45160a4954a8520f303df",
+      "call_limit": 40,
+      "candidate_a_code_hash": "d02555d6612ee32a20a1fa6c20b7bce9608fc77e2f7ace9c16059c41d1b28c9e",
+      "chat_timeout_s": 90,
+      "compiled_substrate_code_hash": "e437e625740caa1020ae89761587bb605acb99ae9708840b1a842f150316999a",
+      "dollar_cap": 0.25,
+      "input_workbook_hash": "3d95978b76409416f96be4645daeb2e28f949c171cc159560627506ef1c7eb34",
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "openrouter",
+      "reasoning": null,
+      "run_timeout_s": 900,
+      "runner_hash": "b70343061ca218be0f5fb70b94de323ffe4c297cc4591e30aad19e042a4fd398",
+      "system_prompt_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+      "task_id": "Debugging:10_10",
+      "temperature": 0.0,
+      "tool_description_hash": "9da86bcaeb5c08f65dfdfaeceb27807970ffc7da8c0980a29fbfe395a64e8fa0",
+      "tool_timeout_s": 180,
+      "top_p": 1.0,
+      "user_prompt_hash": "e614d718839f7289ddc9578c24d2f8304862b79b64a211afb769b0ab44038289"
+    },
+    {
+      "a1_classifier_hash": "b1d90845e55e7ddc1454c89c505078a7d2f0e4910fe45160a4954a8520f303df",
+      "call_limit": 40,
+      "candidate_a_code_hash": "d02555d6612ee32a20a1fa6c20b7bce9608fc77e2f7ace9c16059c41d1b28c9e",
+      "chat_timeout_s": 90,
+      "compiled_substrate_code_hash": "e437e625740caa1020ae89761587bb605acb99ae9708840b1a842f150316999a",
+      "dollar_cap": 0.25,
+      "input_workbook_hash": "71233a0b02e0680361836392ca41c567aae657ce91dd24c4248f273f459fd53c",
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "openrouter",
+      "reasoning": null,
+      "run_timeout_s": 900,
+      "runner_hash": "b70343061ca218be0f5fb70b94de323ffe4c297cc4591e30aad19e042a4fd398",
+      "system_prompt_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+      "task_id": "Financial_Model:06_01",
+      "temperature": 0.0,
+      "tool_description_hash": "9da86bcaeb5c08f65dfdfaeceb27807970ffc7da8c0980a29fbfe395a64e8fa0",
+      "tool_timeout_s": 180,
+      "top_p": 1.0,
+      "user_prompt_hash": "9f648b6a2609f9fced748e03afd0ff9e301be47a3304fe2ea225ed5fdeb10719"
+    },
+    {
+      "a1_classifier_hash": "b1d90845e55e7ddc1454c89c505078a7d2f0e4910fe45160a4954a8520f303df",
+      "call_limit": 40,
+      "candidate_a_code_hash": "d02555d6612ee32a20a1fa6c20b7bce9608fc77e2f7ace9c16059c41d1b28c9e",
+      "chat_timeout_s": 90,
+      "compiled_substrate_code_hash": "e437e625740caa1020ae89761587bb605acb99ae9708840b1a842f150316999a",
+      "dollar_cap": 0.25,
+      "input_workbook_hash": "9af630a02079a57a7542217de50822bd1c5b92e1e08416128be3dc600ad0aeeb",
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "openrouter",
+      "reasoning": null,
+      "run_timeout_s": 900,
+      "runner_hash": "b70343061ca218be0f5fb70b94de323ffe4c297cc4591e30aad19e042a4fd398",
+      "system_prompt_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+      "task_id": "Debugging:01_06",
+      "temperature": 0.0,
+      "tool_description_hash": "9da86bcaeb5c08f65dfdfaeceb27807970ffc7da8c0980a29fbfe395a64e8fa0",
+      "tool_timeout_s": 180,
+      "top_p": 1.0,
+      "user_prompt_hash": "e614d718839f7289ddc9578c24d2f8304862b79b64a211afb769b0ab44038289"
+    },
+    {
+      "a1_classifier_hash": "b1d90845e55e7ddc1454c89c505078a7d2f0e4910fe45160a4954a8520f303df",
+      "call_limit": 40,
+      "candidate_a_code_hash": "d02555d6612ee32a20a1fa6c20b7bce9608fc77e2f7ace9c16059c41d1b28c9e",
+      "chat_timeout_s": 90,
+      "compiled_substrate_code_hash": "e437e625740caa1020ae89761587bb605acb99ae9708840b1a842f150316999a",
+      "dollar_cap": 0.25,
+      "input_workbook_hash": "e4edbd9397e3bff316960d8cc7c871d37fcbeeb7213f9a643d10b574c2480ec8",
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "openrouter",
+      "reasoning": null,
+      "run_timeout_s": 900,
+      "runner_hash": "b70343061ca218be0f5fb70b94de323ffe4c297cc4591e30aad19e042a4fd398",
+      "system_prompt_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+      "task_id": "Debugging:10_04",
+      "temperature": 0.0,
+      "tool_description_hash": "9da86bcaeb5c08f65dfdfaeceb27807970ffc7da8c0980a29fbfe395a64e8fa0",
+      "tool_timeout_s": 180,
+      "top_p": 1.0,
+      "user_prompt_hash": "7e91d84ed831fc974ad7ab1076bb07b3d97e8393e5cd4aa65570d4515dce23bf"
+    },
+    {
+      "a1_classifier_hash": "b1d90845e55e7ddc1454c89c505078a7d2f0e4910fe45160a4954a8520f303df",
+      "call_limit": 40,
+      "candidate_a_code_hash": "d02555d6612ee32a20a1fa6c20b7bce9608fc77e2f7ace9c16059c41d1b28c9e",
+      "chat_timeout_s": 90,
+      "compiled_substrate_code_hash": "e437e625740caa1020ae89761587bb605acb99ae9708840b1a842f150316999a",
+      "dollar_cap": 0.25,
+      "input_workbook_hash": "fa7c8d05a020ef079d6330fe7d1e3de64b35be0e9cc99d413c1bc30e7e19565e",
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "openrouter",
+      "reasoning": null,
+      "run_timeout_s": 900,
+      "runner_hash": "b70343061ca218be0f5fb70b94de323ffe4c297cc4591e30aad19e042a4fd398",
+      "system_prompt_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+      "task_id": "Debugging:05_02",
+      "temperature": 0.0,
+      "tool_description_hash": "9da86bcaeb5c08f65dfdfaeceb27807970ffc7da8c0980a29fbfe395a64e8fa0",
+      "tool_timeout_s": 180,
+      "top_p": 1.0,
+      "user_prompt_hash": "e614d718839f7289ddc9578c24d2f8304862b79b64a211afb769b0ab44038289"
+    },
+    {
+      "a1_classifier_hash": "b1d90845e55e7ddc1454c89c505078a7d2f0e4910fe45160a4954a8520f303df",
+      "call_limit": 40,
+      "candidate_a_code_hash": "d02555d6612ee32a20a1fa6c20b7bce9608fc77e2f7ace9c16059c41d1b28c9e",
+      "chat_timeout_s": 90,
+      "compiled_substrate_code_hash": "e437e625740caa1020ae89761587bb605acb99ae9708840b1a842f150316999a",
+      "dollar_cap": 0.25,
+      "input_workbook_hash": "591b6250a393b2606573631b5a9e66f415d68704d2d95756cd1cb8bca7327343",
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "openrouter",
+      "reasoning": null,
+      "run_timeout_s": 900,
+      "runner_hash": "b70343061ca218be0f5fb70b94de323ffe4c297cc4591e30aad19e042a4fd398",
+      "system_prompt_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+      "task_id": "Template:13_08",
+      "temperature": 0.0,
+      "tool_description_hash": "9da86bcaeb5c08f65dfdfaeceb27807970ffc7da8c0980a29fbfe395a64e8fa0",
+      "tool_timeout_s": 180,
+      "top_p": 1.0,
+      "user_prompt_hash": "3388d4601036f4d2a603bdf04428a75e6b08f3432aa44de8c0325ae03a678cfc"
+    },
+    {
+      "a1_classifier_hash": "b1d90845e55e7ddc1454c89c505078a7d2f0e4910fe45160a4954a8520f303df",
+      "call_limit": 40,
+      "candidate_a_code_hash": "d02555d6612ee32a20a1fa6c20b7bce9608fc77e2f7ace9c16059c41d1b28c9e",
+      "chat_timeout_s": 90,
+      "compiled_substrate_code_hash": "e437e625740caa1020ae89761587bb605acb99ae9708840b1a842f150316999a",
+      "dollar_cap": 0.25,
+      "input_workbook_hash": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "openrouter",
+      "reasoning": null,
+      "run_timeout_s": 900,
+      "runner_hash": "b70343061ca218be0f5fb70b94de323ffe4c297cc4591e30aad19e042a4fd398",
+      "system_prompt_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+      "task_id": "Template:03_03",
+      "temperature": 0.0,
+      "tool_description_hash": "9da86bcaeb5c08f65dfdfaeceb27807970ffc7da8c0980a29fbfe395a64e8fa0",
+      "tool_timeout_s": 180,
+      "top_p": 1.0,
+      "user_prompt_hash": "dab695464d72dac3319cdbb9bafa9d3fa4eb7e41db62f09894dc57d0d0c1d2ea"
+    },
+    {
+      "a1_classifier_hash": "b1d90845e55e7ddc1454c89c505078a7d2f0e4910fe45160a4954a8520f303df",
+      "call_limit": 40,
+      "candidate_a_code_hash": "d02555d6612ee32a20a1fa6c20b7bce9608fc77e2f7ace9c16059c41d1b28c9e",
+      "chat_timeout_s": 90,
+      "compiled_substrate_code_hash": "e437e625740caa1020ae89761587bb605acb99ae9708840b1a842f150316999a",
+      "dollar_cap": 0.25,
+      "input_workbook_hash": "26f8817083ad13636971bc7fa18d75fd4a3d10111d8872fa1ab98e7cbd1aa8a7",
+      "model": "z-ai/glm-5.3-flash",
+      "provider": "openrouter",
+      "reasoning": null,
+      "run_timeout_s": 900,
+      "runner_hash": "b70343061ca218be0f5fb70b94de323ffe4c297cc4591e30aad19e042a4fd398",
+      "system_prompt_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+      "task_id": "Financial_Model:10_01",
+      "temperature": 0.0,
+      "tool_description_hash": "9da86bcaeb5c08f65dfdfaeceb27807970ffc7da8c0980a29fbfe395a64e8fa0",
+      "tool_timeout_s": 180,
+      "top_p": 1.0,
+      "user_prompt_hash": "fabcc32a65a6e196eca03e4416602173b247f18c35616541618f8a7eae49baa6"
+    }
+  ],
+  "seed": 20260920
+}

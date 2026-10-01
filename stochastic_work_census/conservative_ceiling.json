@@ -1,0 +1,7 @@
+{
+ "ceiling": "C0",
+ "C0_strict_safe_tokens_est": 166237,
+ "C0_share": 0.02364945705136139,
+ "denominator_seg_tokens_est": 7029210,
+ "C0_rule": "old+derivation tokens in EXACT_REPEAT, MECHANICAL_REFORMAT, PARTIAL(old portion), DETERMINISTIC_DERIVATION + repeated labels; same-gen only; excludes verification-intent, error, and <=2-turn post-mutation observations"
+}

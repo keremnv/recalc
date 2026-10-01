@@ -1,0 +1,180 @@
+# Claimed patterns. Establishing case ids must exist under cases/.
+# status: established | parked
+# design: later | never
+# decision: target | attend | emit | accept | harness
+
+census:
+  run: glm-5.3-flash-nonvisual-297-1
+  autopsy: v2-boundary-and-successful-read
+  exact: 24
+  scored: 297
+  notes:
+    - Template written_wrong 71 is the construction mass; four visits establish it.
+    - Debugging unnamed 78 (67 of those input_kind=formula) is the Debugging mass.
+    - drowned n=2, both DCF!C9. Do not design for it.
+    - sign_flip n=7, six of them Template.
+    - first-miss address is per run; do not cite a task id alone.
+
+patterns:
+  - id: A-ambiguous-base
+    decision: target
+    one_line: Two plausible numeric bases on a completed row; ISA picks one.
+    establishing_cases: [t-16-12-j10]
+    mass: inside Template written_wrong 71
+    status: established
+    design: later
+
+  - id: B-empty-body
+    decision: target
+    one_line: Header exists, body empty; quantity computed on another axis.
+    establishing_cases: [t-10-02-e10]
+    mass: Template read_unwritten 14; FM unnamed leftovers
+    status: established
+    design: later
+
+  - id: B-listed-continuation
+    decision: target
+    one_line: Boundary listed the extra date cell; instruction and payload note did not require it; golden wants it.
+    establishing_cases: [fm-01-02-m3]
+    mass: FM named_unread 1 on this run; related to FM unnamed 43
+    status: established
+    design: later
+    nuance_open: observation note says Not requirements
+
+  - id: C-empty-prior
+    decision: target
+    one_line: Roll-forward or period-diff chained to an empty prior / first period.
+    establishing_cases: [t-04-04-d13, fm-03-02-m4]
+    mass: subset of written_wrong; fm-03-02 is also the mod≥0.99 overfill ceiling
+    status: established
+    design: later
+
+  - id: D-gappy-instruction
+    decision: target
+    one_line: On-sheet instruction says leave gappy years blank; golden fills year 0.
+    establishing_cases: [t-09-01-c8]
+    mass: rare as first-miss
+    status: parked
+    design: never
+
+  - id: E-mixed-sign
+    decision: emit
+    one_line: One footnote about negatives, two column kinds; sign of the miss is flipped.
+    establishing_cases: [t-14-05-m35, t-09-03-d24]
+    mass: value_shape sign_flip 7 (6 Template)
+    status: established
+    design: never
+
+  - id: F-oneshot-identity
+    decision: emit
+    one_line: One fill, algebraically plausible, wrong identity; no numeric debug loop.
+    establishing_cases: [t-16-12-j10]
+    mass: most Template written_wrong magnitude
+    status: established
+    design: later
+
+  - id: G-preserve-error-token
+    decision: attend
+    one_line: Inspect rank-1 error token; model wipes it; golden keeps the token.
+    establishing_cases: [d-01-05-d53]
+    mass: Debugging written_wrong 7
+    status: established
+    design: later
+
+  - id: H-wrong-representative
+    decision: attend
+    one_line: Planted class is a silent wrong formula; inspect shows another sheet's token.
+    establishing_cases: [d-02-05-d7]
+    mass: Debugging unnamed 78, of which 67 are existing formulas
+    status: established
+    design: later
+
+  - id: I-sibling-representative
+    decision: attend
+    one_line: Inspect selected a sibling of the first-miss; model wrote a different circular cell.
+    establishing_cases: [d-09-09-h107]
+    mass: Debugging read_unwritten 2 after v2; many v1 "reads" were failed oversize
+    status: established
+    design: later
+
+  - id: J-drowned
+    decision: attend
+    one_line: Named far down a long error list.
+    establishing_cases: []
+    example_tasks: [Debugging:02_09, Debugging:02_07]
+    mass: n=2, both DCF!C9
+    status: parked
+    design: never
+
+  - id: K-preserve-compare
+    decision: accept
+    one_line: Compare reports adds and zero input damage; cannot see leftover blank or gold-empty fill.
+    establishing_cases: [t-16-12-j10, fm-03-02-m4]
+    mass: every construction visit
+    status: established
+    design: later
+
+  - id: L-formula-spelling
+    decision: accept
+    one_line: Evaluator compares formula text; UNO collapsed an untouched array range.
+    establishing_cases: [d-01-02-c36]
+    mass: value_shape formula_text 5
+    status: parked
+    design: never
+
+  - id: read-budget
+    decision: harness
+    one_line: First read oversize, second blocked; model writes from inspect representatives.
+    establishing_cases: [d-01-05-d53, d-02-05-d7, d-09-09-h107]
+    mass: induces G/H/I
+    status: established
+    design: later
+
+# The collapse the gate asked for: fourteen surface names resolve to six geometries.
+# Read this before proposing a design against a pattern id -- a design that addresses
+# `run-boundary` addresses four patterns at once, and a design against one of the four
+# addresses a quarter of a mechanism.
+mechanisms:
+  run-boundary:
+    patterns: [B-empty-body, B-listed-continuation, C-empty-prior]
+    cases: [t-04-04-d13, fm-03-02-m4, fm-01-02-m3, t-10-02-e10]
+    one_line: A uniform run written across a range whose first or last cell needs different treatment.
+    lever: constraint (substitution for fm-01-02-m3, where information was already spent and declined)
+  identity-choice:
+    patterns: [A-ambiguous-base, F-oneshot-identity]
+    cases: [t-16-12-j10]
+    one_line: The targeted cell is right and the formula's identity is wrong.
+    lever: none -- no fact about the input separates the candidates
+  sign-convention:
+    patterns: [E-mixed-sign]
+    cases: [t-09-03-d24, t-14-05-m35]
+    one_line: Right magnitude, wrong sign, on a row with two column kinds.
+    lever: none
+  representative-selection:
+    patterns: [H-wrong-representative, I-sibling-representative, J-drowned, read-budget]
+    cases: [d-02-05-d7, d-09-09-h107]
+    one_line: The shortlist named a cell, the model acted on it, and it was not the one that mattered.
+    lever: information for the silent-formula half (refuted); constraint for the read-budget half (measured by ladder arm C)
+  error-token-policy:
+    patterns: [G-preserve-error-token]
+    cases: [d-01-05-d53]
+    one_line: The golden keeps an error token the model removed.
+    lever: constraint
+  instruction-scope:
+    patterns: [D-gappy-instruction]
+    cases: [t-09-01-c8]
+    one_line: The model obeyed the sheet and the golden contradicts the sheet.
+    lever: none
+  serialization:
+    patterns: [L-formula-spelling, K-preserve-compare]
+    cases: [d-01-02-c36]
+    one_line: Our save path or our compare, not the model.
+    lever: none
+
+parked_do_not_visit:
+  - Debugging:04_04 same-string format miss
+  - Debugging:10_02 label prefix (-) OpEx
+  - Debugging:06_09 on the 297 (different cell than the 15)
+  - Debugging:02_07 drown (duplicate of 02_09)
+  - 12 Debugging no-workbooks (harness, not compiler)
+  - more Template written_wrong blanks (71; four visits suffice)

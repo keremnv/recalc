@@ -1,0 +1,17 @@
+{
+ "name": "representative-architecture-economics-capability-checkpoint",
+ "h0": "ordinary reference: real openpyxl (+inert spy), reference helper backend, no capture, no substrate",
+ "h1": "practical retained invisible stack: substrate + Candidate A+A1 + capture + freshness; substrate helper backend",
+ "model_config": "frozen production (z-ai/glm-5.3-flash, t=0, top_p=1, call cap 40, $0.25/instance)",
+ "n": 1,
+ "population": "30 tasks (10/family), seed 20260921",
+ "forbidden": [
+  "mechanism search",
+  "A2/A3/B",
+  "Track-C",
+  "helper design",
+  "feedback",
+  "surface changes",
+  "budget changes"
+ ]
+}

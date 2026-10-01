@@ -1,0 +1,20 @@
+{
+  "ids": [
+    "b7367d71a7b49ef7",
+    "3f0d5af0729c0a88",
+    "606688d218686751",
+    "4c558ea970e21de9",
+    "9718c0c50061ad2a",
+    "1ba2528e222ba641"
+  ],
+  "roles": {
+    "known_cache_sensitive": "b7367d71a7b49ef7",
+    "known_unaffected": "3f0d5af0729c0a88",
+    "formula_error": "606688d218686751",
+    "complex_financial_model": "4c558ea970e21de9",
+    "no_formula": "9718c0c50061ad2a",
+    "supported_complex_financial_model": "1ba2528e222ba641"
+  },
+  "selection": "known Phase12 06_05 C/T + lexically first retained formula-error/no-formula/complex FM (>1000 formulas); unsupported policy applies unchanged",
+  "unavailable_roles": []
+}

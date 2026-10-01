@@ -1,0 +1,2 @@
+{"n_post_calls": 10, "reads": 0, "bash_calls": 10, "calls_to_next_bash": 1, "submitted_after": false, "calls_to_submit": null, "sequence": [["bash", 41], ["bash", 42], ["bash", 43], ["bash", 44], ["bash", 45], ["bash", 46], ["bash", 47], ["bash", 48], ["bash", 49], ["bash", 50]], "run_dir": "Debugging_07_03_TREATMENT"}
+{"n_post_calls": 5, "reads": 0, "bash_calls": 4, "calls_to_next_bash": 1, "submitted_after": true, "calls_to_submit": 5, "sequence": [["bash", 39], ["bash", 40], ["bash", 41], ["bash", 42], ["submit", 43]], "run_dir": "Debugging_02_06_TREATMENT_R1"}

@@ -1,0 +1,11 @@
+{
+ "h0_usable": 11,
+ "h1_usable": 14,
+ "h1_mutation_records": 52,
+ "runtime_failures": 0,
+ "validation_failed": 0,
+ "fidelity_mismatches": 0,
+ "stale_index_attempts": 0,
+ "stale_responses": 0,
+ "corruption_events": 0
+}

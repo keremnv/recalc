@@ -1,0 +1,29 @@
+{
+ "positive": false,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [],
+   "count": 0
+  },
+  "CHG": {
+   "changed_cells": 0,
+   "sheets": 0,
+   "regions": []
+  }
+ },
+ "dep_context": [],
+ "model_block": null,
+ "positive_families": []
+}

@@ -1,0 +1,13 @@
+{
+ "classes_events": {
+  "STATE_RECONSTRUCTION_EXECUTION_ONLY": 766,
+  "STATE_RECONSTRUCTION_VISIBLE_REDUNDANCY": 59,
+  "NO_STATE_RECONSTRUCTION": 349,
+  "UNKNOWN": 36
+ },
+ "visible_redundancy_tokens_est": 117901,
+ "n_workbook_opens": 834,
+ "open_obs_new_tokens_est": 6550143,
+ "open_obs_repeat_tokens_est": 168588,
+ "rule": "reopen action + repeat-class rollup => visible redundancy; reopen + new-evidence rollup => execution-only"
+}

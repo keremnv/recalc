@@ -1,0 +1,18 @@
+{
+  "holdout_touched": false,
+  "new_model_calls": 0,
+  "role": "forensic review provenance; frozen primary and packet unchanged",
+  "source_sha256": {
+    "ASTRA_TOKEN_DIAGNOSIS_PACKET.md": "ff97e7e835e2914c0f890721ce8e8ae1d0f734f9d3d7a08620555f318633d9c9",
+    "TOKEN_CLAIM_FORENSIC_REVIEW.md": "2595f1215865233c8c3eb247e375fac9c7ba097ac3ea67e5cc4f976fc800dca6",
+    "benchmark/review_token_affordance.py": "2f65adba39fab991a59c039e408ee5ce1f5fa39ac9da9a092b210e1e7dde31b9",
+    "token_claim_discovery/future_validation_reservation.json": "b3b5bcdef583314bcdba4bcde16aa699c8c5784117513831c94ccc5bf6c49392",
+    "token_claim_discovery/mechanism_events.jsonl": "609ed1c9395ac3b692d5f1fbc2da39352df2439e2d243ef22369a6fe97c08ccf",
+    "token_claim_discovery/official_scores.json": "a8a52ae9d9950efc139d2c8f0d6a7e2dc023b37574a83dd59d90fa5ab7a4c4bc",
+    "token_claim_discovery/preregistered_spec.json": "9acaec8ccdb6a51161eeee6488059b043d0a92893a0ba0a5b907fd7c67f5e0d4",
+    "token_claim_discovery/primary_runs.jsonl": "5b76fd29d10257e45e0583c6edf56ea550633530b147ecd7916f4948cddf5de8",
+    "token_claim_review/affordance_trajectory_review.json": "a21cdeb505a3a434c3f660d8a6ce17bd597aef958daf4e64c0605fb0c85e8eed",
+    "token_claim_review/reviewer_verdict.json": "3152ef3b2b06f5f9457c6aa42ce8eb7a000b1175b02789271edb1ac9caf1c256",
+    "token_claim_review/trajectory_classification.jsonl": "89939797b984fb9a8450a4b71500dddb7c786884e924ef337ffe5687df24b54f"
+  }
+}

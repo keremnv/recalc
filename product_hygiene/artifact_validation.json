@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "required_json_deliverables": 15,
+  "source_configuration_sha256": "1aba31178faca5533c4a594cf1ee8bae2bf3668fcb5f7a9df65f84361f972aee",
+  "wheel_sha256": "532e493f126087a45d86117343514a9a1cd0a4e0010af89bbd1be1b271d66b2e",
+  "wheel_matches_source": true,
+  "previous_freeze_and_checkpoint_unchanged": true,
+  "all_document_links_valid": true,
+  "token_registry_sources_unchanged": true,
+  "required_answers": 29,
+  "synthesis_labels": 21,
+  "lint": "PASS: product code excluding frozen extraction, helper shim, extraction script, product tests",
+  "claim_specific_validation_started": false
+}

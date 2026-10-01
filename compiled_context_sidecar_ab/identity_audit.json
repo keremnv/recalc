@@ -1,0 +1,548 @@
+[
+  {
+    "key": "Financial_Model:13_05:C0:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Financial_Model:13_05:C1:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Financial_Model:13_05:C1:r2",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Financial_Model:13_05:C0:r2",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Financial_Model:13_05:C0:r3",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Financial_Model:13_05:C1:r3",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Financial_Model:13_05:C1:r4",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Financial_Model:13_05:C0:r4",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Financial_Model:05_01:C0:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Financial_Model:05_01:C1:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Financial_Model:02_01:C1:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Financial_Model:02_01:C0:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Financial_Model:15_05:C0:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Financial_Model:15_05:C1:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Template:03_03:C1:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Template:03_03:C0:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Template:06_17:C0:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Template:06_17:C1:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Template:16_12:C1:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Template:16_12:C0:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Debugging:01_01:C0:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Debugging:01_01:C1:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Debugging:09_04:C1:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Debugging:09_04:C0:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Debugging:10_10:C0:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  {
+    "key": "Debugging:10_10:C1:r1",
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  }
+]

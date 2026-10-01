@@ -1,0 +1,8 @@
+{
+ "mean_reg_delta": -0.001,
+ "min_task_reg_delta": -0.001,
+ "promising_requires": "mean>=-0.01 AND no task<=-0.02",
+ "promising_met": true,
+ "harmful_if": "mean<=-0.02 OR any task<=-0.05",
+ "harmful_met": false
+}

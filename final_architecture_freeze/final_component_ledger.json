@@ -1,0 +1,126 @@
+{
+  "allowed_statuses": [
+    "EARNED",
+    "SUPPORTED",
+    "SUPPORTED_NARROWLY",
+    "NOT_ESTABLISHED",
+    "REJECTED",
+    "CLOSED"
+  ],
+  "components": [
+    {
+      "claim": "PYTHON_OPENPYXL_CORE",
+      "status": "EARNED",
+      "evidence": "Effective tested coding-agent interface; structured waist not capability-required.",
+      "scope": "Ordinary Python + scaffold + workbook + LO; no universal optimality."
+    },
+    {
+      "claim": "CUMULATIVE_PRACTICAL_STACK_CAPABILITY_PRESERVATION",
+      "status": "SUPPORTED",
+      "evidence": "Independent replications, activation-boundary autopsies, exact fidelity, corrective reference parity.",
+      "scope": "Tested causal scopes; known pre-fix veto preserved and corrected; not equality."
+    },
+    {
+      "claim": "REPRESENTATIVE_CHECKPOINT_CAPABILITY_NEUTRALITY",
+      "status": "SUPPORTED_NARROWLY",
+      "evidence": "8 dual-scored mixed deltas, p=.125, high variance/censoring.",
+      "scope": "No systematic score direction, not formal neutrality proof."
+    },
+    {
+      "claim": "STATISTICAL_EQUIVALENCE",
+      "status": "NOT_ESTABLISHED",
+      "evidence": "No equivalence design/margin/power; nonsignificance cannot establish it.",
+      "scope": "No formal score, completion or distribution equivalence claim."
+    },
+    {
+      "claim": "CANDIDATE_A_CONDITIONAL_FIDELITY",
+      "status": "EARNED",
+      "evidence": "51/51 exact historical traces; focused valid-workbook regression exact.",
+      "scope": "Earned primitive read surface only; unsupported cases reference."
+    },
+    {
+      "claim": "CANDIDATE_A_REPRESENTATIVE_CONTACT",
+      "status": "EARNED",
+      "evidence": "59/282 loads; 91,231 non-load operations, heavily concentrated.",
+      "scope": "Observed 30-task sample; no universal coverage or A1 broadening."
+    },
+    {
+      "claim": "CANDIDATE_A_EXISTING_SUBSTRATE_ECONOMICS",
+      "status": "SUPPORTED",
+      "evidence": "~.32s median / ~1.43s mean per accelerated load saved; large-workbook tails.",
+      "scope": "Low marginal retention cost; model/network/total-task gains not inferred."
+    },
+    {
+      "claim": "CANDIDATE_A_ZERO_SUNK_COST_ECONOMICS",
+      "status": "SUPPORTED_NARROWLY",
+      "evidence": "Mean-based checkpoint estimate covers shared cost; median-based estimate does not.",
+      "scope": "Tail-dependent workload build case only, not general substrate mandate."
+    },
+    {
+      "claim": "COMPILED_SUBSTRATE_PRACTICAL_RETENTION",
+      "status": "SUPPORTED_NARROWLY",
+      "evidence": "~25.9s total; conditional Candidate-A consumer pays on tails.",
+      "scope": "Keep existing hidden implementation after hardening; no helper consumer credit."
+    },
+    {
+      "claim": "COMPILED_SUBSTRATE_FROM_ZERO_JUSTIFICATION",
+      "status": "NOT_ESTABLISHED",
+      "evidence": "No broadly self-funding median case; tail-specific case is legitimate.",
+      "scope": "Do not rebuild generic substrate by default; known heavy readers may justify minimal index."
+    },
+    {
+      "claim": "TRANSPARENT_MUTATION_CAPTURE_ASSURANCE",
+      "status": "EARNED",
+      "evidence": "38/38 eligible static replay fidelity; exact live commits; checkpoint .34s / 16 mutations.",
+      "scope": "Cheap deterministic assurance/detection, transparent mutation semantics."
+    },
+    {
+      "claim": "TRANSPARENT_MUTATION_CAPTURE_FAILURE_PREVENTION",
+      "status": "NOT_ESTABLISHED",
+      "evidence": "Zero failure-prevention witnesses; untreated arm also not corrupt.",
+      "scope": "Do not claim prevention in practice; no witness hunt."
+    },
+    {
+      "claim": "TRANSPARENT_MUTATION_CAPTURE_CAPABILITY_NECESSITY",
+      "status": "NOT_ESTABLISHED",
+      "evidence": "No capability-required mutation IR or demonstrated untreated corruption differential.",
+      "scope": "Assurance can justify retention without necessity."
+    },
+    {
+      "claim": "FRESHNESS_GENERATION_INVARIANT",
+      "status": "EARNED",
+      "evidence": "~1.16s / 493 calls; zero stale serving where measured; failed-generation regressions.",
+      "scope": "Mandatory only when compiled serving exists; no independent consumer/rebuild credit."
+    },
+    {
+      "claim": "SUBSTRATE_HELPER_BACKEND",
+      "status": "REJECTED",
+      "evidence": "Slower rounded ~2.6s vs inspect ~.1s; no adoption advantage.",
+      "scope": "Removed from active contract; historical implementation/evidence retained."
+    },
+    {
+      "claim": "HELPER_MODEL_FACING_SURFACE",
+      "status": "SUPPORTED_NARROWLY",
+      "evidence": "Existing facts-only optional contract, 8/60 checkpoint slot adoption.",
+      "scope": "Unchanged; product retention independently adjudicable, no optimization now."
+    },
+    {
+      "claim": "FAIL_CLOSED_SUBSTRATE_BOUNDARY",
+      "status": "EARNED",
+      "evidence": "Focused tests and deterministic corrective reference parity.",
+      "scope": "Ordinary openpyxl may itself reject bad workbook; no extra substrate veto."
+    },
+    {
+      "claim": "TRACK_C_CLOSURE",
+      "status": "CLOSED",
+      "evidence": "C0/C1 ~1.65%, C2 ~1.68%; no viable no-hindsight selector.",
+      "scope": "Large new context is not mechanically removable projection."
+    },
+    {
+      "claim": "MECHANISM_DISCOVERY",
+      "status": "CLOSED",
+      "evidence": "Economics adjudicated; parser defect and empty-sheet fallback resolved.",
+      "scope": "No unresolved new semantic failure in corrective replay; remaining work engineering/communication."
+    }
+  ]
+}

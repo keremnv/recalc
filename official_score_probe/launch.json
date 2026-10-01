@@ -1,0 +1,46 @@
+{
+  "generated_at": "2026-09-16T08:49:44.950064+00:00",
+  "status": "WORKERS_STARTED",
+  "prepare_pass": true,
+  "workers": [
+    {
+      "worker_id": "glm:Template:01_02",
+      "pid": 280234,
+      "log": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/official-score-probe/logs/glm_Template_01_02.log",
+      "command": [
+        "glm-worker",
+        "--task",
+        "Template:01_02",
+        "--resume"
+      ]
+    },
+    {
+      "worker_id": "glm:Financial_Model:02_01",
+      "pid": null,
+      "skipped": true,
+      "reason": "already_terminal"
+    },
+    {
+      "worker_id": "glm:Debugging:01_01",
+      "pid": 280235,
+      "log": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/official-score-probe/logs/glm_Debugging_01_01.log",
+      "command": [
+        "glm-worker",
+        "--task",
+        "Debugging:01_01",
+        "--resume"
+      ]
+    },
+    {
+      "worker_id": "spark:Financial_Model:02_01",
+      "pid": 280236,
+      "log": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/official-score-probe/logs/spark_Financial_Model_02_01.log",
+      "command": [
+        "spark-worker"
+      ]
+    }
+  ],
+  "glm_output_root": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/official-score-probe/glm-compiled",
+  "spark_output_root": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/official-score-spark-1.3-contributor-fm-02_01",
+  "note": "Spark 1.3 Contributor is an extra published-scaffold observation, not a causal arm."
+}

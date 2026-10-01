@@ -1,0 +1,382 @@
+{
+ "positive": true,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [
+    {
+     "cell": "RevenueDrivers!H50"
+    }
+   ],
+   "count": 1
+  },
+  "REF": {
+   "items": [
+    {
+     "formula": "RevenueDrivers!D31",
+     "blank": "RevenueDrivers!D14"
+    },
+    {
+     "formula": "RevenueDrivers!D32",
+     "blank": "RevenueDrivers!D30"
+    },
+    {
+     "formula": "RevenueDrivers!D32",
+     "blank": "RevenueDrivers!D31"
+    },
+    {
+     "formula": "RevenueDrivers!D36",
+     "blank": "RevenueDrivers!D32"
+    },
+    {
+     "formula": "RevenueDrivers!D36",
+     "blank": "RevenueDrivers!D34"
+    },
+    {
+     "formula": "RevenueDrivers!D41",
+     "blank": "RevenueDrivers!D39"
+    },
+    {
+     "formula": "RevenueDrivers!D41",
+     "blank": "RevenueDrivers!D40"
+    },
+    {
+     "formula": "RevenueDrivers!D44",
+     "blank": "RevenueDrivers!D36"
+    },
+    {
+     "formula": "RevenueDrivers!D44",
+     "blank": "RevenueDrivers!D41"
+    },
+    {
+     "formula": "RevenueDrivers!D45",
+     "blank": "RevenueDrivers!D44"
+    },
+    {
+     "formula": "RevenueDrivers!E31",
+     "blank": "RevenueDrivers!E14"
+    },
+    {
+     "formula": "RevenueDrivers!E32",
+     "blank": "RevenueDrivers!E30"
+    },
+    {
+     "formula": "RevenueDrivers!E32",
+     "blank": "RevenueDrivers!E31"
+    },
+    {
+     "formula": "RevenueDrivers!E36",
+     "blank": "RevenueDrivers!E32"
+    },
+    {
+     "formula": "RevenueDrivers!E36",
+     "blank": "RevenueDrivers!E34"
+    },
+    {
+     "formula": "RevenueDrivers!E41",
+     "blank": "RevenueDrivers!E39"
+    },
+    {
+     "formula": "RevenueDrivers!E41",
+     "blank": "RevenueDrivers!E40"
+    },
+    {
+     "formula": "RevenueDrivers!E44",
+     "blank": "RevenueDrivers!E36"
+    },
+    {
+     "formula": "RevenueDrivers!E44",
+     "blank": "RevenueDrivers!E41"
+    },
+    {
+     "formula": "RevenueDrivers!E45",
+     "blank": "RevenueDrivers!E44"
+    },
+    {
+     "formula": "RevenueDrivers!F31",
+     "blank": "RevenueDrivers!F14"
+    },
+    {
+     "formula": "RevenueDrivers!F32",
+     "blank": "RevenueDrivers!F30"
+    },
+    {
+     "formula": "RevenueDrivers!F32",
+     "blank": "RevenueDrivers!F31"
+    },
+    {
+     "formula": "RevenueDrivers!F36",
+     "blank": "RevenueDrivers!F32"
+    },
+    {
+     "formula": "RevenueDrivers!F36",
+     "blank": "RevenueDrivers!F34"
+    },
+    {
+     "formula": "RevenueDrivers!F41",
+     "blank": "RevenueDrivers!F39"
+    },
+    {
+     "formula": "RevenueDrivers!F41",
+     "blank": "RevenueDrivers!F40"
+    },
+    {
+     "formula": "RevenueDrivers!F44",
+     "blank": "RevenueDrivers!F36"
+    },
+    {
+     "formula": "RevenueDrivers!F44",
+     "blank": "RevenueDrivers!F41"
+    },
+    {
+     "formula": "RevenueDrivers!F45",
+     "blank": "RevenueDrivers!F44"
+    },
+    {
+     "formula": "RevenueDrivers!G31",
+     "blank": "RevenueDrivers!G14"
+    },
+    {
+     "formula": "RevenueDrivers!G32",
+     "blank": "RevenueDrivers!G30"
+    },
+    {
+     "formula": "RevenueDrivers!G32",
+     "blank": "RevenueDrivers!G31"
+    },
+    {
+     "formula": "RevenueDrivers!G36",
+     "blank": "RevenueDrivers!G32"
+    },
+    {
+     "formula": "RevenueDrivers!G36",
+     "blank": "RevenueDrivers!G34"
+    },
+    {
+     "formula": "RevenueDrivers!G41",
+     "blank": "RevenueDrivers!G39"
+    },
+    {
+     "formula": "RevenueDrivers!G41",
+     "blank": "RevenueDrivers!G40"
+    },
+    {
+     "formula": "RevenueDrivers!G44",
+     "blank": "RevenueDrivers!G36"
+    },
+    {
+     "formula": "RevenueDrivers!G44",
+     "blank": "RevenueDrivers!G41"
+    },
+    {
+     "formula": "RevenueDrivers!G45",
+     "blank": "RevenueDrivers!G44"
+    },
+    {
+     "formula": "RevenueDrivers!H30",
+     "blank": "RevenueDrivers!D30"
+    },
+    {
+     "formula": "RevenueDrivers!H30",
+     "blank": "RevenueDrivers!E30"
+    },
+    {
+     "formula": "RevenueDrivers!H30",
+     "blank": "RevenueDrivers!F30"
+    },
+    {
+     "formula": "RevenueDrivers!H30",
+     "blank": "RevenueDrivers!G30"
+    },
+    {
+     "formula": "RevenueDrivers!H31",
+     "blank": "RevenueDrivers!D31"
+    },
+    {
+     "formula": "RevenueDrivers!H31",
+     "blank": "RevenueDrivers!E31"
+    },
+    {
+     "formula": "RevenueDrivers!H31",
+     "blank": "RevenueDrivers!F31"
+    },
+    {
+     "formula": "RevenueDrivers!H31",
+     "blank": "RevenueDrivers!G31"
+    },
+    {
+     "formula": "RevenueDrivers!H32",
+     "blank": "RevenueDrivers!D32"
+    },
+    {
+     "formula": "RevenueDrivers!H32",
+     "blank": "RevenueDrivers!E32"
+    },
+    {
+     "formula": "RevenueDrivers!H32",
+     "blank": "RevenueDrivers!F32"
+    },
+    {
+     "formula": "RevenueDrivers!H32",
+     "blank": "RevenueDrivers!G32"
+    },
+    {
+     "formula": "RevenueDrivers!H34",
+     "blank": "RevenueDrivers!D34"
+    },
+    {
+     "formula": "RevenueDrivers!H34",
+     "blank": "RevenueDrivers!E34"
+    },
+    {
+     "formula": "RevenueDrivers!H34",
+     "blank": "RevenueDrivers!F34"
+    },
+    {
+     "formula": "RevenueDrivers!H34",
+     "blank": "RevenueDrivers!G34"
+    },
+    {
+     "formula": "RevenueDrivers!H36",
+     "blank": "RevenueDrivers!D36"
+    },
+    {
+     "formula": "RevenueDrivers!H36",
+     "blank": "RevenueDrivers!E36"
+    },
+    {
+     "formula": "RevenueDrivers!H36",
+     "blank": "RevenueDrivers!F36"
+    },
+    {
+     "formula": "RevenueDrivers!H36",
+     "blank": "RevenueDrivers!G36"
+    },
+    {
+     "formula": "RevenueDrivers!H39",
+     "blank": "RevenueDrivers!D39"
+    },
+    {
+     "formula": "RevenueDrivers!H39",
+     "blank": "RevenueDrivers!E39"
+    },
+    {
+     "formula": "RevenueDrivers!H39",
+     "blank": "RevenueDrivers!F39"
+    },
+    {
+     "formula": "RevenueDrivers!H39",
+     "blank": "RevenueDrivers!G39"
+    },
+    {
+     "formula": "RevenueDrivers!H40",
+     "blank": "RevenueDrivers!D40"
+    },
+    {
+     "formula": "RevenueDrivers!H40",
+     "blank": "RevenueDrivers!E40"
+    },
+    {
+     "formula": "RevenueDrivers!H40",
+     "blank": "RevenueDrivers!F40"
+    },
+    {
+     "formula": "RevenueDrivers!H40",
+     "blank": "RevenueDrivers!G40"
+    },
+    {
+     "formula": "RevenueDrivers!H41",
+     "blank": "RevenueDrivers!D41"
+    },
+    {
+     "formula": "RevenueDrivers!H41",
+     "blank": "RevenueDrivers!E41"
+    },
+    {
+     "formula": "RevenueDrivers!H41",
+     "blank": "RevenueDrivers!F41"
+    },
+    {
+     "formula": "RevenueDrivers!H41",
+     "blank": "RevenueDrivers!G41"
+    },
+    {
+     "formula": "RevenueDrivers!H44",
+     "blank": "RevenueDrivers!D44"
+    },
+    {
+     "formula": "RevenueDrivers!H44",
+     "blank": "RevenueDrivers!E44"
+    },
+    {
+     "formula": "RevenueDrivers!H44",
+     "blank": "RevenueDrivers!F44"
+    },
+    {
+     "formula": "RevenueDrivers!H44",
+     "blank": "RevenueDrivers!G44"
+    },
+    {
+     "formula": "RevenueDrivers!H45",
+     "blank": "RevenueDrivers!H44"
+    },
+    {
+     "formula": "RevenueDrivers!H45",
+     "blank": "RevenueDrivers!H50"
+    }
+   ],
+   "count": 78
+  },
+  "CHG": {
+   "changed_cells": 54,
+   "sheets": 1,
+   "regions": [
+    "RevenueDrivers!D14",
+    "RevenueDrivers!D30",
+    "RevenueDrivers!D31",
+    "RevenueDrivers!D32",
+    "RevenueDrivers!D34",
+    "RevenueDrivers!D36",
+    "RevenueDrivers!D39",
+    "RevenueDrivers!D40",
+    "RevenueDrivers!D41",
+    "RevenueDrivers!D44",
+    "RevenueDrivers!D45",
+    "RevenueDrivers!E14",
+    "RevenueDrivers!E30",
+    "RevenueDrivers!E31",
+    "RevenueDrivers!E32",
+    "RevenueDrivers!E34",
+    "RevenueDrivers!E36",
+    "RevenueDrivers!E39",
+    "RevenueDrivers!E40",
+    "RevenueDrivers!E41"
+   ]
+  }
+ },
+ "dep_context": [
+  {
+   "for": "RevenueDrivers!H50",
+   "fed_by": [
+    "RevenueDrivers!D50",
+    "RevenueDrivers!E50",
+    "RevenueDrivers!F50"
+   ],
+   "feeds": [
+    "RevenueDrivers!H45"
+   ]
+  }
+ ],
+ "model_block": "Post-edit verification (mechanical check of the current workbook)\n\nChanged cells: 54 across 1 sheet(s).\n\nNew formula-pattern breaks (1):\n- RevenueDrivers!H50 differs from the previously consistent row/column pattern.\n\nNewly blank referenced cells (78):\n- RevenueDrivers!D31 now references blank RevenueDrivers!D14\n- RevenueDrivers!D32 now references blank RevenueDrivers!D30\n- RevenueDrivers!D32 now references blank RevenueDrivers!D31\n- RevenueDrivers!D36 now references blank RevenueDrivers!D32\n- RevenueDrivers!D36 now references blank RevenueDrivers!D34\n- RevenueDrivers!D41 now references blank RevenueDrivers!D39\n- RevenueDrivers!D41 now references blank RevenueDrivers!D40\n- RevenueDrivers!D44 now references blank RevenueDrivers!D36\n- RevenueDrivers!D44 now references blank RevenueDrivers!D41\n- RevenueDrivers!D45 now references blank RevenueDrivers!D44\n- and 68 more.\n\nThis report is mechanical evidence about the current workbook state.\nReview it before deciding whether to submit or revise.",
+ "positive_families": [
+  "UNIF",
+  "REF"
+ ]
+}

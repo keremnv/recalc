@@ -1,0 +1,162 @@
+{
+  "by_arm": {
+    "A": {
+      "calls": 367,
+      "mean_per_task": 30.583333333333332
+    },
+    "B": {
+      "calls": 301,
+      "mean_per_task": 25.083333333333332
+    },
+    "C": {
+      "calls": 321,
+      "mean_per_task": 26.75
+    },
+    "D": {
+      "calls": 317,
+      "mean_per_task": 26.416666666666668
+    }
+  },
+  "contrasts": {
+    "B_vs_A": {
+      "all_uncensored": {
+        "bootstrap_95pct_ci_geometric_ratio": [
+          0.5389552889491243,
+          1.3114632622412161
+        ],
+        "equal": 5,
+        "geometric_mean_ratio": 0.8837297871994956,
+        "mean_ratio": 1.0470947137613804,
+        "median_ratio": 1.0,
+        "n": 9,
+        "treatment_higher": 2,
+        "treatment_lower": 2
+      },
+      "dual_valid": {
+        "bootstrap_95pct_ci_geometric_ratio": [
+          0.7857142857142857,
+          2.4444444444444446
+        ],
+        "equal": 0,
+        "geometric_mean_ratio": 1.3858697343671664,
+        "mean_ratio": 1.6150793650793651,
+        "median_ratio": 1.6150793650793651,
+        "n": 2,
+        "treatment_higher": 1,
+        "treatment_lower": 1
+      }
+    },
+    "C_vs_A": {
+      "all_uncensored": {
+        "bootstrap_95pct_ci_geometric_ratio": [
+          0.808399587671053,
+          1.0105843689902043
+        ],
+        "equal": 7,
+        "geometric_mean_ratio": 0.9215366797445084,
+        "mean_ratio": 0.9373101673101673,
+        "median_ratio": 1.0,
+        "n": 10,
+        "treatment_higher": 1,
+        "treatment_lower": 2
+      },
+      "dual_valid": {
+        "bootstrap_95pct_ci_geometric_ratio": [
+          0.7857142857142857,
+          1.0
+        ],
+        "equal": 1,
+        "geometric_mean_ratio": 0.8864052604279183,
+        "mean_ratio": 0.8928571428571428,
+        "median_ratio": 0.8928571428571428,
+        "n": 2,
+        "treatment_higher": 0,
+        "treatment_lower": 1
+      }
+    },
+    "C_vs_B": {
+      "all_uncensored": {
+        "bootstrap_95pct_ci_geometric_ratio": [
+          0.7444920338975516,
+          1.4778718322620852
+        ],
+        "equal": 6,
+        "geometric_mean_ratio": 1.0333562982484346,
+        "mean_ratio": 1.181711855396066,
+        "median_ratio": 1.0,
+        "n": 9,
+        "treatment_higher": 2,
+        "treatment_lower": 1
+      },
+      "dual_valid": {
+        "bootstrap_95pct_ci_geometric_ratio": [
+          0.4090909090909091,
+          3.2
+        ],
+        "equal": 1,
+        "geometric_mean_ratio": 1.0939310151857378,
+        "mean_ratio": 1.5363636363636364,
+        "median_ratio": 1.0,
+        "n": 3,
+        "treatment_higher": 1,
+        "treatment_lower": 1
+      }
+    },
+    "D_vs_A": {
+      "all_uncensored": {
+        "bootstrap_95pct_ci_geometric_ratio": [
+          0.8390027456441236,
+          1.0597307594623622
+        ],
+        "equal": 4,
+        "geometric_mean_ratio": 0.9578595315829274,
+        "mean_ratio": 0.9738534963534964,
+        "median_ratio": 1.0,
+        "n": 10,
+        "treatment_higher": 3,
+        "treatment_lower": 3
+      },
+      "dual_valid": {
+        "bootstrap_95pct_ci_geometric_ratio": [
+          0.8888888888888888,
+          1.2142857142857142
+        ],
+        "equal": 0,
+        "geometric_mean_ratio": 1.0389249632986395,
+        "mean_ratio": 1.0515873015873014,
+        "median_ratio": 1.0515873015873014,
+        "n": 2,
+        "treatment_higher": 1,
+        "treatment_lower": 1
+      }
+    },
+    "D_vs_C": {
+      "all_uncensored": {
+        "bootstrap_95pct_ci_geometric_ratio": [
+          0.8561533618057355,
+          1.2907140935168087
+        ],
+        "equal": 4,
+        "geometric_mean_ratio": 1.0394155247824637,
+        "mean_ratio": 1.1008702408702409,
+        "median_ratio": 1.0,
+        "n": 10,
+        "treatment_higher": 2,
+        "treatment_lower": 4
+      },
+      "dual_valid": {
+        "bootstrap_95pct_ci_geometric_ratio": [
+          0.8888888888888888,
+          1.5454545454545454
+        ],
+        "equal": 0,
+        "geometric_mean_ratio": 1.1720654306553766,
+        "mean_ratio": 1.2171717171717171,
+        "median_ratio": 1.2171717171717171,
+        "n": 2,
+        "treatment_higher": 1,
+        "treatment_lower": 1
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "argv_template": [
+    "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+    "{workdir}/workload.py"
+  ],
+  "cwd": "{workdir}",
+  "environment": "installed RC venv Python; XDG_CACHE_HOME fresh and PYTHONPATH cleared"
+}

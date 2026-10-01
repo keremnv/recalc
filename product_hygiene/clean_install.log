@@ -1,0 +1,29 @@
+Processing /home/kerem/Desktop/Personal Projects/librecalc-mcp
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting lxml==6.1.3 (from librecalc-agent==0.2.0rc1)
+  Downloading lxml-6.1.3-cp313-cp313-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.3 kB)
+Collecting openpyxl==3.1.5 (from librecalc-agent==0.2.0rc1)
+  Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting et-xmlfile (from openpyxl==3.1.5->librecalc-agent==0.2.0rc1)
+  Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+Downloading lxml-6.1.3-cp313-cp313-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.2/5.2 MB 24.4 MB/s  0:00:00
+Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+Building wheels for collected packages: librecalc-agent
+  Building wheel for librecalc-agent (pyproject.toml): started
+  Building wheel for librecalc-agent (pyproject.toml): finished with status 'done'
+  Created wheel for librecalc-agent: filename=librecalc_agent-0.2.0rc1-py3-none-any.whl size=43266 sha256=532e493f126087a45d86117343514a9a1cd0a4e0010af89bbd1be1b271d66b2e
+  Stored in directory: /tmp/librecalc-hygiene-rc-v55taghk/cache/pip/wheels/00/41/b1/1a86f5e219549cd2be9741eeb26d5f6f57687e3ad8e78ddc40
+Successfully built librecalc-agent
+Installing collected packages: lxml, et-xmlfile, openpyxl, librecalc-agent
+
+Successfully installed et-xmlfile-2.0.0 librecalc-agent-0.2.0rc1 lxml-6.1.3 openpyxl-3.1.5
+
+[notice] A new release of pip is available: 25.3 -> 26.2.1
+[notice] To update, run: /tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python -m pip install --upgrade pip

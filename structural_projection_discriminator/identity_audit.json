@@ -1,0 +1,149 @@
+{
+  "ok": true,
+  "rows": [
+    {
+      "repeat": 1,
+      "arm": "CONTROL",
+      "declared_model": "meta/muse-spark-1.3-contributor",
+      "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+      "response_model": "meta/muse-spark-1.3-contributor",
+      "ok": true,
+      "obligation": "O7"
+    },
+    {
+      "repeat": 1,
+      "arm": "TREATMENT",
+      "declared_model": "meta/muse-spark-1.3-contributor",
+      "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+      "response_model": "meta/muse-spark-1.3-contributor",
+      "ok": true,
+      "obligation": "O7"
+    },
+    {
+      "repeat": 2,
+      "arm": "TREATMENT",
+      "declared_model": "meta/muse-spark-1.3-contributor",
+      "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+      "response_model": "meta/muse-spark-1.3-contributor",
+      "ok": true,
+      "obligation": "O7"
+    },
+    {
+      "repeat": 2,
+      "arm": "CONTROL",
+      "declared_model": "meta/muse-spark-1.3-contributor",
+      "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+      "response_model": "meta/muse-spark-1.3-contributor",
+      "ok": true,
+      "obligation": "O7"
+    },
+    {
+      "repeat": 3,
+      "arm": "CONTROL",
+      "declared_model": "meta/muse-spark-1.3-contributor",
+      "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+      "response_model": "meta/muse-spark-1.3-contributor",
+      "ok": true,
+      "obligation": "O7"
+    },
+    {
+      "repeat": 3,
+      "arm": "TREATMENT",
+      "declared_model": "meta/muse-spark-1.3-contributor",
+      "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+      "response_model": "meta/muse-spark-1.3-contributor",
+      "ok": true,
+      "obligation": "O7"
+    },
+    {
+      "repeat": 4,
+      "arm": "TREATMENT",
+      "declared_model": "meta/muse-spark-1.3-contributor",
+      "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+      "response_model": "meta/muse-spark-1.3-contributor",
+      "ok": true,
+      "obligation": "O7"
+    },
+    {
+      "repeat": 4,
+      "arm": "CONTROL",
+      "declared_model": "meta/muse-spark-1.3-contributor",
+      "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+      "response_model": "meta/muse-spark-1.3-contributor",
+      "ok": true,
+      "obligation": "O7"
+    },
+    {
+      "obligation": "O6",
+      "repeat": 1,
+      "arm": "CONTROL",
+      "declared_model": "meta/muse-spark-1.3-contributor",
+      "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+      "response_model": "meta/muse-spark-1.3-contributor",
+      "ok": true
+    },
+    {
+      "obligation": "O6",
+      "repeat": 1,
+      "arm": "TREATMENT",
+      "declared_model": "meta/muse-spark-1.3-contributor",
+      "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+      "response_model": "meta/muse-spark-1.3-contributor",
+      "ok": true
+    },
+    {
+      "obligation": "O6",
+      "repeat": 2,
+      "arm": "TREATMENT",
+      "declared_model": "meta/muse-spark-1.3-contributor",
+      "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+      "response_model": "meta/muse-spark-1.3-contributor",
+      "ok": true
+    },
+    {
+      "obligation": "O6",
+      "repeat": 2,
+      "arm": "CONTROL",
+      "declared_model": "meta/muse-spark-1.3-contributor",
+      "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+      "response_model": "meta/muse-spark-1.3-contributor",
+      "ok": true
+    },
+    {
+      "obligation": "O6",
+      "repeat": 3,
+      "arm": "CONTROL",
+      "declared_model": "meta/muse-spark-1.3-contributor",
+      "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+      "response_model": "meta/muse-spark-1.3-contributor",
+      "ok": true
+    },
+    {
+      "obligation": "O6",
+      "repeat": 3,
+      "arm": "TREATMENT",
+      "declared_model": "meta/muse-spark-1.3-contributor",
+      "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+      "response_model": "meta/muse-spark-1.3-contributor",
+      "ok": true
+    },
+    {
+      "obligation": "O6",
+      "repeat": 4,
+      "arm": "TREATMENT",
+      "declared_model": "meta/muse-spark-1.3-contributor",
+      "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+      "response_model": "meta/muse-spark-1.3-contributor",
+      "ok": true
+    },
+    {
+      "obligation": "O6",
+      "repeat": 4,
+      "arm": "CONTROL",
+      "declared_model": "meta/muse-spark-1.3-contributor",
+      "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+      "response_model": "meta/muse-spark-1.3-contributor",
+      "ok": true
+    }
+  ]
+}

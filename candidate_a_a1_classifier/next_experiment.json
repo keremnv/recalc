@@ -1,0 +1,6 @@
+{
+  "experiment": "larger identical-interface Candidate-A checkpoint with A1 frozen",
+  "justified": true,
+  "not_run_in_this_task": true,
+  "scope": "direct per-load/read timing; no prompt/helper/interface change; Candidate B frozen"
+}

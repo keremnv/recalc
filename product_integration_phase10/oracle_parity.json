@@ -1,0 +1,50 @@
+{
+  "artifact_parity_rows": 543,
+  "assurance_parity_rows": 543,
+  "by_population": {
+    "changed5": 5,
+    "fixed22": 88,
+    "representative30": 120,
+    "session30": 330
+  },
+  "changed_file_raw_comparator_flags_resolved_by_frozen_phase8_package_rule": [
+    {
+      "frozen_package_rule_passed": true,
+      "invocation": 1,
+      "population": "changed5",
+      "raw_EXP_PROD": "GENUINE_SEMANTIC_DIFFERENCE",
+      "workload_id": "phase8_changed_existing_cell"
+    },
+    {
+      "frozen_package_rule_passed": true,
+      "invocation": 1,
+      "population": "changed5",
+      "raw_EXP_PROD": "GENUINE_SEMANTIC_DIFFERENCE",
+      "workload_id": "phase8_changed_output_file"
+    }
+  ],
+  "fallback_parity_rows": 543,
+  "frozen_reference": "Phase-9 experimental implementation",
+  "note": "Raw Phase-3 byte-state classification includes volatile core-properties modified timestamps. For changed-file rows, the preregistered Phase-8 package-parts rule is authoritative and passes. No raw flags were suppressed or ledger rows changed.",
+  "raw_comparator_classifications": {
+    "EXP_PROD": {
+      "EXACT": 481,
+      "GENUINE_SEMANTIC_DIFFERENCE": 2,
+      "VOLATILE_ONLY_DIFFERENCE": 60
+    },
+    "PY_EXP": {
+      "EXACT": 481,
+      "GENUINE_SEMANTIC_DIFFERENCE": 2,
+      "VOLATILE_ONLY_DIFFERENCE": 60
+    },
+    "PY_PROD": {
+      "EXACT": 481,
+      "GENUINE_SEMANTIC_DIFFERENCE": 2,
+      "VOLATILE_ONLY_DIFFERENCE": 60
+    }
+  },
+  "route_parity_rows": 543,
+  "scored_rows": 543,
+  "valid_under_preregistered_comparator": 543,
+  "validator": "product_integration_phase10/validate.py"
+}

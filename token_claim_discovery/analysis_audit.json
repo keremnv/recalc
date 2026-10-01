@@ -1,0 +1,23 @@
+{
+  "all_archived_successful_requests_decomposed": true,
+  "future_validation_population_untouched": true,
+  "limits": [
+    "The workbook evaluator supplies accuracy scores for missing workbooks too; valid submission additionally requires the frozen SUBMITTED status and an output file.",
+    "View/scan classifiers are syntactic proxies, not proof of semantic usefulness.",
+    "cl100k local token estimates are not the model-native/provider token count."
+  ],
+  "model_calls_added": 0,
+  "no_replications": true,
+  "official_scorer_rerun": false,
+  "phase": "POST_PRIMARY_ANALYSIS_CORRECTION",
+  "previously_misclassified_submitted_workbooks": 30,
+  "primary_and_preregistration_unchanged": true,
+  "raw_provider_call_rows": 1175,
+  "raw_provider_ledger_frozen_hash_preserved": true,
+  "score_validity_error": "An error_message may describe a scored cell mismatch. It does not by itself invalidate a submitted workbook.",
+  "selected_provider_call_rows": 1167,
+  "selection_rule": "last successful record per task/arm/call, reconciled exactly to each frozen primary run",
+  "submitted_scored_workbooks": 39,
+  "submitted_with_ordinary_mismatch_diagnostics": 30,
+  "superseded_rows_from_interrupted_partial_block": 8
+}

@@ -1,0 +1,46 @@
+{
+ "INCONCLUSIVE": {
+  "action": "do NOT close the capability branch; diagnose contact failure (prevalence overestimated? scaffold changed? trigger bug?) and either re-enrich once on a fresh reserve or stop for cause stated in the report",
+  "condition": "treatment contact below gate (<6/7 enriched contacted), OR the clean control fired (specificity failure -- harness/report bug, not evidence), OR any gate read missing a required element. Absence of contact is not a negative result.",
+  "note": "distinguish: (a) control-side refire failure (historical firing did not reproduce) from (b) harness failure (report never computed/delivered despite findings). (b) is an implementation bug, not evidence."
+ },
+ "concentration_leave_one_task_out": {
+  "action_if_concentrated": "downgrade PROMISING to INCONCLUSIVE-positive-leaning; do NOT proceed to confirmation on a single-task effect; report the task as a case study",
+  "rule": "recompute the mean paired mod delta dropping each task in turn. PROMISING requires the LOTO minimum to stay >0 (direction robust) and the max single-task contribution to be <60% of the total. NO_CAPABILITY_EFFECT/HARMFUL are not overturned by LOTO (a negative stands even if one task is positive)."
+ },
+ "control_distributions_used": {
+  "ordinary_control_mod_n38": "mean 0.713, p25 0.458, median 0.921, p75 0.970; 3 exact-0, 22 >=0.9 -- high median means absolute gates must be modest; headroom lives in low-mod tasks",
+  "ordinary_control_reg_n38": "mean 0.9826, median 1.0 -- regression is near-ceiling, so even small drops are meaningful harm",
+  "threshold_basis": "thresholds below are set from THESE control distributions only, before seeing any treatment outcome. No power analysis is pretended: N is too small for that; gates are discovery thresholds, not significance tests."
+ },
+ "FORMULA_ERROR_FEEDBACK_HARMFUL": {
+  "action": "close the capability branch permanently; do not run confirmation; report the harm mechanism (which tasks, which error kinds, what the agent did)",
+  "condition_all_of": [
+   "paired regression harm: mean paired reg delta <= -0.02, OR any single task reg delta <= -0.05",
+   "contact adequate (>=6/7 enriched) so the harm is attributable to delivered feedback, not noise"
+  ],
+  "note": "regression harm with adequate contact means the feedback actively misleads repair (e.g. encourages error-clearing deletions)."
+ },
+ "FORMULA_ERROR_FEEDBACK_NO_CAPABILITY_EFFECT": {
+  "action": "close the capability branch permanently (clean negative); do not run confirmation; publish the negative with mechanism telemetry",
+  "condition_all_of": [
+   "treatment contact adequate (>=6/7 enriched) with the clean control unfired",
+   "mean paired modification delta in (-0.02, +0.05) over all 8 tasks",
+   "mechanism flat or absent: EITHER <50% of contacted trajectories reduce live NFE at final vs report, OR reductions do not track mod deltas (repair without capability)"
+  ],
+  "note": "this is the expected outcome shape if the detector is right but the repair loop does not convert (the 297 pattern: true findings, zero exact conversions)."
+ },
+ "FORMULA_ERROR_FEEDBACK_PROMISING": {
+  "action": "freeze the mechanism byte-identical and run ONE fresh confirmation on the reserved population (reserved_confirmation_population.json); do not tune, re-enrich, or expand the discovery set",
+  "condition_all_of": [
+   "treatment contact: >=6/7 ENRICHED tasks received the report episode, AND the clean negative control did NOT fire (specificity check: no perturbation without cause)",
+   "modification improvement: mean paired official-mod delta >= +0.05 over ALL 8 tasks (clean control included; it should contribute ~0)",
+   "regression safety: mean paired reg delta >= -0.01 AND no single task reg delta <= -0.02",
+   "concentration: leave-one-task-out minimum stays >0 (see concentration rule)",
+   "mechanical repair: >=50% of contacted treatment trajectories show strictly fewer live NFE at final submission than at first report (invisible-harness measurement, same engine)"
+  ],
+  "why_0.05": "control mod median is 0.92 (near ceiling); a +0.05 mean paired gain on enriched headroom tasks is large relative to control spread below the ceiling (p25 0.458) yet small enough to be reachable. It must co-occur with actual mechanical error reduction, so a score-only fluctuation cannot pass."
+ },
+ "gate_inputs": "all five gate elements are REQUIRED for any terminal read: treatment contact, modification improvement, regression safety, concentration/LOTO, actual mechanical error reduction. A read missing any element is INCONCLUSIVE, not PROMISING or NEGATIVE.",
+ "population_shape": "N=8: 7 mechanism-enriched tasks (historical ordinary-agent firing) + 1 Tier-C clean negative control (historical ordinary NFE=0, high control mod). Contact gates apply to the 7 ENRICHED tasks; the clean control validates specificity (must NOT fire)."
+}

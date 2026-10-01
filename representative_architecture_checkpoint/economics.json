@@ -1,0 +1,115 @@
+{
+ "n_h0": 30,
+ "n_h1": 30,
+ "substrate": {
+  "initial_build_s_total": 24.7568,
+  "initial_build_s_mean": 0.8537,
+  "initial_db_bytes_mean": 5990753,
+  "refresh_s_total": 1.1599,
+  "refresh_calls": 493,
+  "rebuilds_after_initial": 16,
+  "subslot_substrate_total_s": 25.9167
+ },
+ "candidate_a": {
+  "h1_accelerated_loads_parses_avoided": 59,
+  "h1_accelerated_fast_path_s_total": 29.4932,
+  "h1_accelerated_ops_nonload": 91231,
+  "h1_accelerated_ops_by_op": {
+   "Workbook.sheetnames": 148,
+   "Workbook.__getitem__": 128,
+   "Worksheet.max_row": 80,
+   "Worksheet.max_column": 255,
+   "Worksheet.cell": 30500,
+   "Cell.value": 30052,
+   "Cell.value_timing": 30052,
+   "Cell.data_type": 8,
+   "Cell.data_type_timing": 8
+  },
+  "h1_fallbacks": 542,
+  "h1_fallback_reasons": {
+   "forced real path": 444,
+   "merged-cell access": 92,
+   "unsupported object behavior": 4,
+   "shared substrate unavailable": 2
+  },
+  "h0_eligible_loads": 281,
+  "h0_eligible_unit_s_mean": 1.926,
+  "h0_rejected_loads": 69,
+  "h0_reject_reasons": {
+   "unsupported load mode/options": 69
+  },
+  "avoided_parse_s_estimate": 113.6368
+ },
+ "capture": {
+  "capture_s_total": 0.3424,
+  "capture_s_mean": 0.0114,
+  "mutations": 16,
+  "runtime_failures": 0,
+  "validation_failed": 0,
+  "fidelity_records_raw": 33,
+  "fidelity_records_valid": 16
+ },
+ "helpers": {
+  "H0": {
+   "slots_with_helper_use": 2,
+   "slots_total": 30,
+   "calls": 40,
+   "mean_call_s_by_helper": {
+    "inspect": 0.1065,
+    "search": 2.6307,
+    "periods": 0.116
+   },
+   "total_backend_s": 21.9393
+  },
+  "H1": {
+   "slots_with_helper_use": 6,
+   "slots_total": 30,
+   "calls": 31,
+   "mean_call_s_by_helper": {
+    "periods": 0.8184,
+    "inspect": 2.4189,
+    "search": 1.5012
+   },
+   "total_backend_s": 61.4771
+  }
+ },
+ "ledger_h1_seconds": {
+  "tool_total": 508.324,
+  "substrate_initial_fixed": 24.757,
+  "substrate_refresh_marginal": 1.16,
+  "capture_marginal": 0.342,
+  "helper_backend_marginal": 61.4771
+ },
+ "spend_valid_slots_usd": 4.4781,
+ "spend_metered_total_usd": 2.989179150000001,
+ "censoring": {
+  "H0": {
+   "MODEL_BUDGET_EXHAUSTED": 3,
+   "PROVIDER_CENSORED": 7,
+   "COMPLETED": 20
+  },
+  "H1": {
+   "COMPLETED": 18,
+   "MODEL_BUDGET_EXHAUSTED": 5,
+   "PROVIDER_CENSORED": 6,
+   "?": 1
+  }
+ },
+ "run_status": {
+  "H0": {
+   "TRUNCATED_CALL_LIMIT": 2,
+   "PROVIDER_CENSORED": 7,
+   "NO_SUBMIT": 9,
+   "SUBMITTED": 11,
+   "TRUNCATED_INSTANCE_COST": 1
+  },
+  "H1": {
+   "NO_SUBMIT": 9,
+   "SUBMITTED": 9,
+   "TRUNCATED_INSTANCE_COST": 1,
+   "TRUNCATED_CALL_LIMIT": 4,
+   "PROVIDER_CENSORED": 6,
+   "RUNNER_ERROR": 1
+  }
+ }
+}

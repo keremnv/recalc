@@ -1,0 +1,36 @@
+id: fm-03-02-m4
+run: glm-5.3-flash-nonvisual-297-1
+task: Financial_Model:03_02
+first_miss:
+  kind: regression
+  address: "Valuation Band!M4"
+  error_message: "Regression error at Valuation Band!M4: answer=None, output=9.03348133333333"
+facts:
+  opened_golden: false
+  spreadsheet: 03_02_Banking_input.xlsx
+  instruction: >
+    Valuation CAPM, DuPont Profit Margin, combo chart, Valuation Band Min/Max/Median/Average,
+    period-on-period Difference, Factor.
+  input_kind: blank
+  input_value: null
+  output_formula: "=+L4"
+  autopsy:
+    named: false
+    read: true
+    written: true
+    bucket: written_wrong
+  wrote: {range: M4, formula: "=+L4"}
+  wrote_also: {range: M5:M10, formula: "=+L5-L4"}
+  compare: {formulas_added: 34, labels_changed: 8}
+claims:
+  patterns: [C-empty-prior, K-preserve-compare]
+  nuance: decomposable
+  mechanism: run-boundary
+  lever: constraint
+  lever_why: >
+    Same geometry as t-04-04-d13: M5:M10 period-on-period is right, M4 has no prior and copies
+    the level. mod 0.9995, one miss -- the closest case in the catalog to exact.
+  notes: >
+    Instruction does ask for Diff. M5:M10 is period-on-period (right). M4 = +L4
+    copies FY09 ABV into the first Diff (no prior year). 9.03 is that level.
+    They also overwrote Min/Max labels in R then restored them. mod 0.9995.

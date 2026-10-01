@@ -1,0 +1,332 @@
+{
+  "status": "PASS",
+  "clean_environment": "/tmp/librecalc-hygiene-rc-v55taghk",
+  "product_tests": {
+    "file": "product_hygiene/clean_product_tests.xml",
+    "tests": 27,
+    "failures": 0,
+    "pass": true,
+    "cases": [
+      "test_frozen_extraction_exact",
+      "test_no_research_imports",
+      "test_run_read_configs[settings0]",
+      "test_run_read_configs[settings1]",
+      "test_run_read_configs[settings2]",
+      "test_run_read_configs[settings3]",
+      "test_run_read_configs[settings4]",
+      "test_mutation_bytes_identical_capture",
+      "test_cache_path_is_file_reference_succeeds",
+      "test_unwritable_cache_reference_succeeds",
+      "test_index_build_failure_reference_succeeds",
+      "test_missing_optional_index_reference_succeeds",
+      "test_malformed_unsupported_reference_semantics[malformed]",
+      "test_malformed_unsupported_reference_semantics[unsupported]",
+      "test_published_index_failure_reference_succeeds[corrupt]",
+      "test_published_index_failure_reference_succeeds[stale]",
+      "test_published_index_failure_reference_succeeds[missing]",
+      "test_bad_config_disables_runtime[invalid TOML []",
+      "test_bad_config_disables_runtime[[runtime]\\nenabled='yes']",
+      "test_bad_config_disables_runtime[[runtime]\\nextra=true]",
+      "test_helpers_reference_only",
+      "test_doctor_no_lo",
+      "test_required_lo_blocks_before_script",
+      "test_script_once_arguments_and_exit_status",
+      "test_status_records_fallback",
+      "test_nested_interpreter_does_not_inherit_acceleration",
+      "test_cli_example_and_doctor"
+    ]
+  },
+  "existing_frozen_regressions": {
+    "file": "product_hygiene/frozen_regressions.xml",
+    "tests": 39,
+    "failures": 0,
+    "pass": true,
+    "cases": [
+      "test_malformed_bytes_fall_back_with_reference_exception[untrusted bytes]",
+      "test_malformed_bytes_fall_back_with_reference_exception[PK\\x03\\x04truncated]",
+      "test_malformed_package_xml",
+      "test_initial_failure_is_sticky_and_reference_succeeds[parser]",
+      "test_initial_failure_is_sticky_and_reference_succeeds[database]",
+      "test_partial_build_cleanup",
+      "test_failed_refresh_retires_old_handle_and_new_generation_rebuilds",
+      "test_persistent_substrate_unavailable_reference_proceeds[missing]",
+      "test_persistent_substrate_unavailable_reference_proceeds[corrupt]",
+      "test_persistent_substrate_unavailable_reference_proceeds[stale]",
+      "test_persistent_substrate_unavailable_reference_proceeds[manifest]",
+      "test_unsupported_chartsheet_uses_reference",
+      "test_valid_candidate_surface_remains_exact",
+      "test_retired_proxy_and_sql_failure_use_reference",
+      "test_backup_failure_never_publishes_partial",
+      "test_scope_is_per_workbook",
+      "test_freshness_initialization_failure_is_sticky",
+      "test_reference_helpers_no_index_contact",
+      "test_filelike_fallback_passes_original_object",
+      "test_partial_database_without_commit_marker_rejected",
+      "test_manifest_storage_unavailable_disables_runner_scope",
+      "test_new_load_after_mutation_falls_back_until_parent_refresh",
+      "test_helpers_bypass_candidate_loader_including_styles",
+      "test_runtime_initialization_restores_original_loader",
+      "test_failed_build_retires_existing_persistent_snapshot",
+      "test_new_loader_cannot_revive_failed_generation",
+      "test_helpers_mechanical",
+      "test_freshness_rebuilds_after_mutation",
+      "test_freshness_fail_closed_missing",
+      "test_inspect_reports_truncation_and_supports_paging",
+      "test_inspect_ranges_is_compact_and_single_generation",
+      "test_model_surface_byte_identical_to_h0",
+      "test_value_write_committed_equals_produced",
+      "test_formula_and_new_sheet_committed_equals_produced",
+      "test_creation_committed_equals_produced",
+      "test_opaque_parts_preserved_byte_exact",
+      "test_failed_script_aborts_without_commit",
+      "test_dir_entries_preserved_on_replay",
+      "test_mechanical_validation_rejects_corrupt_output"
+    ]
+  },
+  "total_distinct_suite_tests": 66,
+  "mechanical_steps": [
+    {
+      "step": "environment_creation",
+      "command": [
+        "/home/kerem/miniconda3/bin/python3",
+        "-m",
+        "venv",
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/environment_creation.log"
+    },
+    {
+      "step": "clean_install",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "/home/kerem/Desktop/Personal Projects/librecalc-mcp"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/clean_install.log"
+    },
+    {
+      "step": "runtime_dependencies",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+        "-m",
+        "pip",
+        "list",
+        "--format=json"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/runtime_dependencies.log"
+    },
+    {
+      "step": "isolated_imports",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+        "-c",
+        "import json,sys,librecalc_agent,lx_helpers; from librecalc_agent import diagnostics; from librecalc_agent.config import defaults; diagnostics.check(defaults(),[]); print(json.dumps({\"package\":librecalc_agent.__file__,\"prefix\":sys.prefix,\"research_imports\":[x for x in sys.modules if x.startswith((\"benchmark\",\"librecalc_mcp\",\"openai\",\"mcp\"))]}))"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/isolated_imports.log"
+    },
+    {
+      "step": "doctor",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "doctor",
+        "--json"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/doctor.log"
+    },
+    {
+      "step": "doctor_require_lo",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "doctor",
+        "--require-libreoffice"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/doctor_require_lo.log"
+    },
+    {
+      "step": "example_copy",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "example",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/example_copy.log"
+    },
+    {
+      "step": "example_create_input",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "run",
+        "--workdir",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example/create_input.py"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/example_create_input.log"
+    },
+    {
+      "step": "example_update",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "run",
+        "--workdir",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example/update.py"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/example_update.log"
+    },
+    {
+      "step": "example_read",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "run",
+        "--workdir",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example/read.py"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/example_read.log"
+    },
+    {
+      "step": "enabled_status",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "status",
+        "--json"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/enabled_status.log"
+    },
+    {
+      "step": "disabled_example",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "run",
+        "--no-runtime",
+        "--workdir",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example/update.py"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/disabled_example.log"
+    },
+    {
+      "step": "ordinary_example",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example/update.py"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk/example",
+      "returncode": 0,
+      "log": "product_hygiene/ordinary_example.log"
+    },
+    {
+      "step": "example_verify",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+        "-c",
+        "import json,openpyxl; w=openpyxl.load_workbook(\"output.xlsx\"); print(json.dumps({\"A2\":w[\"Sheet1\"][\"A2\"].value,\"B2\":w[\"Sheet1\"][\"B2\"].value}));w.close()"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk/example",
+      "returncode": 0,
+      "log": "product_hygiene/example_verify.log"
+    },
+    {
+      "step": "reference_helper",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+        "-c",
+        "import lx_helpers; r=lx_helpers.inspect(\"output.xlsx\",\"Sheet1\",\"B2:B2\",with_styles=True); assert r[\"index_generation\"]==0; print(r[\"results\"][0][\"formula\"])"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk/example",
+      "returncode": 0,
+      "log": "product_hygiene/reference_helper.log"
+    },
+    {
+      "step": "status",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "status",
+        "--json"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/status.log"
+    },
+    {
+      "step": "validation_dependencies",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "pytest==8.4.2"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/validation_dependencies.log"
+    },
+    {
+      "step": "clean_product_tests",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+        "-m",
+        "pytest",
+        "-o",
+        "pythonpath=",
+        "/home/kerem/Desktop/Personal Projects/librecalc-mcp/tests/test_product_hygiene.py",
+        "-q",
+        "--junitxml=/home/kerem/Desktop/Personal Projects/librecalc-mcp/product_hygiene/clean_product_tests.xml"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/clean_product_tests.log"
+    },
+    {
+      "step": "wheel_build",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+        "-m",
+        "pip",
+        "wheel",
+        "--no-deps",
+        "--wheel-dir",
+        "/home/kerem/Desktop/Personal Projects/librecalc-mcp/product_hygiene/dist",
+        "/home/kerem/Desktop/Personal Projects/librecalc-mcp"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/wheel_build.log"
+    }
+  ],
+  "ast_source_parity": "PASS: unchanged selected eligibility/proxy/capture definitions; full copy modules only import-relocated, research main removed.",
+  "installed_import_reachability": "No benchmark, librecalc_mcp, openai or mcp imports.",
+  "wheel_exclusion": "PASS; no research/dataset/historical package installed.",
+  "paid_or_model_tests_run": 0,
+  "benchmarks_run": 0,
+  "scoring_runs": 0,
+  "test_selection": "Explicit allowlist: tests/test_product_hygiene.py in clean venv; tests/test_fail_closed_substrate.py, tests/test_inspection_helpers.py, tests/test_transparent_runtime.py in developer interpreter.",
+  "excluded_tests": "All other repository tests/runners excluded; no full discovery, live provider tests, paid/external model tests, UNO service tests or benchmark/scoring drivers invoked. Historical tests may need optional research dependencies and are outside product validation.",
+  "lint": "ruff check src/librecalc_agent --exclude _frozen: PASS; frozen extracted code intentionally not rewritten by lint."
+}

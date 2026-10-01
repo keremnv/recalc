@@ -1,0 +1,50 @@
+{
+ "positive": false,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [],
+   "count": 0
+  },
+  "CHG": {
+   "changed_cells": 37,
+   "sheets": 3,
+   "regions": [
+    "Assumption!I18",
+    "Assumption!I8",
+    "Assumption!J18",
+    "Assumption!J8",
+    "Assumption!K18",
+    "Assumption!K8",
+    "Assumption!L18",
+    "Assumption!L8",
+    "Assumption!M18",
+    "Assumption!M8",
+    "P&L!C37",
+    "P&L!D37",
+    "P&L!E37",
+    "P&L!F37",
+    "P&L!G37",
+    "P&L!H37",
+    "P&L!I37",
+    "P&L!J37",
+    "P&L!K37",
+    "P&L!L37"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": null,
+ "positive_families": []
+}

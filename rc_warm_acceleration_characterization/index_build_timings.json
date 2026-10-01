@@ -1,0 +1,24 @@
+{
+  "prior_cold_instrumented_setup_median_s_all_eligible": 0.26413286350725684,
+  "prior_cold_instrumented_setup_median_s_supported_eligible": 0.3233966660045553,
+  "probe_only_refresh_diagnostics": [
+    {
+      "backup_s": 0.003157756000291556,
+      "ensure_s": 0.007380239985650405,
+      "freshness_s": 0.010537995985941961,
+      "ordinal": 1,
+      "rebuilt": true,
+      "run_id": "a3fb8dd6102e4cf98a8c745b845c477c"
+    },
+    {
+      "backup_s": 0.009869964007521048,
+      "ensure_s": 0.006931793002877384,
+      "freshness_s": 0.016801757010398433,
+      "ordinal": 2,
+      "rebuilt": true,
+      "run_id": "32c833ca8ad844f698ae4856a66ee685"
+    }
+  ],
+  "qualification": "Prior setup diagnostics are nested timings within cold invocations, not a one-time reusable I.",
+  "status": "NO_REUSABLE_INDEX; NO_SEPARATE_ONE_TIME_PUBLIC_BUILD_COST_ESTIMABLE"
+}

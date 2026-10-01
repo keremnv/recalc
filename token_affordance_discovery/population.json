@@ -1,0 +1,41 @@
+{
+  "families": {
+    "Debugging": [
+      "Debugging:02_01",
+      "Debugging:02_06",
+      "Debugging:10_10",
+      "Debugging:01_08"
+    ],
+    "Financial_Model": [
+      "Financial_Model:01_01",
+      "Financial_Model:04_03",
+      "Financial_Model:03_03",
+      "Financial_Model:02_01"
+    ],
+    "Template": [
+      "Template:01_07",
+      "Template:15_01",
+      "Template:06_12",
+      "Template:15_03"
+    ]
+  },
+  "label": "AFFORDANCE_DISCOVERY_FRESH_NONREPRESENTATIVE",
+  "previous_discovery_overlap": 0,
+  "reserved_holdout_overlap": 0,
+  "seed": 20261007,
+  "selection_scope": "control-side historical completion and model-call/token headroom only",
+  "tasks": [
+    "Template:01_07",
+    "Template:15_01",
+    "Template:06_12",
+    "Template:15_03",
+    "Financial_Model:01_01",
+    "Financial_Model:04_03",
+    "Financial_Model:03_03",
+    "Financial_Model:02_01",
+    "Debugging:02_01",
+    "Debugging:02_06",
+    "Debugging:10_10",
+    "Debugging:01_08"
+  ]
+}

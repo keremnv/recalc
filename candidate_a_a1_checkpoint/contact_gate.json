@@ -1,0 +1,13 @@
+{
+  "count": 0,
+  "h1_contact_tasks": [],
+  "pass": false,
+  "required": 4,
+  "status": "CENSORED",
+  "thresholds": {
+    "3": false,
+    "4": false,
+    "6": false,
+    "8": false
+  }
+}

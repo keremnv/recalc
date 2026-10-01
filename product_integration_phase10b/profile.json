@@ -1,0 +1,418 @@
+{
+  "affinity_cpu": 1,
+  "affinity_identity": {
+    "affinity_diagnostic": "[1]",
+    "note": "All scored parents and their children will inherit singleton CPU1 affinity; no per-command taskset wrapper is inside the timer.",
+    "selected_cpu": 1,
+    "selected_cpu_max_khz": 4500000,
+    "topology": [
+      {
+        "cpu": 0,
+        "governor": "powersave",
+        "max_khz": 4500000
+      },
+      {
+        "cpu": 1,
+        "governor": "powersave",
+        "max_khz": 4500000
+      },
+      {
+        "cpu": 2,
+        "governor": "powersave",
+        "max_khz": 4500000
+      },
+      {
+        "cpu": 3,
+        "governor": "powersave",
+        "max_khz": 4500000
+      },
+      {
+        "cpu": 4,
+        "governor": "powersave",
+        "max_khz": 4500000
+      },
+      {
+        "cpu": 5,
+        "governor": "powersave",
+        "max_khz": 4500000
+      },
+      {
+        "cpu": 6,
+        "governor": "powersave",
+        "max_khz": 4500000
+      },
+      {
+        "cpu": 7,
+        "governor": "powersave",
+        "max_khz": 4500000
+      },
+      {
+        "cpu": 8,
+        "governor": "powersave",
+        "max_khz": 3600000
+      },
+      {
+        "cpu": 9,
+        "governor": "powersave",
+        "max_khz": 3600000
+      },
+      {
+        "cpu": 10,
+        "governor": "powersave",
+        "max_khz": 3600000
+      },
+      {
+        "cpu": 11,
+        "governor": "powersave",
+        "max_khz": 3600000
+      },
+      {
+        "cpu": 12,
+        "governor": "powersave",
+        "max_khz": 3600000
+      },
+      {
+        "cpu": 13,
+        "governor": "powersave",
+        "max_khz": 3600000
+      },
+      {
+        "cpu": 14,
+        "governor": "powersave",
+        "max_khz": 3600000
+      },
+      {
+        "cpu": 15,
+        "governor": "powersave",
+        "max_khz": 3600000
+      },
+      {
+        "cpu": 16,
+        "governor": "powersave",
+        "max_khz": 2500000
+      },
+      {
+        "cpu": 17,
+        "governor": "powersave",
+        "max_khz": 2500000
+      }
+    ]
+  },
+  "environment": {
+    "cpu_count": 18,
+    "cpu_model": "Intel(R) Core(TM) Ultra 5 125H",
+    "cwd": "/home/kerem/Desktop/Personal Projects/librecalc-mcp",
+    "filesystem": "ext2/ext3",
+    "kernel": "7.0.0-34-generic",
+    "openpyxl_version": "3.1.5",
+    "os": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+    "python_executable": "/tmp/librecalc-phase10-clean/bin/python",
+    "python_version": "Python 3.13.12",
+    "timing_host_env": {}
+  },
+  "note": "Nested diagnostic timers; full-command paired differences in analysis.json are causal authority.",
+  "p5_raw_timings.jsonl": {
+    "P4": {
+      "argument_run_dir": {
+        "count": 44,
+        "max": 0.184325,
+        "median": 0.0882545,
+        "min": 0.0659
+      },
+      "changed_helper_or_empty_receipt": {
+        "count": 44,
+        "max": 0.138134,
+        "median": 0.06413350000000001,
+        "min": 0.05609
+      },
+      "external_wall_minus_observer_profile": {
+        "count": 44,
+        "max": 5.973688000000038,
+        "median": 2.6144960000000026,
+        "min": 2.201958000000019
+      },
+      "fork_launch": {
+        "count": 44,
+        "max": 2.142013,
+        "median": 0.050599000000000005,
+        "min": 0.039758
+      },
+      "observer_to_receipt": {
+        "count": 44,
+        "max": 14033.861005,
+        "median": 168.865518,
+        "min": 96.534195
+      },
+      "post_snapshot_compare": {
+        "count": 44,
+        "max": 5.912432,
+        "median": 0.110051,
+        "min": 0.056503
+      },
+      "pre_snapshot": {
+        "count": 44,
+        "max": 5.080438,
+        "median": 0.037282,
+        "min": 0.015104
+      },
+      "wait_target": {
+        "count": 44,
+        "max": 14025.200547,
+        "median": 168.4259225,
+        "min": 96.270433
+      }
+    },
+    "P5": {
+      "argument_run_dir": {
+        "count": 44,
+        "max": 0.182994,
+        "median": 0.087499,
+        "min": 0.067622
+      },
+      "changed_helper_or_empty_receipt": {
+        "count": 44,
+        "max": 0.168226,
+        "median": 0.0635585,
+        "min": 0.054174
+      },
+      "external_wall_minus_observer_profile": {
+        "count": 44,
+        "max": 5.544128999999884,
+        "median": 2.5489710000000017,
+        "min": 2.3115860000000055
+      },
+      "fork_launch": {
+        "count": 44,
+        "max": 2.319853,
+        "median": 0.0510105,
+        "min": 0.04135
+      },
+      "observer_to_receipt": {
+        "count": 44,
+        "max": 13738.378182,
+        "median": 165.3022375,
+        "min": 92.03246
+      },
+      "post_snapshot_compare": {
+        "count": 44,
+        "max": 6.436754,
+        "median": 0.098893,
+        "min": 0.056199
+      },
+      "pre_snapshot": {
+        "count": 44,
+        "max": 4.861942,
+        "median": 0.041928,
+        "min": 0.014309
+      },
+      "wait_target": {
+        "count": 44,
+        "max": 13726.788272,
+        "median": 164.9674015,
+        "min": 91.7794
+      }
+    }
+  },
+  "raw_timings.jsonl": {
+    "P1": {
+      "argument_run_dir": {
+        "count": 44,
+        "max": 0.123962,
+        "median": 0.0844735,
+        "min": 0.071161
+      },
+      "changed_helper_or_empty_receipt": {
+        "count": 44,
+        "max": 0.093149,
+        "median": 0.06442049999999999,
+        "min": 0.057464
+      },
+      "external_wall_minus_observer_profile": {
+        "count": 44,
+        "max": 3.361496999999872,
+        "median": 1.9933574999999877,
+        "min": 1.8904720000000026
+      },
+      "fork_launch": {
+        "count": 44,
+        "max": 0.271145,
+        "median": 0.053458,
+        "min": 0.043907
+      },
+      "observer_to_receipt": {
+        "count": 44,
+        "max": 13049.673982,
+        "median": 180.04326450000002,
+        "min": 84.567139
+      },
+      "post_snapshot_compare": {
+        "count": 44,
+        "max": 3.384229,
+        "median": 0.10028999999999999,
+        "min": 0.049755
+      },
+      "pre_snapshot": {
+        "count": 44,
+        "max": 2.818776,
+        "median": 0.037558,
+        "min": 0.013282
+      },
+      "wait_target": {
+        "count": 44,
+        "max": 13043.120094,
+        "median": 179.674577,
+        "min": 84.290893
+      }
+    },
+    "P2": {
+      "argument_run_dir": {
+        "count": 44,
+        "max": 0.145277,
+        "median": 0.0826675,
+        "min": 0.071372
+      },
+      "changed_helper_or_empty_receipt": {
+        "count": 44,
+        "max": 8.162285,
+        "median": 0.0640465,
+        "min": 0.056079
+      },
+      "external_wall_minus_observer_profile": {
+        "count": 44,
+        "max": 4.091761999999989,
+        "median": 1.9819464999999923,
+        "min": 1.8763799999999975
+      },
+      "fork_launch": {
+        "count": 44,
+        "max": 0.276109,
+        "median": 0.054215,
+        "min": 0.044387
+      },
+      "observer_to_receipt": {
+        "count": 44,
+        "max": 15034.569722,
+        "median": 181.4193935,
+        "min": 84.969138
+      },
+      "post_snapshot_compare": {
+        "count": 44,
+        "max": 4.293227,
+        "median": 0.1025355,
+        "min": 0.047405
+      },
+      "pre_snapshot": {
+        "count": 44,
+        "max": 3.262535,
+        "median": 0.0369305,
+        "min": 0.012788
+      },
+      "wait_target": {
+        "count": 44,
+        "max": 15026.554742,
+        "median": 181.088976,
+        "min": 84.704014
+      }
+    },
+    "P3": {
+      "argument_run_dir": {
+        "count": 44,
+        "max": 0.158523,
+        "median": 0.08607500000000001,
+        "min": 0.07082
+      },
+      "changed_helper_or_empty_receipt": {
+        "count": 44,
+        "max": 0.103702,
+        "median": 0.0635685,
+        "min": 0.05527
+      },
+      "external_wall_minus_observer_profile": {
+        "count": 44,
+        "max": 4.832570999999007,
+        "median": 1.9928979999999967,
+        "min": 1.8809710000000024
+      },
+      "fork_launch": {
+        "count": 44,
+        "max": 1.030379,
+        "median": 0.0518675,
+        "min": 0.042438
+      },
+      "observer_to_receipt": {
+        "count": 44,
+        "max": 15038.690349,
+        "median": 186.354196,
+        "min": 88.810094
+      },
+      "post_snapshot_compare": {
+        "count": 44,
+        "max": 4.799446,
+        "median": 0.101522,
+        "min": 0.050558
+      },
+      "pre_snapshot": {
+        "count": 44,
+        "max": 3.410495,
+        "median": 0.038062,
+        "min": 0.012938
+      },
+      "wait_target": {
+        "count": 44,
+        "max": 15029.926834,
+        "median": 185.7583705,
+        "min": 88.548314
+      }
+    },
+    "P4": {
+      "argument_run_dir": {
+        "count": 44,
+        "max": 0.355214,
+        "median": 0.078348,
+        "min": 0.068737
+      },
+      "changed_helper_or_empty_receipt": {
+        "count": 44,
+        "max": 0.09283,
+        "median": 0.062905,
+        "min": 0.05484
+      },
+      "external_wall_minus_observer_profile": {
+        "count": 44,
+        "max": 11.698209000000134,
+        "median": 2.356876999999983,
+        "min": 2.224983000000009
+      },
+      "fork_launch": {
+        "count": 44,
+        "max": 0.297136,
+        "median": 0.0501025,
+        "min": 0.04416
+      },
+      "observer_to_receipt": {
+        "count": 44,
+        "max": 13771.93209,
+        "median": 186.177161,
+        "min": 89.130064
+      },
+      "post_snapshot_compare": {
+        "count": 44,
+        "max": 3.765266,
+        "median": 0.097352,
+        "min": 0.050043
+      },
+      "pre_snapshot": {
+        "count": 44,
+        "max": 3.505955,
+        "median": 0.038727,
+        "min": 0.012378
+      },
+      "wait_target": {
+        "count": 44,
+        "max": 13764.312149,
+        "median": 185.8208735,
+        "min": 88.877158
+      }
+    }
+  }
+}

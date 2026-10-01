@@ -1,0 +1,3834 @@
+{
+  "candidate_addition_count": 5,
+  "gold_used": false,
+  "model_calls": 0,
+  "obligation_count": 84,
+  "output_role_activation_count": 17,
+  "output_role_endpoint_count": 5,
+  "population_member_activation_count": 2,
+  "relation_contract": {
+    "authority": "candidate/evidence only; Edit Plan authority algebra unchanged",
+    "member": "explicit ordinal/member population relation with Task IR field provenance; no lexical target union",
+    "output": "allowed member occurrence -> exact same-column copied-header point dependency -> same-column Month -> right-neighbor Numbers -> contiguous formula-bearing Month extent -> corresponding Numbers cells"
+  },
+  "status": "STATIC_COMPLETE",
+  "task_count": 12,
+  "task_population": [
+    "Financial_Model:01_01",
+    "Financial_Model:03_01",
+    "Financial_Model:04_01",
+    "Financial_Model:05_01",
+    "Financial_Model:06_01",
+    "Financial_Model:07_01",
+    "Financial_Model:08_01",
+    "Financial_Model:12_05",
+    "Financial_Model:13_05",
+    "Financial_Model:14_05",
+    "Financial_Model:15_05",
+    "Financial_Model:17_05"
+  ],
+  "tasks": [
+    {
+      "archived_task_ir_status": "OK",
+      "obligation_count": 8,
+      "obligations": [
+        {
+          "base_candidate_count": 14,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 14,
+          "member_occurrences": [],
+          "obligation_id": "O1",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Consolidated P&L sheet"
+            },
+            "required_change": {
+              "text": "calculate the CAGR of Total Revenue from 2025 to 2030"
+            },
+            "scope": [
+              {
+                "text": "from 2025 to 2030"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Total Revenue"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 3927,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 3927,
+          "member_occurrences": [],
+          "obligation_id": "O2",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Revenue Drivers sheet"
+            },
+            "required_change": {
+              "text": "reference actual Other Revenue from another tab"
+            },
+            "scope": [],
+            "source_relation": {
+              "text": "from another tab"
+            },
+            "subject": {
+              "text": "actual Other Revenue"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 3655,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 3655,
+          "member_occurrences": [],
+          "obligation_id": "O3",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Revenue Drivers sheet"
+            },
+            "required_change": {
+              "text": "hardcode the % of Operating Revenue for the forecasted years as the same value as the last actual year's value"
+            },
+            "scope": [
+              {
+                "text": "for the forecasted years"
+              }
+            ],
+            "source_relation": {
+              "text": "as the same value as the last actual year's value"
+            },
+            "subject": {
+              "text": "% of Operating Revenue"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 3927,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 3927,
+          "member_occurrences": [],
+          "obligation_id": "O4",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Revenue Drivers sheet"
+            },
+            "required_change": {
+              "text": "calculate forecasted Other Revenue"
+            },
+            "scope": [],
+            "source_relation": {
+              "text": "From that"
+            },
+            "subject": {
+              "text": "forecasted Other Revenue"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 106,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 106,
+          "member_occurrences": [],
+          "obligation_id": "O5",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "cost drivers"
+            },
+            "required_change": {
+              "text": "Compute operational costs for each Foundation Course line item"
+            },
+            "scope": [
+              {
+                "text": "each Foundation Course line item"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "operational costs"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 89,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 89,
+          "member_occurrences": [],
+          "obligation_id": "O6",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Working Capital Schedule sheet"
+            },
+            "required_change": {
+              "text": "calculate changes in Working Capital for the forecast period"
+            },
+            "scope": [
+              {
+                "text": "for the forecast period"
+              }
+            ],
+            "source_relation": {
+              "text": "using a roll-forward approach based on period-to-period movements in trade receivables, inventory, and trade payables"
+            },
+            "subject": {
+              "text": "changes in Working Capital"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 74,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 74,
+          "member_occurrences": [],
+          "obligation_id": "O7",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Fixed Assets Schedule sheet"
+            },
+            "required_change": {
+              "text": "compute depreciation"
+            },
+            "scope": [
+              {
+                "text": "for the forecast period"
+              }
+            ],
+            "source_relation": {
+              "text": "by applying the 25% assumption to opening balance plus capital expenditure"
+            },
+            "subject": {
+              "text": "depreciation"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 9,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 9,
+          "member_occurrences": [],
+          "obligation_id": "O8",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Consolidated BS sheet"
+            },
+            "required_change": {
+              "text": "add a validation check"
+            },
+            "scope": [
+              {
+                "text": "for each year"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "validation check"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        }
+      ],
+      "task": "Financial_Model:01_01"
+    },
+    {
+      "archived_task_ir_status": "OK",
+      "obligation_count": 6,
+      "obligations": [
+        {
+          "base_candidate_count": 94,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 94,
+          "member_occurrences": [],
+          "obligation_id": "O1",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Balance Sheet"
+            },
+            "required_change": {
+              "text": "calculate CAGR for each Asset line item over FY08–FY13 and FY13–FY18F"
+            },
+            "scope": [
+              {
+                "text": "each"
+              },
+              {
+                "text": "FY08–FY13"
+              },
+              {
+                "text": "FY13–FY18F"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Asset line item"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 22,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 22,
+          "member_occurrences": [],
+          "obligation_id": "O2",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Balance Sheet"
+            },
+            "required_change": {
+              "text": "calculate Risk Factor for all historical periods"
+            },
+            "scope": [
+              {
+                "text": "all historical periods"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Risk Factor"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 6,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 6,
+          "member_occurrences": [],
+          "obligation_id": "O3",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Balance Sheet Valuation Matrix"
+            },
+            "required_change": {
+              "text": "calculate Basic EPS for FY08–FY13"
+            },
+            "scope": [
+              {
+                "text": "FY08–FY13"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Basic EPS"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 0,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 0,
+          "member_occurrences": [],
+          "obligation_id": "O4",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Income Statement"
+            },
+            "required_change": {
+              "text": "calculate year-on-year growth for all line items"
+            },
+            "scope": [
+              {
+                "text": "all"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "line items"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 0,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 0,
+          "member_occurrences": [],
+          "obligation_id": "O5",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Cash Flow Statement"
+            },
+            "required_change": {
+              "text": "populate opening Cash and Cash Equivalents"
+            },
+            "scope": [
+              {
+                "text": "FY14"
+              },
+              {
+                "text": "FY15–FY18"
+              }
+            ],
+            "source_relation": {
+              "text": "linking FY14 from the Balance Sheet and FY15–FY18 sequentially"
+            },
+            "subject": {
+              "text": "opening Cash and Cash Equivalents"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 81,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 81,
+          "member_occurrences": [],
+          "obligation_id": "O6",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Valuation section (Method 1: EVA)"
+            },
+            "required_change": {
+              "text": "calculate Required Equity for FY14–FY18F"
+            },
+            "scope": [
+              {
+                "text": "FY14–FY18F"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Required Equity"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        }
+      ],
+      "task": "Financial_Model:03_01"
+    },
+    {
+      "archived_task_ir_status": "OK",
+      "obligation_count": 8,
+      "obligations": [
+        {
+          "base_candidate_count": 680,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 680,
+          "member_occurrences": [],
+          "obligation_id": "O1",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Financials sheet"
+            },
+            "required_change": {
+              "text": "calculate CAGR"
+            },
+            "scope": [
+              {
+                "text": "both historical and forecast periods"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "each relevant metric"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 782,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 782,
+          "member_occurrences": [],
+          "obligation_id": "O2",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Financials sheet"
+            },
+            "required_change": {
+              "text": "calculate YoY Revenue Growth"
+            },
+            "scope": [],
+            "source_relation": null,
+            "subject": {
+              "text": "YoY Revenue Growth"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 816,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 816,
+          "member_occurrences": [],
+          "obligation_id": "O3",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Financials sheet"
+            },
+            "required_change": {
+              "text": "calculate Reported EPS (Basic) growth YoY"
+            },
+            "scope": [],
+            "source_relation": null,
+            "subject": {
+              "text": "Reported EPS (Basic)"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 130,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 130,
+          "member_occurrences": [],
+          "obligation_id": "O4",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Assumptions sheet"
+            },
+            "required_change": {
+              "text": "calculate Average Days Inventory"
+            },
+            "scope": [],
+            "source_relation": null,
+            "subject": {
+              "text": "Average Days Inventory"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 78,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 78,
+          "member_occurrences": [],
+          "obligation_id": "O5",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Assumptions sheet"
+            },
+            "required_change": {
+              "text": "derive forecast inventory balances"
+            },
+            "scope": [],
+            "source_relation": null,
+            "subject": {
+              "text": "forecast inventory balances"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 0,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 0,
+          "member_occurrences": [],
+          "obligation_id": "O6",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Ratios sheet"
+            },
+            "required_change": {
+              "text": "calculate Total Asset Turnover"
+            },
+            "scope": [
+              {
+                "text": "for all periods"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Total Asset Turnover"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 152,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 152,
+          "member_occurrences": [],
+          "obligation_id": "O7",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Valuation sheet"
+            },
+            "required_change": {
+              "text": "calculate Discounted FCFF"
+            },
+            "scope": [
+              {
+                "text": "for each forecast year"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Discounted FCFF"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 858,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 858,
+          "member_occurrences": [],
+          "obligation_id": "O8",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Valuation sheet"
+            },
+            "required_change": {
+              "text": "calculate Present Value of Equity and Value per Share"
+            },
+            "scope": [],
+            "source_relation": null,
+            "subject": {
+              "text": "Present Value of Equity and Value per Share"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        }
+      ],
+      "task": "Financial_Model:04_01"
+    },
+    {
+      "archived_task_ir_status": "OK",
+      "obligation_count": 7,
+      "obligations": [
+        {
+          "base_candidate_count": 6,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 6,
+          "member_occurrences": [],
+          "obligation_id": "O1",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the IRR Calculation sheet"
+            },
+            "required_change": {
+              "text": "compute"
+            },
+            "scope": [
+              {
+                "text": "for both Fund and LP calculations"
+              },
+              {
+                "text": "from Dec-25 to Jun-33"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Gross IRR and Net IRR"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 0,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 0,
+          "member_occurrences": [],
+          "obligation_id": "O2",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the IS - Mgmt Co. sheet"
+            },
+            "required_change": {
+              "text": "calculate totals"
+            },
+            "scope": [
+              {
+                "text": "from Apr-25 to Jun-33"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "all income statement components"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 44,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 44,
+          "member_occurrences": [],
+          "obligation_id": "O3",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the Dashboard"
+            },
+            "required_change": {
+              "text": "update"
+            },
+            "scope": [],
+            "source_relation": null,
+            "subject": {
+              "text": "hurdle rate"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 66,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 66,
+          "member_occurrences": [],
+          "obligation_id": "O4",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the Dashboard"
+            },
+            "required_change": {
+              "text": "update"
+            },
+            "scope": [],
+            "source_relation": null,
+            "subject": {
+              "text": "carry for IRR<30%"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 44,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 44,
+          "member_occurrences": [],
+          "obligation_id": "O5",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the Dashboard"
+            },
+            "required_change": {
+              "text": "update"
+            },
+            "scope": [],
+            "source_relation": null,
+            "subject": {
+              "text": "IRR>30%"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 12,
+          "candidate_additions": [
+            "cell:s00:r43:c7",
+            "cell:s00:r43:c9",
+            "cell:s00:r44:c7",
+            "cell:s00:r44:c9",
+            "cell:s00:r45:c7"
+          ],
+          "excluded_members": [
+            "first"
+          ],
+          "excluded_occurrences": [
+            {
+              "address": "G15",
+              "anchor_id": "text:s00:r15:c7",
+              "cell_id": "cell:s00:r15:c7",
+              "col": 7,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "for second and third tranches",
+              "member_identity": "first",
+              "population_label": "tranche",
+              "population_quantifier": "explicit_set",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s00:r15:c7",
+                "run_ids": [
+                  "sheet:s00:vertical:cell:s00:r15:c7:cell:s00:r16:c7:cell:s00:r17:c7"
+                ]
+              },
+              "row": 15,
+              "sheet_id": "sheet:s00",
+              "text": "First Tranche (Under construction in Tier 2 cities)"
+            },
+            {
+              "address": "D22",
+              "anchor_id": "text:s00:r22:c4",
+              "cell_id": "cell:s00:r22:c4",
+              "col": 4,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "for second and third tranches",
+              "member_identity": "first",
+              "population_label": "tranche",
+              "population_quantifier": "explicit_set",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s00:r22:c4",
+                "run_ids": [
+                  "sheet:s00:horizontal:cell:s00:r22:c4:cell:s00:r22:c6:cell:s00:r22:c8"
+                ]
+              },
+              "row": 22,
+              "sheet_id": "sheet:s00",
+              "text": "First Tranche"
+            }
+          ],
+          "included_members": [
+            "second",
+            "third"
+          ],
+          "integrated_candidate_count": 17,
+          "member_occurrences": [
+            {
+              "address": "G15",
+              "anchor_id": "text:s00:r15:c7",
+              "cell_id": "cell:s00:r15:c7",
+              "col": 7,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "for second and third tranches",
+              "member_identity": "first",
+              "population_label": "tranche",
+              "population_quantifier": "explicit_set",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s00:r15:c7",
+                "run_ids": [
+                  "sheet:s00:vertical:cell:s00:r15:c7:cell:s00:r16:c7:cell:s00:r17:c7"
+                ]
+              },
+              "row": 15,
+              "sheet_id": "sheet:s00",
+              "text": "First Tranche (Under construction in Tier 2 cities)"
+            },
+            {
+              "address": "G16",
+              "anchor_id": "text:s00:r16:c7",
+              "cell_id": "cell:s00:r16:c7",
+              "col": 7,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "for second and third tranches",
+              "member_identity": "second",
+              "population_label": "tranche",
+              "population_quantifier": "explicit_set",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s00:r16:c7",
+                "run_ids": [
+                  "sheet:s00:vertical:cell:s00:r15:c7:cell:s00:r16:c7:cell:s00:r17:c7"
+                ]
+              },
+              "row": 16,
+              "sheet_id": "sheet:s00",
+              "text": "Second Tranche"
+            },
+            {
+              "address": "G17",
+              "anchor_id": "text:s00:r17:c7",
+              "cell_id": "cell:s00:r17:c7",
+              "col": 7,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "for second and third tranches",
+              "member_identity": "third",
+              "population_label": "tranche",
+              "population_quantifier": "explicit_set",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s00:r17:c7",
+                "run_ids": [
+                  "sheet:s00:vertical:cell:s00:r15:c7:cell:s00:r16:c7:cell:s00:r17:c7"
+                ]
+              },
+              "row": 17,
+              "sheet_id": "sheet:s00",
+              "text": "Third Tranche"
+            },
+            {
+              "address": "D22",
+              "anchor_id": "text:s00:r22:c4",
+              "cell_id": "cell:s00:r22:c4",
+              "col": 4,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "for second and third tranches",
+              "member_identity": "first",
+              "population_label": "tranche",
+              "population_quantifier": "explicit_set",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s00:r22:c4",
+                "run_ids": [
+                  "sheet:s00:horizontal:cell:s00:r22:c4:cell:s00:r22:c6:cell:s00:r22:c8"
+                ]
+              },
+              "row": 22,
+              "sheet_id": "sheet:s00",
+              "text": "First Tranche"
+            },
+            {
+              "address": "F22",
+              "anchor_id": "text:s00:r22:c6",
+              "cell_id": "cell:s00:r22:c6",
+              "col": 6,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "for second and third tranches",
+              "member_identity": "second",
+              "population_label": "tranche",
+              "population_quantifier": "explicit_set",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s00:r22:c6",
+                "run_ids": [
+                  "sheet:s00:horizontal:cell:s00:r22:c4:cell:s00:r22:c6:cell:s00:r22:c8"
+                ]
+              },
+              "row": 22,
+              "sheet_id": "sheet:s00",
+              "text": "Second Tranche"
+            },
+            {
+              "address": "H22",
+              "anchor_id": "text:s00:r22:c8",
+              "cell_id": "cell:s00:r22:c8",
+              "col": 8,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "for second and third tranches",
+              "member_identity": "third",
+              "population_label": "tranche",
+              "population_quantifier": "explicit_set",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s00:r22:c8",
+                "run_ids": [
+                  "sheet:s00:horizontal:cell:s00:r22:c4:cell:s00:r22:c6:cell:s00:r22:c8"
+                ]
+              },
+              "row": 22,
+              "sheet_id": "sheet:s00",
+              "text": "Third Tranche"
+            }
+          ],
+          "obligation_id": "O6",
+          "output_role_activations": [
+            {
+              "deterministic": true,
+              "endpoints": [],
+              "intermediate_nodes": [],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "member_identity": "second",
+              "occurrence_identity": "cell:s00:r16:c7",
+              "population_label": "tranche",
+              "reason": "no_exact_header_copy_dependency",
+              "relation_sequence": [],
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s00:r16:c7",
+                "run_ids": [
+                  "sheet:s00:vertical:cell:s00:r15:c7:cell:s00:r16:c7:cell:s00:r17:c7"
+                ]
+              },
+              "start_address": "G16",
+              "start_cell_id": "cell:s00:r16:c7"
+            },
+            {
+              "deterministic": true,
+              "endpoints": [],
+              "intermediate_nodes": [],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "member_identity": "third",
+              "occurrence_identity": "cell:s00:r17:c7",
+              "population_label": "tranche",
+              "reason": "no_exact_header_copy_dependency",
+              "relation_sequence": [],
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s00:r17:c7",
+                "run_ids": [
+                  "sheet:s00:vertical:cell:s00:r15:c7:cell:s00:r16:c7:cell:s00:r17:c7"
+                ]
+              },
+              "start_address": "G17",
+              "start_cell_id": "cell:s00:r17:c7"
+            },
+            {
+              "deterministic": true,
+              "endpoints": [
+                {
+                  "address": "G43",
+                  "cell_id": "cell:s00:r43:c7",
+                  "role_evidence": {
+                    "copied_header": "cell:s00:r40:c6",
+                    "formula_bearing_rows": [
+                      43,
+                      44,
+                      45
+                    ],
+                    "month_header": "cell:s00:r42:c6",
+                    "numbers_header": "cell:s00:r42:c7",
+                    "right_neighbor_column": 7,
+                    "same_column": 6,
+                    "source_occurrence": "cell:s00:r22:c6"
+                  },
+                  "sheet_id": "sheet:s00"
+                },
+                {
+                  "address": "G44",
+                  "cell_id": "cell:s00:r44:c7",
+                  "role_evidence": {
+                    "copied_header": "cell:s00:r40:c6",
+                    "formula_bearing_rows": [
+                      43,
+                      44,
+                      45
+                    ],
+                    "month_header": "cell:s00:r42:c6",
+                    "numbers_header": "cell:s00:r42:c7",
+                    "right_neighbor_column": 7,
+                    "same_column": 6,
+                    "source_occurrence": "cell:s00:r22:c6"
+                  },
+                  "sheet_id": "sheet:s00"
+                },
+                {
+                  "address": "G45",
+                  "cell_id": "cell:s00:r45:c7",
+                  "role_evidence": {
+                    "copied_header": "cell:s00:r40:c6",
+                    "formula_bearing_rows": [
+                      43,
+                      44,
+                      45
+                    ],
+                    "month_header": "cell:s00:r42:c6",
+                    "numbers_header": "cell:s00:r42:c7",
+                    "right_neighbor_column": 7,
+                    "same_column": 6,
+                    "source_occurrence": "cell:s00:r22:c6"
+                  },
+                  "sheet_id": "sheet:s00"
+                }
+              ],
+              "intermediate_nodes": [
+                "cell:s00:r40:c6",
+                "cell:s00:r42:c6",
+                "cell:s00:r42:c7"
+              ],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "member_identity": "second",
+              "occurrence_identity": "cell:s00:r22:c6",
+              "population_label": "tranche",
+              "reason": "structural_output_role_witnessed",
+              "relation_sequence": [
+                "point_dependency_copied_header",
+                "same_column_month_header",
+                "right_neighbor_numbers_header",
+                "contiguous_formula_bearing_month_extent"
+              ],
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s00:r22:c6",
+                "run_ids": [
+                  "sheet:s00:horizontal:cell:s00:r22:c4:cell:s00:r22:c6:cell:s00:r22:c8"
+                ]
+              },
+              "source_formula_rows": [
+                43,
+                44,
+                45
+              ],
+              "start_address": "F22",
+              "start_cell_id": "cell:s00:r22:c6"
+            },
+            {
+              "deterministic": true,
+              "endpoints": [
+                {
+                  "address": "I43",
+                  "cell_id": "cell:s00:r43:c9",
+                  "role_evidence": {
+                    "copied_header": "cell:s00:r40:c8",
+                    "formula_bearing_rows": [
+                      43,
+                      44
+                    ],
+                    "month_header": "cell:s00:r42:c8",
+                    "numbers_header": "cell:s00:r42:c9",
+                    "right_neighbor_column": 9,
+                    "same_column": 8,
+                    "source_occurrence": "cell:s00:r22:c8"
+                  },
+                  "sheet_id": "sheet:s00"
+                },
+                {
+                  "address": "I44",
+                  "cell_id": "cell:s00:r44:c9",
+                  "role_evidence": {
+                    "copied_header": "cell:s00:r40:c8",
+                    "formula_bearing_rows": [
+                      43,
+                      44
+                    ],
+                    "month_header": "cell:s00:r42:c8",
+                    "numbers_header": "cell:s00:r42:c9",
+                    "right_neighbor_column": 9,
+                    "same_column": 8,
+                    "source_occurrence": "cell:s00:r22:c8"
+                  },
+                  "sheet_id": "sheet:s00"
+                }
+              ],
+              "intermediate_nodes": [
+                "cell:s00:r40:c8",
+                "cell:s00:r42:c8",
+                "cell:s00:r42:c9"
+              ],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "member_identity": "third",
+              "occurrence_identity": "cell:s00:r22:c8",
+              "population_label": "tranche",
+              "reason": "structural_output_role_witnessed",
+              "relation_sequence": [
+                "point_dependency_copied_header",
+                "same_column_month_header",
+                "right_neighbor_numbers_header",
+                "contiguous_formula_bearing_month_extent"
+              ],
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s00:r22:c8",
+                "run_ids": [
+                  "sheet:s00:horizontal:cell:s00:r22:c4:cell:s00:r22:c6:cell:s00:r22:c8"
+                ]
+              },
+              "source_formula_rows": [
+                43,
+                44
+              ],
+              "start_address": "H22",
+              "start_cell_id": "cell:s00:r22:c8"
+            }
+          ],
+          "output_role_active": true,
+          "population_member_active": true,
+          "population_specifications": [
+            {
+              "allowed_members": [
+                "second",
+                "third"
+              ],
+              "excluded_members": [
+                "first"
+              ],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "for second and third tranches",
+              "member_interval": null,
+              "observed_members": [
+                "first",
+                "second",
+                "third"
+              ],
+              "occurrence_count": 6,
+              "population_label": "tranche",
+              "quantifier": "explicit_set"
+            }
+          ],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the Dashboard"
+            },
+            "required_change": {
+              "text": "update"
+            },
+            "scope": [
+              {
+                "text": "for second and third tranches"
+              },
+              {
+                "text": "for all deals"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Exit Multiple"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 63,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [
+            "first",
+            "second",
+            "third"
+          ],
+          "integrated_candidate_count": 63,
+          "member_occurrences": [
+            {
+              "address": "C30",
+              "anchor_id": "text:s02:r30:c3",
+              "cell_id": "cell:s02:r30:c3",
+              "col": 3,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "all three tranches",
+              "member_identity": "third",
+              "population_label": "tranche",
+              "population_quantifier": "all",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s02:r30:c3",
+                "run_ids": []
+              },
+              "row": 30,
+              "sheet_id": "sheet:s02",
+              "text": "Third Tranche"
+            },
+            {
+              "address": "B11",
+              "anchor_id": "text:s04:r11:c2",
+              "cell_id": "cell:s04:r11:c2",
+              "col": 2,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "all three tranches",
+              "member_identity": "first",
+              "population_label": "tranche",
+              "population_quantifier": "all",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r11:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r11:c2:cell:s04:r12:c2:cell:s04:r13:c2"
+                ]
+              },
+              "row": 11,
+              "sheet_id": "sheet:s04",
+              "text": "First Tranche"
+            },
+            {
+              "address": "B12",
+              "anchor_id": "text:s04:r12:c2",
+              "cell_id": "cell:s04:r12:c2",
+              "col": 2,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "all three tranches",
+              "member_identity": "second",
+              "population_label": "tranche",
+              "population_quantifier": "all",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r12:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r11:c2:cell:s04:r12:c2:cell:s04:r13:c2"
+                ]
+              },
+              "row": 12,
+              "sheet_id": "sheet:s04",
+              "text": "Second Tranche"
+            },
+            {
+              "address": "B13",
+              "anchor_id": "text:s04:r13:c2",
+              "cell_id": "cell:s04:r13:c2",
+              "col": 2,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "all three tranches",
+              "member_identity": "third",
+              "population_label": "tranche",
+              "population_quantifier": "all",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r13:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r11:c2:cell:s04:r12:c2:cell:s04:r13:c2"
+                ]
+              },
+              "row": 13,
+              "sheet_id": "sheet:s04",
+              "text": "Third Tranche"
+            },
+            {
+              "address": "B17",
+              "anchor_id": "text:s04:r17:c2",
+              "cell_id": "cell:s04:r17:c2",
+              "col": 2,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "all three tranches",
+              "member_identity": "first",
+              "population_label": "tranche",
+              "population_quantifier": "all",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r17:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r17:c2:cell:s04:r18:c2:cell:s04:r19:c2"
+                ]
+              },
+              "row": 17,
+              "sheet_id": "sheet:s04",
+              "text": "First Tranche"
+            },
+            {
+              "address": "B18",
+              "anchor_id": "text:s04:r18:c2",
+              "cell_id": "cell:s04:r18:c2",
+              "col": 2,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "all three tranches",
+              "member_identity": "second",
+              "population_label": "tranche",
+              "population_quantifier": "all",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r18:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r17:c2:cell:s04:r18:c2:cell:s04:r19:c2"
+                ]
+              },
+              "row": 18,
+              "sheet_id": "sheet:s04",
+              "text": "Second Tranche"
+            },
+            {
+              "address": "B19",
+              "anchor_id": "text:s04:r19:c2",
+              "cell_id": "cell:s04:r19:c2",
+              "col": 2,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "all three tranches",
+              "member_identity": "third",
+              "population_label": "tranche",
+              "population_quantifier": "all",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r19:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r17:c2:cell:s04:r18:c2:cell:s04:r19:c2"
+                ]
+              },
+              "row": 19,
+              "sheet_id": "sheet:s04",
+              "text": "Third Tranche"
+            },
+            {
+              "address": "B23",
+              "anchor_id": "text:s04:r23:c2",
+              "cell_id": "cell:s04:r23:c2",
+              "col": 2,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "all three tranches",
+              "member_identity": "first",
+              "population_label": "tranche",
+              "population_quantifier": "all",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r23:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r23:c2:cell:s04:r24:c2:cell:s04:r25:c2"
+                ]
+              },
+              "row": 23,
+              "sheet_id": "sheet:s04",
+              "text": "First Tranche"
+            },
+            {
+              "address": "B24",
+              "anchor_id": "text:s04:r24:c2",
+              "cell_id": "cell:s04:r24:c2",
+              "col": 2,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "all three tranches",
+              "member_identity": "second",
+              "population_label": "tranche",
+              "population_quantifier": "all",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r24:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r23:c2:cell:s04:r24:c2:cell:s04:r25:c2"
+                ]
+              },
+              "row": 24,
+              "sheet_id": "sheet:s04",
+              "text": "Second Tranche"
+            },
+            {
+              "address": "B25",
+              "anchor_id": "text:s04:r25:c2",
+              "cell_id": "cell:s04:r25:c2",
+              "col": 2,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "all three tranches",
+              "member_identity": "third",
+              "population_label": "tranche",
+              "population_quantifier": "all",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r25:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r23:c2:cell:s04:r24:c2:cell:s04:r25:c2"
+                ]
+              },
+              "row": 25,
+              "sheet_id": "sheet:s04",
+              "text": "Third Tranche"
+            },
+            {
+              "address": "B29",
+              "anchor_id": "text:s04:r29:c2",
+              "cell_id": "cell:s04:r29:c2",
+              "col": 2,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "all three tranches",
+              "member_identity": "first",
+              "population_label": "tranche",
+              "population_quantifier": "all",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r29:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r29:c2:cell:s04:r30:c2:cell:s04:r31:c2"
+                ]
+              },
+              "row": 29,
+              "sheet_id": "sheet:s04",
+              "text": "First Tranche"
+            },
+            {
+              "address": "B30",
+              "anchor_id": "text:s04:r30:c2",
+              "cell_id": "cell:s04:r30:c2",
+              "col": 2,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "all three tranches",
+              "member_identity": "second",
+              "population_label": "tranche",
+              "population_quantifier": "all",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r30:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r29:c2:cell:s04:r30:c2:cell:s04:r31:c2"
+                ]
+              },
+              "row": 30,
+              "sheet_id": "sheet:s04",
+              "text": "Second Tranche"
+            },
+            {
+              "address": "B31",
+              "anchor_id": "text:s04:r31:c2",
+              "cell_id": "cell:s04:r31:c2",
+              "col": 2,
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "all three tranches",
+              "member_identity": "third",
+              "population_label": "tranche",
+              "population_quantifier": "all",
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r31:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r29:c2:cell:s04:r30:c2:cell:s04:r31:c2"
+                ]
+              },
+              "row": 31,
+              "sheet_id": "sheet:s04",
+              "text": "Third Tranche"
+            }
+          ],
+          "obligation_id": "O7",
+          "output_role_activations": [
+            {
+              "deterministic": true,
+              "endpoints": [],
+              "intermediate_nodes": [],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "member_identity": "third",
+              "occurrence_identity": "cell:s02:r30:c3",
+              "population_label": "tranche",
+              "reason": "no_exact_header_copy_dependency",
+              "relation_sequence": [],
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s02:r30:c3",
+                "run_ids": []
+              },
+              "start_address": "C30",
+              "start_cell_id": "cell:s02:r30:c3"
+            },
+            {
+              "deterministic": true,
+              "endpoints": [],
+              "intermediate_nodes": [],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "member_identity": "first",
+              "occurrence_identity": "cell:s04:r11:c2",
+              "population_label": "tranche",
+              "reason": "no_exact_header_copy_dependency",
+              "relation_sequence": [],
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r11:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r11:c2:cell:s04:r12:c2:cell:s04:r13:c2"
+                ]
+              },
+              "start_address": "B11",
+              "start_cell_id": "cell:s04:r11:c2"
+            },
+            {
+              "deterministic": true,
+              "endpoints": [],
+              "intermediate_nodes": [],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "member_identity": "second",
+              "occurrence_identity": "cell:s04:r12:c2",
+              "population_label": "tranche",
+              "reason": "no_exact_header_copy_dependency",
+              "relation_sequence": [],
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r12:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r11:c2:cell:s04:r12:c2:cell:s04:r13:c2"
+                ]
+              },
+              "start_address": "B12",
+              "start_cell_id": "cell:s04:r12:c2"
+            },
+            {
+              "deterministic": true,
+              "endpoints": [],
+              "intermediate_nodes": [],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "member_identity": "third",
+              "occurrence_identity": "cell:s04:r13:c2",
+              "population_label": "tranche",
+              "reason": "no_exact_header_copy_dependency",
+              "relation_sequence": [],
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r13:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r11:c2:cell:s04:r12:c2:cell:s04:r13:c2"
+                ]
+              },
+              "start_address": "B13",
+              "start_cell_id": "cell:s04:r13:c2"
+            },
+            {
+              "deterministic": true,
+              "endpoints": [],
+              "intermediate_nodes": [],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "member_identity": "first",
+              "occurrence_identity": "cell:s04:r17:c2",
+              "population_label": "tranche",
+              "reason": "no_exact_header_copy_dependency",
+              "relation_sequence": [],
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r17:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r17:c2:cell:s04:r18:c2:cell:s04:r19:c2"
+                ]
+              },
+              "start_address": "B17",
+              "start_cell_id": "cell:s04:r17:c2"
+            },
+            {
+              "deterministic": true,
+              "endpoints": [],
+              "intermediate_nodes": [],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "member_identity": "second",
+              "occurrence_identity": "cell:s04:r18:c2",
+              "population_label": "tranche",
+              "reason": "no_exact_header_copy_dependency",
+              "relation_sequence": [],
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r18:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r17:c2:cell:s04:r18:c2:cell:s04:r19:c2"
+                ]
+              },
+              "start_address": "B18",
+              "start_cell_id": "cell:s04:r18:c2"
+            },
+            {
+              "deterministic": true,
+              "endpoints": [],
+              "intermediate_nodes": [],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "member_identity": "third",
+              "occurrence_identity": "cell:s04:r19:c2",
+              "population_label": "tranche",
+              "reason": "no_exact_header_copy_dependency",
+              "relation_sequence": [],
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r19:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r17:c2:cell:s04:r18:c2:cell:s04:r19:c2"
+                ]
+              },
+              "start_address": "B19",
+              "start_cell_id": "cell:s04:r19:c2"
+            },
+            {
+              "deterministic": true,
+              "endpoints": [],
+              "intermediate_nodes": [],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "member_identity": "first",
+              "occurrence_identity": "cell:s04:r23:c2",
+              "population_label": "tranche",
+              "reason": "no_exact_header_copy_dependency",
+              "relation_sequence": [],
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r23:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r23:c2:cell:s04:r24:c2:cell:s04:r25:c2"
+                ]
+              },
+              "start_address": "B23",
+              "start_cell_id": "cell:s04:r23:c2"
+            },
+            {
+              "deterministic": true,
+              "endpoints": [],
+              "intermediate_nodes": [],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "member_identity": "second",
+              "occurrence_identity": "cell:s04:r24:c2",
+              "population_label": "tranche",
+              "reason": "no_exact_header_copy_dependency",
+              "relation_sequence": [],
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r24:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r23:c2:cell:s04:r24:c2:cell:s04:r25:c2"
+                ]
+              },
+              "start_address": "B24",
+              "start_cell_id": "cell:s04:r24:c2"
+            },
+            {
+              "deterministic": true,
+              "endpoints": [],
+              "intermediate_nodes": [],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "member_identity": "third",
+              "occurrence_identity": "cell:s04:r25:c2",
+              "population_label": "tranche",
+              "reason": "no_exact_header_copy_dependency",
+              "relation_sequence": [],
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r25:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r23:c2:cell:s04:r24:c2:cell:s04:r25:c2"
+                ]
+              },
+              "start_address": "B25",
+              "start_cell_id": "cell:s04:r25:c2"
+            },
+            {
+              "deterministic": true,
+              "endpoints": [],
+              "intermediate_nodes": [],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "member_identity": "first",
+              "occurrence_identity": "cell:s04:r29:c2",
+              "population_label": "tranche",
+              "reason": "no_exact_header_copy_dependency",
+              "relation_sequence": [],
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r29:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r29:c2:cell:s04:r30:c2:cell:s04:r31:c2"
+                ]
+              },
+              "start_address": "B29",
+              "start_cell_id": "cell:s04:r29:c2"
+            },
+            {
+              "deterministic": true,
+              "endpoints": [],
+              "intermediate_nodes": [],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "member_identity": "second",
+              "occurrence_identity": "cell:s04:r30:c2",
+              "population_label": "tranche",
+              "reason": "no_exact_header_copy_dependency",
+              "relation_sequence": [],
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r30:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r29:c2:cell:s04:r30:c2:cell:s04:r31:c2"
+                ]
+              },
+              "start_address": "B30",
+              "start_cell_id": "cell:s04:r30:c2"
+            },
+            {
+              "deterministic": true,
+              "endpoints": [],
+              "intermediate_nodes": [],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "member_identity": "third",
+              "occurrence_identity": "cell:s04:r31:c2",
+              "population_label": "tranche",
+              "reason": "no_exact_header_copy_dependency",
+              "relation_sequence": [],
+              "repeated_block_context": {
+                "occurrence_identity": "cell:s04:r31:c2",
+                "run_ids": [
+                  "sheet:s04:vertical:cell:s04:r29:c2:cell:s04:r30:c2:cell:s04:r31:c2"
+                ]
+              },
+              "start_address": "B31",
+              "start_cell_id": "cell:s04:r31:c2"
+            }
+          ],
+          "output_role_active": true,
+          "population_member_active": true,
+          "population_specifications": [
+            {
+              "allowed_members": [
+                "first",
+                "second",
+                "third"
+              ],
+              "excluded_members": [],
+              "introducing_field": "scope",
+              "introducing_path": "scope[0]",
+              "introducing_span": "all three tranches",
+              "member_interval": null,
+              "observed_members": [
+                "first",
+                "second",
+                "third"
+              ],
+              "occurrence_count": 13,
+              "population_label": "tranche",
+              "quantifier": "all"
+            }
+          ],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the Workings Cost sheet"
+            },
+            "required_change": {
+              "text": "compute"
+            },
+            "scope": [
+              {
+                "text": "all three tranches"
+              },
+              {
+                "text": "from Apr-25 to Jun-33"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "total funds raised"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        }
+      ],
+      "task": "Financial_Model:05_01"
+    },
+    {
+      "archived_task_ir_status": "OK",
+      "obligation_count": 7,
+      "obligations": [
+        {
+          "base_candidate_count": 116,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 116,
+          "member_occurrences": [],
+          "obligation_id": "O1",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Assumption sheet"
+            },
+            "required_change": {
+              "text": "set Content Writing guest post percentage at 8% Apr-25, increasing 15% in Apr-26 and Apr-27, 10% in Apr-28"
+            },
+            "scope": [
+              {
+                "text": "8% Apr-25"
+              },
+              {
+                "text": "15% in Apr-26 and Apr-27"
+              },
+              {
+                "text": "10% in Apr-28"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Content Writing guest post percentage"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 178,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 178,
+          "member_occurrences": [],
+          "obligation_id": "O2",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Assumption sheet"
+            },
+            "required_change": {
+              "text": "set Content Writing Cost per unit at 0.50 Apr-25, 0.55 Apr-26, 0.60 Apr-27, 0.70 Apr-28, 0.75 Apr-29"
+            },
+            "scope": [
+              {
+                "text": "0.50 Apr-25"
+              },
+              {
+                "text": "0.55 Apr-26"
+              },
+              {
+                "text": "0.60 Apr-27"
+              },
+              {
+                "text": "0.70 Apr-28"
+              },
+              {
+                "text": "0.75 Apr-29"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Content Writing Cost per unit"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 7280,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 7280,
+          "member_occurrences": [],
+          "obligation_id": "O3",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the DCF sheet"
+            },
+            "required_change": {
+              "text": "calculate Net Cost of Debt"
+            },
+            "scope": [],
+            "source_relation": null,
+            "subject": {
+              "text": "Net Cost of Debt"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 4160,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 4160,
+          "member_occurrences": [],
+          "obligation_id": "O4",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Balance Sheet Schedules"
+            },
+            "required_change": {
+              "text": "apply 10% annual interest"
+            },
+            "scope": [],
+            "source_relation": null,
+            "subject": {
+              "text": "10% annual interest"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 4720,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 4720,
+          "member_occurrences": [],
+          "obligation_id": "O5",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Balance Sheet"
+            },
+            "required_change": {
+              "text": "calculate Total Liabilities and Equity"
+            },
+            "scope": [],
+            "source_relation": null,
+            "subject": {
+              "text": "Total Liabilities and Equity"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 4720,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 4720,
+          "member_occurrences": [],
+          "obligation_id": "O6",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Balance Sheet"
+            },
+            "required_change": {
+              "text": "validate against Total Assets"
+            },
+            "scope": [],
+            "source_relation": {
+              "text": "against Total Assets"
+            },
+            "subject": {
+              "text": "Total Liabilities and Equity"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 111,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 111,
+          "member_occurrences": [],
+          "obligation_id": "O7",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Employee Expenses sheet"
+            },
+            "required_change": {
+              "text": "set SEO salary from Apr-25 escalating annually through Mar-30 using Inflation Rate from DCF"
+            },
+            "scope": [
+              {
+                "text": "from Apr-25 escalating annually through Mar-30"
+              }
+            ],
+            "source_relation": {
+              "text": "using Inflation Rate from DCF"
+            },
+            "subject": {
+              "text": "SEO salary"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        }
+      ],
+      "task": "Financial_Model:06_01"
+    },
+    {
+      "archived_task_ir_status": "OK",
+      "obligation_count": 7,
+      "obligations": [
+        {
+          "base_candidate_count": 3,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 3,
+          "member_occurrences": [],
+          "obligation_id": "O1",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Sales Schedule sheet"
+            },
+            "required_change": {
+              "text": "implement a scenario selector (in cell F16, Scenarios 1–5, default to scenario 1)"
+            },
+            "scope": [
+              {
+                "text": "all sales calculations including pricing, absorption, collections, and ancillary revenue"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "scenario selector"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 1313,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 1313,
+          "member_occurrences": [],
+          "obligation_id": "O2",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Cashflow (Quarterly) sheet"
+            },
+            "required_change": {
+              "text": "align Acquisition Costs with the start dates and durations in Inputs"
+            },
+            "scope": [],
+            "source_relation": {
+              "text": "with the start dates and durations in Inputs"
+            },
+            "subject": {
+              "text": "Acquisition Costs"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 213,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 213,
+          "member_occurrences": [],
+          "obligation_id": "O3",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Cashflow (Monthly) sheet"
+            },
+            "required_change": {
+              "text": "reconstruct the monthly allocation for all time-bound costs across Years 1–7"
+            },
+            "scope": [
+              {
+                "text": "all time-bound costs"
+              },
+              {
+                "text": "across Years 1–7"
+              }
+            ],
+            "source_relation": {
+              "text": "based on the same timing parameters"
+            },
+            "subject": {
+              "text": "the monthly allocation"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 0,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 0,
+          "member_occurrences": [],
+          "obligation_id": "O4",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Executive Summary sheet"
+            },
+            "required_change": {
+              "text": "link the year and period labels to the Cashflow (Quarterly) timeline"
+            },
+            "scope": [],
+            "source_relation": {
+              "text": "to the Cashflow (Quarterly) timeline"
+            },
+            "subject": {
+              "text": "the year and period labels"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 40,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 40,
+          "member_occurrences": [],
+          "obligation_id": "O5",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Executive Summary sheet"
+            },
+            "required_change": {
+              "text": "reconstruct the Closing Balance for each period in Project Cashflows"
+            },
+            "scope": [
+              {
+                "text": "for each period"
+              },
+              {
+                "text": "in Project Cashflows"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "the Closing Balance"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 290,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 290,
+          "member_occurrences": [],
+          "obligation_id": "O6",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Cashflow (Monthly) sheet"
+            },
+            "required_change": {
+              "text": "reconstruct the Prestige Financing recognition based on the commencement date in Inputs"
+            },
+            "scope": [],
+            "source_relation": {
+              "text": "based on the commencement date in Inputs"
+            },
+            "subject": {
+              "text": "the Prestige Financing recognition"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 1206,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 1206,
+          "member_occurrences": [],
+          "obligation_id": "O7",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Cashflow (Quarterly) sheet"
+            },
+            "required_change": {
+              "text": "reconstruct Approval Costs for Years 1–5 by aggregating monthly values"
+            },
+            "scope": [
+              {
+                "text": "for Years 1–5"
+              }
+            ],
+            "source_relation": {
+              "text": "by aggregating monthly values"
+            },
+            "subject": {
+              "text": "Approval Costs"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        }
+      ],
+      "task": "Financial_Model:07_01"
+    },
+    {
+      "archived_task_ir_status": "OK",
+      "obligation_count": 9,
+      "obligations": [
+        {
+          "base_candidate_count": 260,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 260,
+          "member_occurrences": [],
+          "obligation_id": "O1",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "DCF Valuation tab"
+            },
+            "required_change": {
+              "text": "link the Equity NPV and Equity IRR cells to their respective sensitivity tables"
+            },
+            "scope": [],
+            "source_relation": {
+              "text": "their respective sensitivity tables"
+            },
+            "subject": {
+              "text": "Equity NPV and Equity IRR cells"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 8,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 8,
+          "member_occurrences": [],
+          "obligation_id": "O2",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Income Statement tab"
+            },
+            "required_change": {
+              "text": "calculate EBITDA, EBITDA Margin, and Net Income Margin"
+            },
+            "scope": [
+              {
+                "text": "for Aug-23 to Dec-28"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "EBITDA, EBITDA Margin, and Net Income Margin"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 403,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 403,
+          "member_occurrences": [],
+          "obligation_id": "O3",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Income Statement tab"
+            },
+            "required_change": {
+              "text": "calculate the Tax expense"
+            },
+            "scope": [
+              {
+                "text": "for the same timeframe"
+              }
+            ],
+            "source_relation": {
+              "text": "assuming a flat rate of 30%"
+            },
+            "subject": {
+              "text": "the Tax expense"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 237,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 237,
+          "member_occurrences": [],
+          "obligation_id": "O4",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Balance Sheet"
+            },
+            "required_change": {
+              "text": "link Trade Payables and Receivables from Working Capital"
+            },
+            "scope": [
+              {
+                "text": "for Jan-23 to Dec-28"
+              }
+            ],
+            "source_relation": {
+              "text": "from Working Capital"
+            },
+            "subject": {
+              "text": "Trade Payables and Receivables"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 798,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 798,
+          "member_occurrences": [],
+          "obligation_id": "O5",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Balance Sheet"
+            },
+            "required_change": {
+              "text": "add an assets-equals-liabilities check"
+            },
+            "scope": [
+              {
+                "text": "for all periods"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "an assets-equals-liabilities check"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 1924,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 1924,
+          "member_occurrences": [],
+          "obligation_id": "O6",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Total Working Capital section of the Working Capital tab"
+            },
+            "required_change": {
+              "text": "calculate Inventory, Payables, and Receivables (adjusted for 70% bills discounting)"
+            },
+            "scope": [
+              {
+                "text": "for Aug-23 to Dec-28"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Inventory, Payables, and Receivables (adjusted for 70% bills discounting)"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 74,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 74,
+          "member_occurrences": [],
+          "obligation_id": "O7",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Total Working Capital section of the Working Capital tab"
+            },
+            "required_change": {
+              "text": "compute NWC as a percentage of Revenue"
+            },
+            "scope": [
+              {
+                "text": "monthly"
+              }
+            ],
+            "source_relation": {
+              "text": "as a percentage of Revenue"
+            },
+            "subject": {
+              "text": "NWC"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 72,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 72,
+          "member_occurrences": [],
+          "obligation_id": "O8",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Dashboard"
+            },
+            "required_change": {
+              "text": "create a bar graph with a line for Revenue (in millions) and EBITDA %"
+            },
+            "scope": [
+              {
+                "text": "from FY23–FY28"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Revenue (in millions) and EBITDA %"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 42,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 42,
+          "member_occurrences": [],
+          "obligation_id": "O9",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Dashboard"
+            },
+            "required_change": {
+              "text": "convert revenue numbers from absolute numbers to millions"
+            },
+            "scope": [],
+            "source_relation": null,
+            "subject": {
+              "text": "revenue numbers"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        }
+      ],
+      "task": "Financial_Model:08_01"
+    },
+    {
+      "archived_task_ir_status": "OK",
+      "obligation_count": 6,
+      "obligations": [
+        {
+          "base_candidate_count": 33,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 33,
+          "member_occurrences": [],
+          "obligation_id": "O1",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the Working Capital sheet"
+            },
+            "required_change": {
+              "text": "calculate NWC as a percentage of Revenue"
+            },
+            "scope": [
+              {
+                "text": "for Mar-20 to Mar-30"
+              }
+            ],
+            "source_relation": {
+              "text": "as a percentage of Revenue"
+            },
+            "subject": {
+              "text": "NWC"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 154,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 154,
+          "member_occurrences": [],
+          "obligation_id": "O2",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the Ratio Analysis sheet"
+            },
+            "required_change": {
+              "text": "calculate Asset Turnover Ratio"
+            },
+            "scope": [
+              {
+                "text": "for FY20–FY30E"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Asset Turnover Ratio"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 0,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 0,
+          "member_occurrences": [],
+          "obligation_id": "O3",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the Chart sheet"
+            },
+            "required_change": {
+              "text": "create a combo chart"
+            },
+            "scope": [
+              {
+                "text": "for FY21–FY30E"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "combo chart"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 72,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 72,
+          "member_occurrences": [],
+          "obligation_id": "O4",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the Comps sheet"
+            },
+            "required_change": {
+              "text": "calculate EV/Revenue for Comparable 2"
+            },
+            "scope": [
+              {
+                "text": "for FY19–FY23"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "EV/Revenue for Comparable 2"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 144,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 144,
+          "member_occurrences": [],
+          "obligation_id": "O5",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the Comps sheet"
+            },
+            "required_change": {
+              "text": "EV/EBITDA for Comparable 4"
+            },
+            "scope": [
+              {
+                "text": "for FY19–FY23 only"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "EV/EBITDA for Comparable 4"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 144,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 144,
+          "member_occurrences": [],
+          "obligation_id": "O6",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the Comps sheet"
+            },
+            "required_change": {
+              "text": "P/E for Comparable 6"
+            },
+            "scope": [
+              {
+                "text": "for FY19–FY23 only"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "P/E for Comparable 6"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        }
+      ],
+      "task": "Financial_Model:12_05"
+    },
+    {
+      "archived_task_ir_status": "OK",
+      "obligation_count": 6,
+      "obligations": [
+        {
+          "base_candidate_count": 6,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 6,
+          "member_occurrences": [],
+          "obligation_id": "O1",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Input Sheet"
+            },
+            "required_change": {
+              "text": "define Transport Revenue growth (10% FY26, 30% FY27–FY30)"
+            },
+            "scope": [
+              {
+                "text": "10% FY26, 30% FY27–FY30"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Transport Revenue growth"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 276,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 276,
+          "member_occurrences": [],
+          "obligation_id": "O2",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Revenue Drivers tab"
+            },
+            "required_change": {
+              "text": "calculate Transport Revenue for FY26–FY30"
+            },
+            "scope": [
+              {
+                "text": "FY26–FY30"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Transport Revenue"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 6,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 6,
+          "member_occurrences": [],
+          "obligation_id": "O3",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Input Sheet"
+            },
+            "required_change": {
+              "text": "calculate Warehousing Rate per Square Feet for FY27–FY30 escalating from FY26 base of 28 USD"
+            },
+            "scope": [
+              {
+                "text": "FY27–FY30"
+              }
+            ],
+            "source_relation": {
+              "text": "escalating from FY26 base of 28 USD"
+            },
+            "subject": {
+              "text": "Warehousing Rate per Square Feet"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 104,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 104,
+          "member_occurrences": [],
+          "obligation_id": "O4",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Debt Schedule"
+            },
+            "required_change": {
+              "text": "calculate Long Term Borrowings interest at 15% from FY26"
+            },
+            "scope": [
+              {
+                "text": "from FY26"
+              }
+            ],
+            "source_relation": {
+              "text": "at 15%"
+            },
+            "subject": {
+              "text": "Long Term Borrowings interest"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 109,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 109,
+          "member_occurrences": [],
+          "obligation_id": "O5",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "Asset Sch. tab"
+            },
+            "required_change": {
+              "text": "calculate Consolidated PPE Depreciation for FY26–FY30"
+            },
+            "scope": [
+              {
+                "text": "FY26–FY30"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Consolidated PPE Depreciation"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 29,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 29,
+          "member_occurrences": [],
+          "obligation_id": "O6",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "IS tab"
+            },
+            "required_change": {
+              "text": "link Depreciation & Amortization from Asset Sch sheet"
+            },
+            "scope": [],
+            "source_relation": {
+              "text": "from Asset Sch sheet"
+            },
+            "subject": {
+              "text": "Depreciation & Amortization"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        }
+      ],
+      "task": "Financial_Model:13_05"
+    },
+    {
+      "archived_task_ir_status": "OK",
+      "obligation_count": 6,
+      "obligations": [
+        {
+          "base_candidate_count": 54,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 54,
+          "member_occurrences": [],
+          "obligation_id": "O1",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Fixed Asset & Depreciation sheet"
+            },
+            "required_change": {
+              "text": "calculate Net Block for FY19–FY27"
+            },
+            "scope": [
+              {
+                "text": "FY19–FY27"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Net Block"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 8,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 8,
+          "member_occurrences": [],
+          "obligation_id": "O2",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the DCF_Income Approach sheet"
+            },
+            "required_change": {
+              "text": "calculate income tax for FY20–FY27"
+            },
+            "scope": [
+              {
+                "text": "FY20–FY27"
+              }
+            ],
+            "source_relation": {
+              "text": "using the effective tax rate from the Tax-DCF sheet"
+            },
+            "subject": {
+              "text": "income tax"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 66,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 66,
+          "member_occurrences": [],
+          "obligation_id": "O3",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the DCF_Income Approach sheet"
+            },
+            "required_change": {
+              "text": "calculate Free Cash Flows for all forecast periods"
+            },
+            "scope": [
+              {
+                "text": "all forecast periods"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Free Cash Flows"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 141,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 141,
+          "member_occurrences": [],
+          "obligation_id": "O4",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the WACC sheet"
+            },
+            "required_change": {
+              "text": "calculate Mean and Median for Debt to Equity Ratio, 5 Year Beta, and Unlevered Beta"
+            },
+            "scope": [],
+            "source_relation": null,
+            "subject": {
+              "text": "Mean and Median for Debt to Equity Ratio, 5 Year Beta, and Unlevered Beta"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 8,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 8,
+          "member_occurrences": [],
+          "obligation_id": "O5",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Revenue sheet"
+            },
+            "required_change": {
+              "text": "calculate Total Revenue for all products across all periods"
+            },
+            "scope": [
+              {
+                "text": "all products"
+              },
+              {
+                "text": "all periods"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Total Revenue"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 94,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 94,
+          "member_occurrences": [],
+          "obligation_id": "O6",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Revenue sheet"
+            },
+            "required_change": {
+              "text": "calculate Revenue – Petroleum and Revenue – Petrochemical as the sum of their respective product lines"
+            },
+            "scope": [],
+            "source_relation": {
+              "text": "as the sum of their respective product lines"
+            },
+            "subject": {
+              "text": "Revenue – Petroleum and Revenue – Petrochemical"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        }
+      ],
+      "task": "Financial_Model:14_05"
+    },
+    {
+      "archived_task_ir_status": "OK",
+      "obligation_count": 8,
+      "obligations": [
+        {
+          "base_candidate_count": 144,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 144,
+          "member_occurrences": [],
+          "obligation_id": "O1",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Formats sheet"
+            },
+            "required_change": {
+              "text": "linking all elements of the first Consolidated Financials table to a different tab"
+            },
+            "scope": [],
+            "source_relation": {
+              "text": "to a different tab"
+            },
+            "subject": {
+              "text": "all elements of the first Consolidated Financials table"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 294,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 294,
+          "member_occurrences": [],
+          "obligation_id": "O2",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Formats sheet"
+            },
+            "required_change": {
+              "text": "calculate net margin (%)"
+            },
+            "scope": [
+              {
+                "text": "all historical and forecasted years"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "net margin (%)"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 0,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 0,
+          "member_occurrences": [],
+          "obligation_id": "O3",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the balance sheet of the Consolidated Financials table"
+            },
+            "required_change": {
+              "text": "calculate the efficiency ratios and leverage ratios"
+            },
+            "scope": [
+              {
+                "text": "all years"
+              }
+            ],
+            "source_relation": {
+              "text": "referencing from other tabs as part of their calculation"
+            },
+            "subject": {
+              "text": "the efficiency ratios and leverage ratios"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 0,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 0,
+          "member_occurrences": [],
+          "obligation_id": "O4",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Formats sheet"
+            },
+            "required_change": {
+              "text": "create logical functions below the consolidated Quarterly Result Table that are related to the % change in the following elements of the table: Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin"
+            },
+            "scope": [
+              {
+                "text": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin"
+              }
+            ],
+            "source_relation": {
+              "text": "related to the % change in the following elements of the table"
+            },
+            "subject": {
+              "text": "logical functions"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 0,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 0,
+          "member_occurrences": [],
+          "obligation_id": "O5",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Formats sheet"
+            },
+            "required_change": null,
+            "scope": [
+              {
+                "text": "3QFY23 and 2QFY24"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "the logical function"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 0,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 0,
+          "member_occurrences": [],
+          "obligation_id": "O6",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Formats sheet"
+            },
+            "required_change": null,
+            "scope": [
+              {
+                "text": "3QFY24E"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "the logical function"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 36,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 36,
+          "member_occurrences": [],
+          "obligation_id": "O7",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Report Tables sheet"
+            },
+            "required_change": {
+              "text": "link all elements of the Particulars table to the corresponding elements found in the Formats sheet"
+            },
+            "scope": [],
+            "source_relation": {
+              "text": "to the corresponding elements found in the Formats sheet"
+            },
+            "subject": {
+              "text": "all elements of the Particulars table"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 432,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 432,
+          "member_occurrences": [],
+          "obligation_id": "O8",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "the Report Tables sheet"
+            },
+            "required_change": {
+              "text": "calculate the numbers"
+            },
+            "scope": [],
+            "source_relation": null,
+            "subject": {
+              "text": "the Cost items as % of sales (including % Change) and the % Change part of the Margin (%) section"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        }
+      ],
+      "task": "Financial_Model:15_05"
+    },
+    {
+      "archived_task_ir_status": "OK",
+      "obligation_count": 6,
+      "obligations": [
+        {
+          "base_candidate_count": 363,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 363,
+          "member_occurrences": [],
+          "obligation_id": "O1",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the Valuation sheet"
+            },
+            "required_change": {
+              "text": "calculate Present Value of Terminal cash flow"
+            },
+            "scope": [],
+            "source_relation": {
+              "text": "using the 2018F discount factor"
+            },
+            "subject": {
+              "text": "Present Value of Terminal cash flow"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 332,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 332,
+          "member_occurrences": [],
+          "obligation_id": "O2",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the Valuation sheet"
+            },
+            "required_change": {
+              "text": "calculate Present Value of Equity"
+            },
+            "scope": [],
+            "source_relation": {
+              "text": "by adjusting Enterprise Value for debt, cash, investments, and minority interest"
+            },
+            "subject": {
+              "text": "Present Value of Equity"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 347,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 347,
+          "member_occurrences": [],
+          "obligation_id": "O3",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the Valuation sheet"
+            },
+            "required_change": {
+              "text": "calculate Value per Share"
+            },
+            "scope": [],
+            "source_relation": null,
+            "subject": {
+              "text": "Value per Share"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 240,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 240,
+          "member_occurrences": [],
+          "obligation_id": "O4",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the Valuation sheet"
+            },
+            "required_change": {
+              "text": "Calculate Cost of Equity"
+            },
+            "scope": [],
+            "source_relation": {
+              "text": "using CAPM"
+            },
+            "subject": {
+              "text": "Cost of Equity"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 238,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 238,
+          "member_occurrences": [],
+          "obligation_id": "O5",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the Ratio_Analysis sheet"
+            },
+            "required_change": {
+              "text": "calculate Return on Average Assets"
+            },
+            "scope": [
+              {
+                "text": "for all periods"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "Return on Average Assets"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        },
+        {
+          "base_candidate_count": 22,
+          "candidate_additions": [],
+          "excluded_members": [],
+          "excluded_occurrences": [],
+          "included_members": [],
+          "integrated_candidate_count": 22,
+          "member_occurrences": [],
+          "obligation_id": "O6",
+          "output_role_activations": [],
+          "output_role_active": false,
+          "population_member_active": false,
+          "population_specifications": [],
+          "task_ir_fields": {
+            "locus": {
+              "text": "In the Graphical_representation sheet"
+            },
+            "required_change": {
+              "text": "create a combo chart"
+            },
+            "scope": [
+              {
+                "text": "for 2011–2018F"
+              }
+            ],
+            "source_relation": null,
+            "subject": {
+              "text": "a combo chart"
+            },
+            "subject_interval": null
+          },
+          "uses_gold": false
+        }
+      ],
+      "task": "Financial_Model:17_05"
+    }
+  ],
+  "tasks_with_output_role_activation": [
+    "Financial_Model:05_01"
+  ],
+  "violations": []
+}

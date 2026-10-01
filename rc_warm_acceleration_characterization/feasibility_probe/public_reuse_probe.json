@@ -1,0 +1,219 @@
+{
+  "workload_id": "Template_03_03__c76ea596b408",
+  "workbook_source": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Template/spreadsheet/03_consolidation/03_03_input.xlsx",
+  "script_source": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Template_03_03__c76ea596b408.py",
+  "results": [
+    {
+      "ordinal": 1,
+      "argv": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "run",
+        "--workdir",
+        "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/work",
+        "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/work/workload.py"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "9966f05e4268024dee8bd7d9d0e525d9565cedd8978bea17cd8daf8f4c78a81f",
+      "stdout": "input E41: None\n40 ['Less: Dividends to Common', None, None, None, None]\n41 ['Less: Dividends to NCI', None, None, None, -10]\n42 ['Cash from Financing', None, None, None, None]\n43 ['Net Change in Cash', None, None, None, None]\n",
+      "stderr": "",
+      "probe_only_wall_s": 0.2154418190184515,
+      "workbook_sha256_before": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+      "workbook_sha256_after": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+      "run_id": "a3fb8dd6102e4cf98a8c745b845c477c",
+      "summary": {
+        "run_id": "a3fb8dd6102e4cf98a8c745b845c477c",
+        "returncode": 0,
+        "runtime_enabled": true,
+        "read_gate": "A1_ADMIT",
+        "accelerated_loads": 1,
+        "compiled_workbooks": 1,
+        "capture_enabled": true,
+        "capture_records": 0,
+        "capture_failures": 0,
+        "fallback": [],
+        "log_dir": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/cache/librecalc-agent/runs/a3fb8dd6102e4cf98a8c745b845c477c"
+      },
+      "index_manifest_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/cache/librecalc-agent/runs/a3fb8dd6102e4cf98a8c745b845c477c/index/manifest.json",
+      "index_manifest": {
+        "workbooks": {
+          "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/work/input.xlsx": {
+            "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/work/input.xlsx",
+            "db_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/cache/librecalc-agent/runs/a3fb8dd6102e4cf98a8c745b845c477c/index/3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b.sqlite",
+            "workbook_hash": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+            "index_generation": 1,
+            "rebuilt": true,
+            "ensure_s": 0.007380239985650405,
+            "backup_s": 0.003157756000291556,
+            "freshness_s": 0.010537995985941961
+          }
+        },
+        "refreshes": [
+          {
+            "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/work/input.xlsx",
+            "db_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/cache/librecalc-agent/runs/a3fb8dd6102e4cf98a8c745b845c477c/index/3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b.sqlite",
+            "workbook_hash": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+            "index_generation": 1,
+            "rebuilt": true,
+            "ensure_s": 0.007380239985650405,
+            "backup_s": 0.003157756000291556,
+            "freshness_s": 0.010537995985941961
+          }
+        ],
+        "failures": [],
+        "phase": "product_run",
+        "serves_roles": [
+          "CANDIDATE_A"
+        ]
+      },
+      "runtime_events": [
+        {
+          "event": "bootstrap",
+          "status": "INSTALLED",
+          "candidate": "A"
+        },
+        {
+          "event": "candidate_operation",
+          "operation": "load_workbook",
+          "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/work/input.xlsx",
+          "status": "ACCELERATED",
+          "workbook_generation": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+          "substrate_generation": 1,
+          "rebuilt": false,
+          "parse_performed": false,
+          "substrate_hit": true,
+          "duration_ns": 1409072
+        }
+      ],
+      "refreshes": [
+        {
+          "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/work/input.xlsx",
+          "db_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/cache/librecalc-agent/runs/a3fb8dd6102e4cf98a8c745b845c477c/index/3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b.sqlite",
+          "workbook_hash": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+          "index_generation": 1,
+          "rebuilt": true,
+          "ensure_s": 0.007380239985650405,
+          "backup_s": 0.003157756000291556,
+          "freshness_s": 0.010537995985941961
+        }
+      ]
+    },
+    {
+      "ordinal": 2,
+      "argv": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "run",
+        "--workdir",
+        "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/work",
+        "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/work/workload.py"
+      ],
+      "exit_code": 0,
+      "stdout_sha256": "9966f05e4268024dee8bd7d9d0e525d9565cedd8978bea17cd8daf8f4c78a81f",
+      "stdout": "input E41: None\n40 ['Less: Dividends to Common', None, None, None, None]\n41 ['Less: Dividends to NCI', None, None, None, -10]\n42 ['Cash from Financing', None, None, None, None]\n43 ['Net Change in Cash', None, None, None, None]\n",
+      "stderr": "",
+      "probe_only_wall_s": 0.2184990529785864,
+      "workbook_sha256_before": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+      "workbook_sha256_after": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+      "run_id": "32c833ca8ad844f698ae4856a66ee685",
+      "summary": {
+        "run_id": "32c833ca8ad844f698ae4856a66ee685",
+        "returncode": 0,
+        "runtime_enabled": true,
+        "read_gate": "A1_ADMIT",
+        "accelerated_loads": 1,
+        "compiled_workbooks": 1,
+        "capture_enabled": true,
+        "capture_records": 0,
+        "capture_failures": 0,
+        "fallback": [],
+        "log_dir": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/cache/librecalc-agent/runs/32c833ca8ad844f698ae4856a66ee685"
+      },
+      "index_manifest_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/cache/librecalc-agent/runs/32c833ca8ad844f698ae4856a66ee685/index/manifest.json",
+      "index_manifest": {
+        "workbooks": {
+          "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/work/input.xlsx": {
+            "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/work/input.xlsx",
+            "db_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/cache/librecalc-agent/runs/32c833ca8ad844f698ae4856a66ee685/index/3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b.sqlite",
+            "workbook_hash": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+            "index_generation": 1,
+            "rebuilt": true,
+            "ensure_s": 0.006931793002877384,
+            "backup_s": 0.009869964007521048,
+            "freshness_s": 0.016801757010398433
+          }
+        },
+        "refreshes": [
+          {
+            "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/work/input.xlsx",
+            "db_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/cache/librecalc-agent/runs/32c833ca8ad844f698ae4856a66ee685/index/3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b.sqlite",
+            "workbook_hash": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+            "index_generation": 1,
+            "rebuilt": true,
+            "ensure_s": 0.006931793002877384,
+            "backup_s": 0.009869964007521048,
+            "freshness_s": 0.016801757010398433
+          }
+        ],
+        "failures": [],
+        "phase": "product_run",
+        "serves_roles": [
+          "CANDIDATE_A"
+        ]
+      },
+      "runtime_events": [
+        {
+          "event": "bootstrap",
+          "status": "INSTALLED",
+          "candidate": "A"
+        },
+        {
+          "event": "candidate_operation",
+          "operation": "load_workbook",
+          "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/work/input.xlsx",
+          "status": "ACCELERATED",
+          "workbook_generation": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+          "substrate_generation": 1,
+          "rebuilt": false,
+          "parse_performed": false,
+          "substrate_hit": true,
+          "duration_ns": 1420748
+        }
+      ],
+      "refreshes": [
+        {
+          "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/work/input.xlsx",
+          "db_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/cache/librecalc-agent/runs/32c833ca8ad844f698ae4856a66ee685/index/3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b.sqlite",
+          "workbook_hash": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+          "index_generation": 1,
+          "rebuilt": true,
+          "ensure_s": 0.006931793002877384,
+          "backup_s": 0.009869964007521048,
+          "freshness_s": 0.016801757010398433
+        }
+      ]
+    }
+  ],
+  "reference_probe_invalid_attempt": {
+    "argv": [
+      "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+      "rc_warm_acceleration_characterization/feasibility_probe/work/workload.py"
+    ],
+    "exit_code": 2,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr": "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python: can't open file '/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/work/rc_warm_acceleration_characterization/feasibility_probe/work/workload.py': [Errno 2] No such file or directory\n",
+    "workbook_sha256_before": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+    "workbook_sha256_after": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+    "matches_both_rc_probe_outputs": false
+  },
+  "reference_probe": {
+    "argv": [
+      "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+      "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/work/workload.py"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "9966f05e4268024dee8bd7d9d0e525d9565cedd8978bea17cd8daf8f4c78a81f",
+    "stderr": "",
+    "workbook_sha256_before": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+    "workbook_sha256_after": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+    "matches_both_rc_probe_outputs": true
+  }
+}

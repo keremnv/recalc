@@ -1,0 +1,10 @@
+{
+  "eligible_conditions": [
+    "one-arm provider censoring",
+    "D/A completion discordance",
+    "extreme >3x task ratios"
+  ],
+  "primary_results_unchanged": true,
+  "reason_not_run": "The primary result is already frozen and fails the mechanism and robustness gates. Targeted repeats could diagnose pathologies but cannot rescue this preregistered discovery gate or turn this cohort into holdout validation.",
+  "replication_runs": 0
+}

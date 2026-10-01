@@ -1,0 +1,278 @@
+{
+  "status": "PASS",
+  "environment": "/tmp/librecalc-hygiene-rc-v55taghk",
+  "creation": "python3 -m venv /tmp/librecalc-hygiene-rc-v55taghk/venv",
+  "system_site_packages": false,
+  "canonical_install": "python -m pip install . (absolute checkout path equivalent used below)",
+  "runtime_dependencies": [
+    {
+      "name": "et_xmlfile",
+      "version": "2.0.0"
+    },
+    {
+      "name": "librecalc-agent",
+      "version": "0.2.0rc1"
+    },
+    {
+      "name": "lxml",
+      "version": "6.1.3"
+    },
+    {
+      "name": "openpyxl",
+      "version": "3.1.5"
+    },
+    {
+      "name": "pip",
+      "version": "25.3"
+    }
+  ],
+  "imports": {
+    "package": "/tmp/librecalc-hygiene-rc-v55taghk/venv/lib/python3.13/site-packages/librecalc_agent/__init__.py",
+    "prefix": "/tmp/librecalc-hygiene-rc-v55taghk/venv",
+    "research_imports": []
+  },
+  "doctor_pass": true,
+  "example": {
+    "A2": 21,
+    "B2": "=A2*2"
+  },
+  "test_result": "PASS; see clean_product_tests.xml",
+  "steps": [
+    {
+      "step": "environment_creation",
+      "command": [
+        "/home/kerem/miniconda3/bin/python3",
+        "-m",
+        "venv",
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/environment_creation.log"
+    },
+    {
+      "step": "clean_install",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "/home/kerem/Desktop/Personal Projects/librecalc-mcp"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/clean_install.log"
+    },
+    {
+      "step": "runtime_dependencies",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+        "-m",
+        "pip",
+        "list",
+        "--format=json"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/runtime_dependencies.log"
+    },
+    {
+      "step": "isolated_imports",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+        "-c",
+        "import json,sys,librecalc_agent,lx_helpers; from librecalc_agent import diagnostics; from librecalc_agent.config import defaults; diagnostics.check(defaults(),[]); print(json.dumps({\"package\":librecalc_agent.__file__,\"prefix\":sys.prefix,\"research_imports\":[x for x in sys.modules if x.startswith((\"benchmark\",\"librecalc_mcp\",\"openai\",\"mcp\"))]}))"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/isolated_imports.log"
+    },
+    {
+      "step": "doctor",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "doctor",
+        "--json"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/doctor.log"
+    },
+    {
+      "step": "doctor_require_lo",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "doctor",
+        "--require-libreoffice"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/doctor_require_lo.log"
+    },
+    {
+      "step": "example_copy",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "example",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/example_copy.log"
+    },
+    {
+      "step": "example_create_input",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "run",
+        "--workdir",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example/create_input.py"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/example_create_input.log"
+    },
+    {
+      "step": "example_update",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "run",
+        "--workdir",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example/update.py"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/example_update.log"
+    },
+    {
+      "step": "example_read",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "run",
+        "--workdir",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example/read.py"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/example_read.log"
+    },
+    {
+      "step": "enabled_status",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "status",
+        "--json"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/enabled_status.log"
+    },
+    {
+      "step": "disabled_example",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "run",
+        "--no-runtime",
+        "--workdir",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example/update.py"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/disabled_example.log"
+    },
+    {
+      "step": "ordinary_example",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+        "/tmp/librecalc-hygiene-rc-v55taghk/example/update.py"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk/example",
+      "returncode": 0,
+      "log": "product_hygiene/ordinary_example.log"
+    },
+    {
+      "step": "example_verify",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+        "-c",
+        "import json,openpyxl; w=openpyxl.load_workbook(\"output.xlsx\"); print(json.dumps({\"A2\":w[\"Sheet1\"][\"A2\"].value,\"B2\":w[\"Sheet1\"][\"B2\"].value}));w.close()"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk/example",
+      "returncode": 0,
+      "log": "product_hygiene/example_verify.log"
+    },
+    {
+      "step": "reference_helper",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+        "-c",
+        "import lx_helpers; r=lx_helpers.inspect(\"output.xlsx\",\"Sheet1\",\"B2:B2\",with_styles=True); assert r[\"index_generation\"]==0; print(r[\"results\"][0][\"formula\"])"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk/example",
+      "returncode": 0,
+      "log": "product_hygiene/reference_helper.log"
+    },
+    {
+      "step": "status",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+        "status",
+        "--json"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/status.log"
+    },
+    {
+      "step": "validation_dependencies",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "pytest==8.4.2"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/validation_dependencies.log"
+    },
+    {
+      "step": "clean_product_tests",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+        "-m",
+        "pytest",
+        "-o",
+        "pythonpath=",
+        "/home/kerem/Desktop/Personal Projects/librecalc-mcp/tests/test_product_hygiene.py",
+        "-q",
+        "--junitxml=/home/kerem/Desktop/Personal Projects/librecalc-mcp/product_hygiene/clean_product_tests.xml"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/clean_product_tests.log"
+    },
+    {
+      "step": "wheel_build",
+      "command": [
+        "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+        "-m",
+        "pip",
+        "wheel",
+        "--no-deps",
+        "--wheel-dir",
+        "/home/kerem/Desktop/Personal Projects/librecalc-mcp/product_hygiene/dist",
+        "/home/kerem/Desktop/Personal Projects/librecalc-mcp"
+      ],
+      "cwd": "/tmp/librecalc-hygiene-rc-v55taghk",
+      "returncode": 0,
+      "log": "product_hygiene/wheel_build.log"
+    }
+  ],
+  "models_called": 0,
+  "benchmarks_run": 0
+}

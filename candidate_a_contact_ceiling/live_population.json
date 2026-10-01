@@ -1,0 +1,88 @@
+{
+  "primary_contact_tasks": [
+    "Financial_Model:08_01",
+    "Financial_Model:08_03"
+  ],
+  "primary_fallback_rows": 94,
+  "runner_censored": [
+    "Financial_Model:06_01"
+  ],
+  "selected_family_composition": {
+    "Debugging": 2,
+    "Financial_Model": 4
+  },
+  "selection": {
+    "family_composition": {
+      "Debugging": 2,
+      "Financial_Model": 4
+    },
+    "representative_benchmark": false,
+    "seed": 20260920,
+    "selected": [
+      {
+        "family": "Financial_Model",
+        "historical_repeated_open_surplus": 31,
+        "historical_safe_executions": 9,
+        "historical_safe_read_events": 104,
+        "input_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/07_Project Real Estate Financial Model/07_01_RealEstate_input.xlsx",
+        "rank": 1,
+        "task_id": "Financial_Model:07_01"
+      },
+      {
+        "family": "Financial_Model",
+        "historical_repeated_open_surplus": 28,
+        "historical_safe_executions": 10,
+        "historical_safe_read_events": 88,
+        "input_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/08_Project Seafood Model/08_03_Seafood_input.xlsx",
+        "rank": 2,
+        "task_id": "Financial_Model:08_03"
+      },
+      {
+        "family": "Financial_Model",
+        "historical_repeated_open_surplus": 40,
+        "historical_safe_executions": 6,
+        "historical_safe_read_events": 77,
+        "input_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/08_Project Seafood Model/08_01_Seafood_input.xlsx",
+        "rank": 3,
+        "task_id": "Financial_Model:08_01"
+      },
+      {
+        "family": "Financial_Model",
+        "historical_repeated_open_surplus": 10,
+        "historical_safe_executions": 4,
+        "historical_safe_read_events": 50,
+        "input_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/06_Project DigiMark/06_01_DigiMark_input.xlsx",
+        "rank": 4,
+        "task_id": "Financial_Model:06_01"
+      },
+      {
+        "family": "Debugging",
+        "historical_repeated_open_surplus": 2,
+        "historical_safe_executions": 2,
+        "historical_safe_read_events": 26,
+        "input_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Debugging/spreadsheet/01_Debugging/input_files/Incorrect Cross Sheet References_input.xlsx",
+        "rank": 5,
+        "task_id": "Debugging:01_06"
+      },
+      {
+        "family": "Debugging",
+        "historical_repeated_open_surplus": 5,
+        "historical_safe_executions": 2,
+        "historical_safe_read_events": 10,
+        "input_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Debugging/spreadsheet/05_Debugging/input_files/Embedded Hardcodes_input.xlsx",
+        "rank": 6,
+        "task_id": "Debugging:05_02"
+      }
+    ],
+    "selection_rule": "top-six frozen mechanical ranking"
+  },
+  "source": "candidate_a_live primary H1 archives only; replications excluded",
+  "tasks": [
+    "Financial_Model:07_01",
+    "Financial_Model:08_03",
+    "Financial_Model:08_01",
+    "Financial_Model:06_01",
+    "Debugging:01_06",
+    "Debugging:05_02"
+  ]
+}

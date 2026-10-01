@@ -1,0 +1,47 @@
+{
+  "id": "9052cf9b7b3c3997",
+  "scope": "read-only existing scored numeric cell/cached value inspection; no new scoring execution/workbook variant/probe/classification",
+  "examples": [
+    {
+      "cell": "Cash Flow!H48",
+      "gold_cached_numeric": -5.45696821063757e-12,
+      "V0_cached_numeric": -5.45696821063757e-12,
+      "V1_cached_numeric": 1.81898940354586e-12,
+      "V0_formula": "H45-H47",
+      "V1_formula": "H45-H47"
+    },
+    {
+      "cell": "NCD!AA119",
+      "gold_cached_numeric": 7.105427357601e-15,
+      "V0_cached_numeric": 7.105427357601e-15,
+      "V1_cached_numeric": 7.54951656745106e-15,
+      "V0_formula": "AA116+AA117-AA118",
+      "V1_formula": "AA116+AA117-AA118"
+    },
+    {
+      "cell": "NCD!AA127",
+      "gold_cached_numeric": -2.22044604925031e-15,
+      "V0_cached_numeric": -2.22044604925031e-15,
+      "V1_cached_numeric": -2.88657986402541e-15,
+      "V0_formula": "AA124+AA125-AA126",
+      "V1_formula": "AA124+AA125-AA126"
+    },
+    {
+      "cell": "NCD!AA31",
+      "gold_cached_numeric": 9.9475983006414e-14,
+      "V0_cached_numeric": 9.9475983006414e-14,
+      "V1_cached_numeric": 1.70530256582424e-13,
+      "V0_formula": "AA28+AA29-AA30",
+      "V1_formula": "AA28+AA29-AA30"
+    },
+    {
+      "cell": "NCD!AA39",
+      "gold_cached_numeric": -4.61852778244065e-14,
+      "V0_cached_numeric": 0.0,
+      "V1_cached_numeric": -8.5265128291212e-14,
+      "V0_formula": "AA36+AA37-AA38",
+      "V1_formula": "AA36+AA37-AA38"
+    }
+  ],
+  "qualification": "floating cached value comparison against frozen gold; does not prove why old/new calculations differ or establish engine correctness"
+}

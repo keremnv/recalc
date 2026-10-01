@@ -1,0 +1,1156 @@
+{
+  "integrated": {
+    "summary": {
+      "arm": "integrated_glm",
+      "calls": 1166,
+      "completion_tokens": 3999320,
+      "cost_usd": 4.685829373189999,
+      "prompt_tokens": 23604215,
+      "provider_failures": {
+        "PROVIDER_ERROR": 8,
+        "PROVIDER_TIMEOUT": 101,
+        "TASK_COST_LIMIT": 3
+      },
+      "reasoning_tokens": 3829024,
+      "stage_breakdown": {
+        "edit_plan": {
+          "calls": 84,
+          "completion_tokens": 680151,
+          "cost_usd": 0.3850914143,
+          "prompt_tokens": 604678,
+          "reasoning_tokens": 665024,
+          "total_tokens": 1284829
+        },
+        "retrieval": {
+          "calls": 931,
+          "completion_tokens": 2804561,
+          "cost_usd": 2.5641593418600004,
+          "prompt_tokens": 11529452,
+          "reasoning_tokens": 2669985,
+          "total_tokens": 14334013
+        },
+        "synthesis": {
+          "calls": 139,
+          "completion_tokens": 445610,
+          "cost_usd": 1.7026730092300002,
+          "prompt_tokens": 11457284,
+          "reasoning_tokens": 439194,
+          "total_tokens": 11902894
+        },
+        "task_ir": {
+          "calls": 12,
+          "completion_tokens": 68998,
+          "cost_usd": 0.0339056078,
+          "prompt_tokens": 12801,
+          "reasoning_tokens": 54821,
+          "total_tokens": 81799
+        }
+      },
+      "total_tokens": 27603535
+    },
+    "task_rows": [
+      {
+        "arm": "integrated_glm",
+        "calls": 150,
+        "completion_tokens": 475977,
+        "cost_usd": 0.5232604252099999,
+        "max_cost_usd": 6.0,
+        "max_model_calls": 150,
+        "model": "z-ai/glm-5.3-flash",
+        "partial_due_to_budget": true,
+        "prompt_tokens": 2902290,
+        "provider_failures": {
+          "PROVIDER_TIMEOUT": 8
+        },
+        "reasoning": "max",
+        "reasoning_tokens": 459142,
+        "stage_breakdown": {
+          "edit_plan": {
+            "calls": 8,
+            "completion_tokens": 43171,
+            "cost_usd": 0.024333321890000002,
+            "prompt_tokens": 77888,
+            "reasoning_tokens": 42203,
+            "total_tokens": 121059
+          },
+          "retrieval": {
+            "calls": 124,
+            "completion_tokens": 348615,
+            "cost_usd": 0.28872291291999996,
+            "prompt_tokens": 1373360,
+            "reasoning_tokens": 334948,
+            "total_tokens": 1721975
+          },
+          "synthesis": {
+            "calls": 17,
+            "completion_tokens": 79583,
+            "cost_usd": 0.2083548029,
+            "prompt_tokens": 1449963,
+            "reasoning_tokens": 78756,
+            "total_tokens": 1529546
+          },
+          "task_ir": {
+            "calls": 1,
+            "completion_tokens": 4608,
+            "cost_usd": 0.0018493875,
+            "prompt_tokens": 1079,
+            "reasoning_tokens": 3235,
+            "total_tokens": 5687
+          }
+        },
+        "status": "COMPLETED",
+        "task": "Financial_Model:01_01",
+        "total_tokens": 3378267,
+        "wall_clock_seconds": 7623.426505
+      },
+      {
+        "arm": "integrated_glm",
+        "calls": 150,
+        "completion_tokens": 517488,
+        "cost_usd": 0.3450772338299999,
+        "max_cost_usd": 6.0,
+        "max_model_calls": 150,
+        "model": "z-ai/glm-5.3-flash",
+        "partial_due_to_budget": true,
+        "prompt_tokens": 1025190,
+        "provider_failures": {
+          "PROVIDER_TIMEOUT": 25
+        },
+        "reasoning": "max",
+        "reasoning_tokens": 501217,
+        "stage_breakdown": {
+          "edit_plan": {
+            "calls": 6,
+            "completion_tokens": 67260,
+            "cost_usd": 0.035418980200000005,
+            "prompt_tokens": 46548,
+            "reasoning_tokens": 65998,
+            "total_tokens": 113808
+          },
+          "retrieval": {
+            "calls": 122,
+            "completion_tokens": 411849,
+            "cost_usd": 0.26938791802999995,
+            "prompt_tokens": 779847,
+            "reasoning_tokens": 398012,
+            "total_tokens": 1191696
+          },
+          "synthesis": {
+            "calls": 21,
+            "completion_tokens": 31480,
+            "cost_usd": 0.0366636356,
+            "prompt_tokens": 197747,
+            "reasoning_tokens": 31324,
+            "total_tokens": 229227
+          },
+          "task_ir": {
+            "calls": 1,
+            "completion_tokens": 6899,
+            "cost_usd": 0.0036067,
+            "prompt_tokens": 1048,
+            "reasoning_tokens": 5883,
+            "total_tokens": 7947
+          }
+        },
+        "status": "COMPLETED",
+        "task": "Financial_Model:03_01",
+        "total_tokens": 1542678,
+        "wall_clock_seconds": 10290.49112
+      },
+      {
+        "arm": "integrated_glm",
+        "calls": 9,
+        "completion_tokens": 55097,
+        "cost_usd": 0.02361994275,
+        "max_cost_usd": 6.0,
+        "max_model_calls": 150,
+        "model": "z-ai/glm-5.3-flash",
+        "partial_due_to_budget": false,
+        "prompt_tokens": 41223,
+        "provider_failures": {
+          "PROVIDER_TIMEOUT": 2
+        },
+        "reasoning": "max",
+        "reasoning_tokens": 50397,
+        "stage_breakdown": {
+          "edit_plan": {
+            "calls": 8,
+            "completion_tokens": 51881,
+            "cost_usd": 0.022302526649999998,
+            "prompt_tokens": 40217,
+            "reasoning_tokens": 48279,
+            "total_tokens": 92098
+          },
+          "task_ir": {
+            "calls": 1,
+            "completion_tokens": 3216,
+            "cost_usd": 0.0013174161,
+            "prompt_tokens": 1006,
+            "reasoning_tokens": 2118,
+            "total_tokens": 4222
+          }
+        },
+        "status": "COMPLETED",
+        "task": "Financial_Model:04_01",
+        "total_tokens": 96320,
+        "wall_clock_seconds": 1993.454922
+      },
+      {
+        "arm": "integrated_glm",
+        "calls": 62,
+        "completion_tokens": 152307,
+        "cost_usd": 0.20477443331999998,
+        "max_cost_usd": 6.0,
+        "max_model_calls": 150,
+        "model": "z-ai/glm-5.3-flash",
+        "partial_due_to_budget": false,
+        "prompt_tokens": 1336474,
+        "provider_failures": {
+          "PROVIDER_TIMEOUT": 8
+        },
+        "reasoning": "max",
+        "reasoning_tokens": 142526,
+        "stage_breakdown": {
+          "edit_plan": {
+            "calls": 7,
+            "completion_tokens": 30920,
+            "cost_usd": 0.017570845100000003,
+            "prompt_tokens": 49886,
+            "reasoning_tokens": 29494,
+            "total_tokens": 80806
+          },
+          "retrieval": {
+            "calls": 46,
+            "completion_tokens": 95194,
+            "cost_usd": 0.10158247387,
+            "prompt_tokens": 603816,
+            "reasoning_tokens": 88936,
+            "total_tokens": 699010
+          },
+          "synthesis": {
+            "calls": 8,
+            "completion_tokens": 18843,
+            "cost_usd": 0.08275057185,
+            "prompt_tokens": 681722,
+            "reasoning_tokens": 17841,
+            "total_tokens": 700565
+          },
+          "task_ir": {
+            "calls": 1,
+            "completion_tokens": 7350,
+            "cost_usd": 0.0028705425,
+            "prompt_tokens": 1050,
+            "reasoning_tokens": 6255,
+            "total_tokens": 8400
+          }
+        },
+        "status": "COMPLETED",
+        "task": "Financial_Model:05_01",
+        "total_tokens": 1488781,
+        "wall_clock_seconds": 4628.323674
+      },
+      {
+        "arm": "integrated_glm",
+        "calls": 150,
+        "completion_tokens": 448072,
+        "cost_usd": 1.54701817185,
+        "max_cost_usd": 6.0,
+        "max_model_calls": 150,
+        "model": "z-ai/glm-5.3-flash",
+        "partial_due_to_budget": true,
+        "prompt_tokens": 9171978,
+        "provider_failures": {
+          "PROVIDER_TIMEOUT": 28
+        },
+        "reasoning": "max",
+        "reasoning_tokens": 430127,
+        "stage_breakdown": {
+          "edit_plan": {
+            "calls": 7,
+            "completion_tokens": 47905,
+            "cost_usd": 0.03233396,
+            "prompt_tokens": 59358,
+            "reasoning_tokens": 47188,
+            "total_tokens": 107263
+          },
+          "retrieval": {
+            "calls": 121,
+            "completion_tokens": 317596,
+            "cost_usd": 0.7613679778500001,
+            "prompt_tokens": 4469058,
+            "reasoning_tokens": 302056,
+            "total_tokens": 4786654
+          },
+          "synthesis": {
+            "calls": 21,
+            "completion_tokens": 76188,
+            "cost_usd": 0.749964534,
+            "prompt_tokens": 4642494,
+            "reasoning_tokens": 75636,
+            "total_tokens": 4718682
+          },
+          "task_ir": {
+            "calls": 1,
+            "completion_tokens": 6383,
+            "cost_usd": 0.0033517,
+            "prompt_tokens": 1068,
+            "reasoning_tokens": 5247,
+            "total_tokens": 7451
+          }
+        },
+        "status": "COMPLETED",
+        "task": "Financial_Model:06_01",
+        "total_tokens": 9620050,
+        "wall_clock_seconds": 12909.359358
+      },
+      {
+        "arm": "integrated_glm",
+        "calls": 150,
+        "completion_tokens": 472859,
+        "cost_usd": 0.5800968335700001,
+        "max_cost_usd": 6.0,
+        "max_model_calls": 150,
+        "model": "z-ai/glm-5.3-flash",
+        "partial_due_to_budget": true,
+        "prompt_tokens": 3074188,
+        "provider_failures": {
+          "PROVIDER_ERROR": 8,
+          "PROVIDER_TIMEOUT": 8
+        },
+        "reasoning": "max",
+        "reasoning_tokens": 452578,
+        "stage_breakdown": {
+          "edit_plan": {
+            "calls": 7,
+            "completion_tokens": 32045,
+            "cost_usd": 0.020418159999999998,
+            "prompt_tokens": 31903,
+            "reasoning_tokens": 31256,
+            "total_tokens": 63948
+          },
+          "retrieval": {
+            "calls": 122,
+            "completion_tokens": 388084,
+            "cost_usd": 0.3130181933199999,
+            "prompt_tokens": 1277953,
+            "reasoning_tokens": 371207,
+            "total_tokens": 1666037
+          },
+          "synthesis": {
+            "calls": 20,
+            "completion_tokens": 47636,
+            "cost_usd": 0.24394968025,
+            "prompt_tokens": 1763240,
+            "reasoning_tokens": 46436,
+            "total_tokens": 1810876
+          },
+          "task_ir": {
+            "calls": 1,
+            "completion_tokens": 5094,
+            "cost_usd": 0.0027108,
+            "prompt_tokens": 1092,
+            "reasoning_tokens": 3679,
+            "total_tokens": 6186
+          }
+        },
+        "status": "NON_MODEL_FAILURE",
+        "task": "Financial_Model:07_01",
+        "total_tokens": 3547047,
+        "wall_clock_seconds": 36967.856827
+      },
+      {
+        "arm": "integrated_glm",
+        "calls": 92,
+        "completion_tokens": 379634,
+        "cost_usd": 0.33101294741000004,
+        "max_cost_usd": 0.33,
+        "max_model_calls": 150,
+        "model": "z-ai/glm-5.3-flash",
+        "partial_due_to_budget": true,
+        "prompt_tokens": 1520769,
+        "provider_failures": {
+          "PROVIDER_TIMEOUT": 2,
+          "TASK_COST_LIMIT": 1
+        },
+        "reasoning": "max",
+        "reasoning_tokens": 366036,
+        "stage_breakdown": {
+          "edit_plan": {
+            "calls": 9,
+            "completion_tokens": 94165,
+            "cost_usd": 0.053593284330000004,
+            "prompt_tokens": 70000,
+            "reasoning_tokens": 92596,
+            "total_tokens": 164165
+          },
+          "retrieval": {
+            "calls": 73,
+            "completion_tokens": 251739,
+            "cost_usd": 0.17891710613999995,
+            "prompt_tokens": 709697,
+            "reasoning_tokens": 241747,
+            "total_tokens": 961436
+          },
+          "synthesis": {
+            "calls": 9,
+            "completion_tokens": 26933,
+            "cost_usd": 0.09493665694,
+            "prompt_tokens": 739956,
+            "reasoning_tokens": 26379,
+            "total_tokens": 766889
+          },
+          "task_ir": {
+            "calls": 1,
+            "completion_tokens": 6797,
+            "cost_usd": 0.0035659,
+            "prompt_tokens": 1116,
+            "reasoning_tokens": 5314,
+            "total_tokens": 7913
+          }
+        },
+        "status": "COMPLETED",
+        "task": "Financial_Model:08_01",
+        "total_tokens": 1900403,
+        "wall_clock_seconds": 4872.645042
+      },
+      {
+        "arm": "integrated_glm",
+        "calls": 53,
+        "completion_tokens": 257380,
+        "cost_usd": 0.16240885981,
+        "max_cost_usd": 0.33,
+        "max_model_calls": 150,
+        "model": "z-ai/glm-5.3-flash",
+        "partial_due_to_budget": false,
+        "prompt_tokens": 478092,
+        "provider_failures": {
+          "PROVIDER_TIMEOUT": 4
+        },
+        "reasoning": "max",
+        "reasoning_tokens": 249636,
+        "stage_breakdown": {
+          "edit_plan": {
+            "calls": 6,
+            "completion_tokens": 72737,
+            "cost_usd": 0.03624295313,
+            "prompt_tokens": 42231,
+            "reasoning_tokens": 72127,
+            "total_tokens": 114968
+          },
+          "retrieval": {
+            "calls": 40,
+            "completion_tokens": 162875,
+            "cost_usd": 0.09373110412999999,
+            "prompt_tokens": 271674,
+            "reasoning_tokens": 156825,
+            "total_tokens": 434549
+          },
+          "synthesis": {
+            "calls": 6,
+            "completion_tokens": 17147,
+            "cost_usd": 0.02996860255,
+            "prompt_tokens": 163149,
+            "reasoning_tokens": 17012,
+            "total_tokens": 180296
+          },
+          "task_ir": {
+            "calls": 1,
+            "completion_tokens": 4621,
+            "cost_usd": 0.0024662,
+            "prompt_tokens": 1038,
+            "reasoning_tokens": 3672,
+            "total_tokens": 5659
+          }
+        },
+        "status": "COMPLETED",
+        "task": "Financial_Model:12_05",
+        "total_tokens": 735472,
+        "wall_clock_seconds": 3538.758159
+      },
+      {
+        "arm": "integrated_glm",
+        "calls": 100,
+        "completion_tokens": 345671,
+        "cost_usd": 0.25550781084999996,
+        "max_cost_usd": 0.33,
+        "max_model_calls": 150,
+        "model": "z-ai/glm-5.3-flash",
+        "partial_due_to_budget": false,
+        "prompt_tokens": 1021695,
+        "provider_failures": {
+          "PROVIDER_TIMEOUT": 3
+        },
+        "reasoning": "max",
+        "reasoning_tokens": 329477,
+        "stage_breakdown": {
+          "edit_plan": {
+            "calls": 6,
+            "completion_tokens": 39366,
+            "cost_usd": 0.02758931065,
+            "prompt_tokens": 48013,
+            "reasoning_tokens": 38507,
+            "total_tokens": 87379
+          },
+          "retrieval": {
+            "calls": 82,
+            "completion_tokens": 250151,
+            "cost_usd": 0.15983817794000002,
+            "prompt_tokens": 544732,
+            "reasoning_tokens": 236373,
+            "total_tokens": 794883
+          },
+          "synthesis": {
+            "calls": 11,
+            "completion_tokens": 51102,
+            "cost_usd": 0.06539877226,
+            "prompt_tokens": 427913,
+            "reasoning_tokens": 50515,
+            "total_tokens": 479015
+          },
+          "task_ir": {
+            "calls": 1,
+            "completion_tokens": 5052,
+            "cost_usd": 0.00268155,
+            "prompt_tokens": 1037,
+            "reasoning_tokens": 4082,
+            "total_tokens": 6089
+          }
+        },
+        "status": "COMPLETED",
+        "task": "Financial_Model:13_05",
+        "total_tokens": 1367366,
+        "wall_clock_seconds": 5070.607287
+      },
+      {
+        "arm": "integrated_glm",
+        "calls": 139,
+        "completion_tokens": 382353,
+        "cost_usd": 0.33070582832999984,
+        "max_cost_usd": 0.33,
+        "max_model_calls": 150,
+        "model": "z-ai/glm-5.3-flash",
+        "partial_due_to_budget": true,
+        "prompt_tokens": 1643163,
+        "provider_failures": {
+          "PROVIDER_TIMEOUT": 8,
+          "TASK_COST_LIMIT": 1
+        },
+        "reasoning": "max",
+        "reasoning_tokens": 362458,
+        "stage_breakdown": {
+          "edit_plan": {
+            "calls": 6,
+            "completion_tokens": 45200,
+            "cost_usd": 0.02778264815,
+            "prompt_tokens": 52500,
+            "reasoning_tokens": 44174,
+            "total_tokens": 97700
+          },
+          "retrieval": {
+            "calls": 117,
+            "completion_tokens": 291356,
+            "cost_usd": 0.20035075154,
+            "prompt_tokens": 821172,
+            "reasoning_tokens": 274611,
+            "total_tokens": 1112528
+          },
+          "synthesis": {
+            "calls": 15,
+            "completion_tokens": 43148,
+            "cost_usd": 0.10158541693999999,
+            "prompt_tokens": 768450,
+            "reasoning_tokens": 42049,
+            "total_tokens": 811598
+          },
+          "task_ir": {
+            "calls": 1,
+            "completion_tokens": 2649,
+            "cost_usd": 0.0009870117,
+            "prompt_tokens": 1041,
+            "reasoning_tokens": 1624,
+            "total_tokens": 3690
+          }
+        },
+        "status": "COMPLETED",
+        "task": "Financial_Model:14_05",
+        "total_tokens": 2025516,
+        "wall_clock_seconds": 6868.498764
+      },
+      {
+        "arm": "integrated_glm",
+        "calls": 9,
+        "completion_tokens": 92103,
+        "cost_usd": 0.05181753,
+        "max_cost_usd": 0.33,
+        "max_model_calls": 150,
+        "model": "z-ai/glm-5.3-flash",
+        "partial_due_to_budget": false,
+        "prompt_tokens": 51445,
+        "provider_failures": {},
+        "reasoning": "max",
+        "reasoning_tokens": 89272,
+        "stage_breakdown": {
+          "edit_plan": {
+            "calls": 8,
+            "completion_tokens": 78360,
+            "cost_usd": 0.04476513,
+            "prompt_tokens": 50239,
+            "reasoning_tokens": 77211,
+            "total_tokens": 128599
+          },
+          "task_ir": {
+            "calls": 1,
+            "completion_tokens": 13743,
+            "cost_usd": 0.0070524,
+            "prompt_tokens": 1206,
+            "reasoning_tokens": 12061,
+            "total_tokens": 14949
+          }
+        },
+        "status": "COMPLETED",
+        "task": "Financial_Model:15_05",
+        "total_tokens": 143548,
+        "wall_clock_seconds": 1144.521515
+      },
+      {
+        "arm": "integrated_glm",
+        "calls": 102,
+        "completion_tokens": 420379,
+        "cost_usd": 0.3305293562600002,
+        "max_cost_usd": 0.33,
+        "max_model_calls": 150,
+        "model": "z-ai/glm-5.3-flash",
+        "partial_due_to_budget": true,
+        "prompt_tokens": 1337708,
+        "provider_failures": {
+          "PROVIDER_TIMEOUT": 5,
+          "TASK_COST_LIMIT": 1
+        },
+        "reasoning": "max",
+        "reasoning_tokens": 396158,
+        "stage_breakdown": {
+          "edit_plan": {
+            "calls": 6,
+            "completion_tokens": 77141,
+            "cost_usd": 0.0427402942,
+            "prompt_tokens": 35895,
+            "reasoning_tokens": 75991,
+            "total_tokens": 113036
+          },
+          "retrieval": {
+            "calls": 84,
+            "completion_tokens": 287102,
+            "cost_usd": 0.19724272612000002,
+            "prompt_tokens": 678143,
+            "reasoning_tokens": 265270,
+            "total_tokens": 965245
+          },
+          "synthesis": {
+            "calls": 11,
+            "completion_tokens": 53550,
+            "cost_usd": 0.08910033594000001,
+            "prompt_tokens": 622650,
+            "reasoning_tokens": 53246,
+            "total_tokens": 676200
+          },
+          "task_ir": {
+            "calls": 1,
+            "completion_tokens": 2586,
+            "cost_usd": 0.001446,
+            "prompt_tokens": 1020,
+            "reasoning_tokens": 1651,
+            "total_tokens": 3606
+          }
+        },
+        "status": "COMPLETED",
+        "task": "Financial_Model:17_05",
+        "total_tokens": 1758087,
+        "wall_clock_seconds": 7013.92004
+      }
+    ]
+  },
+  "integrated_summary_from_census": {
+    "budget_censored_tasks": 7,
+    "earliest_loss_task_counts": {
+      "EVIDENCE_PRESENT_MODEL_WRONG_SELECTION": 3,
+      "NO_FRONTEND_GOLD_AVAILABLE": 6,
+      "PLANNER_RESPONSE_MISSING": 1,
+      "PLANNER_SCHEMA_OR_ENTITY_FAILURE": 1,
+      "WRITER_FAILURE": 1
+    },
+    "evaluator_gold_obligation_rows_available": 29,
+    "evaluator_gold_task_count": 4,
+    "exact_tasks": 0,
+    "gold_authority_cells": 1298,
+    "gold_authority_shared_cells": 270,
+    "provider_failure_calls": 112,
+    "provider_failure_tasks": 11,
+    "run_scope": "12-task Financial_Model integrated feasibility; operator-adjusted continuation used parallel workers and per-task 33¢ caps for remaining tasks",
+    "scorer_refresh": {
+      "exact": 0,
+      "missing_outputs": 0,
+      "present": true,
+      "runtime": "metadata-tolerant-local-v1",
+      "scored": 12,
+      "staged_outputs": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/clean_integrated/live/submission/outputs",
+      "value": "LibreOffice refresh succeeded before scorer; metadata-tolerant local evaluator was used"
+    },
+    "static_activation": {
+      "candidate_addition_count": 5,
+      "obligation_count": 84,
+      "output_role_activation_count": 17,
+      "output_role_endpoint_count": 5,
+      "population_member_activation_count": 2,
+      "task_count": 12,
+      "tasks_with_output_role_activation": [
+        "Financial_Model:05_01"
+      ]
+    },
+    "static_obligation_count": 84,
+    "task_count": 12,
+    "tasks_reaching_valid_task_ir": 12,
+    "tasks_with_accepted_edits": 10,
+    "tasks_with_complete_plan": 4,
+    "tasks_with_nonempty_authority": 10,
+    "tasks_with_retrieval": 10,
+    "tasks_with_synthesis": 10,
+    "tasks_with_valid_edit_plan": 10,
+    "total_completion_tokens": 3999320,
+    "total_model_calls": 1166,
+    "total_prompt_tokens": 23604215,
+    "total_provider_cost_usd": 4.68582937319,
+    "total_reasoning_tokens": 3829024,
+    "total_tokens": 27603535,
+    "verdict": "INTEGRATED_FEASIBILITY_RESOURCE_CENSORED",
+    "writer_rejection_tasks": 1,
+    "writes_persisted": 625,
+    "writes_scheduled": 628
+  },
+  "one_off_gpt_probe": {
+    "persisted_result": false,
+    "summary": {
+      "arm": "one_off_gpt_probe",
+      "calls": 92,
+      "completion_tokens": 473087,
+      "cost_usd": 0.7490018484400002,
+      "prompt_tokens": 5083174,
+      "provider_failures": {
+        "PROVIDER_ERROR": 1,
+        "PROVIDER_TIMEOUT": 4
+      },
+      "reasoning_tokens": 454680,
+      "stage_breakdown": {
+        "edit_plan": {
+          "calls": 6,
+          "completion_tokens": 103534,
+          "cost_usd": 0.05103872,
+          "prompt_tokens": 63257,
+          "reasoning_tokens": 98824,
+          "total_tokens": 166791
+        },
+        "retrieval": {
+          "calls": 74,
+          "completion_tokens": 269980,
+          "cost_usd": 0.30274843099000004,
+          "prompt_tokens": 1658971,
+          "reasoning_tokens": 257590,
+          "total_tokens": 1928951
+        },
+        "synthesis": {
+          "calls": 11,
+          "completion_tokens": 93982,
+          "cost_usd": 0.39324441714999997,
+          "prompt_tokens": 3359878,
+          "reasoning_tokens": 93546,
+          "total_tokens": 3453860
+        },
+        "task_ir": {
+          "calls": 1,
+          "completion_tokens": 5591,
+          "cost_usd": 0.0019702803,
+          "prompt_tokens": 1068,
+          "reasoning_tokens": 4720,
+          "total_tokens": 6659
+        }
+      },
+      "total_tokens": 5556261
+    },
+    "task_rows": [
+      {
+        "arm": "one_off_gpt_probe",
+        "calls": 92,
+        "completion_tokens": 473087,
+        "cost_usd": 0.7490018484400002,
+        "max_cost_usd": 1.0,
+        "max_model_calls": 150,
+        "model": "openai/gpt-5.6-sol",
+        "partial_due_to_budget": null,
+        "prompt_tokens": 5083174,
+        "provider_failures": {
+          "PROVIDER_ERROR": 1,
+          "PROVIDER_TIMEOUT": 4
+        },
+        "reasoning": "high",
+        "reasoning_tokens": 454680,
+        "stage_breakdown": {
+          "edit_plan": {
+            "calls": 6,
+            "completion_tokens": 103534,
+            "cost_usd": 0.05103872,
+            "prompt_tokens": 63257,
+            "reasoning_tokens": 98824,
+            "total_tokens": 166791
+          },
+          "retrieval": {
+            "calls": 74,
+            "completion_tokens": 269980,
+            "cost_usd": 0.30274843099000004,
+            "prompt_tokens": 1658971,
+            "reasoning_tokens": 257590,
+            "total_tokens": 1928951
+          },
+          "synthesis": {
+            "calls": 11,
+            "completion_tokens": 93982,
+            "cost_usd": 0.39324441714999997,
+            "prompt_tokens": 3359878,
+            "reasoning_tokens": 93546,
+            "total_tokens": 3453860
+          },
+          "task_ir": {
+            "calls": 1,
+            "completion_tokens": 5591,
+            "cost_usd": 0.0019702803,
+            "prompt_tokens": 1068,
+            "reasoning_tokens": 4720,
+            "total_tokens": 6659
+          }
+        },
+        "status": null,
+        "task": "Financial_Model:06_01",
+        "total_tokens": 5556261,
+        "wall_clock_seconds": null
+      }
+    ],
+    "termination": "user_requested_stop_at_or_above_0.66_usd"
+  },
+  "top_cost_calls": [
+    {
+      "call": "057_synthesis.json",
+      "cost_usd": 0.101587734,
+      "stage": "synthesis",
+      "task": "Financial_Model-06_01",
+      "tokens": {
+        "completion_tokens": 10755,
+        "prompt_tokens": 538092,
+        "reasoning_tokens": 10724,
+        "total_tokens": 548847
+      }
+    },
+    {
+      "call": "087_synthesis.json",
+      "cost_usd": 0.08725285,
+      "stage": "synthesis",
+      "task": "Financial_Model-06_01",
+      "tokens": {
+        "completion_tokens": 10202,
+        "prompt_tokens": 547679,
+        "reasoning_tokens": 10171,
+        "total_tokens": 557881
+      }
+    },
+    {
+      "call": "079_synthesis.json",
+      "cost_usd": 0.08444805,
+      "stage": "synthesis",
+      "task": "Financial_Model-06_01",
+      "tokens": {
+        "completion_tokens": 6183,
+        "prompt_tokens": 542377,
+        "reasoning_tokens": 6152,
+        "total_tokens": 548560
+      }
+    },
+    {
+      "call": "125_synthesis.json",
+      "cost_usd": 0.08403125,
+      "stage": "synthesis",
+      "task": "Financial_Model-06_01",
+      "tokens": {
+        "completion_tokens": 11311,
+        "prompt_tokens": 522505,
+        "reasoning_tokens": 11287,
+        "total_tokens": 533816
+      }
+    },
+    {
+      "call": "109_synthesis.json",
+      "cost_usd": 0.08219965,
+      "stage": "synthesis",
+      "task": "Financial_Model-06_01",
+      "tokens": {
+        "completion_tokens": 8393,
+        "prompt_tokens": 520021,
+        "reasoning_tokens": 8362,
+        "total_tokens": 528414
+      }
+    },
+    {
+      "call": "150_synthesis.json",
+      "cost_usd": 0.08189865,
+      "stage": "synthesis",
+      "task": "Financial_Model-06_01",
+      "tokens": {
+        "completion_tokens": 10233,
+        "prompt_tokens": 511881,
+        "reasoning_tokens": 10202,
+        "total_tokens": 522114
+      }
+    },
+    {
+      "call": "134_synthesis.json",
+      "cost_usd": 0.0806959,
+      "stage": "synthesis",
+      "task": "Financial_Model-06_01",
+      "tokens": {
+        "completion_tokens": 6314,
+        "prompt_tokens": 516926,
+        "reasoning_tokens": 6290,
+        "total_tokens": 523240
+      }
+    },
+    {
+      "call": "045_synthesis.json",
+      "cost_usd": 0.0788982,
+      "stage": "synthesis",
+      "task": "Financial_Model-06_01",
+      "tokens": {
+        "completion_tokens": 1701,
+        "prompt_tokens": 520318,
+        "reasoning_tokens": 1670,
+        "total_tokens": 522019
+      }
+    },
+    {
+      "call": "020_synthesis.json",
+      "cost_usd": 0.06895225,
+      "stage": "synthesis",
+      "task": "Financial_Model-06_01",
+      "tokens": {
+        "completion_tokens": 11096,
+        "prompt_tokens": 422695,
+        "reasoning_tokens": 10778,
+        "total_tokens": 433791
+      }
+    },
+    {
+      "call": "036_synthesis.json",
+      "cost_usd": 0.03744157375,
+      "stage": "synthesis",
+      "task": "Financial_Model-01_01",
+      "tokens": {
+        "completion_tokens": 11461,
+        "prompt_tokens": 295055,
+        "reasoning_tokens": 11149,
+        "total_tokens": 306516
+      }
+    }
+  ],
+  "top_prompt_calls": [
+    {
+      "call": "087_synthesis.json",
+      "cost_usd": 0.08725285,
+      "prompt_tokens": 547679,
+      "stage": "synthesis",
+      "task": "Financial_Model-06_01"
+    },
+    {
+      "call": "079_synthesis.json",
+      "cost_usd": 0.08444805,
+      "prompt_tokens": 542377,
+      "stage": "synthesis",
+      "task": "Financial_Model-06_01"
+    },
+    {
+      "call": "057_synthesis.json",
+      "cost_usd": 0.101587734,
+      "prompt_tokens": 538092,
+      "stage": "synthesis",
+      "task": "Financial_Model-06_01"
+    },
+    {
+      "call": "125_synthesis.json",
+      "cost_usd": 0.08403125,
+      "prompt_tokens": 522505,
+      "stage": "synthesis",
+      "task": "Financial_Model-06_01"
+    },
+    {
+      "call": "045_synthesis.json",
+      "cost_usd": 0.0788982,
+      "prompt_tokens": 520318,
+      "stage": "synthesis",
+      "task": "Financial_Model-06_01"
+    },
+    {
+      "call": "109_synthesis.json",
+      "cost_usd": 0.08219965,
+      "prompt_tokens": 520021,
+      "stage": "synthesis",
+      "task": "Financial_Model-06_01"
+    },
+    {
+      "call": "134_synthesis.json",
+      "cost_usd": 0.0806959,
+      "prompt_tokens": 516926,
+      "stage": "synthesis",
+      "task": "Financial_Model-06_01"
+    },
+    {
+      "call": "150_synthesis.json",
+      "cost_usd": 0.08189865,
+      "prompt_tokens": 511881,
+      "stage": "synthesis",
+      "task": "Financial_Model-06_01"
+    },
+    {
+      "call": "020_synthesis.json",
+      "cost_usd": 0.06895225,
+      "prompt_tokens": 422695,
+      "stage": "synthesis",
+      "task": "Financial_Model-06_01"
+    },
+    {
+      "call": "036_synthesis.json",
+      "cost_usd": 0.03744157375,
+      "prompt_tokens": 295055,
+      "stage": "synthesis",
+      "task": "Financial_Model-01_01"
+    }
+  ],
+  "waste_analysis": {
+    "authority_expansion_hotspots": [
+      {
+        "authority_cells": 78777,
+        "cost_usd": 1.54701817185,
+        "task": "Financial_Model:06_01",
+        "unresolved_after_bound": 78756
+      },
+      {
+        "authority_cells": 1402,
+        "cost_usd": 0.5800968335700001,
+        "task": "Financial_Model:07_01",
+        "unresolved_after_bound": 670
+      },
+      {
+        "authority_cells": 781,
+        "cost_usd": 0.33101294741000004,
+        "task": "Financial_Model:08_01",
+        "unresolved_after_bound": 707
+      },
+      {
+        "authority_cells": 638,
+        "cost_usd": 0.3450772338299999,
+        "task": "Financial_Model:03_01",
+        "unresolved_after_bound": 611
+      },
+      {
+        "authority_cells": 466,
+        "cost_usd": 0.20477443331999998,
+        "task": "Financial_Model:05_01",
+        "unresolved_after_bound": 270
+      }
+    ],
+    "interpretation": [
+      "The largest directly evidenced architecture-induced cost driver is authority expansion: 06_01 authorized 78,777 cells and retained 78,756 unresolved targets at the bound while producing six accepted edits.",
+      "Retrieval and synthesis together account for the majority of provider spend and token volume; synthesis contains the largest prompts, including repeated roughly half-million-token contexts in 06_01.",
+      "Provider timeouts/errors are provider wastage and latency, not semantic abstentions; they consumed no reported provider tokens in the call ledger but blocked progress.",
+      "Tasks at the 150-call or 33¢ ceilings are resource-censored, so their residual work is not evidence that the scheduler queue died.",
+      "LibreOffice, scoring, and writer operations have no model-provider cost in this ledger."
+    ],
+    "large_prompt_calls": [
+      {
+        "call": "087_synthesis.json",
+        "cost_usd": 0.08725285,
+        "prompt_tokens": 547679,
+        "stage": "synthesis",
+        "task": "Financial_Model-06_01"
+      },
+      {
+        "call": "079_synthesis.json",
+        "cost_usd": 0.08444805,
+        "prompt_tokens": 542377,
+        "stage": "synthesis",
+        "task": "Financial_Model-06_01"
+      },
+      {
+        "call": "057_synthesis.json",
+        "cost_usd": 0.101587734,
+        "prompt_tokens": 538092,
+        "stage": "synthesis",
+        "task": "Financial_Model-06_01"
+      },
+      {
+        "call": "125_synthesis.json",
+        "cost_usd": 0.08403125,
+        "prompt_tokens": 522505,
+        "stage": "synthesis",
+        "task": "Financial_Model-06_01"
+      },
+      {
+        "call": "045_synthesis.json",
+        "cost_usd": 0.0788982,
+        "prompt_tokens": 520318,
+        "stage": "synthesis",
+        "task": "Financial_Model-06_01"
+      },
+      {
+        "call": "109_synthesis.json",
+        "cost_usd": 0.08219965,
+        "prompt_tokens": 520021,
+        "stage": "synthesis",
+        "task": "Financial_Model-06_01"
+      },
+      {
+        "call": "134_synthesis.json",
+        "cost_usd": 0.0806959,
+        "prompt_tokens": 516926,
+        "stage": "synthesis",
+        "task": "Financial_Model-06_01"
+      },
+      {
+        "call": "150_synthesis.json",
+        "cost_usd": 0.08189865,
+        "prompt_tokens": 511881,
+        "stage": "synthesis",
+        "task": "Financial_Model-06_01"
+      },
+      {
+        "call": "020_synthesis.json",
+        "cost_usd": 0.06895225,
+        "prompt_tokens": 422695,
+        "stage": "synthesis",
+        "task": "Financial_Model-06_01"
+      },
+      {
+        "call": "036_synthesis.json",
+        "cost_usd": 0.03744157375,
+        "prompt_tokens": 295055,
+        "stage": "synthesis",
+        "task": "Financial_Model-01_01"
+      }
+    ],
+    "provider_failure_calls": 112,
+    "provider_failures_are_separate_from_cost": true,
+    "resource_censored_tasks": [
+      "Financial_Model:01_01",
+      "Financial_Model:03_01",
+      "Financial_Model:06_01",
+      "Financial_Model:07_01",
+      "Financial_Model:08_01",
+      "Financial_Model:14_05",
+      "Financial_Model:17_05"
+    ],
+    "writer_or_scorer_cost": 0.0
+  }
+}

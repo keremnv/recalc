@@ -1,0 +1,17 @@
+{
+  "all_cache_locations_fresh": true,
+  "all_workbook_bytes_unchanged": true,
+  "frozen_primary_hashes_verified": true,
+  "nonzero_exit_invocations": 12,
+  "nonzero_exit_workloads": [
+    "Financial_Model_15_03__472e28fbd6e0",
+    "Template_06_23__fc41ad37c48b",
+    "Template_16_07__9662584ede5e"
+  ],
+  "raw_invocations": 384,
+  "scheduled_invocations_expected": 384,
+  "selected_script_hashes_verified": true,
+  "selected_union_workloads": 48,
+  "single_benchmark_worker": true,
+  "timeouts": 0
+}

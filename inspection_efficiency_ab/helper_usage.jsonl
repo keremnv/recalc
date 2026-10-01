@@ -1,0 +1,19 @@
+{
+ "n_calls": 33,
+ "by_helper": {
+  "periods": 1,
+  "search": 6,
+  "inspect": 26
+ },
+ "adopting_runs": [
+  "Financial_Model:01_01 C1 r1 (periods x1)",
+  "Financial_Model:13_05 C1 r1 (search x6, iterative refinement)",
+  "Financial_Model:01_01 C1 r2 (periods x2, inspect x12+)"
+ ],
+ "non_adopting_C1_runs": 11,
+ "note": "execution adoption in 3/14 C1 runs, all Financial_Model; Template r2 imported-but-bypassed; Debugging ignored",
+ "considered_but_bypassed": [
+  "Template:01_02/01_07/06_12 C1 r2 (imported lx_helpers, executed 0 calls)",
+  "Debugging C1 runs (never imported)"
+ ]
+}

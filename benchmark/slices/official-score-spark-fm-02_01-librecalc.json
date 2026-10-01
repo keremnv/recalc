@@ -1,0 +1,15 @@
+{
+  "name": "official-score-spark-fm-02_01-librecalc",
+  "purpose": "Extra observation: Muse Spark 1.3 Contributor on Financial_Model:02_01 using the LibreCalc SWE-agent harness (spreadsheet.yaml), not the published control scaffold. Not a causal scaffold claim.",
+  "model": "meta/muse-spark-1.3-contributor",
+  "max_tool_calls_per_task": 50,
+  "isolation": {
+    "container": "official SpreadsheetBench 2 image",
+    "golden_data_available_to_agent": false,
+    "input_mount": "one exact workbook, read-only",
+    "output_mount": "one task-private directory, writable"
+  },
+  "tasks": [
+    {"category": "Financial_Model", "id": "02_01"}
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "AFFORDANCE_EFFECT_DISCOVERED": false,
+  "AVAILABILITY_ADDS_VALUE": false,
+  "CUE_EFFECT_SUPPORTED": false,
+  "DEMONSTRATED_QUERYABILITY_ADDS_VALUE": false,
+  "availability_reason": "C/B median input ratio 0.971, geometric 1.018; no actual helper calls; C/B note specificity and module importability are bundled.",
+  "candidate_profiles": {
+    "C": {
+      "call_count_favorable_geometric": true,
+      "capability_guard_passed": false,
+      "coherent_trajectory_mechanism": false,
+      "contrast": "C_vs_A",
+      "discovered": false,
+      "favorable_at_least_two_families": true,
+      "geometric_mean_ratio_below_0_90": true,
+      "leave_one_task_out_favorable_except_one_mild_reversal": true,
+      "median_reduction_at_least_10pct": false,
+      "not_noncompletion_driven": false,
+      "note": "C fails median threshold and lacks a coherent call/inspection mechanism; D fails median and geometric thresholds. Both have only two dual-valid A pairs. Provider routing differed on influential tasks."
+    },
+    "D": {
+      "call_count_favorable_geometric": true,
+      "capability_guard_passed": false,
+      "coherent_trajectory_mechanism": false,
+      "contrast": "D_vs_A",
+      "discovered": false,
+      "favorable_at_least_two_families": true,
+      "geometric_mean_ratio_below_0_90": false,
+      "leave_one_task_out_favorable_except_one_mild_reversal": false,
+      "median_reduction_at_least_10pct": false,
+      "not_noncompletion_driven": false,
+      "note": "D has unfavorable median input and is worse than C; no coherent favorable path."
+    }
+  },
+  "capability_status": "FORMAL_EQUIVALENCE_NOT_ESTABLISHED; ONLY 2-3 DUAL_VALID PAIRS PER CONTRAST",
+  "cue_reason": "B/A median input ratio 0.912; call-count median 1.000 with only 2/9 lower; B/A geometric token ratio reverses above one when Template:15_01 is left out; only two dual-valid pairs and one material modification loss.",
+  "demonstrated_reason": "D/C median input ratio 1.104, geometric 1.164; 8/10 D/C paired tasks used more input tokens.",
+  "descriptive_tags": [
+    "COMPLETION_LIMITED",
+    "PROVIDER_ROUTING_CONFOUNDED",
+    "NO_HELPER_EXECUTION",
+    "TRAJECTORY_VARIANCE",
+    "PREVIOUS_B_A_CALL_REDUCTION_NOT_REPLICATED"
+  ],
+  "freeze_profile": null,
+  "holdout_validation_justified": false,
+  "primary_verdict": "TOKEN_PRODUCT_EFFECT_NOT_ROBUST",
+  "reasoning": "Neither shippable C nor D clears the preregistered median threshold; B does not reproduce a systematic call-count shift. Influential Template:15_01 completion/quality split aligns with different served providers. Most runs did not submit, and cost/deadline truncation affects token totals. No helper query executed.",
+  "token_discovery_status": "CLOSED_BY_PREDECLARED_STOP_RULE",
+  "token_product_claim_status": "DESCRIPTIVE_ONLY_NO_CAUSAL_OR_PUBLIC_SAVINGS_CLAIM"
+}

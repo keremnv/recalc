@@ -1,0 +1,342 @@
+{
+ "n_repeat_groups": 23,
+ "tokens_in_repeats_est": 165857,
+ "groups": [
+  {
+   "task_id": "Financial_Model:08_01",
+   "canonical_query": "view_xlsx|08_01_seafood_input_xlsx|content|income statement",
+   "tool": "view_xlsx",
+   "execution_count": 2,
+   "obs_indices": [
+    2,
+    4
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 1,
+   "tokens_total_est": 62482,
+   "tokens_repeats_est": 58982
+  },
+  {
+   "task_id": "Financial_Model:14_05",
+   "canonical_query": "view_xlsx|14_05_refinery_input_xlsx|content|",
+   "tool": "view_xlsx",
+   "execution_count": 3,
+   "obs_indices": [
+    4,
+    5,
+    6
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 2,
+   "tokens_total_est": 22895,
+   "tokens_repeats_est": 21548
+  },
+  {
+   "task_id": "Financial_Model:17_05",
+   "canonical_query": "view_xlsx|17_05_fmcg_input_xlsx|content|",
+   "tool": "view_xlsx",
+   "execution_count": 5,
+   "obs_indices": [
+    2,
+    4,
+    5,
+    6,
+    7
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 4,
+   "tokens_total_est": 20819,
+   "tokens_repeats_est": 14253
+  },
+  {
+   "task_id": "Financial_Model:04_01",
+   "canonical_query": "view_xlsx|04_01_consumer_input_xlsx|content|",
+   "tool": "view_xlsx",
+   "execution_count": 2,
+   "obs_indices": [
+    1,
+    6
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 1,
+   "tokens_total_est": 36139,
+   "tokens_repeats_est": 11914
+  },
+  {
+   "task_id": "Financial_Model:11_01",
+   "canonical_query": "view_xlsx|11_01_switchgear_input_xlsx|content|",
+   "tool": "view_xlsx",
+   "execution_count": 4,
+   "obs_indices": [
+    2,
+    3,
+    4,
+    5
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 3,
+   "tokens_total_est": 13469,
+   "tokens_repeats_est": 11258
+  },
+  {
+   "task_id": "glm-fill-c0-Visualization-Task-1420776-r1",
+   "canonical_query": "view_xlsx|task_1420776_input_xlsx|content|",
+   "tool": "view_xlsx",
+   "execution_count": 3,
+   "obs_indices": [
+    1,
+    2,
+    3
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 2,
+   "tokens_total_est": 12037,
+   "tokens_repeats_est": 9971
+  },
+  {
+   "task_id": "Financial_Model:11_05",
+   "canonical_query": "view_xlsx|11_05_switchgear_input_xlsx|content|assets sch.",
+   "tool": "view_xlsx",
+   "execution_count": 3,
+   "obs_indices": [
+    1,
+    2,
+    4
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 2,
+   "tokens_total_est": 14689,
+   "tokens_repeats_est": 4800
+  },
+  {
+   "task_id": "Financial_Model:02_01",
+   "canonical_query": "view_xlsx|02_01_pp_input_xlsx|content|",
+   "tool": "view_xlsx",
+   "execution_count": 2,
+   "obs_indices": [
+    1,
+    6
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 1,
+   "tokens_total_est": 11355,
+   "tokens_repeats_est": 4776
+  },
+  {
+   "task_id": "Debugging:10_04",
+   "canonical_query": "view_xlsx|inconsistent_color_coding_input_xlsx|content|",
+   "tool": "view_xlsx",
+   "execution_count": 2,
+   "obs_indices": [
+    2,
+    7
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 1,
+   "tokens_total_est": 94369,
+   "tokens_repeats_est": 4701
+  },
+  {
+   "task_id": "Financial_Model:15_04",
+   "canonical_query": "view_xlsx|15_04_kims_input_xlsx|content|",
+   "tool": "view_xlsx",
+   "execution_count": 2,
+   "obs_indices": [
+    1,
+    2
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 1,
+   "tokens_total_est": 21902,
+   "tokens_repeats_est": 4197
+  },
+  {
+   "task_id": "Financial_Model:02_01",
+   "canonical_query": "view_xlsx|02_01_pp_input_xlsx|content|revenue & cogs schedule",
+   "tool": "view_xlsx",
+   "execution_count": 2,
+   "obs_indices": [
+    2,
+    3
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 1,
+   "tokens_total_est": 3996,
+   "tokens_repeats_est": 3955
+  },
+  {
+   "task_id": "Financial_Model:08_01",
+   "canonical_query": "view_xlsx|08_01_seafood_input_xlsx|content|dcf valuation",
+   "tool": "view_xlsx",
+   "execution_count": 2,
+   "obs_indices": [
+    1,
+    2
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 1,
+   "tokens_total_est": 3500,
+   "tokens_repeats_est": 3500
+  },
+  {
+   "task_id": "Debugging:07_08",
+   "canonical_query": "view_xlsx|incorrect_sign_conventions_input_xlsx|content|bs & cf",
+   "tool": "view_xlsx",
+   "execution_count": 2,
+   "obs_indices": [
+    1,
+    2
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 1,
+   "tokens_total_est": 6580,
+   "tokens_repeats_est": 3273
+  },
+  {
+   "task_id": "Financial_Model:11_05",
+   "canonical_query": "view_xlsx|11_05_switchgear_input_xlsx|content|",
+   "tool": "view_xlsx",
+   "execution_count": 5,
+   "obs_indices": [
+    6,
+    7,
+    8,
+    9,
+    11
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 4,
+   "tokens_total_est": 8958,
+   "tokens_repeats_est": 3101
+  },
+  {
+   "task_id": "Template:02_05",
+   "canonical_query": "view_xlsx|b030eb6ea3f177a7",
+   "tool": "view_xlsx",
+   "execution_count": 3,
+   "obs_indices": [
+    6,
+    8,
+    11
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 2,
+   "tokens_total_est": 2874,
+   "tokens_repeats_est": 1920
+  },
+  {
+   "task_id": "Financial_Model:16_05",
+   "canonical_query": "view_xlsx|16_05_ramjet_input_xlsx|content|",
+   "tool": "view_xlsx",
+   "execution_count": 3,
+   "obs_indices": [
+    1,
+    2,
+    5
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 2,
+   "tokens_total_est": 3566,
+   "tokens_repeats_est": 1699
+  },
+  {
+   "task_id": "Financial_Model:18_05",
+   "canonical_query": "view_xlsx|18_05_roadassets_input_xlsx|content|",
+   "tool": "view_xlsx",
+   "execution_count": 2,
+   "obs_indices": [
+    6,
+    8
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 1,
+   "tokens_total_est": 4420,
+   "tokens_repeats_est": 1196
+  },
+  {
+   "task_id": "Template:07_01",
+   "canonical_query": "python|07_01_output_xlsx,07_01_output_xlsx|load+print+cell+sheetref|daa223f9af2f863b",
+   "tool": "python",
+   "execution_count": 2,
+   "obs_indices": [
+    6,
+    8
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 1,
+   "tokens_total_est": 1231,
+   "tokens_repeats_est": 654
+  },
+  {
+   "task_id": "Financial_Model:08_01",
+   "canonical_query": "view_xlsx|08_01_seafood_input_xlsx|list|",
+   "tool": "view_xlsx",
+   "execution_count": 2,
+   "obs_indices": [
+    0,
+    0
+   ],
+   "identical_result_repeats": 1,
+   "changed_result_repeats": 0,
+   "tokens_total_est": 220,
+   "tokens_repeats_est": 110
+  },
+  {
+   "task_id": "Financial_Model:12_05",
+   "canonical_query": "view_xlsx|12_05_infra_input_xlsx|content|",
+   "tool": "view_xlsx",
+   "execution_count": 2,
+   "obs_indices": [
+    4,
+    10
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 1,
+   "tokens_total_est": 21114,
+   "tokens_repeats_est": 40
+  },
+  {
+   "task_id": "Financial_Model:08_01",
+   "canonical_query": "submit",
+   "tool": "submit",
+   "execution_count": 2,
+   "obs_indices": [
+    49,
+    32
+   ],
+   "identical_result_repeats": 0,
+   "changed_result_repeats": 1,
+   "tokens_total_est": 18,
+   "tokens_repeats_est": 9
+  },
+  {
+   "task_id": "Financial_Model:08_01",
+   "canonical_query": "empty",
+   "tool": "empty",
+   "execution_count": 2,
+   "obs_indices": [
+    1,
+    3
+   ],
+   "identical_result_repeats": 1,
+   "changed_result_repeats": 0,
+   "tokens_total_est": 0,
+   "tokens_repeats_est": 0
+  },
+  {
+   "task_id": "Template:02_05",
+   "canonical_query": "empty",
+   "tool": "empty",
+   "execution_count": 2,
+   "obs_indices": [
+    2,
+    9
+   ],
+   "identical_result_repeats": 1,
+   "changed_result_repeats": 0,
+   "tokens_total_est": 0,
+   "tokens_repeats_est": 0
+  }
+ ],
+ "note": "top 200 groups by repeat tokens; full per-execution log in repeated_queries.jsonl"
+}

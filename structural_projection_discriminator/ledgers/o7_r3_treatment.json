@@ -1,0 +1,137 @@
+{
+  "request_body": {
+    "model": "meta/muse-spark-1.3-contributor",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 4096,
+    "provider": {
+      "allow_fallbacks": true,
+      "require_parameters": true
+    },
+    "messages": [
+      {
+        "role": "system",
+        "content": "You identify spreadsheet cells. You do not write formulas or values.\nUse only the supplied workbook evidence. Return strict JSON only, with no markdown and no commentary.\nSchema:\n{\"sheet\":\"sheet name\",\"ranges\":[{\"start\":\"A1\",\"end\":\"A1\"}],\"evidence\":[\"IDs or coordinates from the supplied evidence that support the selection\"]}\nMultiple ranges are allowed. Parse the quoted user instruction and select the cells it asks to modify."
+      },
+      {
+        "role": "user",
+        "content": "Quoted user instruction: \"In the Workings Cost sheet, compute total funds raised for all three tranches from Apr-25 to Jun-33.\"\n\nIdentify the cells that the quoted user instruction asks to modify. Use the supplied workbook evidence. Return only the target set; do not perform the edits.\n\nSheet identity: Workings Cost Sheet (sheet:s04)\n\nRAW WORKBOOK FACTS\n- RAW:B9 B9 text='Portfolio Building MoM'\n- RAW:B10 B10 text='Initial Investment'\n- RAW:B11 B11 text='First Tranche'\n- RAW:C11 C11 text='Numbers'\n- RAW:B12 B12 text='Second Tranche'\n- RAW:C12 C12 text='Numbers'\n- RAW:B13 B13 text='Third Tranche'\n- RAW:C13 C13 text='Numbers'\n- RAW:B15 B15 text='Portfolio Building Cumulative'\n- RAW:B16 B16 text='Initial Investment'\n- RAW:C16 C16 text='Numbers'\n- RAW:B17 B17 text='First Tranche'\n- RAW:C17 C17 text='Numbers'\n- RAW:B18 B18 text='Second Tranche'\n- RAW:C18 C18 text='Numbers'\n- RAW:B19 B19 text='Third Tranche'\n- RAW:C19 C19 text='Numbers'\n- RAW:B21 B21 text='Ticket Size per Portfolio'\n- RAW:B22 B22 text='Initial Investment'\n- RAW:B23 B23 text='First Tranche'\n- RAW:C23 C23 text='USD Mn'\n- RAW:B24 B24 text='Second Tranche'\n- RAW:C24 C24 text='USD Mn'\n- RAW:B25 B25 text='Third Tranche'\n- RAW:C25 C25 text='USD Mn'\n- RAW:B27 B27 text='Total Fund Raised'\n- RAW:B28 B28 text='Initial Investment'\n- RAW:B29 B29 text='First Tranche'\n- RAW:B30 B30 text='Second Tranche'\n- RAW:B31 B31 text='Third Tranche'\n- RAW:B32 B32 text='Total Fund Size - Cumulative'\n- RAW:O4 O4 text='Apr-25' kind=period_header\n- RAW:P4 P4 text='May-25' kind=period_header\n- RAW:Q4 Q4 text='Jun-25' kind=period_header\n- RAW:R4 R4 text='Jul-25' kind=period_header\n- RAW:S4 S4 text='Aug-25' kind=period_header\n- RAW:T4 T4 text='Sep-25' kind=period_header\n- RAW:U4 U4 text='Oct-25' kind=period_header\n- RAW:V4 V4 text='Nov-25' kind=period_header\n- RAW:W4 W4 text='Dec-25' kind=period_header\n- RAW:X4 X4 text='Jan-26' kind=period_header\n- RAW:Y4 Y4 text='Feb-26' kind=period_header\n- RAW:Z4 Z4 text='Mar-26' kind=period_header\n- RAW:AA4 AA4 text='Apr-26' kind=period_header\n- RAW:AB4 AB4 text='May-26' kind=period_header\n- RAW:AC4 AC4 text='Jun-26' kind=period_header\n- RAW:AD4 AD4 text='Jul-26' kind=period_header\n- RAW:AE4 AE4 text='Aug-26' kind=period_header\n- RAW:AF4 AF4 text='Sep-26' kind=period_header\n- RAW:AG4 AG4 text='Oct-26' kind=period_header\n- RAW:AH4 AH4 text='Nov-26' kind=period_header\n- RAW:AI4 AI4 text='Dec-26' kind=period_header\n- RAW:AJ4 AJ4 text='Jan-27' kind=period_header\n- RAW:AK4 AK4 text='Feb-27' kind=period_header\n- RAW:AL4 AL4 text='Mar-27' kind=period_header\n- RAW:AM4 AM4 text='Apr-27' kind=period_header\n- RAW:AN4 AN4 text='May-27' kind=period_header\n- RAW:AO4 AO4 text='Jun-27' kind=period_header\n- RAW:AP4 AP4 text='Jul-27' kind=period_header\n- RAW:AQ4 AQ4 text='Aug-27' kind=period_header\n- RAW:AR4 AR4 text='Sep-27' kind=period_header\n- RAW:AS4 AS4 text='Oct-27' kind=period_header\n- RAW:AT4 AT4 text='Nov-27' kind=period_header\n- RAW:AU4 AU4 text='Dec-27' kind=period_header\n- RAW:AV4 AV4 text='Jan-28' kind=period_header\n- RAW:AW4 AW4 text='Feb-28' kind=period_header\n- RAW:AX4 AX4 text='Mar-28' kind=period_header\n- RAW:AY4 AY4 text='Apr-28' kind=period_header\n- RAW:AZ4 AZ4 text='May-28' kind=period_header\n- RAW:BA4 BA4 text='Jun-28' kind=period_header\n- RAW:BB4 BB4 text='Jul-28' kind=period_header\n- RAW:BC4 BC4 text='Aug-28' kind=period_header\n- RAW:BD4 BD4 text='Sep-28' kind=period_header\n- RAW:BE4 BE4 text='Oct-28' kind=period_header\n- RAW:BF4 BF4 text='Nov-28' kind=period_header\n- RAW:BG4 BG4 text='Dec-28' kind=period_header\n- RAW:BH4 BH4 text='Jan-29' kind=period_header\n- RAW:BI4 BI4 text='Feb-29' kind=period_header\n- RAW:BJ4 BJ4 text='Mar-29' kind=period_header\n- RAW:BK4 BK4 text='Apr-29' kind=period_header\n- RAW:BL4 BL4 text='May-29' kind=period_header\n- RAW:BM4 BM4 text='Jun-29' kind=period_header\n- RAW:BN4 BN4 text='Jul-29' kind=period_header\n- RAW:BO4 BO4 text='Aug-29' kind=period_header\n- RAW:BP4 BP4 text='Sep-29' kind=period_header\n- RAW:BQ4 BQ4 text='Oct-29' kind=period_header\n- RAW:BR4 BR4 text='Nov-29' kind=period_header\n- RAW:BS4 BS4 text='Dec-29' kind=period_header\n- RAW:BT4 BT4 text='Jan-30' kind=period_header\n- RAW:BU4 BU4 text='Feb-30' kind=period_header\n- RAW:BV4 BV4 text='Mar-30' kind=period_header\n- RAW:BW4 BW4 text='Apr-30' kind=period_header\n- RAW:BX4 BX4 text='May-30' kind=period_header\n- RAW:BY4 BY4 text='Jun-30' kind=period_header\n- RAW:BZ4 BZ4 text='Jul-30' kind=period_header\n- RAW:CA4 CA4 text='Aug-30' kind=period_header\n- RAW:CB4 CB4 text='Sep-30' kind=period_header\n- RAW:CC4 CC4 text='Oct-30' kind=period_header\n- RAW:CD4 CD4 text='Nov-30' kind=period_header\n- RAW:CE4 CE4 text='Dec-30' kind=period_header\n- RAW:CF4 CF4 text='Jan-31' kind=period_header\n- RAW:CG4 CG4 text='Feb-31' kind=period_header\n- RAW:CH4 CH4 text='Mar-31' kind=period_header\n- RAW:CI4 CI4 text='Apr-31' kind=period_header\n- RAW:CJ4 CJ4 text='May-31' kind=period_header\n- RAW:CK4 CK4 text='Jun-31' kind=period_header\n- RAW:CL4 CL4 text='Jul-31' kind=period_header\n- RAW:CM4 CM4 text='Aug-31' kind=period_header\n- RAW:CN4 CN4 text='Sep-31' kind=period_header\n- RAW:CO4 CO4 text='Oct-31' kind=period_header\n- RAW:CP4 CP4 text='Nov-31' kind=period_header\n- RAW:CQ4 CQ4 text='Dec-31' kind=period_header\n- RAW:CR4 CR4 text='Jan-32' kind=period_header\n- RAW:CS4 CS4 text='Feb-32' kind=period_header\n- RAW:CT4 CT4 text='Mar-32' kind=period_header\n- RAW:CU4 CU4 text='Apr-32' kind=period_header\n- RAW:CV4 CV4 text='May-32' kind=period_header\n- RAW:CW4 CW4 text='Jun-32' kind=period_header\n- RAW:CX4 CX4 text='Jul-32' kind=period_header\n- RAW:CY4 CY4 text='Aug-32' kind=period_header\n- RAW:CZ4 CZ4 text='Sep-32' kind=period_header\n- RAW:DA4 DA4 text='Oct-32' kind=period_header\n- RAW:DB4 DB4 text='Nov-32' kind=period_header\n- RAW:DC4 DC4 text='Dec-32' kind=period_header\n- RAW:DD4 DD4 text='Jan-33' kind=period_header\n- RAW:DE4 DE4 text='Feb-33' kind=period_header\n- RAW:DF4 DF4 text='Mar-33' kind=period_header\n- RAW:DG4 DG4 text='Apr-33' kind=period_header\n- RAW:DH4 DH4 text='May-33' kind=period_header\n- RAW:DI4 DI4 text='Jun-33' kind=period_header\n\nCOMPILED STRUCTURAL RELATIONS\n\nmember_run R1\n  parent/header: Portfolio Building MoM\n  parent_coordinate: B9\n  member cells: B11:B13\n  member labels: First Tranche, Second Tranche, Third Tranche\n  provenance: source workbook coordinates\n\nmember_run R2\n  parent/header: Portfolio Building Cumulative\n  parent_coordinate: B15\n  member cells: B17:B19\n  member labels: First Tranche, Second Tranche, Third Tranche\n  provenance: source workbook coordinates\n\nmember_run R3\n  parent/header: Ticket Size per Portfolio\n  parent_coordinate: B21\n  member cells: B23:B25\n  member labels: First Tranche, Second Tranche, Third Tranche\n  provenance: source workbook coordinates\n\nmember_run R4\n  parent/header: Total Fund Raised\n  parent_coordinate: B27\n  member cells: B29:B31\n  member labels: First Tranche, Second Tranche, Third Tranche\n  provenance: source workbook coordinates\n\ntemporal_axis T1\n  sheet: Workings Cost Sheet\n  orientation: column\n  requested boundary labels represented:\n    Apr-25 → O4\n    Jun-33 → DI4\n  provenance: source workbook header coordinates\n\n\nReturn strict JSON only with keys sheet, ranges, evidence.\n"
+      }
+    ]
+  },
+  "request_sha256": "a94eddc197e9cda4a1de169f9c047b3e16cc9fd2b789be6e3af9f1e0944f00b2",
+  "declared_model": "meta/muse-spark-1.3-contributor",
+  "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+  "openrouter_wire_model": "meta/muse-spark-1.3-contributor",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "reasoning_effort": null,
+  "provider": {
+    "allow_fallbacks": true,
+    "require_parameters": true
+  },
+  "started_at": "2026-09-16T14:31:03.389338+00:00",
+  "failure_class": null,
+  "raw_response": {
+    "id": "gen-1789569063-RrcxohmCJiEDOG6i2CVt",
+    "object": "chat.completion",
+    "created": 1789569063,
+    "model": "meta/muse-spark-1.3-contributor",
+    "provider": "Meta",
+    "system_fingerprint": null,
+    "service_tier": "auto",
+    "choices": [
+      {
+        "index": 0,
+        "logprobs": null,
+        "finish_reason": "stop",
+        "native_finish_reason": "completed",
+        "message": {
+          "role": "assistant",
+          "content": "{\"sheet\":\"Workings Cost Sheet\",\"ranges\":[{\"start\":\"O29\",\"end\":\"DI31\"}],\"evidence\":[\"B27\",\"B29\",\"B30\",\"B31\",\"O4\",\"DI4\",\"R4\",\"T1\"]}",
+          "refusal": null,
+          "reasoning": null,
+          "reasoning_details": [
+            {
+              "type": "reasoning.encrypted",
+              "data": "Q-PaDgGFLX89u6pwtVla9k-UTOEoNmc8yXLlR43A8fpO_tI9VlxC0-W5jPeEIZabDO9EFoXyqS8aBbSDEgYU8iBlBYK1xmK2g_doo1rw0l_0kqXSWHH98oDNarzvUqbym-hgGqAPzquiQkr10Rdnvg3EeIr9KytfJmpemQCYCVgZxL5CPZpdqAgKo7KUniuDoQ7KZymz_18_CvwmLOmhRGx6EZz2zXSr_F0qPoEdqJtL_MKQHLI1HVlB1qkIV05b5roBvtjPNfDvL0n2vLt-I6FWEkSi5wtSq_XpQCWgVBKQoCEk1a1dTm4ddWXbj67JY-mRUabu0FIDs3iQjx1mf-3zeOuSgPv6gpL37nnMm3mK2MNAvYfB2H1C1qcrIyOY0l9vNIpA7WXwrwuuMQQasFLQdVpFNdMOA95t6UIN9HmxdJIVX3-hLgu_V6nz7O5477JQ2ROisqmRPcGAB_Y0UNoECEv8tOrnRMAnt62_d6yC7pAPGso7piYFnG7apXt_Gl-JL3q0XdPsNtnKRc3aHyfUAjH5NEoeR_ii_yf2QKmkdfsJ_Pw-KxEymOlHjCrU4FYenQ0NsIrkOkAN5e7JA8VspzPEj3OPiSnqth2skxTD9zViL_pV3iiYIEQ6060ZvM0B7HKrJZLqsUtRiVhLYGumf8X1Lbzh6lg86t0Lrgf5Tq437jfZIACcQXsqn2L3288tx2uycNEeUBtP7y7rMEC1diI-7w7gnLNXSAtsczpk01mKYvyQ7dd-qQgcMcBMELgrUtsC8y5YXTI8W2fTsR9lYQU-V-5bn7v8YeMuwGsnqFdQLqCuRAxD1YySsOZyIjKrDgcXO_tDN8DAp1g395K9dHmj1OKEqilm8x0W47JmexAU7Rgy9mdjJe__jMnTHj3ywcAS6lfaJHYVxTdRZ3JMaYiwdnUc37zGogfeFNPgr97dEdENOp8pePYAk3_WPtUmK1v2hmO2aRKMKFPyMLhm4DcMa3XlZVRNaYlZwVX2yUimtLBQ1HRmjZs90ZXU7d8kSyCaqh_P_lRVZA0m5fP-3U29MSMvj5wpZRkc0MXAGBaUWEjlwETCYrlv8O9NocttAdD29ZfvmhUiEE3LSX0yRiKm6nrjs4gx8YDrVeofjFNiA6yTLXUKnTWax-t_Dbnisz-wVN2taKQIlHY0e-s0s19MkMalBoKPc_5Gj_ObkAypeEQnoRWcDZW1b0EMVnEPkYoZ8JeuL6uedSh3UPFzJH5cN2_VIHQ5ia9Cj55F61s53Rzg-8v3_Z3o_ODupujXLOb7aXB25Qb-NHGAqV5jQ75Mlok_0sWNpXQ5G3aCtM4k4ZQgSvuJkjs0kNaM316dgEaiwlkv_xMpznuJj8-u_vQx0L_ikmUcSme3SeZQ9Drns8m_wxZn-vi3EGOUg0CNHApGExCkxYa99FVk-OpVkQCzN6ObiLXJy4qxemzhDmwwDI6VQG7zF0Bm1v8awLMxYhjEx4MUEYyCDXEvd2h3_O9wgqLH6-tNA1And7s9VGO16N9utR1bi0IMUhkaZOzp18nlcYw7j7BuwADLV_Yy4RCPxTHc3HDc_aUQwLwtQv4P51shJ5oCvqMGgR5iCSLTS_YsTL4bE5RVTyFqBgawN2vmhs9PhZcMiV1l2NWAbuH4EXTyuBLjrLFugUZEFAJUuknzStLN_QDl0fbSJ0inVpo87OnhP02_pBgSG_eyrHtYHAtwo2kKJEMkqhbcdZQRkb20_jaeWFhnJJ4DhWO2J200VtePzPuCbtPkc_JTM4aumNxhPNOPZbzwKb2s0H7pETUrYqoXhNFKqZic0Lvy61MsvExrI9fKy0ufAnP2-WGeurxrVYTDZJH4i1UoG17wTGe55RTxTFw4L9niLHt4jZ_MvOAMBEn6_mXlha0y_Pt5qvkqzMQrqeNq4-1sZyf5QmA3vF1PEE_ETwt1Td4uTAs-N-Z-FGFUEukB2TMGtblddPWaPuMVov4dzUgSNk2NEiR0MiUxNH9EaM-HU8DxJ1eVk2r4jMXYYMDRmSyliSg0n3STGnpPEZi43Rx2LYD5p41USSsg7udvbCBUwGfrywcvVUUWCqsnlVmJoUAbPsmwwfzgSJaUi4uxnwJT3WIGBdmc5x23i0iAfi4f3tigpXXxcWQvUaTL5_dPpF6rpr-tKwO94ugGRVwNFCRfMeGMEU3ei58nED6EUY07DxCkOrnHz56-8YOdBdla42wSWoEJ9aAzYQ1NdjC8wghWg-8p-qYHkrClIGbzYem3shMwccrmkEVtdnuJNmn48pc75SYvveBm4RTIowI8WRGU7slxB_4ETVBqhZtjpbeFzjDI7W-ZoiPUDOhg8w12nv3jUDDDl9cXBKWFB48MhfwE7C5LLhx0Ejbflj0TidzxQpkVeeWAw4cvEvRa7ZJINaFac9frjvMuMQngicls3wBB_BBUbfTvLOso5TxIsq_46_HBJ3oHGso1hjhCexPTSGD68p4C-nUEjf2LfIAlMCFok05gprrSNy_HA-qSPSKXQ7-MUybUOOVZzAa2Dd4YGrZWpSTun7AXjUm8fIQF2xA2A9W_XtTscVV0gY5rJ-P0Ah95gM3UUvjK3LknXu0OPKUKO3DRF_rs8UBB9VyxssocDjwcEDQUAKHd_vLq4h6c87_3JAjWtmDU1TPO-NxeDC3c4MBPE9z01ErvEXVMlMKUKuoD6oEIxyGTrSHaYbdFnAC9aumItgdWesFLPbbmHvltPASvNyVZz9fcvmBlwC8Dl0e2AADvf0Fq6GckFN_oe9wSfPlkd5uwYvdsNcr4uJ8c-CPqAkyBVAMHeSJp2sDnVIJ6ghxsKo1-PfgygArt1UBBv7rSiQp4mx1r_sBoTjcZPmCqTHpxNaf4eKkjeigRAsImi9P9PUgex0CryUQqBp2MTkBssXEwIT1nNBw9NMRsjXzH7K6maUabOTMWdDwz23iu4wi3xum-a6Mq2rgpRuRMgyeiVYi3osFfT4pXuUudfkHgM1bMGx5UneW0jP2NREjCgDLtWp4jP_TLOqly5WKmKU8pGZXBVWPpY5Iz2_4jdrTq1NUejgTjr9D2jKPkzBbv9qMYSRD06MJSU742J-kqmY8hlczp2WM64NnZk19W0cdUplingspf5n_iMJE-XkD2YFWlftcIfk5fBXcWWVsGaHAcXhGiYsC-2YDwa7xtoXdkF3Ll-20G9VvoM31mpqCS4T2IslDln_mSAW9VgCyFUxDKvUOzd_gBtBUB6JZmx5QgiJL8V3RoB6lh84n07wLI0hz0tWbW2xkwuu5AwgKNgexZWkDPXp5Ik0uaPtA0s5Jo19rY4PqDTFG8M7yg3HwblkaUPpQBGY8Wc7qoO5yxCF2BgzL7ebA-0FMZRT0otl7L7OvU00yk6UI1F_DN7svx3rqZv2DMG0LFTV4Z2pKWa0D0dk79ZcBnNLkOVxbpf2cKUfbz7pwXhTE8fjQS5NRMKu4GB2SeibIxmIPioLZZEQ2XUyEgmuCYy9RdwB2BE5lExAy9q_qpgDMzPVs1PVM_St97DpDfeQjB14ch2clcoqqv_u-gW-rju2vQBZoHEt3zs0uiT4GenSi1BfB_1srJpAv9gFAN-7i46oKM1uN9gzZVv41MzL_vZN1jH9OPfKmosAvaMqcByli_krxIAYO8YqMVytke43Mtmleu2ATOiVc84-nxiRBbepCvYbYxmTJ0HCEy4R_BRl99ozniUahXe425c8Sfy1xB-B0BSpAdtUqYl0ulWEE8YRSkjzj9eqhFK4ggu5vaL5AyA-TtElRcbX5F8EIZQVRzJt-04GRLfq3ia9Vl5S62l7bE9pM7E3EVUEk5u6vW4ZT7-vqKopjmpiwvSUouciyAafGYqPEkIBu07cONGk2FEKrP3wqCvY48caZbn2jHEXIxoNXt9BpPg54nYbphU23rCBUFvylgm7NIYps3G8GbD7133UcqOYoKdOgrd83Y9HKJ23sEgFFW4NgV2SDimUx07mxdTrbgMvk9475qNTQLMTP76Fmha0MvVnyv70GOuYk9GAXOj3BRAtFpDaE721hhAXvk6Tktht9kntj4oR9UmhjRpe1ocNgU4zysGdac7McBbCiMjbsHq3GmymOmdbPtYWpn-zZXl6tK-96FyiS0EPNjW4nLNx2rQ2ng_p9XKMl37eqHu9m6EEQOOujHGPyHW1I34reDa3rIcmWKiI4VDYveB3u26fb5JGRxS-iSOSicxnFLFtQvr3dRdNBSY5DNpd0FQ_ADrqpJcBCdG2jJGpN0j1bG9fTxWmCvnknl1xrxVV_obYQoW9duYJwzLWe8wEPbsVgHWzoS9KS73CCCaVTxoZM1h93cfdIlBHgDG5A4nw1aI3K3ZGuGiIxHy9x9SMEZOfxtjdqB2GWLRJAlHwfUXjeIg3n0SSvlN3aPh2odHRYYoqrCu0Dl7LdpZKJ_gnb1QC_smBUD60MBNIdwQaCSHlsLWEKvnkvsgQ8tjDlfTDdVUDKQm8g06MpnF4vWS5ohkuqzbVMYDS6hWHQLPbEsQo1naXnhrW_nY8y_qMZTHGjwziZypyvwaTZ0vm_PUv_ubQQTFSgSB88JB5YZAVrVfgeyw0yfdEPHZLpxeHLTCbIigLkuQcR1MR6HPrc7oVEmsLmkwKP9_vl53JcxNSyTtCOpuiw1sTSGZPC3MmaCS-MaHehdx0oSlr-0wkNSnYUr2TmsyGAxKrR1GizonvU5KwCb4PO3WBHGQCbLJxupln5nTG0PHtRdhLfHbswGYDEEalqJBjQArBaqW-qSvFo6rL29Pul239f7VJ2u9oGKitcu_9v-vVryeOhFiKb9OxQTlonPPukRhpxjt7ztcZSqO7s582u5aRkwert8HUzQLJhBdWW2nbNeLEkRBOf13FfhHAwIVvc3TQGA0BrdnEcyVGxHFw0eEF8HY9_YD1DFR7fG4yi-L2QM0W7JBGr-4aLQ3juGSxr8k5uZHsPkR2ZWAjeb5WpiurDmhrA02JKTCtt4Mly5uLGm_4efr55VArkaF7HaFnx3fLM3YdGbB6EMaqt6ueK5PLaczV0-ecW3gKGr1PsAU3sPHYF3ONRfiOdePGTyYLOoGkxo7Fe13NMhSOlyBoiF86l1Q6wiYXh8nMp1a1ibde8R7ion7mo0imE0R5GW-6C7ryzhoAlI49r-HzbpQJkVn8Pibx2qtZ7I8E77NokE_tzi5ywcn_L1a3ig3pYwkyV-3ZVVfp7wrFEo2lwbsqRL6yXUBw05IeSt7w1HCiLlvxeydX0wNqGPH67JJ9fE-HVdIqhn1gwMo-2WIGJC0UqWH2FgRkm7dW4Q29DBRB0L_yvyAwwGFI0HpMQXE1s_LK1ZXRvfM7e_J8NvSepi-N_dbR7Pm7PVXop4ULef9QvNuXykFqMZj3_N33zARltoBN5ScsByvDTvW4TiEztXXX4GQh02LgKKGPs-SHXuNm4WHwKUwRdqaJG9UQDQRMG1KtUVUKr85kGoEgOEmXNGcx42JSr6D1A4ljmwEu4I7HcZ2QQIskyzukvbARa68o1rrNeq6Kg7WzZ9K5A6iO1WQhMm038_NWz2to0yMaaqzwKgHlLkObuoYmWp5UniwaklllJvbgNF0-qdd3sQe7adVxPQD1k4-MbsxSxwDm6vyWb8FoNY-ZXtDIVSbV7YLcWHq4H-Gmd8msDks0mkOAIv2SUYhAcNrouy_CwvDzY5xzw2amhOpbmXoTVyer2B0TclyPZU-CPLEweEqLQFi1bl_ZKquLZSgxK8YyFhYIK92rn0WLTFCx7msQ13HbGdvNPC1tc3kybJpfiIV0cVtGa9uDsvdFf436WGLAcb5wmyOjjG1DcOh5xlqSnN-IDDjVY4x89Rq81ujjG7LHq2ZkIh67YoYYVUWRylADm1FcUKfTnsL2rO70qxtqhFOys7rK62SjjafBq8Bq5VEAxfB6vsSweb7xXiw2L8Y3tcwrP61CeMeJvrPh-3fNaRceCZJBZlqop6Eb2PMA1yGiX4-Svos5nkM1cHKm3VUwaIuriSeiDyzKmRf_m05HSJCwE2SFv-H-NVm71SM3DgfLHltXEFdV4FGHmFNNGZ1nLLPrN-wE6a7-LzHP8RJgb_V1nZstuGxMQMHjDEDuqr1ina1Qp44Pjmrvc2naXkY0TE3p6xiJG_VxTmrv12KlScPz2frYqrzRe2-mUIFeruQdCZNPq8mDyGtgp6rChxHGKCGJNX9XwisMqJ-SvVAgFehsBZOMJ35nWefJ4vak6BikM5FBzssTO6_XF4kad_FJg64aYdQ19U9uv5nLOGTOexwZoB8yY93ZXiCrnPcT_G_l1EUhnfvZWEtcwRu-Wl-XAlmfVnF1WXgSoLmzZnysGoc4ZlHbD48rbVnXGl8wD5caSD7fKC_HPtCGq0xAoJhhNx3lZiAJOrPhOXIN8xZgmn7gSLVJwObaZYODnadcm0MkDcir2kce6Wf3TzdgaQCWt0Bb9_wtYRPd41qnzKTIwXk3OTDkM0t6GkkEbybDebdNyGnqi7ZJPHiVyjPjWJ3K8gcvwWw4bAv3k44VSXzLR90p43AkzA1am3Pd8y9WBMvvJskSLe3hWcf4mVlybvLsMPJ_62ilFxMWYTic-Zjo-kmnobL7j8ouTuN7BYztPvdnOzgcFSjxvdBbs07qSD8msd6vNBbsRXdzfwEtHrV8aUuXs3UgFQL9jvq05Fhu-kDdP5dB4mYMXMSEpEwzlZEhjl-jpQonB9mcteB5bFQLQ4_shrapbW-9HsM5d6IIfUbO6C_4ImCAJ4zttqEwmYIsoQ7Q2rTOmia9a4eJn11o1-0m1jNRpiT6uduD6Zocd05741GKAaEMAtr6hlvvaSlOUOJla8r29WmkqBl5SjM5khmLniXeugOoqRjpzai2Y5xrUrZ-e5I9RoytnmB8M5tG3N5OOnDQA4er8t-09Y6IIr5GbiO-cjwbjFacZ5gpbFGGoxmBGZDMw_er-YPncoXYXz59MEetbvNNY_HwEwzA5A-SSYw6ypQ5NRBSyRIovniUaOGu3bMXAHIYIGYOdfqGdi3ciRBw3aiaYVwlch3n2nqjQfXxIvK0TWnrdiWJU4y3E7rUTRU5mnFy3BrrcGMDZ_huN3IcjMu2z9cjGEn2c4cYlR6RHusyz8eTDpCyd-GtE_TYzcgbByX_EsIewUJAepFNgXrUT3YKc2x4VYnRfPkE7mW97bcolbnaMge3IBJg0rzdq_YsFODRslzaBnDOqQeMm4CdQa-HkIlzGAaU7xCMOuBjYR2N_FtKg9CCNFKsoLVah3YqyQMk3XT0F1v4ThhA8g_7usXj_mWvNxFOSDcRnNILcKTVTGuOxuhrhh5p8n8kdy8lawkinpHUuqQXq9rSHl94kpeOqqbhbZ9C9w4Pc70z5ghdS6DcNsVtuFi_fyQuPLmvpgGCEWUrQMGeecvs1YTGGH4EV8qiDUcWRqLKz1vTVqKEJbFAZc9-JTK-Py4yiq5-2ve8uh7upzGQHYn5cfBlfzMSaF8CPmB_KhIUYmf8JRSmOxyE0YvrP0_PJRGxlQV3-dH2veZhZUmW4MyzPlGNrIMZx3tHN-e0tdkulx63WniO7wn732Q5XPuOFOGC9axyZj-Mb3l8ThW647vWYzYP6h1Ph8pn47lpdgotj18QHX-BhwInOD7Wpk12wFd-m2lBJkn2jYZyZb1DlFKbUSxvUaRTF_n98IyDcSs4M-rImjwyAywuliBPAybafbmQr_wc2EsAjfpxZNz8-_XCrbq0JccoQoE9PH_wPIDMK8VNgdHnxt5Zqh5Z4PAEHvZh1U0MbrRsRxJ8kELNvf4opCWIBR4YYj_XZrEmtmP5TnbO3yXQyffTwxUD_H8Qvc31OBMXrjVvCPESVRCs6W5WQRkwJPqA3SNP6OgRF9DOfLbBWkRMljWyFww4hS-4CyBkk6vIWJMYY7U_0xMbC-zGu_rthS7yhoQNdm0spqSUH4AUydcOzFbphkM2fBz33qbCDENzbGb5LU6JrpfbvNz9JDcTV73qLgUXJBpXDatxh5y8LJqW_aSkFbfgsKzHV3T1hIE0leAIkJAJH0W7mDg1UvGk8_zm9Ra-kj4zHQTaPC3F-0lxRbQFWx3bkfYsThH-7mazGKmMNlwhYGAqzWWQvJWvhjJQrZfx57zy6TOP156pyiDfd66BMaUCI0upiEUY_-mBdFwWhr25cPM5Iv4UbNKw0zxDSueXmCbO4xmro1uP2FIgsXWW9ZhZhh8AQ4k0pwo6ifuwY0JTGA-mrOY9V5xLBzuhwo5d9OLW9Iaco1DRsVBCML7eGmjnBKllVWyu0Vb4jmbsg96TjAlrMeEbCY_CnwcNLDU5u1SlEpdZNaEqG1XFTjzQjeE5LeO5rxuCtI59Ghrht9K8Rin088aWlbWSRaSwcxOENngMAiQtI1zNWCjN1X9iV3gr9LYuB2x0FC5nc5dlWIo-JyfIt8pl05iObC8jQwpjq6MwWf6okL7Nej5epSJAh5PQazHr0ngDDO_XPD_o_7ddUz7pIiWGCYS1V7NUY9pANU0fYBkWNz80RBT_FbCbyzPC9e_q4Iz2i9QkoB9t2SNIsPXsL4o8Yi02spwtNEnuBFcg04iF8Lk3-HNzSsyayFkG8SlN-n4iLLV-bV2AY6_R149D8w3JyqrYRc4IE1M2fmWR-uFNIPcGASkHdy6EFy89xXcruSVc8QeeSpTT27qnXCMldDxET1pwUHSW4wUVYC34IaTfdE8axGDexF5gox3S0gDYN7xytWFLZAQsG-toSr8kjdBC1X2MlMQK_ChOhgDo6cLVZ6HIvmhOkV2e8iIUg3S3Ljj70sZkal9uETH7cDTT0x19sgqQiXW07E1kXCnqMyYY-8-3KGX1Wb2TDk8FY2yKvZIs_-gth1Nac7UTTLFwdbw2TXvNdSjDkD2SqcibAmpEY7MMUf58ODmFcQEShWVPN43khLGaH2M0pZuI6AjH7tGhzEvzNcDMHZe-zGUKIXHQv0ZlsRnncltUQ_lZ-Ka73P66L2k4x7g00SIvHpCK_Jyxma8L75oK65GwNO07CP93aP7Fou3RTtJZKOqRiHsHI6M4LFiGXQPGbwyd0e_ncvUfQHcSSoEs2GhVidVB9ymGNsg0ltdPwWImbzR3A6nsV-VHQ6z8gE1gqePhE-8FyEPtMHZsNOjWinoz18KElScjAOVB9m6Sw8eyjvNMurBnKqXokWik9Iou06oT92ghgXqZbdc48fYF4jpARHAyWD3JGcTkT_75p5IMmSE1dm2AsQ-bcUZn9bsYr0-xWhFUl_vdNHYGdCdTbJnywejnkc1xk55FSn8rsuquhrK3r9qoM_srNASK75fWX3I4B2mkAbQJpmglV8OTLNlqfkV753NqZV-oernAi3MeNbd4szFGIAlDBGZnRbO7Dl5uhyii-QHIINVO13Man9huLpEwnISKGh7twdUq4GbiwXUOjOtzHPI8gMQsvGmq9zPwQyBNXsxiSIlvaRxHqjHNTVDufLtJGWnttcjZYaTSQ8wAITMbPlsWgP4QrPCigh3cyfxxahav6XyarDJ5aKv4y6qzoiZZQJErjUJLF-tfrXWFoejHppQp9yxpoOO60ZdTVAaipJWWyM9fxHb4MgJcKuEWogztfXUbu4QAypT9ggCC3FxRh3_fWHiS738HI74JeQPD6zfvUaHacPNdOCcAZC7_kIZqWD9OxqXORL1-L0cs-vpnRnfoPfz-vWAaf0QOG6l5luuIUaE9hNkreAJoSwJYYMxKKfB2zesLyB-pnVYMknNxKYJeq2SFtFhclXdd_OT3IHakgj2YzhxS0j38BOpMw0dFDPKigphvBTA3_6RPLeBHzmC29Q77JvdOM7hz1GhElixh5NowY92b1D8nKpSlZIfy7P-yX-ESjsUzubo2xQmOZcDjXGGzszFkVQBsB8kh8Pfwox7j4iF-rTPjTYe4305A1-5bDMhGhFBomQ_Uu9g2MyxZfVXKqO2UaK7dI73s64ZZZejPoXzCcfO_kkwSWMTFTiDtpOckbHkunbDxsB80w4XHFfAGVc96iByCiwz8wrFQuNIb6vp3dRAxUgpfxl1fZGj5y_N6k_WZBvSGT7lnWty-VIH64DHbNYDozdhfqXZX_Y89lyd--uWkE1lFykYTn60JZ4uNPcSsLGScAqIn3nsoPmB-5Oe86UNft9W2Dp9Y1EeVCnJdHF7tsg7VHS0aplevctF-uRapuGovKasCHTKPLMvZrB7RTAkwi3_R34LbL4HlOqSTWkY2-D9iqVdkmu36w7dcQuISxobLAN0h0JiXP2lmQQMGZpdaZVMsVg-VHqmMnNfTWj1j6OsMxCOFix1GK1KJBNb4ho18CTbjrB3aULbZoxPJKY30HSz_DRf6Han6YdCfNlxwYdhJ0D92LmeLk8Rf-LAT29rJ4mHzEpoGrXjWe2Pc67u-1lM-PGdvtlaatnTVyHOfYNM60CJCwzN6JgUo1X-Iv6TPA00xkZYGm_eBM4KzKgepVNaeT8nSOxUqfF-l1Uy6jh0scACB66RkmjCBbynf5XP_SMtqpIM894jgDanltre34vECHdCA3Lg5lb-IVnpSabH-BHEPt8hDquLk2as2ixSfCrTIt6WbU64w0E3gYThK-eHc4PVV90bEbxdLTulgJwNakcqjIjGcVatpOdEEud-AOUiPcPPeWWEQswSMEMFCH6uVz8xYYCZRKhLJkTw-vSnnOF6mqxnSaeScRSWV2AkKdKWGZkIQcZWEKBeTM18FDurEdWI_bqldxCSm2dcmCKVL1V3kyBP1VQA9D3ydmu0sgEcEHNw481z8Myk0XsAu76BSw9xQ0szcEWyOz4UyOAAHuSYxPJxZWGq-I8_yEb4cZKHOS-df9p5d7JCwculd-l0uXS7EBaTmQCzuQ_8ZifPPjT5niwu_Ap4wIK0N64BO8sD_M6SskrNBUadP-7LCXuKHb7sfGv6FBfu37lVMZvrjmUJNTV6ljFPwwlxSn6vHzu3ZU.eyJlbmRwb2ludF9zbHVnIjoibWV0YS9tdXNlLXNwYXJrLTEuMy1jb250cmlidXRvci0yMDI2MDkwMnxtZXRhIn0",
+              "format": "meta-responses-v1",
+              "id": "rs_6aaaa8288f17e42c68ba4377:rs_01a0aaa0dce477ad8762cf563af6986f",
+              "index": 0
+            }
+          ]
+        }
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 2596,
+      "completion_tokens": 917,
+      "total_tokens": 3513,
+      "cost": 0.00019359,
+      "is_byok": false,
+      "prompt_tokens_details": {
+        "cached_tokens": 2545,
+        "cache_write_tokens": 0,
+        "audio_tokens": 0,
+        "video_tokens": 0
+      },
+      "cost_details": {
+        "upstream_inference_cost": 0.00019359,
+        "upstream_inference_prompt_cost": 1.019e-05,
+        "upstream_inference_completions_cost": 0.0001834
+      },
+      "completion_tokens_details": {
+        "reasoning_tokens": 861,
+        "image_tokens": 0,
+        "audio_tokens": 0
+      }
+    }
+  },
+  "response_model": "meta/muse-spark-1.3-contributor",
+  "finish_reason": "stop",
+  "usage": {
+    "prompt_tokens": 2596,
+    "completion_tokens": 917,
+    "total_tokens": 3513,
+    "cost": 0.00019359,
+    "is_byok": false,
+    "prompt_tokens_details": {
+      "cached_tokens": 2545,
+      "cache_write_tokens": 0,
+      "audio_tokens": 0,
+      "video_tokens": 0
+    },
+    "cost_details": {
+      "upstream_inference_cost": 0.00019359,
+      "upstream_inference_prompt_cost": 1.019e-05,
+      "upstream_inference_completions_cost": 0.0001834
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 861,
+      "image_tokens": 0,
+      "audio_tokens": 0
+    }
+  },
+  "text": "{\"sheet\":\"Workings Cost Sheet\",\"ranges\":[{\"start\":\"O29\",\"end\":\"DI31\"}],\"evidence\":[\"B27\",\"B29\",\"B30\",\"B31\",\"O4\",\"DI4\",\"R4\",\"T1\"]}",
+  "parsed": {
+    "sheet": "Workings Cost Sheet",
+    "ranges": [
+      {
+        "start": "O29",
+        "end": "DI31"
+      }
+    ],
+    "evidence": [
+      "B27",
+      "B29",
+      "B30",
+      "B31",
+      "O4",
+      "DI4",
+      "R4",
+      "T1"
+    ]
+  },
+  "parse_valid": true,
+  "finished_at": "2026-09-16T14:31:11.705751+00:00"
+}

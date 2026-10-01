@@ -1,0 +1,45 @@
+{
+  "families": {
+    "Debugging": [
+      "Debugging:04_07",
+      "Debugging:07_05",
+      "Debugging:09_03",
+      "Debugging:06_10",
+      "Debugging:01_04"
+    ],
+    "Financial_Model": [
+      "Financial_Model:02_04",
+      "Financial_Model:18_05",
+      "Financial_Model:02_05",
+      "Financial_Model:15_03",
+      "Financial_Model:09_02"
+    ],
+    "Template": [
+      "Template:16_07",
+      "Template:06_02",
+      "Template:16_08",
+      "Template:01_05",
+      "Template:04_04"
+    ]
+  },
+  "label": "MECHANISM_ENRICHED_NOT_REPRESENTATIVE",
+  "reason": "Selected on frozen control-side completion and high inspection/context headroom, not representative random sampling.",
+  "seed": 20260922,
+  "tasks": [
+    "Template:16_07",
+    "Template:06_02",
+    "Template:16_08",
+    "Template:01_05",
+    "Template:04_04",
+    "Financial_Model:02_04",
+    "Financial_Model:18_05",
+    "Financial_Model:02_05",
+    "Financial_Model:15_03",
+    "Financial_Model:09_02",
+    "Debugging:04_07",
+    "Debugging:07_05",
+    "Debugging:09_03",
+    "Debugging:06_10",
+    "Debugging:01_04"
+  ]
+}

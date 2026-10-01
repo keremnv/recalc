@@ -1,0 +1,7 @@
+# Product integration migration notes
+
+The maintained `run`, `example`, `doctor`, and `status` commands remain. The installed command is a small native dispatcher: default `run` replaces it with the package-owned external observer; `example`, `doctor`, `status`, and explicitly configured runs delegate to the Python CLI. The observer launches the target as a real Python script process and records effects after it exits. A negative whole-script admission decision leaves `openpyxl.load_workbook` untouched. A positive decision activates the narrow direct read runtime, backed by persistent derived state; unsupported operations continue through reference openpyxl.
+
+The old RC's eager openpyxl-to-SQLite index path and per-run index construction are superseded in the maintained runner. The frozen `_frozen` modules remain available for classifier/capture behavior and historical tests; the research directories are unchanged. Config keys `substrate` and `candidate_a` remain accepted as migration aliases for enabling read acceleration; user diagnostics use “direct read engine.”
+
+Existing RC cache entries are not reused. The integrated format binds source SHA-256 and semantic/format versions. The initial supported installation target is Linux x86_64. A platform wheel builds the native observer during packaging; running from a source checkout requires a local observer build. The public release version remains unchanged pending a separate release decision.

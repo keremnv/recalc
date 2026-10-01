@@ -1,0 +1,8 @@
+{
+ "soffice_executable": true,
+ "soffice_version": "LibreOffice 26.2.5.2 620(Build:2)",
+ "python": "3.13.12",
+ "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.43",
+ "scoring": "official evaluation.py WITH open_spreadsheet.py LO refresh, both arms",
+ "lo_policy": "both arms may use soffice identically; no exclusion needed"
+}

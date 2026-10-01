@@ -1,0 +1,189 @@
+{
+  "capability": {
+    "discordances": [],
+    "note": "n=1 paired capability differences are not treated as causal without targeted replication; no reproducible H1 contact failure observed.",
+    "pass": true,
+    "rows": [
+      {
+        "arm": "H0",
+        "exact": 0.0,
+        "modification": 0.0,
+        "output_produced": false,
+        "regression": 0.0,
+        "status": "NO_SUBMIT",
+        "submission_success": false,
+        "task_id": "Debugging:01_06"
+      },
+      {
+        "arm": "H1",
+        "exact": 0.0,
+        "modification": 0.0,
+        "output_produced": false,
+        "regression": 0.0,
+        "status": "TRUNCATED_CALL_LIMIT",
+        "submission_success": false,
+        "task_id": "Debugging:01_06"
+      },
+      {
+        "arm": "H0",
+        "exact": 0.0,
+        "modification": 0.0,
+        "output_produced": false,
+        "regression": 0.0,
+        "status": "TRUNCATED_CALL_LIMIT",
+        "submission_success": false,
+        "task_id": "Debugging:05_02"
+      },
+      {
+        "arm": "H1",
+        "exact": 0.0,
+        "modification": 0.0,
+        "output_produced": false,
+        "regression": 0.0,
+        "status": "NO_SUBMIT",
+        "submission_success": false,
+        "task_id": "Debugging:05_02"
+      },
+      {
+        "arm": "H0",
+        "exact": 0.0,
+        "modification": 0.0,
+        "output_produced": null,
+        "regression": 0.0,
+        "status": "RUNNER_ERROR",
+        "submission_success": null,
+        "task_id": "Financial_Model:06_01"
+      },
+      {
+        "arm": "H1",
+        "exact": 0.0,
+        "modification": 0.0,
+        "output_produced": null,
+        "regression": 0.0,
+        "status": "RUNNER_ERROR",
+        "submission_success": null,
+        "task_id": "Financial_Model:06_01"
+      },
+      {
+        "arm": "H0",
+        "exact": 0.0,
+        "modification": 0.0,
+        "output_produced": false,
+        "regression": 0.0,
+        "status": "TRUNCATED_CALL_LIMIT",
+        "submission_success": false,
+        "task_id": "Financial_Model:07_01"
+      },
+      {
+        "arm": "H1",
+        "exact": 0.0,
+        "modification": 0.0,
+        "output_produced": false,
+        "regression": 0.0,
+        "status": "NO_SUBMIT",
+        "submission_success": false,
+        "task_id": "Financial_Model:07_01"
+      },
+      {
+        "arm": "H0",
+        "exact": 0.0,
+        "modification": 0.0,
+        "output_produced": false,
+        "regression": 0.0,
+        "status": "NO_SUBMIT",
+        "submission_success": false,
+        "task_id": "Financial_Model:08_01"
+      },
+      {
+        "arm": "H1",
+        "exact": 0.0,
+        "modification": 0.0,
+        "output_produced": false,
+        "regression": 0.0,
+        "status": "NO_SUBMIT",
+        "submission_success": false,
+        "task_id": "Financial_Model:08_01"
+      },
+      {
+        "arm": "H0",
+        "exact": 0.0,
+        "modification": 0.038,
+        "output_produced": true,
+        "regression": 0.3697,
+        "status": "SUBMITTED",
+        "submission_success": true,
+        "task_id": "Financial_Model:08_03"
+      },
+      {
+        "arm": "H1",
+        "exact": 0.0,
+        "modification": 0.0,
+        "output_produced": false,
+        "regression": 0.0,
+        "status": "NO_SUBMIT",
+        "submission_success": false,
+        "task_id": "Financial_Model:08_03"
+      }
+    ]
+  },
+  "contact_tasks": [
+    "Financial_Model:08_01",
+    "Financial_Model:08_03"
+  ],
+  "effectiveness": {
+    "contact_task_reductions": [
+      {
+        "h0_deterministic_tool_walltime_s": 101.04234723304398,
+        "h1_deterministic_tool_walltime_s": 49.55389438022394,
+        "reduction_pct": 50.9573008375064,
+        "task_id": "Financial_Model:08_03"
+      },
+      {
+        "h0_deterministic_tool_walltime_s": 108.34393121174071,
+        "h1_deterministic_tool_walltime_s": 71.72962468315382,
+        "reduction_pct": 33.79451540947886,
+        "task_id": "Financial_Model:08_01"
+      }
+    ],
+    "direct_workbook_read_open_time_instrumented": false,
+    "measurement_basis": "deterministic tool walltime proxy; includes Python/tool execution and does not isolate workbook load/read",
+    "measurement_note": "Small n=1 live timing is mechanism evidence, not a representative benchmark estimate.",
+    "median_comparable_read_open_reduction_pct": 50.9573008375064,
+    "note": "Primary n=1 contact comparisons only; replication is preserved separately and does not add an independent task.",
+    "pass": false,
+    "positive_tasks": 2,
+    "required_median_pct": 25,
+    "required_positive_tasks": 3
+  },
+  "provider_censored": false,
+  "reliability": {
+    "candidate_a_caused_exceptions": 0,
+    "contact_tasks": 2,
+    "fallback_identity_corruption": 0,
+    "freshness_events": 272,
+    "note": "No runtime event reported stale/wrong-generation/identity failure; official capability and output checks are in capability.json.",
+    "pass": true,
+    "primary_freshness_events": 229,
+    "silent_semantic_substitutions": 0,
+    "stale_reads": 0,
+    "targeted_replication_fallback_identity_corruption": 0,
+    "targeted_replication_freshness_events": 43,
+    "targeted_replication_stale_reads": 0,
+    "targeted_replication_wrong_generation_reads": 0,
+    "wrong_generation_reads": 0
+  },
+  "targeted_replication": {
+    "capability_loss_attributed": false,
+    "h0_output_produced": false,
+    "h1_contact": true,
+    "h1_contact_operations": 7211,
+    "h1_output_produced": false,
+    "order": [
+      "H1",
+      "H0"
+    ],
+    "output_discordance_reproduced": false,
+    "task_id": "Financial_Model:08_03"
+  },
+  "verdict": "LIVE_A_CONTACT_INSUFFICIENT"
+}

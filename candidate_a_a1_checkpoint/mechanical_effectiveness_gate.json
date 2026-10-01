@@ -1,0 +1,8 @@
+{
+  "median_absolute_time_saved_s": null,
+  "median_exact_trace_reduction_pct": null,
+  "pass": false,
+  "positive_contact_tasks": 0,
+  "positive_trace_fraction": null,
+  "status": "UNTESTED_NO_VALID_TRACE"
+}

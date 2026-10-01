@@ -1,0 +1,19 @@
+{
+  "A": {
+    "any_proxy_reads_pct": 100.0,
+    "fallback_safe_proven": false,
+    "fully_proxyable_pct": 27.91,
+    "local_walltime_ceiling_s_sample": 9.9597,
+    "read_event_coverage_pct": 85.5,
+    "source_inspection_execs": 258
+  },
+  "B": {
+    "any_lowerable_reads_pct": 100.0,
+    "fully_lowerable_pct": 17.83,
+    "local_walltime_ceiling_s_sample": 9.6861,
+    "read_event_coverage_pct": 83.15,
+    "semantic_proof_required": true,
+    "source_inspection_execs": 258
+  },
+  "measurement_note": "ceilings are measured open+full-scan time on the selected local workbook sample multiplied by conservative observed event coverage; not live savings"
+}

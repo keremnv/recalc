@@ -1,0 +1,213 @@
+{
+ "rows": [
+  {
+   "pattern": "open_enumerate_sheets",
+   "n_scripts": 46,
+   "n_tasks": 12,
+   "families": {
+    "Financial_Model": 24,
+    "Debugging": 16,
+    "Template": 2,
+    "Visualization": 4
+   },
+   "substitution": "EXACTLY_REPLACEABLE",
+   "why": "sheet/used-range lookup is a compiled-spine fact",
+   "freedom_effect": "only mechanical computation"
+  },
+  {
+   "pattern": "whole_workbook_text_scan",
+   "n_scripts": 36,
+   "n_tasks": 11,
+   "families": {
+    "Financial_Model": 19,
+    "Debugging": 14,
+    "Template": 1,
+    "Visualization": 2
+   },
+   "substitution": "EXACTLY_REPLACEABLE",
+   "why": "text index answers exact search without opens/scans",
+   "freedom_effect": "only mechanical computation"
+  },
+  {
+   "pattern": "period_header_search",
+   "n_scripts": 65,
+   "n_tasks": 39,
+   "families": {
+    "Financial_Model": 31,
+    "Template": 18,
+    "Debugging": 12,
+    "Visualization": 4
+   },
+   "substitution": "MOSTLY_REPLACEABLE",
+   "why": "period-coordinate lookup answers fiscal axes; ad-hoc header semantics stay manual",
+   "freedom_effect": "mechanical facts; choice stays with model"
+  },
+  {
+   "pattern": "formula_chain_print",
+   "n_scripts": 45,
+   "n_tasks": 18,
+   "families": {
+    "Financial_Model": 18,
+    "Template": 8,
+    "Debugging": 19
+   },
+   "substitution": "EXACTLY_REPLACEABLE",
+   "why": "formula lookup + local row/col inspection are spine facts",
+   "freedom_effect": "only mechanical computation"
+  },
+  {
+   "pattern": "copy_formulas_across_columns",
+   "n_scripts": 24,
+   "n_tasks": 13,
+   "families": {
+    "Financial_Model": 19,
+    "Template": 5
+   },
+   "substitution": "PARTIALLY_REPLACEABLE",
+   "why": "substrate can verify homogeneity/patterns but the fill decision is the agent's",
+   "freedom_effect": "mechanical facts; choice stays with model"
+  },
+  {
+   "pattern": "translated_formula_gen",
+   "n_scripts": 26,
+   "n_tasks": 14,
+   "families": {
+    "Financial_Model": 19,
+    "Template": 5,
+    "Visualization": 2
+   },
+   "substitution": "PARTIALLY_REPLACEABLE",
+   "why": "same: pattern facts replaceable, program authorship not",
+   "freedom_effect": "mechanical facts; choice stays with model"
+  },
+  {
+   "pattern": "concrete_value_batch",
+   "n_scripts": 5,
+   "n_tasks": 5,
+   "families": {
+    "Debugging": 3,
+    "Template": 2
+   },
+   "substitution": "NOT_REPLACEABLE",
+   "why": "values are task content, not workbook facts",
+   "freedom_effect": "semantic content; must remain Python"
+  },
+  {
+   "pattern": "reopen_verify",
+   "n_scripts": 52,
+   "n_tasks": 20,
+   "families": {
+    "Financial_Model": 32,
+    "Debugging": 11,
+    "Template": 8,
+    "Visualization": 1
+   },
+   "substitution": "MOSTLY_REPLACEABLE",
+   "why": "runtime receipt/diff replaces manual re-read; judgment of correctness stays",
+   "freedom_effect": "mechanical facts; choice stays with model"
+  },
+  {
+   "pattern": "save_recalc_cycle",
+   "n_scripts": 106,
+   "n_tasks": 63,
+   "families": {
+    "Financial_Model": 38,
+    "Template": 41,
+    "Debugging": 25,
+    "Visualization": 2
+   },
+   "substitution": "MOSTLY_REPLACEABLE",
+   "why": "runtime save+recalc replaces manual cycle; program content stays",
+   "freedom_effect": "mechanical facts; choice stays with model"
+  },
+  {
+   "pattern": "ref_formula_map_build",
+   "n_scripts": 7,
+   "n_tasks": 3,
+   "families": {
+    "Financial_Model": 1,
+    "Debugging": 6
+   },
+   "substitution": "MOSTLY_REPLACEABLE",
+   "why": "formula-pattern lookup + reference extraction replace hand maps",
+   "freedom_effect": "mechanical facts; choice stays with model"
+  },
+  {
+   "pattern": "handrolled_col_arithmetic",
+   "n_scripts": 19,
+   "n_tasks": 8,
+   "families": {
+    "Financial_Model": 7,
+    "Debugging": 11,
+    "Template": 1
+   },
+   "substitution": "EXACTLY_REPLACEABLE",
+   "why": "coordinate utilities; pure plumbing",
+   "freedom_effect": "only mechanical computation"
+  },
+  {
+   "pattern": "diff_two_workbooks",
+   "n_scripts": 34,
+   "n_tasks": 16,
+   "families": {
+    "Financial_Model": 14,
+    "Debugging": 14,
+    "Template": 6
+   },
+   "substitution": "EXACTLY_REPLACEABLE",
+   "why": "runtime diff is the same computation",
+   "freedom_effect": "only mechanical computation"
+  },
+  {
+   "pattern": "style_copy_loop",
+   "n_scripts": 15,
+   "n_tasks": 12,
+   "families": {
+    "Template": 7,
+    "Debugging": 1,
+    "Financial_Model": 7
+   },
+   "substitution": "PARTIALLY_REPLACEABLE",
+   "why": "style facts readable from substrate; style choice stays",
+   "freedom_effect": "mechanical facts; choice stays with model"
+  },
+  {
+   "pattern": "style_read_inspect",
+   "n_scripts": 30,
+   "n_tasks": 10,
+   "families": {
+    "Financial_Model": 5,
+    "Debugging": 20,
+    "Template": 4,
+    "Visualization": 1
+   },
+   "substitution": "EXACTLY_REPLACEABLE",
+   "why": "style facts are compiled facts",
+   "freedom_effect": "only mechanical computation"
+  },
+  {
+   "pattern": "zip_xml_surgery",
+   "n_scripts": 17,
+   "n_tasks": 8,
+   "families": {
+    "Financial_Model": 13,
+    "Debugging": 2,
+    "Template": 1,
+    "Visualization": 1
+   },
+   "substitution": "NOT_REPLACEABLE",
+   "why": "package surgery is outside the cell-effect model; preserve opaquely",
+   "freedom_effect": "semantic content; must remain Python"
+  },
+  {
+   "pattern": "rowcol_neighborhood_inspect",
+   "n_scripts": 0,
+   "n_tasks": 0,
+   "families": {},
+   "substitution": "EXACTLY_REPLACEABLE",
+   "why": "local inspection is a spine fact (detector fired 0x; covered by chain-print pattern)",
+   "freedom_effect": "only mechanical computation"
+  }
+ ],
+ "mandatory_distinction": "replacing EXACTLY/MOSTLY patterns removes repeated mechanical computation only; PARTIALLY patterns split facts (replaceable) from choice (stays); NOT_REPLACEABLE content must remain Python"
+}

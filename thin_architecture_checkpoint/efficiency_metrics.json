@@ -1,0 +1,82 @@
+{
+ "ALL_H0": {
+  "n": 24,
+  "api_calls": 521,
+  "tokens": 18097832,
+  "cost_usd": 1.7168,
+  "python_execs": 250,
+  "view_xlsx_calls": 139,
+  "submitted": 10,
+  "outputs": 11
+ },
+ "ALL_H1": {
+  "n": 24,
+  "api_calls": 573,
+  "tokens": 16258754,
+  "cost_usd": 1.5622,
+  "python_execs": 393,
+  "view_xlsx_calls": 40,
+  "submitted": 11,
+  "outputs": 14
+ },
+ "A-representative_H0": {
+  "n": 12,
+  "api_calls": 226,
+  "tokens": 7722979,
+  "cost_usd": 0.745,
+  "python_execs": 50,
+  "view_xlsx_calls": 62,
+  "submitted": 5,
+  "outputs": 5
+ },
+ "A-representative_H1": {
+  "n": 12,
+  "api_calls": 233,
+  "tokens": 5345845,
+  "cost_usd": 0.5364,
+  "python_execs": 130,
+  "view_xlsx_calls": 29,
+  "submitted": 6,
+  "outputs": 7
+ },
+ "B-exposure_H0": {
+  "n": 12,
+  "api_calls": 295,
+  "tokens": 10374853,
+  "cost_usd": 0.9717,
+  "python_execs": 200,
+  "view_xlsx_calls": 77,
+  "submitted": 5,
+  "outputs": 6
+ },
+ "B-exposure_H1": {
+  "n": 12,
+  "api_calls": 340,
+  "tokens": 10912909,
+  "cost_usd": 1.0258,
+  "python_execs": 263,
+  "view_xlsx_calls": 11,
+  "submitted": 5,
+  "outputs": 7
+ },
+ "H1_ADOPTED_H1": {
+  "n": 4,
+  "api_calls": 73,
+  "tokens": 1588400,
+  "cost_usd": 0.1492,
+  "python_execs": 67,
+  "view_xlsx_calls": 2,
+  "submitted": 4,
+  "outputs": 4
+ },
+ "H1_NON_ADOPTED_H1": {
+  "n": 20,
+  "api_calls": 500,
+  "tokens": 14670354,
+  "cost_usd": 1.413,
+  "python_execs": 326,
+  "view_xlsx_calls": 38,
+  "submitted": 7,
+  "outputs": 10
+ }
+}

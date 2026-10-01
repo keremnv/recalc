@@ -1,0 +1,45 @@
+{
+  "name": "catalog-ours-eight",
+  "purpose": "The LibreCalc side of the same eight tasks. The gate needs both halves: an `induced` verdict backed by a single run of our arm repeats the single-draw error the gate exists to catch, so self-stability needs repeats here exactly as the arm delta needs repeats on the control. Frozen 297 configuration, reproduced from that run's ledger.",
+  "model": "z-ai/glm-5.3-flash",
+  "sampling": "Not sampled. These are the eight tasks named by cases/*.yaml that control-arm-fifteen did not cover. Selection is by which cells we already visited, so aggregate accuracy on this slice is biased by construction and must not be quoted against any other slice.",
+  "arms": {
+    "librecalc": "run_kimi_frozen.py --call-limit 24 --commit-gate: formula-patterns-v1 + formula-blocks-v1 for Template/Financial Model, formula-anomalies-v1 for Debugging, progressive reads, low reasoning. Matches glm-5.3-flash-nonvisual-297-1, whose Debugging trajectories carry uniformity_break findings."
+  },
+  "discipline": "n>=2, and not comparable in aggregate to any other slice: these eight tasks were selected by which cells the catalog already visited. Per-case cell verdicts only.",
+  "max_tool_calls_per_task": 24,
+  "tasks": [
+    {
+      "category": "Template",
+      "id": "09_01"
+    },
+    {
+      "category": "Template",
+      "id": "09_03"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "01_02"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "03_02"
+    },
+    {
+      "category": "Debugging",
+      "id": "01_02"
+    },
+    {
+      "category": "Debugging",
+      "id": "01_05"
+    },
+    {
+      "category": "Debugging",
+      "id": "02_05"
+    },
+    {
+      "category": "Debugging",
+      "id": "09_09"
+    }
+  ]
+}

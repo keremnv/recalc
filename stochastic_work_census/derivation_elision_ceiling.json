@@ -1,0 +1,18 @@
+{
+ "events_by_type": {
+  "coordinate_lookup": 3,
+  "filter": 14,
+  "aggregation": 2,
+  "sort": 8,
+  "formula_parsing": 1,
+  "other": 2
+ },
+ "tokens_by_type_est": {
+  "coordinate_lookup": 26,
+  "filter": 117,
+  "aggregation": 25,
+  "sort": 332,
+  "formula_parsing": 7,
+  "other": 21
+ }
+}

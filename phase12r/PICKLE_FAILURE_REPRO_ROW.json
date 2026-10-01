@@ -1,0 +1,498 @@
+{
+  "id": "b389e486a16bd690",
+  "run": "benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-nonvisual-297-1",
+  "task": "Financial_Model:10_04",
+  "category": "Financial_Model",
+  "stratum": "P3",
+  "status": "completed",
+  "V0_source": "benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-nonvisual-297-1/submission/outputs/Financial_Model/10_04_output.xlsx",
+  "V0_hash": "270c37c4abd1bce902aa85ca9d2acf0cd30852b1167b266f4b7980ce4a2ba37f",
+  "input": "benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/10_McDonalds/10_04_McDonalds_input.xlsx",
+  "input_hash": "0eacc5bcdb562911deacde8bb856e29845050c95c1cfa0b156e998d11eb16e90",
+  "gold": "benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/10_McDonalds/10_McDonalds_golden.xlsx",
+  "gold_hash": "661638e615a710959124a7beeee723572a4e10fe490ddfb7bc37175100f2e0b2",
+  "original_score": {
+    "accuracy": 0.0,
+    "modification_accuracy": 0.7442,
+    "regression_accuracy": 1.0,
+    "error_message": "Regression error at Valuation!K29: answer=-0.0323434396729479, output=-0.0317097477272917"
+  },
+  "score_reference": "benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-nonvisual-297-1/official_scores.json",
+  "score_reference_hash": "37eba69a30573691a2fa316e000ee15ccdc9dd5d471051494297c869e2d07e1a",
+  "agent_output": "benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-nonvisual-297-1/Financial_Model-10_04/output.xlsx",
+  "agent_output_hash": "a9c2e251453295bc893184c0de3f46d4abb301f30c0bdef5b44baeab5ef77c85",
+  "historical_byte_linkage": "ARCHIVED_SUBMISSION",
+  "historical_evaluator_identity": "UNAVAILABLE_UNLESS_REPRODUCED",
+  "historical_report_references": [
+    "REPO_CLEANUP_AUDIT.md",
+    "RESEARCH_STORAGE_PLAN.md",
+    "REPO_CLEANUP_PHASE1_REPORT.md",
+    "research/evidence/INTEGRATED_FEASIBILITY_REPORT.md",
+    "research/evidence/INTEGRATED_FEASIBILITY_COST_REPORT.md",
+    "research/evidence/REMAINING_LOSS_PROBE_REPORT.md"
+  ],
+  "phase12_discovery": false,
+  "V0_artifact": "phase12r/artifacts/b389e486a16bd690/V0_ORIGINAL.xlsx",
+  "evaluator_hash": "04a2a75b29805ab40efe93e202384c365d1d32b9c924c1a4aed56e41249facb0",
+  "formula_identity": "FORMULAS_BYTE_IDENTICAL",
+  "classification": "UNSCORABLE",
+  "interpretation_impact": "UNKNOWN",
+  "current_V0_score": {
+    "official": {
+      "id": "10_04",
+      "error_message": "DimensionHolder.__init__() missing 1 required positional argument: 'worksheet'",
+      "regression_accuracy": 0.0,
+      "modification_accuracy": 0.0,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "status": "SCORE_UNSCORABLE",
+    "assessed_cells": 0,
+    "correct_cells": 0,
+    "regression_counts": {
+      "correct": 0,
+      "total": 0
+    },
+    "modification_counts": {
+      "correct": 0,
+      "total": 0
+    },
+    "mode": {
+      "with_font_color": false,
+      "with_formula": false
+    },
+    "elapsed_seconds": 4.8644324649940245,
+    "candidate_hash": "270c37c4abd1bce902aa85ca9d2acf0cd30852b1167b266f4b7980ce4a2ba37f",
+    "scoring_reused_identical_identity": false,
+    "scoring_execution_identity": "f3604c26f2a22ffc2779c0578c9a62670bca0dda02a7f830ecbc025026e6f259",
+    "reference_parse_cache_events": [
+      {
+        "identity": "a4318d5e1a8053878eeb23354d2e81455f25edd270ffd1b332ef0f5ebf83b8ff",
+        "reused": false,
+        "elapsed_seconds": 3.198339045018656
+      }
+    ],
+    "scored_object_cache_events": [
+      {
+        "identity": "199d54f876b6ec345c42006f447703fc4a5f7a36375776da983b67e5275ccce2",
+        "reused": false,
+        "unobserved_parsed_cells_released": 184048,
+        "elapsed_seconds": 4.611009718006244
+      }
+    ],
+    "scored_object_cache_hash": "0dd96dc2b9e2c7b5721b4a05db93c9f5770711019e6d41a2da9151c368eff3dc"
+  },
+  "original_score_reproduced": false,
+  "V0_cache_counts": {
+    "formula_cells": 73280,
+    "CACHE_UNCHANGED": 73280,
+    "V0_formula_present": 73280,
+    "V0_cache_present": 73280,
+    "V0_cache_string": 4247,
+    "V0_cache_numeric": 68779,
+    "V0_cache_error": 254,
+    "V1_formula_present": 73280,
+    "V1_cache_present": 73280,
+    "V1_cache_string": 4247,
+    "V1_cache_numeric": 68779,
+    "V1_cache_error": 254
+  },
+  "formula_counts": {
+    "V0": 73280,
+    "V1": 73280
+  },
+  "recalc_reused_identical_bytes": false,
+  "recalc": {
+    "status": "RECALC_PASS",
+    "command": [
+      "libreoffice",
+      "-env:UserInstallation=file:///home/kerem/Desktop/Personal%20Projects/librecalc-mcp/phase12r/recalc_by_hash/d72ad77da1e54f56/270c37c4abd1bce902aa85ca9d2acf0cd30852b1167b266f4b7980ce4a2ba37f/profile",
+      "--headless",
+      "--nologo",
+      "--nodefault",
+      "--nofirststartwizard",
+      "--norestore",
+      "--accept=pipe,name=p12r_270c37c4abd1bce902aa85ca;urp;StarOffice.ComponentContext"
+    ],
+    "force_calculation": "enableAutomaticCalculation(True); calculateAll()",
+    "macro_execution_mode": 4,
+    "update_doc_mode": 0,
+    "elapsed_seconds": 2.519996746996185,
+    "helper_command": [
+      "/usr/bin/python3",
+      "/home/kerem/Desktop/Personal Projects/librecalc-mcp/phase12r/uno_recalc.py",
+      "/home/kerem/Desktop/Personal Projects/librecalc-mcp/phase12r/artifacts/b389e486a16bd690/V0_ORIGINAL.xlsx",
+      "/home/kerem/Desktop/Personal Projects/librecalc-mcp/phase12r/recalc_by_hash/d72ad77da1e54f56/270c37c4abd1bce902aa85ca9d2acf0cd30852b1167b266f4b7980ce4a2ba37f/V1.xlsx",
+      "/home/kerem/Desktop/Personal Projects/librecalc-mcp/phase12r/recalc_by_hash/d72ad77da1e54f56/270c37c4abd1bce902aa85ca9d2acf0cd30852b1167b266f4b7980ce4a2ba37f/profile"
+    ],
+    "stderr": ""
+  },
+  "V1_hash": "014253e6e5dd07423c5c39332dc968bcb9b03f7c61f02bbd0a5ffe474b482aa2",
+  "V1_artifact": "phase12r/artifacts/b389e486a16bd690/V1_RECALCULATED.xlsx",
+  "formula_text_changed_cells": [],
+  "semantic_differences": {},
+  "semantic_fingerprints": {
+    "V0": "c6fd9e3498ada571236094ae561fe8641fea39703035e026aafaaa0b61b4e516",
+    "V1": "c6fd9e3498ada571236094ae561fe8641fea39703035e026aafaaa0b61b4e516"
+  },
+  "cache_summary": {
+    "counts": {
+      "formula_cells": 73280,
+      "CACHE_UNCHANGED": 73280,
+      "V0_formula_present": 73280,
+      "V0_cache_present": 73280,
+      "V0_cache_string": 4247,
+      "V0_cache_numeric": 68779,
+      "V0_cache_error": 254,
+      "V1_formula_present": 73280,
+      "V1_cache_present": 73280,
+      "V1_cache_string": 4247,
+      "V1_cache_numeric": 68779,
+      "V1_cache_error": 254
+    },
+    "changed_cells": [],
+    "stale_definition": "changed present cache relative to fixed LO replay, not correctness inference"
+  },
+  "package_diffs": [
+    {
+      "part": "docProps/core.xml",
+      "type": "core_properties",
+      "V0_hash": "b264272ad6ead0494a8921bf0d6be1c30223e9ef5b5dc960a11a1ba2bd6c3ac4",
+      "V1_hash": "d9d4f26cc03e58137fc77fa1e584f641a0e287c0c0e4b7a039a904e533bbd54d",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/chart1.xml",
+      "type": "other_package_part",
+      "V0_hash": "300ba44afb0c598d4e7c706081232a1af88c553c6d2f4583f5f09fa65a9990fe",
+      "V1_hash": "4142422b2701b96eb065f970baa3a97befaf323719b7d9c101cd8ac24cf242d9",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/chart10.xml",
+      "type": "other_package_part",
+      "V0_hash": "33b5beb1c06fb44550df1f0580b1f7a3235a70f52e19ea5bdea99ba444204b70",
+      "V1_hash": "fb67af6f7e08045c7e4dbbd11aa1d6187fb125e0cffde6887fc5431576bdb41a",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/chart11.xml",
+      "type": "other_package_part",
+      "V0_hash": "d6ade6867d8254c6ca02734905defe0f4b46be91a61c33a99cb105e78ba61047",
+      "V1_hash": "19ccbd2bad414eea9c34062623331fb202c47cadd7c522204d272eff97facc00",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/chart12.xml",
+      "type": "other_package_part",
+      "V0_hash": "3c16b7bf12937a03921e509c658b0501dc42880d3a13f6479c61eaf523af5416",
+      "V1_hash": "5c6e6e1e1bed6a0d1ae31092258c846fc5fcbb40a956c8bf38baf9994ed1cfa4",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/chart2.xml",
+      "type": "other_package_part",
+      "V0_hash": "a4ee4beae93f122e7a33d4785ee42086dc2982e0518c2b046cda3c5d1eae8c5e",
+      "V1_hash": "b4624062b93a298f649f5fdcee67c4bb8789f84543d2d6a779a1dced09b02077",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/chart3.xml",
+      "type": "other_package_part",
+      "V0_hash": "f8ae58bf9266808d0be16ee1bebc8a73d2dd144523b910c14dad6796953cf346",
+      "V1_hash": "64c5e8472b94ae6cd0bb6f57c79129738abe02f9162dd9881d44d827ab692706",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/chart4.xml",
+      "type": "other_package_part",
+      "V0_hash": "328c07709305efa0296f9ed782b348e28e435e7de206494fd8860a2f0d5b8e34",
+      "V1_hash": "5abdd82e5983cdc4d51014c327118aa7214ece9975984ce6b816de9ea4d49ae0",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/chart5.xml",
+      "type": "other_package_part",
+      "V0_hash": "d74d1a4190b788a1053a1354abe4c75884623b5d9eadeb7709fba5408c3e7356",
+      "V1_hash": "d4d5c0302b4da11eade53c26068d58b6113a035b0597c6b30cd6706debe1b264",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/chart6.xml",
+      "type": "other_package_part",
+      "V0_hash": "8c57f454c0e5d406a0e14f9fd6cd71fe5276f0b19c811b31c99ceec84a4c2ebe",
+      "V1_hash": "58d4a9d7010a3ae3a751362c88e5887175e1065f23e995d21d970b0fc3473832",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/chart7.xml",
+      "type": "other_package_part",
+      "V0_hash": "04650725600cfafb7073803fa3577cd873d0e3b78cf4c74f7e23cfc6c179f605",
+      "V1_hash": "93a7b4bde24b688da2892b7eb417dd7a5d26c7779f28dd937418f2ccda038edf",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/chart8.xml",
+      "type": "other_package_part",
+      "V0_hash": "d6a9eb991119d34013ccf1242e1331319909e6dab116ce743a1499e5a44857a6",
+      "V1_hash": "718aa88803a05baab5a267b4b470c9799d03d8a0cc8c7854b108ca717f56b142",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/chart9.xml",
+      "type": "other_package_part",
+      "V0_hash": "e4efece54abfc0e241f7f80d77ab5006624ba27ba52fa1d6714413ff9f60fbea",
+      "V1_hash": "4c00eac62346004ff9d42ff04a20b6fedfc3ffce3201ad88c5dc9f7c2988c6a1",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/colors1.xml",
+      "type": "other_package_part",
+      "V0_hash": "f07a32a8821c53568cb2b1fa79b2438fa1390955b47e0c81ea18b7b09051561f",
+      "V1_hash": "75ce8288fa69ae2d557a5d85ba1b5b3d937caa55b3726db3a086b04b98936fae",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/colors10.xml",
+      "type": "other_package_part",
+      "V0_hash": "f07a32a8821c53568cb2b1fa79b2438fa1390955b47e0c81ea18b7b09051561f",
+      "V1_hash": "75ce8288fa69ae2d557a5d85ba1b5b3d937caa55b3726db3a086b04b98936fae",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/colors11.xml",
+      "type": "other_package_part",
+      "V0_hash": "f07a32a8821c53568cb2b1fa79b2438fa1390955b47e0c81ea18b7b09051561f",
+      "V1_hash": "75ce8288fa69ae2d557a5d85ba1b5b3d937caa55b3726db3a086b04b98936fae",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/colors12.xml",
+      "type": "other_package_part",
+      "V0_hash": "f07a32a8821c53568cb2b1fa79b2438fa1390955b47e0c81ea18b7b09051561f",
+      "V1_hash": "75ce8288fa69ae2d557a5d85ba1b5b3d937caa55b3726db3a086b04b98936fae",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/colors2.xml",
+      "type": "other_package_part",
+      "V0_hash": "f07a32a8821c53568cb2b1fa79b2438fa1390955b47e0c81ea18b7b09051561f",
+      "V1_hash": "75ce8288fa69ae2d557a5d85ba1b5b3d937caa55b3726db3a086b04b98936fae",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/colors3.xml",
+      "type": "other_package_part",
+      "V0_hash": "f07a32a8821c53568cb2b1fa79b2438fa1390955b47e0c81ea18b7b09051561f",
+      "V1_hash": "75ce8288fa69ae2d557a5d85ba1b5b3d937caa55b3726db3a086b04b98936fae",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/colors4.xml",
+      "type": "other_package_part",
+      "V0_hash": "f07a32a8821c53568cb2b1fa79b2438fa1390955b47e0c81ea18b7b09051561f",
+      "V1_hash": "75ce8288fa69ae2d557a5d85ba1b5b3d937caa55b3726db3a086b04b98936fae",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/colors5.xml",
+      "type": "other_package_part",
+      "V0_hash": "f07a32a8821c53568cb2b1fa79b2438fa1390955b47e0c81ea18b7b09051561f",
+      "V1_hash": "75ce8288fa69ae2d557a5d85ba1b5b3d937caa55b3726db3a086b04b98936fae",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/colors6.xml",
+      "type": "other_package_part",
+      "V0_hash": "f07a32a8821c53568cb2b1fa79b2438fa1390955b47e0c81ea18b7b09051561f",
+      "V1_hash": "75ce8288fa69ae2d557a5d85ba1b5b3d937caa55b3726db3a086b04b98936fae",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/colors7.xml",
+      "type": "other_package_part",
+      "V0_hash": "f07a32a8821c53568cb2b1fa79b2438fa1390955b47e0c81ea18b7b09051561f",
+      "V1_hash": "75ce8288fa69ae2d557a5d85ba1b5b3d937caa55b3726db3a086b04b98936fae",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/colors8.xml",
+      "type": "other_package_part",
+      "V0_hash": "f07a32a8821c53568cb2b1fa79b2438fa1390955b47e0c81ea18b7b09051561f",
+      "V1_hash": "75ce8288fa69ae2d557a5d85ba1b5b3d937caa55b3726db3a086b04b98936fae",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/colors9.xml",
+      "type": "other_package_part",
+      "V0_hash": "f07a32a8821c53568cb2b1fa79b2438fa1390955b47e0c81ea18b7b09051561f",
+      "V1_hash": "75ce8288fa69ae2d557a5d85ba1b5b3d937caa55b3726db3a086b04b98936fae",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/style1.xml",
+      "type": "other_package_part",
+      "V0_hash": "038dc7a95781e90e393fd7f36d904089ed586a8326e817b581018469d611cd17",
+      "V1_hash": "23aaf3b01368f1aa964eefa1bdce7fbd7d886c7409285b2392db9c25b02cf695",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/style10.xml",
+      "type": "other_package_part",
+      "V0_hash": "038dc7a95781e90e393fd7f36d904089ed586a8326e817b581018469d611cd17",
+      "V1_hash": "23aaf3b01368f1aa964eefa1bdce7fbd7d886c7409285b2392db9c25b02cf695",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/style11.xml",
+      "type": "other_package_part",
+      "V0_hash": "038dc7a95781e90e393fd7f36d904089ed586a8326e817b581018469d611cd17",
+      "V1_hash": "23aaf3b01368f1aa964eefa1bdce7fbd7d886c7409285b2392db9c25b02cf695",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/style12.xml",
+      "type": "other_package_part",
+      "V0_hash": "038dc7a95781e90e393fd7f36d904089ed586a8326e817b581018469d611cd17",
+      "V1_hash": "23aaf3b01368f1aa964eefa1bdce7fbd7d886c7409285b2392db9c25b02cf695",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/style2.xml",
+      "type": "other_package_part",
+      "V0_hash": "038dc7a95781e90e393fd7f36d904089ed586a8326e817b581018469d611cd17",
+      "V1_hash": "23aaf3b01368f1aa964eefa1bdce7fbd7d886c7409285b2392db9c25b02cf695",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/style3.xml",
+      "type": "other_package_part",
+      "V0_hash": "038dc7a95781e90e393fd7f36d904089ed586a8326e817b581018469d611cd17",
+      "V1_hash": "23aaf3b01368f1aa964eefa1bdce7fbd7d886c7409285b2392db9c25b02cf695",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/style4.xml",
+      "type": "other_package_part",
+      "V0_hash": "038dc7a95781e90e393fd7f36d904089ed586a8326e817b581018469d611cd17",
+      "V1_hash": "23aaf3b01368f1aa964eefa1bdce7fbd7d886c7409285b2392db9c25b02cf695",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/style5.xml",
+      "type": "other_package_part",
+      "V0_hash": "038dc7a95781e90e393fd7f36d904089ed586a8326e817b581018469d611cd17",
+      "V1_hash": "23aaf3b01368f1aa964eefa1bdce7fbd7d886c7409285b2392db9c25b02cf695",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/style6.xml",
+      "type": "other_package_part",
+      "V0_hash": "038dc7a95781e90e393fd7f36d904089ed586a8326e817b581018469d611cd17",
+      "V1_hash": "23aaf3b01368f1aa964eefa1bdce7fbd7d886c7409285b2392db9c25b02cf695",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/style7.xml",
+      "type": "other_package_part",
+      "V0_hash": "038dc7a95781e90e393fd7f36d904089ed586a8326e817b581018469d611cd17",
+      "V1_hash": "23aaf3b01368f1aa964eefa1bdce7fbd7d886c7409285b2392db9c25b02cf695",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/style8.xml",
+      "type": "other_package_part",
+      "V0_hash": "038dc7a95781e90e393fd7f36d904089ed586a8326e817b581018469d611cd17",
+      "V1_hash": "23aaf3b01368f1aa964eefa1bdce7fbd7d886c7409285b2392db9c25b02cf695",
+      "change": "changed"
+    },
+    {
+      "part": "xl/charts/style9.xml",
+      "type": "other_package_part",
+      "V0_hash": "038dc7a95781e90e393fd7f36d904089ed586a8326e817b581018469d611cd17",
+      "V1_hash": "23aaf3b01368f1aa964eefa1bdce7fbd7d886c7409285b2392db9c25b02cf695",
+      "change": "changed"
+    },
+    {
+      "part": "xl/drawings/drawing1.xml",
+      "type": "other_package_part",
+      "V0_hash": "0b3dd946c15cbf78bcf967ea791d9093c5411be06fac097b32197a8e41ca128c",
+      "V1_hash": "3af10ace29deadf21a82eb7bb3791f5e37ffd99320dc096c2763f6df988eab88",
+      "change": "changed"
+    },
+    {
+      "part": "xl/drawings/drawing2.xml",
+      "type": "other_package_part",
+      "V0_hash": "90242578df89e4e3dcbaac0e72a566c63b79cf98511132d5b9f6c7b606f02ab5",
+      "V1_hash": "897aa58dd200eeacbab9cf509eca99b89bd636e772145780b4be943622e439b7",
+      "change": "changed"
+    },
+    {
+      "part": "xl/styles.xml",
+      "type": "styles",
+      "V0_hash": "b406f1d4eea1248f4b5fbbf66288e5e07288f3fa55360098f5d9cf70f96c8f8d",
+      "V1_hash": "ee5a4fe2b43ed9436a919d3516a14dd4040619cfe2f275134375395a17ddc83e",
+      "change": "changed"
+    }
+  ],
+  "V1_score": {
+    "official": {
+      "id": "10_04",
+      "error_message": "DimensionHolder.__init__() missing 1 required positional argument: 'worksheet'",
+      "regression_accuracy": 0.0,
+      "modification_accuracy": 0.0,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "status": "SCORE_UNSCORABLE",
+    "assessed_cells": 0,
+    "correct_cells": 0,
+    "regression_counts": {
+      "correct": 0,
+      "total": 0
+    },
+    "modification_counts": {
+      "correct": 0,
+      "total": 0
+    },
+    "mode": {
+      "with_font_color": false,
+      "with_formula": false
+    },
+    "elapsed_seconds": 1.2596180780092254,
+    "candidate_hash": "014253e6e5dd07423c5c39332dc968bcb9b03f7c61f02bbd0a5ffe474b482aa2",
+    "scoring_reused_identical_identity": false,
+    "scoring_execution_identity": "66cfcf774574b702a0711490c5941df9c81ed703d8d7bdf89f9d6feb8e122696",
+    "reference_parse_cache_events": [],
+    "scored_object_cache_events": [
+      {
+        "identity": "199d54f876b6ec345c42006f447703fc4a5f7a36375776da983b67e5275ccce2",
+        "reused": true,
+        "elapsed_seconds": 0.8356339969905093,
+        "basis": "same complete bytes/loading mode; every existing answer-position cell and workbook metadata retained"
+      }
+    ],
+    "scored_object_cache_hash": "0dd96dc2b9e2c7b5721b4a05db93c9f5770711019e6d41a2da9151c368eff3dc"
+  },
+  "delta": {
+    "accuracy": 0.0,
+    "modification_accuracy": 0.0,
+    "regression_accuracy": 0.0
+  },
+  "total_elapsed_seconds": 17.23392173901084,
+  "candidate_parse_cache_events": [
+    {
+      "identity": "6922081543ea2c1feb081ab0635d0bd2c9507afdb8ae0ff6c5ab92bcf092302f",
+      "reused": false,
+      "elapsed_seconds": 2.9656358580105007
+    },
+    {
+      "identity": "9e9d54ff7cb22a66b10ce502d825da4f2c447e9333c585b6dadc92618142c9b3",
+      "reused": false,
+      "elapsed_seconds": 3.0102804450143594
+    }
+  ],
+  "execution_wrapper_hash": "510e7c5464380348144b83bbce0fe81242ef012bd0ccec77e00216bd387c4b20",
+  "reference_parse_cache_implementation_hash": "2f870b887ef17283950938ea7fae6be7bdd527ce5a2336d8fb78acdd3c0902b4",
+  "execution_supplement_hash": "0f6937916d3d0d1c4983482b95db8dfb7d1f4a197449b08fad5f9e8c98a0fded"
+}

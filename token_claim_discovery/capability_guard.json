@@ -1,0 +1,217 @@
+{
+  "completion_discordance_D_vs_A": [
+    "Debugging:04_07",
+    "Debugging:07_05",
+    "Debugging:06_10"
+  ],
+  "formal_equivalence": "NOT_ESTABLISHED",
+  "mean_modification_valid_only": {
+    "A": 0.70118,
+    "B": 0.68875,
+    "C": 0.6910375,
+    "D": 0.8361888888888889
+  },
+  "mean_regression_valid_only": {
+    "A": 0.97923,
+    "B": 0.9798,
+    "C": 0.98825,
+    "D": 0.994
+  },
+  "paired_score_deltas": {
+    "B_vs_A": {
+      "mean_modification_delta": 0.018255555555555556,
+      "mean_regression_delta": 0.0017888888888888893,
+      "n": 9,
+      "pairs": [
+        {
+          "modification_delta": 0.10749999999999998,
+          "regression_delta": 0.0040000000000000036,
+          "task": "Template:16_07"
+        },
+        {
+          "modification_delta": 0.0,
+          "regression_delta": 0.0,
+          "task": "Template:06_02"
+        },
+        {
+          "modification_delta": -0.32,
+          "regression_delta": -0.039000000000000035,
+          "task": "Template:01_05"
+        },
+        {
+          "modification_delta": 0.0,
+          "regression_delta": 0.029000000000000026,
+          "task": "Template:04_04"
+        },
+        {
+          "modification_delta": 0.0036000000000000476,
+          "regression_delta": 0.0,
+          "task": "Financial_Model:02_04"
+        },
+        {
+          "modification_delta": 0.3376,
+          "regression_delta": 0.0,
+          "task": "Financial_Model:18_05"
+        },
+        {
+          "modification_delta": 0.035599999999999965,
+          "regression_delta": 0.0,
+          "task": "Financial_Model:02_05"
+        },
+        {
+          "modification_delta": 0.0,
+          "regression_delta": 0.0,
+          "task": "Financial_Model:09_02"
+        },
+        {
+          "modification_delta": 0.0,
+          "regression_delta": 0.02210000000000001,
+          "task": "Debugging:07_05"
+        }
+      ]
+    },
+    "C_vs_A": {
+      "mean_modification_delta": 0.06456250000000002,
+      "mean_regression_delta": 0.014212500000000003,
+      "n": 8,
+      "pairs": [
+        {
+          "modification_delta": 0.4298,
+          "regression_delta": 0.09040000000000004,
+          "task": "Template:16_07"
+        },
+        {
+          "modification_delta": -0.08000000000000007,
+          "regression_delta": -0.03410000000000002,
+          "task": "Template:01_05"
+        },
+        {
+          "modification_delta": 0.08330000000000004,
+          "regression_delta": 0.03620000000000001,
+          "task": "Template:04_04"
+        },
+        {
+          "modification_delta": -0.0034999999999999476,
+          "regression_delta": 0.0,
+          "task": "Financial_Model:02_04"
+        },
+        {
+          "modification_delta": 0.044600000000000084,
+          "regression_delta": 0.0,
+          "task": "Financial_Model:18_05"
+        },
+        {
+          "modification_delta": 0.035599999999999965,
+          "regression_delta": 0.0,
+          "task": "Financial_Model:02_05"
+        },
+        {
+          "modification_delta": 0.0,
+          "regression_delta": 0.021199999999999997,
+          "task": "Debugging:07_05"
+        },
+        {
+          "modification_delta": 0.006700000000000039,
+          "regression_delta": 0.0,
+          "task": "Debugging:06_10"
+        }
+      ]
+    },
+    "D_vs_A": {
+      "mean_modification_delta": 0.0449,
+      "mean_regression_delta": 0.0157625,
+      "n": 8,
+      "pairs": [
+        {
+          "modification_delta": 0.5951,
+          "regression_delta": 0.08250000000000002,
+          "task": "Template:16_07"
+        },
+        {
+          "modification_delta": 0.0,
+          "regression_delta": 0.0,
+          "task": "Template:06_02"
+        },
+        {
+          "modification_delta": -0.2,
+          "regression_delta": 0.014599999999999946,
+          "task": "Template:01_05"
+        },
+        {
+          "modification_delta": -0.11119999999999997,
+          "regression_delta": 0.029000000000000026,
+          "task": "Template:04_04"
+        },
+        {
+          "modification_delta": 0.0,
+          "regression_delta": 0.0,
+          "task": "Financial_Model:02_04"
+        },
+        {
+          "modification_delta": 0.025500000000000078,
+          "regression_delta": 0.0,
+          "task": "Financial_Model:18_05"
+        },
+        {
+          "modification_delta": 0.049799999999999955,
+          "regression_delta": 0.0,
+          "task": "Financial_Model:02_05"
+        },
+        {
+          "modification_delta": 0.0,
+          "regression_delta": 0.0,
+          "task": "Financial_Model:09_02"
+        }
+      ]
+    },
+    "D_vs_C": {
+      "mean_modification_delta": -0.0251,
+      "mean_regression_delta": 0.005599999999999994,
+      "n": 6,
+      "pairs": [
+        {
+          "modification_delta": 0.1653,
+          "regression_delta": -0.007900000000000018,
+          "task": "Template:16_07"
+        },
+        {
+          "modification_delta": -0.11999999999999994,
+          "regression_delta": 0.048699999999999966,
+          "task": "Template:01_05"
+        },
+        {
+          "modification_delta": -0.1945,
+          "regression_delta": -0.007199999999999984,
+          "task": "Template:04_04"
+        },
+        {
+          "modification_delta": 0.0034999999999999476,
+          "regression_delta": 0.0,
+          "task": "Financial_Model:02_04"
+        },
+        {
+          "modification_delta": -0.019100000000000006,
+          "regression_delta": 0.0,
+          "task": "Financial_Model:18_05"
+        },
+        {
+          "modification_delta": 0.01419999999999999,
+          "regression_delta": 0.0,
+          "task": "Financial_Model:02_05"
+        }
+      ]
+    }
+  },
+  "submitted": {
+    "A": 10,
+    "B": 12,
+    "C": 8,
+    "D": 9
+  },
+  "valid": {
+    "A": 10,
+    "B": 12,
+    "C": 8,
+    "D": 9
+  }
+}

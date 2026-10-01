@@ -1,0 +1,16 @@
+## Optional inspection helpers (available in this environment)
+
+A Python module `lx_helpers` is importable from your working directory. You may
+use it or ignore it entirely; ordinary Python/openpyxl/view_xlsx all work as usual.
+- `lx_helpers.periods(workbook_path, sheet=None)` returns mechanically recovered
+  period/header coordinates (e.g. FY24 -> column letter). It does not say which
+  periods the task needs.
+- `lx_helpers.search(workbook_path, pattern, regex=False, sheet=None)` returns
+  exact occurrences (sheet/address/value/formula) in sheet order. No ranking.
+- `lx_helpers.inspect(workbook_path, sheet, range, with_styles=False)` returns
+  values/formulas/dtypes for an explicitly requested range and reports paging
+  when its bounded result is truncated.
+- `lx_helpers.inspect_ranges(workbook_path, ranges)` reads several explicitly
+  requested ranges in one freshness-checked call, using compact cell rows and
+  a total output budget.
+Example: `import lx_helpers; lx_helpers.search("input.xlsx", "revenue")`

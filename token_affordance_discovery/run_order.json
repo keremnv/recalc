@@ -1,0 +1,342 @@
+{
+  "method": "seeded task order and cyclic Latin arm rotation, one four-arm concurrent block per task",
+  "seed": 20261007,
+  "slots": [
+    {
+      "arm": "A",
+      "slot": 1,
+      "task": "Financial_Model:03_03",
+      "within_task_position": 1,
+      "worker_preassignment": 1
+    },
+    {
+      "arm": "B",
+      "slot": 2,
+      "task": "Financial_Model:03_03",
+      "within_task_position": 2,
+      "worker_preassignment": 2
+    },
+    {
+      "arm": "C",
+      "slot": 3,
+      "task": "Financial_Model:03_03",
+      "within_task_position": 3,
+      "worker_preassignment": 3
+    },
+    {
+      "arm": "D",
+      "slot": 4,
+      "task": "Financial_Model:03_03",
+      "within_task_position": 4,
+      "worker_preassignment": 4
+    },
+    {
+      "arm": "B",
+      "slot": 5,
+      "task": "Debugging:10_10",
+      "within_task_position": 1,
+      "worker_preassignment": 1
+    },
+    {
+      "arm": "C",
+      "slot": 6,
+      "task": "Debugging:10_10",
+      "within_task_position": 2,
+      "worker_preassignment": 2
+    },
+    {
+      "arm": "D",
+      "slot": 7,
+      "task": "Debugging:10_10",
+      "within_task_position": 3,
+      "worker_preassignment": 3
+    },
+    {
+      "arm": "A",
+      "slot": 8,
+      "task": "Debugging:10_10",
+      "within_task_position": 4,
+      "worker_preassignment": 4
+    },
+    {
+      "arm": "C",
+      "slot": 9,
+      "task": "Debugging:01_08",
+      "within_task_position": 1,
+      "worker_preassignment": 1
+    },
+    {
+      "arm": "D",
+      "slot": 10,
+      "task": "Debugging:01_08",
+      "within_task_position": 2,
+      "worker_preassignment": 2
+    },
+    {
+      "arm": "A",
+      "slot": 11,
+      "task": "Debugging:01_08",
+      "within_task_position": 3,
+      "worker_preassignment": 3
+    },
+    {
+      "arm": "B",
+      "slot": 12,
+      "task": "Debugging:01_08",
+      "within_task_position": 4,
+      "worker_preassignment": 4
+    },
+    {
+      "arm": "D",
+      "slot": 13,
+      "task": "Template:01_07",
+      "within_task_position": 1,
+      "worker_preassignment": 1
+    },
+    {
+      "arm": "A",
+      "slot": 14,
+      "task": "Template:01_07",
+      "within_task_position": 2,
+      "worker_preassignment": 2
+    },
+    {
+      "arm": "B",
+      "slot": 15,
+      "task": "Template:01_07",
+      "within_task_position": 3,
+      "worker_preassignment": 3
+    },
+    {
+      "arm": "C",
+      "slot": 16,
+      "task": "Template:01_07",
+      "within_task_position": 4,
+      "worker_preassignment": 4
+    },
+    {
+      "arm": "A",
+      "slot": 17,
+      "task": "Debugging:02_01",
+      "within_task_position": 1,
+      "worker_preassignment": 1
+    },
+    {
+      "arm": "B",
+      "slot": 18,
+      "task": "Debugging:02_01",
+      "within_task_position": 2,
+      "worker_preassignment": 2
+    },
+    {
+      "arm": "C",
+      "slot": 19,
+      "task": "Debugging:02_01",
+      "within_task_position": 3,
+      "worker_preassignment": 3
+    },
+    {
+      "arm": "D",
+      "slot": 20,
+      "task": "Debugging:02_01",
+      "within_task_position": 4,
+      "worker_preassignment": 4
+    },
+    {
+      "arm": "B",
+      "slot": 21,
+      "task": "Financial_Model:02_01",
+      "within_task_position": 1,
+      "worker_preassignment": 1
+    },
+    {
+      "arm": "C",
+      "slot": 22,
+      "task": "Financial_Model:02_01",
+      "within_task_position": 2,
+      "worker_preassignment": 2
+    },
+    {
+      "arm": "D",
+      "slot": 23,
+      "task": "Financial_Model:02_01",
+      "within_task_position": 3,
+      "worker_preassignment": 3
+    },
+    {
+      "arm": "A",
+      "slot": 24,
+      "task": "Financial_Model:02_01",
+      "within_task_position": 4,
+      "worker_preassignment": 4
+    },
+    {
+      "arm": "C",
+      "slot": 25,
+      "task": "Template:06_12",
+      "within_task_position": 1,
+      "worker_preassignment": 1
+    },
+    {
+      "arm": "D",
+      "slot": 26,
+      "task": "Template:06_12",
+      "within_task_position": 2,
+      "worker_preassignment": 2
+    },
+    {
+      "arm": "A",
+      "slot": 27,
+      "task": "Template:06_12",
+      "within_task_position": 3,
+      "worker_preassignment": 3
+    },
+    {
+      "arm": "B",
+      "slot": 28,
+      "task": "Template:06_12",
+      "within_task_position": 4,
+      "worker_preassignment": 4
+    },
+    {
+      "arm": "D",
+      "slot": 29,
+      "task": "Debugging:02_06",
+      "within_task_position": 1,
+      "worker_preassignment": 1
+    },
+    {
+      "arm": "A",
+      "slot": 30,
+      "task": "Debugging:02_06",
+      "within_task_position": 2,
+      "worker_preassignment": 2
+    },
+    {
+      "arm": "B",
+      "slot": 31,
+      "task": "Debugging:02_06",
+      "within_task_position": 3,
+      "worker_preassignment": 3
+    },
+    {
+      "arm": "C",
+      "slot": 32,
+      "task": "Debugging:02_06",
+      "within_task_position": 4,
+      "worker_preassignment": 4
+    },
+    {
+      "arm": "A",
+      "slot": 33,
+      "task": "Financial_Model:01_01",
+      "within_task_position": 1,
+      "worker_preassignment": 1
+    },
+    {
+      "arm": "B",
+      "slot": 34,
+      "task": "Financial_Model:01_01",
+      "within_task_position": 2,
+      "worker_preassignment": 2
+    },
+    {
+      "arm": "C",
+      "slot": 35,
+      "task": "Financial_Model:01_01",
+      "within_task_position": 3,
+      "worker_preassignment": 3
+    },
+    {
+      "arm": "D",
+      "slot": 36,
+      "task": "Financial_Model:01_01",
+      "within_task_position": 4,
+      "worker_preassignment": 4
+    },
+    {
+      "arm": "B",
+      "slot": 37,
+      "task": "Template:15_01",
+      "within_task_position": 1,
+      "worker_preassignment": 1
+    },
+    {
+      "arm": "C",
+      "slot": 38,
+      "task": "Template:15_01",
+      "within_task_position": 2,
+      "worker_preassignment": 2
+    },
+    {
+      "arm": "D",
+      "slot": 39,
+      "task": "Template:15_01",
+      "within_task_position": 3,
+      "worker_preassignment": 3
+    },
+    {
+      "arm": "A",
+      "slot": 40,
+      "task": "Template:15_01",
+      "within_task_position": 4,
+      "worker_preassignment": 4
+    },
+    {
+      "arm": "C",
+      "slot": 41,
+      "task": "Financial_Model:04_03",
+      "within_task_position": 1,
+      "worker_preassignment": 1
+    },
+    {
+      "arm": "D",
+      "slot": 42,
+      "task": "Financial_Model:04_03",
+      "within_task_position": 2,
+      "worker_preassignment": 2
+    },
+    {
+      "arm": "A",
+      "slot": 43,
+      "task": "Financial_Model:04_03",
+      "within_task_position": 3,
+      "worker_preassignment": 3
+    },
+    {
+      "arm": "B",
+      "slot": 44,
+      "task": "Financial_Model:04_03",
+      "within_task_position": 4,
+      "worker_preassignment": 4
+    },
+    {
+      "arm": "D",
+      "slot": 45,
+      "task": "Template:15_03",
+      "within_task_position": 1,
+      "worker_preassignment": 1
+    },
+    {
+      "arm": "A",
+      "slot": 46,
+      "task": "Template:15_03",
+      "within_task_position": 2,
+      "worker_preassignment": 2
+    },
+    {
+      "arm": "B",
+      "slot": 47,
+      "task": "Template:15_03",
+      "within_task_position": 3,
+      "worker_preassignment": 3
+    },
+    {
+      "arm": "C",
+      "slot": 48,
+      "task": "Template:15_03",
+      "within_task_position": 4,
+      "worker_preassignment": 4
+    }
+  ]
+}

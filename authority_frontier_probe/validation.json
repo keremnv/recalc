@@ -1,0 +1,97 @@
+{
+  "runtime_sha256": {
+    "benchmark/fm_resource_feasibility.py": {
+      "before": "aa19cca30527d22e00301922167a5d2d5f1d420adbfc78115ae6d94beae616f4",
+      "after": "130a1a6c298d7fa1406191bc1e4acf25badee20dbeb554aadffab46bc91f4263"
+    },
+    "benchmark/matched_compiled_treatment.py": {
+      "before": "826ab47efd708f8df876da011da5d9ff7edd126b0fddfe907ecf7753387849c5",
+      "after": "545044f0397dd06b20948f5b009084dfa92a1c79966ae25c3356751f63708038"
+    },
+    "benchmark/workbook_grounding.py": {
+      "before": "18a32057861aeb3dc9acf4a13061b158d840b1474f3c4ac5fc04c61a86473d08",
+      "after": "6b331496979b2fd25e06cb319a568b6bb03109e80a5b8b83f77dd8959a446439"
+    }
+  },
+  "unchanged_prompt_schema_assignments": [
+    "TASK_IR_SYSTEM",
+    "EDIT_PLAN_PROMPT",
+    "EDIT_PLAN_SCHEMA",
+    "RETRIEVAL_SYSTEM",
+    "SYNTHESIS_SYSTEM",
+    "MODEL",
+    "REASONING",
+    "TEMPERATURE",
+    "MAX_SQL_CALLS"
+  ],
+  "unchanged_runtime_config_assignments": [
+    "MODEL",
+    "REASONING",
+    "TEMPERATURE",
+    "TOP_P",
+    "PROVIDER_POLICY",
+    "NATURAL_CALL_CEILING",
+    "NATURAL_COST_CEILING",
+    "MAX_OUTPUT_TOKENS",
+    "FRONTEND_TIMEOUT_SECONDS"
+  ],
+  "default_fm_databases_with_zero_temporal": 20,
+  "model_calls": 0,
+  "fm20_launched": false,
+  "benchmark_workbook_writes": 0,
+  "frozen_caches_rebuilt": false,
+  "tests": {
+    "passed": 139,
+    "duration_seconds": 20.15,
+    "command": ".venv/bin/python -m pytest tests/test_authority_frontier.py tests/test_integration_repairs.py tests/test_workbook_grounding.py tests/test_frontend_projection_and_runtime.py tests/test_matched_compiled_treatment.py tests/test_matched_fm_max.py tests/test_scheduler_terminal_paths.py tests/test_workbook_spine_sqlite.py tests/test_edit_plan.py tests/test_temporal_spine.py tests/test_temporal_provenance.py tests/test_execution_unit.py -q"
+  },
+  "baseline_tests": {
+    "failed_as_expected": 13,
+    "evidence": "pre_repair_regression_results.txt"
+  },
+  "hash_seed_test": {
+    "task": "Financial_Model:15_05",
+    "obligation": "O2",
+    "target_count": 294,
+    "before_dependency_set_intersection": 67,
+    "after_dependency_set_intersection": 80,
+    "dependency_records_per_process": 80
+  },
+  "probe_command": "PYTHONHASHSEED=1 .venv/bin/python benchmark/authority_frontier_probe.py --output authority_frontier_probe --baseline-grounder authority_frontier_probe/baseline_workbook_grounding.py",
+  "saved_authority_exactly_unchanged_tasks": [
+    "Financial_Model:01_01",
+    "Financial_Model:03_01",
+    "Financial_Model:04_01",
+    "Financial_Model:05_01",
+    "Financial_Model:06_01",
+    "Financial_Model:07_01",
+    "Financial_Model:08_01",
+    "Financial_Model:13_05",
+    "Financial_Model:15_05"
+  ],
+  "probe_sources_unchanged": true,
+  "ruff": {
+    "passed": true,
+    "command": ".venv/bin/python -m ruff check benchmark/authority_frontier_probe.py tests/test_authority_frontier.py --output-format concise"
+  },
+  "limits": [
+    "Candidate recovery is not planner accuracy or actual write improvement.",
+    "Evaluator annotations cover 27 obligations with overlaps; no whole-population seven-way loss rate inferred.",
+    "Frozen scalar-omitting caches remain unchanged.",
+    "Implicit table-body and alias-role semantics remain unimplemented."
+  ],
+  "artifact_sha256": {
+    "authority_frontier_probe/scope_label_shadow.json": "67d3a3ec9c49bc6bd63731616b1e9d800abe7a419977d8cbcf5dba974d32378a",
+    "authority_frontier_probe/hash_seed_evidence.json": "269d677e99d9987fc2716f45caa7fe21404e706bf5b7ac314acb16ca6aaccaf8",
+    "authority_frontier_probe/distinction_cases.csv": "a46041007ca4cd348cbeb0abfd8b0c667b4cda718ba15d8fd9706168eefec045",
+    "authority_frontier_probe/baseline_workbook_grounding.py": "18a32057861aeb3dc9acf4a13061b158d840b1474f3c4ac5fc04c61a86473d08",
+    "authority_frontier_probe/historical_scope_anaphora_flags.json": "2249cffe006f933c924baacc15ae4f4af2b6be13c06b3a8a78ccaa964e6639a0",
+    "authority_frontier_probe/source_hashes.json": "ea1246152e2d56ba786e1969fe4475c2644781f54fd532cb2a716ba612259f4b",
+    "authority_frontier_probe/obligation_lineage.csv": "db734ff85b02c819350d0cf254f450379052497f58b10e65dfbcb652de23ccd8",
+    "authority_frontier_probe/current_ir_ledger_recheck.json": "6e426a31cea639b018cdbf72ef78fceaf43e6b1ed36b14c30ce8753254604ed2",
+    "authority_frontier_probe/runtime_repair.patch": "c54a4ce125cd619c5418fc0f3be0daa468cb3bb52e303a2ea92ce21c0f7c4b62",
+    "authority_frontier_probe/pre_repair_regression_results.txt": "6b6869145afe684857130174e952a88066b929c87fe92e8c4632f4c2a37ef321",
+    "authority_frontier_probe/default_temporal_inventory.json": "d59957d4d0c7136279fa78425aff3dd7c282682c5ffd85b32995988457265734",
+    "authority_frontier_probe/summary.json": "08a9b5892f7f70fce47042d272ff7e6b31397578973fe4227ed8ac41023890cd"
+  }
+}

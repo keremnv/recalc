@@ -1,0 +1,21 @@
+{
+ "primary_threshold": 500,
+ "thresholds": {
+  "100": {
+   "n_broad_obs": 321,
+   "tokens_est": 5628929
+  },
+  "500": {
+   "n_broad_obs": 162,
+   "tokens_est": 5105563
+  },
+  "1000": {
+   "n_broad_obs": 134,
+   "tokens_est": 4863687
+  },
+  "5000": {
+   "n_broad_obs": 111,
+   "tokens_est": 4184645
+  }
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "sub_gates": {
+  "exact_conversions_both_directions": "PASS (7/7 H0 outputs round-trip part-exact; all H1 deltas replay to committed output part-exact, 0 telemetry failures)",
+  "paired_modification_deltas": "PASS (where both produced output: deltas +4/0/0/0; no H1 under-editing)",
+  "paired_regression_deltas": "MIXED (6/9 ties incl. 3 FM identicals; 3 negative deltas all from H1-no-output model stalls, unproven at n=1)",
+  "zero_output_failures": "H1 no-output 5 vs H0 no-output 2; submitted-with-missing 0 vs 0",
+  "runtime_specific_failures": "PASS (zero capture/replay/validation/commit failures; no task flipped by the runtime)"
+ },
+ "verdict": "TRANSPARENT_RUNTIME_MIXED",
+ "note": "MIXED: conversions exact and FM stratum perfectly preserved, but 3/9 pairs show H1-no-output from pre-mutation model stalls (no runtime causal path); n=1 per cell cannot separate stochastic variation from systematic perturbation"
+}

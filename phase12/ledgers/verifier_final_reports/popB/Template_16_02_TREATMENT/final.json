@@ -1,0 +1,176 @@
+{
+ "positive": true,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [
+    {
+     "cell": "DirectCap!C13"
+    },
+    {
+     "cell": "DirectCap!C21"
+    },
+    {
+     "cell": "DirectCap!C23"
+    },
+    {
+     "cell": "DirectCap!C24"
+    },
+    {
+     "cell": "DirectCap!C25"
+    },
+    {
+     "cell": "DirectCap!C39"
+    },
+    {
+     "cell": "DirectCap!C41"
+    },
+    {
+     "cell": "DirectCap!C43"
+    },
+    {
+     "cell": "DirectCap!C47"
+    }
+   ],
+   "count": 9
+  },
+  "REF": {
+   "items": [],
+   "count": 0
+  },
+  "CHG": {
+   "changed_cells": 72,
+   "sheets": 3,
+   "regions": [
+    "Assumptions!C12",
+    "DirectCap!C10",
+    "DirectCap!C11",
+    "DirectCap!C12",
+    "DirectCap!C13",
+    "DirectCap!C16",
+    "DirectCap!C17",
+    "DirectCap!C18",
+    "DirectCap!C19",
+    "DirectCap!C20",
+    "DirectCap!C22",
+    "DirectCap!C29",
+    "DirectCap!C30",
+    "DirectCap!C31",
+    "DirectCap!C32",
+    "DirectCap!C33",
+    "DirectCap!C34",
+    "DirectCap!C35",
+    "DirectCap!C37",
+    "DirectCap!C38"
+   ]
+  }
+ },
+ "dep_context": [
+  {
+   "for": "DirectCap!C13",
+   "fed_by": [
+    "DirectCap!C10",
+    "DirectCap!C11",
+    "DirectCap!C12"
+   ],
+   "feeds": [
+    "DirectCap!C22",
+    "DirectCap!C23"
+   ]
+  },
+  {
+   "for": "DirectCap!C21",
+   "fed_by": [
+    "DirectCap!C20"
+   ],
+   "feeds": [
+    "DirectCap!C22",
+    "DirectCap!C23",
+    "DirectCap!C33"
+   ]
+  },
+  {
+   "for": "DirectCap!C23",
+   "fed_by": [
+    "DirectCap!C13",
+    "DirectCap!C21"
+   ],
+   "feeds": [
+    "DirectCap!C24",
+    "DirectCap!C25",
+    "DirectCap!C35"
+   ]
+  },
+  {
+   "for": "DirectCap!C24",
+   "fed_by": [
+    "Assumptions!C15",
+    "DirectCap!C23"
+   ],
+   "feeds": [
+    "DirectCap!C25"
+   ]
+  },
+  {
+   "for": "DirectCap!C25",
+   "fed_by": [
+    "DirectCap!C23",
+    "DirectCap!C24"
+   ],
+   "feeds": [
+    "DirectCap!C39",
+    "DirectCap!C43"
+   ]
+  },
+  {
+   "for": "DirectCap!C39",
+   "fed_by": [
+    "Assumptions!C36",
+    "DirectCap!C25"
+   ],
+   "feeds": [
+    "DirectCap!C41"
+   ]
+  },
+  {
+   "for": "DirectCap!C41",
+   "fed_by": [
+    "DirectCap!C29",
+    "DirectCap!C30",
+    "DirectCap!C31"
+   ],
+   "feeds": [
+    "DirectCap!C43"
+   ]
+  },
+  {
+   "for": "DirectCap!C43",
+   "fed_by": [
+    "DirectCap!C25",
+    "DirectCap!C41"
+   ],
+   "feeds": [
+    "DirectCap!C47"
+   ]
+  },
+  {
+   "for": "DirectCap!C47",
+   "fed_by": [
+    "DirectCap!C43",
+    "DirectCap!C45"
+   ],
+   "feeds": []
+  }
+ ],
+ "model_block": "Post-edit verification (mechanical check of the current workbook)\n\nChanged cells: 72 across 3 sheet(s).\n\nNew formula-pattern breaks (9):\n- DirectCap!C13 differs from the previously consistent row/column pattern.\n- DirectCap!C21 differs from the previously consistent row/column pattern.\n- DirectCap!C23 differs from the previously consistent row/column pattern.\n- DirectCap!C24 differs from the previously consistent row/column pattern.\n- DirectCap!C25 differs from the previously consistent row/column pattern.\n- DirectCap!C39 differs from the previously consistent row/column pattern.\n- DirectCap!C41 differs from the previously consistent row/column pattern.\n- DirectCap!C43 differs from the previously consistent row/column pattern.\n- DirectCap!C47 differs from the previously consistent row/column pattern.\n\nThis report is mechanical evidence about the current workbook state.\nReview it before deciding whether to submit or revise.",
+ "positive_families": [
+  "UNIF"
+ ]
+}

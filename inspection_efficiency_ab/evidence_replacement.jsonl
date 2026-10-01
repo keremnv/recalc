@@ -1,0 +1,20 @@
+[
+ {
+  "helper": "inspect",
+  "run": "Financial_Model:01_01 C1 r2",
+  "class": "EXACT_REPLACEMENT",
+  "evidence": "12 range-print calls returning address/value/formula/dtype, replacing openpyxl iter_rows print-loops one-for-one"
+ },
+ {
+  "helper": "periods",
+  "run": "Financial_Model:01_01 C1 r1+r2",
+  "class": "EXACT_REPLACEMENT",
+  "evidence": "FY header coordinate recovery replacing manual header scans"
+ },
+ {
+  "helper": "search",
+  "run": "Financial_Model:13_05 C1 r1",
+  "class": "EXACT_REPLACEMENT",
+  "evidence": "6 iteratively refined text searches (Borrowing, Rate variants) replacing workbook-wide nested-loop scans"
+ }
+]

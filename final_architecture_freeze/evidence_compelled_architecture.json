@@ -1,0 +1,11 @@
+{
+  "architecture": "A — evidence-compelled core",
+  "flow": [
+    "general-purpose coding agent",
+    "ordinary Python/openpyxl + normal scaffold conveniences (view/shell/submit)",
+    "actual workbook",
+    "LibreOffice recalc / validation / official score"
+  ],
+  "required_semantic_IR": false,
+  "inclusion_rule": "Only capability-compelled components. No optional runtime included merely because it exists."
+}

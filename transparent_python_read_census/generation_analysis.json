@@ -1,0 +1,30 @@
+{
+  "candidate_A": {
+    "fallback": "safe per-object fallback is not proven; object identity/escape can make restart necessary",
+    "multi_workbook": "cache key must include canonical path and mode",
+    "stale_after_save_reload": "path/hash check plus reopen; fallback must preserve data_only/formula mode",
+    "stale_after_write": "must invalidate proxy/index before next read; proxy can observe writes only if every mutator routes through it"
+  },
+  "candidate_B": {
+    "current_substrate": "index.ensure_fresh rehashes and rebuilds on mismatch; no silent stale response observed in this census",
+    "fallback": "lowered and real objects may coexist; object escape and exceptions make mixed execution unsafe",
+    "multi_workbook": "static path/data_only propagation must be proven",
+    "stale_after_save_reload": "must rebind path/generation at every lowered open",
+    "stale_after_write": "lowered read snapshot must be invalidated around writes; source rewriting cannot observe arbitrary mutation through aliases reliably"
+  },
+  "current_substrate_probe": {
+    "first_rebuilt": true,
+    "generation_incremented": true,
+    "hash_changed": true,
+    "scope": "current index only; proxy and AST integration not tested",
+    "second_rebuilt_after_temp_mutation": true,
+    "silent_stale_probe": false,
+    "status": "SUPPORTED_NARROWLY"
+  },
+  "observed_control_stress": {
+    "save_reload_chains": 9,
+    "scripts_saving_then_loading": 103,
+    "scripts_with_try_around_writes": 5,
+    "trajectories_touching_3plus_workbooks": 2
+  }
+}

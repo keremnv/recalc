@@ -1,0 +1,25 @@
+{
+ "inspection_work": {
+  "C0": {
+   "view_xlsx": 115,
+   "python_execs": 71,
+   "bash_bytes": 50801,
+   "api_calls": 227,
+   "tokens": 6319843,
+   "walltime_s": 9078.4,
+   "cost": 0.6217,
+   "runs": 14
+  },
+  "C1": {
+   "view_xlsx": 56,
+   "python_execs": 105,
+   "bash_bytes": 63673,
+   "api_calls": 209,
+   "tokens": 3760254,
+   "walltime_s": 9109.8,
+   "cost": 0.3923,
+   "runs": 14
+  }
+ },
+ "token_cost_note": "C1 -40% tokens, -37% cost, -51% views vs C0 (14 runs/arm); walltime tied; helper calls add python execs (+48%) but displace longer view observations. Trajectory evidence supports attribution for adopting runs; aggregate gap partly reflects stall mix."
+}

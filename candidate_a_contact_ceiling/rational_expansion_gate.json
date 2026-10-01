@@ -1,0 +1,27 @@
+{
+  "broad_iter_rows_or_range": {
+    "passes": false,
+    "reason": "identity/shape semantics, not small API gap"
+  },
+  "classifier_repair": {
+    "independent_task_contact_floor": 3,
+    "live_forced_false_positive_turns": 34,
+    "passes_materiality": true,
+    "status": "bounded opportunity; requires differential proof"
+  },
+  "primary_threshold_pct": 10,
+  "sheet_state_extension": {
+    "historical_execs": 0,
+    "passes_10pct_work_threshold": false
+  },
+  "thresholds_pct": [
+    5,
+    10,
+    20,
+    30
+  ],
+  "worksheets_extension": {
+    "historical_execs": 9,
+    "passes_10pct_work_threshold": false
+  }
+}

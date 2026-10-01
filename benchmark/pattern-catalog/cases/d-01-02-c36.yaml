@@ -1,0 +1,34 @@
+id: d-01-02-c36
+run: glm-5.3-flash-nonvisual-297-1
+task: Debugging:01_02
+first_miss:
+  kind: regression
+  address: "Ex 1 - LBO!C36"
+  error_message: "Regression error at Ex 1 - LBO!C36: answer=='Ex 10 - Balance Sheet'!D8:D8/C7, output=='Ex 10 - Balance Sheet'!D8/C7"
+facts:
+  opened_golden: false
+  spreadsheet: Embedded Hardcode_input.xlsx
+  instruction: Please audit and fix this file thoroughly.
+  input_kind: array_formula
+  input_value: "='Ex 10 - Balance Sheet'!D8:D8/C7"
+  output_formula: "='Ex 10 - Balance Sheet'!D8/C7"
+  autopsy:
+    named: false
+    read: false
+    written: false
+    bucket: unnamed
+  inspect_selected:
+    - {sheet: "Ex 5 - M&A", address: D53, error: "#DIV/0!"}
+  wrote: null
+claims:
+  patterns: [L-formula-spelling]
+  nuance: harness
+  mechanism: serialization
+  lever: none
+  lever_why: >
+    An untouched array cell the LibreOffice save path respelled. Not a model failure and not an
+    interface decision; it is a defect in how we write the workbook back.
+  notes: >
+    Untouched cell. Input already had the array spelling D8:D8. LibreOffice save
+    collapsed it to D8. Evaluator compares formula text. Trajectory spent budget
+    on Ex 5 #DIV/0! and Ex 1 hardcodes. Do not design a D8:D8 tool.

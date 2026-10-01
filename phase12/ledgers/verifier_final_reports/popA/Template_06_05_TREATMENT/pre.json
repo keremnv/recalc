@@ -1,0 +1,189 @@
+{
+ "positive": true,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [
+    {
+     "formula": "WorkingCapital!C22",
+     "blank": "WorkingCapital!C11"
+    },
+    {
+     "formula": "WorkingCapital!C23",
+     "blank": "WorkingCapital!C11"
+    },
+    {
+     "formula": "WorkingCapital!C24",
+     "blank": "WorkingCapital!C11"
+    },
+    {
+     "formula": "WorkingCapital!C26",
+     "blank": "WorkingCapital!C22"
+    },
+    {
+     "formula": "WorkingCapital!C26",
+     "blank": "WorkingCapital!C23"
+    },
+    {
+     "formula": "WorkingCapital!C26",
+     "blank": "WorkingCapital!C24"
+    },
+    {
+     "formula": "WorkingCapital!C27",
+     "blank": "WorkingCapital!C26"
+    },
+    {
+     "formula": "WorkingCapital!D11",
+     "blank": "WorkingCapital!C11"
+    },
+    {
+     "formula": "WorkingCapital!D22",
+     "blank": "WorkingCapital!D11"
+    },
+    {
+     "formula": "WorkingCapital!D23",
+     "blank": "WorkingCapital!D11"
+    },
+    {
+     "formula": "WorkingCapital!D24",
+     "blank": "WorkingCapital!D11"
+    },
+    {
+     "formula": "WorkingCapital!D26",
+     "blank": "WorkingCapital!D22"
+    },
+    {
+     "formula": "WorkingCapital!D26",
+     "blank": "WorkingCapital!D23"
+    },
+    {
+     "formula": "WorkingCapital!D26",
+     "blank": "WorkingCapital!D24"
+    },
+    {
+     "formula": "WorkingCapital!D27",
+     "blank": "WorkingCapital!C26"
+    },
+    {
+     "formula": "WorkingCapital!D27",
+     "blank": "WorkingCapital!D26"
+    },
+    {
+     "formula": "WorkingCapital!E11",
+     "blank": "WorkingCapital!D11"
+    },
+    {
+     "formula": "WorkingCapital!E22",
+     "blank": "WorkingCapital!E11"
+    },
+    {
+     "formula": "WorkingCapital!E23",
+     "blank": "WorkingCapital!E11"
+    },
+    {
+     "formula": "WorkingCapital!E24",
+     "blank": "WorkingCapital!E11"
+    },
+    {
+     "formula": "WorkingCapital!E26",
+     "blank": "WorkingCapital!E22"
+    },
+    {
+     "formula": "WorkingCapital!E26",
+     "blank": "WorkingCapital!E23"
+    },
+    {
+     "formula": "WorkingCapital!E26",
+     "blank": "WorkingCapital!E24"
+    },
+    {
+     "formula": "WorkingCapital!E27",
+     "blank": "WorkingCapital!D26"
+    },
+    {
+     "formula": "WorkingCapital!E27",
+     "blank": "WorkingCapital!E26"
+    },
+    {
+     "formula": "WorkingCapital!F11",
+     "blank": "WorkingCapital!E11"
+    },
+    {
+     "formula": "WorkingCapital!F22",
+     "blank": "WorkingCapital!F11"
+    },
+    {
+     "formula": "WorkingCapital!F23",
+     "blank": "WorkingCapital!F11"
+    },
+    {
+     "formula": "WorkingCapital!F24",
+     "blank": "WorkingCapital!F11"
+    },
+    {
+     "formula": "WorkingCapital!F26",
+     "blank": "WorkingCapital!F22"
+    },
+    {
+     "formula": "WorkingCapital!F26",
+     "blank": "WorkingCapital!F23"
+    },
+    {
+     "formula": "WorkingCapital!F26",
+     "blank": "WorkingCapital!F24"
+    },
+    {
+     "formula": "WorkingCapital!F27",
+     "blank": "WorkingCapital!E26"
+    },
+    {
+     "formula": "WorkingCapital!F27",
+     "blank": "WorkingCapital!F26"
+    }
+   ],
+   "count": 34
+  },
+  "CHG": {
+   "changed_cells": 24,
+   "sheets": 1,
+   "regions": [
+    "WorkingCapital!C11",
+    "WorkingCapital!C22",
+    "WorkingCapital!C23",
+    "WorkingCapital!C24",
+    "WorkingCapital!C26",
+    "WorkingCapital!C27",
+    "WorkingCapital!D11",
+    "WorkingCapital!D22",
+    "WorkingCapital!D23",
+    "WorkingCapital!D24",
+    "WorkingCapital!D26",
+    "WorkingCapital!D27",
+    "WorkingCapital!E11",
+    "WorkingCapital!E22",
+    "WorkingCapital!E23",
+    "WorkingCapital!E24",
+    "WorkingCapital!E26",
+    "WorkingCapital!E27",
+    "WorkingCapital!F11",
+    "WorkingCapital!F22"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": "Post-edit verification (mechanical check of the current workbook)\n\nChanged cells: 24 across 1 sheet(s).\n\nNewly blank referenced cells (34):\n- WorkingCapital!C22 now references blank WorkingCapital!C11\n- WorkingCapital!C23 now references blank WorkingCapital!C11\n- WorkingCapital!C24 now references blank WorkingCapital!C11\n- WorkingCapital!C26 now references blank WorkingCapital!C22\n- WorkingCapital!C26 now references blank WorkingCapital!C23\n- WorkingCapital!C26 now references blank WorkingCapital!C24\n- WorkingCapital!C27 now references blank WorkingCapital!C26\n- WorkingCapital!D11 now references blank WorkingCapital!C11\n- WorkingCapital!D22 now references blank WorkingCapital!D11\n- WorkingCapital!D23 now references blank WorkingCapital!D11\n- and 24 more.\n\nThis report is mechanical evidence about the current workbook state.\nReview it before deciding whether to submit or revise.",
+ "positive_families": [
+  "REF"
+ ]
+}

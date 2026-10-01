@@ -1,0 +1,230 @@
+{
+ "n_partial_mutators": 14,
+ "note": "both replay and archive errored identically; capture verdicts apply to whatever files were produced",
+ "rows": [
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Financial_Model:08_01",
+   "turn": 42,
+   "shape": "FORMULA_TRANSLATION_LIKE+COND",
+   "file_verdicts": [
+    [
+     "out/08_01_output.xlsx",
+     "REPLAYED",
+     "OPAQUE_CAPTURE_EXACT",
+     false,
+     true,
+     0
+    ]
+   ]
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Financial_Model:08_02",
+   "turn": 32,
+   "shape": "FORMULA_TRANSLATION_LIKE+COND",
+   "file_verdicts": [
+    [
+     null,
+     null,
+     "NO_CAPTURE_RECORD",
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Financial_Model:15_04",
+   "turn": 25,
+   "shape": "LOOP_COMPUTED_TARGETS+COND",
+   "file_verdicts": [
+    [
+     "out/15_04_output.xlsx",
+     "REPLAYED_CREATED",
+     "OPAQUE_CAPTURE_EXACT",
+     true,
+     true,
+     0
+    ]
+   ]
+  },
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Financial_Model:15_04",
+   "turn": 26,
+   "shape": "LOOP_COMPUTED_TARGETS+COND",
+   "file_verdicts": [
+    [
+     null,
+     null,
+     "NO_CAPTURE_RECORD",
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:01_01",
+   "turn": 13,
+   "shape": "CONTIGUOUS_FILL",
+   "file_verdicts": [
+    [
+     "out/01_01_output.xlsx",
+     "REPLAYED",
+     "OPAQUE_CAPTURE_EXACT",
+     false,
+     true,
+     0
+    ]
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:07_03",
+   "turn": 10,
+   "shape": "CONTIGUOUS_FILL+COND",
+   "file_verdicts": [
+    [
+     null,
+     null,
+     "NO_CAPTURE_RECORD",
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:08_01",
+   "turn": 22,
+   "shape": "FORMULA_TRANSLATION_LIKE+COND",
+   "file_verdicts": [
+    [
+     null,
+     null,
+     "NO_CAPTURE_RECORD",
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:11_05",
+   "turn": 12,
+   "shape": "CONTIGUOUS_FILL+COND",
+   "file_verdicts": [
+    [
+     "out/11_05_output.xlsx",
+     "REPLAYED_CREATED",
+     "OPAQUE_CAPTURE_EXACT",
+     true,
+     true,
+     0
+    ]
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:18_05",
+   "turn": 13,
+   "shape": "CONTIGUOUS_FILL",
+   "file_verdicts": [
+    [
+     "out/18_05_output.xlsx",
+     "REPLAYED",
+     "CAPTURE_PACKAGE_EQUIVALENT",
+     false,
+     true,
+     0
+    ]
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:02_05",
+   "turn": 3,
+   "shape": "LOOP_COMPUTED_VALUES+COND",
+   "file_verdicts": [
+    [
+     null,
+     null,
+     "NO_CAPTURE_RECORD",
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:06_06",
+   "turn": 1,
+   "shape": "FORMULA_TRANSLATION_LIKE",
+   "file_verdicts": [
+    [
+     null,
+     null,
+     "NO_CAPTURE_RECORD",
+     null,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:06_21",
+   "turn": 2,
+   "shape": "FORMULA_TRANSLATION_LIKE",
+   "file_verdicts": [
+    [
+     "out/06_21_output.xlsx",
+     "REPLAYED_CREATED",
+     "OPAQUE_CAPTURE_EXACT",
+     true,
+     true,
+     0
+    ]
+   ]
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:13_08",
+   "turn": 7,
+   "shape": "SAVE_ONLY",
+   "file_verdicts": [
+    [
+     "out/13_08_output.xlsx",
+     "REPLAYED",
+     "CAPTURE_PACKAGE_EQUIVALENT",
+     false,
+     true,
+     0
+    ]
+   ]
+  },
+  {
+   "population": "P-C_viz",
+   "task_id": "glm-fill-c0-Visualization-Task-1420776-r1",
+   "turn": 15,
+   "shape": "LOOP_COMPUTED_TARGETS+COND",
+   "file_verdicts": [
+    [
+     null,
+     null,
+     "NO_CAPTURE_RECORD",
+     null,
+     null,
+     null
+    ]
+   ]
+  }
+ ]
+}

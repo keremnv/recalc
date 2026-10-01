@@ -1,0 +1,114 @@
+[
+ {
+  "task_id": "Financial_Model:08_02",
+  "arm": "H1",
+  "slot": 26,
+  "run_id": "primary_26",
+  "status": "NO_SUBMIT"
+ },
+ {
+  "task_id": "Financial_Model:08_02",
+  "arm": "H0",
+  "slot": 27,
+  "run_id": "primary_27",
+  "status": "NO_SUBMIT"
+ },
+ {
+  "task_id": "Financial_Model:11_02",
+  "arm": "H1",
+  "slot": 34,
+  "run_id": "primary_34",
+  "status": "TRUNCATED_CALL_LIMIT"
+ },
+ {
+  "task_id": "Template:01_06",
+  "arm": "H1",
+  "slot": 2,
+  "run_id": "primary_02",
+  "status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Template:01_06",
+  "arm": "H0",
+  "slot": 3,
+  "run_id": "primary_03",
+  "status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Template:06_08",
+  "arm": "H1",
+  "slot": 10,
+  "run_id": "primary_10",
+  "status": "SUBMITTED"
+ },
+ {
+  "task_id": "Template:06_08",
+  "arm": "H0",
+  "slot": 11,
+  "run_id": "primary_11",
+  "status": "SUBMITTED"
+ },
+ {
+  "task_id": "Template:16_08",
+  "arm": "H1",
+  "slot": 18,
+  "run_id": "primary_18",
+  "status": "SUBMITTED"
+ },
+ {
+  "task_id": "Template:16_08",
+  "arm": "H0",
+  "slot": 19,
+  "run_id": "primary_19",
+  "status": "SUBMITTED"
+ },
+ {
+  "task_id": "Financial_Model:11_02",
+  "arm": "H0",
+  "slot": 35,
+  "run_id": "primary_35",
+  "status": "TRUNCATED_CALL_LIMIT"
+ },
+ {
+  "task_id": "Debugging:03_06",
+  "arm": "H1",
+  "slot": 42,
+  "run_id": "primary_42",
+  "status": "SUBMITTED"
+ },
+ {
+  "task_id": "Debugging:03_06",
+  "arm": "H0",
+  "slot": 43,
+  "run_id": "primary_43",
+  "status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Debugging:07_05",
+  "arm": "H1",
+  "slot": 50,
+  "run_id": "primary_50",
+  "status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Debugging:07_05",
+  "arm": "H0",
+  "slot": 51,
+  "run_id": "primary_51",
+  "status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Debugging:10_07",
+  "arm": "H1",
+  "slot": 58,
+  "run_id": "primary_58",
+  "status": "NO_SUBMIT"
+ },
+ {
+  "task_id": "Debugging:10_07",
+  "arm": "H0",
+  "slot": 59,
+  "run_id": "primary_59",
+  "status": "NO_SUBMIT"
+ }
+]

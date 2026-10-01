@@ -1,0 +1,1073 @@
+{
+ "method": "archived trajectories preserve only the FINAL workbook, so the exact first qualifying write is unobservable. Headroom is an interval: [headroom after LAST write (report as late as possible), headroom after FIRST write (report as early as possible)]. Steps~=calls (verified: 10_02 10 steps/10 calls; sixty-01_01 16 steps/13 calls); caps 50/60.",
+ "records": [
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:01_01",
+   "cap": 50,
+   "model_calls": 13,
+   "output": true,
+   "steps": 16,
+   "write_steps": [
+    10,
+    11,
+    12,
+    13,
+    14
+   ],
+   "n_writes": 5,
+   "submit_steps": [
+    15
+   ],
+   "submitted": true,
+   "first_write": 10,
+   "last_write": 14,
+   "headroom_max": 39,
+   "headroom_min": 35,
+   "steps_after_first_write": 5,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:01_06",
+   "cap": 50,
+   "model_calls": 17,
+   "output": true,
+   "steps": 17,
+   "write_steps": [
+    14,
+    15
+   ],
+   "n_writes": 2,
+   "submit_steps": [
+    16
+   ],
+   "submitted": true,
+   "first_write": 14,
+   "last_write": 15,
+   "headroom_max": 35,
+   "headroom_min": 34,
+   "steps_after_first_write": 2,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:02_01",
+   "cap": 50,
+   "model_calls": 18,
+   "output": true,
+   "steps": 20,
+   "write_steps": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "n_writes": 8,
+   "submit_steps": [
+    19
+   ],
+   "submitted": true,
+   "first_write": 11,
+   "last_write": 18,
+   "headroom_max": 38,
+   "headroom_min": 31,
+   "steps_after_first_write": 8,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 30
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:02_06",
+   "cap": 50,
+   "model_calls": 15,
+   "output": true,
+   "steps": 15,
+   "write_steps": [
+    11,
+    12,
+    13
+   ],
+   "n_writes": 3,
+   "submit_steps": [
+    14
+   ],
+   "submitted": true,
+   "first_write": 11,
+   "last_write": 13,
+   "headroom_max": 38,
+   "headroom_min": 36,
+   "steps_after_first_write": 3,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 30
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:03_01",
+   "cap": 50,
+   "model_calls": 10,
+   "output": true,
+   "steps": 16,
+   "write_steps": [
+    12,
+    13
+   ],
+   "n_writes": 2,
+   "submit_steps": [
+    15
+   ],
+   "submitted": true,
+   "first_write": 12,
+   "last_write": 13,
+   "headroom_max": 37,
+   "headroom_min": 36,
+   "steps_after_first_write": 3,
+   "steps_after_last_write": 2,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:03_06",
+   "cap": 50,
+   "model_calls": 18,
+   "output": true,
+   "steps": 18,
+   "write_steps": [
+    14,
+    15,
+    16
+   ],
+   "n_writes": 3,
+   "submit_steps": [
+    17
+   ],
+   "submitted": true,
+   "first_write": 14,
+   "last_write": 16,
+   "headroom_max": 35,
+   "headroom_min": 33,
+   "steps_after_first_write": 3,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:04_01",
+   "cap": 50,
+   "model_calls": 21,
+   "output": true,
+   "steps": 19,
+   "write_steps": [
+    15,
+    16,
+    17
+   ],
+   "n_writes": 3,
+   "submit_steps": [
+    18
+   ],
+   "submitted": true,
+   "first_write": 15,
+   "last_write": 17,
+   "headroom_max": 34,
+   "headroom_min": 32,
+   "steps_after_first_write": 3,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:04_07",
+   "cap": 50,
+   "model_calls": 17,
+   "output": true,
+   "steps": 17,
+   "write_steps": [
+    14,
+    15
+   ],
+   "n_writes": 2,
+   "submit_steps": [
+    16
+   ],
+   "submitted": true,
+   "first_write": 14,
+   "last_write": 15,
+   "headroom_max": 35,
+   "headroom_min": 34,
+   "steps_after_first_write": 2,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:05_02",
+   "cap": 50,
+   "model_calls": 7,
+   "output": true,
+   "steps": 10,
+   "write_steps": [
+    7,
+    8
+   ],
+   "n_writes": 2,
+   "submit_steps": [
+    9
+   ],
+   "submitted": true,
+   "first_write": 7,
+   "last_write": 8,
+   "headroom_max": 42,
+   "headroom_min": 41,
+   "steps_after_first_write": 2,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:05_08",
+   "cap": 50,
+   "model_calls": 15,
+   "output": true,
+   "steps": 15,
+   "write_steps": [
+    11,
+    12,
+    13
+   ],
+   "n_writes": 3,
+   "submit_steps": [
+    14
+   ],
+   "submitted": true,
+   "first_write": 11,
+   "last_write": 13,
+   "headroom_max": 38,
+   "headroom_min": 36,
+   "steps_after_first_write": 3,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:06_02",
+   "cap": 50,
+   "model_calls": 50,
+   "output": true,
+   "steps": 50,
+   "write_steps": [
+    47,
+    48
+   ],
+   "n_writes": 2,
+   "submit_steps": [
+    49
+   ],
+   "submitted": true,
+   "first_write": 47,
+   "last_write": 48,
+   "headroom_max": 2,
+   "headroom_min": 1,
+   "steps_after_first_write": 2,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:06_07",
+   "cap": 50,
+   "model_calls": 11,
+   "output": true,
+   "steps": 11,
+   "write_steps": [
+    7,
+    8,
+    9
+   ],
+   "n_writes": 3,
+   "submit_steps": [
+    10
+   ],
+   "submitted": true,
+   "first_write": 7,
+   "last_write": 9,
+   "headroom_max": 42,
+   "headroom_min": 40,
+   "steps_after_first_write": 3,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:07_03",
+   "cap": 50,
+   "model_calls": 16,
+   "output": true,
+   "steps": 16,
+   "write_steps": [
+    10,
+    12,
+    13,
+    14
+   ],
+   "n_writes": 4,
+   "submit_steps": [
+    15
+   ],
+   "submitted": true,
+   "first_write": 10,
+   "last_write": 14,
+   "headroom_max": 39,
+   "headroom_min": 35,
+   "steps_after_first_write": 5,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 36
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:07_08",
+   "cap": 50,
+   "model_calls": 7,
+   "output": true,
+   "steps": 7,
+   "write_steps": [
+    4,
+    5
+   ],
+   "n_writes": 2,
+   "submit_steps": [
+    6
+   ],
+   "submitted": true,
+   "first_write": 4,
+   "last_write": 5,
+   "headroom_max": 45,
+   "headroom_min": 44,
+   "steps_after_first_write": 2,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:08_04",
+   "cap": 50,
+   "model_calls": 11,
+   "output": true,
+   "steps": 11,
+   "write_steps": [
+    7,
+    8,
+    9
+   ],
+   "n_writes": 3,
+   "submit_steps": [
+    10
+   ],
+   "submitted": true,
+   "first_write": 7,
+   "last_write": 9,
+   "headroom_max": 42,
+   "headroom_min": 40,
+   "steps_after_first_write": 3,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:08_09",
+   "cap": 50,
+   "model_calls": 26,
+   "output": true,
+   "steps": 26,
+   "write_steps": [
+    23,
+    24
+   ],
+   "n_writes": 2,
+   "submit_steps": [
+    25
+   ],
+   "submitted": true,
+   "first_write": 23,
+   "last_write": 24,
+   "headroom_max": 26,
+   "headroom_min": 25,
+   "steps_after_first_write": 2,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:09_04",
+   "cap": 50,
+   "model_calls": 7,
+   "output": true,
+   "steps": 7,
+   "write_steps": [
+    3,
+    4,
+    5
+   ],
+   "n_writes": 3,
+   "submit_steps": [
+    6
+   ],
+   "submitted": true,
+   "first_write": 3,
+   "last_write": 5,
+   "headroom_max": 46,
+   "headroom_min": 44,
+   "steps_after_first_write": 3,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:09_09",
+   "cap": 50,
+   "model_calls": 21,
+   "output": true,
+   "steps": 21,
+   "write_steps": [
+    14,
+    15,
+    18,
+    19
+   ],
+   "n_writes": 4,
+   "submit_steps": [
+    20
+   ],
+   "submitted": true,
+   "first_write": 14,
+   "last_write": 19,
+   "headroom_max": 35,
+   "headroom_min": 30,
+   "steps_after_first_write": 6,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:10_05",
+   "cap": 50,
+   "model_calls": 28,
+   "output": true,
+   "steps": 28,
+   "write_steps": [
+    25,
+    26
+   ],
+   "n_writes": 2,
+   "submit_steps": [
+    27
+   ],
+   "submitted": true,
+   "first_write": 25,
+   "last_write": 26,
+   "headroom_max": 24,
+   "headroom_min": 23,
+   "steps_after_first_write": 2,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 3
+  },
+  {
+   "run": "glm-5.3-flash-control-census-sixty-1",
+   "task": "Debugging:10_10",
+   "cap": 50,
+   "model_calls": 20,
+   "output": true,
+   "steps": 20,
+   "write_steps": [
+    14,
+    15,
+    16,
+    17,
+    18
+   ],
+   "n_writes": 5,
+   "submit_steps": [
+    19
+   ],
+   "submitted": true,
+   "first_write": 14,
+   "last_write": 18,
+   "headroom_max": 35,
+   "headroom_min": 31,
+   "steps_after_first_write": 5,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-fifteen-1",
+   "task": "Debugging:02_09",
+   "cap": 50,
+   "model_calls": 17,
+   "output": true,
+   "steps": 17,
+   "write_steps": [
+    14,
+    15
+   ],
+   "n_writes": 2,
+   "submit_steps": [
+    16
+   ],
+   "submitted": true,
+   "first_write": 14,
+   "last_write": 15,
+   "headroom_max": 35,
+   "headroom_min": 34,
+   "steps_after_first_write": 2,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 30
+  },
+  {
+   "run": "glm-5.3-flash-control-fifteen-1",
+   "task": "Debugging:04_09",
+   "cap": 50,
+   "model_calls": 19,
+   "output": true,
+   "steps": 19,
+   "write_steps": [
+    16,
+    17
+   ],
+   "n_writes": 2,
+   "submit_steps": [
+    18
+   ],
+   "submitted": true,
+   "first_write": 16,
+   "last_write": 17,
+   "headroom_max": 33,
+   "headroom_min": 32,
+   "steps_after_first_write": 2,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 4
+  },
+  {
+   "run": "glm-5.3-flash-control-fifteen-1",
+   "task": "Debugging:06_09",
+   "cap": 50,
+   "model_calls": 12,
+   "output": true,
+   "steps": 12,
+   "write_steps": [
+    8,
+    9,
+    10
+   ],
+   "n_writes": 3,
+   "submit_steps": [
+    11
+   ],
+   "submitted": true,
+   "first_write": 8,
+   "last_write": 10,
+   "headroom_max": 41,
+   "headroom_min": 39,
+   "steps_after_first_write": 3,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-fifteen-1",
+   "task": "Debugging:08_10",
+   "cap": 50,
+   "model_calls": 23,
+   "output": true,
+   "steps": 23,
+   "write_steps": [
+    19,
+    20,
+    21
+   ],
+   "n_writes": 3,
+   "submit_steps": [
+    22
+   ],
+   "submitted": true,
+   "first_write": 19,
+   "last_write": 21,
+   "headroom_max": 30,
+   "headroom_min": 28,
+   "steps_after_first_write": 3,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-fifteen-1",
+   "task": "Debugging:10_10",
+   "cap": 50,
+   "model_calls": 29,
+   "output": true,
+   "steps": 29,
+   "write_steps": [
+    26,
+    27
+   ],
+   "n_writes": 2,
+   "submit_steps": [
+    28
+   ],
+   "submitted": true,
+   "first_write": 26,
+   "last_write": 27,
+   "headroom_max": 23,
+   "headroom_min": 22,
+   "steps_after_first_write": 2,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-fifteen-2",
+   "task": "Debugging:02_09",
+   "cap": 50,
+   "model_calls": 22,
+   "output": true,
+   "steps": 22,
+   "write_steps": [
+    17,
+    18,
+    19,
+    20
+   ],
+   "n_writes": 4,
+   "submit_steps": [
+    21
+   ],
+   "submitted": true,
+   "first_write": 17,
+   "last_write": 20,
+   "headroom_max": 32,
+   "headroom_min": 29,
+   "steps_after_first_write": 4,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 30
+  },
+  {
+   "run": "glm-5.3-flash-control-fifteen-2",
+   "task": "Debugging:04_09",
+   "cap": 50,
+   "model_calls": 22,
+   "output": true,
+   "steps": 22,
+   "write_steps": [
+    18,
+    20
+   ],
+   "n_writes": 2,
+   "submit_steps": [
+    21
+   ],
+   "submitted": true,
+   "first_write": 18,
+   "last_write": 20,
+   "headroom_max": 31,
+   "headroom_min": 29,
+   "steps_after_first_write": 3,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-fifteen-2",
+   "task": "Debugging:06_09",
+   "cap": 50,
+   "model_calls": 13,
+   "output": true,
+   "steps": 13,
+   "write_steps": [
+    9,
+    10,
+    11
+   ],
+   "n_writes": 3,
+   "submit_steps": [
+    12
+   ],
+   "submitted": true,
+   "first_write": 9,
+   "last_write": 11,
+   "headroom_max": 40,
+   "headroom_min": 38,
+   "steps_after_first_write": 3,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-fifteen-2",
+   "task": "Debugging:08_10",
+   "cap": 50,
+   "model_calls": 19,
+   "output": true,
+   "steps": 19,
+   "write_steps": [
+    14,
+    15,
+    16,
+    17
+   ],
+   "n_writes": 4,
+   "submit_steps": [
+    18
+   ],
+   "submitted": true,
+   "first_write": 14,
+   "last_write": 17,
+   "headroom_max": 35,
+   "headroom_min": 32,
+   "steps_after_first_write": 4,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-control-fifteen-2",
+   "task": "Debugging:10_10",
+   "cap": 50,
+   "model_calls": null,
+   "output": false,
+   "steps": 30,
+   "write_steps": [],
+   "n_writes": 0,
+   "submit_steps": [],
+   "submitted": false,
+   "first_write": null,
+   "last_write": null,
+   "final_live_nfe": null
+  },
+  {
+   "run": "glm-5.3-flash-catalog-control-eight-1",
+   "task": "Debugging:01_02",
+   "cap": 50,
+   "model_calls": 10,
+   "output": true,
+   "steps": 13,
+   "write_steps": [
+    10,
+    11
+   ],
+   "n_writes": 2,
+   "submit_steps": [
+    12
+   ],
+   "submitted": true,
+   "first_write": 10,
+   "last_write": 11,
+   "headroom_max": 39,
+   "headroom_min": 38,
+   "steps_after_first_write": 2,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-catalog-control-eight-1",
+   "task": "Debugging:01_05",
+   "cap": 50,
+   "model_calls": 9,
+   "output": true,
+   "steps": 9,
+   "write_steps": [
+    7
+   ],
+   "n_writes": 1,
+   "submit_steps": [
+    8
+   ],
+   "submitted": true,
+   "first_write": 7,
+   "last_write": 7,
+   "headroom_max": 42,
+   "headroom_min": 42,
+   "steps_after_first_write": 1,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-catalog-control-eight-1",
+   "task": "Debugging:02_05",
+   "cap": 50,
+   "model_calls": 12,
+   "output": true,
+   "steps": 12,
+   "write_steps": [
+    9,
+    10
+   ],
+   "n_writes": 2,
+   "submit_steps": [
+    11
+   ],
+   "submitted": true,
+   "first_write": 9,
+   "last_write": 10,
+   "headroom_max": 40,
+   "headroom_min": 39,
+   "steps_after_first_write": 2,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 30
+  },
+  {
+   "run": "glm-5.3-flash-catalog-control-eight-1",
+   "task": "Debugging:09_09",
+   "cap": 50,
+   "model_calls": 15,
+   "output": true,
+   "steps": 15,
+   "write_steps": [
+    5,
+    6,
+    7,
+    8,
+    13
+   ],
+   "n_writes": 5,
+   "submit_steps": [
+    14
+   ],
+   "submitted": true,
+   "first_write": 5,
+   "last_write": 13,
+   "headroom_max": 44,
+   "headroom_min": 36,
+   "steps_after_first_write": 9,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-catalog-control-eight-2",
+   "task": "Debugging:01_02",
+   "cap": 50,
+   "model_calls": 8,
+   "output": true,
+   "steps": 34,
+   "write_steps": [
+    22,
+    23,
+    24,
+    26,
+    27,
+    32
+   ],
+   "n_writes": 6,
+   "submit_steps": [
+    33
+   ],
+   "submitted": true,
+   "first_write": 22,
+   "last_write": 32,
+   "headroom_max": 27,
+   "headroom_min": 17,
+   "steps_after_first_write": 11,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-catalog-control-eight-2",
+   "task": "Debugging:01_05",
+   "cap": 50,
+   "model_calls": 7,
+   "output": true,
+   "steps": 7,
+   "write_steps": [
+    4,
+    5
+   ],
+   "n_writes": 2,
+   "submit_steps": [
+    6
+   ],
+   "submitted": true,
+   "first_write": 4,
+   "last_write": 5,
+   "headroom_max": 45,
+   "headroom_min": 44,
+   "steps_after_first_write": 2,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-5.3-flash-catalog-control-eight-2",
+   "task": "Debugging:02_05",
+   "cap": 50,
+   "model_calls": 10,
+   "output": true,
+   "steps": 10,
+   "write_steps": [
+    8
+   ],
+   "n_writes": 1,
+   "submit_steps": [
+    9
+   ],
+   "submitted": true,
+   "first_write": 8,
+   "last_write": 8,
+   "headroom_max": 41,
+   "headroom_min": 41,
+   "steps_after_first_write": 1,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 30
+  },
+  {
+   "run": "glm-5.3-flash-catalog-control-eight-2",
+   "task": "Debugging:09_09",
+   "cap": 50,
+   "model_calls": 22,
+   "output": true,
+   "steps": 22,
+   "write_steps": [
+    9,
+    10,
+    11,
+    13,
+    14,
+    15,
+    16,
+    17,
+    19,
+    20
+   ],
+   "n_writes": 10,
+   "submit_steps": [
+    21
+   ],
+   "submitted": true,
+   "first_write": 9,
+   "last_write": 20,
+   "headroom_max": 40,
+   "headroom_min": 29,
+   "steps_after_first_write": 12,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  },
+  {
+   "run": "glm-fill-c0-Debugging-10_02-r1",
+   "task": "Debugging:10_02",
+   "cap": 60,
+   "model_calls": 60,
+   "output": false,
+   "steps": 61,
+   "write_steps": [],
+   "n_writes": 0,
+   "submit_steps": [],
+   "submitted": false,
+   "first_write": null,
+   "last_write": null,
+   "final_live_nfe": null
+  },
+  {
+   "run": "glm-fill-c0-Debugging-10_04-r1",
+   "task": "Debugging:10_04",
+   "cap": 60,
+   "model_calls": 41,
+   "output": true,
+   "steps": 41,
+   "write_steps": [
+    28,
+    29,
+    34,
+    36,
+    37,
+    38,
+    39
+   ],
+   "n_writes": 7,
+   "submit_steps": [
+    40
+   ],
+   "submitted": true,
+   "first_write": 28,
+   "last_write": 39,
+   "headroom_max": 31,
+   "headroom_min": 20,
+   "steps_after_first_write": 12,
+   "steps_after_last_write": 1,
+   "final_live_nfe": 0
+  }
+ ],
+ "would_contact_tasks": 9,
+ "counts": {
+  ">=2_calls_remaining": {
+   "min_headroom_basis": 9,
+   "max_headroom_basis": 9,
+   "of": 9
+  },
+  ">=4_calls_remaining": {
+   "min_headroom_basis": 9,
+   "max_headroom_basis": 9,
+   "of": 9
+  },
+  ">=6_calls_remaining": {
+   "min_headroom_basis": 9,
+   "max_headroom_basis": 9,
+   "of": 9
+  },
+  ">=8_calls_remaining": {
+   "min_headroom_basis": 9,
+   "max_headroom_basis": 9,
+   "of": 9
+  }
+ },
+ "newscaffold_lx_helpers_era": {
+  "note": "lx_helpers-era ordinary arms (cap 40). First save via bash heredoc python; headroom ample where measured.",
+  "records": [
+   {
+    "study": "representative",
+    "task": "Debugging:06_05",
+    "arm": "H0",
+    "calls": 15,
+    "cap": 40,
+    "first_save_assistant_turn": 15,
+    "headroom_after_first_save": 25,
+    "first_submit_assistant_turn": null
+   },
+   {
+    "study": "live-transparent",
+    "task": "Debugging:02_06",
+    "arm": "H0",
+    "calls": 20,
+    "cap": 40,
+    "first_save_assistant_turn": 16,
+    "headroom_after_first_save": 24,
+    "first_submit_assistant_turn": 20
+   },
+   {
+    "study": "targeted",
+    "task": "Debugging:02_06",
+    "arm": "H0",
+    "calls": 27,
+    "cap": 40,
+    "first_save_assistant_turn": 24,
+    "headroom_after_first_save": 16,
+    "first_submit_assistant_turn": 27
+   },
+   {
+    "study": "batch-write",
+    "task": "Debugging:02_01",
+    "arm": "C0",
+    "calls": 21,
+    "cap": 40,
+    "first_save_assistant_turn": 18,
+    "headroom_after_first_save": 22,
+    "first_submit_assistant_turn": 21
+   },
+   {
+    "study": "inspection",
+    "task": "Debugging:02_06",
+    "arm": "C0",
+    "calls": 19,
+    "cap": 40,
+    "first_save_assistant_turn": 17,
+    "headroom_after_first_save": 23,
+    "first_submit_assistant_turn": 19
+   }
+  ]
+ }
+}

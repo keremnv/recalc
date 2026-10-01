@@ -1,0 +1,51 @@
+{
+  "by_arm": {
+    "A": {
+      "analysis_categories": {
+        "MODEL_NONCOMPLETION": 9,
+        "PROVIDER_CENSORED": 1,
+        "VALID_SUBMISSION": 2
+      },
+      "uncensored_noncompletion_boundaries": {
+        "CALL_CAP": 5,
+        "ESTIMATED_COST_CAP": 2,
+        "TASK_DEADLINE": 2
+      }
+    },
+    "B": {
+      "analysis_categories": {
+        "MODEL_NONCOMPLETION": 6,
+        "PROVIDER_CENSORED": 3,
+        "VALID_SUBMISSION": 3
+      },
+      "uncensored_noncompletion_boundaries": {
+        "CALL_CAP": 4,
+        "ESTIMATED_COST_CAP": 2
+      }
+    },
+    "C": {
+      "analysis_categories": {
+        "MODEL_NONCOMPLETION": 7,
+        "PROVIDER_CENSORED": 2,
+        "VALID_SUBMISSION": 3
+      },
+      "uncensored_noncompletion_boundaries": {
+        "CALL_CAP": 5,
+        "ESTIMATED_COST_CAP": 2
+      }
+    },
+    "D": {
+      "analysis_categories": {
+        "MODEL_NONCOMPLETION": 8,
+        "PROVIDER_CENSORED": 2,
+        "VALID_SUBMISSION": 2
+      },
+      "uncensored_noncompletion_boundaries": {
+        "CALL_CAP": 3,
+        "ESTIMATED_COST_CAP": 2,
+        "TASK_DEADLINE": 3
+      }
+    }
+  },
+  "rule": "Unfinished below-cap runs with logged provider errors are provider-censored in corrected analysis; original runner labels retained in raw records."
+}

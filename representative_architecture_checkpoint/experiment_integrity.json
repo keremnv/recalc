@@ -1,0 +1,9 @@
+{
+ "differences_unintended": [],
+ "pass": true,
+ "intended_differences": [
+  "lx_helpers.py backend (H0 reference vs H1 substrate; identical surface)",
+  "invisible runtime flags (CANDIDATE_A_ARM, capture wrap, substrate manifest)",
+  "per-call telemetry paths"
+ ]
+}

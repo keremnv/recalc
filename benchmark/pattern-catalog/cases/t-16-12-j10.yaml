@@ -1,0 +1,37 @@
+id: t-16-12-j10
+run: glm-5.3-flash-strict-fifteen-unbounded-1
+task: Template:16_12
+control_run: glm-5.3-flash-control-fifteen-1
+first_miss:
+  kind: modification
+  address: RentRoll!J10
+  error_message: "Modification error at RentRoll!J10: answer=-14040, output=-15120"
+facts:
+  opened_golden: false
+  spreadsheet: 16_12_input.xlsx
+  instruction: Complete the financial model based on the provided assumptions.
+  input_kind: blank
+  input_value: null
+  output_formula: "=(F10-E10)*C10*12"
+  autopsy:
+    named: false
+    read: true
+    written: true
+    bucket: written_wrong
+  wrote: {range: J10:J13, formula: "=(F10-E10)*C10*12"}
+  compare: {formulas_added: 48, formula_errors_added: 0}
+  related_297_miss: RentRoll!K10
+claims:
+  patterns: [A-ambiguous-base, F-oneshot-identity, K-preserve-compare]
+  nuance: decomposable
+  mechanism: identity-choice
+  lever: none
+  lever_why: >
+    Two plausible identities for the same occupied row; no fact about the input separates them,
+    and our own arm picks the right one 2/6 times. Nothing to tell, refuse, or substitute --
+    this is the intelligence threshold named for region_width_extensions.
+  notes: >
+    Occupied row. I filled E*C*12 first try (ISA header bind). J used (F-E)*C*12;
+    evaluator leak wants a different J identity (same sign, different magnitude).
+    Control first-miss is the same J10. Do not encode loss-to-lease semantics.
+    297 first-miss is sibling K10, not this packet.

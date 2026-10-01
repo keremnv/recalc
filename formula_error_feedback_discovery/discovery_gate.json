@@ -1,0 +1,24 @@
+{
+ "PROMISING_conditions": {
+  "1_contact_ge_6_7": false,
+  "2_mean_mod_ge_0.05": false,
+  "3_mean_reg_ge_-0.01": true,
+  "4_no_task_reg_le_-0.02": true,
+  "5_loto_positive": false,
+  "6_repair_fraction_ge_50pct": true
+ },
+ "PROMISING": false,
+ "NO_CAPABILITY_EFFECT": {
+  "adequate_contact": false,
+  "mean_mod_in_(-0.02,0.05)": true
+ },
+ "HARMFUL": false,
+ "INCONCLUSIVE": true,
+ "verdict": "INCONCLUSIVE",
+ "missing_conditions": [
+  "contact 2/7 < 6/7",
+  "paired outcomes 1/7 enriched tasks",
+  "11/23 runs provider-censored (90s-deadline timeouts)",
+  "lx_helpers scaffold saved in only 5/23 runs"
+ ]
+}

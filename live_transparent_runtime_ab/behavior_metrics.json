@@ -1,0 +1,230 @@
+{
+ "per_task": {
+  "Financial_Model:01_01": {
+   "H0": {
+    "tool_call_categories": {
+     "bash": 3,
+     "view_xlsx": 13,
+     "submit": 1
+    },
+    "python_count": 3,
+    "api_calls": 17,
+    "repair_loops": 0,
+    "run_status": "SUBMITTED"
+   },
+   "H1": {
+    "tool_call_categories": {
+     "bash": 8,
+     "view_xlsx": 5,
+     "submit": 1
+    },
+    "python_count": 6,
+    "api_calls": 14,
+    "repair_loops": 0,
+    "run_status": "SUBMITTED"
+   }
+  },
+  "Financial_Model:02_01": {
+   "H0": {
+    "tool_call_categories": {
+     "bash": 7,
+     "view_xlsx": 6,
+     "submit": 1
+    },
+    "python_count": 7,
+    "api_calls": 14,
+    "repair_loops": 0,
+    "run_status": "SUBMITTED"
+   },
+   "H1": {
+    "tool_call_categories": {
+     "bash": 2,
+     "view_xlsx": 6,
+     "submit": 1
+    },
+    "python_count": 2,
+    "api_calls": 9,
+    "repair_loops": 0,
+    "run_status": "SUBMITTED"
+   }
+  },
+  "Financial_Model:13_05": {
+   "H0": {
+    "tool_call_categories": {
+     "bash": 3,
+     "view_xlsx": 5,
+     "submit": 1
+    },
+    "python_count": 3,
+    "api_calls": 9,
+    "repair_loops": 0,
+    "run_status": "SUBMITTED"
+   },
+   "H1": {
+    "tool_call_categories": {
+     "bash": 8,
+     "view_xlsx": 6,
+     "submit": 1
+    },
+    "python_count": 8,
+    "api_calls": 15,
+    "repair_loops": 0,
+    "run_status": "SUBMITTED"
+   }
+  },
+  "Template:01_02": {
+   "H0": {
+    "tool_call_categories": {
+     "bash": 2,
+     "view_xlsx": 3,
+     "submit": 1
+    },
+    "python_count": 2,
+    "api_calls": 6,
+    "repair_loops": 0,
+    "run_status": "SUBMITTED"
+   },
+   "H1": {
+    "tool_call_categories": {
+     "bash": 0,
+     "view_xlsx": 2,
+     "submit": 0
+    },
+    "python_count": 0,
+    "api_calls": 5,
+    "repair_loops": 0,
+    "run_status": "NO_SUBMIT"
+   }
+  },
+  "Template:01_07": {
+   "H0": {
+    "tool_call_categories": {
+     "bash": 22,
+     "view_xlsx": 2,
+     "submit": 1
+    },
+    "python_count": 22,
+    "api_calls": 25,
+    "repair_loops": 0,
+    "run_status": "SUBMITTED"
+   },
+   "H1": {
+    "tool_call_categories": {
+     "bash": 0,
+     "view_xlsx": 2,
+     "submit": 0
+    },
+    "python_count": 0,
+    "api_calls": 5,
+    "repair_loops": 0,
+    "run_status": "NO_SUBMIT"
+   }
+  },
+  "Template:06_12": {
+   "H0": {
+    "tool_call_categories": {
+     "bash": 7,
+     "view_xlsx": 2,
+     "submit": 1
+    },
+    "python_count": 7,
+    "api_calls": 10,
+    "repair_loops": 0,
+    "run_status": "SUBMITTED"
+   },
+   "H1": {
+    "tool_call_categories": {
+     "bash": 7,
+     "view_xlsx": 2,
+     "submit": 1
+    },
+    "python_count": 7,
+    "api_calls": 10,
+    "repair_loops": 0,
+    "run_status": "SUBMITTED"
+   }
+  },
+  "Debugging:02_06": {
+   "H0": {
+    "tool_call_categories": {
+     "bash": 18,
+     "view_xlsx": 1,
+     "submit": 1
+    },
+    "python_count": 18,
+    "api_calls": 20,
+    "repair_loops": 0,
+    "run_status": "SUBMITTED"
+   },
+   "H1": {
+    "tool_call_categories": {
+     "bash": 0,
+     "view_xlsx": 21,
+     "submit": 0
+    },
+    "python_count": 0,
+    "api_calls": 24,
+    "repair_loops": 0,
+    "run_status": "NO_SUBMIT"
+   }
+  },
+  "Debugging:04_01": {
+   "H0": {
+    "tool_call_categories": {
+     "bash": 0,
+     "view_xlsx": 17,
+     "submit": 0
+    },
+    "python_count": 0,
+    "api_calls": 20,
+    "repair_loops": 0,
+    "run_status": "NO_SUBMIT"
+   },
+   "H1": {
+    "tool_call_categories": {
+     "bash": 0,
+     "view_xlsx": 17,
+     "submit": 0
+    },
+    "python_count": 0,
+    "api_calls": 21,
+    "repair_loops": 0,
+    "run_status": "NO_SUBMIT"
+   }
+  },
+  "Debugging:05_02": {
+   "H0": {
+    "tool_call_categories": {
+     "bash": 7,
+     "view_xlsx": 5,
+     "submit": 0
+    },
+    "python_count": 6,
+    "api_calls": 12,
+    "repair_loops": 0,
+    "run_status": "NO_SUBMIT"
+   },
+   "H1": {
+    "tool_call_categories": {
+     "bash": 10,
+     "view_xlsx": 3,
+     "submit": 0
+    },
+    "python_count": 5,
+    "api_calls": 18,
+    "repair_loops": 0,
+    "run_status": "NO_SUBMIT"
+   }
+  }
+ },
+ "tasks_with_category_divergence": [
+  "Financial_Model:01_01",
+  "Financial_Model:02_01",
+  "Financial_Model:13_05",
+  "Template:01_02",
+  "Template:01_07",
+  "Debugging:02_06",
+  "Debugging:05_02"
+ ],
+ "note": "n=1 per cell; divergence is expected under stochastic sampling; question is systematic perturbation, of which none is observed beyond completion stalls documented in failure_inventory.json"
+}

@@ -2,7 +2,9 @@ from __future__ import annotations
 
 import os
 import re
+import tempfile
 import warnings
+import xml.etree.ElementTree as ET
 from contextlib import suppress
 from copy import copy
 from pathlib import Path
@@ -14,6 +16,7 @@ from librecalc_mcp.backend.uno_charts import (
     inspect_charts_from_document,
     upsert_chart_on_sheet,
 )
+from librecalc_mcp.backend.xlsx_metadata import repair_docprops
 from librecalc_mcp.domain.charts import ChartSpec
 from librecalc_mcp.domain.formulas import (
     is_escaped_text,
@@ -224,62 +227,78 @@ def _persist_xlsx_formats(
         for sheet_name, cell_range, _cell_format in patches
         for address in _a1_addresses(cell_range)
     }
-    with warnings.catch_warnings():
-        warnings.simplefilter("ignore")
-        workbook = openpyxl.load_workbook(path, keep_vba=suffix == ".xlsm")
-        source = openpyxl.load_workbook(restore_from, read_only=False) if restore_from else None
-    try:
-        for sheet_name, cell_range, cell_format in patches:
-            worksheet = workbook[sheet_name]
-            for address in _a1_addresses(cell_range):
-                cell = worksheet[address]
-                if "font_color" in cell_format or "font_weight" in cell_format:
-                    font = copy(cell.font)
-                    if "font_color" in cell_format:
-                        font.color = Color(rgb=_argb(cell_format["font_color"], field="font_color"))
-                    if "font_weight" in cell_format:
-                        weight = cell_format["font_weight"]
-                        if isinstance(weight, bool) or not isinstance(weight, (int, float)):
-                            raise ValueError("format.font_weight must be numeric")
-                        font.bold = float(weight) >= 150
-                    cell.font = font
-                if cell_format.get("background_transparent") is True:
-                    cell.fill = PatternFill(fill_type=None)
-                elif "background_color" in cell_format:
-                    fill_color = _argb(cell_format["background_color"], field="background_color")
-                    cell.fill = PatternFill(
-                        fill_type="solid",
-                        fgColor=fill_color,
-                        bgColor=fill_color,
-                    )
-        if source is not None:
-            for source_sheet in source.worksheets:
-                if source_sheet.title not in workbook.sheetnames:
-                    continue
-                destination_sheet = workbook[source_sheet.title]
-                for row in source_sheet.iter_rows():
-                    for source_cell in row:
-                        if (
-                            source_cell.value is None
-                            and _theme_spec(source_cell.font.color) is None
-                        ):
-                            continue
-                        address = source_cell.coordinate
-                        if (source_sheet.title, address) in patched:
-                            continue
-                        spec = _theme_spec(source_cell.font.color)
-                        if spec is None:
-                            continue
-                        theme, tint = spec
-                        dest_cell = destination_sheet[address]
-                        font = copy(dest_cell.font)
-                        font.color = Color(theme=theme, tint=tint)
-                        dest_cell.font = font
-        workbook.save(path)
-    finally:
-        workbook.close()
-        if source is not None:
-            source.close()
+    with tempfile.TemporaryDirectory(prefix="librecalc-docprops-") as temporary_directory:
+        scratch = Path(temporary_directory)
+
+        def load_tolerant(workbook_path: str, **kwargs: Any) -> Any:
+            try:
+                return openpyxl.load_workbook(workbook_path, **kwargs)
+            except ET.ParseError:
+                repaired = repair_docprops(Path(workbook_path), scratch)
+                if repaired is None:
+                    raise
+                return openpyxl.load_workbook(repaired, **kwargs)
+
+        with warnings.catch_warnings():
+            warnings.simplefilter("ignore")
+            workbook = load_tolerant(path, keep_vba=suffix == ".xlsm")
+            source = load_tolerant(restore_from, read_only=False) if restore_from else None
+        try:
+            for sheet_name, cell_range, cell_format in patches:
+                worksheet = workbook[sheet_name]
+                for address in _a1_addresses(cell_range):
+                    cell = worksheet[address]
+                    if "font_color" in cell_format or "font_weight" in cell_format:
+                        font = copy(cell.font)
+                        if "font_color" in cell_format:
+                            font.color = Color(
+                                rgb=_argb(cell_format["font_color"], field="font_color")
+                            )
+                        if "font_weight" in cell_format:
+                            weight = cell_format["font_weight"]
+                            if isinstance(weight, bool) or not isinstance(weight, (int, float)):
+                                raise ValueError("format.font_weight must be numeric")
+                            font.bold = float(weight) >= 150
+                        cell.font = font
+                    if cell_format.get("background_transparent") is True:
+                        cell.fill = PatternFill(fill_type=None)
+                    elif "background_color" in cell_format:
+                        fill_color = _argb(
+                            cell_format["background_color"], field="background_color"
+                        )
+                        cell.fill = PatternFill(
+                            fill_type="solid",
+                            fgColor=fill_color,
+                            bgColor=fill_color,
+                        )
+            if source is not None:
+                for source_sheet in source.worksheets:
+                    if source_sheet.title not in workbook.sheetnames:
+                        continue
+                    destination_sheet = workbook[source_sheet.title]
+                    for row in source_sheet.iter_rows():
+                        for source_cell in row:
+                            if (
+                                source_cell.value is None
+                                and _theme_spec(source_cell.font.color) is None
+                            ):
+                                continue
+                            address = source_cell.coordinate
+                            if (source_sheet.title, address) in patched:
+                                continue
+                            spec = _theme_spec(source_cell.font.color)
+                            if spec is None:
+                                continue
+                            theme, tint = spec
+                            dest_cell = destination_sheet[address]
+                            font = copy(dest_cell.font)
+                            font.color = Color(theme=theme, tint=tint)
+                            dest_cell.font = font
+            workbook.save(path)
+        finally:
+            workbook.close()
+            if source is not None:
+                source.close()
 
 
 def _apply_values(sheet: Any, cell_range: str, values: Matrix) -> int:

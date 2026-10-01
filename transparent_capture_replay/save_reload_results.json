@@ -1,0 +1,201 @@
+{
+ "F0_F1_F2n_combos": {
+  "(True, True, 0)": 70,
+  "(False, True, 0)": 32
+ },
+ "F0_false_but_F1F2_exact": [
+  {
+   "task_id": "Financial_Model:08_01",
+   "turn": 42,
+   "rel": "out/08_01_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Debugging:07_03",
+   "turn": 13,
+   "rel": "out/07_03_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Debugging:01_01",
+   "turn": 13,
+   "rel": "out/01_01_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Debugging:02_01",
+   "turn": 13,
+   "rel": "out/02_01_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Debugging:10_10",
+   "turn": 15,
+   "rel": "out/10_10_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Debugging:10_10",
+   "turn": 18,
+   "rel": "out/10_10_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Financial_Model:04_01",
+   "turn": 16,
+   "rel": "out/04_01_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Financial_Model:04_01",
+   "turn": 19,
+   "rel": "out/04_01_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Financial_Model:05_01",
+   "turn": 17,
+   "rel": "out/05_01_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Financial_Model:10_01",
+   "turn": 13,
+   "rel": "out/10_01_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Financial_Model:11_01",
+   "turn": 9,
+   "rel": "out/11_01_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Financial_Model:11_05",
+   "turn": 16,
+   "rel": "out/11_05_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Financial_Model:11_05",
+   "turn": 19,
+   "rel": "out/11_05_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Financial_Model:14_05",
+   "turn": 13,
+   "rel": "out/14_05_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Financial_Model:18_05",
+   "turn": 13,
+   "rel": "out/18_05_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Financial_Model:18_05",
+   "turn": 14,
+   "rel": "out/18_05_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Template:02_05",
+   "turn": 10,
+   "rel": "out/02_05_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Template:03_03",
+   "turn": 5,
+   "rel": "out/03_03_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Template:03_03",
+   "turn": 7,
+   "rel": "out/03_03_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Template:05_02",
+   "turn": 5,
+   "rel": "out/05_02_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Template:06_21",
+   "turn": 3,
+   "rel": "out/06_21_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Template:06_21",
+   "turn": 5,
+   "rel": "out/06_21_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Template:07_01",
+   "turn": 4,
+   "rel": "out/07_01_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Template:07_01",
+   "turn": 5,
+   "rel": "out/07_01_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Template:07_01",
+   "turn": 7,
+   "rel": "out/07_01_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Template:07_01",
+   "turn": 9,
+   "rel": "out/07_01_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Template:10_01",
+   "turn": 4,
+   "rel": "out/10_01_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Template:10_01",
+   "turn": 5,
+   "rel": "out/10_01_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Template:10_01",
+   "turn": 6,
+   "rel": "out/10_01_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Template:11_03",
+   "turn": 5,
+   "rel": "out/11_03_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Template:13_08",
+   "turn": 4,
+   "rel": "out/13_08_output.xlsx",
+   "file_status": "REPLAYED"
+  },
+  {
+   "task_id": "Template:13_08",
+   "turn": 7,
+   "rel": "out/13_08_output.xlsx",
+   "file_status": "REPLAYED"
+  }
+ ],
+ "note": "F0 is byte identity (record only); F1/F2-exact with F0-false is save normalization (zip metadata), not capture loss"
+}

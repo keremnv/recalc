@@ -1,0 +1,314 @@
+{
+  "by_arm": {
+    "A": {
+      "MODEL_NONCOMPLETION": 9,
+      "PROVIDER_CENSORED": 1,
+      "VALID_SUBMISSION": 2
+    },
+    "B": {
+      "MODEL_NONCOMPLETION": 6,
+      "PROVIDER_CENSORED": 3,
+      "VALID_SUBMISSION": 3
+    },
+    "C": {
+      "MODEL_NONCOMPLETION": 7,
+      "PROVIDER_CENSORED": 2,
+      "VALID_SUBMISSION": 3
+    },
+    "D": {
+      "MODEL_NONCOMPLETION": 8,
+      "PROVIDER_CENSORED": 2,
+      "VALID_SUBMISSION": 2
+    }
+  },
+  "rows": [
+    {
+      "arm": "B",
+      "category": "VALID_SUBMISSION",
+      "status": "SUBMITTED",
+      "task": "Financial_Model:03_03"
+    },
+    {
+      "arm": "C",
+      "category": "VALID_SUBMISSION",
+      "status": "SUBMITTED",
+      "task": "Financial_Model:03_03"
+    },
+    {
+      "arm": "A",
+      "category": "VALID_SUBMISSION",
+      "status": "SUBMITTED",
+      "task": "Financial_Model:03_03"
+    },
+    {
+      "arm": "D",
+      "category": "VALID_SUBMISSION",
+      "status": "SUBMITTED",
+      "task": "Financial_Model:03_03"
+    },
+    {
+      "arm": "C",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Debugging:10_10"
+    },
+    {
+      "arm": "A",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Debugging:10_10"
+    },
+    {
+      "arm": "B",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Debugging:10_10"
+    },
+    {
+      "arm": "D",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Debugging:10_10"
+    },
+    {
+      "arm": "D",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Debugging:01_08"
+    },
+    {
+      "arm": "C",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Debugging:01_08"
+    },
+    {
+      "arm": "A",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Debugging:01_08"
+    },
+    {
+      "arm": "B",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Debugging:01_08"
+    },
+    {
+      "arm": "A",
+      "category": "PROVIDER_CENSORED",
+      "status": "PROVIDER_CENSORED",
+      "task": "Template:01_07"
+    },
+    {
+      "arm": "C",
+      "category": "PROVIDER_CENSORED",
+      "status": "PROVIDER_CENSORED",
+      "task": "Template:01_07"
+    },
+    {
+      "arm": "D",
+      "category": "PROVIDER_CENSORED",
+      "status": "PROVIDER_CENSORED",
+      "task": "Template:01_07"
+    },
+    {
+      "arm": "B",
+      "category": "PROVIDER_CENSORED",
+      "status": "PROVIDER_CENSORED",
+      "task": "Template:01_07"
+    },
+    {
+      "arm": "A",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Debugging:02_01"
+    },
+    {
+      "arm": "D",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Debugging:02_01"
+    },
+    {
+      "arm": "C",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Debugging:02_01"
+    },
+    {
+      "arm": "B",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Debugging:02_01"
+    },
+    {
+      "arm": "C",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Financial_Model:02_01"
+    },
+    {
+      "arm": "A",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Financial_Model:02_01"
+    },
+    {
+      "arm": "D",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Financial_Model:02_01"
+    },
+    {
+      "arm": "B",
+      "category": "PROVIDER_CENSORED",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Financial_Model:02_01"
+    },
+    {
+      "arm": "B",
+      "category": "PROVIDER_CENSORED",
+      "status": "PROVIDER_CENSORED",
+      "task": "Template:06_12"
+    },
+    {
+      "arm": "D",
+      "category": "PROVIDER_CENSORED",
+      "status": "PROVIDER_CENSORED",
+      "task": "Template:06_12"
+    },
+    {
+      "arm": "A",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Template:06_12"
+    },
+    {
+      "arm": "C",
+      "category": "PROVIDER_CENSORED",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Template:06_12"
+    },
+    {
+      "arm": "D",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Debugging:02_06"
+    },
+    {
+      "arm": "B",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Debugging:02_06"
+    },
+    {
+      "arm": "C",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Debugging:02_06"
+    },
+    {
+      "arm": "A",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Debugging:02_06"
+    },
+    {
+      "arm": "A",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Financial_Model:01_01"
+    },
+    {
+      "arm": "D",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Financial_Model:01_01"
+    },
+    {
+      "arm": "C",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Financial_Model:01_01"
+    },
+    {
+      "arm": "B",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Financial_Model:01_01"
+    },
+    {
+      "arm": "B",
+      "category": "VALID_SUBMISSION",
+      "status": "SUBMITTED",
+      "task": "Template:15_01"
+    },
+    {
+      "arm": "C",
+      "category": "VALID_SUBMISSION",
+      "status": "SUBMITTED",
+      "task": "Template:15_01"
+    },
+    {
+      "arm": "D",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Template:15_01"
+    },
+    {
+      "arm": "A",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Template:15_01"
+    },
+    {
+      "arm": "D",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Financial_Model:04_03"
+    },
+    {
+      "arm": "C",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Financial_Model:04_03"
+    },
+    {
+      "arm": "A",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Financial_Model:04_03"
+    },
+    {
+      "arm": "B",
+      "category": "MODEL_NONCOMPLETION",
+      "status": "MODEL_NONCOMPLETION",
+      "task": "Financial_Model:04_03"
+    },
+    {
+      "arm": "A",
+      "category": "VALID_SUBMISSION",
+      "status": "SUBMITTED",
+      "task": "Template:15_03"
+    },
+    {
+      "arm": "C",
+      "category": "VALID_SUBMISSION",
+      "status": "SUBMITTED",
+      "task": "Template:15_03"
+    },
+    {
+      "arm": "D",
+      "category": "VALID_SUBMISSION",
+      "status": "SUBMITTED",
+      "task": "Template:15_03"
+    },
+    {
+      "arm": "B",
+      "category": "VALID_SUBMISSION",
+      "status": "SUBMITTED",
+      "task": "Template:15_03"
+    }
+  ]
+}

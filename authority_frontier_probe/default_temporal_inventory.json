@@ -1,0 +1,122 @@
+[
+  {
+    "task": "Financial_Model-01_01",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "6c1bb12804aa48375b58c0ca6095a8d2c14fb2239fac83ddaef54a0ad2ea9e8a"
+  },
+  {
+    "task": "Financial_Model-02_01",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "1cacc8b5d960b3e8c5576297f8ac556e63008f2114bcd3fe82779cfe8963c6ee"
+  },
+  {
+    "task": "Financial_Model-03_01",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "024fbd21a55e7ae00cc486df10ba86f3fee913122f60b0b25f8e79386545929b"
+  },
+  {
+    "task": "Financial_Model-04_01",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "2037ea4230bf21de9f5659d71f36ebf286d4c67403436c789b7a30310b26a007"
+  },
+  {
+    "task": "Financial_Model-05_01",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "660fdb048c9eac5c270965558229b8d4eb62572ec44e89a45ad11b167464ce24"
+  },
+  {
+    "task": "Financial_Model-06_01",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "bcbebf348f665dfc06a3583658cdf0c28304ab172c966b72da36614845201993"
+  },
+  {
+    "task": "Financial_Model-07_01",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "dd11f111b913c64598e96af0df2fb86fcd332fb9423fe3230035ab4f9083d7b2"
+  },
+  {
+    "task": "Financial_Model-08_01",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "318df768bda9fa6c0757d4f839b6ce3dc09134a3e0b7339f3d6dd4e5baa133a3"
+  },
+  {
+    "task": "Financial_Model-10_01",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "12d85a9b621a51353f65bbc35faca2049f6aa198ed9fb3625fc14523f7e30769"
+  },
+  {
+    "task": "Financial_Model-11_01",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "5b1937de60dbd2b4655af2cb0940393b66881f3ac83d8f32d941340318617cbb"
+  },
+  {
+    "task": "Financial_Model-11_05",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "89c365112ec91f681b87191257c48b2cbb35bbd14c9a6792dea4e9e896cac174"
+  },
+  {
+    "task": "Financial_Model-12_05",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "7c78de29725c0685ae5d22d1d21f2ba0aa9f182ab45029246f81e385d531a87f"
+  },
+  {
+    "task": "Financial_Model-13_05",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "ac407626caac8bd4f52856d377266eeeccfe290df04827bd4d7f7904b8c77f9d"
+  },
+  {
+    "task": "Financial_Model-14_05",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "ae965c86615465ca490abd62b2047e7fad6758bfd3ed730ebf946747f7d77f7c"
+  },
+  {
+    "task": "Financial_Model-15_05",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "d074a17c2e2b1d75e38fb69278785d675d02a9fa2ef0683d05a58d5fbd0c32d1"
+  },
+  {
+    "task": "Financial_Model-16_05",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "7058404a9018aa9c61b9e5b81dd3e25aef3ccff48b7d1d216c6ef0fb62725e57"
+  },
+  {
+    "task": "Financial_Model-17_05",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "e454044b9af7b7cd33613d7a9f6050c6edc42611df7d5680331612cf19617167"
+  },
+  {
+    "task": "Financial_Model-18_05",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "a52c402a384e7a98dfe688f640166b08c5ed30a948a236ea6a5f2be06498533d"
+  },
+  {
+    "task": "Financial_Model-19_05",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "7d157b70a6a3f0ebe0e4c9f65557d6ffc02bcd0168011387034af5c2e92c6684"
+  },
+  {
+    "task": "Financial_Model-20_05",
+    "temporal_coordinates": 0,
+    "database_coordinates": 0,
+    "database_sha256": "d1b044c332cc344085ab382882b50c173749e3daac257e42a38abe196b602ad9"
+  }
+]

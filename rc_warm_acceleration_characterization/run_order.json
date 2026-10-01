@@ -1,0 +1,9 @@
+{
+  "feasibility_probe": [
+    "PUBLIC_RC_FIRST",
+    "PUBLIC_RC_SECOND",
+    "REFERENCE_SEMANTIC_CHECK"
+  ],
+  "reason": "Frozen feasibility stop rule triggered before scored timings.",
+  "scored_run_order": []
+}

@@ -1,0 +1,4895 @@
+{
+ "n": 113,
+ "classes": {
+  "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY": 26,
+  "SOURCE_AND_EFFECT_AGREE": 69,
+  "INSUFFICIENT_EFFECT_EVIDENCE": 13,
+  "EFFECT_REGULARITY_NOT_VISIBLE_IN_SOURCE": 5
+ },
+ "rows": [
+  {
+   "exec_id": 17,
+   "task_id": "Financial_Model:08_03",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE",
+   "src_idioms": [
+    "contiguous_same_value_fill?",
+    "coordinate_conversion",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 16056,
+    "n_formula": 15815,
+    "n_value": 87,
+    "n_style": 154,
+    "n_templates": 34,
+    "top_template_n": 8266,
+    "templates": [
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      8266
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0##>",
+      4445
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0####>",
+      1803
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0#>",
+      457
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0#a#>",
+      129
+     ]
+    ],
+    "n_runs": 15816,
+    "max_run": 120,
+    "n_value_groups": 51,
+    "top_value_n": 12,
+    "n_style_groups": 1,
+    "top_style_n": 154,
+    "sheets": [
+     "Assumptions - Line 01",
+     "Assumptions - Line 02",
+     "Assumptions - Line 03",
+     "Balance Sheet",
+     "Capex and Debt Assumptions ",
+     "DCF Valuation",
+     "Income Statement",
+     "Ratio Analysis",
+     "Working Capital"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 43,
+   "task_id": "Financial_Model:08_04",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE",
+   "src_idioms": [
+    "contiguous_formula_translation",
+    "coordinate_conversion",
+    "load_mutate_save_boilerplate",
+    "row_or_column_formula_fill"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 16008,
+    "n_formula": 15767,
+    "n_value": 87,
+    "n_style": 154,
+    "n_templates": 50,
+    "top_template_n": 9065,
+    "templates": [
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      9065
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0##>",
+      2868
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0####>",
+      2373
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0#c#>",
+      181
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0#c##>",
+      111
+     ]
+    ],
+    "n_runs": 15713,
+    "max_run": 120,
+    "n_value_groups": 51,
+    "top_value_n": 12,
+    "n_style_groups": 1,
+    "top_style_n": 154,
+    "sheets": [
+     "Assumptions - Line 01",
+     "Assumptions - Line 02",
+     "Assumptions - Line 03",
+     "Balance Sheet",
+     "Capex and Debt Assumptions ",
+     "DCF Valuation",
+     "Income Statement",
+     "Working Capital"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 75,
+   "task_id": "Financial_Model:08_05",
+   "family": "Financial_Model",
+   "shape": "LOOP_COMPUTED_TARGETS+COND",
+   "src_idioms": [
+    "coordinate_conversion"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 15985,
+    "n_formula": 15985,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 47,
+    "top_template_n": 9301,
+    "templates": [
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      9301
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0##>",
+      3184
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0####>",
+      2472
+     ],
+     [
+      "=#+#",
+      150
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0#e#>",
+      79
+     ]
+    ],
+    "n_runs": 15839,
+    "max_run": 78,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Assumptions - Line 01",
+     "Assumptions - Line 02",
+     "Assumptions - Line 03",
+     "Balance Sheet",
+     "Cashflow",
+     "DCF Valuation",
+     "Ratio Analysis",
+     "Working Capital"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 109,
+   "task_id": "Financial_Model:15_04",
+   "family": "Financial_Model",
+   "shape": "LOOP_COMPUTED_TARGETS+COND",
+   "src_idioms": [],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 0,
+    "n_formula": 0,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 0,
+    "top_template_n": 0,
+    "templates": [],
+    "n_runs": 0,
+    "max_run": 0,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": []
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 110,
+   "task_id": "Financial_Model:15_04",
+   "family": "Financial_Model",
+   "shape": "LOOP_COMPUTED_TARGETS+COND",
+   "src_idioms": [],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": null,
+   "reconciliation": "INSUFFICIENT_EFFECT_EVIDENCE"
+  },
+  {
+   "exec_id": 161,
+   "task_id": "Financial_Model:08_02",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE+COND",
+   "src_idioms": [
+    "coordinate_conversion",
+    "explicit_address_value_batch"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": null,
+   "reconciliation": "INSUFFICIENT_EFFECT_EVIDENCE"
+  },
+  {
+   "exec_id": 188,
+   "task_id": "Financial_Model:08_01",
+   "family": "Financial_Model",
+   "shape": "STRAIGHT_LINE_MULTI_CELL",
+   "src_idioms": [
+    "explicit_address_value_batch"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 8,
+    "n_formula": 2,
+    "n_value": 6,
+    "n_style": 8,
+    "n_templates": 2,
+    "top_template_n": 1,
+    "templates": [
+     [
+      "=#*#+100",
+      1
+     ],
+     [
+      "=#",
+      1
+     ]
+    ],
+    "n_runs": 4,
+    "max_run": 3,
+    "n_value_groups": 4,
+    "top_value_n": 2,
+    "n_style_groups": 1,
+    "top_style_n": 8,
+    "sheets": [
+     "Sheet"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 195,
+   "task_id": "Financial_Model:08_01",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE+COND",
+   "src_idioms": [
+    "contiguous_formula_translation",
+    "coordinate_conversion",
+    "load_mutate_save_boilerplate",
+    "row_or_column_formula_fill"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 16526,
+    "n_formula": 16334,
+    "n_value": 38,
+    "n_style": 226,
+    "n_templates": 40,
+    "top_template_n": 9314,
+    "templates": [
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      9314
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0####>",
+      3249
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0##>",
+      2377
+     ],
+     [
+      "='Working Capital'!#",
+      144
+     ],
+     [
+      "=#-#",
+      143
+     ]
+    ],
+    "n_runs": 16168,
+    "max_run": 120,
+    "n_value_groups": 11,
+    "top_value_n": 12,
+    "n_style_groups": 3,
+    "top_style_n": 154,
+    "sheets": [
+     "Assumptions - Line 01",
+     "Assumptions - Line 02",
+     "Assumptions - Line 03",
+     "Balance Sheet",
+     "Capex and Debt Assumptions ",
+     "DCF Valuation",
+     "Income Statement",
+     "Working Capital"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 199,
+   "task_id": "Financial_Model:08_01",
+   "family": "Financial_Model",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "explicit_address_formula_batch"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 17,
+    "n_formula": 7,
+    "n_value": 10,
+    "n_style": 17,
+    "n_templates": 5,
+    "top_template_n": 3,
+    "templates": [
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      3
+     ],
+     [
+      "=IRR(#:#)",
+      1
+     ],
+     [
+      "=IRR(#:#/(1.1)^#:#)",
+      1
+     ],
+     [
+      "=SUMPRODUCT((COLUMN(#:#)=COLUMN(#))*1)",
+      1
+     ],
+     [
+      "=SUMPRODUCT((#:#+(20*(COLUMN(#:#)=COLUMN(#))))/(1.1)^#:#)",
+      1
+     ]
+    ],
+    "n_runs": 7,
+    "max_run": 4,
+    "n_value_groups": 10,
+    "top_value_n": 1,
+    "n_style_groups": 1,
+    "top_style_n": 17,
+    "sheets": [
+     "Sheet"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 201,
+   "task_id": "Financial_Model:08_01",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE",
+   "src_idioms": [
+    "coordinate_conversion",
+    "explicit_address_formula_batch",
+    "row_or_column_formula_fill"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 20,
+    "n_formula": 10,
+    "n_value": 10,
+    "n_style": 20,
+    "n_templates": 4,
+    "top_template_n": 5,
+    "templates": [
+     [
+      "=#/(1.1)^#",
+      5
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      3
+     ],
+     [
+      "=IRR(#:#)",
+      1
+     ],
+     [
+      "=SUMPRODUCT(#:#/(1.1)^#:#)",
+      1
+     ]
+    ],
+    "n_runs": 7,
+    "max_run": 3,
+    "n_value_groups": 10,
+    "top_value_n": 1,
+    "n_style_groups": 1,
+    "top_style_n": 20,
+    "sheets": [
+     "Sheet"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 204,
+   "task_id": "Financial_Model:08_01",
+   "family": "Financial_Model",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": null,
+   "reconciliation": "INSUFFICIENT_EFFECT_EVIDENCE"
+  },
+  {
+   "exec_id": 212,
+   "task_id": "Financial_Model:08_01",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE+COND",
+   "src_idioms": [
+    "contiguous_formula_translation",
+    "contiguous_same_value_fill?",
+    "coordinate_conversion",
+    "load_mutate_save_boilerplate",
+    "row_or_column_formula_fill"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 15733,
+    "n_formula": 15600,
+    "n_value": 68,
+    "n_style": 72,
+    "n_templates": 39,
+    "top_template_n": 8678,
+    "templates": [
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      8678
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0##>",
+      3354
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0####>",
+      2545
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0#>",
+      138
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0#d#>",
+      101
+     ]
+    ],
+    "n_runs": 15627,
+    "max_run": 65,
+    "n_value_groups": 1,
+    "top_value_n": 68,
+    "n_style_groups": 2,
+    "top_style_n": 65,
+    "sheets": [
+     "Assumptions - Line 01",
+     "Assumptions - Line 02",
+     "Assumptions - Line 03",
+     "DCF Valuation",
+     "Income Statement",
+     "Working Capital"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 223,
+   "task_id": "Template:06_09",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL+STYLE",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 65,
+    "n_formula": 65,
+    "n_value": 0,
+    "n_style": 65,
+    "n_templates": 7,
+    "top_template_n": 30,
+    "templates": [
+     [
+      "=#/#",
+      30
+     ],
+     [
+      "=#-#",
+      10
+     ],
+     [
+      "=#*#",
+      8
+     ],
+     [
+      "=#*(1+#)",
+      5
+     ],
+     [
+      "=#+#",
+      5
+     ]
+    ],
+    "n_runs": 35,
+    "max_run": 2,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 2,
+    "top_style_n": 35,
+    "sheets": [
+     "OpEx_Forecast"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 231,
+   "task_id": "Template:06_16",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL+STYLE",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 48,
+    "n_formula": 48,
+    "n_value": 0,
+    "n_style": 48,
+    "n_templates": 7,
+    "top_template_n": 21,
+    "templates": [
+     [
+      "=#/#",
+      21
+     ],
+     [
+      "=#*#",
+      12
+     ],
+     [
+      "=#*(1+#)",
+      3
+     ],
+     [
+      "=(#/#)-1",
+      3
+     ],
+     [
+      "=#+#",
+      3
+     ]
+    ],
+    "n_runs": 15,
+    "max_run": 6,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 2,
+    "top_style_n": 24,
+    "sheets": [
+     "QuarterlyPL_Forecast"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 263,
+   "task_id": "Debugging:10_04",
+   "family": "Debugging",
+   "shape": "LOOP_COMPUTED_TARGETS+COND",
+   "src_idioms": [],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 81330,
+    "n_formula": 18902,
+    "n_value": 0,
+    "n_style": 81328,
+    "n_templates": 30,
+    "top_template_n": 8883,
+    "templates": [
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0##>",
+      8883
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      7108
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0#>",
+      1783
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0####>",
+      461
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0#d#>",
+      102
+     ]
+    ],
+    "n_runs": 33650,
+    "max_run": 121,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 66,
+    "top_style_n": 24760,
+    "sheets": [
+     "3-month Term SOFR",
+     "4-Wall Analysis",
+     "BBC -- Backcountry + SAIL",
+     "FY2023A (BS)",
+     "FY2023A (CF)",
+     "FY2023A (Earnings)",
+     "FY2023A (IS)",
+     "FY2024A (BS)",
+     "FY2024A (CF)",
+     "FY2024A (Earnings)",
+     "FY2024A (IS)",
+     "FY2025A (BS)",
+     "FY2025A (CF)",
+     "FY2025A (Earnings)",
+     "FY2025A (IS)",
+     "FY2026A (YTD BS)",
+     "FY2026A (YTD CF)",
+     "FY2026A (YTD Earnings)",
+     "FY2026A (YTD IS)",
+     "FY2026B (BS)",
+     "FY2026B (CF)",
+     "FY2026B (Earnings)",
+     "FY2026B (IS)",
+     "FY2027P (BS)",
+     "FY2027P (CF)",
+     "FY2027P (Earnings)",
+     "FY2027P (IS)",
+     "FY2028P (BS)",
+     "FY2028P (CF)",
+     "FY2028P (Earnings)",
+     "FY2028P (IS)",
+     "FY23Operations",
+     "FY23SAIL15",
+     "FY23SAIL16",
+     "FY23SAIL17",
+     "FY23SAIL18",
+     "FY23SAIL21",
+     "FY23SAIL23",
+     "FY23SAIL24",
+     "FY23SAIL26",
+     "FY23SAIL27",
+     "FY23SAIL29",
+     "FY23SAIL30",
+     "FY23SAIL31",
+     "FY23Web",
+     "FY24Operations",
+     "FY24SAIL15",
+     "FY24SAIL16",
+     "FY24SAIL17",
+     "FY24SAIL18",
+     "FY24SAIL21",
+     "FY24SAIL23",
+     "FY24SAIL24",
+     "FY24SAIL26",
+     "FY24SAIL27",
+     "FY24SAIL29",
+     "FY24SAIL30",
+     "FY24SAIL31",
+     "FY24Web",
+     "FY25Operations",
+     "FY25SAIL15",
+     "FY25SAIL16",
+     "FY25SAIL17",
+     "FY25SAIL18",
+     "FY25SAIL21",
+     "FY25SAIL23",
+     "FY25SAIL24",
+     "FY25SAIL26",
+     "FY25SAIL27",
+     "FY25SAIL29",
+     "FY25SAIL30",
+     "FY25SAIL31",
+     "FY25Web",
+     "FY26Operations",
+     "FY26SAIL15",
+     "FY26SAIL16",
+     "FY26SAIL17",
+     "FY26SAIL18",
+     "FY26SAIL21",
+     "FY26SAIL23",
+     "FY26SAIL24",
+     "FY26SAIL26",
+     "FY26SAIL27",
+     "FY26SAIL29",
+     "FY26SAIL30",
+     "FY26SAIL31",
+     "FY26Web",
+     "Model",
+     "P&L Summary",
+     "Rollup"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 264,
+   "task_id": "Debugging:10_04",
+   "family": "Debugging",
+   "shape": "LOOP_COMPUTED_TARGETS+COND",
+   "src_idioms": [],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": null,
+   "reconciliation": "INSUFFICIENT_EFFECT_EVIDENCE"
+  },
+  {
+   "exec_id": 269,
+   "task_id": "Debugging:10_04",
+   "family": "Debugging",
+   "shape": "LOOP_COMPUTED_TARGETS+COND",
+   "src_idioms": [],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": null,
+   "reconciliation": "INSUFFICIENT_EFFECT_EVIDENCE"
+  },
+  {
+   "exec_id": 286,
+   "task_id": "Debugging:01_01",
+   "family": "Debugging",
+   "shape": "STRAIGHT_LINE_MULTI_CELL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 7,
+    "n_formula": 7,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 5,
+    "top_template_n": 3,
+    "templates": [
+     [
+      "<openpyxl.worksheet.formula.DataTableFormula object at 0###>",
+      3
+     ],
+     [
+      "<openpyxl.worksheet.formula.DataTableFormula object at 0##>",
+      1
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0####>",
+      1
+     ],
+     [
+      "=SUM('Ex 1 - LBO'!#:#)-'Ex 1 - LBO'!#",
+      1
+     ],
+     [
+      "=('Ex 1 - LBO'!#-'Ex 1 - LBO'!#)*'Ex 1 - LBO'!#",
+      1
+     ]
+    ],
+    "n_runs": 6,
+    "max_run": 2,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Ex 1 - LBO",
+     "Ex 2 - Valuation Bridge"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 289,
+   "task_id": "Debugging:01_01",
+   "family": "Debugging",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 11,
+    "n_formula": 11,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 5,
+    "top_template_n": 6,
+    "templates": [
+     [
+      "=#-#",
+      6
+     ],
+     [
+      "<openpyxl.worksheet.formula.DataTableFormula object at 0###>",
+      2
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0##>",
+      1
+     ],
+     [
+      "<openpyxl.worksheet.formula.DataTableFormula object at 0####>",
+      1
+     ],
+     [
+      "<openpyxl.worksheet.formula.DataTableFormula object at 0##>",
+      1
+     ]
+    ],
+    "n_runs": 6,
+    "max_run": 6,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Ex 1 - LBO"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 306,
+   "task_id": "Debugging:01_06",
+   "family": "Debugging",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate",
+    "row_or_column_formula_fill"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 11,
+    "n_formula": 11,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 6,
+    "top_template_n": 5,
+    "templates": [
+     [
+      "='Ex 4 - Organic Operating Model'!#",
+      5
+     ],
+     [
+      "<openpyxl.worksheet.formula.DataTableFormula object at 0#d#>",
+      2
+     ],
+     [
+      "<openpyxl.worksheet.formula.DataTableFormula object at 0##>",
+      1
+     ],
+     [
+      "<openpyxl.worksheet.formula.DataTableFormula object at 0###>",
+      1
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      1
+     ]
+    ],
+    "n_runs": 7,
+    "max_run": 5,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Ex 1 - LBO",
+     "Ex 2 - Valuation Bridge",
+     "Ex 3 - PF P&L"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 320,
+   "task_id": "Debugging:02_01",
+   "family": "Debugging",
+   "shape": "STRAIGHT_LINE_MULTI_CELL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 9,
+    "n_formula": 9,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 5,
+    "top_template_n": 4,
+    "templates": [
+     [
+      "<openpyxl.worksheet.formula.DataTableFormula object at 0##>",
+      4
+     ],
+     [
+      "=#*#",
+      2
+     ],
+     [
+      "='Exhibit 2'!#+'Exhibit 2'!#-'Exhibit 2'!#",
+      1
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0##>",
+      1
+     ],
+     [
+      "=PV(#/#, #*#, -#*#/#)",
+      1
+     ]
+    ],
+    "n_runs": 9,
+    "max_run": 1,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Berk-Hath Investment Package",
+     "DCF",
+     "Merger Model",
+     "Synergies",
+     "WACC"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 322,
+   "task_id": "Debugging:02_01",
+   "family": "Debugging",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 8,
+    "n_formula": 8,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 3,
+    "top_template_n": 4,
+    "templates": [
+     [
+      "<openpyxl.worksheet.formula.DataTableFormula object at 0###>",
+      4
+     ],
+     [
+      "=(#-#)/(#+#-#)",
+      3
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      1
+     ]
+    ],
+    "n_runs": 6,
+    "max_run": 3,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Berk-Hath Investment Package",
+     "DCF",
+     "Exhibit 9",
+     "WACC"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 340,
+   "task_id": "Debugging:02_06",
+   "family": "Debugging",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 71,
+    "n_formula": 7,
+    "n_value": 64,
+    "n_style": 0,
+    "n_templates": 5,
+    "top_template_n": 3,
+    "templates": [
+     [
+      "=(#-#)/(#+#-#)",
+      3
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0##>",
+      1
+     ],
+     [
+      "='Exhibit 8b'!#",
+      1
+     ],
+     [
+      "=#*#",
+      1
+     ],
+     [
+      "=+'Exhibit 6'!#",
+      1
+     ]
+    ],
+    "n_runs": 27,
+    "max_run": 5,
+    "n_value_groups": 51,
+    "top_value_n": 2,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Berk-Hath Investment Package",
+     "DCF",
+     "Exhibit 9",
+     "Merger Model",
+     "Synergies",
+     "WACC"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 356,
+   "task_id": "Debugging:03_01",
+   "family": "Debugging",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 8,
+    "n_formula": 8,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 5,
+    "top_template_n": 4,
+    "templates": [
+     [
+      "=SUM(#:#)",
+      4
+     ],
+     [
+      "='Ex 3 - Balance Sheet'!#-#",
+      1
+     ],
+     [
+      "=-(#+#+#)",
+      1
+     ],
+     [
+      "=LBO!#",
+      1
+     ],
+     [
+      "=(LBO!#-LBO!#)*LBO!#",
+      1
+     ]
+    ],
+    "n_runs": 5,
+    "max_run": 4,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "LBO",
+     "Valuation Bridge"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 375,
+   "task_id": "Debugging:03_06",
+   "family": "Debugging",
+   "shape": "STRAIGHT_LINE_MULTI_CELL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 2,
+    "n_formula": 2,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 1,
+    "top_template_n": 2,
+    "templates": [
+     [
+      "='Ex 12 - Debt Schedule'!#",
+      2
+     ]
+    ],
+    "n_runs": 2,
+    "max_run": 1,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "LBO"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 393,
+   "task_id": "Debugging:04_01",
+   "family": "Debugging",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 23,
+    "n_formula": 23,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 5,
+    "top_template_n": 6,
+    "templates": [
+     [
+      "=('Balance Sheet'!#+'Balance Sheet'!#+'Balance Sheet'!#)/'Balance Sheet'!#",
+      6
+     ],
+     [
+      "='Balance Sheet'!#/'Line Item Metrics'!#",
+      6
+     ],
+     [
+      "=#+SUM(#:#)",
+      5
+     ],
+     [
+      "=#+#+#",
+      5
+     ],
+     [
+      "=#/AVERAGE('Balance Sheet'!#:#)",
+      1
+     ]
+    ],
+    "n_runs": 6,
+    "max_run": 6,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Balance Sheet",
+     "Cash Flow Statement",
+     "Line Item Metrics"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 411,
+   "task_id": "Debugging:04_07",
+   "family": "Debugging",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 15,
+    "n_formula": 15,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 1,
+    "top_template_n": 15,
+    "templates": [
+     [
+      "=-#*#",
+      15
+     ]
+    ],
+    "n_runs": 15,
+    "max_run": 1,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Income Statement"
+    ]
+   },
+   "reconciliation": "EFFECT_REGULARITY_NOT_VISIBLE_IN_SOURCE"
+  },
+  {
+   "exec_id": 421,
+   "task_id": "Debugging:05_02",
+   "family": "Debugging",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 18,
+    "n_formula": 18,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 2,
+    "top_template_n": 13,
+    "templates": [
+     [
+      "=#-#-#",
+      13
+     ],
+     [
+      "=-#*#",
+      5
+     ]
+    ],
+    "n_runs": 2,
+    "max_run": 13,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Financial Performance",
+     "Model"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 435,
+   "task_id": "Debugging:05_08",
+   "family": "Debugging",
+   "shape": "STRAIGHT_LINE_MULTI_CELL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 3,
+    "n_formula": 3,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 2,
+    "top_template_n": 2,
+    "templates": [
+     [
+      "=INDEX(Model!#:#,MATCH(\"Interest\",Model!#:#,0))",
+      2
+     ],
+     [
+      "=(#*Model!#+#*Model!#)/SUM(Model!#,Model!#)",
+      1
+     ]
+    ],
+    "n_runs": 2,
+    "max_run": 2,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Transaction Overview"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 486,
+   "task_id": "Debugging:06_02",
+   "family": "Debugging",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 24,
+    "n_formula": 24,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 11,
+    "top_template_n": 5,
+    "templates": [
+     [
+      "=#",
+      5
+     ],
+     [
+      "=Cover!#",
+      4
+     ],
+     [
+      "= -IF(#>0,#*#,0)",
+      3
+     ],
+     [
+      "=WACC!#",
+      3
+     ],
+     [
+      "='Comps + Beta'!#",
+      2
+     ]
+    ],
+    "n_runs": 20,
+    "max_run": 3,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Comps + Beta",
+     "DCF",
+     "Operating Model",
+     "PTA",
+     "Revenue Build",
+     "Supporting Schedules",
+     "WACC"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 496,
+   "task_id": "Debugging:06_07",
+   "family": "Debugging",
+   "shape": "STRAIGHT_LINE_MULTI_CELL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 179,
+    "n_formula": 6,
+    "n_value": 158,
+    "n_style": 15,
+    "n_templates": 4,
+    "top_template_n": 2,
+    "templates": [
+     [
+      "=CHOOSE(#,#,#,#)",
+      2
+     ],
+     [
+      "=RRI(5,#,#)",
+      2
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      1
+     ],
+     [
+      "=CHOOSE('Revenue Build'!#,'Supporting Schedules'!#,'Supporting Schedules'!#,'Supporting Schedules'!#)",
+      1
+     ]
+    ],
+    "n_runs": 99,
+    "max_run": 8,
+    "n_value_groups": 157,
+    "top_value_n": 2,
+    "n_style_groups": 1,
+    "top_style_n": 15,
+    "sheets": [
+     "Comps + Beta",
+     "Cover",
+     "DCF",
+     "Revenue Build",
+     "Supporting Schedules"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 510,
+   "task_id": "Debugging:07_03",
+   "family": "Debugging",
+   "shape": "CONTIGUOUS_FILL+COND",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": null,
+   "reconciliation": "INSUFFICIENT_EFFECT_EVIDENCE"
+  },
+  {
+   "exec_id": 513,
+   "task_id": "Debugging:07_03",
+   "family": "Debugging",
+   "shape": "CONTIGUOUS_FILL+COND",
+   "src_idioms": [
+    "contiguous_same_value_fill?",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 31,
+    "n_formula": 31,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 3,
+    "top_template_n": 25,
+    "templates": [
+     [
+      "=IF(#<=#, IPMT(#, #, #, -#), 0)",
+      25
+     ],
+     [
+      "=('DCF Model'!#+'DCF Model'!#+'DCF Model'!#)",
+      5
+     ],
+     [
+      "=('DCF Model'!#+'DCF Model'!#+'DCF Model'!#)*(7/12)",
+      1
+     ]
+    ],
+    "n_runs": 2,
+    "max_run": 25,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Equity Returns",
+     "LBO & Lenders"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 519,
+   "task_id": "Debugging:07_08",
+   "family": "Debugging",
+   "shape": "STRAIGHT_LINE_MULTI_CELL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 2,
+    "n_formula": 2,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 1,
+    "top_template_n": 2,
+    "templates": [
+     [
+      "=-#",
+      2
+     ]
+    ],
+    "n_runs": 1,
+    "max_run": 2,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "BS & CF"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 520,
+   "task_id": "Debugging:07_08",
+   "family": "Debugging",
+   "shape": "STRAIGHT_LINE_MULTI_CELL+STYLE",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 2,
+    "n_formula": 2,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 1,
+    "top_template_n": 2,
+    "templates": [
+     [
+      "=-#",
+      2
+     ]
+    ],
+    "n_runs": 1,
+    "max_run": 2,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "BS & CF"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 530,
+   "task_id": "Debugging:08_04",
+   "family": "Debugging",
+   "shape": "SAVE_ONLY",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 6252,
+    "n_formula": 12,
+    "n_value": 0,
+    "n_style": 6240,
+    "n_templates": 4,
+    "top_template_n": 5,
+    "templates": [
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      5
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0##>",
+      4
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0#>",
+      2
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0#fb#>",
+      1
+     ]
+    ],
+    "n_runs": 1248,
+    "max_run": 262,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 59,
+    "top_style_n": 2800,
+    "sheets": [
+     "ADDTL -",
+     "BS",
+     "CFS",
+     "Comps + WACC",
+     "Cover",
+     "Employees",
+     "Graphs",
+     "IS Annual",
+     "IS Quarters",
+     "IS Quarters 2",
+     "Key Stats",
+     "Operating Model + DCF",
+     "Revenue Build"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 557,
+   "task_id": "Debugging:08_09",
+   "family": "Debugging",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 44,
+    "n_formula": 44,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 8,
+    "top_template_n": 16,
+    "templates": [
+     [
+      "=OFFSET(#,#,0)",
+      16
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0##>",
+      10
+     ],
+     [
+      "='Comps + WACC'!#",
+      6
+     ],
+     [
+      "=(1+#)^#",
+      6
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      2
+     ]
+    ],
+    "n_runs": 26,
+    "max_run": 4,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Operating Model + DCF",
+     "Revenue Build"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 581,
+   "task_id": "Debugging:09_09",
+   "family": "Debugging",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "contiguous_formula_translation",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 15,
+    "n_formula": 15,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 3,
+    "top_template_n": 7,
+    "templates": [
+     [
+      "=AVERAGE(#,#)*((#/10000)+#)",
+      7
+     ],
+     [
+      "=-#/#",
+      7
+     ],
+     [
+      "=+#+#",
+      1
+     ]
+    ],
+    "n_runs": 15,
+    "max_run": 1,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "LBO"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 585,
+   "task_id": "Debugging:09_09",
+   "family": "Debugging",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "contiguous_formula_translation",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 19,
+    "n_formula": 19,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 4,
+    "top_template_n": 7,
+    "templates": [
+     [
+      "=AVERAGE(#,#)*((#/10000)+#)",
+      7
+     ],
+     [
+      "=-#/#",
+      7
+     ],
+     [
+      "=+((1+#)*(1+#)*(1+#)*(1+#)*(1+#))^(1/(YEAR(#)-YEAR(#)))-1",
+      4
+     ],
+     [
+      "=+#+#",
+      1
+     ]
+    ],
+    "n_runs": 16,
+    "max_run": 4,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "LBO",
+     "Operating Cases"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 630,
+   "task_id": "Debugging:10_10",
+   "family": "Debugging",
+   "shape": "SINGLE_CELL_ASSIGNMENT",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 18903,
+    "n_formula": 18903,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 44,
+    "top_template_n": 10991,
+    "templates": [
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      10991
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0##>",
+      4035
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0####>",
+      2801
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0#a#>",
+      276
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0#a##>",
+      163
+     ]
+    ],
+    "n_runs": 18903,
+    "max_run": 1,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "4-Wall Analysis",
+     "Model"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 631,
+   "task_id": "Debugging:10_10",
+   "family": "Debugging",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 18905,
+    "n_formula": 18902,
+    "n_value": 3,
+    "n_style": 0,
+    "n_templates": 28,
+    "top_template_n": 11146,
+    "templates": [
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      11146
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0####>",
+      3718
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0##>",
+      3248
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0#c#>",
+      210
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0#c##>",
+      114
+     ]
+    ],
+    "n_runs": 18905,
+    "max_run": 1,
+    "n_value_groups": 1,
+    "top_value_n": 3,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "4-Wall Analysis",
+     "Model"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 634,
+   "task_id": "Debugging:10_10",
+   "family": "Debugging",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 18905,
+    "n_formula": 18905,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 47,
+    "top_template_n": 8870,
+    "templates": [
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      8870
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0##>",
+      6115
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0####>",
+      1624
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0#>",
+      863
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0#d#>",
+      319
+     ]
+    ],
+    "n_runs": 18905,
+    "max_run": 1,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "4-Wall Analysis",
+     "Model"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 645,
+   "task_id": "Financial_Model:01_01",
+   "family": "Financial_Model",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 127,
+    "n_formula": 66,
+    "n_value": 0,
+    "n_style": 61,
+    "n_templates": 7,
+    "top_template_n": 35,
+    "templates": [
+     [
+      "=#*'Revenue Drivers'!#",
+      35
+     ],
+     [
+      "=IF(ROUND(#-#,4)=0,\"OK\",\"ERROR\")",
+      10
+     ],
+     [
+      "=#*#",
+      5
+     ],
+     [
+      "=SUM(#:#)",
+      5
+     ],
+     [
+      "=#-#",
+      5
+     ]
+    ],
+    "n_runs": 21,
+    "max_run": 10,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 1,
+    "top_style_n": 61,
+    "sheets": [
+     "Comps",
+     "Consolidated BS",
+     "Consolidated P&L",
+     "Cost Drivers",
+     "DCF Valuation",
+     "Fixed Assets Schedule",
+     "Revenue Drivers",
+     "Working Capital Schedule"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 658,
+   "task_id": "Financial_Model:02_01",
+   "family": "Financial_Model",
+   "shape": "CONTIGUOUS_FILL+COND",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 26,
+    "n_formula": 26,
+    "n_value": 0,
+    "n_style": 4,
+    "n_templates": 5,
+    "top_template_n": 7,
+    "templates": [
+     [
+      "=#/#",
+      7
+     ],
+     [
+      "='IS,BS,CF'!#/'IS,BS,CF'!#",
+      7
+     ],
+     [
+      "=#*#",
+      4
+     ],
+     [
+      "=AVERAGE(#:#)/'IS,BS,CF'!#*'IS,BS,CF'!#",
+      4
+     ],
+     [
+      "='IS,BS,CF'!#/AVERAGE('IS,BS,CF'!#,'IS,BS,CF'!#)",
+      4
+     ]
+    ],
+    "n_runs": 12,
+    "max_run": 4,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 1,
+    "top_style_n": 4,
+    "sheets": [
+     "BS schedules",
+     "IS,BS,CF",
+     "Ratios",
+     "Realization & EBIT Per KG",
+     "Revenue & COGS Schedule"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 674,
+   "task_id": "Financial_Model:03_01",
+   "family": "Financial_Model",
+   "shape": "CONTIGUOUS_FILL+COND",
+   "src_idioms": [
+    "contiguous_formula_translation",
+    "load_mutate_save_boilerplate",
+    "row_or_column_formula_fill"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 431,
+    "n_formula": 327,
+    "n_value": 23,
+    "n_style": 408,
+    "n_templates": 7,
+    "top_template_n": 277,
+    "templates": [
+     [
+      "=#/#-1",
+      277
+     ],
+     [
+      "=((#/#)^(1/5))-1",
+      18
+     ],
+     [
+      "=#",
+      9
+     ],
+     [
+      "='Income Statement'!#/'Balance Sheet'!#",
+      6
+     ],
+     [
+      "=#/#",
+      6
+     ]
+    ],
+    "n_runs": 132,
+    "max_run": 9,
+    "n_value_groups": 1,
+    "top_value_n": 23,
+    "n_style_groups": 6,
+    "top_style_n": 300,
+    "sheets": [
+     "Balance Sheet",
+     "CF",
+     "Du Pont",
+     "Income Statement",
+     "Introduction",
+     "Valuation"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 688,
+   "task_id": "Financial_Model:04_01",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE",
+   "src_idioms": [
+    "contiguous_formula_translation",
+    "coordinate_conversion",
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate",
+    "row_or_column_formula_fill"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 252,
+    "n_formula": 185,
+    "n_value": 19,
+    "n_style": 48,
+    "n_templates": 9,
+    "top_template_n": 132,
+    "templates": [
+     [
+      "=IF(OR(#=0,#=0),\"NA\",((#/#)^(1/5)-1))",
+      132
+     ],
+     [
+      "=IF(#=0,\"NA\",IF(#=0,\" \",#/#-1))",
+      16
+     ],
+     [
+      "=#/#-1",
+      10
+     ],
+     [
+      "=+Financials!#/Financials!#",
+      10
+     ],
+     [
+      "=-#*AVERAGE(Financials!#:#)/365",
+      5
+     ]
+    ],
+    "n_runs": 151,
+    "max_run": 10,
+    "n_value_groups": 18,
+    "top_value_n": 2,
+    "n_style_groups": 1,
+    "top_style_n": 48,
+    "sheets": [
+     "Assumptions",
+     "Financials",
+     "Ratio_Analysis ",
+     "Valuation"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 693,
+   "task_id": "Financial_Model:04_01",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE",
+   "src_idioms": [
+    "contiguous_formula_translation",
+    "coordinate_conversion",
+    "load_mutate_save_boilerplate",
+    "row_or_column_formula_fill"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 148,
+    "n_formula": 148,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 2,
+    "top_template_n": 132,
+    "templates": [
+     [
+      "=IF(OR(#=0,#=0),\"NA\",((#/#)^(1/5)-1))",
+      132
+     ],
+     [
+      "=IF(#=0,\"NA\",IF(#=0,\" \",#/#-1))",
+      16
+     ]
+    ],
+    "n_runs": 80,
+    "max_run": 8,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Financials"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 696,
+   "task_id": "Financial_Model:04_01",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE",
+   "src_idioms": [
+    "coordinate_conversion",
+    "load_mutate_save_boilerplate",
+    "row_or_column_formula_fill"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 8,
+    "n_formula": 8,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 1,
+    "top_template_n": 8,
+    "templates": [
+     [
+      "=IF(#=0,\"NA\",IF(#=0,\" \",#/#-1))",
+      8
+     ]
+    ],
+    "n_runs": 1,
+    "max_run": 8,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Financials"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 711,
+   "task_id": "Financial_Model:05_01",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE+COND",
+   "src_idioms": [
+    "contiguous_formula_translation",
+    "contiguous_same_value_fill?",
+    "coordinate_conversion",
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate",
+    "number_format_copy",
+    "row_or_column_formula_fill",
+    "style_copy",
+    "style_plus_value_write"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 458,
+    "n_formula": 426,
+    "n_value": 32,
+    "n_style": 0,
+    "n_templates": 10,
+    "top_template_n": 297,
+    "templates": [
+     [
+      "=#*#",
+      297
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      50
+     ],
+     [
+      "=SUM(#:#)",
+      25
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0##>",
+      23
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0####>",
+      15
+     ]
+    ],
+    "n_runs": 161,
+    "max_run": 10,
+    "n_value_groups": 9,
+    "top_value_n": 20,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Dashboard",
+     "IRR Calculation",
+     "IS - Mgmt Co.",
+     "Workings Cost Sheet"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 715,
+   "task_id": "Financial_Model:05_01",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE+COND",
+   "src_idioms": [
+    "contiguous_formula_translation",
+    "contiguous_same_value_fill?",
+    "coordinate_conversion",
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate",
+    "number_format_copy",
+    "row_or_column_formula_fill",
+    "style_copy",
+    "style_plus_value_write"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 123,
+    "n_formula": 123,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 8,
+    "top_template_n": 67,
+    "templates": [
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      67
+     ],
+     [
+      "=SUMIF(#:#,#,#:#)",
+      18
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0##>",
+      17
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0####>",
+      12
+     ],
+     [
+      "=IRR(#:#,0.01)",
+      4
+     ]
+    ],
+    "n_runs": 49,
+    "max_run": 7,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "IRR Calculation",
+     "IS - Mgmt Co.",
+     "Workings Cost Sheet"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 741,
+   "task_id": "Financial_Model:06_01",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE+COND",
+   "src_idioms": [
+    "coordinate_conversion",
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate",
+    "row_or_column_formula_fill"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "error": "XMLSyntaxError: Namespace prefix dc on creator is not defined, line 1, column 574 (<string>, line 1)"
+   },
+   "reconciliation": "INSUFFICIENT_EFFECT_EVIDENCE"
+  },
+  {
+   "exec_id": 760,
+   "task_id": "Financial_Model:07_01",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE+COND",
+   "src_idioms": [
+    "contiguous_same_value_fill?",
+    "coordinate_conversion",
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate",
+    "number_format_copy",
+    "row_or_column_formula_fill",
+    "style_copy"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 368,
+    "n_formula": 157,
+    "n_value": 203,
+    "n_style": 22,
+    "n_templates": 7,
+    "top_template_n": 50,
+    "templates": [
+     [
+      "=AND(#>=#,#<EDATE(#,#))*(#)/(#*10000000)",
+      50
+     ],
+     [
+      "=IF(#=Inputs!#,Inputs!#/10000000,0)",
+      50
+     ],
+     [
+      "=SUMIF('Cashflow (Monthly)'!#:#,#,'Cashflow (Monthly)'!#:#)",
+      18
+     ],
+     [
+      "='Cashflow (Quaterly)'!#",
+      13
+     ],
+     [
+      "=#+#+SUM(#:#)",
+      13
+     ]
+    ],
+    "n_runs": 283,
+    "max_run": 18,
+    "n_value_groups": 21,
+    "top_value_n": 45,
+    "n_style_groups": 3,
+    "top_style_n": 13,
+    "sheets": [
+     "Cashflow (Monthly)",
+     "Cashflow (Quaterly)",
+     "Construction Schedule",
+     "Construction Schedule (2)",
+     "Executive Summary",
+     "Inputs",
+     "Sales Schedule"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 792,
+   "task_id": "Financial_Model:08_01",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE+COND",
+   "src_idioms": [
+    "contiguous_same_value_fill?",
+    "coordinate_conversion",
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate",
+    "number_format_copy",
+    "style_copy",
+    "style_plus_value_write"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": null,
+   "reconciliation": "INSUFFICIENT_EFFECT_EVIDENCE"
+  },
+  {
+   "exec_id": 813,
+   "task_id": "Financial_Model:10_01",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE+STYLE",
+   "src_idioms": [
+    "contiguous_formula_translation",
+    "coordinate_conversion",
+    "load_mutate_save_boilerplate",
+    "row_or_column_formula_fill"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 198,
+    "n_formula": 65,
+    "n_value": 88,
+    "n_style": 86,
+    "n_templates": 12,
+    "top_template_n": 25,
+    "templates": [
+     [
+      "=IFERROR((#+#*(1+#)/(#-#)*#)-#+#+#-#,\"NA\")",
+      25
+     ],
+     [
+      "=IF(#=0,\"NA\",IF(#=0,\" \",#/#-1))",
+      14
+     ],
+     [
+      "=#/#",
+      5
+     ],
+     [
+      "=#*#",
+      5
+     ],
+     [
+      "=+(Financials!#+Financials!#)/Financials!#",
+      5
+     ]
+    ],
+    "n_runs": 148,
+    "max_run": 7,
+    "n_value_groups": 87,
+    "top_value_n": 2,
+    "n_style_groups": 6,
+    "top_style_n": 45,
+    "sheets": [
+     "Assumptions",
+     "Financials",
+     "Ratio_Analysis ",
+     "Technical Analysis",
+     "Valuation"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 816,
+   "task_id": "Financial_Model:10_01",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE+COND",
+   "src_idioms": [
+    "contiguous_formula_translation",
+    "coordinate_conversion",
+    "load_mutate_save_boilerplate",
+    "row_or_column_formula_fill"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 18,
+    "n_formula": 18,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 1,
+    "top_template_n": 18,
+    "templates": [
+     [
+      "=IF(#=0,\"NA\",IF(#=0,\" \",#/#-1))",
+      18
+     ]
+    ],
+    "n_runs": 18,
+    "max_run": 1,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Financials"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 824,
+   "task_id": "Financial_Model:11_01",
+   "family": "Financial_Model",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 42,
+    "n_formula": 42,
+    "n_value": 0,
+    "n_style": 2,
+    "n_templates": 7,
+    "top_template_n": 11,
+    "templates": [
+     [
+      "=#-#",
+      11
+     ],
+     [
+      "=#/#-1",
+      10
+     ],
+     [
+      "=#/#",
+      10
+     ],
+     [
+      "=SUMIF(#:#,#,#:#)",
+      5
+     ],
+     [
+      "=IF(IFERROR(#/IS!#,\"NA\")<0,\"NM\",IFERROR(#/IS!#,\"NA\"))",
+      3
+     ]
+    ],
+    "n_runs": 34,
+    "max_run": 5,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 1,
+    "top_style_n": 2,
+    "sheets": [
+     "DCF",
+     "IS",
+     "Summary",
+     "Summary Valuation"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 827,
+   "task_id": "Financial_Model:11_01",
+   "family": "Financial_Model",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 0,
+    "n_formula": 0,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 0,
+    "top_template_n": 0,
+    "templates": [],
+    "n_runs": 0,
+    "max_run": 0,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": []
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 841,
+   "task_id": "Financial_Model:11_05",
+   "family": "Financial_Model",
+   "shape": "CONTIGUOUS_FILL+COND",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 0,
+    "n_formula": 0,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 0,
+    "top_template_n": 0,
+    "templates": [],
+    "n_runs": 0,
+    "max_run": 0,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": []
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 845,
+   "task_id": "Financial_Model:11_05",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE+COND",
+   "src_idioms": [
+    "coordinate_conversion",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 22,
+    "n_formula": 22,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 2,
+    "top_template_n": 20,
+    "templates": [
+     [
+      "=#*#/4",
+      20
+     ],
+     [
+      "=#-#",
+      2
+     ]
+    ],
+    "n_runs": 3,
+    "max_run": 19,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "BG"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 848,
+   "task_id": "Financial_Model:11_05",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE",
+   "src_idioms": [
+    "coordinate_conversion",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 12,
+    "n_formula": 12,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 1,
+    "top_template_n": 12,
+    "templates": [
+     [
+      "=#+#",
+      12
+     ]
+    ],
+    "n_runs": 1,
+    "max_run": 12,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "BG"
+    ]
+   },
+   "reconciliation": "EFFECT_REGULARITY_NOT_VISIBLE_IN_SOURCE"
+  },
+  {
+   "exec_id": 864,
+   "task_id": "Financial_Model:12_05",
+   "family": "Financial_Model",
+   "shape": "LOOP_COMPUTED_VALUES",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate",
+    "row_or_column_formula_fill"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 140,
+    "n_formula": 57,
+    "n_value": 25,
+    "n_style": 91,
+    "n_templates": 6,
+    "top_template_n": 15,
+    "templates": [
+     [
+      "=IFERROR(#/#,\"NA\")",
+      15
+     ],
+     [
+      "=#/#",
+      11
+     ],
+     [
+      "=IFERROR('P&L'!#/AVERAGE(BS!#,BS!#),\"NA\")",
+      10
+     ],
+     [
+      "='P&L'!#",
+      10
+     ],
+     [
+      "=IFERROR('P&L'!#/'P&L'!#,\"NA\")",
+      10
+     ]
+    ],
+    "n_runs": 50,
+    "max_run": 11,
+    "n_value_groups": 25,
+    "top_value_n": 1,
+    "n_style_groups": 1,
+    "top_style_n": 91,
+    "sheets": [
+     "Chart",
+     "Comps",
+     "Ratio Analysis",
+     "Valuation",
+     "WACC",
+     "Working Capital"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 876,
+   "task_id": "Financial_Model:13_05",
+   "family": "Financial_Model",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 17,
+    "n_formula": 10,
+    "n_value": 7,
+    "n_style": 0,
+    "n_templates": 2,
+    "top_template_n": 5,
+    "templates": [
+     [
+      "='Assets Sch.'!#",
+      5
+     ],
+     [
+      "=#+#+#+#",
+      5
+     ]
+    ],
+    "n_runs": 6,
+    "max_run": 5,
+    "n_value_groups": 4,
+    "top_value_n": 4,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Assets Sch.",
+     "Debt Schedule",
+     "IS",
+     "Input Sheet"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 887,
+   "task_id": "Financial_Model:14_05",
+   "family": "Financial_Model",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 96,
+    "n_formula": 83,
+    "n_value": 0,
+    "n_style": 13,
+    "n_templates": 8,
+    "top_template_n": 24,
+    "templates": [
+     [
+      "=SUM(#:#)",
+      24
+     ],
+     [
+      "=#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#",
+      15
+     ],
+     [
+      "=#+#+#+#+#+#+#",
+      15
+     ],
+     [
+      "='Tax-DCF'!#",
+      9
+     ],
+     [
+      "=#-#",
+      9
+     ]
+    ],
+    "n_runs": 66,
+    "max_run": 9,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 1,
+    "top_style_n": 13,
+    "sheets": [
+     "DCF_Income Approach",
+     "Fixed Asset & Depreciation",
+     "Revenue",
+     "WACC"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 892,
+   "task_id": "Financial_Model:14_05",
+   "family": "Financial_Model",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 10,
+    "n_formula": 10,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 2,
+    "top_template_n": 9,
+    "templates": [
+     [
+      "=#-#",
+      9
+     ],
+     [
+      "<openpyxl.worksheet.formula.DataTableFormula object at 0##>",
+      1
+     ]
+    ],
+    "n_runs": 2,
+    "max_run": 9,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "DCF_Income Approach",
+     "Fixed Asset & Depreciation"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 905,
+   "task_id": "Financial_Model:15_05",
+   "family": "Financial_Model",
+   "shape": "CONTIGUOUS_FILL+COND",
+   "src_idioms": [
+    "load_mutate_save_boilerplate",
+    "row_or_column_formula_fill"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 404,
+    "n_formula": 392,
+    "n_value": 0,
+    "n_style": 12,
+    "n_templates": 11,
+    "top_template_n": 144,
+    "templates": [
+     [
+      "=Formats!#",
+      144
+     ],
+     [
+      "=Consol_annual!#",
+      144
+     ],
+     [
+      "=(#-#)*10000",
+      18
+     ],
+     [
+      "=#/Consol_annual!#",
+      18
+     ],
+     [
+      "=IF(#>0,\"+\",\"\u2013\")",
+      14
+     ]
+    ],
+    "n_runs": 102,
+    "max_run": 11,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 1,
+    "top_style_n": 12,
+    "sheets": [
+     "Formats",
+     "Report Tables"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 916,
+   "task_id": "Financial_Model:16_05",
+   "family": "Financial_Model",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 40,
+    "n_formula": 40,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 7,
+    "top_template_n": 6,
+    "templates": [
+     [
+      "=Assumptions!#",
+      6
+     ],
+     [
+      "=#+#+#",
+      6
+     ],
+     [
+      "=#-#",
+      6
+     ],
+     [
+      "=-Assumptions!#*#",
+      6
+     ],
+     [
+      "=AVERAGE(#+#,#)*#",
+      6
+     ]
+    ],
+    "n_runs": 31,
+    "max_run": 5,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "BS_Sch",
+     "Valuation Summary and Football"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 928,
+   "task_id": "Financial_Model:17_05",
+   "family": "Financial_Model",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 16,
+    "n_formula": 15,
+    "n_value": 0,
+    "n_style": 1,
+    "n_templates": 6,
+    "top_template_n": 10,
+    "templates": [
+     [
+      "=+Financials!#/AVERAGE(Financials!#,Financials!#)",
+      10
+     ],
+     [
+      "=#*#",
+      1
+     ],
+     [
+      "=#-#+#+#-#",
+      1
+     ],
+     [
+      "=#/#",
+      1
+     ],
+     [
+      "=#+#*#",
+      1
+     ]
+    ],
+    "n_runs": 7,
+    "max_run": 10,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 1,
+    "top_style_n": 1,
+    "sheets": [
+     "Assumptions",
+     "Ratio_Analysis",
+     "Valuation"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 940,
+   "task_id": "Financial_Model:18_05",
+   "family": "Financial_Model",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 41,
+    "n_formula": 41,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 4,
+    "top_template_n": 18,
+    "templates": [
+     [
+      "=#*#",
+      18
+     ],
+     [
+      "=#*#*#",
+      9
+     ],
+     [
+      "=#+#+#",
+      7
+     ],
+     [
+      "=#/#",
+      7
+     ]
+    ],
+    "n_runs": 5,
+    "max_run": 14,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Cash Budget",
+     "Cash Flow",
+     "Milestones",
+     "Ratio Analysis",
+     "Revenue"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 944,
+   "task_id": "Financial_Model:18_05",
+   "family": "Financial_Model",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 9,
+    "n_formula": 9,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 1,
+    "top_template_n": 9,
+    "templates": [
+     [
+      "=#*#*#",
+      9
+     ]
+    ],
+    "n_runs": 1,
+    "max_run": 9,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Cash Budget"
+    ]
+   },
+   "reconciliation": "EFFECT_REGULARITY_NOT_VISIBLE_IN_SOURCE"
+  },
+  {
+   "exec_id": 945,
+   "task_id": "Financial_Model:18_05",
+   "family": "Financial_Model",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 4,
+    "n_formula": 4,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 1,
+    "top_template_n": 4,
+    "templates": [
+     [
+      "=#*#",
+      4
+     ]
+    ],
+    "n_runs": 1,
+    "max_run": 4,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Milestones"
+    ]
+   },
+   "reconciliation": "EFFECT_REGULARITY_NOT_VISIBLE_IN_SOURCE"
+  },
+  {
+   "exec_id": 955,
+   "task_id": "Financial_Model:19_05",
+   "family": "Financial_Model",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 41,
+    "n_formula": 41,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 6,
+    "top_template_n": 11,
+    "templates": [
+     [
+      "=#/#",
+      11
+     ],
+     [
+      "=(BS!#+BS!#)/#",
+      11
+     ],
+     [
+      "=IS!#/BS!#",
+      11
+     ],
+     [
+      "=#+#+#",
+      6
+     ],
+     [
+      "<openpyxl.worksheet.formula.DataTableFormula object at 0###>",
+      1
+     ]
+    ],
+    "n_runs": 26,
+    "max_run": 11,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "DCF",
+     "IS",
+     "Ratio Analysis",
+     "Revenue Drivers",
+     "Trading Comps"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 970,
+   "task_id": "Financial_Model:20_05",
+   "family": "Financial_Model",
+   "shape": "FORMULA_TRANSLATION_LIKE+STYLE",
+   "src_idioms": [
+    "contiguous_same_value_fill?",
+    "coordinate_conversion",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 569,
+    "n_formula": 506,
+    "n_value": 52,
+    "n_style": 54,
+    "n_templates": 13,
+    "top_template_n": 173,
+    "templates": [
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0##>",
+      173
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0#>",
+      56
+     ],
+     [
+      "<openpyxl.worksheet.formula.ArrayFormula object at 0###>",
+      52
+     ],
+     [
+      "='Balance Sheet Schedules'!#",
+      42
+     ],
+     [
+      "=IFERROR(('Income Statement'!#/'Income Statement'!#-1),0)",
+      42
+     ]
+    ],
+    "n_runs": 366,
+    "max_run": 42,
+    "n_value_groups": 10,
+    "top_value_n": 43,
+    "n_style_groups": 2,
+    "top_style_n": 43,
+    "sheets": [
+     "Balance Sheet",
+     "Balance Sheet Schedules",
+     "Cashflow",
+     "Cost Drivers",
+     "Cover",
+     "DCF",
+     "Income Statement",
+     "Manpower Expenses",
+     "Ratio Analysis",
+     "Summary"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 979,
+   "task_id": "Template:01_02",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 69,
+    "n_formula": 0,
+    "n_value": 69,
+    "n_style": 49,
+    "n_templates": 0,
+    "top_template_n": 0,
+    "templates": [],
+    "n_runs": 25,
+    "max_run": 4,
+    "n_value_groups": 35,
+    "top_value_n": 10,
+    "n_style_groups": 1,
+    "top_style_n": 49,
+    "sheets": [
+     "OID_Bond"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 990,
+   "task_id": "Template:01_07",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL+COND",
+   "src_idioms": [
+    "contiguous_formula_translation",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 128,
+    "n_formula": 0,
+    "n_value": 128,
+    "n_style": 126,
+    "n_templates": 0,
+    "top_template_n": 0,
+    "templates": [],
+    "n_runs": 73,
+    "max_run": 5,
+    "n_value_groups": 45,
+    "top_value_n": 33,
+    "n_style_groups": 1,
+    "top_style_n": 126,
+    "sheets": [
+     "BondAccounting"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 998,
+   "task_id": "Template:02_05",
+   "family": "Template",
+   "shape": "LOOP_COMPUTED_VALUES+COND",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": null,
+   "reconciliation": "INSUFFICIENT_EFFECT_EVIDENCE"
+  },
+  {
+   "exec_id": 1000,
+   "task_id": "Template:02_05",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL+COND",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 72,
+    "n_formula": 0,
+    "n_value": 72,
+    "n_style": 53,
+    "n_templates": 0,
+    "top_template_n": 0,
+    "templates": [],
+    "n_runs": 35,
+    "max_run": 3,
+    "n_value_groups": 44,
+    "top_value_n": 13,
+    "n_style_groups": 1,
+    "top_style_n": 53,
+    "sheets": [
+     "DebtWaterfall"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1005,
+   "task_id": "Template:02_05",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL+COND",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 14,
+    "n_formula": 0,
+    "n_value": 14,
+    "n_style": 0,
+    "n_templates": 0,
+    "top_template_n": 0,
+    "templates": [],
+    "n_runs": 10,
+    "max_run": 2,
+    "n_value_groups": 10,
+    "top_value_n": 3,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "DebtWaterfall"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1011,
+   "task_id": "Template:03_03",
+   "family": "Template",
+   "shape": "STRAIGHT_LINE_MULTI_CELL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 38,
+    "n_formula": 8,
+    "n_value": 30,
+    "n_style": 6,
+    "n_templates": 4,
+    "top_template_n": 3,
+    "templates": [
+     [
+      "=#-#-#-#",
+      3
+     ],
+     [
+      "=#+#+#",
+      3
+     ],
+     [
+      "=#-#",
+      1
+     ],
+     [
+      "=#+#",
+      1
+     ]
+    ],
+    "n_runs": 13,
+    "max_run": 7,
+    "n_value_groups": 19,
+    "top_value_n": 3,
+    "n_style_groups": 1,
+    "top_style_n": 6,
+    "sheets": [
+     "Consolidation"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1013,
+   "task_id": "Template:03_03",
+   "family": "Template",
+   "shape": "STRAIGHT_LINE_MULTI_CELL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 1,
+    "n_formula": 1,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 1,
+    "top_template_n": 1,
+    "templates": [
+     [
+      "=#+#",
+      1
+     ]
+    ],
+    "n_runs": 1,
+    "max_run": 1,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "Consolidation"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1015,
+   "task_id": "Template:03_03",
+   "family": "Template",
+   "shape": "STRAIGHT_LINE_MULTI_CELL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 1,
+    "n_formula": 0,
+    "n_value": 1,
+    "n_style": 1,
+    "n_templates": 0,
+    "top_template_n": 0,
+    "templates": [],
+    "n_runs": 1,
+    "max_run": 1,
+    "n_value_groups": 1,
+    "top_value_n": 1,
+    "n_style_groups": 1,
+    "top_style_n": 1,
+    "sheets": [
+     "Consolidation"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1019,
+   "task_id": "Template:05_02",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": null,
+   "reconciliation": "INSUFFICIENT_EFFECT_EVIDENCE"
+  },
+  {
+   "exec_id": 1020,
+   "task_id": "Template:05_02",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 63,
+    "n_formula": 30,
+    "n_value": 33,
+    "n_style": 60,
+    "n_templates": 4,
+    "top_template_n": 12,
+    "templates": [
+     [
+      "=#-#",
+      12
+     ],
+     [
+      "=#+#+#",
+      9
+     ],
+     [
+      "=#*0.35",
+      6
+     ],
+     [
+      "=#-#-#",
+      3
+     ]
+    ],
+    "n_runs": 21,
+    "max_run": 4,
+    "n_value_groups": 15,
+    "top_value_n": 7,
+    "n_style_groups": 1,
+    "top_style_n": 60,
+    "sheets": [
+     "DeferredTax"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1022,
+   "task_id": "Template:05_02",
+   "family": "Template",
+   "shape": "STRAIGHT_LINE_MULTI_CELL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 3,
+    "n_formula": 0,
+    "n_value": 3,
+    "n_style": 0,
+    "n_templates": 0,
+    "top_template_n": 0,
+    "templates": [],
+    "n_runs": 2,
+    "max_run": 2,
+    "n_value_groups": 3,
+    "top_value_n": 1,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "DeferredTax"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1025,
+   "task_id": "Template:06_06",
+   "family": "Template",
+   "shape": "FORMULA_TRANSLATION_LIKE",
+   "src_idioms": [
+    "coordinate_conversion",
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": null,
+   "reconciliation": "INSUFFICIENT_EFFECT_EVIDENCE"
+  },
+  {
+   "exec_id": 1026,
+   "task_id": "Template:06_06",
+   "family": "Template",
+   "shape": "FORMULA_TRANSLATION_LIKE",
+   "src_idioms": [
+    "contiguous_formula_translation",
+    "coordinate_conversion",
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 53,
+    "n_formula": 48,
+    "n_value": 5,
+    "n_style": 33,
+    "n_templates": 6,
+    "top_template_n": 24,
+    "templates": [
+     [
+      "=#/#-1",
+      24
+     ],
+     [
+      "=SUM(#:#)",
+      7
+     ],
+     [
+      "=#+#",
+      5
+     ],
+     [
+      "=((#*#)+(#*#)+(#*#))/#",
+      4
+     ],
+     [
+      "=((#*#)+(#*#))/#",
+      4
+     ]
+    ],
+    "n_runs": 36,
+    "max_run": 3,
+    "n_value_groups": 5,
+    "top_value_n": 1,
+    "n_style_groups": 1,
+    "top_style_n": 33,
+    "sheets": [
+     "Revenue_Forecast"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 1034,
+   "task_id": "Template:06_12",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL+STYLE",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 30,
+    "n_formula": 30,
+    "n_value": 0,
+    "n_style": 30,
+    "n_templates": 5,
+    "top_template_n": 13,
+    "templates": [
+     [
+      "=#",
+      13
+     ],
+     [
+      "=SUM(#:#)",
+      5
+     ],
+     [
+      "=#*(#-#)",
+      5
+     ],
+     [
+      "=#+#+#+#",
+      5
+     ],
+     [
+      "=#*4",
+      2
+     ]
+    ],
+    "n_runs": 12,
+    "max_run": 4,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 3,
+    "top_style_n": 20,
+    "sheets": [
+     "CashFlow_Build"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1044,
+   "task_id": "Template:06_17",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL+STYLE",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate",
+    "row_or_column_formula_fill"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 46,
+    "n_formula": 45,
+    "n_value": 1,
+    "n_style": 42,
+    "n_templates": 5,
+    "top_template_n": 16,
+    "templates": [
+     [
+      "=#*#",
+      16
+     ],
+     [
+      "=#/#",
+      12
+     ],
+     [
+      "=#+#",
+      8
+     ],
+     [
+      "=#-#",
+      8
+     ],
+     [
+      "=ROUND(#/#,3)",
+      1
+     ]
+    ],
+    "n_runs": 8,
+    "max_run": 8,
+    "n_value_groups": 1,
+    "top_value_n": 1,
+    "n_style_groups": 2,
+    "top_style_n": 28,
+    "sheets": [
+     "OpEx_Forecast"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 1050,
+   "task_id": "Template:06_21",
+   "family": "Template",
+   "shape": "FORMULA_TRANSLATION_LIKE",
+   "src_idioms": [
+    "contiguous_formula_translation",
+    "coordinate_conversion",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 0,
+    "n_formula": 0,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 0,
+    "top_template_n": 0,
+    "templates": [],
+    "n_runs": 0,
+    "max_run": 0,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": []
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 1051,
+   "task_id": "Template:06_21",
+   "family": "Template",
+   "shape": "FORMULA_TRANSLATION_LIKE",
+   "src_idioms": [
+    "contiguous_formula_translation",
+    "coordinate_conversion",
+    "load_mutate_save_boilerplate",
+    "row_or_column_formula_fill"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 27,
+    "n_formula": 27,
+    "n_value": 0,
+    "n_style": 12,
+    "n_templates": 6,
+    "top_template_n": 9,
+    "templates": [
+     [
+      "=#/365*#",
+      9
+     ],
+     [
+      "=-(#-#)",
+      6
+     ],
+     [
+      "=#+#-#",
+      3
+     ],
+     [
+      "=#-#",
+      3
+     ],
+     [
+      "=SUM(#:#)",
+      3
+     ]
+    ],
+    "n_runs": 12,
+    "max_run": 3,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 1,
+    "top_style_n": 12,
+    "sheets": [
+     "WorkingCapital"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 1053,
+   "task_id": "Template:06_21",
+   "family": "Template",
+   "shape": "FORMULA_TRANSLATION_LIKE",
+   "src_idioms": [
+    "contiguous_formula_translation",
+    "coordinate_conversion",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 18,
+    "n_formula": 9,
+    "n_value": 9,
+    "n_style": 6,
+    "n_templates": 6,
+    "top_template_n": 3,
+    "templates": [
+     [
+      "=#/365*#",
+      3
+     ],
+     [
+      "=-(#-#)",
+      2
+     ],
+     [
+      "=#+#-#",
+      1
+     ],
+     [
+      "=#-#",
+      1
+     ],
+     [
+      "=SUM(#:#)",
+      1
+     ]
+    ],
+    "n_runs": 8,
+    "max_run": 3,
+    "n_value_groups": 9,
+    "top_value_n": 1,
+    "n_style_groups": 1,
+    "top_style_n": 6,
+    "sheets": [
+     "WorkingCapital"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 1057,
+   "task_id": "Template:07_01",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 47,
+    "n_formula": 45,
+    "n_value": 2,
+    "n_style": 0,
+    "n_templates": 9,
+    "top_template_n": 17,
+    "templates": [
+     [
+      "=#+#",
+      17
+     ],
+     [
+      "=SUM(#:#)",
+      10
+     ],
+     [
+      "=#",
+      5
+     ],
+     [
+      "=#-#",
+      3
+     ],
+     [
+      "=#*#",
+      3
+     ]
+    ],
+    "n_runs": 14,
+    "max_run": 6,
+    "n_value_groups": 1,
+    "top_value_n": 2,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "EquityDRD"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1059,
+   "task_id": "Template:07_01",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 36,
+    "n_formula": 19,
+    "n_value": 17,
+    "n_style": 0,
+    "n_templates": 8,
+    "top_template_n": 7,
+    "templates": [
+     [
+      "=#",
+      7
+     ],
+     [
+      "=#+#",
+      3
+     ],
+     [
+      "=#*(1-#)*#",
+      2
+     ],
+     [
+      "=#+#+#+#-#-#-#-#",
+      2
+     ],
+     [
+      "=SUM(#:#)",
+      2
+     ]
+    ],
+    "n_runs": 17,
+    "max_run": 4,
+    "n_value_groups": 2,
+    "top_value_n": 15,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "EquityDRD"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1060,
+   "task_id": "Template:07_01",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 18,
+    "n_formula": 15,
+    "n_value": 3,
+    "n_style": 0,
+    "n_templates": 4,
+    "top_template_n": 6,
+    "templates": [
+     [
+      "=#+#",
+      6
+     ],
+     [
+      "=SUM(#:#)",
+      6
+     ],
+     [
+      "=#+#+#+#-#-#-#-#",
+      2
+     ],
+     [
+      "=#+#-#-#",
+      1
+     ]
+    ],
+    "n_runs": 7,
+    "max_run": 5,
+    "n_value_groups": 1,
+    "top_value_n": 3,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "EquityDRD"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1062,
+   "task_id": "Template:07_01",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 28,
+    "n_formula": 22,
+    "n_value": 6,
+    "n_style": 3,
+    "n_templates": 4,
+    "top_template_n": 9,
+    "templates": [
+     [
+      "=#+#",
+      9
+     ],
+     [
+      "=SUM(#:#)",
+      8
+     ],
+     [
+      "=#",
+      3
+     ],
+     [
+      "=#+#-#-#",
+      2
+     ]
+    ],
+    "n_runs": 14,
+    "max_run": 4,
+    "n_value_groups": 5,
+    "top_value_n": 2,
+    "n_style_groups": 1,
+    "top_style_n": 3,
+    "sheets": [
+     "EquityDRD"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1064,
+   "task_id": "Template:07_01",
+   "family": "Template",
+   "shape": "STRAIGHT_LINE_MULTI_CELL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 6,
+    "n_formula": 6,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 1,
+    "top_template_n": 6,
+    "templates": [
+     [
+      "=SUM(#:#)",
+      6
+     ]
+    ],
+    "n_runs": 6,
+    "max_run": 1,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "EquityDRD"
+    ]
+   },
+   "reconciliation": "EFFECT_REGULARITY_NOT_VISIBLE_IN_SOURCE"
+  },
+  {
+   "exec_id": 1069,
+   "task_id": "Template:08_03",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL+STYLE",
+   "src_idioms": [
+    "load_mutate_save_boilerplate",
+    "row_or_column_formula_fill"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 60,
+    "n_formula": 60,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 7,
+    "top_template_n": 12,
+    "templates": [
+     [
+      "=-#*#",
+      12
+     ],
+     [
+      "=#+#+#",
+      12
+     ],
+     [
+      "=-#",
+      12
+     ],
+     [
+      "=#",
+      8
+     ],
+     [
+      "=#/#",
+      8
+     ]
+    ],
+    "n_runs": 20,
+    "max_run": 4,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "IncomeProjection"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 1074,
+   "task_id": "Template:10_01",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "explicit_address_formula_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 27,
+    "n_formula": 27,
+    "n_value": 0,
+    "n_style": 10,
+    "n_templates": 9,
+    "top_template_n": 6,
+    "templates": [
+     [
+      "=#",
+      6
+     ],
+     [
+      "=#/#",
+      6
+     ],
+     [
+      "=-#*#*(1-#)",
+      4
+     ],
+     [
+      "=#*(1-#)",
+      2
+     ],
+     [
+      "=SUM(#:#)",
+      2
+     ]
+    ],
+    "n_runs": 9,
+    "max_run": 6,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 1,
+    "top_style_n": 10,
+    "sheets": [
+     "EPS_Accretion"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1076,
+   "task_id": "Template:10_01",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "explicit_address_formula_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 34,
+    "n_formula": 20,
+    "n_value": 14,
+    "n_style": 10,
+    "n_templates": 9,
+    "top_template_n": 4,
+    "templates": [
+     [
+      "=-#*#*(1-#)",
+      4
+     ],
+     [
+      "=#/#",
+      4
+     ],
+     [
+      "=#",
+      3
+     ],
+     [
+      "=#*(1-#)",
+      2
+     ],
+     [
+      "=#*#/#",
+      2
+     ]
+    ],
+    "n_runs": 13,
+    "max_run": 6,
+    "n_value_groups": 14,
+    "top_value_n": 1,
+    "n_style_groups": 1,
+    "top_style_n": 10,
+    "sheets": [
+     "EPS_Accretion"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1077,
+   "task_id": "Template:10_01",
+   "family": "Template",
+   "shape": "STRAIGHT_LINE_MULTI_CELL",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 1,
+    "n_formula": 1,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 1,
+    "top_template_n": 1,
+    "templates": [
+     [
+      "=#",
+      1
+     ]
+    ],
+    "n_runs": 1,
+    "max_run": 1,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "EPS_Accretion"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1078,
+   "task_id": "Template:10_01",
+   "family": "Template",
+   "shape": "SINGLE_CELL_ASSIGNMENT",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 1,
+    "n_formula": 1,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 1,
+    "top_template_n": 1,
+    "templates": [
+     [
+      "=#/#",
+      1
+     ]
+    ],
+    "n_runs": 1,
+    "max_run": 1,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "EPS_Accretion"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1084,
+   "task_id": "Template:11_03",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL+STYLE",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 26,
+    "n_formula": 25,
+    "n_value": 1,
+    "n_style": 22,
+    "n_templates": 16,
+    "top_template_n": 5,
+    "templates": [
+     [
+      "=#*(1-SharedData!#)",
+      5
+     ],
+     [
+      "=(NPV(#,#:#)+(#*(1+SharedData!#)/(#-SharedData!#))/(1+#)^5)*(1+#)^#-#",
+      4
+     ],
+     [
+      "=SharedData!#",
+      2
+     ],
+     [
+      "=#+#",
+      2
+     ],
+     [
+      "=#-#",
+      1
+     ]
+    ],
+    "n_runs": 8,
+    "max_run": 5,
+    "n_value_groups": 1,
+    "top_value_n": 1,
+    "n_style_groups": 3,
+    "top_style_n": 20,
+    "sheets": [
+     "MergerPremium"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1086,
+   "task_id": "Template:11_03",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL+STYLE",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 10,
+    "n_formula": 10,
+    "n_value": 0,
+    "n_style": 5,
+    "n_templates": 2,
+    "top_template_n": 5,
+    "templates": [
+     [
+      "=SharedData!#",
+      5
+     ],
+     [
+      "=#*(1-SharedData!#)",
+      5
+     ]
+    ],
+    "n_runs": 2,
+    "max_run": 5,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 1,
+    "top_style_n": 5,
+    "sheets": [
+     "MergerPremium"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1091,
+   "task_id": "Template:13_03",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL+COND",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 83,
+    "n_formula": 0,
+    "n_value": 83,
+    "n_style": 70,
+    "n_templates": 0,
+    "top_template_n": 0,
+    "templates": [],
+    "n_runs": 12,
+    "max_run": 9,
+    "n_value_groups": 73,
+    "top_value_n": 6,
+    "n_style_groups": 1,
+    "top_style_n": 70,
+    "sheets": [
+     "FinancialNormalization"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1096,
+   "task_id": "Template:13_08",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 73,
+    "n_formula": 73,
+    "n_value": 0,
+    "n_style": 56,
+    "n_templates": 14,
+    "top_template_n": 24,
+    "templates": [
+     [
+      "=#-#",
+      24
+     ],
+     [
+      "=#/#",
+      18
+     ],
+     [
+      "=#",
+      10
+     ],
+     [
+      "=#*#",
+      4
+     ],
+     [
+      "=AVERAGE(#:#)",
+      4
+     ]
+    ],
+    "n_runs": 24,
+    "max_run": 5,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 1,
+    "top_style_n": 56,
+    "sheets": [
+     "FinancialNormalization"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1098,
+   "task_id": "Template:13_08",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 43,
+    "n_formula": 31,
+    "n_value": 12,
+    "n_style": 13,
+    "n_templates": 14,
+    "top_template_n": 8,
+    "templates": [
+     [
+      "=#",
+      8
+     ],
+     [
+      "=#-#",
+      4
+     ],
+     [
+      "=#/#",
+      4
+     ],
+     [
+      "=AVERAGE(#:#)",
+      4
+     ],
+     [
+      "=#*#",
+      2
+     ]
+    ],
+    "n_runs": 20,
+    "max_run": 5,
+    "n_value_groups": 12,
+    "top_value_n": 1,
+    "n_style_groups": 1,
+    "top_style_n": 13,
+    "sheets": [
+     "FinancialNormalization"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1101,
+   "task_id": "Template:13_08",
+   "family": "Template",
+   "shape": "SAVE_ONLY",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 0,
+    "n_formula": 0,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 0,
+    "top_template_n": 0,
+    "templates": [],
+    "n_runs": 0,
+    "max_run": 0,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": []
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1107,
+   "task_id": "Template:14_05",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL+COND",
+   "src_idioms": [
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "NO_CLEAN_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 65,
+    "n_formula": 65,
+    "n_value": 0,
+    "n_style": 65,
+    "n_templates": 6,
+    "top_template_n": 28,
+    "templates": [
+     [
+      "=#*(1+#)",
+      28
+     ],
+     [
+      "=SUM(#:#)",
+      10
+     ],
+     [
+      "=-#*#",
+      10
+     ],
+     [
+      "=#+#",
+      10
+     ],
+     [
+      "=#",
+      4
+     ]
+    ],
+    "n_runs": 13,
+    "max_run": 5,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 1,
+    "top_style_n": 65,
+    "sheets": [
+     "NOI_Projection"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1122,
+   "task_id": "Template:15_01",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "explicit_address_formula_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 21,
+    "n_formula": 21,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 10,
+    "top_template_n": 7,
+    "templates": [
+     [
+      "=#/#",
+      7
+     ],
+     [
+      "=#/(#*#)",
+      4
+     ],
+     [
+      "=#*12",
+      2
+     ],
+     [
+      "=#*(1+#)/#",
+      2
+     ],
+     [
+      "=#*#",
+      1
+     ]
+    ],
+    "n_runs": 8,
+    "max_run": 4,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "DebtAnalysis"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1129,
+   "task_id": "Template:16_01",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "explicit_address_formula_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 27,
+    "n_formula": 27,
+    "n_value": 0,
+    "n_style": 1,
+    "n_templates": 8,
+    "top_template_n": 9,
+    "templates": [
+     [
+      "=#*#",
+      9
+     ],
+     [
+      "=SUM(#:#)",
+      4
+     ],
+     [
+      "=#/(#*12)",
+      4
+     ],
+     [
+      "=#*#*12",
+      3
+     ],
+     [
+      "=#/#",
+      3
+     ]
+    ],
+    "n_runs": 10,
+    "max_run": 8,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 1,
+    "top_style_n": 1,
+    "sheets": [
+     "DirectCap"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1137,
+   "task_id": "Template:16_06",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "contiguous_formula_translation",
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate",
+    "row_or_column_formula_fill"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 66,
+    "n_formula": 66,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 20,
+    "top_template_n": 12,
+    "templates": [
+     [
+      "=#*#",
+      12
+     ],
+     [
+      "=SUM(#:#)",
+      8
+     ],
+     [
+      "=SharedData!#*1.03/#",
+      6
+     ],
+     [
+      "=#*#*12",
+      5
+     ],
+     [
+      "=-(#-#)*#*12",
+      5
+     ]
+    ],
+    "n_runs": 16,
+    "max_run": 12,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "RentRoll",
+     "Valuation"
+    ]
+   },
+   "reconciliation": "SOURCE_PATTERN_OVERSTATES_EFFECT_REGULARITY"
+  },
+  {
+   "exec_id": 1140,
+   "task_id": "Template:16_12",
+   "family": "Template",
+   "shape": "CONTIGUOUS_FILL",
+   "src_idioms": [
+    "explicit_address_value_batch",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "PARTIAL_DECISION_BOUNDARY",
+   "effect": {
+    "n_effects": 22,
+    "n_formula": 22,
+    "n_value": 0,
+    "n_style": 0,
+    "n_templates": 7,
+    "top_template_n": 4,
+    "templates": [
+     [
+      "=#*#",
+      4
+     ],
+     [
+      "=(#-#)*#",
+      4
+     ],
+     [
+      "=-#*#",
+      4
+     ],
+     [
+      "=#+#+#",
+      4
+     ],
+     [
+      "=SUM(#:#)",
+      4
+     ]
+    ],
+    "n_runs": 5,
+    "max_run": 5,
+    "n_value_groups": 0,
+    "top_value_n": 0,
+    "n_style_groups": 0,
+    "top_style_n": 0,
+    "sheets": [
+     "RentRoll",
+     "Valuation"
+    ]
+   },
+   "reconciliation": "SOURCE_AND_EFFECT_AGREE"
+  },
+  {
+   "exec_id": 1159,
+   "task_id": "glm-fill-c0-Visualization-Task-1420776-r1",
+   "family": "Visualization",
+   "shape": "LOOP_COMPUTED_TARGETS+COND",
+   "src_idioms": [
+    "contiguous_same_value_fill?",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": null,
+   "reconciliation": "INSUFFICIENT_EFFECT_EVIDENCE"
+  },
+  {
+   "exec_id": 1178,
+   "task_id": "glm-fill-c0-Visualization-Task-1420776-r1",
+   "family": "Visualization",
+   "shape": "LOOP_COMPUTED_TARGETS+COND",
+   "src_idioms": [
+    "contiguous_same_value_fill?",
+    "load_mutate_save_boilerplate"
+   ],
+   "boundary": "EARLY_DECISION_BOUNDARY",
+   "effect": null,
+   "reconciliation": "INSUFFICIENT_EFFECT_EVIDENCE"
+  }
+ ]
+}

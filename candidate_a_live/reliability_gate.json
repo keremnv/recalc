@@ -1,0 +1,16 @@
+{
+  "candidate_a_caused_exceptions": 0,
+  "contact_tasks": 2,
+  "fallback_identity_corruption": 0,
+  "freshness_events": 272,
+  "note": "No runtime event reported stale/wrong-generation/identity failure; official capability and output checks are in capability.json.",
+  "pass": true,
+  "primary_freshness_events": 229,
+  "silent_semantic_substitutions": 0,
+  "stale_reads": 0,
+  "targeted_replication_fallback_identity_corruption": 0,
+  "targeted_replication_freshness_events": 43,
+  "targeted_replication_stale_reads": 0,
+  "targeted_replication_wrong_generation_reads": 0,
+  "wrong_generation_reads": 0
+}

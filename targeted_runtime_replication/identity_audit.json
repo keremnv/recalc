@@ -1,0 +1,6 @@
+{
+ "n_tasks": 6,
+ "differences": [],
+ "pass": true,
+ "note": "shared arm-neutral workdir => model-visible paths identical; prompts/tools/model/sampling/request fields hashed equal"
+}

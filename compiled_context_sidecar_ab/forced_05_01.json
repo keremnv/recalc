@@ -1,0 +1,112 @@
+{
+  "task": "Financial_Model:05_01",
+  "control_run": "spark-sidecar-c0-Financial_Model-05_01-r1",
+  "forced_run": "spark-sidecar-c1f-Financial_Model-05_01-r1",
+  "c0": {
+    "modification": 0.999,
+    "regression": 0.9973,
+    "exact": false,
+    "exact_value": 0.0,
+    "usable": true,
+    "error_message": "Regression error at Dashboard!G46: answer=None, output=2",
+    "model_calls": 40
+  },
+  "c1f": {
+    "modification": 0.998,
+    "regression": 1.0,
+    "exact": false,
+    "exact_value": 0.0,
+    "usable": true,
+    "error_message": "Regression error at Dashboard!G46: answer=None, output=2",
+    "model_calls": 40
+  },
+  "adoption": {
+    "used": true,
+    "classification": "USED",
+    "first_turn": 1,
+    "n_calls": 5,
+    "modes": [
+      "periods",
+      "search",
+      "search",
+      "inspect",
+      "formula_pattern"
+    ],
+    "repeated_queries": 0,
+    "calls": [
+      {
+        "turn": 1,
+        "mode": "periods",
+        "arguments": "calc_query periods '/mnt/spreadsheet_data/spreadsheet/05_Project AIF/05_01_AIF_input.xlsx'",
+        "result_chars": 38813,
+        "latency_s": 0.3835534619865939,
+        "failed": false,
+        "observation_preview": "{\n  \"mode\": \"periods\",\n  \"status\": \"OK\",\n  \"truncated\": true,\n  \"coordinates\": [\n    {\n      \"display\": \"Dashboard!B13\",\n      \"temporal_id\": \"tcoord:s00:c:2\",\n      \"year\": 2025,\n      \"month\": null,\n      \"quarter\": null,\n      \"period_key\": \"PERIOD(year=2025)\",\n      \"header_text\": \"2025.0\",\n      \"derivation_kind\": \"LOCAL_TEMPORAL_COORDINATE\",\n      \"axis\": \"column\",\n      \"axis_index\": 2,\n   "
+      },
+      {
+        "turn": 2,
+        "mode": "search",
+        "arguments": "calc_query search '/mnt/spreadsheet_data/spreadsheet/05_Project AIF/05_01_AIF_input.xlsx'   --text 'Gross IRR'",
+        "result_chars": 1617,
+        "latency_s": 0.33717589208390564,
+        "failed": false,
+        "observation_preview": "{\n  \"mode\": \"search\",\n  \"status\": \"OK\",\n  \"text\": \"Gross IRR\",\n  \"truncated\": false,\n  \"hits\": [\n    {\n      \"display\": \"IRR Calculation!C14\",\n      \"cell_id\": \"cell:s03:r14:c3\",\n      \"exact_text\": \"Gross IRR\",\n      \"fact_kind\": \"raw_text_anchor\",\n      \"nearby_labels\": [\n        {\n          \"display\": \"IRR Calculation!C12\",\n          \"kind\": \"raw_text\",\n          \"text\": \"Net Cash Flow\",\n      "
+      },
+      {
+        "turn": 3,
+        "mode": "search",
+        "arguments": "calc_query search '/mnt/spreadsheet_data/spreadsheet/05_Project AIF/05_01_AIF_input.xlsx'   --text hurdle",
+        "result_chars": 7105,
+        "latency_s": 0.34646254300605506,
+        "failed": false,
+        "observation_preview": "{\n  \"mode\": \"search\",\n  \"status\": \"OK\",\n  \"text\": \"hurdle\",\n  \"truncated\": false,\n  \"hits\": [\n    {\n      \"display\": \"Dashboard!G9\",\n      \"cell_id\": \"cell:s00:r9:c7\",\n      \"exact_text\": \"Hurdle Rate\",\n      \"fact_kind\": \"raw_text_anchor\",\n      \"nearby_labels\": [\n        {\n          \"display\": \"Dashboard!E7\",\n          \"kind\": \"raw_text\",\n          \"text\": \"Numbers\",\n          \"cell_id\": \"cell:s"
+      },
+      {
+        "turn": 4,
+        "mode": "inspect",
+        "arguments": "calc_query inspect '/mnt/spreadsheet_data/spreadsheet/05_Project AIF/05_01_AIF_input.xlsx' --sheet Dashboard --target G9",
+        "result_chars": 1377,
+        "latency_s": 0.3479915849165991,
+        "failed": false,
+        "observation_preview": "{\n  \"mode\": \"inspect\",\n  \"status\": \"OK\",\n  \"fact_kind\": \"compiled_cell\",\n  \"truncated\": false,\n  \"cells\": [\n    {\n      \"display\": \"Dashboard!G9\",\n      \"cell_id\": \"cell:s00:r9:c7\",\n      \"kind_raw\": \"text\",\n      \"raw_value\": \"Hurdle Rate\",\n      \"display_value\": \"Hurdle Rate\",\n      \"formula\": null,\n      \"formula_fingerprint_id\": null,\n      \"formula_opaque\": false,\n      \"nearby_labels\": [\n   "
+      },
+      {
+        "turn": 28,
+        "mode": "formula_pattern",
+        "arguments": "calc_query formula_pattern '/mnt/spreadsheet_data/spreadsheet/05_Project AIF/05_01_AIF_input.xlsx' --sheet 'IRR Calculation' --target E10",
+        "result_chars": 8644,
+        "latency_s": 0.33976621297188103,
+        "failed": false,
+        "observation_preview": "{\n  \"mode\": \"formula_pattern\",\n  \"status\": \"OK\",\n  \"display\": \"IRR Calculation!E10\",\n  \"formula\": \"=-E6+E7+E8+E9\",\n  \"fingerprint_id\": \"formula_class:f0de79ecd8\",\n  \"canonical_fingerprint\": \"=-C[0]R[-4]+C[0]R[-3]+C[0]R[-2]+C[0]R[-1]\",\n  \"member_count_returned\": 64,\n  \"members\": [\n    {\n      \"display\": \"IRR Calculation!E10\",\n      \"formula\": \"=-E6+E7+E8+E9\",\n      \"cell_id\": \"cell:s03:r10:c5\"\n    "
+      }
+    ],
+    "evidence_uptake_tokens": [
+      "B4",
+      "B45",
+      "H9",
+      "K7"
+    ],
+    "evidence_uptake": true
+  },
+  "identity": {
+    "ok": true,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor\\",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "tool_choice": "auto",
+    "reasoning_effort": null,
+    "effective_generation_parameters": {
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "tool_choice": "auto",
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      }
+    }
+  },
+  "written_at": "2026-09-16T13:48:34.281000+00:00"
+}

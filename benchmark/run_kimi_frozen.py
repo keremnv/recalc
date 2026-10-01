@@ -52,6 +52,22 @@ def _arguments() -> argparse.Namespace:
     )
     parser.add_argument("--skip-existing", action="store_true")
     parser.add_argument(
+        "--hybrid",
+        action="store_true",
+        help="Expose bash/view_xlsx alongside all LibreCalc tools for the optional-ISA arm.",
+    )
+    parser.add_argument(
+        "--unbounded-reads",
+        action="store_true",
+        help="Remove the read ceiling and post-inspect read budget in both category groups.",
+    )
+    parser.add_argument(
+        "--compute-execution",
+        choices=("formula-blocks-v1", "semantic-program-v1"),
+        default="formula-blocks-v1",
+        help="Template/Financial Model execution surface; default preserves the frozen 297 arm.",
+    )
+    parser.add_argument(
         "--debug-execution",
         choices=("formula-blocks-v1", "semantic-program-v1"),
         default="formula-blocks-v1",
@@ -153,7 +169,12 @@ def _run_group(
 ) -> int:
     if not labels:
         return 0
-    execution = args.debug_execution if debugging else "formula-blocks-v1"
+    if args.hybrid:
+        execution = "semantic-program-v1"
+    elif debugging:
+        execution = args.debug_execution
+    else:
+        execution = args.compute_execution
     repair_passes = args.debug_repair_passes if debugging else 1
     command = [
         sys.executable,
@@ -184,7 +205,8 @@ def _run_group(
         str(repair_passes),
     ]
     if debugging:
-        command.append("--read-budget")
+        if not args.unbounded_reads:
+            command.append("--read-budget")
         # The three checks that cleared the offline gate were all measured on Debugging
         # output, and broken_check_cell is worthless outside repair tasks.
         if args.commit_gate:
@@ -194,6 +216,10 @@ def _run_group(
             command.append("--preserve-populated")
         if args.compute_read_budget:
             command.append("--compute-read-budget")
+    if args.hybrid:
+        command.append("--hybrid")
+    if args.unbounded_reads:
+        command.append("--unbounded-reads")
     if args.skip_existing:
         command.append("--skip-existing")
     for provider in args.provider_only or []:

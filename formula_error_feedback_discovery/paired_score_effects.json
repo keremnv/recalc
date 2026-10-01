@@ -1,0 +1,138 @@
+{
+ "02_01": {
+  "CONTROL": {
+   "cell": "Debugging_02_01_CONTROL_R1",
+   "class": "PROVIDER_CENSORED",
+   "score": null
+  },
+  "TREATMENT": {
+   "cell": "Debugging_02_01_TREATMENT",
+   "class": "MODEL_NONCOMPLETION",
+   "score": null
+  },
+  "mod_delta": null,
+  "reg_delta": null
+ },
+ "02_06": {
+  "CONTROL": {
+   "cell": "Debugging_02_06_CONTROL_R1",
+   "class": "VALID_SUBMISSION",
+   "score": {
+    "acc": 0.0,
+    "reg": 0.9961,
+    "mod": 0.3188
+   }
+  },
+  "TREATMENT": {
+   "cell": "Debugging_02_06_TREATMENT_R1",
+   "class": "VALID_SUBMISSION",
+   "score": {
+    "acc": 0.0,
+    "reg": 0.9951,
+    "mod": 0.3188
+   }
+  },
+  "mod_delta": 0.0,
+  "reg_delta": -0.001
+ },
+ "02_09": {
+  "CONTROL": {
+   "cell": "Debugging_02_09_CONTROL",
+   "class": "VALID_SUBMISSION",
+   "score": {
+    "acc": 0.0,
+    "reg": 0.9956,
+    "mod": 0.8138
+   }
+  },
+  "TREATMENT": {
+   "cell": "Debugging_02_09_TREATMENT",
+   "class": "MODEL_NONCOMPLETION",
+   "score": null
+  },
+  "mod_delta": null,
+  "reg_delta": null
+ },
+ "04_09": {
+  "CONTROL": {
+   "cell": "Debugging_04_09_CONTROL_R1",
+   "class": "PROVIDER_CENSORED",
+   "score": null
+  },
+  "TREATMENT": {
+   "cell": "Debugging_04_09_TREATMENT_R1",
+   "class": "PROVIDER_CENSORED",
+   "score": null
+  },
+  "mod_delta": null,
+  "reg_delta": null
+ },
+ "07_03": {
+  "CONTROL": {
+   "cell": "Debugging_07_03_CONTROL",
+   "class": "MODEL_NONCOMPLETION",
+   "score": null
+  },
+  "TREATMENT": {
+   "cell": "Debugging_07_03_TREATMENT",
+   "class": "MODEL_NONCOMPLETION",
+   "score": {
+    "acc": 0.0,
+    "reg": 0.9954,
+    "mod": 0.0029
+   }
+  },
+  "mod_delta": null,
+  "reg_delta": null
+ },
+ "10_05": {
+  "CONTROL": {
+   "cell": "Debugging_10_05_CONTROL",
+   "class": "MODEL_NONCOMPLETION",
+   "score": null
+  },
+  "TREATMENT": {
+   "cell": "Debugging_10_05_TREATMENT",
+   "class": "MODEL_NONCOMPLETION",
+   "score": null
+  },
+  "mod_delta": null,
+  "reg_delta": null
+ },
+ "10_10": {
+  "CONTROL": {
+   "cell": "Debugging_10_10_CONTROL",
+   "class": "MODEL_NONCOMPLETION",
+   "score": null
+  },
+  "TREATMENT": {
+   "cell": "Debugging_10_10_TREATMENT",
+   "class": "MODEL_NONCOMPLETION",
+   "score": {
+    "acc": 0.0,
+    "reg": 1.0,
+    "mod": 0.242
+   }
+  },
+  "mod_delta": null,
+  "reg_delta": null
+ },
+ "01_06": {
+  "CONTROL": {
+   "cell": "Debugging_01_06_CONTROL_R1",
+   "class": "VALID_SUBMISSION",
+   "score": {
+    "acc": 0.0,
+    "reg": 0.9775,
+    "mod": 0.7595
+   }
+  },
+  "TREATMENT": {
+   "cell": "Debugging_01_06_TREATMENT_R1",
+   "class": "PROVIDER_CENSORED",
+   "score": null
+  },
+  "mod_delta": null,
+  "reg_delta": null
+ }
+}

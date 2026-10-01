@@ -1,0 +1,20 @@
+{
+ "historical_runs": 71,
+ "live_runs": 96,
+ "historical_execs": 1210,
+ "live_execs": 1391,
+ "episodes": 232,
+ "by_family": {
+  "Financial_Model": 1100,
+  "Template": 485,
+  "Debugging": 950,
+  "Visualization": 66
+ },
+ "sources": [
+  "control_python_audit (P-A/P-B/P-C)",
+  "live_transparent_runtime_ab",
+  "targeted_runtime_replication",
+  "inspection_efficiency_ab",
+  "batch_write_helper_ab"
+ ]
+}

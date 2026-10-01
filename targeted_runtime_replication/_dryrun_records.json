@@ -1,0 +1,1166 @@
+{
+ "Template:01_02": {
+  "H0": {
+   "task_id": "Template:01_02",
+   "arm": "H0",
+   "dry_run": true,
+   "system_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+   "instance_hash": "d9bdd49aaab3a0caa84c47ce813360e51ea90c27f24d61db3e74f91afeb93d4b",
+   "tools": [
+    {
+     "type": "function",
+     "function": {
+      "name": "bash",
+      "description": "run shell commands (e.g., file operations, calling Python scripts with `python3`)",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "command": {
+         "type": "string",
+         "description": "shell command to run"
+        }
+       },
+       "required": [
+        "command"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "view_xlsx",
+      "description": "view the content of an xlsx file. Can list all sheets or view a specific sheet's contents with optional row range",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "file_path": {
+         "type": "string"
+        },
+        "mode": {
+         "type": "string",
+         "description": "list or content"
+        },
+        "sheet": {
+         "type": "string"
+        },
+        "start_row": {
+         "type": "integer"
+        },
+        "end_row": {
+         "type": "integer"
+        }
+       },
+       "required": [
+        "file_path"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "submit",
+      "description": "submits the current file",
+      "parameters": {
+       "type": "object",
+       "properties": {}
+      }
+     }
+    }
+   ],
+   "tool_order": [
+    "bash",
+    "view_xlsx",
+    "submit"
+   ],
+   "model": "z-ai/glm-5.3-flash",
+   "temperature": 0.0,
+   "top_p": 1.0,
+   "max_tokens": 8192,
+   "tool_choice": "required",
+   "parallel_tool_calls": false,
+   "workdir_listing": [
+    "input.xlsx"
+   ],
+   "input_hash": "7290b7b0703c267c128d4f6f3633a33a4cbc6863e04b3fd3e099a5f028ea089f",
+   "request_body": {
+    "model": "z-ai/glm-5.3-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "tool_choice": "required",
+    "parallel_tool_calls": false,
+    "n_messages": 2,
+    "system_len": 216,
+    "user_len": 3278
+   }
+  },
+  "H1": {
+   "task_id": "Template:01_02",
+   "arm": "H1",
+   "dry_run": true,
+   "system_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+   "instance_hash": "d9bdd49aaab3a0caa84c47ce813360e51ea90c27f24d61db3e74f91afeb93d4b",
+   "tools": [
+    {
+     "type": "function",
+     "function": {
+      "name": "bash",
+      "description": "run shell commands (e.g., file operations, calling Python scripts with `python3`)",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "command": {
+         "type": "string",
+         "description": "shell command to run"
+        }
+       },
+       "required": [
+        "command"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "view_xlsx",
+      "description": "view the content of an xlsx file. Can list all sheets or view a specific sheet's contents with optional row range",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "file_path": {
+         "type": "string"
+        },
+        "mode": {
+         "type": "string",
+         "description": "list or content"
+        },
+        "sheet": {
+         "type": "string"
+        },
+        "start_row": {
+         "type": "integer"
+        },
+        "end_row": {
+         "type": "integer"
+        }
+       },
+       "required": [
+        "file_path"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "submit",
+      "description": "submits the current file",
+      "parameters": {
+       "type": "object",
+       "properties": {}
+      }
+     }
+    }
+   ],
+   "tool_order": [
+    "bash",
+    "view_xlsx",
+    "submit"
+   ],
+   "model": "z-ai/glm-5.3-flash",
+   "temperature": 0.0,
+   "top_p": 1.0,
+   "max_tokens": 8192,
+   "tool_choice": "required",
+   "parallel_tool_calls": false,
+   "workdir_listing": [
+    "input.xlsx"
+   ],
+   "input_hash": "7290b7b0703c267c128d4f6f3633a33a4cbc6863e04b3fd3e099a5f028ea089f",
+   "request_body": {
+    "model": "z-ai/glm-5.3-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "tool_choice": "required",
+    "parallel_tool_calls": false,
+    "n_messages": 2,
+    "system_len": 216,
+    "user_len": 3278
+   }
+  }
+ },
+ "Template:01_07": {
+  "H0": {
+   "task_id": "Template:01_07",
+   "arm": "H0",
+   "dry_run": true,
+   "system_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+   "instance_hash": "a00d2732f6c6ab271258092254cdef7f3f89a6bc057bd0a4f6fdd8de2e582f0b",
+   "tools": [
+    {
+     "type": "function",
+     "function": {
+      "name": "bash",
+      "description": "run shell commands (e.g., file operations, calling Python scripts with `python3`)",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "command": {
+         "type": "string",
+         "description": "shell command to run"
+        }
+       },
+       "required": [
+        "command"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "view_xlsx",
+      "description": "view the content of an xlsx file. Can list all sheets or view a specific sheet's contents with optional row range",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "file_path": {
+         "type": "string"
+        },
+        "mode": {
+         "type": "string",
+         "description": "list or content"
+        },
+        "sheet": {
+         "type": "string"
+        },
+        "start_row": {
+         "type": "integer"
+        },
+        "end_row": {
+         "type": "integer"
+        }
+       },
+       "required": [
+        "file_path"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "submit",
+      "description": "submits the current file",
+      "parameters": {
+       "type": "object",
+       "properties": {}
+      }
+     }
+    }
+   ],
+   "tool_order": [
+    "bash",
+    "view_xlsx",
+    "submit"
+   ],
+   "model": "z-ai/glm-5.3-flash",
+   "temperature": 0.0,
+   "top_p": 1.0,
+   "max_tokens": 8192,
+   "tool_choice": "required",
+   "parallel_tool_calls": false,
+   "workdir_listing": [
+    "input.xlsx"
+   ],
+   "input_hash": "af4aad6ad3b799ab8b57fa96425cf15c2c9fcc0c82656822d986c7ff1fec2020",
+   "request_body": {
+    "model": "z-ai/glm-5.3-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "tool_choice": "required",
+    "parallel_tool_calls": false,
+    "n_messages": 2,
+    "system_len": 216,
+    "user_len": 3199
+   }
+  },
+  "H1": {
+   "task_id": "Template:01_07",
+   "arm": "H1",
+   "dry_run": true,
+   "system_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+   "instance_hash": "a00d2732f6c6ab271258092254cdef7f3f89a6bc057bd0a4f6fdd8de2e582f0b",
+   "tools": [
+    {
+     "type": "function",
+     "function": {
+      "name": "bash",
+      "description": "run shell commands (e.g., file operations, calling Python scripts with `python3`)",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "command": {
+         "type": "string",
+         "description": "shell command to run"
+        }
+       },
+       "required": [
+        "command"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "view_xlsx",
+      "description": "view the content of an xlsx file. Can list all sheets or view a specific sheet's contents with optional row range",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "file_path": {
+         "type": "string"
+        },
+        "mode": {
+         "type": "string",
+         "description": "list or content"
+        },
+        "sheet": {
+         "type": "string"
+        },
+        "start_row": {
+         "type": "integer"
+        },
+        "end_row": {
+         "type": "integer"
+        }
+       },
+       "required": [
+        "file_path"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "submit",
+      "description": "submits the current file",
+      "parameters": {
+       "type": "object",
+       "properties": {}
+      }
+     }
+    }
+   ],
+   "tool_order": [
+    "bash",
+    "view_xlsx",
+    "submit"
+   ],
+   "model": "z-ai/glm-5.3-flash",
+   "temperature": 0.0,
+   "top_p": 1.0,
+   "max_tokens": 8192,
+   "tool_choice": "required",
+   "parallel_tool_calls": false,
+   "workdir_listing": [
+    "input.xlsx"
+   ],
+   "input_hash": "af4aad6ad3b799ab8b57fa96425cf15c2c9fcc0c82656822d986c7ff1fec2020",
+   "request_body": {
+    "model": "z-ai/glm-5.3-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "tool_choice": "required",
+    "parallel_tool_calls": false,
+    "n_messages": 2,
+    "system_len": 216,
+    "user_len": 3199
+   }
+  }
+ },
+ "Debugging:02_06": {
+  "H0": {
+   "task_id": "Debugging:02_06",
+   "arm": "H0",
+   "dry_run": true,
+   "system_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+   "instance_hash": "b739d88ed3dfc482da4ca8f52ca2bbf5c40d364d2e9b9008ad718ebb2d1b555b",
+   "tools": [
+    {
+     "type": "function",
+     "function": {
+      "name": "bash",
+      "description": "run shell commands (e.g., file operations, calling Python scripts with `python3`)",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "command": {
+         "type": "string",
+         "description": "shell command to run"
+        }
+       },
+       "required": [
+        "command"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "view_xlsx",
+      "description": "view the content of an xlsx file. Can list all sheets or view a specific sheet's contents with optional row range",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "file_path": {
+         "type": "string"
+        },
+        "mode": {
+         "type": "string",
+         "description": "list or content"
+        },
+        "sheet": {
+         "type": "string"
+        },
+        "start_row": {
+         "type": "integer"
+        },
+        "end_row": {
+         "type": "integer"
+        }
+       },
+       "required": [
+        "file_path"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "submit",
+      "description": "submits the current file",
+      "parameters": {
+       "type": "object",
+       "properties": {}
+      }
+     }
+    }
+   ],
+   "tool_order": [
+    "bash",
+    "view_xlsx",
+    "submit"
+   ],
+   "model": "z-ai/glm-5.3-flash",
+   "temperature": 0.0,
+   "top_p": 1.0,
+   "max_tokens": 8192,
+   "tool_choice": "required",
+   "parallel_tool_calls": false,
+   "workdir_listing": [
+    "input.xlsx"
+   ],
+   "input_hash": "8201c6f818b331626002113e51b43d30aafb7ebe27218b3457111042ee3f6d1f",
+   "request_body": {
+    "model": "z-ai/glm-5.3-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "tool_choice": "required",
+    "parallel_tool_calls": false,
+    "n_messages": 2,
+    "system_len": 216,
+    "user_len": 3492
+   }
+  },
+  "H1": {
+   "task_id": "Debugging:02_06",
+   "arm": "H1",
+   "dry_run": true,
+   "system_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+   "instance_hash": "b739d88ed3dfc482da4ca8f52ca2bbf5c40d364d2e9b9008ad718ebb2d1b555b",
+   "tools": [
+    {
+     "type": "function",
+     "function": {
+      "name": "bash",
+      "description": "run shell commands (e.g., file operations, calling Python scripts with `python3`)",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "command": {
+         "type": "string",
+         "description": "shell command to run"
+        }
+       },
+       "required": [
+        "command"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "view_xlsx",
+      "description": "view the content of an xlsx file. Can list all sheets or view a specific sheet's contents with optional row range",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "file_path": {
+         "type": "string"
+        },
+        "mode": {
+         "type": "string",
+         "description": "list or content"
+        },
+        "sheet": {
+         "type": "string"
+        },
+        "start_row": {
+         "type": "integer"
+        },
+        "end_row": {
+         "type": "integer"
+        }
+       },
+       "required": [
+        "file_path"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "submit",
+      "description": "submits the current file",
+      "parameters": {
+       "type": "object",
+       "properties": {}
+      }
+     }
+    }
+   ],
+   "tool_order": [
+    "bash",
+    "view_xlsx",
+    "submit"
+   ],
+   "model": "z-ai/glm-5.3-flash",
+   "temperature": 0.0,
+   "top_p": 1.0,
+   "max_tokens": 8192,
+   "tool_choice": "required",
+   "parallel_tool_calls": false,
+   "workdir_listing": [
+    "input.xlsx"
+   ],
+   "input_hash": "8201c6f818b331626002113e51b43d30aafb7ebe27218b3457111042ee3f6d1f",
+   "request_body": {
+    "model": "z-ai/glm-5.3-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "tool_choice": "required",
+    "parallel_tool_calls": false,
+    "n_messages": 2,
+    "system_len": 216,
+    "user_len": 3492
+   }
+  }
+ },
+ "Financial_Model:01_01": {
+  "H0": {
+   "task_id": "Financial_Model:01_01",
+   "arm": "H0",
+   "dry_run": true,
+   "system_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+   "instance_hash": "3b25c83d20dd1c4c252692abe98cdd80d2327d83c239c769eeecd434f3f8dbe9",
+   "tools": [
+    {
+     "type": "function",
+     "function": {
+      "name": "bash",
+      "description": "run shell commands (e.g., file operations, calling Python scripts with `python3`)",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "command": {
+         "type": "string",
+         "description": "shell command to run"
+        }
+       },
+       "required": [
+        "command"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "view_xlsx",
+      "description": "view the content of an xlsx file. Can list all sheets or view a specific sheet's contents with optional row range",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "file_path": {
+         "type": "string"
+        },
+        "mode": {
+         "type": "string",
+         "description": "list or content"
+        },
+        "sheet": {
+         "type": "string"
+        },
+        "start_row": {
+         "type": "integer"
+        },
+        "end_row": {
+         "type": "integer"
+        }
+       },
+       "required": [
+        "file_path"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "submit",
+      "description": "submits the current file",
+      "parameters": {
+       "type": "object",
+       "properties": {}
+      }
+     }
+    }
+   ],
+   "tool_order": [
+    "bash",
+    "view_xlsx",
+    "submit"
+   ],
+   "model": "z-ai/glm-5.3-flash",
+   "temperature": 0.0,
+   "top_p": 1.0,
+   "max_tokens": 8192,
+   "tool_choice": "required",
+   "parallel_tool_calls": false,
+   "workdir_listing": [
+    "input.xlsx"
+   ],
+   "input_hash": "a01657c0cc7116569be1d649bb259d32073d3fa6261d7d9da22c461875e1080c",
+   "request_body": {
+    "model": "z-ai/glm-5.3-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "tool_choice": "required",
+    "parallel_tool_calls": false,
+    "n_messages": 2,
+    "system_len": 216,
+    "user_len": 4164
+   }
+  },
+  "H1": {
+   "task_id": "Financial_Model:01_01",
+   "arm": "H1",
+   "dry_run": true,
+   "system_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+   "instance_hash": "3b25c83d20dd1c4c252692abe98cdd80d2327d83c239c769eeecd434f3f8dbe9",
+   "tools": [
+    {
+     "type": "function",
+     "function": {
+      "name": "bash",
+      "description": "run shell commands (e.g., file operations, calling Python scripts with `python3`)",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "command": {
+         "type": "string",
+         "description": "shell command to run"
+        }
+       },
+       "required": [
+        "command"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "view_xlsx",
+      "description": "view the content of an xlsx file. Can list all sheets or view a specific sheet's contents with optional row range",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "file_path": {
+         "type": "string"
+        },
+        "mode": {
+         "type": "string",
+         "description": "list or content"
+        },
+        "sheet": {
+         "type": "string"
+        },
+        "start_row": {
+         "type": "integer"
+        },
+        "end_row": {
+         "type": "integer"
+        }
+       },
+       "required": [
+        "file_path"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "submit",
+      "description": "submits the current file",
+      "parameters": {
+       "type": "object",
+       "properties": {}
+      }
+     }
+    }
+   ],
+   "tool_order": [
+    "bash",
+    "view_xlsx",
+    "submit"
+   ],
+   "model": "z-ai/glm-5.3-flash",
+   "temperature": 0.0,
+   "top_p": 1.0,
+   "max_tokens": 8192,
+   "tool_choice": "required",
+   "parallel_tool_calls": false,
+   "workdir_listing": [
+    "input.xlsx"
+   ],
+   "input_hash": "a01657c0cc7116569be1d649bb259d32073d3fa6261d7d9da22c461875e1080c",
+   "request_body": {
+    "model": "z-ai/glm-5.3-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "tool_choice": "required",
+    "parallel_tool_calls": false,
+    "n_messages": 2,
+    "system_len": 216,
+    "user_len": 4164
+   }
+  }
+ },
+ "Financial_Model:13_05": {
+  "H0": {
+   "task_id": "Financial_Model:13_05",
+   "arm": "H0",
+   "dry_run": true,
+   "system_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+   "instance_hash": "ccdf87970d4cfa7892edea1539a170764e0ef234ef2d7f463be6db9865a0dbe2",
+   "tools": [
+    {
+     "type": "function",
+     "function": {
+      "name": "bash",
+      "description": "run shell commands (e.g., file operations, calling Python scripts with `python3`)",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "command": {
+         "type": "string",
+         "description": "shell command to run"
+        }
+       },
+       "required": [
+        "command"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "view_xlsx",
+      "description": "view the content of an xlsx file. Can list all sheets or view a specific sheet's contents with optional row range",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "file_path": {
+         "type": "string"
+        },
+        "mode": {
+         "type": "string",
+         "description": "list or content"
+        },
+        "sheet": {
+         "type": "string"
+        },
+        "start_row": {
+         "type": "integer"
+        },
+        "end_row": {
+         "type": "integer"
+        }
+       },
+       "required": [
+        "file_path"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "submit",
+      "description": "submits the current file",
+      "parameters": {
+       "type": "object",
+       "properties": {}
+      }
+     }
+    }
+   ],
+   "tool_order": [
+    "bash",
+    "view_xlsx",
+    "submit"
+   ],
+   "model": "z-ai/glm-5.3-flash",
+   "temperature": 0.0,
+   "top_p": 1.0,
+   "max_tokens": 8192,
+   "tool_choice": "required",
+   "parallel_tool_calls": false,
+   "workdir_listing": [
+    "input.xlsx"
+   ],
+   "input_hash": "7df362ed7cb902b3fd8021a5e10e2cd9d5e48308f3e9002ca3df91a391872e1f",
+   "request_body": {
+    "model": "z-ai/glm-5.3-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "tool_choice": "required",
+    "parallel_tool_calls": false,
+    "n_messages": 2,
+    "system_len": 216,
+    "user_len": 3804
+   }
+  },
+  "H1": {
+   "task_id": "Financial_Model:13_05",
+   "arm": "H1",
+   "dry_run": true,
+   "system_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+   "instance_hash": "ccdf87970d4cfa7892edea1539a170764e0ef234ef2d7f463be6db9865a0dbe2",
+   "tools": [
+    {
+     "type": "function",
+     "function": {
+      "name": "bash",
+      "description": "run shell commands (e.g., file operations, calling Python scripts with `python3`)",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "command": {
+         "type": "string",
+         "description": "shell command to run"
+        }
+       },
+       "required": [
+        "command"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "view_xlsx",
+      "description": "view the content of an xlsx file. Can list all sheets or view a specific sheet's contents with optional row range",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "file_path": {
+         "type": "string"
+        },
+        "mode": {
+         "type": "string",
+         "description": "list or content"
+        },
+        "sheet": {
+         "type": "string"
+        },
+        "start_row": {
+         "type": "integer"
+        },
+        "end_row": {
+         "type": "integer"
+        }
+       },
+       "required": [
+        "file_path"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "submit",
+      "description": "submits the current file",
+      "parameters": {
+       "type": "object",
+       "properties": {}
+      }
+     }
+    }
+   ],
+   "tool_order": [
+    "bash",
+    "view_xlsx",
+    "submit"
+   ],
+   "model": "z-ai/glm-5.3-flash",
+   "temperature": 0.0,
+   "top_p": 1.0,
+   "max_tokens": 8192,
+   "tool_choice": "required",
+   "parallel_tool_calls": false,
+   "workdir_listing": [
+    "input.xlsx"
+   ],
+   "input_hash": "7df362ed7cb902b3fd8021a5e10e2cd9d5e48308f3e9002ca3df91a391872e1f",
+   "request_body": {
+    "model": "z-ai/glm-5.3-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "tool_choice": "required",
+    "parallel_tool_calls": false,
+    "n_messages": 2,
+    "system_len": 216,
+    "user_len": 3804
+   }
+  }
+ },
+ "Template:06_12": {
+  "H0": {
+   "task_id": "Template:06_12",
+   "arm": "H0",
+   "dry_run": true,
+   "system_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+   "instance_hash": "190b29f6aee9316bc5c06d622fb40a8781d5dd05f610f254d6fd4cdca37222ea",
+   "tools": [
+    {
+     "type": "function",
+     "function": {
+      "name": "bash",
+      "description": "run shell commands (e.g., file operations, calling Python scripts with `python3`)",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "command": {
+         "type": "string",
+         "description": "shell command to run"
+        }
+       },
+       "required": [
+        "command"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "view_xlsx",
+      "description": "view the content of an xlsx file. Can list all sheets or view a specific sheet's contents with optional row range",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "file_path": {
+         "type": "string"
+        },
+        "mode": {
+         "type": "string",
+         "description": "list or content"
+        },
+        "sheet": {
+         "type": "string"
+        },
+        "start_row": {
+         "type": "integer"
+        },
+        "end_row": {
+         "type": "integer"
+        }
+       },
+       "required": [
+        "file_path"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "submit",
+      "description": "submits the current file",
+      "parameters": {
+       "type": "object",
+       "properties": {}
+      }
+     }
+    }
+   ],
+   "tool_order": [
+    "bash",
+    "view_xlsx",
+    "submit"
+   ],
+   "model": "z-ai/glm-5.3-flash",
+   "temperature": 0.0,
+   "top_p": 1.0,
+   "max_tokens": 8192,
+   "tool_choice": "required",
+   "parallel_tool_calls": false,
+   "workdir_listing": [
+    "input.xlsx"
+   ],
+   "input_hash": "d05d2bcd62e971dab1907e3b290cc7e46c161f5d1d3bfac6266d04bd831ddeba",
+   "request_body": {
+    "model": "z-ai/glm-5.3-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "tool_choice": "required",
+    "parallel_tool_calls": false,
+    "n_messages": 2,
+    "system_len": 216,
+    "user_len": 3231
+   }
+  },
+  "H1": {
+   "task_id": "Template:06_12",
+   "arm": "H1",
+   "dry_run": true,
+   "system_hash": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+   "instance_hash": "190b29f6aee9316bc5c06d622fb40a8781d5dd05f610f254d6fd4cdca37222ea",
+   "tools": [
+    {
+     "type": "function",
+     "function": {
+      "name": "bash",
+      "description": "run shell commands (e.g., file operations, calling Python scripts with `python3`)",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "command": {
+         "type": "string",
+         "description": "shell command to run"
+        }
+       },
+       "required": [
+        "command"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "view_xlsx",
+      "description": "view the content of an xlsx file. Can list all sheets or view a specific sheet's contents with optional row range",
+      "parameters": {
+       "type": "object",
+       "properties": {
+        "file_path": {
+         "type": "string"
+        },
+        "mode": {
+         "type": "string",
+         "description": "list or content"
+        },
+        "sheet": {
+         "type": "string"
+        },
+        "start_row": {
+         "type": "integer"
+        },
+        "end_row": {
+         "type": "integer"
+        }
+       },
+       "required": [
+        "file_path"
+       ]
+      }
+     }
+    },
+    {
+     "type": "function",
+     "function": {
+      "name": "submit",
+      "description": "submits the current file",
+      "parameters": {
+       "type": "object",
+       "properties": {}
+      }
+     }
+    }
+   ],
+   "tool_order": [
+    "bash",
+    "view_xlsx",
+    "submit"
+   ],
+   "model": "z-ai/glm-5.3-flash",
+   "temperature": 0.0,
+   "top_p": 1.0,
+   "max_tokens": 8192,
+   "tool_choice": "required",
+   "parallel_tool_calls": false,
+   "workdir_listing": [
+    "input.xlsx"
+   ],
+   "input_hash": "d05d2bcd62e971dab1907e3b290cc7e46c161f5d1d3bfac6266d04bd831ddeba",
+   "request_body": {
+    "model": "z-ai/glm-5.3-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "tool_choice": "required",
+    "parallel_tool_calls": false,
+    "n_messages": 2,
+    "system_len": 216,
+    "user_len": 3231
+   }
+  }
+ }
+}

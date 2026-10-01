@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-09-16T09:01:45.919577+00:00",
+  "status": "HARNESS_WORKER_STARTED",
+  "worker": {
+    "worker_id": "spark-harness:Financial_Model:02_01",
+    "pid": 282696,
+    "log": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/official-score-probe/logs/spark-harness_Financial_Model_02_01.log",
+    "command": [
+      "spark-harness-worker"
+    ]
+  },
+  "spark_control_output_root": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/official-score-spark-1.3-contributor-fm-02_01",
+  "spark_harness_output_root": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/official-score-spark-1.3-contributor-fm-02_01-librecalc",
+  "control_kept": true
+}

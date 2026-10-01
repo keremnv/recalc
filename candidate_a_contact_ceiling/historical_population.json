@@ -1,0 +1,92 @@
+{
+  "source": "transparent_python_read_census python_heredoc only",
+  "summary": {
+    "candidate_a_safe_event_coverage_pct": 85.5,
+    "classes": {
+      "A_FALLBACK_DOMINANT": 5,
+      "A_FULLY_PROXYABLE": 72,
+      "A_NOT_SAFE": 51,
+      "A_PROXYABLE_WITH_LAZY_FALLBACK": 181
+    },
+    "data_only_true_executions": 55,
+    "executions": 309,
+    "families": {
+      "Debugging": {
+        "executions": 86,
+        "fallback_dominant": 0,
+        "fully_proxyable": 16,
+        "lazy_fallback": 61,
+        "not_safe": 9,
+        "open_calls": 91,
+        "read_events": 789,
+        "safe_covered_reads": 619
+      },
+      "Financial_Model": {
+        "executions": 147,
+        "fallback_dominant": 5,
+        "fully_proxyable": 48,
+        "lazy_fallback": 70,
+        "not_safe": 24,
+        "open_calls": 139,
+        "read_events": 2082,
+        "safe_covered_reads": 1852
+      },
+      "Template": {
+        "executions": 54,
+        "fallback_dominant": 0,
+        "fully_proxyable": 5,
+        "lazy_fallback": 47,
+        "not_safe": 2,
+        "open_calls": 62,
+        "read_events": 938,
+        "safe_covered_reads": 783
+      },
+      "Visualization": {
+        "executions": 22,
+        "fallback_dominant": 0,
+        "fully_proxyable": 3,
+        "lazy_fallback": 3,
+        "not_safe": 16,
+        "open_calls": 6,
+        "read_events": 108,
+        "safe_covered_reads": 95
+      }
+    },
+    "package_xml_executions": 43,
+    "patterns": {
+      "COMPARISON_OR_VERIFICATION": 14,
+      "DIMENSION_DISCOVERY": 42,
+      "FORMULA_OR_DTYPE_READ": 66,
+      "OTHER_OPENPYXL_READ": 11,
+      "PACKAGE_XML_READ": 43,
+      "PERIOD_OR_HEADER_SCAN": 60,
+      "ROW_COLUMN_ITERATION": 150,
+      "SHEET_ENUMERATION": 27,
+      "SINGLE_CELL_OR_EXPLICIT_RANGE": 181,
+      "STYLE_OR_STRUCTURE_READ": 55,
+      "TEXT_OR_LABEL_SCAN": 100,
+      "VALUES_ITERATION": 1
+    },
+    "read_write": {
+      "NON_WORKBOOK_PYTHON": 13,
+      "PACKAGE_XML_READ": 35,
+      "READ_ONLY_COMPLEX_PYTHON": 41,
+      "READ_ONLY_SIMPLE": 71,
+      "READ_WRITE_MIXED": 125,
+      "STYLE_OR_STRUCTURE_READ": 20,
+      "WRITE_DOMINANT_WITH_READS": 4
+    },
+    "reasons": {
+      "dynamic attribute/eval/exec": 4,
+      "no workbook read event": 51,
+      "object/function escape risk": 58,
+      "package/XML access": 5,
+      "read/write coexistence": 123,
+      "rich cell object semantics": 20,
+      "unsupported API can fall back": 37
+    },
+    "same_generation_repeat_groups": 61,
+    "same_generation_repeated_open_surplus": 234,
+    "write_executions": 129
+  }
+}

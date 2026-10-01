@@ -1,0 +1,30 @@
+{
+  "distinct_tasks": 14,
+  "label": "A1_ADMITTED_READ_HEAVY_CONTROL_DEFINED",
+  "rule": "Control-only: read-only source, exactly one source workbook load, control preflight success, packaged A1_ADMIT, >=5 static read API references; seeded order, max two scripts per task; retain all qualifying under cap. Workbook size is analyzed, not used for primary selection.",
+  "seed": 20261011,
+  "workload_ids": [
+    "Financial_Model_15_03__103457370cae",
+    "Financial_Model_08_03__59b98508fd79",
+    "Financial_Model_08_03__751f6966e68d",
+    "Financial_Model_08_01__2ea507d758dc",
+    "Debugging_01_06__7b42a0f86b41",
+    "Financial_Model_08_01__8021d8d90c40",
+    "Financial_Model_15_03__472e28fbd6e0",
+    "Financial_Model_02_04__5ac07a9edb67",
+    "Financial_Model_18_05__39d21da726e7",
+    "Financial_Model_07_01__23c57fc578fc",
+    "Financial_Model_02_01__4dbc773c2ade",
+    "Financial_Model_11_02__a443eee257b4",
+    "Financial_Model_11_02__6a75b927c3f6",
+    "Template_03_03__c76ea596b408",
+    "Financial_Model_02_01__e87a34eb884e",
+    "Financial_Model_07_01__90a7533589a4",
+    "Debugging_08_04__2dde74bd671e",
+    "Debugging_01_06__26b457c478d0",
+    "Template_06_12__17725eca76da",
+    "Debugging_05_02__31823ebc55b0",
+    "Debugging_05_02__9e6b464d2158",
+    "Template_16_07__9662584ede5e"
+  ]
+}

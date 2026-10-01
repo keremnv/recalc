@@ -1,0 +1,23 @@
+{
+  "prior_cold_accelerated_loads_scored_total": 78,
+  "prior_cold_contact_source": "rc_acceleration_validation/acceleration_contact.json",
+  "probe_only": true,
+  "public_runs": [
+    {
+      "accelerated_loads": 1,
+      "compiled_workbooks": 1,
+      "index_rebuilt": true,
+      "ordinal": 1,
+      "read_gate": "A1_ADMIT"
+    },
+    {
+      "accelerated_loads": 1,
+      "compiled_workbooks": 1,
+      "index_rebuilt": true,
+      "ordinal": 2,
+      "read_gate": "A1_ADMIT"
+    }
+  ],
+  "warm_acceleration_contact": null,
+  "workload_id": "Template_03_03__c76ea596b408"
+}

@@ -1,0 +1,49 @@
+{
+  "verdict": "OUTPUT_RELATION_NO_GAIN",
+  "comparisons": [
+    {
+      "repeat": 1,
+      "usable": true,
+      "control_exact": false,
+      "treatment_exact": false,
+      "strict_treatment_improvement": false,
+      "strict_control_reversal": false,
+      "precision_collapse": false,
+      "control_f1": 0.4,
+      "treatment_f1": 0.4
+    },
+    {
+      "repeat": 2,
+      "usable": true,
+      "control_exact": false,
+      "treatment_exact": false,
+      "strict_treatment_improvement": false,
+      "strict_control_reversal": false,
+      "precision_collapse": false,
+      "control_f1": 0.4,
+      "treatment_f1": 0.4
+    },
+    {
+      "repeat": 3,
+      "usable": true,
+      "control_exact": false,
+      "treatment_exact": false,
+      "strict_treatment_improvement": false,
+      "strict_control_reversal": false,
+      "precision_collapse": false,
+      "control_f1": 0.4,
+      "treatment_f1": 0.4
+    },
+    {
+      "repeat": 4,
+      "usable": true,
+      "control_exact": false,
+      "treatment_exact": false,
+      "strict_treatment_improvement": false,
+      "strict_control_reversal": false,
+      "precision_collapse": false,
+      "control_f1": 0.4,
+      "treatment_f1": 0.4
+    }
+  ]
+}

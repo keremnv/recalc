@@ -1,0 +1,43 @@
+{
+ "experiment": "zero-model census of model-visible spreadsheet observation work",
+ "constraints": [
+  "no model inference",
+  "no agent changes",
+  "no helpers",
+  "no Candidate A/A1 modification",
+  "no A2/A3",
+  "Candidate B stays closed"
+ ],
+ "unit_hierarchy": [
+  "TASK",
+  "MODEL TURN",
+  "TOOL CALL",
+  "PYTHON EXECUTION",
+  "TOOL OBSERVATION",
+  "OBSERVATION SEGMENT",
+  "ATOMIC FACT"
+ ],
+ "token_accounting_levels": [
+  "OBSERVATION SEGMENT",
+  "ATOMIC FACT"
+ ],
+ "tokenizer_policy": "closest-known GLM-family tokenizer; counts ESTIMATED; byte/char counts exact",
+ "classification": [
+  "NEW_EVIDENCE",
+  "EXACT_REPEAT",
+  "DETERMINISTIC_DERIVATION",
+  "MECHANICAL_REFORMAT",
+  "PARTIAL_OVERLAP",
+  "SEMANTIC_REINSPECTION",
+  "CONTROL_OR_ERROR_RECOVERY",
+  "AMBIGUOUS"
+ ],
+ "rules": {
+  "redundancy_basis": "model-visible prior history only, same trajectory, same workbook generation",
+  "generation": "bumped on save/write or LibreOffice/recalc action; cross-generation facts never match",
+  "no_hindsight": "mechanical classes use prior history + current observation + generation only",
+  "derivation": "conservative: aggregation-shaped output + aggregation op in action + fully-visible inputs",
+  "reinspection": "mechanical repeat with gap>=3 obs (or verify-intent + gap>=2) since last same-query/same-facts",
+  "partial_tokens": "split by new/old fact-count proportion"
+ }
+}

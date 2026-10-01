@@ -1,0 +1,11 @@
+{
+  "blocked_cache_stderr_tail": "WARNING: Cache is unavailable (NotADirectoryError). Ordinary Python can continue. Choose a writable runtime.cache_dir.\n",
+  "blocked_cache_treatment_exit": 0,
+  "blocked_cache_warning": true,
+  "reference_exit": 0,
+  "stdout_exact": true,
+  "unsupported_archived_workload": "Debugging_02_06__7252ca64cf1c",
+  "unsupported_control_treatment_exact": true,
+  "unsupported_gate": "PREDECLARED_REAL_OPENPYXL",
+  "workload_id": "Template_03_03__c76ea596b408"
+}

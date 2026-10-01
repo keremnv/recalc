@@ -1,0 +1,36 @@
+{
+ "H0": {
+  "model": "z-ai/glm-5.3-flash",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "call_limit": 40,
+  "instance_cost_limit": 0.25,
+  "invisible": [
+   "h0_spy_counterfactual",
+   "reference_helpers",
+   "observational_integrity"
+  ]
+ },
+ "H1": {
+  "model": "z-ai/glm-5.3-flash",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "call_limit": 40,
+  "instance_cost_limit": 0.25,
+  "invisible": [
+   "substrate",
+   "candidate_a_a1",
+   "capture",
+   "freshness",
+   "substrate_helpers"
+  ]
+ },
+ "identical_surface": [
+  "system prompt",
+  "instance prompt incl note",
+  "tool schemas",
+  "budgets",
+  "runner",
+  "scorer"
+ ]
+}

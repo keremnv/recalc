@@ -1,0 +1,30 @@
+{
+  "candidate_b_implemented": false,
+  "classification_rule": "earliest blocker from recoverable Python AST and frozen runtime reason; lexical false positives are labelled STATIC_ANALYSIS_UNCERTAINTY",
+  "experiment": "zero-model Candidate-A contact-ceiling audit",
+  "helpers_added": false,
+  "materiality": {
+    "primary": 0.1,
+    "thresholds": [
+      0.05,
+      0.1,
+      0.2,
+      0.3
+    ]
+  },
+  "model_inference": false,
+  "primary_question": "intrinsic non-contact versus conservatively hidden mechanically relaxable work",
+  "prompts_changed": false,
+  "sources": [
+    "candidate_a_live primary archives",
+    "transparent_python_read_census",
+    "candidate_a_shadow_interposition"
+  ],
+  "unit_levels": [
+    "TASK",
+    "PYTHON_EXECUTION",
+    "OPENPYXL_LOAD",
+    "PRIMITIVE_READ_EVENT",
+    "MODEL_TOOL_CYCLE"
+  ]
+}

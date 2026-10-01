@@ -1,0 +1,88 @@
+10 / 403
+20 / 403
+30 / 403
+40 / 403
+50 / 403
+60 / 403
+70 / 403
+80 / 403
+90 / 403
+100 / 403
+110 / 403
+120 / 403
+130 / 403
+140 / 403
+150 / 403
+160 / 403
+170 / 403
+180 / 403
+190 / 403
+200 / 403
+210 / 403
+220 / 403
+230 / 403
+240 / 403
+250 / 403
+260 / 403
+270 / 403
+280 / 403
+290 / 403
+300 / 403
+310 / 403
+320 / 403
+330 / 403
+340 / 403
+350 / 403
+360 / 403
+370 / 403
+380 / 403
+390 / 403
+400 / 403
+follow-up 10 / 310
+follow-up 20 / 310
+follow-up 30 / 310
+follow-up 40 / 310
+follow-up 50 / 310
+follow-up 60 / 310
+follow-up 70 / 310
+follow-up 80 / 310
+follow-up 90 / 310
+follow-up 100 / 310
+follow-up 110 / 310
+follow-up 120 / 310
+follow-up 130 / 310
+follow-up 140 / 310
+follow-up 150 / 310
+follow-up 160 / 310
+follow-up 170 / 310
+follow-up 180 / 310
+follow-up 190 / 310
+follow-up 200 / 310
+follow-up 210 / 310
+follow-up 220 / 310
+follow-up 230 / 310
+follow-up 240 / 310
+follow-up 250 / 310
+follow-up 260 / 310
+follow-up 270 / 310
+follow-up 280 / 310
+follow-up 290 / 310
+follow-up 300 / 310
+follow-up 310 / 310
+{
+  "rows": 310,
+  "classifications": {
+    "MACRO_MODE_EQUIVALENCE_CONFIRMED": 309,
+    "FOLLOWUP_UNRESOLVED": 1
+  },
+  "formula_identity": {
+    "FORMULAS_BYTE_IDENTICAL": 310
+  },
+  "official_outcome_differences": 0,
+  "semantics_differences": 0,
+  "cache_differences": 0,
+  "elapsed_wall_seconds": 1085.515258452011,
+  "manifest_hash": "0de6ee0f7c0ad55f9fcfc61208d54c857cff7463fb25ed42ac308effb4be3412",
+  "results_hash": "ec5d5292b40381ce0649e247169d5d61b9b8855965b13dd8855ad3d9d54075c3",
+  "one_bounded_followup_consumed": true
+}

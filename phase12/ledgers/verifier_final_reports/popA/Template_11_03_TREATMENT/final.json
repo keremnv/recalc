@@ -1,0 +1,50 @@
+{
+ "positive": false,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [],
+   "count": 0
+  },
+  "CHG": {
+   "changed_cells": 31,
+   "sheets": 1,
+   "regions": [
+    "MergerPremium!C11",
+    "MergerPremium!C14",
+    "MergerPremium!C15",
+    "MergerPremium!C16",
+    "MergerPremium!C17",
+    "MergerPremium!C18",
+    "MergerPremium!C19",
+    "MergerPremium!C21",
+    "MergerPremium!C22",
+    "MergerPremium!C23",
+    "MergerPremium!C24",
+    "MergerPremium!C25",
+    "MergerPremium!C28",
+    "MergerPremium!C29",
+    "MergerPremium!C30",
+    "MergerPremium!C36",
+    "MergerPremium!C37",
+    "MergerPremium!C38",
+    "MergerPremium!C39",
+    "MergerPremium!C6"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": null,
+ "positive_families": []
+}

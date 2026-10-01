@@ -1,0 +1,21 @@
+{
+  "mismatches": [
+    {
+      "case": "debugging sheetnames",
+      "disposition": "BOUNDED_REPAIR",
+      "first_divergent_observable": "sheetnames content/order",
+      "primary_category": "PRIMITIVE_VALUE_SEMANTICS",
+      "primitive": "Workbook.sheetnames",
+      "root_cause": "non-empty-cell-only compiled index omitted metadata-only worksheets"
+    },
+    {
+      "case": "debugging dimensions",
+      "disposition": "BOUNDED_REPAIR",
+      "first_divergent_observable": "max_column",
+      "primary_category": "PRIMITIVE_VALUE_SEMANTICS",
+      "primitive": "Worksheet.max_row/max_column",
+      "root_cause": "compiled index inferred bounds from non-empty cells instead of worksheet XML dimension/style extent"
+    }
+  ],
+  "source": "previous frozen shadow replay"
+}

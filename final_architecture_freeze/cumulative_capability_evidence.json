@@ -1,0 +1,54 @@
+{
+  "claim": "CUMULATIVE_PRACTICAL_STACK_CAPABILITY_PRESERVATION",
+  "status": "SUPPORTED",
+  "question": "Across independent experiments, is there a reproducible capability degradation causally attributable to the retained invisible stack?",
+  "answer": "No unresolved reproducible degradation attributable to the retained stack is established across the tested causal scopes after correcting the documented parser veto. This supports practical preservation, not universal neutrality or equality. The pre-fix deterministic veto was real and is not reclassified as model noise.",
+  "scope": "Tested coding agent, models, workloads, retained conservative interface and supported semantics. Corrected parser paths are supported by reference-parity replay, not a new live experiment.",
+  "representative_checkpoint_status": "SUPPORTED_NARROWLY",
+  "statistical_equivalence": "NOT_ESTABLISHED",
+  "pooling": "No pooled sample size, p-value or equivalence margin across heterogeneous experiments.",
+  "studies": [
+    {
+      "source": "LIVE_TRANSPARENT_RUNTIME_AB_REPORT.md",
+      "design": "9 tasks / 18 primary runs",
+      "evidence": "Initial MIXED verdict; 3 H1-only pre-mutation stalls; completed pairs aligned, 5 H1 mutations and zero runtime failures.",
+      "limits": "No unconditional preservation claim from that first draw."
+    },
+    {
+      "source": "TARGETED_RUNTIME_REPLICATION_REPORT.md",
+      "design": "6 tasks, n=2 per arm / 24 runs",
+      "evidence": "Discordant-task pre-mutation stalls H0=3/6 and H1=3/6; overall 4/12 vs 3/12; FM sentinels aligned; 14 H1 mutation records, zero runtime/validation failures.",
+      "limits": "Original H1-only stalls did not replicate as treatment-associated; pre-activation causal boundary matters."
+    },
+    {
+      "source": "THIN_ARCHITECTURE_SYSTEM_CHECKPOINT_REPORT.md",
+      "design": "24 tasks plus discordance replications; 64 total runs",
+      "evidence": "17/24 primary concordant; discordances resolved as variance or H1-favoring repeat; T:02_05 H0 collapsed at r3; no helper contact in H1 losses; clean capture/freshness.",
+      "limits": "Helpers/note differ in this historical design; no pooled same-treatment estimator and no arm-level efficiency attribution."
+    },
+    {
+      "source": "CANDIDATE_A_LIVE_TREATMENT_REPORT.md",
+      "design": "6 exposure-enriched tasks plus targeted FM:08_03 replication",
+      "evidence": "2/6 contact, 4073 primary accelerated events; primary output gap did not replicate; no reproducible contact-attributed capability loss.",
+      "limits": "LIVE_A_CONTACT_INSUFFICIENT; positive primary timing did not replicate. Preserve negative timing result."
+    },
+    {
+      "source": "CANDIDATE_A_A1_12_TASK_CHECKPOINT_RERUN_REPORT.md",
+      "design": "12 exposure-enriched tasks / 24 primary slots",
+      "evidence": "7/12 contact, 51/51 exact traces, zero mismatch, 50/51 faster, median 44.46% backend reduction; no freshness anomaly or reproducible contact-attributed loss.",
+      "limits": "6 provider-censored and 2 shared workbook-error slots; exposure-enriched exact traces do not establish benchmark prevalence or equivalence."
+    },
+    {
+      "source": "REPRESENTATIVE_ARCHITECTURE_CHECKPOINT_REPORT.md",
+      "design": "30 representative pairs plus 20 discordance replication slots",
+      "evidence": "8 dual-scored mixed deltas; completion 14 vs 9, p=.125; within-arm swings up to .50; provider/model censoring; 1 deterministic + 1 archived transient substrate crash.",
+      "limits": "Narrow neutrality only. Real pre-fix substrate veto retained; no attribution of all gaps to noise, especially stable T:16_07 gap."
+    },
+    {
+      "source": "final_architecture_freeze/corrective_replay.json",
+      "design": "Only FM:06_01 and T:06_08 mechanical boundaries, plus labelled injection",
+      "evidence": "Deterministic malformed case now matches reference exception; transient source opens in both; injected class falls back successfully.",
+      "limits": "Implementation correction, zero model calls; no new score/capability treatment result."
+    }
+  ]
+}

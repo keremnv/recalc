@@ -1,0 +1,2 @@
+{"case": "same_path", "classification": "SEMANTIC_EXACT", "path_identity": "/tmp/candidate-a-mixed-gs1_fj4t/source.xlsx", "policy": "PREDECLARED_REAL_OPENPYXL_PATH", "reason": null, "stale": false}
+{"case": "new_path", "classification": "SEMANTIC_EXACT", "path_identity": "/tmp/candidate-a-mixed-gs1_fj4t/new.xlsx", "policy": "PREDECLARED_REAL_OPENPYXL_PATH", "reason": null, "stale": false}

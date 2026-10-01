@@ -1,0 +1,25 @@
+{
+  "A": {
+    "eliminated": false,
+    "reasons": [
+      "not eliminated by coverage alone",
+      "transparent fallback/identity safety remains unproven",
+      "current substrate type/data_only surface is incomplete"
+    ]
+  },
+  "B": {
+    "eliminated": false,
+    "reasons": [
+      "not eliminated as a narrow shadow",
+      "coverage is pattern-sensitive and mixed read/write lowering is unsafe"
+    ]
+  },
+  "C": {
+    "justified": false,
+    "reason": "no measured complementary prize beyond the two candidate ceilings; hybrid would compound unproven fallback and rewrite boundaries"
+  },
+  "D": {
+    "eliminated": false,
+    "reason": "repeated opens/scans and local mechanical walltime are nonzero, but material safe coverage is not yet established"
+  }
+}

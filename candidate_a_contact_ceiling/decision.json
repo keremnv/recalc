@@ -1,0 +1,10 @@
+{
+  "decision": "EARN_SMALL_A1_EXTENSIONS_THEN_CHECKPOINT",
+  "not_yet": [
+    "12-task live checkpoint",
+    "Candidate B",
+    "Cell-object/range/data_only surface expansion",
+    "A2 implementation"
+  ],
+  "reason": "The dominant demonstrated missed work is a bounded eligibility-analysis error, not a new semantic API. A source-aware classifier repair can plausibly create a third independent live contact task, while the historical data support broad A0 opportunity and true Debugging boundaries remain conservative."
+}

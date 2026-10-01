@@ -1,0 +1,6 @@
+{
+  "pid": 294588,
+  "started_at": "2026-09-16T11:05:43.005796+00:00",
+  "log": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/official-score-probe/logs/spark_group_priority_Financial_Model_02_01.log",
+  "output_root": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/official-score-probe/spark-group-priority"
+}

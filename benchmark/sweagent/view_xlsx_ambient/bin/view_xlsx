@@ -1,0 +1,86 @@
+#!/usr/bin/env python3
+"""Official view_xlsx plus a one-shot ambient formula-equivalence appendix.
+
+The appendix is attached only to the first content inspection and only describes
+equivalence classes that intersect formulas already in that inspected window.
+"""
+from __future__ import annotations
+
+import io
+import os
+import sys
+from contextlib import redirect_stdout
+from pathlib import Path
+
+LIB = Path(__file__).resolve().parent.parent / "lib"
+sys.path.insert(0, str(LIB))
+
+from ambient import (  # noqa: E402
+    OBSERVATION_LIMIT,
+    build_ambient_payload,
+    parse_view_xlsx_argv,
+)
+from official_view import main as official_main  # noqa: E402
+
+
+def _flag_path() -> Path:
+    override = os.environ.get("AMBIENT_INDEX_FLAG")
+    if override:
+        return Path(override)
+    mounted = Path("/mnt/spreadsheet_output")
+    if mounted.is_dir():
+        return mounted / ".ambient_index_emitted"
+    return Path("/tmp/.ambient_index_emitted")
+
+
+def _already_emitted() -> bool:
+    return _flag_path().is_file()
+
+
+def _mark_emitted() -> None:
+    path = _flag_path()
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("1\n", encoding="utf-8")
+
+
+def _run_official() -> tuple[str, int]:
+    buf = io.StringIO()
+    code = 0
+    try:
+        with redirect_stdout(buf):
+            official_main()
+    except SystemExit as exc:
+        code = int(exc.code or 0)
+    return buf.getvalue(), code
+
+
+def main() -> int:
+    try:
+        parsed = parse_view_xlsx_argv(sys.argv[1:])
+    except SystemExit:
+        parsed = None
+    output, code = _run_official()
+    sys.stdout.write(output)
+    if code != 0 or parsed is None or parsed.mode != "content" or _already_emitted():
+        return code
+    remaining = OBSERVATION_LIMIT - len(output) - 1
+    payload = build_ambient_payload(
+        parsed.file_path,
+        sheet=parsed.sheet,
+        start_row=parsed.start_row,
+        end_row=parsed.end_row,
+        limit=remaining,
+    )
+    _mark_emitted()
+    text = payload["text"].rstrip("\n")
+    if text:
+        if output and not output.endswith("\n"):
+            sys.stdout.write("\n")
+        sys.stdout.write("\n")
+        sys.stdout.write(text)
+        sys.stdout.write("\n")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

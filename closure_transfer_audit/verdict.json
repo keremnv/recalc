@@ -1,0 +1,33 @@
+{
+  "verdict": "SEMANTIC_MEMBER_CORRECTNESS_DOMINANT",
+  "interpretation": "The limiting failure is semantic construction of upstream edits, not their coordination.",
+  "runtime_s": 1219.012,
+  "provider_cost_usd": 0,
+  "model_calls": 0,
+  "summary": {
+    "primary_complete": 9,
+    "expanded_complete": 0,
+    "expansion_used": false,
+    "total_authored_formula_edits": 2651,
+    "formula_correct_edits": 1425,
+    "formula_correct_value_wrong": 14,
+    "among_fcvw": {
+      "T1_AUTHORITY_GAP": 5,
+      "T2_AUTHORED_MEMBER_SEMANTIC_FAILURE": 9
+    },
+    "transferable_candidates": 0,
+    "faithful_replay_pairs": 0,
+    "r1_gains": 0,
+    "r1_ties": 0,
+    "r1_losses": 0,
+    "replay_attempted": false,
+    "material_regression": false,
+    "fcvw_by_task": {
+      "Financial_Model:08_04": 5,
+      "Template:06_16": 9
+    },
+    "provider_cost_usd": 0,
+    "runtime_s": 1219.012
+  },
+  "written_at": "2026-09-16T21:08:42.105340+00:00"
+}

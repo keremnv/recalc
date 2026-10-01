@@ -1,0 +1,247 @@
+{
+  "bytecode_identity": {
+    "P2_S0": {
+      "bytes": 1004,
+      "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/product_integration_phase10b/minimal_bootstrap/__pycache__/sitecustomize.cpython-313.pyc",
+      "sha256": "64f228e0746f4135a631615f3fcc3d63e5850bb5d6a3e6b30945868d24a9d027"
+    },
+    "P3_S3_P4": {
+      "bytes": 5529,
+      "path": "/tmp/librecalc-phase10-clean/lib/python3.13/site-packages/librecalc_agent/_bootstrap/__pycache__/sitecustomize.cpython-313.pyc",
+      "sha256": "2e1c9d2127d1aaa2f12aa86a9c2d736830be01f5a7364ca06b89f9614879f77d"
+    },
+    "S1": {
+      "bytes": 2015,
+      "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/product_integration_phase10b/config_only_bootstrap/__pycache__/sitecustomize.cpython-313.pyc",
+      "sha256": "de2e5ed15060387f069a41757c17627fec8c1119ab5d0978f04f4bea34751f15"
+    },
+    "S2": {
+      "bytes": 2322,
+      "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/product_integration_phase10b/config_classifier_bootstrap/__pycache__/sitecustomize.cpython-313.pyc",
+      "sha256": "d8f892af12e88e06866410e2ac4c471a50470c1f8ee78c2531ef98e9e5462b2a"
+    }
+  },
+  "environment": {
+    "cpu_count": 18,
+    "cpu_model": "Intel(R) Core(TM) Ultra 5 125H",
+    "cwd": "/home/kerem/Desktop/Personal Projects/librecalc-mcp",
+    "filesystem": "ext2/ext3",
+    "kernel": "7.0.0-34-generic",
+    "openpyxl_version": "3.1.5",
+    "os": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+    "python_executable": "/tmp/librecalc-phase10-clean/bin/python",
+    "python_version": "Python 3.13.12",
+    "timing_host_env": {}
+  },
+  "note": "Diagnostic nested medians only; paired full-command contrasts in analysis.json are causal authority.",
+  "observer_second_invocation": {
+    "P1": {
+      "argument_run_dir": {
+        "max": 0.456312,
+        "median": 0.26050799999999996,
+        "min": 0.163817
+      },
+      "changed_helper_or_empty_receipt": {
+        "max": 0.256758,
+        "median": 0.12944699999999998,
+        "min": 0.079423
+      },
+      "external_wall_minus_observer_profile_ms": {
+        "max": 9.658738,
+        "median": 2.3477750000000004,
+        "min": 1.715418
+      },
+      "fork_launch": {
+        "max": 0.828368,
+        "median": 0.17783949999999998,
+        "min": 0.11477
+      },
+      "observer_to_receipt": {
+        "max": 15672.4374,
+        "median": 279.5676455,
+        "min": 153.710515
+      },
+      "post_snapshot_compare": {
+        "max": 7.715537,
+        "median": 0.319525,
+        "min": 0.119041
+      },
+      "post_xlsx_files": {
+        "max": 1,
+        "median": 1.0,
+        "min": 1
+      },
+      "pre_snapshot": {
+        "max": 8.393208,
+        "median": 0.10453,
+        "min": 0.04418
+      },
+      "pre_xlsx_files": {
+        "max": 1,
+        "median": 1.0,
+        "min": 1
+      },
+      "wait_target": {
+        "max": 15660.615342,
+        "median": 278.56111450000003,
+        "min": 153.095092
+      }
+    },
+    "P2": {
+      "argument_run_dir": {
+        "max": 2.31509,
+        "median": 0.259182,
+        "min": 0.162398
+      },
+      "changed_helper_or_empty_receipt": {
+        "max": 0.312418,
+        "median": 0.145702,
+        "min": 0.095067
+      },
+      "external_wall_minus_observer_profile_ms": {
+        "max": 4.662479,
+        "median": 2.5200915,
+        "min": 1.748173
+      },
+      "fork_launch": {
+        "max": 1.359824,
+        "median": 0.1800995,
+        "min": 0.107411
+      },
+      "observer_to_receipt": {
+        "max": 15714.203447,
+        "median": 281.859989,
+        "min": 153.861402
+      },
+      "post_snapshot_compare": {
+        "max": 7.113552,
+        "median": 0.279152,
+        "min": 0.158113
+      },
+      "post_xlsx_files": {
+        "max": 1,
+        "median": 1.0,
+        "min": 1
+      },
+      "pre_snapshot": {
+        "max": 7.7478,
+        "median": 0.10352149999999999,
+        "min": 0.041692
+      },
+      "pre_xlsx_files": {
+        "max": 1,
+        "median": 1.0,
+        "min": 1
+      },
+      "wait_target": {
+        "max": 15701.94114,
+        "median": 280.83494299999995,
+        "min": 152.764462
+      }
+    },
+    "P3": {
+      "argument_run_dir": {
+        "max": 2.337071,
+        "median": 0.2718585,
+        "min": 0.162373
+      },
+      "changed_helper_or_empty_receipt": {
+        "max": 0.2548,
+        "median": 0.12690849999999998,
+        "min": 0.079923
+      },
+      "external_wall_minus_observer_profile_ms": {
+        "max": 3.989408,
+        "median": 2.2991859999999997,
+        "min": 1.817733
+      },
+      "fork_launch": {
+        "max": 0.602986,
+        "median": 0.1708685,
+        "min": 0.100644
+      },
+      "observer_to_receipt": {
+        "max": 15633.319551,
+        "median": 295.5500875,
+        "min": 157.186092
+      },
+      "post_snapshot_compare": {
+        "max": 6.089209,
+        "median": 0.2401455,
+        "min": 0.093322
+      },
+      "post_xlsx_files": {
+        "max": 1,
+        "median": 1.0,
+        "min": 1
+      },
+      "pre_snapshot": {
+        "max": 7.398847,
+        "median": 0.106595,
+        "min": 0.032292
+      },
+      "pre_xlsx_files": {
+        "max": 1,
+        "median": 1.0,
+        "min": 1
+      },
+      "wait_target": {
+        "max": 15622.461364,
+        "median": 294.53737,
+        "min": 156.13149
+      }
+    },
+    "P4": {
+      "argument_run_dir": {
+        "max": 0.323557,
+        "median": 0.23852600000000002,
+        "min": 0.140342
+      },
+      "changed_helper_or_empty_receipt": {
+        "max": 0.311245,
+        "median": 0.152247,
+        "min": 0.078981
+      },
+      "external_wall_minus_observer_profile_ms": {
+        "max": 8.586708,
+        "median": 3.5481305,
+        "min": 2.728351
+      },
+      "fork_launch": {
+        "max": 0.887889,
+        "median": 0.168745,
+        "min": 0.112804
+      },
+      "observer_to_receipt": {
+        "max": 14967.342061,
+        "median": 297.6975905,
+        "min": 158.099672
+      },
+      "post_snapshot_compare": {
+        "max": 7.781063,
+        "median": 0.263223,
+        "min": 0.137593
+      },
+      "post_xlsx_files": {
+        "max": 1,
+        "median": 1.0,
+        "min": 1
+      },
+      "pre_snapshot": {
+        "max": 7.541642,
+        "median": 0.113228,
+        "min": 0.04084
+      },
+      "pre_xlsx_files": {
+        "max": 1,
+        "median": 1.0,
+        "min": 1
+      },
+      "wait_target": {
+        "max": 14953.990783,
+        "median": 296.7120995,
+        "min": 157.178028
+      }
+    }
+  }
+}

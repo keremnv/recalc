@@ -11,7 +11,6 @@ from collections.abc import Iterator
 from contextlib import contextmanager
 from typing import Any
 
-_READ_NEIGHBORHOOD_MAX_CELLS = 96
 _FOLLOWUP_SOURCE_ERROR = (
     "Output already exists. Follow-up edits must use that output path as the "
     "source; do not restart from the read-only input."
@@ -188,15 +187,13 @@ def _formula_blocks(raw_blocks: str, operation_type: type[Any]) -> list[Any]:
 def _read_neighborhood_limit() -> int | None:
     """Cell ceiling for a single read, or None to disable it.
 
-    The 96-cell cap is an invariant of the *semantic* interface: calc_inspect already
-    supplies structure there, so a whole-sheet dump is an inspect-spiral rather than a
-    need. The thin ablation arm has no semantic inspect, so applying the same cap would
-    handicap it for a reason unrelated to interface thickness and would bias the
-    comparison toward the arm the project is arguing for.
+    Read rationing is a benchmark treatment, not a product-world invariant. The runner sets
+    ``96`` for historical bounded arms and ``none`` for unbounded arms. Outside a benchmark
+    treatment the deterministic read surface is unrestricted.
     """
     raw = os.environ.get("LIBRECALC_READ_MAX_CELLS")
     if raw is None:
-        return _READ_NEIGHBORHOOD_MAX_CELLS
+        return None
     if raw.strip().lower() in {"", "0", "none", "unbounded"}:
         return None
     return int(raw)

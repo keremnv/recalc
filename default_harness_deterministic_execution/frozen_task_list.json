@@ -1,0 +1,99 @@
+[
+  {
+    "category": "Financial_Model",
+    "id": "08_03",
+    "role": "positive_witness",
+    "archived_region": "Working Capital!J44:N44",
+    "reason": "Archived homogeneous J44:N44 group; independent synthesis was inconsistent; deterministic translation of one canonical formula filled all five members.",
+    "repeats": 1,
+    "qualified_id": "Financial_Model:08_03"
+  },
+  {
+    "category": "Financial_Model",
+    "id": "08_04",
+    "role": "wrong_canonical_negative_control",
+    "reason": "Translation previously preserved mechanics while propagating a semantically wrong program. Executor must not repair that.",
+    "repeats": 1,
+    "qualified_id": "Financial_Model:08_04"
+  },
+  {
+    "category": "Financial_Model",
+    "id": "08_05",
+    "role": "absent_program_negative_control",
+    "reason": "Previous canonical decision was absent/wrong. Executor must not manufacture a program.",
+    "repeats": 1,
+    "qualified_id": "Financial_Model:08_05"
+  },
+  {
+    "category": "Financial_Model",
+    "id": "15_04",
+    "role": "mechanical_boundary_witness",
+    "reason": "Non-unit-stride homologues made automatic grouping unsafe. Unsupported declared sets must reject with zero writes.",
+    "repeats": 1,
+    "qualified_id": "Financial_Model:15_04"
+  },
+  {
+    "category": "Financial_Model",
+    "id": "08_02",
+    "qualified_id": "Financial_Model:08_02",
+    "role": "held_out_execution_opportunity",
+    "reason": "Input-only: 16752 mechanically witnessed repeat groups, 109299 potential translated members, max group 180.",
+    "repeats": 1
+  },
+  {
+    "category": "Template",
+    "id": "06_09",
+    "qualified_id": "Template:06_09",
+    "role": "held_out_execution_opportunity",
+    "reason": "Input-only: 9 mechanically witnessed repeat groups, 45 potential translated members, max group 5.",
+    "repeats": 1
+  },
+  {
+    "category": "Debugging",
+    "id": "10_02",
+    "qualified_id": "Debugging:10_02",
+    "role": "held_out_execution_opportunity",
+    "reason": "Input-only: 1578 mechanically witnessed repeat groups, 51884 potential translated members, max group 50.",
+    "repeats": 1
+  },
+  {
+    "category": "Visualization",
+    "id": "Task 1420776",
+    "qualified_id": "Visualization:Task 1420776",
+    "role": "held_out_execution_opportunity",
+    "reason": "Input-only: 12 mechanically witnessed repeat groups, 282 potential translated members, max group 31.",
+    "repeats": 1
+  },
+  {
+    "category": "Financial_Model",
+    "id": "08_01",
+    "qualified_id": "Financial_Model:08_01",
+    "role": "held_out_execution_opportunity",
+    "reason": "Input-only: 16750 mechanically witnessed repeat groups, 109080 potential translated members, max group 180.",
+    "repeats": 1
+  },
+  {
+    "category": "Template",
+    "id": "06_16",
+    "qualified_id": "Template:06_16",
+    "role": "held_out_execution_opportunity",
+    "reason": "Input-only: 7 mechanically witnessed repeat groups, 35 potential translated members, max group 5.",
+    "repeats": 1
+  },
+  {
+    "category": "Debugging",
+    "id": "10_04",
+    "qualified_id": "Debugging:10_04",
+    "role": "held_out_execution_opportunity",
+    "reason": "Input-only: 1572 mechanically witnessed repeat groups, 51860 potential translated members, max group 50.",
+    "repeats": 1
+  },
+  {
+    "category": "Visualization",
+    "id": "Task 1426290",
+    "qualified_id": "Visualization:Task 1426290",
+    "role": "held_out_execution_opportunity",
+    "reason": "Input-only: 25 mechanically witnessed repeat groups, 254 potential translated members, max group 17.",
+    "repeats": 1
+  }
+]

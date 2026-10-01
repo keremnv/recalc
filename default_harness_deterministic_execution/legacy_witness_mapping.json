@@ -1,0 +1,27 @@
+[
+  {
+    "category": "Financial_Model",
+    "id": "08_03",
+    "role": "positive_witness",
+    "archived_region": "Working Capital!J44:N44",
+    "reason": "Archived homogeneous J44:N44 group; independent synthesis was inconsistent; deterministic translation of one canonical formula filled all five members."
+  },
+  {
+    "category": "Financial_Model",
+    "id": "08_04",
+    "role": "wrong_canonical_negative_control",
+    "reason": "Translation previously preserved mechanics while propagating a semantically wrong program. Executor must not repair that."
+  },
+  {
+    "category": "Financial_Model",
+    "id": "08_05",
+    "role": "absent_program_negative_control",
+    "reason": "Previous canonical decision was absent/wrong. Executor must not manufacture a program."
+  },
+  {
+    "category": "Financial_Model",
+    "id": "15_04",
+    "role": "mechanical_boundary_witness",
+    "reason": "Non-unit-stride homologues made automatic grouping unsafe. Unsupported declared sets must reject with zero writes."
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "amortization_estimate_supported": false,
+  "feasibility_gate_passed": false,
+  "further_performance_research_needed": false,
+  "known_semantic_failures_preserved": [
+    "Debugging_08_04__2dde74bd671e",
+    "Financial_Model_15_03__472e28fbd6e0",
+    "Template_06_23__fc41ad37c48b",
+    "Template_16_07__9662584ede5e"
+  ],
+  "new_warm_semantic_mismatches": null,
+  "primary_verdict": "WARM_PRODUCT_STATE_NOT_SUPPORTED_BY_RC",
+  "prior_cold_result_preserved": true,
+  "research_stop": true,
+  "scored_warm_runs": 0,
+  "warm_speed_claim_supported": false
+}

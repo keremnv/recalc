@@ -1,0 +1,48 @@
+{
+  "arithmetic_mean_ratio": 1.7206597972553224,
+  "bootstrap_95pct_ci_geometric_ratio": [
+    1.4874637824660697,
+    1.8338096860396034
+  ],
+  "bootstrap_95pct_ci_median_ratio": [
+    1.5084159829490984,
+    2.092105834250063
+  ],
+  "cluster_sensitivity": {
+    "distinct_tasks": 21,
+    "task_cluster_bootstrap_95pct_ci_geometric_ratio": [
+      1.4522152956743979,
+      1.8793312682719232
+    ],
+    "task_weighted_geometric_ratio": 1.655625570358568
+  },
+  "contact_fraction": 0.26666666666666666,
+  "family": {
+    "Debugging": {
+      "faster": 0,
+      "median_ratio": 1.4173636227738573,
+      "n": 10,
+      "slower": 9
+    },
+    "Financial_Model": {
+      "faster": 0,
+      "median_ratio": 1.5084159829490984,
+      "n": 10,
+      "slower": 10
+    },
+    "Template": {
+      "faster": 0,
+      "median_ratio": 2.204147254644915,
+      "n": 10,
+      "slower": 10
+    }
+  },
+  "faster": 0,
+  "geometric_mean_ratio": 1.6497451681977375,
+  "median_ratio": 1.7037848215253375,
+  "median_reduction_pct": -70.37848215253375,
+  "n": 30,
+  "selected_n": 30,
+  "slower": 29,
+  "tie": 1
+}

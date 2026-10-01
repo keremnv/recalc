@@ -1,0 +1,22 @@
+{
+ "verdict": "TRANSPARENT_CAPTURE_FEASIBLE",
+ "primary_gate": {
+  "eligible": 38,
+  "faithful": 38,
+  "rate": 1.0,
+  "threshold": 0.95,
+  "pass": true
+ },
+ "phase0_reference_check": {
+  "REPLAY_EXACT": 62,
+  "REPLAY_DIFF": 2,
+  "REPLAY_EQUIVALENT": 6,
+  "NO_ARCHIVED_OUTPUT": 1
+ },
+ "phase0_diff_attribution": {
+  "P-B Financial_Model:20_05": "environmental (5/5 overrides pass: LO rewrites + container fidelity loss); script effects fully reproduced",
+  "P-A Financial_Model:08_01": "environmental (agent script requires soffice; sandbox cannot exec); capture fidelity F2=0"
+ },
+ "f3_lo_roundtrip": "NOT_RUNNABLE_HERE (soffice exec denied by sandbox)",
+ "gate_failures": 0
+}

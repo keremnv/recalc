@@ -26,6 +26,11 @@ from pathlib import Path
 
 import openpyxl
 
+try:
+    from lxml import etree as _lxml_etree
+except Exception:  # pragma: no cover - lxml is optional in the evaluator environment
+    _lxml_etree = None
+
 # The prefixes OOXML metadata parts use. Binding one of these cannot change cell data:
 # every part we repair lives under docProps/ or _rels/.
 NAMESPACES = {
@@ -41,6 +46,13 @@ _PREFIX = re.compile(r"<\s*/?\s*([A-Za-z_][\w.-]*):|\s([A-Za-z_][\w.-]*):[\w.-]+
 _ROOT = re.compile(r"<\s*([A-Za-z_][\w.:-]*)((?:\s[^<>]*?)?)(/?)>", re.DOTALL)
 _original = None
 _scratch: Path | None = None
+
+
+def _is_parse_error(exc: BaseException) -> bool:
+    """Recognize both parsers used by openpyxl in this repository."""
+    if isinstance(exc, ET.ParseError):
+        return True
+    return bool(_lxml_etree is not None and isinstance(exc, _lxml_etree.XMLSyntaxError))
 
 
 def _repair_part(xml: str) -> str | None:
@@ -107,7 +119,9 @@ def install() -> None:
     def load_workbook(filename, *args, **kwargs):
         try:
             return _original(filename, *args, **kwargs)
-        except ET.ParseError:
+        except Exception as exc:
+            if not _is_parse_error(exc):
+                raise
             if not isinstance(filename, (str, os.PathLike)):
                 raise
             source = Path(filename)

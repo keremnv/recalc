@@ -1,0 +1,7 @@
+{
+ "frozen_corpus": "ordinary-agent control",
+ "n_trajectories": 71,
+ "n_tasks": 70,
+ "missing": [],
+ "tokenizer": "closest-known:THUDM/glm-4-9b-chat; exact production tokenizer unavailable; tokens ESTIMATED"
+}

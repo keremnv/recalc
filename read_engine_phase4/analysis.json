@@ -1,0 +1,1181 @@
+{
+  "aggregate": {
+    "cold": {
+      "H0_PY": {
+        "bootstrap_median_95pct": [
+          1.4148274368730065,
+          2.094382077464168
+        ],
+        "faster": 0,
+        "geometric_mean_ratio": 1.6742815631528556,
+        "median_ratio": 1.6095240617799078,
+        "n": 22,
+        "range": [
+          1.023664265489842,
+          2.6696543653064957
+        ],
+        "slower": 22,
+        "tied": 0
+      },
+      "H1_H0": {
+        "bootstrap_median_95pct": [
+          0.9974484164601437,
+          1.0193547885108267
+        ],
+        "faster": 9,
+        "geometric_mean_ratio": 1.008368819926124,
+        "median_ratio": 1.006963204453795,
+        "n": 22,
+        "range": [
+          0.8917688464186942,
+          1.1192889354212796
+        ],
+        "slower": 13,
+        "tied": 0
+      },
+      "H1_PY": {
+        "bootstrap_median_95pct": [
+          1.4725398158090364,
+          2.106549950424041
+        ],
+        "faster": 0,
+        "geometric_mean_ratio": 1.6882933240605111,
+        "median_ratio": 1.5885128752689357,
+        "n": 22,
+        "range": [
+          1.0611511845763477,
+          2.5040315691247814
+        ],
+        "slower": 22,
+        "tied": 0
+      }
+    },
+    "session": {
+      "1": {
+        "H0_PY": {
+          "bootstrap_median_95pct": [
+            1.4148274368730065,
+            2.094382077464168
+          ],
+          "faster": 0,
+          "geometric_mean_ratio": 1.6742815631528556,
+          "median_ratio": 1.6095240617799078,
+          "n": 22,
+          "range": [
+            1.023664265489842,
+            2.6696543653064957
+          ],
+          "slower": 22,
+          "tied": 0
+        },
+        "H1_H0": {
+          "bootstrap_median_95pct": [
+            0.9974484164601437,
+            1.0193547885108267
+          ],
+          "faster": 9,
+          "geometric_mean_ratio": 1.008368819926124,
+          "median_ratio": 1.006963204453795,
+          "n": 22,
+          "range": [
+            0.8917688464186942,
+            1.1192889354212796
+          ],
+          "slower": 13,
+          "tied": 0
+        },
+        "H1_PY": {
+          "bootstrap_median_95pct": [
+            1.4725398158090364,
+            2.106549950424041
+          ],
+          "faster": 0,
+          "geometric_mean_ratio": 1.6882933240605111,
+          "median_ratio": 1.5885128752689357,
+          "n": 22,
+          "range": [
+            1.0611511845763477,
+            2.5040315691247814
+          ],
+          "slower": 22,
+          "tied": 0
+        }
+      },
+      "2": {
+        "H0_PY": {
+          "bootstrap_median_95pct": [
+            1.1488845648782253,
+            1.8426617968130246
+          ],
+          "faster": 5,
+          "geometric_mean_ratio": 1.3773034977840903,
+          "median_ratio": 1.3384921146644264,
+          "n": 22,
+          "range": [
+            0.7568441262944426,
+            2.3092166392562383
+          ],
+          "slower": 17,
+          "tied": 0
+        },
+        "H1_H0": {
+          "bootstrap_median_95pct": [
+            0.8594490813722407,
+            0.9130137693666048
+          ],
+          "faster": 22,
+          "geometric_mean_ratio": 0.8843743676385918,
+          "median_ratio": 0.8915661398629587,
+          "n": 22,
+          "range": [
+            0.78425902184062,
+            0.96152407945612
+          ],
+          "slower": 0,
+          "tied": 0
+        },
+        "H1_PY": {
+          "bootstrap_median_95pct": [
+            0.9630541903095552,
+            1.5851439854046687
+          ],
+          "faster": 8,
+          "geometric_mean_ratio": 1.2180519098992253,
+          "median_ratio": 1.1695695633635839,
+          "n": 22,
+          "range": [
+            0.6980167144733657,
+            2.024335472779178
+          ],
+          "slower": 14,
+          "tied": 0
+        }
+      },
+      "3": {
+        "H0_PY": {
+          "bootstrap_median_95pct": [
+            0.9699368166050415,
+            1.7989421451412442
+          ],
+          "faster": 7,
+          "geometric_mean_ratio": 1.2578584436744926,
+          "median_ratio": 1.275403501878996,
+          "n": 22,
+          "range": [
+            0.5943410545670557,
+            2.1870679858376163
+          ],
+          "slower": 15,
+          "tied": 0
+        },
+        "H1_H0": {
+          "bootstrap_median_95pct": [
+            0.8105741758141022,
+            0.8527010346017366
+          ],
+          "faster": 22,
+          "geometric_mean_ratio": 0.8347794000841109,
+          "median_ratio": 0.8308350650530555,
+          "n": 22,
+          "range": [
+            0.7689812663444479,
+            0.9516857983573507
+          ],
+          "slower": 0,
+          "tied": 0
+        },
+        "H1_PY": {
+          "bootstrap_median_95pct": [
+            0.7557298745977412,
+            1.4578706559375314
+          ],
+          "faster": 9,
+          "geometric_mean_ratio": 1.0500343170013264,
+          "median_ratio": 1.0401444455835331,
+          "n": 22,
+          "range": [
+            0.5271747208803697,
+            1.8750632395016602
+          ],
+          "slower": 13,
+          "tied": 0
+        }
+      },
+      "5": {
+        "H0_PY": {
+          "bootstrap_median_95pct": [
+            0.8226009006897786,
+            1.7654692120661526
+          ],
+          "faster": 8,
+          "geometric_mean_ratio": 1.1702899431018854,
+          "median_ratio": 1.2421725806582269,
+          "n": 22,
+          "range": [
+            0.4962546096593575,
+            2.2314322402771145
+          ],
+          "slower": 14,
+          "tied": 0
+        },
+        "H1_H0": {
+          "bootstrap_median_95pct": [
+            0.7746688911666214,
+            0.7926576562765043
+          ],
+          "faster": 22,
+          "geometric_mean_ratio": 0.7856059227323906,
+          "median_ratio": 0.7838938546727878,
+          "n": 22,
+          "range": [
+            0.6929333281107872,
+            0.9324002155645712
+          ],
+          "slower": 0,
+          "tied": 0
+        },
+        "H1_PY": {
+          "bootstrap_median_95pct": [
+            0.5790339560992708,
+            1.3741785712118535
+          ],
+          "faster": 13,
+          "geometric_mean_ratio": 0.9193867106149936,
+          "median_ratio": 0.9637156376096738,
+          "n": 22,
+          "range": [
+            0.4096663727762509,
+            1.7440602370228562
+          ],
+          "slower": 9,
+          "tied": 0
+        }
+      }
+    },
+    "warm": {
+      "H0_PY": {
+        "bootstrap_median_95pct": [
+          0.6811703533024629,
+          1.5627704546369954
+        ],
+        "faster": 10,
+        "geometric_mean_ratio": 1.0319945599426008,
+        "median_ratio": 1.180215589438986,
+        "n": 22,
+        "range": [
+          0.32817384835463487,
+          2.3067441255334056
+        ],
+        "slower": 12,
+        "tied": 0
+      },
+      "H1_H0": {
+        "bootstrap_median_95pct": [
+          0.654842354044624,
+          0.7250335679849806
+        ],
+        "faster": 22,
+        "geometric_mean_ratio": 0.6830088143441505,
+        "median_ratio": 0.7038858955865608,
+        "n": 22,
+        "range": [
+          0.5121475281812023,
+          0.9077160502560653
+        ],
+        "slower": 0,
+        "tied": 0
+      },
+      "H1_PY": {
+        "bootstrap_median_95pct": [
+          0.4374623236272206,
+          1.2045840711176592
+        ],
+        "faster": 13,
+        "geometric_mean_ratio": 0.704861380796009,
+        "median_ratio": 0.8332155846149147,
+        "n": 22,
+        "range": [
+          0.23108391609484807,
+          1.6661256963476592
+        ],
+        "slower": 9,
+        "tied": 0
+      }
+    }
+  },
+  "crossed_break_even": [
+    "Financial_Model_02_04__5ac07a9edb67",
+    "Financial_Model_02_01__4dbc773c2ade",
+    "Financial_Model_02_01__e87a34eb884e"
+  ],
+  "decisions": {
+    "COLD_PRODUCT_SHAPED_SPEED": "NOT SUPPORTED",
+    "WARM_PRODUCT_SHAPED_SPEED": "NOT SUPPORTED"
+  },
+  "limits": [
+    "OS cache uncontrolled",
+    "22 scripts represent 14 tasks",
+    "offline product-shaped harness, not public RC"
+  ],
+  "per_workload": {
+    "Debugging_01_06__26b457c478d0": {
+      "H0_fallback_reasons": {},
+      "H0_parent_validation_ms": 17.20129,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {},
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 0.132651,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 34085.0,
+      "cold": {
+        "H0_PY": 2.094382077464168,
+        "H0_ns": 303310932,
+        "H1_H0": 1.0058097675160618,
+        "H1_PY": 2.106549950424041,
+        "H1_ns": 305073098,
+        "PY_ns": 144821203
+      },
+      "family": "Debugging",
+      "old_rc_ratio": 2.689671074421011,
+      "phase3_archived_warm_ratio": 1.7114789873627263,
+      "task": "Debugging:01_06",
+      "warm": {
+        "H0_PY": 1.711978871720178,
+        "H0_ns": 252394914.5,
+        "H1_H0": 0.703620874659105,
+        "H1_PY": 1.2045840711176592,
+        "H1_ns": 177590330.5,
+        "PY_ns": 147428755.5
+      },
+      "warm_optimization_saved_ms": 74.804584,
+      "warm_signed_excess_ms": 30.161575
+    },
+    "Debugging_01_06__7b42a0f86b41": {
+      "H0_fallback_reasons": {
+        "proxy_operation_escape": 12
+      },
+      "H0_parent_validation_ms": 17.7909285,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {
+        "proxy_operation_escape": 12
+      },
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 0.1338475,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 34085.0,
+      "cold": {
+        "H0_PY": 2.6696543653064957,
+        "H0_ns": 409196775,
+        "H1_H0": 0.8917688464186942,
+        "H1_PY": 2.380714593686005,
+        "H1_ns": 364908936,
+        "PY_ns": 153277061
+      },
+      "family": "Debugging",
+      "old_rc_ratio": 2.7936610156915793,
+      "phase3_archived_warm_ratio": 2.0732891874556025,
+      "task": "Debugging:01_06",
+      "warm": {
+        "H0_PY": 2.1959752833515145,
+        "H0_ns": 331618395.5,
+        "H1_H0": 0.7233395455590762,
+        "H1_PY": 1.588435763518448,
+        "H1_ns": 239872699.5,
+        "PY_ns": 151011898.0
+      },
+      "warm_optimization_saved_ms": 91.745696,
+      "warm_signed_excess_ms": 88.8608015
+    },
+    "Debugging_05_02__31823ebc55b0": {
+      "H0_fallback_reasons": {},
+      "H0_parent_validation_ms": 15.700437,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {},
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 0.1430015,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 22568.0,
+      "cold": {
+        "H0_PY": 1.1195799084863232,
+        "H0_ns": 1099959031,
+        "H1_H0": 1.0081166413915283,
+        "H1_PY": 1.1286671371126669,
+        "H1_ns": 1108887004,
+        "PY_ns": 982474786
+      },
+      "family": "Debugging",
+      "old_rc_ratio": 1.213317723492496,
+      "phase3_archived_warm_ratio": 0.33926731301547636,
+      "task": "Debugging:05_02",
+      "warm": {
+        "H0_PY": 0.32817384835463487,
+        "H0_ns": 297047121.0,
+        "H1_H0": 0.7041509165140166,
+        "H1_PY": 0.23108391609484807,
+        "H1_ns": 209166002.5,
+        "PY_ns": 905151713.0
+      },
+      "warm_optimization_saved_ms": 87.8811185,
+      "warm_signed_excess_ms": -695.9857105
+    },
+    "Debugging_05_02__9e6b464d2158": {
+      "H0_fallback_reasons": {
+        "proxy_operation_escape": 12
+      },
+      "H0_parent_validation_ms": 12.250502,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {
+        "proxy_operation_escape": 12
+      },
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 0.120846,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 22568.0,
+      "cold": {
+        "H0_PY": 2.0030987166651713,
+        "H0_ns": 1443145773,
+        "H1_H0": 0.9974484164601437,
+        "H1_PY": 1.997987642951021,
+        "H1_ns": 1439463466,
+        "PY_ns": 720456641
+      },
+      "family": "Debugging",
+      "old_rc_ratio": 2.02974088284382,
+      "phase3_archived_warm_ratio": 1.2172772054146046,
+      "task": "Debugging:05_02",
+      "warm": {
+        "H0_PY": 1.2073661710359107,
+        "H0_ns": 891099088.5,
+        "H1_H0": 0.9077160502560653,
+        "H1_PY": 1.0959456519855058,
+        "H1_ns": 808864945.0,
+        "PY_ns": 738052059.0
+      },
+      "warm_optimization_saved_ms": 82.2341435,
+      "warm_signed_excess_ms": 70.812886
+    },
+    "Debugging_08_04__2dde74bd671e": {
+      "H0_fallback_reasons": {},
+      "H0_parent_validation_ms": 46.749864,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {},
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 0.1973865,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 68527.0,
+      "cold": {
+        "H0_PY": 1.3608036332409856,
+        "H0_ns": 500250822,
+        "H1_H0": 1.1192889354212796,
+        "H1_PY": 1.5231324499677121,
+        "H1_ns": 559925210,
+        "PY_ns": 367614261
+      },
+      "family": "Debugging",
+      "old_rc_ratio": 1.9300232864364268,
+      "phase3_archived_warm_ratio": 0.908687416431551,
+      "task": "Debugging:08_04",
+      "warm": {
+        "H0_PY": 0.9252732584078345,
+        "H0_ns": 310381491.0,
+        "H1_H0": 0.6511932987653571,
+        "H1_PY": 0.6025317454019684,
+        "H1_ns": 202118347.0,
+        "PY_ns": 335448461.5
+      },
+      "warm_optimization_saved_ms": 108.263144,
+      "warm_signed_excess_ms": -133.3301145
+    },
+    "Financial_Model_02_01__4dbc773c2ade": {
+      "H0_fallback_reasons": {},
+      "H0_parent_validation_ms": 9.248287,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {},
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 0.110052,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 19792.0,
+      "cold": {
+        "H0_PY": 1.443006734049107,
+        "H0_ns": 269916577,
+        "H1_H0": 1.0253617731674183,
+        "H1_PY": 1.4796039435171175,
+        "H1_ns": 276762140,
+        "PY_ns": 187051502
+      },
+      "family": "Financial_Model",
+      "old_rc_ratio": 1.7239952501274818,
+      "phase3_archived_warm_ratio": 1.3012285581264407,
+      "task": "Financial_Model:02_01",
+      "warm": {
+        "H0_PY": 1.2407923536583199,
+        "H0_ns": 226722714.5,
+        "H1_H0": 0.726727590410885,
+        "H1_PY": 0.9017180373743614,
+        "H1_ns": 164765652.0,
+        "PY_ns": 182724139.0
+      },
+      "warm_optimization_saved_ms": 61.9570625,
+      "warm_signed_excess_ms": -17.958487
+    },
+    "Financial_Model_02_01__e87a34eb884e": {
+      "H0_fallback_reasons": {},
+      "H0_parent_validation_ms": 9.462506,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {},
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 0.111595,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 19792.0,
+      "cold": {
+        "H0_PY": 1.4148274368730065,
+        "H0_ns": 271362281,
+        "H1_H0": 0.9887544540503034,
+        "H1_PY": 1.3989169299207596,
+        "H1_ns": 268310664,
+        "PY_ns": 191798854
+      },
+      "family": "Financial_Model",
+      "old_rc_ratio": 1.679568000181137,
+      "phase3_archived_warm_ratio": 1.241975638596785,
+      "task": "Financial_Model:02_01",
+      "warm": {
+        "H0_PY": 1.2113771861240792,
+        "H0_ns": 230456901.0,
+        "H1_H0": 0.7083879492938248,
+        "H1_PY": 0.8581250006997603,
+        "H1_ns": 163252891.5,
+        "PY_ns": 190243719.0
+      },
+      "warm_optimization_saved_ms": 67.2040095,
+      "warm_signed_excess_ms": -26.9908275
+    },
+    "Financial_Model_02_04__5ac07a9edb67": {
+      "H0_fallback_reasons": {},
+      "H0_parent_validation_ms": 10.9889755,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {},
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 0.155107,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 20033.0,
+      "cold": {
+        "H0_PY": 1.4724318530280578,
+        "H0_ns": 394706947,
+        "H1_H0": 0.9952757304775789,
+        "H1_PY": 1.4654756881009552,
+        "H1_ns": 392842245,
+        "PY_ns": 268064662
+      },
+      "family": "Financial_Model",
+      "old_rc_ratio": 1.6653311225948657,
+      "phase3_archived_warm_ratio": 1.2814869636396113,
+      "task": "Financial_Model:02_04",
+      "warm": {
+        "H0_PY": 1.1530650078420617,
+        "H0_ns": 268788340.0,
+        "H1_H0": 0.7010065894227406,
+        "H1_PY": 0.8083061685300692,
+        "H1_ns": 188422397.5,
+        "PY_ns": 233107707.0
+      },
+      "warm_optimization_saved_ms": 80.3659425,
+      "warm_signed_excess_ms": -44.6853095
+    },
+    "Financial_Model_07_01__23c57fc578fc": {
+      "H0_fallback_reasons": {},
+      "H0_parent_validation_ms": 107.705196,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {},
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 0.38284,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 172405.0,
+      "cold": {
+        "H0_PY": 1.3003269379808522,
+        "H0_ns": 1259576901,
+        "H1_H0": 1.0386718523984746,
+        "H1_PY": 1.3506129893962082,
+        "H1_ns": 1308287073,
+        "PY_ns": 968661699
+      },
+      "family": "Financial_Model",
+      "old_rc_ratio": 2.5377743444903733,
+      "phase3_archived_warm_ratio": 0.42725971464601475,
+      "task": "Financial_Model:07_01",
+      "warm": {
+        "H0_PY": 0.4390854111534262,
+        "H0_ns": 440783622.5,
+        "H1_H0": 0.6069194925680343,
+        "H1_PY": 0.26648949493126417,
+        "H1_ns": 267520172.5,
+        "PY_ns": 1003867610.5
+      },
+      "warm_optimization_saved_ms": 173.26345,
+      "warm_signed_excess_ms": -736.347438
+    },
+    "Financial_Model_07_01__90a7533589a4": {
+      "H0_fallback_reasons": {},
+      "H0_parent_validation_ms": 101.032073,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {},
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 0.370295,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 172405.0,
+      "cold": {
+        "H0_PY": 1.2414646319417915,
+        "H0_ns": 1273838145,
+        "H1_H0": 1.002514920763344,
+        "H1_PY": 1.244586817121619,
+        "H1_ns": 1277041747,
+        "PY_ns": 1026076871
+      },
+      "family": "Financial_Model",
+      "old_rc_ratio": 3.315765358524701,
+      "phase3_archived_warm_ratio": 0.4278407519404683,
+      "task": "Financial_Model:07_01",
+      "warm": {
+        "H0_PY": 0.42238897109183876,
+        "H0_ns": 436532300.0,
+        "H1_H0": 0.6175122894686144,
+        "H1_PY": 0.2608303805852137,
+        "H1_ns": 269564060.0,
+        "PY_ns": 1033484134.0
+      },
+      "warm_optimization_saved_ms": 166.96824,
+      "warm_signed_excess_ms": -763.920074
+    },
+    "Financial_Model_08_01__2ea507d758dc": {
+      "H0_fallback_reasons": {},
+      "H0_parent_validation_ms": 682.2638865,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {},
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 2.149112,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 1204936.0,
+      "cold": {
+        "H0_PY": 1.5540598144120246,
+        "H0_ns": 4140518718,
+        "H1_H0": 0.9943927798468656,
+        "H1_PY": 1.545345858901477,
+        "H1_ns": 4117301918,
+        "PY_ns": 2664323908
+      },
+      "family": "Financial_Model",
+      "old_rc_ratio": 1.5413010133020226,
+      "phase3_archived_warm_ratio": 0.5956615379580825,
+      "task": "Financial_Model:08_01",
+      "warm": {
+        "H0_PY": 0.6192107654272222,
+        "H0_ns": 1643451733.5,
+        "H1_H0": 0.5334321581401039,
+        "H1_PY": 0.3303069349454288,
+        "H1_ns": 876670005.0,
+        "PY_ns": 2654107172.0
+      },
+      "warm_optimization_saved_ms": 766.7817285,
+      "warm_signed_excess_ms": -1777.437167
+    },
+    "Financial_Model_08_01__8021d8d90c40": {
+      "H0_fallback_reasons": {},
+      "H0_parent_validation_ms": 686.527065,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {},
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 2.221917,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 1204936.0,
+      "cold": {
+        "H0_PY": 1.6143529650925796,
+        "H0_ns": 4329587151,
+        "H1_H0": 0.9756226842608717,
+        "H1_PY": 1.5749993731481198,
+        "H1_ns": 4224043438,
+        "PY_ns": 2681933409
+      },
+      "family": "Financial_Model",
+      "old_rc_ratio": 1.6949269734465855,
+      "phase3_archived_warm_ratio": 0.5945483063018558,
+      "task": "Financial_Model:08_01",
+      "warm": {
+        "H0_PY": 0.6011775184322763,
+        "H0_ns": 1601385683.5,
+        "H1_H0": 0.5540737035694874,
+        "H1_PY": 0.3330966541404851,
+        "H1_ns": 887285696.5,
+        "PY_ns": 2663748451.0
+      },
+      "warm_optimization_saved_ms": 714.099987,
+      "warm_signed_excess_ms": -1776.4627545
+    },
+    "Financial_Model_08_03__59b98508fd79": {
+      "H0_fallback_reasons": {
+        "proxy_operation_escape": 12
+      },
+      "H0_parent_validation_ms": 690.111026,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {
+        "proxy_operation_escape": 12
+      },
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 2.1543075,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 1211804.0,
+      "cold": {
+        "H0_PY": 2.388868600280661,
+        "H0_ns": 6662471384,
+        "H1_H0": 1.018647308159305,
+        "H1_PY": 2.4334145692221827,
+        "H1_ns": 6786708541,
+        "PY_ns": 2788965196
+      },
+      "family": "Financial_Model",
+      "old_rc_ratio": 2.643855697026621,
+      "phase3_archived_warm_ratio": 1.5402580831568133,
+      "task": "Financial_Model:08_03",
+      "warm": {
+        "H0_PY": 1.5627704546369954,
+        "H0_ns": 4119884637.5,
+        "H1_H0": 0.8199317613781121,
+        "H1_PY": 1.2813651315001846,
+        "H1_ns": 3378024267.5,
+        "PY_ns": 2636269853.5
+      },
+      "warm_optimization_saved_ms": 741.86037,
+      "warm_signed_excess_ms": 741.754414
+    },
+    "Financial_Model_08_03__751f6966e68d": {
+      "H0_fallback_reasons": {},
+      "H0_parent_validation_ms": 701.6818965,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {},
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 2.2203025,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 1211804.0,
+      "cold": {
+        "H0_PY": 1.6046951584672362,
+        "H0_ns": 4218687380,
+        "H1_H0": 0.9983368921733186,
+        "H1_PY": 1.6020263773897516,
+        "H1_ns": 4211671248,
+        "PY_ns": 2628964983
+      },
+      "family": "Financial_Model",
+      "old_rc_ratio": 1.930012101799732,
+      "phase3_archived_warm_ratio": 0.608382946804636,
+      "task": "Financial_Model:08_03",
+      "warm": {
+        "H0_PY": 0.674365996676556,
+        "H0_ns": 1853832764.5,
+        "H1_H0": 0.5121475281812023,
+        "H1_PY": 0.34537487828735103,
+        "H1_ns": 949435868.0,
+        "PY_ns": 2749000948.5
+      },
+      "warm_optimization_saved_ms": 904.3968965,
+      "warm_signed_excess_ms": -1799.5650805
+    },
+    "Financial_Model_11_02__6a75b927c3f6": {
+      "H0_fallback_reasons": {},
+      "H0_parent_validation_ms": 88.3636285,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {},
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 0.342066,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 157568.0,
+      "cold": {
+        "H0_PY": 1.1219449940538906,
+        "H0_ns": 634229726,
+        "H1_H0": 0.9979520322893223,
+        "H1_PY": 1.1196472869329117,
+        "H1_ns": 632930844,
+        "PY_ns": 565294849
+      },
+      "family": "Financial_Model",
+      "old_rc_ratio": 1.766487399354855,
+      "phase3_archived_warm_ratio": 0.7014554434488788,
+      "task": "Financial_Model:11_02",
+      "warm": {
+        "H0_PY": 0.6652052113841243,
+        "H0_ns": 384857834.0,
+        "H1_H0": 0.6584914093238907,
+        "H1_PY": 0.4380319171339287,
+        "H1_ns": 253425577.5,
+        "PY_ns": 578555049.5
+      },
+      "warm_optimization_saved_ms": 131.4322565,
+      "warm_signed_excess_ms": -325.129472
+    },
+    "Financial_Model_11_02__a443eee257b4": {
+      "H0_fallback_reasons": {},
+      "H0_parent_validation_ms": 85.3582575,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {},
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 0.3394335,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 157568.0,
+      "cold": {
+        "H0_PY": 1.023664265489842,
+        "H0_ns": 598995460,
+        "H1_H0": 1.0366203259704172,
+        "H1_PY": 1.0611511845763477,
+        "H1_ns": 620930869,
+        "PY_ns": 585148354
+      },
+      "family": "Financial_Model",
+      "old_rc_ratio": 2.064540401090241,
+      "phase3_archived_warm_ratio": 0.6990969353544503,
+      "task": "Financial_Model:11_02",
+      "warm": {
+        "H0_PY": 0.6879747099283698,
+        "H0_ns": 382070420.0,
+        "H1_H0": 0.6350418464742704,
+        "H1_PY": 0.43689273012051255,
+        "H1_ns": 242630705.0,
+        "PY_ns": 555355327.0
+      },
+      "warm_optimization_saved_ms": 139.439715,
+      "warm_signed_excess_ms": -312.724622
+    },
+    "Financial_Model_15_03__103457370cae": {
+      "H0_fallback_reasons": {},
+      "H0_parent_validation_ms": 66.021047,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {},
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 0.273739,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 116902.0,
+      "cold": {
+        "H0_PY": 1.7039577199935452,
+        "H0_ns": 587678646,
+        "H1_H0": 1.0191240179926497,
+        "H1_PY": 1.736544238089416,
+        "H1_ns": 598917423,
+        "PY_ns": 344890392
+      },
+      "family": "Financial_Model",
+      "old_rc_ratio": 1.7594057666593526,
+      "phase3_archived_warm_ratio": 1.0335388181019356,
+      "task": "Financial_Model:15_03",
+      "warm": {
+        "H0_PY": 0.9853656155309608,
+        "H0_ns": 337012716.0,
+        "H1_H0": 0.6745476986690319,
+        "H1_PY": 0.6646761083040036,
+        "H1_ns": 227331152.0,
+        "PY_ns": 342017938.0
+      },
+      "warm_optimization_saved_ms": 109.681564,
+      "warm_signed_excess_ms": -114.686786
+    },
+    "Financial_Model_15_03__472e28fbd6e0": {
+      "H0_fallback_reasons": {
+        "proxy_operation_escape": 12
+      },
+      "H0_parent_validation_ms": 63.0814355,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {
+        "proxy_operation_escape": 12
+      },
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 0.263046,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 116902.0,
+      "cold": {
+        "H0_PY": 2.3348150548611613,
+        "H0_ns": 801248919,
+        "H1_H0": 1.0195855590290037,
+        "H1_PY": 2.3805437129399514,
+        "H1_ns": 816941827,
+        "PY_ns": 343174470
+      },
+      "family": "Financial_Model",
+      "old_rc_ratio": 2.521335991232085,
+      "phase3_archived_warm_ratio": 1.7489580436062033,
+      "task": "Financial_Model:15_03",
+      "warm": {
+        "H0_PY": 1.678461336662823,
+        "H0_ns": 573408627.5,
+        "H1_H0": 0.7856107170274483,
+        "H1_PY": 1.3186172141985295,
+        "H1_ns": 450475963.0,
+        "PY_ns": 341627546.0
+      },
+      "warm_optimization_saved_ms": 122.9326645,
+      "warm_signed_excess_ms": 108.848417
+    },
+    "Financial_Model_18_05__39d21da726e7": {
+      "H0_fallback_reasons": {},
+      "H0_parent_validation_ms": 15.0362505,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {},
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 0.13317,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 30540.0,
+      "cold": {
+        "H0_PY": 1.8662686512660787,
+        "H0_ns": 310114021,
+        "H1_H0": 1.0114342782327794,
+        "H1_PY": 1.887608086281769,
+        "H1_ns": 313659951,
+        "PY_ns": 166167942
+      },
+      "family": "Financial_Model",
+      "old_rc_ratio": 2.0046385281644254,
+      "phase3_archived_warm_ratio": 1.481445779348112,
+      "task": "Financial_Model:18_05",
+      "warm": {
+        "H0_PY": 1.4576922371770076,
+        "H0_ns": 237131684.5,
+        "H1_H0": 0.7275077658380148,
+        "H1_PY": 1.0604824227480623,
+        "H1_ns": 172515142.0,
+        "PY_ns": 162676097.5
+      },
+      "warm_optimization_saved_ms": 64.6165425,
+      "warm_signed_excess_ms": 9.8390445
+    },
+    "Template_03_03__c76ea596b408": {
+      "H0_fallback_reasons": {},
+      "H0_parent_validation_ms": 0.5271645,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {},
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 0.089822,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 1370.0,
+      "cold": {
+        "H0_PY": 2.2683409434686084,
+        "H0_ns": 212168077,
+        "H1_H0": 0.9805326745738474,
+        "H1_PY": 2.2241824121446387,
+        "H1_ns": 208037732,
+        "PY_ns": 93534474
+      },
+      "family": "Template",
+      "old_rc_ratio": 2.381364771916891,
+      "phase3_archived_warm_ratio": 2.2059189664692957,
+      "task": "Template:03_03",
+      "warm": {
+        "H0_PY": 2.3067441255334056,
+        "H0_ns": 215141631.5,
+        "H1_H0": 0.7222845732672618,
+        "H1_PY": 1.6661256963476592,
+        "H1_ns": 155393481.5,
+        "PY_ns": 93266361.5
+      },
+      "warm_optimization_saved_ms": 59.74815,
+      "warm_signed_excess_ms": 62.12712
+    },
+    "Template_06_12__17725eca76da": {
+      "H0_fallback_reasons": {},
+      "H0_parent_validation_ms": 0.609577,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {},
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 0.0914095,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 1396.0,
+      "cold": {
+        "H0_PY": 2.2742880701450345,
+        "H0_ns": 224695206,
+        "H1_H0": 1.030923467944394,
+        "H1_PY": 2.3446169443784823,
+        "H1_ns": 231643561,
+        "PY_ns": 98798041
+      },
+      "family": "Template",
+      "old_rc_ratio": 2.4525651104868325,
+      "phase3_archived_warm_ratio": 2.151849215141995,
+      "task": "Template:06_12",
+      "warm": {
+        "H0_PY": 2.1412037677586757,
+        "H0_ns": 216312144.0,
+        "H1_H0": 0.7292260276427198,
+        "H1_PY": 1.561421517936284,
+        "H1_ns": 157740445.5,
+        "PY_ns": 101023614.5
+      },
+      "warm_optimization_saved_ms": 58.5716985,
+      "warm_signed_excess_ms": 56.716831
+    },
+    "Template_16_07__9662584ede5e": {
+      "H0_fallback_reasons": {},
+      "H0_parent_validation_ms": 0.8113465,
+      "H0_warm_statuses": {
+        "REUSED": 12
+      },
+      "H1_builder_stack_imported_warm": false,
+      "H1_fallback_reasons": {},
+      "H1_parent_memorybook_constructed": false,
+      "H1_parent_validation_ms": 0.0902525,
+      "H1_warm_statuses": {
+        "REUSED": 12
+      },
+      "artifact_bytes": 2217.0,
+      "cold": {
+        "H0_PY": 2.3974506590383915,
+        "H0_ns": 217733134,
+        "H1_H0": 1.0444559347591074,
+        "H1_PY": 2.5040315691247814,
+        "H1_ns": 227412664,
+        "PY_ns": 90818609
+      },
+      "family": "Template",
+      "old_rc_ratio": 2.509493593073609,
+      "phase3_archived_warm_ratio": 2.294030864982652,
+      "task": "Template:16_07",
+      "warm": {
+        "H0_PY": 2.1109505665438286,
+        "H0_ns": 204381028.5,
+        "H1_H0": 0.7541025144611209,
+        "H1_PY": 1.591873130133829,
+        "H1_ns": 154124247.5,
+        "PY_ns": 96819429.0
+      },
+      "warm_optimization_saved_ms": 50.256781,
+      "warm_signed_excess_ms": 57.3048185
+    }
+  },
+  "population": {
+    "correctness_rows": 330,
+    "scored_invocations": 990,
+    "scripts": 22,
+    "tasks": 14
+  },
+  "warm_signed_excess_ms": {
+    "median": -35.838068500000006,
+    "range": [
+      -1799.5650805,
+      741.754414
+    ]
+  },
+  "warm_task_cluster": {
+    "bootstrap_median_95pct": [
+      0.5199968491061131,
+      1.3832586232255843
+    ],
+    "faster": 9,
+    "geometric_mean_ratio": 0.7806306924778708,
+    "median_ratio": 0.8439788427913117,
+    "n": 14,
+    "range": [
+      0.26364475413875205,
+      1.6661256963476592
+    ],
+    "slower": 5,
+    "tied": 0
+  }
+}

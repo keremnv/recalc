@@ -1,0 +1,20 @@
+{
+  "api_behaviors_requiring_emulation": [
+    "cell.alignment",
+    "cell.border",
+    "cell.fill",
+    "cell.font",
+    "cell.number_format",
+    "other.workbook_api",
+    "workbook.defined_names",
+    "worksheet.column_dimensions",
+    "worksheet.merged_cells",
+    "worksheet.row_dimensions"
+  ],
+  "fallback_hazards": 186,
+  "known_safe_per_object_fallback": false,
+  "mixed_read_write_hazards": 129,
+  "object_escape_cases": 64,
+  "reason": "proxy objects can escape into functions/containers and later writes; a fallback that silently swaps identities is not proven",
+  "type_semantic_edge_case_events": 676
+}

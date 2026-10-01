@@ -1,0 +1,216 @@
+{
+  "direct_route_false_negatives": 0,
+  "quick_negative_count": 20,
+  "rows": [
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Template_15_03__5ad5663409d0"
+    },
+    {
+      "classifier_decision": "A1_ADMIT",
+      "phase10_route": "DIRECT_CONTACT",
+      "quick_negative": false,
+      "safe": true,
+      "workload_id": "Template_16_07__9662584ede5e"
+    },
+    {
+      "classifier_decision": "A1_ADMIT",
+      "phase10_route": "FALLBACK_AFTER_CONTACT",
+      "quick_negative": false,
+      "safe": true,
+      "workload_id": "Template_06_23__fc41ad37c48b"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": false,
+      "safe": true,
+      "workload_id": "Template_06_12__3d05a7ee874d"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Template_06_12__83f82ce3f62b"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Template_15_03__68f4733f2576"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Template_15_01__fa75e25f6a90"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Template_06_02__c26a4c6508ba"
+    },
+    {
+      "classifier_decision": "A1_ADMIT",
+      "phase10_route": "DIRECT_CONTACT",
+      "quick_negative": false,
+      "safe": true,
+      "workload_id": "Template_03_03__c76ea596b408"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Template_06_02__85fab8c95cea"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Financial_Model_08_02__4ca3ae46295d"
+    },
+    {
+      "classifier_decision": "A1_ADMIT",
+      "phase10_route": "DIRECT_CONTACT",
+      "quick_negative": false,
+      "safe": true,
+      "workload_id": "Financial_Model_02_01__79352976d750"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Financial_Model_15_03__64092e664e9b"
+    },
+    {
+      "classifier_decision": "A1_ADMIT",
+      "phase10_route": "DIRECT_CONTACT",
+      "quick_negative": false,
+      "safe": true,
+      "workload_id": "Financial_Model_02_01__bb15e0fe3832"
+    },
+    {
+      "classifier_decision": "A1_ADMIT",
+      "phase10_route": "DIRECT_CONTACT",
+      "quick_negative": false,
+      "safe": true,
+      "workload_id": "Financial_Model_08_03__e48ea186deeb"
+    },
+    {
+      "classifier_decision": "A1_ADMIT",
+      "phase10_route": "DIRECT_CONTACT",
+      "quick_negative": false,
+      "safe": true,
+      "workload_id": "Financial_Model_08_01__2ea507d758dc"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Financial_Model_02_05__c75ecb00f745"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Financial_Model_02_05__90004332940a"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Financial_Model_08_02__625ec1db4acb"
+    },
+    {
+      "classifier_decision": "A1_ADMIT",
+      "phase10_route": "DIRECT_CONTACT",
+      "quick_negative": false,
+      "safe": true,
+      "workload_id": "Financial_Model_11_02__a443eee257b4"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Debugging_05_02__f274eaa3cc8e"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Debugging_09_03__0828d4dfbd13"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Debugging_10_07__6dd8f6d3a4dd"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Debugging_09_03__59822a6e11e7"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Debugging_02_06__7252ca64cf1c"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Debugging_04_07__62a7766ef582"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Debugging_10_07__e3a79d24091a"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Debugging_10_10__c7eca76e6646"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": false,
+      "safe": true,
+      "workload_id": "Debugging_02_06__88edc6528ef0"
+    },
+    {
+      "classifier_decision": "PREDECLARED_REAL_OPENPYXL",
+      "phase10_route": "REFERENCE_ONLY",
+      "quick_negative": true,
+      "safe": true,
+      "workload_id": "Debugging_01_04__542f8461a344"
+    }
+  ]
+}

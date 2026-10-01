@@ -1,0 +1,49 @@
+{
+  "valid_pairs": 0,
+  "pairs": [
+    {
+      "task_id": "Debugging:01_03",
+      "valid_pair": false,
+      "control_modification": null,
+      "treatment_modification": null,
+      "modification_delta": null,
+      "control_regression": null,
+      "treatment_regression": null,
+      "regression_delta": null,
+      "reason_if_unpaired": "one or both arms lacked a valid submitted output"
+    },
+    {
+      "task_id": "Debugging:02_02",
+      "valid_pair": false,
+      "control_modification": null,
+      "treatment_modification": null,
+      "modification_delta": null,
+      "control_regression": null,
+      "treatment_regression": null,
+      "regression_delta": null,
+      "reason_if_unpaired": "one or both arms lacked a valid submitted output"
+    },
+    {
+      "task_id": "Debugging:02_03",
+      "valid_pair": false,
+      "control_modification": null,
+      "treatment_modification": null,
+      "modification_delta": null,
+      "control_regression": null,
+      "treatment_regression": null,
+      "regression_delta": null,
+      "reason_if_unpaired": "one or both arms lacked a valid submitted output"
+    },
+    {
+      "task_id": "Debugging:02_05",
+      "valid_pair": false,
+      "control_modification": null,
+      "treatment_modification": null,
+      "modification_delta": null,
+      "control_regression": null,
+      "treatment_regression": null,
+      "regression_delta": null,
+      "reason_if_unpaired": "one or both arms lacked a valid submitted output"
+    }
+  ]
+}

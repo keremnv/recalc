@@ -1,0 +1,26 @@
+sheet,address,target_kind,causal_class,forensic_class,authorised,written,remaining,rejected,disposition,golden_value,output_value,golden_raw,output_raw
+"IS,BS,CF","I34","direct","direct blank target: wrong edit","wrong_proposal",true,true,false,false,"TRANSLATED_WRITE_SCHEDULED",23.9117096270033,"#DIV/0!","=I31/$C$10","=I31/D10"
+"IS,BS,CF","J34","direct","direct blank target: wrong edit","wrong_proposal",true,true,false,false,"TRANSLATED_WRITE_SCHEDULED",26.278393465597,"#DIV/0!","=J31/$C$10","=J31/E10"
+"IS,BS,CF","K34","direct","direct blank target: wrong edit","wrong_proposal",true,true,false,false,"TRANSLATED_WRITE_SCHEDULED",28.9363956750232,"#DIV/0!","=K31/$C$10","=K31/F10"
+"Revenue & COGS Schedule","D4","direct","direct blank target: unchanged","unauthorized",false,false,false,false,null,-0.251901025950513,null,"=D3/C3-1",null
+"Revenue & COGS Schedule","E4","direct","direct blank target: unchanged","authorized_never_active_40_call_censored",true,false,true,false,null,0.417473378509197,null,"=E3/D3-1",null
+"Revenue & COGS Schedule","F4","direct","direct blank target: unchanged","authorized_never_active_40_call_censored",true,false,true,false,null,0.0446474304251321,null,"=F3/E3-1",null
+"Revenue & COGS Schedule","G4","direct","direct blank target: unchanged","authorized_never_active_40_call_censored",true,false,true,false,null,0.134373893383455,null,"=G3/F3-1",null
+"Revenue & COGS Schedule","H4","direct","direct blank target: unchanged","authorized_never_active_40_call_censored",true,false,true,false,null,-0.556574776678513,null,"=H3/G3-1",null
+"Revenue & COGS Schedule","I4","direct","direct blank target: unchanged","authorized_never_active_40_call_censored",true,false,true,false,null,1.32021011588866,null,"=I3/H3-1",null
+"Revenue & COGS Schedule","J4","direct","direct blank target: unchanged","authorized_never_active_40_call_censored",true,false,true,false,null,-0.242968841171665,null,"=J3/I3-1",null
+"BS schedules","G11","direct","direct blank target: unchanged","unauthorized",false,false,false,false,null,52.9595157754669,null,"=AVERAGE(F8:G8)/'IS,BS,CF'!H19*'IS,BS,CF'!$C$9",null
+"Ratios","C4","direct","direct blank target: unchanged","authorized_never_active_40_call_censored",true,false,true,false,null,1.08866205569059,null,"='IS,BS,CF'!E67/'IS,BS,CF'!E91",null
+"Ratios","D4","direct","direct blank target: unchanged","authorized_never_active_40_call_censored",true,false,true,false,null,1.7201549219485,null,"='IS,BS,CF'!F67/'IS,BS,CF'!F91",null
+"Ratios","E4","direct","direct blank target: unchanged","authorized_never_active_40_call_censored",true,false,true,false,null,1.88924452758298,null,"='IS,BS,CF'!G67/'IS,BS,CF'!G91",null
+"Ratios","F4","direct","direct blank target: unchanged","authorized_never_active_40_call_censored",true,false,true,false,null,1.88167526876332,null,"='IS,BS,CF'!H67/'IS,BS,CF'!H91",null
+"Ratios","F9","direct","direct blank target: unchanged","authorized_never_active_40_call_censored",true,false,true,false,null,0.18433453113052,null,"='IS,BS,CF'!H31/AVERAGE('IS,BS,CF'!G74,'IS,BS,CF'!H74)",null
+"Ratios","G4","direct","direct blank target: unchanged","authorized_never_active_40_call_censored",true,false,true,false,null,2.27216786279094,null,"='IS,BS,CF'!I67/'IS,BS,CF'!I91",null
+"Ratios","G9","direct","direct blank target: unchanged","authorized_never_active_40_call_censored",true,false,true,false,null,0.199572648267142,null,"='IS,BS,CF'!I31/AVERAGE('IS,BS,CF'!H74,'IS,BS,CF'!I74)",null
+"Ratios","H4","direct","direct blank target: unchanged","authorized_never_active_40_call_censored",true,false,true,false,null,2.6037274295885,null,"='IS,BS,CF'!J67/'IS,BS,CF'!J91",null
+"Ratios","H9","direct","direct blank target: unchanged","authorized_never_active_40_call_censored",true,false,true,false,null,0.186195569249726,null,"='IS,BS,CF'!J31/AVERAGE('IS,BS,CF'!I74,'IS,BS,CF'!J74)",null
+"Ratios","I4","direct","direct blank target: unchanged","authorized_never_active_40_call_censored",true,false,true,false,null,2.89417113566668,null,"='IS,BS,CF'!K67/'IS,BS,CF'!K91",null
+"Ratios","I9","direct","direct blank target: unchanged","authorized_never_active_40_call_censored",true,false,true,false,null,0.176003752286306,null,"='IS,BS,CF'!K31/AVERAGE('IS,BS,CF'!J74,'IS,BS,CF'!K74)",null
+"Realization & EBIT Per KG","I11","direct","direct blank target: unchanged","unauthorized",false,false,false,false,null,11.1886412056565,null,"=I7/I4",null
+"Realization & EBIT Per KG","J11","direct","direct blank target: unchanged","unauthorized",false,false,false,false,null,15.3272246086737,null,"=J7/J4",null
+"Realization & EBIT Per KG","K11","direct","direct blank target: unchanged","unauthorized",false,false,false,false,null,27.8913020583849,null,"=K7/K4",null

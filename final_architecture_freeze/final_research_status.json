@@ -1,0 +1,29 @@
+{
+  "status": "FINAL_ARCHITECTURE_AND_EVIDENCE_FROZEN",
+  "date": "2026-09-22",
+  "supersedes": "ARCHITECTURE_EVIDENCE_FREEZE.md",
+  "preserves": [
+    "architecture_evidence_freeze/",
+    "representative_architecture_checkpoint/",
+    "all prior cumulative study artifacts"
+  ],
+  "MECHANISM_DISCOVERY": "CLOSED",
+  "corrective_gate": "PASS_REFERENCE_PARITY_NO_SUBSTRATE_VETO",
+  "capability": {
+    "representative_checkpoint": "SUPPORTED_NARROWLY",
+    "cumulative_practical_stack": "SUPPORTED",
+    "statistical_equivalence": "NOT_ESTABLISHED"
+  },
+  "remaining_research_required": [],
+  "next_phase": [
+    "Integrate/review corrective implementation",
+    "Basic installability/packaging as future engineering",
+    "Evidence presentation and claims as future communication"
+  ],
+  "future_research_leads": "Frozen, not integrated, not automatic next work",
+  "limits": [
+    "No full revised-stack live experiment was run; corrective evidence is deterministic boundary replay.",
+    "Transient historical root cause not established; natural replay did not reproduce it.",
+    "No universal speed or capability equivalence claim."
+  ]
+}

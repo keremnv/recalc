@@ -1,0 +1,55 @@
+{
+  "commands": [
+    "librecalc-agent doctor",
+    "librecalc-agent doctor --require-libreoffice",
+    "librecalc-agent status",
+    "librecalc-agent status --json",
+    "librecalc-agent status --verbose"
+  ],
+  "credentials_required": false,
+  "checks": [
+    "Python version",
+    "openpyxl version and import",
+    "lxml version/import",
+    "SQLite in-memory query and API availability",
+    "optional runtime imports",
+    "cache/index directory creation and writeability",
+    "LibreOffice path and --version",
+    "TOML configuration; external agent configured separately"
+  ],
+  "statuses": [
+    "PASS",
+    "WARNING",
+    "FAIL",
+    "OPTIONAL_NOT_AVAILABLE"
+  ],
+  "exit_codes": {
+    "doctor_or_status": {
+      "0": "mandatory checks pass; warnings/optional absence allowed",
+      "1": "required prerequisite missing"
+    },
+    "invocation": {
+      "2": "bad command/script/workdir or explicitly required LibreOffice missing"
+    },
+    "run": "propagates script exit code; signals mapped to shell 128+signal"
+  },
+  "status_fields": [
+    "product/Python/openpyxl versions",
+    "LibreOffice detected/version",
+    "configured/effective runtime flags",
+    "compiled availability",
+    "capture setting",
+    "cache path",
+    "last-run accelerated loads/fallback count",
+    "diagnostic log location"
+  ],
+  "logs": "<cache>/runs/<run_id>/{runtime.jsonl,summary.json,capture.json}; <cache>/last_run.json",
+  "default_output": "Small human-readable summary; no research/IR dumps. Detailed structured causes in logs or verbose mode.",
+  "no_automatic_recalc": true,
+  "error_ux": {
+    "config": "What failed, reference operation continues, choose valid TOML or omit config.",
+    "cache": "What failed, reference operation continues, choose writable cache.",
+    "optional_import": "Optimization unavailable, ordinary code continues, reinstall for optional feature.",
+    "LibreOffice": "Python work can continue unless expressly required; install Calc before recalc/validation."
+  }
+}

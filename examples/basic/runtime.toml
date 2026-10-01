@@ -1,0 +1,6 @@
+[runtime]
+enabled = true
+reads = true
+capture = true
+verbosity = "normal"
+# Optional: cache_dir = "/your/writable/cache/path"

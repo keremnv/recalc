@@ -1,0 +1,562 @@
+[
+  {
+    "H1_PY_ratio": 1.1336129084776596,
+    "H1_minus_PY_ms": 21.162069,
+    "blockers": [
+      {
+        "detail": "dynamic worksheet subscript",
+        "line": 6,
+        "reason": "STATIC_ANALYSIS_UNCERTAINTY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "rich object"
+      }
+    ],
+    "bootstrap_total_ms": 115.411218,
+    "config_admission_ms": 0.903632,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000417,
+    "pre_runtime_ms": 21.733458,
+    "primary_reason": "STATIC_ANALYSIS_UNCERTAINTY",
+    "runtime_import_install_ms": 92.020267,
+    "task": "Template:15_03",
+    "workload_id": "Template_15_03__5ad5663409d0"
+  },
+  {
+    "H1_PY_ratio": 1.0890121433943167,
+    "H1_minus_PY_ms": 14.545188,
+    "blockers": [
+      {
+        "detail": "dynamic worksheet subscript",
+        "line": 8,
+        "reason": "STATIC_ANALYSIS_UNCERTAINTY"
+      }
+    ],
+    "bootstrap_total_ms": 113.093379,
+    "config_admission_ms": 0.874307,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000295,
+    "pre_runtime_ms": 21.574672,
+    "primary_reason": "STATIC_ANALYSIS_UNCERTAINTY",
+    "runtime_import_install_ms": 91.323916,
+    "task": "Template:06_12",
+    "workload_id": "Template_06_12__3d05a7ee874d"
+  },
+  {
+    "H1_PY_ratio": 1.1207135761406495,
+    "H1_minus_PY_ms": 19.613161,
+    "blockers": [
+      {
+        "detail": "dynamic worksheet subscript",
+        "line": 7,
+        "reason": "STATIC_ANALYSIS_UNCERTAINTY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "rich object"
+      }
+    ],
+    "bootstrap_total_ms": 112.493001,
+    "config_admission_ms": 0.920562,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000301,
+    "pre_runtime_ms": 22.279157,
+    "primary_reason": "STATIC_ANALYSIS_UNCERTAINTY",
+    "runtime_import_install_ms": 89.933807,
+    "task": "Template:06_12",
+    "workload_id": "Template_06_12__83f82ce3f62b"
+  },
+  {
+    "H1_PY_ratio": 1.1440007320596328,
+    "H1_minus_PY_ms": 23.00362,
+    "blockers": [
+      {
+        "detail": "",
+        "line": 5,
+        "reason": "CELL_OBJECT_ITERATION_BOUNDARY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "iterator shape not statically proven"
+      }
+    ],
+    "bootstrap_total_ms": 113.180571,
+    "config_admission_ms": 0.793135,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000277,
+    "pre_runtime_ms": 21.701714,
+    "primary_reason": "CELL_OBJECT_ITERATION_BOUNDARY",
+    "runtime_import_install_ms": 91.388778,
+    "task": "Template:15_03",
+    "workload_id": "Template_15_03__68f4733f2576"
+  },
+  {
+    "H1_PY_ratio": 1.1437756701938486,
+    "H1_minus_PY_ms": 22.650518,
+    "blockers": [
+      {
+        "detail": "",
+        "line": 5,
+        "reason": "CELL_OBJECT_ITERATION_BOUNDARY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "rich object"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "iterator shape not statically proven"
+      }
+    ],
+    "bootstrap_total_ms": 112.860294,
+    "config_admission_ms": 0.820885,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000275,
+    "pre_runtime_ms": 21.682958,
+    "primary_reason": "CELL_OBJECT_ITERATION_BOUNDARY",
+    "runtime_import_install_ms": 90.947904,
+    "task": "Template:15_01",
+    "workload_id": "Template_15_01__fa75e25f6a90"
+  },
+  {
+    "H1_PY_ratio": 1.1253594958501032,
+    "H1_minus_PY_ms": 20.02118,
+    "blockers": [
+      {
+        "detail": "",
+        "line": 4,
+        "reason": "RICH_OBJECT_BOUNDARY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "rich object"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "unsupported active worksheet"
+      }
+    ],
+    "bootstrap_total_ms": 113.190591,
+    "config_admission_ms": 0.906903,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000283,
+    "pre_runtime_ms": 22.056405,
+    "primary_reason": "RICH_OBJECT_BOUNDARY",
+    "runtime_import_install_ms": 90.898741,
+    "task": "Template:06_02",
+    "workload_id": "Template_06_02__c26a4c6508ba"
+  },
+  {
+    "H1_PY_ratio": 1.132181365377723,
+    "H1_minus_PY_ms": 21.315167,
+    "blockers": [
+      {
+        "detail": "",
+        "line": 4,
+        "reason": "RICH_OBJECT_BOUNDARY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "unsupported active worksheet"
+      }
+    ],
+    "bootstrap_total_ms": 113.574158,
+    "config_admission_ms": 0.842999,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000302,
+    "pre_runtime_ms": 22.592774,
+    "primary_reason": "RICH_OBJECT_BOUNDARY",
+    "runtime_import_install_ms": 90.816778,
+    "task": "Template:06_02",
+    "workload_id": "Template_06_02__85fab8c95cea"
+  },
+  {
+    "H1_PY_ratio": 1.0123714355479834,
+    "H1_minus_PY_ms": 35.583086,
+    "blockers": [
+      {
+        "detail": "",
+        "line": 5,
+        "reason": "CELL_OBJECT_ITERATION_BOUNDARY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "iterator shape not statically proven"
+      }
+    ],
+    "bootstrap_total_ms": 113.272621,
+    "config_admission_ms": 0.851987,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000273,
+    "pre_runtime_ms": 22.095807,
+    "primary_reason": "CELL_OBJECT_ITERATION_BOUNDARY",
+    "runtime_import_install_ms": 91.082493,
+    "task": "Financial_Model:08_02",
+    "workload_id": "Financial_Model_08_02__4ca3ae46295d"
+  },
+  {
+    "H1_PY_ratio": 1.227592780049842,
+    "H1_minus_PY_ms": 101.98257,
+    "blockers": [
+      {
+        "detail": "",
+        "line": 5,
+        "reason": "CELL_OBJECT_ITERATION_BOUNDARY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "iterator shape not statically proven"
+      }
+    ],
+    "bootstrap_total_ms": 113.145686,
+    "config_admission_ms": 0.814454,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000281,
+    "pre_runtime_ms": 21.585036,
+    "primary_reason": "CELL_OBJECT_ITERATION_BOUNDARY",
+    "runtime_import_install_ms": 90.719139,
+    "task": "Financial_Model:15_03",
+    "workload_id": "Financial_Model_15_03__64092e664e9b"
+  },
+  {
+    "H1_PY_ratio": 1.0751072176657808,
+    "H1_minus_PY_ms": 22.662951,
+    "blockers": [
+      {
+        "detail": "",
+        "line": 5,
+        "reason": "CELL_OBJECT_ITERATION_BOUNDARY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "iterator shape not statically proven"
+      }
+    ],
+    "bootstrap_total_ms": 113.09901,
+    "config_admission_ms": 0.783323,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000257,
+    "pre_runtime_ms": 21.842978,
+    "primary_reason": "CELL_OBJECT_ITERATION_BOUNDARY",
+    "runtime_import_install_ms": 91.018635,
+    "task": "Financial_Model:02_05",
+    "workload_id": "Financial_Model_02_05__c75ecb00f745"
+  },
+  {
+    "H1_PY_ratio": 1.0893095355584341,
+    "H1_minus_PY_ms": 26.661414,
+    "blockers": [
+      {
+        "detail": "",
+        "line": 5,
+        "reason": "CELL_OBJECT_ITERATION_BOUNDARY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "iterator shape not statically proven"
+      }
+    ],
+    "bootstrap_total_ms": 114.111382,
+    "config_admission_ms": 0.782898,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000262,
+    "pre_runtime_ms": 23.917651,
+    "primary_reason": "CELL_OBJECT_ITERATION_BOUNDARY",
+    "runtime_import_install_ms": 90.321028,
+    "task": "Financial_Model:02_05",
+    "workload_id": "Financial_Model_02_05__90004332940a"
+  },
+  {
+    "H1_PY_ratio": 1.0555886121307532,
+    "H1_minus_PY_ms": 162.061591,
+    "blockers": [
+      {
+        "detail": "",
+        "line": 5,
+        "reason": "CELL_OBJECT_ITERATION_BOUNDARY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "iterator shape not statically proven"
+      }
+    ],
+    "bootstrap_total_ms": 115.334879,
+    "config_admission_ms": 0.856781,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000305,
+    "pre_runtime_ms": 23.135505,
+    "primary_reason": "CELL_OBJECT_ITERATION_BOUNDARY",
+    "runtime_import_install_ms": 91.992399,
+    "task": "Financial_Model:08_02",
+    "workload_id": "Financial_Model_08_02__625ec1db4acb"
+  },
+  {
+    "H1_PY_ratio": 1.0564726269804263,
+    "H1_minus_PY_ms": 58.265633,
+    "blockers": [
+      {
+        "detail": "",
+        "line": 4,
+        "reason": "CELL_OBJECT_ITERATION_BOUNDARY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "iterator shape not statically proven"
+      }
+    ],
+    "bootstrap_total_ms": 113.856228,
+    "config_admission_ms": 0.780406,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.00028,
+    "pre_runtime_ms": 21.833739,
+    "primary_reason": "CELL_OBJECT_ITERATION_BOUNDARY",
+    "runtime_import_install_ms": 91.376403,
+    "task": "Debugging:05_02",
+    "workload_id": "Debugging_05_02__f274eaa3cc8e"
+  },
+  {
+    "H1_PY_ratio": 1.074929447509499,
+    "H1_minus_PY_ms": 17.433465,
+    "blockers": [
+      {
+        "detail": "",
+        "line": 6,
+        "reason": "CELL_OBJECT_ITERATION_BOUNDARY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "iterator shape not statically proven"
+      }
+    ],
+    "bootstrap_total_ms": 112.947398,
+    "config_admission_ms": 0.842617,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000252,
+    "pre_runtime_ms": 21.9402,
+    "primary_reason": "CELL_OBJECT_ITERATION_BOUNDARY",
+    "runtime_import_install_ms": 91.305743,
+    "task": "Debugging:09_03",
+    "workload_id": "Debugging_09_03__0828d4dfbd13"
+  },
+  {
+    "H1_PY_ratio": 0.9891764379043523,
+    "H1_minus_PY_ms": -153.629882,
+    "blockers": [
+      {
+        "detail": "",
+        "line": 5,
+        "reason": "CELL_OBJECT_ITERATION_BOUNDARY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "iterator shape not statically proven"
+      }
+    ],
+    "bootstrap_total_ms": 112.422087,
+    "config_admission_ms": 0.820283,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000292,
+    "pre_runtime_ms": 21.703526,
+    "primary_reason": "CELL_OBJECT_ITERATION_BOUNDARY",
+    "runtime_import_install_ms": 90.659754,
+    "task": "Debugging:10_07",
+    "workload_id": "Debugging_10_07__6dd8f6d3a4dd"
+  },
+  {
+    "H1_PY_ratio": 1.0883961471086796,
+    "H1_minus_PY_ms": 20.227114,
+    "blockers": [
+      {
+        "detail": "defined_names",
+        "line": 5,
+        "reason": "RICH_OBJECT_BOUNDARY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "rich object"
+      }
+    ],
+    "bootstrap_total_ms": 113.673989,
+    "config_admission_ms": 0.941323,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000252,
+    "pre_runtime_ms": 21.892815,
+    "primary_reason": "RICH_OBJECT_BOUNDARY",
+    "runtime_import_install_ms": 91.410131,
+    "task": "Debugging:09_03",
+    "workload_id": "Debugging_09_03__59822a6e11e7"
+  },
+  {
+    "H1_PY_ratio": 1.1107683884209711,
+    "H1_minus_PY_ms": 30.679444,
+    "blockers": [
+      {
+        "detail": "",
+        "line": 5,
+        "reason": "CELL_OBJECT_ITERATION_BOUNDARY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "iterator shape not statically proven"
+      }
+    ],
+    "bootstrap_total_ms": 113.938943,
+    "config_admission_ms": 0.828849,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.00028,
+    "pre_runtime_ms": 21.935469,
+    "primary_reason": "CELL_OBJECT_ITERATION_BOUNDARY",
+    "runtime_import_install_ms": 91.804517,
+    "task": "Debugging:02_06",
+    "workload_id": "Debugging_02_06__7252ca64cf1c"
+  },
+  {
+    "H1_PY_ratio": 1.1151899054473762,
+    "H1_minus_PY_ms": 191.731073,
+    "blockers": [
+      {
+        "detail": "",
+        "line": 5,
+        "reason": "CELL_OBJECT_ITERATION_BOUNDARY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "iterator shape not statically proven"
+      }
+    ],
+    "bootstrap_total_ms": 113.668536,
+    "config_admission_ms": 0.824401,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000303,
+    "pre_runtime_ms": 22.489899,
+    "primary_reason": "CELL_OBJECT_ITERATION_BOUNDARY",
+    "runtime_import_install_ms": 90.612133,
+    "task": "Debugging:04_07",
+    "workload_id": "Debugging_04_07__62a7766ef582"
+  },
+  {
+    "H1_PY_ratio": 0.989407149781037,
+    "H1_minus_PY_ms": -156.616748,
+    "blockers": [
+      {
+        "detail": "",
+        "line": 5,
+        "reason": "CELL_OBJECT_ITERATION_BOUNDARY"
+      },
+      {
+        "detail": "",
+        "line": 11,
+        "reason": "CELL_OBJECT_ITERATION_BOUNDARY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "iterator shape not statically proven"
+      }
+    ],
+    "bootstrap_total_ms": 118.5663,
+    "config_admission_ms": 1.050213,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000336,
+    "pre_runtime_ms": 25.066038,
+    "primary_reason": "CELL_OBJECT_ITERATION_BOUNDARY",
+    "runtime_import_install_ms": 92.599034,
+    "task": "Debugging:10_07",
+    "workload_id": "Debugging_10_07__e3a79d24091a"
+  },
+  {
+    "H1_PY_ratio": 0.9883746734195312,
+    "H1_minus_PY_ms": -163.938032,
+    "blockers": [
+      {
+        "detail": "",
+        "line": 5,
+        "reason": "CELL_OBJECT_ITERATION_BOUNDARY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "iterator shape not statically proven"
+      }
+    ],
+    "bootstrap_total_ms": 114.747592,
+    "config_admission_ms": 0.817749,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000286,
+    "pre_runtime_ms": 22.028748,
+    "primary_reason": "CELL_OBJECT_ITERATION_BOUNDARY",
+    "runtime_import_install_ms": 92.197418,
+    "task": "Debugging:10_10",
+    "workload_id": "Debugging_10_10__c7eca76e6646"
+  },
+  {
+    "H1_PY_ratio": 1.0843101154061812,
+    "H1_minus_PY_ms": 23.372376,
+    "blockers": [
+      {
+        "detail": "dynamic worksheet subscript",
+        "line": 8,
+        "reason": "STATIC_ANALYSIS_UNCERTAINTY"
+      }
+    ],
+    "bootstrap_total_ms": 110.564613,
+    "config_admission_ms": 0.994634,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000287,
+    "pre_runtime_ms": 21.297112,
+    "primary_reason": "STATIC_ANALYSIS_UNCERTAINTY",
+    "runtime_import_install_ms": 89.082826,
+    "task": "Debugging:02_06",
+    "workload_id": "Debugging_02_06__88edc6528ef0"
+  },
+  {
+    "H1_PY_ratio": 1.0806919160018864,
+    "H1_minus_PY_ms": 20.862764,
+    "blockers": [
+      {
+        "detail": "",
+        "line": 4,
+        "reason": "WORKBOOK_WORKSHEETS_BOUNDARY"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "unsupported worksheet collection"
+      },
+      {
+        "detail": "A0 lexical boundary preserved",
+        "line": null,
+        "reason": "iterator shape not statically proven"
+      }
+    ],
+    "bootstrap_total_ms": 113.710854,
+    "config_admission_ms": 0.891864,
+    "decision": "PREDECLARED_REAL_OPENPYXL",
+    "discovery_ms": 0.000309,
+    "pre_runtime_ms": 21.964516,
+    "primary_reason": "WORKBOOK_WORKSHEETS_BOUNDARY",
+    "runtime_import_install_ms": 91.578138,
+    "task": "Debugging:01_04",
+    "workload_id": "Debugging_01_04__542f8461a344"
+  }
+]

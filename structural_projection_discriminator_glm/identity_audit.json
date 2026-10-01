@@ -1,0 +1,69 @@
+{
+  "ok": true,
+  "rows": [
+    {
+      "repeat": 1,
+      "arm": "CONTROL",
+      "declared_model": "z-ai/glm-5.3-flash",
+      "request_model": "openrouter/z-ai/glm-5.3-flash",
+      "response_model": "z-ai/glm-5.3-flash",
+      "ok": true
+    },
+    {
+      "repeat": 1,
+      "arm": "TREATMENT",
+      "declared_model": "z-ai/glm-5.3-flash",
+      "request_model": "openrouter/z-ai/glm-5.3-flash",
+      "response_model": "z-ai/glm-5.3-flash",
+      "ok": true
+    },
+    {
+      "repeat": 2,
+      "arm": "TREATMENT",
+      "declared_model": "z-ai/glm-5.3-flash",
+      "request_model": "openrouter/z-ai/glm-5.3-flash",
+      "response_model": "z-ai/glm-5.3-flash",
+      "ok": true
+    },
+    {
+      "repeat": 2,
+      "arm": "CONTROL",
+      "declared_model": "z-ai/glm-5.3-flash",
+      "request_model": "openrouter/z-ai/glm-5.3-flash",
+      "response_model": "z-ai/glm-5.3-flash",
+      "ok": true
+    },
+    {
+      "repeat": 3,
+      "arm": "CONTROL",
+      "declared_model": "z-ai/glm-5.3-flash",
+      "request_model": "openrouter/z-ai/glm-5.3-flash",
+      "response_model": "z-ai/glm-5.3-flash",
+      "ok": true
+    },
+    {
+      "repeat": 3,
+      "arm": "TREATMENT",
+      "declared_model": "z-ai/glm-5.3-flash",
+      "request_model": "openrouter/z-ai/glm-5.3-flash",
+      "response_model": "z-ai/glm-5.3-flash",
+      "ok": true
+    },
+    {
+      "repeat": 4,
+      "arm": "TREATMENT",
+      "declared_model": "z-ai/glm-5.3-flash",
+      "request_model": "openrouter/z-ai/glm-5.3-flash",
+      "response_model": "z-ai/glm-5.3-flash",
+      "ok": true
+    },
+    {
+      "repeat": 4,
+      "arm": "CONTROL",
+      "declared_model": "z-ai/glm-5.3-flash",
+      "request_model": "openrouter/z-ai/glm-5.3-flash",
+      "response_model": "z-ai/glm-5.3-flash",
+      "ok": true
+    }
+  ]
+}

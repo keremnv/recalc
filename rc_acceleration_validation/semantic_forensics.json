@@ -1,0 +1,97 @@
+{
+  "counts": {
+    "GENUINE_SEMANTIC_OR_EXIT_MISMATCH": 4,
+    "VOLATILE_ADDRESS_ONLY": 4
+  },
+  "method": "Replace only Python object memory addresses in repr of openpyxl ArrayFormula/DataTableFormula; preserve all other bytes and exit codes. Descriptive diagnostic, not a change to primary exactness gate.",
+  "rows": [
+    {
+      "classification": "VOLATILE_ADDRESS_ONLY",
+      "normalized_pairs_equal": [
+        true,
+        true,
+        true
+      ],
+      "task": "Debugging:01_04",
+      "valid_processes": true,
+      "workload_id": "Debugging_01_04__542f8461a344"
+    },
+    {
+      "classification": "GENUINE_SEMANTIC_OR_EXIT_MISMATCH",
+      "normalized_pairs_equal": [
+        false,
+        false,
+        false
+      ],
+      "task": "Debugging:08_04",
+      "valid_processes": true,
+      "workload_id": "Debugging_08_04__2dde74bd671e"
+    },
+    {
+      "classification": "VOLATILE_ADDRESS_ONLY",
+      "normalized_pairs_equal": [
+        true,
+        true,
+        true
+      ],
+      "task": "Debugging:10_10",
+      "valid_processes": true,
+      "workload_id": "Debugging_10_10__c7eca76e6646"
+    },
+    {
+      "classification": "VOLATILE_ADDRESS_ONLY",
+      "normalized_pairs_equal": [
+        true,
+        true,
+        true
+      ],
+      "task": "Financial_Model:08_02",
+      "valid_processes": true,
+      "workload_id": "Financial_Model_08_02__4ca3ae46295d"
+    },
+    {
+      "classification": "GENUINE_SEMANTIC_OR_EXIT_MISMATCH",
+      "normalized_pairs_equal": [
+        false,
+        false,
+        false
+      ],
+      "task": "Financial_Model:15_03",
+      "valid_processes": false,
+      "workload_id": "Financial_Model_15_03__472e28fbd6e0"
+    },
+    {
+      "classification": "VOLATILE_ADDRESS_ONLY",
+      "normalized_pairs_equal": [
+        true,
+        true,
+        true
+      ],
+      "task": "Template:06_02",
+      "valid_processes": true,
+      "workload_id": "Template_06_02__c26a4c6508ba"
+    },
+    {
+      "classification": "GENUINE_SEMANTIC_OR_EXIT_MISMATCH",
+      "normalized_pairs_equal": [
+        false,
+        false,
+        false
+      ],
+      "task": "Template:06_23",
+      "valid_processes": false,
+      "workload_id": "Template_06_23__fc41ad37c48b"
+    },
+    {
+      "classification": "GENUINE_SEMANTIC_OR_EXIT_MISMATCH",
+      "normalized_pairs_equal": [
+        false,
+        false,
+        false
+      ],
+      "task": "Template:16_07",
+      "valid_processes": false,
+      "workload_id": "Template_16_07__9662584ede5e"
+    }
+  ]
+}

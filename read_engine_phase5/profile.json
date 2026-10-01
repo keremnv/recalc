@@ -1,0 +1,490 @@
+{
+  "cold_components_ms": {
+    "H0": {
+      "artifact_discovery_validation_ms": {
+        "median": 0.0270035,
+        "range": [
+          0.025066,
+          0.030752
+        ]
+      },
+      "artifact_hash_ms": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          0.0
+        ]
+      },
+      "artifact_read_ms": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          0.0
+        ]
+      },
+      "builder_import_ms": {
+        "median": 44.13374,
+        "range": [
+          42.3849,
+          47.40352
+        ]
+      },
+      "child_wall_ms": {
+        "median": 152.55142,
+        "range": [
+          87.547589,
+          3008.883646
+        ]
+      },
+      "direct_decode_ms": {
+        "median": 176.215723,
+        "range": [
+          1.650796,
+          2244.593686
+        ]
+      },
+      "external_parent_residual_ms": {
+        "median": 57.2636725,
+        "range": [
+          51.81668,
+          63.169834
+        ]
+      },
+      "module_import_to_run_ms": {
+        "median": 14.840483,
+        "range": [
+          14.261439,
+          21.628454
+        ]
+      },
+      "parent_total_ms": {
+        "median": 482.3647915,
+        "range": [
+          146.87169,
+          5924.338136
+        ]
+      },
+      "post_capture_delta_validation_ms": {
+        "median": 0.3768735,
+        "range": [
+          0.279305,
+          0.896608
+        ]
+      },
+      "pre_capture_ms": {
+        "median": 0.167199,
+        "range": [
+          0.107097,
+          0.454851
+        ]
+      },
+      "publication_ms": {
+        "median": 11.447185000000001,
+        "range": [
+          3.770034,
+          12.955679
+        ]
+      },
+      "rc_import_ms": {
+        "median": 13.861830999999999,
+        "range": [
+          13.463073,
+          14.749243
+        ]
+      },
+      "runtime_artifact_load_ms": {
+        "median": 26.919272,
+        "range": [
+          0.472536,
+          610.99575
+        ]
+      },
+      "runtime_bootstrap_ms": {
+        "median": 61.2210295,
+        "range": [
+          60.116659,
+          64.418374
+        ]
+      },
+      "runtime_reference_parse_ms": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          1933.823788
+        ]
+      },
+      "serialization_ms": {
+        "median": 28.3661065,
+        "range": [
+          0.474173,
+          664.767099
+        ]
+      },
+      "sidecar_header_ms": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "H1": {
+      "artifact_discovery_validation_ms": {
+        "median": 0.026066,
+        "range": [
+          0.023993,
+          0.03069
+        ]
+      },
+      "artifact_hash_ms": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          0.0
+        ]
+      },
+      "artifact_read_ms": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          0.0
+        ]
+      },
+      "builder_import_ms": {
+        "median": 43.8621005,
+        "range": [
+          42.16343,
+          46.939611
+        ]
+      },
+      "direct_decode_ms": {
+        "median": 174.45082,
+        "range": [
+          1.680929,
+          2212.0183
+        ]
+      },
+      "external_parent_residual_ms": {
+        "median": 54.774769,
+        "range": [
+          50.05379,
+          440.355722
+        ]
+      },
+      "module_import_to_run_ms": {
+        "median": 12.930563,
+        "range": [
+          12.435254,
+          15.378703
+        ]
+      },
+      "parent_total_ms": {
+        "median": 386.11281399999996,
+        "range": [
+          55.367258,
+          5340.135504
+        ]
+      },
+      "post_capture_delta_validation_ms": {
+        "median": 0.1746915,
+        "range": [
+          0.080674,
+          1.085668
+        ]
+      },
+      "pre_capture_ms": {
+        "median": 0.18925150000000002,
+        "range": [
+          0.103369,
+          0.449649
+        ]
+      },
+      "publication_ms": {
+        "median": 11.021240500000001,
+        "range": [
+          3.631901,
+          12.77385
+        ]
+      },
+      "rc_import_ms": {
+        "median": 14.357421,
+        "range": [
+          13.981227,
+          15.094274
+        ]
+      },
+      "runtime_artifact_load_ms": {
+        "median": 24.557969,
+        "range": [
+          0.402591,
+          606.795105
+        ]
+      },
+      "runtime_bootstrap_ms": {
+        "median": 0.332959,
+        "range": [
+          0.24268,
+          0.381204
+        ]
+      },
+      "runtime_install_ms": {
+        "median": 0.33530899999999997,
+        "range": [
+          0.244726,
+          0.384225
+        ]
+      },
+      "runtime_reference_parse_ms": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          1897.765671
+        ]
+      },
+      "script_wall_ms": {
+        "median": 57.598588,
+        "range": [
+          1.00454,
+          2502.102459
+        ]
+      },
+      "serialization_ms": {
+        "median": 27.826102499999998,
+        "range": [
+          0.474608,
+          665.242525
+        ]
+      },
+      "sidecar_header_ms": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "warm_components_ms": {
+    "H0": {
+      "artifact_discovery_validation_ms": {
+        "median": 0.14571,
+        "range": [
+          0.08015749999999999,
+          1.9183124999999999
+        ]
+      },
+      "artifact_hash_ms": {
+        "median": 0.05860925,
+        "range": [
+          0.0041775,
+          1.494294
+        ]
+      },
+      "artifact_read_ms": {
+        "median": 0.012375500000000001,
+        "range": [
+          0.0071129999999999995,
+          0.3019155
+        ]
+      },
+      "builder_import_ms": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          0.0
+        ]
+      },
+      "child_wall_ms": {
+        "median": 154.6881455,
+        "range": [
+          86.277625,
+          3008.5926315
+        ]
+      },
+      "external_parent_residual_ms": {
+        "median": 46.199014,
+        "range": [
+          44.435638499999996,
+          50.234089999999995
+        ]
+      },
+      "module_import_to_run_ms": {
+        "median": 14.7279985,
+        "range": [
+          14.3654945,
+          16.180157
+        ]
+      },
+      "parent_total_ms": {
+        "median": 161.7835195,
+        "range": [
+          92.477819,
+          3019.526954
+        ]
+      },
+      "post_capture_delta_validation_ms": {
+        "median": 4.7890542499999995,
+        "range": [
+          3.8978695,
+          5.713708499999999
+        ]
+      },
+      "pre_capture_ms": {
+        "median": 0.1275935,
+        "range": [
+          0.074745,
+          0.620457
+        ]
+      },
+      "rc_import_ms": {
+        "median": 13.937731,
+        "range": [
+          13.761265,
+          14.647473
+        ]
+      },
+      "runtime_artifact_load_ms": {
+        "median": 27.2302515,
+        "range": [
+          0.450806,
+          613.7625515
+        ]
+      },
+      "runtime_bootstrap_ms": {
+        "median": 61.318121500000004,
+        "range": [
+          59.681292,
+          65.0634405
+        ]
+      },
+      "runtime_reference_parse_ms": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          1939.589215
+        ]
+      },
+      "sidecar_header_ms": {
+        "median": 0.071143,
+        "range": [
+          0.06505549999999999,
+          0.0940385
+        ]
+      }
+    },
+    "H1": {
+      "artifact_discovery_validation_ms": {
+        "median": 0.14507475,
+        "range": [
+          0.0780835,
+          1.9066285
+        ]
+      },
+      "artifact_hash_ms": {
+        "median": 0.062357,
+        "range": [
+          0.0042805,
+          1.4898384999999998
+        ]
+      },
+      "artifact_read_ms": {
+        "median": 0.01264225,
+        "range": [
+          0.007278,
+          0.304122
+        ]
+      },
+      "builder_import_ms": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          0.0
+        ]
+      },
+      "external_parent_residual_ms": {
+        "median": 54.05415975,
+        "range": [
+          51.602886999999996,
+          436.8491115
+        ]
+      },
+      "module_import_to_run_ms": {
+        "median": 12.9691025,
+        "range": [
+          12.816447499999999,
+          13.4666415
+        ]
+      },
+      "parent_total_ms": {
+        "median": 110.05558475000001,
+        "range": [
+          46.9513185,
+          2624.8989760000004
+        ]
+      },
+      "post_capture_delta_validation_ms": {
+        "median": 0.1795515,
+        "range": [
+          0.0956445,
+          1.1250695
+        ]
+      },
+      "pre_capture_ms": {
+        "median": 0.12228175,
+        "range": [
+          0.07481550000000001,
+          0.6286935
+        ]
+      },
+      "rc_import_ms": {
+        "median": 14.30362825,
+        "range": [
+          14.017367,
+          15.0114065
+        ]
+      },
+      "runtime_artifact_load_ms": {
+        "median": 28.408517,
+        "range": [
+          0.4446475,
+          612.173728
+        ]
+      },
+      "runtime_bootstrap_ms": {
+        "median": 44.3103445,
+        "range": [
+          43.7339765,
+          46.4610995
+        ]
+      },
+      "runtime_install_ms": {
+        "median": 44.314260749999995,
+        "range": [
+          43.73761,
+          46.4650685
+        ]
+      },
+      "runtime_reference_parse_ms": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          1948.4376665
+        ]
+      },
+      "script_wall_ms": {
+        "median": 61.8698415,
+        "range": [
+          1.0510774999999999,
+          2572.713888
+        ]
+      },
+      "sidecar_header_ms": {
+        "median": 0.06880175,
+        "range": [
+          0.06243800000000001,
+          0.0880585
+        ]
+      }
+    }
+  }
+}

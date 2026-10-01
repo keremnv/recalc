@@ -77,8 +77,13 @@ def test_arm_c_semantic_program_is_the_frozen_lane(tmp_path) -> None:
         observation="formula-patterns-v1",
     )
 
-    assert tools == {"calc_inspect", "calc_read", "calc_read_ranges", "calc_compare",
-                     "calc_fill_formulas"}
+    assert tools == {
+        "calc_inspect",
+        "calc_read",
+        "calc_read_ranges",
+        "calc_compare",
+        "calc_fill_formulas",
+    }
 
 
 def test_arms_differ_only_where_the_ablation_intends(tmp_path) -> None:
@@ -106,8 +111,7 @@ def test_arms_differ_only_where_the_ablation_intends(tmp_path) -> None:
     assert c_tools - b_tools == {"calc_fill_formulas"}
 
 
-def test_thin_arm_lifts_the_semantic_lane_read_cap() -> None:
-    """The 96-cell cap presumes calc_inspect exists. Arm A has none."""
+def test_bounded_and_unbounded_read_treatments_are_explicit() -> None:
     import importlib
     import os
     import sys
@@ -115,7 +119,8 @@ def test_thin_arm_lifts_the_semantic_lane_read_cap() -> None:
     sys.path.insert(0, str(PROJECT_ROOT / "benchmark/sweagent/librecalc/lib"))
     calc_tool = importlib.import_module("calc_tool")
     try:
-        previous = os.environ.pop("LIBRECALC_READ_MAX_CELLS", None)
+        previous = os.environ.get("LIBRECALC_READ_MAX_CELLS")
+        os.environ["LIBRECALC_READ_MAX_CELLS"] = "96"
         assert calc_tool._read_neighborhood_limit() == 96
         calc_tool._require_neighborhood_range("A1:L8", label="calc_read range")
 
@@ -130,7 +135,7 @@ def test_thin_arm_lifts_the_semantic_lane_read_cap() -> None:
         sys.path.remove(str(PROJECT_ROOT / "benchmark/sweagent/librecalc/lib"))
 
 
-def test_default_read_cap_still_binds_for_the_semantic_lane() -> None:
+def test_product_read_surface_is_unbounded_without_a_benchmark_treatment() -> None:
     import importlib
     import os
     import sys
@@ -138,12 +143,11 @@ def test_default_read_cap_still_binds_for_the_semantic_lane() -> None:
     sys.path.insert(0, str(PROJECT_ROOT / "benchmark/sweagent/librecalc/lib"))
     calc_tool = importlib.import_module("calc_tool")
     try:
+        previous = os.environ.get("LIBRECALC_READ_MAX_CELLS")
         os.environ.pop("LIBRECALC_READ_MAX_CELLS", None)
-        try:
-            calc_tool._require_neighborhood_range("A1:L41", label="calc_read range")
-        except ValueError as exc:
-            assert "492 cells" in str(exc)
-        else:
-            raise AssertionError("oversize read should still be rejected by default")
+        assert calc_tool._read_neighborhood_limit() is None
+        calc_tool._require_neighborhood_range("A1:L41", label="calc_read range")
     finally:
+        if previous is not None:
+            os.environ["LIBRECALC_READ_MAX_CELLS"] = previous
         sys.path.remove(str(PROJECT_ROOT / "benchmark/sweagent/librecalc/lib"))

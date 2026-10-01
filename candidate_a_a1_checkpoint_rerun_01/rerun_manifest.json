@@ -1,0 +1,12 @@
+{
+  "attempt_id": "candidate_a_a1_checkpoint_rerun_01",
+  "frozen_failed_attempt": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/candidate_a_a1_checkpoint",
+  "frozen_population_sha256": "d731835bbc4c5294dcabe80c0bc6a81bfc46f2e33948f98026cb3b440e533a25",
+  "frozen_ranking_sha256": "fccf1fe49aa8355d329147cb94db2988df09707f9c36654ccc644588fcea99ba",
+  "frozen_run_order_sha256": "c3dfd0c396eef5e642c487c8d91beb84a3abe35093eb37ed2dd33bf1b18d4825",
+  "old_attempt_overwritten": false,
+  "provider_timeout_tests": "tests/test_provider_timeout_hierarchy.py: 4 passed",
+  "rerun_population_sha256": "d731835bbc4c5294dcabe80c0bc6a81bfc46f2e33948f98026cb3b440e533a25",
+  "rerun_ranking_sha256": "fccf1fe49aa8355d329147cb94db2988df09707f9c36654ccc644588fcea99ba",
+  "rerun_run_order_sha256": "c3dfd0c396eef5e642c487c8d91beb84a3abe35093eb37ed2dd33bf1b18d4825"
+}

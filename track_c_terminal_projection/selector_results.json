@@ -1,0 +1,83 @@
+{
+ "S01_formulas": {
+  "reduction": 0.4596481300283366,
+  "P0_recall_tok": 0.45188483014490294,
+  "P0_recall_count": 0.5157755426151402,
+  "precision_tok": 0.04323656522991826,
+  "gate_tasks_ge25_ge95": 0,
+  "tasks_without_P0_mass": 9,
+  "n_p0_facts": 18890
+ },
+ "S02_task_sheets_keep_unknown": {
+  "reduction": 0.22511301993816982,
+  "P0_recall_tok": 0.5409892321475932,
+  "P0_recall_count": 0.577289571201694,
+  "precision_tok": 0.03609527371368055,
+  "gate_tasks_ge25_ge95": 0,
+  "tasks_without_P0_mass": 9,
+  "n_p0_facts": 18890
+ },
+ "S03_keywords_or_sheet": {
+  "reduction": 0.6824567728663529,
+  "P0_recall_tok": 0.2945581238596578,
+  "P0_recall_count": 0.27008999470619377,
+  "precision_tok": 0.04795879174453745,
+  "gate_tasks_ge25_ge95": 3,
+  "tasks_without_P0_mass": 9,
+  "n_p0_facts": 18890
+ },
+ "S04_header_rows_10": {
+  "reduction": 0.9579846756946563,
+  "P0_recall_tok": 0.06450370920681736,
+  "P0_recall_count": 0.06421386977236633,
+  "precision_tok": 0.0793737777993866,
+  "gate_tasks_ge25_ge95": 4,
+  "tasks_without_P0_mass": 9,
+  "n_p0_facts": 18890
+ },
+ "S05_head_rows_25": {
+  "reduction": 0.8190778811021754,
+  "P0_recall_tok": 0.2563253342939948,
+  "P0_recall_count": 0.276071995764955,
+  "precision_tok": 0.07324870471068512,
+  "gate_tasks_ge25_ge95": 4,
+  "tasks_without_P0_mass": 9,
+  "n_p0_facts": 18890
+ },
+ "S06_compact": {
+  "reduction": 0.2975798216837563,
+  "P0_recall_tok": 0.5846903270489087,
+  "P0_recall_count": 0.6203282159872948,
+  "precision_tok": 0.04303571396221056,
+  "gate_tasks_ge25_ge95": 3,
+  "tasks_without_P0_mass": 9,
+  "n_p0_facts": 18890
+ },
+ "S07_head_rows_50": {
+  "reduction": 0.6369805898961436,
+  "P0_recall_tok": 0.494356120793134,
+  "P0_recall_count": 0.5181048173636845,
+  "precision_tok": 0.07040607779676368,
+  "gate_tasks_ge25_ge95": 3,
+  "tasks_without_P0_mass": 9,
+  "n_p0_facts": 18890
+ },
+ "S08_task_sheets_strict": {
+  "reduction": 0.990030794166217,
+  "P0_recall_tok": 0.05905107016738249,
+  "P0_recall_count": 0.05886712546320805,
+  "precision_tok": 0.30624379074906494,
+  "gate_tasks_ge25_ge95": 0,
+  "tasks_without_P0_mass": 9,
+  "n_p0_facts": 18890
+ },
+ "S09_formula_or_header": {
+  "reduction": 0.4393868419706874,
+  "P0_recall_tok": 0.49594578908580605,
+  "P0_recall_count": 0.557014293276866,
+  "precision_tok": 0.045737350467440985,
+  "gate_tasks_ge25_ge95": 4,
+  "tasks_without_P0_mass": 9,
+  "n_p0_facts": 18890
+ }
+}

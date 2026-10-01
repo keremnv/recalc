@@ -1,0 +1,193 @@
+{
+ "gate_failures_eligible": [],
+ "phase0_non_exact": [
+  {
+   "population": "P-A_matched_c0",
+   "task_id": "Financial_Model:08_01",
+   "phase0": "REPLAY_DIFF",
+   "detail": {
+    "replay": "/tmp/capreplay-sandbox/P-A_matched_c0/Financial_Model_08_01/out/08_01_output.xlsx",
+    "kinds": [
+     "cells",
+     "styles"
+    ],
+    "ndiffs": 2,
+    "noise": []
+   }
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Debugging:09_09",
+   "phase0": "REPLAY_EQUIVALENT",
+   "detail": {
+    "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Debugging_09_09/out/09_09_output.xlsx",
+    "noise_kinds": [
+     "cells",
+     "styles",
+     "dims",
+     "cells",
+     "styles",
+     "dims",
+     "styles",
+     "dims"
+    ],
+    "ndiffs": 8
+   }
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Financial_Model:20_05",
+   "phase0": "REPLAY_DIFF",
+   "detail": {
+    "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Financial_Model_20_05/out/20_05_output.xlsx",
+    "kinds": [
+     "cells",
+     "dims",
+     "styles"
+    ],
+    "ndiffs": 25,
+    "noise": [
+     "styles",
+     "dims",
+     "styles",
+     "dims",
+     "styles",
+     "dims",
+     "styles",
+     "dims",
+     "dims",
+     "styles",
+     "dims",
+     "styles",
+     "dims",
+     "styles",
+     "styles",
+     "dims",
+     "styles",
+     "dims",
+     "styles",
+     "dims"
+    ]
+   }
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:06_12",
+   "phase0": "REPLAY_EQUIVALENT",
+   "detail": {
+    "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_06_12/out/06_12_output.xlsx",
+    "noise_kinds": [
+     "styles",
+     "dims"
+    ],
+    "ndiffs": 2
+   }
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:06_17",
+   "phase0": "REPLAY_EQUIVALENT",
+   "detail": {
+    "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_06_17/out/06_17_output.xlsx",
+    "noise_kinds": [
+     "styles",
+     "dims"
+    ],
+    "ndiffs": 2
+   }
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:13_08",
+   "phase0": "REPLAY_EQUIVALENT",
+   "detail": {
+    "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_13_08/out/13_08_output.xlsx",
+    "noise_kinds": [
+     "styles",
+     "dims"
+    ],
+    "ndiffs": 2
+   }
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:15_01",
+   "phase0": "REPLAY_EQUIVALENT",
+   "detail": {
+    "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_15_01/out/15_01_output.xlsx",
+    "noise_kinds": [
+     "styles",
+     "dims"
+    ],
+    "ndiffs": 2
+   }
+  },
+  {
+   "population": "P-B_sixty_control",
+   "task_id": "Template:16_06",
+   "phase0": "REPLAY_EQUIVALENT",
+   "detail": {
+    "replay": "/tmp/capreplay-sandbox/P-B_sixty_control/Template_16_06/out/16_06_output.xlsx",
+    "noise_kinds": [
+     "cells",
+     "styles",
+     "dims",
+     "styles",
+     "dims",
+     "cells",
+     "styles",
+     "dims"
+    ],
+    "ndiffs": 8
+   }
+  },
+  {
+   "population": "P-C_viz",
+   "task_id": "glm-fill-c0-Visualization-Task-1426290-r1",
+   "phase0": "NO_ARCHIVED_OUTPUT",
+   "detail": {}
+  }
+ ],
+ "overrides_20_05": [
+  {
+   "name": "O1_script_scope",
+   "pass": true,
+   "evidence": "no dims/indent/alignment-construction ops; sheet refs=['Balance Sheet', 'Cost Drivers', 'Ratio Analysis']"
+  },
+  {
+   "name": "O2_dcf_datatable",
+   "pass": true,
+   "evidence": "script DCF refs=False; replay J8==input J8=('N', '32726762.14303546'); archived J8=TABLE-text; replay J7==input J7=True"
+  },
+  {
+   "name": "O3_manpower_colD",
+   "pass": true,
+   "evidence": "replay==input=(12.5, False); archived missing"
+  },
+  {
+   "name": "O4_dcf_colH",
+   "pass": true,
+   "evidence": "replay==input=(8.83203125, False); archived missing"
+  },
+  {
+   "name": "O5_indent_inflation",
+   "pass": true,
+   "evidence": "replay==input indents (9.0/2.0); archived inflated (12.0/3.0); sheets outside script scope"
+  }
+ ],
+ "prototype_bugs_found_and_fixed": [
+  {
+   "bug": "DataTableFormula serialized via object repr (memory addresses) in F2 state compare",
+   "effect": "6 phantom F2 diffs (F2n 1-2) on byte-identical files",
+   "fix": "structural DataTable read; 6 rows recomputed with current comparator (F2n->0, F0/F1 unchanged)",
+   "class": "prototype_bug_not_architectural"
+  }
+ ],
+ "environmental_blocks": [
+  {
+   "block": "soffice cannot execute in this sandbox (Operation not permitted)",
+   "effect": "P-A 08_01 phase0 DIFF (agent script shells to soffice for recalc+cached-value injection); F3 LO round-trip gate unrunnable",
+   "class": "environmental_not_architectural"
+  }
+ ]
+}

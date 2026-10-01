@@ -1,0 +1,9 @@
+{
+ "eligible": 38,
+ "faithful": 38,
+ "rate": 1.0,
+ "verdicts": {
+  "OPAQUE_CAPTURE_EXACT": 38
+ },
+ "failures": []
+}

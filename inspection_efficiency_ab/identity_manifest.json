@@ -1,0 +1,11 @@
+{
+ "differences_unintended": [],
+ "pass": true,
+ "intended_differences": [
+  "instance_hash",
+  "workdir_listing",
+  "request_body.user_len",
+  "workdir contains lx_helpers.py (C1 only)",
+  "instance prompt + usage note (C1 only)"
+ ]
+}

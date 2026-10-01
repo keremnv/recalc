@@ -1,0 +1,31 @@
+{
+  "name": "fm-ambient-replication-two",
+  "purpose": "n=5 replication of forced-exposure on Financial_Model 20_05 and 11_02. Primary unit is one full task run. Exposed-target subsets are frozen in fm-ambient-replication-targets.json.",
+  "model": "z-ai/glm-5.3-flash",
+  "sampling": "The two informative cases from fm-ambient-six. Not resampled. Never historical scores.",
+  "arms": {
+    "control": "--control, official config, 50 calls, $2, reasoning low, remaining-budget, no read budget",
+    "control-ambient": "--control-ambient, identical prompt/budgets; first view_xlsx content appends unranked formula-equivalence metadata"
+  },
+  "repeats": 5,
+  "max_tool_calls_per_task": 50,
+  "cost_limit_usd": 2.0,
+  "reasoning_effort": "low",
+  "token_limit_policy": "remaining-budget",
+  "tasks": [
+    {
+      "category": "Financial_Model",
+      "id": "20_05",
+      "role": "replication_positive_candidate",
+      "stratum": "same_column_nonadjacent",
+      "reason": "diagnostic candidate positive; freeze 42 same-column exposed blank\u2192formula targets"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "11_02",
+      "role": "replication_null_candidate",
+      "stratum": "same_column_nonadjacent",
+      "reason": "diagnostic candidate null; freeze the 5 blank fills whose class was actually in the CF first-content payload (adjacent BS!I7:M7, not the unexposed Working Capital same-column family)"
+    }
+  ]
+}

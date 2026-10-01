@@ -1,0 +1,9 @@
+{
+ "verdict": "TRANSPARENT_RUNTIME_MIXED",
+ "paired_tasks": 9,
+ "experiment_spend_usd": {
+  "total_usd": 0.48411974999999985
+ },
+ "f3_lo": "NOT_RUNNABLE_HERE",
+ "lo_witness": "NOT_RUN (specified only)"
+}

@@ -1,0 +1,180 @@
+{
+ "by_tool": {
+  "view_xlsx": {
+   "total": 1333842,
+   "new": 1297821,
+   "old": 29559,
+   "derivation": 0,
+   "labels": 2884,
+   "control": 3381,
+   "old_reinspect": 197
+  },
+  "python": {
+   "total": 5585088,
+   "new": 5441997,
+   "old": 100481,
+   "derivation": 538,
+   "labels": 46,
+   "control": 3783,
+   "old_reinspect": 38243
+  },
+  "shell": {
+   "total": 395729,
+   "new": 307617,
+   "old": 34343,
+   "derivation": 0,
+   "labels": 16,
+   "control": 3538,
+   "old_reinspect": 50215
+  },
+  "submit": {
+   "total": 1147,
+   "new": 375,
+   "old": 0,
+   "derivation": 0,
+   "labels": 0,
+   "control": 772,
+   "old_reinspect": 0
+  },
+  "empty": {
+   "total": 19293,
+   "new": 19253,
+   "old": 0,
+   "derivation": 0,
+   "labels": 30,
+   "control": 10,
+   "old_reinspect": 0
+  }
+ },
+ "obs_by_tool": {
+  "view_xlsx": 183,
+  "python": 761,
+  "shell": 177,
+  "submit": 70,
+  "empty": 19
+ },
+ "by_pattern": {
+  "sheet_enumeration": {
+   "total": 233632,
+   "new": 226677,
+   "old": 3632,
+   "derivation": 22,
+   "labels": 396,
+   "control": 2860,
+   "old_reinspect": 45
+  },
+  "range_inspection": {
+   "total": 2178284,
+   "new": 2043088,
+   "old": 114238,
+   "derivation": 42,
+   "labels": 2550,
+   "control": 1961,
+   "old_reinspect": 16405
+  },
+  "period_header_search": {
+   "total": 199954,
+   "new": 170023,
+   "old": 16464,
+   "derivation": 177,
+   "labels": 0,
+   "control": 2765,
+   "old_reinspect": 10525
+  },
+  "other": {
+   "total": 340090,
+   "new": 283961,
+   "old": 25390,
+   "derivation": 7,
+   "labels": 0,
+   "control": 1969,
+   "old_reinspect": 28763
+  },
+  "recalc": {
+   "total": 11489,
+   "new": 11009,
+   "old": 27,
+   "derivation": 0,
+   "labels": 0,
+   "control": 453,
+   "old_reinspect": 0
+  },
+  "submit": {
+   "total": 1147,
+   "new": 375,
+   "old": 0,
+   "derivation": 0,
+   "labels": 0,
+   "control": 772,
+   "old_reinspect": 0
+  },
+  "reopen_verification": {
+   "total": 6230,
+   "new": 5466,
+   "old": 0,
+   "derivation": 7,
+   "labels": 0,
+   "control": 172,
+   "old_reinspect": 585
+  },
+  "whole_workbook_scan": {
+   "total": 4273591,
+   "new": 4269956,
+   "old": 3311,
+   "derivation": 0,
+   "labels": 0,
+   "control": 241,
+   "old_reinspect": 83
+  },
+  "formula_chain": {
+   "total": 68607,
+   "new": 34648,
+   "old": 1236,
+   "derivation": 283,
+   "labels": 0,
+   "control": 196,
+   "old_reinspect": 32244
+  },
+  "diff": {
+   "total": 1909,
+   "new": 1786,
+   "old": 85,
+   "derivation": 0,
+   "labels": 0,
+   "control": 33,
+   "old_reinspect": 5
+  },
+  "mutation_write": {
+   "total": 873,
+   "new": 821,
+   "old": 0,
+   "derivation": 0,
+   "labels": 0,
+   "control": 52,
+   "old_reinspect": 0
+  },
+  "empty": {
+   "total": 19293,
+   "new": 19253,
+   "old": 0,
+   "derivation": 0,
+   "labels": 30,
+   "control": 10,
+   "old_reinspect": 0
+  }
+ },
+ "obs_by_pattern": {
+  "sheet_enumeration": 134,
+  "range_inspection": 428,
+  "period_header_search": 203,
+  "other": 181,
+  "recalc": 38,
+  "submit": 70,
+  "reopen_verification": 17,
+  "whole_workbook_scan": 60,
+  "formula_chain": 32,
+  "diff": 8,
+  "mutation_write": 20,
+  "empty": 19
+ }
+}

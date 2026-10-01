@@ -1,0 +1,36 @@
+{
+ "error_kinds_across_all_saves": {
+  "Err:522": 366,
+  "#VALUE!": 1
+ },
+ "changed_formula_total": 1,
+ "unchanged_cascade_total": 366,
+ "contacted_treatments": 2,
+ "reduced_nfe_report_to_final": "1/2",
+ "repair_fraction_gate": ">=50% of contacted reduce",
+ "repair_fraction_met": true,
+ "capability_decomposition": {
+  "07_03_TREATMENT_primary_UNPAIRED": {
+   "class": "B-like (reduced, no improvement observable)",
+   "report_nfe": 36,
+   "final_nfe": 0,
+   "shown_absent": "8/8",
+   "mod": 0.0029,
+   "reg": 0.9954,
+   "clearing_check": "shown cells retain formulas in final (edits upstream broke circularity); mod near-zero despite full error removal",
+   "control": "MODEL_NONCOMPLETION, no workbook: no paired delta"
+  },
+  "02_06_TREATMENT_R1_PAIRED": {
+   "class": "E (not reduced, unchanged)",
+   "report_nfe": 30,
+   "final_nfe": 30,
+   "shown_absent": "0/8",
+   "paired_mod_delta": 0.0,
+   "paired_reg_delta": -0.001
+  }
+ },
+ "post_report_new_errors": {
+  "Debugging_07_03_TREATMENT": [],
+  "Debugging_02_06_TREATMENT_R1": []
+ }
+}

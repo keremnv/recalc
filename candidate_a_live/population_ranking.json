@@ -1,0 +1,146 @@
+{
+  "eligible_count": 8,
+  "ranking": [
+    {
+      "candidate_a_safe_executions": 9,
+      "candidate_a_safe_read_events": 104,
+      "eligibility": "safe primitive reads plus repeated/same-generation access evidence",
+      "family": "Financial_Model",
+      "patterns": {
+        "DIMENSION_DISCOVERY": 4,
+        "FORMULA_OR_DTYPE_READ": 3,
+        "PERIOD_OR_HEADER_SCAN": 4,
+        "ROW_COLUMN_ITERATION": 7,
+        "SINGLE_CELL_OR_EXPLICIT_RANGE": 8,
+        "TEXT_OR_LABEL_SCAN": 4
+      },
+      "rank": 1,
+      "repeated_open_surplus": 31,
+      "selected": true,
+      "task_id": "Financial_Model:07_01",
+      "total_open_calls": 9
+    },
+    {
+      "candidate_a_safe_executions": 10,
+      "candidate_a_safe_read_events": 88,
+      "eligibility": "safe primitive reads plus repeated/same-generation access evidence",
+      "family": "Financial_Model",
+      "patterns": {
+        "DIMENSION_DISCOVERY": 4,
+        "ROW_COLUMN_ITERATION": 10,
+        "SINGLE_CELL_OR_EXPLICIT_RANGE": 10
+      },
+      "rank": 2,
+      "repeated_open_surplus": 28,
+      "selected": true,
+      "task_id": "Financial_Model:08_03",
+      "total_open_calls": 10
+    },
+    {
+      "candidate_a_safe_executions": 6,
+      "candidate_a_safe_read_events": 77,
+      "eligibility": "safe primitive reads plus repeated/same-generation access evidence",
+      "family": "Financial_Model",
+      "patterns": {
+        "DIMENSION_DISCOVERY": 4,
+        "OTHER_OPENPYXL_READ": 1,
+        "ROW_COLUMN_ITERATION": 4,
+        "SINGLE_CELL_OR_EXPLICIT_RANGE": 5,
+        "TEXT_OR_LABEL_SCAN": 1
+      },
+      "rank": 3,
+      "repeated_open_surplus": 40,
+      "selected": true,
+      "task_id": "Financial_Model:08_01",
+      "total_open_calls": 6
+    },
+    {
+      "candidate_a_safe_executions": 4,
+      "candidate_a_safe_read_events": 50,
+      "eligibility": "safe primitive reads plus repeated/same-generation access evidence",
+      "family": "Financial_Model",
+      "patterns": {
+        "DIMENSION_DISCOVERY": 2,
+        "ROW_COLUMN_ITERATION": 4,
+        "SINGLE_CELL_OR_EXPLICIT_RANGE": 4,
+        "TEXT_OR_LABEL_SCAN": 2
+      },
+      "rank": 4,
+      "repeated_open_surplus": 10,
+      "selected": true,
+      "task_id": "Financial_Model:06_01",
+      "total_open_calls": 4
+    },
+    {
+      "candidate_a_safe_executions": 2,
+      "candidate_a_safe_read_events": 26,
+      "eligibility": "safe primitive reads plus repeated/same-generation access evidence",
+      "family": "Debugging",
+      "patterns": {
+        "DIMENSION_DISCOVERY": 1,
+        "ROW_COLUMN_ITERATION": 2,
+        "SINGLE_CELL_OR_EXPLICIT_RANGE": 2,
+        "TEXT_OR_LABEL_SCAN": 2
+      },
+      "rank": 5,
+      "repeated_open_surplus": 2,
+      "selected": true,
+      "task_id": "Debugging:01_06",
+      "total_open_calls": 2
+    },
+    {
+      "candidate_a_safe_executions": 2,
+      "candidate_a_safe_read_events": 10,
+      "eligibility": "safe primitive reads plus repeated/same-generation access evidence",
+      "family": "Debugging",
+      "patterns": {
+        "ROW_COLUMN_ITERATION": 2,
+        "SINGLE_CELL_OR_EXPLICIT_RANGE": 2,
+        "TEXT_OR_LABEL_SCAN": 2
+      },
+      "rank": 6,
+      "repeated_open_surplus": 5,
+      "selected": true,
+      "task_id": "Debugging:05_02",
+      "total_open_calls": 2
+    },
+    {
+      "candidate_a_safe_executions": 1,
+      "candidate_a_safe_read_events": 8,
+      "eligibility": "safe primitive reads plus repeated/same-generation access evidence",
+      "family": "Debugging",
+      "patterns": {
+        "ROW_COLUMN_ITERATION": 1,
+        "SINGLE_CELL_OR_EXPLICIT_RANGE": 1
+      },
+      "rank": 7,
+      "repeated_open_surplus": 10,
+      "selected": false,
+      "task_id": "Debugging:08_04",
+      "total_open_calls": 1
+    },
+    {
+      "candidate_a_safe_executions": 1,
+      "candidate_a_safe_read_events": 7,
+      "eligibility": "safe primitive reads plus repeated/same-generation access evidence",
+      "family": "Template",
+      "patterns": {
+        "ROW_COLUMN_ITERATION": 1,
+        "SINGLE_CELL_OR_EXPLICIT_RANGE": 1,
+        "TEXT_OR_LABEL_SCAN": 1
+      },
+      "rank": 8,
+      "repeated_open_surplus": 9,
+      "selected": false,
+      "task_id": "Template:03_03",
+      "total_open_calls": 1
+    }
+  ],
+  "rule": [
+    "retain only frozen census A_FULLY_PROXYABLE executions with no static reasons, writes, package reads, or data_only modes",
+    "require at least one safe primitive read and repeated-open evidence from the frozen conservative repeat census or multiple opens",
+    "sort by descending safe read events in the eligible task, descending repeated-open surplus, descending safe executions, then task_id",
+    "select first six; no family balancing, score, gold, helper outcome, or live outcome used"
+  ],
+  "seed": 20260920
+}

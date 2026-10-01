@@ -1,0 +1,115 @@
+{
+ "n_execs_total": 1210,
+ "n_python_with_source": 309,
+ "python_bytes": 302076,
+ "python_loc": 7783,
+ "workbook_opens": 298,
+ "workbook_saves": 107,
+ "full_workbook_scans": 36,
+ "text_searches": 25,
+ "period_header_scans": 81,
+ "formula_fill_loops": 91,
+ "verify_or_diff_loops": 77,
+ "libreoffice_invocations": 68,
+ "observation_error_signals": 48,
+ "sed_retry_events": 2,
+ "sum_execution_time_s": 2757.1,
+ "by_family": {
+  "Financial_Model": {
+   "turns": 559,
+   "python_execs": 147
+  },
+  "Template": {
+   "turns": 184,
+   "python_execs": 54
+  },
+  "Debugging": {
+   "turns": 401,
+   "python_execs": 86
+  },
+  "Visualization": {
+   "turns": 66,
+   "python_execs": 22
+  }
+ },
+ "ledger_alignment": {
+  "P-A_matched_c0_control_arm": {
+   "calls": 336,
+   "prompt_tokens": 15731994,
+   "cost": 1.9465506999999889,
+   "pairs": 12
+  },
+  "P-B_sixty": {
+   "trajs": 0,
+   "official_scores_present": true,
+   "n_scored_tasks": 60,
+   "exact_tasks_accuracy1": 6,
+   "mean_modification": 0.6691
+  }
+ },
+ "largest_center": "workbook opens+scans",
+ "interception_stress_probes": {
+  "trajectories": 71,
+  "save_reload_chains": 9,
+  "trajectories_touching_3plus_workbooks": 2,
+  "scripts_with_try_around_writes": 5,
+  "scripts_saving_then_loading": 103,
+  "mutators_with_est_cells_over_500": 1
+ },
+ "mutation_shape_summary": {
+  "shapes": {
+   "FORMULA_TRANSLATION_LIKE": 12,
+   "LOOP_COMPUTED_TARGETS+COND": 8,
+   "FORMULA_TRANSLATION_LIKE+COND": 10,
+   "STRAIGHT_LINE_MULTI_CELL": 13,
+   "CONTIGUOUS_FILL": 43,
+   "CONTIGUOUS_FILL+STYLE": 7,
+   "CONTIGUOUS_FILL+COND": 11,
+   "STRAIGHT_LINE_MULTI_CELL+STYLE": 1,
+   "SAVE_ONLY": 2,
+   "SINGLE_CELL_ASSIGNMENT": 2,
+   "FORMULA_TRANSLATION_LIKE+STYLE": 2,
+   "LOOP_COMPUTED_VALUES": 1,
+   "LOOP_COMPUTED_VALUES+COND": 1
+  },
+  "by_family": {
+   "Financial_Model": {
+    "FORMULA_TRANSLATION_LIKE": 7,
+    "LOOP_COMPUTED_TARGETS+COND": 3,
+    "FORMULA_TRANSLATION_LIKE+COND": 10,
+    "STRAIGHT_LINE_MULTI_CELL": 1,
+    "CONTIGUOUS_FILL": 14,
+    "CONTIGUOUS_FILL+COND": 4,
+    "FORMULA_TRANSLATION_LIKE+STYLE": 2,
+    "LOOP_COMPUTED_VALUES": 1
+   },
+   "Template": {
+    "CONTIGUOUS_FILL+STYLE": 7,
+    "CONTIGUOUS_FILL": 15,
+    "CONTIGUOUS_FILL+COND": 5,
+    "LOOP_COMPUTED_VALUES+COND": 1,
+    "STRAIGHT_LINE_MULTI_CELL": 6,
+    "FORMULA_TRANSLATION_LIKE": 5,
+    "SINGLE_CELL_ASSIGNMENT": 1,
+    "SAVE_ONLY": 1
+   },
+   "Debugging": {
+    "LOOP_COMPUTED_TARGETS+COND": 3,
+    "STRAIGHT_LINE_MULTI_CELL": 6,
+    "CONTIGUOUS_FILL": 14,
+    "CONTIGUOUS_FILL+COND": 2,
+    "STRAIGHT_LINE_MULTI_CELL+STYLE": 1,
+    "SAVE_ONLY": 1,
+    "SINGLE_CELL_ASSIGNMENT": 1
+   },
+   "Visualization": {
+    "LOOP_COMPUTED_TARGETS+COND": 2
+   }
+  },
+  "edit_knowledge": {
+   "MIXED_STATIC_TEMPLATE_DYNAMIC_TARGETS": 67,
+   "PYTHON_DETERMINES_EDITS": 31,
+   "AGENT_KNOWS_EXACT_EDITS": 15
+  }
+ }
+}

@@ -1,0 +1,16 @@
+{
+  "architecture_discovery": "CLOSED",
+  "product_rc": "UNCHANGED_0.2.0rc1",
+  "profile_to_freeze": null,
+  "representative_token_holdout": "DO_NOT_RUN",
+  "single_next_action": "Preregister an independent RC-level conservative read-acceleration claim test; keep the reserved token holdout sealed and token savings descriptive.",
+  "token_mechanism_discovery": "STOP",
+  "unaffected_claim_leads": [
+    "conservative read acceleration",
+    "large-workbook tail acceleration",
+    "fail-closed reference fallback",
+    "mutation assurance/replayability",
+    "ordinary Python/openpyxl interface",
+    "cumulative capability preservation within tested scopes"
+  ]
+}

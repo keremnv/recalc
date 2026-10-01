@@ -1,0 +1,371 @@
+{
+  "task": "Financial_Model:02_01",
+  "operations": [
+    {
+      "operation_id": "op1",
+      "obligation_id": "O1",
+      "operation_kind": "FILL_FORMULA",
+      "cell_ids": [
+        "cell:s00:r34:c10",
+        "cell:s00:r34:c11",
+        "cell:s00:r34:c8",
+        "cell:s00:r34:c9"
+      ]
+    },
+    {
+      "operation_id": "op2",
+      "obligation_id": "O2",
+      "operation_kind": "FILL_FORMULA",
+      "cell_ids": [
+        "cell:s01:r5:c12",
+        "cell:s01:r5:c13",
+        "cell:s01:r5:c14",
+        "cell:s01:r5:c15"
+      ]
+    },
+    {
+      "operation_id": "op4",
+      "obligation_id": "O4",
+      "operation_kind": "FILL_FORMULA",
+      "cell_ids": [
+        "cell:s02:r11:c10",
+        "cell:s02:r11:c11",
+        "cell:s02:r11:c8",
+        "cell:s02:r11:c9"
+      ]
+    },
+    {
+      "operation_id": "op5",
+      "obligation_id": "O5",
+      "operation_kind": "FILL_FORMULA",
+      "cell_ids": [
+        "cell:s03:r9:c6",
+        "cell:s03:r9:c7",
+        "cell:s03:r9:c8",
+        "cell:s03:r9:c9"
+      ]
+    },
+    {
+      "operation_id": "op7",
+      "obligation_id": "O7",
+      "operation_kind": "FILL_FORMULA",
+      "cell_ids": [
+        "cell:s07:r23:c10",
+        "cell:s07:r23:c11",
+        "cell:s07:r23:c9"
+      ]
+    },
+    {
+      "operation_id": "op3",
+      "obligation_id": "O3",
+      "operation_kind": "FILL_FORMULA",
+      "cell_ids": [
+        "cell:s01:r4:c10",
+        "cell:s01:r4:c11",
+        "cell:s01:r4:c5",
+        "cell:s01:r4:c6",
+        "cell:s01:r4:c7",
+        "cell:s01:r4:c8",
+        "cell:s01:r4:c9"
+      ]
+    },
+    {
+      "operation_id": "op6",
+      "obligation_id": "O6",
+      "operation_kind": "FILL_FORMULA",
+      "cell_ids": [
+        "cell:s03:r4:c3",
+        "cell:s03:r4:c4",
+        "cell:s03:r4:c5",
+        "cell:s03:r4:c6",
+        "cell:s03:r4:c7",
+        "cell:s03:r4:c8",
+        "cell:s03:r4:c9"
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "canonical_cell": [
+        "Ratios",
+        4,
+        3
+      ],
+      "member_cells": [
+        [
+          "Ratios",
+          4,
+          3
+        ],
+        [
+          "Ratios",
+          4,
+          4
+        ],
+        [
+          "Ratios",
+          4,
+          5
+        ],
+        [
+          "Ratios",
+          4,
+          6
+        ],
+        [
+          "Ratios",
+          4,
+          7
+        ],
+        [
+          "Ratios",
+          4,
+          8
+        ],
+        [
+          "Ratios",
+          4,
+          9
+        ]
+      ]
+    },
+    {
+      "canonical_cell": [
+        "Revenue & COGS Schedule",
+        4,
+        5
+      ],
+      "member_cells": [
+        [
+          "Revenue & COGS Schedule",
+          4,
+          5
+        ],
+        [
+          "Revenue & COGS Schedule",
+          4,
+          6
+        ],
+        [
+          "Revenue & COGS Schedule",
+          4,
+          7
+        ],
+        [
+          "Revenue & COGS Schedule",
+          4,
+          8
+        ],
+        [
+          "Revenue & COGS Schedule",
+          4,
+          9
+        ],
+        [
+          "Revenue & COGS Schedule",
+          4,
+          10
+        ]
+      ]
+    },
+    {
+      "canonical_cell": [
+        "BS schedules",
+        11,
+        8
+      ],
+      "member_cells": [
+        [
+          "BS schedules",
+          11,
+          8
+        ],
+        [
+          "BS schedules",
+          11,
+          9
+        ],
+        [
+          "BS schedules",
+          11,
+          10
+        ]
+      ]
+    },
+    {
+      "canonical_cell": [
+        "IS,BS,CF",
+        34,
+        8
+      ],
+      "member_cells": [
+        [
+          "IS,BS,CF",
+          34,
+          8
+        ],
+        [
+          "IS,BS,CF",
+          34,
+          9
+        ],
+        [
+          "IS,BS,CF",
+          34,
+          10
+        ],
+        [
+          "IS,BS,CF",
+          34,
+          11
+        ]
+      ]
+    },
+    {
+      "canonical_cell": [
+        "Ratios",
+        9,
+        6
+      ],
+      "member_cells": [
+        [
+          "Ratios",
+          9,
+          6
+        ],
+        [
+          "Ratios",
+          9,
+          7
+        ],
+        [
+          "Ratios",
+          9,
+          8
+        ],
+        [
+          "Ratios",
+          9,
+          9
+        ]
+      ]
+    },
+    {
+      "canonical_cell": [
+        "Revenue & COGS Schedule",
+        5,
+        13
+      ],
+      "member_cells": [
+        [
+          "Revenue & COGS Schedule",
+          5,
+          13
+        ],
+        [
+          "Revenue & COGS Schedule",
+          5,
+          14
+        ],
+        [
+          "Revenue & COGS Schedule",
+          5,
+          15
+        ]
+      ]
+    },
+    {
+      "canonical_cell": [
+        "Realization & EBIT Per KG",
+        23,
+        9
+      ],
+      "member_cells": [
+        [
+          "Realization & EBIT Per KG",
+          23,
+          9
+        ],
+        [
+          "Realization & EBIT Per KG",
+          23,
+          10
+        ],
+        [
+          "Realization & EBIT Per KG",
+          23,
+          11
+        ]
+      ]
+    }
+  ],
+  "treatment_seeds_first_five": [
+    ["IS,BS,CF", 34, 8],
+    ["Revenue & COGS Schedule", 5, 13],
+    ["BS schedules", 11, 8],
+    ["Ratios", 9, 6],
+    ["Realization & EBIT Per KG", 23, 9]
+  ],
+  "control_seeds": [
+    [
+      "IS,BS,CF",
+      34,
+      8
+    ],
+    [
+      "Revenue & COGS Schedule",
+      5,
+      12
+    ],
+    [
+      "Revenue & COGS Schedule",
+      5,
+      13
+    ],
+    [
+      "BS schedules",
+      11,
+      8
+    ],
+    [
+      "BS schedules",
+      11,
+      11
+    ]
+  ],
+  "cell_ids": [
+    "cell:s00:r34:c10",
+    "cell:s00:r34:c11",
+    "cell:s00:r34:c8",
+    "cell:s00:r34:c9",
+    "cell:s01:r4:c10",
+    "cell:s01:r4:c11",
+    "cell:s01:r4:c5",
+    "cell:s01:r4:c6",
+    "cell:s01:r4:c7",
+    "cell:s01:r4:c8",
+    "cell:s01:r4:c9",
+    "cell:s01:r5:c12",
+    "cell:s01:r5:c13",
+    "cell:s01:r5:c14",
+    "cell:s01:r5:c15",
+    "cell:s02:r11:c10",
+    "cell:s02:r11:c11",
+    "cell:s02:r11:c8",
+    "cell:s02:r11:c9",
+    "cell:s03:r4:c3",
+    "cell:s03:r4:c4",
+    "cell:s03:r4:c5",
+    "cell:s03:r4:c6",
+    "cell:s03:r4:c7",
+    "cell:s03:r4:c8",
+    "cell:s03:r4:c9",
+    "cell:s03:r9:c6",
+    "cell:s03:r9:c7",
+    "cell:s03:r9:c8",
+    "cell:s03:r9:c9",
+    "cell:s07:r23:c10",
+    "cell:s07:r23:c11",
+    "cell:s07:r23:c9"
+  ]
+}

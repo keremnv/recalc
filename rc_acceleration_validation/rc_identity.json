@@ -1,0 +1,9 @@
+{
+  "installed_package_file_count_identical_to_wheel": 24,
+  "installed_prefix": "/tmp/librecalc-hygiene-rc-v55taghk/venv",
+  "source_config_sha256": "1aba31178faca5533c4a594cf1ee8bae2bf3668fcb5f7a9df65f84361f972aee",
+  "source_manifest": "product_hygiene/rc_manifest.json",
+  "version": "0.2.0rc1",
+  "wheel": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/product_hygiene/dist/librecalc_agent-0.2.0rc1-py3-none-any.whl",
+  "wheel_sha256": "532e493f126087a45d86117343514a9a1cd0a4e0010af89bbd1be1b271d66b2e"
+}

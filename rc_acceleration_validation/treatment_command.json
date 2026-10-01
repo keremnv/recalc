@@ -1,0 +1,11 @@
+{
+  "argv_template": [
+    "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+    "run",
+    "--workdir",
+    "{workdir}",
+    "{workdir}/workload.py"
+  ],
+  "cwd": "{workdir}",
+  "environment": "shipped default runtime settings; XDG_CACHE_HOME fresh and PYTHONPATH cleared"
+}

@@ -1,0 +1,801 @@
+{
+  "experiment": "output_role_planner_live_probe",
+  "date": "2026-09-14",
+  "task": "Financial_Model:05_01",
+  "obligation_id": "O6",
+  "model_calls": 2,
+  "downstream_calls": {
+    "retrieval": 0,
+    "synthesis": 0
+  },
+  "scheduler": "frozen",
+  "workbook_writes": 0,
+  "libreoffice_runs": 0,
+  "scoring_runs": 0,
+  "conditions": {
+    "CONTROL": "archived repaired O6 planner context before output-role intervention",
+    "TREATMENT": "identical context plus five accepted endpoints and minimum path provenance"
+  },
+  "artifacts": {
+    "report": "OUTPUT_ROLE_PLANNER_RERUN_LIVE_PROBE_REPORT.md",
+    "authority_json": "output_role_planner_rerun_authority_comparison.json",
+    "authority_csv": "output_role_planner_rerun_authority_comparison.csv",
+    "request_response": "output_role_planner_rerun_request_response_ledger.json",
+    "request_diff": "output_role_planner_rerun_request_diff.json",
+    "context_diff": "output_role_planner_rerun_context_diff.json",
+    "live_dir": "output_role_planner_live_probe_rerun"
+  },
+  "freeze": {
+    "model": "z-ai/glm-5.3-flash",
+    "provider": "openrouter",
+    "reasoning": "max",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 65536,
+    "prompt_sha256": "3d486f0e3d5f8c027ddcb3116e8b7ae9dd896a1736d33cfec3f88d0929460004",
+    "schema_sha256": "cea017d381472638b529c92161e5b3c7b5270bfbf0d5bb1384c86d5ec75a64e6",
+    "control_task_ir_sha256": "fa998734f23978731b3152f8049313d3c9b365df85aedb0db8166615fa797d39",
+    "treatment_task_ir_sha256": "fa998734f23978731b3152f8049313d3c9b365df85aedb0db8166615fa797d39",
+    "member_relation": "frozen",
+    "temporal_evidence": "frozen",
+    "retrieval_synthesis_scheduler_writes": "not invoked"
+  },
+  "context_delta": {
+    "control_context_sha256": "afab05664692c75edbac860994df5f62af757f0ccada94f57f5c51d2a77597f1",
+    "treatment_context_sha256": "c39d82e7c8b844a235a6594e5f75c60f0f4334125500e629d9d70042b4384d16",
+    "new_endpoint_ids": [
+      "cell:s00:r43:c7",
+      "cell:s00:r44:c7",
+      "cell:s00:r45:c7",
+      "cell:s00:r43:c9",
+      "cell:s00:r44:c9"
+    ],
+    "changed_paths": [
+      {
+        "path": "GROUNDING.O6.output_role_evidence",
+        "before": null,
+        "after": {
+          "relation_name": "header_copy_month_numbers_formula_extent",
+          "selection_basis": "deterministic relation from frozen member occurrences and workbook structure",
+          "provenance": [
+            {
+              "starting_member_occurrence": "F22",
+              "starting_member_cell_id": "cell:s00:r22:c6",
+              "member_identity": "second",
+              "endpoint": "Dashboard!G43",
+              "endpoint_cell_id": "cell:s00:r43:c7",
+              "path": [
+                "F22",
+                "Dashboard!F40",
+                "Dashboard!F42",
+                "Dashboard!G42",
+                "Dashboard!G43",
+                "Dashboard!G44",
+                "Dashboard!G45"
+              ],
+              "path_cell_ids": [
+                "cell:s00:r22:c6",
+                "cell:s00:r40:c6",
+                "cell:s00:r42:c6",
+                "cell:s00:r42:c7",
+                "cell:s00:r43:c7",
+                "cell:s00:r44:c7",
+                "cell:s00:r45:c7"
+              ],
+              "relation_sequence": [
+                "point_dependency_header_copy",
+                "same_column_month_header",
+                "right_neighbor_numbers_header",
+                "contiguous_formula_bearing_month_rows"
+              ],
+              "dependency_direction": "source_to_consumer_for_header_copy_then_structural_output_role",
+              "role_definition": {
+                "source_header": "Month",
+                "output_header": "Numbers",
+                "extent": "contiguous formula-bearing source-column rows",
+                "target_form": "corresponding output-column cells"
+              }
+            },
+            {
+              "starting_member_occurrence": "F22",
+              "starting_member_cell_id": "cell:s00:r22:c6",
+              "member_identity": "second",
+              "endpoint": "Dashboard!G44",
+              "endpoint_cell_id": "cell:s00:r44:c7",
+              "path": [
+                "F22",
+                "Dashboard!F40",
+                "Dashboard!F42",
+                "Dashboard!G42",
+                "Dashboard!G43",
+                "Dashboard!G44",
+                "Dashboard!G45"
+              ],
+              "path_cell_ids": [
+                "cell:s00:r22:c6",
+                "cell:s00:r40:c6",
+                "cell:s00:r42:c6",
+                "cell:s00:r42:c7",
+                "cell:s00:r43:c7",
+                "cell:s00:r44:c7",
+                "cell:s00:r45:c7"
+              ],
+              "relation_sequence": [
+                "point_dependency_header_copy",
+                "same_column_month_header",
+                "right_neighbor_numbers_header",
+                "contiguous_formula_bearing_month_rows"
+              ],
+              "dependency_direction": "source_to_consumer_for_header_copy_then_structural_output_role",
+              "role_definition": {
+                "source_header": "Month",
+                "output_header": "Numbers",
+                "extent": "contiguous formula-bearing source-column rows",
+                "target_form": "corresponding output-column cells"
+              }
+            },
+            {
+              "starting_member_occurrence": "F22",
+              "starting_member_cell_id": "cell:s00:r22:c6",
+              "member_identity": "second",
+              "endpoint": "Dashboard!G45",
+              "endpoint_cell_id": "cell:s00:r45:c7",
+              "path": [
+                "F22",
+                "Dashboard!F40",
+                "Dashboard!F42",
+                "Dashboard!G42",
+                "Dashboard!G43",
+                "Dashboard!G44",
+                "Dashboard!G45"
+              ],
+              "path_cell_ids": [
+                "cell:s00:r22:c6",
+                "cell:s00:r40:c6",
+                "cell:s00:r42:c6",
+                "cell:s00:r42:c7",
+                "cell:s00:r43:c7",
+                "cell:s00:r44:c7",
+                "cell:s00:r45:c7"
+              ],
+              "relation_sequence": [
+                "point_dependency_header_copy",
+                "same_column_month_header",
+                "right_neighbor_numbers_header",
+                "contiguous_formula_bearing_month_rows"
+              ],
+              "dependency_direction": "source_to_consumer_for_header_copy_then_structural_output_role",
+              "role_definition": {
+                "source_header": "Month",
+                "output_header": "Numbers",
+                "extent": "contiguous formula-bearing source-column rows",
+                "target_form": "corresponding output-column cells"
+              }
+            },
+            {
+              "starting_member_occurrence": "H22",
+              "starting_member_cell_id": "cell:s00:r22:c8",
+              "member_identity": "third",
+              "endpoint": "Dashboard!I43",
+              "endpoint_cell_id": "cell:s00:r43:c9",
+              "path": [
+                "H22",
+                "Dashboard!H40",
+                "Dashboard!H42",
+                "Dashboard!I42",
+                "Dashboard!I43",
+                "Dashboard!I44"
+              ],
+              "path_cell_ids": [
+                "cell:s00:r22:c8",
+                "cell:s00:r40:c8",
+                "cell:s00:r42:c8",
+                "cell:s00:r42:c9",
+                "cell:s00:r43:c9",
+                "cell:s00:r44:c9"
+              ],
+              "relation_sequence": [
+                "point_dependency_header_copy",
+                "same_column_month_header",
+                "right_neighbor_numbers_header",
+                "contiguous_formula_bearing_month_rows"
+              ],
+              "dependency_direction": "source_to_consumer_for_header_copy_then_structural_output_role",
+              "role_definition": {
+                "source_header": "Month",
+                "output_header": "Numbers",
+                "extent": "contiguous formula-bearing source-column rows",
+                "target_form": "corresponding output-column cells"
+              }
+            },
+            {
+              "starting_member_occurrence": "H22",
+              "starting_member_cell_id": "cell:s00:r22:c8",
+              "member_identity": "third",
+              "endpoint": "Dashboard!I44",
+              "endpoint_cell_id": "cell:s00:r44:c9",
+              "path": [
+                "H22",
+                "Dashboard!H40",
+                "Dashboard!H42",
+                "Dashboard!I42",
+                "Dashboard!I43",
+                "Dashboard!I44"
+              ],
+              "path_cell_ids": [
+                "cell:s00:r22:c8",
+                "cell:s00:r40:c8",
+                "cell:s00:r42:c8",
+                "cell:s00:r42:c9",
+                "cell:s00:r43:c9",
+                "cell:s00:r44:c9"
+              ],
+              "relation_sequence": [
+                "point_dependency_header_copy",
+                "same_column_month_header",
+                "right_neighbor_numbers_header",
+                "contiguous_formula_bearing_month_rows"
+              ],
+              "dependency_direction": "source_to_consumer_for_header_copy_then_structural_output_role",
+              "role_definition": {
+                "source_header": "Month",
+                "output_header": "Numbers",
+                "extent": "contiguous formula-bearing source-column rows",
+                "target_form": "corresponding output-column cells"
+              }
+            }
+          ],
+          "candidate_endpoint_ids": [
+            "cell:s00:r43:c7",
+            "cell:s00:r44:c7",
+            "cell:s00:r45:c7",
+            "cell:s00:r43:c9",
+            "cell:s00:r44:c9"
+          ],
+          "candidate_endpoint_count": 5
+        }
+      },
+      {
+        "path": "GROUNDING.O6.targets.candidate_count",
+        "before": 24,
+        "after": 29
+      },
+      {
+        "path": "GROUNDING.O6.targets.foreground_cell_ids",
+        "kind": "append_or_extend",
+        "before_length": 16,
+        "after_length": 21,
+        "appended": [
+          "cell:s00:r43:c7",
+          "cell:s00:r44:c7",
+          "cell:s00:r45:c7",
+          "cell:s00:r43:c9",
+          "cell:s00:r44:c9"
+        ]
+      },
+      {
+        "path": "GROUNDING.O6.targets.region_summaries",
+        "kind": "append_or_extend",
+        "before_length": 20,
+        "after_length": 25,
+        "appended": [
+          {
+            "kind": "RECTANGLE",
+            "sheet_id": "sheet:s00",
+            "r1": 43,
+            "c1": 7,
+            "r2": 43,
+            "c2": 7
+          },
+          {
+            "kind": "RECTANGLE",
+            "sheet_id": "sheet:s00",
+            "r1": 43,
+            "c1": 9,
+            "r2": 43,
+            "c2": 9
+          },
+          {
+            "kind": "RECTANGLE",
+            "sheet_id": "sheet:s00",
+            "r1": 44,
+            "c1": 7,
+            "r2": 44,
+            "c2": 7
+          },
+          {
+            "kind": "RECTANGLE",
+            "sheet_id": "sheet:s00",
+            "r1": 44,
+            "c1": 9,
+            "r2": 44,
+            "c2": 9
+          },
+          {
+            "kind": "RECTANGLE",
+            "sheet_id": "sheet:s00",
+            "r1": 45,
+            "c1": 7,
+            "r2": 45,
+            "c2": 7
+          }
+        ]
+      },
+      {
+        "path": "GROUNDING.O6.targets.region_summary_count",
+        "before": 20,
+        "after": 25
+      }
+    ],
+    "unexpected_changes": [],
+    "non_output_role_context_equal": true,
+    "control_target_candidate_count": 24,
+    "treatment_target_candidate_count": 29
+  },
+  "provider": {
+    "CONTROL": {
+      "provider_attempted": true,
+      "provider_success": true,
+      "failure_class": null,
+      "finish_reason": "stop",
+      "parse_valid": true,
+      "raw_response_retained": true,
+      "model_call_count": 1,
+      "provider_cost_usd": 0.005553525
+    },
+    "TREATMENT": {
+      "provider_attempted": true,
+      "provider_success": true,
+      "failure_class": null,
+      "finish_reason": "stop",
+      "parse_valid": true,
+      "raw_response_retained": true,
+      "model_call_count": 1,
+      "provider_cost_usd": 0.0015584625
+    }
+  },
+  "parse_validity": {
+    "CONTROL": true,
+    "TREATMENT": true
+  },
+  "returned_plans": {
+    "CONTROL": {
+      "operations": [
+        {
+          "operation_id": "op1",
+          "obligation_id": "O6",
+          "operation_kind": "SET_FORMULA",
+          "target_set": {
+            "kind": "UNION",
+            "sets": [
+              {
+                "kind": "CELL",
+                "cell_id": "cell:s00:r39:c6"
+              },
+              {
+                "kind": "CELL",
+                "cell_id": "cell:s00:r39:c8"
+              }
+            ]
+          },
+          "source_relation": {
+            "entity_ids": [
+              "cell:s00:r39:c2",
+              "cell:s00:r22:c6",
+              "cell:s00:r22:c8"
+            ]
+          }
+        }
+      ]
+    },
+    "TREATMENT": {
+      "operations": [
+        {
+          "operation_id": "op1",
+          "obligation_id": "O6",
+          "operation_kind": "SET_FORMULA",
+          "target_set": {
+            "kind": "UNION",
+            "sets": [
+              {
+                "kind": "RECTANGLE",
+                "sheet_id": "sheet:s00",
+                "r1": 43,
+                "c1": 7,
+                "r2": 45,
+                "c2": 7
+              },
+              {
+                "kind": "RECTANGLE",
+                "sheet_id": "sheet:s00",
+                "r1": 43,
+                "c1": 9,
+                "r2": 44,
+                "c2": 9
+              }
+            ]
+          },
+          "source_relation": {
+            "entity_ids": [
+              "cell:s00:r22:c6",
+              "cell:s00:r22:c8",
+              "cell:s00:r39:c2",
+              "cell:s00:r42:c7",
+              "cell:s00:r42:c9",
+              "cell:s00:r43:c7",
+              "cell:s00:r44:c7",
+              "cell:s00:r45:c7",
+              "cell:s00:r43:c9",
+              "cell:s00:r44:c9"
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "returned_plan_summaries": {
+    "CONTROL": [
+      {
+        "operation_id": "op1",
+        "obligation_id": "O6",
+        "operation_kind": "SET_FORMULA",
+        "target_set": {
+          "kind": "UNION",
+          "sets": [
+            {
+              "kind": "CELL",
+              "cell_id": "cell:s00:r39:c6"
+            },
+            {
+              "kind": "CELL",
+              "cell_id": "cell:s00:r39:c8"
+            }
+          ]
+        },
+        "occupancy_filter": null,
+        "source_relation": {
+          "entity_ids": [
+            "cell:s00:r39:c2",
+            "cell:s00:r22:c6",
+            "cell:s00:r22:c8"
+          ]
+        }
+      }
+    ],
+    "TREATMENT": [
+      {
+        "operation_id": "op1",
+        "obligation_id": "O6",
+        "operation_kind": "SET_FORMULA",
+        "target_set": {
+          "kind": "UNION",
+          "sets": [
+            {
+              "kind": "RECTANGLE",
+              "sheet_id": "sheet:s00",
+              "r1": 43,
+              "c1": 7,
+              "r2": 45,
+              "c2": 7
+            },
+            {
+              "kind": "RECTANGLE",
+              "sheet_id": "sheet:s00",
+              "r1": 43,
+              "c1": 9,
+              "r2": 44,
+              "c2": 9
+            }
+          ]
+        },
+        "occupancy_filter": null,
+        "source_relation": {
+          "entity_ids": [
+            "cell:s00:r22:c6",
+            "cell:s00:r22:c8",
+            "cell:s00:r39:c2",
+            "cell:s00:r42:c7",
+            "cell:s00:r42:c9",
+            "cell:s00:r43:c7",
+            "cell:s00:r44:c7",
+            "cell:s00:r45:c7",
+            "cell:s00:r43:c9",
+            "cell:s00:r44:c9"
+          ]
+        }
+      }
+    ]
+  },
+  "expanded_authority": {
+    "CONTROL": {
+      "status": "VALID_PLAN",
+      "cells": [
+        "Dashboard!F39",
+        "Dashboard!H39"
+      ],
+      "cell_ids": [
+        "cell:s00:r39:c6",
+        "cell:s00:r39:c8"
+      ],
+      "operations": [
+        {
+          "operation_id": "op1",
+          "obligation_id": "O6",
+          "operation_kind": "SET_FORMULA",
+          "cell_ids": [
+            "cell:s00:r39:c6",
+            "cell:s00:r39:c8"
+          ]
+        }
+      ],
+      "provenance": {
+        "cell:s00:r39:c6": [
+          {
+            "operation_id": "op1",
+            "target_set_clauses": [
+              "target_set",
+              "target_set.sets[0]"
+            ],
+            "filter_clause": null,
+            "exception_clause": null
+          }
+        ],
+        "cell:s00:r39:c8": [
+          {
+            "operation_id": "op1",
+            "target_set_clauses": [
+              "target_set",
+              "target_set.sets[1]"
+            ],
+            "filter_clause": null,
+            "exception_clause": null
+          }
+        ]
+      },
+      "expansion_error": null
+    },
+    "TREATMENT": {
+      "status": "VALID_PLAN",
+      "cells": [
+        "Dashboard!G43",
+        "Dashboard!G44",
+        "Dashboard!G45",
+        "Dashboard!I43",
+        "Dashboard!I44"
+      ],
+      "cell_ids": [
+        "cell:s00:r43:c7",
+        "cell:s00:r43:c9",
+        "cell:s00:r44:c7",
+        "cell:s00:r44:c9",
+        "cell:s00:r45:c7"
+      ],
+      "operations": [
+        {
+          "operation_id": "op1",
+          "obligation_id": "O6",
+          "operation_kind": "SET_FORMULA",
+          "cell_ids": [
+            "cell:s00:r43:c7",
+            "cell:s00:r43:c9",
+            "cell:s00:r44:c7",
+            "cell:s00:r44:c9",
+            "cell:s00:r45:c7"
+          ]
+        }
+      ],
+      "provenance": {
+        "cell:s00:r43:c7": [
+          {
+            "operation_id": "op1",
+            "target_set_clauses": [
+              "target_set",
+              "target_set.sets[0]"
+            ],
+            "filter_clause": null,
+            "exception_clause": null
+          }
+        ],
+        "cell:s00:r43:c9": [
+          {
+            "operation_id": "op1",
+            "target_set_clauses": [
+              "target_set",
+              "target_set.sets[1]"
+            ],
+            "filter_clause": null,
+            "exception_clause": null
+          }
+        ],
+        "cell:s00:r44:c7": [
+          {
+            "operation_id": "op1",
+            "target_set_clauses": [
+              "target_set",
+              "target_set.sets[0]"
+            ],
+            "filter_clause": null,
+            "exception_clause": null
+          }
+        ],
+        "cell:s00:r44:c9": [
+          {
+            "operation_id": "op1",
+            "target_set_clauses": [
+              "target_set",
+              "target_set.sets[1]"
+            ],
+            "filter_clause": null,
+            "exception_clause": null
+          }
+        ],
+        "cell:s00:r45:c7": [
+          {
+            "operation_id": "op1",
+            "target_set_clauses": [
+              "target_set",
+              "target_set.sets[0]"
+            ],
+            "filter_clause": null,
+            "exception_clause": null
+          }
+        ]
+      },
+      "expansion_error": null
+    }
+  },
+  "gold_targets": [
+    "Dashboard!G43",
+    "Dashboard!G44",
+    "Dashboard!G45",
+    "Dashboard!I43",
+    "Dashboard!I44"
+  ],
+  "quality": {
+    "CONTROL": {
+      "authority_count": 2,
+      "gold_count": 5,
+      "recall": 0.0,
+      "precision": 0.0,
+      "true_positive_cells": [],
+      "false_positive_cells": [
+        "Dashboard!F39",
+        "Dashboard!H39"
+      ],
+      "false_negative_cells": [
+        "Dashboard!G43",
+        "Dashboard!G44",
+        "Dashboard!G45",
+        "Dashboard!I43",
+        "Dashboard!I44"
+      ]
+    },
+    "TREATMENT": {
+      "authority_count": 5,
+      "gold_count": 5,
+      "recall": 1.0,
+      "precision": 1.0,
+      "true_positive_cells": [
+        "Dashboard!G43",
+        "Dashboard!G44",
+        "Dashboard!G45",
+        "Dashboard!I43",
+        "Dashboard!I44"
+      ],
+      "false_positive_cells": [],
+      "false_negative_cells": []
+    }
+  },
+  "authority_delta": {
+    "control_only_cells": [
+      "Dashboard!F39",
+      "Dashboard!H39"
+    ],
+    "treatment_only_cells": [
+      "Dashboard!G43",
+      "Dashboard!G44",
+      "Dashboard!G45",
+      "Dashboard!I43",
+      "Dashboard!I44"
+    ],
+    "shared_cells": []
+  },
+  "safety": {
+    "control_first_tranche_leakage": [],
+    "treatment_first_tranche_leakage": [],
+    "control_ticket_occurrence_leakage": [],
+    "treatment_ticket_occurrence_leakage": [],
+    "control_rejected_dependency_leakage": [],
+    "treatment_rejected_dependency_leakage": [],
+    "treatment_output_endpoint_intersection": [
+      "Dashboard!G43",
+      "Dashboard!G44",
+      "Dashboard!G45",
+      "Dashboard!I43",
+      "Dashboard!I44"
+    ]
+  },
+  "source_relation_use": {
+    "CONTROL": {
+      "source_relation_entity_ids": [
+        "cell:s00:r22:c6",
+        "cell:s00:r22:c8",
+        "cell:s00:r39:c2"
+      ],
+      "cited_new_output_endpoints": [],
+      "cited_output_path_start_ids": [
+        "cell:s00:r22:c6",
+        "cell:s00:r22:c8"
+      ],
+      "cited_role_path_ids": [
+        "cell:s00:r22:c6",
+        "cell:s00:r22:c8"
+      ],
+      "uses_new_role_evidence": true
+    },
+    "TREATMENT": {
+      "source_relation_entity_ids": [
+        "cell:s00:r22:c6",
+        "cell:s00:r22:c8",
+        "cell:s00:r39:c2",
+        "cell:s00:r42:c7",
+        "cell:s00:r42:c9",
+        "cell:s00:r43:c7",
+        "cell:s00:r43:c9",
+        "cell:s00:r44:c7",
+        "cell:s00:r44:c9",
+        "cell:s00:r45:c7"
+      ],
+      "cited_new_output_endpoints": [
+        "cell:s00:r43:c7",
+        "cell:s00:r43:c9",
+        "cell:s00:r44:c7",
+        "cell:s00:r44:c9",
+        "cell:s00:r45:c7"
+      ],
+      "cited_output_path_start_ids": [
+        "cell:s00:r22:c6",
+        "cell:s00:r22:c8"
+      ],
+      "cited_role_path_ids": [
+        "cell:s00:r22:c6",
+        "cell:s00:r22:c8",
+        "cell:s00:r42:c7",
+        "cell:s00:r42:c9",
+        "cell:s00:r43:c7",
+        "cell:s00:r43:c9",
+        "cell:s00:r44:c7",
+        "cell:s00:r44:c9",
+        "cell:s00:r45:c7"
+      ],
+      "uses_new_role_evidence": true
+    }
+  },
+  "raw_ledger_paths": {
+    "CONTROL": "output_role_planner_live_probe_rerun/control/calls/001_edit_plan.json",
+    "TREATMENT": "output_role_planner_live_probe_rerun/treatment/calls/001_edit_plan.json"
+  },
+  "request_delta": {
+    "request_body_shared_config_equal": true,
+    "shared_config_keys": [
+      "model",
+      "temperature",
+      "top_p",
+      "reasoning",
+      "provider",
+      "max_tokens"
+    ],
+    "system_prompt_equal": true,
+    "user_content_changed": true,
+    "changed_request_components": [
+      "messages[1].content"
+    ],
+    "control_request_sha256": "95e7ed3736a9980c493f742b2eb4ac5beebcdd3a43a299f8d4b5ea9356fb1de8",
+    "treatment_request_sha256": "2f79c5c6ee9f38984da52913b7ee2eeb3f1755924d1dffbaf13f78173e2e5570",
+    "control_user_payload_sha256": "cf3fdb3795eb92ca688bd2bfe14e64a15270da8b573ed5a101d5bdde8d0f23f4",
+    "treatment_user_payload_sha256": "d318af7db711712e70038e4deb7f0f70d538a7e942c376c14df0bbc6784e2fb8",
+    "non_user_request_components_equal": true
+  },
+  "causal_verdict": "OUTPUT_ROLE_INTEGRATION_CASHES_OUT",
+  "smallest_next_experiment": "Keep runtime grounding unchanged and run the smallest static cross-task test of this exact structural family before considering runtime integration."
+}

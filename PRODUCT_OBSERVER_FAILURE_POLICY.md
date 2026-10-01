@@ -1,0 +1,7 @@
+# Observer and failure policy
+
+The package-owned Linux x86_64 observer owns pre/post XLSX byte observation, target launch/wait, raw exit or signal status, changed-file helper invocation and final receipt. It does not import openpyxl or decode artifacts. The target remains a genuine Python script interpreter with inherited stdout/stderr. The observer stays alive after `sys.exit`, uncaught exception, `os._exit` or fatal target signal, so post-state can still be examined. It bounds each snapshot to 1,000 XLSX files and 512 MiB aggregate bytes.
+
+Target and assurance outcomes are separate. A target failure does not skip observation. A changed-file helper failure produces `ASSURANCE_STATUS=FAILED`; if the target succeeded, the command returns 125. If the target failed, its target status remains the command status and the receipt still records assurance failure. A missing observer or inaccessible private cache blocks before target launch. A direct-artifact failure uses reference openpyxl when possible and records a fallback. A source change after bootstrap rejects direct serving. An observer failure before the final receipt can leave only a command failure and partial run directory; this is not treated as assurance success.
+
+The `capture=false` compatibility setting still runs the external observer but skips the changed-file helper; the receipt states `NOT_REQUESTED`. Explicit `--no-runtime` executes direct Python without an observer and reports `NOT_REQUESTED`. Neither path may claim effect validation.

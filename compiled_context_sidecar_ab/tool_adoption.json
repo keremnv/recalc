@@ -1,0 +1,254 @@
+{
+  "used": 5,
+  "not_used": 8,
+  "n": 13,
+  "by_task": [
+    {
+      "key": "Financial_Model:13_05:C1:r1",
+      "task": "Financial_Model:13_05",
+      "repeat": 1,
+      "used": false,
+      "classification": "NOT_USED",
+      "first_turn": null,
+      "n_calls": 0,
+      "modes": [],
+      "repeated_queries": 0,
+      "calls": [],
+      "evidence_uptake_tokens": [],
+      "evidence_uptake": false
+    },
+    {
+      "key": "Financial_Model:13_05:C1:r2",
+      "task": "Financial_Model:13_05",
+      "repeat": 2,
+      "used": false,
+      "classification": "NOT_USED",
+      "first_turn": null,
+      "n_calls": 0,
+      "modes": [],
+      "repeated_queries": 0,
+      "calls": [],
+      "evidence_uptake_tokens": [],
+      "evidence_uptake": false
+    },
+    {
+      "key": "Financial_Model:13_05:C1:r3",
+      "task": "Financial_Model:13_05",
+      "repeat": 3,
+      "used": false,
+      "classification": "NOT_USED",
+      "first_turn": null,
+      "n_calls": 0,
+      "modes": [],
+      "repeated_queries": 0,
+      "calls": [],
+      "evidence_uptake_tokens": [],
+      "evidence_uptake": false
+    },
+    {
+      "key": "Financial_Model:13_05:C1:r4",
+      "task": "Financial_Model:13_05",
+      "repeat": 4,
+      "used": false,
+      "classification": "NOT_USED",
+      "first_turn": null,
+      "n_calls": 0,
+      "modes": [],
+      "repeated_queries": 0,
+      "calls": [],
+      "evidence_uptake_tokens": [],
+      "evidence_uptake": false
+    },
+    {
+      "key": "Financial_Model:05_01:C1:r1",
+      "task": "Financial_Model:05_01",
+      "repeat": 1,
+      "used": true,
+      "classification": "USED",
+      "first_turn": 26,
+      "n_calls": 1,
+      "modes": [
+        "inspect"
+      ],
+      "repeated_queries": 0,
+      "calls": [
+        {
+          "turn": 26,
+          "mode": "inspect",
+          "arguments": "calc_query inspect '/mnt/spreadsheet_data/spreadsheet/05_Project AIF/05_01_AIF_input.xlsx' --sheet 'IRR Calculation' --target E14:CQ15",
+          "result_chars": 311,
+          "latency_s": 0.13039492908865213,
+          "failed": true,
+          "observation_preview": "Traceback (most recent call last):\n  File \"/root/tools/calc_query/bin/calc_query\", line 10, in <module>\n    Path(__file__).resolve().parents[5] / \"benchmark\",\n    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File \"/usr/local/lib/python3.11/pathlib.py\", line 445, in __getitem__\n    raise IndexError(idx)\nIndexError: 5\n"
+        }
+      ],
+      "evidence_uptake_tokens": [],
+      "evidence_uptake": false
+    },
+    {
+      "key": "Financial_Model:02_01:C1:r1",
+      "task": "Financial_Model:02_01",
+      "repeat": 1,
+      "used": false,
+      "classification": "NOT_USED",
+      "first_turn": null,
+      "n_calls": 0,
+      "modes": [],
+      "repeated_queries": 0,
+      "calls": [],
+      "evidence_uptake_tokens": [],
+      "evidence_uptake": false
+    },
+    {
+      "key": "Financial_Model:15_05:C1:r1",
+      "task": "Financial_Model:15_05",
+      "repeat": 1,
+      "used": false,
+      "classification": "NOT_USED",
+      "first_turn": null,
+      "n_calls": 0,
+      "modes": [],
+      "repeated_queries": 0,
+      "calls": [],
+      "evidence_uptake_tokens": [],
+      "evidence_uptake": false
+    },
+    {
+      "key": "Template:03_03:C1:r1",
+      "task": "Template:03_03",
+      "repeat": 1,
+      "used": true,
+      "classification": "USED",
+      "first_turn": 3,
+      "n_calls": 1,
+      "modes": [
+        "inspect"
+      ],
+      "repeated_queries": 0,
+      "calls": [
+        {
+          "turn": 3,
+          "mode": "inspect",
+          "arguments": "calc_query inspect /mnt/spreadsheet_data/spreadsheet/03_consolidation/03_03_input.xlsx --sheet Consolidation --target B2:G59",
+          "result_chars": 63262,
+          "latency_s": 0.3539972060825676,
+          "failed": false,
+          "observation_preview": "{\n  \"mode\": \"inspect\",\n  \"status\": \"OK\",\n  \"fact_kind\": \"compiled_cell\",\n  \"truncated\": true,\n  \"cells\": [\n    {\n      \"display\": \"Consolidation!B2\",\n      \"cell_id\": \"cell:s00:r2:c2\",\n      \"kind_raw\": \"text\",\n      \"raw_value\": \"M&A Consolidation Exercise\",\n      \"display_value\": \"M&A Consolidation Exercise\",\n      \"formula\": null,\n      \"formula_fingerprint_id\": null,\n      \"formula_opaque\": fa"
+        }
+      ],
+      "evidence_uptake_tokens": [],
+      "evidence_uptake": false
+    },
+    {
+      "key": "Template:06_17:C1:r1",
+      "task": "Template:06_17",
+      "repeat": 1,
+      "used": true,
+      "classification": "USED",
+      "first_turn": 7,
+      "n_calls": 1,
+      "modes": [
+        "references"
+      ],
+      "repeated_queries": 0,
+      "calls": [
+        {
+          "turn": 7,
+          "mode": "references",
+          "arguments": "calc_query references /mnt/spreadsheet_data/spreadsheet/06_equity_forecast/06_17_input.xlsx --sheet OpEx_Forecast --target G6",
+          "result_chars": 885,
+          "latency_s": 0.31175475707277656,
+          "failed": false,
+          "observation_preview": "{\n  \"mode\": \"references\",\n  \"status\": \"OK\",\n  \"display\": \"OpEx_Forecast!G6\",\n  \"formula\": \"=E6+F6\",\n  \"precedents\": [\n    {\n      \"kind\": \"point\",\n      \"display\": \"OpEx_Forecast!E6\",\n      \"cell_id\": \"cell:s00:r6:c5\",\n      \"cross_sheet\": false,\n      \"fact_kind\": \"parsed_reference\"\n    },\n    {\n      \"kind\": \"point\",\n      \"display\": \"OpEx_Forecast!F6\",\n      \"cell_id\": \"cell:s00:r6:c6\",\n      \""
+        }
+      ],
+      "evidence_uptake_tokens": [
+        "E6"
+      ],
+      "evidence_uptake": true
+    },
+    {
+      "key": "Template:16_12:C1:r1",
+      "task": "Template:16_12",
+      "repeat": 1,
+      "used": true,
+      "classification": "USED",
+      "first_turn": 5,
+      "n_calls": 1,
+      "modes": [
+        "inspect"
+      ],
+      "repeated_queries": 0,
+      "calls": [
+        {
+          "turn": 5,
+          "mode": "inspect",
+          "arguments": "calc_query inspect /mnt/spreadsheet_data/spreadsheet/16_re_direct_cap/16_12_input.xlsx --sheet RentRoll --target B2:L16",
+          "result_chars": 56109,
+          "latency_s": 0.3457123910775408,
+          "failed": false,
+          "observation_preview": "{\n  \"mode\": \"inspect\",\n  \"status\": \"OK\",\n  \"fact_kind\": \"compiled_cell\",\n  \"truncated\": true,\n  \"cells\": [\n    {\n      \"display\": \"RentRoll!B2\",\n      \"cell_id\": \"cell:s00:r2:c2\",\n      \"kind_raw\": \"text\",\n      \"raw_value\": \"SUNSET RIDGE APARTMENTS\",\n      \"display_value\": \"SUNSET RIDGE APARTMENTS\",\n      \"formula\": null,\n      \"formula_fingerprint_id\": null,\n      \"formula_opaque\": false,\n      "
+        }
+      ],
+      "evidence_uptake_tokens": [],
+      "evidence_uptake": false
+    },
+    {
+      "key": "Debugging:01_01:C1:r1",
+      "task": "Debugging:01_01",
+      "repeat": 1,
+      "used": true,
+      "classification": "USED",
+      "first_turn": 3,
+      "n_calls": 1,
+      "modes": [
+        "inspect"
+      ],
+      "repeated_queries": 0,
+      "calls": [
+        {
+          "turn": 3,
+          "mode": "inspect",
+          "arguments": "calc_query inspect '/mnt/spreadsheet_data/spreadsheet/01_Debugging/input_files/Double Counting_input.xlsx' --sheet 'Ex 1 - LBO' --target A1:Z100",
+          "result_chars": 48726,
+          "latency_s": 0.333892212016508,
+          "failed": false,
+          "observation_preview": "{\n  \"mode\": \"inspect\",\n  \"status\": \"OK\",\n  \"fact_kind\": \"compiled_cell\",\n  \"truncated\": true,\n  \"cells\": [\n    {\n      \"display\": \"Ex 1 - LBO!P1\",\n      \"cell_id\": \"cell:s00:r1:c16\",\n      \"kind_raw\": \"numeric\",\n      \"raw_value\": \"2025\",\n      \"display_value\": \"2025\",\n      \"formula\": null,\n      \"formula_fingerprint_id\": null,\n      \"formula_opaque\": false,\n      \"nearby_labels\": []\n    },\n    {"
+        }
+      ],
+      "evidence_uptake_tokens": [
+        "C20",
+        "c3"
+      ],
+      "evidence_uptake": true
+    },
+    {
+      "key": "Debugging:09_04:C1:r1",
+      "task": "Debugging:09_04",
+      "repeat": 1,
+      "used": false,
+      "classification": "NOT_USED",
+      "first_turn": null,
+      "n_calls": 0,
+      "modes": [],
+      "repeated_queries": 0,
+      "calls": [],
+      "evidence_uptake_tokens": [],
+      "evidence_uptake": false
+    },
+    {
+      "key": "Debugging:10_10:C1:r1",
+      "task": "Debugging:10_10",
+      "repeat": 1,
+      "used": false,
+      "classification": "NOT_USED",
+      "first_turn": null,
+      "n_calls": 0,
+      "modes": [],
+      "repeated_queries": 0,
+      "calls": [],
+      "evidence_uptake_tokens": [],
+      "evidence_uptake": false
+    }
+  ]
+}

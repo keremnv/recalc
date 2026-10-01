@@ -1,0 +1,58 @@
+{
+  "A": {
+    "broad_views": 39,
+    "formula_dump_calls": 126,
+    "helper_mention_calls": 0,
+    "helper_output_bytes_proxy": 0,
+    "observation_bytes": 957611,
+    "observation_local_tokens": 408245,
+    "python_calls": 172,
+    "python_stdout_bytes": 284513,
+    "targeted_range_inspections": 44,
+    "truncations": 42,
+    "view_calls": 56,
+    "whole_workbook_scans": 54
+  },
+  "B": {
+    "broad_views": 30,
+    "formula_dump_calls": 84,
+    "helper_mention_calls": 4,
+    "helper_output_bytes_proxy": 3599,
+    "observation_bytes": 991270,
+    "observation_local_tokens": 455702,
+    "python_calls": 113,
+    "python_stdout_bytes": 336560,
+    "targeted_range_inspections": 25,
+    "truncations": 44,
+    "view_calls": 48,
+    "whole_workbook_scans": 53
+  },
+  "C": {
+    "broad_views": 24,
+    "formula_dump_calls": 161,
+    "helper_mention_calls": 0,
+    "helper_output_bytes_proxy": 0,
+    "observation_bytes": 1001872,
+    "observation_local_tokens": 443575,
+    "python_calls": 195,
+    "python_stdout_bytes": 606846,
+    "targeted_range_inspections": 26,
+    "truncations": 39,
+    "view_calls": 39,
+    "whole_workbook_scans": 71
+  },
+  "D": {
+    "broad_views": 12,
+    "formula_dump_calls": 136,
+    "helper_mention_calls": 0,
+    "helper_output_bytes_proxy": 0,
+    "observation_bytes": 1008265,
+    "observation_local_tokens": 437116,
+    "python_calls": 192,
+    "python_stdout_bytes": 685468,
+    "targeted_range_inspections": 25,
+    "truncations": 47,
+    "view_calls": 24,
+    "whole_workbook_scans": 84
+  }
+}

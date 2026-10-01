@@ -1,0 +1,182 @@
+[
+ {
+  "task_id": "Debugging:03_06",
+  "arm": "H0",
+  "run_id": "primary_43",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Debugging:03_06",
+  "arm": "H1",
+  "run_id": "primary_42",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Debugging:06_05",
+  "arm": "H0",
+  "run_id": "primary_47",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Debugging:07_05",
+  "arm": "H0",
+  "run_id": "primary_51",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Debugging:07_05",
+  "arm": "H1",
+  "run_id": "primary_50",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Debugging:08_01",
+  "arm": "H1",
+  "run_id": "primary_53",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Debugging:09_03",
+  "arm": "H0",
+  "run_id": "primary_55",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Debugging:09_03",
+  "arm": "H1",
+  "run_id": "primary_54",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Debugging:09_04",
+  "arm": "H0",
+  "run_id": "primary_56",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Debugging:09_04",
+  "arm": "H1",
+  "run_id": "primary_57",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Debugging:10_07",
+  "arm": "H0",
+  "run_id": "primary_59",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Debugging:10_07",
+  "arm": "H1",
+  "run_id": "primary_58",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Financial_Model:02_05",
+  "arm": "H0",
+  "run_id": "primary_23",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Financial_Model:02_05",
+  "arm": "H1",
+  "run_id": "primary_22",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Financial_Model:06_01",
+  "arm": "H1",
+  "run_id": "primary_25",
+  "prior_status": "RUNNER_ERROR"
+ },
+ {
+  "task_id": "Financial_Model:10_01",
+  "arm": "H0",
+  "run_id": "primary_32",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Financial_Model:10_01",
+  "arm": "H1",
+  "run_id": "primary_33",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Financial_Model:11_02",
+  "arm": "H0",
+  "run_id": "primary_35",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Financial_Model:15_03",
+  "arm": "H0",
+  "run_id": "primary_36",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Financial_Model:18_05",
+  "arm": "H0",
+  "run_id": "primary_39",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Financial_Model:18_05",
+  "arm": "H1",
+  "run_id": "primary_38",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Template:01_05",
+  "arm": "H1",
+  "run_id": "primary_01",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Template:01_06",
+  "arm": "H0",
+  "run_id": "primary_03",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Template:01_06",
+  "arm": "H1",
+  "run_id": "primary_02",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Template:06_08",
+  "arm": "H0",
+  "run_id": "primary_11",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Template:06_08",
+  "arm": "H1",
+  "run_id": "primary_10",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Template:07_02",
+  "arm": "H0",
+  "run_id": "primary_15",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Template:07_02",
+  "arm": "H1",
+  "run_id": "primary_14",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Template:16_08",
+  "arm": "H0",
+  "run_id": "primary_19",
+  "prior_status": "PROVIDER_CENSORED"
+ },
+ {
+  "task_id": "Template:16_08",
+  "arm": "H1",
+  "run_id": "primary_18",
+  "prior_status": "PROVIDER_CENSORED"
+ }
+]

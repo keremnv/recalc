@@ -1,0 +1,49 @@
+{
+  "verdict": "NO_HEADROOM_ON_O7",
+  "comparisons": [
+    {
+      "repeat": 1,
+      "usable": true,
+      "control_exact": true,
+      "treatment_exact": true,
+      "strict_treatment_improvement": false,
+      "strict_control_reversal": false,
+      "precision_collapse": false,
+      "control_f1": 1.0,
+      "treatment_f1": 1.0
+    },
+    {
+      "repeat": 2,
+      "usable": true,
+      "control_exact": true,
+      "treatment_exact": true,
+      "strict_treatment_improvement": false,
+      "strict_control_reversal": false,
+      "precision_collapse": false,
+      "control_f1": 1.0,
+      "treatment_f1": 1.0
+    },
+    {
+      "repeat": 3,
+      "usable": true,
+      "control_exact": true,
+      "treatment_exact": true,
+      "strict_treatment_improvement": false,
+      "strict_control_reversal": false,
+      "precision_collapse": false,
+      "control_f1": 1.0,
+      "treatment_f1": 1.0
+    },
+    {
+      "repeat": 4,
+      "usable": true,
+      "control_exact": true,
+      "treatment_exact": true,
+      "strict_treatment_improvement": false,
+      "strict_control_reversal": false,
+      "precision_collapse": false,
+      "control_f1": 1.0,
+      "treatment_f1": 1.0
+    }
+  ]
+}

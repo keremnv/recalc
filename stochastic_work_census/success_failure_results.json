@@ -1,0 +1,25 @@
+{
+ "label_source": "exit_status only (submitted vs other); no benchmark outcome labels joinable to frozen trajectories",
+ "groups": {
+  "submitted": {
+   "total": 7323529,
+   "new": 7055575,
+   "old": 164383,
+   "derivation": 538,
+   "labels": 2945,
+   "control": 11433,
+   "old_reinspect": 88655
+  },
+  "None": {
+   "total": 11570,
+   "new": 11488,
+   "old": 0,
+   "derivation": 0,
+   "labels": 31,
+   "control": 51,
+   "old_reinspect": 0
+  }
+ },
+ "official_scores_entries": 17,
+ "official_scores_note": "entries keyed by task:arm of the default-harness experiment, not by frozen-corpus trajectory id; no trajectory-level join key exists"
+}

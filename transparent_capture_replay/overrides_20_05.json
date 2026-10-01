@@ -1,0 +1,30 @@
+{
+ "task_id": "Financial_Model:20_05",
+ "overrides": [
+  {
+   "name": "O1_script_scope",
+   "pass": true,
+   "evidence": "no dims/indent/alignment-construction ops; sheet refs=['Balance Sheet', 'Cost Drivers', 'Ratio Analysis']"
+  },
+  {
+   "name": "O2_dcf_datatable",
+   "pass": true,
+   "evidence": "script DCF refs=False; replay J8==input J8=('N', '32726762.14303546'); archived J8=TABLE-text; replay J7==input J7=True"
+  },
+  {
+   "name": "O3_manpower_colD",
+   "pass": true,
+   "evidence": "replay==input=(12.5, False); archived missing"
+  },
+  {
+   "name": "O4_dcf_colH",
+   "pass": true,
+   "evidence": "replay==input=(8.83203125, False); archived missing"
+  },
+  {
+   "name": "O5_indent_inflation",
+   "pass": true,
+   "evidence": "replay==input indents (9.0/2.0); archived inflated (12.0/3.0); sheets outside script scope"
+  }
+ ]
+}

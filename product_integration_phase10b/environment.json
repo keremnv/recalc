@@ -1,0 +1,12 @@
+{
+  "cpu_count": 18,
+  "cpu_model": "Intel(R) Core(TM) Ultra 5 125H",
+  "cwd": "/home/kerem/Desktop/Personal Projects/librecalc-mcp",
+  "filesystem": "ext2/ext3",
+  "kernel": "7.0.0-34-generic",
+  "openpyxl_version": "3.1.5",
+  "os": "Linux-7.0.0-34-generic-x86_64-with-glibc2.43",
+  "python_executable": "/tmp/librecalc-phase10-clean/bin/python",
+  "python_version": "Python 3.13.12",
+  "timing_host_env": {}
+}

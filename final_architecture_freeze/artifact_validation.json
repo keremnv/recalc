@@ -1,0 +1,28 @@
+{
+  "corrective_fix_manifest.json": {
+    "pass": true,
+    "files": 11
+  },
+  "preserved_checkpoint_hashes.json": {
+    "pass": true,
+    "files": 1436
+  },
+  "evidence_source_hashes.json": {
+    "pass": true,
+    "files": 10
+  },
+  "FINAL_ARCHITECTURE_FREEZE.md": {
+    "links_pass": true,
+    "sha256": "8eb4170ecfc9ee0681758ee1698ec1940f702300dc1e39ec4c2869b3817ede43"
+  },
+  "PRODUCT_PRESENTATION_HANDOFF.md": {
+    "links_pass": true,
+    "sha256": "129f83ee56ed4db9c47992d14fe6765fda601af786e7cd77f9084e563aa8315a"
+  },
+  "verification": {
+    "tests_passed": 39,
+    "corrective_replay": "PASS_REFERENCE_PARITY_NO_SUBSTRATE_VETO",
+    "required_answers": 32,
+    "synthesis_labels": 23
+  }
+}

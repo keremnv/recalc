@@ -1,0 +1,50 @@
+{
+ "positive": false,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [],
+   "count": 0
+  },
+  "CHG": {
+   "changed_cells": 55,
+   "sheets": 1,
+   "regions": [
+    "NOI_Projection!C15",
+    "NOI_Projection!C16",
+    "NOI_Projection!C21",
+    "NOI_Projection!C22",
+    "NOI_Projection!C23",
+    "NOI_Projection!C34",
+    "NOI_Projection!C35",
+    "NOI_Projection!C36",
+    "NOI_Projection!C37",
+    "NOI_Projection!C38",
+    "NOI_Projection!C46",
+    "NOI_Projection!C47",
+    "NOI_Projection!C48",
+    "NOI_Projection!C49",
+    "NOI_Projection!D15",
+    "NOI_Projection!D16",
+    "NOI_Projection!D21",
+    "NOI_Projection!D22",
+    "NOI_Projection!D23",
+    "NOI_Projection!D34"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": null,
+ "positive_families": []
+}

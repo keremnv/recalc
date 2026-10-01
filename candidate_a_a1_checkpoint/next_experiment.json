@@ -1,0 +1,7 @@
+{
+  "a2": "do not run",
+  "candidate_b": "remain frozen",
+  "experiment": "rerun the same frozen 24-run checkpoint only after the provider/runner chunked-response censoring is resolved; do not alter prompts, surface, or arms",
+  "live_checkpoint_complete": false,
+  "status": "PROVIDER_OR_RUNNER_CENSORED"
+}

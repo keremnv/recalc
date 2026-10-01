@@ -1,0 +1,153 @@
+{
+  "note": "partial/censored checkpoint; no cross-arm timing inference",
+  "tasks": [
+    {
+      "exact_trace_count": 0,
+      "family": "Financial_Model",
+      "h0": {
+        "completed": true,
+        "contact": false,
+        "cost_usd": 0.044443170000000004,
+        "counterfactual_eligible": 10,
+        "model_calls": 16,
+        "model_network_wait_s": 1111.2365770339966,
+        "python_walltime_s": 13.232343385112472,
+        "real_openpyxl_parses": 12,
+        "status": "NO_SUBMIT",
+        "task_walltime_s": 1130.0136512210593,
+        "tokens": 462761,
+        "tool_walltime_s": 17.497114800964482
+      },
+      "h1": {
+        "completed": false,
+        "contact": false,
+        "partial_fallbacks": 16,
+        "partial_loads": 8,
+        "status": "PROVIDER_OR_RUNNER_CENSORED"
+      },
+      "task_id": "Financial_Model:07_01"
+    },
+    {
+      "exact_trace_count": 0,
+      "family": "Financial_Model",
+      "h0": {
+        "status": "NOT_RUN"
+      },
+      "h1": {
+        "status": "NOT_RUN"
+      },
+      "task_id": "Financial_Model:08_03"
+    },
+    {
+      "exact_trace_count": 0,
+      "family": "Financial_Model",
+      "h0": {
+        "status": "NOT_RUN"
+      },
+      "h1": {
+        "status": "NOT_RUN"
+      },
+      "task_id": "Financial_Model:08_01"
+    },
+    {
+      "exact_trace_count": 0,
+      "family": "Financial_Model",
+      "h0": {
+        "status": "NOT_RUN"
+      },
+      "h1": {
+        "status": "NOT_RUN"
+      },
+      "task_id": "Financial_Model:15_04"
+    },
+    {
+      "exact_trace_count": 0,
+      "family": "Debugging",
+      "h0": {
+        "status": "NOT_RUN"
+      },
+      "h1": {
+        "status": "NOT_RUN"
+      },
+      "task_id": "Debugging:10_10"
+    },
+    {
+      "exact_trace_count": 0,
+      "family": "Financial_Model",
+      "h0": {
+        "status": "NOT_RUN"
+      },
+      "h1": {
+        "status": "NOT_RUN"
+      },
+      "task_id": "Financial_Model:06_01"
+    },
+    {
+      "exact_trace_count": 0,
+      "family": "Debugging",
+      "h0": {
+        "status": "NOT_RUN"
+      },
+      "h1": {
+        "status": "NOT_RUN"
+      },
+      "task_id": "Debugging:01_06"
+    },
+    {
+      "exact_trace_count": 0,
+      "family": "Debugging",
+      "h0": {
+        "status": "NOT_RUN"
+      },
+      "h1": {
+        "status": "NOT_RUN"
+      },
+      "task_id": "Debugging:10_04"
+    },
+    {
+      "exact_trace_count": 0,
+      "family": "Debugging",
+      "h0": {
+        "status": "NOT_RUN"
+      },
+      "h1": {
+        "status": "NOT_RUN"
+      },
+      "task_id": "Debugging:05_02"
+    },
+    {
+      "exact_trace_count": 0,
+      "family": "Template",
+      "h0": {
+        "status": "NOT_RUN"
+      },
+      "h1": {
+        "status": "NOT_RUN"
+      },
+      "task_id": "Template:13_08"
+    },
+    {
+      "exact_trace_count": 0,
+      "family": "Template",
+      "h0": {
+        "status": "NOT_RUN"
+      },
+      "h1": {
+        "status": "NOT_RUN"
+      },
+      "task_id": "Template:03_03"
+    },
+    {
+      "exact_trace_count": 0,
+      "family": "Financial_Model",
+      "h0": {
+        "status": "NOT_RUN"
+      },
+      "h1": {
+        "status": "NOT_RUN"
+      },
+      "task_id": "Financial_Model:10_01"
+    }
+  ],
+  "valid_completed_live_pairs": 0
+}

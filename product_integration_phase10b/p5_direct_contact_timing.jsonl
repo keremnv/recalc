@@ -1,0 +1,7 @@
+{"workload_id": "Template_16_07__9662584ede5e", "ratio": 0.9704328985101451, "P4_wall_ns": 162532807, "P5_wall_ns": 157727183, "valid": true}
+{"workload_id": "Template_03_03__c76ea596b408", "ratio": 0.8608786304899525, "P4_wall_ns": 155239343, "P5_wall_ns": 133642233, "valid": true}
+{"workload_id": "Financial_Model_02_01__79352976d750", "ratio": 0.8730279111077219, "P4_wall_ns": 125577567, "P5_wall_ns": 109632721, "valid": true}
+{"workload_id": "Financial_Model_02_01__bb15e0fe3832", "ratio": 0.9843352892899841, "P4_wall_ns": 105017324, "P5_wall_ns": 103372258, "valid": true}
+{"workload_id": "Financial_Model_08_03__e48ea186deeb", "ratio": 0.9904861928563925, "P4_wall_ns": 758278562, "P5_wall_ns": 751064446, "valid": true}
+{"workload_id": "Financial_Model_08_01__2ea507d758dc", "ratio": 1.0086162419614506, "P4_wall_ns": 742558418, "P5_wall_ns": 748956481, "valid": true}
+{"workload_id": "Financial_Model_11_02__a443eee257b4", "ratio": 0.9932176684595848, "P4_wall_ns": 182879146, "P5_wall_ns": 181638799, "valid": true}

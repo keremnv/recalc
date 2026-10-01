@@ -1,0 +1,141 @@
+{
+ "write_cells": {
+  "observed_pattern": "explicit_address_value_batch",
+  "n_scripts": 34,
+  "n_tasks": 26,
+  "families": [
+   "Debugging",
+   "Financial_Model",
+   "Template"
+  ],
+  "semantic_inputs_agent_must_supply": "explicit address->content map (targets AND content predeclared)",
+  "mechanical_work_replaced": "apply loops / repeated ws[addr]= writes / local s/set/put helpers",
+  "source_bytes_removed_estimate": 8436,
+  "LOC_removed_estimate": 324,
+  "requires_predeclared_targets": true,
+  "requires_predeclared_content": true,
+  "preserves_arbitrary_Python": true,
+  "effect_equivalence_testable": true,
+  "capability_risk": "LOW",
+  "clean_boundary_rate": 0.382,
+  "separable_site_rate": 1.0,
+  "effect_agree_rate": 0.529,
+  "recommendation": "LIVE_TEST",
+  "recommendation_note": "strict per-script reading: FAIL; per-site separability reading: PASS; per-site governs because C_* batch statements are removable independently of sibling semantic loops"
+ },
+ "write_formulas": {
+  "observed_pattern": "explicit_address_formula_batch",
+  "n_scripts": 6,
+  "n_tasks": 4,
+  "families": [
+   "Financial_Model",
+   "Template"
+  ],
+  "semantic_inputs_agent_must_supply": "explicit address->content map (targets AND content predeclared)",
+  "mechanical_work_replaced": "apply loops / repeated ws[addr]= writes / local s/set/put helpers",
+  "source_bytes_removed_estimate": 561,
+  "LOC_removed_estimate": 22,
+  "requires_predeclared_targets": true,
+  "requires_predeclared_content": true,
+  "preserves_arbitrary_Python": true,
+  "effect_equivalence_testable": true,
+  "capability_risk": "LOW",
+  "clean_boundary_rate": 0.833,
+  "separable_site_rate": 1.0,
+  "effect_agree_rate": 0.833,
+  "recommendation": "LIVE_TEST",
+  "recommendation_note": "strict per-script reading: PASS; per-site separability reading: PASS; per-site governs because C_* batch statements are removable independently of sibling semantic loops"
+ },
+ "fill_value": {
+  "observed_pattern": "contiguous_same_value_fill",
+  "n_scripts": 10,
+  "n_tasks": 7,
+  "families": [
+   "Debugging",
+   "Financial_Model",
+   "Visualization"
+  ],
+  "semantic_inputs_agent_must_supply": "explicit address->content map (targets AND content predeclared)",
+  "mechanical_work_replaced": "apply loops / repeated ws[addr]= writes / local s/set/put helpers",
+  "source_bytes_removed_estimate": 3162,
+  "LOC_removed_estimate": 82,
+  "requires_predeclared_targets": true,
+  "requires_predeclared_content": true,
+  "preserves_arbitrary_Python": true,
+  "effect_equivalence_testable": true,
+  "capability_risk": "MEDIUM",
+  "clean_boundary_rate": 0.5,
+  "separable_site_rate": 0.8,
+  "effect_agree_rate": 0.1,
+  "recommendation": "REJECT",
+  "recommendation_note": ""
+ },
+ "fill_formula": {
+  "observed_pattern": "contiguous_formula_translation",
+  "n_scripts": 27,
+  "n_tasks": 18,
+  "families": [
+   "Debugging",
+   "Financial_Model",
+   "Template"
+  ],
+  "semantic_inputs_agent_must_supply": "explicit address->content map (targets AND content predeclared)",
+  "mechanical_work_replaced": "apply loops / repeated ws[addr]= writes / local s/set/put helpers",
+  "source_bytes_removed_estimate": 5421,
+  "LOC_removed_estimate": 175,
+  "requires_predeclared_targets": true,
+  "requires_predeclared_content": true,
+  "preserves_arbitrary_Python": true,
+  "effect_equivalence_testable": true,
+  "capability_risk": "HIGH",
+  "clean_boundary_rate": 0.074,
+  "separable_site_rate": 0.593,
+  "effect_agree_rate": 0.111,
+  "recommendation": "REJECT",
+  "recommendation_note": ""
+ },
+ "copy_style": {
+  "observed_pattern": "style_copy",
+  "n_scripts": 4,
+  "n_tasks": 3,
+  "families": [
+   "Financial_Model"
+  ],
+  "semantic_inputs_agent_must_supply": "explicit address->content map (targets AND content predeclared)",
+  "mechanical_work_replaced": "apply loops / repeated ws[addr]= writes / local s/set/put helpers",
+  "source_bytes_removed_estimate": 1785,
+  "LOC_removed_estimate": 51,
+  "requires_predeclared_targets": true,
+  "requires_predeclared_content": true,
+  "preserves_arbitrary_Python": true,
+  "effect_equivalence_testable": true,
+  "capability_risk": "MEDIUM",
+  "clean_boundary_rate": 0.25,
+  "separable_site_rate": 1.0,
+  "effect_agree_rate": 0.0,
+  "recommendation": "REJECT",
+  "recommendation_note": ""
+ },
+ "copy_number_format": {
+  "observed_pattern": "number_format_copy",
+  "n_scripts": 4,
+  "n_tasks": 3,
+  "families": [
+   "Financial_Model"
+  ],
+  "semantic_inputs_agent_must_supply": "explicit address->content map (targets AND content predeclared)",
+  "mechanical_work_replaced": "apply loops / repeated ws[addr]= writes / local s/set/put helpers",
+  "source_bytes_removed_estimate": 1785,
+  "LOC_removed_estimate": 51,
+  "requires_predeclared_targets": true,
+  "requires_predeclared_content": true,
+  "preserves_arbitrary_Python": true,
+  "effect_equivalence_testable": true,
+  "capability_risk": "MEDIUM",
+  "clean_boundary_rate": 0.25,
+  "separable_site_rate": 1.0,
+  "effect_agree_rate": 0.0,
+  "recommendation": "REJECT",
+  "recommendation_note": ""
+ }
+}

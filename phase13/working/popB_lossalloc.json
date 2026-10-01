@@ -1,0 +1,1263 @@
+{
+ "606688d218686751": {
+  "mod_loss": 0.1026,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.1026
+  }
+ },
+ "d13d34f635775dc6": {
+  "mod_loss": 0.0069,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0069
+  }
+ },
+ "34e62230503c8208": {
+  "mod_loss": 0.0028,
+  "reg_loss": 0.0038,
+  "split": {
+   "L5": 0.0028
+  }
+ },
+ "9bd21a03c2005baa": {
+  "mod_loss": 0.0811,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0454,
+   "UNALLOCATED": 0.0357
+  }
+ },
+ "4c558ea970e21de9": {
+  "mod_loss": 0.0044,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0,
+   "L4": 0.0044
+  }
+ },
+ "19bd776631af1a34": {
+  "mod_loss": 0.0005,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0005
+  }
+ },
+ "9a690d7bc739c1a5": {
+  "mod_loss": 0.2159,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.2159
+  }
+ },
+ "0dae019c30963b9b": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "94b58ce791551797": {
+  "mod_loss": 0.0598,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0598
+  }
+ },
+ "42662b4cf12c1786": {
+  "mod_loss": 0.0069,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0069
+  }
+ },
+ "72dd85c53fe503e6": {
+  "mod_loss": 0.0028,
+  "reg_loss": 0.0038,
+  "split": {
+   "L5": 0.0028
+  }
+ },
+ "84c634c2f7a2c668": {
+  "mod_loss": 0.4158,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.4158
+  }
+ },
+ "c4d969f4ceb237be": {
+  "mod_loss": 0.1195,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0096,
+   "UNALLOCATED": 0.1099
+  }
+ },
+ "df44beb5b2e0b17e": {
+  "mod_loss": 0.0015,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0015
+  }
+ },
+ "8874ac0e3cfa54b9": {
+  "mod_loss": 0.5,
+  "reg_loss": 0.0272,
+  "split": {
+   "L5": 0.4545,
+   "L4": 0.0455
+  }
+ },
+ "06d639a2620b2274": {
+  "mod_loss": 0.3731,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.3731
+  }
+ },
+ "a1a80c78804c69cd": {
+  "mod_loss": 0.0012,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0012
+  }
+ },
+ "7c156b45c5c7cd2b": {
+  "mod_loss": 0.0019,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0019
+  }
+ },
+ "de553c158571cd93": {
+  "mod_loss": 0.0349,
+  "reg_loss": 0.0044,
+  "split": {
+   "L5": 0.0349
+  }
+ },
+ "b284ece3d6036f85": {
+  "mod_loss": 0.8261,
+  "reg_loss": 0.0047,
+  "split": {
+   "L5": 0.8261
+  }
+ },
+ "65ab352badbf4743": {
+  "mod_loss": 0.0707,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0707
+  }
+ },
+ "67a33f92b1206c48": {
+  "mod_loss": 0.0574,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0574
+  }
+ },
+ "494ee15fd5d8fb27": {
+  "mod_loss": 0.0101,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0101
+  }
+ },
+ "4e6ceee034e6686f": {
+  "mod_loss": 0.1071,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.1071
+  }
+ },
+ "1da008ce95ddb6a7": {
+  "mod_loss": 0.5455,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.5455
+  }
+ },
+ "12c85b9af189ed02": {
+  "mod_loss": 1.0,
+  "reg_loss": 0.0,
+  "split": {
+   "L0": 1.0
+  }
+ },
+ "9925b69383e7f15e": {
+  "mod_loss": 0.7143,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.7143
+  }
+ },
+ "f5d4ae1e2b395074": {
+  "mod_loss": 1.0,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 1.0
+  }
+ },
+ "222763088324f2d2": {
+  "mod_loss": 1.0,
+  "reg_loss": 0.0032,
+  "split": {
+   "L4": 1.0
+  }
+ },
+ "f6c1f16ab69e10f4": {
+  "mod_loss": 0.9252,
+  "reg_loss": 0.0027,
+  "split": {
+   "L5": 0.9252
+  }
+ },
+ "332de0bc04c92a9e": {
+  "mod_loss": 0.2188,
+  "reg_loss": 0.4118,
+  "split": {
+   "L5": 0.2188
+  }
+ },
+ "537b3d101dc42160": {
+  "mod_loss": 0.0283,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0283
+  }
+ },
+ "209e5dbd74fb8e00": {
+  "mod_loss": 0.0757,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0757
+  }
+ },
+ "15f1418eba88d862": {
+  "mod_loss": 0.0146,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0146
+  }
+ },
+ "43c2e675b131fdf4": {
+  "mod_loss": 0.7373,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.7373
+  }
+ },
+ "ddafe4cca6953743": {
+  "mod_loss": 0.6589,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.1098,
+   "UNALLOCATED": 0.5491
+  }
+ },
+ "43d17d42f6019b77": {
+  "mod_loss": 0.6647,
+  "reg_loss": 0.0,
+  "split": {
+   "UNALLOCATED": 0.6647
+  }
+ },
+ "1ba2528e222ba641": {
+  "mod_loss": 0.0062,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0,
+   "L4": 0.0062
+  }
+ },
+ "68245995533858b9": {
+  "mod_loss": 0.0476,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0476
+  }
+ },
+ "be6d969f3e1fabe6": {
+  "mod_loss": 0.1898,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.1898
+  }
+ },
+ "1c50bc31672244f5": {
+  "mod_loss": 0.269,
+  "reg_loss": 0.0099,
+  "split": {
+   "L5": 0.269
+  }
+ },
+ "234f93d5dd97dd44": {
+  "mod_loss": 1.0,
+  "reg_loss": 1.0,
+  "split": {
+   "L0": 1.0
+  }
+ },
+ "887db5b95521737c": {
+  "mod_loss": 0.8546,
+  "reg_loss": 0.0204,
+  "split": {
+   "L5": 0.8546
+  }
+ },
+ "67d90764f01c4943": {
+  "mod_loss": 0.3805,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0,
+   "L4": 0.3805
+  }
+ },
+ "f9e4d089b9d77b9e": {
+  "mod_loss": 0.4938,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.4938
+  }
+ },
+ "fbce4e45a98b535f": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "6f65d75f5d7d20b7": {
+  "mod_loss": 0.0027,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0027
+  }
+ },
+ "9dc9742636113ee4": {
+  "mod_loss": 0.1504,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.1504
+  }
+ },
+ "8828b18441936620": {
+  "mod_loss": 0.3528,
+  "reg_loss": 0.0033,
+  "split": {
+   "L5": 0.3528
+  }
+ },
+ "9052cf9b7b3c3997": {
+  "mod_loss": 0.2189,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.1946,
+   "UNALLOCATED": 0.0243
+  }
+ },
+ "df9abe594457a1a2": {
+  "mod_loss": 0.7643,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0,
+   "L4": 0.1834,
+   "UNALLOCATED": 0.5809
+  }
+ },
+ "3f1326e40ed0f8ed": {
+  "mod_loss": 0.0285,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.016,
+   "L4": 0.0125
+  }
+ },
+ "c47f0bb9e55f89d4": {
+  "mod_loss": 0.1266,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.1266
+  }
+ },
+ "e7d2d8f7f8557d91": {
+  "mod_loss": 0.0064,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0064
+  }
+ },
+ "fb930ea387b4c3aa": {
+  "mod_loss": 0.9339,
+  "reg_loss": 0.0056,
+  "split": {
+   "L5": 0.9339
+  }
+ },
+ "23b2c6b0d77953c3": {
+  "mod_loss": 0.0245,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0245
+  }
+ },
+ "9718c0c50061ad2a": {
+  "mod_loss": 0.0192,
+  "reg_loss": 0.0351,
+  "split": {
+   "L5": 0.0192
+  }
+ },
+ "8ef0dc8ac9a1a498": {
+  "mod_loss": 0.0947,
+  "reg_loss": 0.0233,
+  "split": {
+   "L5": 0.0947
+  }
+ },
+ "a307f9414692b2b2": {
+  "mod_loss": 0.4,
+  "reg_loss": 0.0069,
+  "split": {
+   "L5": 0.4
+  }
+ },
+ "a1669999419cfd71": {
+  "mod_loss": 0.8511,
+  "reg_loss": 0.0764,
+  "split": {
+   "L5": 0.783,
+   "L4": 0.0681
+  }
+ },
+ "b75196e415f68e13": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0315,
+  "split": {
+   "L5": 0.0
+  }
+ },
+ "4e2d169e1604af76": {
+  "mod_loss": 0.082,
+  "reg_loss": 0.027,
+  "split": {
+   "L5": 0.082
+  }
+ },
+ "27ada20e631ab4d3": {
+  "mod_loss": 0.3333,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.3333
+  }
+ },
+ "797c21d4fdab59e8": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "27ce4592f9046e83": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "aebb3d0d2478f480": {
+  "mod_loss": 0.3333,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.3333
+  }
+ },
+ "56c530794bf53502": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "fe16361689aafd09": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0156,
+  "split": {
+   "L5": 0.0
+  }
+ },
+ "a0df7f509f7b373a": {
+  "mod_loss": 0.3824,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.2974,
+   "L4": 0.085
+  }
+ },
+ "86af000bf397842c": {
+  "mod_loss": 0.8916,
+  "reg_loss": 0.0686,
+  "split": {
+   "L5": 0.8916
+  }
+ },
+ "b281132fed71f014": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "6ff3f16a05b7dc21": {
+  "mod_loss": 0.3846,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.3846
+  }
+ },
+ "474c32dbbad215a2": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "810b8feaf3d80d0e": {
+  "mod_loss": 0.2571,
+  "reg_loss": 0.0065,
+  "split": {
+   "L5": 0.2314,
+   "L4": 0.0257
+  }
+ },
+ "78d60bfa41b0b3ad": {
+  "mod_loss": 0.28,
+  "reg_loss": 0.0097,
+  "split": {
+   "L5": 0.28
+  }
+ },
+ "5274b077504aaff8": {
+  "mod_loss": 1.0,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 1.0
+  }
+ },
+ "9975f6964e2700de": {
+  "mod_loss": 0.0364,
+  "reg_loss": 0.0044,
+  "split": {
+   "L5": 0.0364
+  }
+ },
+ "c740b35f99140503": {
+  "mod_loss": 0.0761,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0761
+  }
+ },
+ "8e353bfeb76e8372": {
+  "mod_loss": 0.0655,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0655
+  }
+ },
+ "d6177d3f8a7fca10": {
+  "mod_loss": 0.5333,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.48,
+   "UNALLOCATED": 0.0533
+  }
+ },
+ "730a47586d58c125": {
+  "mod_loss": 0.6618,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.3008,
+   "UNALLOCATED": 0.361
+  }
+ },
+ "d1ccb3bd82a036e5": {
+  "mod_loss": 0.2068,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.1737,
+   "L4": 0.0331
+  }
+ },
+ "f63dd0e0ac78a777": {
+  "mod_loss": 0.1439,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.1439
+  }
+ },
+ "11f8011104ab30d7": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "f388294f056c3bb4": {
+  "mod_loss": 0.2739,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.2739
+  }
+ },
+ "d967c687a4fc734d": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "01e59a567833951b": {
+  "mod_loss": 0.4167,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.4167
+  }
+ },
+ "0ec03dc2bdaf201b": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "bec7c0928f2055d0": {
+  "mod_loss": 0.3333,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.2222,
+   "L4": 0.1111
+  }
+ },
+ "bff1afb4d6dee5c2": {
+  "mod_loss": 0.3846,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.3846
+  }
+ },
+ "99d4a118dcf35028": {
+  "mod_loss": 0.1667,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.1667
+  }
+ },
+ "86f5c9c62d80e7e7": {
+  "mod_loss": 0.0931,
+  "reg_loss": 0.0044,
+  "split": {
+   "L5": 0.0931
+  }
+ },
+ "d5045f9bfe563919": {
+  "mod_loss": 0.028,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.028
+  }
+ },
+ "9a4e4566bdf8eeb9": {
+  "mod_loss": 0.0648,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0648
+  }
+ },
+ "720f5375d1447cd9": {
+  "mod_loss": 0.5333,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.474,
+   "UNALLOCATED": 0.0593
+  }
+ },
+ "684639c39043db11": {
+  "mod_loss": 0.2068,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.1737,
+   "L4": 0.0331
+  }
+ },
+ "c757d1a5b9a1c3c2": {
+  "mod_loss": 0.0048,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0048
+  }
+ },
+ "36c0b409d1f65f06": {
+  "mod_loss": 0.2408,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.2408
+  }
+ },
+ "ab567eb64e0ec41a": {
+  "mod_loss": 0.0415,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0415
+  }
+ },
+ "a781c24d0904ca43": {
+  "mod_loss": 0.4444,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.4444
+  }
+ },
+ "323395a7a94e1b23": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "980676ee4b6b3be7": {
+  "mod_loss": 0.4815,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.3852,
+   "L4": 0.0963
+  }
+ },
+ "59123ded62ce91c2": {
+  "mod_loss": 0.3846,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.3846
+  }
+ },
+ "d40fe134f3786a06": {
+  "mod_loss": 0.5833,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0,
+   "L4": 0.5833
+  }
+ },
+ "06384aacdd923dd9": {
+  "mod_loss": 0.4722,
+  "reg_loss": 0.0072,
+  "split": {
+   "L5": 0.4722
+  }
+ },
+ "1d7e05ac41510081": {
+  "mod_loss": 0.5985,
+  "reg_loss": 0.0,
+  "split": {
+   "UNALLOCATED": 0.5985
+  }
+ },
+ "8582e11c361558bd": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "898c8f16747e95ff": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "e0b08149478b515c": {
+  "mod_loss": 0.0188,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0188
+  }
+ },
+ "ca677a95fc277abe": {
+  "mod_loss": 0.18,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.18
+  }
+ },
+ "5a7806b65fcc40c3": {
+  "mod_loss": 0.019,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.019
+  }
+ },
+ "2f67359f95131e6b": {
+  "mod_loss": 0.9403,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.9403
+  }
+ },
+ "d23069fa9919c807": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "39d1aedfae1c1675": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "02f41ed7d3425bab": {
+  "mod_loss": 0.0399,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0399
+  }
+ },
+ "416c0f774c7412c7": {
+  "mod_loss": 0.9227,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.9227
+  }
+ },
+ "43c53e15dea450cc": {
+  "mod_loss": 0.0235,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0235
+  }
+ },
+ "5863253bf1f5be2b": {
+  "mod_loss": 0.0197,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0197
+  }
+ },
+ "55256e78a1d30031": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "410282ab74c28469": {
+  "mod_loss": 0.5912,
+  "reg_loss": 0.0,
+  "split": {
+   "UNALLOCATED": 0.5912
+  }
+ },
+ "b1d4fbcdd50a5a94": {
+  "mod_loss": 0.0044,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0,
+   "L4": 0.0044
+  }
+ },
+ "2b3af90171dd2d04": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "c55c0c596d82b808": {
+  "mod_loss": 0.0005,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0005
+  }
+ },
+ "901006464db09a31": {
+  "mod_loss": 0.05,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.05
+  }
+ },
+ "a7c290828a3cd42f": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "af97d0f352bea81c": {
+  "mod_loss": 0.0045,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0045
+  }
+ },
+ "222b137c7d46c799": {
+  "mod_loss": 0.0339,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0339
+  }
+ },
+ "7d16d00b92f5831a": {
+  "mod_loss": 0.2773,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.2773
+  }
+ },
+ "c05f54e2208cf18d": {
+  "mod_loss": 0.0025,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0025
+  }
+ },
+ "4f8dc68a451b769c": {
+  "mod_loss": 0.0399,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0399
+  }
+ },
+ "653e68d23e866c02": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "8a96a3428ac1372e": {
+  "mod_loss": 0.3549,
+  "reg_loss": 0.0127,
+  "split": {
+   "L5": 0.1868,
+   "L4": 0.1681
+  }
+ },
+ "b0742cf821ff3565": {
+  "mod_loss": 0.0113,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0,
+   "L4": 0.0113
+  }
+ },
+ "98ddced99be6ea2e": {
+  "mod_loss": 0.0473,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0331,
+   "L4": 0.0142
+  }
+ },
+ "af86647801a56b40": {
+  "mod_loss": 0.022,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.022
+  }
+ },
+ "b76929d25149f5d3": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "d02cad2b657cd26b": {
+  "mod_loss": 0.0218,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0218
+  }
+ },
+ "a3b5640005bbc2ee": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "7b06d523d7bd6461": {
+  "mod_loss": 0.5912,
+  "reg_loss": 0.0,
+  "split": {
+   "UNALLOCATED": 0.5912
+  }
+ },
+ "722aef7c198227a4": {
+  "mod_loss": 0.0044,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0,
+   "L4": 0.0044
+  }
+ },
+ "49e6aba104bd6a2f": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "ac358d54b553ea74": {
+  "mod_loss": 0.0005,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0005
+  }
+ },
+ "afe829732722eba5": {
+  "mod_loss": 0.1,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.1
+  }
+ },
+ "5c062e721da84271": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "9caccbd1c0250224": {
+  "mod_loss": 0.8794,
+  "reg_loss": 0.0179,
+  "split": {
+   "L5": 0.8794
+  }
+ },
+ "2579d6a2078a1d35": {
+  "mod_loss": 0.1267,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0975,
+   "UNALLOCATED": 0.0292
+  }
+ },
+ "ff424127ed11b5a8": {
+  "mod_loss": 0.0339,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0339
+  }
+ },
+ "1f5405934f2b29c4": {
+  "mod_loss": 0.2773,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.2773
+  }
+ },
+ "7116b6a65ad7e3fc": {
+  "mod_loss": 0.0025,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0025
+  }
+ },
+ "01bb20c45b078107": {
+  "mod_loss": 0.019,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.019
+  }
+ },
+ "f7f0e41169861e2b": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "26005c750ff1cae8": {
+  "mod_loss": 0.3549,
+  "reg_loss": 0.0127,
+  "split": {
+   "L5": 0.1868,
+   "L4": 0.1681
+  }
+ },
+ "f868b635228ff97e": {
+  "mod_loss": 0.0282,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0169,
+   "L4": 0.0113
+  }
+ },
+ "bed3d8a915f27a81": {
+  "mod_loss": 0.071,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.071
+  }
+ },
+ "98f6e2b22f032cb2": {
+  "mod_loss": 0.022,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.022
+  }
+ },
+ "bd10de19b49ac2f9": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "4d269b770e500896": {
+  "mod_loss": 0.0218,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0218
+  }
+ },
+ "cfb2a5abcf2c66ab": {
+  "mod_loss": 0.9227,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.9227
+  }
+ },
+ "07efd9ed751ed32c": {
+  "mod_loss": 0.0992,
+  "reg_loss": 0.2195,
+  "split": {
+   "L5": 0.0992
+  }
+ },
+ "9a116dd7808f8f1f": {
+  "mod_loss": 0.3607,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.3457,
+   "UNALLOCATED": 0.015
+  }
+ },
+ "5f7acf74ee6bc815": {
+  "mod_loss": 0.0016,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0001,
+   "L4": 0.0015
+  }
+ },
+ "b00bf195f0f4238d": {
+  "mod_loss": 0.0027,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0027
+  }
+ },
+ "ebb9c64fc632b0c8": {
+  "mod_loss": 0.4664,
+  "reg_loss": 0.0,
+  "split": {
+   "UNALLOCATED": 0.4664
+  }
+ },
+ "4b5e49c98116ddc2": {
+  "mod_loss": 0.0218,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.008,
+   "L4": 0.0138
+  }
+ },
+ "18a22617360c10de": {
+  "mod_loss": 0.1426,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.1426
+  }
+ },
+ "f212b1837413f3e7": {
+  "mod_loss": 0.042,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0,
+   "L4": 0.042
+  }
+ },
+ "317792b48935f68e": {
+  "mod_loss": 0.2264,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.2264
+  }
+ },
+ "576e7c78c3c6b972": {
+  "mod_loss": 0.3991,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.3991
+  }
+ },
+ "cca8d36d73c60004": {
+  "mod_loss": 0.0662,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0662
+  }
+ },
+ "543487f87fad7481": {
+  "mod_loss": 0.037,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0,
+   "L4": 0.037
+  }
+ },
+ "b64df33cad9fa941": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "7e106fb8319c5de9": {
+  "mod_loss": 0.1965,
+  "reg_loss": 0.0129,
+  "split": {
+   "L5": 0.1965
+  }
+ },
+ "1dd85083abbc5862": {
+  "mod_loss": 0.9155,
+  "reg_loss": 0.003,
+  "split": {
+   "L5": 0.3052,
+   "UNALLOCATED": 0.6103
+  }
+ },
+ "0b9e7e57c4228f3e": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "635413e458bee499": {
+  "mod_loss": 0.001,
+  "reg_loss": 0.0027,
+  "split": {
+   "L5": 0.001
+  }
+ },
+ "b946c0d16000d0eb": {
+  "mod_loss": 0.3528,
+  "reg_loss": 0.0033,
+  "split": {
+   "L5": 0.3528
+  }
+ },
+ "c167461c3b6b891e": {
+  "mod_loss": 0.3528,
+  "reg_loss": 0.0033,
+  "split": {
+   "L5": 0.3528
+  }
+ },
+ "5c73ac56edb8f1d2": {
+  "mod_loss": 0.3528,
+  "reg_loss": 0.0033,
+  "split": {
+   "L5": 0.3528
+  }
+ },
+ "641a25d92c756f00": {
+  "mod_loss": 0.3528,
+  "reg_loss": 0.0033,
+  "split": {
+   "L5": 0.3528
+  }
+ },
+ "c00404e735a70b91": {
+  "mod_loss": 0.7405,
+  "reg_loss": 0.0,
+  "split": {
+   "L5": 0.0,
+   "L4": 0.1777,
+   "UNALLOCATED": 0.5628
+  }
+ },
+ "5dd5c9211c8e3b63": {
+  "mod_loss": 0.0426,
+  "reg_loss": 0.01,
+  "split": {
+   "L5": 0.0426
+  }
+ },
+ "6d3ab198de904b8e": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ },
+ "99af26845fb1d99d": {
+  "mod_loss": 0.0,
+  "reg_loss": 0.0,
+  "split": {}
+ }
+}

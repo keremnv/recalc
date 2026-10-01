@@ -1,0 +1,162 @@
+[
+  {
+    "number": 1,
+    "question": "What exactly caused the deterministic H1 substrate crash?",
+    "answer": "Financial_Model:06_01 has an undeclared `dc` prefix on `creator` in `docProps/core.xml`. openpyxl/lxml raises `XMLSyntaxError` (line 1, column 574). H1 eagerly called `prepare_substrate → ensure_fresh → build_index → load_workbook(read_only=True)` without a catch, so an optional build became a runner veto. Ordinary openpyxl also rejects these bytes."
+  },
+  {
+    "number": 2,
+    "question": "What fail-closed boundary was added?",
+    "answer": "Transactional index construction and atomic publication, generation failure tombstones, validated read-only snapshot acquisition, proxy retirement/reference delegation, and bootstrap rollback. Every caught substrate failure records exception class, stage, workbook/generation identity, reason, partial initialization and prior accelerated serving; no gold/evaluator content enters telemetry."
+  },
+  {
+    "number": 3,
+    "question": "Does the affected case now behave no worse than reference openpyxl?",
+    "answer": "Yes at the corrected boundary: preparation proceeds, publishes no workbook index, and H1 ordinary loading returns the identical XMLSyntaxError/message as H0. The invalid workbook itself is not repaired. This is mechanical reference parity, not a new model success."
+  },
+  {
+    "number": 4,
+    "question": "Is partial/stale substrate serving impossible after failed initialization?",
+    "answer": "The corrected state machine provides no authoritative handle/manifest after a failed build. Old handles are retired before rebuild; completed rows and an identity marker commit together; publication is atomic. Failed generations stay disabled, including already returned proxies. Tests cover partial DBs, missing/corrupt/stale databases, failed refresh and post-load DB failure. This is the enforced boundary invariant, not a claim of exhaustive proof for arbitrary OS/concurrent failures."
+  },
+  {
+    "number": 5,
+    "question": "Did valid-workbook Candidate-A behavior remain unchanged?",
+    "answer": "The A1 classifier and admitted primitive operations are unchanged; valid fixtures still accelerate and match ordinary openpyxl. A pre-existing empty-sheet unbounded iterator mismatch discovered in corrective tests now falls back. Guards add validation work; performance was not remeasured and the historical timing evidence remains historical."
+  },
+  {
+    "number": 6,
+    "question": "What is checkpoint-only capability-neutrality status?",
+    "answer": "`REPRESENTATIVE_CHECKPOINT_CAPABILITY_NEUTRALITY: SUPPORTED_NARROWLY`."
+  },
+  {
+    "number": 7,
+    "question": "What is cumulative capability-preservation status?",
+    "answer": "`CUMULATIVE_PRACTICAL_STACK_CAPABILITY_PRESERVATION: SUPPORTED` for the tested causal scopes, informed by independent runtime replications, thin-checkpoint autopsies and A/A1 exact fidelity. The real pre-fix parser veto is preserved and corrected, not relabelled as noise. This does not establish unconditional capability equality for the revised code."
+  },
+  {
+    "number": 8,
+    "question": "Is formal equivalence established?",
+    "answer": "`STATISTICAL_EQUIVALENCE: NOT_ESTABLISHED`. There was no equivalence margin/design or adequate uncensored equivalence evidence; p=.125 is not equivalence."
+  },
+  {
+    "number": 9,
+    "question": "What does representative A contact establish?",
+    "answer": "Observed sample contact: 59/282 loads (~21%) and 91,231 accelerated non-load operations. 95% of non-load operations sit in 5 slots; 15/30 H1 slots have none. This replaces the old unmeasured-prevalence placeholder with uneven measured contact, not universal applicability."
+  },
+  {
+    "number": 10,
+    "question": "Is A worth retaining with an existing substrate?",
+    "answer": "Yes, conditionally: exact earned surface, conservative fallback, low marginal retention cost and material large-workbook-tail savings. The narrow A1 gate stays fixed."
+  },
+  {
+    "number": 11,
+    "question": "Would A alone justify rebuilding the substrate from zero?",
+    "answer": "Not as a general default. It supplies a workload-tail-specific case: estimated mean-based ~84s gross savings covers ~25.9s substrate, while median-based ~19s does not. Do not claim broad self-funding or count the index as free."
+  },
+  {
+    "number": 12,
+    "question": "What is final practical substrate status?",
+    "answer": "`COMPILED_SUBSTRATE_PRACTICAL_RETENTION: SUPPORTED_NARROWLY` — retain existing conditional hidden infrastructure after hardening, with Candidate A as the retained paying consumer."
+  },
+  {
+    "number": 13,
+    "question": "What is final zero-sunk-cost substrate status?",
+    "answer": "`COMPILED_SUBSTRATE_FROM_ZERO_JUSTIFICATION: NOT_ESTABLISHED` as a general build. A minimal index may be chosen for a known large/repeated-read tail on full-cost accounting; the default rebuild omits a generic substrate."
+  },
+  {
+    "number": 14,
+    "question": "What is capture's final status?",
+    "answer": "Assurance `EARNED`; retain transparent capture as a cheap deterministic property. Checkpoint: 0.3424s, 16 mutations, zero runtime/validation failures."
+  },
+  {
+    "number": 15,
+    "question": "What does capture still not establish?",
+    "answer": "Failure prevention and capability necessity are both `NOT_ESTABLISHED`; there were zero prevention witnesses and no untreated-corruption differential. Do not search for witnesses to justify the component."
+  },
+  {
+    "number": 16,
+    "question": "What is freshness's final status?",
+    "answer": "`EARNED` conditional invariant: ~1.16s / 493 refresh calls, zero stale serving where measured. Required with substrate-backed reads; no independent architectural claim without them."
+  },
+  {
+    "number": 17,
+    "question": "Was the substrate helper backend removed?",
+    "answer": "Yes from active retained execution: the general helper shim and both retained runner arms use reference openpyxl. Historical API source and original checkpoint shims/evidence remain for archaeology, not as retained consumers."
+  },
+  {
+    "number": 18,
+    "question": "What backend now serves helpers?",
+    "answer": "Plain/reference openpyxl, including style reads; tests assert that helpers bypass Candidate A and index construction."
+  },
+  {
+    "number": 19,
+    "question": "Does the helper model-facing surface remain unchanged?",
+    "answer": "Yes: existing names, arguments, factual contract and prompt note remain. Reference backend uses its already established generation metadata (index_generation=0). Optional helper-surface product status remains independently adjudicable; no helper optimization or expansion occurred."
+  },
+  {
+    "number": 20,
+    "question": "What is the final evidence-compelled architecture?",
+    "answer": "General-purpose coding agent → ordinary Python/openpyxl + normal scaffold conveniences → actual workbook → LibreOffice recalc/validation/score."
+  },
+  {
+    "number": 21,
+    "question": "What is the practical retained architecture?",
+    "answer": "That core plus invisible narrow A+A1 with fail-closed fallback, transparent mutation capture, conditional freshness guards and a hidden compiled/indexed substrate. Optional helpers → reference openpyxl. No substrate helper backend."
+  },
+  {
+    "number": 22,
+    "question": "What is the zero-sunk-cost rebuild?",
+    "answer": "Build the ordinary core first. Thin transparent capture may be added explicitly for assurance. Build minimal index+A1+fail-closed/freshness only for a known workload tail with full-cost justification; otherwise omit compiled serving and its freshness machinery. Optional helpers can use openpyxl without an index."
+  },
+  {
+    "number": 23,
+    "question": "Which branches are permanently closed absent materially new evidence?",
+    "answer": "All 22 prior closure entries and their reopening gates are preserved in `final_closed_branches.json`: required IR/authority/scheduler/closure/program-group runtime; model-facing SQL; dependency-as-intent; fingerprint-as-program-choice; required mutation IR; batch writers; verification receipts; generic compression; persistent state for tokens; delta/reference handles; derivation elision; Track C projection/repetition; and the remaining semantic restoration/helper branches."
+  },
+  {
+    "number": 24,
+    "question": "Which branches remain frozen?",
+    "answer": "A2, A3, narrow opt-in Candidate B, general temporal/output-role ontology, program-group opt-in lowering, formula-error feedback, uniformity-flag transfer and output-role break localization. None is integrated. The former representative-A placeholder is now adjudicated, with its prior frozen entry preserved as history."
+  },
+  {
+    "number": 25,
+    "question": "Is mechanism discovery closed?",
+    "answer": "`MECHANISM_DISCOVERY: CLOSED`. Corrective replay found no unresolved new semantic failure; the fixture edge was resolved by losing acceleration. Uneven contact, tail economics, low adoption and absent prevention witnesses do not reopen discovery."
+  },
+  {
+    "number": 26,
+    "question": "What implementation work remains?",
+    "answer": "No corrective hardening or mechanism implementation required by this task remains. Future engineering should review/integrate this source into the selected maintained harness and verify compatibility in its release configuration; the workspace also contains unrelated pre-existing research changes."
+  },
+  {
+    "number": 27,
+    "question": "What productization work remains?",
+    "answer": "Single installation/bootstrap path; dependency and LibreOffice checks; enable/disable controls; safe defaults; unavailable-substrate fallback; minimal example; diagnostic status; versioned compatibility. Not implemented here."
+  },
+  {
+    "number": 28,
+    "question": "What presentation/communication work remains?",
+    "answer": "An evidence-linked technical narrative and scoped claims using PRODUCT_PRESENTATION_HANDOFF.md. Preserve denominators, negative results, censoring, uncertainty and retention-versus-rebuild accounting; no website/marketing built."
+  },
+  {
+    "number": 29,
+    "question": "What are the strongest defensible external claims?",
+    "answer": "Ordinary Python remains the working interface; a structured semantic waist was not required by this tested agent; read acceleration is exact on its earned surface and can pay on large-workbook tails; capture is cheap assurance; measured repetition is small; large first-seen context does not imply a safe mechanical cut; unsupported optimized paths use reference semantics."
+  },
+  {
+    "number": 30,
+    "question": "What claims must not be made?",
+    "answer": "Better benchmark scores; universally faster; Python universally optimal; formal capability equivalence; compiled substrate always pays; capture prevents corruption in practice; all spreadsheet agents should use this architecture. No total-task, token or cost benefit is inferred from conditional read timing."
+  },
+  {
+    "number": 31,
+    "question": "What is final research status?",
+    "answer": "`FINAL_ARCHITECTURE_AND_EVIDENCE_FROZEN`; mechanism discovery closed, practical components adjudicated, original outcomes retained, known deterministic veto corrected. Transient historical trigger remains unproven, explicitly bounded by natural replay and exception injection."
+  },
+  {
+    "number": 32,
+    "question": "What should happen next?",
+    "answer": "Engineering integration and basic installability/packaging, followed by evidence presentation within the claims registry. Neither requires a new benchmark, consumer, interface, semantic mechanism or reopening of frozen leads."
+  }
+]

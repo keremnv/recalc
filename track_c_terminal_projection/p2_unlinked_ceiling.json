@@ -1,0 +1,23 @@
+{
+ "strict": {
+  "total": 5037252.7999954745,
+  "P0": 199637.77000000197,
+  "P1": 233640.41000000277,
+  "P2": 4803612.390002001,
+  "AMB": 0.0,
+  "P0_share": 0.03963227138415235,
+  "P1_share": 0.04638250635350536,
+  "P2_share": 0.9536174936477908
+ },
+ "loose_sensitivity": {
+  "total": 5037252.7999954745,
+  "P0": 533106.3300003061,
+  "P1": 1474059.840000847,
+  "P2": 3563192.9600038724,
+  "AMB": 0.0,
+  "P0_share": 0.10583275272600674,
+  "P1_share": 0.29263169797675653,
+  "P2_share": 0.7073683020250787
+ },
+ "limitation": "NO_OBSERVED_MECHANICAL_LINK means only that no downstream mechanical lineage was visible; it does NOT establish the information was unused or removable. P2 is an oracle ceiling, not a saving."
+}

@@ -1,0 +1,15 @@
+{
+  "attempt_id": "candidate_a_a1_checkpoint_primary_20260921",
+  "status": "IMMUTABLE_PROVIDER_OR_RUNNER_CENSORED_ATTEMPT",
+  "completed_primary_runs": 1,
+  "partial_primary_runs": 1,
+  "unstarted_primary_runs": 22,
+  "verdict": "PROVIDER_OR_RUNNER_CENSORED",
+  "population_sha256": "d731835bbc4c5294dcabe80c0bc6a81bfc46f2e33948f98026cb3b440e533a25",
+  "population_ranking_sha256": "fccf1fe49aa8355d329147cb94db2988df09707f9c36654ccc644588fcea99ba",
+  "run_order_sha256": "c3dfd0c396eef5e642c487c8d91beb84a3abe35093eb37ed2dd33bf1b18d4825",
+  "identity_manifest_sha256": "870e5bf1cd986f049e785f21674cada4f76c71034a4c331b4067f275eea2a83a",
+  "primary_runs_sha256": "fcfd703e874d64804db488e2cd6da7000612aa727065a5d341c3a4a73f658c16",
+  "report_sha256": "9e2e2c2980fc92046c2a9c0105c9ee46028d75d3b53cd907f41bddf744587fef",
+  "note": "Do not overwrite. The rerun must use a new output directory and a new attempt identifier while reusing the frozen population and run order."
+}

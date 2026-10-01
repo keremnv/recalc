@@ -1,0 +1,231 @@
+{
+  "label": "CORRECTIVE_FAIL_CLOSED_REPLAY",
+  "model_calls": 0,
+  "scoring_runs": 0,
+  "new_treatment_evidence": false,
+  "primary_results_preserved": true,
+  "preserved_artifacts": 1436,
+  "cases": [
+    {
+      "task_id": "Financial_Model:06_01",
+      "label": "CORRECTIVE_FAIL_CLOSED_REPLAY",
+      "kind": "EXACT_SOURCE_INPUT_MECHANICAL_REPLAY",
+      "input": "librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/06_Project DigiMark/06_01_DigiMark_input.xlsx",
+      "input_sha256": "71233a0b02e0680361836392ca41c567aae657ce91dd24c4248f273f459fd53c",
+      "original_record": "representative_architecture_checkpoint/reps/Financial_Model_06_01_H1_primary_25/run_record.json",
+      "original_record_sha256": "e408e4e23f1107642aef76a4b9adaf31bc4e9111bbb614106f04c8f1c1ef047a",
+      "original_error": {
+        "class": "XMLSyntaxError",
+        "message": "Namespace prefix dc on creator is not defined, line 1, column 574 (<string>, line 1)"
+      },
+      "H0": {
+        "status": "REFERENCE_EXCEPTION",
+        "class": "ParseError",
+        "message": "unbound prefix: line 1, column 562"
+      },
+      "H1": {
+        "status": "REFERENCE_EXCEPTION",
+        "class": "ParseError",
+        "message": "unbound prefix: line 1, column 562"
+      },
+      "reference_equal": true,
+      "runner_preparation_proceeded": true,
+      "published_workbooks": 0,
+      "fallback_occurred": true,
+      "preparation_failures": [
+        {
+          "event": "substrate_fallback",
+          "status": "ACCELERATION_DISABLED_FOR_RELEVANT_SCOPE",
+          "path": "/tmp/corrective_fail_closed_e4onbzpy/input.xlsx",
+          "workbook_generation": "71233a0b02e0680361836392ca41c567aae657ce91dd24c4248f273f459fd53c",
+          "index_generation": 0,
+          "stage": "workbook_index_parse",
+          "exception_class": "ParseError",
+          "fallback_reason": "optional substrate failed; ordinary openpyxl required",
+          "partially_initialized": false,
+          "accelerated_operation_already_served": false
+        }
+      ],
+      "candidate_events": [
+        {
+          "event": "bootstrap",
+          "status": "INSTALLED",
+          "candidate": "A"
+        },
+        {
+          "event": "substrate_fallback",
+          "status": "ACCELERATION_DISABLED_FOR_RELEVANT_SCOPE",
+          "path": "/tmp/corrective_fail_closed_e4onbzpy/input.xlsx",
+          "workbook_generation": null,
+          "index_generation": 0,
+          "stage": "snapshot_initialization",
+          "exception_class": "FileNotFoundError",
+          "fallback_reason": "optional substrate failed; ordinary openpyxl required",
+          "partially_initialized": false,
+          "accelerated_operation_already_served": false
+        },
+        {
+          "event": "candidate_operation",
+          "operation": "load_workbook",
+          "path": "/tmp/corrective_fail_closed_e4onbzpy/input.xlsx",
+          "status": "PREDECLARED_FALLBACK",
+          "fallback_reason": "substrate disabled for workbook in this Python process",
+          "data_only": false,
+          "read_only": false,
+          "write_only": false,
+          "parse_performed": true,
+          "substrate_hit": false,
+          "duration_ns": 212329
+        },
+        {
+          "event": "candidate_operation",
+          "operation": "fallback",
+          "status": "RUNTIME_FALLBACK",
+          "fallback_reason": "substrate disabled for workbook in this Python process"
+        }
+      ]
+    },
+    {
+      "task_id": "Template:06_08",
+      "label": "CORRECTIVE_FAIL_CLOSED_REPLAY",
+      "kind": "EXACT_SOURCE_INPUT_MECHANICAL_REPLAY",
+      "input": "librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Template/spreadsheet/06_equity_forecast/06_08_input.xlsx",
+      "input_sha256": "df35d4aa5498819bd8cc9792ad7ae3f5a9d04a21cf9120db889073a3049c785d",
+      "original_record": "representative_architecture_checkpoint/reps_preserved_infra_2/Template_06_08_H1_primary_10/run_record.json",
+      "original_record_sha256": "bb87202fa86222460672c89ee28e5d206382f56af9f6907a0b12c21f23747133",
+      "original_error": {
+        "class": "UnicodeDecodeError",
+        "message": "'utf-8' codec can't decode byte 0x8d in position 4133: invalid start byte"
+      },
+      "H0": {
+        "status": "OPENED",
+        "sheetnames": [
+          "WorkingCapital_Forecast"
+        ]
+      },
+      "H1": {
+        "status": "OPENED",
+        "sheetnames": [
+          "WorkingCapital_Forecast"
+        ]
+      },
+      "reference_equal": true,
+      "runner_preparation_proceeded": true,
+      "published_workbooks": 1,
+      "fallback_occurred": false,
+      "preparation_failures": [],
+      "candidate_events": [
+        {
+          "event": "bootstrap",
+          "status": "INSTALLED",
+          "candidate": "A"
+        },
+        {
+          "event": "candidate_operation",
+          "operation": "load_workbook",
+          "path": "/tmp/corrective_fail_closed_ff_4ja9e/input.xlsx",
+          "status": "ACCELERATED",
+          "workbook_generation": "df35d4aa5498819bd8cc9792ad7ae3f5a9d04a21cf9120db889073a3049c785d",
+          "substrate_generation": 1,
+          "rebuilt": false,
+          "parse_performed": false,
+          "substrate_hit": true,
+          "duration_ns": 1254001
+        },
+        {
+          "event": "candidate_operation",
+          "operation": "Workbook.sheetnames",
+          "path": "/tmp/corrective_fail_closed_ff_4ja9e/input.xlsx",
+          "status": "ACCELERATED",
+          "workbook_generation": "df35d4aa5498819bd8cc9792ad7ae3f5a9d04a21cf9120db889073a3049c785d",
+          "substrate_generation": 1,
+          "rebuilt": false
+        }
+      ]
+    },
+    {
+      "task_id": "Template:06_08",
+      "label": "CORRECTIVE_FAIL_CLOSED_REPLAY",
+      "kind": "INJECTED_EXCEPTION_BOUNDARY_CHECK",
+      "input": "librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Template/spreadsheet/06_equity_forecast/06_08_input.xlsx",
+      "input_sha256": "df35d4aa5498819bd8cc9792ad7ae3f5a9d04a21cf9120db889073a3049c785d",
+      "original_record": "representative_architecture_checkpoint/reps_preserved_infra_2/Template_06_08_H1_primary_10/run_record.json",
+      "original_record_sha256": "bb87202fa86222460672c89ee28e5d206382f56af9f6907a0b12c21f23747133",
+      "original_error": {
+        "class": "UnicodeDecodeError",
+        "message": "'utf-8' codec can't decode byte 0x8d in position 4133: invalid start byte"
+      },
+      "H0": {
+        "status": "OPENED",
+        "sheetnames": [
+          "WorkingCapital_Forecast"
+        ]
+      },
+      "H1": {
+        "status": "OPENED",
+        "sheetnames": [
+          "WorkingCapital_Forecast"
+        ]
+      },
+      "reference_equal": true,
+      "runner_preparation_proceeded": true,
+      "published_workbooks": 0,
+      "fallback_occurred": true,
+      "preparation_failures": [
+        {
+          "event": "substrate_fallback",
+          "status": "ACCELERATION_DISABLED_FOR_RELEVANT_SCOPE",
+          "path": "/tmp/corrective_fail_closed_ydawhlyh/input.xlsx",
+          "workbook_generation": "df35d4aa5498819bd8cc9792ad7ae3f5a9d04a21cf9120db889073a3049c785d",
+          "index_generation": 0,
+          "stage": "compiled_database_construction",
+          "exception_class": "UnicodeDecodeError",
+          "fallback_reason": "optional substrate failed; ordinary openpyxl required",
+          "partially_initialized": false,
+          "accelerated_operation_already_served": false
+        }
+      ],
+      "candidate_events": [
+        {
+          "event": "bootstrap",
+          "status": "INSTALLED",
+          "candidate": "A"
+        },
+        {
+          "event": "substrate_fallback",
+          "status": "ACCELERATION_DISABLED_FOR_RELEVANT_SCOPE",
+          "path": "/tmp/corrective_fail_closed_ydawhlyh/input.xlsx",
+          "workbook_generation": null,
+          "index_generation": 0,
+          "stage": "snapshot_initialization",
+          "exception_class": "FileNotFoundError",
+          "fallback_reason": "optional substrate failed; ordinary openpyxl required",
+          "partially_initialized": false,
+          "accelerated_operation_already_served": false
+        },
+        {
+          "event": "candidate_operation",
+          "operation": "load_workbook",
+          "path": "/tmp/corrective_fail_closed_ydawhlyh/input.xlsx",
+          "status": "PREDECLARED_FALLBACK",
+          "fallback_reason": "substrate disabled for workbook in this Python process",
+          "data_only": false,
+          "read_only": false,
+          "write_only": false,
+          "parse_performed": true,
+          "substrate_hit": false,
+          "duration_ns": 134939
+        },
+        {
+          "event": "candidate_operation",
+          "operation": "fallback",
+          "status": "RUNTIME_FALLBACK",
+          "fallback_reason": "substrate disabled for workbook in this Python process"
+        }
+      ]
+    }
+  ],
+  "transient_interpretation": "Exact source input did not reproduce the archived UnicodeDecodeError. Injected exception tests the boundary only; origin/stack of the historical transient is not established.",
+  "verdict": "PASS_REFERENCE_PARITY_NO_SUBSTRATE_VETO",
+  "scope": "Mechanical runner preparation and load boundary only; no new model trajectory or success/score claim."
+}

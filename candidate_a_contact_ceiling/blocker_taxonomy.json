@@ -1,0 +1,67 @@
+{
+  "by_blocker": {
+    "CELL_OBJECT_ITERATION_BOUNDARY": {
+      "rows": 10,
+      "severity": "OBJECT_LIFETIME_LIMITATION",
+      "unique_execs": 5,
+      "unique_turns": 5
+    },
+    "DATA_ONLY_BOUNDARY": {
+      "rows": 8,
+      "severity": "FUNDAMENTAL",
+      "unique_execs": 3,
+      "unique_turns": 3
+    },
+    "OBJECT_ESCAPE_BOUNDARY": {
+      "rows": 14,
+      "severity": "OBJECT_LIFETIME_LIMITATION",
+      "unique_execs": 1,
+      "unique_turns": 1
+    },
+    "STATIC_ANALYSIS_UNCERTAINTY": {
+      "rows": 62,
+      "severity": "ELIGIBILITY_ANALYSIS_LIMITATION",
+      "unique_execs": 31,
+      "unique_turns": 31
+    }
+  },
+  "logged_reason_counts": {
+    "Workbook.worksheets": 1,
+    "Worksheet.sheet_state": 13,
+    "forced real path": 76,
+    "unsupported load mode/options": 2,
+    "unsupported object behavior": 2
+  },
+  "rows": 94,
+  "summary": {
+    "blocker_rows_sum": 94,
+    "forced_actual_range_turns": 0,
+    "forced_false_positive_turns": 34,
+    "forced_real_rows": 76,
+    "forced_real_unique_turns": 38,
+    "forced_unresolved_turns": 4,
+    "live_python_timing_rows": 49,
+    "logged_reason_counts": {
+      "Workbook.worksheets": 1,
+      "Worksheet.sheet_state": 13,
+      "forced real path": 76,
+      "unsupported load mode/options": 2,
+      "unsupported object behavior": 2
+    },
+    "material_safe_prefix_turns": 19,
+    "primary_fallback_executions": 40,
+    "primary_fallback_rows": 94,
+    "primary_fallback_tasks": 5,
+    "source_recoverable_timing_rows": 42,
+    "unique_hidden_cell_read_units": 116,
+    "unique_hidden_executions": 40,
+    "unique_hidden_open_units": 37,
+    "unique_hidden_prefix_classes": {
+      "MATERIAL_SAFE_PREFIX": 20,
+      "NO_SAFE_PREFIX": 8,
+      "TRIVIAL_SAFE_PREFIX": 8,
+      "UNRESOLVED": 4
+    },
+    "unique_hidden_primitive_read_units": 261
+  }
+}

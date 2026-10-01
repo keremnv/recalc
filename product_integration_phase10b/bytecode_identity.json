@@ -1,0 +1,22 @@
+{
+  "P2_S0": {
+    "bytes": 1004,
+    "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/product_integration_phase10b/minimal_bootstrap/__pycache__/sitecustomize.cpython-313.pyc",
+    "sha256": "64f228e0746f4135a631615f3fcc3d63e5850bb5d6a3e6b30945868d24a9d027"
+  },
+  "P3_S3_P4": {
+    "bytes": 5529,
+    "path": "/tmp/librecalc-phase10-clean/lib/python3.13/site-packages/librecalc_agent/_bootstrap/__pycache__/sitecustomize.cpython-313.pyc",
+    "sha256": "2e1c9d2127d1aaa2f12aa86a9c2d736830be01f5a7364ca06b89f9614879f77d"
+  },
+  "S1": {
+    "bytes": 2015,
+    "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/product_integration_phase10b/config_only_bootstrap/__pycache__/sitecustomize.cpython-313.pyc",
+    "sha256": "de2e5ed15060387f069a41757c17627fec8c1119ab5d0978f04f4bea34751f15"
+  },
+  "S2": {
+    "bytes": 2322,
+    "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/product_integration_phase10b/config_classifier_bootstrap/__pycache__/sitecustomize.cpython-313.pyc",
+    "sha256": "d8f892af12e88e06866410e2ac4c471a50470c1f8ee78c2531ef98e9e5462b2a"
+  }
+}

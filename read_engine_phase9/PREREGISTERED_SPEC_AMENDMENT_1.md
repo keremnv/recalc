@@ -1,0 +1,9 @@
+# Phase 9 preregistration amendment 1 — process fixture route correction
+
+Status: written before any Phase-9 scored timing and before rerunning the affected process gate. Base spec SHA-256 `68c786a73d3ea510ec1216247725dfb3e3ac10ad92d3cd171e3b1da49a03563a`. The initial process fixture ledger is preserved as `process_semantics_attempt_1.jsonl`.
+
+The `reference_module_identity` fixture originally imported openpyxl and checked `openpyxl.load_workbook is openpyxl.reader.excel.load_workbook` without a workbook use that the frozen classifier rejects. The unchanged classifier returned `A1_ADMIT`; both frozen H0 and Phase-9 H1 installed the same direct runtime and printed `False`, while PY printed `True`. This is an inherited direct-path module-identity limitation, not a Phase-9 treatment regression. It is outside the narrow read contract and must be reported as a known limit, never counted as a passed PY-equivalence fixture.
+
+The fixture was intended to test the **proven reference fast path**. Change its source to include a normal `load_workbook("input.xlsx")` and `wb.active.title` observation, which the unchanged classifier rejects through `RICH_OBJECT_BOUNDARY`. Then require H1 to report `FAST_PATH_PROVEN_REFERENCE`, retain the real module function identity and match PY. The first failed gate stays in the record. Restart the complete process fixture suite into a new ledger and require no new H1/H0 difference. No population, timing endpoint, decision rule, observer, classifier, certificate, artifact, direct runtime or changed-file helper is changed. No representative or changed-file scored row exists.
+
+The treatment bootstrap and benchmark runner hashes remain unchanged. After editing only the fixture/probe source, repin the Phase-9 implementation manifest and hash it before rerunning gates. The newly exposed H0/PY direct-path identity difference must remain visible in the final report.

@@ -1,0 +1,162 @@
+--- a/benchmark/fm_resource_feasibility.py
++++ b/benchmark/fm_resource_feasibility.py
+@@ -47,6 +47,7 @@
+ LIVE = RUN_ROOT / "live"
+ REPAIRED_LIVE = LIVE / "repaired_treatment"
+ REPLAY = m.RUN_ROOT / "integration_autopsy" / "replay"
++REPAIRED_DATABASES = m.RUN_ROOT / "integration_autopsy" / "repaired_db"
+ RESOURCE_AUDIT = m.RUN_ROOT / "integration_autopsy" / "resource_envelope_audit.json"
+ CAPABILITY = m.RUN_ROOT / "integration_autopsy" / "provider_capability_metadata.json"
+ 
+@@ -997,17 +998,23 @@
+ 
+ def run_treatment_task(task: str, *, resume: bool = True) -> dict[str, Any]:
+     """Run the repaired compiled arm under the nonbinding 150/$6 probe envelope."""
++    database = REPAIRED_DATABASES / f"Financial_Model-{task}.sqlite"
++    if not database.is_file():
++        raise FileNotFoundError(f"Repaired compiled database required: {database}")
+     old_runtime = m.configure_runtime(
+         reasoning=REASONING, top_p=TOP_P, max_model_calls=NATURAL_CALL_CEILING,
+         max_cost_usd=NATURAL_COST_CEILING, frontend_mode="sharded_projected",
+         frontend_timeout=FRONTEND_TIMEOUT_SECONDS,
+     )
+     old_request_body = m.request_body
++    old_databases = m.DATABASES
++    m.DATABASES = REPAIRED_DATABASES
+     m.request_body = treatment_request_body
+     try:
+         return m.run_one_task(key(task), resume=resume, output_root=REPAIRED_LIVE)
+     finally:
+         m.request_body = old_request_body
++        m.DATABASES = old_databases
+         m.restore_runtime(old_runtime)
+ 
+ 
+--- a/benchmark/matched_compiled_treatment.py
++++ b/benchmark/matched_compiled_treatment.py
+@@ -310,7 +310,10 @@
+         try:
+             compiled = spine_compiler.compile_spine(effective, workbook_key=row["task_key"])
+             write_json(spine_path, compiled)
+-            if not temporal_path.exists():
++            temporal = read_json(temporal_path) if temporal_path.exists() else {}
++            # Historical prep left empty placeholders at these paths. File
++            # existence alone is not evidence that closure was compiled.
++            if temporal.get("readable") is not True or not isinstance(temporal.get("closure"), dict):
+                 from temporal_spine import compile_temporal_workbook
+                 write_json(temporal_path, compile_temporal_workbook(effective, closure=True))
+             db = build_database(spine_path, temporal_path, db_path)
+@@ -339,6 +342,31 @@
+ def spine_for(task_key: str) -> dict[str, Any]:
+     row = task_map()[task_key]
+     return read_json(SPINES / f"{row['category']}-{row['task']}.json")
++
++
++def planning_spine_for(task_key: str, world: World) -> dict[str, Any]:
++    """Project the same compiled temporal identities that validate the plan.
++
++    The legacy spine's local period layer is not the closure-backed world.
++    Read the active database, so a repaired DB cannot coexist with stale
++    grounding periods or a different temporal sidecar during planning.
++    """
++    from temporal_spine import overlay_periods
++
++    coordinates = []
++    for rec in world.temporal.values():
++        parsed = spine_compiler.parse_cell_id(rec["cell_id"])
++        if parsed is None:
++            raise ValueError(f"INVALID_TEMPORAL_CELL: {rec['cell_id']}")
++        _, row, col = parsed
++        coordinates.append({
++            "id": rec["temporal_id"], "cell_id": rec["cell_id"],
++            "sheet_id": rec["sheet_id"], "row_id": rec["row_id"], "col_id": rec["col_id"],
++            "row": row, "col": col, "address": closure.a1(row, col), "axis": rec["axis"],
++            "period": {k: rec[k] for k in ("year", "month", "quarter") if rec.get(k) is not None},
++            "period_key": rec.get("period_key"), "header_text": rec.get("header_text"),
++        })
++    return overlay_periods(spine_for(task_key), {"coordinates": coordinates})
+ 
+ 
+ def db_for(task_key: str) -> Path:
+@@ -769,7 +797,7 @@
+     import frontend_projection as projection
+ 
+     world = World(db_for(task_key))
+-    spine = spine_for(task_key)
++    spine = planning_spine_for(task_key, world)
+     packets = {ob["id"]: project_obligation(spine, ob) for ob in compiler["obligations"]}
+     fragments: list[dict[str, Any]] = []
+     try:
+@@ -858,7 +886,7 @@
+             projected=ACTIVE_FRONTEND_MODE == "sharded_projected",
+         )
+     world = World(db_for(task_key))
+-    spine = spine_for(task_key)
++    spine = planning_spine_for(task_key, world)
+     packets = {ob["id"]: project_obligation(spine, ob) for ob in compiler["obligations"]}
+     context = plan_context(task, compiler, packets, world)
+     user = json.dumps(context, ensure_ascii=False, separators=(",", ":"))
+@@ -1127,7 +1155,12 @@
+             state["failure_ledger"].append({"failure_class": "INVALID_EDIT_PLAN", "status": plan.get("status")})
+         plan["spine"] = spine_for(task_key)
+         if not plan.get("packets"):
+-            plan["packets"] = {ob["id"]: project_obligation(plan["spine"], ob) for ob in compiler.get("obligations", [])}
++            world = World(db_for(task_key))
++            try:
++                grounding_spine = planning_spine_for(task_key, world)
++                plan["packets"] = {ob["id"]: project_obligation(grounding_spine, ob) for ob in compiler.get("obligations", [])}
++            finally:
++                world.close()
+         schedule = schedule_formula_work(task_key, task, compiler, plan, state, task_dir, stub=stub)
+         state["execution_units"] = schedule.get("groups", [])
+         state["program_groups"] = schedule.get("groups", [])
+--- a/benchmark/workbook_grounding.py
++++ b/benchmark/workbook_grounding.py
+@@ -30,6 +30,7 @@
+     r"(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\s*-?\s*(\d{2,4})",
+     re.I,
+ )
++PERCENT_LITERAL = re.compile(r"\d+(?:[.,]\d+)*\s*%")
+ SOURCE_ARG = re.compile(
+     r"\b(?:using|from|based on|percentage of|as a percentage of|linked to|"
+     r"by applying|by growing|by summing)\s+(.+)$",
+@@ -168,7 +169,10 @@
+     all_flag = bool(ALL_SCOPE.search(blob))
+     years: set[int] = set()
+     months: list[tuple[int, int]] = []
+-    found = list(YEAR_TOKEN.finditer(blob))
++    # Scope can contain both rates and dates ("10% FY26"). A typed
++    # percentage is not a calendar year; leave the original span intact.
++    period_blob = PERCENT_LITERAL.sub(lambda m: " " * len(m.group(0)), blob)
++    found = list(YEAR_TOKEN.finditer(period_blob))
+     vals = []
+     for match in found:
+         year = _expand_year(match.group(1))
+@@ -182,7 +186,7 @@
+             years.update(vals)
+     else:
+         years.update(vals)
+-    for match in MONTH_YEAR.finditer(blob):
++    for match in MONTH_YEAR.finditer(period_blob):
+         period = parse_period(match.group(0).replace("-", " "))
+         if period and "year" in period:
+             years.add(period["year"])
+@@ -397,14 +401,16 @@
+         spine, obligation, sheet_ids=locus_ids or None
+     )
+     occ = field_text(obligation.get("occupancy_filter")) or None
+-    targets = compose_targets(
++    # Set composition must have a stable order before bounded evidence uses
++    # targets[:200]. Otherwise Python's hash seed changes dependency membership.
++    targets = sorted(compose_targets(
+         spine,
+         locus_ids=locus_ids,
+         subject_hits=subject,
+         scope_hits=scope,
+         occupancy_text=occ,
+         strict_scope=strict_scope,
+-    )
++    ))
+     class_facts = []
+     dep_facts = []
+     if "NO_FORMULA_CLASS" not in ablation:

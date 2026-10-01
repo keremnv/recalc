@@ -1,0 +1,223 @@
+{
+  "Financial_Model:08_03:C0": {
+    "returncode": 0,
+    "official": {
+      "id": "08_03",
+      "error_message": "Modification error at Ratio Analysis!C19: answer=6.66631169023065, output=7.44444497232591",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.9973,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:03<00:00,  3.03s/it]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:03<00:00,  3.03s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  38%|\u2588\u2588\u2588\u258a      | 38/100 [00:15<00:25,  2.46it/s]\nEvaluating: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 100/100 [00:15<00:00,  6.48it/s]\n",
+    "stdout_tail": "sion/outputs\nREFRESH open_spreadsheet.py /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_03-r1/submission/outputs\nLibreOffice service started (ready after 1s)\nFound 1 files to process\nLibreOffice service stopped\nNamespace(model='glm-fill-c0-Financial_Model-08_03-r1', dataset='Financial_Model', outputs_dir='/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_03-r1/submission/outputs/Financial_Model', workers=1)\nOFFICIAL_JSON /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_03-r1/submission/results/glm-fill-c0-Financial_Model-08_03-r1_Financial_Model__regression.json\nRUN glm-fill-c0-Financial_Model-08_03-r1\nEVALUATION_RUNTIME unmodified-official-evaluation.py\n  Financial_Model:08_03: reg=1.0 mod=0.9973 exact=False Modification error at Ratio Analysis!C19: answer=6.66631169023065, output=7.44444497232591\nSUMMARY exact=0/1 missing_outputs=0\nLEDGER appended scored rows to /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_03-r1/ledger.jsonl\nRESULTS /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_03-r1/official_scores.json\n"
+  },
+  "Financial_Model:08_03:C1": {
+    "returncode": 0,
+    "official": {
+      "id": "08_03",
+      "error_message": "Regression error at DCF Valuation!J16: answer=None, output=543528488.439332",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.9923,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:02<00:00,  2.28s/it]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:02<00:00,  2.29s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  38%|\u2588\u2588\u2588\u258a      | 38/100 [00:15<00:25,  2.42it/s]\nEvaluating: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 100/100 [00:15<00:00,  6.36it/s]\n",
+    "stdout_tail": "08_03-r1/submission/outputs\nREFRESH open_spreadsheet.py /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_03-r1/submission/outputs\nLibreOffice service started (ready after 1s)\nFound 1 files to process\nLibreOffice service stopped\nNamespace(model='glm-fill-c1-Financial_Model-08_03-r1', dataset='Financial_Model', outputs_dir='/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_03-r1/submission/outputs/Financial_Model', workers=1)\nOFFICIAL_JSON /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_03-r1/submission/results/glm-fill-c1-Financial_Model-08_03-r1_Financial_Model__regression.json\nRUN glm-fill-c1-Financial_Model-08_03-r1\nEVALUATION_RUNTIME unmodified-official-evaluation.py\n  Financial_Model:08_03: reg=1.0 mod=0.9923 exact=False Regression error at DCF Valuation!J16: answer=None, output=543528488.439332\nSUMMARY exact=0/1 missing_outputs=0\nLEDGER appended scored rows to /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_03-r1/ledger.jsonl\nRESULTS /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_03-r1/official_scores.json\n"
+  },
+  "Financial_Model:08_04:C1": {
+    "returncode": 0,
+    "official": {
+      "id": "08_04",
+      "error_message": "",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 1.0,
+      "accuracy": 1.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:02<00:00,  2.45s/it]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:02<00:00,  2.46s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  39%|\u2588\u2588\u2588\u2589      | 39/100 [00:15<00:24,  2.52it/s]\nEvaluating: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 100/100 [00:15<00:00,  6.47it/s]\n",
+    "stdout_tail": "-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_04-r1/submission/outputs\nREFRESH open_spreadsheet.py /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_04-r1/submission/outputs\nLibreOffice service started (ready after 1s)\nFound 1 files to process\nLibreOffice service stopped\nNamespace(model='glm-fill-c1-Financial_Model-08_04-r1', dataset='Financial_Model', outputs_dir='/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_04-r1/submission/outputs/Financial_Model', workers=1)\nOFFICIAL_JSON /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_04-r1/submission/results/glm-fill-c1-Financial_Model-08_04-r1_Financial_Model__regression.json\nRUN glm-fill-c1-Financial_Model-08_04-r1\nEVALUATION_RUNTIME unmodified-official-evaluation.py\n  Financial_Model:08_04: reg=1.0 mod=1.0 exact=True \nSUMMARY exact=1/1 missing_outputs=0\nLEDGER appended scored rows to /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_04-r1/ledger.jsonl\nRESULTS /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_04-r1/official_scores.json\n"
+  },
+  "Financial_Model:08_04:C0": {
+    "returncode": 0,
+    "official": {
+      "id": "08_04",
+      "error_message": "Regression error at DCF Valuation!C24: answer=0.350153712667171, output=0.408702845116348",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.5336,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:02<00:00,  2.34s/it]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:02<00:00,  2.35s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  39%|\u2588\u2588\u2588\u2589      | 39/100 [00:16<00:25,  2.43it/s]\nEvaluating: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 100/100 [00:16<00:00,  6.23it/s]\n",
+    "stdout_tail": "ssion/outputs\nREFRESH open_spreadsheet.py /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_04-r1/submission/outputs\nLibreOffice service started (ready after 1s)\nFound 1 files to process\nLibreOffice service stopped\nNamespace(model='glm-fill-c0-Financial_Model-08_04-r1', dataset='Financial_Model', outputs_dir='/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_04-r1/submission/outputs/Financial_Model', workers=1)\nOFFICIAL_JSON /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_04-r1/submission/results/glm-fill-c0-Financial_Model-08_04-r1_Financial_Model__regression.json\nRUN glm-fill-c0-Financial_Model-08_04-r1\nEVALUATION_RUNTIME unmodified-official-evaluation.py\n  Financial_Model:08_04: reg=1.0 mod=0.5336 exact=False Regression error at DCF Valuation!C24: answer=0.350153712667171, output=0.408702845116348\nSUMMARY exact=0/1 missing_outputs=0\nLEDGER appended scored rows to /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_04-r1/ledger.jsonl\nRESULTS /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_04-r1/official_scores.json\n"
+  },
+  "Financial_Model:08_05:C0": {
+    "returncode": 0,
+    "official": {
+      "id": "08_05",
+      "error_message": "Regression error at DCF Valuation!C24: answer=0.350153712667171, output=-0.0676349206585925",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.9782,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:02<00:00,  2.38s/it]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:02<00:00,  2.38s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  40%|\u2588\u2588\u2588\u2588      | 40/100 [00:15<00:23,  2.51it/s]\nEvaluating: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 100/100 [00:15<00:00,  6.28it/s]\n",
+    "stdout_tail": "sion/outputs\nREFRESH open_spreadsheet.py /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_05-r1/submission/outputs\nLibreOffice service started (ready after 1s)\nFound 1 files to process\nLibreOffice service stopped\nNamespace(model='glm-fill-c0-Financial_Model-08_05-r1', dataset='Financial_Model', outputs_dir='/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_05-r1/submission/outputs/Financial_Model', workers=1)\nOFFICIAL_JSON /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_05-r1/submission/results/glm-fill-c0-Financial_Model-08_05-r1_Financial_Model__regression.json\nRUN glm-fill-c0-Financial_Model-08_05-r1\nEVALUATION_RUNTIME unmodified-official-evaluation.py\n  Financial_Model:08_05: reg=1.0 mod=0.9782 exact=False Regression error at DCF Valuation!C24: answer=0.350153712667171, output=-0.067634920658592\nSUMMARY exact=0/1 missing_outputs=0\nLEDGER appended scored rows to /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_05-r1/ledger.jsonl\nRESULTS /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_05-r1/official_scores.json\n"
+  },
+  "Financial_Model:08_05:C1": {
+    "returncode": 0,
+    "official": {
+      "id": "08_05",
+      "error_message": "Regression error at DCF Valuation!C24: answer=0.350153712667171, output=-0.0676349206585923",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.9782,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:02<00:00,  2.39s/it]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:02<00:00,  2.40s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  40%|\u2588\u2588\u2588\u2588      | 40/100 [00:15<00:23,  2.51it/s]\nEvaluating: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 100/100 [00:15<00:00,  6.27it/s]\n",
+    "stdout_tail": "sion/outputs\nREFRESH open_spreadsheet.py /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_05-r1/submission/outputs\nLibreOffice service started (ready after 1s)\nFound 1 files to process\nLibreOffice service stopped\nNamespace(model='glm-fill-c1-Financial_Model-08_05-r1', dataset='Financial_Model', outputs_dir='/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_05-r1/submission/outputs/Financial_Model', workers=1)\nOFFICIAL_JSON /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_05-r1/submission/results/glm-fill-c1-Financial_Model-08_05-r1_Financial_Model__regression.json\nRUN glm-fill-c1-Financial_Model-08_05-r1\nEVALUATION_RUNTIME unmodified-official-evaluation.py\n  Financial_Model:08_05: reg=1.0 mod=0.9782 exact=False Regression error at DCF Valuation!C24: answer=0.350153712667171, output=-0.067634920658592\nSUMMARY exact=0/1 missing_outputs=0\nLEDGER appended scored rows to /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_05-r1/ledger.jsonl\nRESULTS /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_05-r1/official_scores.json\n"
+  },
+  "Financial_Model:15_04:C1": {
+    "returncode": 0,
+    "official": {
+      "id": "15_04",
+      "error_message": "Modification error at Consol_annual!N111: answer=0.0122164048865631, output=-23.2636595516177",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.8529,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:00<00:00,  1.27it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:00<00:00,  1.26it/s]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d  | 74/100 [00:01<00:00, 43.56it/s]\nEvaluating: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 100/100 [00:01<00:00, 58.86it/s]\n",
+    "stdout_tail": "sion/outputs\nREFRESH open_spreadsheet.py /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-15_04-r1/submission/outputs\nLibreOffice service started (ready after 1s)\nFound 1 files to process\nLibreOffice service stopped\nNamespace(model='glm-fill-c1-Financial_Model-15_04-r1', dataset='Financial_Model', outputs_dir='/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-15_04-r1/submission/outputs/Financial_Model', workers=1)\nOFFICIAL_JSON /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-15_04-r1/submission/results/glm-fill-c1-Financial_Model-15_04-r1_Financial_Model__regression.json\nRUN glm-fill-c1-Financial_Model-15_04-r1\nEVALUATION_RUNTIME unmodified-official-evaluation.py\n  Financial_Model:15_04: reg=1.0 mod=0.8529 exact=False Modification error at Consol_annual!N111: answer=0.0122164048865631, output=-23.2636595516\nSUMMARY exact=0/1 missing_outputs=0\nLEDGER appended scored rows to /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-15_04-r1/ledger.jsonl\nRESULTS /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-15_04-r1/official_scores.json\n"
+  },
+  "Financial_Model:15_04:C0": {
+    "returncode": 0,
+    "official": {
+      "id": "15_04",
+      "error_message": "Modification error at Consol_annual!N111: answer=0.0122164048865631, output=-23.2636595516177",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.8574,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:00<00:00,  1.22it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:00<00:00,  1.21it/s]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d  | 74/100 [00:01<00:00, 45.79it/s]\nEvaluating: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 100/100 [00:01<00:00, 61.86it/s]\n",
+    "stdout_tail": "sion/outputs\nREFRESH open_spreadsheet.py /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-15_04-r1/submission/outputs\nLibreOffice service started (ready after 1s)\nFound 1 files to process\nLibreOffice service stopped\nNamespace(model='glm-fill-c0-Financial_Model-15_04-r1', dataset='Financial_Model', outputs_dir='/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-15_04-r1/submission/outputs/Financial_Model', workers=1)\nOFFICIAL_JSON /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-15_04-r1/submission/results/glm-fill-c0-Financial_Model-15_04-r1_Financial_Model__regression.json\nRUN glm-fill-c0-Financial_Model-15_04-r1\nEVALUATION_RUNTIME unmodified-official-evaluation.py\n  Financial_Model:15_04: reg=1.0 mod=0.8574 exact=False Modification error at Consol_annual!N111: answer=0.0122164048865631, output=-23.2636595516\nSUMMARY exact=0/1 missing_outputs=0\nLEDGER appended scored rows to /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-15_04-r1/ledger.jsonl\nRESULTS /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-15_04-r1/official_scores.json\n"
+  },
+  "Financial_Model:08_02:C0": {
+    "returncode": 0,
+    "official": {
+      "id": "08_02",
+      "error_message": "Modification error at DCF Valuation!D35: answer=0.143833422543056, output=None",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.9984,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:02<00:00,  2.26s/it]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:02<00:00,  2.26s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  37%|\u2588\u2588\u2588\u258b      | 37/100 [00:15<00:25,  2.43it/s]\nEvaluating: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 100/100 [00:15<00:00,  6.57it/s]\n",
+    "stdout_tail": "02-r1/submission/outputs\nREFRESH open_spreadsheet.py /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_02-r1/submission/outputs\nLibreOffice service started (ready after 1s)\nFound 1 files to process\nLibreOffice service stopped\nNamespace(model='glm-fill-c0-Financial_Model-08_02-r1', dataset='Financial_Model', outputs_dir='/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_02-r1/submission/outputs/Financial_Model', workers=1)\nOFFICIAL_JSON /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_02-r1/submission/results/glm-fill-c0-Financial_Model-08_02-r1_Financial_Model__regression.json\nRUN glm-fill-c0-Financial_Model-08_02-r1\nEVALUATION_RUNTIME unmodified-official-evaluation.py\n  Financial_Model:08_02: reg=1.0 mod=0.9984 exact=False Modification error at DCF Valuation!D35: answer=0.143833422543056, output=None\nSUMMARY exact=0/1 missing_outputs=0\nLEDGER appended scored rows to /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_02-r1/ledger.jsonl\nRESULTS /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_02-r1/official_scores.json\n"
+  },
+  "Financial_Model:08_02:C1": {
+    "returncode": 0,
+    "official": {
+      "id": "08_02",
+      "error_message": "Modification error at DCF Valuation!D35: answer=0.143833422543056, output=None",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.9984,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:02<00:00,  2.34s/it]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:02<00:00,  2.35s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  37%|\u2588\u2588\u2588\u258b      | 37/100 [00:16<00:27,  2.29it/s]\nEvaluating: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 100/100 [00:16<00:00,  6.19it/s]\n",
+    "stdout_tail": "02-r1/submission/outputs\nREFRESH open_spreadsheet.py /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_02-r1/submission/outputs\nLibreOffice service started (ready after 1s)\nFound 1 files to process\nLibreOffice service stopped\nNamespace(model='glm-fill-c1-Financial_Model-08_02-r1', dataset='Financial_Model', outputs_dir='/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_02-r1/submission/outputs/Financial_Model', workers=1)\nOFFICIAL_JSON /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_02-r1/submission/results/glm-fill-c1-Financial_Model-08_02-r1_Financial_Model__regression.json\nRUN glm-fill-c1-Financial_Model-08_02-r1\nEVALUATION_RUNTIME unmodified-official-evaluation.py\n  Financial_Model:08_02: reg=1.0 mod=0.9984 exact=False Modification error at DCF Valuation!D35: answer=0.143833422543056, output=None\nSUMMARY exact=0/1 missing_outputs=0\nLEDGER appended scored rows to /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_02-r1/ledger.jsonl\nRESULTS /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_02-r1/official_scores.json\n"
+  },
+  "Template:06_09:C1": {
+    "returncode": 0,
+    "official": {
+      "id": "06_09",
+      "error_message": "",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 1.0,
+      "accuracy": 1.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:00<00:00,  2.60it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:00<00:00,  2.55it/s]\n\nEvaluating:   0%|          | 0/97 [00:00<?, ?it/s]\nEvaluating: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 97/97 [00:00<00:00, 2466.47it/s]\n",
+    "stdout_tail": "STAGE workbooks=1/1 dir=/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Template-06_09-r1/submission/outputs\nREFRESH open_spreadsheet.py /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Template-06_09-r1/submission/outputs\nLibreOffice service started (ready after 1s)\nFound 1 files to process\nLibreOffice service stopped\nNamespace(model='glm-fill-c1-Template-06_09-r1', dataset='Template', outputs_dir='/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Template-06_09-r1/submission/outputs/Template', workers=1)\nOFFICIAL_JSON /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Template-06_09-r1/submission/results/glm-fill-c1-Template-06_09-r1_Template__regression.json\nRUN glm-fill-c1-Template-06_09-r1\nEVALUATION_RUNTIME unmodified-official-evaluation.py\n  Template:06_09: reg=1.0 mod=1.0 exact=True \nSUMMARY exact=1/1 missing_outputs=0\nLEDGER appended scored rows to /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Template-06_09-r1/ledger.jsonl\nRESULTS /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Template-06_09-r1/official_scores.json\n"
+  },
+  "Template:06_09:C0": {
+    "returncode": 0,
+    "official": {
+      "id": "06_09",
+      "error_message": "Modification error at OpEx_Forecast!H8: answer=0.401596302003082, output=None",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.958,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:00<00:00,  2.65it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:00<00:00,  2.60it/s]\n\nEvaluating:   0%|          | 0/97 [00:00<?, ?it/s]\nEvaluating: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 97/97 [00:00<00:00, 3098.19it/s]\n",
+    "stdout_tail": "p/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Template-06_09-r1/submission/outputs\nREFRESH open_spreadsheet.py /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Template-06_09-r1/submission/outputs\nLibreOffice service started (ready after 1s)\nFound 1 files to process\nLibreOffice service stopped\nNamespace(model='glm-fill-c0-Template-06_09-r1', dataset='Template', outputs_dir='/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Template-06_09-r1/submission/outputs/Template', workers=1)\nOFFICIAL_JSON /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Template-06_09-r1/submission/results/glm-fill-c0-Template-06_09-r1_Template__regression.json\nRUN glm-fill-c0-Template-06_09-r1\nEVALUATION_RUNTIME unmodified-official-evaluation.py\n  Template:06_09: reg=1.0 mod=0.958 exact=False Modification error at OpEx_Forecast!H8: answer=0.401596302003082, output=None\nSUMMARY exact=0/1 missing_outputs=0\nLEDGER appended scored rows to /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Template-06_09-r1/ledger.jsonl\nRESULTS /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Template-06_09-r1/official_scores.json\n"
+  },
+  "Financial_Model:08_01:C0": {
+    "returncode": 0,
+    "official": {
+      "id": "08_01",
+      "error_message": "Regression error at DCF Valuation!C24: answer=0.350153712667171, output=0.172136718907207",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.6393,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:02<00:00,  2.50s/it]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:02<00:00,  2.51s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  36%|\u2588\u2588\u2588\u258c      | 36/100 [00:15<00:28,  2.25it/s]\nEvaluating: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 100/100 [00:15<00:00,  6.25it/s]\n",
+    "stdout_tail": "ssion/outputs\nREFRESH open_spreadsheet.py /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_01-r1/submission/outputs\nLibreOffice service started (ready after 1s)\nFound 1 files to process\nLibreOffice service stopped\nNamespace(model='glm-fill-c0-Financial_Model-08_01-r1', dataset='Financial_Model', outputs_dir='/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_01-r1/submission/outputs/Financial_Model', workers=1)\nOFFICIAL_JSON /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_01-r1/submission/results/glm-fill-c0-Financial_Model-08_01-r1_Financial_Model__regression.json\nRUN glm-fill-c0-Financial_Model-08_01-r1\nEVALUATION_RUNTIME unmodified-official-evaluation.py\n  Financial_Model:08_01: reg=1.0 mod=0.6393 exact=False Regression error at DCF Valuation!C24: answer=0.350153712667171, output=0.172136718907207\nSUMMARY exact=0/1 missing_outputs=0\nLEDGER appended scored rows to /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_01-r1/ledger.jsonl\nRESULTS /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_01-r1/official_scores.json\n"
+  },
+  "Financial_Model:08_01:C1": {
+    "returncode": 0,
+    "official": {
+      "id": "08_01",
+      "error_message": "Modification error at DCF Valuation!D28: answer=47366611.5049744, output=184768555.832126",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.9294,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:02<00:00,  2.46s/it]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:02<00:00,  2.47s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  36%|\u2588\u2588\u2588\u258c      | 36/100 [00:17<00:31,  2.06it/s]\nEvaluating: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 100/100 [00:17<00:00,  5.72it/s]\n",
+    "stdout_tail": "ssion/outputs\nREFRESH open_spreadsheet.py /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_01-r1/submission/outputs\nLibreOffice service started (ready after 1s)\nFound 1 files to process\nLibreOffice service stopped\nNamespace(model='glm-fill-c1-Financial_Model-08_01-r1', dataset='Financial_Model', outputs_dir='/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_01-r1/submission/outputs/Financial_Model', workers=1)\nOFFICIAL_JSON /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_01-r1/submission/results/glm-fill-c1-Financial_Model-08_01-r1_Financial_Model__regression.json\nRUN glm-fill-c1-Financial_Model-08_01-r1\nEVALUATION_RUNTIME unmodified-official-evaluation.py\n  Financial_Model:08_01: reg=1.0 mod=0.9294 exact=False Modification error at DCF Valuation!D28: answer=47366611.5049744, output=184768555.832126\nSUMMARY exact=0/1 missing_outputs=0\nLEDGER appended scored rows to /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_01-r1/ledger.jsonl\nRESULTS /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Financial_Model-08_01-r1/official_scores.json\n"
+  },
+  "Template:06_16:C1": {
+    "returncode": 0,
+    "official": {
+      "id": "06_16",
+      "error_message": "",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 1.0,
+      "accuracy": 1.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:00<00:00,  2.78it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:00<00:00,  2.72it/s]\n\nEvaluating:   0%|          | 0/97 [00:00<?, ?it/s]\nEvaluating: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 97/97 [00:00<00:00, 2290.96it/s]\n",
+    "stdout_tail": "STAGE workbooks=1/1 dir=/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Template-06_16-r1/submission/outputs\nREFRESH open_spreadsheet.py /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Template-06_16-r1/submission/outputs\nLibreOffice service started (ready after 1s)\nFound 1 files to process\nLibreOffice service stopped\nNamespace(model='glm-fill-c1-Template-06_16-r1', dataset='Template', outputs_dir='/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Template-06_16-r1/submission/outputs/Template', workers=1)\nOFFICIAL_JSON /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Template-06_16-r1/submission/results/glm-fill-c1-Template-06_16-r1_Template__regression.json\nRUN glm-fill-c1-Template-06_16-r1\nEVALUATION_RUNTIME unmodified-official-evaluation.py\n  Template:06_16: reg=1.0 mod=1.0 exact=True \nSUMMARY exact=1/1 missing_outputs=0\nLEDGER appended scored rows to /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Template-06_16-r1/ledger.jsonl\nRESULTS /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c1-Template-06_16-r1/official_scores.json\n"
+  },
+  "Template:06_16:C0": {
+    "returncode": 0,
+    "official": {
+      "id": "06_16",
+      "error_message": "Modification error at QuarterlyPL_Forecast!H8: answer=339.2, output=1257.1217",
+      "regression_accuracy": 1.0,
+      "modification_accuracy": 0.7736,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:00<00:00,  2.86it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:00<00:00,  2.81it/s]\n\nEvaluating:   0%|          | 0/97 [00:00<?, ?it/s]\nEvaluating: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 97/97 [00:00<00:00, 2719.90it/s]\n",
+    "stdout_tail": "/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Template-06_16-r1/submission/outputs\nREFRESH open_spreadsheet.py /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Template-06_16-r1/submission/outputs\nLibreOffice service started (ready after 1s)\nFound 1 files to process\nLibreOffice service stopped\nNamespace(model='glm-fill-c0-Template-06_16-r1', dataset='Template', outputs_dir='/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Template-06_16-r1/submission/outputs/Template', workers=1)\nOFFICIAL_JSON /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Template-06_16-r1/submission/results/glm-fill-c0-Template-06_16-r1_Template__regression.json\nRUN glm-fill-c0-Template-06_16-r1\nEVALUATION_RUNTIME unmodified-official-evaluation.py\n  Template:06_16: reg=1.0 mod=0.7736 exact=False Modification error at QuarterlyPL_Forecast!H8: answer=339.2, output=1257.1217\nSUMMARY exact=0/1 missing_outputs=0\nLEDGER appended scored rows to /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Template-06_16-r1/ledger.jsonl\nRESULTS /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Template-06_16-r1/official_scores.json\n"
+  },
+  "Debugging:10_04:C0": {
+    "returncode": 0,
+    "official": {
+      "id": "10_04",
+      "error_message": "Regression error at Model!B325: answer=0.0005, output=0.0005",
+      "regression_accuracy": 0.7805,
+      "modification_accuracy": 0.9008,
+      "accuracy": 0.0,
+      "interaction_turns": 0
+    },
+    "stderr": "\nProcessing spreadsheets:   0%|          | 0/1 [00:00<?, ?it/s]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:04<00:00,  4.78s/it]\nProcessing spreadsheets: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 1/1 [00:04<00:00,  4.79s/it]\n\nEvaluating:   0%|          | 0/100 [00:00<?, ?it/s]\nEvaluating:  94%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d| 94/100 [01:15<00:04,  1.24it/s]\nEvaluating: 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 100/100 [01:15<00:00,  1.32it/s]\n",
+    "stdout_tail": "p/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Debugging-10_04-r1/submission/outputs\nREFRESH open_spreadsheet.py /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Debugging-10_04-r1/submission/outputs\nLibreOffice service started (ready after 1s)\nFound 1 files to process\nLibreOffice service stopped\nNamespace(model='glm-fill-c0-Debugging-10_04-r1', dataset='Debugging', outputs_dir='/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Debugging-10_04-r1/submission/outputs/Debugging', workers=1)\nOFFICIAL_JSON /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Debugging-10_04-r1/submission/results/glm-fill-c0-Debugging-10_04-r1_Debugging__regression.json\nRUN glm-fill-c0-Debugging-10_04-r1\nEVALUATION_RUNTIME unmodified-official-evaluation.py\n  Debugging:10_04: reg=0.7805 mod=0.9008 exact=False Regression error at Model!B325: answer=0.0005, output=0.0005\nSUMMARY exact=0/1 missing_outputs=0\nLEDGER appended scored rows to /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Debugging-10_04-r1/ledger.jsonl\nRESULTS /home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Debugging-10_04-r1/official_scores.json\n"
+  }
+}

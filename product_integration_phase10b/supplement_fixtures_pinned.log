@@ -1,0 +1,5 @@
+supplement fixture module_argv_path: S0–S3 exact
+supplement fixture uncaught_exception: S0–S3 exact
+supplement fixture atexit_write: S0–S3 exact
+supplement fixture abrupt_exit_after_write: S0–S3 exact
+supplement fixture reference_objects: S0–S3 exact

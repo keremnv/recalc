@@ -1,0 +1,19 @@
+{
+  "declared_model": "z-ai/glm-5.3-flash",
+  "request_model": "openrouter/z-ai/glm-5.3-flash",
+  "temperature": 0.0,
+  "top_p": 1.0,
+  "reasoning_effort": "high",
+  "tool_choice": "auto_or_required_by_catalog",
+  "provider": {
+    "allow_fallbacks": true,
+    "require_parameters": true
+  },
+  "token_limit_policy": "remaining-budget",
+  "cost_limit_usd": 5.0,
+  "call_limit": 60,
+  "timeout_seconds": 7200,
+  "execution_timeout": 180,
+  "max_requeries": 2,
+  "identity_source": "AUTHORITATIVE_EXPERIMENT_CONFIG"
+}

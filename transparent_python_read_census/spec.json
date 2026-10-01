@@ -1,0 +1,15 @@
+{
+  "candidates": [
+    "A proxy/interposition",
+    "B AST/source lowering",
+    "C narrow hybrid",
+    "D no transparent read accelerator"
+  ],
+  "frozen_source": "control_python_audit",
+  "model_inference": false,
+  "new_helpers": 0,
+  "new_interface": 0,
+  "prompt_changes": false,
+  "seed": 20260920,
+  "study": "zero-model transparent ordinary Python/openpyxl read acceleration census"
+}

@@ -1,0 +1,9 @@
+{
+  "historical_prior_H1_overlap": [
+    "Financial_Model:10_01",
+    "Template:07_02"
+  ],
+  "interpretation": "No treatment was run on the reserve after its creation. Two tasks already had earlier, different-architecture H1 runs; a future representative claim-validation design must assess this prior exposure.",
+  "later_affordance_treatment_on_reserve": false,
+  "new_token_claim_treatment_on_reserve": false
+}

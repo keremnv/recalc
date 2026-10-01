@@ -1,0 +1,20 @@
+{
+  "adoption_audit": {
+    "D_arm_helper_calls": 0,
+    "arm": "B",
+    "audit_note": "Transcript shows one type/iteration probe and one loop over result-object keys before the final command printed cell hits; return code 0 alone is not useful adoption.",
+    "command_calls": 4,
+    "command_rendering_cell_hits": 1,
+    "displacement_established": false,
+    "failed_command_calls": 1,
+    "model_visible_bytes_all_helper_commands": 3599,
+    "model_visible_bytes_successful_helper_commands": 2094,
+    "reason": "One B run used the helper, but subsequent broad Python output and trajectory differences prevent mechanical attribution of the arm-level token contrast to displaced inspection.",
+    "runs_with_actual_helper_calls": 1,
+    "successful_command_calls": 3,
+    "task": "Financial_Model:09_02",
+    "type": "search"
+  },
+  "archived_helper_events": 4,
+  "caution": "Text matching is an event index; adoption and displacement follow the transcript audit."
+}

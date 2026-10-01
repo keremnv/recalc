@@ -1,0 +1,215 @@
+{
+ "families": [
+  {
+   "task_id": "Debugging:07_03",
+   "turn": 13,
+   "exec_id": 513,
+   "n_formula_effects": 31,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Debugging:01_01",
+   "turn": 13,
+   "exec_id": 289,
+   "n_formula_effects": 10,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Debugging:02_01",
+   "turn": 13,
+   "exec_id": 322,
+   "n_formula_effects": 7,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Debugging:09_09",
+   "turn": 18,
+   "exec_id": 585,
+   "n_formula_effects": 4,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Debugging:10_10",
+   "turn": 18,
+   "exec_id": 634,
+   "n_formula_effects": 3,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Financial_Model:04_01",
+   "turn": 16,
+   "exec_id": 693,
+   "n_formula_effects": 148,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Financial_Model:04_01",
+   "turn": 19,
+   "exec_id": 696,
+   "n_formula_effects": 8,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Financial_Model:05_01",
+   "turn": 17,
+   "exec_id": 715,
+   "n_formula_effects": 23,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Financial_Model:10_01",
+   "turn": 13,
+   "exec_id": 816,
+   "n_formula_effects": 18,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Financial_Model:11_05",
+   "turn": 16,
+   "exec_id": 845,
+   "n_formula_effects": 22,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Financial_Model:11_05",
+   "turn": 19,
+   "exec_id": 848,
+   "n_formula_effects": 12,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Financial_Model:14_05",
+   "turn": 13,
+   "exec_id": 892,
+   "n_formula_effects": 9,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Financial_Model:18_05",
+   "turn": 13,
+   "exec_id": 944,
+   "n_formula_effects": 9,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Financial_Model:18_05",
+   "turn": 14,
+   "exec_id": 945,
+   "n_formula_effects": 4,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Template:03_03",
+   "turn": 5,
+   "exec_id": 1013,
+   "n_formula_effects": 1,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Template:06_21",
+   "turn": 3,
+   "exec_id": 1051,
+   "n_formula_effects": 27,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Template:06_21",
+   "turn": 5,
+   "exec_id": 1053,
+   "n_formula_effects": 9,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Template:07_01",
+   "turn": 4,
+   "exec_id": 1059,
+   "n_formula_effects": 19,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Template:07_01",
+   "turn": 5,
+   "exec_id": 1060,
+   "n_formula_effects": 15,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Template:07_01",
+   "turn": 7,
+   "exec_id": 1062,
+   "n_formula_effects": 22,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Template:07_01",
+   "turn": 9,
+   "exec_id": 1064,
+   "n_formula_effects": 6,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Template:10_01",
+   "turn": 4,
+   "exec_id": 1076,
+   "n_formula_effects": 20,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Template:10_01",
+   "turn": 5,
+   "exec_id": 1077,
+   "n_formula_effects": 1,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Template:10_01",
+   "turn": 6,
+   "exec_id": 1078,
+   "n_formula_effects": 1,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Template:11_03",
+   "turn": 5,
+   "exec_id": 1086,
+   "n_formula_effects": 10,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  },
+  {
+   "task_id": "Template:13_08",
+   "turn": 4,
+   "exec_id": 1098,
+   "n_formula_effects": 31,
+   "top_templates": [],
+   "lowering": "NO_FAMILY"
+  }
+ ],
+ "counts": {
+  "none": 26
+ }
+}

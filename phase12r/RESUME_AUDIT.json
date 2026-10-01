@@ -1,0 +1,13 @@
+{
+  "utc": "2026-09-30T14:11:54.134790+00:00",
+  "protected_files_verified": 2505,
+  "protected_changes": [],
+  "ledgers_committed_before_resume": 34,
+  "recovered_complete_row_ids": [
+    "1ba2528e222ba641",
+    "43d17d42f6019b77"
+  ],
+  "incomplete_execution_dirs_preserved": [],
+  "pending": 1186,
+  "protocol_unchanged": true
+}

@@ -1,0 +1,50 @@
+{
+ "positive": false,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [],
+   "count": 0
+  },
+  "CHG": {
+   "changed_cells": 24,
+   "sheets": 1,
+   "regions": [
+    "WorkingCapital!C11",
+    "WorkingCapital!C22",
+    "WorkingCapital!C23",
+    "WorkingCapital!C24",
+    "WorkingCapital!C26",
+    "WorkingCapital!C27",
+    "WorkingCapital!D11",
+    "WorkingCapital!D22",
+    "WorkingCapital!D23",
+    "WorkingCapital!D24",
+    "WorkingCapital!D26",
+    "WorkingCapital!D27",
+    "WorkingCapital!E11",
+    "WorkingCapital!E22",
+    "WorkingCapital!E23",
+    "WorkingCapital!E24",
+    "WorkingCapital!E26",
+    "WorkingCapital!E27",
+    "WorkingCapital!F11",
+    "WorkingCapital!F22"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": null,
+ "positive_families": []
+}

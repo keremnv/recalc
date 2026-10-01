@@ -1,0 +1,15 @@
+{
+ "periods": {
+  "verdict": "EARNED",
+  "adoption": "2 runs, exact header-scan replacement, no loss, no misinterpretation"
+ },
+ "search": {
+  "verdict": "EARNED",
+  "adoption": "iterative refinement over 6 calls + r2 use, exact text-scan replacement"
+ },
+ "inspect": {
+  "verdict": "EARNED",
+  "adoption": "12-call range-print loop replacing openpyxl prints exactly; breadth caveat: heavy use in 1 run",
+  "caveat": "narrow breadth (1 run); retained on depth + exactness, re-confirm in next probe"
+ }
+}

@@ -1,0 +1,80 @@
+{
+  "a0_independent_contact": "2/6",
+  "a1_contact_tasks": [
+    "Financial_Model:07_01",
+    "Financial_Model:08_03",
+    "Financial_Model:08_01"
+  ],
+  "a1_independent_contact": "3/6",
+  "runner_censored": [
+    "Financial_Model:06_01"
+  ],
+  "tasks": [
+    {
+      "a0_observed_contact": false,
+      "a1_counterfactual_contact_opportunity": true,
+      "family": "Financial_Model",
+      "newly_admitted_executions": 9,
+      "newly_admitted_load_workbook_calls": 9,
+      "newly_admitted_primitive_reads": 40,
+      "newly_avoidable_repeated_opens": 8,
+      "remaining_blocker": null,
+      "task_id": "Financial_Model:07_01"
+    },
+    {
+      "a0_observed_contact": true,
+      "a1_counterfactual_contact_opportunity": true,
+      "family": "Financial_Model",
+      "newly_admitted_executions": 0,
+      "newly_admitted_load_workbook_calls": 0,
+      "newly_admitted_primitive_reads": 0,
+      "newly_avoidable_repeated_opens": 0,
+      "remaining_blocker": null,
+      "task_id": "Financial_Model:08_03"
+    },
+    {
+      "a0_observed_contact": true,
+      "a1_counterfactual_contact_opportunity": true,
+      "family": "Financial_Model",
+      "newly_admitted_executions": 11,
+      "newly_admitted_load_workbook_calls": 11,
+      "newly_admitted_primitive_reads": 52,
+      "newly_avoidable_repeated_opens": 10,
+      "remaining_blocker": null,
+      "task_id": "Financial_Model:08_01"
+    },
+    {
+      "a0_observed_contact": false,
+      "a1_counterfactual_contact_opportunity": "UNKNOWN_RUNNER_CENSORED",
+      "family": "Financial_Model",
+      "newly_admitted_executions": 0,
+      "newly_admitted_load_workbook_calls": 0,
+      "newly_admitted_primitive_reads": 0,
+      "newly_avoidable_repeated_opens": 0,
+      "remaining_blocker": "runner error",
+      "task_id": "Financial_Model:06_01"
+    },
+    {
+      "a0_observed_contact": false,
+      "a1_counterfactual_contact_opportunity": false,
+      "family": "Debugging",
+      "newly_admitted_executions": 0,
+      "newly_admitted_load_workbook_calls": 0,
+      "newly_admitted_primitive_reads": 0,
+      "newly_avoidable_repeated_opens": 0,
+      "remaining_blocker": "data_only/Cell-object/rich",
+      "task_id": "Debugging:01_06"
+    },
+    {
+      "a0_observed_contact": false,
+      "a1_counterfactual_contact_opportunity": false,
+      "family": "Debugging",
+      "newly_admitted_executions": 0,
+      "newly_admitted_load_workbook_calls": 0,
+      "newly_admitted_primitive_reads": 0,
+      "newly_avoidable_repeated_opens": 0,
+      "remaining_blocker": "data_only/Cell-object/rich",
+      "task_id": "Debugging:05_02"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "candidate_b": "remain frozen",
+  "experiment": "Retain the narrow A1 fast path; no A2/B expansion. If broader prevalence is required later, use a new representative checkpoint with the same frozen interface and transport-tested runner.",
+  "live_checkpoint_complete": true,
+  "transport_hardening": "adversarial timeout tests passed before rerun"
+}

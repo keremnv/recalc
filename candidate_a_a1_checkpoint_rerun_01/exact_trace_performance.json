@@ -1,0 +1,47 @@
+{
+  "by_task": {
+    "Debugging:05_02": {
+      "median_reduction_pct": 51.958402998655714,
+      "traces": 2
+    },
+    "Debugging:10_10": {
+      "median_reduction_pct": 42.19882449459631,
+      "traces": 8
+    },
+    "Financial_Model:08_01": {
+      "median_reduction_pct": 43.35500487914293,
+      "traces": 14
+    },
+    "Financial_Model:08_03": {
+      "median_reduction_pct": 47.1576219046355,
+      "traces": 11
+    },
+    "Financial_Model:10_01": {
+      "median_reduction_pct": 56.02526466688915,
+      "traces": 6
+    },
+    "Financial_Model:15_04": {
+      "median_reduction_pct": 47.14649319113574,
+      "traces": 9
+    },
+    "Template:13_08": {
+      "median_reduction_pct": 58.83823693191283,
+      "traces": 1
+    }
+  },
+  "median_absolute_time_saved_s": 1.423197805066593,
+  "median_reduction_pct": 44.46306240428392,
+  "positive_contact_tasks": 7,
+  "positive_fraction": 0.9803921568627451,
+  "positive_task_ids": [
+    "Debugging:05_02",
+    "Debugging:10_10",
+    "Financial_Model:08_01",
+    "Financial_Model:08_03",
+    "Financial_Model:10_01",
+    "Financial_Model:15_04",
+    "Template:13_08"
+  ],
+  "positive_traces": 50,
+  "traces": 51
+}

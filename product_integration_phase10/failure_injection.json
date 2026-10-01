@@ -1,0 +1,72 @@
+[
+  {
+    "artifact_status": [
+      "BUILT"
+    ],
+    "case": "corrupt_artifact",
+    "direct_served": 1,
+    "exit": 0,
+    "pass": true
+  },
+  {
+    "artifact_status": [
+      "BUILT"
+    ],
+    "case": "truncated_artifact",
+    "direct_served": 1,
+    "exit": 0,
+    "pass": true
+  },
+  {
+    "artifact_status": [
+      "BUILT"
+    ],
+    "case": "missing_artifact",
+    "direct_served": 1,
+    "exit": 0,
+    "pass": true
+  },
+  {
+    "artifact_status": [
+      "BUILT"
+    ],
+    "case": "stale_source",
+    "pass": true,
+    "stdout": "22"
+  },
+  {
+    "case": "cache_path_file",
+    "error": "The observer cannot write the cache/run directory; no task was run.",
+    "pass": true,
+    "script_not_run": true
+  },
+  {
+    "case": "permission_denied",
+    "error": "The observer cannot write the cache/run directory; no task was run.",
+    "pass": true,
+    "script_not_run": true
+  },
+  {
+    "case": "missing_observer",
+    "pass": true
+  },
+  {
+    "assurance": "FAILED",
+    "case": "capture_helper_failure",
+    "exit": 125,
+    "pass": true
+  },
+  {
+    "assurance": "PASS",
+    "case": "observer_child_launch_failure",
+    "exit": 127,
+    "pass": true,
+    "target_exit": 127
+  },
+  {
+    "case": "malformed_workbook_reference",
+    "pass": true,
+    "prod_exit": 1,
+    "py_exit": 1
+  }
+]

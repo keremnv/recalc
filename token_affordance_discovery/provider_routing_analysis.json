@@ -1,0 +1,222 @@
+{
+  "actual_provider_counts": {
+    "A": {
+      "OpenInference": 345,
+      "Wafer": 22
+    },
+    "B": {
+      "OpenInference": 270,
+      "Wafer": 31
+    },
+    "C": {
+      "OpenInference": 286,
+      "Wafer": 35
+    },
+    "D": {
+      "OpenInference": 291,
+      "Wafer": 26
+    }
+  },
+  "by_task_arm": {
+    "Debugging:01_08": {
+      "A": {
+        "OpenInference": 40
+      },
+      "B": {
+        "OpenInference": 40
+      },
+      "C": {
+        "OpenInference": 40
+      },
+      "D": {
+        "OpenInference": 39,
+        "Wafer": 1
+      }
+    },
+    "Debugging:02_01": {
+      "A": {
+        "OpenInference": 40
+      },
+      "B": {
+        "OpenInference": 39,
+        "Wafer": 1
+      },
+      "C": {
+        "OpenInference": 40
+      },
+      "D": {
+        "OpenInference": 40
+      }
+    },
+    "Debugging:02_06": {
+      "A": {
+        "OpenInference": 40
+      },
+      "B": {
+        "OpenInference": 40
+      },
+      "C": {
+        "OpenInference": 40
+      },
+      "D": {
+        "OpenInference": 40
+      }
+    },
+    "Debugging:10_10": {
+      "A": {
+        "OpenInference": 36,
+        "Wafer": 4
+      },
+      "B": {
+        "OpenInference": 27,
+        "Wafer": 13
+      },
+      "C": {
+        "OpenInference": 36,
+        "Wafer": 4
+      },
+      "D": {
+        "OpenInference": 18,
+        "Wafer": 5
+      }
+    },
+    "Financial_Model:01_01": {
+      "A": {
+        "OpenInference": 36
+      },
+      "B": {
+        "OpenInference": 36
+      },
+      "C": {
+        "OpenInference": 35,
+        "Wafer": 1
+      },
+      "D": {
+        "OpenInference": 36
+      }
+    },
+    "Financial_Model:02_01": {
+      "A": {
+        "OpenInference": 40
+      },
+      "B": {
+        "OpenInference": 25
+      },
+      "C": {
+        "OpenInference": 39,
+        "Wafer": 1
+      },
+      "D": {
+        "OpenInference": 36
+      }
+    },
+    "Financial_Model:03_03": {
+      "A": {
+        "Wafer": 14
+      },
+      "B": {
+        "Wafer": 11
+      },
+      "C": {
+        "Wafer": 11
+      },
+      "D": {
+        "Wafer": 17
+      }
+    },
+    "Financial_Model:04_03": {
+      "A": {
+        "OpenInference": 36,
+        "Wafer": 1
+      },
+      "B": {
+        "OpenInference": 37,
+        "Wafer": 1
+      },
+      "C": {
+        "OpenInference": 39
+      },
+      "D": {
+        "OpenInference": 38
+      }
+    },
+    "Template:01_07": {
+      "A": {
+        "OpenInference": 2
+      },
+      "B": {
+        "OpenInference": 2
+      },
+      "C": {
+        "OpenInference": 2
+      },
+      "D": {
+        "OpenInference": 2
+      }
+    },
+    "Template:06_12": {
+      "A": {
+        "OpenInference": 39
+      },
+      "B": {
+        "OpenInference": 2
+      },
+      "C": {
+        "OpenInference": 8
+      },
+      "D": {
+        "OpenInference": 3
+      }
+    },
+    "Template:15_01": {
+      "A": {
+        "OpenInference": 30
+      },
+      "B": {
+        "OpenInference": 1,
+        "Wafer": 4
+      },
+      "C": {
+        "OpenInference": 1,
+        "Wafer": 15
+      },
+      "D": {
+        "OpenInference": 32,
+        "Wafer": 2
+      }
+    },
+    "Template:15_03": {
+      "A": {
+        "OpenInference": 6,
+        "Wafer": 3
+      },
+      "B": {
+        "OpenInference": 21,
+        "Wafer": 1
+      },
+      "C": {
+        "OpenInference": 6,
+        "Wafer": 3
+      },
+      "D": {
+        "OpenInference": 7,
+        "Wafer": 1
+      }
+    }
+  },
+  "causal_limit": "Do not condition on post-treatment served provider to manufacture a favorable estimate; present routing as a limitation and use full preregistered cohort.",
+  "notable_confounded_task": "Template:15_01: A/D mostly OpenInference and noncompleted; B/C mostly Wafer and submitted. Provider assignment is a competing explanation, not a treatment mechanism.",
+  "same_routing_policy": true,
+  "tasks_with_unequal_provider_mix": [
+    "Template:15_01",
+    "Template:06_12",
+    "Template:15_03",
+    "Financial_Model:01_01",
+    "Financial_Model:04_03",
+    "Financial_Model:03_03",
+    "Financial_Model:02_01",
+    "Debugging:02_01",
+    "Debugging:10_10",
+    "Debugging:01_08"
+  ]
+}

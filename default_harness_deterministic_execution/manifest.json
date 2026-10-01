@@ -1,0 +1,319 @@
+{
+  "jobs": [
+    {
+      "order": 1,
+      "task": "Financial_Model:08_03",
+      "category": "Financial_Model",
+      "id": "08_03",
+      "role": "positive_witness",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "glm-fill-c0-Financial_Model-08_03-r1",
+      "pair_key": "Financial_Model:08_03"
+    },
+    {
+      "order": 2,
+      "task": "Financial_Model:08_03",
+      "category": "Financial_Model",
+      "id": "08_03",
+      "role": "positive_witness",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "glm-fill-c1-Financial_Model-08_03-r1",
+      "pair_key": "Financial_Model:08_03"
+    },
+    {
+      "order": 3,
+      "task": "Financial_Model:08_04",
+      "category": "Financial_Model",
+      "id": "08_04",
+      "role": "wrong_canonical_negative_control",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "glm-fill-c1-Financial_Model-08_04-r1",
+      "pair_key": "Financial_Model:08_04"
+    },
+    {
+      "order": 4,
+      "task": "Financial_Model:08_04",
+      "category": "Financial_Model",
+      "id": "08_04",
+      "role": "wrong_canonical_negative_control",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "glm-fill-c0-Financial_Model-08_04-r1",
+      "pair_key": "Financial_Model:08_04"
+    },
+    {
+      "order": 5,
+      "task": "Financial_Model:08_05",
+      "category": "Financial_Model",
+      "id": "08_05",
+      "role": "absent_program_negative_control",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "glm-fill-c0-Financial_Model-08_05-r1",
+      "pair_key": "Financial_Model:08_05"
+    },
+    {
+      "order": 6,
+      "task": "Financial_Model:08_05",
+      "category": "Financial_Model",
+      "id": "08_05",
+      "role": "absent_program_negative_control",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "glm-fill-c1-Financial_Model-08_05-r1",
+      "pair_key": "Financial_Model:08_05"
+    },
+    {
+      "order": 7,
+      "task": "Financial_Model:15_04",
+      "category": "Financial_Model",
+      "id": "15_04",
+      "role": "mechanical_boundary_witness",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "glm-fill-c1-Financial_Model-15_04-r1",
+      "pair_key": "Financial_Model:15_04"
+    },
+    {
+      "order": 8,
+      "task": "Financial_Model:15_04",
+      "category": "Financial_Model",
+      "id": "15_04",
+      "role": "mechanical_boundary_witness",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "glm-fill-c0-Financial_Model-15_04-r1",
+      "pair_key": "Financial_Model:15_04"
+    },
+    {
+      "order": 9,
+      "task": "Financial_Model:08_02",
+      "category": "Financial_Model",
+      "id": "08_02",
+      "role": "held_out_execution_opportunity",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "glm-fill-c0-Financial_Model-08_02-r1",
+      "pair_key": "Financial_Model:08_02"
+    },
+    {
+      "order": 10,
+      "task": "Financial_Model:08_02",
+      "category": "Financial_Model",
+      "id": "08_02",
+      "role": "held_out_execution_opportunity",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "glm-fill-c1-Financial_Model-08_02-r1",
+      "pair_key": "Financial_Model:08_02"
+    },
+    {
+      "order": 11,
+      "task": "Template:06_09",
+      "category": "Template",
+      "id": "06_09",
+      "role": "held_out_execution_opportunity",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "glm-fill-c1-Template-06_09-r1",
+      "pair_key": "Template:06_09"
+    },
+    {
+      "order": 12,
+      "task": "Template:06_09",
+      "category": "Template",
+      "id": "06_09",
+      "role": "held_out_execution_opportunity",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "glm-fill-c0-Template-06_09-r1",
+      "pair_key": "Template:06_09"
+    },
+    {
+      "order": 13,
+      "task": "Debugging:10_02",
+      "category": "Debugging",
+      "id": "10_02",
+      "role": "held_out_execution_opportunity",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "glm-fill-c0-Debugging-10_02-r1",
+      "pair_key": "Debugging:10_02"
+    },
+    {
+      "order": 14,
+      "task": "Debugging:10_02",
+      "category": "Debugging",
+      "id": "10_02",
+      "role": "held_out_execution_opportunity",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "glm-fill-c1-Debugging-10_02-r1",
+      "pair_key": "Debugging:10_02"
+    },
+    {
+      "order": 15,
+      "task": "Visualization:Task 1420776",
+      "category": "Visualization",
+      "id": "Task 1420776",
+      "role": "held_out_execution_opportunity",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "glm-fill-c1-Visualization-Task 1420776-r1",
+      "pair_key": "Visualization:Task 1420776"
+    },
+    {
+      "order": 16,
+      "task": "Visualization:Task 1420776",
+      "category": "Visualization",
+      "id": "Task 1420776",
+      "role": "held_out_execution_opportunity",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "glm-fill-c0-Visualization-Task 1420776-r1",
+      "pair_key": "Visualization:Task 1420776"
+    },
+    {
+      "order": 17,
+      "task": "Financial_Model:08_01",
+      "category": "Financial_Model",
+      "id": "08_01",
+      "role": "held_out_execution_opportunity",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "glm-fill-c0-Financial_Model-08_01-r1",
+      "pair_key": "Financial_Model:08_01"
+    },
+    {
+      "order": 18,
+      "task": "Financial_Model:08_01",
+      "category": "Financial_Model",
+      "id": "08_01",
+      "role": "held_out_execution_opportunity",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "glm-fill-c1-Financial_Model-08_01-r1",
+      "pair_key": "Financial_Model:08_01"
+    },
+    {
+      "order": 19,
+      "task": "Template:06_16",
+      "category": "Template",
+      "id": "06_16",
+      "role": "held_out_execution_opportunity",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "glm-fill-c1-Template-06_16-r1",
+      "pair_key": "Template:06_16"
+    },
+    {
+      "order": 20,
+      "task": "Template:06_16",
+      "category": "Template",
+      "id": "06_16",
+      "role": "held_out_execution_opportunity",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "glm-fill-c0-Template-06_16-r1",
+      "pair_key": "Template:06_16"
+    },
+    {
+      "order": 21,
+      "task": "Debugging:10_04",
+      "category": "Debugging",
+      "id": "10_04",
+      "role": "held_out_execution_opportunity",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "glm-fill-c0-Debugging-10_04-r1",
+      "pair_key": "Debugging:10_04"
+    },
+    {
+      "order": 22,
+      "task": "Debugging:10_04",
+      "category": "Debugging",
+      "id": "10_04",
+      "role": "held_out_execution_opportunity",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "glm-fill-c1-Debugging-10_04-r1",
+      "pair_key": "Debugging:10_04"
+    },
+    {
+      "order": 23,
+      "task": "Visualization:Task 1426290",
+      "category": "Visualization",
+      "id": "Task 1426290",
+      "role": "held_out_execution_opportunity",
+      "arm": "C1",
+      "repeat": 1,
+      "run_name": "glm-fill-c1-Visualization-Task 1426290-r1",
+      "pair_key": "Visualization:Task 1426290"
+    },
+    {
+      "order": 24,
+      "task": "Visualization:Task 1426290",
+      "category": "Visualization",
+      "id": "Task 1426290",
+      "role": "held_out_execution_opportunity",
+      "arm": "C0",
+      "repeat": 1,
+      "run_name": "glm-fill-c0-Visualization-Task 1426290-r1",
+      "pair_key": "Visualization:Task 1426290"
+    }
+  ],
+  "groups": [
+    [
+      "glm-fill-c0-Financial_Model-08_03-r1",
+      "glm-fill-c1-Financial_Model-08_03-r1"
+    ],
+    [
+      "glm-fill-c1-Financial_Model-08_04-r1",
+      "glm-fill-c0-Financial_Model-08_04-r1"
+    ],
+    [
+      "glm-fill-c0-Financial_Model-08_05-r1",
+      "glm-fill-c1-Financial_Model-08_05-r1"
+    ],
+    [
+      "glm-fill-c1-Financial_Model-15_04-r1",
+      "glm-fill-c0-Financial_Model-15_04-r1"
+    ],
+    [
+      "glm-fill-c0-Financial_Model-08_02-r1",
+      "glm-fill-c1-Financial_Model-08_02-r1"
+    ],
+    [
+      "glm-fill-c1-Template-06_09-r1",
+      "glm-fill-c0-Template-06_09-r1"
+    ],
+    [
+      "glm-fill-c0-Debugging-10_02-r1",
+      "glm-fill-c1-Debugging-10_02-r1"
+    ],
+    [
+      "glm-fill-c1-Visualization-Task 1420776-r1",
+      "glm-fill-c0-Visualization-Task 1420776-r1"
+    ],
+    [
+      "glm-fill-c0-Financial_Model-08_01-r1",
+      "glm-fill-c1-Financial_Model-08_01-r1"
+    ],
+    [
+      "glm-fill-c1-Template-06_16-r1",
+      "glm-fill-c0-Template-06_16-r1"
+    ],
+    [
+      "glm-fill-c0-Debugging-10_04-r1",
+      "glm-fill-c1-Debugging-10_04-r1"
+    ],
+    [
+      "glm-fill-c1-Visualization-Task 1426290-r1",
+      "glm-fill-c0-Visualization-Task 1426290-r1"
+    ]
+  ],
+  "written_at": "2026-09-16T15:25:37.678044+00:00"
+}

@@ -1,0 +1,6 @@
+{
+  "command": "PYTHONPATH=src pytest -q tests/test_product_hygiene.py tests/test_product_process_semantics.py",
+  "failed": 0,
+  "passed": 27,
+  "scope": "maintained product and process fixture tests; run after scored v2 without maintained code changes"
+}

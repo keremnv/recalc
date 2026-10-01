@@ -1,0 +1,26 @@
+{
+  "architecture": "B — practical retained",
+  "flow": [
+    "general-purpose coding agent",
+    "ordinary Python/openpyxl + normal scaffold conveniences (view/shell/submit)",
+    "actual workbook",
+    "LibreOffice recalc / validation / official score"
+  ],
+  "invisible_components": [
+    "transparent Candidate A+A1, unchanged narrow gate, fail-closed to real openpyxl",
+    "transparent mutation capture, assurance only",
+    "freshness/generation guards, conditional invariant",
+    "compiled/indexed substrate, conditional hidden infrastructure"
+  ],
+  "optional_helper": "Existing helper contract -> plain/reference openpyxl backend; no substrate helper execution.",
+  "reason": "Low marginal-cost retention with measured exactness, tail economics and assurance; not evidence-compelled core.",
+  "not_integrated": [
+    "A2",
+    "A3",
+    "Candidate B",
+    "formula-error feedback",
+    "semantic planning IR",
+    "new substrate consumers",
+    "Track C interventions"
+  ]
+}

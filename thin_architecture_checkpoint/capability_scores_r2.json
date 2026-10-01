@@ -1,0 +1,142 @@
+[
+ {
+  "task_id": "Financial_Model:17_02",
+  "arm": "H0",
+  "rep": "r2",
+  "official_exact": 1.0,
+  "official_modification": 1.0,
+  "official_regression": 1.0,
+  "run_status": "SUBMITTED",
+  "output_produced": true
+ },
+ {
+  "task_id": "Financial_Model:08_01",
+  "arm": "H0",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.0,
+  "run_status": "NO_SUBMIT",
+  "output_produced": false
+ },
+ {
+  "task_id": "Financial_Model:15_04",
+  "arm": "H0",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.8588,
+  "official_regression": 1.0,
+  "run_status": "SUBMITTED",
+  "output_produced": true
+ },
+ {
+  "task_id": "Template:08_02",
+  "arm": "H0",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.0294,
+  "official_regression": 0.8913,
+  "run_status": "TRUNCATED_CALL_LIMIT",
+  "output_produced": true
+ },
+ {
+  "task_id": "Template:02_05",
+  "arm": "H0",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.9,
+  "official_regression": 1.0,
+  "run_status": "SUBMITTED",
+  "output_produced": true
+ },
+ {
+  "task_id": "Template:13_08",
+  "arm": "H0",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.0,
+  "run_status": "NO_SUBMIT",
+  "output_produced": false
+ },
+ {
+  "task_id": "Template:16_06",
+  "arm": "H0",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.0,
+  "run_status": "TRUNCATED_CALL_LIMIT",
+  "output_produced": false
+ },
+ {
+  "task_id": "Financial_Model:17_02",
+  "arm": "H1",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.8759,
+  "official_regression": 1.0,
+  "run_status": "SUBMITTED",
+  "output_produced": true
+ },
+ {
+  "task_id": "Financial_Model:08_01",
+  "arm": "H1",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.0,
+  "run_status": "NO_SUBMIT",
+  "output_produced": false
+ },
+ {
+  "task_id": "Financial_Model:15_04",
+  "arm": "H1",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.264,
+  "official_regression": 0.997,
+  "run_status": "TRUNCATED_CALL_LIMIT",
+  "output_produced": true
+ },
+ {
+  "task_id": "Template:08_02",
+  "arm": "H1",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.0294,
+  "official_regression": 0.8913,
+  "run_status": "TRUNCATED_CALL_LIMIT",
+  "output_produced": true
+ },
+ {
+  "task_id": "Template:02_05",
+  "arm": "H1",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.0,
+  "run_status": "NO_SUBMIT",
+  "output_produced": false
+ },
+ {
+  "task_id": "Template:13_08",
+  "arm": "H1",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.0,
+  "official_regression": 0.0,
+  "run_status": "NO_SUBMIT",
+  "output_produced": false
+ },
+ {
+  "task_id": "Template:16_06",
+  "arm": "H1",
+  "rep": "r2",
+  "official_exact": 0.0,
+  "official_modification": 0.5867,
+  "official_regression": 1.0,
+  "run_status": "SUBMITTED",
+  "output_produced": true
+ }
+]

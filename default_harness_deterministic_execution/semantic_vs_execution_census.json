@@ -1,0 +1,12 @@
+{
+  "accepted_invocations": 0,
+  "rejected_invocations": 0,
+  "tasks_with_any_invocation": 0,
+  "note": "No C1 trajectory issued calc_translate_fill. A few runs considered it in reasoning then used openpyxl.",
+  "considered_then_python": [
+    "Financial_Model:08_03",
+    "Financial_Model:08_04",
+    "Financial_Model:08_02",
+    "Template:06_16"
+  ]
+}

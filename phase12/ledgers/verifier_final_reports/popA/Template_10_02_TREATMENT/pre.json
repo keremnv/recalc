@@ -1,0 +1,141 @@
+{
+ "positive": true,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [
+    {
+     "formula": "EPS_Accretion!C33",
+     "blank": "EPS_Accretion!C28"
+    },
+    {
+     "formula": "EPS_Accretion!C33",
+     "blank": "EPS_Accretion!C29"
+    },
+    {
+     "formula": "EPS_Accretion!C33",
+     "blank": "EPS_Accretion!C30"
+    },
+    {
+     "formula": "EPS_Accretion!C33",
+     "blank": "EPS_Accretion!C31"
+    },
+    {
+     "formula": "EPS_Accretion!C33",
+     "blank": "EPS_Accretion!C32"
+    },
+    {
+     "formula": "EPS_Accretion!C35",
+     "blank": "EPS_Accretion!C33"
+    },
+    {
+     "formula": "EPS_Accretion!C35",
+     "blank": "EPS_Accretion!C34"
+    },
+    {
+     "formula": "EPS_Accretion!C38",
+     "blank": "EPS_Accretion!C24"
+    },
+    {
+     "formula": "EPS_Accretion!C39",
+     "blank": "EPS_Accretion!C35"
+    },
+    {
+     "formula": "EPS_Accretion!C40",
+     "blank": "EPS_Accretion!C38"
+    },
+    {
+     "formula": "EPS_Accretion!C40",
+     "blank": "EPS_Accretion!C39"
+    },
+    {
+     "formula": "EPS_Accretion!D33",
+     "blank": "EPS_Accretion!D28"
+    },
+    {
+     "formula": "EPS_Accretion!D33",
+     "blank": "EPS_Accretion!D29"
+    },
+    {
+     "formula": "EPS_Accretion!D33",
+     "blank": "EPS_Accretion!D30"
+    },
+    {
+     "formula": "EPS_Accretion!D33",
+     "blank": "EPS_Accretion!D31"
+    },
+    {
+     "formula": "EPS_Accretion!D33",
+     "blank": "EPS_Accretion!D32"
+    },
+    {
+     "formula": "EPS_Accretion!D35",
+     "blank": "EPS_Accretion!D33"
+    },
+    {
+     "formula": "EPS_Accretion!D35",
+     "blank": "EPS_Accretion!D34"
+    },
+    {
+     "formula": "EPS_Accretion!D38",
+     "blank": "EPS_Accretion!D24"
+    },
+    {
+     "formula": "EPS_Accretion!D39",
+     "blank": "EPS_Accretion!D35"
+    },
+    {
+     "formula": "EPS_Accretion!D40",
+     "blank": "EPS_Accretion!D38"
+    },
+    {
+     "formula": "EPS_Accretion!D40",
+     "blank": "EPS_Accretion!D39"
+    }
+   ],
+   "count": 22
+  },
+  "CHG": {
+   "changed_cells": 27,
+   "sheets": 1,
+   "regions": [
+    "EPS_Accretion!C24",
+    "EPS_Accretion!C25",
+    "EPS_Accretion!C28",
+    "EPS_Accretion!C29",
+    "EPS_Accretion!C30",
+    "EPS_Accretion!C31",
+    "EPS_Accretion!C32",
+    "EPS_Accretion!C33",
+    "EPS_Accretion!C34",
+    "EPS_Accretion!C35",
+    "EPS_Accretion!C38",
+    "EPS_Accretion!C39",
+    "EPS_Accretion!C40",
+    "EPS_Accretion!D24",
+    "EPS_Accretion!D25",
+    "EPS_Accretion!D28",
+    "EPS_Accretion!D29",
+    "EPS_Accretion!D30",
+    "EPS_Accretion!D31",
+    "EPS_Accretion!D32"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": "Post-edit verification (mechanical check of the current workbook)\n\nChanged cells: 27 across 1 sheet(s).\n\nNewly blank referenced cells (22):\n- EPS_Accretion!C33 now references blank EPS_Accretion!C28\n- EPS_Accretion!C33 now references blank EPS_Accretion!C29\n- EPS_Accretion!C33 now references blank EPS_Accretion!C30\n- EPS_Accretion!C33 now references blank EPS_Accretion!C31\n- EPS_Accretion!C33 now references blank EPS_Accretion!C32\n- EPS_Accretion!C35 now references blank EPS_Accretion!C33\n- EPS_Accretion!C35 now references blank EPS_Accretion!C34\n- EPS_Accretion!C38 now references blank EPS_Accretion!C24\n- EPS_Accretion!C39 now references blank EPS_Accretion!C35\n- EPS_Accretion!C40 now references blank EPS_Accretion!C38\n- and 12 more.\n\nThis report is mechanical evidence about the current workbook state.\nReview it before deciding whether to submit or revise.",
+ "positive_families": [
+  "REF"
+ ]
+}

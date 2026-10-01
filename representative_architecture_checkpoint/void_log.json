@@ -1,0 +1,149 @@
+[
+ {
+  "task_id": "Template:01_05",
+  "arm": "H0",
+  "run_id": "primary_00",
+  "prior_status": "SUBMITTED",
+  "reason": "void: H0 counterfactual rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Template:06_02",
+  "arm": "H0",
+  "run_id": "primary_08",
+  "prior_status": "SUBMITTED",
+  "reason": "void: H0 counterfactual rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Template:01_06",
+  "arm": "H0",
+  "run_id": "primary_03",
+  "prior_status": "SUBMITTED",
+  "reason": "void: H0 counterfactual rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Template:06_08",
+  "arm": "H0",
+  "run_id": "primary_11",
+  "prior_status": "SUBMITTED",
+  "reason": "void: H0 counterfactual rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Template:16_08",
+  "arm": "H0",
+  "run_id": "primary_19",
+  "prior_status": "SUBMITTED",
+  "reason": "void: H0 counterfactual rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Template:02_01",
+  "arm": "H0",
+  "run_id": "primary_04",
+  "prior_status": "SUBMITTED",
+  "reason": "void: H0 counterfactual rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Template:06_23",
+  "arm": "H0",
+  "run_id": "primary_12",
+  "prior_status": "SUBMITTED",
+  "reason": "void: H0 counterfactual rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Financial_Model:02_04",
+  "arm": "H0",
+  "run_id": "primary_20",
+  "prior_status": "SUBMITTED",
+  "reason": "void: H0 counterfactual rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Financial_Model:09_02",
+  "arm": "H0",
+  "run_id": "primary_28",
+  "prior_status": "SUBMITTED",
+  "reason": "void: H0 counterfactual rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Template:04_04",
+  "arm": "H0",
+  "run_id": "primary_07",
+  "prior_status": "SUBMITTED",
+  "reason": "void: H0 counterfactual rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Template:01_05",
+  "arm": "H1",
+  "run_id": "primary_01",
+  "prior_status": "PROVIDER_CENSORED",
+  "reason": "void: accelerated-load rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Template:06_02",
+  "arm": "H1",
+  "run_id": "primary_09",
+  "prior_status": "SUBMITTED",
+  "reason": "void: accelerated-load rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Template:01_06",
+  "arm": "H1",
+  "run_id": "primary_02",
+  "prior_status": "SUBMITTED",
+  "reason": "void: accelerated-load rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Template:06_08",
+  "arm": "H1",
+  "run_id": "primary_10",
+  "prior_status": "SUBMITTED",
+  "reason": "void: accelerated-load rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Template:16_08",
+  "arm": "H1",
+  "run_id": "primary_18",
+  "prior_status": "SUBMITTED",
+  "reason": "void: accelerated-load rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Template:02_01",
+  "arm": "H1",
+  "run_id": "primary_05",
+  "prior_status": "SUBMITTED",
+  "reason": "void: accelerated-load rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Template:06_23",
+  "arm": "H1",
+  "run_id": "primary_13",
+  "prior_status": "SUBMITTED",
+  "reason": "void: accelerated-load rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Financial_Model:02_04",
+  "arm": "H1",
+  "run_id": "primary_21",
+  "prior_status": "SUBMITTED",
+  "reason": "void: accelerated-load rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Financial_Model:09_02",
+  "arm": "H1",
+  "run_id": "primary_29",
+  "prior_status": "SUBMITTED",
+  "reason": "void: accelerated-load rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Template:04_04",
+  "arm": "H1",
+  "run_id": "primary_06",
+  "prior_status": "TRUNCATED_CALL_LIMIT",
+  "reason": "void: accelerated-load rows not archived (pre-fix)"
+ },
+ {
+  "task_id": "Template:07_02",
+  "arm": "H1",
+  "run_id": "primary_14",
+  "prior_status": "PROVIDER_CENSORED",
+  "reason": "void: accelerated-load rows not archived (pre-fix)"
+ }
+]

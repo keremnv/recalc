@@ -1,0 +1,38 @@
+id: t-10-02-e10
+run: glm-5.3-flash-strict-fifteen-unbounded-1
+task: Template:10_02
+control_run: glm-5.3-flash-control-fifteen-1
+first_miss:
+  kind: modification
+  address: EPS_Accretion!E10
+  error_message: "Modification error at EPS_Accretion!E10: answer=265.521333333333, output=None"
+facts:
+  opened_golden: false
+  spreadsheet: 10_02_input.xlsx
+  instruction: Complete the financial model based on the provided assumptions.
+  input_kind: blank
+  input_value: null
+  output_formula: null
+  autopsy:
+    named: false
+    read: true
+    written: false
+    bucket: read_unwritten
+  wrote: null
+  compare: {formulas_added: 26, candidate_gaps_remaining: 15}
+  related_297_miss: EPS_Accretion!C31
+claims:
+  patterns: [B-empty-body]
+  nuance: decomposable
+  mechanism: run-boundary
+  lever: constraint
+  lever_why: >
+    Header-only column E, body never filled; compare reported candidate_gaps_remaining 15 and
+    the model submitted anyway. Told and declined, so not information. Refusing submit while
+    declared gaps remain is the commit-gate shape, measured on Debugging and never on
+    completion tasks.
+  notes: >
+    Combined column E is header-only. They compiled a financing identity into C34
+    (read, not this first-miss) and left E10 blank. Control first-miss is C34
+    (wrong identity after off-by-one). Leftover slot, not economics.
+    297 first-miss is C31 sign_flip — different packet.

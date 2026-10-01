@@ -1,0 +1,90 @@
+{
+ "audit_method": "For each top-C0 task: inspected largest repeat blocks (class, generation, tool, action); verified prior-visibility via exact-line search over preceding observations and fact-provenance tracing (which prior obs each old fact came from); checked generation handling, query identity, label counting, and post-mutation placement.",
+ "corrections_applied": [
+  {
+   "effect": "C0/C1 tokens -1.3pp swing prevented; final C0=2.20%",
+   "fix": "derivation class now requires ALL block facts to be DERIV-kind plus agg-op in action",
+   "found": "Financial_Model:08_04 obs14: 32KB new-cell Dashboard print misclassified DETERMINISTIC_DERIVATION (10k tokens) due to one 'charts: N' line + len() in action"
+  },
+  {
+   "effect": "C0 -0.13pp (2.33% -> 2.20%)",
+   "fix": "correct-mode new/old counting uses distinct fact keys per block (within-observation duplicates are not prior-context repetition)",
+   "found": "Debugging:09_09 obs7: 202 duplicate SHEET|LBO emissions (one per sheet-prefixed line) inflated the old-fraction of a PARTIAL block"
+  }
+ ],
+ "per_task": [
+  {
+   "checks": [
+    "100% of 770 lines exactly visible in obs1 (same gen, same file)",
+    "PARTIAL old=768/new=2 confirmed; sed slice of prior dump"
+   ],
+   "task_id": "Debugging:04_07",
+   "verdict": "GENUINE"
+  },
+  {
+   "checks": [
+    "98% line prior-visibility; adjacent-obs overlapping range scans, same file/gen"
+   ],
+   "task_id": "Financial_Model:10_01",
+   "verdict": "GENUINE"
+  },
+  {
+   "checks": [
+    "1003 old CELL facts traced: 1000 from immediately-prior obs5 (overlapping tuple-print range), 3 from obs3; same file/gen; sheet-None on both sides but same print loop and region"
+   ],
+   "task_id": "Financial_Model:08_03",
+   "verdict": "GENUINE"
+  },
+  {
+   "checks": [
+    "277 old facts all from obs2 same file/gen; distinctive chain formulas (=T1+1...); re-scan overlap"
+   ],
+   "task_id": "Debugging:02_06",
+   "verdict": "GENUINE_PLAUSIBLE"
+  },
+  {
+   "checks": [
+    "100% line prior-visibility; same-file re-print"
+   ],
+   "task_id": "Debugging:05_02",
+   "verdict": "GENUINE"
+  },
+  {
+   "checks": [
+    "100% line prior-visibility on top block"
+   ],
+   "task_id": "Financial_Model:04_01",
+   "verdict": "GENUINE"
+  },
+  {
+   "checks": [
+    "post-mutation gen=1 prints with old=2/1 distinct facts; negligible C0 share (0.3% of task budget); no misclassification"
+   ],
+   "task_id": "Debugging:10_05",
+   "verdict": "GENUINE_NEGLIGIBLE"
+  },
+  {
+   "checks": [
+    "57% line prior-visibility; awk slice overlapping earlier dump region; PARTIAL proportions plausible"
+   ],
+   "task_id": "Debugging:05_08",
+   "verdict": "GENUINE"
+  },
+  {
+   "checks": [
+    "awk/sed slices of /tmp/dump.txt with small old counts (7,33); same-file overlap, no guard violations"
+   ],
+   "task_id": "Debugging:01_06",
+   "verdict": "GENUINE"
+  },
+  {
+   "checks": [
+    "rank 11; same shell-slice pattern as 01_06 family; covered by pattern"
+   ],
+   "task_id": "Debugging:04_01",
+   "verdict": "GENUINE_BY_PATTERN"
+  }
+ ],
+ "systematic_undercount_found": false,
+ "final_numbers_note": "Audit performed at C0=2.20-2.33%; subsequent sheet-attribution refinement lowered C0 to 1.65% by removing cross-sheet sheetless false matches. Audit verdicts (GENUINE etc.) stand; corrections applied before final totals."
+}

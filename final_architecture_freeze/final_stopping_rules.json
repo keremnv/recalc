@@ -1,0 +1,27 @@
+{
+  "MECHANISM_DISCOVERY": "CLOSED",
+  "condition": "Corrective replay found no unresolved new semantic failure. Empty-sheet fixture mismatch was resolved by reference fallback; it did not require a new mechanism.",
+  "preserved_rules": [
+    "Do not broaden Candidate A merely to raise coverage; coverage is not the objective, conditional reliability is.",
+    "Do not reopen Track C because context volume is large; P2 oracle mass without a viable selector is not a resource.",
+    "Do not build A2/A3 without a measured residual resource outside A1 coverage.",
+    "Do not build compiled substrate from zero solely because Candidate A is fast conditionally (circularity guard).",
+    "Do not put formula-error feedback into the agent loop without a live causal discriminator.",
+    "Do not reintroduce model-facing SQL, required IR/DSL, scheduler, or authority mechanisms on efficiency grounds alone.",
+    "Do not expand helpers beyond search/periods/inspect without uptake-gated adoption evidence.",
+    "Do not claim benchmark-wide efficiency from exposure-enriched populations.",
+    "Do not treat representative-checkpoint absence as license to assume materiality in either direction."
+  ],
+  "final_rules": [
+    "No new representative/full benchmark in this phase.",
+    "No A1 broadening to increase contact; no A2/A3/B or new consumers.",
+    "Do not reopen discovery over uneven A contact, tail-heavy substrate value, rare helper usage or absent corruption witnesses.",
+    "No formula-error feedback or corruption-witness search.",
+    "Charge substrate cost once, separate retention from rebuild, and do not credit rejected helper execution.",
+    "Freshness has no independent claim without compiled serving.",
+    "Packaging/installability and evidence communication are not research mechanisms.",
+    "Closed branches require materially new evidence at their preserved gates, not dissatisfaction with economics.",
+    "Frozen leads require separate future authorization and evidence; none is promoted by this freeze.",
+    "Preserve original primary/censored outcomes; corrective replay is separate implementation evidence."
+  ]
+}

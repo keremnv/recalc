@@ -1,0 +1,10 @@
+{
+ "runtime_telemetry_failures": [],
+ "stalls": {
+  "H0": 4,
+  "H1": 3
+ },
+ "all_stall_boundary": "MODEL_BEHAVIOR_DRIFT",
+ "systematic_runtime_failure_class": false,
+ "lo_witness": "OPEN, uncounted"
+}

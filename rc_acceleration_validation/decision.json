@@ -1,0 +1,10 @@
+{
+  "eligible_contact": true,
+  "eligible_materiality_gate": false,
+  "further_research_experiment_justified": false,
+  "leave_two_largest_wins_out_median_ratio": 2.0471406419670304,
+  "primary_verdict": "EXPERIMENT_INCONCLUSIVE",
+  "research_stop": true,
+  "semantic_exact": false,
+  "tail_support_gate": false
+}

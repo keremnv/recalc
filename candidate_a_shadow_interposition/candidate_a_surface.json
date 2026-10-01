@@ -1,0 +1,103 @@
+{
+  "candidate": "A narrow transparent proxy/interposition shadow",
+  "no_new_model_surface": true,
+  "no_production_install": true,
+  "surface": [
+    {
+      "constraint": "data_only=False; read_only=False; write_only=False; no extra options",
+      "operation": "load_workbook",
+      "reason": "default mutable formula-mode local xlsx/xlsm",
+      "status": "supported_with_constraint"
+    },
+    {
+      "constraint": null,
+      "operation": "Workbook.sheetnames",
+      "reason": "XML metadata includes metadata-only sheets and preserves order",
+      "status": "supported"
+    },
+    {
+      "constraint": "string sheet name only",
+      "operation": "Workbook.__getitem__",
+      "reason": "single named worksheet lookup; missing name is KeyError",
+      "status": "supported"
+    },
+    {
+      "constraint": null,
+      "operation": "Worksheet.max_row",
+      "reason": "XML dimension preserves sparse/formatted extent",
+      "status": "supported"
+    },
+    {
+      "constraint": null,
+      "operation": "Worksheet.max_column",
+      "reason": "XML dimension preserves sparse/formatted extent",
+      "status": "supported"
+    },
+    {
+      "constraint": "non-merged cell; primitive attributes only",
+      "operation": "Worksheet.cell",
+      "reason": "compiled primitive cell facts",
+      "status": "supported_with_constraint"
+    },
+    {
+      "constraint": "range/slice falls back",
+      "operation": "Worksheet.__getitem__ single cell",
+      "reason": "single coordinate maps to primitive cell",
+      "status": "supported_with_constraint"
+    },
+    {
+      "constraint": null,
+      "operation": "Worksheet.__getitem__ range",
+      "reason": "Cell-object range identity is not emulated",
+      "status": "fallback_required"
+    },
+    {
+      "constraint": "values_only=True; merged coordinates fallback per cell",
+      "operation": "Worksheet.iter_rows(values_only=True)",
+      "reason": "row-major tuples of primitive values",
+      "status": "supported_with_constraint"
+    },
+    {
+      "constraint": null,
+      "operation": "Worksheet.iter_rows(values_only=False)",
+      "reason": "Cell object identity is not broadly emulated",
+      "status": "fallback_required"
+    },
+    {
+      "constraint": "non-merged cell; data_only fallback",
+      "operation": "Cell.value",
+      "reason": "formula text and typed primitive values in formula mode",
+      "status": "supported_with_constraint"
+    },
+    {
+      "constraint": "non-merged cell",
+      "operation": "Cell.data_type",
+      "reason": "compiled dtype for formula-mode primitive cells",
+      "status": "supported_with_constraint"
+    },
+    {
+      "constraint": null,
+      "operation": "Cell.coordinate/row/column",
+      "reason": "derived mechanically from explicit coordinate",
+      "status": "supported"
+    },
+    {
+      "constraint": null,
+      "operation": "data_only=True",
+      "reason": "current compiled index has no cached-value table",
+      "status": "fallback_required"
+    },
+    {
+      "constraint": null,
+      "operation": "writes/save/reload",
+      "reason": "proxy does not emulate mutation identity",
+      "status": "fallback_required"
+    },
+    {
+      "constraint": null,
+      "operation": "styles/merged/tables/names/package",
+      "reason": "rich openpyxl/package behavior is out of scope",
+      "status": "fallback_required"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+ "tasks": [
+  {
+   "task_id": "Financial_Model:03_03",
+   "cohort": "A-representative"
+  },
+  {
+   "task_id": "Financial_Model:04_03",
+   "cohort": "A-representative"
+  },
+  {
+   "task_id": "Financial_Model:09_05",
+   "cohort": "A-representative"
+  },
+  {
+   "task_id": "Financial_Model:17_02",
+   "cohort": "A-representative"
+  },
+  {
+   "task_id": "Template:06_22",
+   "cohort": "A-representative"
+  },
+  {
+   "task_id": "Template:08_02",
+   "cohort": "A-representative"
+  },
+  {
+   "task_id": "Template:15_03",
+   "cohort": "A-representative"
+  },
+  {
+   "task_id": "Template:16_11",
+   "cohort": "A-representative"
+  },
+  {
+   "task_id": "Debugging:01_08",
+   "cohort": "A-representative"
+  },
+  {
+   "task_id": "Debugging:04_06",
+   "cohort": "A-representative"
+  },
+  {
+   "task_id": "Debugging:08_02",
+   "cohort": "A-representative"
+  },
+  {
+   "task_id": "Debugging:10_03",
+   "cohort": "A-representative"
+  },
+  {
+   "task_id": "Financial_Model:07_01",
+   "cohort": "B-exposure"
+  },
+  {
+   "task_id": "Financial_Model:08_01",
+   "cohort": "B-exposure"
+  },
+  {
+   "task_id": "Financial_Model:08_03",
+   "cohort": "B-exposure"
+  },
+  {
+   "task_id": "Financial_Model:15_04",
+   "cohort": "B-exposure"
+  },
+  {
+   "task_id": "Template:02_05",
+   "cohort": "B-exposure"
+  },
+  {
+   "task_id": "Template:06_17",
+   "cohort": "B-exposure"
+  },
+  {
+   "task_id": "Template:13_08",
+   "cohort": "B-exposure"
+  },
+  {
+   "task_id": "Template:16_06",
+   "cohort": "B-exposure"
+  },
+  {
+   "task_id": "Debugging:06_02",
+   "cohort": "B-exposure"
+  },
+  {
+   "task_id": "Debugging:08_04",
+   "cohort": "B-exposure"
+  },
+  {
+   "task_id": "Debugging:10_04",
+   "cohort": "B-exposure"
+  },
+  {
+   "task_id": "Debugging:10_10",
+   "cohort": "B-exposure"
+  }
+ ],
+ "n": 24
+}

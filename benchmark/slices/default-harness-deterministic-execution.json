@@ -1,0 +1,61 @@
+{
+  "name": "default-harness-deterministic-execution",
+  "purpose": "Frozen C0/C1 GLM capability probe: optional calc_translate_fill on the official SpreadsheetBench coding-agent scaffold. Legacy FM witnesses plus gold-blind held-out execution opportunities.",
+  "model": "z-ai/glm-5.3-flash",
+  "max_tool_calls_per_task": 60,
+  "cost_limit_usd": 5.0,
+  "arms": {
+    "C0": "official spreadsheet-control.yaml; bash+Python+openpyxl+view_xlsx+submit",
+    "C1": "C0 plus optional calc_translate_fill; model remains sovereign"
+  },
+  "tasks": [
+    {
+      "category": "Financial_Model",
+      "id": "08_03"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "08_04"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "08_05"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "15_04"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "08_02"
+    },
+    {
+      "category": "Template",
+      "id": "06_09"
+    },
+    {
+      "category": "Debugging",
+      "id": "10_02"
+    },
+    {
+      "category": "Visualization",
+      "id": "Task 1420776"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "08_01"
+    },
+    {
+      "category": "Template",
+      "id": "06_16"
+    },
+    {
+      "category": "Debugging",
+      "id": "10_04"
+    },
+    {
+      "category": "Visualization",
+      "id": "Task 1426290"
+    }
+  ]
+}

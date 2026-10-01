@@ -1,0 +1,13 @@
+{
+ "recommend_full_297_task_run": false,
+ "reasons": [
+  "adoption too narrow (4/24, FM-only) to compound at scale",
+  "no mechanism-aligned savings on inspection-heavy tasks (B-cohort +5% tokens)",
+  "aggregate gaps proven unattributable (salience + variance)",
+  "reliability alone does not justify benchmark spend without an efficiency/capability thesis"
+ ],
+ "revisit_if": [
+  "neutral, family-balanced note examples recover T/D adoption (prompt micro-test)",
+  "a future mechanism earns itself with adoption-gated evidence"
+ ]
+}

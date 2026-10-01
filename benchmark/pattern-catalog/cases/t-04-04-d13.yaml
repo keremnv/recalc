@@ -1,0 +1,37 @@
+id: t-04-04-d13
+run: glm-5.3-flash-strict-fifteen-unbounded-1
+task: Template:04_04
+control_run: glm-5.3-flash-control-fifteen-1
+first_miss:
+  kind: modification
+  address: FCF_Calc!D13
+  error_message: "Modification error at FCF_Calc!D13: answer=82, output=0"
+facts:
+  opened_golden: false
+  spreadsheet: 04_04_input.xlsx
+  instruction: Complete the financial model based on the provided assumptions.
+  input_kind: blank
+  input_value: null
+  output_formula: "=C16"
+  autopsy:
+    named: false
+    read: true
+    written: true
+    bucket: written_wrong
+  wrote: {range: D13:G13, formula: "=C16"}
+  compare: {formulas_added: 36, formula_errors_added: 0}
+claims:
+  patterns: [C-empty-prior]
+  nuance: decomposable
+  mechanism: run-boundary
+  lever: constraint
+  lever_why: >
+    D13:G13 written uniformly; D13 alone chains to a blank prior (C16) and evaluates 0. A write
+    whose formula references a cell blank in the input and still blank after is refusable
+    gold-blind. Untested -- referential_integrity was rejected for a different shape (a
+    reference that *became* blank), not this one.
+  notes: >
+    Historical C13 beginning PP&E is 82; historical ending C16 is blank.
+    Fill D13:G13 =C16 (beginning = prior ending) yields 0. Control special-cased
+    D13=C13 then died on tax sign at D23 (E-mixed-sign, not this packet).
+    Same first-miss address on the 297.

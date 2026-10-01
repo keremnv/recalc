@@ -1,0 +1,247 @@
+[
+ {
+  "task_id": "Template:01_05",
+  "family": "Template",
+  "reasons": [
+   "output_mismatch",
+   "mod_delta_0.680",
+   "reg_delta_0.983"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.68,
+   "official_regression": 0.983,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.0,
+   "official_regression": 0.0,
+   "output_produced": false,
+   "run_status": "PROVIDER_CENSORED"
+  }
+ },
+ {
+  "task_id": "Template:06_02",
+  "family": "Template",
+  "reasons": [
+   "mod_delta_0.212"
+  ],
+  "H0": {
+   "official_exact": 1.0,
+   "official_modification": 1.0,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.7885,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  }
+ },
+ {
+  "task_id": "Template:16_07",
+  "family": "Template",
+  "reasons": [
+   "output_mismatch",
+   "mod_delta_0.397",
+   "reg_delta_1.000"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.3967,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.0,
+   "official_regression": 0.0,
+   "output_produced": false,
+   "run_status": "NO_SUBMIT"
+  }
+ },
+ {
+  "task_id": "Template:16_08",
+  "family": "Template",
+  "reasons": [
+   "mod_delta_0.429",
+   "reg_delta_0.122"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.2063,
+   "official_regression": 0.8779,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.6349,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  }
+ },
+ {
+  "task_id": "Financial_Model:02_05",
+  "family": "Financial_Model",
+  "reasons": [
+   "output_mismatch",
+   "mod_delta_0.951",
+   "reg_delta_1.000"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.9511,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.0,
+   "official_regression": 0.0,
+   "output_produced": false,
+   "run_status": "PROVIDER_CENSORED"
+  }
+ },
+ {
+  "task_id": "Financial_Model:06_01",
+  "family": "Financial_Model",
+  "reasons": [
+   "output_mismatch"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.0,
+   "official_regression": 0.0,
+   "output_produced": false,
+   "run_status": "NO_SUBMIT"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.0,
+   "official_regression": 0.0,
+   "output_produced": null,
+   "run_status": "RUNNER_ERROR"
+  }
+ },
+ {
+  "task_id": "Financial_Model:09_02",
+  "family": "Financial_Model",
+  "reasons": [
+   "output_mismatch",
+   "mod_delta_0.986",
+   "reg_delta_1.000"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.9858,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "NO_SUBMIT"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.0,
+   "official_regression": 0.0,
+   "output_produced": false,
+   "run_status": "NO_SUBMIT"
+  }
+ },
+ {
+  "task_id": "Financial_Model:11_02",
+  "family": "Financial_Model",
+  "reasons": [
+   "output_mismatch",
+   "mod_delta_0.960",
+   "reg_delta_1.000"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.9595,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "TRUNCATED_CALL_LIMIT"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.0,
+   "official_regression": 0.0,
+   "output_produced": false,
+   "run_status": "TRUNCATED_CALL_LIMIT"
+  }
+ },
+ {
+  "task_id": "Financial_Model:18_05",
+  "family": "Financial_Model",
+  "reasons": [
+   "mod_delta_0.459"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.9936,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.535,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  }
+ },
+ {
+  "task_id": "Debugging:03_06",
+  "family": "Debugging",
+  "reasons": [
+   "output_mismatch",
+   "mod_delta_0.996",
+   "reg_delta_1.000"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.0,
+   "official_regression": 0.0,
+   "output_produced": false,
+   "run_status": "PROVIDER_CENSORED"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.9962,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "SUBMITTED"
+  }
+ },
+ {
+  "task_id": "Debugging:06_05",
+  "family": "Debugging",
+  "reasons": [
+   "output_mismatch",
+   "reg_delta_1.000"
+  ],
+  "H0": {
+   "official_exact": 0.0,
+   "official_modification": 0.0227,
+   "official_regression": 1.0,
+   "output_produced": true,
+   "run_status": "NO_SUBMIT"
+  },
+  "H1": {
+   "official_exact": 0.0,
+   "official_modification": 0.0,
+   "official_regression": 0.0,
+   "output_produced": false,
+   "run_status": "TRUNCATED_INSTANCE_COST"
+  }
+ }
+]

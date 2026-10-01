@@ -1,0 +1,43 @@
+{
+  "families": {
+    "Debugging": {
+      "eligible": 0,
+      "fidelity_pct": 0.0,
+      "heldout_rows": 38,
+      "predeclared_fallback": 38,
+      "semantic_exact": 0,
+      "stale_failures": 0
+    },
+    "Financial_Model": {
+      "eligible": 3,
+      "fidelity_pct": 100.0,
+      "heldout_rows": 54,
+      "predeclared_fallback": 51,
+      "semantic_exact": 3,
+      "stale_failures": 0
+    },
+    "Template": {
+      "eligible": 0,
+      "fidelity_pct": 0.0,
+      "heldout_rows": 12,
+      "predeclared_fallback": 12,
+      "semantic_exact": 0,
+      "stale_failures": 0
+    },
+    "Visualization": {
+      "eligible": 0,
+      "fidelity_pct": 0.0,
+      "heldout_rows": 4,
+      "predeclared_fallback": 4,
+      "semantic_exact": 0,
+      "stale_failures": 0
+    }
+  },
+  "heldout_total": {
+    "eligible_scripts": 3,
+    "fully_accelerated": 1,
+    "partially_accelerated_safely": 2,
+    "predeclared_fallback": 105,
+    "semantic_mismatch": 0
+  }
+}

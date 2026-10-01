@@ -1,0 +1,14 @@
+{
+  "experiment": "ASSISTED_DELIVERY_TIMING_PROBE",
+  "verdict": "DELIVERY_TIMING_NOT_SUPPORTED",
+  "timely_contact_observed": "1/4",
+  "timely_contact_upper_bound_with_censored_task": "2/4",
+  "gate": ">=3/4",
+  "gate_passed": false,
+  "reason": "Two fully observed treatment noncontacts (02_05, 01_03) make the gate unattainable even if doubly provider-censored 02_03 had contacted. Only 02_02 contacted, at call 4, via a byte-identical input-to-output copy; it inspected related evidence but never changed output after feedback.",
+  "traceable_evidence_use_observed": "1/1 contacted, inspection only; no relevant output edit",
+  "mechanical_error_reduction": "none; contacted 02_02 remained 30 to 30",
+  "paired_capability_outcomes": 0,
+  "regression_safety_assessable": false,
+  "single_next_action": "Close the unchanged assisted-delivery capability retry route; do not run a larger unchanged-mechanism benchmark. Any different trigger or report requires a newly preregistered mechanism and fresh discovery population."
+}

@@ -1,0 +1,528 @@
+{
+  "by_family": {
+    "Debugging": 21,
+    "Financial_Model": 26,
+    "Template": 22,
+    "Visualization": 2
+  },
+  "by_population": {
+    "P-A_matched_c0": 9,
+    "P-B_sixty_control": 60,
+    "P-C_viz": 2
+  },
+  "historical_primary": [
+    "P-B_sixty_control",
+    "P-A_matched_c0"
+  ],
+  "n_archived_action_executions": 1210,
+  "n_inspection_executions": 258,
+  "n_mixed_read_write_executions": 125,
+  "n_mutating_executions": 129,
+  "n_python_executions": 309,
+  "n_python_source_turns": 309,
+  "n_readable_source_bodies": 309,
+  "n_tasks": 70,
+  "n_trajectories": 71,
+  "n_unique_archived_model_tool_turns": 1210,
+  "n_unresolved": 901,
+  "population": [
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_03-r1/Financial_Model-08_03/output.xlsx",
+      "population": "P-A_matched_c0",
+      "source_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/08_Project Seafood Model/08_03_Seafood_input.xlsx",
+      "task_id": "Financial_Model:08_03"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_04-r1/Financial_Model-08_04/output.xlsx",
+      "population": "P-A_matched_c0",
+      "source_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/08_Project Seafood Model/08_04_Seafood_input.xlsx",
+      "task_id": "Financial_Model:08_04"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_05-r1/Financial_Model-08_05/output.xlsx",
+      "population": "P-A_matched_c0",
+      "source_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/08_Project Seafood Model/08_05_Seafood_input.xlsx",
+      "task_id": "Financial_Model:08_05"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-15_04-r1/Financial_Model-15_04/output.xlsx",
+      "population": "P-A_matched_c0",
+      "source_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/15_Project KIMS/15_04_KIMS_input.xlsx",
+      "task_id": "Financial_Model:15_04"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_02-r1/Financial_Model-08_02/output.xlsx",
+      "population": "P-A_matched_c0",
+      "source_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/08_Project Seafood Model/08_02_Seafood_input.xlsx",
+      "task_id": "Financial_Model:08_02"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Financial_Model-08_01-r1/Financial_Model-08_01/output.xlsx",
+      "population": "P-A_matched_c0",
+      "source_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/08_Project Seafood Model/08_01_Seafood_input.xlsx",
+      "task_id": "Financial_Model:08_01"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Template-06_09-r1/Template-06_09/output.xlsx",
+      "population": "P-A_matched_c0",
+      "source_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Template/spreadsheet/06_equity_forecast/06_09_input.xlsx",
+      "task_id": "Template:06_09"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Template-06_16-r1/Template-06_16/output.xlsx",
+      "population": "P-A_matched_c0",
+      "source_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Template/spreadsheet/06_equity_forecast/06_16_input.xlsx",
+      "task_id": "Template:06_16"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-fill-c0-Debugging-10_04-r1/Debugging-10_04/output.xlsx",
+      "population": "P-A_matched_c0",
+      "source_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Debugging/spreadsheet/10_Debugging/input_files/Inconsistent Color Coding_input.xlsx",
+      "task_id": "Debugging:10_04"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-01_01/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:01_01"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-01_06/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:01_06"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-02_01/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:02_01"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-02_06/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:02_06"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-03_01/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:03_01"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-03_06/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:03_06"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-04_01/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:04_01"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-04_07/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:04_07"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-05_02/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:05_02"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-05_08/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:05_08"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-06_02/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:06_02"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-06_07/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:06_07"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-07_03/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:07_03"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-07_08/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:07_08"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-08_04/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:08_04"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-08_09/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:08_09"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-09_04/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:09_04"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-09_09/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:09_09"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-10_05/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:10_05"
+    },
+    {
+      "family": "Debugging",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Debugging-10_10/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Debugging:10_10"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-01_01/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:01_01"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-02_01/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:02_01"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-03_01/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:03_01"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-04_01/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:04_01"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-05_01/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:05_01"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-06_01/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:06_01"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-07_01/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:07_01"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-08_01/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:08_01"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-10_01/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:10_01"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-11_01/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:11_01"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-11_05/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:11_05"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-12_05/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:12_05"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-13_05/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:13_05"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-14_05/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:14_05"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-15_05/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:15_05"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-16_05/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:16_05"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-17_05/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:17_05"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-18_05/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:18_05"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-19_05/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:19_05"
+    },
+    {
+      "family": "Financial_Model",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Financial_Model-20_05/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Financial_Model:20_05"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-01_02/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:01_02"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-01_07/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:01_07"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-02_05/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:02_05"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-03_03/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:03_03"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-05_02/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:05_02"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-06_06/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:06_06"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-06_12/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:06_12"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-06_17/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:06_17"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-06_21/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:06_21"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-07_01/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:07_01"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-08_03/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:08_03"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-10_01/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:10_01"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-11_03/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:11_03"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-13_03/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:13_03"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-13_08/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:13_08"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-14_05/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:14_05"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-15_01/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:15_01"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-16_01/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:16_01"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-16_06/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:16_06"
+    },
+    {
+      "family": "Template",
+      "output_xlsx": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/benchmark-runs/openrouter/glm-5.3-flash-control-census-sixty-1/Template-16_12/output.xlsx",
+      "population": "P-B_sixty_control",
+      "source_xlsx": null,
+      "task_id": "Template:16_12"
+    },
+    {
+      "family": "Visualization",
+      "output_xlsx": null,
+      "population": "P-C_viz",
+      "source_xlsx": null,
+      "task_id": "glm-fill-c0-Visualization-Task-1420776-r1"
+    },
+    {
+      "family": "Visualization",
+      "output_xlsx": null,
+      "population": "P-C_viz",
+      "source_xlsx": null,
+      "task_id": "glm-fill-c0-Visualization-Task-1426290-r1"
+    }
+  ],
+  "visualization_separate": true
+}

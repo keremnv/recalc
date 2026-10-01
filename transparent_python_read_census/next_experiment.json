@@ -1,0 +1,6 @@
+{
+  "experiment": "Implement the smallest A shadow proxy for sheetnames, sheet lookup, dimensions, cell.value/data_type, explicit ranges, and values_only iter_rows; run differential replay against real openpyxl on held-out workbooks including write-then-read and data_only/formula pairs.",
+  "model_inference": false,
+  "success": ">=99% semantic equivalence, zero stale/mutation mismatches, and measured repeated-read amortization",
+  "why": "the census cannot prove proxy fallback identity or generation safety from static source alone"
+}

@@ -1,0 +1,15 @@
+{
+  "common_packet_sha256": "9b8740f8c415638585a569e3ee2bb855628c20845f128b0ce2153e829d17ab89",
+  "raw_facts_equal": true,
+  "system_prompt_equal": true,
+  "json_extract_policy_equal": true,
+  "treatment_only_delta": "compiled_structural_relations_block",
+  "treatment_delta_sha256": "53730be25e9f7f2b11b459b9010ff83d30609b6ff00da6c18d449b601dc59de9",
+  "control_request_sha256": "e1e0abcbc287cd0664ec8de4958a176950fb2f1aac4f3f37e6d77c45d0ec5f31",
+  "treatment_request_sha256": "76ca86e656c7ac0c138162f52993975d64f40216e28a2006910f893041b4d9db",
+  "forbidden_language_absent": true,
+  "evaluator_rectangle_absent": true,
+  "calc_query_absent": true,
+  "gold_used_in_payloads": false,
+  "written_at": "2026-09-16T14:44:37.328848+00:00"
+}

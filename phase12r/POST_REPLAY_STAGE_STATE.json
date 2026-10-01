@@ -1,0 +1,11 @@
+{
+  "primary_replay_complete": true,
+  "completed_stages": [
+    "analyze.py",
+    "render_tables.py",
+    "replicate_phase12.py",
+    "enrich_audit.py"
+  ],
+  "active_stage": null,
+  "review_gates": "await independent interpretation review; follow-up not started"
+}

@@ -1,0 +1,50 @@
+{
+ "positive": false,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [],
+   "count": 0
+  },
+  "CHG": {
+   "changed_cells": 114,
+   "sheets": 1,
+   "regions": [
+    "OpEx_Forecast!C11",
+    "OpEx_Forecast!C13",
+    "OpEx_Forecast!C14",
+    "OpEx_Forecast!C19",
+    "OpEx_Forecast!C22",
+    "OpEx_Forecast!C24",
+    "OpEx_Forecast!C25",
+    "OpEx_Forecast!C27",
+    "OpEx_Forecast!C28",
+    "OpEx_Forecast!D11",
+    "OpEx_Forecast!D13",
+    "OpEx_Forecast!D14",
+    "OpEx_Forecast!D19",
+    "OpEx_Forecast!D22",
+    "OpEx_Forecast!D24",
+    "OpEx_Forecast!D25",
+    "OpEx_Forecast!D27",
+    "OpEx_Forecast!D28",
+    "OpEx_Forecast!E11",
+    "OpEx_Forecast!E13"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": null,
+ "positive_families": []
+}

@@ -1,0 +1,1316 @@
+{
+  "RAW_TASK": "Complete the financial model based on the provided assumptions. Ensure the existing structure, layout, and formatting of the model are preserved throughout the process.\nIn the Input Sheet, define Transport Revenue growth (10% FY26, 30% FY27–FY30), then in the Revenue Drivers tab calculate Transport Revenue for FY26–FY30. Also in the Input Sheet, calculate Warehousing Rate per Square Feet for FY27–FY30 escalating from FY26 base of 28 USD. In the Debt Schedule, calculate Long Term Borrowings interest at 15% from FY26. In the Asset Sch. tab, calculate Consolidated PPE Depreciation for FY26–FY30. In the IS tab, link Depreciation & Amortization from Asset Sch sheet.",
+  "GENERATED_TASK_IR": {
+    "obligations": [
+      {
+        "id": "O1",
+        "locus": {
+          "text": "Input Sheet"
+        },
+        "subject": {
+          "text": "Transport Revenue growth"
+        },
+        "subject_interval": null,
+        "required_change": {
+          "text": "define"
+        },
+        "scope": [
+          {
+            "text": "10% FY26"
+          },
+          {
+            "text": "30% FY27–FY30"
+          }
+        ],
+        "source_relation": null,
+        "condition": null,
+        "result_property": null,
+        "then_after": [],
+        "occupancy_filter": null,
+        "provenance": [
+          {
+            "text": "In the Input Sheet, define Transport Revenue growth (10% FY26, 30% FY27–FY30)"
+          }
+        ]
+      }
+    ]
+  },
+  "SHEETS": {
+    "columns": [
+      "name",
+      "normalized_name",
+      "sheet_id",
+      "sheet_index",
+      "used_c1",
+      "used_c2",
+      "used_r1",
+      "used_r2",
+      "visibility",
+      "workbook_id"
+    ],
+    "rows": [
+      [
+        "Cover Page",
+        "cover page",
+        "sheet:s00",
+        0,
+        1,
+        4,
+        1,
+        24,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "Summary Valuation",
+        "summary valuation",
+        "sheet:s01",
+        1,
+        2,
+        9,
+        2,
+        24,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "DCF",
+        "dcf",
+        "sheet:s02",
+        2,
+        1,
+        17,
+        1,
+        31,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "Summary",
+        "summary",
+        "sheet:s03",
+        3,
+        2,
+        14,
+        2,
+        41,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "IS",
+        "is",
+        "sheet:s04",
+        4,
+        1,
+        35,
+        1,
+        36,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "BS",
+        "bs",
+        "sheet:s05",
+        5,
+        2,
+        41,
+        1,
+        48,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "CF",
+        "cf",
+        "sheet:s06",
+        6,
+        1,
+        18,
+        2,
+        34,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "Ratio Analysis",
+        "ratio analysis",
+        "sheet:s07",
+        7,
+        2,
+        15,
+        2,
+        34,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "Input Sheet",
+        "input sheet",
+        "sheet:s08",
+        8,
+        1,
+        34,
+        1,
+        89,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "Revenue Drivers",
+        "revenue drivers",
+        "sheet:s09",
+        9,
+        2,
+        34,
+        2,
+        66,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "Cost Drivers",
+        "cost drivers",
+        "sheet:s10",
+        10,
+        1,
+        13,
+        2,
+        48,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "Working Capital",
+        "working capital",
+        "sheet:s11",
+        11,
+        2,
+        40,
+        2,
+        31,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "Assets Sch.",
+        "assets sch",
+        "sheet:s12",
+        12,
+        2,
+        15,
+        1,
+        52,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "Debt Schedule",
+        "debt schedule",
+        "sheet:s13",
+        13,
+        2,
+        15,
+        2,
+        29,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "BG",
+        "bg",
+        "sheet:s14",
+        14,
+        1,
+        34,
+        2,
+        45,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "Trading Comps",
+        "trading comps",
+        "sheet:s15",
+        15,
+        1,
+        190,
+        1,
+        43,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "Chart",
+        "chart",
+        "sheet:s16",
+        16,
+        1,
+        1,
+        1,
+        1,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "WACC",
+        "wacc",
+        "sheet:s17",
+        17,
+        2,
+        9,
+        2,
+        21,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "Projection Sheet(FY26 to FY28)",
+        "projection sheet fy26 to fy28",
+        "sheet:s18",
+        18,
+        1,
+        20,
+        1,
+        53,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ],
+      [
+        "Segmental Breakdown",
+        "segmental breakdown",
+        "sheet:s19",
+        19,
+        1,
+        15,
+        1,
+        54,
+        "visible",
+        "wb:Financial_Model:13_05"
+      ]
+    ]
+  },
+  "GROUNDING": {
+    "O1": {
+      "obligation_id": "O1",
+      "fields": {
+        "id": "O1",
+        "locus": {
+          "text": "Input Sheet"
+        },
+        "subject": {
+          "text": "Transport Revenue growth"
+        },
+        "subject_interval": null,
+        "required_change": {
+          "text": "define"
+        },
+        "scope": [
+          {
+            "text": "10% FY26"
+          },
+          {
+            "text": "30% FY27–FY30"
+          }
+        ],
+        "source_relation": null,
+        "condition": null,
+        "result_property": null,
+        "then_after": [],
+        "occupancy_filter": null
+      },
+      "complete_world_packet": {
+        "candidate_counts": {
+          "n_sheets_universe": 20,
+          "n_locus": 2,
+          "n_text_universe": 910,
+          "n_subject": 37,
+          "n_period_universe": 168,
+          "n_scope": 3,
+          "n_source": 0,
+          "n_occupied_universe": 10712,
+          "n_target": 6,
+          "n_s1": 1940
+        },
+        "remainder_namespace": "grounding:O1"
+      },
+      "locus": {
+        "foreground": [
+          {
+            "sheet_id": "sheet:s08",
+            "title": "Input Sheet",
+            "rules": [
+              "compact",
+              "compact_title",
+              "exact_norm",
+              "jaccard",
+              "substring",
+              "token_prefix",
+              "token_subset"
+            ]
+          },
+          {
+            "sheet_id": "sheet:s18",
+            "title": "Projection Sheet(FY26 to FY28)",
+            "rules": [
+              "token_prefix"
+            ]
+          }
+        ],
+        "candidate_count": 2,
+        "omitted_count": 0,
+        "remainder_handle": null,
+        "selection_basis": "mechanical match evidence only"
+      },
+      "subject": {
+        "foreground": [
+          {
+            "id": "text:s08:r20:c2",
+            "cell_id": "cell:s08:r20:c2",
+            "row_id": "row:s08:r20",
+            "col_id": "col:s08:c2",
+            "sheet_id": "sheet:s08",
+            "text": "Transport Revenue",
+            "address": "B20",
+            "query": "Transport Revenue growth",
+            "rules": [
+              "substring",
+              "jaccard",
+              "token_prefix",
+              "token_prefix"
+            ],
+            "neighbor_left": null,
+            "neighbor_right": "Y-o-Y Growth"
+          },
+          {
+            "id": "text:s18:r2:c1",
+            "cell_id": "cell:s18:r2:c1",
+            "row_id": "row:s18:r2",
+            "col_id": "col:s18:c1",
+            "sheet_id": "sheet:s18",
+            "text": "Revenue",
+            "address": "A2",
+            "query": "Transport Revenue growth",
+            "rules": [
+              "substring",
+              "token_prefix"
+            ],
+            "neighbor_left": null,
+            "neighbor_right": "April to March 2024"
+          },
+          {
+            "id": "text:s08:r7:c2",
+            "cell_id": "cell:s08:r7:c2",
+            "row_id": "row:s08:r7",
+            "col_id": "col:s08:c2",
+            "sheet_id": "sheet:s08",
+            "text": "Revenue",
+            "address": "B7",
+            "query": "Transport Revenue growth",
+            "rules": [
+              "substring",
+              "token_prefix"
+            ],
+            "neighbor_left": null,
+            "neighbor_right": null
+          },
+          {
+            "id": "text:s08:r29:c3",
+            "cell_id": "cell:s08:r29:c3",
+            "row_id": "row:s08:r29",
+            "col_id": "col:s08:c3",
+            "sheet_id": "sheet:s08",
+            "text": "#",
+            "address": "C29",
+            "query": "Transport Revenue growth",
+            "rules": [
+              "substring"
+            ],
+            "neighbor_left": "No of Pallet",
+            "neighbor_right": null
+          },
+          {
+            "id": "text:s08:r67:c3",
+            "cell_id": "cell:s08:r67:c3",
+            "row_id": "row:s08:r67",
+            "col_id": "col:s08:c3",
+            "sheet_id": "sheet:s08",
+            "text": "#",
+            "address": "C67",
+            "query": "Transport Revenue growth",
+            "rules": [
+              "substring"
+            ],
+            "neighbor_left": "Number of Directors",
+            "neighbor_right": null
+          },
+          {
+            "id": "text:s08:r19:c2",
+            "cell_id": "cell:s08:r19:c2",
+            "row_id": "row:s08:r19",
+            "col_id": "col:s08:c2",
+            "sheet_id": "sheet:s08",
+            "text": "Transportation / Contract Logistic Revenue",
+            "address": "B19",
+            "query": "Transport Revenue growth",
+            "rules": [
+              "token_prefix",
+              "token_prefix"
+            ],
+            "neighbor_left": null,
+            "neighbor_right": null
+          },
+          {
+            "id": "text:s18:r8:c1",
+            "cell_id": "cell:s18:r8:c1",
+            "row_id": "row:s18:r8",
+            "col_id": "col:s18:c1",
+            "sheet_id": "sheet:s18",
+            "text": "Total Revenue",
+            "address": "A8",
+            "query": "Transport Revenue growth",
+            "rules": [
+              "token_prefix"
+            ],
+            "neighbor_left": null,
+            "neighbor_right": null
+          },
+          {
+            "id": "text:s08:r13:c2",
+            "cell_id": "cell:s08:r13:c2",
+            "row_id": "row:s08:r13",
+            "col_id": "col:s08:c2",
+            "sheet_id": "sheet:s08",
+            "text": "Total Revenue From Air",
+            "address": "B13",
+            "query": "Transport Revenue growth",
+            "rules": [
+              "token_prefix"
+            ],
+            "neighbor_left": null,
+            "neighbor_right": null
+          },
+          {
+            "id": "text:s08:r22:c2",
+            "cell_id": "cell:s08:r22:c2",
+            "row_id": "row:s08:r22",
+            "col_id": "col:s08:c2",
+            "sheet_id": "sheet:s08",
+            "text": "Warehousing Revenue",
+            "address": "B22",
+            "query": "Transport Revenue growth",
+            "rules": [
+              "token_prefix"
+            ],
+            "neighbor_left": null,
+            "neighbor_right": null
+          },
+          {
+            "id": "text:s08:r36:c2",
+            "cell_id": "cell:s08:r36:c2",
+            "row_id": "row:s08:r36",
+            "col_id": "col:s08:c2",
+            "sheet_id": "sheet:s08",
+            "text": "Revenue From Project",
+            "address": "B36",
+            "query": "Transport Revenue growth",
+            "rules": [
+              "token_prefix"
+            ],
+            "neighbor_left": null,
+            "neighbor_right": "Y-o-Y Growth"
+          },
+          {
+            "id": "text:s08:r38:c2",
+            "cell_id": "cell:s08:r38:c2",
+            "row_id": "row:s08:r38",
+            "col_id": "col:s08:c2",
+            "sheet_id": "sheet:s08",
+            "text": "Other Revenue as % of Operating Revenue",
+            "address": "B38",
+            "query": "Transport Revenue growth",
+            "rules": [
+              "token_prefix"
+            ],
+            "neighbor_left": null,
+            "neighbor_right": "As a % of Operating Revenue"
+          },
+          {
+            "id": "text:s08:r52:c2",
+            "cell_id": "cell:s08:r52:c2",
+            "row_id": "row:s08:r52",
+            "col_id": "col:s08:c2",
+            "sheet_id": "sheet:s08",
+            "text": "Transportation/Contract Logistics",
+            "address": "B52",
+            "query": "Transport Revenue growth",
+            "rules": [
+              "token_prefix"
+            ],
+            "neighbor_left": null,
+            "neighbor_right": null
+          },
+          {
+            "id": "text:s08:r53:c2",
+            "cell_id": "cell:s08:r53:c2",
+            "row_id": "row:s08:r53",
+            "col_id": "col:s08:c2",
+            "sheet_id": "sheet:s08",
+            "text": "Transport Cost",
+            "address": "B53",
+            "query": "Transport Revenue growth",
+            "rules": [
+              "token_prefix"
+            ],
+            "neighbor_left": null,
+            "neighbor_right": "As % of Revenue"
+          },
+          {
+            "id": "text:s08:r8:c2",
+            "cell_id": "cell:s08:r8:c2",
+            "row_id": "row:s08:r8",
+            "col_id": "col:s08:c2",
+            "sheet_id": "sheet:s08",
+            "text": "Freight Revenue",
+            "address": "B8",
+            "query": "Transport Revenue growth",
+            "rules": [
+              "token_prefix"
+            ],
+            "neighbor_left": null,
+            "neighbor_right": null
+          },
+          {
+            "id": "text:s08:r11:c3",
+            "cell_id": "cell:s08:r11:c3",
+            "row_id": "row:s08:r11",
+            "col_id": "col:s08:c3",
+            "sheet_id": "sheet:s08",
+            "text": "Y-o-Y Growth",
+            "address": "C11",
+            "query": "Transport Revenue growth",
+            "rules": [
+              "token_prefix"
+            ],
+            "neighbor_left": "Inbound",
+            "neighbor_right": null
+          },
+          {
+            "id": "text:s08:r12:c3",
+            "cell_id": "cell:s08:r12:c3",
+            "row_id": "row:s08:r12",
+            "col_id": "col:s08:c3",
+            "sheet_id": "sheet:s08",
+            "text": "Y-o-Y Growth",
+            "address": "C12",
+            "query": "Transport Revenue growth",
+            "rules": [
+              "token_prefix"
+            ],
+            "neighbor_left": "Outbound",
+            "neighbor_right": null
+          }
+        ],
+        "candidate_count": 37,
+        "omitted_count": 21,
+        "remainder_handle": "grounding:O1:subject:tail",
+        "selection_basis": "mechanical match evidence only"
+      },
+      "scope": {
+        "foreground": [
+          {
+            "id": "period:s18:r2:c10",
+            "cell_id": "cell:s18:r2:c10",
+            "row_id": "row:s18:r2",
+            "col_id": "col:s18:c10",
+            "sheet_id": "sheet:s18",
+            "address": "J2",
+            "period_key": "PERIOD(year=2026, month=4)",
+            "header_text": "April to March 2026",
+            "axis": "column",
+            "period": {
+              "month": 4,
+              "year": 2026
+            },
+            "encoding_class": null
+          },
+          {
+            "id": "period:s18:r2:c14",
+            "cell_id": "cell:s18:r2:c14",
+            "row_id": "row:s18:r2",
+            "col_id": "col:s18:c14",
+            "sheet_id": "sheet:s18",
+            "address": "N2",
+            "period_key": "PERIOD(year=2027, month=4)",
+            "header_text": "April to March 2027",
+            "axis": "column",
+            "period": {
+              "month": 4,
+              "year": 2027
+            },
+            "encoding_class": null
+          },
+          {
+            "id": "period:s18:r2:c18",
+            "cell_id": "cell:s18:r2:c18",
+            "row_id": "row:s18:r2",
+            "col_id": "col:s18:c18",
+            "sheet_id": "sheet:s18",
+            "address": "R2",
+            "period_key": "PERIOD(year=2028, month=4)",
+            "header_text": "April to March 2028",
+            "axis": "column",
+            "period": {
+              "month": 4,
+              "year": 2028
+            },
+            "encoding_class": null
+          }
+        ],
+        "candidate_count": 3,
+        "omitted_count": 0,
+        "remainder_handle": null,
+        "selection_basis": "mechanical match evidence only"
+      },
+      "source": {
+        "foreground": [],
+        "candidate_count": 0,
+        "omitted_count": 0,
+        "remainder_handle": null,
+        "selection_basis": "mechanical match evidence only"
+      },
+      "targets": {
+        "candidate_count": 6,
+        "foreground_cell_ids": [
+          "cell:s18:r2:c10",
+          "cell:s18:r2:c14",
+          "cell:s18:r2:c18",
+          "cell:s18:r8:c10",
+          "cell:s18:r8:c14",
+          "cell:s18:r8:c18"
+        ],
+        "omitted_count": 0,
+        "remainder_handle": null,
+        "region_summaries": [
+          {
+            "kind": "RECTANGLE",
+            "sheet_id": "sheet:s18",
+            "r1": 2,
+            "c1": 10,
+            "r2": 2,
+            "c2": 10
+          },
+          {
+            "kind": "RECTANGLE",
+            "sheet_id": "sheet:s18",
+            "r1": 8,
+            "c1": 10,
+            "r2": 8,
+            "c2": 10
+          },
+          {
+            "kind": "RECTANGLE",
+            "sheet_id": "sheet:s18",
+            "r1": 2,
+            "c1": 14,
+            "r2": 2,
+            "c2": 14
+          },
+          {
+            "kind": "RECTANGLE",
+            "sheet_id": "sheet:s18",
+            "r1": 8,
+            "c1": 14,
+            "r2": 8,
+            "c2": 14
+          },
+          {
+            "kind": "RECTANGLE",
+            "sheet_id": "sheet:s18",
+            "r1": 2,
+            "c1": 18,
+            "r2": 2,
+            "c2": 18
+          },
+          {
+            "kind": "RECTANGLE",
+            "sheet_id": "sheet:s18",
+            "r1": 8,
+            "c1": 18,
+            "r2": 8,
+            "c2": 18
+          }
+        ],
+        "region_summary_count": 6,
+        "selection_basis": "deterministic rectangle/run summary over complete candidate IDs"
+      },
+      "formula_class_facts": {
+        "foreground": [
+          {
+            "cell_id": "cell:s08:r11:c4",
+            "formula_id": "formula:s08:r11:c4",
+            "class_id": "formula_class:cb22284c1a",
+            "opaque": false
+          },
+          {
+            "cell_id": "cell:s08:r11:c5",
+            "formula_id": "formula:s08:r11:c5",
+            "class_id": "formula_class:cb22284c1a",
+            "opaque": false
+          },
+          {
+            "cell_id": "cell:s08:r11:c6",
+            "formula_id": "formula:s08:r11:c6",
+            "class_id": "formula_class:cb22284c1a",
+            "opaque": false
+          },
+          {
+            "cell_id": "cell:s08:r11:c7",
+            "formula_id": "formula:s08:r11:c7",
+            "class_id": "formula_class:cb22284c1a",
+            "opaque": false
+          },
+          {
+            "cell_id": "cell:s08:r11:c8",
+            "formula_id": "formula:s08:r11:c8",
+            "class_id": "formula_class:cb22284c1a",
+            "opaque": false
+          },
+          {
+            "cell_id": "cell:s08:r12:c4",
+            "formula_id": "formula:s08:r12:c4",
+            "class_id": "formula_class:cb22284c1a",
+            "opaque": false
+          },
+          {
+            "cell_id": "cell:s08:r12:c5",
+            "formula_id": "formula:s08:r12:c5",
+            "class_id": "formula_class:cb22284c1a",
+            "opaque": false
+          },
+          {
+            "cell_id": "cell:s08:r12:c6",
+            "formula_id": "formula:s08:r12:c6",
+            "class_id": "formula_class:cb22284c1a",
+            "opaque": false
+          },
+          {
+            "cell_id": "cell:s08:r12:c7",
+            "formula_id": "formula:s08:r12:c7",
+            "class_id": "formula_class:cb22284c1a",
+            "opaque": false
+          },
+          {
+            "cell_id": "cell:s08:r12:c8",
+            "formula_id": "formula:s08:r12:c8",
+            "class_id": "formula_class:cb22284c1a",
+            "opaque": false
+          },
+          {
+            "cell_id": "cell:s08:r16:c2",
+            "formula_id": "formula:s08:r16:c2",
+            "class_id": "formula_class:d116e09771",
+            "opaque": false
+          },
+          {
+            "cell_id": "cell:s08:r16:c4",
+            "formula_id": "formula:s08:r16:c4",
+            "class_id": "formula_class:cb22284c1a",
+            "opaque": false
+          },
+          {
+            "cell_id": "cell:s08:r16:c5",
+            "formula_id": "formula:s08:r16:c5",
+            "class_id": "formula_class:cb22284c1a",
+            "opaque": false
+          },
+          {
+            "cell_id": "cell:s08:r16:c6",
+            "formula_id": "formula:s08:r16:c6",
+            "class_id": "formula_class:cb22284c1a",
+            "opaque": false
+          },
+          {
+            "cell_id": "cell:s08:r16:c7",
+            "formula_id": "formula:s08:r16:c7",
+            "class_id": "formula_class:cb22284c1a",
+            "opaque": false
+          },
+          {
+            "cell_id": "cell:s08:r16:c8",
+            "formula_id": "formula:s08:r16:c8",
+            "class_id": "formula_class:cb22284c1a",
+            "opaque": false
+          }
+        ],
+        "candidate_count": 80,
+        "omitted_count": 64,
+        "remainder_handle": "grounding:O1:formula_class_facts:tail"
+      },
+      "dependency_facts": {
+        "foreground": [
+          {
+            "source_id": "cell:s18:r8:c10",
+            "consumer_id": "cell:s18:r16:c12",
+            "cross_sheet": false
+          },
+          {
+            "source_id": "cell:s18:r8:c14",
+            "consumer_id": "cell:s18:r16:c16",
+            "cross_sheet": false
+          },
+          {
+            "source_id": "cell:s18:r8:c18",
+            "consumer_id": "cell:s18:r16:c20",
+            "cross_sheet": false
+          },
+          {
+            "source_id": "cell:s18:r8:c10",
+            "consumer_id": "cell:s18:r40:c12",
+            "cross_sheet": false
+          },
+          {
+            "source_id": "cell:s18:r8:c14",
+            "consumer_id": "cell:s18:r40:c16",
+            "cross_sheet": false
+          },
+          {
+            "source_id": "cell:s18:r8:c18",
+            "consumer_id": "cell:s18:r40:c20",
+            "cross_sheet": false
+          },
+          {
+            "source_id": "cell:s18:r8:c10",
+            "consumer_id": "cell:s18:r42:c10",
+            "cross_sheet": false
+          },
+          {
+            "source_id": "cell:s18:r8:c10",
+            "consumer_id": "cell:s18:r42:c12",
+            "cross_sheet": false
+          },
+          {
+            "source_id": "cell:s18:r8:c14",
+            "consumer_id": "cell:s18:r42:c14",
+            "cross_sheet": false
+          },
+          {
+            "source_id": "cell:s18:r8:c14",
+            "consumer_id": "cell:s18:r42:c16",
+            "cross_sheet": false
+          },
+          {
+            "source_id": "cell:s18:r8:c18",
+            "consumer_id": "cell:s18:r42:c18",
+            "cross_sheet": false
+          },
+          {
+            "source_id": "cell:s18:r8:c18",
+            "consumer_id": "cell:s18:r42:c20",
+            "cross_sheet": false
+          }
+        ],
+        "candidate_count": 12,
+        "omitted_count": 0,
+        "remainder_handle": null
+      }
+    }
+  },
+  "NOTE": "This is a deterministic obligation-scoped projection of a complete closed-world grounding packet. Foreground candidates and region summaries are evidence, not a whitelist. Omitted candidates remain in the authoritative world under the shown remainder_handle. Use only stable workbook identities and the exact Edit Plan schema.",
+  "EXACT_JSON_SCHEMA": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "type": "object",
+    "properties": {
+      "operations": {
+        "type": "array",
+        "items": {
+          "$ref": "#/$defs/operation"
+        }
+      }
+    },
+    "required": [
+      "operations"
+    ],
+    "additionalProperties": false,
+    "$defs": {
+      "set": {
+        "oneOf": [
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "const": "CELL"
+              },
+              "cell_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "kind",
+              "cell_id"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "const": "SHEET"
+              },
+              "sheet_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "kind",
+              "sheet_id"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "const": "RECTANGLE"
+              },
+              "sheet_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "r1": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "c1": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "r2": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "c2": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "kind",
+              "sheet_id",
+              "r1",
+              "c1",
+              "r2",
+              "c2"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "const": "ROW_INTERVAL"
+              },
+              "sheet_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "row_start": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "row_end": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "col_start": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "col_end": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "kind",
+              "sheet_id",
+              "row_start",
+              "row_end"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "const": "COLUMN_INTERVAL"
+              },
+              "sheet_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "row_start": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "row_end": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "col_start": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "col_end": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "kind",
+              "sheet_id",
+              "col_start",
+              "col_end"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "const": "TEMPORAL_INTERVAL"
+              },
+              "sheet_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "axis": {
+                "enum": [
+                  "row",
+                  "column"
+                ]
+              },
+              "start_coordinate": {
+                "type": "string",
+                "minLength": 1
+              },
+              "end_coordinate": {
+                "type": "string",
+                "minLength": 1
+              },
+              "row_constraint": {
+                "type": "object",
+                "properties": {
+                  "r1": {
+                    "type": "integer",
+                    "minimum": 1
+                  },
+                  "r2": {
+                    "type": "integer",
+                    "minimum": 1
+                  }
+                },
+                "required": [
+                  "r1",
+                  "r2"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "kind",
+              "sheet_id",
+              "axis",
+              "start_coordinate",
+              "end_coordinate"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "const": "FORMULA_CLASS_MEMBERS"
+              },
+              "fingerprint_id": {
+                "type": "string",
+                "minLength": 1
+              },
+              "sheet_id": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "kind",
+              "fingerprint_id"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "const": "UNION"
+              },
+              "sets": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "$ref": "#/$defs/set"
+                }
+              }
+            },
+            "required": [
+              "kind",
+              "sets"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "const": "INTERSECT"
+              },
+              "sets": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                  "$ref": "#/$defs/set"
+                }
+              }
+            },
+            "required": [
+              "kind",
+              "sets"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "const": "DIFFERENCE"
+              },
+              "sets": {
+                "type": "array",
+                "minItems": 2,
+                "maxItems": 2,
+                "items": {
+                  "$ref": "#/$defs/set"
+                }
+              }
+            },
+            "required": [
+              "kind",
+              "sets"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      },
+      "operation": {
+        "type": "object",
+        "properties": {
+          "operation_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "obligation_id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "operation_kind": {
+            "enum": [
+              "SET_FORMULA",
+              "FILL_FORMULA",
+              "REPLACE_FORMULA",
+              "CLEAR_CELL"
+            ]
+          },
+          "target_set": {
+            "$ref": "#/$defs/set"
+          },
+          "occupancy_filter": {
+            "enum": [
+              "BLANK_ONLY",
+              "NONBLANK_ONLY",
+              "FORMULA_ONLY",
+              "NONFORMULA_ONLY"
+            ]
+          },
+          "source_relation": {
+            "type": "object",
+            "properties": {
+              "entity_ids": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "entity_ids"
+            ],
+            "additionalProperties": false
+          },
+          "sequencing": {
+            "type": "object",
+            "properties": {
+              "after": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "uniqueItems": true
+              }
+            },
+            "required": [
+              "after"
+            ],
+            "additionalProperties": false
+          },
+          "explicit_exceptions": {
+            "type": "object",
+            "properties": {
+              "include": {
+                "type": "array",
+                "maxItems": 16,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "exclude": {
+                "type": "array",
+                "maxItems": 16,
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              }
+            },
+            "required": [
+              "include",
+              "exclude"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "operation_id",
+          "obligation_id",
+          "operation_kind",
+          "target_set"
+        ],
+        "additionalProperties": false
+      }
+    }
+  }
+}

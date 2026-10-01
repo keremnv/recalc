@@ -1,0 +1,9 @@
+{
+ "verdict": "INSPECTION_HELPERS_EFFICIENCY_EARNED",
+ "capability_gate": "PASS (all r1 discordances resolved as variance in r2; no helper-attributable loss)",
+ "per_helper": {
+  "periods": "EARNED",
+  "search": "EARNED",
+  "inspect": "EARNED (breadth caveat)"
+ }
+}

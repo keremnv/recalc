@@ -1,0 +1,39 @@
+{
+  "by_arm": {
+    "A": {
+      "attempted_slots": 12,
+      "input_tokens_per_valid_submission": 5341962.5,
+      "reported_cost_usd_per_valid_submission": 0.182021452,
+      "total_provider_input_tokens": 10683925,
+      "total_provider_reported_cost_usd": 0.364042904,
+      "valid_submissions": 2
+    },
+    "B": {
+      "attempted_slots": 12,
+      "input_tokens_per_valid_submission": 3082798.0,
+      "reported_cost_usd_per_valid_submission": 0.10369251266666667,
+      "total_provider_input_tokens": 9248394,
+      "total_provider_reported_cost_usd": 0.311077538,
+      "valid_submissions": 3
+    },
+    "C": {
+      "attempted_slots": 12,
+      "input_tokens_per_valid_submission": 3334529.0,
+      "reported_cost_usd_per_valid_submission": 0.111481862,
+      "total_provider_input_tokens": 10003587,
+      "total_provider_reported_cost_usd": 0.334445586,
+      "valid_submissions": 3
+    },
+    "D": {
+      "attempted_slots": 12,
+      "input_tokens_per_valid_submission": 5251640.0,
+      "reported_cost_usd_per_valid_submission": 0.1735925635,
+      "total_provider_input_tokens": 10503280,
+      "total_provider_reported_cost_usd": 0.347185127,
+      "valid_submissions": 2
+    }
+  },
+  "denominator": "valid submitted and officially scored workbooks",
+  "limit": "Scores differ; censored slots consumed tokens; this is not a causal cost-to-success estimate.",
+  "status": "DESCRIPTIVE_DISCOVERY_ONLY"
+}

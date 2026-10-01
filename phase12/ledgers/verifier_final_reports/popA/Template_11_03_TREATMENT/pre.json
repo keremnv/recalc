@@ -1,0 +1,205 @@
+{
+ "positive": true,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [
+    {
+     "formula": "MergerPremium!C19",
+     "blank": "MergerPremium!C11"
+    },
+    {
+     "formula": "MergerPremium!C19",
+     "blank": "MergerPremium!D18"
+    },
+    {
+     "formula": "MergerPremium!C21",
+     "blank": "MergerPremium!C11"
+    },
+    {
+     "formula": "MergerPremium!C21",
+     "blank": "MergerPremium!D14"
+    },
+    {
+     "formula": "MergerPremium!C21",
+     "blank": "MergerPremium!D15"
+    },
+    {
+     "formula": "MergerPremium!C21",
+     "blank": "MergerPremium!D16"
+    },
+    {
+     "formula": "MergerPremium!C21",
+     "blank": "MergerPremium!D17"
+    },
+    {
+     "formula": "MergerPremium!C21",
+     "blank": "MergerPremium!D18"
+    },
+    {
+     "formula": "MergerPremium!C22",
+     "blank": "MergerPremium!C11"
+    },
+    {
+     "formula": "MergerPremium!C22",
+     "blank": "MergerPremium!C19"
+    },
+    {
+     "formula": "MergerPremium!C23",
+     "blank": "MergerPremium!C21"
+    },
+    {
+     "formula": "MergerPremium!C23",
+     "blank": "MergerPremium!C22"
+    },
+    {
+     "formula": "MergerPremium!C24",
+     "blank": "MergerPremium!C11"
+    },
+    {
+     "formula": "MergerPremium!C25",
+     "blank": "MergerPremium!C23"
+    },
+    {
+     "formula": "MergerPremium!C25",
+     "blank": "MergerPremium!C24"
+    },
+    {
+     "formula": "MergerPremium!C28",
+     "blank": "MergerPremium!C25"
+    },
+    {
+     "formula": "MergerPremium!C29",
+     "blank": "MergerPremium!C8"
+    },
+    {
+     "formula": "MergerPremium!C30",
+     "blank": "MergerPremium!C28"
+    },
+    {
+     "formula": "MergerPremium!C30",
+     "blank": "MergerPremium!C29"
+    },
+    {
+     "formula": "MergerPremium!C8",
+     "blank": "MergerPremium!C6"
+    },
+    {
+     "formula": "MergerPremium!C8",
+     "blank": "MergerPremium!C7"
+    },
+    {
+     "formula": "MergerPremium!D14",
+     "blank": "MergerPremium!C14"
+    },
+    {
+     "formula": "MergerPremium!D15",
+     "blank": "MergerPremium!C15"
+    },
+    {
+     "formula": "MergerPremium!D16",
+     "blank": "MergerPremium!C16"
+    },
+    {
+     "formula": "MergerPremium!D17",
+     "blank": "MergerPremium!C17"
+    },
+    {
+     "formula": "MergerPremium!D18",
+     "blank": "MergerPremium!C18"
+    },
+    {
+     "formula": "MergerPremium!D36",
+     "blank": "MergerPremium!C36"
+    },
+    {
+     "formula": "MergerPremium!D36",
+     "blank": "MergerPremium!C8"
+    },
+    {
+     "formula": "MergerPremium!D36",
+     "blank": "MergerPremium!D18"
+    },
+    {
+     "formula": "MergerPremium!D37",
+     "blank": "MergerPremium!C37"
+    },
+    {
+     "formula": "MergerPremium!D37",
+     "blank": "MergerPremium!C8"
+    },
+    {
+     "formula": "MergerPremium!D37",
+     "blank": "MergerPremium!D18"
+    },
+    {
+     "formula": "MergerPremium!D38",
+     "blank": "MergerPremium!C38"
+    },
+    {
+     "formula": "MergerPremium!D38",
+     "blank": "MergerPremium!C8"
+    },
+    {
+     "formula": "MergerPremium!D38",
+     "blank": "MergerPremium!D18"
+    },
+    {
+     "formula": "MergerPremium!D39",
+     "blank": "MergerPremium!C39"
+    },
+    {
+     "formula": "MergerPremium!D39",
+     "blank": "MergerPremium!C8"
+    },
+    {
+     "formula": "MergerPremium!D39",
+     "blank": "MergerPremium!D18"
+    }
+   ],
+   "count": 38
+  },
+  "CHG": {
+   "changed_cells": 31,
+   "sheets": 1,
+   "regions": [
+    "MergerPremium!C11",
+    "MergerPremium!C14",
+    "MergerPremium!C15",
+    "MergerPremium!C16",
+    "MergerPremium!C17",
+    "MergerPremium!C18",
+    "MergerPremium!C19",
+    "MergerPremium!C21",
+    "MergerPremium!C22",
+    "MergerPremium!C23",
+    "MergerPremium!C24",
+    "MergerPremium!C25",
+    "MergerPremium!C28",
+    "MergerPremium!C29",
+    "MergerPremium!C30",
+    "MergerPremium!C36",
+    "MergerPremium!C37",
+    "MergerPremium!C38",
+    "MergerPremium!C39",
+    "MergerPremium!C6"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": "Post-edit verification (mechanical check of the current workbook)\n\nChanged cells: 31 across 1 sheet(s).\n\nNewly blank referenced cells (38):\n- MergerPremium!C19 now references blank MergerPremium!C11\n- MergerPremium!C19 now references blank MergerPremium!D18\n- MergerPremium!C21 now references blank MergerPremium!C11\n- MergerPremium!C21 now references blank MergerPremium!D14\n- MergerPremium!C21 now references blank MergerPremium!D15\n- MergerPremium!C21 now references blank MergerPremium!D16\n- MergerPremium!C21 now references blank MergerPremium!D17\n- MergerPremium!C21 now references blank MergerPremium!D18\n- MergerPremium!C22 now references blank MergerPremium!C11\n- MergerPremium!C22 now references blank MergerPremium!C19\n- and 28 more.\n\nThis report is mechanical evidence about the current workbook state.\nReview it before deciding whether to submit or revise.",
+ "positive_families": [
+  "REF"
+ ]
+}

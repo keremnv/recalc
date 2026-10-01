@@ -1,0 +1,78 @@
+{
+  "a0_historical_family": {
+    "Debugging": {
+      "executions": 86,
+      "fallback_dominant": 0,
+      "fully_proxyable": 16,
+      "lazy_fallback": 61,
+      "not_safe": 9,
+      "open_calls": 91,
+      "read_events": 789,
+      "safe_covered_reads": 619
+    },
+    "Financial_Model": {
+      "executions": 147,
+      "fallback_dominant": 5,
+      "fully_proxyable": 48,
+      "lazy_fallback": 70,
+      "not_safe": 24,
+      "open_calls": 139,
+      "read_events": 2082,
+      "safe_covered_reads": 1852
+    },
+    "Template": {
+      "executions": 54,
+      "fallback_dominant": 0,
+      "fully_proxyable": 5,
+      "lazy_fallback": 47,
+      "not_safe": 2,
+      "open_calls": 62,
+      "read_events": 938,
+      "safe_covered_reads": 783
+    },
+    "Visualization": {
+      "executions": 22,
+      "fallback_dominant": 0,
+      "fully_proxyable": 3,
+      "lazy_fallback": 3,
+      "not_safe": 16,
+      "open_calls": 6,
+      "read_events": 108,
+      "safe_covered_reads": 95
+    }
+  },
+  "levels": {
+    "A0": {
+      "historical_executions": 309,
+      "historical_fully_proxyable": 72,
+      "historical_fully_proxyable_pct": 23.300970873786408,
+      "historical_safe_read_events": 3349,
+      "live_independent_tasks": 2
+    },
+    "A1_classifier": {
+      "historical_new_api": false,
+      "live_false_positive_turns": 34
+    },
+    "A1_sheet_state": {
+      "historical_events": 0,
+      "historical_execs": 0
+    },
+    "A1_worksheets": {
+      "historical_events": 9,
+      "historical_execs": 9
+    },
+    "A2": {
+      "live_material_prefix_turns": 19
+    }
+  },
+  "rule": "cumulative ceilings are opportunity counts, not implemented support; incompatible paths are not combined",
+  "sensitivity_materiality": {
+    "a1_classifier_live_task_floor": 3,
+    "additional_work_thresholds_pct": [
+      5,
+      10,
+      20,
+      30
+    ]
+  }
+}

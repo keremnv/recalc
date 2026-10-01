@@ -1,0 +1,437 @@
+{
+  "by_arm": {
+    "A": {
+      "broad_view_calls": 62,
+      "edit_check_loops": 19,
+      "formula_dump_calls": 0,
+      "helper_api_introspection_proxy": 0,
+      "post_edit_read_recalc": 62,
+      "post_edit_recalc": 19,
+      "post_edit_workbook_reads": 61,
+      "python_inspection_calls": 192,
+      "python_stdout_visible_bytes": 435484,
+      "recalc_commands": 19,
+      "repeat_read_commands": 34,
+      "repeat_view_targets": 46,
+      "repeat_visible_observations": 117,
+      "save_commands": 19,
+      "targeted_range_proxy": 19,
+      "total_tool_observation_visible_bytes": 1171026,
+      "view_visible_bytes": 585837,
+      "whole_workbook_scan_proxy": 44,
+      "workbook_open_commands": 161
+    },
+    "B": {
+      "broad_view_calls": 57,
+      "edit_check_loops": 4,
+      "formula_dump_calls": 0,
+      "helper_api_introspection_proxy": 0,
+      "post_edit_read_recalc": 12,
+      "post_edit_recalc": 1,
+      "post_edit_workbook_reads": 12,
+      "python_inspection_calls": 158,
+      "python_stdout_visible_bytes": 507793,
+      "recalc_commands": 2,
+      "repeat_read_commands": 10,
+      "repeat_view_targets": 34,
+      "repeat_visible_observations": 71,
+      "save_commands": 6,
+      "targeted_range_proxy": 5,
+      "total_tool_observation_visible_bytes": 1161971,
+      "view_visible_bytes": 481764,
+      "whole_workbook_scan_proxy": 86,
+      "workbook_open_commands": 117
+    },
+    "C": {
+      "broad_view_calls": 72,
+      "edit_check_loops": 9,
+      "formula_dump_calls": 2,
+      "helper_api_introspection_proxy": 0,
+      "post_edit_read_recalc": 15,
+      "post_edit_recalc": 8,
+      "post_edit_workbook_reads": 15,
+      "python_inspection_calls": 150,
+      "python_stdout_visible_bytes": 405451,
+      "recalc_commands": 8,
+      "repeat_read_commands": 10,
+      "repeat_view_targets": 47,
+      "repeat_visible_observations": 112,
+      "save_commands": 9,
+      "targeted_range_proxy": 8,
+      "total_tool_observation_visible_bytes": 1181368,
+      "view_visible_bytes": 624443,
+      "whole_workbook_scan_proxy": 56,
+      "workbook_open_commands": 92
+    },
+    "D": {
+      "broad_view_calls": 53,
+      "edit_check_loops": 32,
+      "formula_dump_calls": 1,
+      "helper_api_introspection_proxy": 2,
+      "post_edit_read_recalc": 37,
+      "post_edit_recalc": 32,
+      "post_edit_workbook_reads": 37,
+      "python_inspection_calls": 151,
+      "python_stdout_visible_bytes": 415959,
+      "recalc_commands": 34,
+      "repeat_read_commands": 22,
+      "repeat_view_targets": 37,
+      "repeat_visible_observations": 106,
+      "save_commands": 32,
+      "targeted_range_proxy": 33,
+      "total_tool_observation_visible_bytes": 1185157,
+      "view_visible_bytes": 519081,
+      "whole_workbook_scan_proxy": 65,
+      "workbook_open_commands": 129
+    }
+  },
+  "classifier_limit": "Conservative command and exact-repeat proxies; none identifies confidence, useful evidence, or redundant checks.",
+  "paired_differences": {
+    "B_vs_A": [
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": -1,
+        "post_edit_read_recalc_difference": -25,
+        "save_count_difference": -13,
+        "task": "Template:15_01"
+      },
+      {
+        "final_save_to_submit_difference": 1,
+        "first_save_call_difference": 0,
+        "post_edit_read_recalc_difference": 9,
+        "save_count_difference": 2,
+        "task": "Template:15_03"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Financial_Model:01_01"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Financial_Model:04_03"
+      },
+      {
+        "final_save_to_submit_difference": -1,
+        "first_save_call_difference": -4,
+        "post_edit_read_recalc_difference": 1,
+        "save_count_difference": 1,
+        "task": "Financial_Model:03_03"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:02_01"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:02_06"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:10_10"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:01_08"
+      }
+    ],
+    "C_vs_A": [
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": -1,
+        "post_edit_read_recalc_difference": -14,
+        "save_count_difference": -7,
+        "task": "Template:15_01"
+      },
+      {
+        "final_save_to_submit_difference": 3,
+        "first_save_call_difference": -3,
+        "post_edit_read_recalc_difference": 2,
+        "save_count_difference": 0,
+        "task": "Template:15_03"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Financial_Model:01_01"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Financial_Model:04_03"
+      },
+      {
+        "final_save_to_submit_difference": 0,
+        "first_save_call_difference": -3,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Financial_Model:03_03"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": -3,
+        "save_count_difference": -2,
+        "task": "Financial_Model:02_01"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:02_01"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:02_06"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:10_10"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:01_08"
+      }
+    ],
+    "C_vs_B": [
+      {
+        "final_save_to_submit_difference": 0,
+        "first_save_call_difference": 0,
+        "post_edit_read_recalc_difference": 11,
+        "save_count_difference": 6,
+        "task": "Template:15_01"
+      },
+      {
+        "final_save_to_submit_difference": 2,
+        "first_save_call_difference": -3,
+        "post_edit_read_recalc_difference": -7,
+        "save_count_difference": -2,
+        "task": "Template:15_03"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Financial_Model:01_01"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Financial_Model:04_03"
+      },
+      {
+        "final_save_to_submit_difference": 1,
+        "first_save_call_difference": 1,
+        "post_edit_read_recalc_difference": -1,
+        "save_count_difference": -1,
+        "task": "Financial_Model:03_03"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:02_01"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:02_06"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:10_10"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:01_08"
+      }
+    ],
+    "D_vs_A": [
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": 0,
+        "post_edit_read_recalc_difference": 5,
+        "save_count_difference": 15,
+        "task": "Template:15_01"
+      },
+      {
+        "final_save_to_submit_difference": 1,
+        "first_save_call_difference": -2,
+        "post_edit_read_recalc_difference": 1,
+        "save_count_difference": 0,
+        "task": "Template:15_03"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Financial_Model:01_01"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Financial_Model:04_03"
+      },
+      {
+        "final_save_to_submit_difference": 0,
+        "first_save_call_difference": -1,
+        "post_edit_read_recalc_difference": 4,
+        "save_count_difference": 1,
+        "task": "Financial_Model:03_03"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": -3,
+        "save_count_difference": -2,
+        "task": "Financial_Model:02_01"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:02_01"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:02_06"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:10_10"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:01_08"
+      }
+    ],
+    "D_vs_C": [
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": 1,
+        "post_edit_read_recalc_difference": 19,
+        "save_count_difference": 22,
+        "task": "Template:15_01"
+      },
+      {
+        "final_save_to_submit_difference": -2,
+        "first_save_call_difference": 1,
+        "post_edit_read_recalc_difference": -1,
+        "save_count_difference": 0,
+        "task": "Template:15_03"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Financial_Model:01_01"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Financial_Model:04_03"
+      },
+      {
+        "final_save_to_submit_difference": 0,
+        "first_save_call_difference": 2,
+        "post_edit_read_recalc_difference": 4,
+        "save_count_difference": 1,
+        "task": "Financial_Model:03_03"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Financial_Model:02_01"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:02_01"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:02_06"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:10_10"
+      },
+      {
+        "final_save_to_submit_difference": null,
+        "first_save_call_difference": null,
+        "post_edit_read_recalc_difference": 0,
+        "save_count_difference": 0,
+        "task": "Debugging:01_08"
+      }
+    ]
+  }
+}

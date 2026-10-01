@@ -1,0 +1,79 @@
+[
+  {
+    "key": "Financial_Model:13_05:C1:r1",
+    "task": "Financial_Model:13_05",
+    "class": "AVAILABLE_NOT_QUERIED",
+    "error_message": "Regression error at Summary Valuation!E11: answer=11.3281525647495, output=11.5097743684789",
+    "used": false
+  },
+  {
+    "key": "Financial_Model:13_05:C1:r2",
+    "task": "Financial_Model:13_05",
+    "class": "AVAILABLE_NOT_QUERIED",
+    "error_message": "Regression error at Summary Valuation!E11: answer=11.3281525647495, output=11.5097743684789",
+    "used": false
+  },
+  {
+    "key": "Financial_Model:13_05:C1:r3",
+    "task": "Financial_Model:13_05",
+    "class": "AVAILABLE_NOT_QUERIED",
+    "error_message": "Regression error at Summary Valuation!E11: answer=11.3281525647495, output=11.5097743684789",
+    "used": false
+  },
+  {
+    "key": "Financial_Model:13_05:C1:r4",
+    "task": "Financial_Model:13_05",
+    "class": "AVAILABLE_NOT_QUERIED",
+    "error_message": "Regression error at Summary Valuation!E11: answer=11.3281525647495, output=11.5097743684789",
+    "used": false
+  },
+  {
+    "key": "Financial_Model:05_01:C1:r1",
+    "task": "Financial_Model:05_01",
+    "class": "PROVIDER_OR_RESOURCE_CENSORED",
+    "error_message": "output file not exist",
+    "used": true
+  },
+  {
+    "key": "Financial_Model:15_05:C1:r1",
+    "task": "Financial_Model:15_05",
+    "class": "PROVIDER_OR_RESOURCE_CENSORED",
+    "error_message": "output file not exist",
+    "used": false
+  },
+  {
+    "key": "Template:03_03:C1:r1",
+    "task": "Template:03_03",
+    "class": "QUERIED_BUT_WRONG_MODEL_CHOICE",
+    "error_message": "Regression error at Consolidation!C32: answer=None, output=630",
+    "used": true
+  },
+  {
+    "key": "Template:16_12:C1:r1",
+    "task": "Template:16_12",
+    "class": "QUERIED_BUT_WRONG_MODEL_CHOICE",
+    "error_message": "Modification error at Valuation!C43: answer=368442.563744589, output=None",
+    "used": true
+  },
+  {
+    "key": "Debugging:01_01:C1:r1",
+    "task": "Debugging:01_01",
+    "class": "QUERIED_BUT_WRONG_MODEL_CHOICE",
+    "error_message": "Regression error at Ex 1 - LBO!R59: answer=0, output=95.8833120588848",
+    "used": true
+  },
+  {
+    "key": "Debugging:09_04:C1:r1",
+    "task": "Debugging:09_04",
+    "class": "AVAILABLE_NOT_QUERIED",
+    "error_message": "Regression error at LBO!B35: answer=Revolver, output=Revolver",
+    "used": false
+  },
+  {
+    "key": "Debugging:10_10:C1:r1",
+    "task": "Debugging:10_10",
+    "class": "AVAILABLE_NOT_QUERIED",
+    "error_message": "Regression error at Model!D17: answer=177.359960324625, output=169.837029607725",
+    "used": false
+  }
+]

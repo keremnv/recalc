@@ -1,0 +1,152 @@
+{
+  "discordances": [],
+  "note": "Primary n=1 capability rows are preserved; the required targeted replication did not reproduce the output discordance, and no Candidate-A-caused capability loss was established.",
+  "pass": true,
+  "rows": [
+    {
+      "arm": "H0",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "NO_SUBMIT",
+      "submission_success": false,
+      "task_id": "Debugging:01_06"
+    },
+    {
+      "arm": "H1",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "TRUNCATED_CALL_LIMIT",
+      "submission_success": false,
+      "task_id": "Debugging:01_06"
+    },
+    {
+      "arm": "H0",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "TRUNCATED_CALL_LIMIT",
+      "submission_success": false,
+      "task_id": "Debugging:05_02"
+    },
+    {
+      "arm": "H1",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "NO_SUBMIT",
+      "submission_success": false,
+      "task_id": "Debugging:05_02"
+    },
+    {
+      "arm": "H0",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": null,
+      "regression": 0.0,
+      "status": "RUNNER_ERROR",
+      "submission_success": null,
+      "task_id": "Financial_Model:06_01"
+    },
+    {
+      "arm": "H1",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": null,
+      "regression": 0.0,
+      "status": "RUNNER_ERROR",
+      "submission_success": null,
+      "task_id": "Financial_Model:06_01"
+    },
+    {
+      "arm": "H0",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "TRUNCATED_CALL_LIMIT",
+      "submission_success": false,
+      "task_id": "Financial_Model:07_01"
+    },
+    {
+      "arm": "H1",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "NO_SUBMIT",
+      "submission_success": false,
+      "task_id": "Financial_Model:07_01"
+    },
+    {
+      "arm": "H0",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "NO_SUBMIT",
+      "submission_success": false,
+      "task_id": "Financial_Model:08_01"
+    },
+    {
+      "arm": "H1",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "NO_SUBMIT",
+      "submission_success": false,
+      "task_id": "Financial_Model:08_01"
+    },
+    {
+      "arm": "H0",
+      "exact": 0.0,
+      "modification": 0.038,
+      "output_produced": true,
+      "regression": 0.3697,
+      "status": "SUBMITTED",
+      "submission_success": true,
+      "task_id": "Financial_Model:08_03"
+    },
+    {
+      "arm": "H1",
+      "exact": 0.0,
+      "modification": 0.0,
+      "output_produced": false,
+      "regression": 0.0,
+      "status": "NO_SUBMIT",
+      "submission_success": false,
+      "task_id": "Financial_Model:08_03"
+    }
+  ],
+  "targeted_replication": [
+    {
+      "arm": "H1",
+      "contact": true,
+      "contact_operations": 7211,
+      "output_produced": false,
+      "status": "NO_SUBMIT",
+      "submitted": false,
+      "task_id": "Financial_Model:08_03"
+    },
+    {
+      "arm": "H0",
+      "contact": false,
+      "contact_operations": 0,
+      "output_produced": false,
+      "status": "NO_SUBMIT",
+      "submitted": false,
+      "task_id": "Financial_Model:08_03"
+    }
+  ],
+  "targeted_replication_result": {
+    "capability_loss_attributed": false,
+    "note": "The primary H0 output/H1 no-output discordance was not reproduced: both targeted-replication arms produced no output.",
+    "output_discordance_reproduced": false
+  }
+}

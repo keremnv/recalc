@@ -1,0 +1,15 @@
+{
+  "P1_known_source_recoverable_lexical_false_positive_turns": 34,
+  "P2_negative_controls": 173,
+  "P3_synthetic_ast_cases": 16,
+  "frozen": true,
+  "historical_source_executions": 309,
+  "model_inference": false,
+  "selection_rule": "P1 is the frozen 34 source-recoverable lexical false-positive turns; P2 excludes only no-read/eligibility-only rows and retains genuine semantic/fallback controls; P3 is the fixed AST adversarial fixture set.",
+  "sources": [
+    "candidate_a_contact_ceiling/fallback_events_expanded.jsonl",
+    "control_python_audit/python_executions.jsonl",
+    "transparent_python_read_census/executions.jsonl",
+    "frozen Candidate-A shadow semantic result"
+  ]
+}

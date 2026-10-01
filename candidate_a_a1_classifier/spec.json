@@ -1,0 +1,12 @@
+{
+  "a2": "not implemented",
+  "a3": "not implemented",
+  "candidate_b": "frozen",
+  "experiment": "zero-model A1 AST eligibility-classifier repair",
+  "model_inference": false,
+  "new_helpers": 0,
+  "new_model_syntax": 0,
+  "prompts_changed": false,
+  "seed": 20260920,
+  "semantic_surface_changed": false
+}

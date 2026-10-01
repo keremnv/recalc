@@ -1,0 +1,98 @@
+{
+  "experiment": "ASSISTED_DELIVERY_TIMING_PROBE",
+  "status": "FROZEN_BEFORE_LIVE_INFERENCE",
+  "scientific_question": "If the exact same formula-error report is delivered early enough, does the agent gather relevant evidence or make a traceably related workbook edit?",
+  "scope": "delivery-and-timing mechanism probe; not capability confirmation or natural-workflow prevalence",
+  "prior_verdict": "FORMULA_ERROR_FEEDBACK_INCONCLUSIVE",
+  "task_selection_rule": "eligible Debugging tasks, excluding prior discovery and reserved IDs, input <=1 MiB; ascending task ID; first four zero-model NFE >=3",
+  "selection_screen": "zero-model openpyxl round-trip plus frozen detector; no agent/treatment/gold outcome, first four NFE>=3; preliminary XX_03 screen broadened before preregistration because only two positive tasks; all screening results frozen in population.json",
+  "selected_tasks": [
+    "Debugging:01_03",
+    "Debugging:02_02",
+    "Debugging:02_03",
+    "Debugging:02_05"
+  ],
+  "population_sha256": "666bb57de5e17e07de9141eb47c665aa3c76e2a9cbcd717960e1966c51cce4a5",
+  "run_order_file": "run_order.json",
+  "run_order_sha256": "4e99c3a10b3bdd4bfa0e25c2ff076f1e33b1b79f52a5075bc0f79f3567371cff",
+  "early_save_instruction_exact": "After your first substantive workbook edit, save a provisional `output.xlsx` by call 20, then continue inspecting, correcting, verifying, and completing the task normally.",
+  "early_save_instruction_sha256": "e90259ee33bab317a36e5e67a579888ec39c5f9892a463629e72d43f6211ab2b",
+  "same_instruction_in_both_arms": true,
+  "treatment_template_file": "treatment_template.json",
+  "treatment_template_sha256": "78d5b69cb492390654f5142f2fabd7a3b9b96e00d6b7239d62645d34c782457f",
+  "template_render_sha256": "d2fa348e81174a809258d363ae9f5e854dea19e01057f8faf94bbf425d38ded9",
+  "mechanism": {
+    "detector": "new_formula_errors imported from frozen commit_checks.py",
+    "recalculation_comparison": "input UNO as-is; current output UNO calculateAll, saved recalculated copy, read; unchanged from frozen runner",
+    "recognized_error_types": "unchanged frozen error_kind",
+    "trigger": "first successful changed-byte output.xlsx save whose new_formula_error delta is nonempty",
+    "clean_save": "silent, later nonempty save may fire",
+    "episodes_max": 1,
+    "append": "after truncation to successful save observation, zero model calls, informational, fails open",
+    "selection": "sorted(sheet,address), <=8 per sheet, <=80 total, unchanged",
+    "control": "same invisible detector telemetry, no report"
+  },
+  "provider_config_file": "provider_config.json",
+  "provider_config_sha256": "9ea8f7605028d44a15da4817531187392c4a82a27e1c7267cfeadecaa517f117",
+  "prior_settings_mechanically_extracted": {
+    "model": "z-ai/glm-5.3-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "max_tokens": 8192,
+    "call_cap": 50,
+    "instance_cost_cap_usd": 0.25,
+    "global_cost_cap_usd": 25.0,
+    "bash_timeout_s": 180,
+    "tool_choice": "required",
+    "parallel_tool_calls": false,
+    "tools": [
+      "bash",
+      "view_xlsx",
+      "submit"
+    ],
+    "reasoning": "none",
+    "system_and_instance_prompt_file": "benchmark/sweagent/spreadsheet-control.yaml",
+    "scorer": "official evaluation.py after open_spreadsheet.py LibreOffice refresh"
+  },
+  "code_hashes": {
+    "formula_error_delivery_probe/probe_runner.py": "5910526d9774157a1fa9783a2050d81c0a1116648915cd6fcf94315d3726d06f",
+    "formula_error_delivery_probe/select_population.py": "312820e0fb5fef179cb9aa181950118ed567cc10a064b9b31ec31a69c2957472",
+    "formula_error_feedback_discovery/frozen_runner.py": "b284cd40b5405aadbcfaa954e7db382d6b3ed472157e998072a3350d9d3d548d",
+    "src/librecalc_mcp/domain/commit_checks.py": "e0504fd26d42193f64bb3baa14553910061351898587d34715ceafe71ccbcac6",
+    "src/librecalc_mcp/backend/uno.py": "f2142f2b7c249ba24e3d1cea7e36a75936ee05557d506c620856bd07ab14f6a2",
+    "src/librecalc_mcp/domain/grid.py": "f24d9d796cea2218762b5e5d3c2fc91101cf633543dadc7618e4ca6b675d7c97",
+    "benchmark/sweagent/spreadsheet-control.yaml": "c3cc1b506956bc73a9560716e739bfb2fb19d96477df540f3837d17c3cd53c3d",
+    "benchmark-data/SpreadsheetBench-2/evaluation/evaluation.py": "04a2a75b29805ab40efe93e202384c365d1d32b9c924c1a4aed56e41249facb0",
+    "benchmark-data/SpreadsheetBench-2/evaluation/open_spreadsheet.py": "9f50ca883067c99dbd254f2b6620dd97157c1f56ae24e0ec692d30813a82dba1"
+  },
+  "contact_definition": "treatment report written and appended after first nonempty qualifying output save; TIMELY_CONTACT iff delivered at call <=25 and 50-call_cap minus delivery call >=25",
+  "primary_endpoint": "TIMELY_CONTACT_RATE across four task-level treatment attempts, using permitted infrastructure replacement if primary censored",
+  "primary_gate": "TIMELY_CONTACT >=3/4",
+  "secondary_mechanistic_endpoint": "TRACEABLE_EVIDENCE_USE among timely contacts: post-report evidence relevant to reported computational problem gathered via any tool and/or an actual output.xlsx edit traceably related by named cell, formula, or demonstrable dependency; generic bash calls and merely touching file do not count",
+  "secondary_components": [
+    "relevant inspection",
+    "relevant output.xlsx edit",
+    "shown/live NFE reduction",
+    "verification",
+    "submission"
+  ],
+  "capability_safety_endpoints": "exploratory paired official modification and regression deltas on valid submitted pairs; no inference from unpaired, noncompletion, token use, or error disappearance alone; prior regression guard tracked (mean >=-0.01 and no task <=-0.02; harm signal mean <=-0.02 or any <=-0.05)",
+  "provisional_save_endpoint": "output.xlsx changed-byte successful save by call <=20 after a substantive workbook edit, judged from full transcript and output snapshots; clean counts as provisional save but no contact",
+  "censoring": {
+    "VALID_SUBMISSION": "submit tool called with output workbook present",
+    "MODEL_NONCOMPLETION": "call cap, cost cap, no save, clean save, no contact, no submit, ordinary run-time cap without infrastructure fault",
+    "PROVIDER_CENSORED": "provider API timeout/refusal/HTTP error after retries",
+    "RUNNER_CENSORED": "runner crash or global spend cap",
+    "WORKBOOK_INFRA_CENSORED": "UNO calculation or official scorer infrastructure failure preventing assessment",
+    "OTHER": "verbatim rationale"
+  },
+  "replacement_rule": "at most one R1 for each arm/task iff primary is PROVIDER_CENSORED, RUNNER_CENSORED, or WORKBOOK_INFRA_CENSORED; do not replace model outcomes, missing contact, score, or nonuse; primary and R1 kept separately",
+  "stopping_rule": "exactly four frozen pairs in order plus permitted infrastructure R1 attempts; no interim adaptation, no enlargement, no automatic capability rerun or confirmation",
+  "decision_rule": {
+    "PROBE_INCONCLUSIVE": "infrastructure censoring after permitted replacements leaves timely-contact gate indeterminate (lower bound <3 and upper bound >=3); also if no valid assessment of actionability despite >=3 timely contacts because required trajectories are infra-lost",
+    "DELIVERY_TIMING_NOT_SUPPORTED": "maximum possible timely contacts <3, or observed timely contacts <3 with all four treatment tasks classifiable",
+    "DELIVERY_SUPPORTED_ACTIONABILITY_WEAK": "at least three timely contacts but fewer than two distinct timely trajectories with TRACEABLE_EVIDENCE_USE",
+    "DELIVERY_TIMING_SUPPORTED": "at least three timely contacts and at least two distinct timely trajectories with TRACEABLE_EVIDENCE_USE"
+  },
+  "post_probe": "freeze results; no original rerun, reserve opening, report redesign, new trigger, or larger benchmark"
+}

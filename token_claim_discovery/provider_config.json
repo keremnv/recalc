@@ -1,0 +1,149 @@
+{
+  "actual_routing": {
+    "note": "Default OpenRouter routing policy is common to arms; actually served provider may vary stochastically and is reported, not treated as a factorial arm.",
+    "provider_wait_s_by_arm": {
+      "A": 4879.05176768429,
+      "B": 4048.0609026205457,
+      "C": 5016.566482827002,
+      "D": 6191.6057239495785
+    },
+    "served_models": {
+      "z-ai/glm-5.3-flash": 1167
+    },
+    "served_providers_by_arm": {
+      "A": {
+        "DeepInfra": 1,
+        "InferenceNet": 2,
+        "Morph": 7,
+        "OpenInference": 65,
+        "Phala": 13,
+        "Wafer": 241
+      },
+      "B": {
+        "DeepInfra": 2,
+        "InferenceNet": 9,
+        "Morph": 1,
+        "OpenInference": 52,
+        "Phala": 14,
+        "Wafer": 179
+      },
+      "C": {
+        "InferenceNet": 13,
+        "Morph": 1,
+        "OpenInference": 64,
+        "Phala": 26,
+        "Wafer": 202
+      },
+      "D": {
+        "DeepInfra": 1,
+        "InferenceNet": 14,
+        "Morph": 6,
+        "OpenInference": 68,
+        "Phala": 13,
+        "Wafer": 173
+      }
+    }
+  },
+  "base_scaffold_source": "benchmark/sweagent/spreadsheet-control.yaml via benchmark/ab_local_runner.py load_templates()",
+  "original_config": {
+    "arms": {
+      "A": {
+        "H": 0,
+        "S": 0
+      },
+      "B": {
+        "H": 1,
+        "S": 0
+      },
+      "C": {
+        "H": 0,
+        "S": 1
+      },
+      "D": {
+        "H": 1,
+        "S": 1
+      }
+    },
+    "common": {
+      "call_cap": 40,
+      "candidate_a": false,
+      "capture": false,
+      "compiled_substrate": false,
+      "freshness": "inactive",
+      "helper_backend": "reference_openpyxl",
+      "instance_cost_cap_usd": 0.25,
+      "max_tokens": 8192,
+      "model": "z-ai/glm-5.3-flash",
+      "provider_deadline_s": 240,
+      "task_deadline_s": 900,
+      "temperature": 0.0,
+      "top_p": 1.0
+    }
+  },
+  "provenance": "retrospective index of frozen arm configs, schemas, and per-call routing",
+  "provider_tool_schemas": [
+    {
+      "function": {
+        "description": "run shell commands (e.g., file operations, calling Python scripts with `python3`)",
+        "name": "bash",
+        "parameters": {
+          "properties": {
+            "command": {
+              "description": "shell command to run",
+              "type": "string"
+            }
+          },
+          "required": [
+            "command"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "view the content of an xlsx file. Can list all sheets or view a specific sheet's contents with optional row range",
+        "name": "view_xlsx",
+        "parameters": {
+          "properties": {
+            "end_row": {
+              "type": "integer"
+            },
+            "file_path": {
+              "type": "string"
+            },
+            "mode": {
+              "description": "list or content",
+              "type": "string"
+            },
+            "sheet": {
+              "type": "string"
+            },
+            "start_row": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "file_path"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "submits the current file",
+        "name": "submit",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ],
+  "reasoning_level": null,
+  "reasoning_level_note": "No explicit reasoning setting in archived request configuration; served response reasoning tokens are preserved per call."
+}

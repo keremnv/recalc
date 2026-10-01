@@ -1,0 +1,23 @@
+{
+ "tentative_mapping": {
+  "EXACT_REPEAT": "possible observation memoization/reference",
+  "PARTIAL_OVERLAP": "possible delta observations",
+  "DETERMINISTIC_DERIVATION": "possible persistent deterministic state / derivation elision",
+  "MECHANICAL_REFORMAT": "possible canonical observation form",
+  "SEMANTIC_REINSPECTION": "probably requires caution; may not be safely suppressible",
+  "CONTROL_OR_ERROR_RECOVERY": "runner/provider robustness, not a context mechanism"
+ },
+ "dominant_redundancy_class": "PARTIAL_OVERLAP",
+ "dominant_tokens_est": 115143,
+ "class_shares": {
+  "NEW_EVIDENCE": 0.9539699340324161,
+  "CONTROL_BLANK": 0.0005585264915972065,
+  "EXACT_REPEAT": 0.014000293062805065,
+  "PARTIAL_OVERLAP": 0.016380645904731827,
+  "SEMANTIC_REINSPECTION": 0.012608102475242595,
+  "MECHANICAL_REFORMAT": 0.002403684055533979,
+  "DETERMINISTIC_DERIVATION": 7.511512673543684e-05,
+  "CONTROL_OR_ERROR_RECOVERY": 3.6988509377298443e-06
+ },
+ "note": "mapping only; no mechanism implemented"
+}

@@ -1,0 +1,23 @@
+{
+  "actual_probe_argv": [
+    "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+    "run",
+    "--workdir",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/work",
+    "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_warm_acceleration_characterization/feasibility_probe/work/workload.py"
+  ],
+  "cwd": "{workdir}",
+  "environment": "XDG_CACHE_HOME same for first and second public runs; PYTHONPATH cleared; unchanged workbook bytes",
+  "public_cli": "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+  "rc_cold_and_attempted_warm": [
+    "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/librecalc-agent",
+    "run",
+    "--workdir",
+    "{workdir}",
+    "{workdir}/workload.py"
+  ],
+  "reference": [
+    "/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python",
+    "{workdir}/workload.py"
+  ]
+}

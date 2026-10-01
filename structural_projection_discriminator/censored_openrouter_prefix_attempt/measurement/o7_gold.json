@@ -1,0 +1,16 @@
+{
+  "obligation": "O7",
+  "loaded_after_payload_freeze": true,
+  "gold_display_count": 297,
+  "gold_cell_count": 297,
+  "gold_extent": {
+    "rows": [
+      29,
+      30,
+      31
+    ],
+    "start_col": 15,
+    "end_col": 113
+  },
+  "loaded_at": "2026-09-16T14:27:55.497396+00:00"
+}

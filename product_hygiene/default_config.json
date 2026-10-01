@@ -1,0 +1,19 @@
+{
+  "runtime": {
+    "enabled": true,
+    "substrate": true,
+    "candidate_a": true,
+    "capture": true,
+    "verbosity": "normal",
+    "cache_dir": "${XDG_CACHE_HOME:-~/.cache}/librecalc-agent"
+  },
+  "precedence": "--no-runtime overrides TOML; --config selects a file, otherwise LIBRECALC_CONFIG; no selected file uses defaults.",
+  "dependencies": [
+    "effective acceleration = enabled AND substrate AND candidate_a AND successful bootstrap AND unchanged frozen source eligibility",
+    "compiled/freshness machinery is inactive without compiled serving",
+    "capture = enabled AND capture AND capture module available; independent of read index availability",
+    "invalid configuration disables optional runtime for the invocation",
+    "unavailable cache disables optimized reads; ordinary writes remain authoritative"
+  ],
+  "configuration_example": "examples/basic/runtime.toml"
+}

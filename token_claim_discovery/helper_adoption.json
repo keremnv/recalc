@@ -1,0 +1,31 @@
+{
+  "by_arm": {
+    "A": {
+      "helper_mention_calls": 0,
+      "invocation_syntax_by_type": {},
+      "runs_with_helper_mention": 0,
+      "runs_with_invocation_syntax": 0
+    },
+    "B": {
+      "helper_mention_calls": 4,
+      "invocation_syntax_by_type": {
+        "search": 6
+      },
+      "runs_with_helper_mention": 1,
+      "runs_with_invocation_syntax": 1
+    },
+    "C": {
+      "helper_mention_calls": 0,
+      "invocation_syntax_by_type": {},
+      "runs_with_helper_mention": 0,
+      "runs_with_invocation_syntax": 0
+    },
+    "D": {
+      "helper_mention_calls": 0,
+      "invocation_syntax_by_type": {},
+      "runs_with_helper_mention": 0,
+      "runs_with_invocation_syntax": 0
+    }
+  },
+  "limitation": "Command syntax plus return code requires transcript audit for actual execution and displacement; mention alone is not adoption."
+}

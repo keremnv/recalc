@@ -1,0 +1,48 @@
+{
+ "positive": false,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [],
+   "count": 0
+  },
+  "CHG": {
+   "changed_cells": 18,
+   "sheets": 2,
+   "regions": [
+    "Construction Schedule (1)!E9",
+    "Construction Schedule (1)!I10",
+    "Executive Summary!C10",
+    "Executive Summary!C8",
+    "Executive Summary!C9",
+    "Executive Summary!F21",
+    "Executive Summary!G21",
+    "Executive Summary!H21",
+    "Executive Summary!I21",
+    "Executive Summary!J21",
+    "Executive Summary!K21",
+    "Executive Summary!L21",
+    "Executive Summary!M21",
+    "Executive Summary!N21",
+    "Executive Summary!O21",
+    "Executive Summary!P21",
+    "Executive Summary!Q21",
+    "Executive Summary!R21"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": null,
+ "positive_families": []
+}

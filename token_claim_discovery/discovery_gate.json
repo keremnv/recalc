@@ -1,0 +1,19 @@
+{
+  "D_vs_A_median_reduction_ge_10pct": true,
+  "capability_guard_interpretation": "Cannot affirmatively establish preservation: D had 9 valid submissions versus A's 10, with two A-only and one D-only valid submissions, and mixed paired modification deltas. No reproducible degradation is proven either.",
+  "capability_guard_pass": false,
+  "coherent_mechanism": false,
+  "component_material": true,
+  "component_material_descriptively": true,
+  "component_mechanism_identified": false,
+  "discovered": false,
+  "favorable_two_families": true,
+  "helper_mechanism_supported": false,
+  "holdout_validation_justified": false,
+  "interaction_supported": false,
+  "not_one_or_two_pathological_tasks": false,
+  "primary_verdict": "TOKEN_EFFECT_TRAJECTORY_NOISE",
+  "reason": "D/A E2 median clears 10% narrowly but reverses after omitting two extreme Template tasks; its CI crosses 1, Debugging median is adverse, helper adoption is one B run and zero D runs, observation burden does not fall, and capability preservation is not established.",
+  "salience_mechanism_supported": false,
+  "verdict_scope": "The observed paired token movement is mixed and dominated by trajectory length and two Template tasks. This is not proof that every product-facing effect is zero."
+}

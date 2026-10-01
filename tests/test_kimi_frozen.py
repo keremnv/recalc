@@ -132,9 +132,7 @@ def test_frozen_forwards_provider_pin(monkeypatch: pytest.MonkeyPatch, tmp_path:
 
     assert frozen.main() == 0
     assert commands
-    assert all(
-        command[command.index("--provider-only") + 1] == "inceptron" for command in commands
-    )
+    assert all(command[command.index("--provider-only") + 1] == "inceptron" for command in commands)
 
 
 def test_frozen_no_score_skips_official_pack(
@@ -201,6 +199,43 @@ def test_frozen_debug_ablation_changes_only_debugging_group(
     assert debugging[debugging.index("--execution") + 1] == "semantic-program-v1"
     assert debugging[debugging.index("--observation") + 1] == "formula-anomalies-v1"
     assert debugging[debugging.index("--repair-passes") + 1] == "2"
+
+
+def test_hybrid_unbounded_arm_keeps_category_observations_and_all_write_tools(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path
+) -> None:
+    frozen = _module()
+    slice_path = _write_slice(tmp_path / "slice.json")
+    commands: list[list[str]] = []
+    monkeypatch.setattr(
+        frozen.subprocess,
+        "call",
+        lambda command, cwd=None: commands.append([str(part) for part in command]) or 0,
+    )
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "run_kimi_frozen.py",
+            "--slice",
+            str(slice_path),
+            "--run-name",
+            "hybrid-sample",
+            "--hybrid",
+            "--unbounded-reads",
+            "--no-score",
+        ],
+    )
+
+    assert frozen.main() == 0
+    compute, debugging = commands
+    assert compute[compute.index("--observation") + 1] == "formula-patterns-v1"
+    assert debugging[debugging.index("--observation") + 1] == "formula-anomalies-v1"
+    assert all(
+        command[command.index("--execution") + 1] == "semantic-program-v1" for command in commands
+    )
+    assert all("--hybrid" in command and "--unbounded-reads" in command for command in commands)
+    assert "--read-budget" not in debugging
 
 
 def test_frozen_format_observation_requires_semantic_program(

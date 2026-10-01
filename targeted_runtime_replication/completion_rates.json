@@ -1,0 +1,133 @@
+{
+ "Template:01_02": {
+  "H0": {
+   "n": 2,
+   "output_rate": 1.0,
+   "usable_rate": 1.0,
+   "completion_rate": 1.0,
+   "pre_mutation_stall_rate": 0.0,
+   "mean_modification": 0.4615,
+   "mean_regression": 0.9408
+  },
+  "H1": {
+   "n": 2,
+   "output_rate": 1.0,
+   "usable_rate": 1.0,
+   "completion_rate": 0.5,
+   "pre_mutation_stall_rate": 0.0,
+   "mean_modification": 0.2308,
+   "mean_regression": 1.0
+  }
+ },
+ "Template:01_07": {
+  "H0": {
+   "n": 2,
+   "output_rate": 0.0,
+   "usable_rate": 0.0,
+   "completion_rate": 0.0,
+   "pre_mutation_stall_rate": 1.0,
+   "mean_modification": 0.0,
+   "mean_regression": 0.0
+  },
+  "H1": {
+   "n": 2,
+   "output_rate": 0.5,
+   "usable_rate": 0.5,
+   "completion_rate": 0.5,
+   "pre_mutation_stall_rate": 0.5,
+   "mean_modification": 0.2105,
+   "mean_regression": 0.485
+  }
+ },
+ "Debugging:02_06": {
+  "H0": {
+   "n": 2,
+   "output_rate": 0.5,
+   "usable_rate": 0.5,
+   "completion_rate": 0.5,
+   "pre_mutation_stall_rate": 0.5,
+   "mean_modification": 0.0,
+   "mean_regression": 0.449
+  },
+  "H1": {
+   "n": 2,
+   "output_rate": 0.0,
+   "usable_rate": 0.0,
+   "completion_rate": 0.0,
+   "pre_mutation_stall_rate": 1.0,
+   "mean_modification": 0.0,
+   "mean_regression": 0.0
+  }
+ },
+ "Financial_Model:01_01": {
+  "H0": {
+   "n": 2,
+   "output_rate": 1.0,
+   "usable_rate": 1.0,
+   "completion_rate": 1.0,
+   "pre_mutation_stall_rate": 0.0,
+   "mean_modification": 0.0074,
+   "mean_regression": 0.85
+  },
+  "H1": {
+   "n": 2,
+   "output_rate": 1.0,
+   "usable_rate": 1.0,
+   "completion_rate": 0.5,
+   "pre_mutation_stall_rate": 0.0,
+   "mean_modification": 0.0074,
+   "mean_regression": 0.8501
+  }
+ },
+ "Financial_Model:13_05": {
+  "H0": {
+   "n": 2,
+   "output_rate": 1.0,
+   "usable_rate": 1.0,
+   "completion_rate": 1.0,
+   "pre_mutation_stall_rate": 0.0,
+   "mean_modification": 0.0268,
+   "mean_regression": 0.8483
+  },
+  "H1": {
+   "n": 2,
+   "output_rate": 1.0,
+   "usable_rate": 1.0,
+   "completion_rate": 1.0,
+   "pre_mutation_stall_rate": 0.0,
+   "mean_modification": 0.0268,
+   "mean_regression": 0.8483
+  }
+ },
+ "Template:06_12": {
+  "H0": {
+   "n": 2,
+   "output_rate": 0.5,
+   "usable_rate": 0.5,
+   "completion_rate": 0.5,
+   "pre_mutation_stall_rate": 0.5,
+   "mean_modification": 0.2833,
+   "mean_regression": 0.5
+  },
+  "H1": {
+   "n": 2,
+   "output_rate": 1.0,
+   "usable_rate": 1.0,
+   "completion_rate": 1.0,
+   "pre_mutation_stall_rate": 0.0,
+   "mean_modification": 0.0,
+   "mean_regression": 1.0
+  }
+ },
+ "_primary_statistic": {
+  "P_no_output_before_mutation_discordant_tasks": {
+   "H0": 0.5,
+   "H1": 0.5
+  },
+  "overall_pre_mutation_stalls": {
+   "H0": 4,
+   "H1": 3
+  },
+  "n_per_arm": 12
+ }
+}

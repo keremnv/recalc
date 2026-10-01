@@ -1,0 +1,168 @@
+{
+ "positive": true,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [
+    {
+     "cell": "P&L!I37",
+     "error": "#DIV/0!"
+    },
+    {
+     "cell": "P&L!J37",
+     "error": "#DIV/0!"
+    },
+    {
+     "cell": "P&L!K37",
+     "error": "#DIV/0!"
+    },
+    {
+     "cell": "P&L!L37",
+     "error": "#DIV/0!"
+    },
+    {
+     "cell": "P&L!M37",
+     "error": "#DIV/0!"
+    }
+   ],
+   "count": 5,
+   "sheets": 1,
+   "types": {
+    "#DIV/0!": 5
+   },
+   "changed_overlap": 5
+  },
+  "UNIF": {
+   "items": [
+    {
+     "cell": "Working Capital!N30"
+    }
+   ],
+   "count": 1
+  },
+  "REF": {
+   "items": [
+    {
+     "formula": "Assumption!J8",
+     "blank": "Assumption!I8"
+    },
+    {
+     "formula": "Assumption!K8",
+     "blank": "Assumption!J8"
+    },
+    {
+     "formula": "Assumption!L8",
+     "blank": "Assumption!K8"
+    },
+    {
+     "formula": "Assumption!M8",
+     "blank": "Assumption!L8"
+    }
+   ],
+   "count": 4
+  },
+  "CHG": {
+   "changed_cells": 37,
+   "sheets": 3,
+   "regions": [
+    "Assumption!I18",
+    "Assumption!I8",
+    "Assumption!J18",
+    "Assumption!J8",
+    "Assumption!K18",
+    "Assumption!K8",
+    "Assumption!L18",
+    "Assumption!L8",
+    "Assumption!M18",
+    "Assumption!M8",
+    "P&L!C37",
+    "P&L!D37",
+    "P&L!E37",
+    "P&L!F37",
+    "P&L!G37",
+    "P&L!H37",
+    "P&L!I37",
+    "P&L!J37",
+    "P&L!K37",
+    "P&L!L37"
+   ]
+  }
+ },
+ "dep_context": [
+  {
+   "for": "P&L!I37",
+   "fed_by": [
+    "P&L!I36",
+    "P&L!I9"
+   ],
+   "feeds": [
+    "BS!I39",
+    "CF!C14",
+    "CF!D14"
+   ]
+  },
+  {
+   "for": "P&L!J37",
+   "fed_by": [
+    "P&L!J36",
+    "P&L!J9"
+   ],
+   "feeds": [
+    "BS!J39",
+    "CF!D14",
+    "CF!E14"
+   ]
+  },
+  {
+   "for": "P&L!K37",
+   "fed_by": [
+    "P&L!K36",
+    "P&L!K9"
+   ],
+   "feeds": [
+    "BS!K39",
+    "CF!E14",
+    "CF!F14"
+   ]
+  },
+  {
+   "for": "P&L!L37",
+   "fed_by": [
+    "P&L!L36",
+    "P&L!L9"
+   ],
+   "feeds": [
+    "BS!L39",
+    "CF!F14",
+    "CF!G14"
+   ]
+  },
+  {
+   "for": "P&L!M37",
+   "fed_by": [
+    "P&L!M36",
+    "P&L!M9"
+   ],
+   "feeds": [
+    "BS!M39",
+    "CF!G14",
+    "Ratio Analysis!M13"
+   ]
+  },
+  {
+   "for": "Working Capital!N30",
+   "fed_by": [
+    "Working Capital!M29"
+   ],
+   "feeds": [
+    "Valuation!H10"
+   ]
+  }
+ ],
+ "model_block": "Post-edit verification (mechanical check of the current workbook)\n\nChanged cells: 37 across 3 sheet(s).\n\nNew formula errors (5):\n- P&L!I37: #DIV/0!\n- P&L!J37: #DIV/0!\n- P&L!K37: #DIV/0!\n- P&L!L37: #DIV/0!\n- P&L!M37: #DIV/0!\n\nNew formula-pattern breaks (1):\n- Working Capital!N30 differs from the previously consistent row/column pattern.\n\nNewly blank referenced cells (4):\n- Assumption!J8 now references blank Assumption!I8\n- Assumption!K8 now references blank Assumption!J8\n- Assumption!L8 now references blank Assumption!K8\n- Assumption!M8 now references blank Assumption!L8\n\nThis report is mechanical evidence about the current workbook state.\nReview it before deciding whether to submit or revise.",
+ "positive_families": [
+  "ERR",
+  "UNIF",
+  "REF"
+ ]
+}

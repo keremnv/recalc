@@ -1,0 +1,480 @@
+{
+  "cold": {
+    "H0": {
+      "child_wall_ns": {
+        "median": 267.824246,
+        "range": [
+          161.610782,
+          3986.731334
+        ]
+      },
+      "external_parent_residual": {
+        "median": 105.89856,
+        "range": [
+          95.997913,
+          122.230343
+        ]
+      },
+      "parent_total_ns": {
+        "median": 811.5058819999999,
+        "range": [
+          261.632634,
+          8209.017856
+        ]
+      },
+      "post_capture_delta_validation_ns": {
+        "median": 0.4543855,
+        "range": [
+          0.309161,
+          1.231553
+        ]
+      },
+      "pre_capture_ns": {
+        "median": 0.3408215,
+        "range": [
+          0.241141,
+          0.51157
+        ]
+      },
+      "runtime_artifact_load_ns": {
+        "median": 42.8386635,
+        "range": [
+          0.852966,
+          810.98719
+        ]
+      },
+      "runtime_child_source_hash_ns": {
+        "median": 0.65018,
+        "range": [
+          0.20872,
+          3.330897
+        ]
+      },
+      "runtime_reference_parse_ns": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          2728.042983
+        ]
+      }
+    },
+    "H1": {
+      "external_parent_residual": {
+        "median": 97.0283735,
+        "range": [
+          83.64355,
+          559.466178
+        ]
+      },
+      "parent_total_ns": {
+        "median": 569.6827475,
+        "range": [
+          96.084922,
+          5849.373137
+        ]
+      },
+      "post_capture_delta_validation_ns": {
+        "median": 0.2635485,
+        "range": [
+          0.14992,
+          1.496556
+        ]
+      },
+      "pre_capture_ns": {
+        "median": 0.3110765,
+        "range": [
+          0.215666,
+          0.50601
+        ]
+      },
+      "runtime_artifact_load_ns": {
+        "median": 37.93482,
+        "range": [
+          0.810302,
+          644.34159
+        ]
+      },
+      "runtime_child_source_hash_ns": {
+        "median": 0.337556,
+        "range": [
+          0.057043,
+          1.746644
+        ]
+      },
+      "runtime_install_ns": {
+        "median": 0.6090884999999999,
+        "range": [
+          0.448482,
+          0.985532
+        ]
+      },
+      "runtime_reference_parse_ns": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          2067.341921
+        ]
+      },
+      "script_wall_ns": {
+        "median": 78.3382695,
+        "range": [
+          1.947153,
+          2689.477974
+        ]
+      }
+    },
+    "H2": {
+      "bootstrap_bootstrap_total": {
+        "median": 518.6372635,
+        "range": [
+          123.107374,
+          3285.022479
+        ]
+      },
+      "bootstrap_config_admission": {
+        "median": 0.9858595,
+        "range": [
+          0.736305,
+          1.756324
+        ]
+      },
+      "bootstrap_discovery": {
+        "median": 0.2438215,
+        "range": [
+          0.173629,
+          0.257126
+        ]
+      },
+      "bootstrap_pre_runtime": {
+        "median": 517.855824,
+        "range": [
+          122.098928,
+          3284.362684
+        ]
+      },
+      "bootstrap_runtime_import_install": {
+        "median": 0.64299,
+        "range": [
+          0.364724,
+          0.971251
+        ]
+      },
+      "external_observer_residual": {
+        "median": 2.3667825000000002,
+        "range": [
+          1.841438,
+          2.807538
+        ]
+      },
+      "observer_argument_run_dir": {
+        "median": 0.32954550000000005,
+        "range": [
+          0.216485,
+          0.412695
+        ]
+      },
+      "observer_changed_helper_or_empty_receipt": {
+        "median": 0.119381,
+        "range": [
+          0.075954,
+          0.186441
+        ]
+      },
+      "observer_fork_launch": {
+        "median": 0.1903795,
+        "range": [
+          0.132385,
+          0.275059
+        ]
+      },
+      "observer_observer_to_receipt": {
+        "median": 665.978126,
+        "range": [
+          187.388476,
+          6427.136895
+        ]
+      },
+      "observer_post_snapshot_compare": {
+        "median": 0.4204905,
+        "range": [
+          0.127553,
+          2.340347
+        ]
+      },
+      "observer_pre_snapshot": {
+        "median": 0.312222,
+        "range": [
+          0.046601,
+          1.682231
+        ]
+      },
+      "observer_wait_target": {
+        "median": 664.2368584999999,
+        "range": [
+          186.518448,
+          6423.421555
+        ]
+      },
+      "runtime_artifact_load_ns": {
+        "median": 44.4960775,
+        "range": [
+          1.071155,
+          639.894265
+        ]
+      },
+      "runtime_child_source_hash_ns": {
+        "median": 0.37839350000000005,
+        "range": [
+          0.097292,
+          1.667488
+        ]
+      },
+      "runtime_reference_parse_ns": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          2127.35767
+        ]
+      }
+    }
+  },
+  "warm": {
+    "H0": {
+      "child_wall_ns": {
+        "median": 270.32825775000003,
+        "range": [
+          159.79011250000002,
+          3755.6398090000002
+        ]
+      },
+      "external_parent_residual": {
+        "median": 87.19154800000001,
+        "range": [
+          81.8151335,
+          93.422326
+        ]
+      },
+      "parent_total_ns": {
+        "median": 280.369665,
+        "range": [
+          170.21333049999998,
+          3775.54329
+        ]
+      },
+      "post_capture_delta_validation_ns": {
+        "median": 6.812203,
+        "range": [
+          5.3742525,
+          8.360740499999999
+        ]
+      },
+      "pre_capture_ns": {
+        "median": 0.23351324999999998,
+        "range": [
+          0.14015149999999998,
+          1.1978985
+        ]
+      },
+      "runtime_artifact_load_ns": {
+        "median": 47.063832500000004,
+        "range": [
+          0.8094650000000001,
+          816.3445830000001
+        ]
+      },
+      "runtime_child_source_hash_ns": {
+        "median": 0.6493687499999999,
+        "range": [
+          0.1860575,
+          3.5801195
+        ]
+      },
+      "runtime_reference_parse_ns": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          2141.89368
+        ]
+      }
+    },
+    "H1": {
+      "external_parent_residual": {
+        "median": 96.15646175,
+        "range": [
+          91.968283,
+          561.1634025000001
+        ]
+      },
+      "parent_total_ns": {
+        "median": 191.95682225000002,
+        "range": [
+          86.03172749999999,
+          3149.8920749999997
+        ]
+      },
+      "post_capture_delta_validation_ns": {
+        "median": 0.29794925,
+        "range": [
+          0.18515549999999997,
+          1.5923155000000002
+        ]
+      },
+      "pre_capture_ns": {
+        "median": 0.23292600000000002,
+        "range": [
+          0.139673,
+          1.1931535000000002
+        ]
+      },
+      "runtime_artifact_load_ns": {
+        "median": 50.422194749999996,
+        "range": [
+          0.8014545,
+          809.182832
+        ]
+      },
+      "runtime_child_source_hash_ns": {
+        "median": 0.50236925,
+        "range": [
+          0.078433,
+          3.3658395
+        ]
+      },
+      "runtime_install_ns": {
+        "median": 81.87496925,
+        "range": [
+          80.265199,
+          84.540082
+        ]
+      },
+      "runtime_reference_parse_ns": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          2245.9316440000002
+        ]
+      },
+      "script_wall_ns": {
+        "median": 106.38830725,
+        "range": [
+          1.940829,
+          3052.105615
+        ]
+      }
+    },
+    "H2": {
+      "bootstrap_bootstrap_total": {
+        "median": 115.32177025000001,
+        "range": [
+          113.8372825,
+          121.0336535
+        ]
+      },
+      "bootstrap_config_admission": {
+        "median": 0.99589225,
+        "range": [
+          0.703927,
+          1.7878935
+        ]
+      },
+      "bootstrap_discovery": {
+        "median": 0.240972,
+        "range": [
+          0.2302345,
+          0.271328
+        ]
+      },
+      "bootstrap_pre_runtime": {
+        "median": 23.73306925,
+        "range": [
+          23.072111999999997,
+          30.015721499999998
+        ]
+      },
+      "bootstrap_runtime_import_install": {
+        "median": 90.923956,
+        "range": [
+          89.571996,
+          92.209205
+        ]
+      },
+      "external_observer_residual": {
+        "median": 2.39630475,
+        "range": [
+          2.060965,
+          2.7153915
+        ]
+      },
+      "observer_argument_run_dir": {
+        "median": 0.272223,
+        "range": [
+          0.21849649999999998,
+          0.334982
+        ]
+      },
+      "observer_changed_helper_or_empty_receipt": {
+        "median": 0.109655,
+        "range": [
+          0.088786,
+          0.13777499999999998
+        ]
+      },
+      "observer_fork_launch": {
+        "median": 0.1847625,
+        "range": [
+          0.14090999999999998,
+          0.285711
+        ]
+      },
+      "observer_observer_to_receipt": {
+        "median": 280.6891395,
+        "range": [
+          166.7651065,
+          3585.87844
+        ]
+      },
+      "observer_post_snapshot_compare": {
+        "median": 0.4494145,
+        "range": [
+          0.127932,
+          1.857629
+        ]
+      },
+      "observer_pre_snapshot": {
+        "median": 0.30239400000000005,
+        "range": [
+          0.048518500000000006,
+          1.7783384999999998
+        ]
+      },
+      "observer_wait_target": {
+        "median": 279.74582175,
+        "range": [
+          165.8906665,
+          3582.1076615
+        ]
+      },
+      "runtime_artifact_load_ns": {
+        "median": 47.75747525,
+        "range": [
+          0.79034,
+          815.798761
+        ]
+      },
+      "runtime_child_source_hash_ns": {
+        "median": 0.50996175,
+        "range": [
+          0.0819125,
+          3.262644
+        ]
+      },
+      "runtime_reference_parse_ns": {
+        "median": 0.0,
+        "range": [
+          0.0,
+          2108.5863234999997
+        ]
+      }
+    }
+  }
+}

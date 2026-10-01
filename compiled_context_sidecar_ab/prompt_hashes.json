@@ -1,0 +1,18 @@
+{
+  "c0_system_sha256": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+  "c1_system_sha256": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+  "c0_instance_sha256": "a659355097d0faeeff8aeb10bb728c34e40c002cda67cd439bcc99f9da9dafa9",
+  "c1_instance_sha256": "088238307584b443653efc2a8bcd83ba794288fa5126cff9238279dc9ae45f1b",
+  "c0_config_sha256": "c3cc1b506956bc73a9560716e739bfb2fb19d96477df540f3837d17c3cd53c3d",
+  "c1_config_sha256": "bdb7702fcde649ebded7690edbd94e22230e5630a37158856db6d09c53493e4a",
+  "c1_tool_schema_sha256": "0abb2333ebe68ab0a12a6cca0176b9fc6e06389a29c8db692714b74630b5f806",
+  "c0_bundles": [
+    "tools/submit",
+    "tools/view_xlsx"
+  ],
+  "c1_bundles": [
+    "tools/submit",
+    "tools/view_xlsx",
+    "../../../benchmark/sweagent/calc_query"
+  ]
+}

@@ -1,0 +1,996 @@
+{
+ "tier_definitions": {
+  "A_EXCLUDE_FROM_PRIMARY": "directly used to develop/tune the commit gate, the Debugging observation, or a named case study. Usable ONLY as positive/negative controls or implementation checks, never in the primary causal population or the confirmation reserve.",
+  "B_CAUTION": "NOT mechanism-developed, but heavily reused (>=6 distinct live runs). Usable in primary only if needed for N, with pre-registered leave-one-task-out + tier sensitivity analysis.",
+  "C_USABLE": "<6 distinct live runs and no mechanism-development role. Preferred for primary and confirmation populations. Prior scoring (297/Sol/census) is measurement, not contamination."
+ },
+ "tier_a": {
+  "01_02": {
+   "reason": "pattern-catalog case d-01-02-c36; catalog gate control/ours arms x2 reps",
+   "distinct_live_runs": 6,
+   "runs": [
+    "or:glm-5.3-flash-catalog-control-eight-1",
+    "or:glm-5.3-flash-catalog-control-eight-2",
+    "or:glm-5.3-flash-catalog-ours-eight-1",
+    "or:glm-5.3-flash-catalog-ours-eight-2",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "kimi-v2-fifteen.json",
+     "catalog-control-eight.json",
+     "catalog-ours-eight.json"
+    ],
+    "pattern_catalog_case": [
+     "d-01-02-c36.yaml"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:17"
+    ],
+    "catalog_gate_arms": [
+     "catalog-control/ours-eight-1/2"
+    ]
+   }
+  },
+  "01_05": {
+   "reason": "pattern-catalog case d-01-05-d53 (IFERROR-wipe, later noise); catalog gate arms x2 reps",
+   "distinct_live_runs": 7,
+   "runs": [
+    "or:glm-5.3-flash-catalog-control-eight-1",
+    "or:glm-5.3-flash-catalog-control-eight-2",
+    "or:glm-5.3-flash-catalog-ours-eight-1",
+    "or:glm-5.3-flash-catalog-ours-eight-2",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:gpt-5.6-sol-debug-iterate-five-medium-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "kimi-v2-fifteen.json",
+     "catalog-control-eight.json",
+     "kimi-k27-high-diagnostic-four.json",
+     "catalog-ours-eight.json",
+     "sol-debug-iterate-five.json"
+    ],
+    "pattern_catalog_case": [
+     "d-01-05-d53.yaml"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:4"
+    ],
+    "catalog_gate_arms": [
+     "catalog-control/ours-eight-1/2"
+    ]
+   }
+  },
+  "02_05": {
+   "reason": "pattern-catalog case d-02-05-d7 (agent_scan candidate; arm_delta induced); catalog gate arms x2 reps",
+   "distinct_live_runs": 6,
+   "runs": [
+    "or:glm-5.3-flash-catalog-control-eight-1",
+    "or:glm-5.3-flash-catalog-control-eight-2",
+    "or:glm-5.3-flash-catalog-ours-eight-1",
+    "or:glm-5.3-flash-catalog-ours-eight-2",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "catalog-control-eight.json",
+     "catalog-ours-eight.json"
+    ],
+    "pattern_catalog_case": [
+     "d-02-05-d7.yaml"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:2"
+    ],
+    "catalog_gate_arms": [
+     "catalog-control/ours-eight-1/2"
+    ]
+   }
+  },
+  "04_06": {
+   "reason": "formula-anomalies-v1 observation development runs (kimi-k2.7-code-debugging-04_06-*)",
+   "distinct_live_runs": 7,
+   "runs": [
+    "new:thin:H0",
+    "new:thin:H1",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:gpt-5.6-sol-debug-iterate-five-medium-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1",
+    "or:kimi-k2.7-code-debugging-04_06-formula-anomalies-auto-low-1",
+    "or:kimi-k2.7-code-debugging-04_06-formula-anomalies-auto-low-2"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "public-example-nonvisual-v1.json",
+     "sol-debug-iterate-five.json"
+    ],
+    "study_population": [
+     "thin_architecture_checkpoint/population.json",
+     "token_affordance_discovery/selection_manifest.json"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:6"
+    ]
+   }
+  },
+  "05_03": {
+   "reason": "commit-gate Phase-4 dev (gate on/off A/B; no-workbook arm case); formula-anomalies-v1 dev runs; pre-gate write-four same-task run; program-errors/format probes (16 distinct live runs)",
+   "distinct_live_runs": 16,
+   "runs": [
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:glm-5.3-flash-wall-discriminator-low-1",
+    "or:gpt-5.6-sol-debug-program-errors-05_03-medium-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1",
+    "or:kimi-k2.5-debug-program-errors-05_03-none-1",
+    "or:kimi-k2.7-code-debugging-05_03-formula-anomalies-auto-low-1",
+    "or:kimi-k2.7-commit-gate-off-low-1",
+    "or:kimi-k2.7-commit-gate-on-low-1",
+    "or:kimi-k2.7-commit-write-four-low-1",
+    "or:kimi-k2.7-debug-program-errors-05_03-low-1",
+    "or:kimi-k2.7-debug-program-errors-05_03-low-2",
+    "or:kimi-k2.7-debug-program-errors-05_03-low-3",
+    "or:kimi-k2.7-debug-program-errors-05_03-low-4",
+    "or:kimi-k2.7-wall-discriminator-low-1",
+    "or:kimi-k2.7-wall-discriminator-low-2",
+    "or:qwen3.8-27b-wall-discriminator-low-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "commit-gate-debug-four.json",
+     "public-example-nonvisual-v1.json",
+     "kimi-k27-commit-write-four.json",
+     "sol-debug-program-errors-three.json",
+     "wall-discriminator-five.json"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:24"
+    ],
+    "commit_gate_phase4": [
+     "commit-gate-debug-four",
+     "kimi-k2.7-commit-gate-off/on-low-1"
+    ]
+   }
+  },
+  "06_01": {
+   "reason": "commit-gate Phase-4 dev (12-call-cap autosubmit bypass case); readbudget probes",
+   "distinct_live_runs": 7,
+   "runs": [
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:glm-5.3-readbudget-off-ab-high-1",
+    "or:glm-5.3-readbudget-on-ab-high-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1",
+    "or:kimi-k2.7-commit-gate-off-low-1",
+    "or:kimi-k2.7-commit-gate-on-low-1",
+    "or:kimi-k2.7-debug-06_01-readbudget-on-low-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "commit-gate-debug-four.json",
+     "debug-read-ab-two.json"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:5",
+     "INTEGRATED_FEASIBILITY_REPORT.md:1",
+     "INTEGRATED_FEASIBILITY_COST_REPORT.md:3",
+     "INTEGRATED_FEASIBILITY_REPORT.md:1",
+     "INTEGRATED_FEASIBILITY_COST_REPORT.md:3"
+    ],
+    "commit_gate_phase4": [
+     "commit-gate-debug-four",
+     "kimi-k2.7-commit-gate-off/on-low-1"
+    ]
+   }
+  },
+  "07_01": {
+   "reason": "commit-gate Phase-4 dev (no-findings case); formula-anomalies-v1 dev runs; offline-vs-live disagreement exemplar (94 offline vs 0 live)",
+   "distinct_live_runs": 9,
+   "runs": [
+    "or:ablation3-a-thin-glm-1",
+    "or:ablation3-b-semantic-glm-1",
+    "or:ablation3-c-semantic-program-glm-1",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:gpt-5.6-sol-debug-iterate-five-medium-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1",
+    "or:kimi-k2.7-code-debugging-07_01-formula-anomalies-auto-low-1",
+    "or:kimi-k2.7-commit-gate-off-low-1",
+    "or:kimi-k2.7-commit-gate-on-low-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "commit-gate-debug-four.json",
+     "public-example-nonvisual-v1.json",
+     "ablation-three.json",
+     "sol-debug-iterate-five.json"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:6",
+     "INTEGRATED_FEASIBILITY_COST_REPORT.md:1",
+     "INTEGRATED_FEASIBILITY_COST_REPORT.md:1"
+    ],
+    "commit_gate_phase4": [
+     "commit-gate-debug-four",
+     "kimi-k2.7-commit-gate-off/on-low-1"
+    ]
+   }
+  },
+  "08_03": {
+   "reason": "formula-anomalies-v1 observation development runs (kimi-k2.7-code-debugging-08_03-*, 4 configs); heavy report attention",
+   "distinct_live_runs": 6,
+   "runs": [
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1",
+    "or:kimi-k2.7-code-debugging-08_03-bounded-inspect-auto-low-1",
+    "or:kimi-k2.7-code-debugging-08_03-error-context-auto-low-1",
+    "or:kimi-k2.7-code-debugging-08_03-formula-anomalies-auto-low-1",
+    "or:kimi-k2.7-code-debugging-08_03-semantic-program-auto-low-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "public-example-nonvisual-v1.json",
+     "sol-debug-program-errors-three.json"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:22",
+     "DEFAULT_HARNESS_DETERMINISTIC_EXECUTION_REPORT.md:4",
+     "DEFAULT_HARNESS_DETERMINISTIC_EXECUTION_REPORT.md:4"
+    ]
+   }
+  },
+  "09_09": {
+   "reason": "pattern-catalog case d-09-09-h107; catalog gate arms x2 reps",
+   "distinct_live_runs": 7,
+   "runs": [
+    "or:glm-5.3-flash-catalog-control-eight-1",
+    "or:glm-5.3-flash-catalog-control-eight-2",
+    "or:glm-5.3-flash-catalog-ours-eight-1",
+    "or:glm-5.3-flash-catalog-ours-eight-2",
+    "or:glm-5.3-flash-control-census-sixty-1",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "catalog-control-eight.json",
+     "control-census-sixty.json",
+     "catalog-ours-eight.json"
+    ],
+    "pattern_catalog_case": [
+     "d-09-09-h107.yaml"
+    ],
+    "study_population": [
+     "transparent_capture_replay/population.json",
+     "control_python_audit/population.json",
+     "control_python_audit/population.json"
+    ],
+    "doc_mentions": [
+     "TRANSPARENT_CAPTURE_REPLAY_REPORT.md:1",
+     "TRANSPARENT_CAPTURE_REPLAY_REPORT.md:1"
+    ],
+    "catalog_gate_arms": [
+     "catalog-control/ours-eight-1/2"
+    ]
+   }
+  },
+  "10_02": {
+   "reason": "commit-gate Phase-4 dev (fired + 12/12-repaired case); formula-anomalies-v1 dev runs x4; cap-lesson exemplar; P-A matched c0; fill-c0/c1 probes",
+   "distinct_live_runs": 10,
+   "runs": [
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:glm-fill-c0-Debugging-10_02-r1",
+    "or:glm-fill-c1-Debugging-10_02-r1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1",
+    "or:kimi-k2.7-code-debugging-10_02-formula-anomalies-auto-low-1",
+    "or:kimi-k2.7-code-debugging-10_02-formula-anomalies-auto-low-2",
+    "or:kimi-k2.7-code-debugging-10_02-formula-anomalies-auto-low-3",
+    "or:kimi-k2.7-code-debugging-10_02-formula-anomalies-auto-low-4",
+    "or:kimi-k2.7-commit-gate-off-low-1",
+    "or:kimi-k2.7-commit-gate-on-low-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "default-harness-deterministic-execution.json",
+     "commit-gate-debug-four.json",
+     "public-example-nonvisual-v1.json"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:9",
+     "DEFAULT_HARNESS_DETERMINISTIC_EXECUTION_REPORT.md:5",
+     "DEFAULT_HARNESS_DETERMINISTIC_EXECUTION_REPORT.md:5"
+    ],
+    "commit_gate_phase4": [
+     "commit-gate-debug-four",
+     "kimi-k2.7-commit-gate-off/on-low-1"
+    ]
+   }
+  }
+ },
+ "tier_b": {
+  "01_01": {
+   "distinct_live_runs": 7,
+   "runs": [
+    "new:sidecar-openrouter:C0",
+    "new:sidecar-openrouter:C1",
+    "or:glm-5.3-flash-control-census-sixty-1",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1",
+    "or:spark-sidecar-c0-Debugging-01_01-r1",
+    "or:spark-sidecar-c1-Debugging-01_01-r1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "compiled-context-sidecar-ten.json",
+     "kimi-v2-fifteen.json",
+     "control-census-sixty.json",
+     "official-score-three.json"
+    ],
+    "study_population": [
+     "transparent_capture_replay/population.json",
+     "control_python_audit/population.json",
+     "control_python_audit/population.json"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:1",
+     "TOKEN_AFFORDANCE_DISCOVERY_REPORT.md:2",
+     "OFFICIAL_SCORE_PROBE_REPORT.md:1",
+     "COMPILED_CONTEXT_SIDECAR_AB_REPORT.md:2",
+     "OFFICIAL_SCORE_COMPILED_MODEL_DISCRIMINATOR_REPORT.md:2",
+     "TOKEN_AFFORDANCE_DISCOVERY_REPORT.md:2",
+     "OFFICIAL_SCORE_PROBE_REPORT.md:1",
+     "COMPILED_CONTEXT_SIDECAR_AB_REPORT.md:2",
+     "OFFICIAL_SCORE_COMPILED_MODEL_DISCRIMINATOR_REPORT.md:2"
+    ]
+   }
+  },
+  "02_01": {
+   "distinct_live_runs": 8,
+   "runs": [
+    "new:batch-write-r2:C0",
+    "new:batch-write-r2:C1",
+    "new:batch-write:C0",
+    "new:batch-write:C1",
+    "or:glm-5.3-flash-control-census-sixty-1",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1",
+    "or:grok-4.6-heldout-v3-debugging-02_01-formula-anomalies-blocks-medium-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "grok-v3-five.json",
+     "control-census-sixty.json"
+    ],
+    "study_population": [
+     "batch_write_helper_ab/population.json",
+     "token_affordance_discovery/population.json",
+     "transparent_capture_replay/population.json",
+     "control_python_audit/population.json",
+     "token_affordance_discovery/selection_manifest.json",
+     "control_python_audit/population.json"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:3",
+     "TOKEN_AFFORDANCE_DISCOVERY_REPORT.md:3",
+     "BATCH_WRITE_HELPER_AB_REPORT.md:2",
+     "TOKEN_AFFORDANCE_DISCOVERY_REPORT.md:3",
+     "BATCH_WRITE_HELPER_AB_REPORT.md:2"
+    ]
+   }
+  },
+  "02_03": {
+   "distinct_live_runs": 7,
+   "runs": [
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:glm-5.3-flash-wall-discriminator-low-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1",
+    "or:kimi-k2.7-high-diagnostic-four-1",
+    "or:kimi-k2.7-wall-discriminator-low-1",
+    "or:kimi-k2.7-wall-discriminator-low-2",
+    "or:qwen3.8-27b-wall-discriminator-low-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "kimi-k27-high-diagnostic-four.json",
+     "wall-discriminator-five.json"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:10"
+    ]
+   }
+  },
+  "02_06": {
+   "distinct_live_runs": 9,
+   "runs": [
+    "new:inspection:C0",
+    "new:inspection:C1",
+    "new:live-transparent:H0",
+    "new:live-transparent:H1",
+    "new:targeted:H0",
+    "new:targeted:H1",
+    "or:glm-5.3-flash-control-census-sixty-1",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "control-census-sixty.json"
+    ],
+    "study_population": [
+     "inspection_efficiency_ab/population.json",
+     "token_affordance_discovery/population.json",
+     "transparent_capture_replay/population.json",
+     "targeted_runtime_replication/population.json",
+     "control_python_audit/population.json",
+     "token_affordance_discovery/selection_manifest.json",
+     "control_python_audit/population.json"
+    ],
+    "doc_mentions": [
+     "TOKEN_AFFORDANCE_DISCOVERY_REPORT.md:1",
+     "TARGETED_RUNTIME_REPLICATION_REPORT.md:2",
+     "LIVE_TRANSPARENT_RUNTIME_AB_REPORT.md:1",
+     "TOKEN_AFFORDANCE_DISCOVERY_REPORT.md:1",
+     "TARGETED_RUNTIME_REPLICATION_REPORT.md:2",
+     "LIVE_TRANSPARENT_RUNTIME_AB_REPORT.md:1"
+    ]
+   }
+  },
+  "02_09": {
+   "distinct_live_runs": 11,
+   "runs": [
+    "or:glm-5.3-flash-control-fifteen-1",
+    "or:glm-5.3-flash-control-fifteen-2",
+    "or:glm-5.3-flash-librecalc-fifteen-1",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:glm-5.3-flash-strict-fifteen-unbounded-1",
+    "or:glm-ladder-C-unbounded-1",
+    "or:glm-ladder-C-unbounded-2",
+    "or:glm-ladder-C-unbounded-3",
+    "or:glm-ladder-D-raw-1",
+    "or:gpt-5.6-sol-debug-iterate-five-medium-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "control-arm-fifteen.json",
+     "read-side-ladder.json",
+     "sol-debug-iterate-five.json"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:1"
+    ]
+   }
+  },
+  "03_06": {
+   "distinct_live_runs": 7,
+   "runs": [
+    "new:representative-repl:H0",
+    "new:representative-repl:H1",
+    "new:representative:H0",
+    "new:representative:H1",
+    "or:glm-5.3-flash-control-census-sixty-1",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "control-census-sixty.json"
+    ],
+    "study_population": [
+     "transparent_capture_replay/population.json",
+     "control_python_audit/population.json",
+     "token_claim_discovery/selection_manifest.json",
+     "token_affordance_discovery/selection_manifest.json",
+     "control_python_audit/population.json"
+    ]
+   }
+  },
+  "04_01": {
+   "distinct_live_runs": 9,
+   "runs": [
+    "new:inspection:C0",
+    "new:inspection:C1",
+    "new:live-transparent:H0",
+    "new:live-transparent:H1",
+    "or:glm-5.3-flash-control-census-sixty-1",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:glm-5.3-v4-five-formula-patterns-high-1",
+    "or:glm-5.3-v4-five-high-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "glm-v4-five.json",
+     "control-census-sixty.json"
+    ],
+    "study_population": [
+     "inspection_efficiency_ab/population.json",
+     "transparent_capture_replay/population.json",
+     "control_python_audit/population.json",
+     "token_affordance_discovery/selection_manifest.json",
+     "control_python_audit/population.json"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:2",
+     "ROLE_AWARE_AUTHORITY_FRONTIER_REPORT.md:1",
+     "LIVE_TRANSPARENT_RUNTIME_AB_REPORT.md:1",
+     "ROLE_AWARE_AUTHORITY_FRONTIER_REPORT.md:1",
+     "LIVE_TRANSPARENT_RUNTIME_AB_REPORT.md:1"
+    ]
+   }
+  },
+  "04_04": {
+   "distinct_live_runs": 8,
+   "runs": [
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1",
+    "or:kimi-k2.5-debug-format-three-none-1",
+    "or:kimi-k2.5-debug-format-three-none-2",
+    "or:kimi-k2.7-debug-format-three-low-1",
+    "or:kimi-k2.7-debug-format-three-low-2",
+    "or:kimi-k2.7-debug-format-three-low-3",
+    "or:kimi-k2.7-debug-format-three-low-4"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "sol-debug-format-three.json"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:9"
+    ]
+   }
+  },
+  "04_09": {
+   "distinct_live_runs": 10,
+   "runs": [
+    "or:glm-5.3-flash-control-fifteen-1",
+    "or:glm-5.3-flash-control-fifteen-2",
+    "or:glm-5.3-flash-librecalc-fifteen-1",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:glm-5.3-flash-strict-fifteen-unbounded-1",
+    "or:glm-ladder-C-unbounded-1",
+    "or:glm-ladder-C-unbounded-2",
+    "or:glm-ladder-C-unbounded-3",
+    "or:glm-ladder-D-raw-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "control-arm-fifteen.json",
+     "read-side-ladder.json"
+    ]
+   }
+  },
+  "05_02": {
+   "distinct_live_runs": 7,
+   "runs": [
+    "new:inspection:C0",
+    "new:inspection:C1",
+    "new:live-transparent:H0",
+    "new:live-transparent:H1",
+    "or:glm-5.3-flash-control-census-sixty-1",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "control-census-sixty.json"
+    ],
+    "study_population": [
+     "inspection_efficiency_ab/population.json",
+     "transparent_capture_replay/population.json",
+     "candidate_a_live/population.json",
+     "control_python_audit/population.json",
+     "candidate_a_a1_checkpoint/population.json",
+     "candidate_a_a1_checkpoint_rerun_01/population.json",
+     "token_affordance_discovery/selection_manifest.json",
+     "candidate_a_live/identity_manifest.json",
+     "candidate_a_a1_checkpoint/identity_manifest.json",
+     "candidate_a_a1_checkpoint_rerun_01/identity_manifest.json",
+     "control_python_audit/population.json"
+    ],
+    "doc_mentions": [
+     "CANDIDATE_A_A1_12_TASK_CHECKPOINT_REPORT.md:1",
+     "CANDIDATE_A_LIVE_TREATMENT_REPORT.md:1",
+     "LIVE_TRANSPARENT_RUNTIME_AB_REPORT.md:1",
+     "CANDIDATE_A_A1_12_TASK_CHECKPOINT_RERUN_REPORT.md:2",
+     "CANDIDATE_A_A1_CLASSIFIER_REPAIR_REPORT.md:1",
+     "CANDIDATE_A_A1_12_TASK_CHECKPOINT_REPORT.md:1",
+     "CANDIDATE_A_LIVE_TREATMENT_REPORT.md:1",
+     "LIVE_TRANSPARENT_RUNTIME_AB_REPORT.md:1",
+     "CANDIDATE_A_A1_12_TASK_CHECKPOINT_RERUN_REPORT.md:2",
+     "CANDIDATE_A_A1_CLASSIFIER_REPAIR_REPORT.md:1"
+    ]
+   }
+  },
+  "05_04": {
+   "distinct_live_runs": 8,
+   "runs": [
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1",
+    "or:kimi-k2.5-debug-format-three-none-1",
+    "or:kimi-k2.5-debug-format-three-none-2",
+    "or:kimi-k2.7-debug-format-three-low-1",
+    "or:kimi-k2.7-debug-format-three-low-2",
+    "or:kimi-k2.7-debug-format-three-low-3",
+    "or:kimi-k2.7-debug-format-three-low-4"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "sol-debug-format-three.json"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:7"
+    ]
+   }
+  },
+  "06_02": {
+   "distinct_live_runs": 6,
+   "runs": [
+    "new:thin:H0",
+    "new:thin:H1",
+    "or:glm-5.3-flash-control-census-sixty-1",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1",
+    "or:kimi-k2.7-v1-five-low-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "kimi-v1-five.json",
+     "control-census-sixty.json"
+    ],
+    "study_population": [
+     "transparent_capture_replay/population.json",
+     "thin_architecture_checkpoint/population.json",
+     "control_python_audit/population.json",
+     "token_affordance_discovery/selection_manifest.json",
+     "thin_architecture_checkpoint/exposure_selection.json",
+     "control_python_audit/population.json"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:1"
+    ]
+   }
+  },
+  "06_04": {
+   "distinct_live_runs": 7,
+   "runs": [
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1",
+    "or:kimi-k2.5-debug-format-three-none-2",
+    "or:kimi-k2.7-debug-format-three-low-1",
+    "or:kimi-k2.7-debug-format-three-low-2",
+    "or:kimi-k2.7-debug-format-three-low-3",
+    "or:kimi-k2.7-debug-format-three-low-4"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "sol-debug-format-three.json"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:10"
+    ]
+   }
+  },
+  "06_05": {
+   "distinct_live_runs": 6,
+   "runs": [
+    "new:representative-repl:H0",
+    "new:representative-repl:H1",
+    "new:representative:H0",
+    "new:representative:H1",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json"
+    ],
+    "study_population": [
+     "token_claim_discovery/selection_manifest.json",
+     "token_affordance_discovery/selection_manifest.json"
+    ]
+   }
+  },
+  "06_09": {
+   "distinct_live_runs": 15,
+   "runs": [
+    "or:glm-5.3-flash-control-fifteen-1",
+    "or:glm-5.3-flash-control-fifteen-2",
+    "or:glm-5.3-flash-librecalc-fifteen-1",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:glm-5.3-flash-strict-fifteen-unbounded-1",
+    "or:glm-ladder-C-unbounded-1",
+    "or:glm-ladder-C-unbounded-2",
+    "or:glm-ladder-C-unbounded-3",
+    "or:glm-ladder-D-raw-1",
+    "or:glm-optional-isa-control-three-1",
+    "or:glm-optional-isa-hybrid-three-1",
+    "or:glm-optional-isa-strict-three-1",
+    "or:glm-read-ranges-schema-probe-1",
+    "or:glm-read-ranges-schema-probe-2",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "optional-isa-sample-three.json",
+     "control-arm-fifteen.json",
+     "read-side-ladder.json"
+    ]
+   }
+  },
+  "08_10": {
+   "distinct_live_runs": 10,
+   "runs": [
+    "or:glm-5.3-flash-control-fifteen-1",
+    "or:glm-5.3-flash-control-fifteen-2",
+    "or:glm-5.3-flash-librecalc-fifteen-1",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:glm-5.3-flash-strict-fifteen-unbounded-1",
+    "or:glm-ladder-C-unbounded-1",
+    "or:glm-ladder-C-unbounded-2",
+    "or:glm-ladder-C-unbounded-3",
+    "or:glm-ladder-D-raw-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "control-arm-fifteen.json",
+     "read-side-ladder.json"
+    ]
+   }
+  },
+  "09_04": {
+   "distinct_live_runs": 9,
+   "runs": [
+    "new:representative:H0",
+    "new:representative:H1",
+    "new:sidecar-openrouter:C0",
+    "new:sidecar-openrouter:C1",
+    "or:glm-5.3-flash-control-census-sixty-1",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1",
+    "or:spark-sidecar-c0-Debugging-09_04-r1",
+    "or:spark-sidecar-c1-Debugging-09_04-r1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "compiled-context-sidecar-ten.json",
+     "control-census-sixty.json"
+    ],
+    "study_population": [
+     "transparent_capture_replay/population.json",
+     "control_python_audit/population.json",
+     "token_claim_discovery/selection_manifest.json",
+     "token_affordance_discovery/selection_manifest.json",
+     "control_python_audit/population.json"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:4",
+     "COMPILED_CONTEXT_FORCED_05_01_REPORT.md:1",
+     "COMPILED_CONTEXT_SIDECAR_AB_REPORT.md:2",
+     "COMPILED_CONTEXT_FORCED_05_01_REPORT.md:1",
+     "COMPILED_CONTEXT_SIDECAR_AB_REPORT.md:2"
+    ]
+   }
+  },
+  "10_04": {
+   "distinct_live_runs": 6,
+   "runs": [
+    "new:thin:H0",
+    "new:thin:H1",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:glm-fill-c0-Debugging-10_04-r1",
+    "or:glm-fill-c1-Debugging-10_04-r1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "default-harness-deterministic-execution.json"
+    ],
+    "study_population": [
+     "closure_transfer_audit/population.json",
+     "fact_normalized_read_replay/population.json",
+     "transparent_capture_replay/population.json",
+     "thin_architecture_checkpoint/population.json",
+     "control_python_audit/population.json",
+     "candidate_a_a1_checkpoint/population.json",
+     "candidate_a_a1_checkpoint_rerun_01/population.json",
+     "token_affordance_discovery/selection_manifest.json",
+     "thin_architecture_checkpoint/exposure_selection.json",
+     "candidate_a_a1_checkpoint/identity_manifest.json",
+     "candidate_a_a1_checkpoint_rerun_01/identity_manifest.json",
+     "control_python_audit/population.json"
+    ],
+    "doc_mentions": [
+     "FACT_NORMALIZED_READ_REPLAY_REPORT.md:4",
+     "READ_SIDE_V2_ADJUDICATION_REPORT.md:2",
+     "CANDIDATE_A_A1_12_TASK_CHECKPOINT_REPORT.md:1",
+     "DEFAULT_HARNESS_DETERMINISTIC_EXECUTION_REPORT.md:4",
+     "FACT_NORMALIZED_READ_REPLAY_REPORT.md:4",
+     "READ_SIDE_V2_ADJUDICATION_REPORT.md:2",
+     "CANDIDATE_A_A1_12_TASK_CHECKPOINT_REPORT.md:1",
+     "DEFAULT_HARNESS_DETERMINISTIC_EXECUTION_REPORT.md:4"
+    ]
+   }
+  },
+  "10_10": {
+   "distinct_live_runs": 17,
+   "runs": [
+    "new:sidecar-openrouter:C0",
+    "new:sidecar-openrouter:C1",
+    "new:thin:H0",
+    "new:thin:H1",
+    "or:glm-5.3-flash-control-census-sixty-1",
+    "or:glm-5.3-flash-control-fifteen-1",
+    "or:glm-5.3-flash-control-fifteen-2",
+    "or:glm-5.3-flash-librecalc-fifteen-1",
+    "or:glm-5.3-flash-nonvisual-297-1",
+    "or:glm-5.3-flash-strict-fifteen-unbounded-1",
+    "or:glm-ladder-C-unbounded-1",
+    "or:glm-ladder-C-unbounded-2",
+    "or:glm-ladder-C-unbounded-3",
+    "or:glm-ladder-D-raw-1",
+    "or:gpt-5.6-sol-nonvisual-all-medium-1",
+    "or:spark-sidecar-c0-Debugging-10_10-r1",
+    "or:spark-sidecar-c1-Debugging-10_10-r1"
+   ],
+   "slice_pop_flags": {
+    "slice": [
+     "kimi-nonvisual-all.json",
+     "compiled-context-sidecar-ten.json",
+     "control-arm-fifteen.json",
+     "control-census-sixty.json",
+     "read-side-ladder.json"
+    ],
+    "study_population": [
+     "token_affordance_discovery/population.json",
+     "fact_normalized_read_replay/population.json",
+     "transparent_capture_replay/population.json",
+     "thin_architecture_checkpoint/population.json",
+     "control_python_audit/population.json",
+     "candidate_a_a1_checkpoint/population.json",
+     "candidate_a_a1_checkpoint_rerun_01/population.json",
+     "token_affordance_discovery/selection_manifest.json",
+     "thin_architecture_checkpoint/exposure_selection.json",
+     "candidate_a_a1_checkpoint/identity_manifest.json",
+     "candidate_a_a1_checkpoint_rerun_01/identity_manifest.json",
+     "control_python_audit/population.json"
+    ],
+    "doc_mentions": [
+     "PROJECT_CONTEXT.md:1",
+     "FACT_NORMALIZED_READ_REPLAY_REPORT.md:4",
+     "TOKEN_AFFORDANCE_DISCOVERY_REPORT.md:1",
+     "READ_SIDE_V2_ADJUDICATION_REPORT.md:2",
+     "CANDIDATE_A_A1_12_TASK_CHECKPOINT_REPORT.md:1",
+     "COMPILED_CONTEXT_SIDECAR_AB_REPORT.md:2",
+     "CANDIDATE_A_A1_12_TASK_CHECKPOINT_RERUN_REPORT.md:2",
+     "FACT_NORMALIZED_READ_REPLAY_REPORT.md:4",
+     "TOKEN_AFFORDANCE_DISCOVERY_REPORT.md:1",
+     "READ_SIDE_V2_ADJUDICATION_REPORT.md:2",
+     "CANDIDATE_A_A1_12_TASK_CHECKPOINT_REPORT.md:1",
+     "COMPILED_CONTEXT_SIDECAR_AB_REPORT.md:2",
+     "CANDIDATE_A_A1_12_TASK_CHECKPOINT_RERUN_REPORT.md:2"
+    ]
+   }
+  }
+ },
+ "tier_c": [
+  "01_03",
+  "01_04",
+  "01_06",
+  "01_07",
+  "01_08",
+  "01_09",
+  "01_10",
+  "02_02",
+  "02_04",
+  "02_07",
+  "02_08",
+  "02_10",
+  "03_01",
+  "03_02",
+  "03_03",
+  "03_04",
+  "03_05",
+  "03_07",
+  "03_08",
+  "03_09",
+  "03_10",
+  "04_02",
+  "04_03",
+  "04_05",
+  "04_07",
+  "04_08",
+  "04_10",
+  "05_01",
+  "05_05",
+  "05_06",
+  "05_07",
+  "05_08",
+  "05_09",
+  "05_10",
+  "06_03",
+  "06_06",
+  "06_07",
+  "06_08",
+  "06_10",
+  "07_02",
+  "07_03",
+  "07_04",
+  "07_05",
+  "07_06",
+  "07_07",
+  "07_08",
+  "07_09",
+  "07_10",
+  "08_01",
+  "08_02",
+  "08_04",
+  "08_05",
+  "08_06",
+  "08_07",
+  "08_08",
+  "08_09",
+  "09_01",
+  "09_02",
+  "09_03",
+  "09_05",
+  "09_06",
+  "09_07",
+  "09_08",
+  "09_10",
+  "10_01",
+  "10_03",
+  "10_05",
+  "10_06",
+  "10_07",
+  "10_08",
+  "10_09"
+ ],
+ "required_marks": {
+  "01_02": "A_EXCLUDE_FROM_PRIMARY: pattern-catalog case d-01-02-c36; catalog gate control/ours arms x2 reps",
+  "01_05": "A_EXCLUDE_FROM_PRIMARY: pattern-catalog case d-01-05-d53 (IFERROR-wipe, later noise); catalog gate arms x2 reps",
+  "02_05": "A_EXCLUDE_FROM_PRIMARY: pattern-catalog case d-02-05-d7 (agent_scan candidate; arm_delta induced); catalog gate arms x2 reps",
+  "04_06": "A_EXCLUDE_FROM_PRIMARY: formula-anomalies-v1 observation development runs (kimi-k2.7-code-debugging-04_06-*)",
+  "05_03": "A_EXCLUDE_FROM_PRIMARY: commit-gate Phase-4 dev (gate on/off A/B; no-workbook arm case); formula-anomalies-v1 dev runs; pre-gate write-four same-task run; program-errors/format probes (16 distinct live runs)",
+  "06_01": "A_EXCLUDE_FROM_PRIMARY: commit-gate Phase-4 dev (12-call-cap autosubmit bypass case); readbudget probes",
+  "07_01": "A_EXCLUDE_FROM_PRIMARY: commit-gate Phase-4 dev (no-findings case); formula-anomalies-v1 dev runs; offline-vs-live disagreement exemplar (94 offline vs 0 live)",
+  "08_03": "A_EXCLUDE_FROM_PRIMARY: formula-anomalies-v1 observation development runs (kimi-k2.7-code-debugging-08_03-*, 4 configs); heavy report attention",
+  "09_09": "A_EXCLUDE_FROM_PRIMARY: pattern-catalog case d-09-09-h107; catalog gate arms x2 reps",
+  "10_02": "A_EXCLUDE_FROM_PRIMARY: commit-gate Phase-4 dev (fired + 12/12-repaired case); formula-anomalies-v1 dev runs x4; cap-lesson exemplar; P-A matched c0; fill-c0/c1 probes"
+ },
+ "counts": {
+  "A": 10,
+  "B": 19,
+  "C": 71
+ }
+}

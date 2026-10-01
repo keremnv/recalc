@@ -1,0 +1,12 @@
+{
+  "reference_parse_cache.py": {
+    "first_pass_reconstructed_exact_hash": "2f870b887ef17283950938ea7fae6be7bdd527ce5a2336d8fb78acdd3c0902b4",
+    "matches_recorded_execution_identity": true,
+    "reconstruction": "exact inverse of the two recorded serialization-compatibility edits; no scored artifact mutation"
+  },
+  "scored_object_cache.py": {
+    "first_pass_reconstructed_exact_hash": "0dd96dc2b9e2c7b5721b4a05db93c9f5770711019e6d41a2da9151c368eff3dc",
+    "matches_recorded_execution_identity": true,
+    "reconstruction": "exact inverse of the two recorded serialization-compatibility edits; no scored artifact mutation"
+  }
+}

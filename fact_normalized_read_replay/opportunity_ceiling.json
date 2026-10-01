@@ -1,0 +1,24 @@
+{
+  "payload_ceiling": {
+    "matched_realizable_observations": 15,
+    "historical_raw_bytes": 66366,
+    "counterfactual_compact_exact_h_bytes": 103370,
+    "absolute_bytes_avoided": -37004,
+    "pooled_reduction_pct": -55.76,
+    "per_task_median_reduction_pct": -66.44,
+    "per_task_range_pct": [
+      -108.98,
+      -59.24
+    ],
+    "normalized_historical_fact_bytes": 244282,
+    "normalized_fact_pooled_reduction_pct": 57.68,
+    "per_task_normalized_median_reduction_pct": 57.82
+  },
+  "round_trip_ceiling": {
+    "historical_model_tool_cycles": 169,
+    "minimum_compiled_cycles": 169,
+    "cycles_avoidable_by_within_execution_batching": 0,
+    "cycles_avoidable_by_exact_repeated_query_reuse": 20,
+    "note": "Range consolidation inside one Python/view execution is not a model/tool-cycle saving."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "primary_03_Financial_Model_08_03_H1": {
+    "generation": "2b7a84044765a4664ddb197de168fbd7feb8fff395a027a4923ee2d9ab9e8dc1",
+    "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/candidate_a_a1_checkpoint_rerun_01/snapshots/primary_03_Financial_Model_08_03_H1.xlsx",
+    "sha256": "2b7a84044765a4664ddb197de168fbd7feb8fff395a027a4923ee2d9ab9e8dc1",
+    "source_run": "primary_03_Financial_Model_08_03_H1"
+  },
+  "primary_06_Financial_Model_08_01_H1": {
+    "generation": "6d742f67e84fcc3d92d1dec6b285417093b99dec1469686f1c6813aee9ad2a0a",
+    "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/candidate_a_a1_checkpoint_rerun_01/snapshots/primary_06_Financial_Model_08_01_H1.xlsx",
+    "sha256": "6d742f67e84fcc3d92d1dec6b285417093b99dec1469686f1c6813aee9ad2a0a",
+    "source_run": "primary_06_Financial_Model_08_01_H1"
+  },
+  "primary_08_Financial_Model_15_04_H1": {
+    "generation": "9ff136a8008051fc400bcade977f9732fef6f3b9c3116ebc46ee366d24406f53",
+    "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/candidate_a_a1_checkpoint_rerun_01/snapshots/primary_08_Financial_Model_15_04_H1.xlsx",
+    "sha256": "9ff136a8008051fc400bcade977f9732fef6f3b9c3116ebc46ee366d24406f53",
+    "source_run": "primary_08_Financial_Model_15_04_H1"
+  },
+  "primary_10_Debugging_10_10_H1": {
+    "generation": "3d95978b76409416f96be4645daeb2e28f949c171cc159560627506ef1c7eb34",
+    "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/candidate_a_a1_checkpoint_rerun_01/snapshots/primary_10_Debugging_10_10_H1.xlsx",
+    "sha256": "3d95978b76409416f96be4645daeb2e28f949c171cc159560627506ef1c7eb34",
+    "source_run": "primary_10_Debugging_10_10_H1"
+  },
+  "primary_17_Debugging_05_02_H1": {
+    "generation": "fa7c8d05a020ef079d6330fe7d1e3de64b35be0e9cc99d413c1bc30e7e19565e",
+    "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/candidate_a_a1_checkpoint_rerun_01/snapshots/primary_17_Debugging_05_02_H1.xlsx",
+    "sha256": "fa7c8d05a020ef079d6330fe7d1e3de64b35be0e9cc99d413c1bc30e7e19565e",
+    "source_run": "primary_17_Debugging_05_02_H1"
+  },
+  "primary_19_Template_13_08_H1": {
+    "generation": "591b6250a393b2606573631b5a9e66f415d68704d2d95756cd1cb8bca7327343",
+    "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/candidate_a_a1_checkpoint_rerun_01/snapshots/primary_19_Template_13_08_H1.xlsx",
+    "sha256": "591b6250a393b2606573631b5a9e66f415d68704d2d95756cd1cb8bca7327343",
+    "source_run": "primary_19_Template_13_08_H1"
+  },
+  "primary_24_Financial_Model_10_01_H1": {
+    "generation": "26f8817083ad13636971bc7fa18d75fd4a3d10111d8872fa1ab98e7cbd1aa8a7",
+    "path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/candidate_a_a1_checkpoint_rerun_01/snapshots/primary_24_Financial_Model_10_01_H1.xlsx",
+    "sha256": "26f8817083ad13636971bc7fa18d75fd4a3d10111d8872fa1ab98e7cbd1aa8a7",
+    "source_run": "primary_24_Financial_Model_10_01_H1"
+  }
+}

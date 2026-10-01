@@ -1,0 +1,6 @@
+{
+ "pullable_by_inspect": 235,
+ "total_post_actions": 405,
+ "frac": 0.5802469135802469,
+ "note": "inspect() can already retrieve range/cell facts on demand; a receipt only saves the pull call itself"
+}

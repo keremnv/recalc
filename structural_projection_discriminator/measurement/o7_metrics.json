@@ -1,0 +1,386 @@
+[
+  {
+    "obligation": "O7",
+    "repeat": 1,
+    "arm": "CONTROL",
+    "order": [
+      "CONTROL",
+      "TREATMENT"
+    ],
+    "censored": false,
+    "failure_class": null,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor",
+    "request_sha256": "2c5412b4f68073391a56dc059702999646aa0c3e9ab10153162ca85ba3ceea7b",
+    "parse_valid": true,
+    "predicted_cell_count": 297,
+    "gold_cell_count": 297,
+    "true_positives": 297,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "target_recall": 1.0,
+    "target_precision": 1.0,
+    "f1": 1.0,
+    "exact_target_set_equality": true,
+    "selected_tranche_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "selected_start_period_column": 15,
+    "selected_end_period_column": 113,
+    "gold_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "gold_start_period_column": 15,
+    "gold_end_period_column": 113,
+    "error_class": "exact",
+    "predicted_sheet": "s04",
+    "predicted_sheet_raw": "s04",
+    "predicted_ranges": [
+      {
+        "start": "O29",
+        "end": "DI31"
+      }
+    ]
+  },
+  {
+    "obligation": "O7",
+    "repeat": 1,
+    "arm": "TREATMENT",
+    "order": [
+      "CONTROL",
+      "TREATMENT"
+    ],
+    "censored": false,
+    "failure_class": null,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor",
+    "request_sha256": "a94eddc197e9cda4a1de169f9c047b3e16cc9fd2b789be6e3af9f1e0944f00b2",
+    "parse_valid": true,
+    "predicted_cell_count": 297,
+    "gold_cell_count": 297,
+    "true_positives": 297,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "target_recall": 1.0,
+    "target_precision": 1.0,
+    "f1": 1.0,
+    "exact_target_set_equality": true,
+    "selected_tranche_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "selected_start_period_column": 15,
+    "selected_end_period_column": 113,
+    "gold_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "gold_start_period_column": 15,
+    "gold_end_period_column": 113,
+    "error_class": "exact",
+    "predicted_sheet": "Workings Cost Sheet",
+    "predicted_sheet_raw": "Workings Cost Sheet",
+    "predicted_ranges": [
+      {
+        "start": "O29",
+        "end": "DI31"
+      }
+    ]
+  },
+  {
+    "obligation": "O7",
+    "repeat": 2,
+    "arm": "CONTROL",
+    "order": [
+      "TREATMENT",
+      "CONTROL"
+    ],
+    "censored": false,
+    "failure_class": null,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor",
+    "request_sha256": "2c5412b4f68073391a56dc059702999646aa0c3e9ab10153162ca85ba3ceea7b",
+    "parse_valid": true,
+    "predicted_cell_count": 297,
+    "gold_cell_count": 297,
+    "true_positives": 297,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "target_recall": 1.0,
+    "target_precision": 1.0,
+    "f1": 1.0,
+    "exact_target_set_equality": true,
+    "selected_tranche_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "selected_start_period_column": 15,
+    "selected_end_period_column": 113,
+    "gold_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "gold_start_period_column": 15,
+    "gold_end_period_column": 113,
+    "error_class": "exact",
+    "predicted_sheet": "s04",
+    "predicted_sheet_raw": "s04",
+    "predicted_ranges": [
+      {
+        "start": "O29",
+        "end": "DI31"
+      }
+    ]
+  },
+  {
+    "obligation": "O7",
+    "repeat": 2,
+    "arm": "TREATMENT",
+    "order": [
+      "TREATMENT",
+      "CONTROL"
+    ],
+    "censored": false,
+    "failure_class": null,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor",
+    "request_sha256": "a94eddc197e9cda4a1de169f9c047b3e16cc9fd2b789be6e3af9f1e0944f00b2",
+    "parse_valid": true,
+    "predicted_cell_count": 297,
+    "gold_cell_count": 297,
+    "true_positives": 297,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "target_recall": 1.0,
+    "target_precision": 1.0,
+    "f1": 1.0,
+    "exact_target_set_equality": true,
+    "selected_tranche_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "selected_start_period_column": 15,
+    "selected_end_period_column": 113,
+    "gold_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "gold_start_period_column": 15,
+    "gold_end_period_column": 113,
+    "error_class": "exact",
+    "predicted_sheet": "Workings Cost Sheet",
+    "predicted_sheet_raw": "Workings Cost Sheet",
+    "predicted_ranges": [
+      {
+        "start": "O29",
+        "end": "DI31"
+      }
+    ]
+  },
+  {
+    "obligation": "O7",
+    "repeat": 3,
+    "arm": "CONTROL",
+    "order": [
+      "CONTROL",
+      "TREATMENT"
+    ],
+    "censored": false,
+    "failure_class": null,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor",
+    "request_sha256": "2c5412b4f68073391a56dc059702999646aa0c3e9ab10153162ca85ba3ceea7b",
+    "parse_valid": true,
+    "predicted_cell_count": 297,
+    "gold_cell_count": 297,
+    "true_positives": 297,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "target_recall": 1.0,
+    "target_precision": 1.0,
+    "f1": 1.0,
+    "exact_target_set_equality": true,
+    "selected_tranche_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "selected_start_period_column": 15,
+    "selected_end_period_column": 113,
+    "gold_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "gold_start_period_column": 15,
+    "gold_end_period_column": 113,
+    "error_class": "exact",
+    "predicted_sheet": "s04",
+    "predicted_sheet_raw": "s04",
+    "predicted_ranges": [
+      {
+        "start": "O29",
+        "end": "DI31"
+      }
+    ]
+  },
+  {
+    "obligation": "O7",
+    "repeat": 3,
+    "arm": "TREATMENT",
+    "order": [
+      "CONTROL",
+      "TREATMENT"
+    ],
+    "censored": false,
+    "failure_class": null,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor",
+    "request_sha256": "a94eddc197e9cda4a1de169f9c047b3e16cc9fd2b789be6e3af9f1e0944f00b2",
+    "parse_valid": true,
+    "predicted_cell_count": 297,
+    "gold_cell_count": 297,
+    "true_positives": 297,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "target_recall": 1.0,
+    "target_precision": 1.0,
+    "f1": 1.0,
+    "exact_target_set_equality": true,
+    "selected_tranche_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "selected_start_period_column": 15,
+    "selected_end_period_column": 113,
+    "gold_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "gold_start_period_column": 15,
+    "gold_end_period_column": 113,
+    "error_class": "exact",
+    "predicted_sheet": "Workings Cost Sheet",
+    "predicted_sheet_raw": "Workings Cost Sheet",
+    "predicted_ranges": [
+      {
+        "start": "O29",
+        "end": "DI31"
+      }
+    ]
+  },
+  {
+    "obligation": "O7",
+    "repeat": 4,
+    "arm": "CONTROL",
+    "order": [
+      "TREATMENT",
+      "CONTROL"
+    ],
+    "censored": false,
+    "failure_class": null,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor",
+    "request_sha256": "2c5412b4f68073391a56dc059702999646aa0c3e9ab10153162ca85ba3ceea7b",
+    "parse_valid": true,
+    "predicted_cell_count": 297,
+    "gold_cell_count": 297,
+    "true_positives": 297,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "target_recall": 1.0,
+    "target_precision": 1.0,
+    "f1": 1.0,
+    "exact_target_set_equality": true,
+    "selected_tranche_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "selected_start_period_column": 15,
+    "selected_end_period_column": 113,
+    "gold_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "gold_start_period_column": 15,
+    "gold_end_period_column": 113,
+    "error_class": "exact",
+    "predicted_sheet": "Workings Cost Sheet",
+    "predicted_sheet_raw": "Workings Cost Sheet",
+    "predicted_ranges": [
+      {
+        "start": "O29",
+        "end": "DI31"
+      }
+    ]
+  },
+  {
+    "obligation": "O7",
+    "repeat": 4,
+    "arm": "TREATMENT",
+    "order": [
+      "TREATMENT",
+      "CONTROL"
+    ],
+    "censored": false,
+    "failure_class": null,
+    "declared_model": "meta/muse-spark-1.3-contributor",
+    "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+    "response_model": "meta/muse-spark-1.3-contributor",
+    "request_sha256": "a94eddc197e9cda4a1de169f9c047b3e16cc9fd2b789be6e3af9f1e0944f00b2",
+    "parse_valid": true,
+    "predicted_cell_count": 297,
+    "gold_cell_count": 297,
+    "true_positives": 297,
+    "false_positives": 0,
+    "false_negatives": 0,
+    "target_recall": 1.0,
+    "target_precision": 1.0,
+    "f1": 1.0,
+    "exact_target_set_equality": true,
+    "selected_tranche_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "selected_start_period_column": 15,
+    "selected_end_period_column": 113,
+    "gold_member_rows": [
+      29,
+      30,
+      31
+    ],
+    "gold_start_period_column": 15,
+    "gold_end_period_column": 113,
+    "error_class": "exact",
+    "predicted_sheet": "Workings Cost Sheet",
+    "predicted_sheet_raw": "Workings Cost Sheet",
+    "predicted_ranges": [
+      {
+        "start": "O29",
+        "end": "DI31"
+      }
+    ]
+  }
+]

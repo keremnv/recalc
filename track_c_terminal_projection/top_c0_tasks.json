@@ -1,0 +1,62 @@
+[
+ {
+  "task_id": "Debugging:04_07",
+  "C0_tokens_est": 25328,
+  "total_tokens_est": 68091
+ },
+ {
+  "task_id": "Financial_Model:08_03",
+  "C0_tokens_est": 15989,
+  "total_tokens_est": 279832
+ },
+ {
+  "task_id": "Financial_Model:10_01",
+  "C0_tokens_est": 12324,
+  "total_tokens_est": 87076
+ },
+ {
+  "task_id": "Debugging:05_02",
+  "C0_tokens_est": 5609,
+  "total_tokens_est": 45011
+ },
+ {
+  "task_id": "Debugging:10_10",
+  "C0_tokens_est": 4788,
+  "total_tokens_est": 1846608
+ },
+ {
+  "task_id": "Debugging:04_01",
+  "C0_tokens_est": 4460,
+  "total_tokens_est": 38993
+ },
+ {
+  "task_id": "Debugging:02_06",
+  "C0_tokens_est": 4338,
+  "total_tokens_est": 41214
+ },
+ {
+  "task_id": "Financial_Model:04_01",
+  "C0_tokens_est": 3884,
+  "total_tokens_est": 82857
+ },
+ {
+  "task_id": "Financial_Model:06_01",
+  "C0_tokens_est": 3838,
+  "total_tokens_est": 35220
+ },
+ {
+  "task_id": "Financial_Model:05_01",
+  "C0_tokens_est": 3798,
+  "total_tokens_est": 98908
+ },
+ {
+  "task_id": "Financial_Model:15_04",
+  "C0_tokens_est": 3736,
+  "total_tokens_est": 70068
+ },
+ {
+  "task_id": "Debugging:09_09",
+  "C0_tokens_est": 3338,
+  "total_tokens_est": 58836
+ }
+]

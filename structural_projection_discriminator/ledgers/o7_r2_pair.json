@@ -1,0 +1,294 @@
+{
+  "repeat": 2,
+  "order": [
+    "TREATMENT",
+    "CONTROL"
+  ],
+  "arms": {
+    "TREATMENT": {
+      "request_body": {
+        "model": "meta/muse-spark-1.3-contributor",
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "max_tokens": 4096,
+        "provider": {
+          "allow_fallbacks": true,
+          "require_parameters": true
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "You identify spreadsheet cells. You do not write formulas or values.\nUse only the supplied workbook evidence. Return strict JSON only, with no markdown and no commentary.\nSchema:\n{\"sheet\":\"sheet name\",\"ranges\":[{\"start\":\"A1\",\"end\":\"A1\"}],\"evidence\":[\"IDs or coordinates from the supplied evidence that support the selection\"]}\nMultiple ranges are allowed. Parse the quoted user instruction and select the cells it asks to modify."
+          },
+          {
+            "role": "user",
+            "content": "Quoted user instruction: \"In the Workings Cost sheet, compute total funds raised for all three tranches from Apr-25 to Jun-33.\"\n\nIdentify the cells that the quoted user instruction asks to modify. Use the supplied workbook evidence. Return only the target set; do not perform the edits.\n\nSheet identity: Workings Cost Sheet (sheet:s04)\n\nRAW WORKBOOK FACTS\n- RAW:B9 B9 text='Portfolio Building MoM'\n- RAW:B10 B10 text='Initial Investment'\n- RAW:B11 B11 text='First Tranche'\n- RAW:C11 C11 text='Numbers'\n- RAW:B12 B12 text='Second Tranche'\n- RAW:C12 C12 text='Numbers'\n- RAW:B13 B13 text='Third Tranche'\n- RAW:C13 C13 text='Numbers'\n- RAW:B15 B15 text='Portfolio Building Cumulative'\n- RAW:B16 B16 text='Initial Investment'\n- RAW:C16 C16 text='Numbers'\n- RAW:B17 B17 text='First Tranche'\n- RAW:C17 C17 text='Numbers'\n- RAW:B18 B18 text='Second Tranche'\n- RAW:C18 C18 text='Numbers'\n- RAW:B19 B19 text='Third Tranche'\n- RAW:C19 C19 text='Numbers'\n- RAW:B21 B21 text='Ticket Size per Portfolio'\n- RAW:B22 B22 text='Initial Investment'\n- RAW:B23 B23 text='First Tranche'\n- RAW:C23 C23 text='USD Mn'\n- RAW:B24 B24 text='Second Tranche'\n- RAW:C24 C24 text='USD Mn'\n- RAW:B25 B25 text='Third Tranche'\n- RAW:C25 C25 text='USD Mn'\n- RAW:B27 B27 text='Total Fund Raised'\n- RAW:B28 B28 text='Initial Investment'\n- RAW:B29 B29 text='First Tranche'\n- RAW:B30 B30 text='Second Tranche'\n- RAW:B31 B31 text='Third Tranche'\n- RAW:B32 B32 text='Total Fund Size - Cumulative'\n- RAW:O4 O4 text='Apr-25' kind=period_header\n- RAW:P4 P4 text='May-25' kind=period_header\n- RAW:Q4 Q4 text='Jun-25' kind=period_header\n- RAW:R4 R4 text='Jul-25' kind=period_header\n- RAW:S4 S4 text='Aug-25' kind=period_header\n- RAW:T4 T4 text='Sep-25' kind=period_header\n- RAW:U4 U4 text='Oct-25' kind=period_header\n- RAW:V4 V4 text='Nov-25' kind=period_header\n- RAW:W4 W4 text='Dec-25' kind=period_header\n- RAW:X4 X4 text='Jan-26' kind=period_header\n- RAW:Y4 Y4 text='Feb-26' kind=period_header\n- RAW:Z4 Z4 text='Mar-26' kind=period_header\n- RAW:AA4 AA4 text='Apr-26' kind=period_header\n- RAW:AB4 AB4 text='May-26' kind=period_header\n- RAW:AC4 AC4 text='Jun-26' kind=period_header\n- RAW:AD4 AD4 text='Jul-26' kind=period_header\n- RAW:AE4 AE4 text='Aug-26' kind=period_header\n- RAW:AF4 AF4 text='Sep-26' kind=period_header\n- RAW:AG4 AG4 text='Oct-26' kind=period_header\n- RAW:AH4 AH4 text='Nov-26' kind=period_header\n- RAW:AI4 AI4 text='Dec-26' kind=period_header\n- RAW:AJ4 AJ4 text='Jan-27' kind=period_header\n- RAW:AK4 AK4 text='Feb-27' kind=period_header\n- RAW:AL4 AL4 text='Mar-27' kind=period_header\n- RAW:AM4 AM4 text='Apr-27' kind=period_header\n- RAW:AN4 AN4 text='May-27' kind=period_header\n- RAW:AO4 AO4 text='Jun-27' kind=period_header\n- RAW:AP4 AP4 text='Jul-27' kind=period_header\n- RAW:AQ4 AQ4 text='Aug-27' kind=period_header\n- RAW:AR4 AR4 text='Sep-27' kind=period_header\n- RAW:AS4 AS4 text='Oct-27' kind=period_header\n- RAW:AT4 AT4 text='Nov-27' kind=period_header\n- RAW:AU4 AU4 text='Dec-27' kind=period_header\n- RAW:AV4 AV4 text='Jan-28' kind=period_header\n- RAW:AW4 AW4 text='Feb-28' kind=period_header\n- RAW:AX4 AX4 text='Mar-28' kind=period_header\n- RAW:AY4 AY4 text='Apr-28' kind=period_header\n- RAW:AZ4 AZ4 text='May-28' kind=period_header\n- RAW:BA4 BA4 text='Jun-28' kind=period_header\n- RAW:BB4 BB4 text='Jul-28' kind=period_header\n- RAW:BC4 BC4 text='Aug-28' kind=period_header\n- RAW:BD4 BD4 text='Sep-28' kind=period_header\n- RAW:BE4 BE4 text='Oct-28' kind=period_header\n- RAW:BF4 BF4 text='Nov-28' kind=period_header\n- RAW:BG4 BG4 text='Dec-28' kind=period_header\n- RAW:BH4 BH4 text='Jan-29' kind=period_header\n- RAW:BI4 BI4 text='Feb-29' kind=period_header\n- RAW:BJ4 BJ4 text='Mar-29' kind=period_header\n- RAW:BK4 BK4 text='Apr-29' kind=period_header\n- RAW:BL4 BL4 text='May-29' kind=period_header\n- RAW:BM4 BM4 text='Jun-29' kind=period_header\n- RAW:BN4 BN4 text='Jul-29' kind=period_header\n- RAW:BO4 BO4 text='Aug-29' kind=period_header\n- RAW:BP4 BP4 text='Sep-29' kind=period_header\n- RAW:BQ4 BQ4 text='Oct-29' kind=period_header\n- RAW:BR4 BR4 text='Nov-29' kind=period_header\n- RAW:BS4 BS4 text='Dec-29' kind=period_header\n- RAW:BT4 BT4 text='Jan-30' kind=period_header\n- RAW:BU4 BU4 text='Feb-30' kind=period_header\n- RAW:BV4 BV4 text='Mar-30' kind=period_header\n- RAW:BW4 BW4 text='Apr-30' kind=period_header\n- RAW:BX4 BX4 text='May-30' kind=period_header\n- RAW:BY4 BY4 text='Jun-30' kind=period_header\n- RAW:BZ4 BZ4 text='Jul-30' kind=period_header\n- RAW:CA4 CA4 text='Aug-30' kind=period_header\n- RAW:CB4 CB4 text='Sep-30' kind=period_header\n- RAW:CC4 CC4 text='Oct-30' kind=period_header\n- RAW:CD4 CD4 text='Nov-30' kind=period_header\n- RAW:CE4 CE4 text='Dec-30' kind=period_header\n- RAW:CF4 CF4 text='Jan-31' kind=period_header\n- RAW:CG4 CG4 text='Feb-31' kind=period_header\n- RAW:CH4 CH4 text='Mar-31' kind=period_header\n- RAW:CI4 CI4 text='Apr-31' kind=period_header\n- RAW:CJ4 CJ4 text='May-31' kind=period_header\n- RAW:CK4 CK4 text='Jun-31' kind=period_header\n- RAW:CL4 CL4 text='Jul-31' kind=period_header\n- RAW:CM4 CM4 text='Aug-31' kind=period_header\n- RAW:CN4 CN4 text='Sep-31' kind=period_header\n- RAW:CO4 CO4 text='Oct-31' kind=period_header\n- RAW:CP4 CP4 text='Nov-31' kind=period_header\n- RAW:CQ4 CQ4 text='Dec-31' kind=period_header\n- RAW:CR4 CR4 text='Jan-32' kind=period_header\n- RAW:CS4 CS4 text='Feb-32' kind=period_header\n- RAW:CT4 CT4 text='Mar-32' kind=period_header\n- RAW:CU4 CU4 text='Apr-32' kind=period_header\n- RAW:CV4 CV4 text='May-32' kind=period_header\n- RAW:CW4 CW4 text='Jun-32' kind=period_header\n- RAW:CX4 CX4 text='Jul-32' kind=period_header\n- RAW:CY4 CY4 text='Aug-32' kind=period_header\n- RAW:CZ4 CZ4 text='Sep-32' kind=period_header\n- RAW:DA4 DA4 text='Oct-32' kind=period_header\n- RAW:DB4 DB4 text='Nov-32' kind=period_header\n- RAW:DC4 DC4 text='Dec-32' kind=period_header\n- RAW:DD4 DD4 text='Jan-33' kind=period_header\n- RAW:DE4 DE4 text='Feb-33' kind=period_header\n- RAW:DF4 DF4 text='Mar-33' kind=period_header\n- RAW:DG4 DG4 text='Apr-33' kind=period_header\n- RAW:DH4 DH4 text='May-33' kind=period_header\n- RAW:DI4 DI4 text='Jun-33' kind=period_header\n\nCOMPILED STRUCTURAL RELATIONS\n\nmember_run R1\n  parent/header: Portfolio Building MoM\n  parent_coordinate: B9\n  member cells: B11:B13\n  member labels: First Tranche, Second Tranche, Third Tranche\n  provenance: source workbook coordinates\n\nmember_run R2\n  parent/header: Portfolio Building Cumulative\n  parent_coordinate: B15\n  member cells: B17:B19\n  member labels: First Tranche, Second Tranche, Third Tranche\n  provenance: source workbook coordinates\n\nmember_run R3\n  parent/header: Ticket Size per Portfolio\n  parent_coordinate: B21\n  member cells: B23:B25\n  member labels: First Tranche, Second Tranche, Third Tranche\n  provenance: source workbook coordinates\n\nmember_run R4\n  parent/header: Total Fund Raised\n  parent_coordinate: B27\n  member cells: B29:B31\n  member labels: First Tranche, Second Tranche, Third Tranche\n  provenance: source workbook coordinates\n\ntemporal_axis T1\n  sheet: Workings Cost Sheet\n  orientation: column\n  requested boundary labels represented:\n    Apr-25 → O4\n    Jun-33 → DI4\n  provenance: source workbook header coordinates\n\n\nReturn strict JSON only with keys sheet, ranges, evidence.\n"
+          }
+        ]
+      },
+      "request_sha256": "a94eddc197e9cda4a1de169f9c047b3e16cc9fd2b789be6e3af9f1e0944f00b2",
+      "declared_model": "meta/muse-spark-1.3-contributor",
+      "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+      "openrouter_wire_model": "meta/muse-spark-1.3-contributor",
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      },
+      "started_at": "2026-09-16T14:30:38.095164+00:00",
+      "failure_class": null,
+      "raw_response": {
+        "id": "gen-1789569038-2S87f6uP9ECGPOsGWxtu",
+        "object": "chat.completion",
+        "created": 1789569038,
+        "model": "meta/muse-spark-1.3-contributor",
+        "provider": "Meta",
+        "system_fingerprint": null,
+        "service_tier": "auto",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "{\"sheet\":\"Workings Cost Sheet\",\"ranges\":[{\"start\":\"O29\",\"end\":\"DI31\"}],\"evidence\":[\"B27\",\"B29\",\"B30\",\"B31\",\"O4\",\"DI4\",\"R4\",\"T1\"]}",
+              "refusal": null,
+              "reasoning": "Identifying target cells by mapping the instruction to sheet s04 and isolating the tranche rows and date columns.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.summary",
+                  "summary": "Identifying target cells by mapping the instruction to sheet s04 and isolating the tranche rows and date columns.",
+                  "format": "meta-responses-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "Q-PaDgGgRA6E2E2iT0PIn9t5W6iAICByCVFyn2wnDXzDYOXDEEB8nWr6kOxcO0ZJEcFrX3ATS8lDHlzF-io7HLCLfOsAvKVWCOEW8-TiCAsKUvmQ1SdUaggoNgMR3GQxS3Y_nepNS4haF42vMf9ogmeop6vKIz8zffnYYjF7WNQIEv6Tk7sUChXaPw5oWkY6jll7IkB-ASJEwF8tSjvbpOHDhGbmm24w4Xgp7bJieUSNDl6Y9k_B0i00GpPlcffhaVP3KuQ5WrMgMimayLaSRpkbs3LybAkrKD6GRF6ofxPuL1Zfkb2a2wP6JJxzXsizHf6av64l7dzQmdknEqoM8kF3sJPAq8UaWDPON2aO1SDsl46QXjiF-p1U5zrpBa3Q8AnHKYfv_2Y90f8yFjhtyyIKqko0gWiOwz6cYEIprucJtDiwOioiv38iabc4BAptYBUbUYIiX0jRXjkayokE3eLmgldh7fMUC5j3yyxXB6zB7hfViecQ6SPcgmauZjEUgNka0mjY4Mqc71I2kmTTDJY_a1ShvqTjryMx9vBmpDZCIgUgdmGJl7dZZDFiUR_C1L8hOEVPBdsSx6gk3zjKuMCHt6tctLht5VOdxsTmRicuBDgUxz8dcvwyT1VwygdVav0Mxwon_TMqoOYVkLYdcQC_ax1J69o_ZfjJAk4WnIX4Sc9Eyq0vcq0wGR7tBWIMOScan-ftc1kk-eOu9a5vf9_rXUo9PyJOGp1hK2Nr0YlN7OpekSx5qGv1emK9TaNqPweJMga2TSPsUCnwlg-deM1IHRXSXQ344tK8996zcAU6GjWca36-AkOPdF5KmlgV3IZZGHZHZhj01Z10VHWkifZn_dZPJYnnKHsIx5OVcHZY00oBetMhE3_Z7c718kh12244U8b6X8V0YllHS-GvLf9YcYkhMDV1b2j9PkKRTTfOlEAKNNG3QXe-lvaJMBKn6dmTdQXyGDR0Q69EEsWc44omSneBRayD9nK3EH0f4oypE7uXFpzqfPhClnnr7294jv7TwP7vswmTeU0hFZuucCgV6rJhSgGW2y1I6v27IKvcwcJHtigqQlriXADt40100SjY3rGn126SNayDhhtmG7TOtTH0LmaPz86XIpf7C3Jb1fZa4Y8favvloTrvBIc6ydi6IEFMY-rYjUN1dOKridn_oReBfyNqmV5mktC3suSvVdcgkxsxhxTJmjcmZHnfjEYa6l2w4Y2KZCmn7JWrHXrbjCMcFOLnWkqBp-zIY3cB3umyypHc0LrOKj_tpW3dyYjNDtaCoAl5XcWkJGmGGJY7MQdyy1FdUtxSItm9IjnOk5bM8Tfn_FiM5BOEd3ipiUKwhxkiPlpfxsYrvuV79bDM4zR-pBAafp1Ubj0422aI8-FlTWRz13zx2BfYMTTuQbiV_Vd_9kQ66S63DEN0rvohGbqJYW9-vUxg4mheN15eaUwftwo4eEI6kjvRmLhMb_8DlHQeaUOaniI9kb1m0KvreGu60xOFmFbroX2X2fXYLa51SZyla4Xip2eTk5lVWVE18Nf_iP1-z1ka7rmb99yjC2BtQN0OlUdJn2IaNYcxczYTGuCXqrL5z4H_zGEX7mOMGE2bUtp1B-qag1N-h00jnnDEMLtizfRuGRG1zJ-GFHZoev8HKHj6XtOdca6c67hHHbLnC1yCXzWwQIydg0pRA4uAUxu7wkbJPxc_yAb2UT-IXacFwfiJfI-c3On6CacR6uOa0oRe8Wjh6jTJKOHxMKIfWaehjHNjkJz-aQus8-U492PkMWMXPRVPgBJEnQ8U1almEVaRQtoWVGQG2KjqOT_AtOcvjQYOLFKVO6-r0JfKeKsSFT0kH6_SFQtsqtdYR4PZdMi_EZ2uw54-t2vBcH-pXYeNnOyJc30SWlGjuT4CH8e0LW40dhtrKU7ciSQR9ltrNzEiVYJsOAyWdJ3NHQPdBLUqSL633gNIjoHYMNfIIm1D3-v41bt6frobvXvF1PTiqZb3Dwk6-TYy_C50-PZk61Bc65VjTomDJDkf_4_nNe7xNUzRc2DAlmaLPQ8up9yjLHCKUV6j8Li14JkzQ-Njv_iJx7nyKa0FqwMc9OWM71jyuX02dtnC2BJwRDg9O8uBAF-md5jdmCrbV3lHuPmtdSBdeZaCrSEkLkifbBRfJPS28tmgOG0Z2pG_3Dr_6N3KG9PMMRViLS0ID31dpsS29T41GUUXdTFYoMkk2gb6he1TLINIrCQyszHTsd-apKcO4ZbUmmk8kf-h233N8f3U9M72mjkYbUcXEX6c6TE5CKyWnH2t_o4McHqvyJeIoh2WtSKamsuASg0M7cN13O2_L9bLwBoha672QnHaiXRI_iJ9NJb56P3yUhelGrVIRB7aPLiuoxIqNz-q08TwquFANcWQUsdYZ0ksG0tgzOCoVlY9rn7JwWOIuoqI5kpwNQHBw3ilkPJWqj1tjkbhOrRFlznDs3YOlZ0E32YGwaLPFpQeZ6T1ngM1i-HUNzIXoeLTwuBuvZiyROvGx9sb0nGhodNn5wkZ7rVay2eHn08F_yYaFHEPNNbjXkhVz9QOJFeXWWdRBnzrRng4Ixi77B5eToxDeF9V6KfDCsDE_q6vwhbVo-jA7eexQyHiP8C1e7RtwMqDMIjEBvaEJUKKPVVVtephH5xZA5nBfETaDc5EsNiRMfStIXSJYAmefA-BViFVKqaQNV9KVxJZXjKUPS2zOueI8OuuNTe76nl_z_mMv-BhNfTR17lyCA2KUGTfNUzq0jr8hnpN6HgdTxua4LaFejbHNJIkSml70GRQZHwVrSJienk78e-vhT6Lqt2fD7O-hQAcpVeaX_tIBdTsF_V4Q4eBzUoEeGZcn3fXOGotKVQeKk7AEo0D8dtvLm8q7A6kIm20yM65LTD-StYUJpXq4ufJgtBlQkm_o2cdl9KuLO--sLH8KDKNynFHoVl90TMSCGecYkVf0lGGFSXz4O83A43U1AA3NEOKu9Fhwpvs43XNljRKXGxg_5S3RPEK-rymRVR0-DebYCX-Vv44-brQhkitVQr1RtfUWHH39WbsR1InWkYDramdnoKkCeWdF5QV0l3PULONNZlVr0tSH6hAkIOxLAJmymdpPxwEvruZUTTHx07OxdmbVFr5ic1NUCcVWBuIqZgS6ZbmdNJFRxlxqPCdezxj4UVpRWLkoUsNjCe5GA7dIjUZLBS0PaYbjgjE_Ls0xCggCjZFyQVB57DZAFkwSyRHkwo59ENQbbC439rctBAbkZX0g3LID-UWLlXVMrHBHIyjC1k2jq5smlpi5sg1ATZObwpQZ-u-r4fWWfBh9GnJluQSMFq1eoJUniKQxaIbc0HcYRNoJcxmAa1nL-gCKypPjDPd0yZengBRgTT-fiFrKgp6xB7B0oxLx5NyagQ_ax9reEOnkfJ-IiWnTg6iTeGl5E4PKMVwPno9YdP3Ft-EfbfnZogXiFKLA5EH4ZcG20TtWC7UJQy58vFdfk050r840DkNAcY78G43HtY3j0HdDiA7EAEGW7bVejE2yjQV3r7tgTX-1CzqhE1E-H2wBjTO42UbR1CNHvIRjM_sqzohAO6IUMV_gmELZAR_KLOrWQ_DWqSgTTn0XZrDWzeHGdKgbkGpCzYT8zQOJ-KBkMOGKo7dvmQaAG_r78kQrVt2JPVY7h6MNhEdJxGf8-nyvxIEna8xZdRPjQAkptG-ALwHnt337309VYpyuH7geoMFAgRCNtRXNL8sFAVAWMByn3f51nVAKBo5_-mrk_N2bWhA_5gvTpY-gpTMEMarVl2ay8z1WzQP5PE3C7hBgkNvE6rjSuJqsuJPtPcIEVqV371lDV5b_eNoCzoDVmYP4RpS88w1Tt_OENu4DQR8toasLITC5fnIrztsgHvBUWy8G2abdCWVJ_pZFuibhR5J4GR6-5kA1y14KLVhODC9TpUFqhKafvi0PmTGPosA6hBTecrHhxvPz8i5LyrB7N6Z5Resj-5B16YjNalZImFhpxlbuNsYM11ztjKEv05jx7TqIa82qcvUX7RmLHHyM3u4LQ0OC25cekBvUUIDcNzrwVsr5mwG4Al2-SstR-7kDJOh9wAvbBiwUzJYDqcCHET6_hCYsMTnsmMaKfxb7dXyfupFPubO2V5hWBJOuwAghPFJanmK1inH35taaJpnGfJ6LTCw7kMc53_lF7tdL3rg6FaJBYjE2lkZphKu8I3oK4mVhpcqhyqz0MNdKVJR5_qrBWhGabTNr54qaRuk_13j856_LEVw_uZebB8VxfEAWYq95Nq1awQ808Yv3QKBWbVFAMjTZZx4p235cnmaWAG6cJ7c9lnV_ruyVhNXMDlAfkIGxxsRBX9HWZpn-9ntBvjl_vZJsXviozyWuTv7XH9Nl1S4faFmX_MKB52X_xppQYM0fQmn8e49kD6qbBPKlwxdmW9JvgmlpHf-7cMbKa6oE36ZMtdooIuTC7MtkUL5K9g5d9aBz_0-3rDd5y3c0DGsPENfJwxoLQ6vdXSfrtwHk5Mxzw28i3D43koyY10fWDIyId5tqm8nnwKNy6fzACOziiTLaZKE2LHDhw0aU8PuX5_pYG_RBIFv8uquBrnYnkPVx_POwuT8YpVOFJXeARRvEhnaX9oamouxQIzH6upmkjWYjHpQvcD7iWz5DeJW3TWfaIbwKLlzYNx97NuShDLr9lZ9d8NMtUPnqfo-HV8iw_3xMi7UjgBMYx0K1h4LjxCIseZ8dEmUiba5GofFq-Hsmbt797J50S4x7K0uzTTzYGPvP3mrknyn4fxLsqu1iyyyOuqHLFDXOLiYlRswxhaYkrOY4IuFQW34TnqpdjYoMzKK94z1ta5ka0OkOHJ4ytlfnek3Piw1g3TUtJea8oT2htury2o1ekYR18kLFBOBqx4r5-Df8hhLhtTyJm659SxzoUKaVyRZvx3bNqZGHbkEByay_N4lUPmsBkZzMhkGwIRL2YSvZKPd2Q0SQ3XYXOCIJcUDH6sKX3AKm8LSWaolLIl7iEXEmYZyy0gsO6pJ1yvIXTMLCSf3N9WXbZGCChI1yEz3YKNE0znkdcswpmyRLv5Yq1c6uTqbLzVH2nR70uId4VzhPglcf8kwDReLsLMStm0XqrziB6ULpOAtbA-g_XoXPzMbiRHAbMiV804LtW0SDUKh8JokdttdWHZUTTDeNILOVzCC-7hDrB6pf288jEDVdfBW3yWDDXTQpeirrh3jsmEsL6cCdARBC0SnhrloY9aso4or1uxLVSej0FyVnkH0Ja_GsSFW5uLUXqa4hIFgXn7NmuBsaZEuVuiBhDwH1-0ZwaZBiSvlv18KUPTwD64VA1AT7WKSWJv-bC2x9L1bg36eUHdZgS91C-tTVmM4Shgca8wNIZwJ7JjVyDO6Sq6HJrq3Bgzwy0h3nDEOwjvFRgWdzkY_x1sWHGR7VrsaEkEIKQOP2UzOVRWi0ffLE9L7KbSokw39uFbtZASJulXcerFKdPYyKyHwaBMEXBQsCHnlewnUqFsZwuKVcN5ntOAlLKYCcw.eyJlbmRwb2ludF9zbHVnIjoibWV0YS9tdXNlLXNwYXJrLTEuMy1jb250cmlidXRvci0yMDI2MDkwMnxtZXRhIn0",
+                  "format": "meta-responses-v1",
+                  "id": "rs_6aaaa80eb01cc9db710c4068:rs_01a0aaa079df74cd94ead40c76a77f12",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 2596,
+          "completion_tokens": 791,
+          "total_tokens": 3387,
+          "cost": 0.0004178,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.0004178,
+            "upstream_inference_prompt_cost": 0.0002596,
+            "upstream_inference_completions_cost": 0.0001582
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 710,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      },
+      "response_model": "meta/muse-spark-1.3-contributor",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 2596,
+        "completion_tokens": 791,
+        "total_tokens": 3387,
+        "cost": 0.0004178,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.0004178,
+          "upstream_inference_prompt_cost": 0.0002596,
+          "upstream_inference_completions_cost": 0.0001582
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 710,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "text": "{\"sheet\":\"Workings Cost Sheet\",\"ranges\":[{\"start\":\"O29\",\"end\":\"DI31\"}],\"evidence\":[\"B27\",\"B29\",\"B30\",\"B31\",\"O4\",\"DI4\",\"R4\",\"T1\"]}",
+      "parsed": {
+        "sheet": "Workings Cost Sheet",
+        "ranges": [
+          {
+            "start": "O29",
+            "end": "DI31"
+          }
+        ],
+        "evidence": [
+          "B27",
+          "B29",
+          "B30",
+          "B31",
+          "O4",
+          "DI4",
+          "R4",
+          "T1"
+        ]
+      },
+      "parse_valid": true,
+      "finished_at": "2026-09-16T14:30:44.363674+00:00"
+    },
+    "CONTROL": {
+      "request_body": {
+        "model": "meta/muse-spark-1.3-contributor",
+        "temperature": 0.0,
+        "top_p": 1.0,
+        "max_tokens": 4096,
+        "provider": {
+          "allow_fallbacks": true,
+          "require_parameters": true
+        },
+        "messages": [
+          {
+            "role": "system",
+            "content": "You identify spreadsheet cells. You do not write formulas or values.\nUse only the supplied workbook evidence. Return strict JSON only, with no markdown and no commentary.\nSchema:\n{\"sheet\":\"sheet name\",\"ranges\":[{\"start\":\"A1\",\"end\":\"A1\"}],\"evidence\":[\"IDs or coordinates from the supplied evidence that support the selection\"]}\nMultiple ranges are allowed. Parse the quoted user instruction and select the cells it asks to modify."
+          },
+          {
+            "role": "user",
+            "content": "Quoted user instruction: \"In the Workings Cost sheet, compute total funds raised for all three tranches from Apr-25 to Jun-33.\"\n\nIdentify the cells that the quoted user instruction asks to modify. Use the supplied workbook evidence. Return only the target set; do not perform the edits.\n\nSheet identity: Workings Cost Sheet (sheet:s04)\n\nRAW WORKBOOK FACTS\n- RAW:B9 B9 text='Portfolio Building MoM'\n- RAW:B10 B10 text='Initial Investment'\n- RAW:B11 B11 text='First Tranche'\n- RAW:C11 C11 text='Numbers'\n- RAW:B12 B12 text='Second Tranche'\n- RAW:C12 C12 text='Numbers'\n- RAW:B13 B13 text='Third Tranche'\n- RAW:C13 C13 text='Numbers'\n- RAW:B15 B15 text='Portfolio Building Cumulative'\n- RAW:B16 B16 text='Initial Investment'\n- RAW:C16 C16 text='Numbers'\n- RAW:B17 B17 text='First Tranche'\n- RAW:C17 C17 text='Numbers'\n- RAW:B18 B18 text='Second Tranche'\n- RAW:C18 C18 text='Numbers'\n- RAW:B19 B19 text='Third Tranche'\n- RAW:C19 C19 text='Numbers'\n- RAW:B21 B21 text='Ticket Size per Portfolio'\n- RAW:B22 B22 text='Initial Investment'\n- RAW:B23 B23 text='First Tranche'\n- RAW:C23 C23 text='USD Mn'\n- RAW:B24 B24 text='Second Tranche'\n- RAW:C24 C24 text='USD Mn'\n- RAW:B25 B25 text='Third Tranche'\n- RAW:C25 C25 text='USD Mn'\n- RAW:B27 B27 text='Total Fund Raised'\n- RAW:B28 B28 text='Initial Investment'\n- RAW:B29 B29 text='First Tranche'\n- RAW:B30 B30 text='Second Tranche'\n- RAW:B31 B31 text='Third Tranche'\n- RAW:B32 B32 text='Total Fund Size - Cumulative'\n- RAW:O4 O4 text='Apr-25' kind=period_header\n- RAW:P4 P4 text='May-25' kind=period_header\n- RAW:Q4 Q4 text='Jun-25' kind=period_header\n- RAW:R4 R4 text='Jul-25' kind=period_header\n- RAW:S4 S4 text='Aug-25' kind=period_header\n- RAW:T4 T4 text='Sep-25' kind=period_header\n- RAW:U4 U4 text='Oct-25' kind=period_header\n- RAW:V4 V4 text='Nov-25' kind=period_header\n- RAW:W4 W4 text='Dec-25' kind=period_header\n- RAW:X4 X4 text='Jan-26' kind=period_header\n- RAW:Y4 Y4 text='Feb-26' kind=period_header\n- RAW:Z4 Z4 text='Mar-26' kind=period_header\n- RAW:AA4 AA4 text='Apr-26' kind=period_header\n- RAW:AB4 AB4 text='May-26' kind=period_header\n- RAW:AC4 AC4 text='Jun-26' kind=period_header\n- RAW:AD4 AD4 text='Jul-26' kind=period_header\n- RAW:AE4 AE4 text='Aug-26' kind=period_header\n- RAW:AF4 AF4 text='Sep-26' kind=period_header\n- RAW:AG4 AG4 text='Oct-26' kind=period_header\n- RAW:AH4 AH4 text='Nov-26' kind=period_header\n- RAW:AI4 AI4 text='Dec-26' kind=period_header\n- RAW:AJ4 AJ4 text='Jan-27' kind=period_header\n- RAW:AK4 AK4 text='Feb-27' kind=period_header\n- RAW:AL4 AL4 text='Mar-27' kind=period_header\n- RAW:AM4 AM4 text='Apr-27' kind=period_header\n- RAW:AN4 AN4 text='May-27' kind=period_header\n- RAW:AO4 AO4 text='Jun-27' kind=period_header\n- RAW:AP4 AP4 text='Jul-27' kind=period_header\n- RAW:AQ4 AQ4 text='Aug-27' kind=period_header\n- RAW:AR4 AR4 text='Sep-27' kind=period_header\n- RAW:AS4 AS4 text='Oct-27' kind=period_header\n- RAW:AT4 AT4 text='Nov-27' kind=period_header\n- RAW:AU4 AU4 text='Dec-27' kind=period_header\n- RAW:AV4 AV4 text='Jan-28' kind=period_header\n- RAW:AW4 AW4 text='Feb-28' kind=period_header\n- RAW:AX4 AX4 text='Mar-28' kind=period_header\n- RAW:AY4 AY4 text='Apr-28' kind=period_header\n- RAW:AZ4 AZ4 text='May-28' kind=period_header\n- RAW:BA4 BA4 text='Jun-28' kind=period_header\n- RAW:BB4 BB4 text='Jul-28' kind=period_header\n- RAW:BC4 BC4 text='Aug-28' kind=period_header\n- RAW:BD4 BD4 text='Sep-28' kind=period_header\n- RAW:BE4 BE4 text='Oct-28' kind=period_header\n- RAW:BF4 BF4 text='Nov-28' kind=period_header\n- RAW:BG4 BG4 text='Dec-28' kind=period_header\n- RAW:BH4 BH4 text='Jan-29' kind=period_header\n- RAW:BI4 BI4 text='Feb-29' kind=period_header\n- RAW:BJ4 BJ4 text='Mar-29' kind=period_header\n- RAW:BK4 BK4 text='Apr-29' kind=period_header\n- RAW:BL4 BL4 text='May-29' kind=period_header\n- RAW:BM4 BM4 text='Jun-29' kind=period_header\n- RAW:BN4 BN4 text='Jul-29' kind=period_header\n- RAW:BO4 BO4 text='Aug-29' kind=period_header\n- RAW:BP4 BP4 text='Sep-29' kind=period_header\n- RAW:BQ4 BQ4 text='Oct-29' kind=period_header\n- RAW:BR4 BR4 text='Nov-29' kind=period_header\n- RAW:BS4 BS4 text='Dec-29' kind=period_header\n- RAW:BT4 BT4 text='Jan-30' kind=period_header\n- RAW:BU4 BU4 text='Feb-30' kind=period_header\n- RAW:BV4 BV4 text='Mar-30' kind=period_header\n- RAW:BW4 BW4 text='Apr-30' kind=period_header\n- RAW:BX4 BX4 text='May-30' kind=period_header\n- RAW:BY4 BY4 text='Jun-30' kind=period_header\n- RAW:BZ4 BZ4 text='Jul-30' kind=period_header\n- RAW:CA4 CA4 text='Aug-30' kind=period_header\n- RAW:CB4 CB4 text='Sep-30' kind=period_header\n- RAW:CC4 CC4 text='Oct-30' kind=period_header\n- RAW:CD4 CD4 text='Nov-30' kind=period_header\n- RAW:CE4 CE4 text='Dec-30' kind=period_header\n- RAW:CF4 CF4 text='Jan-31' kind=period_header\n- RAW:CG4 CG4 text='Feb-31' kind=period_header\n- RAW:CH4 CH4 text='Mar-31' kind=period_header\n- RAW:CI4 CI4 text='Apr-31' kind=period_header\n- RAW:CJ4 CJ4 text='May-31' kind=period_header\n- RAW:CK4 CK4 text='Jun-31' kind=period_header\n- RAW:CL4 CL4 text='Jul-31' kind=period_header\n- RAW:CM4 CM4 text='Aug-31' kind=period_header\n- RAW:CN4 CN4 text='Sep-31' kind=period_header\n- RAW:CO4 CO4 text='Oct-31' kind=period_header\n- RAW:CP4 CP4 text='Nov-31' kind=period_header\n- RAW:CQ4 CQ4 text='Dec-31' kind=period_header\n- RAW:CR4 CR4 text='Jan-32' kind=period_header\n- RAW:CS4 CS4 text='Feb-32' kind=period_header\n- RAW:CT4 CT4 text='Mar-32' kind=period_header\n- RAW:CU4 CU4 text='Apr-32' kind=period_header\n- RAW:CV4 CV4 text='May-32' kind=period_header\n- RAW:CW4 CW4 text='Jun-32' kind=period_header\n- RAW:CX4 CX4 text='Jul-32' kind=period_header\n- RAW:CY4 CY4 text='Aug-32' kind=period_header\n- RAW:CZ4 CZ4 text='Sep-32' kind=period_header\n- RAW:DA4 DA4 text='Oct-32' kind=period_header\n- RAW:DB4 DB4 text='Nov-32' kind=period_header\n- RAW:DC4 DC4 text='Dec-32' kind=period_header\n- RAW:DD4 DD4 text='Jan-33' kind=period_header\n- RAW:DE4 DE4 text='Feb-33' kind=period_header\n- RAW:DF4 DF4 text='Mar-33' kind=period_header\n- RAW:DG4 DG4 text='Apr-33' kind=period_header\n- RAW:DH4 DH4 text='May-33' kind=period_header\n- RAW:DI4 DI4 text='Jun-33' kind=period_header\n\nReturn strict JSON only with keys sheet, ranges, evidence.\n"
+          }
+        ]
+      },
+      "request_sha256": "2c5412b4f68073391a56dc059702999646aa0c3e9ab10153162ca85ba3ceea7b",
+      "declared_model": "meta/muse-spark-1.3-contributor",
+      "request_model": "openrouter/meta/muse-spark-1.3-contributor",
+      "openrouter_wire_model": "meta/muse-spark-1.3-contributor",
+      "temperature": 0.0,
+      "top_p": 1.0,
+      "reasoning_effort": null,
+      "provider": {
+        "allow_fallbacks": true,
+        "require_parameters": true
+      },
+      "started_at": "2026-09-16T14:30:45.365542+00:00",
+      "failure_class": null,
+      "raw_response": {
+        "id": "gen-1789569045-M4Lzz7FXc0t9i1YU276y",
+        "object": "chat.completion",
+        "created": 1789569045,
+        "model": "meta/muse-spark-1.3-contributor",
+        "provider": "Meta",
+        "system_fingerprint": null,
+        "service_tier": "auto",
+        "choices": [
+          {
+            "index": 0,
+            "logprobs": null,
+            "finish_reason": "stop",
+            "native_finish_reason": "completed",
+            "message": {
+              "role": "assistant",
+              "content": "{\"sheet\":\"s04\",\"ranges\":[{\"start\":\"O29\",\"end\":\"DI31\"}],\"evidence\":[\"B27\",\"B29\",\"B30\",\"B31\",\"O4\",\"DI4\"]}",
+              "refusal": null,
+              "reasoning": "Mapping the user instruction to sheet s04 cells by identifying rows B29-B31 across columns O to DI for the Apr-25 to Jun-33 period.",
+              "reasoning_details": [
+                {
+                  "type": "reasoning.summary",
+                  "summary": "Mapping the user instruction to sheet s04 cells by identifying rows B29-B31 across columns O to DI for the Apr-25 to Jun-33 period.",
+                  "format": "meta-responses-v1",
+                  "index": 0
+                },
+                {
+                  "type": "reasoning.encrypted",
+                  "data": "Q-PaDgGSFp1OnY9dKVGhN90b4ZfOn46iiVwUvXx9rAAziDVlKfpugxJK4OqQGuUS1Hc5pyzJ44UbezwtMtGpKaRw4BV_sdqDeOQgbuR9fn3WysXDNCQMw-A8GW2V7Yw1ghNQ6TpfVJL7K6I0jcKm4f6yhxdz93Jn95iPf0yyqlrTAkGpGAfig-FERzLPb3U0PLo39IMkCA4xtlA4bgunAUjOrqv8rLibHTzFt1-WY0U-7OHslPOgwo-YIR87WQNW4nbYOkQWj-DOC4cR2LJjl9trlCPNH0vtIWcjefTKHzpce6DwNSX5Teq7s0YWhUP6sJNy69K61m_uiOF8-AW0cHbMJmIwb7y5RSA39gAOOgMv3g2uB_E6xXeI6p1bDjNGX3chl7EfsKLhkljUV1SO-MriEbPH8_cgCMljrkiPXUjVkqXGYIEf9tvjeQJdHoxHOYggFAxPBWWkXdBwVGSAP_B6bnUawOpz16T0V702p71RYM2DNkDDTG2dVQ_FJ2hnxg9y-hY6NjbwkssvtsbeBW81AsS3uy3LquQlSr7ZnVC5kXSy2xSzeEe4Kmh58_oQUyNagn2WWQIcMGjLCXMH6MDWvWF4u5CK99xMV1pTI3L9ySNn3KqA_Y1I0SeQjI7Crm1LUTl5-Y659sE72mNH5KKFAHHI6dwzyHtELMSajXEXtjcaNLAk24HX_U0YVI7JIh6XmEjrpCHPSNMGFb3bZ5iGzw_Za9huGHYjnWspmij_-WK0maWU33GLBb3eZl3XIuAbEhuPrGmJqGwPQSfPTamNGsDQrj2uunOxhfkqXrPrjXwAYNpZgmckL_wwUnybK0msQX9Tqx-0zoSzHai-oXFE5wPRNvtxkG3irZSH-OP6sQiofXMNysjwabJQbr2941X-b__GFjJYy5ECGBw812Pa66stPXyXJgCgNbymiNEUUYNdqXDUSItpL4_Yx1bdB1Z36vPe2rDfhqbF87TDH6gRlUoWoLHLnmXZLJUJ5g13mVz-mfzVrUxQptY4RV6Kb7EpZDxwO5VWiD37F1Bgxw5ZS0Vx7OkSjzC8QghLYyL5sjbl-iQJq7eozaHpNFXMwcyP9EGq_1N1IfcvOh2Hv0KS3rdIa2KtiwgjawTlcBjr7qIpZVOv_6QRaMI6jeokoqQUtToEuVApTAUWpdTte4ZZFA-1EbAYNwIHvLiKl69FUYx3bCBLvt8MrQXLXbsUWQKpYBQT-x5KiMq1HjBf7aFA2-d4Ezg9jJL0NWthStPckMKAQcvEIx5l9g6-RrE0ZJIphlAHIdajkBzKsyeRM_WhEfdzqr7hUYJrqdVEt6Bsn-GJKnc9MJkiW9dhWa7pDbPrTR0gPiyVgf_MCIBW2nu-PTgFWqQXXSUW1AmdXf3rqMMZxv4dMZSHkSOVfMFNR-lhAsu87XJFkMnhH9g1oX9Ixbug8SOqKXBdBy3M6fmvH7vbsJ2k1Z9glxNqkpQLAnWJpZbl-b3QugqRJjEVMVS0Utp5eYsO-F8S828jGwV1fWzYlD8ac9xlja1GxJzezdyTTRKmgFmdbmR0wBUEHwmeQl5PUrzEt_cc3zPLKxq3cdAAvTbsmpJsP2ogH5STJR5avxLIevuG6ER0UAEKfc4W9aINn5YzozzK9pmfImeWJ030P0dAsLc5mw97bDawfyaDH01tGUmJQ-ZaOG24W_mWFH-_-YVpdaqPKF-Stn0LOjnBn8ZBmpIoTg3nRACyBbWlINTb-em4AMzCn3BdB6HXhMgo61Jyoj1q4AvPUetVSSNOQ_GEi0oEMAW6BOxS-I1K_JuDNOU7OmPsiHDQVm9wmUbOspIIGWfN61eI6NSAmXRP5zrZppkR5X2Tk4_Z5X5QXGM4F3VlQxcgeR-J1stdeHtAxLQa2nlffiAD9lYwZeHJKoJXhTtLAgWk6BUXjUJ_vmJvYYSR7BKdCDlUIvQGgnyLJ6fb_Iq9Lgn5B7MglgBGyCItES1Ohc_GRp19xzPsJeq_EcohBQnuEccIssPObe1aCqH0JNDJ3o7KL-8YHR8kys3gORSf3rx0wpnZGi9MKYWC6KKIqH7hbmbKpVfTmhWgSsdW4rPxaze6yojSDNOr-6c-CV4Zc9jKfhpvPHvtEI4H544skKFVesJ7Lw8hfHBrKkSGhKEijln5uFeBMy9i67yRJykHATrbReBxGALIoYpxYZQulLjorUKHh3gVJE8ZnS5uQk9SA5SFdWh_v9huajD_RPmwJE_bqsfq_ulK_95OmkeB6z-wlAWreJxxA7dmyiIPq5KgGU_3JdErwmkNHax2Ed2meLJ5L3_mc3Fgxsvg149sPwQoj0ipaqyAYEGsqCXBf7e_tFasMk_WBH40NcSEHejyI1SlLaz1lp4s00MwMldxKTKKOqKUVP2Q55MCZACWpy4eHwLNZqQ1iYjapLDGh63I6Esll4eSGGfN2_TO3p_SbNNpyRWT8DT3jqb0tnMIWjKX-YhRsGC898teJc-cKjeNNMGq6f4_dvJS0tAP-him-usTyeQ-lp21r3LsPm0Nrq0yjnIYR6mYqVqFNbHFbSo0ZibgPWzNa8wP0nfCg43HZ6j5jTOFdDgGzHtwKIvId5HZX0gQAc8kcSG3r34IYhNbcTQdHtWkyPFxgRAx_UsE_hInyxwkR1o8CXVoEXl9VE2y6wchp3mNNhQlriuEz9PyNEBwD2YUvpiZ0SR9m-psaPRbj-bUXHh2bZhmqESz3w4BcOP2UIau983qJBUQOI5ibac2npsr1vbO5ahEMzIfs-xqimqumX503e5WR0MGSR9RlTU1HaCVn9RBkfzLlJTXLfOCk2gKNYQHJ8TijzgCE-52Wt7Nrpatfb67J05phDitIhEeOiK6GpYhv3dbGe-nthSXqlkI_HpPT-RhuTAY2ngWiRXta-R1bzFypkxsBKEDZBXYuevx_0oQx84TTOhQAFYlBzXtHzD38--N-OwEl_eI4FUsBkBXUUqqztXhsPQCaqXCmW--el7whhWTu9flQfdcj2cixEOk1Nmhf2qD1VAHQh9ljGKZ_63qBdkyPsak6OF2f24aXtrrbkJfVHlWwZTLY8pJPtA8r7GLWrAByG0ot7hPDyDDtqteYATmVaPS0Y0KC-tccg2z9NaTXRUGduQM_WScemhZf-zf4wAIsB6-itmwmbbkH62DdMH9vZpcOKfLE7S0jkU3XlkedaE-k3Ax_VEMACOq8rHGhdlBNvYfVCQOyCuysUS42HkFC-7vtqoeBxsWYcGlFgtQGW9tBAlxB1QU38rjJ3pg6hY1dOF5vZN_CgsIlBF-d0TnjJC_0Mj_V_VGoTcV0OiiAMoqAKJQ4Lw-6SKAAKcMn_FUF2eSw0rhrFkNrMoa_AmJTZ21tfphGCQ3AdlssuAXUA2QkDamUXwOPApcGpY-LFTtK7AlB9hPLQ8I2Zla74QqNpU74g5y89H_g5sPPKIxHXlO9kILsVb2-xxiJBF3g8AUSj2sv9R-zUxeUyW1gwvS2hNIz_xsbVZ_COb6gf-9AMDBB5HZd9oObbp-XxMR-5vOwJOdMu838ZtEtFd8Zatp8HmtvR_4RwnCAaDPoy6vaIk9J0JAJZ_Ce0mHecpz-KOT6EVl212j5fQ8BhgKhQHIy1KCn3vW-oRwcKYs4ZUYrTTN-ng6gV76NAJ27NUzSvyFELCzhtnX0oWmocE7nJtvL2NxbUEp46Ht3WZ8WT5w1u9Im9PXFJ8HqbL9bq6JWQLKco8l4LXubzcZ-A4Vy_A_ii04mBUeTjIysHYEpRYkJs0hsJ-s-lE2ZJIWH-lwNPPb3RGmJLl3ICgq-7ZB8DsQEF-Rev39pc_0OezMyyd0vP4EJbnvH1ChLYZEVgl11WikrCbMJLE-vnmmvfFTtxTcQhgFuGCQHnau-4t-DY4bL9AzMi7OSuUvZfScVsKJUYsGDxlHzOK7jiFEtEJxiU4dAfBLNlZpxYzbC0XHd9ZKHsuIoHFhEGtF33eB_Fei1KxILR2OjkM7hRsQR3GHMIjXHv4hoWers2l7moiM1XFed9w6p87mfWtsj7H-OU48_bUOxyUztpohPZqzyaZhd2wDU7Lh94Uz96Kujh124j4tXftpgh_AEOs1_DzrtC1V2vOIACc3Jy-F7n8xpVeWvmt3ppU1lDHNkqEV5gdz0ho2q9_QPTEUDHWe70pLEYpiFeHMaDxrRF_KaDdyHmUVpW6bL-qICESqkdE5fbktY6vDe43WxutgCy-LfQ1qLqE9uHS9weJfBboZlRylThr08uh-W098AS1ygdmATuuJjL0hIq4Bm6FEFg53KZ5yCBlQ9FiSFK-q2Q6Xmo3hiCV5jl9_uH_NpHPYUDCxmz_WbcmLmHBByXDSSSAfBPydmB_cn_-N_pVP4uEDMx4VT4frR9V9dtFhwQTxcp3XiIoSqGGj3O2p3bZnuh88fKpIHiS_OO3cIOJSw0R_3A8ChXOzVZ9Yf9mQ17vth2kswrpFgiX8tEMH7P_LTzBlnKqorqVDXr50hdhsbv7wY_XPkRDl8Mlp9ilxcKruOSp0KoSYjdK6UqxBsScHdr9Cm5d71Sf1_NyJ6YptMMFir8FS1LnxDuWD0Er8mnpIbwxQ2NxRciKMRnO5S-Wt_Dw8hyi0RYtLwGl8bCxv3ler8dmwjrPU0Z_6aTlCz0-6HuhONOqkTA55p_HsslRcF9FqlzVvJ5-mtxyETqd-eSXUP4L-oz62o-dC79CHrKqGVYWj4jKM4gdHnOiD9B7GoRNmENM21b6LRda3vKR57g0XjcBghvr0ZncSyYs5UDfegK42JIFrgOzVhyWFjjO51eUqqpY8tOPjUqMEU_d7SYj-0JzBBx1BQDHVH_mCDEQlKl3Ln0w8g4YqLQk5-QsMLNMWzQcMNJ2BPt-CE_QohceyBEik-HXBvVeZkRLLnGUqX3I1cqVe_P1H_80Pj9aDSjkadJBR5oLVxFLzrCWnSU2cjsCXxxbYceqpdV-HT1LqYYvebsRxqO6VZDd6UPs7NiFw346WpZ_PHHIIOgA6z9WTAOU_stTivjlZa3fCbctOCnzDMw3E8zpGpAPDd-StPBv42basfqfsmffRLIPMJrI-OhZFXEC0___iwO6LiYjnVXeypqUROx3rvwQZGAfkbAD_Z2FwJK8U-6tN-lkrbquWjv8TW2n-yPJw3Ub5YhBjpL0Q_RYOT3-R68RoSMbmFa7IRy-GQwUKGqDsVOFEwv98MhXAzKMgiOBu8iHGC5HiW33CcYw7b1suM_V_TyKMVTABWeY1Y1L5uFiaC37saAJxPG2F4wgm5jx7_n61s3BD7jHYAs_K58uOgGve3n_-vNiJKM0jlTtnF6JfXxS7AeBnZc91nDGp4J4VIiEJSa_Ke7xQjoRpRMs1aJKzB87eTXC428I9WTV3mh4XRcoleHxoRikniT1sMnjo8YmmAPNHVH0u7mXrBgU9zMRuwe2Jo1YTIoHp3-3DQO259entwaiuGxoVZ_R3xfx0VcFLSZrnoLfzoTnUhul2OH7kmwJmIb6uAOqooA4tbYpdFGzXKw.eyJlbmRwb2ludF9zbHVnIjoibWV0YS9tdXNlLXNwYXJrLTEuMy1jb250cmlidXRvci0yMDI2MDkwMnxtZXRhIn0",
+                  "format": "meta-responses-v1",
+                  "id": "rs_6aaaa81534826118125b4e97:rs_01a0aaa095147647a010429903aa778a",
+                  "index": 1
+                }
+              ]
+            }
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 2330,
+          "completion_tokens": 771,
+          "total_tokens": 3101,
+          "cost": 0.000162878,
+          "is_byok": false,
+          "prompt_tokens_details": {
+            "cached_tokens": 2289,
+            "cache_write_tokens": 0,
+            "audio_tokens": 0,
+            "video_tokens": 0
+          },
+          "cost_details": {
+            "upstream_inference_cost": 0.000162878,
+            "upstream_inference_prompt_cost": 8.678e-06,
+            "upstream_inference_completions_cost": 0.0001542
+          },
+          "completion_tokens_details": {
+            "reasoning_tokens": 687,
+            "image_tokens": 0,
+            "audio_tokens": 0
+          }
+        }
+      },
+      "response_model": "meta/muse-spark-1.3-contributor",
+      "finish_reason": "stop",
+      "usage": {
+        "prompt_tokens": 2330,
+        "completion_tokens": 771,
+        "total_tokens": 3101,
+        "cost": 0.000162878,
+        "is_byok": false,
+        "prompt_tokens_details": {
+          "cached_tokens": 2289,
+          "cache_write_tokens": 0,
+          "audio_tokens": 0,
+          "video_tokens": 0
+        },
+        "cost_details": {
+          "upstream_inference_cost": 0.000162878,
+          "upstream_inference_prompt_cost": 8.678e-06,
+          "upstream_inference_completions_cost": 0.0001542
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 687,
+          "image_tokens": 0,
+          "audio_tokens": 0
+        }
+      },
+      "text": "{\"sheet\":\"s04\",\"ranges\":[{\"start\":\"O29\",\"end\":\"DI31\"}],\"evidence\":[\"B27\",\"B29\",\"B30\",\"B31\",\"O4\",\"DI4\"]}",
+      "parsed": {
+        "sheet": "s04",
+        "ranges": [
+          {
+            "start": "O29",
+            "end": "DI31"
+          }
+        ],
+        "evidence": [
+          "B27",
+          "B29",
+          "B30",
+          "B31",
+          "O4",
+          "DI4"
+        ]
+      },
+      "parse_valid": true,
+      "finished_at": "2026-09-16T14:30:51.238626+00:00"
+    }
+  },
+  "censored": false
+}

@@ -1,0 +1,58 @@
+{
+  "verdict": "COMPACT_ENCODING_NO_RESOURCE_GAIN",
+  "summary": {
+    "resource": {
+      "pairs_with_prompt_tokens": 11,
+      "median_control_prompt_tokens": 527751.0,
+      "median_treatment_prompt_tokens": 449719.0,
+      "total_control_prompt_tokens": 8507460.0,
+      "total_treatment_prompt_tokens": 4998231.0,
+      "median_prompt_token_reduction": 76417.0,
+      "total_prompt_token_reduction": 844132,
+      "median_control_request_bytes": 1397463.5,
+      "median_treatment_request_bytes": 1026883.5,
+      "total_control_request_bytes": 22521144.0,
+      "total_treatment_request_bytes": 16542516.0,
+      "median_request_byte_reduction": 373572.0,
+      "total_request_byte_reduction": 5978628,
+      "total_control_cost_usd": 0.959086687,
+      "total_treatment_cost_usd": 0.5467582779,
+      "cost_difference_usd": -0.4123284091,
+      "control_provider_failures": 0,
+      "treatment_provider_failures": 5
+    },
+    "semantic": {
+      "categories": {
+        "both semantically correct": 7,
+        "provider-censored pair": 5,
+        "treatment correct / control wrong": 4
+      },
+      "control_hard_accept": 12,
+      "treatment_hard_accept": 11,
+      "treatment_specific_loss": 0,
+      "control_gold_exact": 1,
+      "treatment_gold_exact": 1
+    },
+    "pair_count": 16
+  },
+  "envelope": {
+    "model": "z-ai/glm-5.3-flash",
+    "reasoning": "high",
+    "proposed_max_model_calls": 40,
+    "proposed_cost_usd": 2.5,
+    "per_target_synthesis_cost_usd": 0.0599429179375,
+    "historical_frontend_cost_usd": 0.035686,
+    "historical_retrieval_calls": 101,
+    "historical_retrieval_cost_usd": 0.755029,
+    "observed_control_provider_failures": 0,
+    "observed_treatment_provider_failures": 5,
+    "what_would_censor": [
+      "provider timeouts at the 300-second synthesis ceiling (compact packets timed out in this sample; full packets did not)",
+      "identity mismatch (run invalid)",
+      "task cost cap if retrieval is still repeated per target",
+      "call cap if a task still materializes an independent synthesis session per residual cell"
+    ],
+    "not_used": "historical 150-call 06_01 cap"
+  },
+  "equivalence_status": "PASS"
+}

@@ -1,0 +1,5 @@
+{
+  "basis": "shared substrate, conservative fallback, exact-trace fidelity, and conditional exact-trace speedup",
+  "decision": "RETAIN_A_IN_RUNTIME",
+  "qualification": "narrow fast path; no benchmark-wide prevalence claim"
+}

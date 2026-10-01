@@ -1,0 +1,13 @@
+{
+  "verdict": "NO_EXECUTOR_ADOPTION",
+  "stopped_early": true,
+  "reason": "No C1 run invoked calc_translate_fill. Some C1 official-score advantages exist but cannot be attributed to deterministic execution. C0 already filled the 08_03 repeated region with Python.",
+  "matched_scored_pairs": 8,
+  "operator_stop": [
+    "Debugging:10_04 C1",
+    "Visualization:Task 1426290 C0"
+  ],
+  "envelope_censored": [
+    "Debugging:10_02"
+  ]
+}

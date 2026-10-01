@@ -1,0 +1,5 @@
+{
+  "candidate_B": "frozen",
+  "candidate_b_reopened": false,
+  "reason": "A failure is not treated as architectural unless identity/fallback/mixed-state impossibility is demonstrated"
+}

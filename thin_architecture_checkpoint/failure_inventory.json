@@ -1,0 +1,191 @@
+[
+ {
+  "task_id": "Financial_Model:17_02",
+  "arm": "H0",
+  "status": "NO_SUBMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Template:08_02",
+  "arm": "H0",
+  "status": "NO_SUBMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Template:08_02",
+  "arm": "H1",
+  "status": "NO_SUBMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Template:16_11",
+  "arm": "H0",
+  "status": "NO_SUBMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Template:16_11",
+  "arm": "H1",
+  "status": "NO_SUBMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Debugging:01_08",
+  "arm": "H0",
+  "status": "NO_SUBMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Debugging:01_08",
+  "arm": "H1",
+  "status": "NO_SUBMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Debugging:04_06",
+  "arm": "H0",
+  "status": "NO_SUBMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Debugging:04_06",
+  "arm": "H1",
+  "status": "NO_SUBMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Debugging:08_02",
+  "arm": "H0",
+  "status": "TRUNCATED_CALL_LIMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Debugging:08_02",
+  "arm": "H1",
+  "status": "NO_SUBMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Debugging:10_03",
+  "arm": "H0",
+  "status": "TRUNCATED_CALL_LIMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Debugging:10_03",
+  "arm": "H1",
+  "status": "NO_SUBMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Financial_Model:07_01",
+  "arm": "H0",
+  "status": "NO_SUBMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Financial_Model:07_01",
+  "arm": "H1",
+  "status": "NO_SUBMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Financial_Model:08_01",
+  "arm": "H0",
+  "status": "NO_SUBMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Financial_Model:08_01",
+  "arm": "H1",
+  "status": "TRUNCATED_CALL_LIMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Financial_Model:15_04",
+  "arm": "H0",
+  "status": "TRUNCATED_CALL_LIMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Template:02_05",
+  "arm": "H1",
+  "status": "NO_SUBMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Debugging:06_02",
+  "arm": "H0",
+  "status": "TRUNCATED_CALL_LIMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Debugging:06_02",
+  "arm": "H1",
+  "status": "TRUNCATED_CALL_LIMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Debugging:08_04",
+  "arm": "H0",
+  "status": "NO_SUBMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Debugging:08_04",
+  "arm": "H1",
+  "status": "NO_SUBMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Debugging:10_04",
+  "arm": "H0",
+  "status": "TRUNCATED_CALL_LIMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Debugging:10_04",
+  "arm": "H1",
+  "status": "TRUNCATED_CALL_LIMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Debugging:10_10",
+  "arm": "H0",
+  "status": "NO_SUBMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ },
+ {
+  "task_id": "Debugging:10_10",
+  "arm": "H1",
+  "status": "TRUNCATED_CALL_LIMIT",
+  "boundary": "MODEL_BEHAVIOR_VARIANCE",
+  "note": "stall/truncation; see run_record"
+ }
+]

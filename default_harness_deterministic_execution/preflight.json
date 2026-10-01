@@ -1,0 +1,57 @@
+{
+  "c0_c1_source_workbooks_identical": true,
+  "source_workbook_sha256": {
+    "Financial_Model:08_03": "2b7a84044765a4664ddb197de168fbd7feb8fff395a027a4923ee2d9ab9e8dc1",
+    "Financial_Model:08_04": "4201821791e065ce9b7e79a6938da5386c4d0b11f51cd018bec824ad02ee28d6",
+    "Financial_Model:08_05": "629d5e66d268b458c66bc64864310f8802e749ad8a61515d0d738f50dc06d661",
+    "Financial_Model:15_04": "9ff136a8008051fc400bcade977f9732fef6f3b9c3116ebc46ee366d24406f53",
+    "Financial_Model:08_02": "9928600b0184036b03a8664c1e2dcd8994e5f90e866d68c140dd6543b3ac0aff",
+    "Template:06_09": "711ee00111390178ded38c58c7640abef3d225f4e5757dd952bd34c007380c28",
+    "Debugging:10_02": "72ca5cce164e462ddebd0b7df1a69817b3c53e9dcf9a442d18615936562a05ae",
+    "Visualization:Task 1420776": "8fe4f53e3af0748ee15cdf6a486ca9e663acdcb40c4ebe8553155de31f90271f",
+    "Financial_Model:08_01": "6d742f67e84fcc3d92d1dec6b285417093b99dec1469686f1c6813aee9ad2a0a",
+    "Template:06_16": "b02c7f8fcaf81509eeabf151431ea02825d0ca9bbcf4b8e79b8a0f02e80faac1",
+    "Debugging:10_04": "e4edbd9397e3bff316960d8cc7c871d37fcbeeb7213f9a643d10b574c2480ec8",
+    "Visualization:Task 1426290": "cc97fb57fde39c21efbbe0cca39ec7e9dfc59905d2990698e65eceb79d9af872"
+  },
+  "ordinary_tools_identical": true,
+  "c1_delta": [
+    "calc_translate_fill schema",
+    "short system/tool explanation"
+  ],
+  "executor_deterministic_preflight": "accepted 08_03 Working Capital!J44:N44 via parallel_line witness on row 45; translated relative refs; non-unit-stride reject left bytes unchanged",
+  "writes_only_declared_targets": true,
+  "rejection_zero_mutation": true,
+  "no_evaluator_gold_access_in_executor": true,
+  "shared_master_policy": "typed reject SHARED_FORMULA_MASTER, zero writes",
+  "hashes": {
+    "c0_system_sha256": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+    "c1_system_sha256": "0c36c45319b387fbdb58a3c899c1d8d0beed4d5426f0aa80422114165930b24b",
+    "c0_instance_sha256": "a659355097d0faeeff8aeb10bb728c34e40c002cda67cd439bcc99f9da9dafa9",
+    "c1_instance_sha256": "3b379ca7976614a2c4a5dd2dc785266f0d1345d57f4a87736cde581440b0d0aa",
+    "tool_schema_sha256": "a030b193ed43999e553403c97715e59b1f9957f86d2b99574fde0e93ab190f3f",
+    "executor_sha256": "fee61e1c7ab57a146e712974ea67509940056981d26bf5cccf432b69e057e929",
+    "c0_config_sha256": "c3cc1b506956bc73a9560716e739bfb2fb19d96477df540f3837d17c3cd53c3d",
+    "c1_config_sha256": "860f1f145b85f5b0137e5811ac95cab118233de17b61218200617c94d2ce50e4"
+  },
+  "identity": {
+    "declared_model": "z-ai/glm-5.3-flash",
+    "request_model": "openrouter/z-ai/glm-5.3-flash",
+    "temperature": 0.0,
+    "top_p": 1.0,
+    "reasoning_effort": "high",
+    "tool_choice": "auto_or_required_by_catalog",
+    "provider": {
+      "allow_fallbacks": true,
+      "require_parameters": true
+    },
+    "token_limit_policy": "remaining-budget",
+    "cost_limit_usd": 5.0,
+    "call_limit": 60,
+    "timeout_seconds": 7200,
+    "execution_timeout": 180,
+    "max_requeries": 2,
+    "identity_source": "AUTHORITATIVE_EXPERIMENT_CONFIG"
+  },
+  "08_03_input_note": "J44:N44 are empty on the input workbook; mechanical permission is a parallel-line witness, not gold."
+}

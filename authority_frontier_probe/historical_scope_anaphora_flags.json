@@ -1,0 +1,34 @@
+[
+  {
+    "task": "08_01",
+    "id": "O3",
+    "scope": "for the same timeframe",
+    "then_after": [
+      "O2"
+    ]
+  },
+  {
+    "task": "15_01",
+    "id": "O2",
+    "scope": "for the same time period",
+    "then_after": [
+      "O1"
+    ]
+  },
+  {
+    "task": "15_01",
+    "id": "O3",
+    "scope": "the same task",
+    "then_after": [
+      "O2"
+    ]
+  },
+  {
+    "task": "15_05",
+    "id": "O8",
+    "scope": "for the % change of those 2 sections, the measurement is \u2018bps\u2019",
+    "then_after": [
+      "O7"
+    ]
+  }
+]

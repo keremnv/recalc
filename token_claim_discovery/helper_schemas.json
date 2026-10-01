@@ -1,0 +1,73 @@
+{
+  "backend": "librecalc_agent 0.2.0rc1 reference openpyxl",
+  "helper_on_signatures": [
+    "search(workbook, pattern, regex=False, sheet=None)",
+    "periods(workbook, sheet=None)",
+    "inspect(workbook, sheet, cell_range, with_styles=False)"
+  ],
+  "provider_tool_schemas_all_arms": [
+    {
+      "function": {
+        "description": "run shell commands (e.g., file operations, calling Python scripts with `python3`)",
+        "name": "bash",
+        "parameters": {
+          "properties": {
+            "command": {
+              "description": "shell command to run",
+              "type": "string"
+            }
+          },
+          "required": [
+            "command"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "view the content of an xlsx file. Can list all sheets or view a specific sheet's contents with optional row range",
+        "name": "view_xlsx",
+        "parameters": {
+          "properties": {
+            "end_row": {
+              "type": "integer"
+            },
+            "file_path": {
+              "type": "string"
+            },
+            "mode": {
+              "description": "list or content",
+              "type": "string"
+            },
+            "sheet": {
+              "type": "string"
+            },
+            "start_row": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "file_path"
+          ],
+          "type": "object"
+        }
+      },
+      "type": "function"
+    },
+    {
+      "function": {
+        "description": "submits the current file",
+        "name": "submit",
+        "parameters": {
+          "properties": {},
+          "type": "object"
+        }
+      },
+      "type": "function"
+    }
+  ],
+  "provider_tool_schemas_differ": false,
+  "reason": "Frozen RC helpers are Python-callable lx_helpers, not a new provider tool API. H factor is availability and its exact Python signatures in an addendum."
+}

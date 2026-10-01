@@ -1,0 +1,19 @@
+{
+  "claim_decision": "NO_RC_ACCELERATION_CLAIM",
+  "descriptive_speed_result": "22/22 eligible workloads slower; median total invocation ratio 2.017; no speed claim.",
+  "frozen_algorithm_verdict": "EXPERIMENT_INCONCLUSIVE",
+  "genuine_semantic_mismatch_workloads": [
+    "Debugging_08_04__2dde74bd671e",
+    "Financial_Model_15_03__472e28fbd6e0",
+    "Template_06_23__fc41ad37c48b",
+    "Template_16_07__9662584ede5e"
+  ],
+  "preregistration_mapping_gap": "The frozen mapping assigned all exactness-failing runs to EXPERIMENT_INCONCLUSIVE, while its prose reserved that label for benchmark/environment failure. Here the cause is reproducible RC behavior. The label is retained rather than retrospectively changing a gate; it must not be interpreted as an infrastructure-only failure.",
+  "research_stop": true,
+  "volatile_address_only_workloads": [
+    "Debugging_01_04__542f8461a344",
+    "Debugging_10_10__c7eca76e6646",
+    "Financial_Model_08_02__4ca3ae46295d",
+    "Template_06_02__c26a4c6508ba"
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "experiment": "ASSISTED_DELIVERY_TIMING_PROBE",
+  "rule": "eligible Debugging tasks, excluding prior discovery and reserved IDs, input <=1 MiB; ascending task ID; first four zero-model NFE >=3",
+  "threshold": 3,
+  "selected_tasks": [
+    "Debugging:01_03",
+    "Debugging:02_02",
+    "Debugging:02_03",
+    "Debugging:02_05"
+  ],
+  "screen_rows": [
+    {
+      "task_id": "Debugging:01_01",
+      "input_sha256": "e6d8eb78c3c91d352c054a5c043493861954ffa1cf75f80076a1b2d062709c10",
+      "input_bytes": 57760,
+      "zero_model_nfe": 0,
+      "screen_error": null
+    },
+    {
+      "task_id": "Debugging:01_02",
+      "input_sha256": "6da43f3b6d18b4cfdaf5aafd0bbb55b4537607c8d03a26a7a0eb4b68b68f5aeb",
+      "input_bytes": 57603,
+      "zero_model_nfe": 0,
+      "screen_error": null
+    },
+    {
+      "task_id": "Debugging:01_03",
+      "input_sha256": "db44c7fba3299b49a07572c2be03ea4544fabbdf633d22c978013857198dd9a9",
+      "input_bytes": 58898,
+      "zero_model_nfe": 4,
+      "screen_error": null
+    },
+    {
+      "task_id": "Debugging:01_04",
+      "input_sha256": "d01f1c1025176da9cfbabe38cfca0776fd77e7287f6138e6fe85ab06394d457a",
+      "input_bytes": 85553,
+      "zero_model_nfe": 0,
+      "screen_error": null
+    },
+    {
+      "task_id": "Debugging:01_05",
+      "input_sha256": "24b0999de0f20959e97b9372e50a791b0528e7e793b4555a8a477ea783953387",
+      "input_bytes": 57734,
+      "zero_model_nfe": 0,
+      "screen_error": null
+    },
+    {
+      "task_id": "Debugging:01_07",
+      "input_sha256": "97f867b9624e3496dc8673842aafb951ccc5f45c285b70cc1284b99f38956789",
+      "input_bytes": 99263,
+      "zero_model_nfe": 0,
+      "screen_error": null
+    },
+    {
+      "task_id": "Debugging:01_08",
+      "input_sha256": "ba4cf8036c9558fd947c600c0e53f7154d58e217ca67b2ba75546882a0089793",
+      "input_bytes": 57892,
+      "zero_model_nfe": 0,
+      "screen_error": null
+    },
+    {
+      "task_id": "Debugging:01_09",
+      "input_sha256": "b8212812e23364bf75d059513c51fc8e37fbd079ec8d9724e813c8f52c664eec",
+      "input_bytes": 57507,
+      "zero_model_nfe": 1,
+      "screen_error": null
+    },
+    {
+      "task_id": "Debugging:01_10",
+      "input_sha256": "8b6e6e0c11a6c421126ea4ccb8dd11989bd156bd14b8634e95d06430cc7a4aa6",
+      "input_bytes": 57836,
+      "zero_model_nfe": 0,
+      "screen_error": null
+    },
+    {
+      "task_id": "Debugging:02_02",
+      "input_sha256": "42fafe27404cd1b612bd98c5cade89d603194a09bdaac9e8266de3baa18e6389",
+      "input_bytes": 87753,
+      "zero_model_nfe": 30,
+      "screen_error": null
+    },
+    {
+      "task_id": "Debugging:02_03",
+      "input_sha256": "db0ec61dfd9ab2ba12cfaabf651c6b8b1b7d49c0babf04efb8e759eb7acd87d9",
+      "input_bytes": 87499,
+      "zero_model_nfe": 30,
+      "screen_error": null
+    },
+    {
+      "task_id": "Debugging:02_05",
+      "input_sha256": "23a52e0fbd9781d8916d38a5354f04c227762c94bc612774a5fa6d806cadd8fb",
+      "input_bytes": 87761,
+      "zero_model_nfe": 30,
+      "screen_error": null
+    }
+  ]
+}

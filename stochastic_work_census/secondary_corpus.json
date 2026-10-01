@@ -1,0 +1,4 @@
+{
+ "status": "not_pooled",
+ "detail": "candidate_a_a1_checkpoint/population.json present (4 entries); live-checkpoint trajectories are treatment runs under a modified runtime and were NOT pooled; primary conclusions rest on the frozen corpus only"
+}

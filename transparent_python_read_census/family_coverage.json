@@ -1,0 +1,34 @@
+{
+  "Debugging": {
+    "A_any_proxy_reads": 77,
+    "A_fully_proxyable": 16,
+    "B_any_lowerable_reads": 77,
+    "B_fully_lowerable": 12,
+    "inspection_source_execs": 77,
+    "read_events": 789
+  },
+  "Financial_Model": {
+    "A_any_proxy_reads": 123,
+    "A_fully_proxyable": 48,
+    "B_any_lowerable_reads": 123,
+    "B_fully_lowerable": 28,
+    "inspection_source_execs": 123,
+    "read_events": 2082
+  },
+  "Template": {
+    "A_any_proxy_reads": 52,
+    "A_fully_proxyable": 5,
+    "B_any_lowerable_reads": 52,
+    "B_fully_lowerable": 5,
+    "inspection_source_execs": 52,
+    "read_events": 938
+  },
+  "Visualization": {
+    "A_any_proxy_reads": 6,
+    "A_fully_proxyable": 3,
+    "B_any_lowerable_reads": 6,
+    "B_fully_lowerable": 1,
+    "inspection_source_execs": 6,
+    "read_events": 108
+  }
+}

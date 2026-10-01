@@ -1,0 +1,48 @@
+# Read Engine Phase 9 preregistration
+
+Status: version 1, written and SHA-256 hashed **before H1 implementation and any Phase-9 scored timing**. The architecture choice is in [ARCHITECTURE_DECISION.md](ARCHITECTURE_DECISION.md). Any treatment or scoring amendment requires a new numbered document and hash before rerunning affected scored rows.
+
+## Identity and frozen authority
+
+- Repository HEAD: `254a5c14fa74fc3534493c565de84b38e7317175`; working tree contains pre-existing research files. Per-file SHA-256 pins the experiment.
+- Interpreter: `/tmp/librecalc-hygiene-rc-v55taghk/venv/bin/python`, CPython 3.13.12; openpyxl 3.1.5; lxml 6.1.3; Linux x86_64. OS filesystem cache is not controlled; do not call observations cold-disk.
+- Population source: `read_engine_phase3/population.json` SHA `ea83d4f603430d78b30b8b85b70bb5a8ee9ef916350060bbf52c8f67701651dc`; the 30 ordered `secondary_ids`, 21 tasks, exact script/workbook hashes are enumerated in the immutable Phase-8 [population table](../read_engine_phase8/PREREGISTERED_VALIDATION_SPEC.md), SHA `20a149e390f102d26ef259082b34948d0d9eb5b4f2029e6ae5bbf268f2c1cd11`. RC representative manifest SHA `efc5d8c2e553ab0af90d18d45e1326817e55178a5d521fec23bde5c0c43504f5`. The runner must rehash every source and staged input; 30/30 matches required. Historical Phase-8A labels (7 direct, one fallback, 22 reference-only) are analysis labels only.
+- Changed-file population: the same five Phase-8 scripts and `Template_15_03` source SHA `6b59c89a4a3c05e503c9df94cbb965a7246bea9c2446d7dceaf79be6f6ae258f`. Script hashes in order: existing-cell `6de4258a0ec586642ce5b49af71c9aadb7a5e6f56f1f7bdb55f821b9e4fb50ad`, formula `b30d43f3d4fb47bd69c7ebe2ce4765f25426da312a5db72ae8ab37548ee925f4`, multi-cell `909c7f1a2a8e1f776e7176b2cd40a0d9d0a22306f65daca9bf92d030edcca1d4`, new-sheet `e83ba283a3821b68afbfa632f7e22c6dc47816ae12b7427349945c513ad56f5b`, output-file `01c558c4788f4664fd420552aba6bb93ef304f0adffd5045e53daa43b2a8b48e`.
+- Frozen H0: Phase-8A overlay bootstrap SHA `9d0dab30e5123c9b45d1c7953067a4ee6dd925dc57a11d9c27c660ce8551178e`; hardened certificate `b0505f938568e7ab1ee4c26085d6f56b551ec8c46fb3a75b47ec1ca0ba911ba1`; Phase-6 observer binary SHA `6b86ac8a250e2e73696db7dbe63223522741ecccf6e48ff2e1d1dcd8eadc0046`; observer source `46732be5b2c53f2fc73ee542a71afcab4e64c8878249189157bf0b07217d5664`; runtime `a6ba03f6bebdffe14e1b1b3c73ddac662fc2be7948bd26e25ec8ac9ebd8df875`; safe artifact `9cf0b12ba9f47a5b2af045c5d68457638ebc301e54db1113a58b5eba3ee64848`; classifier `bcd4a0f9b1d5f5b220b95c4fd5ce54d57bd444a77bb4376e4bfc90fd4f974381`.
+- H1 implementation files are `read_engine_phase9/overlay/read_engine_phase6/bootstrap/sitecustomize.py` and Phase-9 runner/probe/analysis modules. Their exact hashes will be frozen in `read_engine_phase9/implementation_identity.json` before the first Phase-9 correctness gate or scored command. The manifest itself must be hashed. Treatment identity must remain fixed through scoring.
+
+## Arms and one treatment change
+
+- **PY:** direct `<RC Python> WORK/workload.py`.
+- **H0:** frozen Phase-8A thin native observer → real Python script process with the hardened Phase-8A overlay.
+- **H1:** the same observer and real script process, with one bootstrap branch: after the unchanged config/classifier returns a decision other than `A1_ADMIT`, leave real openpyxl unpatched, skip direct artifact/certificate/runtime imports/install and record a truthful `FAST_PATH_PROVEN_REFERENCE` route. If admitted, execute the Phase-8A direct path unchanged. No source rewrite, process change, source freshness change, artifact change, merged route change, capture/helper change or fallback change.
+- The negative branch must not claim observed `load_workbook` call counts; its route witness is the classifier decision plus absence of direct runtime install. A classifier-rejected script remains semantically reference-only even if it contains normal reference loads.
+- Launch environment, staging outside timer, observer command shape, 180-second timeout and output capture follow Phase 8A. H1 overlay root supplies only the changed startup module and an unchanged capture helper link.
+
+## Timing and state
+
+- **COLD:** no artifact before external command launch → observer command exits. Each independent repetition begins with a private empty cache.
+- **SECOND_INVOCATION:** fresh command after first on identical staged source. Label `VALID_REUSE` only with direct contact and child-confirmed `REUSED`; a rejected script remains `SECOND_INVOCATION`.
+- **SESSION N=1,2,3,5:** observed sum of N fresh full commands, initial artifact absent, per-repetition cache private. Never multiply one invocation time.
+- All treatment timers include observer startup, pre/post observation, sitecustomize, config/classifier, script, normal openpyxl or direct read path, changed-file helper when needed, receipts and shutdown. Stage/reset outside timer identically across arms.
+- For each of 30 scripts: unscored cold and second-invocation correctness gate; one unscored warmup per arm; three scored repetitions of five invocations. Workload shuffle seed `20261001`; within each workload/repetition/invocation rotate `PY,H0,H1` by `(position + repetition + invocation) % 3`. Five changed-file fixtures receive one unscored gate and three scored repetitions per arm with the same rotation. No result-based ordering change.
+
+## Process and assurance gate
+
+Before scored timing compare PY/H0/H1 on a focused fixture suite: `__main__`, `__file__`, `__package__`, `__spec__`, argv/path/cwd/env, local imports, sys.modules and openpyxl identity, stdout/stderr, return/SystemExit/exception, atexit, inherited FD, SIGINT/SIGTERM, and `os._exit`. Preserve existing accepted H0/PY differences but require no new product-contract violation. For mutation + `os._exit` and mutation + SIGTERM, require observer survival, changed-XLSX detection, helper success, effect receipt and faithful target termination. These are diagnostics, not speed rows.
+
+For all 30 scored workloads require exit/timeout parity, frozen normalized stdout/stderr, package/output parity, H0/H1 contact class equality, direct artifact `BUILT→REUSED` witnesses, unchanged fallback-after-contact route and merged certificate result, successful observer receipt/capture. On H1 fast path require classifier negative, no direct runtime installed, no artifact status, and normal reference objects in focused fixtures. Do not pretend unobserved reference parse counts are equal. For the five write fixtures require exact output/package state except the already-preregistered single volatile `docProps/core.xml` modified timestamp rule, one expected effect, helper success, validation/replay and output-file correctness. Any genuine mismatch stops scored interpretation.
+
+## Routing coverage and analysis
+
+Classification for analysis: `FAST_PATH_PROVEN_REFERENCE` when H1's unchanged classifier rejects and the negative branch witness exists; `REFERENCE_ONLY_BUT_UNCERTAIN` for other H0-reference-only scripts not safely bypassed; `OTHER` otherwise. Historical Phase-8A outcome labels cannot enter H1 routing. The runner must report coverage among the frozen 22 without requiring 22/22. Direct-contact/fallback scripts are negative controls; systematic H1/H0 changes need explanation.
+
+Primary causal endpoint: H1/H0 full-command second invocation on `FAST_PATH_PROVEN_REFERENCE`. Secondary: all 22 H1/PY cold, second and N=1/2/3/5; all 30 H1/PY same endpoints; seven direct-contact and one fallback diagnostic views; five write-fixture H1/H0 and H1/PY. Keep raw rows and per-workload paired ratios. Report median, geometric mean, workload-bootstrap 95% median interval (2,000 resamples, seed `20261002`), median signed excess ms, faster/slower/tied, range, and equal-task sensitivity. The 30 scripts are only 21 tasks; no market-population inference.
+
+**Practical transparency budget, fixed before scoring:** median signed H1/PY excess on all 22 frozen reference-only scripts must be at most **+10 ms** on the second invocation, and at most **+15 ms** cold. The ~1 ms measured native observer snapshot/receipt work and low-single-digit config/classification execution support a small residual; larger startup/import work is implementation cost, not an assurance necessity. These are engineering margins, not statistical equivalence claims. Report observed ratios and intervals separately even if budget passes.
+
+The fast path is `EARNED` only with exactness, no lost assurance, coverage of at least one proven-reference script, median second-command H1/H0 ratio below one, at least a 5 ms median paired saving on covered scripts and majority faster. `PARTIALLY EARNED` means exact and useful for some but coverage or causal magnitude below that rule. Otherwise `NOT EARNED`. Reference-only transparency is `PRACTICALLY TRANSPARENT UNDER PREREGISTERED BUDGET` only if both signed margins pass, otherwise `MEASURABLE RESIDUAL TAX REMAINS`. Integration-readiness uses the user-specified A/B/C/D rubric; no post-hoc threshold or universal speed claim.
+
+## Stop and amendment rules
+
+Stop scored interpretation on a new genuine semantic difference, missing/false reuse, changed direct or fallback route, absent assurance receipt, or benchmark identity/timer defect. Do not repair and continue within one scored run. A versioned hashed amendment must explain a defect and restart all affected gates/rows. A failed fast path is a legitimate result; do not add admission caching, first-contact hooks, changed-file helper changes, new formats, workbook-iteration support or observer changes to rescue it.

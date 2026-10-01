@@ -1,0 +1,44 @@
+=== LibreCalc demo (rc2) ===
+workdir: examples/demo | cache: /tmp/librecalc-demo.rvGk31 (fresh)
+
+--- [1/4] ordinary Python ---
+$ python read.py
+sheets: ['Forecast', 'Regions']
+dimensions: A1:H402
+H402 reported total: 1171120
+column H recomputed: 1171120
+North lead: A. Rivera
+read phase: 25.3 ms (in-script) | total: 223 ms
+
+--- [2/4] LibreCalc, first run: decode once, then serve ---
+$ librecalc-agent run --workdir . ./read.py
+sheets: ['Forecast', 'Regions']
+dimensions: A1:H402
+H402 reported total: 1171120
+column H recomputed: 1171120
+North lead: A. Rivera
+path: direct read, decoded state BUILT (route=DIRECT_RUNTIME, served_loads=1)
+read phase: 15.9 ms (in-script) | total: 314 ms
+
+--- [3/4] LibreCalc, second run: reuse decoded state ---
+$ librecalc-agent run --workdir . ./read.py
+sheets: ['Forecast', 'Regions']
+dimensions: A1:H402
+H402 reported total: 1171120
+column H recomputed: 1171120
+North lead: A. Rivera
+path: direct read, decoded state REUSED (route=DIRECT_RUNTIME, served_loads=1)
+read phase: 17.2 ms (in-script) | total: 284 ms
+
+--- [4/4] outside the supported surface: ordinary openpyxl ---
+$ librecalc-agent run --workdir . ./unsupported.py
+rows seen: 402
+H402 via iteration: 1171120
+path: ordinary openpyxl (route=REFERENCE_FAST_PATH) — iteration is outside the supported surface
+read phase: 44.7 ms (in-script) | total: 316 ms
+
+result: identical output across [1][2][3]; reference run matches plain Python
+timings: this demo / this machine only (CPython 3.13.12, Linux-7.0.0-34-generic-x86_64-with-glibc2.43) — not a benchmark.
+read phase = time inside the script (parse + reads). First run builds the
+reusable decode once (cached); later runs reuse it. Totals include
+interpreter startup, which dominates at this size.

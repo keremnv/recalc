@@ -1,0 +1,8 @@
+{
+  "deterministic_trace_s": null,
+  "live_python_s": 13.232343385112472,
+  "live_task_s": 1130.0136512210593,
+  "live_tool_s": 17.497114800964482,
+  "model_network_s": 1111.2365770339966,
+  "status": "NO_CAUSAL_H1_COMPARISON"
+}

@@ -1,0 +1,7 @@
+{
+  "diagnostic_only": "One merged-cell fixture executed without scored timing; see certificate_review/indirect_cell_result.json",
+  "observer_capture_changed_path": "UNMEASURED",
+  "reason": "Confirmed semantic certificate false positive before scoring",
+  "representative_full_command": "UNMEASURED",
+  "status": "NOT_MEASURED_PHASE8"
+}

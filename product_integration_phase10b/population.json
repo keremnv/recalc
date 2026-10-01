@@ -1,0 +1,249 @@
+{
+  "ids": [
+    "Template_15_03__5ad5663409d0",
+    "Template_06_12__3d05a7ee874d",
+    "Template_06_12__83f82ce3f62b",
+    "Template_15_03__68f4733f2576",
+    "Template_15_01__fa75e25f6a90",
+    "Template_06_02__c26a4c6508ba",
+    "Template_06_02__85fab8c95cea",
+    "Financial_Model_08_02__4ca3ae46295d",
+    "Financial_Model_15_03__64092e664e9b",
+    "Financial_Model_02_05__c75ecb00f745",
+    "Financial_Model_02_05__90004332940a",
+    "Financial_Model_08_02__625ec1db4acb",
+    "Debugging_05_02__f274eaa3cc8e",
+    "Debugging_09_03__0828d4dfbd13",
+    "Debugging_10_07__6dd8f6d3a4dd",
+    "Debugging_09_03__59822a6e11e7",
+    "Debugging_02_06__7252ca64cf1c",
+    "Debugging_04_07__62a7766ef582",
+    "Debugging_10_07__e3a79d24091a",
+    "Debugging_10_10__c7eca76e6646",
+    "Debugging_02_06__88edc6528ef0",
+    "Debugging_01_04__542f8461a344"
+  ],
+  "source": "frozen Phase-10 representative 30; exact 22 REFERENCE_ONLY outcomes",
+  "workloads": [
+    {
+      "family": "Template",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Template_15_03__5ad5663409d0.py",
+      "script_sha256": "5ad5663409d0c391afd0f36dc925a338c502ed7afd47b7187293d690611641b6",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Template/spreadsheet/15_re_debt/15_03_input.xlsx",
+      "source_workbook_sha256": "6b59c89a4a3c05e503c9df94cbb965a7246bea9c2446d7dceaf79be6f6ae258f",
+      "staged_workbook_sha256": "6b59c89a4a3c05e503c9df94cbb965a7246bea9c2446d7dceaf79be6f6ae258f",
+      "task": "Template:15_03",
+      "workload_id": "Template_15_03__5ad5663409d0"
+    },
+    {
+      "family": "Template",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Template_06_12__3d05a7ee874d.py",
+      "script_sha256": "3d05a7ee874db894026f7f48981f5d8cde2fe22fbd65042bcb29edfe140c934d",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Template/spreadsheet/06_equity_forecast/06_12_input.xlsx",
+      "source_workbook_sha256": "d05d2bcd62e971dab1907e3b290cc7e46c161f5d1d3bfac6266d04bd831ddeba",
+      "staged_workbook_sha256": "d05d2bcd62e971dab1907e3b290cc7e46c161f5d1d3bfac6266d04bd831ddeba",
+      "task": "Template:06_12",
+      "workload_id": "Template_06_12__3d05a7ee874d"
+    },
+    {
+      "family": "Template",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Template_06_12__83f82ce3f62b.py",
+      "script_sha256": "83f82ce3f62bbbcb5333f6ca5cdd270576d044b6fae192efe5c76a19410b7d4a",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Template/spreadsheet/06_equity_forecast/06_12_input.xlsx",
+      "source_workbook_sha256": "d05d2bcd62e971dab1907e3b290cc7e46c161f5d1d3bfac6266d04bd831ddeba",
+      "staged_workbook_sha256": "d05d2bcd62e971dab1907e3b290cc7e46c161f5d1d3bfac6266d04bd831ddeba",
+      "task": "Template:06_12",
+      "workload_id": "Template_06_12__83f82ce3f62b"
+    },
+    {
+      "family": "Template",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Template_15_03__68f4733f2576.py",
+      "script_sha256": "68f4733f25762dd3f9c85f6a80f970bc04371cad59adce693f3337f550a51bf1",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Template/spreadsheet/15_re_debt/15_03_input.xlsx",
+      "source_workbook_sha256": "6b59c89a4a3c05e503c9df94cbb965a7246bea9c2446d7dceaf79be6f6ae258f",
+      "staged_workbook_sha256": "6b59c89a4a3c05e503c9df94cbb965a7246bea9c2446d7dceaf79be6f6ae258f",
+      "task": "Template:15_03",
+      "workload_id": "Template_15_03__68f4733f2576"
+    },
+    {
+      "family": "Template",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Template_15_01__fa75e25f6a90.py",
+      "script_sha256": "fa75e25f6a904785d20c0acbf833cf4c6c5a1c940210e1b82e6c0a04775f5a17",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Template/spreadsheet/15_re_debt/15_01_input.xlsx",
+      "source_workbook_sha256": "0cce1cbcae88e9dbcc2d33743c76179443119357d80e8d24d38b3e99a404a0c6",
+      "staged_workbook_sha256": "0cce1cbcae88e9dbcc2d33743c76179443119357d80e8d24d38b3e99a404a0c6",
+      "task": "Template:15_01",
+      "workload_id": "Template_15_01__fa75e25f6a90"
+    },
+    {
+      "family": "Template",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Template_06_02__c26a4c6508ba.py",
+      "script_sha256": "c26a4c6508ba40e1186fc8eba8fe5b653dc04c6ff6dadb69d24d942527fc8d22",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Template/spreadsheet/06_equity_forecast/06_02_input.xlsx",
+      "source_workbook_sha256": "76ff3caea33395983113db652c35d5a14b46e7be8588f06f26092990fef1cc19",
+      "staged_workbook_sha256": "76ff3caea33395983113db652c35d5a14b46e7be8588f06f26092990fef1cc19",
+      "task": "Template:06_02",
+      "workload_id": "Template_06_02__c26a4c6508ba"
+    },
+    {
+      "family": "Template",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Template_06_02__85fab8c95cea.py",
+      "script_sha256": "85fab8c95cea9d5419d812a21f36fd315fda9d014a8af1dfd47c8053009fc2cc",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Template/spreadsheet/06_equity_forecast/06_02_input.xlsx",
+      "source_workbook_sha256": "76ff3caea33395983113db652c35d5a14b46e7be8588f06f26092990fef1cc19",
+      "staged_workbook_sha256": "76ff3caea33395983113db652c35d5a14b46e7be8588f06f26092990fef1cc19",
+      "task": "Template:06_02",
+      "workload_id": "Template_06_02__85fab8c95cea"
+    },
+    {
+      "family": "Financial_Model",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Financial_Model_08_02__4ca3ae46295d.py",
+      "script_sha256": "4ca3ae46295d01eb593acad8ea57be99442fbfeee4f1a5376b5ba284acfd88b6",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/08_Project Seafood Model/08_02_Seafood_input.xlsx",
+      "source_workbook_sha256": "9928600b0184036b03a8664c1e2dcd8994e5f90e866d68c140dd6543b3ac0aff",
+      "staged_workbook_sha256": "9928600b0184036b03a8664c1e2dcd8994e5f90e866d68c140dd6543b3ac0aff",
+      "task": "Financial_Model:08_02",
+      "workload_id": "Financial_Model_08_02__4ca3ae46295d"
+    },
+    {
+      "family": "Financial_Model",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Financial_Model_15_03__64092e664e9b.py",
+      "script_sha256": "64092e664e9b7cf08c10b5205b302bf9005c0d5890b2bf082cf76e82983ecd40",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/15_Project KIMS/15_03_KIMS_input.xlsx",
+      "source_workbook_sha256": "318eed515474a4e8c0684d3895e49e4726728d1166c2f83ef71b936d32dbf3d7",
+      "staged_workbook_sha256": "318eed515474a4e8c0684d3895e49e4726728d1166c2f83ef71b936d32dbf3d7",
+      "task": "Financial_Model:15_03",
+      "workload_id": "Financial_Model_15_03__64092e664e9b"
+    },
+    {
+      "family": "Financial_Model",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Financial_Model_02_05__c75ecb00f745.py",
+      "script_sha256": "c75ecb00f74516f13a4a8049a7459be03356b89e52098736463b619518b41bf6",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/02_Project PP/02_05_PP_input.xlsx",
+      "source_workbook_sha256": "f61402df84ff17d94590f86939a408f786cb4fdeba82eb3e1911d8ebb839febd",
+      "staged_workbook_sha256": "f61402df84ff17d94590f86939a408f786cb4fdeba82eb3e1911d8ebb839febd",
+      "task": "Financial_Model:02_05",
+      "workload_id": "Financial_Model_02_05__c75ecb00f745"
+    },
+    {
+      "family": "Financial_Model",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Financial_Model_02_05__90004332940a.py",
+      "script_sha256": "90004332940ab83e9b76bee957d8d87dd6ba0e9d044906c6a269c53e4d97ac78",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/02_Project PP/02_05_PP_input.xlsx",
+      "source_workbook_sha256": "f61402df84ff17d94590f86939a408f786cb4fdeba82eb3e1911d8ebb839febd",
+      "staged_workbook_sha256": "f61402df84ff17d94590f86939a408f786cb4fdeba82eb3e1911d8ebb839febd",
+      "task": "Financial_Model:02_05",
+      "workload_id": "Financial_Model_02_05__90004332940a"
+    },
+    {
+      "family": "Financial_Model",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Financial_Model_08_02__625ec1db4acb.py",
+      "script_sha256": "625ec1db4acbbfeac9b8daaa50457b6a137a5d0481d9d8ab81a6d1d53d8e8246",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/08_Project Seafood Model/08_02_Seafood_input.xlsx",
+      "source_workbook_sha256": "9928600b0184036b03a8664c1e2dcd8994e5f90e866d68c140dd6543b3ac0aff",
+      "staged_workbook_sha256": "9928600b0184036b03a8664c1e2dcd8994e5f90e866d68c140dd6543b3ac0aff",
+      "task": "Financial_Model:08_02",
+      "workload_id": "Financial_Model_08_02__625ec1db4acb"
+    },
+    {
+      "family": "Debugging",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Debugging_05_02__f274eaa3cc8e.py",
+      "script_sha256": "f274eaa3cc8e366dabb404cbc85db6c0d998ca67f50fb941fbf9c892a9f00cd5",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Debugging/spreadsheet/05_Debugging/input_files/Embedded Hardcodes_input.xlsx",
+      "source_workbook_sha256": "fa7c8d05a020ef079d6330fe7d1e3de64b35be0e9cc99d413c1bc30e7e19565e",
+      "staged_workbook_sha256": "fa7c8d05a020ef079d6330fe7d1e3de64b35be0e9cc99d413c1bc30e7e19565e",
+      "task": "Debugging:05_02",
+      "workload_id": "Debugging_05_02__f274eaa3cc8e"
+    },
+    {
+      "family": "Debugging",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Debugging_09_03__0828d4dfbd13.py",
+      "script_sha256": "0828d4dfbd137e47a235624d244a4e3e8996643edd2c5a5e6cdf42045b65cda5",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Debugging/spreadsheet/09_Debugging/input_files/Errors_input.xlsx",
+      "source_workbook_sha256": "f1ca163a1198e742864c9814016b49f397a0f1d0469685a5d7efd618aec7ca5a",
+      "staged_workbook_sha256": "f1ca163a1198e742864c9814016b49f397a0f1d0469685a5d7efd618aec7ca5a",
+      "task": "Debugging:09_03",
+      "workload_id": "Debugging_09_03__0828d4dfbd13"
+    },
+    {
+      "family": "Debugging",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Debugging_10_07__6dd8f6d3a4dd.py",
+      "script_sha256": "6dd8f6d3a4dd5f9b166e269862419e4a1f2b33ed91da0058630adee76fc56a42",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Debugging/spreadsheet/10_Debugging/input_files/Incorrect Index Match_input.xlsx",
+      "source_workbook_sha256": "0d51c60e2cbef7e4b675815f9873fe69c01cac1e06cd69bf8a5751c1f64ee956",
+      "staged_workbook_sha256": "0d51c60e2cbef7e4b675815f9873fe69c01cac1e06cd69bf8a5751c1f64ee956",
+      "task": "Debugging:10_07",
+      "workload_id": "Debugging_10_07__6dd8f6d3a4dd"
+    },
+    {
+      "family": "Debugging",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Debugging_09_03__59822a6e11e7.py",
+      "script_sha256": "59822a6e11e748dced202ff39c6e03af4f09a84147e1da3116a53bad9434fe4b",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Debugging/spreadsheet/09_Debugging/input_files/Errors_input.xlsx",
+      "source_workbook_sha256": "f1ca163a1198e742864c9814016b49f397a0f1d0469685a5d7efd618aec7ca5a",
+      "staged_workbook_sha256": "f1ca163a1198e742864c9814016b49f397a0f1d0469685a5d7efd618aec7ca5a",
+      "task": "Debugging:09_03",
+      "workload_id": "Debugging_09_03__59822a6e11e7"
+    },
+    {
+      "family": "Debugging",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Debugging_02_06__7252ca64cf1c.py",
+      "script_sha256": "7252ca64cf1c7e434feb481f5a531a6ec38ec25852e3a3ccfc6556a0b8c40b1e",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Debugging/spreadsheet/02_Debugging/input_files/Incorrect Cross Sheet References_input.xlsx",
+      "source_workbook_sha256": "8201c6f818b331626002113e51b43d30aafb7ebe27218b3457111042ee3f6d1f",
+      "staged_workbook_sha256": "8201c6f818b331626002113e51b43d30aafb7ebe27218b3457111042ee3f6d1f",
+      "task": "Debugging:02_06",
+      "workload_id": "Debugging_02_06__7252ca64cf1c"
+    },
+    {
+      "family": "Debugging",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Debugging_04_07__62a7766ef582.py",
+      "script_sha256": "62a7766ef582f2ed6abd70dea493060185d1ed1de93ce7a026ad2d1c295c4e96",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Debugging/spreadsheet/04_Debugging/input_files/Incorrect Sign Conventions_input.xlsx",
+      "source_workbook_sha256": "d148f7eefd3b1578aaf1b39dc3f34dbf2628719a68e9f956d7b3ca49c245c886",
+      "staged_workbook_sha256": "d148f7eefd3b1578aaf1b39dc3f34dbf2628719a68e9f956d7b3ca49c245c886",
+      "task": "Debugging:04_07",
+      "workload_id": "Debugging_04_07__62a7766ef582"
+    },
+    {
+      "family": "Debugging",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Debugging_10_07__e3a79d24091a.py",
+      "script_sha256": "e3a79d24091a5d792f9c9c017b59e00b563fa1da4d2da35e1f6332a2a803e5e3",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Debugging/spreadsheet/10_Debugging/input_files/Incorrect Index Match_input.xlsx",
+      "source_workbook_sha256": "0d51c60e2cbef7e4b675815f9873fe69c01cac1e06cd69bf8a5751c1f64ee956",
+      "staged_workbook_sha256": "0d51c60e2cbef7e4b675815f9873fe69c01cac1e06cd69bf8a5751c1f64ee956",
+      "task": "Debugging:10_07",
+      "workload_id": "Debugging_10_07__e3a79d24091a"
+    },
+    {
+      "family": "Debugging",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Debugging_10_10__c7eca76e6646.py",
+      "script_sha256": "c7eca76e664673057398fd0113bd5d46b4641651030b6d91e6023cdac28c4afc",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Debugging/spreadsheet/10_Debugging/input_files/Unit Mismatch_input.xlsx",
+      "source_workbook_sha256": "3d95978b76409416f96be4645daeb2e28f949c171cc159560627506ef1c7eb34",
+      "staged_workbook_sha256": "3d95978b76409416f96be4645daeb2e28f949c171cc159560627506ef1c7eb34",
+      "task": "Debugging:10_10",
+      "workload_id": "Debugging_10_10__c7eca76e6646"
+    },
+    {
+      "family": "Debugging",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Debugging_02_06__88edc6528ef0.py",
+      "script_sha256": "88edc6528ef05d20e9f9c555d8aaf494ab384f893e3c5fc01d4994249c1fc0e0",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Debugging/spreadsheet/02_Debugging/input_files/Incorrect Cross Sheet References_input.xlsx",
+      "source_workbook_sha256": "8201c6f818b331626002113e51b43d30aafb7ebe27218b3457111042ee3f6d1f",
+      "staged_workbook_sha256": "8201c6f818b331626002113e51b43d30aafb7ebe27218b3457111042ee3f6d1f",
+      "task": "Debugging:02_06",
+      "workload_id": "Debugging_02_06__88edc6528ef0"
+    },
+    {
+      "family": "Debugging",
+      "script_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/rc_acceleration_validation/workloads/Debugging_01_04__542f8461a344.py",
+      "script_sha256": "542f8461a344298bf6f633eca6053a9d512b1954438e8d3f0817a96318258160",
+      "source_workbook_path": "/home/kerem/Desktop/Personal Projects/librecalc-mcp/benchmark-data/SpreadsheetBench-2/data/Debugging/spreadsheet/01_Debugging/input_files/Inconsistent Color Coding_input.xlsx",
+      "source_workbook_sha256": "d01f1c1025176da9cfbabe38cfca0776fd77e7287f6138e6fe85ab06394d457a",
+      "staged_workbook_sha256": "d01f1c1025176da9cfbabe38cfca0776fd77e7287f6138e6fe85ab06394d457a",
+      "task": "Debugging:01_04",
+      "workload_id": "Debugging_01_04__542f8461a344"
+    }
+  ]
+}

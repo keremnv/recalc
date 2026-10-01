@@ -1,0 +1,21 @@
+{
+  "boundary_preserved": true,
+  "formula_data_only_cases": 8,
+  "formula_data_only_exact": 8,
+  "freshness_stale": 0,
+  "freshness_wrong_generation": 0,
+  "identity_corruption": 0,
+  "known_false_positive_bogus_range_remaining": 0,
+  "known_false_positive_legitimate_blocker_preserved": 14,
+  "known_false_positive_repaired": 20,
+  "known_false_positive_turns": 34,
+  "new_false_negatives": 0,
+  "newly_admitted_semantic_cases": 20,
+  "pass": true,
+  "semantic_exact": 20,
+  "true_unsupported_controls": 173,
+  "wrong_exceptions": 0,
+  "wrong_order": 0,
+  "wrong_types": 0,
+  "wrong_values": 0
+}

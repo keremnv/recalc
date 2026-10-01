@@ -1,0 +1,33 @@
+{
+  "limits": [
+    "No embedded agent/model client; the external agent must invoke run for runtime assistance.",
+    "Only local Python files are wrapped; no shell/notebook/global or nested-interpreter acceleration.",
+    "Index preparation covers top-level .xlsx; capture retains the frozen recursive .xlsx observation scope.",
+    "Per-invocation index lifetime differs from long-lived research runner amortization; no RC efficiency claim.",
+    "Single writer per workbook/task directory; no concurrent script editing or index-sharing guarantee.",
+    "Optional cache diagnostics are best-effort; unavailable cache can prevent persisted last-run status.",
+    "Cache cleanup/retention is manual; per-run derived databases can grow on repeated use.",
+    "No automatic recalc, task scoring or formula semantic validation; install/invoke LibreOffice in the required workflow.",
+    "openpyxl rich-content/macro caveats remain; capture never restores semantics lost by the script.",
+    "Only Linux Python 3.13.12 canonical RC install tested; other accepted Python/platform versions need CI.",
+    "Not a sandbox; supplied scripts run with user permissions.",
+    "No public registry publication, explicit license/release policy, signing or broader release support process completed."
+  ],
+  "research_remaining": "None required for frozen mechanism choice. Leads remain frozen.",
+  "public_release_gaps": [
+    "Explicit license/release policy and distribution publication",
+    "Broader Python/OS CI and supported compatibility policy",
+    "Dependency lock/hashes and repeatable release automation",
+    "Cache retention/cleanup UX and release support documentation",
+    "Optional convenience integration with chosen coding-agent shell workflow (without prompt/semantic changes)"
+  ],
+  "not_planned": [
+    "new benchmark",
+    "model experiment",
+    "A1 broadening",
+    "A2/A3/B",
+    "new helpers/substrate consumers",
+    "formula-error feedback",
+    "context machinery"
+  ]
+}

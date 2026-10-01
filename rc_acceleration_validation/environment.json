@@ -1,0 +1,8 @@
+{
+  "machine": "HP-Spectre-x360-14-eu0xxx",
+  "openpyxl": "3.1.5",
+  "parallel_benchmark_workers": 1,
+  "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.43",
+  "python": "Python 3.13.12",
+  "venv": "/tmp/librecalc-hygiene-rc-v55taghk/venv"
+}

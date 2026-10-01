@@ -179,7 +179,7 @@ def test_strict_loop_requires_one_nonparallel_tool_call() -> None:
 def test_muse_spark_uses_auto_tool_choice() -> None:
     runner = _runner_module()
     args = type("Args", (), {"max_tokens": None, "reasoning_effort": "medium"})()
-    for model_id in ("meta/muse-spark-1.2", "meta/muse-spark-1.2-contributor"):
+    for model_id in ("meta/muse-spark-1.2", "meta/muse-spark-1.2-contributor", "meta/muse-spark-1.3-contributor"):
         kwargs = runner._completion_kwargs(
             args,
             {
@@ -903,6 +903,54 @@ def test_control_index_flag_selects_treatment_config(monkeypatch) -> None:
     assert arguments.control is False
     runner._apply_arm_config(arguments)
     assert arguments.config == runner.CONTROL_INDEX_CONFIG
+
+
+def test_control_ambient_stages_wrapped_view_xlsx_without_touching_control_prompt(tmp_path) -> None:
+    runner = _runner_module()
+    project_root = Path(__file__).parents[1]
+    control_cfg = yaml.safe_load(runner.CONTROL_CONFIG.read_text(encoding="utf-8"))
+
+    staged = runner._stage_tool_policy(
+        source_config=runner.CONTROL_AMBIENT_CONFIG,
+        sweagent_root=project_root / "benchmark-data/SpreadsheetBench-2/SWE-agent",
+        temporary_root=tmp_path,
+        read_policy="progressive",
+        execution="semantic-program-v1",
+        control_ambient=True,
+    )
+    config = yaml.safe_load(staged.read_text(encoding="utf-8"))
+    bundles = [Path(item["path"]) for item in config["agent"]["tools"]["bundles"]]
+    assert [bundle.name for bundle in bundles] == ["submit", "view_xlsx_ambient"]
+    assert (project_root / "benchmark/sweagent/view_xlsx_ambient").resolve() in {
+        bundle.resolve() for bundle in bundles
+    }
+    prompt = config["agent"]["templates"]["instance_template"]
+    assert prompt == control_cfg["agent"]["templates"]["instance_template"]
+    assert "formula_index" not in prompt
+    assert "STRUCTURAL INDEX" not in prompt
+    assert config["agent"]["templates"]["max_observation_length"] == 10_000
+    assert config["agent"]["tools"]["enable_bash_tool"] is True
+
+
+def test_control_ambient_flag_selects_treatment_config(monkeypatch) -> None:
+    runner = _runner_module()
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "run_openrouter_slice.py",
+            "--slice",
+            "slice.json",
+            "--run-name",
+            "probe",
+            "--control-ambient",
+        ],
+    )
+    arguments = runner._arguments()
+    assert arguments.control_ambient is True
+    assert arguments.control is False
+    runner._apply_arm_config(arguments)
+    assert arguments.config == runner.CONTROL_AMBIENT_CONFIG
 
 
 def test_control_arm_selects_the_control_config_when_none_is_named(monkeypatch) -> None:

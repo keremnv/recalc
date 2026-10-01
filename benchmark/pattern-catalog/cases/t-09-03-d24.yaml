@@ -1,0 +1,35 @@
+id: t-09-03-d24
+run: glm-5.3-flash-nonvisual-297-1
+task: Template:09_03
+first_miss:
+  kind: modification
+  address: Sheet!D24
+  error_message: "Modification error at Sheet!D24: answer=-11.7, output=11.7"
+facts:
+  opened_golden: false
+  spreadsheet: 09_03_input.xlsx
+  instruction: Complete the financial model based on the provided assumptions.
+  sheet_note: Use Beginning Balance (not Average Balance) for interest calculations
+  input_kind: blank
+  input_value: null
+  output_formula: "=D23*D18"
+  autopsy:
+    named: false
+    read: true
+    written: true
+    bucket: written_wrong
+  wrote: {range: D24:H24, formula: "=D23*D18"}
+  wrote_also: {range: D10:H10, formula: "=-D24"}
+  compare: {formulas_added: 73, formula_errors_added: 0}
+claims:
+  patterns: [E-mixed-sign]
+  nuance: task_nature
+  mechanism: sign-convention
+  lever: none
+  lever_why: >
+    The beginning-balance identity is what the sheet note asked for and the minus went on the
+    cash-flow row. surface.yaml already says never encode sign; nothing changes that.
+  notes: >
+    Beginning-balance identity is what the note asked; they used it. Minus went
+    on the cash-flow row (D10=-D24). Golden leak wants Interest Expense itself
+    negative. Same family as t-14-05-m35. Do not encode a sign convention.

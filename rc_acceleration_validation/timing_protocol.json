@@ -1,0 +1,10 @@
+{
+  "cache": "new XDG_CACHE_HOME per invocation, no reuse",
+  "endpoint": "external perf_counter_ns subprocess invocation until process exit",
+  "order": "seeded AB/BA alternating per workload/repetition",
+  "repetitions": 3,
+  "stdout": "capture exact bytes; compare control/treatment within workload",
+  "timeout_seconds": 180,
+  "warmup": "one unscored execution per arm on separate fresh cache",
+  "workbook_staging": "copy original workbook into invocation workdir before clock starts"
+}

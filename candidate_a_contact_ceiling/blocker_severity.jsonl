@@ -1,0 +1,4 @@
+{"blocker": "STATIC_ANALYSIS_UNCERTAINTY", "evidence": "classifier/eligibility limitation; source-aware proof is plausible", "rows": 62, "severity": "ELIGIBILITY_ANALYSIS_LIMITATION", "unique_execs": 31, "unique_turns": 31}
+{"blocker": "DATA_ONLY_BOUNDARY", "evidence": "cached-value semantics are deliberately fallback-only", "rows": 8, "severity": "FUNDAMENTAL", "unique_execs": 3, "unique_turns": 3}
+{"blocker": "CELL_OBJECT_ITERATION_BOUNDARY", "evidence": "Cell identity/iterator shape is not emulated", "rows": 10, "severity": "OBJECT_LIFETIME_LIMITATION", "unique_execs": 5, "unique_turns": 5}
+{"blocker": "OBJECT_ESCAPE_BOUNDARY", "evidence": "see report", "rows": 14, "severity": "OBJECT_LIFETIME_LIMITATION", "unique_execs": 1, "unique_turns": 1}

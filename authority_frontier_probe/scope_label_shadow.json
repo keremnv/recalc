@@ -1,0 +1,2813 @@
+[
+  {
+    "task": "Financial_Model:01_01",
+    "obligation_id": "O1",
+    "scope": [
+      "from 2025 to 2030"
+    ],
+    "extra_scope_label_hits": [
+      {
+        "id": "text:s04:r22:c2",
+        "cell_id": "cell:s04:r22:c2",
+        "row_id": "row:s04:r22",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Cashflow from Operating Activity",
+        "address": "B22",
+        "query": "from 2025 to 2030",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s04:r33:c2",
+        "cell_id": "cell:s04:r33:c2",
+        "row_id": "row:s04:r33",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Cashflow from Financing Activity",
+        "address": "B33",
+        "query": "from 2025 to 2030",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s04:r36:c2",
+        "cell_id": "cell:s04:r36:c2",
+        "row_id": "row:s04:r36",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Cashflow from Investing Activity",
+        "address": "B36",
+        "query": "from 2025 to 2030",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      }
+    ],
+    "extra_hit_count": 3,
+    "extra_rows": 3,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:01_01",
+    "obligation_id": "O2",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:01_01",
+    "obligation_id": "O3",
+    "scope": [
+      "for the forecasted years"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:01_01",
+    "obligation_id": "O4",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:01_01",
+    "obligation_id": "O5",
+    "scope": [
+      "for each Foundation Course line item"
+    ],
+    "extra_scope_label_hits": [
+      {
+        "id": "text:s08:r6:c2",
+        "cell_id": "cell:s08:r6:c2",
+        "row_id": "row:s08:r6",
+        "col_id": "col:s08:c2",
+        "sheet_id": "sheet:s08",
+        "text": "Foundation Course",
+        "address": "B6",
+        "query": "for each Foundation Course line item",
+        "rules": [
+          "substring",
+          "token_prefix",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s08:r17:c2",
+        "cell_id": "cell:s08:r17:c2",
+        "row_id": "row:s08:r17",
+        "col_id": "col:s08:c2",
+        "sheet_id": "sheet:s08",
+        "text": "Total Revenue from Foundation Course Mature",
+        "address": "B17",
+        "query": "for each Foundation Course line item",
+        "rules": [
+          "token_prefix",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "USD Mn"
+      },
+      {
+        "id": "text:s08:r29:c2",
+        "cell_id": "cell:s08:r29:c2",
+        "row_id": "row:s08:r29",
+        "col_id": "col:s08:c2",
+        "sheet_id": "sheet:s08",
+        "text": "Total Revenue from Foundation Course Emerging",
+        "address": "B29",
+        "query": "for each Foundation Course line item",
+        "rules": [
+          "token_prefix",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "USD Mn"
+      },
+      {
+        "id": "text:s08:r41:c2",
+        "cell_id": "cell:s08:r41:c2",
+        "row_id": "row:s08:r41",
+        "col_id": "col:s08:c2",
+        "sheet_id": "sheet:s08",
+        "text": "Total Revenue from Foundation Course Lite",
+        "address": "B41",
+        "query": "for each Foundation Course line item",
+        "rules": [
+          "token_prefix",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "USD Mn"
+      },
+      {
+        "id": "text:s08:r43:c2",
+        "cell_id": "cell:s08:r43:c2",
+        "row_id": "row:s08:r43",
+        "col_id": "col:s08:c2",
+        "sheet_id": "sheet:s08",
+        "text": "Total Foundation Course Revenue",
+        "address": "B43",
+        "query": "for each Foundation Course line item",
+        "rules": [
+          "token_prefix",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "USD Mn"
+      },
+      {
+        "id": "text:s08:r141:c2",
+        "cell_id": "cell:s08:r141:c2",
+        "row_id": "row:s08:r141",
+        "col_id": "col:s08:c2",
+        "sheet_id": "sheet:s08",
+        "text": "Total Foundation Course Lite Branches",
+        "address": "B141",
+        "query": "for each Foundation Course line item",
+        "rules": [
+          "token_prefix",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s09:r6:c2",
+        "cell_id": "cell:s09:r6:c2",
+        "row_id": "row:s09:r6",
+        "col_id": "col:s09:c2",
+        "sheet_id": "sheet:s09",
+        "text": "Foundation Course",
+        "address": "B6",
+        "query": "for each Foundation Course line item",
+        "rules": [
+          "substring",
+          "token_prefix",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s09:r23:c2",
+        "cell_id": "cell:s09:r23:c2",
+        "row_id": "row:s09:r23",
+        "col_id": "col:s09:c2",
+        "sheet_id": "sheet:s09",
+        "text": "Total Foundation Course Mature Expenses",
+        "address": "B23",
+        "query": "for each Foundation Course line item",
+        "rules": [
+          "token_prefix",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s09:r41:c2",
+        "cell_id": "cell:s09:r41:c2",
+        "row_id": "row:s09:r41",
+        "col_id": "col:s09:c2",
+        "sheet_id": "sheet:s09",
+        "text": "Total Foundation Course Emerging Expenses",
+        "address": "B41",
+        "query": "for each Foundation Course line item",
+        "rules": [
+          "token_prefix",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s09:r59:c2",
+        "cell_id": "cell:s09:r59:c2",
+        "row_id": "row:s09:r59",
+        "col_id": "col:s09:c2",
+        "sheet_id": "sheet:s09",
+        "text": "Total Foundation Course Lite Expenses",
+        "address": "B59",
+        "query": "for each Foundation Course line item",
+        "rules": [
+          "token_prefix",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s09:r61:c2",
+        "cell_id": "cell:s09:r61:c2",
+        "row_id": "row:s09:r61",
+        "col_id": "col:s09:c2",
+        "sheet_id": "sheet:s09",
+        "text": "Total Foundation Course Expenses",
+        "address": "B61",
+        "query": "for each Foundation Course line item",
+        "rules": [
+          "token_prefix",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      }
+    ],
+    "extra_hit_count": 11,
+    "extra_rows": 11,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:01_01",
+    "obligation_id": "O6",
+    "scope": [
+      "for the forecast period"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:01_01",
+    "obligation_id": "O7",
+    "scope": [
+      "for the forecast period"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:01_01",
+    "obligation_id": "O8",
+    "scope": [
+      "for each year"
+    ],
+    "extra_scope_label_hits": [
+      {
+        "id": "text:s04:r39:c2",
+        "cell_id": "cell:s04:r39:c2",
+        "row_id": "row:s04:r39",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Net Changes in Cash During the Year",
+        "address": "B39",
+        "query": "for each year",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s04:r41:c2",
+        "cell_id": "cell:s04:r41:c2",
+        "row_id": "row:s04:r41",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Cash at the Beginning of the Year",
+        "address": "B41",
+        "query": "for each year",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s04:r42:c2",
+        "cell_id": "cell:s04:r42:c2",
+        "row_id": "row:s04:r42",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Cash at the End of the Year",
+        "address": "B42",
+        "query": "for each year",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      }
+    ],
+    "extra_hit_count": 3,
+    "extra_rows": 3,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:03_01",
+    "obligation_id": "O1",
+    "scope": [
+      "over FY08–FY13 and FY13–FY18F"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:03_01",
+    "obligation_id": "O2",
+    "scope": [
+      "all historical periods"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:03_01",
+    "obligation_id": "O3",
+    "scope": [
+      "for FY08–FY13"
+    ],
+    "extra_scope_label_hits": [
+      {
+        "id": "text:s21:r8:c11",
+        "cell_id": "cell:s21:r8:c11",
+        "row_id": "row:s21:r8",
+        "col_id": "col:s21:c11",
+        "sheet_id": "sheet:s21",
+        "text": "FY13",
+        "address": "K8",
+        "query": "for FY08–FY13",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "one year"
+      }
+    ],
+    "extra_hit_count": 1,
+    "extra_rows": 1,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:03_01",
+    "obligation_id": "O4",
+    "scope": [
+      "all line items"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:03_01",
+    "obligation_id": "O5",
+    "scope": [
+      "FY14",
+      "FY15–FY18"
+    ],
+    "extra_scope_label_hits": [
+      {
+        "id": "text:s11:r62:c12",
+        "cell_id": "cell:s11:r62:c12",
+        "row_id": "row:s11:r62",
+        "col_id": "col:s11:c12",
+        "sheet_id": "sheet:s11",
+        "text": "FY14F",
+        "address": "L62",
+        "query": "FY14",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": "(As on 07/17/2014)",
+        "neighbor_right": "Variance"
+      }
+    ],
+    "extra_hit_count": 1,
+    "extra_rows": 1,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:03_01",
+    "obligation_id": "O6",
+    "scope": [
+      "for FY14–FY18F"
+    ],
+    "extra_scope_label_hits": [
+      {
+        "id": "text:s21:r9:c11",
+        "cell_id": "cell:s21:r9:c11",
+        "row_id": "row:s21:r9",
+        "col_id": "col:s21:c11",
+        "sheet_id": "sheet:s21",
+        "text": "FY14F",
+        "address": "K9",
+        "query": "for FY14–FY18F",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "one year"
+      }
+    ],
+    "extra_hit_count": 1,
+    "extra_rows": 1,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:04_01",
+    "obligation_id": "O1",
+    "scope": [
+      "both historical and forecast periods",
+      "each relevant metric"
+    ],
+    "extra_scope_label_hits": [
+      {
+        "id": "text:s03:r3:c5",
+        "cell_id": "cell:s03:r3:c5",
+        "row_id": "row:s03:r3",
+        "col_id": "col:s03:c5",
+        "sheet_id": "sheet:s03",
+        "text": "Historicals",
+        "address": "E3",
+        "query": "both historical and forecast periods",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": "USD mn",
+        "neighbor_right": "Forecasts"
+      },
+      {
+        "id": "text:s03:r3:c11",
+        "cell_id": "cell:s03:r3:c11",
+        "row_id": "row:s03:r3",
+        "col_id": "col:s03:c11",
+        "sheet_id": "sheet:s03",
+        "text": "Forecasts",
+        "address": "K3",
+        "query": "both historical and forecast periods",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": "Historicals",
+        "neighbor_right": "CAGR %"
+      }
+    ],
+    "extra_hit_count": 2,
+    "extra_rows": 1,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:04_01",
+    "obligation_id": "O2",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:04_01",
+    "obligation_id": "O3",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:04_01",
+    "obligation_id": "O4",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:04_01",
+    "obligation_id": "O5",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:04_01",
+    "obligation_id": "O6",
+    "scope": [
+      "all periods"
+    ],
+    "extra_scope_label_hits": [
+      {
+        "id": "text:s04:r32:c3",
+        "cell_id": "cell:s04:r32:c3",
+        "row_id": "row:s04:r32",
+        "col_id": "col:s04:c3",
+        "sheet_id": "sheet:s04",
+        "text": "Period End",
+        "address": "C32",
+        "query": "all periods",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s04:r33:c3",
+        "cell_id": "cell:s04:r33:c3",
+        "row_id": "row:s04:r33",
+        "col_id": "col:s04:c3",
+        "sheet_id": "sheet:s04",
+        "text": "Discounting Period",
+        "address": "C33",
+        "query": "all periods",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s07:r2:c15",
+        "cell_id": "cell:s07:r2:c15",
+        "row_id": "row:s07:r2",
+        "col_id": "col:s07:c15",
+        "sheet_id": "sheet:s07",
+        "text": "Period",
+        "address": "O2",
+        "query": "all periods",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": "Key Details",
+        "neighbor_right": "Index"
+      }
+    ],
+    "extra_hit_count": 3,
+    "extra_rows": 3,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:04_01",
+    "obligation_id": "O7",
+    "scope": [
+      "each forecast year"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:04_01",
+    "obligation_id": "O8",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:05_01",
+    "obligation_id": "O1",
+    "scope": [
+      "for both Fund and LP calculations",
+      "from Dec-25 to Jun-33"
+    ],
+    "extra_scope_label_hits": [
+      {
+        "id": "text:s02:r4:c14",
+        "cell_id": "cell:s02:r4:c14",
+        "row_id": "row:s02:r4",
+        "col_id": "col:s02:c14",
+        "sheet_id": "sheet:s02",
+        "text": "LP",
+        "address": "N4",
+        "query": "for both Fund and LP calculations",
+        "rules": [
+          "substring"
+        ],
+        "neighbor_left": "Carry",
+        "neighbor_right": "Remaining Distribution"
+      },
+      {
+        "id": "text:s02:r4:c17",
+        "cell_id": "cell:s02:r4:c17",
+        "row_id": "row:s02:r4",
+        "col_id": "col:s02:c17",
+        "sheet_id": "sheet:s02",
+        "text": "LP",
+        "address": "Q4",
+        "query": "for both Fund and LP calculations",
+        "rules": [
+          "substring"
+        ],
+        "neighbor_left": "GP",
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s03:r2:c3",
+        "cell_id": "cell:s03:r2:c3",
+        "row_id": "row:s03:r2",
+        "col_id": "col:s03:c3",
+        "sheet_id": "sheet:s03",
+        "text": "Waterfall Calculation -",
+        "address": "C2",
+        "query": "for both Fund and LP calculations",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s03:r4:c3",
+        "cell_id": "cell:s03:r4:c3",
+        "row_id": "row:s03:r4",
+        "col_id": "col:s03:c3",
+        "sheet_id": "sheet:s03",
+        "text": "Fund IRR Calculation",
+        "address": "C4",
+        "query": "for both Fund and LP calculations",
+        "rules": [
+          "token_prefix",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s03:r11:c3",
+        "cell_id": "cell:s03:r11:c3",
+        "row_id": "row:s03:r11",
+        "col_id": "col:s03:c3",
+        "sheet_id": "sheet:s03",
+        "text": "Fund Expense",
+        "address": "C11",
+        "query": "for both Fund and LP calculations",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s03:r17:c3",
+        "cell_id": "cell:s03:r17:c3",
+        "row_id": "row:s03:r17",
+        "col_id": "col:s03:c3",
+        "sheet_id": "sheet:s03",
+        "text": "LP IRR Calculation",
+        "address": "C17",
+        "query": "for both Fund and LP calculations",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s03:r22:c3",
+        "cell_id": "cell:s03:r22:c3",
+        "row_id": "row:s03:r22",
+        "col_id": "col:s03:c3",
+        "sheet_id": "sheet:s03",
+        "text": "Fund Expense",
+        "address": "C22",
+        "query": "for both Fund and LP calculations",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s04:r27:c2",
+        "cell_id": "cell:s04:r27:c2",
+        "row_id": "row:s04:r27",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Total Fund Raised",
+        "address": "B27",
+        "query": "for both Fund and LP calculations",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s04:r32:c2",
+        "cell_id": "cell:s04:r32:c2",
+        "row_id": "row:s04:r32",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Total Fund Size - Cumulative",
+        "address": "B32",
+        "query": "for both Fund and LP calculations",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s04:r33:c2",
+        "cell_id": "cell:s04:r33:c2",
+        "row_id": "row:s04:r33",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Total Fund Size - Incremental",
+        "address": "B33",
+        "query": "for both Fund and LP calculations",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s04:r163:c2",
+        "cell_id": "cell:s04:r163:c2",
+        "row_id": "row:s04:r163",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Fund Expenses",
+        "address": "B163",
+        "query": "for both Fund and LP calculations",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s04:r178:c2",
+        "cell_id": "cell:s04:r178:c2",
+        "row_id": "row:s04:r178",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "PRE - FUND LAUNCH COST",
+        "address": "B178",
+        "query": "for both Fund and LP calculations",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "UOM"
+      },
+      {
+        "id": "text:s04:r192:c2",
+        "cell_id": "cell:s04:r192:c2",
+        "row_id": "row:s04:r192",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Fund Expenses (pre-launch of Fund)",
+        "address": "B192",
+        "query": "for both Fund and LP calculations",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s04:r193:c2",
+        "cell_id": "cell:s04:r193:c2",
+        "row_id": "row:s04:r193",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Fund Admin set-up - one off",
+        "address": "B193",
+        "query": "for both Fund and LP calculations",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "USD"
+      }
+    ],
+    "extra_hit_count": 14,
+    "extra_rows": 13,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:05_01",
+    "obligation_id": "O2",
+    "scope": [
+      "from Apr-25 to Jun-33"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:05_01",
+    "obligation_id": "O3",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:05_01",
+    "obligation_id": "O4",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:05_01",
+    "obligation_id": "O5",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:05_01",
+    "obligation_id": "O6",
+    "scope": [
+      "for second and third tranches",
+      "for all deals"
+    ],
+    "extra_scope_label_hits": [
+      {
+        "id": "text:s00:r15:c7",
+        "cell_id": "cell:s00:r15:c7",
+        "row_id": "row:s00:r15",
+        "col_id": "col:s00:c7",
+        "sheet_id": "sheet:s00",
+        "text": "First Tranche (Under construction in Tier 2 cities)",
+        "address": "G15",
+        "query": "for second and third tranches",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": "%age",
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s00:r22:c4",
+        "cell_id": "cell:s00:r22:c4",
+        "row_id": "row:s00:r22",
+        "col_id": "col:s00:c4",
+        "sheet_id": "sheet:s00",
+        "text": "First Tranche",
+        "address": "D22",
+        "query": "for second and third tranches",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": "Investment Starts Date",
+        "neighbor_right": "Second Tranche"
+      }
+    ],
+    "extra_hit_count": 2,
+    "extra_rows": 2,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:05_01",
+    "obligation_id": "O7",
+    "scope": [
+      "for all three tranches",
+      "from Apr-25 to Jun-33"
+    ],
+    "extra_scope_label_hits": [
+      {
+        "id": "text:s02:r30:c3",
+        "cell_id": "cell:s02:r30:c3",
+        "row_id": "row:s02:r30",
+        "col_id": "col:s02:c3",
+        "sheet_id": "sheet:s02",
+        "text": "Third Tranche",
+        "address": "C30",
+        "query": "for all three tranches",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s04:r11:c2",
+        "cell_id": "cell:s04:r11:c2",
+        "row_id": "row:s04:r11",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "First Tranche",
+        "address": "B11",
+        "query": "for all three tranches",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "Numbers"
+      },
+      {
+        "id": "text:s04:r12:c2",
+        "cell_id": "cell:s04:r12:c2",
+        "row_id": "row:s04:r12",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Second Tranche",
+        "address": "B12",
+        "query": "for all three tranches",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "Numbers"
+      },
+      {
+        "id": "text:s04:r13:c2",
+        "cell_id": "cell:s04:r13:c2",
+        "row_id": "row:s04:r13",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Third Tranche",
+        "address": "B13",
+        "query": "for all three tranches",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "Numbers"
+      },
+      {
+        "id": "text:s04:r17:c2",
+        "cell_id": "cell:s04:r17:c2",
+        "row_id": "row:s04:r17",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "First Tranche",
+        "address": "B17",
+        "query": "for all three tranches",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "Numbers"
+      },
+      {
+        "id": "text:s04:r18:c2",
+        "cell_id": "cell:s04:r18:c2",
+        "row_id": "row:s04:r18",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Second Tranche",
+        "address": "B18",
+        "query": "for all three tranches",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "Numbers"
+      },
+      {
+        "id": "text:s04:r19:c2",
+        "cell_id": "cell:s04:r19:c2",
+        "row_id": "row:s04:r19",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Third Tranche",
+        "address": "B19",
+        "query": "for all three tranches",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "Numbers"
+      },
+      {
+        "id": "text:s04:r23:c2",
+        "cell_id": "cell:s04:r23:c2",
+        "row_id": "row:s04:r23",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "First Tranche",
+        "address": "B23",
+        "query": "for all three tranches",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "USD Mn"
+      },
+      {
+        "id": "text:s04:r24:c2",
+        "cell_id": "cell:s04:r24:c2",
+        "row_id": "row:s04:r24",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Second Tranche",
+        "address": "B24",
+        "query": "for all three tranches",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "USD Mn"
+      },
+      {
+        "id": "text:s04:r25:c2",
+        "cell_id": "cell:s04:r25:c2",
+        "row_id": "row:s04:r25",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Third Tranche",
+        "address": "B25",
+        "query": "for all three tranches",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "USD Mn"
+      },
+      {
+        "id": "text:s04:r29:c2",
+        "cell_id": "cell:s04:r29:c2",
+        "row_id": "row:s04:r29",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "First Tranche",
+        "address": "B29",
+        "query": "for all three tranches",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s04:r30:c2",
+        "cell_id": "cell:s04:r30:c2",
+        "row_id": "row:s04:r30",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Second Tranche",
+        "address": "B30",
+        "query": "for all three tranches",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s04:r31:c2",
+        "cell_id": "cell:s04:r31:c2",
+        "row_id": "row:s04:r31",
+        "col_id": "col:s04:c2",
+        "sheet_id": "sheet:s04",
+        "text": "Third Tranche",
+        "address": "B31",
+        "query": "for all three tranches",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s11:r1:c6",
+        "cell_id": "cell:s11:r1:c6",
+        "row_id": "row:s11:r1",
+        "col_id": "col:s11:c6",
+        "sheet_id": "sheet:s11",
+        "text": "Transfer from",
+        "address": "F1",
+        "query": "from Apr-25 to Jun-33",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": "Desc.",
+        "neighbor_right": "Accounts Transferred (USD)"
+      }
+    ],
+    "extra_hit_count": 14,
+    "extra_rows": 14,
+    "gold_rows_with_extra_label": [
+      "cell:s04:r29",
+      "cell:s04:r30",
+      "cell:s04:r31"
+    ],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:06_01",
+    "obligation_id": "O1",
+    "scope": [
+      "Apr-25",
+      "Apr-26 and Apr-27",
+      "Apr-28"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:06_01",
+    "obligation_id": "O2",
+    "scope": [
+      "Apr-25",
+      "Apr-26",
+      "Apr-27",
+      "Apr-28",
+      "Apr-29"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:06_01",
+    "obligation_id": "O3",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:06_01",
+    "obligation_id": "O4",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:06_01",
+    "obligation_id": "O5",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:06_01",
+    "obligation_id": "O6",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:06_01",
+    "obligation_id": "O7",
+    "scope": [
+      "from Apr-25",
+      "through Mar-30"
+    ],
+    "extra_scope_label_hits": [
+      {
+        "id": "text:s05:r21:c3",
+        "cell_id": "cell:s05:r21:c3",
+        "row_id": "row:s05:r21",
+        "col_id": "col:s05:c3",
+        "sheet_id": "sheet:s05",
+        "text": "Advance from Customer",
+        "address": "C21",
+        "query": "from Apr-25",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      }
+    ],
+    "extra_hit_count": 1,
+    "extra_rows": 1,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:07_01",
+    "obligation_id": "O1",
+    "scope": [
+      "all sales calculations including pricing, absorption, collections, and ancillary revenue",
+      "Scenarios 1–5",
+      "default to scenario 1"
+    ],
+    "extra_scope_label_hits": [
+      {
+        "id": "text:s02:r35:c3",
+        "cell_id": "cell:s02:r35:c3",
+        "row_id": "row:s02:r35",
+        "col_id": "col:s02:c3",
+        "sheet_id": "sheet:s02",
+        "text": "Piped Gas including civil work",
+        "address": "C35",
+        "query": "all sales calculations including pricing, absorption, collections, and ancillary revenue",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "x"
+      },
+      {
+        "id": "text:s03:r35:c3",
+        "cell_id": "cell:s03:r35:c3",
+        "row_id": "row:s03:r35",
+        "col_id": "col:s03:c3",
+        "sheet_id": "sheet:s03",
+        "text": "Piped Gas including civil work",
+        "address": "C35",
+        "query": "all sales calculations including pricing, absorption, collections, and ancillary revenue",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "x"
+      },
+      {
+        "id": "text:s04:r35:c3",
+        "cell_id": "cell:s04:r35:c3",
+        "row_id": "row:s04:r35",
+        "col_id": "col:s04:c3",
+        "sheet_id": "sheet:s04",
+        "text": "Piped Gas including civil work",
+        "address": "C35",
+        "query": "all sales calculations including pricing, absorption, collections, and ancillary revenue",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "x"
+      },
+      {
+        "id": "text:s05:r3:c2",
+        "cell_id": "cell:s05:r3:c2",
+        "row_id": "row:s05:r3",
+        "col_id": "col:s05:c2",
+        "sheet_id": "sheet:s05",
+        "text": "Financial Model: Sales Schedule",
+        "address": "B3",
+        "query": "all sales calculations including pricing, absorption, collections, and ancillary revenue",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s05:r14:c2",
+        "cell_id": "cell:s05:r14:c2",
+        "row_id": "row:s05:r14",
+        "col_id": "col:s05:c2",
+        "sheet_id": "sheet:s05",
+        "text": "Sales Schedule",
+        "address": "B14",
+        "query": "all sales calculations including pricing, absorption, collections, and ancillary revenue",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "Scenarios"
+      },
+      {
+        "id": "text:s05:r14:c25",
+        "cell_id": "cell:s05:r14:c25",
+        "row_id": "row:s05:r14",
+        "col_id": "col:s05:c25",
+        "sheet_id": "sheet:s05",
+        "text": "Apartments Sales",
+        "address": "Y14",
+        "query": "all sales calculations including pricing, absorption, collections, and ancillary revenue",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": "Scenarios",
+        "neighbor_right": "Selling Price"
+      },
+      {
+        "id": "text:s05:r17:c5",
+        "cell_id": "cell:s05:r17:c5",
+        "row_id": "row:s05:r17",
+        "col_id": "col:s05:c5",
+        "sheet_id": "sheet:s05",
+        "text": "Collection %",
+        "address": "E17",
+        "query": "all sales calculations including pricing, absorption, collections, and ancillary revenue",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": "Stage",
+        "neighbor_right": "Apartments Sold"
+      },
+      {
+        "id": "text:s05:r17:c10",
+        "cell_id": "cell:s05:r17:c10",
+        "row_id": "row:s05:r17",
+        "col_id": "col:s05:c10",
+        "sheet_id": "sheet:s05",
+        "text": "Car Park Revenue",
+        "address": "J17",
+        "query": "all sales calculations including pricing, absorption, collections, and ancillary revenue",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": "Other Income",
+        "neighbor_right": "Area"
+      },
+      {
+        "id": "text:s05:r17:c14",
+        "cell_id": "cell:s05:r17:c14",
+        "row_id": "row:s05:r17",
+        "col_id": "col:s05:c14",
+        "sheet_id": "sheet:s05",
+        "text": "Base Rate Collection",
+        "address": "N17",
+        "query": "all sales calculations including pricing, absorption, collections, and ancillary revenue",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": "Total Apartments Sold",
+        "neighbor_right": "Total Collected"
+      },
+      {
+        "id": "text:s05:r17:c16",
+        "cell_id": "cell:s05:r17:c16",
+        "row_id": "row:s05:r17",
+        "col_id": "col:s05:c16",
+        "sheet_id": "sheet:s05",
+        "text": "Other Income Collection",
+        "address": "P17",
+        "query": "all sales calculations including pricing, absorption, collections, and ancillary revenue",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": "Total Collected",
+        "neighbor_right": "Total Other Income Collected"
+      },
+      {
+        "id": "text:s05:r17:c18",
+        "cell_id": "cell:s05:r17:c18",
+        "row_id": "row:s05:r17",
+        "col_id": "col:s05:c18",
+        "sheet_id": "sheet:s05",
+        "text": "Car Park Collection",
+        "address": "R17",
+        "query": "all sales calculations including pricing, absorption, collections, and ancillary revenue",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": "Total Other Income Collected",
+        "neighbor_right": "Cumulative Car Park Collection"
+      },
+      {
+        "id": "text:s05:r17:c19",
+        "cell_id": "cell:s05:r17:c19",
+        "row_id": "row:s05:r17",
+        "col_id": "col:s05:c19",
+        "sheet_id": "sheet:s05",
+        "text": "Cumulative Car Park Collection",
+        "address": "S17",
+        "query": "all sales calculations including pricing, absorption, collections, and ancillary revenue",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": "Car Park Collection",
+        "neighbor_right": null
+      }
+    ],
+    "extra_hit_count": 12,
+    "extra_rows": 6,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:07_01",
+    "obligation_id": "O2",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:07_01",
+    "obligation_id": "O3",
+    "scope": [
+      "all time-bound costs",
+      "Years 1–7"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:07_01",
+    "obligation_id": "O4",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:07_01",
+    "obligation_id": "O5",
+    "scope": [
+      "each period"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:07_01",
+    "obligation_id": "O6",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:07_01",
+    "obligation_id": "O7",
+    "scope": [
+      "Years 1–5"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:08_01",
+    "obligation_id": "O1",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:08_01",
+    "obligation_id": "O2",
+    "scope": [
+      "for Aug-23 to Dec-28"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:08_01",
+    "obligation_id": "O3",
+    "scope": [
+      "for the same timeframe"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:08_01",
+    "obligation_id": "O4",
+    "scope": [
+      "for Jan-23 to Dec-28"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:08_01",
+    "obligation_id": "O5",
+    "scope": [
+      "for all periods"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:08_01",
+    "obligation_id": "O6",
+    "scope": [
+      "for Aug-23 to Dec-28"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:08_01",
+    "obligation_id": "O7",
+    "scope": [
+      "monthly"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:08_01",
+    "obligation_id": "O8",
+    "scope": [
+      "from FY23–FY28"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:08_01",
+    "obligation_id": "O9",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:12_05",
+    "obligation_id": "O1",
+    "scope": [
+      "Mar-20 to Mar-30"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:12_05",
+    "obligation_id": "O2",
+    "scope": [
+      "FY20–FY30E"
+    ],
+    "extra_scope_label_hits": [
+      {
+        "id": "text:s09:r5:c3",
+        "cell_id": "cell:s09:r5:c3",
+        "row_id": "row:s09:r5",
+        "col_id": "col:s09:c3",
+        "sheet_id": "sheet:s09",
+        "text": "FY20",
+        "address": "C5",
+        "query": "FY20–FY30E",
+        "rules": [
+          "substring",
+          "jaccard",
+          "token_prefix"
+        ],
+        "neighbor_left": "Particulars",
+        "neighbor_right": "FY21"
+      },
+      {
+        "id": "text:s09:r5:c13",
+        "cell_id": "cell:s09:r5:c13",
+        "row_id": "row:s09:r5",
+        "col_id": "col:s09:c13",
+        "sheet_id": "sheet:s09",
+        "text": "FY30E",
+        "address": "M5",
+        "query": "FY20–FY30E",
+        "rules": [
+          "substring",
+          "jaccard",
+          "token_prefix"
+        ],
+        "neighbor_left": "FY29E",
+        "neighbor_right": null
+      }
+    ],
+    "extra_hit_count": 2,
+    "extra_rows": 1,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:12_05",
+    "obligation_id": "O3",
+    "scope": [
+      "FY21–FY30E"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:12_05",
+    "obligation_id": "O4",
+    "scope": [
+      "FY19–FY23"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:12_05",
+    "obligation_id": "O5",
+    "scope": [
+      "FY19–FY23 only"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:12_05",
+    "obligation_id": "O6",
+    "scope": [
+      "FY19–FY23 only"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": null,
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:13_05",
+    "obligation_id": "O1",
+    "scope": [
+      "10% FY26",
+      "30% FY27–FY30"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:13_05",
+    "obligation_id": "O2",
+    "scope": [
+      "FY26–FY30"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:13_05",
+    "obligation_id": "O3",
+    "scope": [
+      "FY27–FY30"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:13_05",
+    "obligation_id": "O4",
+    "scope": [
+      "from FY26"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:13_05",
+    "obligation_id": "O5",
+    "scope": [
+      "FY26–FY30"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:13_05",
+    "obligation_id": "O6",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:15_05",
+    "obligation_id": "O1",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:15_05",
+    "obligation_id": "O2",
+    "scope": [
+      "all historical and forecasted years"
+    ],
+    "extra_scope_label_hits": [
+      {
+        "id": "text:s06:r15:c1",
+        "cell_id": "cell:s06:r15:c1",
+        "row_id": "row:s06:r15",
+        "col_id": "col:s06:c1",
+        "sheet_id": "sheet:s06",
+        "text": "Years to Target",
+        "address": "A15",
+        "query": "all historical and forecasted years",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "Earnings"
+      }
+    ],
+    "extra_hit_count": 1,
+    "extra_rows": 1,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:15_05",
+    "obligation_id": "O3",
+    "scope": [
+      "all years"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:15_05",
+    "obligation_id": "O4",
+    "scope": [
+      "below the consolidated Quarterly Result Table",
+      "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin"
+    ],
+    "extra_scope_label_hits": [
+      {
+        "id": "text:s06:r1:c4",
+        "cell_id": "cell:s06:r1:c4",
+        "row_id": "row:s06:r1",
+        "col_id": "col:s06:c4",
+        "sheet_id": "sheet:s06",
+        "text": "Consolidated Financials",
+        "address": "D1",
+        "query": "below the consolidated Quarterly Result Table",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": "KIMS IN",
+        "neighbor_right": "Consolidated Financials"
+      },
+      {
+        "id": "text:s06:r1:c15",
+        "cell_id": "cell:s06:r1:c15",
+        "row_id": "row:s06:r1",
+        "col_id": "col:s06:c15",
+        "sheet_id": "sheet:s06",
+        "text": "Consolidated Financials",
+        "address": "O1",
+        "query": "below the consolidated Quarterly Result Table",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": "Consolidated Financials",
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s06:r2:c48",
+        "cell_id": "cell:s06:r2:c48",
+        "row_id": "row:s06:r2",
+        "col_id": "col:s06:c48",
+        "sheet_id": "sheet:s06",
+        "text": "Quarterly Result Table (Consolidated )",
+        "address": "AV2",
+        "query": "below the consolidated Quarterly Result Table",
+        "rules": [
+          "jaccard",
+          "token_prefix",
+          "token_prefix",
+          "token_prefix",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r9:c1",
+        "cell_id": "cell:s01:r9:c1",
+        "row_id": "row:s01:r9",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA (calc)",
+        "address": "A9",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r10:c1",
+        "cell_id": "cell:s01:r10:c1",
+        "row_id": "row:s01:r10",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDAM (calc)",
+        "address": "A10",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r11:c1",
+        "cell_id": "cell:s01:r11:c1",
+        "row_id": "row:s01:r11",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA",
+        "address": "A11",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r12:c1",
+        "cell_id": "cell:s01:r12:c1",
+        "row_id": "row:s01:r12",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "Total EBITDA (inc. Other Income)",
+        "address": "A12",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r49:c1",
+        "cell_id": "cell:s01:r49:c1",
+        "row_id": "row:s01:r49",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA",
+        "address": "A49",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r50:c1",
+        "cell_id": "cell:s01:r50:c1",
+        "row_id": "row:s01:r50",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA %",
+        "address": "A50",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r68:c1",
+        "cell_id": "cell:s01:r68:c1",
+        "row_id": "row:s01:r68",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA",
+        "address": "A68",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r69:c1",
+        "cell_id": "cell:s01:r69:c1",
+        "row_id": "row:s01:r69",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA %",
+        "address": "A69",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r85:c1",
+        "cell_id": "cell:s01:r85:c1",
+        "row_id": "row:s01:r85",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA",
+        "address": "A85",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r86:c1",
+        "cell_id": "cell:s01:r86:c1",
+        "row_id": "row:s01:r86",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA %",
+        "address": "A86",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r102:c1",
+        "cell_id": "cell:s01:r102:c1",
+        "row_id": "row:s01:r102",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA",
+        "address": "A102",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r103:c1",
+        "cell_id": "cell:s01:r103:c1",
+        "row_id": "row:s01:r103",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA %",
+        "address": "A103",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r119:c1",
+        "cell_id": "cell:s01:r119:c1",
+        "row_id": "row:s01:r119",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA",
+        "address": "A119",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r120:c1",
+        "cell_id": "cell:s01:r120:c1",
+        "row_id": "row:s01:r120",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA %",
+        "address": "A120",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r136:c1",
+        "cell_id": "cell:s01:r136:c1",
+        "row_id": "row:s01:r136",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA",
+        "address": "A136",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r137:c1",
+        "cell_id": "cell:s01:r137:c1",
+        "row_id": "row:s01:r137",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA %",
+        "address": "A137",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r153:c1",
+        "cell_id": "cell:s01:r153:c1",
+        "row_id": "row:s01:r153",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA",
+        "address": "A153",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r154:c1",
+        "cell_id": "cell:s01:r154:c1",
+        "row_id": "row:s01:r154",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA %",
+        "address": "A154",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r170:c1",
+        "cell_id": "cell:s01:r170:c1",
+        "row_id": "row:s01:r170",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA",
+        "address": "A170",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r171:c1",
+        "cell_id": "cell:s01:r171:c1",
+        "row_id": "row:s01:r171",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA %",
+        "address": "A171",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r187:c1",
+        "cell_id": "cell:s01:r187:c1",
+        "row_id": "row:s01:r187",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA",
+        "address": "A187",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s01:r188:c1",
+        "cell_id": "cell:s01:r188:c1",
+        "row_id": "row:s01:r188",
+        "col_id": "col:s01:c1",
+        "sheet_id": "sheet:s01",
+        "text": "EBITDA %",
+        "address": "A188",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s06:r4:c4",
+        "cell_id": "cell:s06:r4:c4",
+        "row_id": "row:s06:r4",
+        "col_id": "col:s06:c4",
+        "sheet_id": "sheet:s06",
+        "text": "Sales",
+        "address": "D4",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": "Price (Rs)",
+        "neighbor_right": "Revenue"
+      },
+      {
+        "id": "text:s06:r4:c37",
+        "cell_id": "cell:s06:r4:c37",
+        "row_id": "row:s06:r4",
+        "col_id": "col:s06:c37",
+        "sheet_id": "sheet:s06",
+        "text": "PBT",
+        "address": "AK4",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring"
+        ],
+        "neighbor_left": "Equity Capital",
+        "neighbor_right": "EPS"
+      },
+      {
+        "id": "text:s06:r5:c4",
+        "cell_id": "cell:s06:r5:c4",
+        "row_id": "row:s06:r5",
+        "col_id": "col:s06:c4",
+        "sheet_id": "sheet:s06",
+        "text": "EBITDA",
+        "address": "D5",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": "Target Price (Rs)",
+        "neighbor_right": "Op. Expenditure"
+      },
+      {
+        "id": "text:s06:r6:c15",
+        "cell_id": "cell:s06:r6:c15",
+        "row_id": "row:s06:r6",
+        "col_id": "col:s06:c15",
+        "sheet_id": "sheet:s06",
+        "text": "EBITDA",
+        "address": "O6",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": "Depreciation",
+        "neighbor_right": "Net worth"
+      },
+      {
+        "id": "text:s06:r6:c67",
+        "cell_id": "cell:s06:r6:c67",
+        "row_id": "row:s06:r6",
+        "col_id": "col:s06:c67",
+        "sheet_id": "sheet:s06",
+        "text": "Sales",
+        "address": "BO6",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": "Others",
+        "neighbor_right": "FY24E"
+      },
+      {
+        "id": "text:s06:r8:c15",
+        "cell_id": "cell:s06:r8:c15",
+        "row_id": "row:s06:r8",
+        "col_id": "col:s06:c15",
+        "sheet_id": "sheet:s06",
+        "text": "EBIT",
+        "address": "O8",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": "Other Income",
+        "neighbor_right": "Def Tax Liability"
+      },
+      {
+        "id": "text:s06:r8:c67",
+        "cell_id": "cell:s06:r8:c67",
+        "row_id": "row:s06:r8",
+        "col_id": "col:s06:c67",
+        "sheet_id": "sheet:s06",
+        "text": "PAT",
+        "address": "BO8",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring"
+        ],
+        "neighbor_left": "Change in WC",
+        "neighbor_right": "FY24E"
+      },
+      {
+        "id": "text:s06:r10:c4",
+        "cell_id": "cell:s06:r10:c4",
+        "row_id": "row:s06:r10",
+        "col_id": "col:s06:c4",
+        "sheet_id": "sheet:s06",
+        "text": "Recurring PAT",
+        "address": "D10",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": "Rating",
+        "neighbor_right": "Other Income"
+      },
+      {
+        "id": "text:s06:r11:c15",
+        "cell_id": "cell:s06:r11:c15",
+        "row_id": "row:s06:r11",
+        "col_id": "col:s06:c15",
+        "sheet_id": "sheet:s06",
+        "text": "PBT",
+        "address": "O11",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring"
+        ],
+        "neighbor_left": "Total Equity",
+        "neighbor_right": "Other Current Liabilities"
+      },
+      {
+        "id": "text:s06:r12:c4",
+        "cell_id": "cell:s06:r12:c4",
+        "row_id": "row:s06:r12",
+        "col_id": "col:s06:c4",
+        "sheet_id": "sheet:s06",
+        "text": "Gross Debt",
+        "address": "D12",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "Tax"
+      },
+      {
+        "id": "text:s06:r16:c15",
+        "cell_id": "cell:s06:r16:c15",
+        "row_id": "row:s06:r16",
+        "col_id": "col:s06:c15",
+        "sheet_id": "sheet:s06",
+        "text": "Recurring PAT",
+        "address": "O16",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": "Book Value",
+        "neighbor_right": "Inventory"
+      },
+      {
+        "id": "text:s06:r17:c48",
+        "cell_id": "cell:s06:r17:c48",
+        "row_id": "row:s06:r17",
+        "col_id": "col:s06:c48",
+        "sheet_id": "sheet:s06",
+        "text": "EBITDA",
+        "address": "AV17",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": "Financing C/F",
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s06:r20:c48",
+        "cell_id": "cell:s06:r20:c48",
+        "row_id": "row:s06:r20",
+        "col_id": "col:s06:c48",
+        "sheet_id": "sheet:s06",
+        "text": "EBIT",
+        "address": "AV20",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": "RoIC (%)",
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s06:r21:c4",
+        "cell_id": "cell:s06:r21:c4",
+        "row_id": "row:s06:r21",
+        "col_id": "col:s06:c4",
+        "sheet_id": "sheet:s06",
+        "text": "EV/EBITDA (x)",
+        "address": "D21",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": "52 Week Low",
+        "neighbor_right": "CEPS (Rs)"
+      },
+      {
+        "id": "text:s06:r24:c4",
+        "cell_id": "cell:s06:r24:c4",
+        "row_id": "row:s06:r24",
+        "col_id": "col:s06:c4",
+        "sheet_id": "sheet:s06",
+        "text": "EBITDA Margin (%)",
+        "address": "D24",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "EBITDAM (%)"
+      },
+      {
+        "id": "text:s06:r24:c15",
+        "cell_id": "cell:s06:r24:c15",
+        "row_id": "row:s06:r24",
+        "col_id": "col:s06:c15",
+        "sheet_id": "sheet:s06",
+        "text": "EBITDAM (%)",
+        "address": "O24",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": "EBITDA Margin (%)",
+        "neighbor_right": "FA Turnover"
+      },
+      {
+        "id": "text:s06:r24:c48",
+        "cell_id": "cell:s06:r24:c48",
+        "row_id": "row:s06:r24",
+        "col_id": "col:s06:c48",
+        "sheet_id": "sheet:s06",
+        "text": "PBT",
+        "address": "AV24",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring"
+        ],
+        "neighbor_left": "P/B",
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s06:r25:c4",
+        "cell_id": "cell:s06:r25:c4",
+        "row_id": "row:s06:r25",
+        "col_id": "col:s06:c4",
+        "sheet_id": "sheet:s06",
+        "text": "Net Margin (%)",
+        "address": "D25",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "PATM (%)"
+      },
+      {
+        "id": "text:s06:r26:c37",
+        "cell_id": "cell:s06:r26:c37",
+        "row_id": "row:s06:r26",
+        "col_id": "col:s06:c37",
+        "sheet_id": "sheet:s06",
+        "text": "EV/EBITDA",
+        "address": "AK26",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": "Revenue/Capital Employed",
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s06:r27:c15",
+        "cell_id": "cell:s06:r27:c15",
+        "row_id": "row:s06:r27",
+        "col_id": "col:s06:c15",
+        "sheet_id": "sheet:s06",
+        "text": "Sales Growth (%)",
+        "address": "O27",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": "Capital Employed/Equity"
+      },
+      {
+        "id": "text:s06:r27:c37",
+        "cell_id": "cell:s06:r27:c37",
+        "row_id": "row:s06:r27",
+        "col_id": "col:s06:c37",
+        "sheet_id": "sheet:s06",
+        "text": "EV/Sales",
+        "address": "AK27",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": "Capital Employed/Equity",
+        "neighbor_right": "PAT before MI & Associates"
+      },
+      {
+        "id": "text:s06:r30:c48",
+        "cell_id": "cell:s06:r30:c48",
+        "row_id": "row:s06:r30",
+        "col_id": "col:s06:c48",
+        "sheet_id": "sheet:s06",
+        "text": "Recurring PAT",
+        "address": "AV30",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s06:r35:c48",
+        "cell_id": "cell:s06:r35:c48",
+        "row_id": "row:s06:r35",
+        "col_id": "col:s06:c48",
+        "sheet_id": "sheet:s06",
+        "text": "Gross Margin",
+        "address": "AV35",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s06:r36:c48",
+        "cell_id": "cell:s06:r36:c48",
+        "row_id": "row:s06:r36",
+        "col_id": "col:s06:c48",
+        "sheet_id": "sheet:s06",
+        "text": "EBITDA Margin",
+        "address": "AV36",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s06:r37:c48",
+        "cell_id": "cell:s06:r37:c48",
+        "row_id": "row:s06:r37",
+        "col_id": "col:s06:c48",
+        "sheet_id": "sheet:s06",
+        "text": "EBIT Margin",
+        "address": "AV37",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "token_prefix",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s06:r38:c48",
+        "cell_id": "cell:s06:r38:c48",
+        "row_id": "row:s06:r38",
+        "col_id": "col:s06:c48",
+        "sheet_id": "sheet:s06",
+        "text": "PBT Margin",
+        "address": "AV38",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s06:r39:c48",
+        "cell_id": "cell:s06:r39:c48",
+        "row_id": "row:s06:r39",
+        "col_id": "col:s06:c48",
+        "sheet_id": "sheet:s06",
+        "text": "PAT Margin",
+        "address": "AV39",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s06:r41:c48",
+        "cell_id": "cell:s06:r41:c48",
+        "row_id": "row:s06:r41",
+        "col_id": "col:s06:c48",
+        "sheet_id": "sheet:s06",
+        "text": "Cost items as % of sales",
+        "address": "AV41",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s06:r71:c48",
+        "cell_id": "cell:s06:r71:c48",
+        "row_id": "row:s06:r71",
+        "col_id": "col:s06:c48",
+        "sheet_id": "sheet:s06",
+        "text": "EBITDA",
+        "address": "AV71",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "substring",
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      },
+      {
+        "id": "text:s06:r72:c48",
+        "cell_id": "cell:s06:r72:c48",
+        "row_id": "row:s06:r72",
+        "col_id": "col:s06:c48",
+        "sheet_id": "sheet:s06",
+        "text": "FCF/EBITDA",
+        "address": "AV72",
+        "query": "Net Sales, EBITDA, PBT, Recurring PAT, Gross Margin, EBITDA Margin, and PAT Margin",
+        "rules": [
+          "token_prefix"
+        ],
+        "neighbor_left": null,
+        "neighbor_right": null
+      }
+    ],
+    "extra_hit_count": 55,
+    "extra_rows": 48,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:15_05",
+    "obligation_id": "O5",
+    "scope": [
+      "3QFY23 and 2QFY24"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:15_05",
+    "obligation_id": "O6",
+    "scope": [
+      "3QFY24E"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:15_05",
+    "obligation_id": "O7",
+    "scope": [],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  },
+  {
+    "task": "Financial_Model:15_05",
+    "obligation_id": "O8",
+    "scope": [
+      "those 2 sections"
+    ],
+    "extra_scope_label_hits": [],
+    "extra_hit_count": 0,
+    "extra_rows": 0,
+    "gold_rows_with_extra_label": [],
+    "caveat": "Lexical evidence opportunity only. A hit is not proof of target role or authority."
+  }
+]

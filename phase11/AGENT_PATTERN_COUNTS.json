@@ -1,0 +1,16 @@
+{
+ "runs": 179,
+ "patterns": {
+  "projection": 85,
+  "scan_loop": 111,
+  "print_dump": 116,
+  "before_after": 52,
+  "recalc": 70,
+  "save_mutation": 50,
+  "formula_regex": 4,
+  "zip_inspection": 1,
+  "counter_grouping": 2,
+  "date_parsing": 1,
+  "dep_extraction": 1
+ }
+}

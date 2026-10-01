@@ -1,0 +1,1748 @@
+[
+  {
+    "task": "01_01",
+    "parse_valid": true,
+    "n_oracle": 8,
+    "n_pred": 8,
+    "matching": {
+      "pairs": [
+        {
+          "oracle_id": "O7",
+          "pred_id": "O7",
+          "oracle_index": 6,
+          "pred_index": 6,
+          "score": 0.95
+        },
+        {
+          "oracle_id": "O8",
+          "pred_id": "O8",
+          "oracle_index": 7,
+          "pred_index": 7,
+          "score": 0.925
+        },
+        {
+          "oracle_id": "O4",
+          "pred_id": "O4",
+          "oracle_index": 3,
+          "pred_index": 3,
+          "score": 0.925
+        },
+        {
+          "oracle_id": "O6",
+          "pred_id": "O6",
+          "oracle_index": 5,
+          "pred_index": 5,
+          "score": 0.9167
+        },
+        {
+          "oracle_id": "O2",
+          "pred_id": "O2",
+          "oracle_index": 1,
+          "pred_index": 1,
+          "score": 0.9167
+        },
+        {
+          "oracle_id": "O1",
+          "pred_id": "O1",
+          "oracle_index": 0,
+          "pred_index": 0,
+          "score": 0.9167
+        },
+        {
+          "oracle_id": "O3",
+          "pred_id": "O3",
+          "oracle_index": 2,
+          "pred_index": 2,
+          "score": 0.8776
+        },
+        {
+          "oracle_id": "O5",
+          "pred_id": "O5",
+          "oracle_index": 4,
+          "pred_index": 4,
+          "score": 0.781
+        }
+      ],
+      "unmatched_oracle": [],
+      "unmatched_pred": [],
+      "merged_candidates": [],
+      "split_candidates": []
+    },
+    "errors": [],
+    "error_counts": {},
+    "field_counts": {
+      "locus": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0
+      },
+      "subject": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0
+      },
+      "subject_interval": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "required_change": {
+        "tp": 8,
+        "fp": 0,
+        "fn": 0
+      },
+      "scope": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "source_relation": {
+        "tp": 3,
+        "fp": 1,
+        "fn": 0
+      },
+      "condition": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "result_property": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "then_after": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "occupancy_filter": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "critical_requirements": [
+      "F_LOCUS",
+      "F_SUBJECT",
+      "F_SCOPE",
+      "F_SOURCE_RELATION",
+      "F_RESULT_PROPERTY",
+      "F_THEN"
+    ],
+    "preserved_requirements": [
+      "F_LOCUS",
+      "F_SUBJECT",
+      "F_SCOPE",
+      "F_SOURCE_RELATION",
+      "F_RESULT_PROPERTY",
+      "F_THEN"
+    ],
+    "critical_requirement_recall": 1.0,
+    "all_critical_requirements_preserved": true,
+    "task_spec_preserved": true,
+    "evaluation_ambiguous": [],
+    "loss_n": 0,
+    "invention_n": 0,
+    "boilerplate_as_obligation": false,
+    "workbook_like_hits": [],
+    "span_exact": 40,
+    "span_normalized": 43,
+    "span_total": 43,
+    "complexity": {
+      "task": "01_01",
+      "task_characters": 1029,
+      "task_tokens_est": 157,
+      "n_oracle_obligations": 8,
+      "n_populated_constraint_fields": 36,
+      "n_then_edges": 2,
+      "n_loci": 5,
+      "n_subjects": 8,
+      "longest_clause_characters": 218,
+      "obligation_bucket": ">=7",
+      "composition": "explicit_THEN"
+    }
+  },
+  {
+    "task": "03_01",
+    "parse_valid": true,
+    "n_oracle": 6,
+    "n_pred": 6,
+    "matching": {
+      "pairs": [
+        {
+          "oracle_id": "O6",
+          "pred_id": "O6",
+          "oracle_index": 5,
+          "pred_index": 5,
+          "score": 0.9333
+        },
+        {
+          "oracle_id": "O3",
+          "pred_id": "O3",
+          "oracle_index": 2,
+          "pred_index": 2,
+          "score": 0.9333
+        },
+        {
+          "oracle_id": "O2",
+          "pred_id": "O2",
+          "oracle_index": 1,
+          "pred_index": 1,
+          "score": 0.797
+        },
+        {
+          "oracle_id": "O4",
+          "pred_id": "O4",
+          "oracle_index": 3,
+          "pred_index": 3,
+          "score": 0.7333
+        },
+        {
+          "oracle_id": "O5",
+          "pred_id": "O5",
+          "oracle_index": 4,
+          "pred_index": 4,
+          "score": 0.7
+        },
+        {
+          "oracle_id": "O1",
+          "pred_id": "O1",
+          "oracle_index": 0,
+          "pred_index": 0,
+          "score": 0.6786
+        }
+      ],
+      "unmatched_oracle": [],
+      "unmatched_pred": [],
+      "merged_candidates": [],
+      "split_candidates": []
+    },
+    "errors": [
+      {
+        "code": "OMITTED_CONSTRAINT",
+        "detail": "O4.subject_mismatch"
+      },
+      {
+        "code": "OMITTED_CONSTRAINT",
+        "detail": "O5.subject_mismatch"
+      },
+      {
+        "code": "OMITTED_CONSTRAINT",
+        "detail": "O1.subject_mismatch"
+      }
+    ],
+    "error_counts": {
+      "OMITTED_CONSTRAINT": 3
+    },
+    "field_counts": {
+      "locus": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "subject": {
+        "tp": 3,
+        "fp": 3,
+        "fn": 3
+      },
+      "subject_interval": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "required_change": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "scope": {
+        "tp": 4,
+        "fp": 2,
+        "fn": 0
+      },
+      "source_relation": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0
+      },
+      "condition": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 0
+      },
+      "result_property": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "then_after": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "occupancy_filter": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "critical_requirements": [
+      "F_LOCUS",
+      "F_SUBJECT",
+      "F_REQUIRED_CHANGE",
+      "F_SCOPE",
+      "F_SOURCE_RELATION",
+      "F_THEN"
+    ],
+    "preserved_requirements": [
+      "F_LOCUS",
+      "F_REQUIRED_CHANGE",
+      "F_SCOPE",
+      "F_SOURCE_RELATION",
+      "F_THEN"
+    ],
+    "critical_requirement_recall": 0.8333,
+    "all_critical_requirements_preserved": false,
+    "task_spec_preserved": false,
+    "evaluation_ambiguous": [],
+    "loss_n": 3,
+    "invention_n": 0,
+    "boilerplate_as_obligation": false,
+    "workbook_like_hits": [],
+    "span_exact": 34,
+    "span_normalized": 34,
+    "span_total": 34,
+    "complexity": {
+      "task": "03_01",
+      "task_characters": 755,
+      "task_tokens_est": 114,
+      "n_oracle_obligations": 6,
+      "n_populated_constraint_fields": 24,
+      "n_then_edges": 1,
+      "n_loci": 4,
+      "n_subjects": 6,
+      "longest_clause_characters": 134,
+      "obligation_bucket": "4-6",
+      "composition": "explicit_THEN"
+    }
+  },
+  {
+    "task": "04_01",
+    "parse_valid": true,
+    "n_oracle": 7,
+    "n_pred": 8,
+    "matching": {
+      "pairs": [
+        {
+          "oracle_id": "O6",
+          "pred_id": "O7",
+          "oracle_index": 5,
+          "pred_index": 6,
+          "score": 0.9333
+        },
+        {
+          "oracle_id": "O5",
+          "pred_id": "O6",
+          "oracle_index": 4,
+          "pred_index": 5,
+          "score": 0.925
+        },
+        {
+          "oracle_id": "O4",
+          "pred_id": "O4",
+          "oracle_index": 3,
+          "pred_index": 3,
+          "score": 0.7917
+        },
+        {
+          "oracle_id": "O7",
+          "pred_id": "O8",
+          "oracle_index": 6,
+          "pred_index": 7,
+          "score": 0.7833
+        },
+        {
+          "oracle_id": "O3",
+          "pred_id": "O3",
+          "oracle_index": 2,
+          "pred_index": 2,
+          "score": 0.7833
+        },
+        {
+          "oracle_id": "O2",
+          "pred_id": "O2",
+          "oracle_index": 1,
+          "pred_index": 1,
+          "score": 0.7536
+        },
+        {
+          "oracle_id": "O1",
+          "pred_id": "O1",
+          "oracle_index": 0,
+          "pred_index": 0,
+          "score": 0.6833
+        }
+      ],
+      "unmatched_oracle": [],
+      "unmatched_pred": [
+        "O5"
+      ],
+      "merged_candidates": [],
+      "split_candidates": [
+        {
+          "oracle_id": "O4",
+          "pred_ids": [
+            "O4",
+            "O5"
+          ]
+        }
+      ]
+    },
+    "errors": [
+      {
+        "code": "SPURIOUS_OBLIGATION",
+        "detail": "O5"
+      },
+      {
+        "code": "SPLIT_OBLIGATION",
+        "detail": "O4 -> O4,O5"
+      },
+      {
+        "code": "OMITTED_CONSTRAINT",
+        "detail": "O1.subject_mismatch"
+      }
+    ],
+    "error_counts": {
+      "SPURIOUS_OBLIGATION": 1,
+      "SPLIT_OBLIGATION": 1,
+      "OMITTED_CONSTRAINT": 1
+    },
+    "field_counts": {
+      "locus": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0
+      },
+      "subject": {
+        "tp": 6,
+        "fp": 1,
+        "fn": 1
+      },
+      "subject_interval": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "required_change": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0
+      },
+      "scope": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "source_relation": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "condition": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "result_property": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "then_after": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "occupancy_filter": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "critical_requirements": [
+      "F_LOCUS",
+      "F_SUBJECT",
+      "F_REQUIRED_CHANGE",
+      "F_SCOPE",
+      "F_THEN"
+    ],
+    "preserved_requirements": [
+      "F_LOCUS",
+      "F_REQUIRED_CHANGE",
+      "F_SCOPE",
+      "F_THEN"
+    ],
+    "critical_requirement_recall": 0.8,
+    "all_critical_requirements_preserved": false,
+    "task_spec_preserved": false,
+    "evaluation_ambiguous": [],
+    "loss_n": 1,
+    "invention_n": 1,
+    "boilerplate_as_obligation": false,
+    "workbook_like_hits": [],
+    "span_exact": 40,
+    "span_normalized": 40,
+    "span_total": 40,
+    "complexity": {
+      "task": "04_01",
+      "task_characters": 660,
+      "task_tokens_est": 97,
+      "n_oracle_obligations": 7,
+      "n_populated_constraint_fields": 27,
+      "n_then_edges": 3,
+      "n_loci": 4,
+      "n_subjects": 7,
+      "longest_clause_characters": 106,
+      "obligation_bucket": ">=7",
+      "composition": "explicit_THEN"
+    }
+  },
+  {
+    "task": "05_01",
+    "parse_valid": true,
+    "n_oracle": 4,
+    "n_pred": 7,
+    "matching": {
+      "pairs": [
+        {
+          "oracle_id": "O2",
+          "pred_id": "O2",
+          "oracle_index": 1,
+          "pred_index": 1,
+          "score": 0.82
+        },
+        {
+          "oracle_id": "O4",
+          "pred_id": "O7",
+          "oracle_index": 3,
+          "pred_index": 6,
+          "score": 0.8167
+        },
+        {
+          "oracle_id": "O1",
+          "pred_id": "O1",
+          "oracle_index": 0,
+          "pred_index": 0,
+          "score": 0.8125
+        },
+        {
+          "oracle_id": "O3",
+          "pred_id": "O4",
+          "oracle_index": 2,
+          "pred_index": 3,
+          "score": 0.6263
+        }
+      ],
+      "unmatched_oracle": [],
+      "unmatched_pred": [
+        "O3",
+        "O5",
+        "O6"
+      ],
+      "merged_candidates": [],
+      "split_candidates": [
+        {
+          "oracle_id": "O3",
+          "pred_ids": [
+            "O4",
+            "O3"
+          ]
+        }
+      ]
+    },
+    "errors": [
+      {
+        "code": "SPURIOUS_OBLIGATION",
+        "detail": "O3"
+      },
+      {
+        "code": "SPURIOUS_OBLIGATION",
+        "detail": "O5"
+      },
+      {
+        "code": "SPURIOUS_OBLIGATION",
+        "detail": "O6"
+      },
+      {
+        "code": "SPLIT_OBLIGATION",
+        "detail": "O3 -> O4,O3"
+      }
+    ],
+    "error_counts": {
+      "SPURIOUS_OBLIGATION": 3,
+      "SPLIT_OBLIGATION": 1
+    },
+    "field_counts": {
+      "locus": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "subject": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0
+      },
+      "subject_interval": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "required_change": {
+        "tp": 3,
+        "fp": 1,
+        "fn": 0
+      },
+      "scope": {
+        "tp": 0,
+        "fp": 3,
+        "fn": 0
+      },
+      "source_relation": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "condition": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "result_property": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "then_after": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "occupancy_filter": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "critical_requirements": [
+      "F_LOCUS",
+      "F_SUBJECT",
+      "F_REQUIRED_CHANGE"
+    ],
+    "preserved_requirements": [
+      "F_LOCUS",
+      "F_SUBJECT",
+      "F_REQUIRED_CHANGE"
+    ],
+    "critical_requirement_recall": 1.0,
+    "all_critical_requirements_preserved": true,
+    "task_spec_preserved": false,
+    "evaluation_ambiguous": [],
+    "loss_n": 0,
+    "invention_n": 3,
+    "boilerplate_as_obligation": false,
+    "workbook_like_hits": [],
+    "span_exact": 41,
+    "span_normalized": 41,
+    "span_total": 41,
+    "complexity": {
+      "task": "05_01",
+      "task_characters": 668,
+      "task_tokens_est": 112,
+      "n_oracle_obligations": 4,
+      "n_populated_constraint_fields": 11,
+      "n_then_edges": 0,
+      "n_loci": 4,
+      "n_subjects": 4,
+      "longest_clause_characters": 174,
+      "obligation_bucket": "4-6",
+      "composition": "no_THEN"
+    }
+  },
+  {
+    "task": "06_01",
+    "parse_valid": true,
+    "n_oracle": 6,
+    "n_pred": 7,
+    "matching": {
+      "pairs": [
+        {
+          "oracle_id": "O4",
+          "pred_id": "O4",
+          "oracle_index": 3,
+          "pred_index": 3,
+          "score": 0.925
+        },
+        {
+          "oracle_id": "O3",
+          "pred_id": "O3",
+          "oracle_index": 2,
+          "pred_index": 2,
+          "score": 0.925
+        },
+        {
+          "oracle_id": "O6",
+          "pred_id": "O7",
+          "oracle_index": 5,
+          "pred_index": 6,
+          "score": 0.8071
+        },
+        {
+          "oracle_id": "O1",
+          "pred_id": "O1",
+          "oracle_index": 0,
+          "pred_index": 0,
+          "score": 0.8067
+        },
+        {
+          "oracle_id": "O2",
+          "pred_id": "O2",
+          "oracle_index": 1,
+          "pred_index": 1,
+          "score": 0.8056
+        },
+        {
+          "oracle_id": "O5",
+          "pred_id": "O5",
+          "oracle_index": 4,
+          "pred_index": 4,
+          "score": 0.7917
+        }
+      ],
+      "unmatched_oracle": [],
+      "unmatched_pred": [
+        "O6"
+      ],
+      "merged_candidates": [],
+      "split_candidates": [
+        {
+          "oracle_id": "O5",
+          "pred_ids": [
+            "O5",
+            "O6"
+          ]
+        }
+      ]
+    },
+    "errors": [
+      {
+        "code": "SPURIOUS_OBLIGATION",
+        "detail": "O6"
+      },
+      {
+        "code": "SPLIT_OBLIGATION",
+        "detail": "O5 -> O5,O6"
+      }
+    ],
+    "error_counts": {
+      "SPURIOUS_OBLIGATION": 1,
+      "SPLIT_OBLIGATION": 1
+    },
+    "field_counts": {
+      "locus": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "subject": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "subject_interval": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "required_change": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "scope": {
+        "tp": 0,
+        "fp": 3,
+        "fn": 0
+      },
+      "source_relation": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "condition": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "result_property": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "then_after": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "occupancy_filter": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "critical_requirements": [
+      "F_LOCUS",
+      "F_SUBJECT",
+      "F_REQUIRED_CHANGE",
+      "F_SOURCE_RELATION"
+    ],
+    "preserved_requirements": [
+      "F_LOCUS",
+      "F_SUBJECT",
+      "F_REQUIRED_CHANGE",
+      "F_SOURCE_RELATION"
+    ],
+    "critical_requirement_recall": 1.0,
+    "all_critical_requirements_preserved": true,
+    "task_spec_preserved": false,
+    "evaluation_ambiguous": [],
+    "loss_n": 0,
+    "invention_n": 1,
+    "boilerplate_as_obligation": false,
+    "workbook_like_hits": [],
+    "span_exact": 40,
+    "span_normalized": 40,
+    "span_total": 40,
+    "complexity": {
+      "task": "06_01",
+      "task_characters": 734,
+      "task_tokens_est": 115,
+      "n_oracle_obligations": 6,
+      "n_populated_constraint_fields": 19,
+      "n_then_edges": 0,
+      "n_loci": 4,
+      "n_subjects": 6,
+      "longest_clause_characters": 132,
+      "obligation_bucket": "4-6",
+      "composition": "no_THEN"
+    }
+  },
+  {
+    "task": "07_01",
+    "parse_valid": true,
+    "n_oracle": 7,
+    "n_pred": 7,
+    "matching": {
+      "pairs": [
+        {
+          "oracle_id": "O4",
+          "pred_id": "O4",
+          "oracle_index": 3,
+          "pred_index": 3,
+          "score": 0.9143
+        },
+        {
+          "oracle_id": "O2",
+          "pred_id": "O2",
+          "oracle_index": 1,
+          "pred_index": 1,
+          "score": 0.9
+        },
+        {
+          "oracle_id": "O7",
+          "pred_id": "O7",
+          "oracle_index": 6,
+          "pred_index": 6,
+          "score": 0.8
+        },
+        {
+          "oracle_id": "O6",
+          "pred_id": "O6",
+          "oracle_index": 5,
+          "pred_index": 5,
+          "score": 0.8
+        },
+        {
+          "oracle_id": "O1",
+          "pred_id": "O1",
+          "oracle_index": 0,
+          "pred_index": 0,
+          "score": 0.8
+        },
+        {
+          "oracle_id": "O5",
+          "pred_id": "O5",
+          "oracle_index": 4,
+          "pred_index": 4,
+          "score": 0.7762
+        },
+        {
+          "oracle_id": "O3",
+          "pred_id": "O3",
+          "oracle_index": 2,
+          "pred_index": 2,
+          "score": 0.5765
+        }
+      ],
+      "unmatched_oracle": [],
+      "unmatched_pred": [],
+      "merged_candidates": [],
+      "split_candidates": []
+    },
+    "errors": [
+      {
+        "code": "OMITTED_CONSTRAINT",
+        "detail": "O7.scope_mismatch"
+      },
+      {
+        "code": "OMITTED_CONSTRAINT",
+        "detail": "O6.scope"
+      },
+      {
+        "code": "OMITTED_CONSTRAINT",
+        "detail": "O3.subject_mismatch"
+      },
+      {
+        "code": "OVERGENERALIZED_SCOPE",
+        "detail": "O3"
+      },
+      {
+        "code": "WRONG_ATTACHMENT",
+        "detail": "scope of O3 on O7"
+      },
+      {
+        "code": "WRONG_ATTACHMENT",
+        "detail": "scope of O6 on O7"
+      },
+      {
+        "code": "WRONG_ATTACHMENT",
+        "detail": "scope of O7 on O6"
+      }
+    ],
+    "error_counts": {
+      "OMITTED_CONSTRAINT": 3,
+      "OVERGENERALIZED_SCOPE": 1,
+      "WRONG_ATTACHMENT": 3
+    },
+    "field_counts": {
+      "locus": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0
+      },
+      "subject": {
+        "tp": 6,
+        "fp": 1,
+        "fn": 1
+      },
+      "subject_interval": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "required_change": {
+        "tp": 1,
+        "fp": 6,
+        "fn": 0
+      },
+      "scope": {
+        "tp": 1,
+        "fp": 3,
+        "fn": 3
+      },
+      "source_relation": {
+        "tp": 2,
+        "fp": 3,
+        "fn": 0
+      },
+      "condition": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "result_property": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "then_after": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "occupancy_filter": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "critical_requirements": [
+      "F_LOCUS",
+      "F_SUBJECT",
+      "F_REQUIRED_CHANGE",
+      "F_SCOPE",
+      "F_SOURCE_RELATION",
+      "F_THEN"
+    ],
+    "preserved_requirements": [
+      "F_LOCUS",
+      "F_REQUIRED_CHANGE",
+      "F_SOURCE_RELATION",
+      "F_THEN"
+    ],
+    "critical_requirement_recall": 0.6667,
+    "all_critical_requirements_preserved": false,
+    "task_spec_preserved": false,
+    "evaluation_ambiguous": [],
+    "loss_n": 3,
+    "invention_n": 1,
+    "boilerplate_as_obligation": false,
+    "workbook_like_hits": [],
+    "span_exact": 40,
+    "span_normalized": 40,
+    "span_total": 40,
+    "complexity": {
+      "task": "07_01",
+      "task_characters": 1044,
+      "task_tokens_est": 152,
+      "n_oracle_obligations": 7,
+      "n_populated_constraint_fields": 23,
+      "n_then_edges": 2,
+      "n_loci": 4,
+      "n_subjects": 7,
+      "longest_clause_characters": 212,
+      "obligation_bucket": ">=7",
+      "composition": "explicit_THEN"
+    }
+  },
+  {
+    "task": "08_01",
+    "parse_valid": true,
+    "n_oracle": 9,
+    "n_pred": 9,
+    "matching": {
+      "pairs": [
+        {
+          "oracle_id": "O9",
+          "pred_id": "O9",
+          "oracle_index": 8,
+          "pred_index": 8,
+          "score": 0.92
+        },
+        {
+          "oracle_id": "O2",
+          "pred_id": "O2",
+          "oracle_index": 1,
+          "pred_index": 1,
+          "score": 0.92
+        },
+        {
+          "oracle_id": "O4",
+          "pred_id": "O4",
+          "oracle_index": 3,
+          "pred_index": 3,
+          "score": 0.9167
+        },
+        {
+          "oracle_id": "O8",
+          "pred_id": "O8",
+          "oracle_index": 7,
+          "pred_index": 7,
+          "score": 0.9125
+        },
+        {
+          "oracle_id": "O6",
+          "pred_id": "O6",
+          "oracle_index": 5,
+          "pred_index": 5,
+          "score": 0.9125
+        },
+        {
+          "oracle_id": "O1",
+          "pred_id": "O1",
+          "oracle_index": 0,
+          "pred_index": 0,
+          "score": 0.9125
+        },
+        {
+          "oracle_id": "O3",
+          "pred_id": "O3",
+          "oracle_index": 2,
+          "pred_index": 2,
+          "score": 0.8805
+        },
+        {
+          "oracle_id": "O5",
+          "pred_id": "O5",
+          "oracle_index": 4,
+          "pred_index": 4,
+          "score": 0.8629
+        },
+        {
+          "oracle_id": "O7",
+          "pred_id": "O7",
+          "oracle_index": 6,
+          "pred_index": 6,
+          "score": 0.8583
+        }
+      ],
+      "unmatched_oracle": [],
+      "unmatched_pred": [],
+      "merged_candidates": [],
+      "split_candidates": []
+    },
+    "errors": [
+      {
+        "code": "OMITTED_CONSTRAINT",
+        "detail": "O8.result_property_mismatch"
+      },
+      {
+        "code": "REQUIRED_CHANGE_CONFUSION",
+        "detail": "O5:add_check->set"
+      }
+    ],
+    "error_counts": {
+      "OMITTED_CONSTRAINT": 1,
+      "REQUIRED_CHANGE_CONFUSION": 1
+    },
+    "field_counts": {
+      "locus": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 0
+      },
+      "subject": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 0
+      },
+      "subject_interval": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "required_change": {
+        "tp": 9,
+        "fp": 0,
+        "fn": 0
+      },
+      "scope": {
+        "tp": 7,
+        "fp": 0,
+        "fn": 0
+      },
+      "source_relation": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0
+      },
+      "condition": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "result_property": {
+        "tp": 2,
+        "fp": 1,
+        "fn": 1
+      },
+      "then_after": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0
+      },
+      "occupancy_filter": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "critical_requirements": [
+      "F_LOCUS",
+      "F_SUBJECT",
+      "F_REQUIRED_CHANGE",
+      "F_SCOPE",
+      "F_SOURCE_RELATION",
+      "F_CONDITION",
+      "F_RESULT_PROPERTY",
+      "F_THEN"
+    ],
+    "preserved_requirements": [
+      "F_LOCUS",
+      "F_SUBJECT",
+      "F_REQUIRED_CHANGE",
+      "F_SCOPE",
+      "F_SOURCE_RELATION",
+      "F_CONDITION",
+      "F_THEN"
+    ],
+    "critical_requirement_recall": 0.875,
+    "all_critical_requirements_preserved": false,
+    "task_spec_preserved": false,
+    "evaluation_ambiguous": [],
+    "loss_n": 1,
+    "invention_n": 0,
+    "boilerplate_as_obligation": false,
+    "workbook_like_hits": [],
+    "span_exact": 52,
+    "span_normalized": 52,
+    "span_total": 52,
+    "complexity": {
+      "task": "08_01",
+      "task_characters": 1051,
+      "task_tokens_est": 167,
+      "n_oracle_obligations": 9,
+      "n_populated_constraint_fields": 46,
+      "n_then_edges": 3,
+      "n_loci": 5,
+      "n_subjects": 9,
+      "longest_clause_characters": 170,
+      "obligation_bucket": ">=7",
+      "composition": "explicit_THEN"
+    }
+  },
+  {
+    "task": "12_05",
+    "parse_valid": true,
+    "n_oracle": 6,
+    "n_pred": 6,
+    "matching": {
+      "pairs": [
+        {
+          "oracle_id": "O3",
+          "pred_id": "O3",
+          "oracle_index": 2,
+          "pred_index": 2,
+          "score": 0.9333
+        },
+        {
+          "oracle_id": "O2",
+          "pred_id": "O2",
+          "oracle_index": 1,
+          "pred_index": 1,
+          "score": 0.925
+        },
+        {
+          "oracle_id": "O1",
+          "pred_id": "O1",
+          "oracle_index": 0,
+          "pred_index": 0,
+          "score": 0.925
+        },
+        {
+          "oracle_id": "O4",
+          "pred_id": "O4",
+          "oracle_index": 3,
+          "pred_index": 3,
+          "score": 0.92
+        },
+        {
+          "oracle_id": "O6",
+          "pred_id": "O6",
+          "oracle_index": 5,
+          "pred_index": 5,
+          "score": 0.7467
+        },
+        {
+          "oracle_id": "O5",
+          "pred_id": "O5",
+          "oracle_index": 4,
+          "pred_index": 4,
+          "score": 0.7467
+        }
+      ],
+      "unmatched_oracle": [],
+      "unmatched_pred": [],
+      "merged_candidates": [],
+      "split_candidates": []
+    },
+    "errors": [
+      {
+        "code": "OMITTED_CONSTRAINT",
+        "detail": "O1.result_property"
+      }
+    ],
+    "error_counts": {
+      "OMITTED_CONSTRAINT": 1
+    },
+    "field_counts": {
+      "locus": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "subject": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "subject_interval": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "required_change": {
+        "tp": 4,
+        "fp": 2,
+        "fn": 0
+      },
+      "scope": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "source_relation": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "condition": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "result_property": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 1
+      },
+      "then_after": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0
+      },
+      "occupancy_filter": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "critical_requirements": [
+      "F_LOCUS",
+      "F_SUBJECT",
+      "F_REQUIRED_CHANGE",
+      "F_SCOPE",
+      "F_SOURCE_RELATION",
+      "F_RESULT_PROPERTY",
+      "F_THEN"
+    ],
+    "preserved_requirements": [
+      "F_LOCUS",
+      "F_SUBJECT",
+      "F_REQUIRED_CHANGE",
+      "F_SCOPE",
+      "F_SOURCE_RELATION",
+      "F_THEN"
+    ],
+    "critical_requirement_recall": 0.8571,
+    "all_critical_requirements_preserved": false,
+    "task_spec_preserved": false,
+    "evaluation_ambiguous": [],
+    "loss_n": 1,
+    "invention_n": 0,
+    "boilerplate_as_obligation": false,
+    "workbook_like_hits": [],
+    "span_exact": 34,
+    "span_normalized": 34,
+    "span_total": 34,
+    "complexity": {
+      "task": "12_05",
+      "task_characters": 647,
+      "task_tokens_est": 104,
+      "n_oracle_obligations": 6,
+      "n_populated_constraint_fields": 27,
+      "n_then_edges": 2,
+      "n_loci": 4,
+      "n_subjects": 6,
+      "longest_clause_characters": 138,
+      "obligation_bucket": "4-6",
+      "composition": "explicit_THEN"
+    }
+  },
+  {
+    "task": "13_05",
+    "parse_valid": true,
+    "n_oracle": 6,
+    "n_pred": 6,
+    "matching": {
+      "pairs": [
+        {
+          "oracle_id": "O6",
+          "pred_id": "O6",
+          "oracle_index": 5,
+          "pred_index": 5,
+          "score": 1.0
+        },
+        {
+          "oracle_id": "O5",
+          "pred_id": "O5",
+          "oracle_index": 4,
+          "pred_index": 4,
+          "score": 1.0
+        },
+        {
+          "oracle_id": "O3",
+          "pred_id": "O3",
+          "oracle_index": 2,
+          "pred_index": 2,
+          "score": 1.0
+        },
+        {
+          "oracle_id": "O2",
+          "pred_id": "O2",
+          "oracle_index": 1,
+          "pred_index": 1,
+          "score": 0.95
+        },
+        {
+          "oracle_id": "O1",
+          "pred_id": "O1",
+          "oracle_index": 0,
+          "pred_index": 0,
+          "score": 0.9
+        },
+        {
+          "oracle_id": "O4",
+          "pred_id": "O4",
+          "oracle_index": 3,
+          "pred_index": 3,
+          "score": 0.6167
+        }
+      ],
+      "unmatched_oracle": [],
+      "unmatched_pred": [],
+      "merged_candidates": [],
+      "split_candidates": []
+    },
+    "errors": [],
+    "error_counts": {},
+    "field_counts": {
+      "locus": {
+        "tp": 5,
+        "fp": 1,
+        "fn": 0
+      },
+      "subject": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "subject_interval": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "required_change": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "scope": {
+        "tp": 3,
+        "fp": 2,
+        "fn": 0
+      },
+      "source_relation": {
+        "tp": 1,
+        "fp": 1,
+        "fn": 0
+      },
+      "condition": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "result_property": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "then_after": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0
+      },
+      "occupancy_filter": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "critical_requirements": [
+      "F_REQUIRED_CHANGE"
+    ],
+    "preserved_requirements": [
+      "F_REQUIRED_CHANGE"
+    ],
+    "critical_requirement_recall": 1.0,
+    "all_critical_requirements_preserved": true,
+    "task_spec_preserved": true,
+    "evaluation_ambiguous": [],
+    "loss_n": 0,
+    "invention_n": 0,
+    "boilerplate_as_obligation": false,
+    "workbook_like_hits": [],
+    "span_exact": 32,
+    "span_normalized": 32,
+    "span_total": 32,
+    "complexity": {
+      "task": "13_05",
+      "task_characters": 669,
+      "task_tokens_est": 103,
+      "n_oracle_obligations": 6,
+      "n_populated_constraint_fields": 22,
+      "n_then_edges": 1,
+      "n_loci": 4,
+      "n_subjects": 6,
+      "longest_clause_characters": 118,
+      "obligation_bucket": "4-6",
+      "composition": "explicit_THEN"
+    }
+  },
+  {
+    "task": "15_05",
+    "parse_valid": true,
+    "n_oracle": 6,
+    "n_pred": 8,
+    "matching": {
+      "pairs": [
+        {
+          "oracle_id": "O2",
+          "pred_id": "O3",
+          "oracle_index": 1,
+          "pred_index": 2,
+          "score": 0.92
+        },
+        {
+          "oracle_id": "O6",
+          "pred_id": "O7",
+          "oracle_index": 5,
+          "pred_index": 6,
+          "score": 0.9125
+        },
+        {
+          "oracle_id": "O1",
+          "pred_id": "O2",
+          "oracle_index": 0,
+          "pred_index": 1,
+          "score": 0.8143
+        },
+        {
+          "oracle_id": "O3",
+          "pred_id": "O4",
+          "oracle_index": 2,
+          "pred_index": 3,
+          "score": 0.8048
+        },
+        {
+          "oracle_id": "O5",
+          "pred_id": "O6",
+          "oracle_index": 4,
+          "pred_index": 5,
+          "score": 0.8
+        },
+        {
+          "oracle_id": "O4",
+          "pred_id": "O5",
+          "oracle_index": 3,
+          "pred_index": 4,
+          "score": 0.8
+        }
+      ],
+      "unmatched_oracle": [],
+      "unmatched_pred": [
+        "O1",
+        "O8"
+      ],
+      "merged_candidates": [],
+      "split_candidates": [
+        {
+          "oracle_id": "O1",
+          "pred_ids": [
+            "O2",
+            "O1"
+          ]
+        },
+        {
+          "oracle_id": "O3",
+          "pred_ids": [
+            "O4",
+            "O1"
+          ]
+        },
+        {
+          "oracle_id": "O4",
+          "pred_ids": [
+            "O5",
+            "O6"
+          ]
+        },
+        {
+          "oracle_id": "O5",
+          "pred_ids": [
+            "O6",
+            "O5"
+          ]
+        },
+        {
+          "oracle_id": "O6",
+          "pred_ids": [
+            "O7",
+            "O8"
+          ]
+        }
+      ]
+    },
+    "errors": [
+      {
+        "code": "SPURIOUS_OBLIGATION",
+        "detail": "O1"
+      },
+      {
+        "code": "SPURIOUS_OBLIGATION",
+        "detail": "O8"
+      },
+      {
+        "code": "SPLIT_OBLIGATION",
+        "detail": "O1 -> O2,O1"
+      },
+      {
+        "code": "SPLIT_OBLIGATION",
+        "detail": "O3 -> O4,O1"
+      },
+      {
+        "code": "SPLIT_OBLIGATION",
+        "detail": "O6 -> O7,O8"
+      },
+      {
+        "code": "OMITTED_CONSTRAINT",
+        "detail": "O2.result_property"
+      },
+      {
+        "code": "OMITTED_CONSTRAINT",
+        "detail": "O5.condition"
+      },
+      {
+        "code": "OMITTED_CONSTRAINT",
+        "detail": "O4.condition"
+      },
+      {
+        "code": "WRONG_ATTACHMENT",
+        "detail": "condition of O4 on O6"
+      },
+      {
+        "code": "WRONG_ATTACHMENT",
+        "detail": "condition of O5 on O5"
+      }
+    ],
+    "error_counts": {
+      "SPURIOUS_OBLIGATION": 2,
+      "SPLIT_OBLIGATION": 3,
+      "OMITTED_CONSTRAINT": 3,
+      "WRONG_ATTACHMENT": 2
+    },
+    "field_counts": {
+      "locus": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "subject": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0
+      },
+      "subject_interval": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "required_change": {
+        "tp": 4,
+        "fp": 2,
+        "fn": 0
+      },
+      "scope": {
+        "tp": 1,
+        "fp": 4,
+        "fn": 0
+      },
+      "source_relation": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 0
+      },
+      "condition": {
+        "tp": 0,
+        "fp": 1,
+        "fn": 2
+      },
+      "result_property": {
+        "tp": 0,
+        "fp": 2,
+        "fn": 1
+      },
+      "then_after": {
+        "tp": 2,
+        "fp": 3,
+        "fn": 0
+      },
+      "occupancy_filter": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0
+      }
+    },
+    "critical_requirements": [
+      "F_LOCUS",
+      "F_SUBJECT",
+      "F_REQUIRED_CHANGE",
+      "F_SCOPE",
+      "F_CONDITION",
+      "F_RESULT_PROPERTY",
+      "F_THEN"
+    ],
+    "preserved_requirements": [
+      "F_LOCUS",
+      "F_SUBJECT",
+      "F_REQUIRED_CHANGE",
+      "F_SCOPE",
+      "F_THEN"
+    ],
+    "critical_requirement_recall": 0.7143,
+    "all_critical_requirements_preserved": false,
+    "task_spec_preserved": false,
+    "evaluation_ambiguous": [],
+    "loss_n": 3,
+    "invention_n": 2,
+    "boilerplate_as_obligation": false,
+    "workbook_like_hits": [],
+    "span_exact": 47,
+    "span_normalized": 47,
+    "span_total": 47,
+    "complexity": {
+      "task": "15_05",
+      "task_characters": 1478,
+      "task_tokens_est": 248,
+      "n_oracle_obligations": 6,
+      "n_populated_constraint_fields": 22,
+      "n_then_edges": 2,
+      "n_loci": 3,
+      "n_subjects": 6,
+      "longest_clause_characters": 335,
+      "obligation_bucket": "4-6",
+      "composition": "explicit_THEN"
+    }
+  }
+]

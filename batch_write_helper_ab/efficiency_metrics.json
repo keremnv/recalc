@@ -1,0 +1,212 @@
+{
+ "per_task": {
+  "Financial_Model:08_01": {
+   "C0": {
+    "mutation_py_bytes": 20877,
+    "mutation_py_loc": 467,
+    "direct_assignments": 0,
+    "local_write_defs": 1,
+    "mutation_py_execs": 40,
+    "bash_bytes": 20877
+   },
+   "C1": {
+    "mutation_py_bytes": 19864,
+    "mutation_py_loc": 437,
+    "direct_assignments": 1,
+    "local_write_defs": 0,
+    "mutation_py_execs": 38,
+    "bash_bytes": 20374
+   }
+  },
+  "Template:10_01": {
+   "C0": {
+    "mutation_py_bytes": 1696,
+    "mutation_py_loc": 37,
+    "direct_assignments": 14,
+    "local_write_defs": 0,
+    "mutation_py_execs": 4,
+    "bash_bytes": 1696
+   },
+   "C1": {
+    "mutation_py_bytes": 1063,
+    "mutation_py_loc": 30,
+    "direct_assignments": 1,
+    "local_write_defs": 0,
+    "mutation_py_execs": 2,
+    "bash_bytes": 1063
+   }
+  },
+  "Template:15_01": {
+   "C0": {
+    "mutation_py_bytes": 6981,
+    "mutation_py_loc": 156,
+    "direct_assignments": 32,
+    "local_write_defs": 0,
+    "mutation_py_execs": 13,
+    "bash_bytes": 7603
+   },
+   "C1": {
+    "mutation_py_bytes": 1477,
+    "mutation_py_loc": 38,
+    "direct_assignments": 2,
+    "local_write_defs": 0,
+    "mutation_py_execs": 2,
+    "bash_bytes": 1477
+   }
+  },
+  "Template:16_01": {
+   "C0": {
+    "mutation_py_bytes": 1020,
+    "mutation_py_loc": 29,
+    "direct_assignments": 1,
+    "local_write_defs": 0,
+    "mutation_py_execs": 2,
+    "bash_bytes": 1199
+   },
+   "C1": {
+    "mutation_py_bytes": 645,
+    "mutation_py_loc": 26,
+    "direct_assignments": 1,
+    "local_write_defs": 0,
+    "mutation_py_execs": 1,
+    "bash_bytes": 645
+   }
+  },
+  "Debugging:02_01": {
+   "C0": {
+    "mutation_py_bytes": 7949,
+    "mutation_py_loc": 188,
+    "direct_assignments": 7,
+    "local_write_defs": 0,
+    "mutation_py_execs": 16,
+    "bash_bytes": 8587
+   },
+   "C1": {
+    "mutation_py_bytes": 15787,
+    "mutation_py_loc": 384,
+    "direct_assignments": 0,
+    "local_write_defs": 0,
+    "mutation_py_execs": 32,
+    "bash_bytes": 17940
+   }
+  },
+  "Template:03_03": {
+   "C0": {
+    "mutation_py_bytes": 2158,
+    "mutation_py_loc": 61,
+    "direct_assignments": 36,
+    "local_write_defs": 0,
+    "mutation_py_execs": 4,
+    "bash_bytes": 2158
+   },
+   "C1": {
+    "mutation_py_bytes": 1304,
+    "mutation_py_loc": 38,
+    "direct_assignments": 2,
+    "local_write_defs": 0,
+    "mutation_py_execs": 2,
+    "bash_bytes": 1304
+   }
+  },
+  "Debugging:05_08": {
+   "C0": {
+    "mutation_py_bytes": 24307,
+    "mutation_py_loc": 416,
+    "direct_assignments": 0,
+    "local_write_defs": 0,
+    "mutation_py_execs": 38,
+    "bash_bytes": 24307
+   },
+   "C1": {
+    "mutation_py_bytes": 8051,
+    "mutation_py_loc": 179,
+    "direct_assignments": 0,
+    "local_write_defs": 0,
+    "mutation_py_execs": 17,
+    "bash_bytes": 8051
+   }
+  },
+  "Template:05_02": {
+   "C0": {
+    "mutation_py_bytes": 2964,
+    "mutation_py_loc": 102,
+    "direct_assignments": 45,
+    "local_write_defs": 0,
+    "mutation_py_execs": 2,
+    "bash_bytes": 2964
+   },
+   "C1": {
+    "mutation_py_bytes": 496,
+    "mutation_py_loc": 11,
+    "direct_assignments": 0,
+    "local_write_defs": 0,
+    "mutation_py_execs": 1,
+    "bash_bytes": 496
+   }
+  },
+  "Debugging:06_07": {
+   "C0": {
+    "mutation_py_bytes": 6985,
+    "mutation_py_loc": 158,
+    "direct_assignments": 0,
+    "local_write_defs": 0,
+    "mutation_py_execs": 15,
+    "bash_bytes": 7105
+   },
+   "C1": {
+    "mutation_py_bytes": 10787,
+    "mutation_py_loc": 258,
+    "direct_assignments": 0,
+    "local_write_defs": 0,
+    "mutation_py_execs": 25,
+    "bash_bytes": 10891
+   }
+  },
+  "Financial_Model:11_01": {
+   "C0": {
+    "mutation_py_bytes": 3073,
+    "mutation_py_loc": 75,
+    "direct_assignments": 0,
+    "local_write_defs": 0,
+    "mutation_py_execs": 5,
+    "bash_bytes": 7000
+   },
+   "C1": {
+    "mutation_py_bytes": 1046,
+    "mutation_py_loc": 25,
+    "direct_assignments": 0,
+    "local_write_defs": 0,
+    "mutation_py_execs": 1,
+    "bash_bytes": 1287
+   }
+  }
+ },
+ "arm_totals": {
+  "C0": {
+   "mutation_py_bytes": 78010,
+   "mutation_py_loc": 1689,
+   "direct_assignments": 135,
+   "local_write_defs": 1,
+   "mutation_py_execs": 139,
+   "bash_bytes": 83496,
+   "api_calls": 183,
+   "tokens": 4104791,
+   "cost_usd": 0.3980098799999999,
+   "walltime_s": 4763.196907281876,
+   "python_execs": 151
+  },
+  "C1": {
+   "mutation_py_bytes": 60520,
+   "mutation_py_loc": 1426,
+   "direct_assignments": 7,
+   "local_write_defs": 0,
+   "mutation_py_execs": 121,
+   "bash_bytes": 63528,
+   "api_calls": 166,
+   "tokens": 4058278,
+   "cost_usd": 0.3968181,
+   "walltime_s": 5302.911058664322,
+   "python_execs": 122
+  }
+ }
+}

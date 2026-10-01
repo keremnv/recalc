@@ -1,0 +1,377 @@
+{
+ "positive": true,
+ "status": "OK",
+ "signals": {
+  "ERR": {
+   "items": [],
+   "count": 0,
+   "sheets": 0,
+   "types": {},
+   "changed_overlap": 0
+  },
+  "UNIF": {
+   "items": [],
+   "count": 0
+  },
+  "REF": {
+   "items": [
+    {
+     "formula": "NOI_Projection!C15",
+     "blank": "NOI_Projection!C16"
+    },
+    {
+     "formula": "NOI_Projection!C21",
+     "blank": "NOI_Projection!C15"
+    },
+    {
+     "formula": "NOI_Projection!C21",
+     "blank": "NOI_Projection!C16"
+    },
+    {
+     "formula": "NOI_Projection!C22",
+     "blank": "NOI_Projection!C21"
+    },
+    {
+     "formula": "NOI_Projection!C23",
+     "blank": "NOI_Projection!C15"
+    },
+    {
+     "formula": "NOI_Projection!C23",
+     "blank": "NOI_Projection!C16"
+    },
+    {
+     "formula": "NOI_Projection!C23",
+     "blank": "NOI_Projection!C22"
+    },
+    {
+     "formula": "NOI_Projection!C34",
+     "blank": "NOI_Projection!G16"
+    },
+    {
+     "formula": "NOI_Projection!C35",
+     "blank": "NOI_Projection!C34"
+    },
+    {
+     "formula": "NOI_Projection!C36",
+     "blank": "NOI_Projection!C34"
+    },
+    {
+     "formula": "NOI_Projection!C36",
+     "blank": "NOI_Projection!C35"
+    },
+    {
+     "formula": "NOI_Projection!C37",
+     "blank": "NOI_Projection!G22"
+    },
+    {
+     "formula": "NOI_Projection!C38",
+     "blank": "NOI_Projection!C36"
+    },
+    {
+     "formula": "NOI_Projection!C38",
+     "blank": "NOI_Projection!C37"
+    },
+    {
+     "formula": "NOI_Projection!C46",
+     "blank": "NOI_Projection!F38"
+    },
+    {
+     "formula": "NOI_Projection!C47",
+     "blank": "NOI_Projection!C46"
+    },
+    {
+     "formula": "NOI_Projection!C48",
+     "blank": "NOI_Projection!C47"
+    },
+    {
+     "formula": "NOI_Projection!C49",
+     "blank": "NOI_Projection!C47"
+    },
+    {
+     "formula": "NOI_Projection!C49",
+     "blank": "NOI_Projection!C48"
+    },
+    {
+     "formula": "NOI_Projection!D15",
+     "blank": "NOI_Projection!D16"
+    },
+    {
+     "formula": "NOI_Projection!D21",
+     "blank": "NOI_Projection!D15"
+    },
+    {
+     "formula": "NOI_Projection!D21",
+     "blank": "NOI_Projection!D16"
+    },
+    {
+     "formula": "NOI_Projection!D22",
+     "blank": "NOI_Projection!D21"
+    },
+    {
+     "formula": "NOI_Projection!D23",
+     "blank": "NOI_Projection!D15"
+    },
+    {
+     "formula": "NOI_Projection!D23",
+     "blank": "NOI_Projection!D16"
+    },
+    {
+     "formula": "NOI_Projection!D23",
+     "blank": "NOI_Projection!D22"
+    },
+    {
+     "formula": "NOI_Projection!D34",
+     "blank": "NOI_Projection!C34"
+    },
+    {
+     "formula": "NOI_Projection!D35",
+     "blank": "NOI_Projection!D34"
+    },
+    {
+     "formula": "NOI_Projection!D36",
+     "blank": "NOI_Projection!D34"
+    },
+    {
+     "formula": "NOI_Projection!D36",
+     "blank": "NOI_Projection!D35"
+    },
+    {
+     "formula": "NOI_Projection!D37",
+     "blank": "NOI_Projection!C37"
+    },
+    {
+     "formula": "NOI_Projection!D38",
+     "blank": "NOI_Projection!D36"
+    },
+    {
+     "formula": "NOI_Projection!D38",
+     "blank": "NOI_Projection!D37"
+    },
+    {
+     "formula": "NOI_Projection!E15",
+     "blank": "NOI_Projection!E16"
+    },
+    {
+     "formula": "NOI_Projection!E21",
+     "blank": "NOI_Projection!E15"
+    },
+    {
+     "formula": "NOI_Projection!E21",
+     "blank": "NOI_Projection!E16"
+    },
+    {
+     "formula": "NOI_Projection!E22",
+     "blank": "NOI_Projection!E21"
+    },
+    {
+     "formula": "NOI_Projection!E23",
+     "blank": "NOI_Projection!E15"
+    },
+    {
+     "formula": "NOI_Projection!E23",
+     "blank": "NOI_Projection!E16"
+    },
+    {
+     "formula": "NOI_Projection!E23",
+     "blank": "NOI_Projection!E22"
+    },
+    {
+     "formula": "NOI_Projection!E34",
+     "blank": "NOI_Projection!D34"
+    },
+    {
+     "formula": "NOI_Projection!E35",
+     "blank": "NOI_Projection!E34"
+    },
+    {
+     "formula": "NOI_Projection!E36",
+     "blank": "NOI_Projection!E34"
+    },
+    {
+     "formula": "NOI_Projection!E36",
+     "blank": "NOI_Projection!E35"
+    },
+    {
+     "formula": "NOI_Projection!E37",
+     "blank": "NOI_Projection!D37"
+    },
+    {
+     "formula": "NOI_Projection!E38",
+     "blank": "NOI_Projection!E36"
+    },
+    {
+     "formula": "NOI_Projection!E38",
+     "blank": "NOI_Projection!E37"
+    },
+    {
+     "formula": "NOI_Projection!F15",
+     "blank": "NOI_Projection!F16"
+    },
+    {
+     "formula": "NOI_Projection!F21",
+     "blank": "NOI_Projection!F15"
+    },
+    {
+     "formula": "NOI_Projection!F21",
+     "blank": "NOI_Projection!F16"
+    },
+    {
+     "formula": "NOI_Projection!F22",
+     "blank": "NOI_Projection!F21"
+    },
+    {
+     "formula": "NOI_Projection!F23",
+     "blank": "NOI_Projection!F15"
+    },
+    {
+     "formula": "NOI_Projection!F23",
+     "blank": "NOI_Projection!F16"
+    },
+    {
+     "formula": "NOI_Projection!F23",
+     "blank": "NOI_Projection!F22"
+    },
+    {
+     "formula": "NOI_Projection!F34",
+     "blank": "NOI_Projection!E34"
+    },
+    {
+     "formula": "NOI_Projection!F35",
+     "blank": "NOI_Projection!F34"
+    },
+    {
+     "formula": "NOI_Projection!F36",
+     "blank": "NOI_Projection!F34"
+    },
+    {
+     "formula": "NOI_Projection!F36",
+     "blank": "NOI_Projection!F35"
+    },
+    {
+     "formula": "NOI_Projection!F37",
+     "blank": "NOI_Projection!E37"
+    },
+    {
+     "formula": "NOI_Projection!F38",
+     "blank": "NOI_Projection!F36"
+    },
+    {
+     "formula": "NOI_Projection!F38",
+     "blank": "NOI_Projection!F37"
+    },
+    {
+     "formula": "NOI_Projection!G15",
+     "blank": "NOI_Projection!C15"
+    },
+    {
+     "formula": "NOI_Projection!G15",
+     "blank": "NOI_Projection!D15"
+    },
+    {
+     "formula": "NOI_Projection!G15",
+     "blank": "NOI_Projection!E15"
+    },
+    {
+     "formula": "NOI_Projection!G15",
+     "blank": "NOI_Projection!F15"
+    },
+    {
+     "formula": "NOI_Projection!G16",
+     "blank": "NOI_Projection!C16"
+    },
+    {
+     "formula": "NOI_Projection!G16",
+     "blank": "NOI_Projection!D16"
+    },
+    {
+     "formula": "NOI_Projection!G16",
+     "blank": "NOI_Projection!E16"
+    },
+    {
+     "formula": "NOI_Projection!G16",
+     "blank": "NOI_Projection!F16"
+    },
+    {
+     "formula": "NOI_Projection!G21",
+     "blank": "NOI_Projection!C21"
+    },
+    {
+     "formula": "NOI_Projection!G21",
+     "blank": "NOI_Projection!D21"
+    },
+    {
+     "formula": "NOI_Projection!G21",
+     "blank": "NOI_Projection!E21"
+    },
+    {
+     "formula": "NOI_Projection!G21",
+     "blank": "NOI_Projection!F21"
+    },
+    {
+     "formula": "NOI_Projection!G22",
+     "blank": "NOI_Projection!C22"
+    },
+    {
+     "formula": "NOI_Projection!G22",
+     "blank": "NOI_Projection!D22"
+    },
+    {
+     "formula": "NOI_Projection!G22",
+     "blank": "NOI_Projection!E22"
+    },
+    {
+     "formula": "NOI_Projection!G22",
+     "blank": "NOI_Projection!F22"
+    },
+    {
+     "formula": "NOI_Projection!G23",
+     "blank": "NOI_Projection!C23"
+    },
+    {
+     "formula": "NOI_Projection!G23",
+     "blank": "NOI_Projection!D23"
+    },
+    {
+     "formula": "NOI_Projection!G23",
+     "blank": "NOI_Projection!E23"
+    },
+    {
+     "formula": "NOI_Projection!G23",
+     "blank": "NOI_Projection!F23"
+    }
+   ],
+   "count": 81
+  },
+  "CHG": {
+   "changed_cells": 55,
+   "sheets": 1,
+   "regions": [
+    "NOI_Projection!C15",
+    "NOI_Projection!C16",
+    "NOI_Projection!C21",
+    "NOI_Projection!C22",
+    "NOI_Projection!C23",
+    "NOI_Projection!C34",
+    "NOI_Projection!C35",
+    "NOI_Projection!C36",
+    "NOI_Projection!C37",
+    "NOI_Projection!C38",
+    "NOI_Projection!C46",
+    "NOI_Projection!C47",
+    "NOI_Projection!C48",
+    "NOI_Projection!C49",
+    "NOI_Projection!D15",
+    "NOI_Projection!D16",
+    "NOI_Projection!D21",
+    "NOI_Projection!D22",
+    "NOI_Projection!D23",
+    "NOI_Projection!D34"
+   ]
+  }
+ },
+ "dep_context": [],
+ "model_block": "Post-edit verification (mechanical check of the current workbook)\n\nChanged cells: 55 across 1 sheet(s).\n\nNewly blank referenced cells (81):\n- NOI_Projection!C15 now references blank NOI_Projection!C16\n- NOI_Projection!C21 now references blank NOI_Projection!C15\n- NOI_Projection!C21 now references blank NOI_Projection!C16\n- NOI_Projection!C22 now references blank NOI_Projection!C21\n- NOI_Projection!C23 now references blank NOI_Projection!C15\n- NOI_Projection!C23 now references blank NOI_Projection!C16\n- NOI_Projection!C23 now references blank NOI_Projection!C22\n- NOI_Projection!C34 now references blank NOI_Projection!G16\n- NOI_Projection!C35 now references blank NOI_Projection!C34\n- NOI_Projection!C36 now references blank NOI_Projection!C34\n- and 71 more.\n\nThis report is mechanical evidence about the current workbook state.\nReview it before deciding whether to submit or revise.",
+ "positive_families": [
+  "REF"
+ ]
+}

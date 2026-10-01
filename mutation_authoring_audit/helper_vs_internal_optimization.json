@@ -1,0 +1,22 @@
+{
+ "write_cells/write_formulas": {
+  "placement": "MODEL_FACING_JUSTIFIED",
+  "why": "removes agent-authored apply boilerplate (source bytes); runtime cannot author the map"
+ },
+ "fill_value/contiguous fills": {
+  "placement": "INTERNAL_ONLY",
+  "why": "effects heterogeneous; any regularity is execution-side, invisible optimization only"
+ },
+ "translation": {
+  "placement": "NEITHER",
+  "why": "rejected: no homogeneous effect families observed"
+ },
+ "style/number-format copy": {
+  "placement": "NEITHER",
+  "why": "effect confirmation 0.0; agents already use copy.copy"
+ },
+ "load/save boilerplate": {
+  "placement": "NEITHER",
+  "why": "2-4 LOC; hiding file identity risks more than it saves"
+ }
+}

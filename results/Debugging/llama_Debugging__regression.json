@@ -1,0 +1,814 @@
+{
+    "total_tests": 100,
+    "missing_outputs": 99,
+    "regression_accuracy": 0.9951,
+    "modification_accuracy": 0.3188,
+    "accuracy": 0.0,
+    "interaction_turns_stats": {
+        "average": 0.0,
+        "maximum": 0,
+        "minimum": 0
+    },
+    "scores": [
+        {
+            "id": "01_01",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "01_02",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "01_03",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "01_04",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "01_05",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "01_06",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "01_07",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "01_08",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "01_09",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "01_10",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "02_01",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "02_02",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "02_03",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "02_04",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "02_05",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "02_06",
+            "error_message": "Modification error at DCF!C10: answer=0.018, output=0.0254",
+            "regression_accuracy": 0.9951,
+            "modification_accuracy": 0.3188,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "02_07",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "02_08",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "02_09",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "02_10",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "03_01",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "03_02",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "03_03",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "03_04",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "03_05",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "03_06",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "03_07",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "03_08",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "03_09",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "03_10",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "04_01",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "04_02",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "04_03",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "04_04",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "04_05",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "04_06",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "04_07",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "04_08",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "04_09",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "04_10",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "05_01",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "05_02",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "05_03",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "05_04",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "05_05",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "05_06",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "05_07",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "05_08",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "05_09",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "05_10",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "06_01",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "06_02",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "06_03",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "06_04",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "06_05",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "06_06",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "06_07",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "06_08",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "06_09",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "06_10",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "07_01",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "07_02",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "07_03",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "07_04",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "07_05",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "07_06",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "07_07",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "07_08",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "07_09",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "07_10",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "08_01",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "08_02",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "08_03",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "08_04",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "08_05",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "08_06",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "08_07",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "08_08",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "08_09",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "08_10",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "09_01",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "09_02",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "09_03",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "09_04",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "09_05",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "09_06",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "09_07",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "09_08",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "09_09",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "09_10",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "10_01",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "10_02",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "10_03",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "10_04",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "10_05",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "10_06",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "10_07",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "10_08",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "10_09",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        },
+        {
+            "id": "10_10",
+            "error_message": "output file not exist",
+            "regression_accuracy": 0.0,
+            "modification_accuracy": 0.0,
+            "accuracy": 0.0,
+            "interaction_turns": 0
+        }
+    ]
+}

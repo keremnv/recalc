@@ -1,0 +1,10 @@
+{
+  "candidate_B": "frozen",
+  "model_inference": false,
+  "new_agent_syntax": 0,
+  "new_helpers": 0,
+  "production_proxy": false,
+  "prompt_changes": false,
+  "seed": 20260920,
+  "study": "Candidate A narrow transparent interposition"
+}

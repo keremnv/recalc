@@ -1,0 +1,10 @@
+stage,entering,leaving,representation,why
+intensional_plan_to_expanded_memberships,7,78793,set expressions -> cell memberships,SHEET/RECTANGLE/UNION expansion and occupancy filters
+operation_memberships_to_unique_authority,78793,78777,cell sets,16 O6 cells overlap O5; runtime first-owner mapping gives O6 zero owned cells
+authority_to_potential_semantic_units,78777,77011,witnessed groups plus residual cell list,1816 members -> 50 canonicals; 76961 residuals stay cells
+potential_units_to_initial_active_queue,77011,6,one candidate per owned operation,operation-order lazy activation
+queue_replenishment_to_observed_sessions,6,21,single-cell seeds,five O2 then sixteen O3 residuals; earlier operation sorts first each turn
+observed_sessions_to_retrieval_attempts,21,121,bootstrap then up to eight SQL decisions/session,116 retained retrievals plus five discarded on resume
+observed_sessions_to_synthesis_attempts,21,21,complete evidence table per target,one synthesis per observed seed
+synthesis_to_accepted_edits,21,6,concrete formulas,12 provider timeouts; three explicit abstentions; six hard accepts
+accepted_to_writer,6,6,explicit cells/formulas,no translations or dependency additions for these six seeds

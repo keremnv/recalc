@@ -1,0 +1,86 @@
+[
+ {
+  "task": "Financial_Model:17_02",
+  "arm": "H0",
+  "rep": "r2",
+  "rc": 0
+ },
+ {
+  "task": "Financial_Model:17_02",
+  "arm": "H1",
+  "rep": "r2",
+  "rc": 0
+ },
+ {
+  "task": "Template:08_02",
+  "arm": "H0",
+  "rep": "r2",
+  "rc": 0
+ },
+ {
+  "task": "Template:08_02",
+  "arm": "H1",
+  "rep": "r2",
+  "rc": 0
+ },
+ {
+  "task": "Financial_Model:08_01",
+  "arm": "H0",
+  "rep": "r2",
+  "rc": 0
+ },
+ {
+  "task": "Financial_Model:08_01",
+  "arm": "H1",
+  "rep": "r2",
+  "rc": 0
+ },
+ {
+  "task": "Financial_Model:15_04",
+  "arm": "H0",
+  "rep": "r2",
+  "rc": 0
+ },
+ {
+  "task": "Financial_Model:15_04",
+  "arm": "H1",
+  "rep": "r2",
+  "rc": 0
+ },
+ {
+  "task": "Template:02_05",
+  "arm": "H0",
+  "rep": "r2",
+  "rc": 0
+ },
+ {
+  "task": "Template:02_05",
+  "arm": "H1",
+  "rep": "r2",
+  "rc": 0
+ },
+ {
+  "task": "Template:13_08",
+  "arm": "H0",
+  "rep": "r2",
+  "rc": 0
+ },
+ {
+  "task": "Template:13_08",
+  "arm": "H1",
+  "rep": "r2",
+  "rc": 0
+ },
+ {
+  "task": "Template:16_06",
+  "arm": "H0",
+  "rep": "r2",
+  "rc": 0
+ },
+ {
+  "task": "Template:16_06",
+  "arm": "H1",
+  "rep": "r2",
+  "rc": 0
+ }
+]

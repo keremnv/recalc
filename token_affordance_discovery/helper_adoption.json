@@ -1,0 +1,507 @@
+{
+  "by_arm": {
+    "A": {
+      "helper_command_calls": 0,
+      "runs_with_helper_call_syntax": 0,
+      "runs_with_import_attempt": 0
+    },
+    "B": {
+      "helper_command_calls": 0,
+      "runs_with_helper_call_syntax": 0,
+      "runs_with_import_attempt": 0
+    },
+    "C": {
+      "helper_command_calls": 0,
+      "runs_with_helper_call_syntax": 0,
+      "runs_with_import_attempt": 0
+    },
+    "D": {
+      "helper_command_calls": 0,
+      "runs_with_helper_call_syntax": 0,
+      "runs_with_import_attempt": 1
+    }
+  },
+  "limit": "Syntax and command exit status are proxies; transcript audit is required for successful import, useful helper output, and displacement.",
+  "rows": [
+    {
+      "arm": "B",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Financial_Model:03_03"
+    },
+    {
+      "arm": "C",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Financial_Model:03_03"
+    },
+    {
+      "arm": "A",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Financial_Model:03_03"
+    },
+    {
+      "arm": "D",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Financial_Model:03_03"
+    },
+    {
+      "arm": "C",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Debugging:10_10"
+    },
+    {
+      "arm": "A",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Debugging:10_10"
+    },
+    {
+      "arm": "B",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Debugging:10_10"
+    },
+    {
+      "arm": "D",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Debugging:10_10"
+    },
+    {
+      "arm": "D",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 2,
+      "import_command_failures": 0,
+      "task": "Debugging:01_08"
+    },
+    {
+      "arm": "C",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Debugging:01_08"
+    },
+    {
+      "arm": "A",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Debugging:01_08"
+    },
+    {
+      "arm": "B",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Debugging:01_08"
+    },
+    {
+      "arm": "A",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Template:01_07"
+    },
+    {
+      "arm": "C",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Template:01_07"
+    },
+    {
+      "arm": "D",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Template:01_07"
+    },
+    {
+      "arm": "B",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Template:01_07"
+    },
+    {
+      "arm": "A",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Debugging:02_01"
+    },
+    {
+      "arm": "D",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Debugging:02_01"
+    },
+    {
+      "arm": "C",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Debugging:02_01"
+    },
+    {
+      "arm": "B",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Debugging:02_01"
+    },
+    {
+      "arm": "C",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Financial_Model:02_01"
+    },
+    {
+      "arm": "A",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Financial_Model:02_01"
+    },
+    {
+      "arm": "D",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Financial_Model:02_01"
+    },
+    {
+      "arm": "B",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Financial_Model:02_01"
+    },
+    {
+      "arm": "B",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Template:06_12"
+    },
+    {
+      "arm": "D",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Template:06_12"
+    },
+    {
+      "arm": "A",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Template:06_12"
+    },
+    {
+      "arm": "C",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Template:06_12"
+    },
+    {
+      "arm": "D",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Debugging:02_06"
+    },
+    {
+      "arm": "B",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Debugging:02_06"
+    },
+    {
+      "arm": "C",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Debugging:02_06"
+    },
+    {
+      "arm": "A",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Debugging:02_06"
+    },
+    {
+      "arm": "A",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Financial_Model:01_01"
+    },
+    {
+      "arm": "D",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Financial_Model:01_01"
+    },
+    {
+      "arm": "C",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Financial_Model:01_01"
+    },
+    {
+      "arm": "B",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Financial_Model:01_01"
+    },
+    {
+      "arm": "B",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Template:15_01"
+    },
+    {
+      "arm": "C",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Template:15_01"
+    },
+    {
+      "arm": "D",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Template:15_01"
+    },
+    {
+      "arm": "A",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Template:15_01"
+    },
+    {
+      "arm": "D",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Financial_Model:04_03"
+    },
+    {
+      "arm": "C",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Financial_Model:04_03"
+    },
+    {
+      "arm": "A",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Financial_Model:04_03"
+    },
+    {
+      "arm": "B",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Financial_Model:04_03"
+    },
+    {
+      "arm": "A",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Template:15_03"
+    },
+    {
+      "arm": "C",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Template:15_03"
+    },
+    {
+      "arm": "D",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Template:15_03"
+    },
+    {
+      "arm": "B",
+      "displacement_mechanically_proven": false,
+      "helper_command_calls": [],
+      "helper_function_call_syntax": {},
+      "helper_output_bytes_proxy": 0,
+      "import_attempts": 0,
+      "import_command_failures": 0,
+      "task": "Template:15_03"
+    }
+  ]
+}

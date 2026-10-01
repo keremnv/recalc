@@ -1,0 +1,45 @@
+{
+ "by_tool": {
+  "view_xlsx": {
+   "tok": 1026817,
+   "n": 37,
+   "p2": 983112.8000000003
+  },
+  "python": {
+   "tok": 4043083,
+   "n": 119,
+   "p2": 3801841.3
+  },
+  "shell": {
+   "tok": 35663,
+   "n": 6,
+   "p2": 19022.5
+  }
+ },
+ "by_shape": {
+  "FORMULA_DUMP": {
+   "tok": 655651,
+   "n": 18
+  },
+  "WHOLE_WORKBOOK_SCAN": {
+   "tok": 3914346,
+   "n": 109
+  },
+  "WHOLE_SHEET_SCAN": {
+   "tok": 417770,
+   "n": 22
+  },
+  "LARGE_RANGE_SCAN": {
+   "tok": 88444,
+   "n": 8
+  },
+  "OTHER_BROAD_PROJECTION": {
+   "tok": 21632,
+   "n": 4
+  },
+  "MULTI_SHEET_ENUMERATION_WITH_VALUES": {
+   "tok": 7720,
+   "n": 1
+  }
+ }
+}

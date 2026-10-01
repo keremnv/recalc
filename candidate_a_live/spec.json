@@ -1,0 +1,22 @@
+{
+  "experiment": "first live causal treatment for Candidate A",
+  "inference": "model inference was run for six primary task pairs plus one targeted matched replication",
+  "model_surface_identical": true,
+  "treatment_difference": "CANDIDATE_A_ARM=H1 enables only the frozen primitive formula-mode interposition path",
+  "control": "H0 ordinary openpyxl reads with common transparent runtime/substrate maintenance",
+  "treatment": "H1 same scaffold and prompts with safe primitive reads served from the already-maintained compiled substrate",
+  "candidate_b": "frozen; not implemented or tested",
+  "primary_population_n": 6,
+  "primary_runs": 12,
+  "targeted_replication": {
+    "task_id": "Financial_Model:08_03",
+    "reason": "primary output/no-output discordance",
+    "runs": 2,
+    "order": ["H1", "H0"]
+  },
+  "selection_rule": "top six exposure-enriched tasks from frozen Census ranking: safe primitive-read events, repeated-open surplus, safe execution count, task ID",
+  "shared_substrate_economics": true,
+  "direct_read_open_timing_instrumented": false,
+  "primary_verdict": "LIVE_A_CONTACT_INSUFFICIENT",
+  "interpretation": "two independent primary FM tasks contacted H1 and showed clean reliability plus lower deterministic tool-walltime proxies; the required three-task live contact gate did not pass, and direct workbook-read/open time was not isolated"
+}
