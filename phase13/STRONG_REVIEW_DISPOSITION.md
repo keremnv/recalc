@@ -133,7 +133,8 @@ defect, color-task flagging, C4/C6/C7/C8 classifications.
 ## Net effect on the verdict
 
 C (MODEL CAPABILITY LIMIT) **holds** with stronger numbers:
-reasoning family (L5+L4) 74% of P1 mod loss with evidence in
+reasoning family (L5+L4) ~81% of P1 mod loss (33.39 / 41.4766;
+L5 28.13 ≈ 68%, L4 5.26 ≈ 13%) with evidence in
 context; UNALLOCATED 14% (bounded, UNSCORABLE-interior); L0/L6
 explained 6%/~0%; tight-regime D-mass unchanged in shape
 (26 never-submit, budget artifact, Stage-B null stands). No
