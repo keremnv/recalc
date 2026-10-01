@@ -1,27 +1,101 @@
 # librecalc-agent
 
-Run workbook tasks written in ordinary Python/openpyxl — with an optional
-runtime underneath that can accelerate narrow reads, and an external observer
-that records what happened.
+An agent-native application substrate for spreadsheet work.
 
-> **ordinary Python, conditionally accelerated, externally observed**
-
-Your scripts stay normal `.py` files using normal `openpyxl`. There is no new
-workbook API to learn, no model account to configure, and no network access.
-This package runs a script, optionally serves some of its reads from a derived
-cache, watches the workbooks before and after, and writes a receipt separating
-*what your script did* (target status) from *what was observed and checked*
-(assurance status).
+The substrate offers two things. First, efficiency on a narrow path:
+supported repeated reads can reuse persistent, validated derived workbook
+state instead of paying the full normal parsing path again — while anything
+unsupported or uncertain falls back to ordinary reference execution.
+Second, execution transparency: an external observer, running outside the
+agent/script process, records what ran, whether fallback occurred, what
+workbook effects occurred, and whether changed workbook state passed
+mechanical assurance — keeping the script's own outcome (target status)
+separate from the post-state check (assurance status). The agent-facing
+surface stays ordinary Python files using ordinary `openpyxl`, with no new
+workbook API to learn.
 
 This is release candidate `0.2.0rc2`, Linux-first. It is not published to an
-index. See [CHANGELOG.md](CHANGELOG.md) and
-[docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md) for the
-exact boundary of what is established, what is conditional, and what is not
-claimed.
+index. The exact boundary of what is established, what is conditional, and
+what is not claimed is [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md).
 
-## Install
+## Substrate diagram
 
-Linux x86_64, CPython 3.13 (3.11–3.14 accepted, 3.13 tested), local filesystem:
+```text
+                    AGENT-WRITTEN PROGRAM
+                            │
+                   existing interface
+                    (plain openpyxl)
+                            │
+        ┌───────────────────┴───────────────────┐
+        │          APPLICATION SUBSTRATE         │
+        │                                       │
+        │   EXECUTION              OBSERVATION   │
+        │                                       │
+        │   admission              before state  │
+        │      ↓                       ↓         │
+        │   validated              run observed  │
+        │   derived state              ↓         │
+        │      ↓                   after state   │
+        │   supported reads            ↓         │
+        │      │                   effect capture│
+        │      └─ reference fallback   ↓         │
+        │                          validation    │
+        │                               ↓        │
+        │                            receipt     │
+        └───────────────────┬───────────────────┘
+                            │
+                         WORKBOOK
+```
+
+The agent-facing surface is the normal program and its existing interface.
+The substrate underneath has two independent sides: execution, which may
+serve supported reads from validated derived state or fall back to the
+reference path; and observation, which watches workbook state before and
+after the run and records the outcome in a receipt. Neither side requires
+a LibreCalc-specific workbook-intent API: the execution side changes how
+supported reads may be served, while observation records what happened
+around the run.
+
+## What the substrate adds
+
+Relative to running the same script directly with plain Python/openpyxl:
+
+| Reference/plain execution | With LibreCalc substrate |
+| --- | --- |
+| workbook follows normal load path | supported warm reads can reuse validated derived state |
+| execution outcome is primarily process status/output | workbook effects are independently observed |
+| unsupported optimization would otherwise require special handling | uncertain/unsupported paths use reference behavior |
+| state reuse/freshness is not supplied by the execution layer | derived state is content-addressed and rebuilt when invalid |
+| execution and post-state assurance are not separated | target and assurance outcomes are reported separately |
+
+Nothing here replaces ordinary execution: the reference path remains
+available through conservative admission and lazy fallback, and scripts
+that never touch the supported surface use reference openpyxl behavior,
+with the launcher and observer still surrounding execution.
+
+## Current evidence snapshot
+
+Product evidence for `0.2.0rc2` only. All timing figures are host- and
+run-sensitive; the validation host is recorded in
+[docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md).
+
+| Observation | Scope |
+| --- | --- |
+| 543 / 543 oracle rows show exit/stream/state parity with plain Python | ordinary execution surface |
+| 0.608× median vs plain Python on warm direct-contact workloads | 7 frozen representative workloads, warm reuse only |
+| 1.04–1.12× plain Python on cold direct-contact runs: no cold acceleration | cold runs; first invocation builds state |
+| 5 frozen changed-file fixtures: changed-XLSX detection, mechanical validation, delta replay | changed-file capture/assurance |
+
+In short: warm direct-contact acceleration is real on the tested narrow
+surface; cold state construction produces no speedup; the normal execution
+surface has been parity-tested; and assurance is mechanical — it checks
+what the change is and that it replayed, never whether the change is what
+the task wanted.
+
+## Quick start
+
+Linux x86_64, CPython 3.13 (3.11–3.14 accepted, 3.13 tested), local
+filesystem:
 
 ```bash
 python3 -m venv .venv-product
@@ -35,8 +109,6 @@ Installing from a built wheel needs no compiler; building from source needs
 `cc` for two small C files. See [COMPATIBILITY.md](COMPATIBILITY.md) for the
 supported baseline.
 
-## Quick start
-
 ```bash
 librecalc-agent example /tmp/librecalc-example
 cd /tmp/librecalc-example
@@ -49,6 +121,56 @@ librecalc-agent status
 `example` copies three ordinary scripts (`create_input.py`, `update.py`,
 `read.py`) plus a commented `runtime.toml`. `run` executes a script and prints
 its normal output; `status` shows the last receipt.
+
+## How it works
+
+### Before: admission, identity, observation setup
+
+- **Admission/eligibility.** A conservative whole-script check (static
+  admission) decides whether the script qualifies for the direct read path.
+  Uncertain or unsupported scripts are routed to ordinary openpyxl without
+  ever loading the direct runtime.
+- **Source/workbook identity.** Derived state is keyed by whole-file SHA-256
+  plus runtime/decoder/contract/format versions, so a changed workbook or a
+  new package version rebuilds instead of serving stale data.
+- **Validated reuse or rebuild.** A matching artifact is validated before
+  serving; corrupt, missing, stale, or incompatible entries rebuild, and a
+  second source hash at first load closes the bootstrap-to-script race.
+- **Pre-run observation.** The external observer snapshots workbook bytes
+  before launch.
+
+### During: one ordinary execution
+
+- The script executes once in a real interpreter, with stdout, stderr, argv,
+  cwd, and exit status preserved. The harness does not rerun failed scripts,
+  and `python task.py` remains valid for reference execution.
+- Supported direct reads — sheet names and literal lookup, worksheet
+  bounds/dimensions, literal/integer cell access, cell value and data type —
+  may be served from the persistent derived artifact instead of running the
+  normal workbook parser for that load.
+- Anything outside that narrow surface — unsupported load options,
+  iteration, rich objects, writes, uncertain syntax — runs on real openpyxl
+  through lazy reference fallback, and the fallback is recorded in the
+  receipt.
+
+### After: observation, capture, receipt
+
+- Final workbook state is observed: the native parent waits for the real
+  script process (surviving tested abrupt exits such as `os._exit`, SIGTERM,
+  and exceptions), then snapshots again.
+- Changed files may be captured: only when bytes changed and capture is
+  enabled, a capture helper derives a package-level delta and mechanically
+  validates it (persisted, serialization valid, relationships preserved,
+  captured == committed, replay reproduces the parts).
+- Effects are mechanically validated and replayed where supported; full
+  details are in [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md).
+- The receipt records two outcomes separately: **target status** (the
+  script's exit code / signal) and **assurance status** (`PASS`, `FAILED`,
+  or `NOT_REQUESTED`).
+
+The supported read surface and fallback boundaries above are the contract.
+There is no broad openpyxl-equivalence claim: proxy objects support the
+narrow contract only (no identity, repr, style, or escape equivalence).
 
 ## Public commands
 
@@ -65,50 +187,28 @@ the script filename; anything after it is passed to the script.
 
 ## Ordinary Python execution
 
-Scripts are ordinary Python files executed once in a real interpreter, with
-stdout, stderr, argv, cwd, and exit status preserved. The harness does not rerun
-failed scripts. `python task.py` remains valid for reference execution. The
-runtime is scoped to the script launched by `run`; nested interpreters and
-other Python processes are unaffected.
+Scripts are ordinary Python files. The runtime is scoped to the script
+launched by `run`; nested interpreters and other Python processes are
+unaffected.
 
-## How acceleration works
+## Direct reads and fallback
 
-No extra workbook API is required. Before launch, a conservative whole-script
-check (static admission) decides whether the script qualifies for the direct
-read path:
+No extra workbook API is required. As described above, static admission
+routes each script before launch: uncertain or unsupported scripts never
+load the direct runtime, while admitted scripts may have supported reads
+served from the persistent derived artifact.
 
-- **Negative admission** (uncertain or unsupported scripts): the direct runtime
-  is never loaded. The script runs on ordinary openpyxl. An external observer
-  still records the run.
-- **Positive admission**: supported reads — sheet names and literal lookup,
-  worksheet bounds/dimensions, literal/integer cell access, cell value and
-  data type — can be served from a persistent derived artifact instead of
-  running the normal workbook parser for that load.
-
-Anything outside that narrow surface — unsupported load options, iteration,
-rich objects, writes, uncertain syntax — runs on real openpyxl through lazy
-reference fallback, and the fallback is recorded in the receipt. Derived state
-is keyed by whole-file SHA-256 plus runtime/decoder/contract/format versions;
-a changed workbook or a new package version rebuilds instead of serving stale
-data. There is no broad openpyxl-equivalence claim: proxy objects support the
-narrow contract only (no identity, repr, style, or escape equivalence).
+Unsupported load modes, proxy escapes, iteration, and artifact/decoder
+failures lazily use real openpyxl and are recorded in the receipt.
+Representative fallback-after-contact behavior is covered by tests.
 
 Cold runs are not accelerated: the first invocation builds state. Writes are
 not accelerated. No token, cost, or benchmark-score claim is made.
 
 ## Effect observation
 
-An external native process observes each run: it snapshots workbook bytes
-before launch, waits for the real script process, snapshots again, and — only
-when bytes changed and capture is enabled — runs a capture helper that derives
-a package-level delta and mechanically validates it (persisted, serialization
-valid, relationships preserved, captured == committed, replay reproduces the
-parts).
-
-The receipt keeps two outcomes distinct:
-
-- **target status**: the script's exit code / signal.
-- **assurance status**: `PASS`, `FAILED`, or `NOT_REQUESTED`.
+Observation covers recursive `*.xlsx` under the workdir, up to 1,000 files /
+512 MiB aggregate.
 
 Capture is assurance, not a correctness verdict: it records what the script
 produced and checks the mechanics of the change; it never judges whether the
@@ -117,10 +217,6 @@ runtime (`--no-runtime`) reports `NOT_REQUESTED` and never implies validation.
 If assurance fails while the script succeeded, the command exits `125`; if the
 script failed, its own status is preserved and assurance failure stays visible
 in the receipt.
-
-The observer survives tested abrupt exits (`os._exit`, SIGTERM, exceptions)
-so post-state is still examined. Observation covers recursive `*.xlsx` under
-the workdir, up to 1,000 files / 512 MiB aggregate.
 
 ## Cache
 
@@ -185,21 +281,6 @@ result. `--require-libreoffice` (on `doctor` and `run`) makes LibreOffice
 absence a preflight failure; it does not recalculate anything. No UNO bindings
 are required.
 
-## Limitations
-
-- Linux x86_64 with glibc, CPython 3.13 tested; local filesystems only.
-  macOS is future fast-follow, Windows a separate port. Neither is supported.
-- Narrow direct-read semantics; no broad openpyxl equivalence.
-- No universal speedup. Reference-only scripts pay a small measured wrapper
-  cost; cold runs are not faster; writes are not accelerated.
-- No token, model-cost, or benchmark-score claims.
-- Effect capture is mechanical assurance, not task-correctness certification.
-- One writer per task directory; concurrently edited script sources are
-  unsupported. This is not a sandbox: scripts run with your permissions.
-- No automatic cache eviction (manual deletion documented above).
-
-The full boundary is [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md).
-
 ## Uninstall / cleanup
 
 ```bash
@@ -221,6 +302,77 @@ helpers are invoked by exact path with no shell. See
 [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md) for scope:
 this review is bounded behavior, not a formal certification — and the harness
 is not a sandbox.
+
+## Why this shape?
+
+This architecture was reached empirically rather than imposed as a doctrine.
+The underlying idea is simple: preserve a compositional application
+interface, and place mechanically exact infrastructure underneath it when the
+evidence supports doing so.
+
+During the research program, richer agent-facing structures around
+context, planning, querying, execution, and verification were tested
+rather than assumed beneficial; they generally did not establish enough
+task-level benefit to justify becoming required interface structure.
+Narrower deterministic mechanisms were retained where the evidence
+supported them, and semantic abstractions remain hypotheses rather than
+presumed improvements.
+
+That is a statement about this project's evidence, not a universal rule for
+agent systems. The research record is summarized below; it exists to explain
+the shape, not to relitigate every experiment on this page.
+
+## Evidence and limitations
+
+The claim boundary for this candidate:
+
+- no universal speedup claim;
+- no cold acceleration claim;
+- no write acceleration claim;
+- no token/model-cost claim;
+- no benchmark-score improvement claim;
+- no task correctness/output certification claim;
+- no broad openpyxl-equivalence claim;
+- timing measurements are host/run-sensitive and never averaged across hosts.
+
+Product limits also include: Linux x86_64 with glibc, CPython 3.13 tested;
+local filesystems only; macOS is future fast-follow, Windows a separate port
+(neither supported); one writer per task directory with concurrently edited
+script sources unsupported; no automatic cache eviction; and no sandbox —
+scripts run with your permissions.
+
+The full boundary is [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md).
+
+## Research background
+
+The architecture emerged from experiments around access/read cost, context
+representation, planning/authority, execution mechanisms, verification,
+evaluation state, and residual failure analysis. The durable outcomes were:
+a narrow direct-read path exact enough to productize, an external observer
+worth keeping as assurance, and a set of richer abstractions that did not
+earn a place in the required interface.
+
+The most useful synthesis and decision documents are:
+
+- [phase13/PROGRAM_SYNTHESIS.md](phase13/PROGRAM_SYNTHESIS.md) — causal map
+  of where the loss boundary moved and why.
+- [phase13/ARCHITECTURE_DECISION_LEDGER.md](phase13/ARCHITECTURE_DECISION_LEDGER.md) —
+  adopted/rejected choices with evidence, scope, and reopen conditions.
+- [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md) —
+  the current product claim boundary.
+
+Research supports the architecture; it is not the product. Historical
+records may contain superseded wording and must not be quoted as product
+claims.
+
+## Product and release status
+
+`librecalc-agent 0.2.0rc2` is a Linux-first release candidate, not yet
+published to an index, with the license decision still open (see
+[CHANGELOG.md](CHANGELOG.md)). The tested baseline is Linux x86_64 with
+glibc, CPython 3.13, pinned `openpyxl`/`lxml`, and a local filesystem; see
+[COMPATIBILITY.md](COMPATIBILITY.md) for the full supported/tested boundary,
+including the macOS fast-follow and Windows separate-port posture.
 
 ## Repository map
 
