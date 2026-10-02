@@ -27,6 +27,10 @@ release-candidate/
 # Regenerated run bulk must not be recommitted; reports, manifests,
 # and compact evidence at experiment roots stay tracked.
 **/runs/
+**/*_runs/
+**/runs_*/
+**/reps_r*/
+**/reps_replication/
 **/work/
 **/reps/
 **/reps_preserved*/
