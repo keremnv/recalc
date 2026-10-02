@@ -18,6 +18,8 @@ No new agent API: scripts still write ordinary openpyxl. `iter_cols`,
   `research/full_cell_iteration_product_confirmation/REPORT.md`.
 - Narrow exception-parity fix: missing-sheet lookup now raises the exact
   pinned-openpyxl `KeyError("Worksheet {name} does not exist.")`.
+- Read-artifact keys rotate with the version bump by design, so rc3
+  artifacts rebuild once on first rc4 touch (cold cost only).
 - No cold-acceleration, write-acceleration, token-saving, or broad
   openpyxl-equivalence claim is added.
 
