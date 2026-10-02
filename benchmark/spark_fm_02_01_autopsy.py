@@ -35,8 +35,8 @@ TASK_DIR = RUN_ROOT / "Financial_Model-02_01"
 DATA_ROOT = ROOT / "benchmark-data/SpreadsheetBench-2/data"
 INPUT_XLSX = DATA_ROOT / "Financial_Model/spreadsheet/02_Project PP/02_01_PP_input.xlsx"
 GOLD_XLSX = DATA_ROOT / "Financial_Model/spreadsheet/02_Project PP/02_PP_golden.xlsx"
-OUT_JSON = ROOT / "spark_fm_02_01_autopsy.json"
-OUT_CSV = ROOT / "spark_fm_02_01_autopsy.csv"
+OUT_JSON = ROOT / "research/history/loose_evidence/spark_fm_02_01_autopsy.json"
+OUT_CSV = ROOT / "research/history/loose_evidence/spark_fm_02_01_autopsy.csv"
 CELL_RE = re.compile(r"cell:s(\d+):r(\d+):c(\d+)")
 
 

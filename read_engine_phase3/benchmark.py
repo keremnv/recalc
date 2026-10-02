@@ -42,7 +42,7 @@ def verify() -> dict:
     if safe_artifact.sha_file(HERE / "population.json") != POP_SHA:
         raise RuntimeError("Phase-3 population changed")
     for name, digest in FROZEN.items():
-        if safe_artifact.sha_file(ROOT / "rc_acceleration_validation" / name) != digest:
+        if safe_artifact.sha_file(ROOT / "research/history/rc_acceleration_validation" / name) != digest:
             raise RuntimeError(f"Frozen RC source changed: {name}")
     if safe_artifact.sha_file(ROOT / "read_engine_phase1/prototype.py") != safe_artifact.DECODER:
         raise RuntimeError("Phase-1 decoder changed")

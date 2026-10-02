@@ -18,7 +18,7 @@ from pathlib import Path
 import tiktoken
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "token_claim_discovery"
+OUT = ROOT / "research/history/token_claim_discovery"
 ARMS = "ABCD"
 FAMILIES = ("Template", "Financial_Model", "Debugging")
 ENC = tiktoken.get_encoding("cl100k_base")

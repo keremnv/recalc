@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "rc_acceleration_validation"
+OUT = ROOT / "research/history/rc_acceleration_validation"
 
 
 def sha(path: Path):
@@ -51,8 +51,8 @@ def main():
     }
     (OUT / "measurement_integrity.json").write_text(json.dumps(integrity, indent=2, sort_keys=True) + "\n")
     names = [
-        "RC_ACCELERATION_CLAIM_VALIDATION_REPORT.md", "FINAL_CLAIM_REGISTRY.md",
-        "RESEARCH_RECORD_FREEZE.md", "CLAIM_BACKLOG.md", "FINAL_PRESENTATION_HANDOFF.md",
+        "research/reports/RC_ACCELERATION_CLAIM_VALIDATION_REPORT.md", "research/reports/FINAL_CLAIM_REGISTRY.md",
+        "research/reports/RESEARCH_RECORD_FREEZE.md", "research/reports/CLAIM_BACKLOG.md", "research/reports/FINAL_PRESENTATION_HANDOFF.md",
     ]
     artifact_hashes = {p.name: sha(p) for p in sorted(OUT.iterdir())
                        if p.is_file() and p.name != "final_result_hash_manifest.json"}

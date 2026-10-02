@@ -7,8 +7,8 @@ from collections import Counter
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/"token_claim_discovery/historical_token_summary.json"
-REG=ROOT/"product_hygiene/future_claim_evidence_registry.json"
+OUT=ROOT/"research/history/token_claim_discovery/historical_token_summary.json"
+REG=ROOT/"research/history/product_hygiene/future_claim_evidence_registry.json"
 
 
 def load(path):return json.loads((ROOT/path).read_text())
@@ -28,7 +28,7 @@ def run_stats(items,control="H0",treat="H1",effkey="efficiency"):
 
 
 def main():
-    reg=load("product_hygiene/future_claim_evidence_registry.json")
+    reg=load("research/history/product_hygiene/future_claim_evidence_registry.json")
     rows=[]
     for r in reg["rows"]:
         if r.get("scope") not in ("aggregate","ALL","A-representative","B-exposure"):
@@ -51,7 +51,7 @@ def main():
              "interpretation":"DESCRIPTIVE_ASSOCIATION; no current RC causal attribution"}
         e=r["experiment"]
         if e.startswith("Thin architecture checkpoint"):
-            data=load("thin_architecture_checkpoint/efficiency_metrics.json")
+            data=load("research/history/thin_architecture_checkpoint/efficiency_metrics.json")
             cohort=r["scope"]
             a=data[f"{cohort}_H0"];b=data[f"{cohort}_H1"]
             row["calls"]={"control":a["api_calls"],"treatment":b["api_calls"]}
@@ -59,18 +59,18 @@ def main():
                                "control_outputs":a["outputs"],"treatment_outputs":b["outputs"]}
             row["helper_adoption"]="A-representative/nonadopter and B-exposure cohorts split in source; not randomized helper uptake"
         elif e=="Inspection efficiency Stage B":
-            d=load("inspection_efficiency_ab/efficiency_metrics.json")["inspection_work"]
+            d=load("research/history/inspection_efficiency_ab/efficiency_metrics.json")["inspection_work"]
             row["calls"]={"control":d["C0"]["api_calls"],"treatment":d["C1"]["api_calls"]}
-            items=[load(str(Path(p).relative_to(ROOT))) for p in glob.glob(str(ROOT/"inspection_efficiency_ab/reps/*/run_record.json"))]
+            items=[load(str(Path(p).relative_to(ROOT))) for p in glob.glob(str(ROOT/"research/history/inspection_efficiency_ab/reps/*/run_record.json"))]
             stats=run_stats(items,"C0","C1")
             row["completion"]={"control_submitted":stats["C0"]["submitted"],"treatment_submitted":stats["C1"]["submitted"]}
             row["helper_adoption"]="Variable adoption; stage includes repeated discordant pairs"
         elif e=="Batch-write helpers":
-            d=load("batch_write_helper_ab/efficiency_metrics.json")["arm_totals"]
+            d=load("research/history/batch_write_helper_ab/efficiency_metrics.json")["arm_totals"]
             row["calls"]={"control":d["C0"]["api_calls"],"treatment":d["C1"]["api_calls"]}
             row["helper_adoption"]="0/13 treatment runs invoked rejected batch-write helper"
         elif e=="Default-harness deterministic execution":
-            d=load("architecture_transfer_audit/control_efficiency_census.json")["deterministic_execution_glm"]
+            d=load("research/history/architecture_transfer_audit/control_efficiency_census.json")["deterministic_execution_glm"]
             row["calls"]={"control":d["C0"]["calls"],"treatment":d["C1"]["calls"]}
             row["helper_adoption"]="deterministic executor invoked zero times"
         elif e in ("candidate_a_live","candidate_a_a1_checkpoint_rerun_01"):
@@ -91,7 +91,7 @@ def main():
             row["helper_adoption"]="No model-facing helper-factor treatment; invisible Candidate A varies"
         elif e in ("representative_architecture_checkpoint","representative_architecture_checkpoint_replication"):
             folder="reps" if e=="representative_architecture_checkpoint" else "reps_replication"
-            items=[load(str(Path(p).relative_to(ROOT))) for p in glob.glob(str(ROOT/f"representative_architecture_checkpoint/{folder}/*/run_record.json"))]
+            items=[load(str(Path(p).relative_to(ROOT))) for p in glob.glob(str(ROOT/f"research/history/representative_architecture_checkpoint/{folder}/*/run_record.json"))]
             stats=run_stats(items)
             row["calls"]={"control":stats["H0"]["calls"],"treatment":stats["H1"]["calls"]}
             row["completion"]={"control_submitted":stats["H0"]["submitted"],"treatment_submitted":stats["H1"]["submitted"]}
@@ -100,7 +100,7 @@ def main():
             row["status_counts"]={"control":stats["H0"]["statuses"],"treatment":stats["H1"]["statuses"]}
             row["helper_adoption"]="Helper surface fixed across arms; sparse use"
         elif e in ("live_transparent_runtime_ab","targeted_runtime_replication"):
-            pattern="live_transparent_runtime_ab/runs/**/run_record.json" if e=="live_transparent_runtime_ab" else "targeted_runtime_replication/reps/**/run_record.json"
+            pattern="research/history/live_transparent_runtime_ab/runs/**/run_record.json" if e=="live_transparent_runtime_ab" else "research/history/targeted_runtime_replication/reps/**/run_record.json"
             items=[load(str(Path(p).relative_to(ROOT))) for p in glob.glob(str(ROOT/pattern),recursive=True)]
             stats=run_stats(items)
             row["calls"]={"control":stats["H0"]["calls"],"treatment":stats["H1"]["calls"]}

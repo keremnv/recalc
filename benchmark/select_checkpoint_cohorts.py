@@ -11,7 +11,7 @@ from collections import defaultdict
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-OUT = PROJECT_ROOT / "thin_architecture_checkpoint"
+OUT = PROJECT_ROOT / "research/history/thin_architecture_checkpoint"
 DATA = PROJECT_ROOT / "benchmark-data" / "SpreadsheetBench-2" / "data"
 SEED = 20260919
 
@@ -39,9 +39,9 @@ def cohort_a(tasks: dict[str, list[str]]) -> dict[str, list[str]]:
 
 def exposure_ranking() -> list[dict]:
     ex = [json.loads(l) for l in
-          open(PROJECT_ROOT / "control_python_audit" / "python_executions.jsonl")]
+          open(PROJECT_ROOT / "research/history/control_python_audit" / "python_executions.jsonl")]
     labels = {}
-    for line in open(PROJECT_ROOT / "control_python_audit" / "purpose_classification.jsonl"):
+    for line in open(PROJECT_ROOT / "research/history/control_python_audit" / "purpose_classification.jsonl"):
         p = json.loads(line)
         labels[p["exec_id"]] = p["labels"]
     feats: dict[str, dict] = defaultdict(

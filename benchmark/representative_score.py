@@ -19,7 +19,7 @@ from collections import Counter
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-OUT = PROJECT_ROOT / "representative_architecture_checkpoint"
+OUT = PROJECT_ROOT / "research/history/representative_architecture_checkpoint"
 REPS = OUT / "reps"
 STAGE = OUT / "score_staging"
 BENCH = PROJECT_ROOT / "benchmark-data" / "SpreadsheetBench-2"
@@ -27,7 +27,7 @@ EVAL = BENCH / "evaluation" / "evaluation.py"
 REFRESH = BENCH / "evaluation" / "open_spreadsheet.py"
 
 HELPER_RE = re.compile(r"(?:lx_helpers|lx|L)\.(periods|search|inspect\w*)\s*\(")
-# Discordance thresholds inherited from thin_architecture_checkpoint/spec.json
+# Discordance thresholds inherited from research/history/thin_architecture_checkpoint/spec.json
 MD = {"abs_mod_ge": 0.10, "abs_reg_ge": 0.05}
 
 

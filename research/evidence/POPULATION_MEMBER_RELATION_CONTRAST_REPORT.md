@@ -73,9 +73,9 @@ are the requested line-item targets.
 
 The complete occurrence-level measurements, provenance, context, packet
 membership, candidate status, and evidence are in
-[`population_member_relation_contrast.csv`](population_member_relation_contrast.csv)
+[`population_member_relation_contrast.csv`](../history/loose_evidence/population_member_relation_contrast.csv)
 and
-[`population_member_relation_contrast.json`](population_member_relation_contrast.json).
+[`population_member_relation_contrast.json`](../history/loose_evidence/population_member_relation_contrast.json).
 The rerunnable static evaluator is
 [`benchmark/population_member_relation_contrast.py`](benchmark/population_member_relation_contrast.py).
 

@@ -11,7 +11,7 @@ from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-AB = ROOT / "live_transparent_runtime_ab"
+AB = ROOT / "research/history/live_transparent_runtime_ab"
 
 
 def main() -> None:

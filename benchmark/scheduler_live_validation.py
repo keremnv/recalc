@@ -734,7 +734,7 @@ def run(output: Path, report_path: Path, *, resume: bool = False) -> dict[str, A
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", type=Path, default=ROOT / "scheduler_live_validation")
+    parser.add_argument("--output", type=Path, default=ROOT / "research/history/scheduler_live_validation")
     parser.add_argument("--report", type=Path, default=ROOT / "SCHEDULER_LIVE_VALIDATION_REPORT.md")
     parser.add_argument("--resume", action="store_true", help="Continue the existing isolated 04_01 directory")
     args = parser.parse_args()

@@ -32,10 +32,10 @@ AUDIT_ROOT = RUN_ROOT / "clean_integrated"
 LIVE_ROOT = AUDIT_ROOT / "live"
 STATIC_ROOT = AUDIT_ROOT / "static_activation"
 REPORT_PATH = ROOT / "INTEGRATED_FEASIBILITY_REPORT.md"
-CSV_PATH = ROOT / "integrated_feasibility_census.csv"
-JSON_PATH = ROOT / "integrated_feasibility_census.json"
-ACTIVATION_CSV = ROOT / "integrated_static_activation.csv"
-ACTIVATION_JSON = ROOT / "integrated_static_activation.json"
+CSV_PATH = ROOT / "research/history/loose_evidence/integrated_feasibility_census.csv"
+JSON_PATH = ROOT / "research/history/loose_evidence/integrated_feasibility_census.json"
+ACTIVATION_CSV = ROOT / "research/history/loose_evidence/integrated_static_activation.csv"
+ACTIVATION_JSON = ROOT / "research/history/loose_evidence/integrated_static_activation.json"
 
 TASKS = [
     "Financial_Model:01_01", "Financial_Model:03_01", "Financial_Model:04_01",
@@ -249,7 +249,7 @@ def _gold_by_obligation(task_key: str, spine: dict[str, Any]) -> dict[str, set[s
     """Read evaluator gold only for post-run measurement, never construction."""
     candidates = [
         ROOT / "benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/authority_loss_by_obligation.csv",
-        ROOT / "authority_loss_by_obligation.csv",
+        ROOT / "research/history/loose_evidence/authority_loss_by_obligation.csv",
     ]
     path = next((p for p in candidates if p.exists()), None)
     if path is None:

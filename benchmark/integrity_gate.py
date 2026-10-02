@@ -175,7 +175,7 @@ def fidelity_gate() -> dict[str, Any]:
     target = treatment.target_from_id(spine, "cell:s01:r49:c3", TASK_KEY, "O3")
     bootstrap = treatment.prior.compile_bootstrap(spine, packet, obligation, target)
     bootstrap_ids = set(bootstrap["bootstrap_entity_ids"])
-    accepted = json.loads((ROOT / "resource_demand_autopsy/accepted_edit_slices.json").read_text(encoding="utf-8"))
+    accepted = json.loads((ROOT / "research/history/resource_demand_autopsy/accepted_edit_slices.json").read_text(encoding="utf-8"))
     c49 = next(x for x in accepted if x["cell_id"] == "cell:s01:r49:c3")
     working_ids = set(c49["full_evidence_ids"])
     bootstrap_evidence = treatment.materialize_complete(db_path, bootstrap_ids | {target["cell_id"]})

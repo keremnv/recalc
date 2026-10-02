@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
-OUT=ROOT/"token_claim_discovery"
+OUT=ROOT/"research/history/token_claim_discovery"
 
 AFFORDANCE_REVIEW_REQUIREMENT = """## Affordance-induced verification / commitment hypothesis
 
@@ -210,10 +210,10 @@ def main():
               f"{next_action.get('single_next_action')} The 30 reserved validation tasks remain untouched. A later refinement, if justified, needs a new integration-profile identity, fresh discovery tasks, and a new preregistration; do not tune this RC against the reserved holdout.", "",
               "## Summary of findings", "",
               "The combined product-facing profile produced an 11.2% lower median provider-input count in the uncensored discovery pairs, but that result is concentrated in two Template tasks, lacks a stable cross-family effect, and has no affirmative capability guard. Salience reduced broad views without reducing observation bytes or per-call input. Helper use occurred in one B run and none in D, so helper execution is not the identified cause. The primary verdict is `TOKEN_EFFECT_TRAJECTORY_NOISE`; no token or cost claim is ready. Independent Astra review of the frozen packet is the next step, with the representative holdout still untouched.", ""]
-    (ROOT/"TOKEN_EFFICIENCY_CLAIM_DISCOVERY_REPORT.md").write_text("\n".join(lines))
+    (ROOT/"research/reports/TOKEN_EFFICIENCY_CLAIM_DISCOVERY_REPORT.md").write_text("\n".join(lines))
     packet=["# Astra token diagnosis packet", "",
             "Independent forensic review only. GPT-6 Astra did not run as an experimental arm and this packet is not evidence that any claim passes. Do not inspect, tune against, or run the reserved validation cohort.", "",
-            f"Spec SHA-256: `{read('spec_hash.json',{}).get('sha256')}`. Product RC hashes and exact design are in `token_claim_discovery/preregistered_spec.json`, `exact_notes.json`, `helper_schemas.json`, `arm_configs.json`, `selection_manifest.json`, and `run_order.json`.", "",
+            f"Spec SHA-256: `{read('spec_hash.json',{}).get('sha256')}`. Product RC hashes and exact design are in `research/history/token_claim_discovery/preregistered_spec.json`, `exact_notes.json`, `helper_schemas.json`, `arm_configs.json`, `selection_manifest.json`, and `run_order.json`.", "",
             "The exact notes are:", "", "```text", "NEUTRAL: " + notes.get("neutral",""), "SALIENCE: " + notes.get("salience",""), "HELPERS ON: " + notes.get("helper_on_addendum",""), "```", "",
             f"Population: `{pop.get('tasks')}`. Primary slots: {len(primary)}/60. Replications: {len(reps)}. Censoring: `{censor.get('by_arm')}`. Primary verdict: `{gate.get('primary_verdict')}`.", "",
             "The provider tool schemas are identical in all arms: see `helper_schemas.json`. The helper factor is the frozen Python module, import availability, and exact signature addendum. This is a possible limitation for a claim about directly exposed tool schemas.", "",
@@ -224,7 +224,7 @@ def main():
                json.dumps({"factorial":fx,"capability":cap,"censoring":censor,"routing":routing,"inspection":behavior,
                            "adoption":adoption,"trajectory":traj,"token_to_success":success,
                            "replication_runs":reps},indent=2), "```", "",
-               "Exact requests, responses, provider usage, local request decomposition, model-visible observations, official scores, and all primary and replication records are linked by the manifest in `token_claim_discovery/astra_packet_manifest.json`. Provider-reported token counts and local estimates are never substituted for one another.", "",
+               "Exact requests, responses, provider usage, local request decomposition, model-visible observations, official scores, and all primary and replication records are linked by the manifest in `research/history/token_claim_discovery/astra_packet_manifest.json`. Provider-reported token counts and local estimates are never substituted for one another.", "",
                "Known limitations and contradictions include prior lower-token totals with completion/censoring confounding; treatment note overhead; helper adoption endogeneity; provider latency and served-model routing; model noncompletion; local tokenizer mismatch; and any task-level sign reversals shown above. The reserved validation tasks were not inspected for treatment outcomes.", ""]
     packet += ["## Frozen run order", "", "| Task | Slot and arm sequence |", "| --- | --- |"]
     by_task={}
@@ -262,9 +262,9 @@ def main():
                "11. What fresh experiment would discriminate the leading explanations?",
                "12. Is representative holdout validation justified?", ""]
     packet.append(AFFORDANCE_REVIEW_REQUIREMENT)
-    (ROOT/"ASTRA_TOKEN_DIAGNOSIS_PACKET.md").write_text("\n".join(packet))
+    (ROOT/"research/reports/ASTRA_TOKEN_DIAGNOSIS_PACKET.md").write_text("\n".join(packet))
     sources=[p for p in OUT.iterdir() if p.is_file() and p.name!="astra_packet_manifest.json"]
-    sources.extend([ROOT/"TOKEN_EFFICIENCY_CLAIM_DISCOVERY_REPORT.md",ROOT/"ASTRA_TOKEN_DIAGNOSIS_PACKET.md",ROOT/"CLAIM_BACKLOG.md"])
+    sources.extend([ROOT/"research/reports/TOKEN_EFFICIENCY_CLAIM_DISCOVERY_REPORT.md",ROOT/"research/reports/ASTRA_TOKEN_DIAGNOSIS_PACKET.md",ROOT/"research/reports/CLAIM_BACKLOG.md"])
     manifest={"role":"independent forensic review only; not treatment evidence","sources":{str(p.relative_to(ROOT)):sha(p) for p in sources},
               "request_archives":{str(p.relative_to(ROOT)):sha(p) for p in OUT.glob("runs/primary/*/requests/*.json")},
               "primary_runs":len(primary),"replication_runs":len(reps),"future_holdout_untouched":True}

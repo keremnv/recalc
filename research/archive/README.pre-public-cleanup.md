@@ -94,8 +94,8 @@ Status reports effective settings, versions, cache/log locations and the last re
 
 ## Limitations and evidence
 
-See [COMPATIBILITY.md](COMPATIBILITY.md) for tested versions and platform limits. Use one writer per task directory. Only local Python scripts and top-level `.xlsx` read indexing are supported by this RC. Macro preservation, embedded objects, external links and untested environments retain openpyxl's caveats; capture does not restore content that Python removed. Existing startup customizations and arbitrary nested interpreters are not a supported acceleration path.
+See [COMPATIBILITY.md](../../COMPATIBILITY.md) for tested versions and platform limits. Use one writer per task directory. Only local Python scripts and top-level `.xlsx` read indexing are supported by this RC. Macro preservation, embedded objects, external links and untested environments retain openpyxl's caveats; capture does not restore content that Python removed. Existing startup customizations and arbitrary nested interpreters are not a supported acceleration path.
 
 No task scoring or automatic recalculation is added. Scripts may invoke installed LibreOffice through their normal workflow. Cache retention/cleanup is manual in this RC: after tasks finish, the configured cache can be removed; it contains diagnostics and derived indexes, not workbook authority.
 
-The scoped technical record is [FINAL_ARCHITECTURE_FREEZE.md](FINAL_ARCHITECTURE_FREEZE.md); installation validation and the exact RC boundary are in [PRODUCT_HYGIENE_REPORT.md](PRODUCT_HYGIENE_REPORT.md). The earlier MCP interface remains documented only in [the historical README](docs/HISTORICAL_MCP_README.md).
+The scoped technical record is [FINAL_ARCHITECTURE_FREEZE.md](FINAL_ARCHITECTURE_FREEZE.md); installation validation and the exact RC boundary are in [PRODUCT_HYGIENE_REPORT.md](../reports/PRODUCT_HYGIENE_REPORT.md). The earlier MCP interface remains documented only in [the historical README](docs/HISTORICAL_MCP_README.md).

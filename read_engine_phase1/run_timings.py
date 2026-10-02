@@ -208,7 +208,7 @@ def construction(pop):
 
 
 def _get_traces():
-    return [json.loads(line) for line in (ROOT / "candidate_a_a1_checkpoint_rerun_01/contact_traces.jsonl").open()]
+    return [json.loads(line) for line in (ROOT / "research/history/candidate_a_a1_checkpoint_rerun_01/contact_traces.jsonl").open()]
 
 
 def index_ready(pop):

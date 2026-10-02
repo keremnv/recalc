@@ -28,7 +28,7 @@ ARCHIVED_TARGET = {"sheet": "Financials", "row": 11, "col": 6, "address": "F11"}
 ARCHIVED_SPINE = {"title_to_index": {"Financials": 3}}
 ARCHIVED_CALL = (
     ROOT
-    / "scheduler_live_validation/Financial_Model-04_01/calls/056_synthesis.json"
+    / "research/history/scheduler_live_validation/Financial_Model-04_01/calls/056_synthesis.json"
 )
 
 

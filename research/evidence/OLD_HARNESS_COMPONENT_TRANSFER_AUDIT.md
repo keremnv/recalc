@@ -4,7 +4,7 @@ Zero-model, no-implementation architecture audit. No live model inference was ru
 
 Headline: the full old architecture failed against the loose control scaffold, and most of its celebrated repair mechanisms fixed failures the architecture itself created. A small set of mechanisms has genuine isolated evidence and earns a narrow, non-semantic role. The proposed new architecture (general agent + compiled substrate + optional queries + mutation IR + deterministic runtime) survives review only in part: its substrate, runtime, and diagnostics layers are earned, but the structured Mutation IR as a required thin waist is the least-evidenced part of the proposal, with measured adoption resistance and a representability gap. Transparent interception (Architecture D) is the evidence-favored alternative if the forced-IR test fails.
 
-Machine-readable companion: [`architecture_transfer_audit/`](architecture_transfer_audit/) (`component_ledger.json`, `evidence_index.json`, `implementation_map.json`, `architecture_induced_failures.json`, `layer_mapping.json`, `control_mutation_census.json`, `control_efficiency_census.json`, `architecture_tradeoffs.json`, `falsification_findings.json`, `narrow_transfer_candidates.json`, `next_experiment.json`).
+Machine-readable companion: [`architecture_transfer_audit/`](../history/architecture_transfer_audit) (`component_ledger.json`, `evidence_index.json`, `implementation_map.json`, `architecture_induced_failures.json`, `layer_mapping.json`, `control_mutation_census.json`, `control_efficiency_census.json`, `architecture_tradeoffs.json`, `falsification_findings.json`, `narrow_transfer_candidates.json`, `next_experiment.json`).
 
 ## 1. Which old harness components have strong isolated evidence?
 

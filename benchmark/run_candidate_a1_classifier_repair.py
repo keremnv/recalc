@@ -24,11 +24,11 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-OUT = ROOT / "candidate_a_a1_classifier"
-LIVE = ROOT / "candidate_a_live"
-CENSUS = ROOT / "transparent_python_read_census"
-CONTROL = ROOT / "control_python_audit"
-SHADOW = ROOT / "candidate_a_shadow_interposition"
+OUT = ROOT / "research/history/candidate_a_a1_classifier"
+LIVE = ROOT / "research/history/candidate_a_live"
+CENSUS = ROOT / "research/history/transparent_python_read_census"
+CONTROL = ROOT / "research/history/control_python_audit"
+SHADOW = ROOT / "research/history/candidate_a_shadow_interposition"
 SEED = 20260920
 
 LIVE_TASKS = [
@@ -375,7 +375,7 @@ def metrics(source: str | None) -> dict[str, int]:
 
 
 def collect_known_false_positives() -> list[dict[str, Any]]:
-    expanded = load_jsonl(ROOT / "candidate_a_contact_ceiling" / "fallback_events_expanded.jsonl")
+    expanded = load_jsonl(ROOT / "research/history/candidate_a_contact_ceiling" / "fallback_events_expanded.jsonl")
     keys = {(x.get("task_id"), x.get("turn")) for x in expanded if x.get("fallback_reason") == "forced real path" and x.get("source_available") and not x.get("source_metrics", {}).get("source_uses_actual_range")}
     rows = []
     for task, turn in sorted(keys):
@@ -389,7 +389,7 @@ def build_negative_controls() -> list[dict[str, Any]]:
     rows = []
     # All other source-recoverable primary H1 fallback turns are controls; this
     # includes true data_only, Cell-object, dynamic, and object-boundary cases.
-    expanded = load_jsonl(ROOT / "candidate_a_contact_ceiling" / "fallback_events_expanded.jsonl")
+    expanded = load_jsonl(ROOT / "research/history/candidate_a_contact_ceiling" / "fallback_events_expanded.jsonl")
     seen = set()
     for x in expanded:
         key = (x.get("task_id"), x.get("turn"))
@@ -496,7 +496,7 @@ def run_command_pair(row: dict[str, Any]) -> dict[str, Any]:
     if not input_path.exists():
         # Live workdirs are named by run id; locate the archived workdir from
         # the transcript command's absolute path.
-        m = re.search(r"candidate_a_live/work/([^\"']+)", command)
+        m = re.search(r"research/history/candidate_a_live/work/([^\"']+)", command)
         if m:
             input_path = LIVE / "work" / m.group(1) / "input.xlsx"
     if not input_path.exists():
@@ -567,9 +567,9 @@ def main() -> None:
         "P3_synthetic_ast_cases": len(synthetics),
         "historical_source_executions": len(historical),
         "sources": [
-            "candidate_a_contact_ceiling/fallback_events_expanded.jsonl",
-            "control_python_audit/python_executions.jsonl",
-            "transparent_python_read_census/executions.jsonl",
+            "research/history/candidate_a_contact_ceiling/fallback_events_expanded.jsonl",
+            "research/history/control_python_audit/python_executions.jsonl",
+            "research/history/transparent_python_read_census/executions.jsonl",
             "frozen Candidate-A shadow semantic result",
         ],
         "selection_rule": "P1 is the frozen 34 source-recoverable lexical false-positive turns; P2 excludes only no-read/eligibility-only rows and retains genuine semantic/fallback controls; P3 is the fixed AST adversarial fixture set.",

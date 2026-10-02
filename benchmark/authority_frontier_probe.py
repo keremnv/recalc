@@ -27,7 +27,7 @@ def run(destination: Path, baseline_grounder: Path):
     live = m.RUN_ROOT / 'resource_feasibility/live/repaired_treatment_credit_restored_merged_for_bridge'
     repaired = m.RUN_ROOT / 'integration_autopsy/repaired_db'
     csv.field_size_limit(100_000_000)
-    with (m.ROOT / 'authority_loss_by_obligation.csv').open() as handle:
+    with (m.ROOT / 'research/history/loose_evidence/authority_loss_by_obligation.csv').open() as handle:
         annotations = {(r['task'], r['obligation_id']): r for r in csv.DictReader(handle) if r['row_type'] == 'OBLIGATION'}
     hashes = {}
     def read(path):

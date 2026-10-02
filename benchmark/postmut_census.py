@@ -16,8 +16,8 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-AUD = PROJECT_ROOT / "post_mutation_verification_audit"
-CTRL = PROJECT_ROOT / "control_python_audit"
+AUD = PROJECT_ROOT / "research/history/post_mutation_verification_audit"
+CTRL = PROJECT_ROOT / "research/history/control_python_audit"
 
 # ---------- address extraction ----------
 WS_SUB = re.compile(r"""\w+\[\s*["']([A-Za-z]{1,3}\d{1,7})["']\s*\]""")
@@ -263,10 +263,10 @@ MUT_VERBS = ("python", "openpyxl", ".save(", "soffice", "libreoffice")
 def load_live() -> list[dict]:
     out = []
     reps = [
-        ("live_transparent_runtime_ab/runs/*/*", True),
-        ("targeted_runtime_replication/reps/*", True),
-        ("inspection_efficiency_ab/reps/*", True),
-        ("batch_write_helper_ab/reps/*", True),
+        ("research/history/live_transparent_runtime_ab/runs/*/*", True),
+        ("research/history/targeted_runtime_replication/reps/*", True),
+        ("research/history/inspection_efficiency_ab/reps/*", True),
+        ("research/history/batch_write_helper_ab/reps/*", True),
     ]
     import glob as _g
     for pat, _ in reps:

@@ -6,8 +6,8 @@ and release surfaces without changing the validated mechanism, so the rc2
 evidence stands for rc3.
 
 Concise technical boundary for users who care about implementation guarantees.
-Research-oriented readers: full ledgers live in `product_integration_phase10/`,
-`product_integration_phase10b/`, `product_hygiene/`, and `phase10c_audit/`.
+Research-oriented readers: full ledgers live in `research/history/product_integration_phase10/`,
+`research/history/product_integration_phase10b/`, `research/history/product_hygiene/`, and `research/history/phase10c_audit/`.
 
 Validation host for the cited runs: Ubuntu 26.04.1, kernel 7.0.0-34, Intel
 Core Ultra 5 125H, CPython 3.13.12, openpyxl 3.1.5.

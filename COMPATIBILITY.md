@@ -9,7 +9,7 @@ path in the maintained runtime.)
 
 | Component/environment | Status | Evidence or limit |
 |---|---|---|
-| Linux x86_64 with glibc, local filesystem | SUPPORTED | Release baseline in `phase10c_b/LINUX_RELEASE_BASELINE.md`. |
+| Linux x86_64 with glibc, local filesystem | SUPPORTED | Release baseline in `research/history/phase10c_b/LINUX_RELEASE_BASELINE.md`. |
 | CPython 3.13, openpyxl 3.1.5, lxml 6.1.3 | TESTED | Clean wheel install + 27+ maintained product/process tests + smoke battery. Exact pins in `pyproject.toml`. |
 | CPython 3.11/3.12/3.14 | EXPECTED_BUT_UNTESTED | Metadata accepts 3.11–3.14; release CI covers the declared floor only. |
 | Other openpyxl/lxml versions | UNSUPPORTED by this candidate | The direct decoder mimics openpyxl semantics; upgrades need re-validation. |
@@ -24,7 +24,7 @@ path in the maintained runtime.)
 | Stale/corrupt/unavailable derived artifact | SUPPORTED fallback | Rebuild; reference serving when build fails. Old-version entries are orphaned, never served. |
 | Global Python interposition, arbitrary shells/notebooks, nested-Python acceleration | UNSUPPORTED | `run` wraps one local Python file; bootstrap is guarded to that file. Nested interpreters use ordinary Python. Pre-existing user `sitecustomize` is untested with the product hook. |
 | Historical MCP/UNO server | UNSUPPORTED by this distribution | Source preserved in repo, not installed. No UNO binding needed. |
-| `lx_helpers` top-level import | See disposition | `phase10c_b/LX_HELPERS_DISPOSITION.md` (removed pre-v1 with vendored benchmark shim retained in `benchmark/`). |
+| `lx_helpers` top-level import | See disposition | `research/history/phase10c_b/LX_HELPERS_DISPOSITION.md` (removed pre-v1 with vendored benchmark shim retained in `benchmark/`). |
 | Model clients, credentials, network | No dependency | The harness has no model client or credential store. Configure any external coding agent separately. |
 
 The harness executes the supplied Python with the user's permissions; it is

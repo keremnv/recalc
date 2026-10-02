@@ -207,8 +207,8 @@ runtime integration remains deferred until that causal test is complete.
 
 ## Artifacts
 
-- [`output_role_occurrence_contrast.csv`](output_role_occurrence_contrast.csv)
-- [`output_role_occurrence_contrast.json`](output_role_occurrence_contrast.json)
+- [`output_role_occurrence_contrast.csv`](../history/loose_evidence/output_role_occurrence_contrast.csv)
+- [`output_role_occurrence_contrast.json`](../history/loose_evidence/output_role_occurrence_contrast.json)
 - [`benchmark/output_role_occurrence_contrast.py`](benchmark/output_role_occurrence_contrast.py)
 
 All artifacts were produced with zero model calls, zero workbook writes, a

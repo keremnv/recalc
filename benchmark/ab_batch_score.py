@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Score + analyze the batch-write helper A/B.
 
-Reads batch_write_helper_ab/reps/*, stages outputs through the UNMODIFIED
+Reads research/history/batch_write_helper_ab/reps/*, stages outputs through the UNMODIFIED
 official evaluator (LibreOffice refresh skipped: soffice unavailable in this
 sandbox; identical for both arms), and writes all deliverable artifacts.
 """
@@ -18,7 +18,7 @@ import zipfile
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-AB = PROJECT_ROOT / "batch_write_helper_ab"
+AB = PROJECT_ROOT / "research/history/batch_write_helper_ab"
 REPS = AB / "reps"
 STAGE = AB / "score_staging"
 EVAL = PROJECT_ROOT / "benchmark-data" / "SpreadsheetBench-2" / "evaluation" / "evaluation.py"

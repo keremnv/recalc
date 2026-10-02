@@ -19,7 +19,7 @@ from pathlib import Path
 from statistics import mean
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-OUT = PROJECT_ROOT / "representative_architecture_checkpoint"
+OUT = PROJECT_ROOT / "research/history/representative_architecture_checkpoint"
 REPS = OUT / "reps"
 
 

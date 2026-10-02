@@ -15,7 +15,7 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-CHECK = ROOT / "candidate_a_a1_checkpoint"
+CHECK = ROOT / "research/history/candidate_a_a1_checkpoint"
 REPORT = ROOT / "CANDIDATE_A_A1_12_TASK_CHECKPOINT_REPORT.md"
 
 

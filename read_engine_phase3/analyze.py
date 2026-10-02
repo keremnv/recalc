@@ -38,7 +38,7 @@ def effects(pairs: list[tuple[float, float]], seed=SEED) -> dict:
 
 
 def old_artifact_bytes(wid: str) -> int | None:
-    base = ROOT / "rc_acceleration_validation/runs" / f"{wid}__TREATMENT__score_1/cache/librecalc-agent/runs"
+    base = ROOT / "research/history/rc_acceleration_validation/runs" / f"{wid}__TREATMENT__score_1/cache/librecalc-agent/runs"
     paths = list(base.glob("*/index/*.sqlite"))
     return sum(p.stat().st_size for p in paths) if paths else None
 

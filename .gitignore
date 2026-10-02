@@ -21,7 +21,7 @@ src/recalc_agent/native/launcher
 *.whl
 *.tmp
 # Local release-candidate staging (hashes recorded in
-# phase10c_b/RELEASE_CANDIDATE_MANIFEST.json instead).
+# research/history/phase10c_b/RELEASE_CANDIDATE_MANIFEST.json instead).
 release-candidate/
 # Externalized research evidence (see research/EVIDENCE_ARCHIVE.md).
 # Regenerated run bulk must not be recommitted; reports, manifests,
@@ -43,9 +43,43 @@ release-candidate/
 **/replay_substrate/
 **/workbooks/
 *.r3jz
-phase12r/reference_parse_cache/
-phase12r/artifacts/
-phase12r/reference_score_objects/
-phase12r/recalc_by_hash/
-phase12r/followup_macro_mode/
-phase12r/scoring_recovery/
+research/history/phase12r/reference_parse_cache/
+research/history/phase12r/artifacts/
+research/history/phase12r/reference_score_objects/
+research/history/phase12r/recalc_by_hash/
+research/history/phase12r/followup_macro_mode/
+research/history/phase12r/scoring_recovery/
+
+# Private working data (see research/private-data-manifest.json).
+# Restored symlinks and regenerated bulk at these paths must never be committed.
+/closure_transfer_audit/work
+/compiled_context_sidecar_ab/c1_retry.log
+/compiled_context_sidecar_ab/job_cache
+/compiled_context_sidecar_ab/launch.log
+/compiled_context_sidecar_ab/world_cache
+/default_harness_deterministic_execution/held_out_census.json
+/read_engine_phase3/raw_timings.jsonl
+/read_engine_phase4/raw_timings.jsonl
+/read_engine_phase5/raw_timings.jsonl
+/read_engine_phase6/raw_timings.jsonl
+/read_engine_phase7/raw_timings.jsonl
+/read_engine_phase8/representative_timings.jsonl
+/read_engine_phase9/raw_timings.jsonl
+/release-candidate
+/research/history/loose_evidence/actuation_loss_trace.csv
+/research/history/loose_evidence/integrated_feasibility_census.json
+/research/history/phase12/ledgers/verifier_final_reports/popB/Financial_Model_17_05_CONTROL/final.json
+/research/history/phase12r/BASELINE_CORRECTION_LEDGER.jsonl
+/research/history/phase12r/BASELINE_CORRECTION_LEDGER_RAW.jsonl
+/research/history/phase12r/CACHE_STATE.jsonl
+/research/history/phase12r/SCORE_REPLAY.jsonl
+/research/history/phase13/working/popB_fullerr.json
+/research/history/phase13/working/popB_roots.json
+/research/history/resource_demand_autopsy/authority_cells.csv
+/research/history/resource_demand_autopsy/evidence_access_baseline.json
+/research/history/resource_demand_autopsy/evidence_manifests.json
+/research/history/scheduler_live_validation/Financial_Model-04_01
+/research/history/stochastic_work_census/atomic_facts.jsonl
+/research/history/stochastic_work_census/observations_raw.jsonl
+/research/history/stochastic_work_census/observations_segmented.jsonl
+/research/history/stochastic_work_census/repeated_facts.jsonl

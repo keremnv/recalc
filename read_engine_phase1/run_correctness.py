@@ -234,7 +234,7 @@ def main():
     pop = verify_frozen()
     ledger = HERE / "raw_correctness.jsonl"
     trace_by_id = {row["trace_id"]: row for row in
-                   (json.loads(line) for line in (ROOT / "candidate_a_a1_checkpoint_rerun_01/contact_traces.jsonl").open())}
+                   (json.loads(line) for line in (ROOT / "research/history/candidate_a_a1_checkpoint_rerun_01/contact_traces.jsonl").open())}
     if args.stage in ("traces", "all"):
         if ledger.exists():
             raise RuntimeError("Correctness ledger already exists; preserve frozen run")

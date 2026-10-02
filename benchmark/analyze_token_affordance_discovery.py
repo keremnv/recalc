@@ -19,7 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from benchmark.review_token_affordance import analyze_run  # noqa: E402
 
-OUT = ROOT / "token_affordance_discovery"
+OUT = ROOT / "research/history/token_affordance_discovery"
 ARMS = "ABCD"
 FAMILIES = ("Template", "Financial_Model", "Debugging")
 CENSORED = {"PROVIDER_CENSORED", "RUNNER_CENSORED", "WORKBOOK_INFRA_CENSORED"}
@@ -120,7 +120,7 @@ def main():
         raise RuntimeError("all 48 unique primary slots must finish before analysis")
     if set(x["task"] for x in primary) != set(population):
         raise RuntimeError("primary task set changed")
-    if hashlib.sha256((ROOT / "token_claim_discovery/future_validation_reservation.json").read_bytes()).hexdigest() != spec["reserved_holdout_sha256"]:
+    if hashlib.sha256((ROOT / "research/history/token_claim_discovery/future_validation_reservation.json").read_bytes()).hexdigest() != spec["reserved_holdout_sha256"]:
         raise RuntimeError("reserved holdout manifest changed")
 
     scores = load("official_scores.json")["arms"] if args.reuse_scores else score_all(primary)

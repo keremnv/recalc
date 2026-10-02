@@ -14,7 +14,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "token_claim_discovery"
+OUT = ROOT / "research/history/token_claim_discovery"
 
 
 def read(name: str):
@@ -44,9 +44,9 @@ def historical_detail():
     records = []
     checkpoint_scores = {
         (s["task_id"], s["arm"]): s
-        for s in json.loads((ROOT / "representative_architecture_checkpoint/capability_scores.json").read_text())
+        for s in json.loads((ROOT / "research/history/representative_architecture_checkpoint/capability_scores.json").read_text())
     }
-    for path in sorted((ROOT / "representative_architecture_checkpoint/reps").glob("*/run_record.json")):
+    for path in sorted((ROOT / "research/history/representative_architecture_checkpoint/reps").glob("*/run_record.json")):
         r = json.loads(path.read_text())
         e = r.get("efficiency") or {}
         score = checkpoint_scores.get((r.get("task_id"), r.get("arm")), {})
@@ -190,7 +190,7 @@ def main():
     reserve = read("representative_reserve.json")
     held = set(sum(reserve["tasks"].values(), []))
     prior_h1 = set()
-    for path in (ROOT / "representative_architecture_checkpoint/reps").glob("*/run_record.json"):
+    for path in (ROOT / "research/history/representative_architecture_checkpoint/reps").glob("*/run_record.json"):
         r = json.loads(path.read_text())
         if r.get("arm") == "H1":
             prior_h1.add(r.get("task_id"))
@@ -211,7 +211,7 @@ def main():
             manifest["entries"][path.name] = digest(path)
     manifest["root_reports"] = {
         name: digest(ROOT / name)
-        for name in ("TOKEN_EFFICIENCY_CLAIM_DISCOVERY_REPORT.md", "CLAIM_BACKLOG.md")
+        for name in ("research/reports/TOKEN_EFFICIENCY_CLAIM_DISCOVERY_REPORT.md", "research/reports/CLAIM_BACKLOG.md")
     }
     put("final_result_hash_manifest.json", manifest)
 

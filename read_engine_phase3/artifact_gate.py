@@ -19,7 +19,7 @@ from read_engine_phase3 import safe_artifact  # noqa: E402
 from openpyxl.utils.cell import coordinate_to_tuple  # noqa: E402
 
 PHASE1_POP = ROOT / "read_engine_phase1/population.json"
-TRACE_FILE = ROOT / "candidate_a_a1_checkpoint_rerun_01/contact_traces.jsonl"
+TRACE_FILE = ROOT / "research/history/candidate_a_a1_checkpoint_rerun_01/contact_traces.jsonl"
 PHASE1_POP_SHA = "6492d1cbc2163ea252c0d34cf346171d332a923bd5f05fc1fd54c3e851097afa"
 TRACE_SHA = "665244f6150dfbb74ae647dfc8a7b8b034c02794f6de9cf7419f6d56da41696f"
 

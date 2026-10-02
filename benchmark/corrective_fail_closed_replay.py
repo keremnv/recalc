@@ -16,7 +16,7 @@ from benchmark.inspection_helpers import index
 from benchmark.representative_checkpoint import prepare_substrate, task_source
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "final_architecture_freeze"
+OUT = ROOT / "research/history/final_architecture_freeze"
 REAL = openpyxl.load_workbook
 
 
@@ -73,11 +73,11 @@ def replay(task, original_record, inject=False):
 
 
 def main():
-    preserved = [p for p in (ROOT / "representative_architecture_checkpoint").rglob("*")
+    preserved = [p for p in (ROOT / "research/history/representative_architecture_checkpoint").rglob("*")
                  if p.is_file() and p.suffix in {".json", ".jsonl", ".md"}]
     before = {str(p.relative_to(ROOT)): sha(p) for p in preserved}
-    det = "representative_architecture_checkpoint/reps/Financial_Model_06_01_H1_primary_25/run_record.json"
-    trans = "representative_architecture_checkpoint/reps_preserved_infra_2/Template_06_08_H1_primary_10/run_record.json"
+    det = "research/history/representative_architecture_checkpoint/reps/Financial_Model_06_01_H1_primary_25/run_record.json"
+    trans = "research/history/representative_architecture_checkpoint/reps_preserved_infra_2/Template_06_08_H1_primary_10/run_record.json"
     cases = [replay("Financial_Model:06_01", det), replay("Template:06_08", trans), replay("Template:06_08", trans, inject=True)]
     unchanged = all(sha(ROOT / p) == digest for p, digest in before.items())
     assert unchanged

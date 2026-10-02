@@ -16,7 +16,7 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-AUTOPSY = ROOT / "resource_demand_autopsy"
+AUTOPSY = ROOT / "research/history/resource_demand_autopsy"
 LIVE = ROOT / "benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/resource_feasibility/clean_integrated/live/Financial_Model-06_01"
 OUT_JSON = AUTOPSY / "evidence_access_baseline.json"
 OUT_MD = ROOT / "RESOURCE_EVIDENCE_ACCESS_BASELINE.md"
@@ -165,7 +165,7 @@ def main() -> dict[str, Any]:
         f"`{reconstructed_hash}`", "", f"Content-equivalent: **{equivalent}**. The archived evidence hash is `{digest(archived)}` and the manifest hash is `{c49_manifest['evidence_sha256']}`.", "",
         "The exact shared IDs are in `evidence_access_baseline.json` under `shared_records_across_all_o3_targets.record_ids`; exact per-target/final-synthesis IDs are under each `per_target[].record_ids` entry. Retrieval history/state is recorded alongside each target.", "",
         "This proves storage/reconstruction deduplication, not model-token savings. A stateless model cannot access omitted shared facts from a record ID alone. A model-facing compact representation therefore needs a persistent retrieval/materialization tool, or a shared model-visible context carrying the shared records, plus the manifest and target delta.", "",
-        "Retrieval history/state is retained per target in `resource_demand_autopsy/evidence_access_baseline.json`, including working-set IDs before/after each archived retrieval call and the final synthesis-visible record count.",
+        "Retrieval history/state is retained per target in `research/history/resource_demand_autopsy/evidence_access_baseline.json`, including working-set IDs before/after each archived retrieval call and the final synthesis-visible record count.",
     ]
     OUT_MD.write_text("\n".join(md) + "\n", encoding="utf-8")
     return result

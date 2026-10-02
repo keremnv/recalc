@@ -29,7 +29,7 @@ from prototype import canonical  # noqa: E402
 from persistence import acquire, no_openpyxl_load, paths, sha, tick  # noqa: E402
 
 POP = HERE / "population.json"
-TRACE_FILE = ROOT / "candidate_a_a1_checkpoint_rerun_01/contact_traces.jsonl"
+TRACE_FILE = ROOT / "research/history/candidate_a_a1_checkpoint_rerun_01/contact_traces.jsonl"
 SPEC_HASH = "227c7618a244ef9dc4960b6d1aed751165ec326bd2a6d9670895e773df7bddde"
 P1_HASH = "a6e95f1503ec6090d6176065471372924bf447f907a2a428faceee12a2f72473"
 POP_HASH = "6492d1cbc2163ea252c0d34cf346171d332a923bd5f05fc1fd54c3e851097afa"

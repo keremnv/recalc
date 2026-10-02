@@ -36,10 +36,10 @@ from benchmark.read_side_v2_adjudication import (
     replay_v2,
 )
 
-OUT = PROJECT_ROOT / "fact_normalized_read_replay"
-WORK = PROJECT_ROOT / "thin_architecture_checkpoint" / "work"
-RANKING = PROJECT_ROOT / "thin_architecture_checkpoint" / "exposure_ranking.json"
-POPULATION = PROJECT_ROOT / "thin_architecture_checkpoint" / "population.json"
+OUT = PROJECT_ROOT / "research/history/fact_normalized_read_replay"
+WORK = PROJECT_ROOT / "research/history/thin_architecture_checkpoint" / "work"
+RANKING = PROJECT_ROOT / "research/history/thin_architecture_checkpoint" / "exposure_ranking.json"
+POPULATION = PROJECT_ROOT / "research/history/thin_architecture_checkpoint" / "population.json"
 MAX_CELLS = 10_000
 TASKS = [
     "Financial_Model:08_01",

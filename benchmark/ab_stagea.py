@@ -17,7 +17,7 @@ import sys
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-AB = PROJECT_ROOT / "targeted_runtime_replication"
+AB = PROJECT_ROOT / "research/history/targeted_runtime_replication"
 RUNNER = PROJECT_ROOT / "benchmark" / "ab_local_runner.py"
 
 TASKS = ["Template:01_02", "Template:01_07", "Debugging:02_06",

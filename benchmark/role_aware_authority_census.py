@@ -23,8 +23,8 @@ sys.path.insert(0, str(ROOT / "benchmark"))
 import matched_compiled_treatment as m
 import workbook_grounding as g
 
-ANNOTATIONS = ROOT / "authority_loss_by_obligation.csv"
-LINEAGE = ROOT / "authority_frontier_probe" / "obligation_lineage.csv"
+ANNOTATIONS = ROOT / "research/history/loose_evidence/authority_loss_by_obligation.csv"
+LINEAGE = ROOT / "research/history/authority_frontier_probe" / "obligation_lineage.csv"
 REPAIRED_DB = ROOT / "benchmark-data/SpreadsheetBench-2/benchmark-runs" / "matched-glm-compiled-sixty" / "integration_autopsy" / "repaired_db"
 
 CATEGORY_ORDER = [

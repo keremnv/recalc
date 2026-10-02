@@ -401,9 +401,9 @@ earn a place in the required interface.
 
 The most useful synthesis and decision documents are:
 
-- [phase13/PROGRAM_SYNTHESIS.md](phase13/PROGRAM_SYNTHESIS.md) — causal map
+- [phase13/PROGRAM_SYNTHESIS.md](research/history/phase13/PROGRAM_SYNTHESIS.md) — causal map
   of where the loss boundary moved and why.
-- [phase13/ARCHITECTURE_DECISION_LEDGER.md](phase13/ARCHITECTURE_DECISION_LEDGER.md) —
+- [phase13/ARCHITECTURE_DECISION_LEDGER.md](research/history/phase13/ARCHITECTURE_DECISION_LEDGER.md) —
   adopted/rejected choices with evidence, scope, and reopen conditions.
 - [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md) —
   the current product claim boundary.
@@ -425,12 +425,14 @@ including the macOS fast-follow and Windows separate-port posture.
 
 - Current product docs: this file, [COMPATIBILITY.md](COMPATIBILITY.md),
   [CHANGELOG.md](CHANGELOG.md), [docs/](docs/).
-- Integration records: `PRODUCT_INTEGRATION_*.md`, `PRODUCT_*_POLICY.md`,
-  `PRODUCT_*_DESIGN.md`, `phase10c_audit/`, `phase10c_b/`.
+- Integration records: `research/reports/PRODUCT_INTEGRATION_*.md`,
+  `research/reports/PRODUCT_*_POLICY.md`, `research/reports/PRODUCT_*_DESIGN.md`,
+  `research/history/phase10c_audit/`, `research/history/phase10c_b/`.
 - Historical evidence and research: [research/](research/), `benchmark/`,
-  `read_engine_phase*/`, `product_integration_phase10*/`, `product_hygiene/`,
-  and `*-REPORT.md` files. These preserve how the product was validated; they
-  are not user documentation and may contain superseded wording.
-- The old `0.2.0rc1` claim registry ([FINAL_CLAIM_REGISTRY.md](FINAL_CLAIM_REGISTRY.md))
+  `read_engine_phase*/`, `research/history/product_integration_phase10*/`,
+  `research/history/product_hygiene/`, and the `research/reports/*-REPORT.md`
+  files. These preserve how the product was validated; they are not user
+  documentation and may contain superseded wording.
+- The old `0.2.0rc1` claim registry ([FINAL_CLAIM_REGISTRY.md](research/reports/FINAL_CLAIM_REGISTRY.md))
   is retained as history and marked as such; it must not be used to describe
   this candidate.

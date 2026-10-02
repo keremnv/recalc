@@ -3,7 +3,7 @@ import sys
 import zipfile
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "phase11"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "research/history/phase11"))
 
 from recalc_errors import patch_full_calc
 

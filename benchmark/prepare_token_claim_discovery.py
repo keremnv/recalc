@@ -19,7 +19,7 @@ import tiktoken
 ROOT = Path(__file__).resolve().parents[1]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
-OUT = ROOT / "token_claim_discovery"
+OUT = ROOT / "research/history/token_claim_discovery"
 FAMILIES = ("Template", "Financial_Model", "Debugging")
 SEED = 20260922
 HOLDOUT_SEED = 20261001
@@ -35,7 +35,7 @@ def sha(path: Path) -> str:
 
 def main() -> None:
     OUT.mkdir(exist_ok=True)
-    registry = json.loads((ROOT / "product_hygiene/future_claim_evidence_registry.json").read_text())
+    registry = json.loads((ROOT / "research/history/product_hygiene/future_claim_evidence_registry.json").read_text())
     aggregates = []
     for r in registry["rows"]:
         if r.get("scope") != "aggregate":
@@ -65,7 +65,7 @@ def main() -> None:
     # The representative checkpoint's H0 arm is control-side only. Prefer
     # completed/usable runs, then large prompt-token burden. No H1 files enter.
     candidates = []
-    for p in sorted((ROOT / "representative_architecture_checkpoint/reps").glob("*H0*/run_record.json")):
+    for p in sorted((ROOT / "research/history/representative_architecture_checkpoint/reps").glob("*H0*/run_record.json")):
         d = json.loads(p.read_text())
         task = d["task_id"]
         fam, tid = task.split(":", 1)
@@ -175,7 +175,7 @@ def main() -> None:
     # Design-only estimates from independent prior H0/H1 paired tasks; not
     # used to select any task. Structural variance estimates are descriptive.
     pairs = {}
-    for p in (ROOT / "representative_architecture_checkpoint/reps").glob("*/run_record.json"):
+    for p in (ROOT / "research/history/representative_architecture_checkpoint/reps").glob("*/run_record.json"):
         d = json.loads(p.read_text()); pairs.setdefault(d["task_id"], {})[d["arm"]] = d
     logs, call_diffs, complete = [], [], []
     family_logs = {f: [] for f in FAMILIES}
@@ -211,7 +211,7 @@ def main() -> None:
         "no_architecture_changes": True, "holdout_not_run": True,
     }
     put("preregistered_spec.json", spec)
-    put("spec_hash.json", {"algorithm": "sha256", "path": "token_claim_discovery/preregistered_spec.json", "sha256": sha(OUT/"preregistered_spec.json")})
+    put("spec_hash.json", {"algorithm": "sha256", "path": "research/history/token_claim_discovery/preregistered_spec.json", "sha256": sha(OUT/"preregistered_spec.json")})
     print("frozen_spec_sha256", sha(OUT/"preregistered_spec.json"))
     print("population", selected)
     print("note_tokens", len(enc.encode(neutral)), len(enc.encode(salience)))

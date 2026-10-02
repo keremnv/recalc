@@ -12,7 +12,7 @@ import sys
 import time
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-OUT = ROOT / "rc_acceleration_validation"
+OUT = ROOT / "research/history/rc_acceleration_validation"
 
 
 def sha(data: bytes) -> str:

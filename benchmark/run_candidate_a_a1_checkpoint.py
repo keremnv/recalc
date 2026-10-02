@@ -22,7 +22,7 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-CHECK = Path(os.environ.get("CANDIDATE_A_CHECKPOINT_OUT", str(ROOT / "candidate_a_a1_checkpoint")))
+CHECK = Path(os.environ.get("CANDIDATE_A_CHECKPOINT_OUT", str(ROOT / "research/history/candidate_a_a1_checkpoint")))
 FROZEN_CHECK = Path(os.environ["CANDIDATE_A_FROZEN_CHECKPOINT"]) if os.environ.get("CANDIDATE_A_FROZEN_CHECKPOINT") else None
 REPORT_PATH = Path(os.environ.get("CANDIDATE_A_CHECKPOINT_REPORT", str(ROOT / "CANDIDATE_A_A1_12_TASK_CHECKPOINT_REPORT.md")))
 SEED = 20260920
@@ -88,8 +88,8 @@ def build_population() -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     import runpy
     a1mod = runpy.run_path(str(ROOT / "benchmark" / "run_candidate_a1_classifier_repair.py"))
     historical = a1mod["historical_rows"]()
-    census = {x.get("exec_id"): x for x in scaffold.load_jsonl(ROOT / "transparent_python_read_census" / "executions.jsonl")}
-    repeat_groups = json.loads((ROOT / "transparent_python_read_census" / "repeated_open_analysis.json").read_text(encoding="utf-8")).get("repeat_groups", [])
+    census = {x.get("exec_id"): x for x in scaffold.load_jsonl(ROOT / "research/history/transparent_python_read_census" / "executions.jsonl")}
+    repeat_groups = json.loads((ROOT / "research/history/transparent_python_read_census" / "repeated_open_analysis.json").read_text(encoding="utf-8")).get("repeat_groups", [])
 
     def repeat_for(task: str) -> int:
         total = 0
@@ -349,7 +349,7 @@ def replay_traces(traces: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], d
 
 def run_checkpoint() -> None:
     CHECK.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(ROOT / "candidate_a_a1_checkpoint_sitecustomize.py", CHECK / "sitecustomize.py")
+    shutil.copy2(ROOT / "research/history/loose_evidence/candidate_a_a1_checkpoint_sitecustomize.py", CHECK / "sitecustomize.py")
     write_json(CHECK / "spec.json", {
         "experiment": "larger identical-interface Candidate-A+A1 live checkpoint",
         "attempt_id": CHECK.name,

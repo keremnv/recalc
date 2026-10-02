@@ -24,8 +24,8 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "transparent_python_read_census"
-AUDIT = ROOT / "control_python_audit"
+OUT = ROOT / "research/history/transparent_python_read_census"
+AUDIT = ROOT / "research/history/control_python_audit"
 POP_PATH = AUDIT / "population.json"
 EXEC_PATH = AUDIT / "python_executions.jsonl"
 FEATURE_PATH = AUDIT / "script_features.jsonl"

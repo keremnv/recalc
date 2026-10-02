@@ -13,12 +13,12 @@ import sys
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-AB = PROJECT_ROOT / "batch_write_helper_ab"
+AB = PROJECT_ROOT / "research/history/batch_write_helper_ab"
 RUNNER = PROJECT_ROOT / "benchmark" / "ab_local_runner.py"
 SHIM_C0 = PROJECT_ROOT / "benchmark" / "inspection_helpers" / "lx_helpers.py"
 SHIM_C1 = PROJECT_ROOT / "benchmark" / "mutation_helpers" / "shim_c1.py"
 
-# (task, batch_kind, boundary) from mutation_authoring_audit/source_effect_reconciliation.json:
+# (task, batch_kind, boundary) from research/history/mutation_authoring_audit/source_effect_reconciliation.json:
 # all 4 formula-batch-confirmed tasks + EARLY value-batch round-robin to n=10.
 TASKS = [
     ("Financial_Model:08_01", "value+formula", "EARLY"),
@@ -93,7 +93,7 @@ def write_frozen() -> None:
     (AB / "_c1_note.txt").write_text(NOTE_C1)
     json.dump({
         "name": "batch-write-helper-ab",
-        "gated_on": "mutation_authoring_audit/candidate_helpers.json: "
+        "gated_on": "research/history/mutation_authoring_audit/candidate_helpers.json: "
                      "write_cells + write_formulas == LIVE_TEST; all others REJECT",
         "arms": {"C0": "transparent runtime + ordinary Python/openpyxl + earned "
                        "periods/search/inspect",
@@ -109,7 +109,7 @@ def write_frozen() -> None:
     }, open(AB / "spec.json", "w"), indent=1)
     json.dump({"tasks": [{"task_id": t, "batch_kind": k, "boundary": b}
                          for t, k, b in TASKS],
-               "selection": "mechanically from mutation_authoring_audit/"
+               "selection": "mechanically from research/history/mutation_authoring_audit/"
                             "source_effect_reconciliation.json: rows with an "
                             "explicit_address_*_batch idiom + SOURCE_AND_EFFECT_AGREE + "
                             "EARLY/PARTIAL boundary; all 4 formula-batch tasks + "

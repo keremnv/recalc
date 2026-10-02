@@ -34,10 +34,10 @@ from formula_synthesis_probe import _canonical_formula  # noqa: E402
 TASK_KEY = "Financial_Model:06_01"
 OBLIGATION_ID = "O3"
 ARCHIVE_LIVE = integrity_gate.ARCHIVE_LIVE
-AUTOPSY = ROOT / "resource_demand_autopsy"
+AUTOPSY = ROOT / "research/history/resource_demand_autopsy"
 SOURCE = integrity_gate.SOURCE
 GOLD = ROOT / "benchmark-data/SpreadsheetBench-2/data/Financial_Model/spreadsheet/06_Project DigiMark/06_DigiMark_golden.xlsx"
-OUT = ROOT / "compact_evidence_delivery"
+OUT = ROOT / "research/history/compact_evidence_delivery"
 RUN_ROOT = ROOT / "benchmark-data/SpreadsheetBench-2/benchmark-runs/mechanical/compact-evidence-delivery"
 REPORT = ROOT / "COMPACT_EVIDENCE_DELIVERY_REPORT.md"
 WITNESSES = {
@@ -700,11 +700,11 @@ def render_report(prepared: dict[str, Any], live: dict[str, Any] | None, summary
         "",
         "## Artifacts",
         "",
-        "- `compact_evidence_delivery/equivalence.json`",
-        "- `compact_evidence_delivery/live.json`",
-        "- `compact_evidence_delivery/ledger.json`",
-        "- `compact_evidence_delivery/pairs.csv`",
-        "- `compact_evidence_delivery/targets/*/canonical_facts.json`",
+        "- `research/history/compact_evidence_delivery/equivalence.json`",
+        "- `research/history/compact_evidence_delivery/live.json`",
+        "- `research/history/compact_evidence_delivery/ledger.json`",
+        "- `research/history/compact_evidence_delivery/pairs.csv`",
+        "- `research/history/compact_evidence_delivery/targets/*/canonical_facts.json`",
         "- `benchmark/compact_evidence_delivery.py`",
         "",
         "No FM20, GPT model swap, old-harness comparison, or published-control rerun was launched.",

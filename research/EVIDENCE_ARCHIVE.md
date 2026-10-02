@@ -45,3 +45,29 @@ before citing archived contents.
 No archive has been uploaded yet. All `archive_url` fields in
 `evidence-manifest.json` are `null` (pending). Recommended destination
 when ready: a DOI-minted Zenodo dataset with this manifest attached.
+
+## Private working data (not in Git, not for upload)
+
+Separate from the archive above, bulk working data lives in a private
+directory outside the repository and is intentionally not published:
+
+- run caches and ignored raw JSONLs that were never committed;
+- tracked bulk data files over 5 MB removed from Git during the
+  repository tidy (ledgers, timings, baselines, logs);
+- stale local release-candidate staging.
+
+`private-data-manifest.json` in this directory indexes every unit with
+its in-repo path, size, and SHA-256/tree hash. To reproduce analyses
+that read these files, symlink them back into a worktree with:
+
+```sh
+scripts/restore-private-data.sh        # link all units
+scripts/restore-private-data.sh --check
+scripts/restore-private-data.sh --clean
+```
+
+The private root defaults to the manifest's `private_root` and can be
+overridden with `RECALC_PRIVATE_DATA`. Restored symlinks are gitignored
+and must never be committed. A public clone builds, tests, and runs the
+product without any of this data; only historical reproduction scripts
+need it.

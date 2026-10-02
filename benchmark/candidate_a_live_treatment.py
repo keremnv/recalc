@@ -25,9 +25,9 @@ from pathlib import Path
 from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "candidate_a_live"
+OUT = ROOT / "research/history/candidate_a_live"
 DATA = ROOT / "benchmark-data" / "SpreadsheetBench-2" / "data"
-CENSUS = ROOT / "transparent_python_read_census"
+CENSUS = ROOT / "research/history/transparent_python_read_census"
 BOOTSTRAP = OUT / "sitecustomize.py"
 SEED = 20260920
 

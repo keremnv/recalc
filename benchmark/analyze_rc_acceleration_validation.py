@@ -10,7 +10,7 @@ import random
 import statistics
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-OUT = ROOT / "rc_acceleration_validation"
+OUT = ROOT / "research/history/rc_acceleration_validation"
 
 
 def read(name):

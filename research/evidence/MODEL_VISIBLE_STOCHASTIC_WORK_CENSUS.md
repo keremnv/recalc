@@ -180,6 +180,13 @@ Secondary corpus: not pooled. The A1 live-checkpoint population file
 exists but its runs are treatment trajectories under a modified runtime;
 primary conclusions rest on the frozen corpus only.
 
+Note: the four bulk deliverables (`observations_raw.jsonl`,
+`observations_segmented.jsonl`, `atomic_facts.jsonl`,
+`repeated_facts.jsonl`) now live in private working data outside Git;
+see `research/EVIDENCE_ARCHIVE.md` and
+`research/private-data-manifest.json`. All other deliverables above
+remain in `research/history/stochastic_work_census/`.
+
 ## Final synthesis
 
 ### WHAT THE MODEL ACTUALLY SAW

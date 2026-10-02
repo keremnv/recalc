@@ -16,7 +16,7 @@ from collections import Counter
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-AB = PROJECT_ROOT / "thin_architecture_checkpoint"
+AB = PROJECT_ROOT / "research/history/thin_architecture_checkpoint"
 REPS = AB / "reps"
 STAGE = AB / "score_staging"
 BENCH = PROJECT_ROOT / "benchmark-data" / "SpreadsheetBench-2"

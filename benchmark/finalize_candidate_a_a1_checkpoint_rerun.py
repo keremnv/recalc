@@ -15,9 +15,9 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CHECK = ROOT / "candidate_a_a1_checkpoint_rerun_01"
+CHECK = ROOT / "research/history/candidate_a_a1_checkpoint_rerun_01"
 REPORT = ROOT / "CANDIDATE_A_A1_12_TASK_CHECKPOINT_RERUN_REPORT.md"
-FAILED = ROOT / "candidate_a_a1_checkpoint"
+FAILED = ROOT / "research/history/candidate_a_a1_checkpoint"
 
 
 def write_json(path: Path, value) -> None:
@@ -283,7 +283,7 @@ def main() -> None:
     runner_names = [r.get("run_id") for r in runner_errors]
     report = f"""# Candidate-A A1 12-Task Checkpoint Rerun Report
 
-This is a new run of the exact frozen checkpoint after transport hardening. The earlier censored attempt at `candidate_a_a1_checkpoint/` was preserved and not overwritten. No prompts, model-facing interface, Candidate-A semantic surface, A1 classifier, A2, A3, or Candidate B changed.
+This is a new run of the exact frozen checkpoint after transport hardening. The earlier censored attempt at `research/history/candidate_a_a1_checkpoint/` was preserved and not overwritten. No prompts, model-facing interface, Candidate-A semantic surface, A1 classifier, A2, A3, or Candidate B changed.
 
 Verdict: **{verdict}**
 

@@ -63,7 +63,7 @@ TIMEOUT_SECONDS = 180
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 ORDINALS = ("first", "second", "third")
 ARTIFACT = ROOT / "structural_projection_discriminator"
-AUTHORITY_PATH = ROOT / "authority_loss_by_obligation.csv"
+AUTHORITY_PATH = ROOT / "research/history/loose_evidence/authority_loss_by_obligation.csv"
 REPORT = ROOT / "SPARK_STRUCTURAL_PROJECTION_DISCRIMINATOR_REPORT.md"
 
 
@@ -82,7 +82,7 @@ def activate_family(family: str) -> None:
         REASONING_EFFORT = glm.reasoning
         MAX_TOKENS = glm.max_output_tokens
         TIMEOUT_SECONDS = 600
-        ARTIFACT = ROOT / "structural_projection_discriminator_glm"
+        ARTIFACT = ROOT / "research/history/structural_projection_discriminator_glm"
         REPORT = ROOT / "GLM_STRUCTURAL_PROJECTION_DISCRIMINATOR_REPORT.md"
         return
     if family != "spark":

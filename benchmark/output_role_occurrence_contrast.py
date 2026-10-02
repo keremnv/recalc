@@ -17,12 +17,12 @@ from pathlib import Path
 from openpyxl import load_workbook
 
 ROOT = Path(__file__).resolve().parents[1]
-FROZEN_PATH = ROOT / "population_member_relation_contrast.json"
+FROZEN_PATH = ROOT / "research/history/loose_evidence/population_member_relation_contrast.json"
 SPINE_PATH = ROOT / (
     "benchmark-data/SpreadsheetBench-2/benchmark-runs/mechanical/"
     "workbook-grounding-probe/spines/05_01.json"
 )
-AUTHORITY_PATH = ROOT / "authority_loss_by_obligation.csv"
+AUTHORITY_PATH = ROOT / "research/history/loose_evidence/authority_loss_by_obligation.csv"
 LIVE_RESULT = ROOT / (
     "benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/"
     "resource_feasibility/live/repaired_treatment_credit_restored_merged_for_bridge/"

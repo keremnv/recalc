@@ -19,9 +19,9 @@ SPINE_DIR = (
     ROOT
     / "benchmark-data/SpreadsheetBench-2/benchmark-runs/mechanical/workbook-grounding-probe/spines"
 )
-LINEAGE_PATH = ROOT / "authority_frontier_probe/obligation_lineage.csv"
-SHADOW_PATH = ROOT / "authority_frontier_probe/scope_label_shadow.json"
-AUTHORITY_PATH = ROOT / "authority_loss_by_obligation.csv"
+LINEAGE_PATH = ROOT / "research/history/authority_frontier_probe/obligation_lineage.csv"
+SHADOW_PATH = ROOT / "research/history/authority_frontier_probe/scope_label_shadow.json"
+AUTHORITY_PATH = ROOT / "research/history/loose_evidence/authority_loss_by_obligation.csv"
 LIVE_DIR = (
     ROOT
     / "benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/"

@@ -29,7 +29,7 @@ There were 169 archived factual/tool observations. Sixty-three had reconstructab
 
 Eligible historical classes were 24 `CAPPED_VISIBLE`, 21 `RANGE_TABLE`, 16 `VALUE_ONLY`, and 2 `FULL_VISIBLE`. Capped output contributed only its visible head/prefix or tail. Hidden cells never entered H.
 
-The complete population and anti-hindsight rules are in [spec.json](fact_normalized_read_replay/spec.json). The reconstructed visible sets are in [visible_fact_sets.jsonl](fact_normalized_read_replay/visible_fact_sets.jsonl), and the pre-observation query audit is in [query_realizability.jsonl](fact_normalized_read_replay/query_realizability.jsonl).
+The complete population and anti-hindsight rules are in [spec.json](../history/fact_normalized_read_replay/spec.json). The reconstructed visible sets are in [visible_fact_sets.jsonl](../history/fact_normalized_read_replay/visible_fact_sets.jsonl), and the pre-observation query audit is in [query_realizability.jsonl](../history/fact_normalized_read_replay/query_realizability.jsonl).
 
 The H parser uses the archived observation text itself. In particular, formulas printed as `repr(c.value)[:N]`, standalone tuples, and row-prefixed tuple lists remain visibly truncated or value-only; they are not replaced by full source-workbook formulas.
 
@@ -134,7 +134,7 @@ The 20 repeated-query rows are a deterministic reuse ceiling, not observed savin
 | Silent helper truncations | 0 | 0 |
 | Primary wrong-fact rows | 5 | 0 systematic fidelity failure |
 
-The gate fails `FACT_PRESERVATION`, `QUERY_REALIZABILITY`, `PAYLOAD_MATERIALITY`, and the strict fidelity component. Phase B was not justified and no model inference was run. The machine-readable result is in [gate.json](fact_normalized_read_replay/gate.json).
+The gate fails `FACT_PRESERVATION`, `QUERY_REALIZABILITY`, `PAYLOAD_MATERIALITY`, and the strict fidelity component. Phase B was not justified and no model inference was run. The machine-readable result is in [gate.json](../history/fact_normalized_read_replay/gate.json).
 
 ## Required adjudication answers
 
@@ -157,7 +157,7 @@ The gate fails `FACT_PRESERVATION`, `QUERY_REALIZABILITY`, `PAYLOAD_MATERIALITY`
 17. **Repaired gate:** fails fact preservation, query realizability, raw payload materiality, and strict fidelity.
 18. **Old broad “no efficiency gain” conclusion:** still unresolved, not falsified and not supported as a universal null. The new result rejects using the prior raw aggregate as evidence against compactness, but does not establish live savings.
 19. **Live V1/V2 discriminator:** not justified; `LIVE_V1_V2_JUSTIFIED = false`.
-20. **Evidence ledger:** corrected below and in [corrected_evidence_ledger.json](fact_normalized_read_replay/corrected_evidence_ledger.json).
+20. **Evidence ledger:** corrected below and in [corrected_evidence_ledger.json](../history/fact_normalized_read_replay/corrected_evidence_ledger.json).
 
 ## Corrected evidence ledger
 
@@ -175,7 +175,7 @@ The gate fails `FACT_PRESERVATION`, `QUERY_REALIZABILITY`, `PAYLOAD_MATERIALITY`
 | V2 END-TO-END EFFICIENCY | `UNTESTED` |
 | FULL-BENCHMARK JUSTIFICATION | `NOT_ESTABLISHED` |
 
-The full evidence package is in [fact_normalized_read_replay/](fact_normalized_read_replay/): population, historical observations, visible H sets, query inputs, realizability, fact equivalence, representation sizes, task results, cycle analysis, consolidation opportunities, ceilings, gate, ledger, freshness log, and next-experiment decision.
+The full evidence package is in [fact_normalized_read_replay/](../history/fact_normalized_read_replay): population, historical observations, visible H sets, query inputs, realizability, fact equivalence, representation sizes, task results, cycle analysis, consolidation opportunities, ceilings, gate, ledger, freshness log, and next-experiment decision.
 
 ## Final synthesis
 

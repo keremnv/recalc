@@ -105,7 +105,7 @@ def _refresh_outputs(outputs_root: Path) -> None:
 
 
 def _official_result_path(model_name: str, category: str) -> Path:
-    results_dir = EVALUATION_DIR / "results" / category
+    results_dir = EVALUATION_DIR / "research/history/results" / category
     matches = sorted(
         results_dir.glob(f"{model_name}_{category}_*_regression.json"),
         key=lambda path: path.stat().st_mtime,

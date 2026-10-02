@@ -14,7 +14,7 @@ import time
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-AB = PROJECT_ROOT / "thin_architecture_checkpoint"
+AB = PROJECT_ROOT / "research/history/thin_architecture_checkpoint"
 RUNNER = PROJECT_ROOT / "benchmark" / "ab_local_runner.py"
 SHIM = PROJECT_ROOT / "benchmark" / "inspection_helpers" / "lx_helpers.py"
 ORDER_SEED = 77031

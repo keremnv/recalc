@@ -28,14 +28,14 @@ LIVE_ROOT = integrated.LIVE_ROOT
 GPT_ROOT = AUDIT_ROOT / "model_swap_gpt56_sol_high"
 STATIC_PATH = integrated.STATIC_ROOT / "activation_audit.json"
 SCORE_PATH = LIVE_ROOT / "official_scores.json"
-GOLD_PATHS = [ROOT / "authority_loss_by_obligation.csv", ROOT / "benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/authority_loss_by_obligation.csv"]
+GOLD_PATHS = [ROOT / "research/history/loose_evidence/authority_loss_by_obligation.csv", ROOT / "benchmark-data/SpreadsheetBench-2/benchmark-runs/matched-glm-compiled-sixty/authority_loss_by_obligation.csv"]
 
 REPORT_PATH = ROOT / "INTEGRATED_FEASIBILITY_REPORT.md"
-CENSUS_JSON = ROOT / "integrated_feasibility_census.json"
-CENSUS_CSV = ROOT / "integrated_feasibility_census.csv"
+CENSUS_JSON = ROOT / "research/history/loose_evidence/integrated_feasibility_census.json"
+CENSUS_CSV = ROOT / "research/history/loose_evidence/integrated_feasibility_census.csv"
 COST_REPORT_PATH = ROOT / "INTEGRATED_FEASIBILITY_COST_REPORT.md"
-COST_JSON = ROOT / "integrated_feasibility_cost.json"
-COST_CSV = ROOT / "integrated_feasibility_cost.csv"
+COST_JSON = ROOT / "research/history/loose_evidence/integrated_feasibility_cost.json"
+COST_CSV = ROOT / "research/history/loose_evidence/integrated_feasibility_cost.csv"
 
 
 def load(path: Path, default: Any = None) -> Any:

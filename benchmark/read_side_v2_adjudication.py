@@ -25,8 +25,8 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(PROJECT_ROOT))
 
-OUT = PROJECT_ROOT / "read_side_v2_adjudication"
-CHECKPOINT = PROJECT_ROOT / "thin_architecture_checkpoint"
+OUT = PROJECT_ROOT / "research/history/read_side_v2_adjudication"
+CHECKPOINT = PROJECT_ROOT / "research/history/thin_architecture_checkpoint"
 RANKING_PATH = CHECKPOINT / "exposure_ranking.json"
 REPS = CHECKPOINT / "reps"
 WORK = CHECKPOINT / "work"

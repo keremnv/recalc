@@ -169,7 +169,7 @@ The combined product-facing profile produced an 11.2% lower median provider-inpu
 
 ### HISTORICAL EVIDENCE
 
-Earlier lower totals were heterogeneous and confounded. The [historical note](token_claim_discovery/historical_research_note.md) and [task-arm reconstruction](token_claim_discovery/historical_token_summary.json) preserve available token splits, calls, observations, completion, and provenance.
+Earlier lower totals were heterogeneous and confounded. The [historical note](../history/token_claim_discovery/historical_research_note.md) and [task-arm reconstruction](../history/token_claim_discovery/historical_token_summary.json) preserve available token splits, calls, observations, completion, and provenance.
 
 ### PREREGISTERED DESIGN
 
@@ -181,7 +181,7 @@ All 60 slots ran; 1,167 selected successful provider calls reconcile to primary 
 
 ### TOKEN EFFECT
 
-D/A E2: 14 uncensored pairs, median ratio 0.888, arithmetic mean 1.052, geometric mean 0.854, 95% task-bootstrap geometric interval 0.563–1.212, 8 favorable and 6 unfavorable. The [task table](token_claim_discovery/task_level_token_effects.json) and [family contrasts](token_claim_discovery/family_level_token_effects.json) provide all ratios.
+D/A E2: 14 uncensored pairs, median ratio 0.888, arithmetic mean 1.052, geometric mean 0.854, 95% task-bootstrap geometric interval 0.563–1.212, 8 favorable and 6 unfavorable. The [task table](../history/token_claim_discovery/task_level_token_effects.json) and [family contrasts](../history/token_claim_discovery/family_level_token_effects.json) provide all ratios.
 
 ### COMPLETION-AWARE EFFECT
 

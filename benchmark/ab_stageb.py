@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-AB = PROJECT_ROOT / "inspection_efficiency_ab"
+AB = PROJECT_ROOT / "research/history/inspection_efficiency_ab"
 RUNNER = PROJECT_ROOT / "benchmark" / "ab_local_runner.py"
 SHIM = PROJECT_ROOT / "benchmark" / "inspection_helpers" / "lx_helpers.py"
 
@@ -83,7 +83,7 @@ def write_frozen() -> None:
     (AB / "_c1_note.txt").write_text(NOTE)
     json.dump({
         "name": "inspection-efficiency-ab-stage-b",
-        "gated_on": "targeted_runtime_replication/verdict.json == "
+        "gated_on": "research/history/targeted_runtime_replication/verdict.json == "
                      "RUNTIME_CAPABILITY_PRESERVATION_SUPPORTED",
         "arms": {"C0": "transparent runtime + ordinary Python/openpyxl/view_xlsx",
                  "C1": "C0 + optional lx_helpers (periods/search/inspect); "

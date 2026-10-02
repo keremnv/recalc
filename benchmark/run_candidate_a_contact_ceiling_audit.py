@@ -15,10 +15,10 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "candidate_a_contact_ceiling"
-LIVE = ROOT / "candidate_a_live"
-CENSUS = ROOT / "transparent_python_read_census"
-SHADOW = ROOT / "candidate_a_shadow_interposition"
+OUT = ROOT / "research/history/candidate_a_contact_ceiling"
+LIVE = ROOT / "research/history/candidate_a_live"
+CENSUS = ROOT / "research/history/transparent_python_read_census"
+SHADOW = ROOT / "research/history/candidate_a_shadow_interposition"
 
 LIVE_TASKS = [
     "Financial_Model:07_01",
@@ -705,7 +705,7 @@ def main() -> None:
             "evidence_class": "opportunity_ceiling_only",
         })
     write_jsonl(OUT / "safe_prefix_analysis.jsonl", safe_prefix)
-    write_jsonl(OUT / "object_escape_timing.jsonl", [{"source": "candidate_a_shadow_interposition/object_escape_census.json", **shadow_escape}])
+    write_jsonl(OUT / "object_escape_timing.jsonl", [{"source": "research/history/candidate_a_shadow_interposition/object_escape_census.json", **shadow_escape}])
 
     extension_rows = [
         {"extension": "AST-aware forced-real eligibility repair", "classification": "SAFE_EXTENSION_HIGH_VALUE", "evidence": f"{len(forced_false)} unique live forced-real turns had no actual workbook range subscript", "new_api": False, "implement": False},

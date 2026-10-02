@@ -14,7 +14,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "token_claim_discovery"
+OUT = ROOT / "research/history/token_claim_discovery"
 CENSORED = {"PROVIDER_CENSORED", "RUNNER_CENSORED", "WORKBOOK_INFRA_CENSORED"}
 
 

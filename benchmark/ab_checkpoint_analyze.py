@@ -14,7 +14,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
 from benchmark.ab_checkpoint_score import transcript_cmds  # noqa: E402
 
-AB = PROJECT_ROOT / "thin_architecture_checkpoint"
+AB = PROJECT_ROOT / "research/history/thin_architecture_checkpoint"
 REPS = AB / "reps"
 MEMBER_RE = re.compile(r"(?:lx_helpers|lx|L)\.(periods|search|inspect)\s*\(")
 LOOP_RE = re.compile(r"for\s+\w+\s+in\s+(\[.*?\])\s*:")

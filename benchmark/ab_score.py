@@ -6,8 +6,8 @@ skipped (soffice is not executable in this sandbox). score_openrouter_run.py
 --no-refresh documents the same escape hatch.
 
 Usage: python3 benchmark/ab_score.py
-Reads live_transparent_runtime_ab/runs/*/*_{H0,H1}/output.xlsx, writes
-live_transparent_runtime_ab/paired_scores.json.
+Reads research/history/live_transparent_runtime_ab/runs/*/*_{H0,H1}/output.xlsx, writes
+research/history/live_transparent_runtime_ab/paired_scores.json.
 """
 from __future__ import annotations
 
@@ -19,13 +19,13 @@ import sys
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-RUNS_DIR = PROJECT_ROOT / "live_transparent_runtime_ab" / "runs"
-STAGE = PROJECT_ROOT / "live_transparent_runtime_ab" / "score_staging"
+RUNS_DIR = PROJECT_ROOT / "research/history/live_transparent_runtime_ab" / "runs"
+STAGE = PROJECT_ROOT / "research/history/live_transparent_runtime_ab" / "score_staging"
 EVAL = PROJECT_ROOT / "benchmark-data" / "SpreadsheetBench-2" / "evaluation" / "evaluation.py"
 
 
 def main() -> None:
-    tasks = json.load(open(PROJECT_ROOT / "live_transparent_runtime_ab" / "population.json"))["frozen_tasks"]
+    tasks = json.load(open(PROJECT_ROOT / "research/history/live_transparent_runtime_ab" / "population.json"))["frozen_tasks"]
     if STAGE.exists():
         shutil.rmtree(STAGE)
     for arm in ("H0", "H1"):
@@ -51,7 +51,7 @@ def main() -> None:
             print(f"== {arm}/{cat}: rc={proc.returncode}", flush=True)
             if proc.returncode != 0:
                 print((proc.stdout + proc.stderr)[-1500:])
-            pat = str(bench / "results" / cat / "llama_*_regression.json")
+            pat = str(bench / "research/history/results" / cat / "llama_*_regression.json")
             cands = sorted(glob.glob(pat), key=lambda p: os.stat(p).st_mtime)
             if not cands:
                 raise RuntimeError(f"no result file for {arm}/{cat}")
@@ -79,7 +79,7 @@ def main() -> None:
                                  if k != "trajectory"},
                     "h1_telemetry": rec.get("h1_telemetry"),
                 })
-    json.dump(paired, open(PROJECT_ROOT / "live_transparent_runtime_ab" /
+    json.dump(paired, open(PROJECT_ROOT / "research/history/live_transparent_runtime_ab" /
                            "paired_scores.json", "w"), indent=1)
     print(f"wrote paired_scores.json ({len(paired)} rows)")
 

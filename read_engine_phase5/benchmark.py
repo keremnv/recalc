@@ -28,7 +28,7 @@ PINNED = {
     "read_engine_phase3/bootstrap/sitecustomize.py": "9b7158871fa3b143e9d9aa493fd872fb8aa525d3ffa4ee5b5771df32cacb2804",
     "read_engine_phase1/prototype.py": "a6e95f1503ec6090d6176065471372924bf447f907a2a428faceee12a2f72473",
     "read_engine_phase3/population.json": "ea83d4f603430d78b30b8b85b70bb5a8ee9ef916350060bbf52c8f67701651dc",
-    "rc_acceleration_validation/eligible_population.json": "b6be87f570bfd33c499038526a45b8624d7752531a79dda29a55bd9cddbcf1a8",
+    "research/history/rc_acceleration_validation/eligible_population.json": "b6be87f570bfd33c499038526a45b8624d7752531a79dda29a55bd9cddbcf1a8",
 }
 ARMS = ("PY", "H0", "H1")
 

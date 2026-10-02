@@ -14,8 +14,8 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-DISCOVERY = ROOT / "token_claim_discovery"
-OUT = ROOT / "token_claim_review"
+DISCOVERY = ROOT / "research/history/token_claim_discovery"
+OUT = ROOT / "research/history/token_claim_review"
 OUT.mkdir(exist_ok=True)
 
 SAVE_RE = re.compile(r"\b(?:wb|workbook|book|w)\.save\s*\(")
@@ -253,7 +253,7 @@ def main():
     result = {
         "phase": "POST_HOC_INDEPENDENT_FORENSIC_REVIEW",
         "source_primary_sha256": freeze["files_sha256"]["primary_runs.jsonl"],
-        "packet_sha256": hashlib.sha256((ROOT / "ASTRA_TOKEN_DIAGNOSIS_PACKET.md").read_bytes()).hexdigest(),
+        "packet_sha256": hashlib.sha256((ROOT / "research/reports/ASTRA_TOKEN_DIAGNOSIS_PACKET.md").read_bytes()).hexdigest(),
         "model_calls_added": 0, "holdout_used": False,
         "lineage": {"raw_mechanism_events": raw_event_count,
                     "selected_primary_tool_events": final_event_count,

@@ -5,7 +5,7 @@ from pathlib import Path
 
 import openpyxl
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "phase12"))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "research/history/phase12"))
 
 from verification_block import verifier
 from verification_block.verifier import (patch_full_calc, recalc, render,
@@ -26,7 +26,7 @@ def _family_wb(path, break_cell=None, break_formula=None):
 
 def test_rewrite_filter_keeps_localized_break(tmp_path):
     from phase11.mine import derive_workbook, structural_diff, adjacent_family_breaks
-    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "phase11"))
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "research/history/phase11"))
     pre_p, post_p = tmp_path / "in.xlsx", tmp_path / "out.xlsx"
     _family_wb(pre_p)
     _family_wb(post_p, break_cell="B5", break_formula="=SUM(A1:A5)")
@@ -39,7 +39,7 @@ def test_rewrite_filter_keeps_localized_break(tmp_path):
 
 
 def test_rewrite_filter_suppresses_broad_rewrite(tmp_path):
-    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "phase11"))
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "research/history/phase11"))
     from phase11.mine import derive_workbook, structural_diff, adjacent_family_breaks
     pre_p, post_p = tmp_path / "in.xlsx", tmp_path / "out.xlsx"
     _family_wb(pre_p)

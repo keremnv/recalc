@@ -49,7 +49,7 @@ from benchmark.transparent_runtime.validate import (  # noqa: E402
     validate_mechanical,
 )
 
-OUT = PROJECT_ROOT / "representative_architecture_checkpoint"
+OUT = PROJECT_ROOT / "research/history/representative_architecture_checkpoint"
 SPEND_FILE = OUT / "_spend.json"
 SHIM_H0 = OUT / "_shim_h0_lx_helpers.py"
 SHIM_H1 = OUT / "_shim_h1_lx_helpers.py"

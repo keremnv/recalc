@@ -63,7 +63,7 @@ Pre-release, not stable: the license decision is still open
   capture fields are unchanged.
 - Config: `substrate` and `candidate_a` deprecated (warning), removal planned
   post-v1. New key `reads`.
-- `lx_helpers` top-level import: see `phase10c_b/LX_HELPERS_DISPOSITION.md`
+- `lx_helpers` top-level import: see `research/history/phase10c_b/LX_HELPERS_DISPOSITION.md`
   for the deprecate-vs-remove decision and timeline.
 - Cached artifacts from `0.2.0rc1` are NOT reused: the runtime version is part
   of the artifact key, so old entries are orphaned and rebuilt (never served
@@ -84,9 +84,9 @@ Pre-release, not stable: the license decision is still open
 
 - Packaged RC with per-invocation openpyxl-to-SQLite index path, since
   superseded by the integrated persistent direct-read engine.
-- Its frozen claim registry (`FINAL_CLAIM_REGISTRY.md`, now historical) found
+- Its frozen claim registry (`research/reports/FINAL_CLAIM_REGISTRY.md`, now historical) found
   packaged fresh-invocation wall-time reduction UNSUPPORTED (median T/C
   2.017) and exact read semantics for all admitted workloads UNSUPPORTED
   (four semantic failures on the old index path).
 - Do not use rc1 docs or rc1 numbers to describe rc2. The old wheel in
-  `product_hygiene/dist/` is an archive, never to be shipped.
+  `research/history/product_hygiene/dist/` is an archive, never to be shipped.

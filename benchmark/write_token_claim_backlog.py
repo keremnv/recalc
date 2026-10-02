@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "token_claim_discovery"
+OUT = ROOT / "research/history/token_claim_discovery"
 
 LEADS = [
     {"claim":"Token efficiency", "status":"DISCOVERY_NEGATIVE_MIXED; NO PUBLIC CLAIM", "priority":1,
@@ -44,7 +44,7 @@ lines=["# Claim backlog", "", "Architecture discovery remains closed. Claims req
        "| --- | --- | --- | --- | --- | --- |"]
 for x in LEADS:
     lines.append("| " + " | ".join(str(x[k]).replace("|","/") for k in ("priority","claim","status","best_evidence","missing_evidence","next_discriminating_test")) + " |")
-(ROOT/"CLAIM_BACKLOG.md").write_text("\n".join(lines)+"\n")
+(ROOT/"research/reports/CLAIM_BACKLOG.md").write_text("\n".join(lines)+"\n")
 
 if __name__ == "__main__":
     print("wrote claim backlog")

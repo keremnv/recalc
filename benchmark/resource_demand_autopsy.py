@@ -3,7 +3,7 @@
 
 Run: PYTHONPATH=benchmark:src:benchmark/sweagent/formula_index/lib \
      python benchmark/resource_demand_autopsy.py
-Outputs are confined to resource_demand_autopsy/. Archived inputs are hash-checked.
+Outputs are confined to research/history/resource_demand_autopsy/. Archived inputs are hash-checked.
 """
 from __future__ import annotations
 
@@ -23,7 +23,7 @@ import matched_compiled_treatment as m
 import xlsx_cell_writer as writer
 
 ROOT = c.ROOT
-OUT = ROOT / 'resource_demand_autopsy'
+OUT = ROOT / 'research/history/resource_demand_autopsy'
 TASK = 'Financial_Model:06_01'
 TD = c.LIVE_ROOT / 'Financial_Model-06_01'
 TD7 = c.LIVE_ROOT / 'Financial_Model-07_01'

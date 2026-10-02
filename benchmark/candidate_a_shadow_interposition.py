@@ -25,8 +25,8 @@ from typing import Any
 from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "candidate_a_shadow_interposition"
-AUDIT = ROOT / "control_python_audit"
+OUT = ROOT / "research/history/candidate_a_shadow_interposition"
+AUDIT = ROOT / "research/history/control_python_audit"
 sys.path.insert(0, str(ROOT))
 
 from benchmark.inspection_helpers import index  # noqa: E402
@@ -701,9 +701,9 @@ def execute_source(source: str, mode: str, refs: list[str], population: list[dic
 
 
 def heldout_replay(population: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    split = json.loads((ROOT / "transparent_python_read_census" / "heldout_split.json").read_text())
+    split = json.loads((ROOT / "research/history/transparent_python_read_census" / "heldout_split.json").read_text())
     held_tasks = {task for item in split["families"].values() for task in item["heldout_tasks"]}
-    prior = [json.loads(x) for x in (ROOT / "transparent_python_read_census" / "executions.jsonl").read_text().splitlines()]
+    prior = [json.loads(x) for x in (ROOT / "research/history/transparent_python_read_census" / "executions.jsonl").read_text().splitlines()]
     original = {x["exec_id"]: x for x in (json.loads(x) for x in (AUDIT / "python_executions.jsonl").read_text().splitlines())}
     out = []
     for row in prior:
@@ -772,11 +772,11 @@ def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     fixture_info, historical, population = fixture_and_historical()
     fixture_info = [{"path": str(OUT / "fixtures" / "semantic_edges.xlsx"), "sheets": ["EmptyMetadata", "Data", "ユニコード"], "coordinates": ["A1", "B1", "C1", "D1", "E1", "F1", "G1", "H1", "I1", "J1", "C3", "K20", "B10"], "cases": ["blank", "empty string", "int", "float", "bool", "date", "datetime", "time", "formula", "error", "unicode", "formatted sparse bound", "merged adjacent"]}]
-    prior_rows = [json.loads(x) for x in (ROOT / "transparent_python_read_census" / "executions.jsonl").read_text().splitlines()]
+    prior_rows = [json.loads(x) for x in (ROOT / "research/history/transparent_python_read_census" / "executions.jsonl").read_text().splitlines()]
     original_rows = {x["exec_id"]: x for x in (json.loads(x) for x in (AUDIT / "python_executions.jsonl").read_text().splitlines())}
     for row in prior_rows:
         row["source"] = original_rows.get(row["exec_id"], {}).get("source")
-    split = json.loads((ROOT / "transparent_python_read_census" / "heldout_split.json").read_text())
+    split = json.loads((ROOT / "research/history/transparent_python_read_census" / "heldout_split.json").read_text())
     held_tasks = {t for item in split["families"].values() for t in item["heldout_tasks"]}
     prior_mismatches = [
         {"case": "debugging sheetnames", "primitive": "Workbook.sheetnames", "first_divergent_observable": "sheetnames content/order", "root_cause": "non-empty-cell-only compiled index omitted metadata-only worksheets", "primary_category": "PRIMITIVE_VALUE_SEMANTICS", "disposition": "BOUNDED_REPAIR"},

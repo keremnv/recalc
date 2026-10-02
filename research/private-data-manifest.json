@@ -1,0 +1,291 @@
+{
+  "private_root": "/home/kerem/recalc-private-data",
+  "moved_from_commit": "ba76b21e6572048bb72c3ce0f3cd09b8d31e41af",
+  "note": "Experiment data kept outside git. Use scripts/restore-private-data.sh to symlink units back into a worktree for local reproduction. Symlinks are gitignored and never committed.",
+  "entries": [
+    {
+      "repo_path": "closure_transfer_audit/work",
+      "private_name": "closure_transfer_audit_work",
+      "kind": "dir",
+      "tier": 2,
+      "files": 778,
+      "bytes": 60511765,
+      "tree_sha256": "18dee054aa45c2acb67812b71a8f0ec19ddb5ded95f4cb7cfbb5ea9feeb1d797",
+      "note": "never tracked in git; working experiment data"
+    },
+    {
+      "repo_path": "compiled_context_sidecar_ab/job_cache",
+      "private_name": "compiled_context_sidecar_ab_job_cache",
+      "kind": "dir",
+      "tier": 2,
+      "files": 2,
+      "bytes": 910017012,
+      "tree_sha256": "37fe6fb5bb1f811fcf8e4cb5dd56cd0a52a9522689359c2eba9723c17ad55229",
+      "note": "never tracked in git; working experiment data"
+    },
+    {
+      "repo_path": "compiled_context_sidecar_ab/world_cache",
+      "private_name": "compiled_context_sidecar_ab_world_cache",
+      "kind": "dir",
+      "tier": 2,
+      "files": 4,
+      "bytes": 1820034024,
+      "tree_sha256": "c6f9212cfc23d42cb120899c7ef2e4a9a638237f8aebdb9a1bd01e7756acc535",
+      "note": "never tracked in git; working experiment data"
+    },
+    {
+      "repo_path": "release-candidate",
+      "private_name": "release-candidate",
+      "kind": "dir",
+      "tier": 2,
+      "files": 6,
+      "bytes": 119445,
+      "tree_sha256": "225d94f0e752a480a9e759701e4f0738c13c052d69e6cce6f04797730fb271ac",
+      "note": "never tracked in git; working experiment data"
+    },
+    {
+      "repo_path": "research/history/scheduler_live_validation/Financial_Model-04_01",
+      "private_name": "scheduler_live_validation_Financial_Model-04_01",
+      "kind": "dir",
+      "tier": 2,
+      "files": 1,
+      "bytes": 114429992,
+      "tree_sha256": "42a0da7deefeafa47892feb86a65ef1835c7113466ba643b6f4ceac6fb9cc201",
+      "note": "never tracked in git; working experiment data"
+    },
+    {
+      "repo_path": "research/history/stochastic_work_census/atomic_facts.jsonl",
+      "private_name": "stochastic_work_census_atomic_facts.jsonl",
+      "kind": "file",
+      "tier": 2,
+      "bytes": 171490931,
+      "sha256": "332893415b695963f22e7191b4cea6b93b8445bd6b031a7d7ba79500b35991ec",
+      "note": "never tracked in git; working experiment data"
+    },
+    {
+      "repo_path": "research/history/stochastic_work_census/observations_segmented.jsonl",
+      "private_name": "stochastic_work_census_observations_segmented.jsonl",
+      "kind": "file",
+      "tier": 2,
+      "bytes": 103180104,
+      "sha256": "8dd18e85ee0c30700639b80e89ff05af248f6b7987dea331f9a01eb5e761a1a2",
+      "note": "never tracked in git; working experiment data"
+    },
+    {
+      "repo_path": "compiled_context_sidecar_ab/c1_retry.log",
+      "private_name": "compiled_context_sidecar_ab_c1_retry.log",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 6548307,
+      "sha256": "dc8acee6afb187684f4b07777472f2ebcc63668fba22d99f93766da2b3b527f1",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "compiled_context_sidecar_ab/launch.log",
+      "private_name": "compiled_context_sidecar_ab_launch.log",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 7108872,
+      "sha256": "c7970059b0b13d34f0cb19a47f122402a6a853170689672fe33cf8547ec9bff2",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "default_harness_deterministic_execution/held_out_census.json",
+      "private_name": "default_harness_deterministic_execution_held_out_census.json",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 8406819,
+      "sha256": "eec0422f9ba12730dee4a8ea190fed0fc11fdbea1d271928e4e0dc9f10d7763d",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "read_engine_phase3/raw_timings.jsonl",
+      "private_name": "read_engine_phase3_raw_timings.jsonl",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 5881915,
+      "sha256": "71538d1edd168c4fd3808f90f508d1eac9a233546e2e60d11567c06aafa191ad",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "read_engine_phase4/raw_timings.jsonl",
+      "private_name": "read_engine_phase4_raw_timings.jsonl",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 6388978,
+      "sha256": "a13078e5f50e0ea8fca5df7add7c65a2b667a07e14877972732bb2444ff214be",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "read_engine_phase5/raw_timings.jsonl",
+      "private_name": "read_engine_phase5_raw_timings.jsonl",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 6584634,
+      "sha256": "0a806d6c79fce69f1cdb5575087c32cc24192b8230af1e3ddfb6622528620754",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "read_engine_phase6/raw_timings.jsonl",
+      "private_name": "read_engine_phase6_raw_timings.jsonl",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 9304745,
+      "sha256": "cecdab68d0c6cd5e26b7fff2282d8688a2cdaa98ff693006f705018936b7524c",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "read_engine_phase7/raw_timings.jsonl",
+      "private_name": "read_engine_phase7_raw_timings.jsonl",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 6919074,
+      "sha256": "6a2ee1d05a740c80dc3e6874ce7f0b176556bde620223cc614c159f0fa9f7d5e",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "read_engine_phase8/representative_timings.jsonl",
+      "private_name": "read_engine_phase8_representative_timings.jsonl",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 10216075,
+      "sha256": "32e31d7904fa1a6c00b271849d3588c6d4922b56e527495b9a1f512934ed3f86",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "read_engine_phase9/raw_timings.jsonl",
+      "private_name": "read_engine_phase9_raw_timings.jsonl",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 10407645,
+      "sha256": "cc031acd4ceb2b490c76587d9cd6cd1a83e719caa3afa335238beac61db03aa2",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "research/history/loose_evidence/actuation_loss_trace.csv",
+      "private_name": "research_history_loose_evidence_actuation_loss_trace.csv",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 10865257,
+      "sha256": "cdc1c90abd02463ee0cd78426e032adab1c5e26bb825596e45f017b70a61bf90",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "research/history/loose_evidence/integrated_feasibility_census.json",
+      "private_name": "research_history_loose_evidence_integrated_feasibility_census.json",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 5403486,
+      "sha256": "2dbfa7a05c1a82166c1d333ee7bae1a56df212938cefd24740162de5f2082e82",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "research/history/phase12/ledgers/verifier_final_reports/popB/Financial_Model_17_05_CONTROL/final.json",
+      "private_name": "research_history_phase12_ledgers_verifier_final_reports_popB_Financial_Model_17_05_CONTROL_final.json",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 7816815,
+      "sha256": "cb682324a94d4c6cbf7d05aa6165b38dbeff4a6777e0e7ce6fe69019349020f8",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "research/history/phase12r/BASELINE_CORRECTION_LEDGER.jsonl",
+      "private_name": "research_history_phase12r_BASELINE_CORRECTION_LEDGER.jsonl",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 42366326,
+      "sha256": "ea0fe5392635b25a267ddc337d3acf58807d7a5642c05d78c6b946de79c55674",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "research/history/phase12r/BASELINE_CORRECTION_LEDGER_RAW.jsonl",
+      "private_name": "research_history_phase12r_BASELINE_CORRECTION_LEDGER_RAW.jsonl",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 24939922,
+      "sha256": "733f0490ef3284cf06274771a50775e0d503bea203249835e4bb8a07a19b8345",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "research/history/phase12r/CACHE_STATE.jsonl",
+      "private_name": "research_history_phase12r_CACHE_STATE.jsonl",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 15186112,
+      "sha256": "e231aab58238e5f9b49856dc6186a746ac8755d6fa99742dd58f4468742c8d18",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "research/history/phase12r/SCORE_REPLAY.jsonl",
+      "private_name": "research_history_phase12r_SCORE_REPLAY.jsonl",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 5484454,
+      "sha256": "7af69dbe6e67fa4a69464f3f8411c8a0ba0c07d35eb1adcf66ee42147a1ea93f",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "research/history/phase13/working/popB_fullerr.json",
+      "private_name": "research_history_phase13_working_popB_fullerr.json",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 27381009,
+      "sha256": "72ea8209a738e4d776e2ca1bd5356d3497c3bdb007226ab372e461c62b4aef28",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "research/history/phase13/working/popB_roots.json",
+      "private_name": "research_history_phase13_working_popB_roots.json",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 7415192,
+      "sha256": "1ff8f1a1a56badf84733543029d58a8e85c9afad312d3b0dbdde3c7d26552815",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "research/history/resource_demand_autopsy/authority_cells.csv",
+      "private_name": "research_history_resource_demand_autopsy_authority_cells.csv",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 10995454,
+      "sha256": "71d576795cb953e799bfcaa4d6fe5a65b09eb4f3bef05d14521247b255a4dcfb",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "research/history/resource_demand_autopsy/evidence_access_baseline.json",
+      "private_name": "research_history_resource_demand_autopsy_evidence_access_baseline.json",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 20434884,
+      "sha256": "bdcd75a9da57a5c95f27d9becf8ee6ac8dabb79247a478a2ba2a00fd02dd8a47",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "research/history/resource_demand_autopsy/evidence_manifests.json",
+      "private_name": "research_history_resource_demand_autopsy_evidence_manifests.json",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 11945872,
+      "sha256": "1b8988603a55bf620466d21e5dbf837d6f7b16e92967c22fe9b4416e811345b5",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "research/history/stochastic_work_census/observations_raw.jsonl",
+      "private_name": "research_history_stochastic_work_census_observations_raw.jsonl",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 14948885,
+      "sha256": "60e55f04ef9546110dab3c9654bf6fcc4cdd5c8357ca1277eab31b33373e3082",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    },
+    {
+      "repo_path": "research/history/stochastic_work_census/repeated_facts.jsonl",
+      "private_name": "research_history_stochastic_work_census_repeated_facts.jsonl",
+      "kind": "file",
+      "tier": 3,
+      "bytes": 9081311,
+      "sha256": "75c6ce620f9844a1993e658d3b2dbf79a0f31724fcd8cbb01dda4d813aa4e027",
+      "note": "removed from git (>5MB bulk); preserved byte-identical"
+    }
+  ]
+}

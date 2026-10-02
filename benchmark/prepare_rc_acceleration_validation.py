@@ -17,11 +17,11 @@ import tempfile
 import zipfile
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
-OUT = ROOT / "rc_acceleration_validation"
+OUT = ROOT / "research/history/rc_acceleration_validation"
 VENV = pathlib.Path("/tmp/librecalc-hygiene-rc-v55taghk/venv")
 PY = VENV / "bin/python"
 CLI = VENV / "bin/librecalc-agent"
-WHEEL = ROOT / "product_hygiene/dist/librecalc_agent-0.2.0rc1-py3-none-any.whl"
+WHEEL = ROOT / "research/history/product_hygiene/dist/librecalc_agent-0.2.0rc1-py3-none-any.whl"
 SEED = 20261011
 
 
@@ -44,7 +44,7 @@ def data_rows(path):
 
 
 def verify_rc():
-    manifest = json.loads((ROOT / "product_hygiene/rc_manifest.json").read_text())
+    manifest = json.loads((ROOT / "research/history/product_hygiene/rc_manifest.json").read_text())
     assert manifest["version"] == "0.2.0rc1"
     mapping = {name: sha((ROOT / name).read_bytes()) for name in manifest["source_sha256"]}
     assert mapping == manifest["source_sha256"], "RC source/config mismatch"
@@ -67,7 +67,7 @@ def verify_rc():
     assert version == "0.2.0rc1"
     dump("rc_identity.json", {"version": version, "source_config_sha256": source_hash,
          "wheel_sha256": wheel_hash, "installed_package_file_count_identical_to_wheel": len(installed),
-         "installed_prefix": str(VENV), "wheel": str(WHEEL), "source_manifest": "product_hygiene/rc_manifest.json"})
+         "installed_prefix": str(VENV), "wheel": str(WHEEL), "source_manifest": "research/history/product_hygiene/rc_manifest.json"})
 
 
 def dataset_map():
@@ -102,7 +102,7 @@ def normalize(source: str, original: str, basename: str):
 def extract():
     from librecalc_agent._frozen.eligibility import classify
     workbooks = dataset_map()
-    census = {r["exec_id"]: r for r in data_rows(ROOT / "transparent_python_read_census/executions.jsonl")}
+    census = {r["exec_id"]: r for r in data_rows(ROOT / "research/history/transparent_python_read_census/executions.jsonl")}
     candidates = {}
 
     def add(task, source, provenance, read_count=None, control_class=None):
@@ -135,15 +135,15 @@ def extract():
                "a1_decision": decision, "control_read_class": control_class}
         candidates.setdefault(key, row)
 
-    for r in data_rows(ROOT / "control_python_audit/python_executions.jsonl"):
+    for r in data_rows(ROOT / "research/history/control_python_audit/python_executions.jsonl"):
         if r.get("has_source") and r["exec_id"] in census:
             c = census[r["exec_id"]]
-            add(r["task_id"], r["source"], {"archive": "control_python_audit/python_executions.jsonl", "exec_id": r["exec_id"]},
+            add(r["task_id"], r["source"], {"archive": "research/history/control_python_audit/python_executions.jsonl", "exec_id": r["exec_id"]},
                 c.get("read_event_count"), c.get("read_write_classification"))
     archived_controls = (
-        sorted((ROOT / "representative_architecture_checkpoint/reps").glob("*H0*/run_record.json"))
-        + sorted((ROOT / "token_claim_discovery/runs/primary").glob("*_A/run_record.json"))
-        + sorted((ROOT / "token_affordance_discovery/runs/primary").glob("*_A/run_record.json"))
+        sorted((ROOT / "research/history/representative_architecture_checkpoint/reps").glob("*H0*/run_record.json"))
+        + sorted((ROOT / "research/history/token_claim_discovery/runs/primary").glob("*_A/run_record.json"))
+        + sorted((ROOT / "research/history/token_affordance_discovery/runs/primary").glob("*_A/run_record.json"))
     )
     for record_path in archived_controls:
         record = json.loads(record_path.read_text())

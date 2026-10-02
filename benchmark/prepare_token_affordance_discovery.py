@@ -15,15 +15,15 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from benchmark import ab_local_runner as base  # noqa: E402
 
-OUT = ROOT / "token_affordance_discovery"
+OUT = ROOT / "research/history/token_affordance_discovery"
 SEED = 20261007
 FAMILIES = ("Template", "Financial_Model", "Debugging")
 RC_VENV = Path("/tmp/librecalc-hygiene-rc-v55taghk/venv")
 CONTROL_GLOBS = (
-    "representative_architecture_checkpoint/reps/*H0*/run_record.json",
-    "thin_architecture_checkpoint/reps/*H0/run_record.json",
-    "live_transparent_runtime_ab/runs/**/*H0/run_record.json",
-    "batch_write_helper_ab/reps/*C0/run_record.json",
+    "research/history/representative_architecture_checkpoint/reps/*H0*/run_record.json",
+    "research/history/thin_architecture_checkpoint/reps/*H0/run_record.json",
+    "research/history/live_transparent_runtime_ab/runs/**/*H0/run_record.json",
+    "research/history/batch_write_helper_ab/reps/*C0/run_record.json",
 )
 
 
@@ -39,8 +39,8 @@ def sha(path):
 def main():
     if (OUT / "preregistered_spec.json").exists():
         raise RuntimeError("preregistration already exists; refuse to overwrite frozen design")
-    previous = set(json.loads((ROOT / "token_claim_discovery/population.json").read_text())["tasks"])
-    reservation = json.loads((ROOT / "token_claim_discovery/future_validation_reservation.json").read_text())
+    previous = set(json.loads((ROOT / "research/history/token_claim_discovery/population.json").read_text())["tasks"])
+    reservation = json.loads((ROOT / "research/history/token_claim_discovery/future_validation_reservation.json").read_text())
     holdout = reservation["tasks"]
     holdout = set(sum(holdout.values(), [])) if isinstance(holdout, dict) else set(holdout)
     if len(previous) != 15 or len(holdout) != 30:
@@ -178,7 +178,7 @@ def main():
                           "within_task_position": position, "worker_preassignment": position})
     put("run_order.json", {"seed": SEED, "method": "seeded task order and cyclic Latin arm rotation, one four-arm concurrent block per task", "slots": slots})
 
-    rc = json.loads((ROOT / "product_hygiene/rc_manifest.json").read_text())
+    rc = json.loads((ROOT / "research/history/product_hygiene/rc_manifest.json").read_text())
     rc_sources_bad = [name for name, digest in rc["source_sha256"].items() if sha(ROOT / name) != digest]
     if rc_sources_bad or sha(ROOT / rc["wheel"]["wheel"]) != rc["wheel"]["sha256"]:
         raise RuntimeError(f"frozen RC changed: {rc_sources_bad}")
@@ -200,8 +200,8 @@ def main():
                        "wheel_sha256": rc["wheel"]["sha256"]},
         "hashes": {name: sha(OUT / name) for name in ("selection_manifest.json", "population.json",
                                                       "exact_notes.json", "arm_profiles.json", "run_order.json")},
-        "prior_population_sha256": sha(ROOT / "token_claim_discovery/population.json"),
-        "reserved_holdout_sha256": sha(ROOT / "token_claim_discovery/future_validation_reservation.json"),
+        "prior_population_sha256": sha(ROOT / "research/history/token_claim_discovery/population.json"),
+        "reserved_holdout_sha256": sha(ROOT / "research/history/token_claim_discovery/future_validation_reservation.json"),
         "primary_slots": 48, "model_and_runtime_settings": settings,
         "primary_endpoints": ["total provider-reported input tokens per task", "model-call count per task"],
         "contrasts": {"B_vs_A": "textual cue", "C_vs_B": "actual availability beyond cue",

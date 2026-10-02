@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Differential test: H0 reference_api vs H1 api on fixture workbooks.
-Compares factual contract (results/truncated/next_offset); index_generation
+Compares factual contract (research/history/results/truncated/next_offset); index_generation
 and timings ignored. Fails closed on any factual mismatch."""
 import json
 import sys
@@ -88,7 +88,7 @@ def battery(path):
 
 
 def main() -> None:
-    pop = json.load(open(ROOT / "representative_architecture_checkpoint"
+    pop = json.load(open(ROOT / "research/history/representative_architecture_checkpoint"
                          / "population.json"))
     # 2 fixtures per family (first 2 selected IDs), pre-run mechanical choice
     fixtures = []
@@ -130,7 +130,7 @@ def main() -> None:
     for m in mism[:10]:
         print(json.dumps(m, indent=1)[:800])
     json.dump({"total": total, "mismatches": mism},
-              open(ROOT / "representative_architecture_checkpoint"
+              open(ROOT / "research/history/representative_architecture_checkpoint"
                    / "helper_parity_differential.json", "w"), indent=1)
     sys.exit(1 if mism else 0)
 

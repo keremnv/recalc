@@ -38,7 +38,7 @@ def verify() -> tuple[dict, list[dict]]:
         if sha(PHASE8 / f"{name}.md") != recorded:
             raise RuntimeError(f"Changed preregistration: {name}")
     pop = b7.verify()
-    representative = json.loads((ROOT / "rc_acceleration_validation/representative_population.json").read_text())
+    representative = json.loads((ROOT / "research/history/rc_acceleration_validation/representative_population.json").read_text())
     if len(pop["secondary_ids"]) != 30 or pop["secondary_ids"] != representative["workload_ids"]:
         raise RuntimeError("Representative population differs from frozen RC manifest")
     by_id = {x["workload_id"]: x for x in pop["workloads"]}

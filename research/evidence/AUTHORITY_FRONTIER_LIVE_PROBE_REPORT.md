@@ -10,14 +10,14 @@ synthesis, scheduling, workbook writes, LibreOffice refresh and scoring were
 not run.
 
 The machine-readable source of truth is
-[`authority_frontier_live_probe/report.json`](authority_frontier_live_probe/report.json).
+[`authority_frontier_live_probe/report.json`](../history/authority_frontier_live_probe/report.json).
 The exact serialized planner inputs are in
-[`control_context.json`](authority_frontier_live_probe/control_context.json),
-[`treatment_context.json`](authority_frontier_live_probe/treatment_context.json),
+[`control_context.json`](../history/authority_frontier_live_probe/control_context.json),
+[`treatment_context.json`](../history/authority_frontier_live_probe/treatment_context.json),
 and the exact request/response ledgers are in
-[`control/calls/001_edit_plan.json`](authority_frontier_live_probe/control/calls/001_edit_plan.json)
+[`control/calls/001_edit_plan.json`](../history/authority_frontier_live_probe/control/calls/001_edit_plan.json)
 and
-[`treatment/calls/001_edit_plan.json`](authority_frontier_live_probe/treatment/calls/001_edit_plan.json).
+[`treatment/calls/001_edit_plan.json`](../history/authority_frontier_live_probe/treatment/calls/001_edit_plan.json).
 
 ## Evidence intervention
 

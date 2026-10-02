@@ -58,10 +58,10 @@ not called a planner choice. A target present in the candidate evidence but
 absent from a valid expanded plan is eligible for the model-selection class.
 
 The complete per-cell accounting is in
-[`role_aware_authority_census.csv`](role_aware_authority_census.csv). The
+[`role_aware_authority_census.csv`](../history/loose_evidence/role_aware_authority_census.csv). The
 structured version, including obligation records, parent context, candidate
 counts, secondary causes, unannotated diagnostics, and ranked distinctions is
-in [`role_aware_authority_census.json`](role_aware_authority_census.json).
+in [`role_aware_authority_census.json`](../history/loose_evidence/role_aware_authority_census.json).
 The reproducible static census is
 [`benchmark/role_aware_authority_census.py`](benchmark/role_aware_authority_census.py).
 

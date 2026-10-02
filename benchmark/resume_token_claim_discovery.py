@@ -14,7 +14,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "token_claim_discovery"
+OUT = ROOT / "research/history/token_claim_discovery"
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 from benchmark.run_token_claim_discovery import valid_rc  # noqa: E402

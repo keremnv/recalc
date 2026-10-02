@@ -25,7 +25,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 from benchmark import ab_local_runner as base  # noqa: E402
 
-OUT = ROOT / "token_claim_discovery"
+OUT = ROOT / "research/history/token_claim_discovery"
 RC_VENV = Path("/tmp/librecalc-hygiene-rc-v55taghk/venv")
 ENC = tiktoken.get_encoding("cl100k_base")
 base.CHAT_TIMEOUT = 240
@@ -62,7 +62,7 @@ def append(name: str, obj: dict) -> None:
 
 
 def valid_rc() -> None:
-    rc = json.loads((ROOT / "product_hygiene/rc_manifest.json").read_text())
+    rc = json.loads((ROOT / "research/history/product_hygiene/rc_manifest.json").read_text())
     spec = read("preregistered_spec.json")["product_rc"]
     if rc.get("source_configuration_sha256") != spec["source_config_sha256"] or rc.get("wheel",{}).get("sha256") != spec["wheel_sha256"]:
         raise RuntimeError("Frozen PRODUCT_HYGIENE_RC manifest mismatch; stop")

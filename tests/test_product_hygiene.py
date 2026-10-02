@@ -39,7 +39,7 @@ def task(tmp_path):
 
 
 def test_frozen_extraction_sources_unchanged():
-    for row in json.loads((ROOT / "product_hygiene/extraction_manifest.json").read_text()):
+    for row in json.loads((ROOT / "research/history/product_hygiene/extraction_manifest.json").read_text()):
         assert hashlib.sha256((ROOT / row["source"]).read_bytes()).hexdigest() == row["source_sha256"]
 
 

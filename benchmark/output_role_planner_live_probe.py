@@ -33,8 +33,8 @@ ARCHIVE = ROOT / (
     "resource_feasibility/live/repaired_treatment_credit_restored_merged_for_bridge/"
     "Financial_Model-05_01/result.json"
 )
-ROLE_CONTRAST = ROOT / "output_role_occurrence_contrast.json"
-AUTHORITY_CENSUS = ROOT / "authority_loss_by_obligation.csv"
+ROLE_CONTRAST = ROOT / "research/history/loose_evidence/output_role_occurrence_contrast.json"
+AUTHORITY_CENSUS = ROOT / "research/history/loose_evidence/authority_loss_by_obligation.csv"
 DATABASE = m.DATABASES / "Financial_Model-05_01.sqlite"
 SHEET_NAMES: dict[str, str] = {}
 
@@ -830,7 +830,7 @@ def run(output: Path, *, reuse_calls: bool = False, artifact_prefix: str = "outp
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", type=Path, default=ROOT / "output_role_planner_live_probe")
+    parser.add_argument("--output", type=Path, default=ROOT / "research/history/output_role_planner_live_probe")
     parser.add_argument("--from-saved", action="store_true", help="Regenerate artifacts from the two persisted calls without making provider requests")
     parser.add_argument("--artifact-prefix", default="output_role_planner", help="Prefix for root report/comparison artifacts")
     args = parser.parse_args()

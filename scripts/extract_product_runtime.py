@@ -65,7 +65,7 @@ extract('benchmark/inspection_helpers/api.py','helper_common.py',{'CAP','CELL_CA
 extract('benchmark/inspection_helpers/index.py','period_constants.py',{'PERIOD_RES'},'import re')
 copy('benchmark/inspection_helpers/reference_api.py','helpers.py', [('from benchmark.inspection_helpers.api import (','from .helper_common import ('),('from benchmark.inspection_helpers.index import PERIOD_RES','from .period_constants import PERIOD_RES')])
 DEST.joinpath('__init__.py').write_text('"""Internal frozen mechanics; not a model-facing interface."""\n')
-(ROOT/'product_hygiene/extraction_manifest.json').write_text(json.dumps(rows,indent=2)+'\n')
+(ROOT/'research/history/product_hygiene/extraction_manifest.json').write_text(json.dumps(rows,indent=2)+'\n')
 
 if __name__ == '__main__':
     print(f'Extracted {len(rows)} modules without research imports.')
