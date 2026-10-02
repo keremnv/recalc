@@ -117,7 +117,7 @@ class Runtime:
 
 
 def _serve_iter_rows(ws, args, kwargs):
-    """Direct full-cell row iteration (probe) or fail-closed delegation.
+    """Direct full-cell row iteration or fail-closed delegation.
 
     Mirrors openpyxl 3.1.5 Worksheet.iter_rows semantics exactly for the
     certified rectangle-of-cells shape, including merged ranges (children
@@ -127,8 +127,6 @@ def _serve_iter_rows(ws, args, kwargs):
     """
     runtime = ws._workbook._runtime
     real = lambda: ws._real_sheet().iter_rows(*args, **kwargs)  # noqa: E731
-    if os.environ.get("RECALC_NO_ITERATION_PROBE") == "1":
-        return real()
     # Bind through the exact openpyxl signature so arity/keyword errors
     # reproduce identically.
     def _bind(min_row=None, max_row=None, min_col=None, max_col=None,

@@ -45,7 +45,6 @@ class A1Analyzer:
         self.openpyxl_loaded = "openpyxl" in self.source
         self.tree: ast.AST | None = None
         self.parse_error: str | None = None
-        self._probe_enabled = True
         self._pending_iter_sites: list = []
         try:
             self.tree = ast.parse(self.source)
@@ -97,9 +96,10 @@ class A1Analyzer:
             elif self._proven_object(base, "worksheet") and isinstance(value.slice, ast.Constant) and isinstance(value.slice.value, str) and ":" not in value.slice.value:
                 self.cells.add(name)
 
-    # Iteration probe: cell attributes served identically by direct proxy
-    # cells (value/coordinate/row/column/data_type are read-state lookups or
-    # stored coordinates; everything else escapes per-cell to genuine).
+    # Certified iteration: cell attributes served identically by direct
+    # proxy cells (value/coordinate/row/column/data_type are read-state
+    # lookups or stored coordinates; everything else escapes per-cell to
+    # genuine).
     ITER_CELL_ATTRS = {"value", "coordinate", "row", "column", "data_type"}
     ITER_KWARGS = {"min_row", "max_row", "min_col", "max_col", "values_only"}
 
@@ -153,7 +153,7 @@ class A1Analyzer:
                       and (kw.value.value is None
                            or isinstance(kw.value.value, int))):
                 return False
-        parent = getattr(node, "_probe_parent", None)
+        parent = getattr(node, "_ast_parent", None)
         # Certified only under direct `for ... in <call>` consumption.
         if isinstance(parent, ast.For) and parent.iter is node:
             return True
@@ -168,7 +168,7 @@ class A1Analyzer:
         for node in ast.walk(self.tree):
             if not isinstance(node, ast.Name):
                 continue
-            name, parent = node.id, getattr(node, "_probe_parent", None)
+            name, parent = node.id, getattr(node, "_ast_parent", None)
             if name in row_vars:
                 if isinstance(parent, ast.For) and (
                         parent.iter is node or node in ast.walk(parent.target)):
@@ -194,13 +194,13 @@ class A1Analyzer:
         assert self.tree is not None
         for node in ast.walk(self.tree):
             for child in ast.iter_child_nodes(node):
-                child._probe_parent = node  # type: ignore[attr-defined]
+                child._ast_parent = node  # type: ignore[attr-defined]
 
     def _name_from_iteration(self, node: ast.Name) -> bool:
         """True if this Name occurrence binds to an iteration-derived cell.
 
-        Cells proven via .cell()/subscript predate the probe and keep their
-        existing (permissive) treatment; only iteration-derived cells get
+        Cells proven via .cell()/subscript predate certified iteration and
+        keep their existing (permissive) treatment; only iteration-derived cells get
         the strict consumption proof. Membership is approximate by name:
         a name is iteration-derived if it was bound by an iteration for-target.
         """
@@ -262,8 +262,6 @@ class A1Analyzer:
             return {"decision": "PREDECLARED_REAL_OPENPYXL", "reason": "source unavailable or no openpyxl", "categories": [], "blockers": [{"reason": "STATIC_ANALYSIS_UNCERTAINTY"}], "parse_ok": False}
         if self.tree is None:
             return {"decision": "PREDECLARED_REAL_OPENPYXL", "reason": "syntax parse failed", "categories": [], "blockers": [{"reason": "STATIC_ANALYSIS_UNCERTAINTY", "detail": self.parse_error}], "parse_ok": False}
-        import os as _os
-        self._probe_enabled = _os.environ.get("RECALC_NO_ITERATION_PROBE") != "1"
         self._link_parents()
         self._walk_statements(self.tree.body)
         self._resolve_iteration_vars()
@@ -307,7 +305,7 @@ class A1Analyzer:
                     values_only = next((kw.value for kw in node.keywords if kw.arg == "values_only"), None)
                     if is_true(values_only):
                         self.add_category("ITER_ROWS_VALUES_ONLY", node, fn)
-                    elif self._probe_enabled and self._iter_site_certified(node):
+                    elif self._iter_site_certified(node):
                         # Consumption proof is whole-tree; evaluated once the
                         # walk completes (see _finalize_iteration below).
                         self._pending_iter_sites.append(node)
@@ -341,11 +339,10 @@ class A1Analyzer:
             if isinstance(node, ast.Return) and node.value is not None and self._proven_object(node.value):
                 self.add_blocker("OBJECT_ESCAPE_BOUNDARY", node)
         # Whole-tree consumption proof for candidate iteration sites.
-        if self._probe_enabled:
-            self._finalize_iteration()
+        self._finalize_iteration()
         # Preserve every non-range A0 lexical rejection.  Only the lexical
         # range/slice rejection is replaced by the AST proof above, plus --
-        # for the iteration probe -- the lexical iterator-shape rejection,
+        # for certified iteration -- the lexical iterator-shape rejection,
         # and then only when at least one iter_rows site certified and no
         # iteration boundary remains (a bare lexical match with no certified
         # site, e.g. inside a string or eval payload, keeps the blocker).

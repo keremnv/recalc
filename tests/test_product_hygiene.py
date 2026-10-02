@@ -107,6 +107,34 @@ def test_merged_terminal_child_served_directly(task, capfd):
     assert setup["merged_certificate"]["certified"] is True
 
 
+def test_certified_iter_rows_served_directly(task, capfd):
+    import subprocess
+    import sys
+    work, script, config = task
+    book = openpyxl.load_workbook(work / "input.xlsx")
+    book.active["B2"] = "x"
+    book.save(work / "input.xlsx")
+    script.write_text('import openpyxl\nwb=openpyxl.load_workbook("input.xlsx")\n'
+                      'ws=wb["Sheet1"]\nfor row in ws.iter_rows(min_row=1,max_row=2,min_col=1,max_col=2):\n'
+                      ' print([(c.coordinate,c.value,c.row,c.column,c.data_type) for c in row])\nwb.close()\n')
+    ref = subprocess.run([sys.executable, str(script)], cwd=work,
+                         capture_output=True, text=True)
+    assert ref.returncode == 0
+    code, receipt = runner.run(script, [], work, config, [])
+    assert code == 0
+    assert receipt["route"] == "DIRECT_RUNTIME"
+    assert capfd.readouterr().out == ref.stdout
+
+
+def test_values_only_iter_rows_stays_reference(task):
+    work, script, config = task
+    script.write_text('import openpyxl\nwb=openpyxl.load_workbook("input.xlsx")\n'
+                      'ws=wb["Sheet1"]\nfor row in ws.iter_rows(values_only=True):\n print(row)\nwb.close()\n')
+    code, receipt = runner.run(script, [], work, config, [])
+    assert code == 0
+    assert receipt["route"] == "REFERENCE_FAST_PATH"
+
+
 def test_malformed_workbook_matches_reference(task):
     import subprocess
     import sys
