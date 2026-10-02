@@ -1,8 +1,10 @@
 """Schema-validated, content-addressed derived read artifact."""
 from __future__ import annotations
 
+import datetime as dt
 import hashlib
 import json
+import math
 import os
 import re
 import struct
@@ -15,7 +17,7 @@ from typing import Any
 from ._identity import (HEXDIGEST, MAGIC, MAX_COMPRESSED, MAX_HEADER,
                         MAX_SHEETS, RUNTIME_VERSION, artifact_key, identity,
                         paths, sha_bytes, sha_file)
-from .direct import MemoryBook, SheetInfo, _value_from_json, _value_to_json, decode_xlsx
+from .direct import ArrayFormula, DataTableFormula, MemoryBook, SheetInfo, _value_to_json, decode_xlsx
 
 MAX_UNCOMPRESSED = 512 * 1024 * 1024
 MAX_CELLS = 10_000_000
@@ -68,6 +70,37 @@ def _check_typed(obj: Any) -> None:
     else:
         if set(obj) != {"kind", "value"} or not isinstance(obj["value"], str) or len(obj["value"]) > 128:
             raise ArtifactError("invalid temporal value")
+
+
+def _direct_value(typed: Any) -> Any:
+    """Reconstruct a cell value from an already-validated typed dict.
+
+    Same result as _value_from_json(canonical(typed)) without the
+    per-cell re-encode/re-parse round-trip. Non-finite floats are
+    rejected explicitly (canonical(allow_nan=False) did this before).
+    """
+    kind = typed["kind"]
+    if kind == "scalar":
+        value = typed["value"]
+        if isinstance(value, float) and not math.isfinite(value):
+            raise ArtifactError("non-finite scalar")
+        return value
+    if kind == "array":
+        return ArrayFormula(ref=typed["ref"], text=typed["text"])
+    if kind == "datatable":
+        return DataTableFormula(**typed["attrs"])
+    if kind == "datetime":
+        return dt.datetime.fromisoformat(typed["value"])
+    if kind == "date":
+        return dt.date.fromisoformat(typed["value"])
+    if kind == "time":
+        return dt.time.fromisoformat(typed["value"])
+    if kind == "timedelta":
+        seconds = typed["seconds"]
+        if isinstance(seconds, float) and not math.isfinite(seconds):
+            raise ArtifactError("non-finite timedelta")
+        return dt.timedelta(seconds=seconds)
+    raise ArtifactError("invalid typed value kind")
 
 
 def _payload(book: MemoryBook) -> bytes:
@@ -138,7 +171,7 @@ def _book(raw: bytes) -> MemoryBook:
                 raise ArtifactError("invalid data type")
             _check_typed(typed)
             try:
-                value = _value_from_json(canonical(typed).decode())
+                value = _direct_value(typed)
             except (TypeError, ValueError, KeyError, OverflowError) as exc:
                 raise ArtifactError("invalid typed value") from exc
             store[coord] = (value, dtype)
