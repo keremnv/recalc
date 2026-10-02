@@ -423,3 +423,70 @@ def test_cli_example_and_doctor(tmp_path):
     assert (tmp_path / "example/update.py").is_file()
     assert main(["example", str(tmp_path / "example")]) == 2
     assert main(["doctor", "--json"]) == 0
+
+
+def _direct(typed):
+    from recalc_agent.read_engine.artifact import _check_typed, _direct_value
+    _check_typed(typed)
+    return _direct_value(typed)
+
+
+def test_direct_value_scalars():
+    assert _direct({"kind": "scalar", "value": None}) is None
+    assert _direct({"kind": "scalar", "value": True}) is True
+    assert _direct({"kind": "scalar", "value": 7}) == 7
+    assert _direct({"kind": "scalar", "value": 2.5}) == 2.5
+    assert _direct({"kind": "scalar", "value": "x"}) == "x"
+    assert _direct({"kind": "scalar", "value": "=A1*2"}) == "=A1*2"
+    assert _direct({"kind": "scalar", "value": "#DIV/0!"}) == "#DIV/0!"
+
+
+def test_direct_value_temporals():
+    import datetime as dt
+    assert _direct({"kind": "datetime", "value": "2024-05-01T12:30:00"}) == dt.datetime(2024, 5, 1, 12, 30)
+    assert _direct({"kind": "date", "value": "2024-05-01"}) == dt.date(2024, 5, 1)
+    assert _direct({"kind": "time", "value": "12:30:00"}) == dt.time(12, 30)
+    assert _direct({"kind": "timedelta", "seconds": 90}) == dt.timedelta(seconds=90)
+    assert _direct({"kind": "timedelta", "seconds": 1.5}) == dt.timedelta(seconds=1.5)
+
+
+def test_direct_value_formulas():
+    from openpyxl.worksheet.formula import ArrayFormula, DataTableFormula
+    a = _direct({"kind": "array", "ref": "A1:A2", "text": "SUM(A1:A2)"})
+    assert isinstance(a, ArrayFormula) and (a.ref, a.text) == ("A1:A2", "SUM(A1:A2)")
+    d = _direct({"kind": "datatable", "attrs": {"ref": "A1:B2"}})
+    assert isinstance(d, DataTableFormula)
+
+
+def test_direct_value_matches_legacy_reconstruction():
+    import datetime as dt
+    import json
+    from recalc_agent.read_engine.direct import _value_from_json, _value_to_json
+    from openpyxl.worksheet.formula import ArrayFormula, DataTableFormula
+    values = [None, True, 0, -3, 2.5, "", "s", "=F(1)",
+              dt.datetime(2024, 5, 1, 12, 30), dt.date(2024, 5, 1),
+              dt.time(12, 30), dt.timedelta(seconds=90)]
+    for v in values:
+        raw = _value_to_json(v)
+        assert _direct(json.loads(raw)) == _value_from_json(raw)
+    for v in (ArrayFormula(ref="A1:A2", text="SUM(A1:A2)"),
+              DataTableFormula(ref="A1:B2")):
+        raw = _value_to_json(v)
+        new, old = _direct(json.loads(raw)), _value_from_json(raw)
+        assert type(new) is type(old) and vars(new) == vars(old)
+
+
+def test_direct_value_rejects_non_finite():
+    import math
+    from recalc_agent.read_engine.artifact import ArtifactError
+    for bad in (math.nan, math.inf, -math.inf):
+        with pytest.raises(ArtifactError):
+            _direct({"kind": "scalar", "value": bad})
+        with pytest.raises(ArtifactError):
+            _direct({"kind": "timedelta", "seconds": bad})
+
+
+def test_direct_value_rejects_unknown_kind():
+    from recalc_agent.read_engine.artifact import ArtifactError, _direct_value
+    with pytest.raises(ArtifactError):
+        _direct_value({"kind": "frobnicate", "value": 1})

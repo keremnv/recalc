@@ -75,8 +75,9 @@ def _check_typed(obj: Any) -> None:
 def _direct_value(typed: Any) -> Any:
     """Reconstruct a cell value from an already-validated typed dict.
 
-    Same result as _value_from_json(canonical(typed)) without the
-    per-cell re-encode/re-parse round-trip. Non-finite floats are
+    Invariant: the input dict has already passed structural/type
+    validation (_check_typed), so reconstruction must not serialize
+    and parse the same typed value again. Non-finite floats are
     rejected explicitly (canonical(allow_nan=False) did this before).
     """
     kind = typed["kind"]
