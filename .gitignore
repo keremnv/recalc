@@ -23,3 +23,25 @@ src/recalc_agent/native/launcher
 # Local release-candidate staging (hashes recorded in
 # phase10c_b/RELEASE_CANDIDATE_MANIFEST.json instead).
 release-candidate/
+# Externalized research evidence (see research/EVIDENCE_ARCHIVE.md).
+# Regenerated run bulk must not be recommitted; reports, manifests,
+# and compact evidence at experiment roots stay tracked.
+**/runs/
+**/work/
+**/reps/
+**/reps_preserved*/
+**/calls/
+**/delta_store/
+**/snapshots/
+**/*_cache/
+**/score_staging/
+**/traj/
+**/replay_substrate/
+**/workbooks/
+*.r3jz
+phase12r/reference_parse_cache/
+phase12r/artifacts/
+phase12r/reference_score_objects/
+phase12r/recalc_by_hash/
+phase12r/followup_macro_mode/
+phase12r/scoring_recovery/
