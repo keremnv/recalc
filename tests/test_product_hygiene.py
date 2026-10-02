@@ -120,6 +120,37 @@ def test_malformed_workbook_matches_reference(task):
     assert receipt["target_status"]["exit_code"] == direct.returncode
 
 
+def test_missing_sheet_keyerror_matches_reference(task, capfd):
+    import subprocess
+    import sys
+    work, script, config = task
+    script.write_text('import openpyxl\nwb=openpyxl.load_workbook("input.xlsx")\n'
+                      'print(wb["Sheet1"].title)\nprint(wb["Nope"].title)\n')
+    direct = subprocess.run([sys.executable, str(script)], cwd=work,
+                            capture_output=True)
+    code, receipt = runner.run(script, [], work, config, [])
+    assert receipt["route"] == "DIRECT_RUNTIME"
+    assert code == direct.returncode != 0
+    # Existing-sheet lookup unaffected; stdout identical up to the raise.
+    assert direct.stdout == b"Sheet1\n"
+    assert capfd.readouterr().out == "Sheet1\n"
+    # Exception type/args/message identical to pinned openpyxl.
+    direct_err = direct.stderr.decode().strip().splitlines()[-1]
+    assert direct_err == "KeyError: 'Worksheet Nope does not exist.'"
+    from recalc_agent.read_engine.direct import decode_xlsx
+    from recalc_agent.read_engine.runtime import ProxyWorkbook
+    book = decode_xlsx(work / "input.xlsx")
+    proxy = ProxyWorkbook.__new__(ProxyWorkbook)
+    object.__setattr__(proxy, "_book", book)
+    try:
+        proxy["Nope"]
+    except KeyError as exc:
+        assert exc.args == ("Worksheet Nope does not exist.",)
+        assert "Worksheet Nope does not exist." in str(exc)
+    else:
+        raise AssertionError("expected KeyError")
+
+
 def test_version_mismatch_sidecar_rebuilds(task):
     import json
     work, script, config = task

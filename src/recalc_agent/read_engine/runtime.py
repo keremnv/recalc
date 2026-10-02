@@ -196,7 +196,10 @@ class ProxyWorkbook:
 
     def __getitem__(self, name):
         if not isinstance(name, str) or name not in self._book.sheetnames:
-            raise KeyError(name)
+            # Match pinned openpyxl exactly (R3 KeyError parity fix):
+            # Workbook.__getitem__ raises KeyError("Worksheet {0} does not
+            # exist.") for any miss, regardless of key type.
+            raise KeyError("Worksheet {0} does not exist.".format(name))
         self._runtime.counts["direct_served_reads"] += 1
         return ProxyWorksheet(self, name)
 

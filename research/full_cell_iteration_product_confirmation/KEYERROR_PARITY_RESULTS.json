@@ -1,0 +1,19 @@
+{
+ "case": {
+  "case": "keyerror_missing_sheet",
+  "parity": true,
+  "route": "DIRECT_RUNTIME",
+  "route_ok": true,
+  "exit": [
+   1,
+   1
+  ]
+ },
+ "reference_message": "KeyError: 'Worksheet Nope does not exist.'",
+ "verified": [
+  "exception type",
+  "exception args/message",
+  "stdout behavior when uncaught",
+  "existing-sheet lookup unaffected"
+ ]
+}
