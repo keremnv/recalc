@@ -1,0 +1,494 @@
+[
+ {
+  "workload": "Debugging_02_06__7252ca64cf1c",
+  "ws_vars": [
+   "ws"
+  ],
+  "iter_calls": [
+   {
+    "method": "iter_rows",
+    "line": 5,
+    "receiver_ws": true,
+    "kwargs": {
+     "min_row": 1,
+     "max_row": 40,
+     "max_col": 20
+    }
+   }
+  ],
+  "sheet_iters": [],
+  "cell_vars": [
+   "c"
+  ],
+  "row_vars": [
+   "row"
+  ],
+  "cell_attr_use": {
+   "coordinate": 1,
+   "value": 2
+  },
+  "row_ops": [],
+  "materialize": [],
+  "identity_use": [
+   {
+    "op": "is",
+    "line": 7
+   }
+  ],
+  "merged_refs": []
+ },
+ {
+  "workload": "Debugging_04_07__62a7766ef582",
+  "ws_vars": [
+   "ws"
+  ],
+  "iter_calls": [
+   {
+    "method": "iter_rows",
+    "line": 5,
+    "receiver_ws": true,
+    "kwargs": {
+     "min_row": 30,
+     "max_row": 45,
+     "max_col": 20
+    }
+   }
+  ],
+  "sheet_iters": [],
+  "cell_vars": [
+   "c"
+  ],
+  "row_vars": [
+   "row"
+  ],
+  "cell_attr_use": {
+   "coordinate": 1,
+   "value": 2
+  },
+  "row_ops": [],
+  "materialize": [],
+  "identity_use": [
+   {
+    "op": "is",
+    "line": 7
+   }
+  ],
+  "merged_refs": []
+ },
+ {
+  "workload": "Debugging_05_02__f274eaa3cc8e",
+  "ws_vars": [
+   "ws"
+  ],
+  "iter_calls": [
+   {
+    "method": "iter_rows",
+    "line": 4,
+    "receiver_ws": true,
+    "kwargs": {
+     "min_row": 23,
+     "max_row": 77,
+     "min_col": 2,
+     "max_col": 27
+    }
+   }
+  ],
+  "sheet_iters": [],
+  "cell_vars": [
+   "c"
+  ],
+  "row_vars": [
+   "row"
+  ],
+  "cell_attr_use": {
+   "coordinate": 1,
+   "value": 2
+  },
+  "row_ops": [],
+  "materialize": [],
+  "identity_use": [
+   {
+    "op": "is",
+    "line": 6
+   }
+  ],
+  "merged_refs": []
+ },
+ {
+  "workload": "Debugging_09_03__0828d4dfbd13",
+  "ws_vars": [
+   "ws"
+  ],
+  "iter_calls": [
+   {
+    "method": "iter_rows",
+    "line": 6,
+    "receiver_ws": true,
+    "kwargs": {}
+   }
+  ],
+  "sheet_iters": [],
+  "cell_vars": [],
+  "row_vars": [
+   "row"
+  ],
+  "cell_attr_use": {},
+  "row_ops": [],
+  "materialize": [],
+  "identity_use": [],
+  "merged_refs": []
+ },
+ {
+  "workload": "Debugging_10_07__6dd8f6d3a4dd",
+  "ws_vars": [
+   "ws"
+  ],
+  "iter_calls": [
+   {
+    "method": "iter_rows",
+    "line": 5,
+    "receiver_ws": true,
+    "kwargs": {
+     "min_row": 40,
+     "max_row": 80,
+     "max_col": 20
+    }
+   }
+  ],
+  "sheet_iters": [],
+  "cell_vars": [
+   "c"
+  ],
+  "row_vars": [
+   "row"
+  ],
+  "cell_attr_use": {
+   "coordinate": 1,
+   "value": 2
+  },
+  "row_ops": [],
+  "materialize": [],
+  "identity_use": [
+   {
+    "op": "is",
+    "line": 7
+   }
+  ],
+  "merged_refs": []
+ },
+ {
+  "workload": "Debugging_10_07__e3a79d24091a",
+  "ws_vars": [
+   "ws",
+   "ws2"
+  ],
+  "iter_calls": [
+   {
+    "method": "iter_rows",
+    "line": 5,
+    "receiver_ws": true,
+    "kwargs": {
+     "min_row": 1,
+     "max_row": 12,
+     "max_col": 20
+    }
+   },
+   {
+    "method": "iter_rows",
+    "line": 11,
+    "receiver_ws": true,
+    "kwargs": {
+     "min_row": 28,
+     "max_row": 40,
+     "max_col": 20
+    }
+   }
+  ],
+  "sheet_iters": [],
+  "cell_vars": [
+   "c"
+  ],
+  "row_vars": [
+   "row"
+  ],
+  "cell_attr_use": {
+   "coordinate": 2,
+   "value": 4
+  },
+  "row_ops": [],
+  "materialize": [],
+  "identity_use": [
+   {
+    "op": "is",
+    "line": 7
+   },
+   {
+    "op": "is",
+    "line": 13
+   }
+  ],
+  "merged_refs": []
+ },
+ {
+  "workload": "Debugging_10_10__c7eca76e6646",
+  "ws_vars": [
+   "ws"
+  ],
+  "iter_calls": [
+   {
+    "method": "iter_rows",
+    "line": 5,
+    "receiver_ws": true,
+    "kwargs": {
+     "min_row": 1,
+     "max_row": 200
+    }
+   }
+  ],
+  "sheet_iters": [],
+  "cell_vars": [
+   "c"
+  ],
+  "row_vars": [
+   "row"
+  ],
+  "cell_attr_use": {
+   "coordinate": 1,
+   "value": 2
+  },
+  "row_ops": [],
+  "materialize": [],
+  "identity_use": [
+   {
+    "op": "is",
+    "line": 7
+   }
+  ],
+  "merged_refs": []
+ },
+ {
+  "workload": "Financial_Model_02_05__90004332940a",
+  "ws_vars": [
+   "ws"
+  ],
+  "iter_calls": [
+   {
+    "method": "iter_rows",
+    "line": 5,
+    "receiver_ws": true,
+    "kwargs": {
+     "min_row": 1,
+     "max_row": 121
+    }
+   }
+  ],
+  "sheet_iters": [],
+  "cell_vars": [
+   "c"
+  ],
+  "row_vars": [
+   "row"
+  ],
+  "cell_attr_use": {
+   "coordinate": 1,
+   "value": 2
+  },
+  "row_ops": [],
+  "materialize": [],
+  "identity_use": [
+   {
+    "op": "is",
+    "line": 7
+   }
+  ],
+  "merged_refs": []
+ },
+ {
+  "workload": "Financial_Model_02_05__c75ecb00f745",
+  "ws_vars": [
+   "ws"
+  ],
+  "iter_calls": [
+   {
+    "method": "iter_rows",
+    "line": 5,
+    "receiver_ws": true,
+    "kwargs": {
+     "min_row": 1,
+     "max_row": 164
+    }
+   }
+  ],
+  "sheet_iters": [],
+  "cell_vars": [
+   "c"
+  ],
+  "row_vars": [
+   "row"
+  ],
+  "cell_attr_use": {
+   "coordinate": 1,
+   "value": 2
+  },
+  "row_ops": [],
+  "materialize": [],
+  "identity_use": [
+   {
+    "op": "is",
+    "line": 7
+   }
+  ],
+  "merged_refs": []
+ },
+ {
+  "workload": "Financial_Model_08_02__4ca3ae46295d",
+  "ws_vars": [
+   "ws"
+  ],
+  "iter_calls": [
+   {
+    "method": "iter_rows",
+    "line": 5,
+    "receiver_ws": true,
+    "kwargs": {
+     "min_row": 1,
+     "max_row": 120,
+     "max_col": 40
+    }
+   }
+  ],
+  "sheet_iters": [],
+  "cell_vars": [
+   "c"
+  ],
+  "row_vars": [
+   "row"
+  ],
+  "cell_attr_use": {
+   "coordinate": 1,
+   "value": 2
+  },
+  "row_ops": [],
+  "materialize": [],
+  "identity_use": [
+   {
+    "op": "is",
+    "line": 7
+   }
+  ],
+  "merged_refs": []
+ },
+ {
+  "workload": "Financial_Model_08_02__625ec1db4acb",
+  "ws_vars": [
+   "ws"
+  ],
+  "iter_calls": [
+   {
+    "method": "iter_rows",
+    "line": 5,
+    "receiver_ws": true,
+    "kwargs": {
+     "min_row": 1,
+     "max_row": 200,
+     "max_col": 40
+    }
+   }
+  ],
+  "sheet_iters": [],
+  "cell_vars": [
+   "c"
+  ],
+  "row_vars": [
+   "row"
+  ],
+  "cell_attr_use": {
+   "coordinate": 1,
+   "value": 2
+  },
+  "row_ops": [],
+  "materialize": [],
+  "identity_use": [
+   {
+    "op": "is",
+    "line": 7
+   }
+  ],
+  "merged_refs": []
+ },
+ {
+  "workload": "Financial_Model_15_03__64092e664e9b",
+  "ws_vars": [
+   "ws"
+  ],
+  "iter_calls": [
+   {
+    "method": "iter_rows",
+    "line": 5,
+    "receiver_ws": true,
+    "kwargs": {
+     "min_row": 1,
+     "max_row": 181,
+     "max_col": 45
+    }
+   }
+  ],
+  "sheet_iters": [],
+  "cell_vars": [
+   "c"
+  ],
+  "row_vars": [
+   "row"
+  ],
+  "cell_attr_use": {
+   "coordinate": 1,
+   "value": 2
+  },
+  "row_ops": [],
+  "materialize": [],
+  "identity_use": [
+   {
+    "op": "is",
+    "line": 7
+   }
+  ],
+  "merged_refs": []
+ },
+ {
+  "workload": "Template_15_03__68f4733f2576",
+  "ws_vars": [
+   "ws"
+  ],
+  "iter_calls": [
+   {
+    "method": "iter_rows",
+    "line": 5,
+    "receiver_ws": true,
+    "kwargs": {
+     "min_row": 1,
+     "max_row": 60
+    }
+   }
+  ],
+  "sheet_iters": [],
+  "cell_vars": [
+   "c"
+  ],
+  "row_vars": [
+   "row"
+  ],
+  "cell_attr_use": {
+   "coordinate": 1,
+   "value": 2
+  },
+  "row_ops": [],
+  "materialize": [],
+  "identity_use": [
+   {
+    "op": "is",
+    "line": 7
+   }
+  ],
+  "merged_refs": []
+ }
+]

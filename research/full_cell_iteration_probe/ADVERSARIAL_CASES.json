@@ -1,0 +1,314 @@
+[
+ {
+  "id": "bare_empty",
+  "book": "empty",
+  "script_sha256": "de29b1fc657ed761c6afe0412098117a637ee267e17759c27b14d29db2369c8a",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "bare_sparse",
+  "book": "sparse",
+  "script_sha256": "6d9eca61a51f7ddc26167fd079bc10a50267987d1f2235c5ea8118cc11da95ca",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "bare_blanks",
+  "book": "blanks",
+  "script_sha256": "b57c4610d20278ea57083fb7f3e90b7c60ae45019b06b4e975f47a495158f6b2",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "bare_types",
+  "book": "types",
+  "script_sha256": "c1b6c65e610c0ad5213becae322692178ea03321c0ae91688db66265c598b13f",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "bare_styled",
+  "book": "styled",
+  "script_sha256": "320e2df4dcce26e97b5385c1edc480e1e4036887595a8e22ccffae4ba5f8d663",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "bare_style_only",
+  "book": "style_only",
+  "script_sha256": "a30079fba639066aea5a1f2afb72f40d596d866c7cc09c53daef740661cbb4ca",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "bare_merges_only",
+  "book": "merges_only",
+  "script_sha256": "c6610110c035667c401537a81dc02f57e4026a6c66d185b11ed2e34a547b7ea3",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "bare_bigdim",
+  "book": "bigdim",
+  "script_sha256": "97fee6b366577973a23ef4e92029f98f1e290f2f7aa4d3689976a0a781ecd28d",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "bounds_basic",
+  "book": "sparse",
+  "script_sha256": "d95f58c758d80dfa3f5df7f3e81aedb60545a386cdfa56a194acd0bcd65590f7",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "bounds_beyond_dim",
+  "book": "sparse",
+  "script_sha256": "1edb9901c372d26ecd08c40157a3107136912e35c645a6bbe11b30f086d90558",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "bounds_zero",
+  "book": "sparse",
+  "script_sha256": "b59292c3a566f35f8f9d3ea4c8a60749d1bdfbe043fecf64563b760abc5162ad",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "bounds_reversed",
+  "book": "sparse",
+  "script_sha256": "dc56d8b856d21556a0a45794b18aee59769c6543f599339e3ae4a5c1ebd5eda0",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "bounds_negative",
+  "book": "sparse",
+  "script_sha256": "00516b828211a6f151979ef377c5afbc1d08199dc2963cfd5d7a5ef42020d5f8",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "bounds_single_cell",
+  "book": "sparse",
+  "script_sha256": "f6ca46eaaad099030f5486d1423f2df13367f7101d88ed608da7e14a6c0e4244",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "merged_anchor_in_rect",
+  "book": "merged",
+  "script_sha256": "a7c232cbeb1b06b9af3b445b26a4bc6b6c230abce900a74d0bf10fe199f8570b",
+  "expect": {
+   "route": "DIRECT_RUNTIME"
+  }
+ },
+ {
+  "id": "merged_child_in_rect",
+  "book": "merged",
+  "script_sha256": "bc17a4aaaec85ef79364dd992be6319e79372362feab5445fed2668fb806c751",
+  "expect": {
+   "route": "DIRECT_RUNTIME"
+  }
+ },
+ {
+  "id": "merged_outside_rect",
+  "book": "merged",
+  "script_sha256": "4393a58107e6c5472299b158f227d6f3d94a692afe3b5d00018142df7257a20f",
+  "expect": {
+   "route": "DIRECT_RUNTIME"
+  }
+ },
+ {
+  "id": "merged_bare",
+  "book": "merged",
+  "script_sha256": "37965f7beefe22f95ac721052927a5ab3ab3d8ef8fc8e12639fd7e92f9096ac0",
+  "expect": {
+   "route": "DIRECT_RUNTIME"
+  }
+ },
+ {
+  "id": "merged_attrs",
+  "book": "merged",
+  "script_sha256": "c06d41b751591574faab82e2d2f0c7f5556b5e7ef3e7aa623470334256d798b0",
+  "expect": {
+   "route": "DIRECT_RUNTIME"
+  }
+ },
+ {
+  "id": "attrs_types",
+  "book": "types",
+  "script_sha256": "3d18d82560c729595dfcf91bb0bcf45d784743561b93234c1ca8c229f14e4dff",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "attrs_array",
+  "book": "array",
+  "script_sha256": "2904df7702c399cb4a0fb4cf3b49f476ce1c03a88d4c9ed5616aeae74423e335",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "repeat",
+  "book": "sparse",
+  "script_sha256": "7b801a90ebab34bee6f16a83d63f0ff966059032382720a39e14e4345a91b56a",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "partial",
+  "book": "sparse",
+  "script_sha256": "f8b689f62e8a6fbc22783155d2578f4c257af5fb1c94e7ef1a91b0a1036fe32d",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "block_len_row",
+  "book": "sparse",
+  "script_sha256": "1f2cfd53dca1acbae1d1537ed0bafd4e33940b891d34ed881dcb0a1da62200b1",
+  "expect": {
+   "route": "REFERENCE_FAST_PATH"
+  }
+ },
+ {
+  "id": "nested_shadow",
+  "book": "sparse",
+  "script_sha256": "55b8d0434316944bfce6029d5f6bc2141a290cafe223712fcb0b3eb83ae894e4",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "block_values_only",
+  "book": "sparse",
+  "script_sha256": "042e7d7e93c55c4385fe72b48d47086344e3a340c060924385a18044a44aedc1",
+  "expect": {
+   "route": "REFERENCE_FAST_PATH"
+  }
+ },
+ {
+  "id": "block_iter_cols",
+  "book": "sparse",
+  "script_sha256": "fb508a468073e9e246362d68366c9b24103338dfb3a8653837bd3915e02c30a1",
+  "expect": {
+   "route": "REFERENCE_FAST_PATH"
+  }
+ },
+ {
+  "id": "block_sheet_iter",
+  "book": "sparse",
+  "script_sha256": "14f3bb4fef9982303b86766c863a138cedc9c1d2156dbb3df69b8031a2b62809",
+  "expect": {
+   "route": null
+  }
+ },
+ {
+  "id": "block_dynamic_bounds",
+  "book": "sparse",
+  "script_sha256": "8d9993835c1b0ccb3fdbbfc409bc7e1e34c806eb16cc43d3cb53353020d5bcb4",
+  "expect": {
+   "route": "REFERENCE_FAST_PATH"
+  }
+ },
+ {
+  "id": "block_rich_after",
+  "book": "sparse",
+  "script_sha256": "941135f22ca3f6b5b697fd405cc2fdc8fed94dcde23fda1ce82be77b4b8ccb02",
+  "expect": {
+   "route": "REFERENCE_FAST_PATH"
+  }
+ },
+ {
+  "id": "block_store_cell",
+  "book": "sparse",
+  "script_sha256": "9a9724e246af22de6b7de2b82b973ea9e48f8928c6c54440955feb695e755cd0",
+  "expect": {
+   "route": "REFERENCE_FAST_PATH"
+  }
+ },
+ {
+  "id": "block_identity",
+  "book": "sparse",
+  "script_sha256": "6aa8651f576d6b58a999ecb6d42c5f0913bf57dc44263775544721c7fddafc7a",
+  "expect": {
+   "route": "REFERENCE_FAST_PATH"
+  }
+ },
+ {
+  "id": "block_escape_call",
+  "book": "sparse",
+  "script_sha256": "923bc4d840fb79a5c516cbb2f8859fdcdefa1bfeab8d20689dc66a199b6a5448",
+  "expect": {
+   "route": "REFERENCE_FAST_PATH"
+  }
+ },
+ {
+  "id": "block_materialize",
+  "book": "sparse",
+  "script_sha256": "9bdf96041d313f9d88b6bb80385464499e40158276967b3197c423e5c5b83b14",
+  "expect": {
+   "route": "REFERENCE_FAST_PATH"
+  }
+ },
+ {
+  "id": "block_mixed_write",
+  "book": "sparse",
+  "script_sha256": "4cff7cd0da925d8282028495a05d1473dbca5cc9658a19c5256817f130571150",
+  "expect": {
+   "route": "REFERENCE_FAST_PATH"
+  }
+ },
+ {
+  "id": "block_row_index",
+  "book": "sparse",
+  "script_sha256": "3664764e9c86d3724843568ea300dfd3446727ffe297aad76c37bed4d0cde081",
+  "expect": {
+   "route": "REFERENCE_FAST_PATH"
+  }
+ },
+ {
+  "id": "block_getattr",
+  "book": "sparse",
+  "script_sha256": "1ea9cc390a10be261feddcb7e223547c448171235729ca5d75436c076edeca28",
+  "expect": {
+   "route": "REFERENCE_FAST_PATH"
+  }
+ },
+ {
+  "id": "block_alias_escape",
+  "book": "sparse",
+  "script_sha256": "fa3cc4d71ac67adcfb514a7a034abdb2e275895bd7cfe9e312c58a98b077787d",
+  "expect": {
+   "route": "REFERENCE_FAST_PATH"
+  }
+ },
+ {
+  "id": "raise_mid_iter",
+  "book": "sparse",
+  "script_sha256": "1212cc4bac04ca3307e81b01bd75fcc05da69f71cedb598c629bc061098a73fd",
+  "expect": {
+   "route": null
+  }
+ }
+]

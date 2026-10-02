@@ -1,0 +1,95 @@
+{
+ "n": 13,
+ "workloads": [
+  "Debugging_02_06__7252ca64cf1c",
+  "Debugging_04_07__62a7766ef582",
+  "Debugging_05_02__f274eaa3cc8e",
+  "Debugging_09_03__0828d4dfbd13",
+  "Debugging_10_07__6dd8f6d3a4dd",
+  "Debugging_10_07__e3a79d24091a",
+  "Debugging_10_10__c7eca76e6646",
+  "Financial_Model_02_05__90004332940a",
+  "Financial_Model_02_05__c75ecb00f745",
+  "Financial_Model_08_02__4ca3ae46295d",
+  "Financial_Model_08_02__625ec1db4acb",
+  "Financial_Model_15_03__64092e664e9b",
+  "Template_15_03__68f4733f2576"
+ ],
+ "rule": "Population A, classifier blockers subset of {iterator shape not statically proven, CELL_OBJECT_ITERATION_BOUNDARY}",
+ "other_blocked": [
+  {
+   "workload": "Debugging_01_04__542f8461a344",
+   "blockers": [
+    "WORKBOOK_WORKSHEETS_BOUNDARY",
+    "iterator shape not statically proven",
+    "unsupported worksheet collection"
+   ]
+  },
+  {
+   "workload": "Debugging_02_06__88edc6528ef0",
+   "blockers": [
+    "STATIC_ANALYSIS_UNCERTAINTY"
+   ]
+  },
+  {
+   "workload": "Debugging_09_03__59822a6e11e7",
+   "blockers": [
+    "RICH_OBJECT_BOUNDARY",
+    "rich object"
+   ]
+  },
+  {
+   "workload": "Template_06_02__85fab8c95cea",
+   "blockers": [
+    "RICH_OBJECT_BOUNDARY",
+    "unsupported active worksheet"
+   ]
+  },
+  {
+   "workload": "Template_06_02__c26a4c6508ba",
+   "blockers": [
+    "RICH_OBJECT_BOUNDARY",
+    "rich object",
+    "unsupported active worksheet"
+   ]
+  },
+  {
+   "workload": "Template_06_12__3d05a7ee874d",
+   "blockers": [
+    "STATIC_ANALYSIS_UNCERTAINTY"
+   ]
+  },
+  {
+   "workload": "Template_06_12__83f82ce3f62b",
+   "blockers": [
+    "STATIC_ANALYSIS_UNCERTAINTY",
+    "rich object"
+   ]
+  },
+  {
+   "workload": "Template_15_01__fa75e25f6a90",
+   "blockers": [
+    "CELL_OBJECT_ITERATION_BOUNDARY",
+    "iterator shape not statically proven",
+    "rich object"
+   ]
+  },
+  {
+   "workload": "Template_15_03__5ad5663409d0",
+   "blockers": [
+    "STATIC_ANALYSIS_UNCERTAINTY",
+    "rich object"
+   ]
+  }
+ ],
+ "admitted": [
+  "Financial_Model_02_01__79352976d750",
+  "Financial_Model_02_01__bb15e0fe3832",
+  "Financial_Model_08_01__2ea507d758dc",
+  "Financial_Model_08_03__e48ea186deeb",
+  "Financial_Model_11_02__a443eee257b4",
+  "Template_03_03__c76ea596b408",
+  "Template_06_23__fc41ad37c48b",
+  "Template_16_07__9662584ede5e"
+ ]
+}

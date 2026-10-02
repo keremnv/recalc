@@ -103,6 +103,7 @@ class Runtime:
         profile = {"route": "DIRECT_WITH_FALLBACK" if self.counts["fallback_loads"]
                    else "DIRECT_RUNTIME", "times": self.times, "counts": self.counts,
                    "event_overflow": self.event_overflow,
+                   "events": self.events,
                    "fallback_reasons": sorted({e["reason"] for e in self.events
                                                if e["event"] == "reference_parse"}),
                    "bootstrap_ns": self.after_install_ns - self.bootstrap_started_ns,
@@ -113,6 +114,75 @@ class Runtime:
                 json.dumps(profile, sort_keys=True, default=str) + "\n")
         except OSError:
             pass
+
+
+def _serve_iter_rows(ws, args, kwargs):
+    """Direct full-cell row iteration (probe) or fail-closed delegation.
+
+    Mirrors openpyxl 3.1.5 Worksheet.iter_rows semantics exactly for the
+    certified rectangle-of-cells shape, including merged ranges (children
+    read as None/'n', matching MergedCell observables); anything else
+    (values_only, uncertain emptiness, odd arguments) delegates to genuine
+    openpyxl with a recorded reason.
+    """
+    runtime = ws._workbook._runtime
+    real = lambda: ws._real_sheet().iter_rows(*args, **kwargs)  # noqa: E731
+    if os.environ.get("RECALC_NO_ITERATION_PROBE") == "1":
+        return real()
+    # Bind through the exact openpyxl signature so arity/keyword errors
+    # reproduce identically.
+    def _bind(min_row=None, max_row=None, min_col=None, max_col=None,
+              values_only=False):
+        return min_row, max_row, min_col, max_col, values_only
+    try:
+        min_row, max_row, min_col, max_col, values_only = _bind(*args, **kwargs)
+    except TypeError:
+        # Arity/keyword errors reproduce byte-identically via genuine.
+        runtime.record("iteration_reference", reason="signature_mismatch",
+                       sheet=ws.title)
+        return real()
+    bounds = (min_row, max_row, min_col, max_col)
+    if values_only or not all(b is None or isinstance(b, int)
+                              for b in bounds):
+        runtime.record("iteration_reference",
+                       reason="values_only" if values_only else "dynamic_bounds",
+                       sheet=ws.title)
+        return real()
+    info = ws._sheet.info
+    explicit = any([min_col, min_row, max_col, max_row])
+    if not explicit and not info.cells:
+        # Indistinguishable without new state: truly empty, style-only
+        # cells, or merges-only. Reference decides cheaply and correctly.
+        runtime.record("iteration_reference", reason="sparse_state_empty",
+                       sheet=ws.title)
+        return real()
+    # Mirror openpyxl's `or`-defaults exactly (falsy -> default).
+    min_col = min_col or 1
+    min_row = min_row or 1
+    max_col = max_col or ws._sheet.max_column
+    max_row = max_row or ws._sheet.max_row
+    # Merged ranges are served, not escaped (see DEVIATIONS.md D1):
+    # MemoryBook.cell maps merged children to (None, 'n'), which is exactly
+    # MergedCell-observable state for the certified attribute contract.
+    # Rich access on any served cell still escapes per-cell to genuine.
+    runtime.record("iteration_direct", sheet=ws.title, min_row=min_row,
+                   max_row=max_row, min_col=min_col, max_col=max_col)
+    runtime.counts.setdefault("direct_iteration_rows", 0)
+    runtime.counts.setdefault("direct_iteration_cells", 0)
+
+    def _gen():
+        # Lazily, like openpyxl: negative bounds fail on first advance
+        # with the identical message openpyxl's cell() raises.
+        if min_row < 1 or min_col < 1:
+            raise ValueError("Row or column values must be at least 1")
+        for row in range(min_row, max_row + 1):
+            cells = tuple(ProxyCell(ws, row, column)
+                          for column in range(min_col, max_col + 1))
+            runtime.counts["direct_iteration_rows"] += 1
+            runtime.counts["direct_iteration_cells"] += len(cells)
+            yield cells
+
+    return _gen()
 
 
 class ProxyWorkbook:
@@ -202,7 +272,7 @@ class ProxyWorksheet:
         return iter(self._real_sheet())
 
     def iter_rows(self, *args, **kwargs):
-        return self._real_sheet().iter_rows(*args, **kwargs)
+        return _serve_iter_rows(self, args, kwargs)
 
     def __getattr__(self, name):
         return getattr(self._real_sheet(), name)

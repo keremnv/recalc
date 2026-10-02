@@ -45,6 +45,8 @@ class A1Analyzer:
         self.openpyxl_loaded = "openpyxl" in self.source
         self.tree: ast.AST | None = None
         self.parse_error: str | None = None
+        self._probe_enabled = True
+        self._pending_iter_sites: list = []
         try:
             self.tree = ast.parse(self.source)
         except SyntaxError as exc:
@@ -95,6 +97,128 @@ class A1Analyzer:
             elif self._proven_object(base, "worksheet") and isinstance(value.slice, ast.Constant) and isinstance(value.slice.value, str) and ":" not in value.slice.value:
                 self.cells.add(name)
 
+    # Iteration probe: cell attributes served identically by direct proxy
+    # cells (value/coordinate/row/column/data_type are read-state lookups or
+    # stored coordinates; everything else escapes per-cell to genuine).
+    ITER_CELL_ATTRS = {"value", "coordinate", "row", "column", "data_type"}
+    ITER_KWARGS = {"min_row", "max_row", "min_col", "max_col", "values_only"}
+
+    def _resolve_iteration_vars(self) -> None:
+        """Track for-targets over certified-shape iter_rows calls.
+
+        Row vars: `for row in <proven-ws>.iter_rows(...)` (statement or
+        comprehension). Cell vars: `for c in <row-var>`. Only direct
+        iteration is tracked; anything else keeps existing blockers.
+        """
+        assert self.tree is not None
+        self.iter_row_vars: set[str] = set()
+        self.iter_cell_names: set[str] = set()
+        for node in ast.walk(self.tree):
+            targets: list[ast.AST] = []
+            iters: list[ast.AST] = []
+            if isinstance(node, ast.For):
+                targets, iters = [node.target], [node.iter]
+            elif isinstance(node, (ast.ListComp, ast.SetComp, ast.GeneratorExp,
+                                   ast.DictComp)):
+                for gen in node.generators:
+                    targets.append(gen.target)
+                    iters.append(gen.iter)
+            else:
+                continue
+            for target, it in zip(targets, iters):
+                names = [n.id for n in ast.walk(target)
+                         if isinstance(n, ast.Name)
+                         and isinstance(getattr(n, "ctx", None), ast.Store)]
+                if (isinstance(it, ast.Call)
+                        and dotted(it.func).rsplit(".", 1)[-1] == "iter_rows"
+                        and isinstance(it.func, ast.Attribute)
+                        and self._proven_object(it.func.value, "worksheet")):
+                    self.iter_row_vars.update(names)
+                elif isinstance(it, ast.Name) and it.id in self.iter_row_vars:
+                    self.cells.update(names)
+                    self.iter_cell_names.update(names)
+
+    def _iter_site_certified(self, node: ast.Call) -> bool:
+        """Static kwargs proof for one iter_rows call site."""
+        if node.args:
+            return False
+        for kw in node.keywords:
+            if kw.arg is None or kw.arg not in self.ITER_KWARGS:
+                return False
+            if kw.arg == "values_only":
+                if not (is_false(kw.value) or (isinstance(kw.value, ast.Constant)
+                                               and kw.value.value is None)):
+                    return False
+            elif not (isinstance(kw.value, ast.Constant)
+                      and (kw.value.value is None
+                           or isinstance(kw.value.value, int))):
+                return False
+        parent = getattr(node, "_probe_parent", None)
+        # Certified only under direct `for ... in <call>` consumption.
+        if isinstance(parent, ast.For) and parent.iter is node:
+            return True
+        if isinstance(parent, ast.comprehension) and parent.iter is node:
+            return True
+        return False
+
+    def _iteration_use_safe(self) -> bool:
+        """Whole-tree consumption proof for tracked row/cell vars."""
+        assert self.tree is not None
+        row_vars = getattr(self, "iter_row_vars", set())
+        for node in ast.walk(self.tree):
+            if not isinstance(node, ast.Name):
+                continue
+            name, parent = node.id, getattr(node, "_probe_parent", None)
+            if name in row_vars:
+                if isinstance(parent, ast.For) and (
+                        parent.iter is node or node in ast.walk(parent.target)):
+                    continue
+                if isinstance(parent, ast.comprehension) and (
+                        parent.iter is node or node in ast.walk(parent.target)):
+                    continue
+                return False
+            if name in self.cells and self._name_from_iteration(node):
+                if isinstance(parent, ast.Attribute) and isinstance(
+                        getattr(parent, "ctx", None), ast.Load):
+                    if parent.attr in self.ITER_CELL_ATTRS:
+                        continue
+                    return False
+                if isinstance(parent, ast.For) and node in ast.walk(parent.target):
+                    continue
+                if isinstance(parent, ast.comprehension) and node in ast.walk(parent.target):
+                    continue
+                return False
+        return True
+
+    def _link_parents(self) -> None:
+        assert self.tree is not None
+        for node in ast.walk(self.tree):
+            for child in ast.iter_child_nodes(node):
+                child._probe_parent = node  # type: ignore[attr-defined]
+
+    def _name_from_iteration(self, node: ast.Name) -> bool:
+        """True if this Name occurrence binds to an iteration-derived cell.
+
+        Cells proven via .cell()/subscript predate the probe and keep their
+        existing (permissive) treatment; only iteration-derived cells get
+        the strict consumption proof. Membership is approximate by name:
+        a name is iteration-derived if it was bound by an iteration for-target.
+        """
+        return node.id in getattr(self, "iter_cell_names", set())
+
+    def _finalize_iteration(self) -> None:
+        """Whole-tree consumption proof for candidate iter_rows sites."""
+        if not self._pending_iter_sites:
+            return
+        if self._iteration_use_safe():
+            for site in self._pending_iter_sites:
+                self.add_category("ITER_ROWS_CERTIFIED", site, "direct iteration")
+        else:
+            for site in self._pending_iter_sites:
+                self.add_category("CELL_OBJECT_ITERATION", site, "unsafe consumption")
+                self.add_blocker("CELL_OBJECT_ITERATION_BOUNDARY", site)
+        self._pending_iter_sites = []
+
     def _walk_statements(self, body: list[ast.stmt]) -> None:
         for stmt in body:
             if isinstance(stmt, ast.Assign):
@@ -138,7 +262,11 @@ class A1Analyzer:
             return {"decision": "PREDECLARED_REAL_OPENPYXL", "reason": "source unavailable or no openpyxl", "categories": [], "blockers": [{"reason": "STATIC_ANALYSIS_UNCERTAINTY"}], "parse_ok": False}
         if self.tree is None:
             return {"decision": "PREDECLARED_REAL_OPENPYXL", "reason": "syntax parse failed", "categories": [], "blockers": [{"reason": "STATIC_ANALYSIS_UNCERTAINTY", "detail": self.parse_error}], "parse_ok": False}
+        import os as _os
+        self._probe_enabled = _os.environ.get("RECALC_NO_ITERATION_PROBE") != "1"
+        self._link_parents()
         self._walk_statements(self.tree.body)
+        self._resolve_iteration_vars()
         self._load_mode_blockers()
         lexical = self.a0_lexical_matches()
         for node in ast.walk(self.tree):
@@ -179,6 +307,11 @@ class A1Analyzer:
                     values_only = next((kw.value for kw in node.keywords if kw.arg == "values_only"), None)
                     if is_true(values_only):
                         self.add_category("ITER_ROWS_VALUES_ONLY", node, fn)
+                    elif self._probe_enabled and self._iter_site_certified(node):
+                        # Consumption proof is whole-tree; evaluated once the
+                        # walk completes (see _finalize_iteration below).
+                        self._pending_iter_sites.append(node)
+                        self.add_category("ITER_ROWS_CANDIDATE", node, fn)
                     else:
                         self.add_category("CELL_OBJECT_ITERATION", node, fn)
                         self.add_blocker("CELL_OBJECT_ITERATION_BOUNDARY", node)
@@ -207,11 +340,26 @@ class A1Analyzer:
                         self.add_blocker("READ_WRITE_MIXED_BOUNDARY", node)
             if isinstance(node, ast.Return) and node.value is not None and self._proven_object(node.value):
                 self.add_blocker("OBJECT_ESCAPE_BOUNDARY", node)
+        # Whole-tree consumption proof for candidate iteration sites.
+        if self._probe_enabled:
+            self._finalize_iteration()
         # Preserve every non-range A0 lexical rejection.  Only the lexical
-        # range/slice rejection is replaced by the AST proof above.
+        # range/slice rejection is replaced by the AST proof above, plus --
+        # for the iteration probe -- the lexical iterator-shape rejection,
+        # and then only when at least one iter_rows site certified and no
+        # iteration boundary remains (a bare lexical match with no certified
+        # site, e.g. inside a string or eval payload, keeps the blocker).
+        certified_any = any(c.get("category") == "ITER_ROWS_CERTIFIED"
+                            for c in self.categories)
+        iter_blocked = any(b.get("reason") == "CELL_OBJECT_ITERATION_BOUNDARY"
+                           for b in self.blockers)
         for item in lexical:
-            if item["reason"] != "range/slice object path":
-                self.add_blocker(item["reason"], None, "A0 lexical boundary preserved")
+            if item["reason"] == "range/slice object path":
+                continue
+            if (item["reason"] == "iterator shape not statically proven"
+                    and certified_any and not iter_blocked):
+                continue
+            self.add_blocker(item["reason"], None, "A0 lexical boundary preserved")
         # Deduplicate and choose stable precedence.
         unique = []
         seen = set()
