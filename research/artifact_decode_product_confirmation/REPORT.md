@@ -137,15 +137,28 @@ mechanical defect — both flags resolved as noise by predefined rule).
 
 ## 18. Conditional rc5 integration
 
-(To be completed on PRODUCTIZE: D1 already in tree; version bump to
-0.2.0rc5 + CHANGELOG/docs/evidence; artifact-key vector rotation per
-existing RUNTIME_VERSION policy with one-time-rebuild documentation.)
+Performed (verdict PRODUCTIZE): D1 product commit (`ad715bf`: decoder
++ 6 unit tests, +70/−2), rc5 version/docs commit (`c476c36`:
+`pyproject`, `__version__`, CHANGELOG, README, COMPATIBILITY,
+evidence docs with conservative decode-only claims), vector-rotation
+commit (`8350b7f`: fixed key vector rotated for the intentional bump,
+sanctioned by the test's update rule). `RUNTIME_VERSION` key policy
+mechanically rebuilds rc4 artifacts once on first rc5 touch (cold
+only) — documented in CHANGELOG, not redesigned; D1 itself reuses
+rc4-built artifacts (52/52 proven in §15).
 
 ## 19. Release verification
 
-(To be completed: suites, adversarial, corruption, parity, native
-build, wheel/sdist, fresh venv, --version/doctor, Quick Start,
-package + link checks.)
+On the rc5 tree, all green: product suites 49/49; full suite 890
+passed + 4 documented pre-existing + 12 skipped; adversarial 40/40;
+corruption 12/12 PASS; semantic parity 52/52; full-command parity
+re-run 52/52 (independent window: decode −64.1%, warm −3.0 s, max
+delta +0.012); clean native build; wheel + sdist;
+fresh-venv install; `--version` → 0.2.0rc5; `doctor` 8 PASS; Quick
+Start end-to-end (DIRECT_RUNTIME/PASS); wheel contains 0
+research/staging/probe paths; doc links intact. No probe-only
+harness ships (research lives only under `research/`, excluded from
+the wheel by existing packaging rules).
 
 ## 20. Limitations
 
