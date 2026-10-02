@@ -1,4 +1,9 @@
-# Evidence and limitations — recalc-agent 0.2.0rc2
+# Evidence and limitations — recalc-agent 0.2.0rc3
+
+Measurements below were established on `0.2.0rc2`. `0.2.0rc3` is a rename
+and release-hygiene candidate only: it changes product identity, licensing,
+and release surfaces without changing the validated mechanism, so the rc2
+evidence stands for rc3.
 
 Concise technical boundary for users who care about implementation guarantees.
 Research-oriented readers: full ledgers live in `product_integration_phase10/`,

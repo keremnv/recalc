@@ -1,7 +1,7 @@
 # Public release blockers
 
-`PUBLIC_RELEASE_BLOCKER: LICENSE_NOT_CHOSEN`
+`LICENSE_NOT_CHOSEN` is resolved: the project is licensed under the MIT
+License (see [LICENSE](LICENSE), copyright 2026 keremnv).
 
-No software license has been selected. Do not publish this repository publicly
-until a license is chosen and added. No license is selected on the user's behalf
-by this note.
+No other blockers are tracked in this file. Do not publish until the
+remaining manual release review is complete.

@@ -15,7 +15,7 @@ separate from the post-state check (assurance status). The agent-facing
 surface stays ordinary Python files using ordinary `openpyxl`, with no new
 workbook API to learn.
 
-This is release candidate `0.2.0rc2`, Linux-first. It is not published to an
+This is release candidate `0.2.0rc3`, Linux-first. It is not published to an
 index. The exact boundary of what is established, what is conditional, and
 what is not claimed is [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md).
 
@@ -120,7 +120,9 @@ uses genuine reference openpyxl behavior.
 
 ## Current evidence snapshot
 
-Product evidence for `0.2.0rc2` only. All timing figures are host- and
+Product evidence below was established on `0.2.0rc2` and carried forward
+unchanged: `0.2.0rc3` is a rename and release-hygiene candidate that does
+not change the validated mechanism. All timing figures are host- and
 run-sensitive; the validation host is recorded in
 [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md).
 
@@ -412,8 +414,8 @@ claims.
 
 ## Product and release status
 
-`recalc-agent 0.2.0rc2` is a Linux-first release candidate, not yet
-published to an index, with the license decision still open (see
+`recalc-agent 0.2.0rc3` is a Linux-first release candidate, not yet
+published to an index, under the MIT License (see [LICENSE](LICENSE) and
 [CHANGELOG.md](CHANGELOG.md)). The tested baseline is Linux x86_64 with
 glibc, CPython 3.13, pinned `openpyxl`/`lxml`, and a local filesystem; see
 [COMPATIBILITY.md](COMPATIBILITY.md) for the full supported/tested boundary,

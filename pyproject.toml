@@ -4,8 +4,9 @@ build-backend = "hatchling.build"
 
 [project]
 name = "recalc-agent"
-version = "0.2.0rc2"
+version = "0.2.0rc3"
 description = "Ordinary Python/openpyxl harness with optional conservative runtime assurance and read acceleration."
+license = "MIT"
 readme = "README.md"
 requires-python = ">=3.11,<3.15"
 dependencies = [

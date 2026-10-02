@@ -1,5 +1,20 @@
 # Changelog — recalc-agent
 
+## 0.2.0rc3 (release candidate, Linux-first)
+
+Rename and release-hygiene candidate. No runtime-mechanism change from
+`0.2.0rc2`: the validated read/observer behavior and all rc2-established
+evidence stand unchanged (see
+[docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md)).
+
+- Product renamed to `recalc`: distribution and command are now
+  `recalc-agent`, the Python package is `recalc_agent`, public
+  environment variables are `RECALC_CONFIG` / `RECALC_NO_RUNTIME`
+  (plus internal `RECALC_*` handoff keys), and the default cache is
+  `~/.cache/recalc-agent`. No old-name compatibility aliases.
+- Licensed under the MIT License (`LICENSE`, copyright 2026 keremnv);
+  the license blocker is resolved.
+
 ## 0.2.0rc2 (release candidate, Linux-first)
 
 Version rationale: same architecture generation as `0.2.0rc1` (the validated
