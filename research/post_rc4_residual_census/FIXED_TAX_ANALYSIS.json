@@ -1,0 +1,18 @@
+{
+ "admission_s_per_script": 0.0006075910519239886,
+ "empty_base_s_median": 0.038,
+ "empty_prod_s_median": 0.151,
+ "empty_tax_s_median": 0.1129,
+ "observer_profile_ns": {
+  "argument_run_dir": 211184,
+  "changed_helper_or_empty_receipt": 126305,
+  "fork_launch": 115698,
+  "observer_to_receipt": 59149042,
+  "post_snapshot_compare": 88918,
+  "pre_snapshot": 24205,
+  "wait_target": 58562190
+ },
+ "openpyxl_import_s_median": 0.087,
+ "python_bare_c_s_median": 0.0398,
+ "reps": 10
+}

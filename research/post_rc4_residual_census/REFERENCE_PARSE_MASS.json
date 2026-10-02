@@ -1,0 +1,58 @@
+{
+ "by_blocker_family": {
+  "active_worksheets": {
+   "parse_s": 0.0654,
+   "share": 0.2825,
+   "workloads": [
+    "Debugging_01_04__542f8461a344",
+    "Template_06_02__85fab8c95cea",
+    "Template_06_02__c26a4c6508ba"
+   ]
+  },
+  "dynamic_uncertain": {
+   "parse_s": 0.1005,
+   "share": 0.4341,
+   "workloads": [
+    "Debugging_02_06__88edc6528ef0",
+    "Template_06_12__3d05a7ee874d",
+    "Template_06_12__83f82ce3f62b",
+    "Template_15_03__5ad5663409d0"
+   ]
+  },
+  "rich_attributes": {
+   "parse_s": 0.0835,
+   "share": 0.3607,
+   "workloads": [
+    "Debugging_09_03__59822a6e11e7",
+    "Template_06_02__85fab8c95cea",
+    "Template_06_02__c26a4c6508ba",
+    "Template_06_12__83f82ce3f62b",
+    "Template_15_01__fa75e25f6a90",
+    "Template_15_03__5ad5663409d0"
+   ]
+  },
+  "unsupported_iteration": {
+   "parse_s": 0.0615,
+   "share": 0.2657,
+   "workloads": [
+    "Debugging_01_04__542f8461a344",
+    "Template_15_01__fa75e25f6a90"
+   ]
+  }
+ },
+ "note": "families overlap (multi-blocker workloads counted in each); shares may sum >1",
+ "population": "A",
+ "residual_reference_workloads": [
+  "Debugging_01_04__542f8461a344",
+  "Debugging_02_06__88edc6528ef0",
+  "Debugging_09_03__59822a6e11e7",
+  "Template_06_02__85fab8c95cea",
+  "Template_06_02__c26a4c6508ba",
+  "Template_06_12__3d05a7ee874d",
+  "Template_06_12__83f82ce3f62b",
+  "Template_06_23__fc41ad37c48b",
+  "Template_15_01__fa75e25f6a90",
+  "Template_15_03__5ad5663409d0"
+ ],
+ "total_residual_reference_parse_s": 0.2315
+}

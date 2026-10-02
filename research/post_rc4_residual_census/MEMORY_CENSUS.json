@@ -1,0 +1,36 @@
+{
+ "workloads": [
+  {
+   "base_exit": 0,
+   "base_rss_peak_kb": 997632,
+   "population": "A",
+   "prod_exit": 0,
+   "prod_rss_peak_kb": 148520,
+   "workload": "Debugging_10_10__c7eca76e6646"
+  },
+  {
+   "base_exit": 0,
+   "base_rss_peak_kb": 47136,
+   "population": "A",
+   "prod_exit": 0,
+   "prod_rss_peak_kb": 47884,
+   "workload": "Template_03_03__c76ea596b408"
+  },
+  {
+   "base_exit": 0,
+   "base_rss_peak_kb": 47244,
+   "population": "A",
+   "prod_exit": 0,
+   "prod_rss_peak_kb": 47764,
+   "workload": "Template_06_02__85fab8c95cea"
+  },
+  {
+   "base_exit": 0,
+   "base_rss_peak_kb": 46972,
+   "population": "A",
+   "prod_exit": 0,
+   "prod_rss_peak_kb": 48240,
+   "workload": "Template_06_23__fc41ad37c48b"
+  }
+ ]
+}
