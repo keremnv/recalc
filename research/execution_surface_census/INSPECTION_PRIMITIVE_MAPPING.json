@@ -1,0 +1,72 @@
+{
+ "changed_cells": {
+  "archived_obs_bytes_max": 656,
+  "archived_obs_bytes_sum": 1884,
+  "exact": true,
+  "loop_instances": 7,
+  "needs_state": "before/after states",
+  "risk": "L2",
+  "scripts": 7,
+  "tasks": 7
+ },
+ "diff_workbooks": {
+  "archived_obs_bytes_max": 34953,
+  "archived_obs_bytes_sum": 89082,
+  "exact": true,
+  "loop_instances": 32,
+  "needs_state": "two read states",
+  "risk": "L2",
+  "scripts": 32,
+  "tasks": 15
+ },
+ "find_text": {
+  "archived_obs_bytes_max": 71473,
+  "archived_obs_bytes_sum": 1150262,
+  "exact": true,
+  "loop_instances": 257,
+  "needs_state": "none beyond read state",
+  "risk": "L0",
+  "scripts": 168,
+  "tasks": 38
+ },
+ "formula_regions": {
+  "archived_obs_bytes_max": 30329,
+  "archived_obs_bytes_sum": 123366,
+  "exact": true,
+  "loop_instances": 54,
+  "needs_state": "formula presence",
+  "risk": "L1",
+  "scripts": 49,
+  "tasks": 25
+ },
+ "inspect_neighborhood": {
+  "archived_obs_bytes_max": 215,
+  "archived_obs_bytes_sum": 215,
+  "exact": true,
+  "loop_instances": 1,
+  "needs_state": "read state",
+  "risk": "L1",
+  "scripts": 1,
+  "tasks": 1
+ },
+ "reference_search": {
+  "archived_obs_bytes_max": 1528,
+  "archived_obs_bytes_sum": 5451,
+  "exact": true,
+  "loop_instances": 8,
+  "needs_state": "formula text index",
+  "risk": "L2",
+  "scripts": 6,
+  "tasks": 4
+ },
+ "sparse_range_values": {
+  "archived_obs_bytes_max": 71473,
+  "archived_obs_bytes_sum": 670936,
+  "exact": true,
+  "loop_instances": 126,
+  "needs_state": "read state",
+  "risk": "L1",
+  "scripts": 60,
+  "tasks": 23
+ }
+}

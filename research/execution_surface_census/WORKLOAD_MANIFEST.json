@@ -1,0 +1,2555 @@
+{
+ "populations": {
+  "A": {
+   "n": 30,
+   "rule": "frozen representative_population.json (pre-tidy 554dc00)",
+   "workloads": [
+    {
+     "population": "A",
+     "workload_id": "Debugging_01_04__542f8461a344",
+     "family": "Debugging",
+     "task": "Debugging:01_04",
+     "script_sha256": "542f8461a344298bf6f633eca6053a9d512b1954438e8d3f0817a96318258160",
+     "workbook_sha256": "d01f1c1025176da9cfbabe38cfca0776fd77e7287f6138e6fe85ab06394d457a",
+     "workbook_bytes": 85553,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Debugging_02_06__7252ca64cf1c",
+     "family": "Debugging",
+     "task": "Debugging:02_06",
+     "script_sha256": "7252ca64cf1c7e434feb481f5a531a6ec38ec25852e3a3ccfc6556a0b8c40b1e",
+     "workbook_sha256": "8201c6f818b331626002113e51b43d30aafb7ebe27218b3457111042ee3f6d1f",
+     "workbook_bytes": 111159,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Debugging_02_06__88edc6528ef0",
+     "family": "Debugging",
+     "task": "Debugging:02_06",
+     "script_sha256": "88edc6528ef05d20e9f9c555d8aaf494ab384f893e3c5fc01d4994249c1fc0e0",
+     "workbook_sha256": "8201c6f818b331626002113e51b43d30aafb7ebe27218b3457111042ee3f6d1f",
+     "workbook_bytes": 111159,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Debugging_04_07__62a7766ef582",
+     "family": "Debugging",
+     "task": "Debugging:04_07",
+     "script_sha256": "62a7766ef582f2ed6abd70dea493060185d1ed1de93ce7a026ad2d1c295c4e96",
+     "workbook_sha256": "d148f7eefd3b1578aaf1b39dc3f34dbf2628719a68e9f956d7b3ca49c245c886",
+     "workbook_bytes": 676567,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Debugging_05_02__f274eaa3cc8e",
+     "family": "Debugging",
+     "task": "Debugging:05_02",
+     "script_sha256": "f274eaa3cc8e366dabb404cbc85db6c0d998ca67f50fb941fbf9c892a9f00cd5",
+     "workbook_sha256": "fa7c8d05a020ef079d6330fe7d1e3de64b35be0e9cc99d413c1bc30e7e19565e",
+     "workbook_bytes": 412320,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": "READ_ONLY_COMPLEX_PYTHON"
+    },
+    {
+     "population": "A",
+     "workload_id": "Debugging_09_03__0828d4dfbd13",
+     "family": "Debugging",
+     "task": "Debugging:09_03",
+     "script_sha256": "0828d4dfbd137e47a235624d244a4e3e8996643edd2c5a5e6cdf42045b65cda5",
+     "workbook_sha256": "f1ca163a1198e742864c9814016b49f397a0f1d0469685a5d7efd618aec7ca5a",
+     "workbook_bytes": 59783,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Debugging_09_03__59822a6e11e7",
+     "family": "Debugging",
+     "task": "Debugging:09_03",
+     "script_sha256": "59822a6e11e748dced202ff39c6e03af4f09a84147e1da3116a53bad9434fe4b",
+     "workbook_sha256": "f1ca163a1198e742864c9814016b49f397a0f1d0469685a5d7efd618aec7ca5a",
+     "workbook_bytes": 59783,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Debugging_10_07__6dd8f6d3a4dd",
+     "family": "Debugging",
+     "task": "Debugging:10_07",
+     "script_sha256": "6dd8f6d3a4dd5f9b166e269862419e4a1f2b33ed91da0058630adee76fc56a42",
+     "workbook_sha256": "0d51c60e2cbef7e4b675815f9873fe69c01cac1e06cd69bf8a5751c1f64ee956",
+     "workbook_bytes": 8320856,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Debugging_10_07__e3a79d24091a",
+     "family": "Debugging",
+     "task": "Debugging:10_07",
+     "script_sha256": "e3a79d24091a5d792f9c9c017b59e00b563fa1da4d2da35e1f6332a2a803e5e3",
+     "workbook_sha256": "0d51c60e2cbef7e4b675815f9873fe69c01cac1e06cd69bf8a5751c1f64ee956",
+     "workbook_bytes": 8320856,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Debugging_10_10__c7eca76e6646",
+     "family": "Debugging",
+     "task": "Debugging:10_10",
+     "script_sha256": "c7eca76e664673057398fd0113bd5d46b4641651030b6d91e6023cdac28c4afc",
+     "workbook_sha256": "3d95978b76409416f96be4645daeb2e28f949c171cc159560627506ef1c7eb34",
+     "workbook_bytes": 8323836,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Financial_Model_02_01__79352976d750",
+     "family": "Financial_Model",
+     "task": "Financial_Model:02_01",
+     "script_sha256": "79352976d750f561f316dae5bb7b49af6d580b9a4fb2538252aaf33fe234e169",
+     "workbook_sha256": "2a7aa7cbeda9ebbd90c52b28090030140e30a5d019af05da4844b21396c673e8",
+     "workbook_bytes": 66494,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Financial_Model_02_01__bb15e0fe3832",
+     "family": "Financial_Model",
+     "task": "Financial_Model:02_01",
+     "script_sha256": "bb15e0fe3832cef58a3a88a36599e6d9ffd323dc23447b4031586f6afb850b2e",
+     "workbook_sha256": "2a7aa7cbeda9ebbd90c52b28090030140e30a5d019af05da4844b21396c673e8",
+     "workbook_bytes": 66494,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Financial_Model_02_05__90004332940a",
+     "family": "Financial_Model",
+     "task": "Financial_Model:02_05",
+     "script_sha256": "90004332940ab83e9b76bee957d8d87dd6ba0e9d044906c6a269c53e4d97ac78",
+     "workbook_sha256": "f61402df84ff17d94590f86939a408f786cb4fdeba82eb3e1911d8ebb839febd",
+     "workbook_bytes": 66570,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Financial_Model_02_05__c75ecb00f745",
+     "family": "Financial_Model",
+     "task": "Financial_Model:02_05",
+     "script_sha256": "c75ecb00f74516f13a4a8049a7459be03356b89e52098736463b619518b41bf6",
+     "workbook_sha256": "f61402df84ff17d94590f86939a408f786cb4fdeba82eb3e1911d8ebb839febd",
+     "workbook_bytes": 66570,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Financial_Model_08_01__2ea507d758dc",
+     "family": "Financial_Model",
+     "task": "Financial_Model:08_01",
+     "script_sha256": "2ea507d758dc68aade4adfb2a31f27ed535c25328a8bd2f3ed0ef8605cff86a4",
+     "workbook_sha256": "6d742f67e84fcc3d92d1dec6b285417093b99dec1469686f1c6813aee9ad2a0a",
+     "workbook_bytes": 2164521,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": "READ_ONLY_COMPLEX_PYTHON"
+    },
+    {
+     "population": "A",
+     "workload_id": "Financial_Model_08_02__4ca3ae46295d",
+     "family": "Financial_Model",
+     "task": "Financial_Model:08_02",
+     "script_sha256": "4ca3ae46295d01eb593acad8ea57be99442fbfeee4f1a5376b5ba284acfd88b6",
+     "workbook_sha256": "9928600b0184036b03a8664c1e2dcd8994e5f90e866d68c140dd6543b3ac0aff",
+     "workbook_bytes": 2147654,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Financial_Model_08_02__625ec1db4acb",
+     "family": "Financial_Model",
+     "task": "Financial_Model:08_02",
+     "script_sha256": "625ec1db4acbbfeac9b8daaa50457b6a137a5d0481d9d8ab81a6d1d53d8e8246",
+     "workbook_sha256": "9928600b0184036b03a8664c1e2dcd8994e5f90e866d68c140dd6543b3ac0aff",
+     "workbook_bytes": 2147654,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Financial_Model_08_03__e48ea186deeb",
+     "family": "Financial_Model",
+     "task": "Financial_Model:08_03",
+     "script_sha256": "e48ea186deebbb5d9534eb7a39851146a5cee96eb28e931685c782401cd17376",
+     "workbook_sha256": "2b7a84044765a4664ddb197de168fbd7feb8fff395a027a4923ee2d9ab9e8dc1",
+     "workbook_bytes": 2173244,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": "READ_ONLY_SIMPLE"
+    },
+    {
+     "population": "A",
+     "workload_id": "Financial_Model_11_02__a443eee257b4",
+     "family": "Financial_Model",
+     "task": "Financial_Model:11_02",
+     "script_sha256": "a443eee257b468e8d4be0c4dfb546e3de9f9115a14d43af9b2c7d2aacef927fd",
+     "workbook_sha256": "2102c51421d746b2a090e83b46e37c927b6a839d82d3df75b39f8c5d058b2105",
+     "workbook_bytes": 593808,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Financial_Model_15_03__64092e664e9b",
+     "family": "Financial_Model",
+     "task": "Financial_Model:15_03",
+     "script_sha256": "64092e664e9b7cf08c10b5205b302bf9005c0d5890b2bf082cf76e82983ecd40",
+     "workbook_sha256": "318eed515474a4e8c0684d3895e49e4726728d1166c2f83ef71b936d32dbf3d7",
+     "workbook_bytes": 297984,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Template_03_03__c76ea596b408",
+     "family": "Template",
+     "task": "Template:03_03",
+     "script_sha256": "c76ea596b40873c4c85950f6a34b4b87f139895493bc0287ac44b87b8666e46a",
+     "workbook_sha256": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+     "workbook_bytes": 7552,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": "READ_ONLY_SIMPLE"
+    },
+    {
+     "population": "A",
+     "workload_id": "Template_06_02__85fab8c95cea",
+     "family": "Template",
+     "task": "Template:06_02",
+     "script_sha256": "85fab8c95cea9d5419d812a21f36fd315fda9d014a8af1dfd47c8053009fc2cc",
+     "workbook_sha256": "76ff3caea33395983113db652c35d5a14b46e7be8588f06f26092990fef1cc19",
+     "workbook_bytes": 6303,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Template_06_02__c26a4c6508ba",
+     "family": "Template",
+     "task": "Template:06_02",
+     "script_sha256": "c26a4c6508ba40e1186fc8eba8fe5b653dc04c6ff6dadb69d24d942527fc8d22",
+     "workbook_sha256": "76ff3caea33395983113db652c35d5a14b46e7be8588f06f26092990fef1cc19",
+     "workbook_bytes": 6303,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Template_06_12__3d05a7ee874d",
+     "family": "Template",
+     "task": "Template:06_12",
+     "script_sha256": "3d05a7ee874db894026f7f48981f5d8cde2fe22fbd65042bcb29edfe140c934d",
+     "workbook_sha256": "d05d2bcd62e971dab1907e3b290cc7e46c161f5d1d3bfac6266d04bd831ddeba",
+     "workbook_bytes": 7558,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Template_06_12__83f82ce3f62b",
+     "family": "Template",
+     "task": "Template:06_12",
+     "script_sha256": "83f82ce3f62bbbcb5333f6ca5cdd270576d044b6fae192efe5c76a19410b7d4a",
+     "workbook_sha256": "d05d2bcd62e971dab1907e3b290cc7e46c161f5d1d3bfac6266d04bd831ddeba",
+     "workbook_bytes": 7558,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Template_06_23__fc41ad37c48b",
+     "family": "Template",
+     "task": "Template:06_23",
+     "script_sha256": "fc41ad37c48b2393a985ee732d87613d64f34261bdea148383a9505d4c65eed7",
+     "workbook_sha256": "45dcae55a68ffcdbf86156fe4c692fa255fc943f5cd8b3d6bdb8627086efd265",
+     "workbook_bytes": 6437,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Template_15_01__fa75e25f6a90",
+     "family": "Template",
+     "task": "Template:15_01",
+     "script_sha256": "fa75e25f6a904785d20c0acbf833cf4c6c5a1c940210e1b82e6c0a04775f5a17",
+     "workbook_sha256": "0cce1cbcae88e9dbcc2d33743c76179443119357d80e8d24d38b3e99a404a0c6",
+     "workbook_bytes": 6772,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Template_15_03__5ad5663409d0",
+     "family": "Template",
+     "task": "Template:15_03",
+     "script_sha256": "5ad5663409d0c391afd0f36dc925a338c502ed7afd47b7187293d690611641b6",
+     "workbook_sha256": "6b59c89a4a3c05e503c9df94cbb965a7246bea9c2446d7dceaf79be6f6ae258f",
+     "workbook_bytes": 7836,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Template_15_03__68f4733f2576",
+     "family": "Template",
+     "task": "Template:15_03",
+     "script_sha256": "68f4733f25762dd3f9c85f6a80f970bc04371cad59adce693f3337f550a51bf1",
+     "workbook_sha256": "6b59c89a4a3c05e503c9df94cbb965a7246bea9c2446d7dceaf79be6f6ae258f",
+     "workbook_bytes": 7836,
+     "a1_decision_archived": "PREDECLARED_REAL_OPENPYXL",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "A",
+     "workload_id": "Template_16_07__9662584ede5e",
+     "family": "Template",
+     "task": "Template:16_07",
+     "script_sha256": "9662584ede5e229b8b66419e66cf0722af4320425e2c61a706a9cedee0ce787d",
+     "workbook_sha256": "d3a7de73ce86d28dccf1879795495172a906f0268188217b3e7d99f16da47d1c",
+     "workbook_bytes": 9480,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": null
+    }
+   ]
+  },
+  "B": {
+   "n": 22,
+   "rule": "frozen eligible_population.json (pre-tidy 554dc00)",
+   "workloads": [
+    {
+     "population": "B",
+     "workload_id": "Debugging_01_06__26b457c478d0",
+     "family": "Debugging",
+     "task": "Debugging:01_06",
+     "script_sha256": "26b457c478d0634d0a4e7be8bf765adf7a345fa4547aee9b8effb183f4dc2607",
+     "workbook_sha256": "9af630a02079a57a7542217de50822bd1c5b92e1e08416128be3dc600ad0aeeb",
+     "workbook_bytes": 57771,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": "READ_ONLY_SIMPLE"
+    },
+    {
+     "population": "B",
+     "workload_id": "Debugging_01_06__7b42a0f86b41",
+     "family": "Debugging",
+     "task": "Debugging:01_06",
+     "script_sha256": "7b42a0f86b413bc1011d17fab5b33d0fe3259f4919ab7c2bc1ea4c75eaf91c9d",
+     "workbook_sha256": "9af630a02079a57a7542217de50822bd1c5b92e1e08416128be3dc600ad0aeeb",
+     "workbook_bytes": 57771,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": "READ_ONLY_SIMPLE"
+    },
+    {
+     "population": "B",
+     "workload_id": "Debugging_05_02__31823ebc55b0",
+     "family": "Debugging",
+     "task": "Debugging:05_02",
+     "script_sha256": "31823ebc55b02226534b23f54683e4820336dff7581a9706ed6dfb1b077df218",
+     "workbook_sha256": "fa7c8d05a020ef079d6330fe7d1e3de64b35be0e9cc99d413c1bc30e7e19565e",
+     "workbook_bytes": 412320,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": "READ_ONLY_SIMPLE"
+    },
+    {
+     "population": "B",
+     "workload_id": "Debugging_05_02__9e6b464d2158",
+     "family": "Debugging",
+     "task": "Debugging:05_02",
+     "script_sha256": "9e6b464d215877c5f6c82754977a2b10858234b8a4f1e0224f2cb99a35945e20",
+     "workbook_sha256": "fa7c8d05a020ef079d6330fe7d1e3de64b35be0e9cc99d413c1bc30e7e19565e",
+     "workbook_bytes": 412320,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": "READ_ONLY_SIMPLE"
+    },
+    {
+     "population": "B",
+     "workload_id": "Debugging_08_04__2dde74bd671e",
+     "family": "Debugging",
+     "task": "Debugging:08_04",
+     "script_sha256": "2dde74bd671eb9d0a7d07bbef34322c49ce239fb75884d9f8a2b73711c28c29a",
+     "workbook_sha256": "3463b88f927d0153e58141167f35da823656ec9249c1c8dc1c3205f75a5af802",
+     "workbook_bytes": 281911,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": "READ_ONLY_SIMPLE"
+    },
+    {
+     "population": "B",
+     "workload_id": "Financial_Model_02_01__4dbc773c2ade",
+     "family": "Financial_Model",
+     "task": "Financial_Model:02_01",
+     "script_sha256": "4dbc773c2adee20681cb69a160bb22b9952a8932c8aba2098bf77dbfcb2606fb",
+     "workbook_sha256": "2a7aa7cbeda9ebbd90c52b28090030140e30a5d019af05da4844b21396c673e8",
+     "workbook_bytes": 66494,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "B",
+     "workload_id": "Financial_Model_02_01__e87a34eb884e",
+     "family": "Financial_Model",
+     "task": "Financial_Model:02_01",
+     "script_sha256": "e87a34eb884e766da334993192d3f1275c959c0a6870d93bcc017fb29fe2c758",
+     "workbook_sha256": "2a7aa7cbeda9ebbd90c52b28090030140e30a5d019af05da4844b21396c673e8",
+     "workbook_bytes": 66494,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "B",
+     "workload_id": "Financial_Model_02_04__5ac07a9edb67",
+     "family": "Financial_Model",
+     "task": "Financial_Model:02_04",
+     "script_sha256": "5ac07a9edb67328602006cd6f007da75dd224b9a2c69bf2c30fd0b67021ec9a5",
+     "workbook_sha256": "1b64bd5ac59b13beceb019da28ee25a8e12d479e14d625ce3ead88ccc344c741",
+     "workbook_bytes": 66611,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "B",
+     "workload_id": "Financial_Model_07_01__23c57fc578fc",
+     "family": "Financial_Model",
+     "task": "Financial_Model:07_01",
+     "script_sha256": "23c57fc578fc0e3f8e259db65f9454f162186bf1916d1cd53d0cc692ff10439c",
+     "workbook_sha256": "e918281d3d7072ceb87fce285e49e77fa8843a260fc827f9c554dc0b47a6b185",
+     "workbook_bytes": 590007,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": "READ_ONLY_SIMPLE"
+    },
+    {
+     "population": "B",
+     "workload_id": "Financial_Model_07_01__90a7533589a4",
+     "family": "Financial_Model",
+     "task": "Financial_Model:07_01",
+     "script_sha256": "90a7533589a42c31eeb5d88a2bb969c668182ec3fff00c7dfa3fcff6ad0d970a",
+     "workbook_sha256": "e918281d3d7072ceb87fce285e49e77fa8843a260fc827f9c554dc0b47a6b185",
+     "workbook_bytes": 590007,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": "READ_ONLY_SIMPLE"
+    },
+    {
+     "population": "B",
+     "workload_id": "Financial_Model_08_01__2ea507d758dc",
+     "family": "Financial_Model",
+     "task": "Financial_Model:08_01",
+     "script_sha256": "2ea507d758dc68aade4adfb2a31f27ed535c25328a8bd2f3ed0ef8605cff86a4",
+     "workbook_sha256": "6d742f67e84fcc3d92d1dec6b285417093b99dec1469686f1c6813aee9ad2a0a",
+     "workbook_bytes": 2164521,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": "READ_ONLY_COMPLEX_PYTHON"
+    },
+    {
+     "population": "B",
+     "workload_id": "Financial_Model_08_01__8021d8d90c40",
+     "family": "Financial_Model",
+     "task": "Financial_Model:08_01",
+     "script_sha256": "8021d8d90c404bb2ee5b1a5cea69cb9c8319ac660155eb76114c9eba0ed0d727",
+     "workbook_sha256": "6d742f67e84fcc3d92d1dec6b285417093b99dec1469686f1c6813aee9ad2a0a",
+     "workbook_bytes": 2164521,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": "READ_ONLY_SIMPLE"
+    },
+    {
+     "population": "B",
+     "workload_id": "Financial_Model_08_03__59b98508fd79",
+     "family": "Financial_Model",
+     "task": "Financial_Model:08_03",
+     "script_sha256": "59b98508fd79a63c8f9949d0672fc240033641fcabb7b7728add8e68bf6a8fd0",
+     "workbook_sha256": "2b7a84044765a4664ddb197de168fbd7feb8fff395a027a4923ee2d9ab9e8dc1",
+     "workbook_bytes": 2173244,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": "READ_ONLY_SIMPLE"
+    },
+    {
+     "population": "B",
+     "workload_id": "Financial_Model_08_03__751f6966e68d",
+     "family": "Financial_Model",
+     "task": "Financial_Model:08_03",
+     "script_sha256": "751f6966e68dfb75f8bd17e05d3b36f1dada7182227ab89d3ce7c89d4a2a4bb7",
+     "workbook_sha256": "2b7a84044765a4664ddb197de168fbd7feb8fff395a027a4923ee2d9ab9e8dc1",
+     "workbook_bytes": 2173244,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": "READ_ONLY_SIMPLE"
+    },
+    {
+     "population": "B",
+     "workload_id": "Financial_Model_11_02__6a75b927c3f6",
+     "family": "Financial_Model",
+     "task": "Financial_Model:11_02",
+     "script_sha256": "6a75b927c3f6beee92df4e34b464b58fab52c3d66b3499640723201eb5a63c0b",
+     "workbook_sha256": "2102c51421d746b2a090e83b46e37c927b6a839d82d3df75b39f8c5d058b2105",
+     "workbook_bytes": 593808,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "B",
+     "workload_id": "Financial_Model_11_02__a443eee257b4",
+     "family": "Financial_Model",
+     "task": "Financial_Model:11_02",
+     "script_sha256": "a443eee257b468e8d4be0c4dfb546e3de9f9115a14d43af9b2c7d2aacef927fd",
+     "workbook_sha256": "2102c51421d746b2a090e83b46e37c927b6a839d82d3df75b39f8c5d058b2105",
+     "workbook_bytes": 593808,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "B",
+     "workload_id": "Financial_Model_15_03__103457370cae",
+     "family": "Financial_Model",
+     "task": "Financial_Model:15_03",
+     "script_sha256": "103457370cae106b8d2b0fb6892fd96cd42871a5e9e3d664f659ace94edabe84",
+     "workbook_sha256": "318eed515474a4e8c0684d3895e49e4726728d1166c2f83ef71b936d32dbf3d7",
+     "workbook_bytes": 297984,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "B",
+     "workload_id": "Financial_Model_15_03__472e28fbd6e0",
+     "family": "Financial_Model",
+     "task": "Financial_Model:15_03",
+     "script_sha256": "472e28fbd6e04569a12be2d8913578ff2aa23af0b01fa34dfff3c0675507c28c",
+     "workbook_sha256": "318eed515474a4e8c0684d3895e49e4726728d1166c2f83ef71b936d32dbf3d7",
+     "workbook_bytes": 297984,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "B",
+     "workload_id": "Financial_Model_18_05__39d21da726e7",
+     "family": "Financial_Model",
+     "task": "Financial_Model:18_05",
+     "script_sha256": "39d21da726e704949a90cf4343bf60ff7d7162c5a0061419aa82fc10cde5eab0",
+     "workbook_sha256": "56adf80d06ec4014d5189805adcafdfe38508c58a5391d7d40147621773aac9e",
+     "workbook_bytes": 88645,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "B",
+     "workload_id": "Template_03_03__c76ea596b408",
+     "family": "Template",
+     "task": "Template:03_03",
+     "script_sha256": "c76ea596b40873c4c85950f6a34b4b87f139895493bc0287ac44b87b8666e46a",
+     "workbook_sha256": "3dc2f7d65a9f792a86cb3f0183a029e0ceb206ed138a5c1c67d40d9c2428de7b",
+     "workbook_bytes": 7552,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": "READ_ONLY_SIMPLE"
+    },
+    {
+     "population": "B",
+     "workload_id": "Template_06_12__17725eca76da",
+     "family": "Template",
+     "task": "Template:06_12",
+     "script_sha256": "17725eca76daaa7ab66e4205f46f08aa3f233dca9c9f4fac8092d1f37640a909",
+     "workbook_sha256": "d05d2bcd62e971dab1907e3b290cc7e46c161f5d1d3bfac6266d04bd831ddeba",
+     "workbook_bytes": 7558,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": null
+    },
+    {
+     "population": "B",
+     "workload_id": "Template_16_07__9662584ede5e",
+     "family": "Template",
+     "task": "Template:16_07",
+     "script_sha256": "9662584ede5e229b8b66419e66cf0722af4320425e2c61a706a9cedee0ce787d",
+     "workbook_sha256": "d3a7de73ce86d28dccf1879795495172a906f0268188217b3e7d99f16da47d1c",
+     "workbook_bytes": 9480,
+     "a1_decision_archived": "A1_ADMIT",
+     "control_read_class_archived": null
+    }
+   ]
+  },
+  "C": {
+   "n": 120,
+   "rule": "round-robin over purpose-label strata, (task_id,exec_id) order, task cap 4",
+   "distinct_tasks": 58,
+   "strata": 59,
+   "workloads": [
+    {
+     "population": "C",
+     "exec_id": 750,
+     "task_id": "Financial_Model:07_01",
+     "family": "Financial_Model",
+     "turn": 6,
+     "purpose_labels": [
+      "DATA_EXTRACTION",
+      "HEADER_PERIOD_SEARCH",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "476df031122d0a191eaf2ec8746ee94d9c939bce88b7c7adabb3be6321469a51",
+     "script_bytes": 573,
+     "archived_execution_time_s": 1.512596679996932,
+     "archived_observation_bytes": 21
+    },
+    {
+     "population": "C",
+     "exec_id": 245,
+     "task_id": "Debugging:10_04",
+     "family": "Debugging",
+     "turn": 10,
+     "purpose_labels": [
+      "DATA_EXTRACTION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "223ecd22f0b1a78f0b99b0e606b02b6af01ca286cc131e4acb888675150a9e27",
+     "script_bytes": 1151,
+     "archived_execution_time_s": 13.185952287982218,
+     "archived_observation_bytes": 30
+    },
+    {
+     "population": "C",
+     "exec_id": 630,
+     "task_id": "Debugging:10_10",
+     "family": "Debugging",
+     "turn": 14,
+     "purpose_labels": [
+      "DIFF_CHECK",
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION"
+     ],
+     "script_sha256": "7b1dbc63719fc50dcda23fa35b70fa161fd6c094bdeada74e67e95ad48521a53",
+     "script_bytes": 501,
+     "archived_execution_time_s": 37.10390432999702,
+     "archived_observation_bytes": 69
+    },
+    {
+     "population": "C",
+     "exec_id": 212,
+     "task_id": "Financial_Model:08_01",
+     "family": "Financial_Model",
+     "turn": 42,
+     "purpose_labels": [
+      "DIFF_CHECK",
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "PATTERN_ANALYSIS",
+      "SEMANTIC_CALCULATION",
+      "STRUCTURAL_MUTATION",
+      "TARGET_SELECTION"
+     ],
+     "script_sha256": "abd74ec78a1e8b1f2904dcde501876a1592364a46dbccef1536df429afa00147",
+     "script_bytes": 7603,
+     "archived_execution_time_s": 14.317310289945453,
+     "archived_observation_bytes": 511
+    },
+    {
+     "population": "C",
+     "exec_id": 1101,
+     "task_id": "Template:13_08",
+     "family": "Template",
+     "turn": 7,
+     "purpose_labels": [
+      "DIFF_CHECK",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "STYLE_LAYOUT_MUTATION"
+     ],
+     "script_sha256": "57198c4e91d63a2079d21aabc55403f3c1443aa1a2920c9406d13da0735af49e",
+     "script_bytes": 876,
+     "archived_execution_time_s": 0.38922887800436,
+     "archived_observation_bytes": 162
+    },
+    {
+     "population": "C",
+     "exec_id": 217,
+     "task_id": "Financial_Model:08_01",
+     "family": "Financial_Model",
+     "turn": 47,
+     "purpose_labels": [
+      "DIFF_CHECK",
+      "HEADER_PERIOD_SEARCH",
+      "PATTERN_ANALYSIS",
+      "SEMANTIC_CALCULATION",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "d26d558a20d76e1673667732ea01d4a666e2d39c2976c44feeba86318e52e3a6",
+     "script_bytes": 3836,
+     "archived_execution_time_s": 9.59777024295181,
+     "archived_observation_bytes": 3565
+    },
+    {
+     "population": "C",
+     "exec_id": 273,
+     "task_id": "Debugging:10_04",
+     "family": "Debugging",
+     "turn": 38,
+     "purpose_labels": [
+      "DIFF_CHECK",
+      "HEADER_PERIOD_SEARCH",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "c9945d96b815632a44a1b55642c2360560655bc3d5cd800588af94f7ebd474e0",
+     "script_bytes": 877,
+     "archived_execution_time_s": 28.226911564939655,
+     "archived_observation_bytes": 2382
+    },
+    {
+     "population": "C",
+     "exec_id": 23,
+     "task_id": "Financial_Model:08_03",
+     "family": "Financial_Model",
+     "turn": 23,
+     "purpose_labels": [
+      "DIFF_CHECK",
+      "PATTERN_ANALYSIS",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "93784e349aa43431b752a71994dcd9821716ed0a12f0c7592bc259511ab626b1",
+     "script_bytes": 709,
+     "archived_execution_time_s": 13.105053593986668,
+     "archived_observation_bytes": 123
+    },
+    {
+     "population": "C",
+     "exec_id": 531,
+     "task_id": "Debugging:08_04",
+     "family": "Debugging",
+     "turn": 8,
+     "purpose_labels": [
+      "DIFF_CHECK",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "a870af5d4e22ca664e2348d9333be00e65e7dca9f3cf518ca05b76b49e3c25f4",
+     "script_bytes": 1036,
+     "archived_execution_time_s": 1.1490285079926252,
+     "archived_observation_bytes": 106
+    },
+    {
+     "population": "C",
+     "exec_id": 161,
+     "task_id": "Financial_Model:08_02",
+     "family": "Financial_Model",
+     "turn": 32,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "FORMULA_REFERENCE_ANALYSIS",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "STRUCTURAL_MUTATION",
+      "TARGET_SELECTION",
+      "TEXT_SEARCH"
+     ],
+     "script_sha256": "ae8e26c6d40ee1b77ee75b4c8d881182d614d59929b2a829fa50cf1cd3841f41",
+     "script_bytes": 5818,
+     "archived_execution_time_s": 2.6243558609858155,
+     "archived_observation_bytes": 189
+    },
+    {
+     "population": "C",
+     "exec_id": 263,
+     "task_id": "Debugging:10_04",
+     "family": "Debugging",
+     "turn": 28,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "FORMULA_REFERENCE_ANALYSIS",
+      "MUTATION",
+      "PATTERN_ANALYSIS",
+      "STRUCTURAL_MUTATION",
+      "TARGET_SELECTION",
+      "TEXT_SEARCH"
+     ],
+     "script_sha256": "f3526720a571786e0b5bb6a8b269339c0a56f734bcb87690c746b7d853200daa",
+     "script_bytes": 8193,
+     "archived_execution_time_s": 2.8664425360038877,
+     "archived_observation_bytes": 5061
+    },
+    {
+     "population": "C",
+     "exec_id": 585,
+     "task_id": "Debugging:09_09",
+     "family": "Debugging",
+     "turn": 18,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "FORMULA_REFERENCE_ANALYSIS",
+      "MUTATION",
+      "SEMANTIC_CALCULATION"
+     ],
+     "script_sha256": "5d2d6d232156de545f60ded0e608c01cc3c0613749ba9b02a057c23b64f16edf",
+     "script_bytes": 641,
+     "archived_execution_time_s": 0.9797335210023448,
+     "archived_observation_bytes": 311
+    },
+    {
+     "population": "C",
+     "exec_id": 188,
+     "task_id": "Financial_Model:08_01",
+     "family": "Financial_Model",
+     "turn": 18,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "FORMULA_REFERENCE_ANALYSIS",
+      "MUTATION",
+      "STRUCTURAL_MUTATION"
+     ],
+     "script_sha256": "02f6ce836a9f77445c89f1be94e61504b1a585ff1b76d596fbc80f86e755ecfa",
+     "script_bytes": 514,
+     "archived_execution_time_s": 0.36857570603024215,
+     "archived_observation_bytes": 749
+    },
+    {
+     "population": "C",
+     "exec_id": 306,
+     "task_id": "Debugging:01_06",
+     "family": "Debugging",
+     "turn": 14,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION"
+     ],
+     "script_sha256": "db38a9e59b23abff3ab7873fe307bb7b685e2b1d73bd35559cf1594891bde594",
+     "script_bytes": 817,
+     "archived_execution_time_s": 0.4570361180230975,
+     "archived_observation_bytes": 510
+    },
+    {
+     "population": "C",
+     "exec_id": 792,
+     "task_id": "Financial_Model:08_01",
+     "family": "Financial_Model",
+     "turn": 22,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "PATTERN_ANALYSIS",
+      "SEMANTIC_CALCULATION",
+      "STRUCTURAL_MUTATION",
+      "STYLE_LAYOUT_MUTATION"
+     ],
+     "script_sha256": "9119ad3a834a9c50522584be94b95c683635eaee55bf105ea6f73648a3001374",
+     "script_bytes": 4902,
+     "archived_execution_time_s": 3.151729750999948,
+     "archived_observation_bytes": 341
+    },
+    {
+     "population": "C",
+     "exec_id": 486,
+     "task_id": "Debugging:06_02",
+     "family": "Debugging",
+     "turn": 47,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION"
+     ],
+     "script_sha256": "d1ad714ddef20a99e7beaae499cf308fd62a62513bb9ef0d8e57da390b6d3494",
+     "script_bytes": 2260,
+     "archived_execution_time_s": 4.173159653990297,
+     "archived_observation_bytes": 778
+    },
+    {
+     "population": "C",
+     "exec_id": 43,
+     "task_id": "Financial_Model:08_04",
+     "family": "Financial_Model",
+     "turn": 18,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "STRUCTURAL_MUTATION"
+     ],
+     "script_sha256": "03871e63978919215b29763ef4ad100b7c0cf57350e5ccfe3009f2941beae9bc",
+     "script_bytes": 3304,
+     "archived_execution_time_s": 6.205792614957318,
+     "archived_observation_bytes": 48
+    },
+    {
+     "population": "C",
+     "exec_id": 109,
+     "task_id": "Financial_Model:15_04",
+     "family": "Financial_Model",
+     "turn": 25,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "STRUCTURAL_MUTATION",
+      "TARGET_SELECTION",
+      "TEXT_SEARCH"
+     ],
+     "script_sha256": "b4f6a505ed9341085e99a4da753f7b733ad6d5dd00cc106073b620f08bbc4f00",
+     "script_bytes": 7363,
+     "archived_execution_time_s": 0.2708008059998974,
+     "archived_observation_bytes": 596
+    },
+    {
+     "population": "C",
+     "exec_id": 711,
+     "task_id": "Financial_Model:05_01",
+     "family": "Financial_Model",
+     "turn": 13,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "STYLE_LAYOUT_MUTATION"
+     ],
+     "script_sha256": "f22c9390c35d19956e440033420cfa7ff96d05673d6bef34fc07dfa3bc8e388f",
+     "script_bytes": 1357,
+     "archived_execution_time_s": 1.260938339997665,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 510,
+     "task_id": "Debugging:07_03",
+     "family": "Debugging",
+     "turn": 10,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "TARGET_SELECTION"
+     ],
+     "script_sha256": "77f3c253be3e4ee428c3c7371a524d50b5d97638d585a185599e32357dc51cb0",
+     "script_bytes": 1781,
+     "archived_execution_time_s": 0.9884789540083148,
+     "archived_observation_bytes": 226
+    },
+    {
+     "population": "C",
+     "exec_id": 1044,
+     "task_id": "Template:06_17",
+     "family": "Template",
+     "turn": 4,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "STYLE_LAYOUT_MUTATION"
+     ],
+     "script_sha256": "4104a9d56ffa8fc50a6db34cff4e0152028b730eeb0989b89b06d6030ecfe21d",
+     "script_bytes": 1235,
+     "archived_execution_time_s": 0.38515827398805413,
+     "archived_observation_bytes": 48
+    },
+    {
+     "population": "C",
+     "exec_id": 760,
+     "task_id": "Financial_Model:07_01",
+     "family": "Financial_Model",
+     "turn": 16,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "STYLE_LAYOUT_MUTATION",
+      "TARGET_SELECTION"
+     ],
+     "script_sha256": "a348c09e018f3c1b9f7023d027b9bc70fccf36a3777aac7bfe9cbb875002b432",
+     "script_bytes": 2610,
+     "archived_execution_time_s": 2.421754310023971,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 741,
+     "task_id": "Financial_Model:06_01",
+     "family": "Financial_Model",
+     "turn": 22,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "TARGET_SELECTION"
+     ],
+     "script_sha256": "9259a2974907592a26e6bc1564d3b262047e93014a2c43ea852f58de9135b138",
+     "script_bytes": 1075,
+     "archived_execution_time_s": 8.178106256003957,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 286,
+     "task_id": "Debugging:01_01",
+     "family": "Debugging",
+     "turn": 10,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION"
+     ],
+     "script_sha256": "228d754f084b20be7528dee2f6b2b30766c2aade6e1cbb79015953a5a678059b",
+     "script_bytes": 400,
+     "archived_execution_time_s": 0.4722800719900988,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 393,
+     "task_id": "Debugging:04_01",
+     "family": "Debugging",
+     "turn": 15,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "SEMANTIC_CALCULATION"
+     ],
+     "script_sha256": "e3f303d3864ac611afcc89d70968d562c5c935776c43c1618754268ad4a2d674",
+     "script_bytes": 1174,
+     "archived_execution_time_s": 3.361760961008258,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 715,
+     "task_id": "Financial_Model:05_01",
+     "family": "Financial_Model",
+     "turn": 17,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "STYLE_LAYOUT_MUTATION"
+     ],
+     "script_sha256": "9a031831d683c94ac278dd20e8bbbdd40ef18e76ba387f12427bfa75b96df483",
+     "script_bytes": 1351,
+     "archived_execution_time_s": 2.7752426819934044,
+     "archived_observation_bytes": 416
+    },
+    {
+     "population": "C",
+     "exec_id": 990,
+     "task_id": "Template:01_07",
+     "family": "Template",
+     "turn": 8,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "TARGET_SELECTION"
+     ],
+     "script_sha256": "c49d543b089dee7cfcd24871dcd3bb0d4f37903a4e98a9e20c5552239211d369",
+     "script_bytes": 4269,
+     "archived_execution_time_s": 0.3950735749967862,
+     "archived_observation_bytes": 108
+    },
+    {
+     "population": "C",
+     "exec_id": 110,
+     "task_id": "Financial_Model:15_04",
+     "family": "Financial_Model",
+     "turn": 26,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "STRUCTURAL_MUTATION",
+      "TARGET_SELECTION",
+      "TEXT_SEARCH"
+     ],
+     "script_sha256": "5dcf4b8ee795b35be6e4c4e2b003c7bb169e23ec7d9c2254282641d71eb4e43d",
+     "script_bytes": 6168,
+     "archived_execution_time_s": 0.2630517149809748,
+     "archived_observation_bytes": 204
+    },
+    {
+     "population": "C",
+     "exec_id": 520,
+     "task_id": "Debugging:07_08",
+     "family": "Debugging",
+     "turn": 4,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "STYLE_LAYOUT_MUTATION"
+     ],
+     "script_sha256": "c47f34b9a43a3269d0b9504b2e5e890c8b7ca7a24cb2435fa85f1971158309fc",
+     "script_bytes": 480,
+     "archived_execution_time_s": 2.419867025979329,
+     "archived_observation_bytes": 59
+    },
+    {
+     "population": "C",
+     "exec_id": 513,
+     "task_id": "Debugging:07_03",
+     "family": "Debugging",
+     "turn": 13,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "TARGET_SELECTION"
+     ],
+     "script_sha256": "fe09ea52fc528a6a50aadbef75fb7db9fc56e695f3c2100f4bc6b926175ab132",
+     "script_bytes": 626,
+     "archived_execution_time_s": 1.6820977659954224,
+     "archived_observation_bytes": 433
+    },
+    {
+     "population": "C",
+     "exec_id": 243,
+     "task_id": "Debugging:10_04",
+     "family": "Debugging",
+     "turn": 8,
+     "purpose_labels": [
+      "FORMULA_REFERENCE_ANALYSIS",
+      "HEADER_PERIOD_SEARCH",
+      "PATTERN_ANALYSIS",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "2d41a2bcab5071e3344a08f2fe76d85a72bda8a4192ce4db0835f1454a436235",
+     "script_bytes": 1816,
+     "archived_execution_time_s": 15.906788293970749,
+     "archived_observation_bytes": 3546
+    },
+    {
+     "population": "C",
+     "exec_id": 75,
+     "task_id": "Financial_Model:08_05",
+     "family": "Financial_Model",
+     "turn": 25,
+     "purpose_labels": [
+      "FORMULA_REFERENCE_ANALYSIS",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "STRUCTURAL_MUTATION"
+     ],
+     "script_sha256": "f243228a8a59bd54f3cc1b803747220ea4f14d572325de65a5fb2813c70ce0d0",
+     "script_bytes": 3424,
+     "archived_execution_time_s": 1.754601676017046,
+     "archived_observation_bytes": 211
+    },
+    {
+     "population": "C",
+     "exec_id": 827,
+     "task_id": "Financial_Model:11_01",
+     "family": "Financial_Model",
+     "turn": 9,
+     "purpose_labels": [
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION"
+     ],
+     "script_sha256": "b32f0aacadfc241dfa839bf4fc06f87da12fce067516d1d4103c852b60e37f94",
+     "script_bytes": 189,
+     "archived_execution_time_s": 4.10974630099372,
+     "archived_observation_bytes": 358
+    },
+    {
+     "population": "C",
+     "exec_id": 19,
+     "task_id": "Financial_Model:08_03",
+     "family": "Financial_Model",
+     "turn": 19,
+     "purpose_labels": [
+      "HEADER_PERIOD_SEARCH",
+      "SEMANTIC_CALCULATION",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "089fe6c6f91544234a8cf5338567d4bb74c82cd12bf08a478fd6972e979dfc84",
+     "script_bytes": 1318,
+     "archived_execution_time_s": 4.782515704049729,
+     "archived_observation_bytes": 1976
+    },
+    {
+     "population": "C",
+     "exec_id": 724,
+     "task_id": "Financial_Model:06_01",
+     "family": "Financial_Model",
+     "turn": 5,
+     "purpose_labels": [
+      "HEADER_PERIOD_SEARCH",
+      "STRUCTURAL_MUTATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "1bb15396eabd998e3e4b81a103e5acd1d18dbfc5762df1615ed8026c0c953593",
+     "script_bytes": 813,
+     "archived_execution_time_s": 4.148074592987541,
+     "archived_observation_bytes": 250
+    },
+    {
+     "population": "C",
+     "exec_id": 761,
+     "task_id": "Financial_Model:07_01",
+     "family": "Financial_Model",
+     "turn": 17,
+     "purpose_labels": [
+      "HEADER_PERIOD_SEARCH",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "9ee6c9a69edf0a0a6c7c905c5005f245c79c7f427ce121680b8a56e60f339697",
+     "script_bytes": 921,
+     "archived_execution_time_s": 3.196127981005702,
+     "archived_observation_bytes": 11100
+    },
+    {
+     "population": "C",
+     "exec_id": 526,
+     "task_id": "Debugging:08_04",
+     "family": "Debugging",
+     "turn": 3,
+     "purpose_labels": [
+      "HEADER_PERIOD_SEARCH",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "3706b69c8c07975538d36d601ac9342644cf8b07fcf09eddf4a040cd00823373",
+     "script_bytes": 605,
+     "archived_execution_time_s": 0.6773826650169212,
+     "archived_observation_bytes": 71473
+    },
+    {
+     "population": "C",
+     "exec_id": 631,
+     "task_id": "Debugging:10_10",
+     "family": "Debugging",
+     "turn": 15,
+     "purpose_labels": [
+      "MUTATION"
+     ],
+     "script_sha256": "be71e19754c0051d503ed0601368c77bc598398b9778c7cb79016e39b75eda66",
+     "script_bytes": 242,
+     "archived_execution_time_s": 24.649642506992677,
+     "archived_observation_bytes": 29
+    },
+    {
+     "population": "C",
+     "exec_id": 530,
+     "task_id": "Debugging:08_04",
+     "family": "Debugging",
+     "turn": 7,
+     "purpose_labels": [
+      "MUTATION",
+      "STYLE_LAYOUT_MUTATION"
+     ],
+     "script_sha256": "be2d7f08a29e6e7a957d0c1f6a40bf282ada026314ba5e8c1074501c6a4c8eed",
+     "script_bytes": 1071,
+     "archived_execution_time_s": 1.3132711390207987,
+     "archived_observation_bytes": 10
+    },
+    {
+     "population": "C",
+     "exec_id": 319,
+     "task_id": "Debugging:02_01",
+     "family": "Debugging",
+     "turn": 10,
+     "purpose_labels": [
+      "OTHER"
+     ],
+     "script_sha256": "24bf12bfcfde55d3b947374e66007a4b218dcc9ef5c8ff5ab6c77602af6a5949",
+     "script_bytes": 426,
+     "archived_execution_time_s": 0.22942251700442284,
+     "archived_observation_bytes": 73
+    },
+    {
+     "population": "C",
+     "exec_id": 113,
+     "task_id": "Financial_Model:15_04",
+     "family": "Financial_Model",
+     "turn": 29,
+     "purpose_labels": [
+      "SEMANTIC_CALCULATION",
+      "VERIFICATION"
+     ],
+     "script_sha256": "8334480aeb46a1099d7ae8ac066e6ddbd01ac388fdc500bd2e03cc77d5fdac5a",
+     "script_bytes": 1765,
+     "archived_execution_time_s": 0.8380889240652323,
+     "archived_observation_bytes": 192
+    },
+    {
+     "population": "C",
+     "exec_id": 307,
+     "task_id": "Debugging:01_06",
+     "family": "Debugging",
+     "turn": 15,
+     "purpose_labels": [
+      "SEMANTIC_CALCULATION",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "ae2db7b9d41731abd02c665b5f1a0a3991d96887973e3a12475a3ebf4a3d0964",
+     "script_bytes": 406,
+     "archived_execution_time_s": 1.241880665998906,
+     "archived_observation_bytes": 650
+    },
+    {
+     "population": "C",
+     "exec_id": 1102,
+     "task_id": "Template:13_08",
+     "family": "Template",
+     "turn": 8,
+     "purpose_labels": [
+      "STRUCTURAL_MUTATION",
+      "TEXT_SEARCH",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "c840a440de42d69ab91b168a84f47a72e42b01d910f7d3c4f159233de88b1275",
+     "script_bytes": 437,
+     "archived_execution_time_s": 0.23753121600020677,
+     "archived_observation_bytes": 617
+    },
+    {
+     "population": "C",
+     "exec_id": 124,
+     "task_id": "Financial_Model:15_04",
+     "family": "Financial_Model",
+     "turn": 40,
+     "purpose_labels": [
+      "STRUCTURAL_MUTATION",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "408eb13715e74874ec5a3f2667d567ec0a99c0fc365471089aa56b9926b5ce71",
+     "script_bytes": 864,
+     "archived_execution_time_s": 0.25526279502082616,
+     "archived_observation_bytes": 529
+    },
+    {
+     "population": "C",
+     "exec_id": 619,
+     "task_id": "Debugging:10_10",
+     "family": "Debugging",
+     "turn": 3,
+     "purpose_labels": [
+      "TEXT_SEARCH",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "89851d4b54eea40c0b475a05484d87b67e6cc5e9db9c94c2f98745586fad0d15",
+     "script_bytes": 337,
+     "archived_execution_time_s": 14.003970132995164,
+     "archived_observation_bytes": 6905
+    },
+    {
+     "population": "C",
+     "exec_id": 417,
+     "task_id": "Debugging:05_02",
+     "family": "Debugging",
+     "turn": 3,
+     "purpose_labels": [
+      "TEXT_SEARCH",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "f2a6469ffac2bf29683b8fb6d175c5e04f7cf309c186b8ea1f94671e5d29142e",
+     "script_bytes": 450,
+     "archived_execution_time_s": 1.212759597983677,
+     "archived_observation_bytes": 10870
+    },
+    {
+     "population": "C",
+     "exec_id": 321,
+     "task_id": "Debugging:02_01",
+     "family": "Debugging",
+     "turn": 12,
+     "purpose_labels": [
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "57f0b8b406a2f8fb21b5ddc965295b47a888c7e3cf8a0c5dbc6cf282f55bb46c",
+     "script_bytes": 709,
+     "archived_execution_time_s": 1.7169757490046322,
+     "archived_observation_bytes": 313
+    },
+    {
+     "population": "C",
+     "exec_id": 301,
+     "task_id": "Debugging:01_06",
+     "family": "Debugging",
+     "turn": 9,
+     "purpose_labels": [
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "d39665f3453720a7f879d7c89d56c8b61fba302b9b981027a5082c54040aeb34",
+     "script_bytes": 552,
+     "archived_execution_time_s": 0.413553493010113,
+     "archived_observation_bytes": 11592
+    },
+    {
+     "population": "C",
+     "exec_id": 734,
+     "task_id": "Financial_Model:06_01",
+     "family": "Financial_Model",
+     "turn": 15,
+     "purpose_labels": [
+      "DATA_EXTRACTION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "c15dbacc794a5dc2c79da6d0a92f988cb2016ea0baf5d1ae1d278fd89f6d5525",
+     "script_bytes": 391,
+     "archived_execution_time_s": 5.149776870995993,
+     "archived_observation_bytes": 511
+    },
+    {
+     "population": "C",
+     "exec_id": 628,
+     "task_id": "Debugging:10_10",
+     "family": "Debugging",
+     "turn": 12,
+     "purpose_labels": [
+      "DIFF_CHECK",
+      "HEADER_PERIOD_SEARCH",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "da7299da8e94712f17df9cef9de55d2d40ce77008206fe93f0ea8dc395d8c6f1",
+     "script_bytes": 480,
+     "archived_execution_time_s": 23.778078214993002,
+     "archived_observation_bytes": 1659
+    },
+    {
+     "population": "C",
+     "exec_id": 532,
+     "task_id": "Debugging:08_04",
+     "family": "Debugging",
+     "turn": 9,
+     "purpose_labels": [
+      "DIFF_CHECK",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "e41372a9ae2bf6babdac4feaf12bc6330e0d1835f7579f65982e3e3c9a15a742",
+     "script_bytes": 425,
+     "archived_execution_time_s": 1.1054692980251275,
+     "archived_observation_bytes": 1955
+    },
+    {
+     "population": "C",
+     "exec_id": 645,
+     "task_id": "Financial_Model:01_01",
+     "family": "Financial_Model",
+     "turn": 9,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION"
+     ],
+     "script_sha256": "59a478031e3a42ac876ac6b415764f174f34dcd3875a78c1d96f1df0557876d8",
+     "script_bytes": 1451,
+     "archived_execution_time_s": 3.0881588119955268,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 557,
+     "task_id": "Debugging:08_09",
+     "family": "Debugging",
+     "turn": 23,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION"
+     ],
+     "script_sha256": "0ca4fa03ed88974431eb7669669eaf69573cbc6f2a5c3b89a4e378ea9b88b77e",
+     "script_bytes": 1318,
+     "archived_execution_time_s": 0.9712030880036764,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 864,
+     "task_id": "Financial_Model:12_05",
+     "family": "Financial_Model",
+     "turn": 12,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "STRUCTURAL_MUTATION"
+     ],
+     "script_sha256": "380c9a8aa98d0ae829ccde8aa8cc1b9b644ab8dcbecd8d26bd993bc83e246716",
+     "script_bytes": 2959,
+     "archived_execution_time_s": 0.5206349849759135,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 813,
+     "task_id": "Financial_Model:10_01",
+     "family": "Financial_Model",
+     "turn": 10,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "STYLE_LAYOUT_MUTATION"
+     ],
+     "script_sha256": "7526abeb075a54def2a06c3ea066a43b38e6c8bf6fcf476d69ea798d22a3712b",
+     "script_bytes": 2423,
+     "archived_execution_time_s": 5.948016928014113,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 674,
+     "task_id": "Financial_Model:03_01",
+     "family": "Financial_Model",
+     "turn": 7,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "TARGET_SELECTION"
+     ],
+     "script_sha256": "756885e49c1cf7053da4cde4cc3adc54def3c627fc7104b2f2ed009c3054e113",
+     "script_bytes": 2443,
+     "archived_execution_time_s": 10.236206412999309,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 289,
+     "task_id": "Debugging:01_01",
+     "family": "Debugging",
+     "turn": 13,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION"
+     ],
+     "script_sha256": "f78e42d9a6e7faa727014d42ebe77eb1aee8bfe67cd97df22df30c4f41d9f00d",
+     "script_bytes": 334,
+     "archived_execution_time_s": 1.292818256013561,
+     "archived_observation_bytes": 331
+    },
+    {
+     "population": "C",
+     "exec_id": 421,
+     "task_id": "Debugging:05_02",
+     "family": "Debugging",
+     "turn": 7,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "SEMANTIC_CALCULATION"
+     ],
+     "script_sha256": "f631f3dc16cf9ecc3ec4465f62e417570cbad44d85da013c5d30469073315991",
+     "script_bytes": 529,
+     "archived_execution_time_s": 1.9543959489965346,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 970,
+     "task_id": "Financial_Model:20_05",
+     "family": "Financial_Model",
+     "turn": 12,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "STYLE_LAYOUT_MUTATION"
+     ],
+     "script_sha256": "75f2bbe59391fcad9177e8deac9767949808123f53e730a9eb5c90304e5f572f",
+     "script_bytes": 1580,
+     "archived_execution_time_s": 0.8155071930086706,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 1069,
+     "task_id": "Template:08_03",
+     "family": "Template",
+     "turn": 3,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "STYLE_LAYOUT_MUTATION"
+     ],
+     "script_sha256": "97a8780603984cac45646799334aea5b84a526f7eeccb420b45982d16747c5a3",
+     "script_bytes": 1581,
+     "archived_execution_time_s": 0.37985102301172446,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 998,
+     "task_id": "Template:02_05",
+     "family": "Template",
+     "turn": 3,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "TARGET_SELECTION"
+     ],
+     "script_sha256": "aed2b6078d1603874de2ed9661c18f81221cb999e00fb536691196467b056bb1",
+     "script_bytes": 1602,
+     "archived_execution_time_s": 0.45168136300344486,
+     "archived_observation_bytes": 251
+    },
+    {
+     "population": "C",
+     "exec_id": 814,
+     "task_id": "Financial_Model:10_01",
+     "family": "Financial_Model",
+     "turn": 11,
+     "purpose_labels": [
+      "HEADER_PERIOD_SEARCH",
+      "SEMANTIC_CALCULATION",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "5107171dec6139223885e412d6a7283c9c83e8aee2d3175a4a5ec094a2cd72d2",
+     "script_bytes": 820,
+     "archived_execution_time_s": 5.64942078499007,
+     "archived_observation_bytes": 903
+    },
+    {
+     "population": "C",
+     "exec_id": 762,
+     "task_id": "Financial_Model:07_01",
+     "family": "Financial_Model",
+     "turn": 18,
+     "purpose_labels": [
+      "HEADER_PERIOD_SEARCH",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "d2e367af120174bf920ff053cb1cc9714d2940d541996b48e7af74e2c8c2445c",
+     "script_bytes": 958,
+     "archived_execution_time_s": 3.8832799149968196,
+     "archived_observation_bytes": 186
+    },
+    {
+     "population": "C",
+     "exec_id": 1022,
+     "task_id": "Template:05_02",
+     "family": "Template",
+     "turn": 5,
+     "purpose_labels": [
+      "MUTATION"
+     ],
+     "script_sha256": "745654d77dd80b9f9051798bb94e28f6d49a859a731262f809e0515d9dd04424",
+     "script_bytes": 246,
+     "archived_execution_time_s": 0.9665858559892513,
+     "archived_observation_bytes": 479
+    },
+    {
+     "population": "C",
+     "exec_id": 843,
+     "task_id": "Financial_Model:11_05",
+     "family": "Financial_Model",
+     "turn": 14,
+     "purpose_labels": [
+      "OTHER"
+     ],
+     "script_sha256": "7cbc18958cb0a7f3941a8f94d9e2a5ef053d2d2bf5c9cb7a2cc070ccc8743154",
+     "script_bytes": 478,
+     "archived_execution_time_s": 1.3648301119974349,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 1121,
+     "task_id": "Template:15_01",
+     "family": "Template",
+     "turn": 7,
+     "purpose_labels": [
+      "SEMANTIC_CALCULATION",
+      "VERIFICATION"
+     ],
+     "script_sha256": "7ac246757e5a6eafcb6b15952607dbe94db0829929b313e7c3bbe462da6c4c46",
+     "script_bytes": 1443,
+     "archived_execution_time_s": 0.23297248600283638,
+     "archived_observation_bytes": 498
+    },
+    {
+     "population": "C",
+     "exec_id": 1103,
+     "task_id": "Template:13_08",
+     "family": "Template",
+     "turn": 9,
+     "purpose_labels": [
+      "SEMANTIC_CALCULATION",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "0591214e84a75eebbf9f6433d9ac444bfda9acab1df3e8a05c7b3833767ff998",
+     "script_bytes": 749,
+     "archived_execution_time_s": 0.4345177020004485,
+     "archived_observation_bytes": 820
+    },
+    {
+     "population": "C",
+     "exec_id": 422,
+     "task_id": "Debugging:05_02",
+     "family": "Debugging",
+     "turn": 8,
+     "purpose_labels": [
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "d6286acc05a0f1cc6248ff2f0bbd67325e55bc58e91715be55355b6a65b6d6c5",
+     "script_bytes": 291,
+     "archived_execution_time_s": 2.412304513010895,
+     "archived_observation_bytes": 311
+    },
+    {
+     "population": "C",
+     "exec_id": 302,
+     "task_id": "Debugging:01_06",
+     "family": "Debugging",
+     "turn": 10,
+     "purpose_labels": [
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "05e87606770454f99328ca5d15a17cceef61fdf73a794bb97a494e89b73e6b99",
+     "script_bytes": 499,
+     "archived_execution_time_s": 0.42741685299552046,
+     "archived_observation_bytes": 4253
+    },
+    {
+     "population": "C",
+     "exec_id": 21,
+     "task_id": "Financial_Model:08_03",
+     "family": "Financial_Model",
+     "turn": 21,
+     "purpose_labels": [
+      "DIFF_CHECK",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "1a852f24eb5e1c2470948dbc53b0715f8181f6f13a5385a1c50030903ae8e6d3",
+     "script_bytes": 684,
+     "archived_execution_time_s": 12.8923381769564,
+     "archived_observation_bytes": 855
+    },
+    {
+     "population": "C",
+     "exec_id": 824,
+     "task_id": "Financial_Model:11_01",
+     "family": "Financial_Model",
+     "turn": 6,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION"
+     ],
+     "script_sha256": "9e727f3efdbf038745fffe3dccc1750ab0f71ffefae73c77afdece4ef46fbe2e",
+     "script_bytes": 674,
+     "archived_execution_time_s": 1.3052614520129282,
+     "archived_observation_bytes": 5
+    },
+    {
+     "population": "C",
+     "exec_id": 658,
+     "task_id": "Financial_Model:02_01",
+     "family": "Financial_Model",
+     "turn": 9,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION"
+     ],
+     "script_sha256": "1b998d38623031776c8104b8b15067c3f5540938d8960f231278825bc339e26f",
+     "script_bytes": 1305,
+     "archived_execution_time_s": 0.5758694079995621,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 928,
+     "task_id": "Financial_Model:17_05",
+     "family": "Financial_Model",
+     "turn": 8,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "STRUCTURAL_MUTATION"
+     ],
+     "script_sha256": "3f6afeec51df70422716306b7c51c6ae6f8a417ed6dd84cb82bc50af8d9093b9",
+     "script_bytes": 1158,
+     "archived_execution_time_s": 3.7620213179907296,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 816,
+     "task_id": "Financial_Model:10_01",
+     "family": "Financial_Model",
+     "turn": 13,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "STYLE_LAYOUT_MUTATION"
+     ],
+     "script_sha256": "33777e41a6e5a090e0753be4da403e657315f8bb47193cd456c87549a2f5427f",
+     "script_bytes": 672,
+     "archived_execution_time_s": 10.429993405006826,
+     "archived_observation_bytes": 371
+    },
+    {
+     "population": "C",
+     "exec_id": 841,
+     "task_id": "Financial_Model:11_05",
+     "family": "Financial_Model",
+     "turn": 12,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "TARGET_SELECTION"
+     ],
+     "script_sha256": "5040e6f803c31eb2310138138f5fa6ca15ccd9d8bfbddb7d7b5139a8da25480c",
+     "script_bytes": 1487,
+     "archived_execution_time_s": 0.877511782979127,
+     "archived_observation_bytes": 259
+    },
+    {
+     "population": "C",
+     "exec_id": 320,
+     "task_id": "Debugging:02_01",
+     "family": "Debugging",
+     "turn": 11,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION"
+     ],
+     "script_sha256": "aaf0435e98c8f0dd98c5f19819530ddd38de9639301ce5d957d0c5ac1c4a84cc",
+     "script_bytes": 794,
+     "archived_execution_time_s": 0.5206995319749694,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 581,
+     "task_id": "Debugging:09_09",
+     "family": "Debugging",
+     "turn": 14,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "SEMANTIC_CALCULATION"
+     ],
+     "script_sha256": "7dfd92817eeea2277992ac77d734ac0d4041812b14cd5b6134625b2a874c023f",
+     "script_bytes": 880,
+     "archived_execution_time_s": 0.4685258269892074,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 1084,
+     "task_id": "Template:11_03",
+     "family": "Template",
+     "turn": 3,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "STYLE_LAYOUT_MUTATION"
+     ],
+     "script_sha256": "13de16e9d6757fbc17a4e6b2b0356981889a84e18273b3b07066ff436ba3bdc2",
+     "script_bytes": 1284,
+     "archived_execution_time_s": 0.37975917699804995,
+     "archived_observation_bytes": 0
+    },
+    {
+     "population": "C",
+     "exec_id": 1000,
+     "task_id": "Template:02_05",
+     "family": "Template",
+     "turn": 5,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "TARGET_SELECTION"
+     ],
+     "script_sha256": "ef0e8ce4ef280b9130af723f43bdecd9497d325d56064c3ac70fc98080c9b312",
+     "script_bytes": 1603,
+     "archived_execution_time_s": 0.374295396002708,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 825,
+     "task_id": "Financial_Model:11_01",
+     "family": "Financial_Model",
+     "turn": 7,
+     "purpose_labels": [
+      "HEADER_PERIOD_SEARCH",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "d6cacdfacd6b01709a4b1850fd219eeb56c9ba4aaa345f46cfc463e346a3039f",
+     "script_bytes": 530,
+     "archived_execution_time_s": 3.4766515610099304,
+     "archived_observation_bytes": 814
+    },
+    {
+     "population": "C",
+     "exec_id": 728,
+     "task_id": "Financial_Model:06_01",
+     "family": "Financial_Model",
+     "turn": 9,
+     "purpose_labels": [
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "ec21f76c664aa22891039c9adb083026ecd9c2ce6590413d1a9eda940880c6cf",
+     "script_bytes": 563,
+     "archived_execution_time_s": 4.1497782450169325,
+     "archived_observation_bytes": 713
+    },
+    {
+     "population": "C",
+     "exec_id": 318,
+     "task_id": "Debugging:02_01",
+     "family": "Debugging",
+     "turn": 9,
+     "purpose_labels": [
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "b3945e3e48f72975ab3368f94cc137cd804361f14633e1517f7ad39b6b2a6643",
+     "script_bytes": 570,
+     "archived_execution_time_s": 0.4927658629894722,
+     "archived_observation_bytes": 160
+    },
+    {
+     "population": "C",
+     "exec_id": 22,
+     "task_id": "Financial_Model:08_03",
+     "family": "Financial_Model",
+     "turn": 22,
+     "purpose_labels": [
+      "DIFF_CHECK",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "b600f02b67d5c1b533b2d32afc44c3c4e2f1a680928c78fb22e3223f733e21ab",
+     "script_bytes": 729,
+     "archived_execution_time_s": 12.859606064041145,
+     "archived_observation_bytes": 12785
+    },
+    {
+     "population": "C",
+     "exec_id": 848,
+     "task_id": "Financial_Model:11_05",
+     "family": "Financial_Model",
+     "turn": 19,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION"
+     ],
+     "script_sha256": "a3632cdd2494ca6c8184c932c7ef14e2d705f29e0cf1d4c715a0b8880d2c42f0",
+     "script_bytes": 297,
+     "archived_execution_time_s": 4.032088109001052,
+     "archived_observation_bytes": 462
+    },
+    {
+     "population": "C",
+     "exec_id": 688,
+     "task_id": "Financial_Model:04_01",
+     "family": "Financial_Model",
+     "turn": 11,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION"
+     ],
+     "script_sha256": "b0486e53eba28bf912bf56649a163608a26a9fe9c887e2d99e32007ca94ec3ba",
+     "script_bytes": 2740,
+     "archived_execution_time_s": 5.051168332007364,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 223,
+     "task_id": "Template:06_09",
+     "family": "Template",
+     "turn": 3,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "STYLE_LAYOUT_MUTATION"
+     ],
+     "script_sha256": "179915d8ccfda2c04b785d8220cfb2d441f209b39d056fd7b6db90c9d4b0b3fa",
+     "script_bytes": 2316,
+     "archived_execution_time_s": 0.45719605195336044,
+     "archived_observation_bytes": 48
+    },
+    {
+     "population": "C",
+     "exec_id": 905,
+     "task_id": "Financial_Model:15_05",
+     "family": "Financial_Model",
+     "turn": 11,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "TARGET_SELECTION"
+     ],
+     "script_sha256": "b1491f52f85ba79736703ab774ba1edb90fffd2d7a5802036d4eb90027e00c79",
+     "script_bytes": 3016,
+     "archived_execution_time_s": 0.8678151910135057,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 340,
+     "task_id": "Debugging:02_06",
+     "family": "Debugging",
+     "turn": 11,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION"
+     ],
+     "script_sha256": "1e43b24964da1398485ad350955d5ff4615374a0f65b8c89bbbab8166bd12585",
+     "script_bytes": 733,
+     "archived_execution_time_s": 0.5475793820223771,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 979,
+     "task_id": "Template:01_02",
+     "family": "Template",
+     "turn": 4,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "SEMANTIC_CALCULATION"
+     ],
+     "script_sha256": "abc54135c013fe805c1d023e1371a4f752a086b6967cb365efbccc4968f8041e",
+     "script_bytes": 1445,
+     "archived_execution_time_s": 0.4772202590102097,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 1086,
+     "task_id": "Template:11_03",
+     "family": "Template",
+     "turn": 5,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "STYLE_LAYOUT_MUTATION"
+     ],
+     "script_sha256": "ee5aa80e212555dc50aadf028f98128f92a2d7987ddb99846922bb96d18747d4",
+     "script_bytes": 1262,
+     "archived_execution_time_s": 0.3867222710105125,
+     "archived_observation_bytes": 0
+    },
+    {
+     "population": "C",
+     "exec_id": 1005,
+     "task_id": "Template:02_05",
+     "family": "Template",
+     "turn": 10,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "TARGET_SELECTION"
+     ],
+     "script_sha256": "31a71a8528c07d16d472a9908f5c105ac27dc2b1460986853c94511c59c3c162",
+     "script_bytes": 1653,
+     "archived_execution_time_s": 0.38432812999235466,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 826,
+     "task_id": "Financial_Model:11_01",
+     "family": "Financial_Model",
+     "turn": 8,
+     "purpose_labels": [
+      "HEADER_PERIOD_SEARCH",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "2a03a66b9b1fa02aaef37c77a9d2b43334a40f3e0d05aa2a2ead258c92dc7197",
+     "script_bytes": 247,
+     "archived_execution_time_s": 0.9593458879971877,
+     "archived_observation_bytes": 417
+    },
+    {
+     "population": "C",
+     "exec_id": 815,
+     "task_id": "Financial_Model:10_01",
+     "family": "Financial_Model",
+     "turn": 12,
+     "purpose_labels": [
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "7fcf8602f7ea6da8215b2332bd4e3f57e58afd46e4328568a207ed8871e58ecc",
+     "script_bytes": 315,
+     "archived_execution_time_s": 5.116838552989066,
+     "archived_observation_bytes": 207
+    },
+    {
+     "population": "C",
+     "exec_id": 415,
+     "task_id": "Debugging:05_02",
+     "family": "Debugging",
+     "turn": 1,
+     "purpose_labels": [
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "2c41e8809fd6caee39a9200242c81a88dffbd3240b4e497f9f9392f327f3ce59",
+     "script_bytes": 277,
+     "archived_execution_time_s": 1.1666832700138912,
+     "archived_observation_bytes": 20519
+    },
+    {
+     "population": "C",
+     "exec_id": 1100,
+     "task_id": "Template:13_08",
+     "family": "Template",
+     "turn": 6,
+     "purpose_labels": [
+      "DIFF_CHECK",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "7e3e7669481ef170183815bb00a2910303ea2206ffe2f2d135f21e550e712769",
+     "script_bytes": 1308,
+     "archived_execution_time_s": 0.37164772099640686,
+     "archived_observation_bytes": 530
+    },
+    {
+     "population": "C",
+     "exec_id": 1011,
+     "task_id": "Template:03_03",
+     "family": "Template",
+     "turn": 3,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION"
+     ],
+     "script_sha256": "a67b1c369f61f61827e682ede9045c1f59ad7a355ba69dc4309d141102525c83",
+     "script_bytes": 1392,
+     "archived_execution_time_s": 0.441782226000214,
+     "archived_observation_bytes": 36
+    },
+    {
+     "population": "C",
+     "exec_id": 693,
+     "task_id": "Financial_Model:04_01",
+     "family": "Financial_Model",
+     "turn": 16,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION"
+     ],
+     "script_sha256": "f2bb9831d727be123b95cac813442faccdd3162f50b3dce36d9f580cc8a09b6c",
+     "script_bytes": 911,
+     "archived_execution_time_s": 10.217251227993984,
+     "archived_observation_bytes": 305
+    },
+    {
+     "population": "C",
+     "exec_id": 1034,
+     "task_id": "Template:06_12",
+     "family": "Template",
+     "turn": 4,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "STYLE_LAYOUT_MUTATION"
+     ],
+     "script_sha256": "21d64f6bad757809649228f13e779e26aa2d59eefb1f924044486c221caadfb4",
+     "script_bytes": 1735,
+     "archived_execution_time_s": 0.37396256800275296,
+     "archived_observation_bytes": 48
+    },
+    {
+     "population": "C",
+     "exec_id": 1091,
+     "task_id": "Template:13_03",
+     "family": "Template",
+     "turn": 1,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "TARGET_SELECTION"
+     ],
+     "script_sha256": "69cbb959c06166ba3981ec5893d370dad6eb7695fa52f2a6ed1b1706c994c4db",
+     "script_bytes": 1937,
+     "archived_execution_time_s": 0.402277786997729,
+     "archived_observation_bytes": 215
+    },
+    {
+     "population": "C",
+     "exec_id": 356,
+     "task_id": "Debugging:03_01",
+     "family": "Debugging",
+     "turn": 12,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION"
+     ],
+     "script_sha256": "c4d822c0c8730b008749c9e5222cdc4be06e3cebb11cdbc93f59a8dcc48e0ea9",
+     "script_bytes": 729,
+     "archived_execution_time_s": 0.4761118399910629,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 1020,
+     "task_id": "Template:05_02",
+     "family": "Template",
+     "turn": 3,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "SEMANTIC_CALCULATION"
+     ],
+     "script_sha256": "6ad8e92658e11043ab763679433eb6b301c666f0278ed9561317719771d18310",
+     "script_bytes": 1896,
+     "archived_execution_time_s": 0.37536814699706156,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 1107,
+     "task_id": "Template:14_05",
+     "family": "Template",
+     "turn": 2,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "TARGET_SELECTION"
+     ],
+     "script_sha256": "c86ab0e5b85848a3c1462052dd0e4a56294515c7b755cbc54cb03130f0618851",
+     "script_bytes": 957,
+     "archived_execution_time_s": 0.4062212099961471,
+     "archived_observation_bytes": 0
+    },
+    {
+     "population": "C",
+     "exec_id": 1046,
+     "task_id": "Template:06_17",
+     "family": "Template",
+     "turn": 6,
+     "purpose_labels": [
+      "HEADER_PERIOD_SEARCH",
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "ce8a60d12d7aa6b1d6f7c73a2973e8a69bf466e572794f27f796f7089c229735",
+     "script_bytes": 1541,
+     "archived_execution_time_s": 0.3637787720072083,
+     "archived_observation_bytes": 1076
+    },
+    {
+     "population": "C",
+     "exec_id": 844,
+     "task_id": "Financial_Model:11_05",
+     "family": "Financial_Model",
+     "turn": 15,
+     "purpose_labels": [
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "d839c71ec5be3ca2055b3512e548955934449f08381808d937223cd050e1aa56",
+     "script_bytes": 602,
+     "archived_execution_time_s": 3.3495230219850782,
+     "archived_observation_bytes": 1838
+    },
+    {
+     "population": "C",
+     "exec_id": 464,
+     "task_id": "Debugging:06_02",
+     "family": "Debugging",
+     "turn": 25,
+     "purpose_labels": [
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "c2daf4f02fabf3bccdd5d1ef96733a8dd5c3b6f577d7deee32c8f1fd2e072fa9",
+     "script_bytes": 995,
+     "archived_execution_time_s": 2.3250826540170237,
+     "archived_observation_bytes": 3624
+    },
+    {
+     "population": "C",
+     "exec_id": 1050,
+     "task_id": "Template:06_21",
+     "family": "Template",
+     "turn": 2,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION"
+     ],
+     "script_sha256": "d6596045061048d807822bfd9d18a15ea8ebfea94f07af8dd7e6c63d9a8005db",
+     "script_bytes": 1177,
+     "archived_execution_time_s": 0.3734850360051496,
+     "archived_observation_bytes": 457
+    },
+    {
+     "population": "C",
+     "exec_id": 876,
+     "task_id": "Financial_Model:13_05",
+     "family": "Financial_Model",
+     "turn": 8,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION"
+     ],
+     "script_sha256": "63d27c48b160b7e5b67c9c2ad072f439c98c61524762b692a31d373336910587",
+     "script_bytes": 848,
+     "archived_execution_time_s": 0.9922162900038529,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 231,
+     "task_id": "Template:06_16",
+     "family": "Template",
+     "turn": 3,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION",
+      "STYLE_LAYOUT_MUTATION"
+     ],
+     "script_sha256": "20fadb27789986f88346cb9e9958e44c1733f09968eef379c915d72b4bc80303",
+     "script_bytes": 2138,
+     "archived_execution_time_s": 0.41109053499531,
+     "archived_observation_bytes": 48
+    },
+    {
+     "population": "C",
+     "exec_id": 375,
+     "task_id": "Debugging:03_06",
+     "family": "Debugging",
+     "turn": 15,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION"
+     ],
+     "script_sha256": "f4c46a85f15137377105fe8038b1fb70b9f147732375d57f0efc0aae2dd07067",
+     "script_bytes": 440,
+     "archived_execution_time_s": 0.5299486100266222,
+     "archived_observation_bytes": 354
+    },
+    {
+     "population": "C",
+     "exec_id": 1025,
+     "task_id": "Template:06_06",
+     "family": "Template",
+     "turn": 1,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION",
+      "SEMANTIC_CALCULATION"
+     ],
+     "script_sha256": "e3569c2dc8e944b0d794eb1774b0aa82da0634aaa0504c468e3930896dd53319",
+     "script_bytes": 2559,
+     "archived_execution_time_s": 0.38518165099958424,
+     "archived_observation_bytes": 682
+    },
+    {
+     "population": "C",
+     "exec_id": 1012,
+     "task_id": "Template:03_03",
+     "family": "Template",
+     "turn": 4,
+     "purpose_labels": [
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "8fba743675a7a06906eb655ab9c9777039b2c65b3d2136e73e879b41a5553419",
+     "script_bytes": 686,
+     "archived_execution_time_s": 2.052075182000408,
+     "archived_observation_bytes": 1148
+    },
+    {
+     "population": "C",
+     "exec_id": 1014,
+     "task_id": "Template:03_03",
+     "family": "Template",
+     "turn": 6,
+     "purpose_labels": [
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "0ec110cf118dcb3bec8ad41da2e3fe80e7aedccbb8356d614b2a1bfec47d25ef",
+     "script_bytes": 273,
+     "archived_execution_time_s": 0.3571742469939636,
+     "archived_observation_bytes": 227
+    },
+    {
+     "population": "C",
+     "exec_id": 1051,
+     "task_id": "Template:06_21",
+     "family": "Template",
+     "turn": 3,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION"
+     ],
+     "script_sha256": "3ae725e83ef1c81804f45c28544b71a45cd93e5133b0e547fde3a01b46e36042",
+     "script_bytes": 1187,
+     "archived_execution_time_s": 0.5095785459998297,
+     "archived_observation_bytes": 747
+    },
+    {
+     "population": "C",
+     "exec_id": 887,
+     "task_id": "Financial_Model:14_05",
+     "family": "Financial_Model",
+     "turn": 8,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION"
+     ],
+     "script_sha256": "0aebf665abb6c15dced5ce3a37131af6634a41fabfc553a493dffb00a9a3ef41",
+     "script_bytes": 1117,
+     "archived_execution_time_s": 1.6893474999815226,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 411,
+     "task_id": "Debugging:04_07",
+     "family": "Debugging",
+     "turn": 14,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION"
+     ],
+     "script_sha256": "a43afdbc84e28d7cce9f14eed22fddbcb1941e0077eff7f432f36443b51a580a",
+     "script_bytes": 372,
+     "archived_execution_time_s": 5.0635216789960396,
+     "archived_observation_bytes": 225
+    },
+    {
+     "population": "C",
+     "exec_id": 1021,
+     "task_id": "Template:05_02",
+     "family": "Template",
+     "turn": 4,
+     "purpose_labels": [
+      "VERIFICATION",
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "9313eb3b02f3b989efd733bbdf843eefd3b10f0a099f83d903860174bf6b03ce",
+     "script_bytes": 213,
+     "archived_execution_time_s": 1.2067463129933458,
+     "archived_observation_bytes": 1985
+    },
+    {
+     "population": "C",
+     "exec_id": 1042,
+     "task_id": "Template:06_17",
+     "family": "Template",
+     "turn": 2,
+     "purpose_labels": [
+      "WORKBOOK_INSPECTION"
+     ],
+     "script_sha256": "a1795fe98cd63cfe23f754d9553801141dca2c984ddceb40004152aee7452408",
+     "script_bytes": 1104,
+     "archived_execution_time_s": 0.36758494601235725,
+     "archived_observation_bytes": 15823
+    },
+    {
+     "population": "C",
+     "exec_id": 1053,
+     "task_id": "Template:06_21",
+     "family": "Template",
+     "turn": 5,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION"
+     ],
+     "script_sha256": "4cabc995b8777a380e5070b7debf2653b00fe352ee45ae737acb48ab5fc6f993",
+     "script_bytes": 1034,
+     "archived_execution_time_s": 0.939255391000188,
+     "archived_observation_bytes": 536
+    },
+    {
+     "population": "C",
+     "exec_id": 916,
+     "task_id": "Financial_Model:16_05",
+     "family": "Financial_Model",
+     "turn": 6,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "HEADER_PERIOD_SEARCH",
+      "MUTATION",
+      "SEMANTIC_CALCULATION"
+     ],
+     "script_sha256": "f469fe5836b38703be52c3a93df928f4737bcddd18aa746a54ec169352355b52",
+     "script_bytes": 895,
+     "archived_execution_time_s": 5.929811540991068,
+     "archived_observation_bytes": 6
+    },
+    {
+     "population": "C",
+     "exec_id": 435,
+     "task_id": "Debugging:05_08",
+     "family": "Debugging",
+     "turn": 11,
+     "purpose_labels": [
+      "FORMULA_CONSTRUCTION",
+      "MUTATION"
+     ],
+     "script_sha256": "5f45b9c798b712f8a9d2e46bd7c077f169fa83baacacdea33cdfa9d10de9b61a",
+     "script_bytes": 514,
+     "archived_execution_time_s": 1.9999014220084064,
+     "archived_observation_bytes": 227
+    }
+   ]
+  }
+ }
+}

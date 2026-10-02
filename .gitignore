@@ -42,6 +42,8 @@ release-candidate/
 **/traj/
 **/replay_substrate/
 **/workbooks/
+# Execution-surface census staging (extracted pre-tidy workloads + run telemetry).
+research/execution_surface_census/_staging/
 *.r3jz
 research/history/phase12r/reference_parse_cache/
 research/history/phase12r/artifacts/
