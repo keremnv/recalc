@@ -5,7 +5,7 @@ import json
 import sys
 from pathlib import Path
 
-from librecalc_agent._frozen import capture
+from recalc_agent._frozen import capture
 
 
 def main() -> int:

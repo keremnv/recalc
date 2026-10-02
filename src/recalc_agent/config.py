@@ -36,13 +36,13 @@ class Config:
 
 def defaults() -> Config:
     base = Path(os.environ.get("XDG_CACHE_HOME", str(Path.home() / ".cache")))
-    return Config(cache_dir=str(base / "librecalc-agent"))
+    return Config(cache_dir=str(base / "recalc-agent"))
 
 
 def load(path: str | None = None, disabled: bool = False) -> tuple[Config, list[dict]]:
     config = defaults()
     issues = []
-    selected = path or os.environ.get("LIBRECALC_CONFIG")
+    selected = path or os.environ.get("RECALC_CONFIG")
     if selected:
         try:
             config_path = Path(selected).expanduser().resolve()

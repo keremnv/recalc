@@ -1,4 +1,4 @@
-# librecalc-agent
+# recalc
 
 An agent-native application substrate for spreadsheet work.
 
@@ -53,7 +53,7 @@ The substrate underneath has two independent sides: execution, which may
 serve supported reads from validated workbook read state or fall back to the
 reference path; and observation, which watches workbook state before and
 after the run and records the outcome in a receipt. Neither side requires
-a LibreCalc-specific workbook-intent API: the execution side changes how
+a recalc-specific workbook-intent API: the execution side changes how
 supported reads may be served, while observation records what happened
 around the run.
 
@@ -61,7 +61,7 @@ around the run.
 
 Relative to running the same script directly with plain Python/openpyxl:
 
-| Reference/plain execution | With LibreCalc substrate |
+| Reference/plain execution | With recalc substrate |
 | --- | --- |
 | workbook follows normal load path | supported warm reads can reuse persistent, validated workbook read state |
 | execution outcome is primarily process status/output | workbook effects are independently observed |
@@ -149,18 +149,18 @@ python -m pip install .
 ```
 
 This installs `openpyxl`, the XML parser, the runtime, diagnostics, and the
-`librecalc-agent` command (a small native launcher plus the Python CLI).
+`recalc-agent` command (a small native launcher plus the Python CLI).
 Installing from a built wheel needs no compiler; building from source needs
 `cc` for two small C files. See [COMPATIBILITY.md](COMPATIBILITY.md) for the
 supported baseline.
 
 ```bash
-librecalc-agent example /tmp/librecalc-example
-cd /tmp/librecalc-example
-librecalc-agent run --workdir . ./create_input.py
-librecalc-agent run --workdir . ./update.py
-librecalc-agent run --workdir . ./read.py
-librecalc-agent status
+recalc-agent example /tmp/recalc-example
+cd /tmp/recalc-example
+recalc-agent run --workdir . ./create_input.py
+recalc-agent run --workdir . ./update.py
+recalc-agent run --workdir . ./read.py
+recalc-agent status
 ```
 
 `example` copies three ordinary scripts (`create_input.py`, `update.py`,
@@ -220,13 +220,13 @@ narrow contract only (no identity, repr, style, or escape equivalence).
 ## Public commands
 
 ```bash
-librecalc-agent example <new-directory>   # copy the minimal example
-librecalc-agent run --workdir <dir> <script.py> [script args...]
-librecalc-agent doctor [--require-libreoffice] [--json] [--verbose]
-librecalc-agent status [--json] [--verbose]
+recalc-agent example <new-directory>   # copy the minimal example
+recalc-agent run --workdir <dir> <script.py> [script args...]
+recalc-agent doctor [--require-libreoffice] [--json] [--verbose]
+recalc-agent status [--json] [--verbose]
 ```
 
-`--config <runtime.toml>` (or `LIBRECALC_CONFIG`) selects a configuration file;
+`--config <runtime.toml>` (or `RECALC_CONFIG`) selects a configuration file;
 `--no-runtime` runs with the optional runtime disabled. Harness flags go before
 the script filename; anything after it is passed to the script.
 
@@ -265,8 +265,8 @@ in the receipt.
 
 ## Cache
 
-Default location: `$XDG_CACHE_HOME/librecalc-agent`, or
-`~/.cache/librecalc-agent`; override with `cache_dir` in `[runtime]`
+Default location: `$XDG_CACHE_HOME/recalc-agent`, or
+`~/.cache/recalc-agent`; override with `cache_dir` in `[runtime]`
 (relative paths resolve beside the config file). Layout:
 
 - `read-engine/` — persistent read artifacts (safe to delete while no
@@ -296,7 +296,7 @@ verbosity = "normal"  # quiet | normal | verbose
 
 An invalid configuration disables the optional runtime for that invocation
 with a loud warning (fail-closed); the script still runs as ordinary Python.
-`--no-runtime` / `LIBRECALC_NO_RUNTIME=1` does the same explicitly.
+`--no-runtime` / `RECALC_NO_RUNTIME=1` does the same explicitly.
 
 The old keys `substrate` and `candidate_a` are deprecated aliases of `reads`
 for one window and warn when used; setting both `reads` and an alias is
@@ -329,8 +329,8 @@ are required.
 ## Uninstall / cleanup
 
 ```bash
-python -m pip uninstall librecalc-agent
-rm -rf ~/.cache/librecalc-agent   # or your configured cache_dir
+python -m pip uninstall recalc-agent
+rm -rf ~/.cache/recalc-agent   # or your configured cache_dir
 ```
 
 The cache holds only diagnostics and workbook read state — never workbook
@@ -412,7 +412,7 @@ claims.
 
 ## Product and release status
 
-`librecalc-agent 0.2.0rc2` is a Linux-first release candidate, not yet
+`recalc-agent 0.2.0rc2` is a Linux-first release candidate, not yet
 published to an index, with the license decision still open (see
 [CHANGELOG.md](CHANGELOG.md)). The tested baseline is Linux x86_64 with
 glibc, CPython 3.13, pinned `openpyxl`/`lxml`, and a local filesystem; see

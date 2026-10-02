@@ -3,7 +3,7 @@ requires = ["hatchling>=1.25"]
 build-backend = "hatchling.build"
 
 [project]
-name = "librecalc-agent"
+name = "recalc-agent"
 version = "0.2.0rc2"
 description = "Ordinary Python/openpyxl harness with optional conservative runtime assurance and read acceleration."
 readme = "README.md"
@@ -21,16 +21,16 @@ dev = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/librecalc_agent"]
+packages = ["src/recalc_agent"]
 
 [tool.hatch.build.targets.wheel.hooks.custom]
 path = "hatch_build.py"
 
 [tool.hatch.build.targets.wheel.force-include]
-"examples/basic" = "librecalc_agent/example"
+"examples/basic" = "recalc_agent/example"
 
 [tool.hatch.build.targets.sdist]
-include = ["/src/librecalc_agent", "/pyproject.toml", "/hatch_build.py", "/README.md", "/COMPATIBILITY.md", "/CHANGELOG.md", "/examples/basic", "/docs/EVIDENCE_AND_LIMITATIONS.md", "/LICENSE*"]
+include = ["/src/recalc_agent", "/pyproject.toml", "/hatch_build.py", "/README.md", "/COMPATIBILITY.md", "/CHANGELOG.md", "/examples/basic", "/docs/EVIDENCE_AND_LIMITATIONS.md", "/LICENSE*"]
 
 [tool.pytest.ini_options]
 # The SWE-agent bundle is not a package; tests reach its instruments directly.

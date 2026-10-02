@@ -1,7 +1,7 @@
 #!/bin/bash
-# Reproducible LibreCalc rc2 demo.
+# Reproducible recalc rc2 demo.
 #
-#   ordinary Python -> LibreCalc first run (BUILT) -> second run (REUSED)
+#   ordinary Python -> recalc first run (BUILT) -> second run (REUSED)
 #   -> unsupported operation on the reference path. Identical results.
 #
 # Usage: scripts/demo.sh [--check] [--keep]
@@ -27,12 +27,12 @@ done
 
 PY="${PYTHON:-python3}"
 export PYTHONPATH="$ROOT/src${PYTHONPATH:+:$PYTHONPATH}"
-if ! "$PY" -c "import librecalc_agent" 2>/dev/null; then
-  echo "FAIL: librecalc_agent not importable with $PY (PYTHONPATH=$PYTHONPATH)" >&2
+if ! "$PY" -c "import recalc_agent" 2>/dev/null; then
+  echo "FAIL: recalc_agent not importable with $PY (PYTHONPATH=$PYTHONPATH)" >&2
   exit 2
 fi
 
-CACHE="$(mktemp -d /tmp/librecalc-demo.XXXXXX)"
+CACHE="$(mktemp -d /tmp/recalc-demo.XXXXXX)"
 if [ "$KEEP" -eq 0 ]; then
   trap 'rm -rf "$CACHE"' EXIT
 fi
@@ -57,7 +57,7 @@ print('' if v is None else (','.join(v) if isinstance(v, list) else v))
 
 cd "$DEMO"
 
-say "=== LibreCalc demo (rc2) ==="
+say "=== recalc demo (rc2) ==="
 say "workdir: examples/demo | cache: $CACHE (fresh)"
 say ""
 
@@ -72,30 +72,30 @@ say "$(cat "$OUT/plain.out")"
 say "read phase: $(grep -o '[0-9.]* ms' "$OUT/plain.err") (in-script) | total: ${PLAIN_MS} ms"
 say ""
 
-# ---- Beat B1: first LibreCalc run -> BUILT ----
-say "--- [2/4] LibreCalc, first run: decode once, then serve ---"
-say "\$ librecalc-agent run --workdir . ./read.py"
+# ---- Beat B1: first recalc run -> BUILT ----
+say "--- [2/4] recalc, first run: decode once, then serve ---"
+say "\$ recalc-agent run --workdir . ./read.py"
 start=$(now_ns)
-"$PY" -m librecalc_agent run --workdir . ./read.py >"$OUT/built.out" 2>"$OUT/built.err" \
-  || fail "first librecalc run exited nonzero"
+"$PY" -m recalc_agent run --workdir . ./read.py >"$OUT/built.out" 2>"$OUT/built.err" \
+  || fail "first recalc run exited nonzero"
 end=$(now_ns)
 BUILT_MS=$(ms "$start" "$end")
-"$PY" -m librecalc_agent status --json >"$OUT/built.status.json" 2>/dev/null || true
+"$PY" -m recalc_agent status --json >"$OUT/built.status.json" 2>/dev/null || true
 [ -s "$OUT/built.status.json" ] || fail "no status JSON after first run"
 say "$(cat "$OUT/built.out")"
 say "path: direct read, decoded state $(receipt_field "$OUT/built.status.json" artifact) (route=$(receipt_field "$OUT/built.status.json" route), served_loads=$(receipt_field "$OUT/built.status.json" direct_served_loads))"
 say "read phase: $(grep -o '[0-9.]* ms' "$OUT/built.err") (in-script) | total: ${BUILT_MS} ms"
 say ""
 
-# ---- Beat B2: second LibreCalc run -> REUSED ----
-say "--- [3/4] LibreCalc, second run: reuse decoded state ---"
-say "\$ librecalc-agent run --workdir . ./read.py"
+# ---- Beat B2: second recalc run -> REUSED ----
+say "--- [3/4] recalc, second run: reuse decoded state ---"
+say "\$ recalc-agent run --workdir . ./read.py"
 start=$(now_ns)
-"$PY" -m librecalc_agent run --workdir . ./read.py >"$OUT/reused.out" 2>"$OUT/reused.err" \
-  || fail "second librecalc run exited nonzero"
+"$PY" -m recalc_agent run --workdir . ./read.py >"$OUT/reused.out" 2>"$OUT/reused.err" \
+  || fail "second recalc run exited nonzero"
 end=$(now_ns)
 REUSED_MS=$(ms "$start" "$end")
-"$PY" -m librecalc_agent status --json >"$OUT/reused.status.json" 2>/dev/null || true
+"$PY" -m recalc_agent status --json >"$OUT/reused.status.json" 2>/dev/null || true
 [ -s "$OUT/reused.status.json" ] || fail "no status JSON after second run"
 say "$(cat "$OUT/reused.out")"
 say "path: direct read, decoded state $(receipt_field "$OUT/reused.status.json" artifact) (route=$(receipt_field "$OUT/reused.status.json" route), served_loads=$(receipt_field "$OUT/reused.status.json" direct_served_loads))"
@@ -104,15 +104,15 @@ say ""
 
 # ---- Beat C: unsupported operation -> reference path ----
 say "--- [4/4] outside the supported surface: ordinary openpyxl ---"
-say "\$ librecalc-agent run --workdir . ./unsupported.py"
+say "\$ recalc-agent run --workdir . ./unsupported.py"
 "$PY" unsupported.py >"$OUT/ref-plain.out" 2>"$OUT/ref-plain.err" \
   || fail "plain unsupported.py exited nonzero"
 start=$(now_ns)
-"$PY" -m librecalc_agent run --workdir . ./unsupported.py >"$OUT/ref.out" 2>"$OUT/ref.err" \
+"$PY" -m recalc_agent run --workdir . ./unsupported.py >"$OUT/ref.out" 2>"$OUT/ref.err" \
   || fail "reference-path run exited nonzero"
 end=$(now_ns)
 REF_MS=$(ms "$start" "$end")
-"$PY" -m librecalc_agent status --json >"$OUT/ref.status.json" 2>/dev/null || true
+"$PY" -m recalc_agent status --json >"$OUT/ref.status.json" 2>/dev/null || true
 [ -s "$OUT/ref.status.json" ] || fail "no status JSON after reference run"
 say "$(cat "$OUT/ref.out")"
 say "path: ordinary openpyxl (route=$(receipt_field "$OUT/ref.status.json" route)) — iteration is outside the supported surface"
@@ -120,8 +120,8 @@ say "read phase: $(grep -o '[0-9.]* ms' "$OUT/ref.err") (in-script) | total: ${R
 say ""
 
 # ---- Validation (always enforced) ----
-cmp -s "$OUT/plain.out" "$OUT/built.out" || fail "stdout differs: plain vs first LibreCalc run"
-cmp -s "$OUT/plain.out" "$OUT/reused.out" || fail "stdout differs: plain vs second LibreCalc run"
+cmp -s "$OUT/plain.out" "$OUT/built.out" || fail "stdout differs: plain vs first recalc run"
+cmp -s "$OUT/plain.out" "$OUT/reused.out" || fail "stdout differs: plain vs second recalc run"
 cmp -s "$OUT/ref-plain.out" "$OUT/ref.out" || fail "stdout differs: plain vs reference-path run"
 [ "$(receipt_field "$OUT/built.status.json" route)" = "DIRECT_RUNTIME" ] || fail "first run route != DIRECT_RUNTIME"
 [ "$(receipt_field "$OUT/built.status.json" artifact)" = "BUILT" ] || fail "first run artifact != BUILT"

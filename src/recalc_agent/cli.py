@@ -14,14 +14,14 @@ from .runner import ProductError, exec_run
 
 
 def main(argv=None) -> int:
-    parser = argparse.ArgumentParser(prog="librecalc-agent", description="Run ordinary Python workbook scripts with optional invisible runtime.")
+    parser = argparse.ArgumentParser(prog="recalc-agent", description="Run ordinary Python workbook scripts with optional invisible runtime.")
     parser.add_argument("--version", action="version", version=__version__)
     commands = parser.add_subparsers(dest="command", required=True)
     example = commands.add_parser("example", help="Copy a small ordinary Python example into a new directory.")
     example.add_argument("directory", type=Path)
     for name in ("doctor", "status", "run"):
         sub = commands.add_parser(name)
-        sub.add_argument("--config", help="Runtime TOML file; alternatively LIBRECALC_CONFIG.")
+        sub.add_argument("--config", help="Runtime TOML file; alternatively RECALC_CONFIG.")
         sub.add_argument("--no-runtime", action="store_true", help="Use ordinary Python/openpyxl only.")
         if name != "run":
             sub.add_argument("--json", action="store_true", help="Machine-readable diagnostic output.")
@@ -63,7 +63,7 @@ def main(argv=None) -> int:
     if args.json or args.verbose:
         print(json.dumps(report, indent=2))
     else:
-        print(f"librecalc-agent {__version__} | Python {report['python']} | openpyxl {report['versions'].get('openpyxl')}")
+        print(f"recalc-agent {__version__} | Python {report['python']} | openpyxl {report['versions'].get('openpyxl')}")
         for item in report["checks"]:
             print(f"{item['status']}: {item['check']}: {item['message']}")
         print(f"Runtime: {'enabled' if config.enabled else 'disabled'}; read acceleration: {'enabled' if config.reads_effective else 'disabled'}; capture: {'enabled' if config.assurance else 'disabled'}")

@@ -1,4 +1,4 @@
-# Changelog — librecalc-agent
+# Changelog — recalc-agent
 
 ## 0.2.0rc2 (release candidate, Linux-first)
 

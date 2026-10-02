@@ -1,4 +1,4 @@
-# Evidence and limitations — librecalc-agent 0.2.0rc2
+# Evidence and limitations — recalc-agent 0.2.0rc2
 
 Concise technical boundary for users who care about implementation guarantees.
 Research-oriented readers: full ledgers live in `product_integration_phase10/`,

@@ -12,9 +12,9 @@ from pathlib import Path
 import openpyxl
 import pytest
 
-from librecalc_agent import diagnostics, runner
-from librecalc_agent.config import Config, load
-from librecalc_agent.read_engine import artifact, cache
+from recalc_agent import diagnostics, runner
+from recalc_agent.config import Config, load
+from recalc_agent.read_engine import artifact, cache
 
 ROOT = Path(__file__).resolve().parents[1]
 DIRECT = ('import openpyxl\nwb=openpyxl.load_workbook("input.xlsx")\n'
@@ -45,8 +45,8 @@ def test_frozen_extraction_sources_unchanged():
 
 def test_no_research_imports():
     import ast
-    import librecalc_agent
-    for path in Path(librecalc_agent.__file__).parent.rglob("*.py"):
+    import recalc_agent
+    for path in Path(recalc_agent.__file__).parent.rglob("*.py"):
         for node in ast.walk(ast.parse(path.read_text())):
             if isinstance(node, ast.ImportFrom):
                 assert not (node.module or "").startswith(("benchmark", "librecalc_mcp")), path
@@ -184,7 +184,7 @@ def test_source_change_invalidates(task):
 
 
 def test_version_change_changes_artifact_key(monkeypatch):
-    from librecalc_agent.read_engine import _identity
+    from recalc_agent.read_engine import _identity
     digest = "a" * 64
     original = cache.artifact_key(digest)
     for attr, value in [("CONTRACT", "NEXT_CONTRACT"), ("DECODER", "b" * 64),
@@ -198,7 +198,7 @@ def test_version_change_changes_artifact_key(monkeypatch):
 
 
 def test_artifact_key_stable_and_single_sourced():
-    from librecalc_agent.read_engine import _identity
+    from recalc_agent.read_engine import _identity
     digest = "a" * 64
     # Fixed vector locks the key format across the consolidation; any drift
     # between layers or across refactors fails here. Update only with an
@@ -217,7 +217,7 @@ def test_artifact_key_stable_and_single_sourced():
 
 def test_artifact_round_trip_and_corruption(task):
     work, _, _ = task
-    from librecalc_agent.read_engine.direct import decode_xlsx
+    from recalc_agent.read_engine.direct import decode_xlsx
     book = decode_xlsx(work / "input.xlsx")
     digest = artifact.sha_file(work / "input.xlsx")
     raw = artifact.encode(book, digest)
@@ -306,7 +306,7 @@ def test_nested_interpreter_does_not_inherit_interposition(task, capfd):
 def test_concurrent_publication(task):
     work, script, config = task
     env = {**os.environ, "PYTHONPATH": str(ROOT / "src")}
-    command = [sys.executable, "-m", "librecalc_agent.cli", "run", "--workdir", str(work), str(script)]
+    command = [sys.executable, "-m", "recalc_agent.cli", "run", "--workdir", str(work), str(script)]
     cfg = work / "runtime.toml"
     cfg.write_text(f'[runtime]\ncache_dir="{config.cache_dir}"\n')
     command[4:4] = ["--config", str(cfg)]
@@ -323,8 +323,8 @@ def test_concurrent_publication(task):
 def test_capture_rejects_entity_expansion_xml():
     import io
     import zipfile
-    from librecalc_agent._frozen.delta import derive_delta
-    from librecalc_agent._frozen.validate import _safe_fromstring, validate_mechanical
+    from recalc_agent._frozen.delta import derive_delta
+    from recalc_agent._frozen.validate import _safe_fromstring, validate_mechanical
     bomb = (b'<?xml version="1.0"?><!DOCTYPE r [<!ENTITY x "y">'
             b'<!ENTITY x2 "&x;&x;&x;&x;&x;&x;&x;&x;">'
             b'<!ENTITY xxe SYSTEM "file:///etc/passwd">]><r>&x2;</r>')
@@ -357,7 +357,7 @@ def test_cache_summary_reports_use(task):
 
 
 def test_cli_example_and_doctor(tmp_path):
-    from librecalc_agent.cli import main
+    from recalc_agent.cli import main
     assert main(["example", str(tmp_path / "example")]) == 0
     assert (tmp_path / "example/update.py").is_file()
     assert main(["example", str(tmp_path / "example")]) == 2

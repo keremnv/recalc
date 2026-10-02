@@ -109,7 +109,7 @@ def ensure(source: Path, cache_root: Path, source_sha: str) -> tuple[Path, str, 
             return artifact, "REUSED", profile
         profile["rebuild_reason"] = reason
         t = tick()
-        builder = importlib.import_module("librecalc_agent.read_engine.artifact")
+        builder = importlib.import_module("recalc_agent.read_engine.artifact")
         profile["builder_import_ns"] = tick() - t
         profile["builder_stack_imported"] = True
         built_artifact, status, build_phases = builder.ensure(source, cache_root, source_sha)

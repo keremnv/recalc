@@ -16,8 +16,8 @@ closure_transfer_audit/work/
 .venv-product/
 # Phase 10C-B: GENERATED — never stage. Built native binaries are reproduced
 # by hatch_build.py (wheel) and scripts/build_native.sh (dev checkout).
-src/librecalc_agent/native/observer
-src/librecalc_agent/native/launcher
+src/recalc_agent/native/observer
+src/recalc_agent/native/launcher
 *.whl
 *.tmp
 # Local release-candidate staging (hashes recorded in

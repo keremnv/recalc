@@ -1,4 +1,4 @@
-# LibreCalc demo fixture
+# recalc demo fixture
 
 A small, readable workbook plus two ordinary openpyxl scripts. No SDK, no DSL,
 no rewrite: both scripts also run under plain `python`.
@@ -12,11 +12,11 @@ no rewrite: both scripts also run under plain `python`.
 - `generate_model.py` — deterministic generator. Every cell value is a pure
   function of (row, column); workbook properties use a fixed timestamp.
 - `read.py` — supported reads only (sheet names, literal sheet lookup,
-  dimensions, literal/integer cell access, values). LibreCalc can serve this
+  dimensions, literal/integer cell access, values). recalc can serve this
   from reusable decoded state. (Named `read.py`, not `inspect.py`, so it does
   not shadow the standard library.)
 - `unsupported.py` — row iteration (`iter_rows`), which is outside the
-  supported read surface. LibreCalc runs it on ordinary openpyxl instead of
+  supported read surface. recalc runs it on ordinary openpyxl instead of
   pretending to accelerate it.
 
 ## Run it
@@ -25,9 +25,9 @@ From this directory, with a fresh demo cache:
 
 ```bash
 python read.py                                      # ordinary Python
-XDG_CACHE_HOME=/tmp/lc-demo librecalc-agent run --workdir . ./read.py         # first run: BUILT
-XDG_CACHE_HOME=/tmp/lc-demo librecalc-agent run --workdir . ./read.py         # second run: REUSED
-XDG_CACHE_HOME=/tmp/lc-demo librecalc-agent run --workdir . ./unsupported.py # reference path
+XDG_CACHE_HOME=/tmp/lc-demo recalc-agent run --workdir . ./read.py         # first run: BUILT
+XDG_CACHE_HOME=/tmp/lc-demo recalc-agent run --workdir . ./read.py         # second run: REUSED
+XDG_CACHE_HOME=/tmp/lc-demo recalc-agent run --workdir . ./unsupported.py # reference path
 ```
 
 Or run the full reproducible demo with checks from the repo root:

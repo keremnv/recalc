@@ -95,10 +95,10 @@ def check(config: Config, issues: list[dict], require_lo: bool = False) -> dict:
             checks.append({"check": name, "status": "FAIL" if required else "OPTIONAL_NOT_AVAILABLE",
                            "message": f"{name} is unavailable ({type(exc).__name__}). Reinstall with python -m pip install . in the checkout. " + ("Workbook tasks need openpyxl." if required else "openpyxl can use its standard XML parser; this differs from the pinned RC environment.")})
     available = True
-    for name in ("librecalc_agent._frozen.eligibility",
-                 "librecalc_agent._frozen.capture",
-                 "librecalc_agent.read_engine.cache",
-                 "librecalc_agent.read_engine.runtime"):
+    for name in ("recalc_agent._frozen.eligibility",
+                 "recalc_agent._frozen.capture",
+                 "recalc_agent.read_engine.cache",
+                 "recalc_agent.read_engine.runtime"):
         try:
             importlib.import_module(name)
         except Exception as exc:  # noqa: BLE001 - optional runtime must not veto ordinary Python
@@ -119,7 +119,7 @@ def check(config: Config, issues: list[dict], require_lo: bool = False) -> dict:
                    "message": lo["version"] or "LibreOffice is unavailable. Python edits can continue; install LibreOffice Calc before tasks that require recalculation or validation."})
     if not issues:
         checks.append({"check": "configuration", "status": "PASS", "message": "Runtime settings loaded. No model credentials are required; configure your coding agent separately."})
-    return {"product": "librecalc-agent", "version": __version__, "python": platform.python_version(),
+    return {"product": "recalc-agent", "version": __version__, "python": platform.python_version(),
             "versions": versions, "platform": platform.platform(), "configuration": config.public(),
             "direct_read_engine_available": config.reads_effective and available and cache_ok and observer_ok,
             "cache_summary": cache_summary(Path(config.cache_dir)),

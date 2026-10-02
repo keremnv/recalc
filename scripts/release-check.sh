@@ -45,17 +45,17 @@ VPY="$ROOT/release-candidate/venv/bin/python"
 "$VPY" -m pip freeze | tee "$WORK/installed.txt"
 
 step "4. native launcher/observer present and executable"
-test -x "$ROOT/release-candidate/venv/bin/librecalc-agent"
-OBS="$("$VPY" -c 'import librecalc_agent.runner,os; p=librecalc_agent.runner.observer_binary(); print(p); raise SystemExit(0 if os.access(p, os.X_OK) else 1)')"
+test -x "$ROOT/release-candidate/venv/bin/recalc-agent"
+OBS="$("$VPY" -c 'import recalc_agent.runner,os; p=recalc_agent.runner.observer_binary(); print(p); raise SystemExit(0 if os.access(p, os.X_OK) else 1)')"
 echo "observer: $OBS"
 
 step "5-6. maintained product/process tests"
 (cd "$ROOT" && "$VPY" -m pytest -q tests/test_product_hygiene.py tests/test_product_process_semantics.py)
 
 step "7-8. doctor + example"
-"$ROOT/release-candidate/venv/bin/librecalc-agent" doctor
-"$ROOT/release-candidate/venv/bin/librecalc-agent" example "$WORK/task"
-(cd "$WORK/task" && "$ROOT/release-candidate/venv/bin/librecalc-agent" run --workdir . ./create_input.py)
+"$ROOT/release-candidate/venv/bin/recalc-agent" doctor
+"$ROOT/release-candidate/venv/bin/recalc-agent" example "$WORK/task"
+(cd "$WORK/task" && "$ROOT/release-candidate/venv/bin/recalc-agent" run --workdir . ./create_input.py)
 
 step "9-10. reference-only + direct BUILD/REUSE"
 REFDIR="$WORK/ref" && mkdir -p "$REFDIR"
@@ -66,10 +66,10 @@ wb = openpyxl.Workbook(); wb.active.title = "Sheet1"; wb.active["A1"] = 7; wb.sa
 open(f"{d}/ref.py", "w").write('import openpyxl\nwb=openpyxl.load_workbook("input.xlsx")\nprint(wb.active["A1"].value)\nwb.close()\n')
 open(f"{d}/direct.py", "w").write('import openpyxl\nwb=openpyxl.load_workbook("input.xlsx")\nws=wb["Sheet1"]\nprint(ws.cell(row=1,column=1).value)\nwb.close()\n')
 EOF
-(cd "$REFDIR" && "$ROOT/release-candidate/venv/bin/librecalc-agent" run --workdir . ./ref.py)
-(cd "$REFDIR" && "$ROOT/release-candidate/venv/bin/librecalc-agent" run --workdir . ./direct.py)
-(cd "$REFDIR" && "$ROOT/release-candidate/venv/bin/librecalc-agent" run --workdir . ./direct.py)
-"$ROOT/release-candidate/venv/bin/librecalc-agent" status
+(cd "$REFDIR" && "$ROOT/release-candidate/venv/bin/recalc-agent" run --workdir . ./ref.py)
+(cd "$REFDIR" && "$ROOT/release-candidate/venv/bin/recalc-agent" run --workdir . ./direct.py)
+(cd "$REFDIR" && "$ROOT/release-candidate/venv/bin/recalc-agent" run --workdir . ./direct.py)
+"$ROOT/release-candidate/venv/bin/recalc-agent" status
 XDG_CACHE_HOME="$WORK/xdg" true  # default cache path exercised implicitly
 
 step "11. changed-file capture"
@@ -80,8 +80,8 @@ d = sys.argv[1]
 wb = openpyxl.Workbook(); wb.active["A1"] = 1; wb.save(f"{d}/input.xlsx")
 open(f"{d}/w.py", "w").write('import openpyxl\nwb=openpyxl.load_workbook("input.xlsx")\nwb.active["A1"]=2\nwb.save("input.xlsx")\nwb.close()\n')
 EOF
-(cd "$CAPDIR" && "$ROOT/release-candidate/venv/bin/librecalc-agent" run --workdir . ./w.py)
-"$ROOT/release-candidate/venv/bin/librecalc-agent" status --json | "$VPY" -c "import json,sys; d=json.load(sys.stdin); assert d['last_run']['effect_capture_status']=='PASS', d; print('capture PASS')"
+(cd "$CAPDIR" && "$ROOT/release-candidate/venv/bin/recalc-agent" run --workdir . ./w.py)
+"$ROOT/release-candidate/venv/bin/recalc-agent" status --json | "$VPY" -c "import json,sys; d=json.load(sys.stdin); assert d['last_run']['effect_capture_status']=='PASS', d; print('capture PASS')"
 
 step "12. abrupt-exit smoke (os._exit after mutation)"
 ADIR="$WORK/abrupt" && mkdir -p "$ADIR"
@@ -92,11 +92,11 @@ wb = openpyxl.Workbook(); wb.active["A1"] = 1; wb.save(f"{d}/input.xlsx")
 open(f"{d}/a.py", "w").write('import openpyxl,os\nw=openpyxl.load_workbook("input.xlsx")\nw.active["A1"]=9\nw.save("input.xlsx")\nos._exit(7)\n')
 EOF
 set +e
-(cd "$ADIR" && "$ROOT/release-candidate/venv/bin/librecalc-agent" run --workdir . ./a.py)
+(cd "$ADIR" && "$ROOT/release-candidate/venv/bin/recalc-agent" run --workdir . ./a.py)
 CODE=$?
 set -e
 test "$CODE" -eq 7 || { echo "expected exit 7, got $CODE"; exit 1; }
-"$ROOT/release-candidate/venv/bin/librecalc-agent" status --json | "$VPY" -c "import json,sys; d=json.load(sys.stdin); assert d['last_run']['assurance_status']=='PASS', d; print('abrupt-exit assurance PASS')"
+"$ROOT/release-candidate/venv/bin/recalc-agent" status --json | "$VPY" -c "import json,sys; d=json.load(sys.stdin); assert d['last_run']['assurance_status']=='PASS', d; print('abrupt-exit assurance PASS')"
 
 step "13-15. wheel list, no __pycache__, license"
 if [ -f "$ROOT/LICENSE" ]; then LICENSE_REQ=1; else echo "LICENSE DECISION REQUIRED — wheel license check deferred"; LICENSE_REQ=0; fi

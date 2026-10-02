@@ -35,7 +35,7 @@ static uint64_t ns(void) {
     if (clock_gettime(CLOCK_MONOTONIC, &t)) return 0;
     return (uint64_t)t.tv_sec * 1000000000ULL + (uint64_t)t.tv_nsec;
 }
-static void die(const char *message) { fprintf(stderr, "librecalc observer: %s: %s\n", message, strerror(errno)); exit(125); }
+static void die(const char *message) { fprintf(stderr, "recalc observer: %s: %s\n", message, strerror(errno)); exit(125); }
 static char *join(const char *a, const char *b) {
     size_t n = strlen(a) + strlen(b) + 2;
     char *s = malloc(n);
@@ -114,7 +114,7 @@ static Snapshot snapshot(const char *root) {
     scan_error = 0; scan_diagnosis = NULL;
     int walked = nftw(root, collect, 20, FTW_PHYS);
     if (scan_error) {
-        fprintf(stderr, "librecalc observer: snapshot XLSX: %s\n", scan_diagnosis);
+        fprintf(stderr, "recalc observer: snapshot XLSX: %s\n", scan_diagnosis);
         exit(125);
     }
     if (walked != 0) die("snapshot XLSX");
@@ -158,7 +158,7 @@ static int helper(const char *python, const char *script, const char *workdir, c
     pid_t pid = fork();
     if (pid < 0) die("fork helper");
     if (!pid) {
-        unsetenv("LIBRECALC_RUN_CONTEXT");
+        unsetenv("RECALC_RUN_CONTEXT");
         char *argv[] = {(char *)python, (char *)script, (char *)workdir, (char *)run_dir, NULL};
         execv(python, argv); _exit(127);
     }
@@ -203,7 +203,7 @@ int main(int argc, char **argv) {
     if (pid<0) die("fork script");
     if (!pid) {
         sigaction(SIGINT,&original_int,NULL); sigaction(SIGTERM,&original_term,NULL);
-        setenv("PYTHONPATH",pythonpath,1); setenv("LIBRECALC_RUN_CONTEXT",context,1);
+        setenv("PYTHONPATH",pythonpath,1); setenv("RECALC_RUN_CONTEXT",context,1);
         if (chdir(wd)) _exit(127);
         char **childargv=calloc((size_t)argc-5,sizeof(char *));
         if (!childargv) _exit(127);
@@ -219,7 +219,7 @@ int main(int argc, char **argv) {
     size_t changed=changed_count(&pre,&post);
     uint64_t t5=ns();
     int helper_status=0;
-    const char *capture_enabled=getenv("LIBRECALC_CAPTURE_ENABLED");
+    const char *capture_enabled=getenv("RECALC_CAPTURE_ENABLED");
     int do_capture=!capture_enabled || strcmp(capture_enabled,"0");
     if (changed && do_capture) { save_pre(&pre,run_dir); helper_status=helper(python,capture_helper,wd,run_dir); }
     else write_empty_capture(run_dir);
@@ -237,7 +237,7 @@ int main(int argc, char **argv) {
     char *last=join(run_root,"last_run.json");
     FILE *lf=fopen(last,"w");if(!lf) die("last run");
     fputs("{\"run_dir\":",lf);json_string(lf,run_dir);fputs("}\n",lf);if(fclose(lf)) die("close last run");
-    const char *private_pointer=getenv("LIBRECALC_RECEIPT_POINTER");
+    const char *private_pointer=getenv("RECALC_RECEIPT_POINTER");
     if (private_pointer && *private_pointer) {
         FILE *pf=fopen(private_pointer,"w"); if(!pf) die("private receipt pointer");
         fputs("{\"run_dir\":",pf);json_string(pf,run_dir);fputs("}\n",pf);

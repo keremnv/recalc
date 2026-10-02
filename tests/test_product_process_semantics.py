@@ -11,7 +11,7 @@ from pathlib import Path
 import openpyxl
 import pytest
 
-from librecalc_agent.runner import observer_binary
+from recalc_agent.runner import observer_binary
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -36,8 +36,8 @@ def observed(work: Path, script: str, args: list[str] | None = None,
     cache.mkdir(exist_ok=True)
     runs.mkdir(exist_ok=True)
     command = [str(observer_binary()), sys.executable, str(target), str(work),
-               str(cache), str(runs), str(ROOT / "src/librecalc_agent/_bootstrap"),
-               str(ROOT / "src/librecalc_agent/_capture_helper.py"), *(args or [])]
+               str(cache), str(runs), str(ROOT / "src/recalc_agent/_bootstrap"),
+               str(ROOT / "src/recalc_agent/_capture_helper.py"), *(args or [])]
     env = {**os.environ, "PYTHONPATH": str(ROOT / "src"), **(env_extra or {})}
     result = subprocess.run(command, cwd=work, env=env, capture_output=True,
                             pass_fds=pass_fds, timeout=20)
@@ -55,8 +55,8 @@ def observed_raw(work: Path, script: str):
     cache.mkdir(exist_ok=True)
     runs.mkdir(exist_ok=True)
     command = [str(observer_binary()), sys.executable, str(target), str(work),
-               str(cache), str(runs), str(ROOT / "src/librecalc_agent/_bootstrap"),
-               str(ROOT / "src/librecalc_agent/_capture_helper.py")]
+               str(cache), str(runs), str(ROOT / "src/recalc_agent/_bootstrap"),
+               str(ROOT / "src/recalc_agent/_capture_helper.py")]
     env = {**os.environ, "PYTHONPATH": str(ROOT / "src")}
     return subprocess.run(command, cwd=work, env=env, capture_output=True,
                           timeout=60)
@@ -71,8 +71,8 @@ def test_observer_child_launch_failure_is_target_status(work):
     runs.mkdir(exist_ok=True)
     command = [str(observer_binary()), "/nonexistent/python", str(target),
                str(work), str(cache), str(runs),
-               str(ROOT / "src/librecalc_agent/_bootstrap"),
-               str(ROOT / "src/librecalc_agent/_capture_helper.py")]
+               str(ROOT / "src/recalc_agent/_bootstrap"),
+               str(ROOT / "src/recalc_agent/_capture_helper.py")]
     env = {**os.environ, "PYTHONPATH": str(ROOT / "src")}
     result = subprocess.run(command, cwd=work, env=env, capture_output=True,
                             timeout=20)

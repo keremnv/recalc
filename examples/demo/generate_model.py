@@ -1,4 +1,4 @@
-"""Deterministic generator for the LibreCalc demo workbook.
+"""Deterministic generator for the recalc demo workbook.
 
 Every cell value is a pure function of (row, column), so each regeneration
 produces the same sheet contents. Workbook properties use a fixed timestamp.
@@ -63,8 +63,8 @@ def build(path: Path) -> None:
         regions.append([name, LEADS[name], 50000])
 
     props = wb.properties
-    props.creator = "librecalc-demo"
-    props.lastModifiedBy = "librecalc-demo"
+    props.creator = "recalc-demo"
+    props.lastModifiedBy = "recalc-demo"
     props.created = FIXED_TIME
     props.modified = FIXED_TIME
 

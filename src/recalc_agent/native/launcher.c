@@ -11,7 +11,7 @@
 #include <unistd.h>
 
 static void fail(const char *reason) {
-    fprintf(stderr, "librecalc-agent: %s: %s\n", reason, strerror(errno));
+    fprintf(stderr, "recalc-agent: %s: %s\n", reason, strerror(errno));
     exit(2);
 }
 
@@ -47,8 +47,8 @@ static void private_directory(const char *path) {
 
 static char *package_root(const char *prefix) {
     for (int i = 0; i < 2; ++i) {
-        char *pattern = join(prefix, i ? "lib64/python*/site-packages/librecalc_agent"
-                                       : "lib/python*/site-packages/librecalc_agent");
+        char *pattern = join(prefix, i ? "lib64/python*/site-packages/recalc_agent"
+                                       : "lib/python*/site-packages/recalc_agent");
         glob_t found = {0};
         int result = glob(pattern, 0, NULL, &found);
         free(pattern);
@@ -68,7 +68,7 @@ static void python_cli(const char *python, int argc, char **argv) {
     if (!next) fail("allocate arguments");
     next[0] = (char *)python;
     next[1] = "-m";
-    next[2] = "librecalc_agent.cli";
+    next[2] = "recalc_agent.cli";
     for (int i = 1; i < argc; ++i) next[i + 2] = argv[i];
     execv(python, next);
     fail("launch Python CLI");
@@ -93,8 +93,8 @@ int main(int argc, char **argv) {
     *slash = 0;
     char *root = package_root(prefix);
 
-    if (argc < 2 || strcmp(argv[1], "run") || getenv("LIBRECALC_CONFIG") ||
-            getenv("LIBRECALC_NO_RUNTIME")) python_cli(python, argc, argv);
+    if (argc < 2 || strcmp(argv[1], "run") || getenv("RECALC_CONFIG") ||
+            getenv("RECALC_NO_RUNTIME")) python_cli(python, argc, argv);
     char cwd[PATH_MAX];
     if (!getcwd(cwd, sizeof(cwd))) fail("working directory");
     const char *workdir_arg = cwd;
@@ -118,7 +118,7 @@ int main(int argc, char **argv) {
         if (!home || !*home) python_cli(python, argc, argv);
         cache_base = join(home, ".cache");
     }
-    char *cache = join(cache_base, "librecalc-agent");
+    char *cache = join(cache_base, "recalc-agent");
     char *runs = join(cache, "runs");
     private_directory(cache);
     private_directory(runs);

@@ -39,7 +39,7 @@ def _prepare(script: Path, args: list[str], workdir: Path, config: Config,
     # Only internal handoff keys are filtered; everything else (user env,
     # PATH, FD markers) inherits so the target matches direct Python.
     env = {k: v for k, v in os.environ.items()
-           if k not in {"LIBRECALC_RUN_CONTEXT", "LIBRECALC_EFFECTIVE_CONFIG"}}
+           if k not in {"RECALC_RUN_CONTEXT", "RECALC_EFFECTIVE_CONFIG"}}
     # The observer changes cwd before launching the real script. Preserve the
     # caller's import paths as absolute paths, including a source checkout.
     import_root = str(Path(__file__).resolve().parents[1])
@@ -70,10 +70,10 @@ def _prepare(script: Path, args: list[str], workdir: Path, config: Config,
                 raise OSError("cache/run directory must be user-owned and private")
     except OSError as exc:
         raise ProductError("The observer cannot write the cache/run directory; no task was run.") from exc
-    env["LIBRECALC_EFFECTIVE_CONFIG"] = json.dumps(asdict(config), sort_keys=True)
-    env["LIBRECALC_CAPTURE_ENABLED"] = "1" if config.assurance else "0"
+    env["RECALC_EFFECTIVE_CONFIG"] = json.dumps(asdict(config), sort_keys=True)
+    env["RECALC_CAPTURE_ENABLED"] = "1" if config.assurance else "0"
     pointer = runs / f"receipt-{uuid.uuid4().hex}.json"
-    env["LIBRECALC_RECEIPT_POINTER"] = str(pointer)
+    env["RECALC_RECEIPT_POINTER"] = str(pointer)
     bootstrap = Path(__file__).parent / "_bootstrap"
     helper = Path(__file__).parent / "_capture_helper.py"
     command = [str(binary), sys.executable, str(script), str(workdir), str(cache),

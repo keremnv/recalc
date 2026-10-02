@@ -1,4 +1,4 @@
-"""Guarded startup for an ordinary Python script launched by LibreCalc."""
+"""Guarded startup for an ordinary Python script launched by recalc."""
 from __future__ import annotations
 
 import json
@@ -22,15 +22,15 @@ def _start(context_path: Path) -> None:
     if Path(sys.argv[0]).resolve() != script:
         return
     workdir, cache_root, run_dir = Path(workdir_s), Path(cache_s), Path(run_dir_s)
-    from librecalc_agent.config import Config, load as load_config
-    from librecalc_agent._frozen.eligibility import classify
+    from recalc_agent.config import Config, load as load_config
+    from recalc_agent._frozen.eligibility import classify
 
-    effective = os.environ.get("LIBRECALC_EFFECTIVE_CONFIG")
+    effective = os.environ.get("RECALC_EFFECTIVE_CONFIG")
     if effective:
         config, issues = Config(**json.loads(effective)), []
     else:
-        config, issues = load_config(os.environ.get("LIBRECALC_CONFIG"),
-                                    os.environ.get("LIBRECALC_NO_RUNTIME") == "1")
+        config, issues = load_config(os.environ.get("RECALC_CONFIG"),
+                                    os.environ.get("RECALC_NO_RUNTIME") == "1")
     source = script.read_text(encoding="utf-8") if config.reads_effective else ""
     decision = classify(source) if config.reads_effective else {"decision": "DISABLED"}
     admitted = decision["decision"] == "A1_ADMIT"
@@ -43,8 +43,8 @@ def _start(context_path: Path) -> None:
         _write(run_dir / "setup.json", setup)
         return
 
-    from librecalc_agent.read_engine import cache
-    from librecalc_agent.read_engine.certificate import certify
+    from recalc_agent.read_engine import cache
+    from recalc_agent.read_engine.certificate import certify
 
     certificate = certify(source, decision)
     setup["merged_certificate"] = certificate
@@ -65,7 +65,7 @@ def _start(context_path: Path) -> None:
                                       "path": resolved})
     setup["artifacts"] = entries
     _write(run_dir / "setup.json", setup)
-    from librecalc_agent.read_engine.runtime import Runtime
+    from recalc_agent.read_engine.runtime import Runtime
 
     context = {"script": str(script), "admitted": True,
                "workbooks": entries,
@@ -77,7 +77,7 @@ def _start(context_path: Path) -> None:
     _write(run_dir / "setup.json", setup)
 
 
-_context = os.environ.get("LIBRECALC_RUN_CONTEXT")
+_context = os.environ.get("RECALC_RUN_CONTEXT")
 if _context:
     try:
         _start(Path(_context))
