@@ -113,11 +113,22 @@ Debugging_10_10 peak RSS: BASE 997,968 KB vs candidate 148,296 KB (−85%), conf
 
 ## 14. Product integration
 
-(To be completed on PRODUCTIZE: production `iter_rows` + classifier support for the §3 contract, KeyError fix, tests, removal of `RECALC_NO_ITERATION_PROBE`, docs/evidence updates.)
+Performed (commit `d0a86fd`, after the `37b2ac2` research commit): removed
+the research-only `RECALC_NO_ITERATION_PROBE` switch so certified iteration
+is the unconditional product path; productionized probe naming/comments in
+`src/recalc_agent/_frozen/eligibility.py` and
+`src/recalc_agent/read_engine/runtime.py` (no behavior change); added two
+maintained tests (`test_certified_iter_rows_served_directly`,
+`test_values_only_iter_rows_stays_reference`). Hygiene suite 30/30.
 
 ## 15. Version/evidence updates
 
-(To be completed: prefer `0.2.0rc4`; distinguish rc2 validation / rc3 baseline / rc4 iteration evidence; conservative claims only.)
+Bumped to `0.2.0rc4` (`pyproject.toml`, `recalc_agent.__version__`,
+`README.md`, `COMPATIBILITY.md`, `CHANGELOG.md`,
+`docs/EVIDENCE_AND_LIMITATIONS.md`). Evidence docs distinguish rc2
+validation, the rename-only rc3 baseline, and the rc4 iteration
+confirmation, with conservative claims only (no generic-iteration,
+cold, write, token, or broad-equivalence claims).
 
 ## 16. Limitations and exact unsupported iteration forms
 

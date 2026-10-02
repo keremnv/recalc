@@ -1,5 +1,26 @@
 # Changelog — recalc-agent
 
+## 0.2.0rc4 (release candidate, Linux-first)
+
+Real product-mechanism expansion beyond rc3: the direct runtime now serves
+the certified full-cell `ws.iter_rows()` contract (bounded or worksheet-
+dimension bounds, nested row → cell consumption, `.value` / `.coordinate` /
+`.row` / `.column` / `.data_type`) from the existing persisted read state.
+No new agent API: scripts still write ordinary openpyxl. `iter_cols`,
+`values_only`, `.values`, range literals, rich attributes, writes, and
+`data_only` remain reference-routed by design.
+
+- Representative-30 warm routing on the frozen confirmation population went
+  from 7 direct (+1 pre-existing fallback) to 20 direct (+1 unchanged
+  pre-existing fallback); representative warm total (median sums) 102.26 s
+  → 21.51 s. Parity: 40/40 adversarial, 52/52 A/B differential, zero
+  iteration-attributed fallbacks. See
+  `research/full_cell_iteration_product_confirmation/REPORT.md`.
+- Narrow exception-parity fix: missing-sheet lookup now raises the exact
+  pinned-openpyxl `KeyError("Worksheet {name} does not exist.")`.
+- No cold-acceleration, write-acceleration, token-saving, or broad
+  openpyxl-equivalence claim is added.
+
 ## 0.2.0rc3 (release candidate, Linux-first)
 
 Rename and release-hygiene candidate. No runtime-mechanism change from

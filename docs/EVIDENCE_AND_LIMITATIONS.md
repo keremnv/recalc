@@ -1,9 +1,11 @@
-# Evidence and limitations — recalc-agent 0.2.0rc3
+# Evidence and limitations — recalc-agent 0.2.0rc4
 
 Measurements below were established on `0.2.0rc2`. `0.2.0rc3` is a rename
 and release-hygiene candidate only: it changes product identity, licensing,
 and release surfaces without changing the validated mechanism, so the rc2
-evidence stands for rc3.
+evidence stands for rc3. `0.2.0rc4` adds the certified full-cell `iter_rows`
+contract to the direct runtime; rc2/rc3 evidence below still stands, and the
+rc4 iteration confirmation is reported separately under “Established”.
 
 Concise technical boundary for users who care about implementation guarantees.
 Research-oriented readers: full ledgers live in `research/history/product_integration_phase10/`,
@@ -22,11 +24,22 @@ Core Ultra 5 125H, CPython 3.13.12, openpyxl 3.1.5.
   uncertain scripts to ordinary openpyxl without loading the direct runtime
   (audited: no proxy, no artifact lookup, no direct state). Admitted scripts
   get a narrow surface (sheet names, bounds, literal cell access, value/data
-  type); the merged-cell certificate covers only a closed terminal-scalar
+  type, plus — since rc4 — the certified full-cell `iter_rows` contract);
+  the merged-cell certificate covers only a closed terminal-scalar
   grammar.
-- **Reference fallback.** Unsupported load modes, proxy escapes, iteration,
-  and artifact/decoder failures lazily use real openpyxl and are recorded in
-  the receipt. Representative fallback-after-contact behavior is covered.
+- **Certified full-cell iteration (rc4).** Bounded or worksheet-dimension
+  `ws.iter_rows()` with nested row → cell consumption and the
+  `.value` / `.coordinate` / `.row` / `.column` / `.data_type` cell
+  surface is served from existing read state. Frozen confirmation:
+  13/13 iteration-only representative workloads converted to direct and
+  stayed direct throughout; 40/40 adversarial and 52/52 A/B differential
+  parity vs pinned openpyxl; representative-30 warm total (median sums)
+  102.26 s → 21.51 s. `iter_cols`, `values_only`, `.values`, range
+  literals, rich attributes, and mixed mutation remain reference-routed.
+- **Reference fallback.** Unsupported load modes, proxy escapes, uncertified
+  iteration, and artifact/decoder failures lazily use real openpyxl and are
+  recorded in the receipt. Representative fallback-after-contact behavior is
+  covered.
 - **Persistent derived state.** Content-addressed artifacts (`JSONZ_MEMORY_V1`)
   keyed by whole-file SHA-256 plus runtime/decoder/contract/format versions,
   validated before serving, published atomically under a per-key lock.
@@ -61,4 +74,5 @@ Core Ultra 5 125H, CPython 3.13.12, openpyxl 3.1.5.
 
 Universal speedup; cross-host timing guarantees; cold acceleration; write
 acceleration; token/model-cost savings; benchmark-score improvement; task
-correctness or output certification from capture; broad openpyxl equivalence.
+correctness or output certification from capture; broad openpyxl equivalence;
+generic `iter_rows` acceleration beyond the certified contract.

@@ -15,7 +15,7 @@ separate from the post-state check (assurance status). The agent-facing
 surface stays ordinary Python files using ordinary `openpyxl`, with no new
 workbook API to learn.
 
-This is release candidate `0.2.0rc3`, Linux-first. It is not published to an
+This is release candidate `0.2.0rc4`, Linux-first. It is not published to an
 index. The exact boundary of what is established, what is conditional, and
 what is not claimed is [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md).
 
@@ -121,8 +121,10 @@ uses genuine reference openpyxl behavior.
 ## Current evidence snapshot
 
 Product evidence below was established on `0.2.0rc2` and carried forward
-unchanged: `0.2.0rc3` is a rename and release-hygiene candidate that does
-not change the validated mechanism. All timing figures are host- and
+through the rename-only `0.2.0rc3`. `0.2.0rc4` adds the certified full-cell
+`iter_rows` contract to the direct runtime (see
+[docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md) and
+[CHANGELOG.md](CHANGELOG.md)). All timing figures are host- and
 run-sensitive; the validation host is recorded in
 [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md).
 
@@ -192,13 +194,14 @@ its normal output; `status` shows the last receipt.
   cwd, and exit status preserved. The harness does not rerun failed scripts,
   and `python task.py` remains valid for reference execution.
 - Supported direct reads — sheet names and literal lookup, worksheet
-  bounds/dimensions, literal/integer cell access, cell value and data type —
-  may be served from the persistent read artifact instead of running the
-  normal workbook parser for that load.
+  bounds/dimensions, literal/integer cell access, cell value and data type,
+  and the certified full-cell `iter_rows` contract — may be served from the
+  persistent read artifact instead of running the normal workbook parser
+  for that load.
 - Anything outside that narrow surface — unsupported load options,
-  iteration, rich objects, writes, uncertain syntax — runs on real openpyxl
-  through lazy reference fallback, and the fallback is recorded in the
-  receipt.
+  uncertified iteration, rich objects, writes, uncertain syntax — runs on
+  real openpyxl through lazy reference fallback, and the fallback is
+  recorded in the receipt.
 
 ### After: observation, capture, receipt
 
@@ -245,9 +248,9 @@ routes each script before launch: uncertain or unsupported scripts never
 load the direct runtime, while admitted scripts may have supported reads
 served from the persistent read artifact.
 
-Unsupported load modes, proxy escapes, iteration, and artifact/decoder
-failures lazily use real openpyxl and are recorded in the receipt.
-Representative fallback-after-contact behavior is covered by tests.
+Unsupported load modes, proxy escapes, uncertified iteration, and
+artifact/decoder failures lazily use real openpyxl and are recorded in the
+receipt. Representative fallback-after-contact behavior is covered by tests.
 
 Cold runs are not accelerated: the first invocation builds state. Writes are
 not accelerated. No token, cost, or benchmark-score claim is made.
@@ -414,7 +417,7 @@ claims.
 
 ## Product and release status
 
-`recalc-agent 0.2.0rc3` is a Linux-first release candidate, not yet
+`recalc-agent 0.2.0rc4` is a Linux-first release candidate, not yet
 published to an index, under the MIT License (see [LICENSE](LICENSE) and
 [CHANGELOG.md](CHANGELOG.md)). The tested baseline is Linux x86_64 with
 glibc, CPython 3.13, pinned `openpyxl`/`lxml`, and a local filesystem; see
