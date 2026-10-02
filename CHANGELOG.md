@@ -1,5 +1,25 @@
 # Changelog — recalc-agent
 
+## 0.2.0rc5 (release candidate, Linux-first)
+
+Decoder-only performance confirmation beyond rc4: warm artifact decode no
+longer re-serializes and re-parses each already-validated typed value, but
+reconstructs the Python value directly from the validated dict (explicit
+non-finite rejection preserves prior behavior). No format, bytes,
+validation, admission, routing, or API change; stdlib-only.
+
+- Representative-30 warm decode mass on the frozen confirmation protocol:
+  5.014 s → 1.896 s (−62%); warm total 13.158 s → 10.157 s, tracking
+  decode. Parity: 52/52 canonical artifact state, 40/40 adversarial,
+  52/52 A/B full-command, 12/12 corruption reject. See
+  `research/artifact_decode_product_confirmation/REPORT.md`.
+- Read-artifact keys rotate with the version bump by design (existing
+  `RUNTIME_VERSION` key policy), so rc4 artifacts rebuild once on first
+  rc5 touch (cold cost only). The D1 mechanism itself is byte-compatible:
+  rc4-built artifacts reuse correctly under the new decoder.
+- No cold-acceleration, binary-format, lazy-decode, write, recalc, or
+  broad-equivalence claim is added.
+
 ## 0.2.0rc4 (release candidate, Linux-first)
 
 Real product-mechanism expansion beyond rc3: the direct runtime now serves

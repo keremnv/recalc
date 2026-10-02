@@ -1,4 +1,4 @@
-# Evidence and limitations — recalc-agent 0.2.0rc4
+# Evidence and limitations — recalc-agent 0.2.0rc5
 
 Measurements below were established on `0.2.0rc2`. `0.2.0rc3` is a rename
 and release-hygiene candidate only: it changes product identity, licensing,
@@ -6,6 +6,9 @@ and release surfaces without changing the validated mechanism, so the rc2
 evidence stands for rc3. `0.2.0rc4` adds the certified full-cell `iter_rows`
 contract to the direct runtime; rc2/rc3 evidence below still stands, and the
 rc4 iteration confirmation is reported separately under “Established”.
+`0.2.0rc5` keeps the same artifact representation and contracts while
+decoding already-validated typed values directly; its confirmation is
+likewise reported separately under “Established”.
 
 Concise technical boundary for users who care about implementation guarantees.
 Research-oriented readers: full ledgers live in `research/history/product_integration_phase10/`,
@@ -36,6 +39,14 @@ Core Ultra 5 125H, CPython 3.13.12, openpyxl 3.1.5.
   parity vs pinned openpyxl; representative-30 warm total (median sums)
   102.26 s → 21.51 s. `iter_cols`, `values_only`, `.values`, range
   literals, rich attributes, and mixed mutation remain reference-routed.
+- **Direct typed reconstruction (rc5).** Warm decode reconstructs Python
+  values directly from already-validated typed dicts instead of
+  re-serializing/re-parsing each value. Same artifact bytes, format,
+  validation, admission, and API. Frozen confirmation: decode mass
+  5.014 s → 1.896 s, warm total 13.158 s → 10.157 s; 52/52 canonical
+  state, 40/40 adversarial, 52/52 A/B parity, 12/12 corruption reject.
+  The rc5 version bump rotates artifact keys once by existing policy
+  (cold rebuild only); the mechanism itself reuses rc4-built artifacts.
 - **Reference fallback.** Unsupported load modes, proxy escapes, uncertified
   iteration, and artifact/decoder failures lazily use real openpyxl and are
   recorded in the receipt. Representative fallback-after-contact behavior is
