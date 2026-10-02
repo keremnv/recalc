@@ -1,0 +1,54 @@
+{
+ "non_rejecting": [],
+ "results": {
+  "corrupt_compressed_stream": {
+   "d1b": "REJECTED: artifact checksum mismatch",
+   "rc4": "REJECTED: artifact checksum mismatch"
+  },
+  "corrupt_serialized_structure": {
+   "d1b": "REJECTED: invalid payload JSON",
+   "rc4": "REJECTED: invalid payload JSON"
+  },
+  "duplicate_coordinates": {
+   "d1b": "REJECTED: invalid or duplicate coordinate",
+   "rc4": "REJECTED: invalid or duplicate coordinate"
+  },
+  "impossible_coordinate": {
+   "d1b": "REJECTED: invalid or duplicate coordinate",
+   "rc4": "REJECTED: invalid or duplicate coordinate"
+  },
+  "impossible_typed_kind": {
+   "d1b": "REJECTED: invalid typed value kind",
+   "rc4": "REJECTED: invalid typed value kind"
+  },
+  "nan_typed_value": {
+   "d1b": "REJECTED: invalid typed value",
+   "rc4": "REJECTED: invalid typed value"
+  },
+  "truncated_header": {
+   "d1b": "REJECTED: bad magic or truncated artifact",
+   "rc4": "REJECTED: bad magic or truncated artifact"
+  },
+  "truncated_payload": {
+   "d1b": "REJECTED: artifact checksum mismatch",
+   "rc4": "REJECTED: artifact checksum mismatch"
+  },
+  "wrong_checksum": {
+   "d1b": "REJECTED: artifact checksum mismatch",
+   "rc4": "REJECTED: artifact checksum mismatch"
+  },
+  "wrong_decoder_version": {
+   "d1b": "REJECTED: artifact identity mismatch",
+   "rc4": "REJECTED: artifact identity mismatch"
+  },
+  "wrong_format_version": {
+   "d1b": "REJECTED: artifact identity mismatch",
+   "rc4": "REJECTED: artifact identity mismatch"
+  },
+  "wrong_source_hash": {
+   "d1b": "REJECTED: artifact identity mismatch",
+   "rc4": "REJECTED: artifact identity mismatch"
+  }
+ },
+ "verdict": "PASS"
+}

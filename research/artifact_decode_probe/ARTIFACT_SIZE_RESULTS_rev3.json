@@ -1,0 +1,39 @@
+{
+ "all_identical": true,
+ "rows": [
+  {
+   "bytes_identical": true,
+   "d1_artifacts": {
+    "81e619c14f636a22d09938e0b6ec87872fd6d69cce56865857466c441e8eeefd.r3jz": {
+     "bytes": 19943,
+     "sha256": "c667459c30566ac752e2de7f3d4f76f5020a395e19456da6144329e6c4041e2c"
+    }
+   },
+   "population": "A",
+   "rc4_artifacts": {
+    "81e619c14f636a22d09938e0b6ec87872fd6d69cce56865857466c441e8eeefd.r3jz": {
+     "bytes": 19943,
+     "sha256": "c667459c30566ac752e2de7f3d4f76f5020a395e19456da6144329e6c4041e2c"
+    }
+   },
+   "workload": "Financial_Model_02_05__90004332940a"
+  },
+  {
+   "bytes_identical": true,
+   "d1_artifacts": {
+    "90a80377a0e2f09c59a055af38ec05499f7fcf3344d93434023d886058160dd6.r3jz": {
+     "bytes": 1370,
+     "sha256": "36e25c43f8ffc609b2e947da88140bef0673488d518d707f9c8ce9411d8264ce"
+    }
+   },
+   "population": "A",
+   "rc4_artifacts": {
+    "90a80377a0e2f09c59a055af38ec05499f7fcf3344d93434023d886058160dd6.r3jz": {
+     "bytes": 1370,
+     "sha256": "36e25c43f8ffc609b2e947da88140bef0673488d518d707f9c8ce9411d8264ce"
+    }
+   },
+   "workload": "Template_03_03__c76ea596b408"
+  }
+ ]
+}

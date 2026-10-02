@@ -1,0 +1,51 @@
+{
+ "candidates": [
+  {
+   "adversarial": "40/40 under in-src D1",
+   "bench": "2.45-3.42x on 7 books (in-process, pristine rc4 baseline)",
+   "build": "no tripwire; artifacts byte-identical; memory -5.6%",
+   "corruption": "12/12 reject incl. NaN parity",
+   "full_command_A": "warm 15.244->11.848s (-3.40); decode 5.272->2.036s (-3.24, -61.4%)",
+   "id": "D1",
+   "justification": "typed re-encode (3.70s) + re-parse (1.84s) = 69% of 7-book decode mass; removable with zero format change",
+   "non_regression": "max +0.056s (straddles resolved by arm-reversal)",
+   "packaging": "no new dependency; no format change; no migration",
+   "parity": "52/52 canon-identical vs pristine rc4",
+   "program_parity": "52/52 normalized",
+   "scope": "same payload bytes; replace per-cell canonical(typed)->_value_from_json round-trip with direct validated-dict->value mapping (NaN/Infinity rejection preserved)",
+   "status": "PRODUCT_CANDIDATE (probe verdict; not integrated)"
+  },
+  {
+   "bench": "2.27-2.59x (SLOWER than D1: C regex beats manual Python loop; validation cost is _check_typed, not COORD)",
+   "coordfuzz": "200009/200009 language-identical",
+   "corruption": "12/12 PASS",
+   "id": "D1b",
+   "parity": "52/52 PASS",
+   "scope": "faster coordinate validation, same accept/reject language",
+   "status": "REJECTED (correct but slower than D1; one-variable discipline: kill it)"
+  },
+  {
+   "id": "C-sheet-segmented",
+   "justification": "sheet-touch census: all 7 LAZY_SHEET_PROMISING (touch 1-2 sheets, 0.5-21% cell mass); but current single-JSON format is FORMAT_BLOCKED for lazy decode without full parse",
+   "scope": "new segmented artifact format + migration; laziness wins only if D1-class no-format-change candidates disappoint",
+   "status": "DEFERRED unless D1 fails gate (format change + migration burden vs overlapping mass)"
+  },
+  {
+   "id": "A-codec",
+   "justification": "zlib decompress = 0.16s/8.05s (2%) \u2014 not material",
+   "status": "REJECTED by decomposition"
+  },
+  {
+   "id": "B-serformat",
+   "justification": "json.loads = 0.78s/8.05s (10%); binary format attacks a minor share while adding schema/dependency burden",
+   "status": "REJECTED by decomposition (orjson-class libs noted, not tested)"
+  },
+  {
+   "id": "E-close",
+   "justification": "fallback if D1 fails semantics or economics",
+   "status": "FALLBACK"
+  }
+ ],
+ "decomposition_gate": "PASS (instrumented/ref = 0.962, within +-15%)",
+ "sheet_touch": "ALL 7 LAZY_SHEET_PROMISING; current format FORMAT_BLOCKED (single JSON doc must be fully parsed)"
+}

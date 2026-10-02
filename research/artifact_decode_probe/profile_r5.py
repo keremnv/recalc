@@ -124,11 +124,31 @@ def timed_book(obj):
     return MemoryBook(sheets), acc, count
 
 
+def canon_value(v):
+    """Duck-typed canonical value form (robust across module copies)."""
+    import datetime as dt
+    import json
+    n = type(v).__name__
+    if n == "ArrayFormula":
+        return json.dumps({"kind": "array", "ref": v.ref, "text": v.text}, sort_keys=True)
+    if n == "DataTableFormula":
+        return json.dumps({"kind": "datatable", "attrs": dict(vars(v))}, sort_keys=True)
+    if isinstance(v, dt.datetime):
+        return json.dumps({"kind": "datetime", "value": v.isoformat()}, sort_keys=True)
+    if isinstance(v, dt.date):
+        return json.dumps({"kind": "date", "value": v.isoformat()}, sort_keys=True)
+    if isinstance(v, dt.time):
+        return json.dumps({"kind": "time", "value": v.isoformat()}, sort_keys=True)
+    if isinstance(v, dt.timedelta):
+        return json.dumps({"kind": "timedelta", "seconds": v.total_seconds()}, sort_keys=True)
+    return json.dumps({"kind": "scalar", "value": v}, sort_keys=True)
+
+
 def canon_book(book):
     sheets = []
     for name in book.sheetnames:
         info = book._sheets[name]
-        cells = sorted((c, repr(v), d) for c, (v, d) in info.cells.items())
+        cells = sorted((c, canon_value(v), d) for c, (v, d) in info.cells.items())
         sheets.append({"name": name,
                        "bounds": [info.min_row, info.min_col, info.max_row, info.max_col],
                        "merged": sorted(info.merged),

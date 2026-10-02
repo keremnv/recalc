@@ -1,0 +1,29 @@
+{
+ "all_identical": true,
+ "rows": [
+  {
+   "bytes_identical": true,
+   "d1_artifacts": {},
+   "population": "A",
+   "rc4_artifacts": {},
+   "workload": "Template_06_02__85fab8c95cea"
+  },
+  {
+   "bytes_identical": true,
+   "d1_artifacts": {
+    "aeb321b9f5eaab2c93cc7af266340a8bbc86dd741bdf06551fb65a3a032fbb2b.r3jz": {
+     "bytes": 1396,
+     "sha256": "5cd43b15ca8fd81e3d9b579bf0b75c8905407b0dfb92828f463657a37f62c0eb"
+    }
+   },
+   "population": "B",
+   "rc4_artifacts": {
+    "aeb321b9f5eaab2c93cc7af266340a8bbc86dd741bdf06551fb65a3a032fbb2b.r3jz": {
+     "bytes": 1396,
+     "sha256": "5cd43b15ca8fd81e3d9b579bf0b75c8905407b0dfb92828f463657a37f62c0eb"
+    }
+   },
+   "workload": "Template_06_12__17725eca76da"
+  }
+ ]
+}

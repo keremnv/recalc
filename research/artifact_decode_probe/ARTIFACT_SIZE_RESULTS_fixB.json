@@ -1,0 +1,22 @@
+{
+ "all_identical": true,
+ "rows": [
+  {
+   "bytes_identical": true,
+   "d1_artifacts": {
+    "75709d0babb237421c55ac38fc61a657e546c5555d4a207eeb084ba8cb55f077.r3jz": {
+     "bytes": 1204936,
+     "sha256": "6a1c5aa1cd7e915116c3504569451b9e5131dfe5b72d3d63c6e8ad076a4b693e"
+    }
+   },
+   "population": "B",
+   "rc4_artifacts": {
+    "75709d0babb237421c55ac38fc61a657e546c5555d4a207eeb084ba8cb55f077.r3jz": {
+     "bytes": 1204936,
+     "sha256": "6a1c5aa1cd7e915116c3504569451b9e5131dfe5b72d3d63c6e8ad076a4b693e"
+    }
+   },
+   "workload": "Financial_Model_08_01__2ea507d758dc"
+  }
+ ]
+}
