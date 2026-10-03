@@ -140,6 +140,7 @@ def test_sweagent_accepts_formula_index_signature() -> None:
     import string
 
     import yaml
+    pytest.importorskip("jinja2", reason="optional harness templating dependency")
     from jinja2 import Template
 
     spec = yaml.safe_load(

@@ -68,8 +68,12 @@ def test_hard_reject_and_abstain_have_explicit_dispositions(tmp_path):
 
 
 def test_persisted_request_resume_recounts_cost_without_provider_call(tmp_path, monkeypatch):
+    from experiment_config import active_experiment_config
+    config = active_experiment_config()
     request = m.request_body("system", "user")
-    record = {"request_sha256": m.digest(request), "stage": "synthesis", "call_index_within_task": 1, "provider_cost_usd": .25, "raw_response_body": {"choices": []}}
+    record = {"request_sha256": m.digest(request), "stage": "synthesis", "call_index_within_task": 1, "provider_cost_usd": .25, "raw_response_body": {"choices": []},
+              "request_body": request, "declared_model": config.model, "request_model": config.model, "response_model": config.model,
+              "declared_reasoning": config.reasoning, "request_reasoning": config.reasoning, "effective_generation_parameters": {}}
     m.persist_call(tmp_path, record)
     monkeypatch.setattr(m, "model_call", lambda *a, **k: pytest.fail("new model call"))
     state = {"_resume_mode": True, "model_call_count": 0, "provider_cost_usd": 0}

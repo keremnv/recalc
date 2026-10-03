@@ -25,7 +25,7 @@ def _family_wb(path, break_cell=None, break_formula=None):
 
 
 def test_rewrite_filter_keeps_localized_break(tmp_path):
-    from phase11.mine import derive_workbook, structural_diff, adjacent_family_breaks
+    from mine import derive_workbook, structural_diff, adjacent_family_breaks
     sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "research/history/phase11"))
     pre_p, post_p = tmp_path / "in.xlsx", tmp_path / "out.xlsx"
     _family_wb(pre_p)
@@ -40,7 +40,7 @@ def test_rewrite_filter_keeps_localized_break(tmp_path):
 
 def test_rewrite_filter_suppresses_broad_rewrite(tmp_path):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "research/history/phase11"))
-    from phase11.mine import derive_workbook, structural_diff, adjacent_family_breaks
+    from mine import derive_workbook, structural_diff, adjacent_family_breaks
     pre_p, post_p = tmp_path / "in.xlsx", tmp_path / "out.xlsx"
     _family_wb(pre_p)
     wb = openpyxl.load_workbook(post_p if False else pre_p)
