@@ -287,6 +287,17 @@ and `status` report the location, a bounded size summary, and artifact count
 so growth stays visible. Delete the directory (or the whole cache root) to
 reclaim space.
 
+Upgrading `recalc-agent` orphans prior artifacts by versioned key; the first
+touch under the new version rebuilds automatically. No manual cache migration
+is ever required; stale entries stay inert on disk until deleted.
+
+Concurrency: simultaneous reads, simultaneous same-artifact builds (one
+builder wins under a per-key lock; the other reuses the result), reads
+during a build, and crashes mid-publication are safe — validation plus
+atomic publication mean torn or partial state is never served. Concurrent
+editing of the same task/script directory and external writer races outside
+this model are unsupported (see [COMPATIBILITY.md](COMPATIBILITY.md)).
+
 ## Configuration
 
 Copy `examples/basic/runtime.toml` and pass it with `--config`:
