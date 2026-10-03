@@ -1,5 +1,28 @@
 # Changelog — recalc-agent
 
+## 0.2.0 (Linux-first)
+
+Final release of the validated rc5 mechanism set. No runtime-mechanism
+change from `0.2.0rc5`: ordinary Python/openpyxl agent surface,
+persistent validated read state, direct point reads, certified
+full-cell `iter_rows`, D1 warm decode, genuine-openpyxl fallback,
+and external observation/assurance — with the tested platform,
+cache lifecycle, concurrency boundaries, and claim limits
+documented in README/COMPATIBILITY/EVIDENCE_AND_LIMITATIONS.
+
+- Read-artifact keys rotate with the version bump by design
+  (existing `RUNTIME_VERSION` key policy), so rc5 artifacts
+  rebuild once on first 0.2.0 touch (cold cost only). No manual
+  cache migration is required; stale entries stay inert.
+- Release hygiene only beyond rc5: research-test dispositions
+  (no product-path impact), cache-upgrade/concurrency
+  documentation, full release-gate verification. See
+  `research/releases/0.2.0/RELEASE_VERIFICATION.md`.
+- Known limitations unchanged: Linux x86_64/glibc tested;
+  narrow direct-read contract; no universal/cold/write speedup;
+  no token/model-cost claims; no task-correctness certification;
+  no automatic cache eviction; no sandbox.
+
 ## 0.2.0rc5 (release candidate, Linux-first)
 
 Decoder-only performance confirmation beyond rc4: warm artifact decode no

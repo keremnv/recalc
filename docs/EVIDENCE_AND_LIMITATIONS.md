@@ -1,4 +1,4 @@
-# Evidence and limitations — recalc-agent 0.2.0rc5
+# Evidence and limitations — recalc-agent 0.2.0
 
 Measurements below were established on `0.2.0rc2`. `0.2.0rc3` is a rename
 and release-hygiene candidate only: it changes product identity, licensing,
@@ -8,7 +8,9 @@ contract to the direct runtime; rc2/rc3 evidence below still stands, and the
 rc4 iteration confirmation is reported separately under “Established”.
 `0.2.0rc5` keeps the same artifact representation and contracts while
 decoding already-validated typed values directly; its confirmation is
-likewise reported separately under “Established”.
+likewise reported separately under “Established”. `0.2.0` final ships the
+rc5 mechanism set unchanged (release hygiene + version bump only); rc5
+artifacts rebuild once under the rotated version key (cold cost only).
 
 Concise technical boundary for users who care about implementation guarantees.
 Research-oriented readers: full ledgers live in `research/history/product_integration_phase10/`,

@@ -262,9 +262,9 @@ def test_artifact_key_stable_and_single_sourced():
     # Fixed vector locks the key format across the consolidation; any drift
     # between layers or across refactors fails here. Update only with an
     # intentional, documented version bump (which orphans old artifacts).
-    # Vector rotated for the intentional 0.2.0rc5 bump (CHANGELOG):
-    # the key mixes in RUNTIME_VERSION, so rc4 artifacts rebuild once.
-    expected = "aeaa250e4a03582890663c66c1b2988a3f5746ae72e7f12bdb9d46b8cdf94375"
+    # Vector rotated for the intentional 0.2.0 final bump (CHANGELOG):
+    # the key mixes in RUNTIME_VERSION, so rc5 artifacts rebuild once.
+    expected = "fed6c5a9fdd8ca50c558abe7068a5672af8d6f5feb42c577edf3142daa415ac3"
     assert _identity.artifact_key(digest) == expected
     assert cache.artifact_key is _identity.artifact_key
     assert artifact.artifact_key is _identity.artifact_key

@@ -1,4 +1,4 @@
-# Compatibility — recalc-agent 0.2.0rc5
+# Compatibility — recalc-agent 0.2.0
 
 Current product document. `SUPPORTED` describes this candidate's intended
 contract. `TESTED` means local mechanical checks actually ran.
