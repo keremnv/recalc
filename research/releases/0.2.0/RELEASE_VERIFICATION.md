@@ -5,9 +5,9 @@ Mechanism set: rc5 unchanged. Gates: `gates.py` (this directory).
 
 ## Results
 
-- release commit: (filled at tag time — see tag annotation)
+- release commit: the tagged commit (see `git show v0.2.0`)
 - tag: `v0.2.0` (no prior tag convention existed)
-- master after promotion: (filled post-promotion)
+- master after promotion: fast-forwarded to the tagged commit
 - product suite: 49/49 green
 - full suite: 893 passed, 13 skipped, 0 failed (4 research
   failures resolved test-only: jinja2 skip-guard, 2× import-path
