@@ -1,0 +1,106 @@
+{
+ "workload": "Financial_Model_08_02__4ca3ae46295d",
+ "product": "recalc-agent 0.2.0 (clean install from master f2db7ee)",
+ "protocol": "R3 warm: BASE 3x fresh-dir bare python; RECALC fresh cache + 1 warmup (discarded) + 3x fresh-dir full recalc-agent run, shared warm cache; same window",
+ "base_wall_s": [
+  3.3629,
+  3.6866,
+  3.7523
+ ],
+ "base_exits": [
+  0,
+  0,
+  0
+ ],
+ "recalc_wall_s": [
+  0.75,
+  0.7254,
+  0.732
+ ],
+ "recalc_exits": [
+  0,
+  0,
+  0
+ ],
+ "routes": [
+  "DIRECT_RUNTIME",
+  "DIRECT_RUNTIME",
+  "DIRECT_RUNTIME"
+ ],
+ "artifact_status": [
+  [
+   "REUSED"
+  ],
+  [
+   "REUSED"
+  ],
+  [
+   "REUSED"
+  ]
+ ],
+ "counts": [
+  {
+   "direct_iteration_cells": 4800,
+   "direct_iteration_rows": 120,
+   "direct_served_loads": 1,
+   "direct_served_reads": 8351,
+   "fallback_loads": 0,
+   "reference_loads": 0
+  },
+  {
+   "direct_iteration_cells": 4800,
+   "direct_iteration_rows": 120,
+   "direct_served_loads": 1,
+   "direct_served_reads": 8351,
+   "fallback_loads": 0,
+   "reference_loads": 0
+  },
+  {
+   "direct_iteration_cells": 4800,
+   "direct_iteration_rows": 120,
+   "direct_served_loads": 1,
+   "direct_served_reads": 8351,
+   "fallback_loads": 0,
+   "reference_loads": 0
+  }
+ ],
+ "base_stdout_sha256": "bd47afe77467d24a115845076f0316f2414511092677590577784efe0d4a15b1",
+ "recalc_stdout_sha256": "ae4596df17fba51d0aeb8f2c8700b9d0ab2e4b7a89e939645546458e2d9e810a",
+ "input_sha256_after": "9928600b0184036b03a8664c1e2dcd8994e5f90e866d68c140dd6543b3ac0aff",
+ "base_median_s": 3.6866,
+ "recalc_median_s": 0.732,
+ "saved_s": 2.9546,
+ "pct_lower": 80.14,
+ "ratio": 0.1986,
+ "display": {
+  "base": "3.69 s",
+  "recalc": "0.73 s",
+  "saved": "2.95 s",
+  "pct": "80.1% lower"
+ },
+ "parity_standard": "address-normalized stdout identical across BASEx2 and RECALC (raw bytes differ only in openpyxl ArrayFormula object 0x addresses, which differ between any two runs including BASE-vs-BASE; same normalization as census gate G2)",
+ "order_bias_check": {
+  "protocol": "alternating R,B,R,B starting RECALC, fresh cache+warmup",
+  "recalc_wall_s": [
+   0.6899,
+   0.6814,
+   0.7021
+  ],
+  "base_wall_s": [
+   3.4611,
+   3.3197,
+   3.5603
+  ],
+  "note": "delta persists reversed-order: medians 3.4611 -> 0.6899 (-2.77s, -80.1%)"
+ },
+ "host": "Ubuntu 26.04.1, kernel 7.0.0-34, Intel Core Ultra 5 125H, CPython 3.13.12, openpyxl 3.1.5 (same validation host class as EVIDENCE_AND_LIMITATIONS)",
+ "frozen_crosscheck_R3": {
+  "base_median_s": 5.3035,
+  "on_median_s_rc4": 1.6696,
+  "source": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl",
+  "note": "different window (host-sensitive absolutes); same workload, route, parity outcome"
+ },
+ "stdout_raw_identical": false,
+ "stdout_normalized_identical": true,
+ "stdout_normalized_sha256_16": "61beb2466319bc29"
+}
