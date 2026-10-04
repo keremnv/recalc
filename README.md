@@ -1,23 +1,97 @@
 # recalc
 
-An agent-native application substrate for spreadsheet work.
+An agent-native application substrate for spreadsheet work: a selective
+execution and observation layer for ordinary Python/openpyxl spreadsheet agents.
 
-The substrate offers two things. First, efficiency on a narrow path:
-supported repeated reads can reuse persistent, validated workbook read
-state, decoded from the source workbook, instead of paying the full
-normal parsing path again — while anything
-unsupported or uncertain falls back to ordinary reference execution.
-Second, execution transparency: an external observer, running outside the
-agent/script process, records what ran, whether fallback occurred, what
-workbook effects occurred, and whether changed workbook state passed
-mechanical assurance — keeping the script's own outcome (target status)
-separate from the post-state check (assurance status). The agent-facing
-surface stays ordinary Python files using ordinary `openpyxl`, with no new
-workbook API to learn.
+Recalc runs your agent's Python scripts unchanged — no rewrites, no new
+workbook API. Supported expensive reads can reuse validated workbook state
+instead of re-parsing the file; anything unsupported or uncertain stays on
+genuine openpyxl. An external observer records how each run executed and what
+workbook effects it produced.
 
 This is `0.2.0`, Linux-first. It is not published to an
 index. The exact boundary of what is established, what is conditional, and
 what is not claimed is [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md).
+
+## SpreadsheetBench-2 task: scanning assumptions in a financial model
+
+One real read-only inspection step from a public benchmark trajectory
+(SpreadsheetBench-2 FM:08_02 · Project Seafood Model). The agent scanned
+`Assumptions - Line 01` of the benchmark workbook using ordinary
+Python/openpyxl iteration. On the same workbook and code, the measured warm
+step fell from **3.69 s** to **0.73 s** (medians of 3 warm reps, same window),
+saving **2.95 s**, while producing the same findings. Input bytes were verified
+unchanged. Full instruction, code, and raw rep timings:
+[docs/evidence/readme_vignette/](docs/evidence/readme_vignette/).
+
+![Measured vignette: one real read-only inspection step from the SpreadsheetBench-2 FM:08_02 agent trajectory; the frozen Assumptions-tab scan took 3.69 s under plain Python and 0.73 s under warm Recalc, saving 2.95 s (80.1% lower) with identical delivered findings](docs/assets/recalc-performance-vignette.svg)
+
+Across the preregistered 30-workload read-heavy representative population used
+to productize certified full-cell iteration, aggregate warm runtime changed
+from **102.26 s** to **21.51 s**; artifact decode (D1) separately moved decode
+mass from **5.014 s** to **1.896 s** with warm total **13.158 s** to
+**10.157 s**, and peak RSS on the large confirmation workbook fell from
+**997,968 KB** to **148,296 KB**. These are measured, workload-specific
+results on the validation host — Recalc is not a universal openpyxl
+accelerator.
+
+Recalc materially helps when expensive spreadsheet reads fall within its
+certified direct contract; mixed/dynamic workloads may remain on genuine
+openpyxl and can see little or no speedup. In a later mixed-workflow
+external-validity study, fully direct execution was uncommon and aggregate
+replay showed no speedup; most dynamic and mixed read/write work correctly
+remained on genuine openpyxl.
+
+| Workload shape | Expected behavior |
+| --- | --- |
+| Warm, expensive certified reads | Recalc may materially reduce workbook-read cost |
+| First/cold load | State must be built; no cold-speedup claim |
+| Dynamic or mixed read/write script | Often remains on genuine openpyxl |
+| Writes | Not accelerated |
+| Unsupported semantics | Fail-closed reference execution |
+
+## Quick start
+
+Linux x86_64, CPython 3.13 (3.11–3.14 accepted, 3.13 tested), local
+filesystem:
+
+```bash
+python3 -m venv .venv-product
+. .venv-product/bin/activate
+python -m pip install .
+```
+
+This installs `openpyxl`, the XML parser, the runtime, diagnostics, and the
+`recalc-agent` command (a small native launcher plus the Python CLI).
+Installing from a built wheel needs no compiler; building from source needs
+`cc` for two small C files. See [COMPATIBILITY.md](COMPATIBILITY.md) for the
+supported baseline.
+
+```bash
+recalc-agent example /tmp/recalc-example
+cd /tmp/recalc-example
+recalc-agent run --workdir . ./create_input.py
+recalc-agent run --workdir . ./update.py
+recalc-agent run --workdir . ./read.py
+recalc-agent status
+```
+
+`example` copies three ordinary scripts (`create_input.py`, `update.py`,
+`read.py`) plus a commented `runtime.toml`. `run` executes a script and prints
+its normal output; `status` shows the last receipt.
+
+What to notice: the two write scripts run on the reference path, while the
+supported read is served directly — the first read builds validated state
+(`BUILT`). Run `read.py` once more and `recalc-agent status --json` reports
+(excerpt):
+
+```text
+route: DIRECT_RUNTIME, artifact: REUSED, direct_served_loads: 1,
+fallback: [], target: exit 0, assurance: PASS
+```
+
+Route tells how execution happened, target whether the script succeeded, and
+assurance whether observed workbook effects passed mechanical checks.
 
 ## Substrate diagram
 
@@ -133,7 +207,7 @@ run-sensitive; the validation host is recorded in
 | Observation | Scope |
 | --- | --- |
 | 543 / 543 oracle rows show exit/stream/state parity with plain Python | ordinary execution surface |
-| 0.608× median vs plain Python on warm direct-contact workloads | 7 frozen representative workloads, warm reuse only |
+| 0.608× median vs plain Python on warm direct-contact workloads | 7 frozen contact-selected workloads, warm reuse only |
 | 1.04–1.12× plain Python on cold direct-contact runs: no cold acceleration | cold runs; first invocation builds state |
 | 5 frozen changed-file fixtures: changed-XLSX detection, mechanical validation, delta replay | changed-file capture/assurance |
 
@@ -142,69 +216,6 @@ surface; cold state construction produces no speedup; the normal execution
 surface has been parity-tested; and assurance is mechanical — it checks
 what the change is and that it replayed, never whether the change is what
 the task wanted.
-
-## Scanning assumptions in a real financial model
-
-Recalc keeps the agent in ordinary Python. On operations inside its certified
-read contract, validated workbook state can be served directly; everything else
-remains genuine openpyxl.
-
-![Measured vignette: one real inspection step from the SpreadsheetBench-2 FM:08_02 agent trajectory; the frozen Assumptions-tab scan took 3.69 s under plain Python and 0.73 s under warm Recalc, saving 2.95 s (80.1% lower) with identical delivered findings](docs/assets/recalc-performance-vignette.svg)
-
-One real inspection step from this agent trajectory
-(SpreadsheetBench-2 FM:08_02 · Project Seafood Model). The agent scanned
-`Assumptions - Line 01` using ordinary Python/openpyxl iteration. On the same
-workbook and code, the measured warm step fell from **3.69 s** to **0.73 s**
-(medians of 3 warm reps, same window), saving **2.95 s**, while producing the
-same findings. This step performs no writes; input bytes were verified
-unchanged. Full provenance, prompt, code, and raw rep timings:
-[docs/evidence/readme_vignette/](docs/evidence/readme_vignette/).
-
-Across the preregistered 30-workload read-heavy representative population used
-to productize certified full-cell iteration, aggregate warm runtime changed
-from **102.26 s** to **21.51 s**; artifact decode (D1) separately moved decode
-mass from **5.014 s** to **1.896 s** with warm total **13.158 s** to
-**10.157 s**, and peak RSS on the large confirmation workbook fell from
-**997,968 KB** to **148,296 KB**. These are measured, workload-specific
-results on the validation host — Recalc is not a universal openpyxl
-accelerator.
-
-Recalc materially helps when expensive spreadsheet reads fall within its
-certified direct contract; mixed/dynamic workloads may remain on genuine
-openpyxl and can see little or no speedup. In a later mixed-workflow
-external-validity study, fully direct execution was uncommon and aggregate
-replay showed no speedup; most dynamic and mixed read/write work correctly
-remained on genuine openpyxl.
-
-## Quick start
-
-Linux x86_64, CPython 3.13 (3.11–3.14 accepted, 3.13 tested), local
-filesystem:
-
-```bash
-python3 -m venv .venv-product
-. .venv-product/bin/activate
-python -m pip install .
-```
-
-This installs `openpyxl`, the XML parser, the runtime, diagnostics, and the
-`recalc-agent` command (a small native launcher plus the Python CLI).
-Installing from a built wheel needs no compiler; building from source needs
-`cc` for two small C files. See [COMPATIBILITY.md](COMPATIBILITY.md) for the
-supported baseline.
-
-```bash
-recalc-agent example /tmp/recalc-example
-cd /tmp/recalc-example
-recalc-agent run --workdir . ./create_input.py
-recalc-agent run --workdir . ./update.py
-recalc-agent run --workdir . ./read.py
-recalc-agent status
-```
-
-`example` copies three ordinary scripts (`create_input.py`, `update.py`,
-`read.py`) plus a commented `runtime.toml`. `run` executes a script and prints
-its normal output; `status` shows the last receipt.
 
 ## How it works
 
