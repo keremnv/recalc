@@ -141,7 +141,7 @@ def compose():
     ]
     left_w, gap, right_w = 668, 24, W - 668 - 24 - 48
     img_h = int(left_w * ch / cw)
-    top_h = 150
+    top_h = 172
     mid_y = top_h + 8
     code_h = 60 + 24 * (len(code_lines) + 1) + 60
     mid_h = max(img_h + 92, code_h + 40)
@@ -167,6 +167,8 @@ def compose():
                  f'\u201cComplete the financial model based on the provided assumptions. …\u201d</text>')
     parts.append(f'<text x="40" y="106" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#57606a">'
                  f'Excerpt — first sentence of the 5-part instruction; full text in docs/evidence/readme_vignette/prompt.txt</text>')
+    parts.append(f'<text x="40" y="130" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" font-weight="700" fill="#1f2328">'
+                 f'One real inspection step from this agent trajectory — read-only scan, not the whole task</text>')
     parts.append(f'<text x="{W//2}" y="{mid_y - 12}" text-anchor="middle" font-size="22" fill="#57606a">↓</text>')
     # Left: workbook
     parts.append(panel(L, mid_y, left_w, mid_h, "REAL WORKBOOK — input.xlsx · \u2018Assumptions - Line 01\u2019 (LibreOffice render)"))
@@ -193,7 +195,7 @@ def compose():
     parts.append(f'<text x="820" y="{time_y + 78}" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="17" fill="#57606a">Saved</text>')
     parts.append(f'<text x="820" y="{time_y + 116}" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="34" font-weight="800" fill="#1a7f37">{d["saved"]} · {d["pct"]}</text>')
     parts.append(f'<text x="60" y="{time_y + 162}" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#57606a">Medians of 3 warm reps, same window · artifact REUSED · model-provider latency excluded</text>')
-    parts.append(f'<text x="60" y="{time_y + 186}" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#57606a">No writes in this inspection step — input bytes unchanged (sha verified)</text>')
+    parts.append(f'<text x="60" y="{time_y + 186}" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#57606a">Read-only inspection step; workbook bytes unchanged · Same agent code, same findings</text>')
     parts.append(f'<text x="{W//2}" y="{bot_y - 12}" text-anchor="middle" font-size="22" fill="#57606a">↓</text>')
     # Findings
     parts.append(panel(24, bot_y, W - 48, bot_h, "DELIVERED FINDINGS — IDENTICAL UNDER BASE AND RECALC"))

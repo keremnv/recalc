@@ -143,21 +143,21 @@ surface has been parity-tested; and assurance is mechanical — it checks
 what the change is and that it replayed, never whether the change is what
 the task wanted.
 
-## Real workbook, measured execution
+## Scanning assumptions in a real financial model
 
 Recalc keeps the agent in ordinary Python. On operations inside its certified
 read contract, validated workbook state can be served directly; everything else
 remains genuine openpyxl.
 
-![Measured vignette: on SpreadsheetBench-2 task FM:08_02, the same frozen agent scan of the Assumptions tab took 3.69 s under plain Python and 0.73 s under warm Recalc, saving 2.95 s (80.1% lower) with identical delivered findings](docs/assets/recalc-performance-vignette.svg)
+![Measured vignette: one real inspection step from the SpreadsheetBench-2 FM:08_02 agent trajectory; the frozen Assumptions-tab scan took 3.69 s under plain Python and 0.73 s under warm Recalc, saving 2.95 s (80.1% lower) with identical delivered findings](docs/assets/recalc-performance-vignette.svg)
 
-In the workload above — an inspection step from the public SpreadsheetBench-2
-task Financial_Model:08_02 (Project Seafood Model) — BASE and Recalc ran the
-same frozen agent scan over the same workbook and delivered the same findings.
-Recalc reduced the read/inspection portion from **3.69 s** to **0.73 s**
-(medians of 3 warm reps, same window), saving **2.95 s**. This step performs
-no writes; input bytes were verified unchanged. Full provenance, prompt, code,
-and raw rep timings:
+One real inspection step from this agent trajectory
+(SpreadsheetBench-2 FM:08_02 · Project Seafood Model). The agent scanned
+`Assumptions - Line 01` using ordinary Python/openpyxl iteration. On the same
+workbook and code, the measured warm step fell from **3.69 s** to **0.73 s**
+(medians of 3 warm reps, same window), saving **2.95 s**, while producing the
+same findings. This step performs no writes; input bytes were verified
+unchanged. Full provenance, prompt, code, and raw rep timings:
 [docs/evidence/readme_vignette/](docs/evidence/readme_vignette/).
 
 Across the preregistered 30-workload read-heavy representative population used
@@ -171,9 +171,10 @@ accelerator.
 
 Recalc materially helps when expensive spreadsheet reads fall within its
 certified direct contract; mixed/dynamic workloads may remain on genuine
-openpyxl and can see little or no speedup. On the later 18-trajectory
-mixed-workflow Tier 1 corpus, only 10 of 164 executed Python invocations were
-directly served and aggregate Recalc replay showed no speedup over BASE replay.
+openpyxl and can see little or no speedup. In a later mixed-workflow
+external-validity study, fully direct execution was uncommon and aggregate
+replay showed no speedup; most dynamic and mixed read/write work correctly
+remained on genuine openpyxl.
 
 ## Quick start
 
