@@ -211,7 +211,7 @@ def compose():
     parts.append(f'<rect x="0" y="0" width="{W}" height="{H}" fill="{SKIN["field"]}" '
                  f'stroke="{RULE}" stroke-width="1"/>')
     # Benchmark header
-    parts.append(panel(24, 16, W - 48, top_h - 24, "SPREADSHEETBENCH-2 · FM:08_02 · PROJECT SEAFOOD MODEL"))
+    parts.append(panel(24, 16, W - 48, top_h - 24, "SpreadsheetBench-2 · FM:08_02 · Project Seafood Model"))
     parts.append(f'<text x="40" y="80" font-family="{S}" font-size="14" fill="{MUT}">'
                  f'Public benchmark task — full 5-part instruction in docs/evidence/readme_vignette/prompt.txt</text>')
     parts.append(f'<text x="40" y="104" font-family="{S}" font-size="14" fill="{MUT}">'
@@ -220,13 +220,13 @@ def compose():
                  f'Measured here: read-only inspection of \u2018Assumptions - Line 01\u2019 — one step, not the whole task</text>')
     parts.append(f'<text x="{W//2}" y="{mid_y - 12}" text-anchor="middle" font-size="22" fill="{MUT}">↓</text>')
     # Left: workbook
-    parts.append(panel(L, mid_y, left_w, mid_h, "REAL WORKBOOK — input.xlsx · \u2018Assumptions - Line 01\u2019 (LibreOffice render)"))
+    parts.append(panel(L, mid_y, left_w, mid_h, "Real workbook — input.xlsx · \u2018Assumptions - Line 01\u2019 (LibreOffice render)"))
     parts.append(f'<image x="{L}" y="{mid_y + 44}" width="{left_w}" height="{img_h}" '
                  f'href="data:image/png;base64,{png_b64}"/>')
     parts.append(f'<text x="{L + 16}" y="{mid_y + 44 + img_h + 26}" font-family="{S}" '
                  f'font-size="14" fill="{INK}">Scan region A1:AN120 · 4,800 cells served directly · values identical</text>')
     # Right: code
-    parts.append(panel(R, mid_y, right_w, mid_h, "ORDINARY AGENT PYTHON"))
+    parts.append(panel(R, mid_y, right_w, mid_h, "Ordinary agent Python"))
     y = mid_y + 66
     for ln in code_lines:
         parts.append(f'<text x="{R + 16}" y="{y}" font-family="{M}" '
@@ -236,10 +236,10 @@ def compose():
                  f'font-size="14" fill="{MUT}">No Recalc API · frozen agent scan step</text>')
     parts.append(f'<text x="{W//2}" y="{time_y - 12}" text-anchor="middle" font-size="22" fill="{MUT}">↓</text>')
     # Timing
-    parts.append(panel(24, time_y, W - 48, time_h, "LOCAL EXECUTION — SAME CODE, SAME VALUES DELIVERED"))
+    parts.append(panel(24, time_y, W - 48, time_h, "Local execution — same code, same values delivered"))
     parts.append(f'<text x="60" y="{time_y + 78}" font-family="{S}" font-size="17" fill="{MUT}">BASE (plain Python)</text>')
     parts.append(f'<text x="60" y="{time_y + 116}" font-family="{S}" font-size="34" font-weight="600" fill="{INK}">{d["base"]}</text>')
-    parts.append(f'<text x="430" y="{time_y + 78}" font-family="{S}" font-size="17" fill="{MUT}">RECALC (warm, DIRECT_RUNTIME)</text>')
+    parts.append(f'<text x="430" y="{time_y + 78}" font-family="{S}" font-size="17" fill="{MUT}">Recalc (warm, DIRECT_RUNTIME)</text>')
     parts.append(f'<text x="430" y="{time_y + 116}" font-family="{S}" font-size="34" font-weight="600" fill="{INK}">{d["recalc"]}</text>')
     parts.append(f'<text x="820" y="{time_y + 78}" font-family="{S}" font-size="17" fill="{MUT}">Saved</text>')
     parts.append(f'<text x="820" y="{time_y + 116}" font-family="{S}" font-size="34" font-weight="600" fill="{SKIN["result"]}">{d["saved"]} · {d["pct"]}</text>')
@@ -247,7 +247,7 @@ def compose():
     parts.append(f'<text x="60" y="{time_y + 186}" font-family="{S}" font-size="14" fill="{MUT}">Read-only inspection step; workbook bytes unchanged · Same agent code, same findings</text>')
     parts.append(f'<text x="{W//2}" y="{bot_y - 12}" text-anchor="middle" font-size="22" fill="{MUT}">↓</text>')
     # Findings
-    parts.append(panel(24, bot_y, W - 48, bot_h, "DELIVERED FINDINGS — IDENTICAL UNDER BASE AND RECALC"))
+    parts.append(panel(24, bot_y, W - 48, bot_h, "Delivered findings — identical in both arms"))
     y = bot_y + 62
     for ln in findings:
         parts.append(f'<text x="40" y="{y}" font-family="{M}" '
