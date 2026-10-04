@@ -162,13 +162,13 @@ def compose():
              f'viewBox="0 0 {W} {H}" role="img">']
     parts.append(f'<rect x="0" y="0" width="{W}" height="{H}" rx="12" fill="#f6f8fa"/>')
     # Prompt header
-    parts.append(panel(24, 16, W - 48, top_h - 24, "REAL TASK PROMPT — SpreadsheetBench-2 · Financial_Model:08_02 (Project Seafood Model)"))
-    parts.append(f'<text x="40" y="80" font-family="Georgia,serif" font-size="19" font-style="italic" fill="#1f2328">'
-                 f'\u201cComplete the financial model based on the provided assumptions. …\u201d</text>')
-    parts.append(f'<text x="40" y="106" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#57606a">'
-                 f'Excerpt — first sentence of the 5-part instruction; full text in docs/evidence/readme_vignette/prompt.txt</text>')
-    parts.append(f'<text x="40" y="130" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" font-weight="700" fill="#1f2328">'
-                 f'One real inspection step from this agent trajectory — read-only scan, not the whole task</text>')
+    parts.append(panel(24, 16, W - 48, top_h - 24, "SPREADSHEETBENCH-2 · FM:08_02 · PROJECT SEAFOOD MODEL"))
+    parts.append(f'<text x="40" y="80" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#57606a">'
+                 f'Public benchmark task — full 5-part instruction in docs/evidence/readme_vignette/prompt.txt</text>')
+    parts.append(f'<text x="40" y="104" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#57606a">'
+                 f'Full task includes modeling work across several sheets.</text>')
+    parts.append(f'<text x="40" y="130" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="700" fill="#1f2328">'
+                 f'Measured here: read-only inspection of \u2018Assumptions - Line 01\u2019 — one step, not the whole task</text>')
     parts.append(f'<text x="{W//2}" y="{mid_y - 12}" text-anchor="middle" font-size="22" fill="#57606a">↓</text>')
     # Left: workbook
     parts.append(panel(L, mid_y, left_w, mid_h, "REAL WORKBOOK — input.xlsx · \u2018Assumptions - Line 01\u2019 (LibreOffice render)"))
