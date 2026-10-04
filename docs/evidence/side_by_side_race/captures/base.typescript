@@ -1,0 +1,3553 @@
+Script started on 2026-10-05 00:13:31+01:00 [COMMAND="/tmp/racevenv/bin/python workload.py" <not executed on terminal>]
+B2 'Assumptions - Line 01 Revenue'
+B4 'Revenue'
+B5 'Volume '
+D5 'Units'
+E5 'As % of Total Volume'
+F5 "=+'Assumptions - Company Level'!F6+1"
+G5 '=EOMONTH(F5,16)'
+H5 '=EOMONTH(G5,12)'
+I5 '=EOMONTH(H5,12)'
+J5 '=EOMONTH(I5,12)'
+K5 '=EOMONTH(J5,12)'
+L5 datetime.datetime(2023, 1, 31, 0, 0)
+M5 '=EOMONTH(L5,1)'
+N5 '=EOMONTH(M5,1)'
+O5 '=EOMONTH(N5,1)'
+P5 '=EOMONTH(O5,1)'
+Q5 '=EOMONTH(P5,1)'
+R5 '=EOMONTH(Q5,1)'
+S5 '=EOMONTH(R5,1)'
+T5 '=EOMONTH(S5,1)'
+U5 '=EOMONTH(T5,1)'
+V5 '=EOMONTH(U5,1)'
+W5 '=EOMONTH(V5,1)'
+X5 '=EOMONTH(W5,1)'
+Y5 '=EOMONTH(X5,1)'
+Z5 '=EOMONTH(Y5,1)'
+AA5 '=EOMONTH(Z5,1)'
+AB5 '=EOMONTH(AA5,1)'
+AC5 '=EOMONTH(AB5,1)'
+AD5 '=EOMONTH(AC5,1)'
+AE5 '=EOMONTH(AD5,1)'
+AF5 '=EOMONTH(AE5,1)'
+AG5 '=EOMONTH(AF5,1)'
+AH5 '=EOMONTH(AG5,1)'
+AI5 '=EOMONTH(AH5,1)'
+AJ5 '=EOMONTH(AI5,1)'
+AK5 '=EOMONTH(AJ5,1)'
+AL5 '=EOMONTH(AK5,1)'
+AM5 '=EOMONTH(AL5,1)'
+AN5 '=EOMONTH(AM5,1)'
+B6 'Volume distribution per month'
+D6 'Volume % '
+B7 'Plant Capacity  '
+D7 'In KG'
+F7 <openpyxl.worksheet.formula.ArrayFormula object at 0x753133ada3c0>
+G7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e8e8910>
+H7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e8e8b90>
+I7 <openpyxl.worksheet.formula.ArrayFormula object at 0x7531326e9cd0>
+J7 <openpyxl.worksheet.formula.ArrayFormula object at 0x7531326ea8b0>
+K7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd62c30>
+L7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e87d8c0>
+M7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e87d7b0>
+N7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e8d1750>
+O7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e8d1850>
+P7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e7ec500>
+Q7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e7ed220>
+R7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e891fd0>
+S7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e8912b0>
+T7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e8e4a10>
+U7 <openpyxl.worksheet.formula.ArrayFormula object at 0x753133bd93d0>
+V7 <openpyxl.worksheet.formula.ArrayFormula object at 0x753133bd9f10>
+W7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e80c050>
+X7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e80c100>
+Y7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75313392c0f0>
+Z7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75313392cb90>
+AA7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e7bdbe0>
+AB7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312db2d950>
+AC7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312db2dcd0>
+AD7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ce4e190>
+AE7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ce4e200>
+AF7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e800f50>
+AG7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e800fb0>
+AH7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e801010>
+AI7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e801070>
+AJ7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e8010d0>
+AK7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e801130>
+AL7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e801190>
+AM7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e801250>
+AN7 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312e801c70>
+B8 'Base'
+D8 'In KG'
+F8 105000
+G8 105000
+H8 105000
+I8 105000
+J8 105000
+K8 105000
+L8 '=IF(L$5>=$F$5,$F8*L$6,0)'
+M8 '=IF(M$5>=$F$5,$F8*M$6,0)'
+N8 '=IF(N$5>=$F$5,$F8*N$6,0)'
+O8 '=IF(O$5>=$F$5,$F8*O$6,0)'
+P8 '=IF(P$5>=$F$5,$F8*P$6,0)'
+Q8 '=IF(Q$5>=$F$5,$F8*Q$6,0)'
+R8 '=IF(R$5>=$F$5,$F8*R$6,0)'
+S8 '=IF(S$5>=$F$5,$F8*S$6,0)'
+T8 '=IF(T$5>=$F$5,$F8*T$6,0)'
+U8 '=IF(U$5>=$F$5,$F8*U$6,0)'
+V8 '=IF(V$5>=$F$5,$F8*V$6,0)'
+W8 '=IF(W$5>=$F$5,$F8*W$6,0)'
+X8 '=$G8*X$6'
+Y8 '=$G8*Y$6'
+Z8 '=$G8*Z$6'
+AA8 '=$G8*AA$6'
+AB8 '=$G8*AB$6'
+AC8 '=$G8*AC$6'
+AD8 '=$G8*AD$6'
+AE8 '=$G8*AE$6'
+AF8 '=$G8*AF$6'
+AG8 '=$G8*AG$6'
+AH8 '=$G8*AH$6'
+AI8 '=$G8*AI$6'
+AJ8 '=$H8*AJ$6'
+AK8 '=$H8*AK$6'
+AL8 '=$H8*AL$6'
+AM8 '=$H8*AM$6'
+AN8 '=$H8*AN$6'
+B9 'Upside'
+D9 'In KG'
+F9 105000
+G9 105000
+H9 105000
+I9 105000
+J9 105000
+K9 105000
+L9 '=IF(L$5>=$F$5,$F9*L$6,0)'
+M9 '=IF(M$5>=$F$5,$F9*M$6,0)'
+N9 '=IF(N$5>=$F$5,$F9*N$6,0)'
+O9 '=IF(O$5>=$F$5,$F9*O$6,0)'
+P9 '=IF(P$5>=$F$5,$F9*P$6,0)'
+Q9 '=IF(Q$5>=$F$5,$F9*Q$6,0)'
+R9 '=IF(R$5>=$F$5,$F9*R$6,0)'
+S9 '=IF(S$5>=$F$5,$F9*S$6,0)'
+T9 '=IF(T$5>=$F$5,$F9*T$6,0)'
+U9 '=IF(U$5>=$F$5,$F9*U$6,0)'
+V9 '=IF(V$5>=$F$5,$F9*V$6,0)'
+W9 '=IF(W$5>=$F$5,$F9*W$6,0)'
+X9 '=$G9*X$6'
+Y9 '=$G9*Y$6'
+Z9 '=$G9*Z$6'
+AA9 '=$G9*AA$6'
+AB9 '=$G9*AB$6'
+AC9 '=$G9*AC$6'
+AD9 '=$G9*AD$6'
+AE9 '=$G9*AE$6'
+AF9 '=$G9*AF$6'
+AG9 '=$G9*AG$6'
+AH9 '=$G9*AH$6'
+AI9 '=$G9*AI$6'
+AJ9 '=$H9*AJ$6'
+AK9 '=$H9*AK$6'
+AL9 '=$H9*AL$6'
+AM9 '=$H9*AM$6'
+AN9 '=$H9*AN$6'
+B10 'Downside'
+D10 'In KG'
+F10 105000
+G10 105000
+H10 105000
+I10 105000
+J10 105000
+K10 105000
+L10 '=IF(L$5>=$F$5,$F10*L$6,0)'
+M10 '=IF(M$5>=$F$5,$F10*M$6,0)'
+N10 '=IF(N$5>=$F$5,$F10*N$6,0)'
+O10 '=IF(O$5>=$F$5,$F10*O$6,0)'
+P10 '=IF(P$5>=$F$5,$F10*P$6,0)'
+Q10 '=IF(Q$5>=$F$5,$F10*Q$6,0)'
+R10 '=IF(R$5>=$F$5,$F10*R$6,0)'
+S10 '=IF(S$5>=$F$5,$F10*S$6,0)'
+T10 '=IF(T$5>=$F$5,$F10*T$6,0)'
+U10 '=IF(U$5>=$F$5,$F10*U$6,0)'
+V10 '=IF(V$5>=$F$5,$F10*V$6,0)'
+W10 '=IF(W$5>=$F$5,$F10*W$6,0)'
+X10 '=$G10*X$6'
+Y10 '=$G10*Y$6'
+Z10 '=$G10*Z$6'
+AA10 '=$G10*AA$6'
+AB10 '=$G10*AB$6'
+AC10 '=$G10*AC$6'
+AD10 '=$G10*AD$6'
+AE10 '=$G10*AE$6'
+AF10 '=$G10*AF$6'
+AG10 '=$G10*AG$6'
+AH10 '=$G10*AH$6'
+AI10 '=$G10*AI$6'
+AJ10 '=$H10*AJ$6'
+AK10 '=$H10*AK$6'
+AL10 '=$H10*AL$6'
+AM10 '=$H10*AM$6'
+AN10 '=$H10*AN$6'
+B11 'Management'
+D11 'In KG'
+F11 105000
+G11 105000
+H11 105000
+I11 105000
+J11 105000
+K11 105000
+L11 '=IF(L$5>=$F$5,$F11*L$6,0)'
+M11 '=IF(M$5>=$F$5,$F11*M$6,0)'
+N11 '=IF(N$5>=$F$5,$F11*N$6,0)'
+O11 '=IF(O$5>=$F$5,$F11*O$6,0)'
+P11 '=IF(P$5>=$F$5,$F11*P$6,0)'
+Q11 '=IF(Q$5>=$F$5,$F11*Q$6,0)'
+R11 '=IF(R$5>=$F$5,$F11*R$6,0)'
+S11 '=IF(S$5>=$F$5,$F11*S$6,0)'
+T11 '=IF(T$5>=$F$5,$F11*T$6,0)'
+U11 '=IF(U$5>=$F$5,$F11*U$6,0)'
+V11 '=IF(V$5>=$F$5,$F11*V$6,0)'
+W11 '=IF(W$5>=$F$5,$F11*W$6,0)'
+X11 '=$G11*X$6'
+Y11 '=$G11*Y$6'
+Z11 '=$G11*Z$6'
+AA11 '=$G11*AA$6'
+AB11 '=$G11*AB$6'
+AC11 '=$G11*AC$6'
+AD11 '=$G11*AD$6'
+AE11 '=$G11*AE$6'
+AF11 '=$G11*AF$6'
+AG11 '=$G11*AG$6'
+AH11 '=$G11*AH$6'
+AI11 '=$G11*AI$6'
+AJ11 '=$H11*AJ$6'
+AK11 '=$H11*AK$6'
+AL11 '=$H11*AL$6'
+AM11 '=$H11*AM$6'
+AN11 '=$H11*AN$6'
+B13 'Capacity Utilization '
+D13 'In KG'
+E13 0.85
+F13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd90b90>
+G13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd90bf0>
+H13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd90c50>
+I13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd90cb0>
+J13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd90d10>
+K13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd90d70>
+L13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd90dd0>
+M13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd90e30>
+N13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd90e90>
+O13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd90ef0>
+P13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd90f50>
+Q13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd90fb0>
+R13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd91010>
+S13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd91070>
+T13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd910d0>
+U13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd91130>
+V13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd91190>
+W13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd911f0>
+X13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd91250>
+Y13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd912b0>
+Z13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd91310>
+AA13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd91370>
+AB13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd913d0>
+AC13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd91430>
+AD13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd91490>
+AE13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd914f0>
+AF13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd91550>
+AG13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd915b0>
+AH13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd91610>
+AI13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd91670>
+AJ13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd916d0>
+AK13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd91730>
+AL13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd91790>
+AM13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd917f0>
+AN13 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd91850>
+B14 'Base'
+D14 'In KG'
+F14 "=F17*(1+'Assumptions - Company Level'!$C$11)"
+G14 "=G17*(1+'Assumptions - Company Level'!$C$11)"
+H14 "=H17*(1+'Assumptions - Company Level'!$C$11)"
+I14 "=I17*(1+'Assumptions - Company Level'!$C$11)"
+J14 "=J17*(1+'Assumptions - Company Level'!$C$11)"
+K14 "=K17*(1+'Assumptions - Company Level'!$C$11)"
+L14 '=IF(L$5>=$F$5,$F14*L$6,0)'
+M14 '=IF(M$5>=$F$5,$F14*M$6,0)'
+N14 '=IF(N$5>=$F$5,$F14*N$6,0)'
+O14 '=IF(O$5>=$F$5,$F14*O$6,0)'
+P14 '=IF(P$5>=$F$5,$F14*P$6,0)'
+Q14 '=IF(Q$5>=$F$5,$F14*Q$6,0)'
+R14 '=IF(R$5>=$F$5,$F14*R$6,0)'
+S14 "=S17*(1+'Assumptions - Company Level'!$C$11)"
+T14 "=T17*(1+'Assumptions - Company Level'!$C$11)"
+U14 "=U17*(1+'Assumptions - Company Level'!$C$11)"
+V14 "=V17*(1+'Assumptions - Company Level'!$C$11)"
+W14 "=W17*(1+'Assumptions - Company Level'!$C$11)"
+X14 '=$G14*X$6'
+Y14 '=$G14*Y$6'
+Z14 '=$G14*Z$6'
+AA14 '=$G14*AA$6'
+AB14 '=$G14*AB$6'
+AC14 '=$G14*AC$6'
+AD14 '=$G14*AD$6'
+AE14 '=$G14*AE$6'
+AF14 '=$G14*AF$6'
+AG14 '=$G14*AG$6'
+AH14 '=$G14*AH$6'
+AI14 '=$G14*AI$6'
+AJ14 '=$H14*AJ$6'
+AK14 '=$H14*AK$6'
+AL14 '=$H14*AL$6'
+AM14 '=$H14*AM$6'
+AN14 '=$H14*AN$6'
+B15 'Upside'
+D15 'In KG'
+F15 "=F17*(1+'Assumptions - Company Level'!$C$12)"
+G15 "=G17*(1+'Assumptions - Company Level'!$C$12)"
+H15 "=H17*(1+'Assumptions - Company Level'!$C$12)"
+I15 "=I17*(1+'Assumptions - Company Level'!$C$12)"
+J15 "=J17*(1+'Assumptions - Company Level'!$C$12)"
+K15 "=K17*(1+'Assumptions - Company Level'!$C$12)"
+L15 '=IF(L$5>=$F$5,$F15*L$6,0)'
+M15 '=IF(M$5>=$F$5,$F15*M$6,0)'
+N15 '=IF(N$5>=$F$5,$F15*N$6,0)'
+O15 '=IF(O$5>=$F$5,$F15*O$6,0)'
+P15 '=IF(P$5>=$F$5,$F15*P$6,0)'
+Q15 '=IF(Q$5>=$F$5,$F15*Q$6,0)'
+R15 '=IF(R$5>=$F$5,$F15*R$6,0)'
+S15 "=S17*(1+'Assumptions - Company Level'!$C$12)"
+T15 "=T17*(1+'Assumptions - Company Level'!$C$12)"
+U15 "=U17*(1+'Assumptions - Company Level'!$C$12)"
+V15 "=V17*(1+'Assumptions - Company Level'!$C$12)"
+W15 "=W17*(1+'Assumptions - Company Level'!$C$12)"
+X15 '=$G15*X$6'
+Y15 '=$G15*Y$6'
+Z15 '=$G15*Z$6'
+AA15 '=$G15*AA$6'
+AB15 '=$G15*AB$6'
+AC15 '=$G15*AC$6'
+AD15 '=$G15*AD$6'
+AE15 '=$G15*AE$6'
+AF15 '=$G15*AF$6'
+AG15 '=$G15*AG$6'
+AH15 '=$G15*AH$6'
+AI15 '=$G15*AI$6'
+AJ15 '=$H15*AJ$6'
+AK15 '=$H15*AK$6'
+AL15 '=$H15*AL$6'
+AM15 '=$H15*AM$6'
+AN15 '=$H15*AN$6'
+B16 'Downside'
+D16 'In KG'
+F16 "=F17*(1+'Assumptions - Company Level'!$C$13)"
+G16 "=G17*(1+'Assumptions - Company Level'!$C$13)"
+H16 "=H17*(1+'Assumptions - Company Level'!$C$13)"
+I16 "=I17*(1+'Assumptions - Company Level'!$C$13)"
+J16 "=J17*(1+'Assumptions - Company Level'!$C$13)"
+K16 "=K17*(1+'Assumptions - Company Level'!$C$13)"
+L16 '=IF(L$5>=$F$5,$F16*L$6,0)'
+M16 '=IF(M$5>=$F$5,$F16*M$6,0)'
+N16 '=IF(N$5>=$F$5,$F16*N$6,0)'
+O16 '=IF(O$5>=$F$5,$F16*O$6,0)'
+P16 '=IF(P$5>=$F$5,$F16*P$6,0)'
+Q16 '=IF(Q$5>=$F$5,$F16*Q$6,0)'
+R16 '=IF(R$5>=$F$5,$F16*R$6,0)'
+S16 "=S17*(1+'Assumptions - Company Level'!$C$13)"
+T16 "=T17*(1+'Assumptions - Company Level'!$C$13)"
+U16 "=U17*(1+'Assumptions - Company Level'!$C$13)"
+V16 "=V17*(1+'Assumptions - Company Level'!$C$13)"
+W16 "=W17*(1+'Assumptions - Company Level'!$C$13)"
+X16 '=$G16*X$6'
+Y16 '=$G16*Y$6'
+Z16 '=$G16*Z$6'
+AA16 '=$G16*AA$6'
+AB16 '=$G16*AB$6'
+AC16 '=$G16*AC$6'
+AD16 '=$G16*AD$6'
+AE16 '=$G16*AE$6'
+AF16 '=$G16*AF$6'
+AG16 '=$G16*AG$6'
+AH16 '=$G16*AH$6'
+AI16 '=$G16*AI$6'
+AJ16 '=$H16*AJ$6'
+AK16 '=$H16*AK$6'
+AL16 '=$H16*AL$6'
+AM16 '=$H16*AM$6'
+AN16 '=$H16*AN$6'
+B17 'Management'
+D17 'In KG'
+F17 '=SUM(S17:W17)'
+G17 15000
+H17 30000
+I17 45000
+J17 55000
+K17 60000
+L17 '=IF(L$5>=$F$5,$F17*L$6,0)'
+M17 '=IF(M$5>=$F$5,$F17*M$6,0)'
+N17 '=IF(N$5>=$F$5,$F17*N$6,0)'
+O17 '=IF(O$5>=$F$5,$F17*O$6,0)'
+P17 '=IF(P$5>=$F$5,$F17*P$6,0)'
+Q17 '=IF(Q$5>=$F$5,$F17*Q$6,0)'
+R17 '=IF(R$5>=$F$5,$F17*R$6,0)'
+S17 700
+T17 800
+U17 900
+V17 1000
+W17 1100
+X17 '=$G17*X$6'
+Y17 '=$G17*Y$6'
+Z17 '=$G17*Z$6'
+AA17 '=$G17*AA$6'
+AB17 '=$G17*AB$6'
+AC17 '=$G17*AC$6'
+AD17 '=$G17*AD$6'
+AE17 '=$G17*AE$6'
+AF17 '=$G17*AF$6'
+AG17 '=$G17*AG$6'
+AH17 '=$G17*AH$6'
+AI17 '=$G17*AI$6'
+AJ17 '=$H17*AJ$6'
+AK17 '=$H17*AK$6'
+AL17 '=$H17*AL$6'
+AM17 '=$H17*AM$6'
+AN17 '=$H17*AN$6'
+B19 'Volume including Fish 01 as fish raw material'
+D19 '% of total volume'
+E19 0.8
+F19 '=$E$19*F13'
+G19 '=$E$19*G13'
+H19 '=$E$19*H13'
+I19 '=$E$19*I13'
+J19 '=$E$19*J13'
+K19 '=$E$19*K13'
+L19 '=$E$19*L13'
+M19 '=$E$19*M13'
+N19 '=$E$19*N13'
+O19 '=$E$19*O13'
+P19 '=$E$19*P13'
+Q19 '=$E$19*Q13'
+R19 '=$E$19*R13'
+S19 '=$E$19*S13'
+T19 '=$E$19*T13'
+U19 '=$E$19*U13'
+V19 '=$E$19*V13'
+W19 '=$E$19*W13'
+X19 '=$E$19*X13'
+Y19 '=$E$19*Y13'
+Z19 '=$E$19*Z13'
+AA19 '=$E$19*AA13'
+AB19 '=$E$19*AB13'
+AC19 '=$E$19*AC13'
+AD19 '=$E$19*AD13'
+AE19 '=$E$19*AE13'
+AF19 '=$E$19*AF13'
+AG19 '=$E$19*AG13'
+AH19 '=$E$19*AH13'
+AI19 '=$E$19*AI13'
+AJ19 '=$E$19*AJ13'
+AK19 '=$E$19*AK13'
+AL19 '=$E$19*AL13'
+AM19 '=$E$19*AM13'
+AN19 '=$E$19*AN13'
+B20 'Type 01 retail'
+E20 0.20833333333333334
+F20 '=SUM(L20:W20)'
+G20 '=$E20*G$19'
+H20 '=$E20*H$19'
+I20 '=$E20*I$19'
+J20 '=$E20*J$19'
+K20 '=$E20*K$19'
+L20 '=$E20*L$19'
+M20 '=$E20*M$19'
+N20 '=$E20*N$19'
+O20 '=$E20*O$19'
+P20 '=$E20*P$19'
+Q20 '=$E20*Q$19'
+R20 '=$E20*R$19'
+S20 '=$E20*S$19'
+T20 '=$E20*T$19'
+U20 '=$E20*U$19'
+V20 '=$E20*V$19'
+W20 '=$E20*W$19'
+X20 '=$E20*X$19'
+Y20 '=$E20*Y$19'
+Z20 '=$E20*Z$19'
+AA20 '=$E20*AA$19'
+AB20 '=$E20*AB$19'
+AC20 '=$E20*AC$19'
+AD20 '=$E20*AD$19'
+AE20 '=$E20*AE$19'
+AF20 '=$E20*AF$19'
+AG20 '=$E20*AG$19'
+AH20 '=$E20*AH$19'
+AI20 '=$E20*AI$19'
+AJ20 '=$E20*AJ$19'
+AK20 '=$E20*AK$19'
+AL20 '=$E20*AL$19'
+AM20 '=$E20*AM$19'
+AN20 '=$E20*AN$19'
+B21 'Type 01 foodservice'
+E21 0.06666666666666667
+F21 '=SUM(L21:W21)'
+G21 '=$E21*G$19'
+H21 '=$E21*H$19'
+I21 '=$E21*I$19'
+J21 '=$E21*J$19'
+K21 '=$E21*K$19'
+L21 '=$E21*L$19'
+M21 '=$E21*M$19'
+N21 '=$E21*N$19'
+O21 '=$E21*O$19'
+P21 '=$E21*P$19'
+Q21 '=$E21*Q$19'
+R21 '=$E21*R$19'
+S21 '=$E21*S$19'
+T21 '=$E21*T$19'
+U21 '=$E21*U$19'
+V21 '=$E21*V$19'
+W21 '=$E21*W$19'
+X21 '=$E21*X$19'
+Y21 '=$E21*Y$19'
+Z21 '=$E21*Z$19'
+AA21 '=$E21*AA$19'
+AB21 '=$E21*AB$19'
+AC21 '=$E21*AC$19'
+AD21 '=$E21*AD$19'
+AE21 '=$E21*AE$19'
+AF21 '=$E21*AF$19'
+AG21 '=$E21*AG$19'
+AH21 '=$E21*AH$19'
+AI21 '=$E21*AI$19'
+AJ21 '=$E21*AJ$19'
+AK21 '=$E21*AK$19'
+AL21 '=$E21*AL$19'
+AM21 '=$E21*AM$19'
+AN21 '=$E21*AN$19'
+B22 'Type 02 retail'
+E22 0.21666666666666667
+F22 '=SUM(L22:W22)'
+G22 '=$E22*G$19'
+H22 '=$E22*H$19'
+I22 '=$E22*I$19'
+J22 '=$E22*J$19'
+K22 '=$E22*K$19'
+L22 '=$E22*L$19'
+M22 '=$E22*M$19'
+N22 '=$E22*N$19'
+O22 '=$E22*O$19'
+P22 '=$E22*P$19'
+Q22 '=$E22*Q$19'
+R22 '=$E22*R$19'
+S22 '=$E22*S$19'
+T22 '=$E22*T$19'
+U22 '=$E22*U$19'
+V22 '=$E22*V$19'
+W22 '=$E22*W$19'
+X22 '=$E22*X$19'
+Y22 '=$E22*Y$19'
+Z22 '=$E22*Z$19'
+AA22 '=$E22*AA$19'
+AB22 '=$E22*AB$19'
+AC22 '=$E22*AC$19'
+AD22 '=$E22*AD$19'
+AE22 '=$E22*AE$19'
+AF22 '=$E22*AF$19'
+AG22 '=$E22*AG$19'
+AH22 '=$E22*AH$19'
+AI22 '=$E22*AI$19'
+AJ22 '=$E22*AJ$19'
+AK22 '=$E22*AK$19'
+AL22 '=$E22*AL$19'
+AM22 '=$E22*AM$19'
+AN22 '=$E22*AN$19'
+B23 'Type 02 foodservice'
+E23 0.08333333333333333
+F23 '=SUM(L23:W23)'
+G23 '=$E23*G$19'
+H23 '=$E23*H$19'
+I23 '=$E23*I$19'
+J23 '=$E23*J$19'
+K23 '=$E23*K$19'
+L23 '=$E23*L$19'
+M23 '=$E23*M$19'
+N23 '=$E23*N$19'
+O23 '=$E23*O$19'
+P23 '=$E23*P$19'
+Q23 '=$E23*Q$19'
+R23 '=$E23*R$19'
+S23 '=$E23*S$19'
+T23 '=$E23*T$19'
+U23 '=$E23*U$19'
+V23 '=$E23*V$19'
+W23 '=$E23*W$19'
+X23 '=$E23*X$19'
+Y23 '=$E23*Y$19'
+Z23 '=$E23*Z$19'
+AA23 '=$E23*AA$19'
+AB23 '=$E23*AB$19'
+AC23 '=$E23*AC$19'
+AD23 '=$E23*AD$19'
+AE23 '=$E23*AE$19'
+AF23 '=$E23*AF$19'
+AG23 '=$E23*AG$19'
+AH23 '=$E23*AH$19'
+AI23 '=$E23*AI$19'
+AJ23 '=$E23*AJ$19'
+AK23 '=$E23*AK$19'
+AL23 '=$E23*AL$19'
+AM23 '=$E23*AM$19'
+AN23 '=$E23*AN$19'
+B24 'Type 03 retail'
+E24 0.175
+F24 '=SUM(L24:W24)'
+G24 '=$E24*G$19'
+H24 '=$E24*H$19'
+I24 '=$E24*I$19'
+J24 '=$E24*J$19'
+K24 '=$E24*K$19'
+L24 '=$E24*L$19'
+M24 '=$E24*M$19'
+N24 '=$E24*N$19'
+O24 '=$E24*O$19'
+P24 '=$E24*P$19'
+Q24 '=$E24*Q$19'
+R24 '=$E24*R$19'
+S24 '=$E24*S$19'
+T24 '=$E24*T$19'
+U24 '=$E24*U$19'
+V24 '=$E24*V$19'
+W24 '=$E24*W$19'
+X24 '=$E24*X$19'
+Y24 '=$E24*Y$19'
+Z24 '=$E24*Z$19'
+AA24 '=$E24*AA$19'
+AB24 '=$E24*AB$19'
+AC24 '=$E24*AC$19'
+AD24 '=$E24*AD$19'
+AE24 '=$E24*AE$19'
+AF24 '=$E24*AF$19'
+AG24 '=$E24*AG$19'
+AH24 '=$E24*AH$19'
+AI24 '=$E24*AI$19'
+AJ24 '=$E24*AJ$19'
+AK24 '=$E24*AK$19'
+AL24 '=$E24*AL$19'
+AM24 '=$E24*AM$19'
+AN24 '=$E24*AN$19'
+B25 'Type 03 foodservice'
+E25 0.08333333333333333
+F25 '=SUM(L25:W25)'
+G25 '=$E25*G$19'
+H25 '=$E25*H$19'
+I25 '=$E25*I$19'
+J25 '=$E25*J$19'
+K25 '=$E25*K$19'
+L25 '=$E25*L$19'
+M25 '=$E25*M$19'
+N25 '=$E25*N$19'
+O25 '=$E25*O$19'
+P25 '=$E25*P$19'
+Q25 '=$E25*Q$19'
+R25 '=$E25*R$19'
+S25 '=$E25*S$19'
+T25 '=$E25*T$19'
+U25 '=$E25*U$19'
+V25 '=$E25*V$19'
+W25 '=$E25*W$19'
+X25 '=$E25*X$19'
+Y25 '=$E25*Y$19'
+Z25 '=$E25*Z$19'
+AA25 '=$E25*AA$19'
+AB25 '=$E25*AB$19'
+AC25 '=$E25*AC$19'
+AD25 '=$E25*AD$19'
+AE25 '=$E25*AE$19'
+AF25 '=$E25*AF$19'
+AG25 '=$E25*AG$19'
+AH25 '=$E25*AH$19'
+AI25 '=$E25*AI$19'
+AJ25 '=$E25*AJ$19'
+AK25 '=$E25*AK$19'
+AL25 '=$E25*AL$19'
+AM25 '=$E25*AM$19'
+AN25 '=$E25*AN$19'
+B26 'Type 04 retail'
+E26 0.1
+F26 '=SUM(L26:W26)'
+G26 '=$E26*G$19'
+H26 '=$E26*H$19'
+I26 '=$E26*I$19'
+J26 '=$E26*J$19'
+K26 '=$E26*K$19'
+L26 '=$E26*L$19'
+M26 '=$E26*M$19'
+N26 '=$E26*N$19'
+O26 '=$E26*O$19'
+P26 '=$E26*P$19'
+Q26 '=$E26*Q$19'
+R26 '=$E26*R$19'
+S26 '=$E26*S$19'
+T26 '=$E26*T$19'
+U26 '=$E26*U$19'
+V26 '=$E26*V$19'
+W26 '=$E26*W$19'
+X26 '=$E26*X$19'
+Y26 '=$E26*Y$19'
+Z26 '=$E26*Z$19'
+AA26 '=$E26*AA$19'
+AB26 '=$E26*AB$19'
+AC26 '=$E26*AC$19'
+AD26 '=$E26*AD$19'
+AE26 '=$E26*AE$19'
+AF26 '=$E26*AF$19'
+AG26 '=$E26*AG$19'
+AH26 '=$E26*AH$19'
+AI26 '=$E26*AI$19'
+AJ26 '=$E26*AJ$19'
+AK26 '=$E26*AK$19'
+AL26 '=$E26*AL$19'
+AM26 '=$E26*AM$19'
+AN26 '=$E26*AN$19'
+B27 'Type 04 foodservice'
+E27 0.06666666666666667
+F27 '=SUM(L27:W27)'
+G27 '=$E27*G$19'
+H27 '=$E27*H$19'
+I27 '=$E27*I$19'
+J27 '=$E27*J$19'
+K27 '=$E27*K$19'
+L27 '=$E27*L$19'
+M27 '=$E27*M$19'
+N27 '=$E27*N$19'
+O27 '=$E27*O$19'
+P27 '=$E27*P$19'
+Q27 '=$E27*Q$19'
+R27 '=$E27*R$19'
+S27 '=$E27*S$19'
+T27 '=$E27*T$19'
+U27 '=$E27*U$19'
+V27 '=$E27*V$19'
+W27 '=$E27*W$19'
+X27 '=$E27*X$19'
+Y27 '=$E27*Y$19'
+Z27 '=$E27*Z$19'
+AA27 '=$E27*AA$19'
+AB27 '=$E27*AB$19'
+AC27 '=$E27*AC$19'
+AD27 '=$E27*AD$19'
+AE27 '=$E27*AE$19'
+AF27 '=$E27*AF$19'
+AG27 '=$E27*AG$19'
+AH27 '=$E27*AH$19'
+AI27 '=$E27*AI$19'
+AJ27 '=$E27*AJ$19'
+AK27 '=$E27*AK$19'
+AL27 '=$E27*AL$19'
+AM27 '=$E27*AM$19'
+AN27 '=$E27*AN$19'
+B29 'Volume including Fish 02 as fish raw material'
+D29 '% of total volume'
+E29 '=1-E19'
+F29 '=$E29*F$13'
+G29 '=$E29*G$13'
+H29 '=$E29*H$13'
+I29 '=$E29*I$13'
+J29 '=$E29*J$13'
+K29 '=$E29*K$13'
+L29 '=$E29*L$13'
+M29 '=$E29*M$13'
+N29 '=$E29*N$13'
+O29 '=$E29*O$13'
+P29 '=$E29*P$13'
+Q29 '=$E29*Q$13'
+R29 '=$E29*R$13'
+S29 '=$E29*S$13'
+T29 '=$E29*T$13'
+U29 '=$E29*U$13'
+V29 '=$E29*V$13'
+W29 '=$E29*W$13'
+X29 '=$E29*X$13'
+Y29 '=$E29*Y$13'
+Z29 '=$E29*Z$13'
+AA29 '=$E29*AA$13'
+AB29 '=$E29*AB$13'
+AC29 '=$E29*AC$13'
+AD29 '=$E29*AD$13'
+AE29 '=$E29*AE$13'
+AF29 '=$E29*AF$13'
+AG29 '=$E29*AG$13'
+AH29 '=$E29*AH$13'
+AI29 '=$E29*AI$13'
+AJ29 '=$E29*AJ$13'
+AK29 '=$E29*AK$13'
+AL29 '=$E29*AL$13'
+AM29 '=$E29*AM$13'
+AN29 '=$E29*AN$13'
+B30 'Type 01 retail'
+E30 0.13333333333333333
+F30 '=$E30*F$29'
+G30 '=$E30*G$29'
+H30 '=$E30*H$29'
+I30 '=$E30*I$29'
+J30 '=$E30*J$29'
+K30 '=$E30*K$29'
+L30 '=$E30*L$29'
+M30 '=$E30*M$29'
+N30 '=$E30*N$29'
+O30 '=$E30*O$29'
+P30 '=$E30*P$29'
+Q30 '=$E30*Q$29'
+R30 '=$E30*R$29'
+S30 '=$E30*S$29'
+T30 '=$E30*T$29'
+U30 '=$E30*U$29'
+V30 '=$E30*V$29'
+W30 '=$E30*W$29'
+X30 '=$E30*X$29'
+Y30 '=$E30*Y$29'
+Z30 '=$E30*Z$29'
+AA30 '=$E30*AA$29'
+AB30 '=$E30*AB$29'
+AC30 '=$E30*AC$29'
+AD30 '=$E30*AD$29'
+AE30 '=$E30*AE$29'
+AF30 '=$E30*AF$29'
+AG30 '=$E30*AG$29'
+AH30 '=$E30*AH$29'
+AI30 '=$E30*AI$29'
+AJ30 '=$E30*AJ$29'
+AK30 '=$E30*AK$29'
+AL30 '=$E30*AL$29'
+AM30 '=$E30*AM$29'
+AN30 '=$E30*AN$29'
+B31 'Type 01 foodservice'
+E31 0.06666666666666667
+F31 '=$E31*F$29'
+G31 '=$E31*G$29'
+H31 '=$E31*H$29'
+I31 '=$E31*I$29'
+J31 '=$E31*J$29'
+K31 '=$E31*K$29'
+L31 '=$E31*L$29'
+M31 '=$E31*M$29'
+N31 '=$E31*N$29'
+O31 '=$E31*O$29'
+P31 '=$E31*P$29'
+Q31 '=$E31*Q$29'
+R31 '=$E31*R$29'
+S31 '=$E31*S$29'
+T31 '=$E31*T$29'
+U31 '=$E31*U$29'
+V31 '=$E31*V$29'
+W31 '=$E31*W$29'
+X31 '=$E31*X$29'
+Y31 '=$E31*Y$29'
+Z31 '=$E31*Z$29'
+AA31 '=$E31*AA$29'
+AB31 '=$E31*AB$29'
+AC31 '=$E31*AC$29'
+AD31 '=$E31*AD$29'
+AE31 '=$E31*AE$29'
+AF31 '=$E31*AF$29'
+AG31 '=$E31*AG$29'
+AH31 '=$E31*AH$29'
+AI31 '=$E31*AI$29'
+AJ31 '=$E31*AJ$29'
+AK31 '=$E31*AK$29'
+AL31 '=$E31*AL$29'
+AM31 '=$E31*AM$29'
+AN31 '=$E31*AN$29'
+B32 'Type 02 retail'
+E32 0.21666666666666667
+F32 '=$E32*F$29'
+G32 '=$E32*G$29'
+H32 '=$E32*H$29'
+I32 '=$E32*I$29'
+J32 '=$E32*J$29'
+K32 '=$E32*K$29'
+L32 '=$E32*L$29'
+M32 '=$E32*M$29'
+N32 '=$E32*N$29'
+O32 '=$E32*O$29'
+P32 '=$E32*P$29'
+Q32 '=$E32*Q$29'
+R32 '=$E32*R$29'
+S32 '=$E32*S$29'
+T32 '=$E32*T$29'
+U32 '=$E32*U$29'
+V32 '=$E32*V$29'
+W32 '=$E32*W$29'
+X32 '=$E32*X$29'
+Y32 '=$E32*Y$29'
+Z32 '=$E32*Z$29'
+AA32 '=$E32*AA$29'
+AB32 '=$E32*AB$29'
+AC32 '=$E32*AC$29'
+AD32 '=$E32*AD$29'
+AE32 '=$E32*AE$29'
+AF32 '=$E32*AF$29'
+AG32 '=$E32*AG$29'
+AH32 '=$E32*AH$29'
+AI32 '=$E32*AI$29'
+AJ32 '=$E32*AJ$29'
+AK32 '=$E32*AK$29'
+AL32 '=$E32*AL$29'
+AM32 '=$E32*AM$29'
+AN32 '=$E32*AN$29'
+B33 'Type 02 foodservice'
+E33 0.1
+F33 '=$E33*F$29'
+G33 '=$E33*G$29'
+H33 '=$E33*H$29'
+I33 '=$E33*I$29'
+J33 '=$E33*J$29'
+K33 '=$E33*K$29'
+L33 '=$E33*L$29'
+M33 '=$E33*M$29'
+N33 '=$E33*N$29'
+O33 '=$E33*O$29'
+P33 '=$E33*P$29'
+Q33 '=$E33*Q$29'
+R33 '=$E33*R$29'
+S33 '=$E33*S$29'
+T33 '=$E33*T$29'
+U33 '=$E33*U$29'
+V33 '=$E33*V$29'
+W33 '=$E33*W$29'
+X33 '=$E33*X$29'
+Y33 '=$E33*Y$29'
+Z33 '=$E33*Z$29'
+AA33 '=$E33*AA$29'
+AB33 '=$E33*AB$29'
+AC33 '=$E33*AC$29'
+AD33 '=$E33*AD$29'
+AE33 '=$E33*AE$29'
+AF33 '=$E33*AF$29'
+AG33 '=$E33*AG$29'
+AH33 '=$E33*AH$29'
+AI33 '=$E33*AI$29'
+AJ33 '=$E33*AJ$29'
+AK33 '=$E33*AK$29'
+AL33 '=$E33*AL$29'
+AM33 '=$E33*AM$29'
+AN33 '=$E33*AN$29'
+B34 'Type 03 retail'
+E34 0.21666666666666667
+F34 '=$E34*F$29'
+G34 '=$E34*G$29'
+H34 '=$E34*H$29'
+I34 '=$E34*I$29'
+J34 '=$E34*J$29'
+K34 '=$E34*K$29'
+L34 '=$E34*L$29'
+M34 '=$E34*M$29'
+N34 '=$E34*N$29'
+O34 '=$E34*O$29'
+P34 '=$E34*P$29'
+Q34 '=$E34*Q$29'
+R34 '=$E34*R$29'
+S34 '=$E34*S$29'
+T34 '=$E34*T$29'
+U34 '=$E34*U$29'
+V34 '=$E34*V$29'
+W34 '=$E34*W$29'
+X34 '=$E34*X$29'
+Y34 '=$E34*Y$29'
+Z34 '=$E34*Z$29'
+AA34 '=$E34*AA$29'
+AB34 '=$E34*AB$29'
+AC34 '=$E34*AC$29'
+AD34 '=$E34*AD$29'
+AE34 '=$E34*AE$29'
+AF34 '=$E34*AF$29'
+AG34 '=$E34*AG$29'
+AH34 '=$E34*AH$29'
+AI34 '=$E34*AI$29'
+AJ34 '=$E34*AJ$29'
+AK34 '=$E34*AK$29'
+AL34 '=$E34*AL$29'
+AM34 '=$E34*AM$29'
+AN34 '=$E34*AN$29'
+B35 'Type 03 foodservice'
+E35 0.08333333333333333
+F35 '=$E35*F$29'
+G35 '=$E35*G$29'
+H35 '=$E35*H$29'
+I35 '=$E35*I$29'
+J35 '=$E35*J$29'
+K35 '=$E35*K$29'
+L35 '=$E35*L$29'
+M35 '=$E35*M$29'
+N35 '=$E35*N$29'
+O35 '=$E35*O$29'
+P35 '=$E35*P$29'
+Q35 '=$E35*Q$29'
+R35 '=$E35*R$29'
+S35 '=$E35*S$29'
+T35 '=$E35*T$29'
+U35 '=$E35*U$29'
+V35 '=$E35*V$29'
+W35 '=$E35*W$29'
+X35 '=$E35*X$29'
+Y35 '=$E35*Y$29'
+Z35 '=$E35*Z$29'
+AA35 '=$E35*AA$29'
+AB35 '=$E35*AB$29'
+AC35 '=$E35*AC$29'
+AD35 '=$E35*AD$29'
+AE35 '=$E35*AE$29'
+AF35 '=$E35*AF$29'
+AG35 '=$E35*AG$29'
+AH35 '=$E35*AH$29'
+AI35 '=$E35*AI$29'
+AJ35 '=$E35*AJ$29'
+AK35 '=$E35*AK$29'
+AL35 '=$E35*AL$29'
+AM35 '=$E35*AM$29'
+AN35 '=$E35*AN$29'
+B36 'Type 04 retail'
+E36 0.13333333333333333
+F36 '=$E36*F$29'
+G36 '=$E36*G$29'
+H36 '=$E36*H$29'
+I36 '=$E36*I$29'
+J36 '=$E36*J$29'
+K36 '=$E36*K$29'
+L36 '=$E36*L$29'
+M36 '=$E36*M$29'
+N36 '=$E36*N$29'
+O36 '=$E36*O$29'
+P36 '=$E36*P$29'
+Q36 '=$E36*Q$29'
+R36 '=$E36*R$29'
+S36 '=$E36*S$29'
+T36 '=$E36*T$29'
+U36 '=$E36*U$29'
+V36 '=$E36*V$29'
+W36 '=$E36*W$29'
+X36 '=$E36*X$29'
+Y36 '=$E36*Y$29'
+Z36 '=$E36*Z$29'
+AA36 '=$E36*AA$29'
+AB36 '=$E36*AB$29'
+AC36 '=$E36*AC$29'
+AD36 '=$E36*AD$29'
+AE36 '=$E36*AE$29'
+AF36 '=$E36*AF$29'
+AG36 '=$E36*AG$29'
+AH36 '=$E36*AH$29'
+AI36 '=$E36*AI$29'
+AJ36 '=$E36*AJ$29'
+AK36 '=$E36*AK$29'
+AL36 '=$E36*AL$29'
+AM36 '=$E36*AM$29'
+AN36 '=$E36*AN$29'
+B37 'Type 04 foodservice'
+E37 0.05
+F37 '=$E37*F$29'
+G37 '=$E37*G$29'
+H37 '=$E37*H$29'
+I37 '=$E37*I$29'
+J37 '=$E37*J$29'
+K37 '=$E37*K$29'
+L37 '=$E37*L$29'
+M37 '=$E37*M$29'
+N37 '=$E37*N$29'
+O37 '=$E37*O$29'
+P37 '=$E37*P$29'
+Q37 '=$E37*Q$29'
+R37 '=$E37*R$29'
+S37 '=$E37*S$29'
+T37 '=$E37*T$29'
+U37 '=$E37*U$29'
+V37 '=$E37*V$29'
+W37 '=$E37*W$29'
+X37 '=$E37*X$29'
+Y37 '=$E37*Y$29'
+Z37 '=$E37*Z$29'
+AA37 '=$E37*AA$29'
+AB37 '=$E37*AB$29'
+AC37 '=$E37*AC$29'
+AD37 '=$E37*AD$29'
+AE37 '=$E37*AE$29'
+AF37 '=$E37*AF$29'
+AG37 '=$E37*AG$29'
+AH37 '=$E37*AH$29'
+AI37 '=$E37*AI$29'
+AJ37 '=$E37*AJ$29'
+AK37 '=$E37*AK$29'
+AL37 '=$E37*AL$29'
+AM37 '=$E37*AM$29'
+AN37 '=$E37*AN$29'
+B39 'Sales price of Line 01 product in USD /Kg including Fish 01 as fish raw material'
+B40 'Natural retail'
+F40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cd93fb0>
+G40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c050>
+H40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c0b0>
+I40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c110>
+J40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c170>
+K40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c1d0>
+L40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c230>
+M40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c290>
+N40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c2f0>
+O40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c350>
+P40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c3b0>
+Q40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c410>
+R40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c470>
+S40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c4d0>
+T40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c530>
+U40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c590>
+V40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c5f0>
+W40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c650>
+X40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c6b0>
+Y40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c710>
+Z40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c770>
+AA40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c7d0>
+AB40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c830>
+AC40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c890>
+AD40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c8f0>
+AE40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c950>
+AF40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5c9b0>
+AG40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5ca10>
+AH40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5ca70>
+AI40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5cad0>
+AJ40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5cb30>
+AK40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5cb90>
+AL40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5cbf0>
+AM40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5cc50>
+AN40 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5ccb0>
+B41 'Base'
+D41 'USD/Kg'
+F41 "=F44*(1+'Assumptions - Company Level'!$E$11)"
+G41 "=F41*(1+'Assumptions - Company Level'!H$29)"
+H41 "=G41*(1+'Assumptions - Company Level'!I$29)"
+I41 "=H41*(1+'Assumptions - Company Level'!J$29)"
+J41 "=I41*(1+'Assumptions - Company Level'!K$29)"
+K41 "=J41*(1+'Assumptions - Company Level'!L$29)"
+L41 '=F41'
+M41 '=L41'
+N41 '=M41'
+O41 '=N41'
+P41 '=O41'
+Q41 '=P41'
+R41 '=Q41'
+S41 '=R41'
+T41 '=S41'
+U41 '=T41'
+V41 '=U41'
+W41 '=V41'
+X41 '=+G41'
+Y41 '=X41'
+Z41 '=Y41'
+AA41 '=Z41'
+AB41 '=AA41'
+AC41 '=AB41'
+AD41 '=AC41'
+AE41 '=AD41'
+AF41 '=AE41'
+AG41 '=AF41'
+AH41 '=AG41'
+AI41 '=AH41'
+AJ41 '=+H41'
+AK41 '=AJ41'
+AL41 '=AK41'
+AM41 '=AL41'
+AN41 '=AM41'
+B42 'Upside'
+D42 '=D41'
+F42 "=F44*(1+'Assumptions - Company Level'!$E$12)"
+G42 "=F42*(1+'Assumptions - Company Level'!H$29)"
+H42 "=G42*(1+'Assumptions - Company Level'!I$29)"
+I42 "=H42*(1+'Assumptions - Company Level'!J$29)"
+J42 "=I42*(1+'Assumptions - Company Level'!K$29)"
+K42 "=J42*(1+'Assumptions - Company Level'!L$29)"
+L42 '=F42'
+M42 '=L42'
+N42 '=M42'
+O42 '=N42'
+P42 '=O42'
+Q42 '=P42'
+R42 '=Q42'
+S42 '=R42'
+T42 '=S42'
+U42 '=T42'
+V42 '=U42'
+W42 '=V42'
+X42 '=+G42'
+Y42 '=X42'
+Z42 '=Y42'
+AA42 '=Z42'
+AB42 '=AA42'
+AC42 '=AB42'
+AD42 '=AC42'
+AE42 '=AD42'
+AF42 '=AE42'
+AG42 '=AF42'
+AH42 '=AG42'
+AI42 '=AH42'
+AJ42 '=+H42'
+AK42 '=AJ42'
+AL42 '=AK42'
+AM42 '=AL42'
+AN42 '=AM42'
+B43 'Downside'
+D43 '=D42'
+F43 "=F44*(1+'Assumptions - Company Level'!$E$13)"
+G43 "=F43*(1+'Assumptions - Company Level'!H$29)"
+H43 "=G43*(1+'Assumptions - Company Level'!I$29)"
+I43 "=H43*(1+'Assumptions - Company Level'!J$29)"
+J43 "=I43*(1+'Assumptions - Company Level'!K$29)"
+K43 "=J43*(1+'Assumptions - Company Level'!L$29)"
+L43 '=F43'
+M43 '=L43'
+N43 '=M43'
+O43 '=N43'
+P43 '=O43'
+Q43 '=P43'
+R43 '=Q43'
+S43 '=R43'
+T43 '=S43'
+U43 '=T43'
+V43 '=U43'
+W43 '=V43'
+X43 '=+G43'
+Y43 '=X43'
+Z43 '=Y43'
+AA43 '=Z43'
+AB43 '=AA43'
+AC43 '=AB43'
+AD43 '=AC43'
+AE43 '=AD43'
+AF43 '=AE43'
+AG43 '=AF43'
+AH43 '=AG43'
+AI43 '=AH43'
+AJ43 '=+H43'
+AK43 '=AJ43'
+AL43 '=AK43'
+AM43 '=AL43'
+AN43 '=AM43'
+B44 'Management'
+D44 '=D43'
+F44 4.4
+G44 "=F44*(1+'Assumptions - Company Level'!H$29)"
+H44 "=G44*(1+'Assumptions - Company Level'!I$29)"
+I44 "=H44*(1+'Assumptions - Company Level'!J$29)"
+J44 "=I44*(1+'Assumptions - Company Level'!K$29)"
+K44 "=J44*(1+'Assumptions - Company Level'!L$29)"
+L44 '=F44'
+M44 '=L44'
+N44 '=M44'
+O44 '=N44'
+P44 '=O44'
+Q44 '=P44'
+R44 '=Q44'
+S44 '=R44'
+T44 '=S44'
+U44 '=T44'
+V44 '=U44'
+W44 '=V44'
+X44 '=+G44'
+Y44 '=X44'
+Z44 '=Y44'
+AA44 '=Z44'
+AB44 '=AA44'
+AC44 '=AB44'
+AD44 '=AC44'
+AE44 '=AD44'
+AF44 '=AE44'
+AG44 '=AF44'
+AH44 '=AG44'
+AI44 '=AH44'
+AJ44 '=+H44'
+AK44 '=AJ44'
+AL44 '=AK44'
+AM44 '=AL44'
+AN44 '=AM44'
+B46 'Type 01 foodservice'
+F46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f170>
+G46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f1d0>
+H46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f230>
+I46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f290>
+J46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f2f0>
+K46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f350>
+L46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f3b0>
+M46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f410>
+N46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f470>
+O46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f4d0>
+P46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f530>
+Q46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f590>
+R46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f5f0>
+S46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f650>
+T46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f6b0>
+U46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f710>
+V46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f770>
+W46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f7d0>
+X46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f830>
+Y46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f890>
+Z46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f8f0>
+AA46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f950>
+AB46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5f9b0>
+AC46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5fa10>
+AD46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5fa70>
+AE46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5fad0>
+AF46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5fb30>
+AG46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5fb90>
+AH46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5fbf0>
+AI46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5fc50>
+AJ46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5fcb0>
+AK46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5fd10>
+AL46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5fd70>
+AM46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5fdd0>
+AN46 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc5fe30>
+B47 'Base'
+D47 '=D41'
+F47 "=F50*(1+'Assumptions - Company Level'!$E$11)"
+G47 "=F47*(1+'Assumptions - Company Level'!H$29)"
+H47 "=G47*(1+'Assumptions - Company Level'!I$29)"
+I47 "=H47*(1+'Assumptions - Company Level'!J$29)"
+J47 "=I47*(1+'Assumptions - Company Level'!K$29)"
+K47 "=J47*(1+'Assumptions - Company Level'!L$29)"
+L47 '=F47'
+M47 '=L47'
+N47 '=M47'
+O47 '=N47'
+P47 '=O47'
+Q47 '=P47'
+R47 '=Q47'
+S47 '=R47'
+T47 '=S47'
+U47 '=T47'
+V47 '=U47'
+W47 '=V47'
+X47 '=+G47'
+Y47 '=X47'
+Z47 '=Y47'
+AA47 '=Z47'
+AB47 '=AA47'
+AC47 '=AB47'
+AD47 '=AC47'
+AE47 '=AD47'
+AF47 '=AE47'
+AG47 '=AF47'
+AH47 '=AG47'
+AI47 '=AH47'
+AJ47 '=+H47'
+AK47 '=AJ47'
+AL47 '=AK47'
+AM47 '=AL47'
+AN47 '=AM47'
+B48 'Upside'
+D48 '=D42'
+F48 "=F50*(1+'Assumptions - Company Level'!$E$12)"
+G48 "=F48*(1+'Assumptions - Company Level'!H$29)"
+H48 "=G48*(1+'Assumptions - Company Level'!I$29)"
+I48 "=H48*(1+'Assumptions - Company Level'!J$29)"
+J48 "=I48*(1+'Assumptions - Company Level'!K$29)"
+K48 "=J48*(1+'Assumptions - Company Level'!L$29)"
+L48 '=F48'
+M48 '=L48'
+N48 '=M48'
+O48 '=N48'
+P48 '=O48'
+Q48 '=P48'
+R48 '=Q48'
+S48 '=R48'
+T48 '=S48'
+U48 '=T48'
+V48 '=U48'
+W48 '=V48'
+X48 '=+G48'
+Y48 '=X48'
+Z48 '=Y48'
+AA48 '=Z48'
+AB48 '=AA48'
+AC48 '=AB48'
+AD48 '=AC48'
+AE48 '=AD48'
+AF48 '=AE48'
+AG48 '=AF48'
+AH48 '=AG48'
+AI48 '=AH48'
+AJ48 '=+H48'
+AK48 '=AJ48'
+AL48 '=AK48'
+AM48 '=AL48'
+AN48 '=AM48'
+B49 'Downside'
+D49 '=D43'
+F49 "=F50*(1+'Assumptions - Company Level'!$E$13)"
+G49 "=F49*(1+'Assumptions - Company Level'!H$29)"
+H49 "=G49*(1+'Assumptions - Company Level'!I$29)"
+I49 "=H49*(1+'Assumptions - Company Level'!J$29)"
+J49 "=I49*(1+'Assumptions - Company Level'!K$29)"
+K49 "=J49*(1+'Assumptions - Company Level'!L$29)"
+L49 '=F49'
+M49 '=L49'
+N49 '=M49'
+O49 '=N49'
+P49 '=O49'
+Q49 '=P49'
+R49 '=Q49'
+S49 '=R49'
+T49 '=S49'
+U49 '=T49'
+V49 '=U49'
+W49 '=V49'
+X49 '=+G49'
+Y49 '=X49'
+Z49 '=Y49'
+AA49 '=Z49'
+AB49 '=AA49'
+AC49 '=AB49'
+AD49 '=AC49'
+AE49 '=AD49'
+AF49 '=AE49'
+AG49 '=AF49'
+AH49 '=AG49'
+AI49 '=AH49'
+AJ49 '=+H49'
+AK49 '=AJ49'
+AL49 '=AK49'
+AM49 '=AL49'
+AN49 '=AM49'
+B50 'Management'
+D50 '=D44'
+F50 4.5
+G50 "=F50*(1+'Assumptions - Company Level'!H$29)"
+H50 "=G50*(1+'Assumptions - Company Level'!I$29)"
+I50 "=H50*(1+'Assumptions - Company Level'!J$29)"
+J50 "=I50*(1+'Assumptions - Company Level'!K$29)"
+K50 "=J50*(1+'Assumptions - Company Level'!L$29)"
+L50 '=F50'
+M50 '=L50'
+N50 '=M50'
+O50 '=N50'
+P50 '=O50'
+Q50 '=P50'
+R50 '=Q50'
+S50 '=R50'
+T50 '=S50'
+U50 '=T50'
+V50 '=U50'
+W50 '=V50'
+X50 '=+G50'
+Y50 '=X50'
+Z50 '=Y50'
+AA50 '=Z50'
+AB50 '=AA50'
+AC50 '=AB50'
+AD50 '=AC50'
+AE50 '=AD50'
+AF50 '=AE50'
+AG50 '=AF50'
+AH50 '=AG50'
+AI50 '=AH50'
+AJ50 '=+H50'
+AK50 '=AJ50'
+AL50 '=AK50'
+AM50 '=AL50'
+AN50 '=AM50'
+B52 'Type 02 retail'
+F52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92330>
+G52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92390>
+H52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc923f0>
+I52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92450>
+J52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc924b0>
+K52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92510>
+L52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92570>
+M52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc925d0>
+N52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92630>
+O52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92690>
+P52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc926f0>
+Q52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92750>
+R52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc927b0>
+S52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92810>
+T52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92870>
+U52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc928d0>
+V52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92930>
+W52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92990>
+X52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc929f0>
+Y52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92a50>
+Z52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92ab0>
+AA52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92b10>
+AB52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92b70>
+AC52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92bd0>
+AD52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92c30>
+AE52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92c90>
+AF52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92cf0>
+AG52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92d50>
+AH52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92db0>
+AI52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92e10>
+AJ52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92e70>
+AK52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92ed0>
+AL52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92f30>
+AM52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92f90>
+AN52 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cc92ff0>
+B53 'Base'
+D53 '=D47'
+F53 "=F56*(1+'Assumptions - Company Level'!$E$11)"
+G53 "=F53*(1+'Assumptions - Company Level'!H$29)"
+H53 "=G53*(1+'Assumptions - Company Level'!I$29)"
+I53 "=H53*(1+'Assumptions - Company Level'!J$29)"
+J53 "=I53*(1+'Assumptions - Company Level'!K$29)"
+K53 "=J53*(1+'Assumptions - Company Level'!L$29)"
+L53 '=F53'
+M53 '=L53'
+N53 '=M53'
+O53 '=N53'
+P53 '=O53'
+Q53 '=P53'
+R53 '=Q53'
+S53 '=R53'
+T53 '=S53'
+U53 '=T53'
+V53 '=U53'
+W53 '=V53'
+X53 '=+G53'
+Y53 '=X53'
+Z53 '=Y53'
+AA53 '=Z53'
+AB53 '=AA53'
+AC53 '=AB53'
+AD53 '=AC53'
+AE53 '=AD53'
+AF53 '=AE53'
+AG53 '=AF53'
+AH53 '=AG53'
+AI53 '=AH53'
+AJ53 '=+H53'
+AK53 '=AJ53'
+AL53 '=AK53'
+AM53 '=AL53'
+AN53 '=AM53'
+B54 'Upside'
+D54 '=D48'
+F54 "=F56*(1+'Assumptions - Company Level'!$E$12)"
+G54 "=F54*(1+'Assumptions - Company Level'!H$29)"
+H54 "=G54*(1+'Assumptions - Company Level'!I$29)"
+I54 "=H54*(1+'Assumptions - Company Level'!J$29)"
+J54 "=I54*(1+'Assumptions - Company Level'!K$29)"
+K54 "=J54*(1+'Assumptions - Company Level'!L$29)"
+L54 '=F54'
+M54 '=L54'
+N54 '=M54'
+O54 '=N54'
+P54 '=O54'
+Q54 '=P54'
+R54 '=Q54'
+S54 '=R54'
+T54 '=S54'
+U54 '=T54'
+V54 '=U54'
+W54 '=V54'
+X54 '=+G54'
+Y54 '=X54'
+Z54 '=Y54'
+AA54 '=Z54'
+AB54 '=AA54'
+AC54 '=AB54'
+AD54 '=AC54'
+AE54 '=AD54'
+AF54 '=AE54'
+AG54 '=AF54'
+AH54 '=AG54'
+AI54 '=AH54'
+AJ54 '=+H54'
+AK54 '=AJ54'
+AL54 '=AK54'
+AM54 '=AL54'
+AN54 '=AM54'
+B55 'Downside'
+D55 '=D49'
+F55 "=F56*(1+'Assumptions - Company Level'!$E$13)"
+G55 "=F55*(1+'Assumptions - Company Level'!H$29)"
+H55 "=G55*(1+'Assumptions - Company Level'!I$29)"
+I55 "=H55*(1+'Assumptions - Company Level'!J$29)"
+J55 "=I55*(1+'Assumptions - Company Level'!K$29)"
+K55 "=J55*(1+'Assumptions - Company Level'!L$29)"
+L55 '=F55'
+M55 '=L55'
+N55 '=M55'
+O55 '=N55'
+P55 '=O55'
+Q55 '=P55'
+R55 '=Q55'
+S55 '=R55'
+T55 '=S55'
+U55 '=T55'
+V55 '=U55'
+W55 '=V55'
+X55 '=+G55'
+Y55 '=X55'
+Z55 '=Y55'
+AA55 '=Z55'
+AB55 '=AA55'
+AC55 '=AB55'
+AD55 '=AC55'
+AE55 '=AD55'
+AF55 '=AE55'
+AG55 '=AF55'
+AH55 '=AG55'
+AI55 '=AH55'
+AJ55 '=+H55'
+AK55 '=AJ55'
+AL55 '=AK55'
+AM55 '=AL55'
+AN55 '=AM55'
+B56 'Management'
+D56 '=D50'
+F56 4.5
+G56 "=F56*(1+'Assumptions - Company Level'!H$29)"
+H56 "=G56*(1+'Assumptions - Company Level'!I$29)"
+I56 "=H56*(1+'Assumptions - Company Level'!J$29)"
+J56 "=I56*(1+'Assumptions - Company Level'!K$29)"
+K56 "=J56*(1+'Assumptions - Company Level'!L$29)"
+L56 '=F56'
+M56 '=L56'
+N56 '=M56'
+O56 '=N56'
+P56 '=O56'
+Q56 '=P56'
+R56 '=Q56'
+S56 '=R56'
+T56 '=S56'
+U56 '=T56'
+V56 '=U56'
+W56 '=V56'
+X56 '=+G56'
+Y56 '=X56'
+Z56 '=Y56'
+AA56 '=Z56'
+AB56 '=AA56'
+AC56 '=AB56'
+AD56 '=AC56'
+AE56 '=AD56'
+AF56 '=AE56'
+AG56 '=AF56'
+AH56 '=AG56'
+AI56 '=AH56'
+AJ56 '=+H56'
+AK56 '=AJ56'
+AL56 '=AK56'
+AM56 '=AL56'
+AN56 '=AM56'
+B58 'Type 02 foodservice'
+F58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbd4f0>
+G58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbd550>
+H58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbd5b0>
+I58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbd610>
+J58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbd670>
+K58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbd6d0>
+L58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbd730>
+M58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbd790>
+N58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbd7f0>
+O58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbd850>
+P58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbd8b0>
+Q58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbd910>
+R58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbd970>
+S58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbd9d0>
+T58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbda30>
+U58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbda90>
+V58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbdaf0>
+W58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbdb50>
+X58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbdbb0>
+Y58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbdc10>
+Z58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbdc70>
+AA58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbdcd0>
+AB58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbdd30>
+AC58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbdd90>
+AD58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbddf0>
+AE58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbde50>
+AF58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbdeb0>
+AG58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbdf10>
+AH58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbdf70>
+AI58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbdfd0>
+AJ58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbe030>
+AK58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbe090>
+AL58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbe0f0>
+AM58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbe150>
+AN58 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ccbe1b0>
+B59 'Base'
+D59 '=D53'
+F59 "=F62*(1+'Assumptions - Company Level'!$E$11)"
+G59 "=F59*(1+'Assumptions - Company Level'!H$29)"
+H59 "=G59*(1+'Assumptions - Company Level'!I$29)"
+I59 "=H59*(1+'Assumptions - Company Level'!J$29)"
+J59 "=I59*(1+'Assumptions - Company Level'!K$29)"
+K59 "=J59*(1+'Assumptions - Company Level'!L$29)"
+L59 '=F59'
+M59 '=L59'
+N59 '=M59'
+O59 '=N59'
+P59 '=O59'
+Q59 '=P59'
+R59 '=Q59'
+S59 '=R59'
+T59 '=S59'
+U59 '=T59'
+V59 '=U59'
+W59 '=V59'
+X59 '=+G59'
+Y59 '=X59'
+Z59 '=Y59'
+AA59 '=Z59'
+AB59 '=AA59'
+AC59 '=AB59'
+AD59 '=AC59'
+AE59 '=AD59'
+AF59 '=AE59'
+AG59 '=AF59'
+AH59 '=AG59'
+AI59 '=AH59'
+AJ59 '=+H59'
+AK59 '=AJ59'
+AL59 '=AK59'
+AM59 '=AL59'
+AN59 '=AM59'
+B60 'Upside'
+D60 '=D54'
+F60 "=F62*(1+'Assumptions - Company Level'!$E$12)"
+G60 "=F60*(1+'Assumptions - Company Level'!H$29)"
+H60 "=G60*(1+'Assumptions - Company Level'!I$29)"
+I60 "=H60*(1+'Assumptions - Company Level'!J$29)"
+J60 "=I60*(1+'Assumptions - Company Level'!K$29)"
+K60 "=J60*(1+'Assumptions - Company Level'!L$29)"
+L60 '=F60'
+M60 '=L60'
+N60 '=M60'
+O60 '=N60'
+P60 '=O60'
+Q60 '=P60'
+R60 '=Q60'
+S60 '=R60'
+T60 '=S60'
+U60 '=T60'
+V60 '=U60'
+W60 '=V60'
+X60 '=+G60'
+Y60 '=X60'
+Z60 '=Y60'
+AA60 '=Z60'
+AB60 '=AA60'
+AC60 '=AB60'
+AD60 '=AC60'
+AE60 '=AD60'
+AF60 '=AE60'
+AG60 '=AF60'
+AH60 '=AG60'
+AI60 '=AH60'
+AJ60 '=+H60'
+AK60 '=AJ60'
+AL60 '=AK60'
+AM60 '=AL60'
+AN60 '=AM60'
+B61 'Downside'
+D61 '=D55'
+F61 "=F62*(1+'Assumptions - Company Level'!$E$13)"
+G61 "=F61*(1+'Assumptions - Company Level'!H$29)"
+H61 "=G61*(1+'Assumptions - Company Level'!I$29)"
+I61 "=H61*(1+'Assumptions - Company Level'!J$29)"
+J61 "=I61*(1+'Assumptions - Company Level'!K$29)"
+K61 "=J61*(1+'Assumptions - Company Level'!L$29)"
+L61 '=F61'
+M61 '=L61'
+N61 '=M61'
+O61 '=N61'
+P61 '=O61'
+Q61 '=P61'
+R61 '=Q61'
+S61 '=R61'
+T61 '=S61'
+U61 '=T61'
+V61 '=U61'
+W61 '=V61'
+X61 '=+G61'
+Y61 '=X61'
+Z61 '=Y61'
+AA61 '=Z61'
+AB61 '=AA61'
+AC61 '=AB61'
+AD61 '=AC61'
+AE61 '=AD61'
+AF61 '=AE61'
+AG61 '=AF61'
+AH61 '=AG61'
+AI61 '=AH61'
+AJ61 '=+H61'
+AK61 '=AJ61'
+AL61 '=AK61'
+AM61 '=AL61'
+AN61 '=AM61'
+B62 'Management'
+D62 '=D56'
+F62 4.25
+G62 "=F62*(1+'Assumptions - Company Level'!H$29)"
+H62 "=G62*(1+'Assumptions - Company Level'!I$29)"
+I62 "=H62*(1+'Assumptions - Company Level'!J$29)"
+J62 "=I62*(1+'Assumptions - Company Level'!K$29)"
+K62 "=J62*(1+'Assumptions - Company Level'!L$29)"
+L62 '=F62'
+M62 '=L62'
+N62 '=M62'
+O62 '=N62'
+P62 '=O62'
+Q62 '=P62'
+R62 '=Q62'
+S62 '=R62'
+T62 '=S62'
+U62 '=T62'
+V62 '=U62'
+W62 '=V62'
+X62 '=+G62'
+Y62 '=X62'
+Z62 '=Y62'
+AA62 '=Z62'
+AB62 '=AA62'
+AC62 '=AB62'
+AD62 '=AC62'
+AE62 '=AD62'
+AF62 '=AE62'
+AG62 '=AF62'
+AH62 '=AG62'
+AI62 '=AH62'
+AJ62 '=+H62'
+AK62 '=AJ62'
+AL62 '=AK62'
+AM62 '=AL62'
+AN62 '=AM62'
+B64 'Type 03 retail'
+F64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb106b0>
+G64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10710>
+H64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10770>
+I64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb107d0>
+J64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10830>
+K64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10890>
+L64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb108f0>
+M64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10950>
+N64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb109b0>
+O64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10a10>
+P64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10a70>
+Q64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10ad0>
+R64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10b30>
+S64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10b90>
+T64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10bf0>
+U64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10c50>
+V64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10cb0>
+W64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10d10>
+X64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10d70>
+Y64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10dd0>
+Z64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10e30>
+AA64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10e90>
+AB64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10ef0>
+AC64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10f50>
+AD64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb10fb0>
+AE64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb11010>
+AF64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb11070>
+AG64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb110d0>
+AH64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb11130>
+AI64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb11190>
+AJ64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb111f0>
+AK64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb11250>
+AL64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb112b0>
+AM64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb11310>
+AN64 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb11370>
+B65 'Base'
+D65 '=D59'
+F65 "=F68*(1+'Assumptions - Company Level'!$E$11)"
+G65 "=F65*(1+'Assumptions - Company Level'!H$29)"
+H65 "=G65*(1+'Assumptions - Company Level'!I$29)"
+I65 "=H65*(1+'Assumptions - Company Level'!J$29)"
+J65 "=I65*(1+'Assumptions - Company Level'!K$29)"
+K65 "=J65*(1+'Assumptions - Company Level'!L$29)"
+L65 '=F65'
+M65 '=L65'
+N65 '=M65'
+O65 '=N65'
+P65 '=O65'
+Q65 '=P65'
+R65 '=Q65'
+S65 '=R65'
+T65 '=S65'
+U65 '=T65'
+V65 '=U65'
+W65 '=V65'
+X65 '=+G65'
+Y65 '=X65'
+Z65 '=Y65'
+AA65 '=Z65'
+AB65 '=AA65'
+AC65 '=AB65'
+AD65 '=AC65'
+AE65 '=AD65'
+AF65 '=AE65'
+AG65 '=AF65'
+AH65 '=AG65'
+AI65 '=AH65'
+AJ65 '=+H65'
+AK65 '=AJ65'
+AL65 '=AK65'
+AM65 '=AL65'
+AN65 '=AM65'
+B66 'Upside'
+D66 '=D60'
+F66 "=F68*(1+'Assumptions - Company Level'!$E$12)"
+G66 "=F66*(1+'Assumptions - Company Level'!H$29)"
+H66 "=G66*(1+'Assumptions - Company Level'!I$29)"
+I66 "=H66*(1+'Assumptions - Company Level'!J$29)"
+J66 "=I66*(1+'Assumptions - Company Level'!K$29)"
+K66 "=J66*(1+'Assumptions - Company Level'!L$29)"
+L66 '=F66'
+M66 '=L66'
+N66 '=M66'
+O66 '=N66'
+P66 '=O66'
+Q66 '=P66'
+R66 '=Q66'
+S66 '=R66'
+T66 '=S66'
+U66 '=T66'
+V66 '=U66'
+W66 '=V66'
+X66 '=+G66'
+Y66 '=X66'
+Z66 '=Y66'
+AA66 '=Z66'
+AB66 '=AA66'
+AC66 '=AB66'
+AD66 '=AC66'
+AE66 '=AD66'
+AF66 '=AE66'
+AG66 '=AF66'
+AH66 '=AG66'
+AI66 '=AH66'
+AJ66 '=+H66'
+AK66 '=AJ66'
+AL66 '=AK66'
+AM66 '=AL66'
+AN66 '=AM66'
+B67 'Downside'
+D67 '=D61'
+F67 "=F68*(1+'Assumptions - Company Level'!$E$13)"
+G67 "=F67*(1+'Assumptions - Company Level'!H$29)"
+H67 "=G67*(1+'Assumptions - Company Level'!I$29)"
+I67 "=H67*(1+'Assumptions - Company Level'!J$29)"
+J67 "=I67*(1+'Assumptions - Company Level'!K$29)"
+K67 "=J67*(1+'Assumptions - Company Level'!L$29)"
+L67 '=F67'
+M67 '=L67'
+N67 '=M67'
+O67 '=N67'
+P67 '=O67'
+Q67 '=P67'
+R67 '=Q67'
+S67 '=R67'
+T67 '=S67'
+U67 '=T67'
+V67 '=U67'
+W67 '=V67'
+X67 '=+G67'
+Y67 '=X67'
+Z67 '=Y67'
+AA67 '=Z67'
+AB67 '=AA67'
+AC67 '=AB67'
+AD67 '=AC67'
+AE67 '=AD67'
+AF67 '=AE67'
+AG67 '=AF67'
+AH67 '=AG67'
+AI67 '=AH67'
+AJ67 '=+H67'
+AK67 '=AJ67'
+AL67 '=AK67'
+AM67 '=AL67'
+AN67 '=AM67'
+B68 'Management'
+D68 '=D62'
+F68 4
+G68 "=F68*(1+'Assumptions - Company Level'!H$29)"
+H68 "=G68*(1+'Assumptions - Company Level'!I$29)"
+I68 "=H68*(1+'Assumptions - Company Level'!J$29)"
+J68 "=I68*(1+'Assumptions - Company Level'!K$29)"
+K68 "=J68*(1+'Assumptions - Company Level'!L$29)"
+L68 '=F68'
+M68 '=L68'
+N68 '=M68'
+O68 '=N68'
+P68 '=O68'
+Q68 '=P68'
+R68 '=Q68'
+S68 '=R68'
+T68 '=S68'
+U68 '=T68'
+V68 '=U68'
+W68 '=V68'
+X68 '=+G68'
+Y68 '=X68'
+Z68 '=Y68'
+AA68 '=Z68'
+AB68 '=AA68'
+AC68 '=AB68'
+AD68 '=AC68'
+AE68 '=AD68'
+AF68 '=AE68'
+AG68 '=AF68'
+AH68 '=AG68'
+AI68 '=AH68'
+AJ68 '=+H68'
+AK68 '=AJ68'
+AL68 '=AK68'
+AM68 '=AL68'
+AN68 '=AM68'
+B70 'Type 03 foodservice'
+F70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13830>
+G70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13890>
+H70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb138f0>
+I70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13950>
+J70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb139b0>
+K70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13a10>
+L70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13a70>
+M70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13ad0>
+N70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13b30>
+O70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13b90>
+P70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13bf0>
+Q70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13c50>
+R70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13cb0>
+S70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13d10>
+T70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13d70>
+U70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13dd0>
+V70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13e30>
+W70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13e90>
+X70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13ef0>
+Y70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13f50>
+Z70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb13fb0>
+AA70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb60050>
+AB70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb600b0>
+AC70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb60110>
+AD70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb60170>
+AE70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb601d0>
+AF70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb60230>
+AG70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb60290>
+AH70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb602f0>
+AI70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb60350>
+AJ70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb603b0>
+AK70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb60410>
+AL70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb60470>
+AM70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb604d0>
+AN70 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb60530>
+B71 'Base'
+D71 '=D65'
+F71 "=F74*(1+'Assumptions - Company Level'!$E$11)"
+G71 "=F71*(1+'Assumptions - Company Level'!H$29)"
+H71 "=G71*(1+'Assumptions - Company Level'!I$29)"
+I71 "=H71*(1+'Assumptions - Company Level'!J$29)"
+J71 "=I71*(1+'Assumptions - Company Level'!K$29)"
+K71 "=J71*(1+'Assumptions - Company Level'!L$29)"
+L71 '=F71'
+M71 '=L71'
+N71 '=M71'
+O71 '=N71'
+P71 '=O71'
+Q71 '=P71'
+R71 '=Q71'
+S71 '=R71'
+T71 '=S71'
+U71 '=T71'
+V71 '=U71'
+W71 '=V71'
+X71 '=+G71'
+Y71 '=X71'
+Z71 '=Y71'
+AA71 '=Z71'
+AB71 '=AA71'
+AC71 '=AB71'
+AD71 '=AC71'
+AE71 '=AD71'
+AF71 '=AE71'
+AG71 '=AF71'
+AH71 '=AG71'
+AI71 '=AH71'
+AJ71 '=+H71'
+AK71 '=AJ71'
+AL71 '=AK71'
+AM71 '=AL71'
+AN71 '=AM71'
+B72 'Upside'
+D72 '=D66'
+F72 "=F74*(1+'Assumptions - Company Level'!$E$12)"
+G72 "=F72*(1+'Assumptions - Company Level'!H$29)"
+H72 "=G72*(1+'Assumptions - Company Level'!I$29)"
+I72 "=H72*(1+'Assumptions - Company Level'!J$29)"
+J72 "=I72*(1+'Assumptions - Company Level'!K$29)"
+K72 "=J72*(1+'Assumptions - Company Level'!L$29)"
+L72 '=F72'
+M72 '=L72'
+N72 '=M72'
+O72 '=N72'
+P72 '=O72'
+Q72 '=P72'
+R72 '=Q72'
+S72 '=R72'
+T72 '=S72'
+U72 '=T72'
+V72 '=U72'
+W72 '=V72'
+X72 '=+G72'
+Y72 '=X72'
+Z72 '=Y72'
+AA72 '=Z72'
+AB72 '=AA72'
+AC72 '=AB72'
+AD72 '=AC72'
+AE72 '=AD72'
+AF72 '=AE72'
+AG72 '=AF72'
+AH72 '=AG72'
+AI72 '=AH72'
+AJ72 '=+H72'
+AK72 '=AJ72'
+AL72 '=AK72'
+AM72 '=AL72'
+AN72 '=AM72'
+B73 'Downside'
+D73 '=D67'
+F73 "=F74*(1+'Assumptions - Company Level'!$E$13)"
+G73 "=F73*(1+'Assumptions - Company Level'!H$29)"
+H73 "=G73*(1+'Assumptions - Company Level'!I$29)"
+I73 "=H73*(1+'Assumptions - Company Level'!J$29)"
+J73 "=I73*(1+'Assumptions - Company Level'!K$29)"
+K73 "=J73*(1+'Assumptions - Company Level'!L$29)"
+L73 '=F73'
+M73 '=L73'
+N73 '=M73'
+O73 '=N73'
+P73 '=O73'
+Q73 '=P73'
+R73 '=Q73'
+S73 '=R73'
+T73 '=S73'
+U73 '=T73'
+V73 '=U73'
+W73 '=V73'
+X73 '=+G73'
+Y73 '=X73'
+Z73 '=Y73'
+AA73 '=Z73'
+AB73 '=AA73'
+AC73 '=AB73'
+AD73 '=AC73'
+AE73 '=AD73'
+AF73 '=AE73'
+AG73 '=AF73'
+AH73 '=AG73'
+AI73 '=AH73'
+AJ73 '=+H73'
+AK73 '=AJ73'
+AL73 '=AK73'
+AM73 '=AL73'
+AN73 '=AM73'
+B74 'Management'
+D74 '=D68'
+F74 4.5
+G74 "=F74*(1+'Assumptions - Company Level'!H$29)"
+H74 "=G74*(1+'Assumptions - Company Level'!I$29)"
+I74 "=H74*(1+'Assumptions - Company Level'!J$29)"
+J74 "=I74*(1+'Assumptions - Company Level'!K$29)"
+K74 "=J74*(1+'Assumptions - Company Level'!L$29)"
+L74 '=F74'
+M74 '=L74'
+N74 '=M74'
+O74 '=N74'
+P74 '=O74'
+Q74 '=P74'
+R74 '=Q74'
+S74 '=R74'
+T74 '=S74'
+U74 '=T74'
+V74 '=U74'
+W74 '=V74'
+X74 '=+G74'
+Y74 '=X74'
+Z74 '=Y74'
+AA74 '=Z74'
+AB74 '=AA74'
+AC74 '=AB74'
+AD74 '=AC74'
+AE74 '=AD74'
+AF74 '=AE74'
+AG74 '=AF74'
+AH74 '=AG74'
+AI74 '=AH74'
+AJ74 '=+H74'
+AK74 '=AJ74'
+AL74 '=AK74'
+AM74 '=AL74'
+AN74 '=AM74'
+B76 'Type 04 retail'
+F76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb629f0>
+G76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb62a50>
+H76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb62ab0>
+I76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb62b10>
+J76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb62b70>
+K76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb62bd0>
+L76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb62c30>
+M76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb62c90>
+N76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb62cf0>
+O76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb62d50>
+P76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb62db0>
+Q76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb62e10>
+R76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb62e70>
+S76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb62ed0>
+T76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb62f30>
+U76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb62f90>
+V76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb62ff0>
+W76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb63050>
+X76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb630b0>
+Y76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb63110>
+Z76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb63170>
+AA76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb631d0>
+AB76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb63230>
+AC76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb63290>
+AD76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb632f0>
+AE76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb63350>
+AF76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb633b0>
+AG76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb63410>
+AH76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb63470>
+AI76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb634d0>
+AJ76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb63530>
+AK76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb63590>
+AL76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb635f0>
+AM76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb63650>
+AN76 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb636b0>
+B77 'Base'
+D77 '=D71'
+F77 "=F80*(1+'Assumptions - Company Level'!$E$11)"
+G77 "=F77*(1+'Assumptions - Company Level'!H$29)"
+H77 "=G77*(1+'Assumptions - Company Level'!I$29)"
+I77 "=H77*(1+'Assumptions - Company Level'!J$29)"
+J77 "=I77*(1+'Assumptions - Company Level'!K$29)"
+K77 "=J77*(1+'Assumptions - Company Level'!L$29)"
+L77 '=F77'
+M77 '=L77'
+N77 '=M77'
+O77 '=N77'
+P77 '=O77'
+Q77 '=P77'
+R77 '=Q77'
+S77 '=R77'
+T77 '=S77'
+U77 '=T77'
+V77 '=U77'
+W77 '=V77'
+X77 '=+G77'
+Y77 '=X77'
+Z77 '=Y77'
+AA77 '=Z77'
+AB77 '=AA77'
+AC77 '=AB77'
+AD77 '=AC77'
+AE77 '=AD77'
+AF77 '=AE77'
+AG77 '=AF77'
+AH77 '=AG77'
+AI77 '=AH77'
+AJ77 '=+H77'
+AK77 '=AJ77'
+AL77 '=AK77'
+AM77 '=AL77'
+AN77 '=AM77'
+B78 'Upside'
+D78 '=D72'
+F78 "=F80*(1+'Assumptions - Company Level'!$E$12)"
+G78 "=F78*(1+'Assumptions - Company Level'!H$29)"
+H78 "=G78*(1+'Assumptions - Company Level'!I$29)"
+I78 "=H78*(1+'Assumptions - Company Level'!J$29)"
+J78 "=I78*(1+'Assumptions - Company Level'!K$29)"
+K78 "=J78*(1+'Assumptions - Company Level'!L$29)"
+L78 '=F78'
+M78 '=L78'
+N78 '=M78'
+O78 '=N78'
+P78 '=O78'
+Q78 '=P78'
+R78 '=Q78'
+S78 '=R78'
+T78 '=S78'
+U78 '=T78'
+V78 '=U78'
+W78 '=V78'
+X78 '=+G78'
+Y78 '=X78'
+Z78 '=Y78'
+AA78 '=Z78'
+AB78 '=AA78'
+AC78 '=AB78'
+AD78 '=AC78'
+AE78 '=AD78'
+AF78 '=AE78'
+AG78 '=AF78'
+AH78 '=AG78'
+AI78 '=AH78'
+AJ78 '=+H78'
+AK78 '=AJ78'
+AL78 '=AK78'
+AM78 '=AL78'
+AN78 '=AM78'
+B79 'Downside'
+D79 '=D73'
+F79 "=F80*(1+'Assumptions - Company Level'!$E$13)"
+G79 "=F79*(1+'Assumptions - Company Level'!H$29)"
+H79 "=G79*(1+'Assumptions - Company Level'!I$29)"
+I79 "=H79*(1+'Assumptions - Company Level'!J$29)"
+J79 "=I79*(1+'Assumptions - Company Level'!K$29)"
+K79 "=J79*(1+'Assumptions - Company Level'!L$29)"
+L79 '=F79'
+M79 '=L79'
+N79 '=M79'
+O79 '=N79'
+P79 '=O79'
+Q79 '=P79'
+R79 '=Q79'
+S79 '=R79'
+T79 '=S79'
+U79 '=T79'
+V79 '=U79'
+W79 '=V79'
+X79 '=+G79'
+Y79 '=X79'
+Z79 '=Y79'
+AA79 '=Z79'
+AB79 '=AA79'
+AC79 '=AB79'
+AD79 '=AC79'
+AE79 '=AD79'
+AF79 '=AE79'
+AG79 '=AF79'
+AH79 '=AG79'
+AI79 '=AH79'
+AJ79 '=+H79'
+AK79 '=AJ79'
+AL79 '=AK79'
+AM79 '=AL79'
+AN79 '=AM79'
+B80 'Management'
+D80 '=D74'
+F80 7
+G80 "=F80*(1+'Assumptions - Company Level'!H$29)"
+H80 "=G80*(1+'Assumptions - Company Level'!I$29)"
+I80 "=H80*(1+'Assumptions - Company Level'!J$29)"
+J80 "=I80*(1+'Assumptions - Company Level'!K$29)"
+K80 "=J80*(1+'Assumptions - Company Level'!L$29)"
+L80 '=F80'
+M80 '=L80'
+N80 '=M80'
+O80 '=N80'
+P80 '=O80'
+Q80 '=P80'
+R80 '=Q80'
+S80 '=R80'
+T80 '=S80'
+U80 '=T80'
+V80 '=U80'
+W80 '=V80'
+X80 '=+G80'
+Y80 '=X80'
+Z80 '=Y80'
+AA80 '=Z80'
+AB80 '=AA80'
+AC80 '=AB80'
+AD80 '=AC80'
+AE80 '=AD80'
+AF80 '=AE80'
+AG80 '=AF80'
+AH80 '=AG80'
+AI80 '=AH80'
+AJ80 '=+H80'
+AK80 '=AJ80'
+AL80 '=AK80'
+AM80 '=AL80'
+AN80 '=AM80'
+B82 'Type 04 foodservice'
+F82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb95bb0>
+G82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb95c10>
+H82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb95c70>
+I82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb95cd0>
+J82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb95d30>
+K82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb95d90>
+L82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb95df0>
+M82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb95e50>
+N82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb95eb0>
+O82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb95f10>
+P82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb95f70>
+Q82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb95fd0>
+R82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb96030>
+S82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb96090>
+T82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb960f0>
+U82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb96150>
+V82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb961b0>
+W82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb96210>
+X82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb96270>
+Y82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb962d0>
+Z82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb96330>
+AA82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb96390>
+AB82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb963f0>
+AC82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb96450>
+AD82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb964b0>
+AE82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb96510>
+AF82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb96570>
+AG82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb965d0>
+AH82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb96630>
+AI82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb96690>
+AJ82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb966f0>
+AK82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb96750>
+AL82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb967b0>
+AM82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb96810>
+AN82 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cb96870>
+B83 'Base'
+D83 '=D77'
+F83 "=F86*(1+'Assumptions - Company Level'!$E$11)"
+G83 "=F83*(1+'Assumptions - Company Level'!H$29)"
+H83 "=G83*(1+'Assumptions - Company Level'!I$29)"
+I83 "=H83*(1+'Assumptions - Company Level'!J$29)"
+J83 "=I83*(1+'Assumptions - Company Level'!K$29)"
+K83 "=J83*(1+'Assumptions - Company Level'!L$29)"
+L83 '=F83'
+M83 '=L83'
+N83 '=M83'
+O83 '=N83'
+P83 '=O83'
+Q83 '=P83'
+R83 '=Q83'
+S83 '=R83'
+T83 '=S83'
+U83 '=T83'
+V83 '=U83'
+W83 '=V83'
+X83 '=+G83'
+Y83 '=X83'
+Z83 '=Y83'
+AA83 '=Z83'
+AB83 '=AA83'
+AC83 '=AB83'
+AD83 '=AC83'
+AE83 '=AD83'
+AF83 '=AE83'
+AG83 '=AF83'
+AH83 '=AG83'
+AI83 '=AH83'
+AJ83 '=+H83'
+AK83 '=AJ83'
+AL83 '=AK83'
+AM83 '=AL83'
+AN83 '=AM83'
+B84 'Upside'
+D84 '=D78'
+F84 "=F86*(1+'Assumptions - Company Level'!$E$12)"
+G84 "=F84*(1+'Assumptions - Company Level'!H$29)"
+H84 "=G84*(1+'Assumptions - Company Level'!I$29)"
+I84 "=H84*(1+'Assumptions - Company Level'!J$29)"
+J84 "=I84*(1+'Assumptions - Company Level'!K$29)"
+K84 "=J84*(1+'Assumptions - Company Level'!L$29)"
+L84 '=F84'
+M84 '=L84'
+N84 '=M84'
+O84 '=N84'
+P84 '=O84'
+Q84 '=P84'
+R84 '=Q84'
+S84 '=R84'
+T84 '=S84'
+U84 '=T84'
+V84 '=U84'
+W84 '=V84'
+X84 '=+G84'
+Y84 '=X84'
+Z84 '=Y84'
+AA84 '=Z84'
+AB84 '=AA84'
+AC84 '=AB84'
+AD84 '=AC84'
+AE84 '=AD84'
+AF84 '=AE84'
+AG84 '=AF84'
+AH84 '=AG84'
+AI84 '=AH84'
+AJ84 '=+H84'
+AK84 '=AJ84'
+AL84 '=AK84'
+AM84 '=AL84'
+AN84 '=AM84'
+B85 'Downside'
+D85 '=D79'
+F85 "=F86*(1+'Assumptions - Company Level'!$E$13)"
+G85 "=F85*(1+'Assumptions - Company Level'!H$29)"
+H85 "=G85*(1+'Assumptions - Company Level'!I$29)"
+I85 "=H85*(1+'Assumptions - Company Level'!J$29)"
+J85 "=I85*(1+'Assumptions - Company Level'!K$29)"
+K85 "=J85*(1+'Assumptions - Company Level'!L$29)"
+L85 '=F85'
+M85 '=L85'
+N85 '=M85'
+O85 '=N85'
+P85 '=O85'
+Q85 '=P85'
+R85 '=Q85'
+S85 '=R85'
+T85 '=S85'
+U85 '=T85'
+V85 '=U85'
+W85 '=V85'
+X85 '=+G85'
+Y85 '=X85'
+Z85 '=Y85'
+AA85 '=Z85'
+AB85 '=AA85'
+AC85 '=AB85'
+AD85 '=AC85'
+AE85 '=AD85'
+AF85 '=AE85'
+AG85 '=AF85'
+AH85 '=AG85'
+AI85 '=AH85'
+AJ85 '=+H85'
+AK85 '=AJ85'
+AL85 '=AK85'
+AM85 '=AL85'
+AN85 '=AM85'
+B86 'Management'
+D86 '=D80'
+F86 6
+G86 "=F86*(1+'Assumptions - Company Level'!H$29)"
+H86 "=G86*(1+'Assumptions - Company Level'!I$29)"
+I86 "=H86*(1+'Assumptions - Company Level'!J$29)"
+J86 "=I86*(1+'Assumptions - Company Level'!K$29)"
+K86 "=J86*(1+'Assumptions - Company Level'!L$29)"
+L86 '=F86'
+M86 '=L86'
+N86 '=M86'
+O86 '=N86'
+P86 '=O86'
+Q86 '=P86'
+R86 '=Q86'
+S86 '=R86'
+T86 '=S86'
+U86 '=T86'
+V86 '=U86'
+W86 '=V86'
+X86 '=+G86'
+Y86 '=X86'
+Z86 '=Y86'
+AA86 '=Z86'
+AB86 '=AA86'
+AC86 '=AB86'
+AD86 '=AC86'
+AE86 '=AD86'
+AF86 '=AE86'
+AG86 '=AF86'
+AH86 '=AG86'
+AI86 '=AH86'
+AJ86 '=+H86'
+AK86 '=AJ86'
+AL86 '=AK86'
+AM86 '=AL86'
+AN86 '=AM86'
+B88 'Sales price of Line 01 product in USD /Kg including Fish 02 as fish raw material'
+B89 'Type 01 retail'
+F89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc8d70>
+G89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc8dd0>
+H89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc8e30>
+I89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc8e90>
+J89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc8ef0>
+K89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc8f50>
+L89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc8fb0>
+M89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc9010>
+N89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc9070>
+O89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc90d0>
+P89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc9130>
+Q89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc9190>
+R89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc91f0>
+S89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc9250>
+T89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc92b0>
+U89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc9310>
+V89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc9370>
+W89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc93d0>
+X89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc9430>
+Y89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc9490>
+Z89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc94f0>
+AA89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc9550>
+AB89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc95b0>
+AC89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc9610>
+AD89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc9670>
+AE89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc96d0>
+AF89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc9730>
+AG89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc9790>
+AH89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc97f0>
+AI89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc9850>
+AJ89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc98b0>
+AK89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc9910>
+AL89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc9970>
+AM89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc99d0>
+AN89 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbc9a30>
+B90 'Base'
+D90 'USD/Kg'
+E90 10000
+F90 "=F93*(1+'Assumptions - Company Level'!$E$11)"
+G90 "=F90*(1+'Assumptions - Company Level'!H$29)"
+H90 "=G90*(1+'Assumptions - Company Level'!I$29)"
+I90 "=H90*(1+'Assumptions - Company Level'!J$29)"
+J90 "=I90*(1+'Assumptions - Company Level'!K$29)"
+K90 "=J90*(1+'Assumptions - Company Level'!L$29)"
+L90 '=F90'
+M90 '=L90'
+N90 '=M90'
+O90 '=N90'
+P90 '=O90'
+Q90 '=P90'
+R90 '=Q90'
+S90 '=R90'
+T90 '=S90'
+U90 '=T90'
+V90 '=U90'
+W90 '=V90'
+X90 '=+G90'
+Y90 '=X90'
+Z90 '=Y90'
+AA90 '=Z90'
+AB90 '=AA90'
+AC90 '=AB90'
+AD90 '=AC90'
+AE90 '=AD90'
+AF90 '=AE90'
+AG90 '=AF90'
+AH90 '=AG90'
+AI90 '=AH90'
+AJ90 '=+H90'
+AK90 '=AJ90'
+AL90 '=AK90'
+AM90 '=AL90'
+AN90 '=AM90'
+B91 'Upside'
+D91 '=D90'
+E91 10000
+F91 "=F93*(1+'Assumptions - Company Level'!$E$12)"
+G91 "=F91*(1+'Assumptions - Company Level'!H$29)"
+H91 "=G91*(1+'Assumptions - Company Level'!I$29)"
+I91 "=H91*(1+'Assumptions - Company Level'!J$29)"
+J91 "=I91*(1+'Assumptions - Company Level'!K$29)"
+K91 "=J91*(1+'Assumptions - Company Level'!L$29)"
+L91 '=F91'
+M91 '=L91'
+N91 '=M91'
+O91 '=N91'
+P91 '=O91'
+Q91 '=P91'
+R91 '=Q91'
+S91 '=R91'
+T91 '=S91'
+U91 '=T91'
+V91 '=U91'
+W91 '=V91'
+X91 '=+G91'
+Y91 '=X91'
+Z91 '=Y91'
+AA91 '=Z91'
+AB91 '=AA91'
+AC91 '=AB91'
+AD91 '=AC91'
+AE91 '=AD91'
+AF91 '=AE91'
+AG91 '=AF91'
+AH91 '=AG91'
+AI91 '=AH91'
+AJ91 '=+H91'
+AK91 '=AJ91'
+AL91 '=AK91'
+AM91 '=AL91'
+AN91 '=AM91'
+B92 'Downside'
+D92 '=D91'
+F92 "=F93*(1+'Assumptions - Company Level'!$E$13)"
+G92 "=F92*(1+'Assumptions - Company Level'!H$29)"
+H92 "=G92*(1+'Assumptions - Company Level'!I$29)"
+I92 "=H92*(1+'Assumptions - Company Level'!J$29)"
+J92 "=I92*(1+'Assumptions - Company Level'!K$29)"
+K92 "=J92*(1+'Assumptions - Company Level'!L$29)"
+L92 '=F92'
+M92 '=L92'
+N92 '=M92'
+O92 '=N92'
+P92 '=O92'
+Q92 '=P92'
+R92 '=Q92'
+S92 '=R92'
+T92 '=S92'
+U92 '=T92'
+V92 '=U92'
+W92 '=V92'
+X92 '=+G92'
+Y92 '=X92'
+Z92 '=Y92'
+AA92 '=Z92'
+AB92 '=AA92'
+AC92 '=AB92'
+AD92 '=AC92'
+AE92 '=AD92'
+AF92 '=AE92'
+AG92 '=AF92'
+AH92 '=AG92'
+AI92 '=AH92'
+AJ92 '=+H92'
+AK92 '=AJ92'
+AL92 '=AK92'
+AM92 '=AL92'
+AN92 '=AM92'
+B93 'Management'
+D93 '=D92'
+F93 6
+G93 "=F93*(1+'Assumptions - Company Level'!H$29)"
+H93 "=G93*(1+'Assumptions - Company Level'!I$29)"
+I93 "=H93*(1+'Assumptions - Company Level'!J$29)"
+J93 "=I93*(1+'Assumptions - Company Level'!K$29)"
+K93 "=J93*(1+'Assumptions - Company Level'!L$29)"
+L93 '=F93'
+M93 '=L93'
+N93 '=M93'
+O93 '=N93'
+P93 '=O93'
+Q93 '=P93'
+R93 '=Q93'
+S93 '=R93'
+T93 '=S93'
+U93 '=T93'
+V93 '=U93'
+W93 '=V93'
+X93 '=+G93'
+Y93 '=X93'
+Z93 '=Y93'
+AA93 '=Z93'
+AB93 '=AA93'
+AC93 '=AB93'
+AD93 '=AC93'
+AE93 '=AD93'
+AF93 '=AE93'
+AG93 '=AF93'
+AH93 '=AG93'
+AI93 '=AH93'
+AJ93 '=+H93'
+AK93 '=AJ93'
+AL93 '=AK93'
+AM93 '=AL93'
+AN93 '=AM93'
+B95 'Type 01 foodservice'
+F95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbcbef0>
+G95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbcbf50>
+H95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312cbcbfb0>
+I95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30050>
+J95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca300b0>
+K95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30110>
+L95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30170>
+M95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca301d0>
+N95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30230>
+O95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30290>
+P95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca302f0>
+Q95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30350>
+R95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca303b0>
+S95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30410>
+T95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30470>
+U95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca304d0>
+V95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30530>
+W95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30590>
+X95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca305f0>
+Y95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30650>
+Z95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca306b0>
+AA95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30710>
+AB95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30770>
+AC95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca307d0>
+AD95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30830>
+AE95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30890>
+AF95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca308f0>
+AG95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30950>
+AH95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca309b0>
+AI95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30a10>
+AJ95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30a70>
+AK95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30ad0>
+AL95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30b30>
+AM95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30b90>
+AN95 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca30bf0>
+B96 'Base'
+D96 '=D90'
+F96 "=F99*(1+'Assumptions - Company Level'!$E$11)"
+G96 "=F96*(1+'Assumptions - Company Level'!H$29)"
+H96 "=G96*(1+'Assumptions - Company Level'!I$29)"
+I96 "=H96*(1+'Assumptions - Company Level'!J$29)"
+J96 "=I96*(1+'Assumptions - Company Level'!K$29)"
+K96 "=J96*(1+'Assumptions - Company Level'!L$29)"
+L96 '=F96'
+M96 '=L96'
+N96 '=M96'
+O96 '=N96'
+P96 '=O96'
+Q96 '=P96'
+R96 '=Q96'
+S96 '=R96'
+T96 '=S96'
+U96 '=T96'
+V96 '=U96'
+W96 '=V96'
+X96 '=+G96'
+Y96 '=X96'
+Z96 '=Y96'
+AA96 '=Z96'
+AB96 '=AA96'
+AC96 '=AB96'
+AD96 '=AC96'
+AE96 '=AD96'
+AF96 '=AE96'
+AG96 '=AF96'
+AH96 '=AG96'
+AI96 '=AH96'
+AJ96 '=+H96'
+AK96 '=AJ96'
+AL96 '=AK96'
+AM96 '=AL96'
+AN96 '=AM96'
+B97 'Upside'
+D97 '=D91'
+F97 "=F99*(1+'Assumptions - Company Level'!$E$12)"
+G97 "=F97*(1+'Assumptions - Company Level'!H$29)"
+H97 "=G97*(1+'Assumptions - Company Level'!I$29)"
+I97 "=H97*(1+'Assumptions - Company Level'!J$29)"
+J97 "=I97*(1+'Assumptions - Company Level'!K$29)"
+K97 "=J97*(1+'Assumptions - Company Level'!L$29)"
+L97 '=F97'
+M97 '=L97'
+N97 '=M97'
+O97 '=N97'
+P97 '=O97'
+Q97 '=P97'
+R97 '=Q97'
+S97 '=R97'
+T97 '=S97'
+U97 '=T97'
+V97 '=U97'
+W97 '=V97'
+X97 '=+G97'
+Y97 '=X97'
+Z97 '=Y97'
+AA97 '=Z97'
+AB97 '=AA97'
+AC97 '=AB97'
+AD97 '=AC97'
+AE97 '=AD97'
+AF97 '=AE97'
+AG97 '=AF97'
+AH97 '=AG97'
+AI97 '=AH97'
+AJ97 '=+H97'
+AK97 '=AJ97'
+AL97 '=AK97'
+AM97 '=AL97'
+AN97 '=AM97'
+B98 'Downside'
+D98 '=D92'
+F98 "=F99*(1+'Assumptions - Company Level'!$E$13)"
+G98 "=F98*(1+'Assumptions - Company Level'!H$29)"
+H98 "=G98*(1+'Assumptions - Company Level'!I$29)"
+I98 "=H98*(1+'Assumptions - Company Level'!J$29)"
+J98 "=I98*(1+'Assumptions - Company Level'!K$29)"
+K98 "=J98*(1+'Assumptions - Company Level'!L$29)"
+L98 '=F98'
+M98 '=L98'
+N98 '=M98'
+O98 '=N98'
+P98 '=O98'
+Q98 '=P98'
+R98 '=Q98'
+S98 '=R98'
+T98 '=S98'
+U98 '=T98'
+V98 '=U98'
+W98 '=V98'
+X98 '=+G98'
+Y98 '=X98'
+Z98 '=Y98'
+AA98 '=Z98'
+AB98 '=AA98'
+AC98 '=AB98'
+AD98 '=AC98'
+AE98 '=AD98'
+AF98 '=AE98'
+AG98 '=AF98'
+AH98 '=AG98'
+AI98 '=AH98'
+AJ98 '=+H98'
+AK98 '=AJ98'
+AL98 '=AK98'
+AM98 '=AL98'
+AN98 '=AM98'
+B99 'Management'
+D99 '=D93'
+F99 5.5
+G99 "=F99*(1+'Assumptions - Company Level'!H$29)"
+H99 "=G99*(1+'Assumptions - Company Level'!I$29)"
+I99 "=H99*(1+'Assumptions - Company Level'!J$29)"
+J99 "=I99*(1+'Assumptions - Company Level'!K$29)"
+K99 "=J99*(1+'Assumptions - Company Level'!L$29)"
+L99 '=F99'
+M99 '=L99'
+N99 '=M99'
+O99 '=N99'
+P99 '=O99'
+Q99 '=P99'
+R99 '=Q99'
+S99 '=R99'
+T99 '=S99'
+U99 '=T99'
+V99 '=U99'
+W99 '=V99'
+X99 '=+G99'
+Y99 '=X99'
+Z99 '=Y99'
+AA99 '=Z99'
+AB99 '=AA99'
+AC99 '=AB99'
+AD99 '=AC99'
+AE99 '=AD99'
+AF99 '=AE99'
+AG99 '=AF99'
+AH99 '=AG99'
+AI99 '=AH99'
+AJ99 '=+H99'
+AK99 '=AJ99'
+AL99 '=AK99'
+AM99 '=AL99'
+AN99 '=AM99'
+B101 'Type 02 retail'
+F101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca330b0>
+G101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33110>
+H101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33170>
+I101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca331d0>
+J101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33230>
+K101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33290>
+L101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca332f0>
+M101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33350>
+N101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca333b0>
+O101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33410>
+P101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33470>
+Q101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca334d0>
+R101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33530>
+S101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33590>
+T101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca335f0>
+U101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33650>
+V101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca336b0>
+W101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33710>
+X101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33770>
+Y101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca337d0>
+Z101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33830>
+AA101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33890>
+AB101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca338f0>
+AC101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33950>
+AD101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca339b0>
+AE101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33a10>
+AF101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33a70>
+AG101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33ad0>
+AH101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33b30>
+AI101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33b90>
+AJ101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33bf0>
+AK101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33c50>
+AL101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33cb0>
+AM101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33d10>
+AN101 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca33d70>
+B102 'Base'
+D102 '=D96'
+F102 "=F105*(1+'Assumptions - Company Level'!$E$11)"
+G102 "=F102*(1+'Assumptions - Company Level'!H$29)"
+H102 "=G102*(1+'Assumptions - Company Level'!I$29)"
+I102 "=H102*(1+'Assumptions - Company Level'!J$29)"
+J102 "=I102*(1+'Assumptions - Company Level'!K$29)"
+K102 "=J102*(1+'Assumptions - Company Level'!L$29)"
+L102 '=F102'
+M102 '=L102'
+N102 '=M102'
+O102 '=N102'
+P102 '=O102'
+Q102 '=P102'
+R102 '=Q102'
+S102 '=R102'
+T102 '=S102'
+U102 '=T102'
+V102 '=U102'
+W102 '=V102'
+X102 '=+G102'
+Y102 '=X102'
+Z102 '=Y102'
+AA102 '=Z102'
+AB102 '=AA102'
+AC102 '=AB102'
+AD102 '=AC102'
+AE102 '=AD102'
+AF102 '=AE102'
+AG102 '=AF102'
+AH102 '=AG102'
+AI102 '=AH102'
+AJ102 '=+H102'
+AK102 '=AJ102'
+AL102 '=AK102'
+AM102 '=AL102'
+AN102 '=AM102'
+B103 'Upside'
+D103 '=D97'
+F103 "=F105*(1+'Assumptions - Company Level'!$E$12)"
+G103 "=F103*(1+'Assumptions - Company Level'!H$29)"
+H103 "=G103*(1+'Assumptions - Company Level'!I$29)"
+I103 "=H103*(1+'Assumptions - Company Level'!J$29)"
+J103 "=I103*(1+'Assumptions - Company Level'!K$29)"
+K103 "=J103*(1+'Assumptions - Company Level'!L$29)"
+L103 '=F103'
+M103 '=L103'
+N103 '=M103'
+O103 '=N103'
+P103 '=O103'
+Q103 '=P103'
+R103 '=Q103'
+S103 '=R103'
+T103 '=S103'
+U103 '=T103'
+V103 '=U103'
+W103 '=V103'
+X103 '=+G103'
+Y103 '=X103'
+Z103 '=Y103'
+AA103 '=Z103'
+AB103 '=AA103'
+AC103 '=AB103'
+AD103 '=AC103'
+AE103 '=AD103'
+AF103 '=AE103'
+AG103 '=AF103'
+AH103 '=AG103'
+AI103 '=AH103'
+AJ103 '=+H103'
+AK103 '=AJ103'
+AL103 '=AK103'
+AM103 '=AL103'
+AN103 '=AM103'
+B104 'Downside'
+D104 '=D98'
+F104 "=F105*(1+'Assumptions - Company Level'!$E$13)"
+G104 "=F104*(1+'Assumptions - Company Level'!H$29)"
+H104 "=G104*(1+'Assumptions - Company Level'!I$29)"
+I104 "=H104*(1+'Assumptions - Company Level'!J$29)"
+J104 "=I104*(1+'Assumptions - Company Level'!K$29)"
+K104 "=J104*(1+'Assumptions - Company Level'!L$29)"
+L104 '=F104'
+M104 '=L104'
+N104 '=M104'
+O104 '=N104'
+P104 '=O104'
+Q104 '=P104'
+R104 '=Q104'
+S104 '=R104'
+T104 '=S104'
+U104 '=T104'
+V104 '=U104'
+W104 '=V104'
+X104 '=+G104'
+Y104 '=X104'
+Z104 '=Y104'
+AA104 '=Z104'
+AB104 '=AA104'
+AC104 '=AB104'
+AD104 '=AC104'
+AE104 '=AD104'
+AF104 '=AE104'
+AG104 '=AF104'
+AH104 '=AG104'
+AI104 '=AH104'
+AJ104 '=+H104'
+AK104 '=AJ104'
+AL104 '=AK104'
+AM104 '=AL104'
+AN104 '=AM104'
+B105 'Management'
+D105 '=D99'
+F105 5.5
+G105 "=F105*(1+'Assumptions - Company Level'!H$29)"
+H105 "=G105*(1+'Assumptions - Company Level'!I$29)"
+I105 "=H105*(1+'Assumptions - Company Level'!J$29)"
+J105 "=I105*(1+'Assumptions - Company Level'!K$29)"
+K105 "=J105*(1+'Assumptions - Company Level'!L$29)"
+L105 '=F105'
+M105 '=L105'
+N105 '=M105'
+O105 '=N105'
+P105 '=O105'
+Q105 '=P105'
+R105 '=Q105'
+S105 '=R105'
+T105 '=S105'
+U105 '=T105'
+V105 '=U105'
+W105 '=V105'
+X105 '=+G105'
+Y105 '=X105'
+Z105 '=Y105'
+AA105 '=Z105'
+AB105 '=AA105'
+AC105 '=AB105'
+AD105 '=AC105'
+AE105 '=AD105'
+AF105 '=AE105'
+AG105 '=AF105'
+AH105 '=AG105'
+AI105 '=AH105'
+AJ105 '=+H105'
+AK105 '=AJ105'
+AL105 '=AK105'
+AM105 '=AL105'
+AN105 '=AM105'
+B107 'Type 02 foodservice'
+F107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e270>
+G107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e2d0>
+H107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e330>
+I107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e390>
+J107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e3f0>
+K107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e450>
+L107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e4b0>
+M107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e510>
+N107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e570>
+O107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e5d0>
+P107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e630>
+Q107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e690>
+R107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e6f0>
+S107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e750>
+T107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e7b0>
+U107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e810>
+V107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e870>
+W107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e8d0>
+X107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e930>
+Y107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e990>
+Z107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5e9f0>
+AA107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5ea50>
+AB107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5eab0>
+AC107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5eb10>
+AD107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5eb70>
+AE107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5ebd0>
+AF107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5ec30>
+AG107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5ec90>
+AH107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5ecf0>
+AI107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5ed50>
+AJ107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5edb0>
+AK107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5ee10>
+AL107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5ee70>
+AM107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5eed0>
+AN107 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca5ef30>
+B108 'Base'
+D108 '=D102'
+F108 "=F111*(1+'Assumptions - Company Level'!$E$11)"
+G108 "=F108*(1+'Assumptions - Company Level'!H$29)"
+H108 "=G108*(1+'Assumptions - Company Level'!I$29)"
+I108 "=H108*(1+'Assumptions - Company Level'!J$29)"
+J108 "=I108*(1+'Assumptions - Company Level'!K$29)"
+K108 "=J108*(1+'Assumptions - Company Level'!L$29)"
+L108 '=F108'
+M108 '=L108'
+N108 '=M108'
+O108 '=N108'
+P108 '=O108'
+Q108 '=P108'
+R108 '=Q108'
+S108 '=R108'
+T108 '=S108'
+U108 '=T108'
+V108 '=U108'
+W108 '=V108'
+X108 '=+G108'
+Y108 '=X108'
+Z108 '=Y108'
+AA108 '=Z108'
+AB108 '=AA108'
+AC108 '=AB108'
+AD108 '=AC108'
+AE108 '=AD108'
+AF108 '=AE108'
+AG108 '=AF108'
+AH108 '=AG108'
+AI108 '=AH108'
+AJ108 '=+H108'
+AK108 '=AJ108'
+AL108 '=AK108'
+AM108 '=AL108'
+AN108 '=AM108'
+B109 'Upside'
+D109 '=D103'
+F109 "=F111*(1+'Assumptions - Company Level'!$E$12)"
+G109 "=F109*(1+'Assumptions - Company Level'!H$29)"
+H109 "=G109*(1+'Assumptions - Company Level'!I$29)"
+I109 "=H109*(1+'Assumptions - Company Level'!J$29)"
+J109 "=I109*(1+'Assumptions - Company Level'!K$29)"
+K109 "=J109*(1+'Assumptions - Company Level'!L$29)"
+L109 '=F109'
+M109 '=L109'
+N109 '=M109'
+O109 '=N109'
+P109 '=O109'
+Q109 '=P109'
+R109 '=Q109'
+S109 '=R109'
+T109 '=S109'
+U109 '=T109'
+V109 '=U109'
+W109 '=V109'
+X109 '=+G109'
+Y109 '=X109'
+Z109 '=Y109'
+AA109 '=Z109'
+AB109 '=AA109'
+AC109 '=AB109'
+AD109 '=AC109'
+AE109 '=AD109'
+AF109 '=AE109'
+AG109 '=AF109'
+AH109 '=AG109'
+AI109 '=AH109'
+AJ109 '=+H109'
+AK109 '=AJ109'
+AL109 '=AK109'
+AM109 '=AL109'
+AN109 '=AM109'
+B110 'Downside'
+D110 '=D104'
+F110 "=F111*(1+'Assumptions - Company Level'!$E$13)"
+G110 "=F110*(1+'Assumptions - Company Level'!H$29)"
+H110 "=G110*(1+'Assumptions - Company Level'!I$29)"
+I110 "=H110*(1+'Assumptions - Company Level'!J$29)"
+J110 "=I110*(1+'Assumptions - Company Level'!K$29)"
+K110 "=J110*(1+'Assumptions - Company Level'!L$29)"
+L110 '=F110'
+M110 '=L110'
+N110 '=M110'
+O110 '=N110'
+P110 '=O110'
+Q110 '=P110'
+R110 '=Q110'
+S110 '=R110'
+T110 '=S110'
+U110 '=T110'
+V110 '=U110'
+W110 '=V110'
+X110 '=+G110'
+Y110 '=X110'
+Z110 '=Y110'
+AA110 '=Z110'
+AB110 '=AA110'
+AC110 '=AB110'
+AD110 '=AC110'
+AE110 '=AD110'
+AF110 '=AE110'
+AG110 '=AF110'
+AH110 '=AG110'
+AI110 '=AH110'
+AJ110 '=+H110'
+AK110 '=AJ110'
+AL110 '=AK110'
+AM110 '=AL110'
+AN110 '=AM110'
+B111 'Management'
+D111 '=D105'
+F111 5.25
+G111 "=F111*(1+'Assumptions - Company Level'!H$29)"
+H111 "=G111*(1+'Assumptions - Company Level'!I$29)"
+I111 "=H111*(1+'Assumptions - Company Level'!J$29)"
+J111 "=I111*(1+'Assumptions - Company Level'!K$29)"
+K111 "=J111*(1+'Assumptions - Company Level'!L$29)"
+L111 '=F111'
+M111 '=L111'
+N111 '=M111'
+O111 '=N111'
+P111 '=O111'
+Q111 '=P111'
+R111 '=Q111'
+S111 '=R111'
+T111 '=S111'
+U111 '=T111'
+V111 '=U111'
+W111 '=V111'
+X111 '=+G111'
+Y111 '=X111'
+Z111 '=Y111'
+AA111 '=Z111'
+AB111 '=AA111'
+AC111 '=AB111'
+AD111 '=AC111'
+AE111 '=AD111'
+AF111 '=AE111'
+AG111 '=AF111'
+AH111 '=AG111'
+AI111 '=AH111'
+AJ111 '=+H111'
+AK111 '=AJ111'
+AL111 '=AK111'
+AM111 '=AL111'
+AN111 '=AM111'
+B113 'Type 03 retail'
+F113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca951f0>
+G113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95250>
+H113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca952b0>
+I113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95310>
+J113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95370>
+K113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca953d0>
+L113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95430>
+M113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95490>
+N113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca954f0>
+O113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95550>
+P113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca955b0>
+Q113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95610>
+R113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95670>
+S113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca956d0>
+T113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95730>
+U113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95790>
+V113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca957f0>
+W113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95850>
+X113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca958b0>
+Y113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95910>
+Z113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95970>
+AA113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca959d0>
+AB113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95a30>
+AC113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95a90>
+AD113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95af0>
+AE113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95b50>
+AF113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95bb0>
+AG113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95c10>
+AH113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95c70>
+AI113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95cd0>
+AJ113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95d30>
+AK113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95d90>
+AL113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95df0>
+AM113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95e50>
+AN113 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312ca95eb0>
+B114 'Base'
+D114 '=D108'
+F114 "=F117*(1+'Assumptions - Company Level'!$E$11)"
+G114 "=F114*(1+'Assumptions - Company Level'!H$29)"
+H114 "=G114*(1+'Assumptions - Company Level'!I$29)"
+I114 "=H114*(1+'Assumptions - Company Level'!J$29)"
+J114 "=I114*(1+'Assumptions - Company Level'!K$29)"
+K114 "=J114*(1+'Assumptions - Company Level'!L$29)"
+L114 '=F114'
+M114 '=L114'
+N114 '=M114'
+O114 '=N114'
+P114 '=O114'
+Q114 '=P114'
+R114 '=Q114'
+S114 '=R114'
+T114 '=S114'
+U114 '=T114'
+V114 '=U114'
+W114 '=V114'
+X114 '=+G114'
+Y114 '=X114'
+Z114 '=Y114'
+AA114 '=Z114'
+AB114 '=AA114'
+AC114 '=AB114'
+AD114 '=AC114'
+AE114 '=AD114'
+AF114 '=AE114'
+AG114 '=AF114'
+AH114 '=AG114'
+AI114 '=AH114'
+AJ114 '=+H114'
+AK114 '=AJ114'
+AL114 '=AK114'
+AM114 '=AL114'
+AN114 '=AM114'
+B115 'Upside'
+D115 '=D109'
+F115 "=F117*(1+'Assumptions - Company Level'!$E$12)"
+G115 "=F115*(1+'Assumptions - Company Level'!H$29)"
+H115 "=G115*(1+'Assumptions - Company Level'!I$29)"
+I115 "=H115*(1+'Assumptions - Company Level'!J$29)"
+J115 "=I115*(1+'Assumptions - Company Level'!K$29)"
+K115 "=J115*(1+'Assumptions - Company Level'!L$29)"
+L115 '=F115'
+M115 '=L115'
+N115 '=M115'
+O115 '=N115'
+P115 '=O115'
+Q115 '=P115'
+R115 '=Q115'
+S115 '=R115'
+T115 '=S115'
+U115 '=T115'
+V115 '=U115'
+W115 '=V115'
+X115 '=+G115'
+Y115 '=X115'
+Z115 '=Y115'
+AA115 '=Z115'
+AB115 '=AA115'
+AC115 '=AB115'
+AD115 '=AC115'
+AE115 '=AD115'
+AF115 '=AE115'
+AG115 '=AF115'
+AH115 '=AG115'
+AI115 '=AH115'
+AJ115 '=+H115'
+AK115 '=AJ115'
+AL115 '=AK115'
+AM115 '=AL115'
+AN115 '=AM115'
+B116 'Downside'
+D116 '=D110'
+F116 "=F117*(1+'Assumptions - Company Level'!$E$13)"
+G116 "=F116*(1+'Assumptions - Company Level'!H$29)"
+H116 "=G116*(1+'Assumptions - Company Level'!I$29)"
+I116 "=H116*(1+'Assumptions - Company Level'!J$29)"
+J116 "=I116*(1+'Assumptions - Company Level'!K$29)"
+K116 "=J116*(1+'Assumptions - Company Level'!L$29)"
+L116 '=F116'
+M116 '=L116'
+N116 '=M116'
+O116 '=N116'
+P116 '=O116'
+Q116 '=P116'
+R116 '=Q116'
+S116 '=R116'
+T116 '=S116'
+U116 '=T116'
+V116 '=U116'
+W116 '=V116'
+X116 '=+G116'
+Y116 '=X116'
+Z116 '=Y116'
+AA116 '=Z116'
+AB116 '=AA116'
+AC116 '=AB116'
+AD116 '=AC116'
+AE116 '=AD116'
+AF116 '=AE116'
+AG116 '=AF116'
+AH116 '=AG116'
+AI116 '=AH116'
+AJ116 '=+H116'
+AK116 '=AJ116'
+AL116 '=AK116'
+AM116 '=AL116'
+AN116 '=AM116'
+B117 'Management'
+D117 '=D111'
+F117 5
+G117 "=F117*(1+'Assumptions - Company Level'!H$29)"
+H117 "=G117*(1+'Assumptions - Company Level'!I$29)"
+I117 "=H117*(1+'Assumptions - Company Level'!J$29)"
+J117 "=I117*(1+'Assumptions - Company Level'!K$29)"
+K117 "=J117*(1+'Assumptions - Company Level'!L$29)"
+L117 '=F117'
+M117 '=L117'
+N117 '=M117'
+O117 '=N117'
+P117 '=O117'
+Q117 '=P117'
+R117 '=Q117'
+S117 '=R117'
+T117 '=S117'
+U117 '=T117'
+V117 '=U117'
+W117 '=V117'
+X117 '=+G117'
+Y117 '=X117'
+Z117 '=Y117'
+AA117 '=Z117'
+AB117 '=AA117'
+AC117 '=AB117'
+AD117 '=AC117'
+AE117 '=AD117'
+AF117 '=AE117'
+AG117 '=AF117'
+AH117 '=AG117'
+AI117 '=AH117'
+AJ117 '=+H117'
+AK117 '=AJ117'
+AL117 '=AK117'
+AM117 '=AL117'
+AN117 '=AM117'
+B119 'Type 03 foodservice'
+F119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caec4d0>
+G119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caec530>
+H119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caec590>
+I119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caec5f0>
+J119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caec650>
+K119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caec6b0>
+L119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caec710>
+M119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caec770>
+N119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caec7d0>
+O119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caec830>
+P119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caec890>
+Q119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caec8f0>
+R119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caec950>
+S119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caec9b0>
+T119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caeca10>
+U119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caeca70>
+V119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caecad0>
+W119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caecb30>
+X119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caecb90>
+Y119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caecbf0>
+Z119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caecc50>
+AA119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caeccb0>
+AB119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caecd10>
+AC119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caecd70>
+AD119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caecdd0>
+AE119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caece30>
+AF119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caece90>
+AG119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caecef0>
+AH119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caecf50>
+AI119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caecfb0>
+AJ119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caed010>
+AK119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caed070>
+AL119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caed0d0>
+AM119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caed130>
+AN119 <openpyxl.worksheet.formula.ArrayFormula object at 0x75312caed190>
+B120 'Base'
+D120 '=D114'
+F120 "=F123*(1+'Assumptions - Company Level'!$E$11)"
+G120 "=F120*(1+'Assumptions - Company Level'!H$29)"
+H120 "=G120*(1+'Assumptions - Company Level'!I$29)"
+I120 "=H120*(1+'Assumptions - Company Level'!J$29)"
+J120 "=I120*(1+'Assumptions - Company Level'!K$29)"
+K120 "=J120*(1+'Assumptions - Company Level'!L$29)"
+L120 '=F120'
+M120 '=L120'
+N120 '=M120'
+O120 '=N120'
+P120 '=O120'
+Q120 '=P120'
+R120 '=Q120'
+S120 '=R120'
+T120 '=S120'
+U120 '=T120'
+V120 '=U120'
+W120 '=V120'
+X120 '=+G120'
+Y120 '=X120'
+Z120 '=Y120'
+AA120 '=Z120'
+AB120 '=AA120'
+AC120 '=AB120'
+AD120 '=AC120'
+AE120 '=AD120'
+AF120 '=AE120'
+AG120 '=AF120'
+AH120 '=AG120'
+AI120 '=AH120'
+AJ120 '=+H120'
+AK120 '=AJ120'
+AL120 '=AK120'
+AM120 '=AL120'
+AN120 '=AM120'
+
+Script done on 2026-10-05 00:13:33+01:00 [COMMAND_EXIT_CODE="0"]
