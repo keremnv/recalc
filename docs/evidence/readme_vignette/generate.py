@@ -22,6 +22,34 @@ ROOT = HERE.parents[2]
 ASSET = ROOT / "docs" / "assets" / "recalc-performance-vignette.svg"
 CROP_PNG = HERE / "sheet_crop.png"
 
+# Visual language borrowed from the sibling `design` project's frontend DNA
+# (styles/graphDna.ts, typography.ts, base.css): monochrome Radix gray chrome,
+# Jost + Spline Sans Mono, square plates (radius 0), 1px rules, weights 400/600
+# only, and one spent colour — jade11 — for the settled result.
+SKIN = {
+    "field": "#f9f9f9",   # gray2 canvas
+    "plate": "#f0f0f0",   # gray3 panel, one step from the field
+    "rule": "#d9d9d9",    # gray6
+    "muted": "#8d8d8d",   # gray9 secondary labels
+    "ink": "#202020",     # gray12
+    "result": "#208368",  # jade11 — the one spent colour
+    "sans": "Jost, 'Helvetica Neue', Helvetica, sans-serif",
+    "mono": "'Spline Sans Mono', 'DM Mono', ui-monospace, Menlo, Consolas, monospace",
+}
+FONTS = [
+    ("Jost", 400, "fonts/jost-latin-400-normal.woff2"),
+    ("Jost", 600, "fonts/jost-latin-600-normal.woff2"),
+    ("Spline Sans Mono", 400, "fonts/spline-sans-mono-latin-400-normal.woff2"),
+]
+FONT_HASHES = {
+    "fonts/jost-latin-400-normal.woff2":
+        "f94cffda16515fbb1667a2662d6b46f5610a942fd02fe88d67ff98f776288962",
+    "fonts/jost-latin-600-normal.woff2":
+        "d0487d684596edca7f495d2495ee77a55448740930023c305e8a683b1daefda2",
+    "fonts/spline-sans-mono-latin-400-normal.woff2":
+        "af7360e11effa088510c57bd6c327cacd1e53ce8b0f3ef1e2445284df777e5d6",
+}
+
 
 def load():
     scenario = json.loads((HERE / "scenario.json").read_text())
@@ -69,12 +97,17 @@ def verify():
         errors.append("reuse gate")
     if not timing["stdout_normalized_identical"]:
         errors.append("parity gate")
+    # 6. vendored font bytes (embedded in the asset)
+    for rel, want in FONT_HASHES.items():
+        got = hashlib.sha256((HERE / rel).read_bytes()).hexdigest()
+        if got != want:
+            errors.append(f"font sha mismatch: {rel}")
     if errors:
         print("VERIFY FAIL:")
         [print(" -", e) for e in errors]
         return False
     print("VERIFY PASS: hashes, prompt, medians (%.4f/%.4f), saved %.4fs, %.2f%% lower, "
-          "DIRECTx3/REUSEDx3, normalized-stdout parity" % (bmed, rmed, saved, pct))
+          "DIRECTx3/REUSEDx3, normalized-stdout parity, fonts" % (bmed, rmed, saved, pct))
     return True
 
 
@@ -120,6 +153,17 @@ def esc(s):
              .replace(">", "&gt;").replace('"', "&quot;"))
 
 
+def font_css():
+    """@font-face block with vendored woff2 embedded as data URIs."""
+    out = []
+    for family, weight, rel in FONTS:
+        b64 = base64.b64encode((HERE / rel).read_bytes()).decode()
+        out.append("@font-face{font-family:'%s';font-weight:%d;font-style:normal;"
+                   "font-display:swap;src:url(data:font/woff2;base64,%s) format('woff2');}"
+                   % (family, weight, b64))
+    return "".join(out)
+
+
 def compose():
     scenario, timing, prompt, code = load()
     d = timing["display"]
@@ -127,7 +171,7 @@ def compose():
         png_b64 = base64.b64encode(f.read()).decode()
     from PIL import Image
     cw, ch = Image.open(CROP_PNG).size
-    # Layout: 1200 wide. Left panel workbook (700), right panel code (440).
+    # Layout: 1200 wide. Left panel workbook, right panel code.
     W = 1200
     code_lines = [ln for ln in code.splitlines()]
     findings = [
@@ -151,60 +195,65 @@ def compose():
     bot_h = 76 + 24 * len(findings) + 64
     H = bot_y + bot_h + 24
     L, R = 24, 24 + left_w + gap
+    S, M = SKIN["sans"], SKIN["mono"]
+    INK, MUT, RULE, PLATE = SKIN["ink"], SKIN["muted"], SKIN["rule"], SKIN["plate"]
 
     def panel(x, y, w, h, title):
-        return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="10" fill="#ffffff" '
-                f'stroke="#d0d7de" stroke-width="1.5"/>'
-                f'<text x="{x + 16}" y="{y + 30}" font-family="system-ui,-apple-system,Segoe UI,sans-serif" '
-                f'font-size="15" font-weight="700" fill="#57606a">{esc(title)}</text>')
+        return (f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{PLATE}" '
+                f'stroke="{RULE}" stroke-width="1"/>'
+                f'<text x="{x + 16}" y="{y + 30}" font-family="{S}" '
+                f'font-size="15" font-weight="600" fill="{INK}">{esc(title)}</text>'
+                f'<line x1="{x}" y1="{y + 40}" x2="{x + w}" y2="{y + 40}" stroke="{RULE}" stroke-width="1"/>')
 
     parts = [f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" '
              f'viewBox="0 0 {W} {H}" role="img">']
-    parts.append(f'<rect x="0" y="0" width="{W}" height="{H}" rx="12" fill="#f6f8fa"/>')
-    # Prompt header
+    parts.append(f"<style>{font_css()}</style>")
+    parts.append(f'<rect x="0" y="0" width="{W}" height="{H}" fill="{SKIN["field"]}" '
+                 f'stroke="{RULE}" stroke-width="1"/>')
+    # Benchmark header
     parts.append(panel(24, 16, W - 48, top_h - 24, "SPREADSHEETBENCH-2 · FM:08_02 · PROJECT SEAFOOD MODEL"))
-    parts.append(f'<text x="40" y="80" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#57606a">'
+    parts.append(f'<text x="40" y="80" font-family="{S}" font-size="14" fill="{MUT}">'
                  f'Public benchmark task — full 5-part instruction in docs/evidence/readme_vignette/prompt.txt</text>')
-    parts.append(f'<text x="40" y="104" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#57606a">'
+    parts.append(f'<text x="40" y="104" font-family="{S}" font-size="14" fill="{MUT}">'
                  f'Full task includes modeling work across several sheets.</text>')
-    parts.append(f'<text x="40" y="130" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="15" font-weight="700" fill="#1f2328">'
+    parts.append(f'<text x="40" y="130" font-family="{S}" font-size="15" font-weight="600" fill="{INK}">'
                  f'Measured here: read-only inspection of \u2018Assumptions - Line 01\u2019 — one step, not the whole task</text>')
-    parts.append(f'<text x="{W//2}" y="{mid_y - 12}" text-anchor="middle" font-size="22" fill="#57606a">↓</text>')
+    parts.append(f'<text x="{W//2}" y="{mid_y - 12}" text-anchor="middle" font-size="22" fill="{MUT}">↓</text>')
     # Left: workbook
     parts.append(panel(L, mid_y, left_w, mid_h, "REAL WORKBOOK — input.xlsx · \u2018Assumptions - Line 01\u2019 (LibreOffice render)"))
     parts.append(f'<image x="{L}" y="{mid_y + 44}" width="{left_w}" height="{img_h}" '
                  f'href="data:image/png;base64,{png_b64}"/>')
-    parts.append(f'<text x="{L + 16}" y="{mid_y + 44 + img_h + 26}" font-family="system-ui,-apple-system,Segoe UI,sans-serif" '
-                 f'font-size="14" fill="#1f2328">Scan region A1:AN120 · 4,800 cells served directly · values identical</text>')
+    parts.append(f'<text x="{L + 16}" y="{mid_y + 44 + img_h + 26}" font-family="{S}" '
+                 f'font-size="14" fill="{INK}">Scan region A1:AN120 · 4,800 cells served directly · values identical</text>')
     # Right: code
     parts.append(panel(R, mid_y, right_w, mid_h, "ORDINARY AGENT PYTHON"))
     y = mid_y + 66
     for ln in code_lines:
-        parts.append(f'<text x="{R + 16}" y="{y}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" '
-                     f'font-size="13.5" fill="#1f2328">{esc(ln) if ln.strip() else " "}</text>')
+        parts.append(f'<text x="{R + 16}" y="{y}" font-family="{M}" '
+                     f'font-size="13.5" fill="{INK}">{esc(ln) if ln.strip() else " "}</text>')
         y += 24
-    parts.append(f'<text x="{R + 16}" y="{y + 34}" font-family="system-ui,-apple-system,Segoe UI,sans-serif" '
-                 f'font-size="14" fill="#57606a">No Recalc API · frozen agent scan step</text>')
-    parts.append(f'<text x="{W//2}" y="{time_y - 12}" text-anchor="middle" font-size="22" fill="#57606a">↓</text>')
+    parts.append(f'<text x="{R + 16}" y="{y + 34}" font-family="{S}" '
+                 f'font-size="14" fill="{MUT}">No Recalc API · frozen agent scan step</text>')
+    parts.append(f'<text x="{W//2}" y="{time_y - 12}" text-anchor="middle" font-size="22" fill="{MUT}">↓</text>')
     # Timing
     parts.append(panel(24, time_y, W - 48, time_h, "LOCAL EXECUTION — SAME CODE, SAME VALUES DELIVERED"))
-    parts.append(f'<text x="60" y="{time_y + 78}" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="17" fill="#57606a">BASE (plain Python)</text>')
-    parts.append(f'<text x="60" y="{time_y + 116}" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="34" font-weight="800" fill="#1f2328">{d["base"]}</text>')
-    parts.append(f'<text x="430" y="{time_y + 78}" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="17" fill="#57606a">RECALC (warm, DIRECT_RUNTIME)</text>')
-    parts.append(f'<text x="430" y="{time_y + 116}" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="34" font-weight="800" fill="#0969da">{d["recalc"]}</text>')
-    parts.append(f'<text x="820" y="{time_y + 78}" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="17" fill="#57606a">Saved</text>')
-    parts.append(f'<text x="820" y="{time_y + 116}" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="34" font-weight="800" fill="#1a7f37">{d["saved"]} · {d["pct"]}</text>')
-    parts.append(f'<text x="60" y="{time_y + 162}" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#57606a">Medians of 3 warm reps, same window · artifact REUSED · model-provider latency excluded</text>')
-    parts.append(f'<text x="60" y="{time_y + 186}" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#57606a">Read-only inspection step; workbook bytes unchanged · Same agent code, same findings</text>')
-    parts.append(f'<text x="{W//2}" y="{bot_y - 12}" text-anchor="middle" font-size="22" fill="#57606a">↓</text>')
+    parts.append(f'<text x="60" y="{time_y + 78}" font-family="{S}" font-size="17" fill="{MUT}">BASE (plain Python)</text>')
+    parts.append(f'<text x="60" y="{time_y + 116}" font-family="{S}" font-size="34" font-weight="600" fill="{INK}">{d["base"]}</text>')
+    parts.append(f'<text x="430" y="{time_y + 78}" font-family="{S}" font-size="17" fill="{MUT}">RECALC (warm, DIRECT_RUNTIME)</text>')
+    parts.append(f'<text x="430" y="{time_y + 116}" font-family="{S}" font-size="34" font-weight="600" fill="{INK}">{d["recalc"]}</text>')
+    parts.append(f'<text x="820" y="{time_y + 78}" font-family="{S}" font-size="17" fill="{MUT}">Saved</text>')
+    parts.append(f'<text x="820" y="{time_y + 116}" font-family="{S}" font-size="34" font-weight="600" fill="{SKIN["result"]}">{d["saved"]} · {d["pct"]}</text>')
+    parts.append(f'<text x="60" y="{time_y + 162}" font-family="{S}" font-size="14" fill="{MUT}">Medians of 3 warm reps, same window · artifact REUSED · model-provider latency excluded</text>')
+    parts.append(f'<text x="60" y="{time_y + 186}" font-family="{S}" font-size="14" fill="{MUT}">Read-only inspection step; workbook bytes unchanged · Same agent code, same findings</text>')
+    parts.append(f'<text x="{W//2}" y="{bot_y - 12}" text-anchor="middle" font-size="22" fill="{MUT}">↓</text>')
     # Findings
     parts.append(panel(24, bot_y, W - 48, bot_h, "DELIVERED FINDINGS — IDENTICAL UNDER BASE AND RECALC"))
     y = bot_y + 62
     for ln in findings:
-        parts.append(f'<text x="40" y="{y}" font-family="ui-monospace,SFMono-Regular,Consolas,monospace" '
-                     f'font-size="14.5" fill="#1f2328">{esc(ln)}</text>')
+        parts.append(f'<text x="40" y="{y}" font-family="{M}" '
+                     f'font-size="14.5" fill="{INK}">{esc(ln)}</text>')
         y += 24
-    parts.append(f'<text x="40" y="{y + 22}" font-family="system-ui,-apple-system,Segoe UI,sans-serif" font-size="14" fill="#57606a">'
+    parts.append(f'<text x="40" y="{y + 22}" font-family="{S}" font-size="14" fill="{MUT}">'
                  f'3,550 finding lines, address-normalized stdout identical · read step of the Line-01 completion workflow</text>')
     parts.append("</svg>")
     ASSET.parent.mkdir(parents=True, exist_ok=True)
