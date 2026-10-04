@@ -42,13 +42,17 @@ external-validity study, fully direct execution was uncommon and aggregate
 replay showed no speedup; most dynamic and mixed read/write work correctly
 remained on genuine openpyxl.
 
-| Workload shape | Expected behavior |
-| --- | --- |
-| Warm, expensive certified reads | Recalc may materially reduce workbook-read cost |
-| First/cold load | State must be built; no cold-speedup claim |
-| Dynamic or mixed read/write script | Often remains on genuine openpyxl |
-| Writes | Not accelerated |
-| Unsupported semantics | Fail-closed reference execution |
+**Recalc helps when:**
+
+- Reads are expensive (large workbooks, wide scans) and fall inside the certified direct contract
+- The workbook has been seen before, so validated state is warm and reused
+
+**Recalc won't help when:**
+
+- It is the first/cold load — state must be built first
+- Scripts are dynamic or mix reads with writes — they often stay on genuine openpyxl
+- The work is writes — writes are not accelerated
+- Reads use unsupported semantics — execution fails closed to the reference path
 
 ## Quick start
 
@@ -80,10 +84,11 @@ recalc-agent status
 `read.py`) plus a commented `runtime.toml`. `run` executes a script and prints
 its normal output; `status` shows the last receipt.
 
-What to notice: the two write scripts run on the reference path, while the
-supported read is served directly — the first read builds validated state
-(`BUILT`). Run `read.py` once more and `recalc-agent status --json` reports
-(excerpt):
+What to notice:
+
+- The two write scripts run on the reference path.
+- The supported read is served directly — the first read builds validated state (`BUILT`).
+- Run `read.py` once more and `recalc-agent status --json` reports (excerpt):
 
 ```text
 route: DIRECT_RUNTIME, artifact: REUSED, direct_served_loads: 1,
@@ -294,9 +299,14 @@ routes each script before launch: uncertain or unsupported scripts never
 load the direct runtime, while admitted scripts may have supported reads
 served from the persistent read artifact.
 
-Unsupported load modes, proxy escapes, uncertified iteration, and
-artifact/decoder failures lazily use real openpyxl and are recorded in the
-receipt. Representative fallback-after-contact behavior is covered by tests.
+The following lazily use real openpyxl and are recorded in the receipt:
+
+- Unsupported load modes
+- Proxy escapes
+- Uncertified iteration
+- Artifact/decoder failures
+
+Representative fallback-after-contact behavior is covered by tests.
 
 Cold runs are not accelerated: the first invocation builds state. Writes are
 not accelerated. No token, cost, or benchmark-score claim is made.
@@ -306,13 +316,9 @@ not accelerated. No token, cost, or benchmark-score claim is made.
 Observation covers recursive `*.xlsx` under the workdir, up to 1,000 files /
 512 MiB aggregate.
 
-Capture is assurance, not a correctness verdict: it records what the script
-produced and checks the mechanics of the change; it never judges whether the
-change is what the task wanted. Disabling capture (`capture = false`) or the
-runtime (`--no-runtime`) reports `NOT_REQUESTED` and never implies validation.
-If assurance fails while the script succeeded, the command exits `125`; if the
-script failed, its own status is preserved and assurance failure stays visible
-in the receipt.
+- Capture is assurance, not a correctness verdict: it records what the script produced and checks the mechanics of the change; it never judges whether the change is what the task wanted.
+- Disabling capture (`capture = false`) or the runtime (`--no-runtime`) reports `NOT_REQUESTED` and never implies validation.
+- If assurance fails while the script succeeded, the command exits `125`; if the script failed, its own status is preserved and assurance failure stays visible in the receipt.
 
 ## Cache
 
