@@ -1,0 +1,60 @@
+{
+ "common_settings": {
+  "cost_limit_usd_per_task": 2.0,
+  "execution_timeout_seconds_per_command": 180,
+  "fallback_policy": "OpenRouter default (allow_fallbacks=true, require_parameters=true); no provider pin (provider slugs not exposed by catalog API at freeze time). Served-model identity audited post-hoc per generation; any generation served by a different model id invalidates the run (provider-invalid, retried).",
+  "harness": "SWE-agent 1.1.0 via benchmark/run_openrouter_slice.py (Tier 1 patch: --tier1-helper-bundle)",
+  "max_requeries": 2,
+  "max_tokens_policy": "remaining-budget (no fixed cap)",
+  "per_task_timeout_seconds": 3600,
+  "per_task_tool_call_limit": 50,
+  "reasoning_effort": "unset (both models run in their default non-thinking configuration)",
+  "temperature": 0.0,
+  "tool_choice": "auto with one-tool-per-turn enforcement at provider boundary",
+  "top_p": 1.0
+ },
+ "models": [
+  {
+   "capture": "model_catalog_name, model_context_length, catalog/safety prices recorded per run in ledger.jsonl; served-model audit via OpenRouter generation API",
+   "catalog_context_length": 1000000,
+   "catalog_name": "Anthropic: Claude Sonnet 4.5",
+   "catalog_pricing_per_token": {
+    "completion": "0.000015",
+    "prompt": "0.000003"
+   },
+   "category": "P (frontier proprietary)",
+   "contrast_rationale": "Anthropic family; never used in the GLM/Spark lineage. Frontier-class instruction/tool-use behavior provides the strongest contrast axis for helper-adoption and planning-behavior claims.",
+   "model": "anthropic/claude-sonnet-4.5",
+   "observed_endpoints": [
+    "Claude Platform on AWS",
+    "Azure",
+    "Amazon Bedrock",
+    "Anthropic",
+    "Google"
+   ],
+   "tool_support": true,
+   "frozen_scope": "Per prereg Amendment A2 (2026-10-03, user-directed cost decision): 6 first-half cells only, no further runs. Family comparisons use the 6 matched first-half tasks."
+  },
+  {
+   "capture": "model_catalog_name, model_context_length, catalog/safety prices recorded per run in ledger.jsonl; served-model audit via OpenRouter generation API",
+   "catalog_context_length": 1050000,
+   "catalog_name": "Xiaomi: MiMo-V2.6-Pro",
+   "catalog_pricing_per_token": {
+    "completion": "0.00000087",
+    "prompt": "0.000000435"
+   },
+   "category": "O (strong open-weight)",
+   "contrast_rationale": "Xiaomi open-weight family; architecturally and organizationally distinct from both the GLM lineage and the Category P pick. User-selected replacement for deepseek/deepseek-v3.2 per prereg Amendment A1 (2026-10-03).",
+   "model": "xiaomi/mimo-v2.6-pro",
+   "observed_endpoints": [
+    "DeepInfra",
+    "Novita",
+    "GMICloud",
+    "Xiaomi"
+   ],
+   "supersedes": "deepseek/deepseek-v3.2 (DeepSeek V3.2, ctx 163840, $0.00000028/$0.00000042; 6 attempt-1 cells superseded, excluded from primary analysis)",
+   "tool_support": true
+  }
+ ],
+ "note": "Catalog snapshot observed 2026-10-03 via OpenRouter /api/v1/models. Context-length difference (1M vs 163k) is an intrinsic provider/model difference, recorded here, not equalized. All other settings identical across categories."
+}

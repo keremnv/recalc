@@ -1,0 +1,55 @@
+{
+  "name": "tier1-external-validity-v1",
+  "purpose": "Tier 1 external-validity falsification screen: 6 controlled (2/cat lowest task-id hash) + 6 curated (2 read/2 mutation/2 mixed). No model key: one slice serves both model categories with identical tasks.",
+  "sampling": "Controlled: within each category, all dataset.json ids ranked by sha256(task_id) hex ascending, lowest 2 taken. No exclusions, no hindsight. Curated: authored before model selection, strata fixed in generate_curated.py.",
+  "tasks": [
+    {
+      "category": "Debugging",
+      "id": "07_01"
+    },
+    {
+      "category": "Debugging",
+      "id": "08_06"
+    },
+    {
+      "category": "Template",
+      "id": "07_01"
+    },
+    {
+      "category": "Template",
+      "id": "03_02"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "11_05"
+    },
+    {
+      "category": "Financial_Model",
+      "id": "07_01"
+    },
+    {
+      "category": "Curated_Tier1",
+      "id": "T1_R1"
+    },
+    {
+      "category": "Curated_Tier1",
+      "id": "T1_R2"
+    },
+    {
+      "category": "Curated_Tier1",
+      "id": "T1_W1"
+    },
+    {
+      "category": "Curated_Tier1",
+      "id": "T1_W2"
+    },
+    {
+      "category": "Curated_Tier1",
+      "id": "T1_M1"
+    },
+    {
+      "category": "Curated_Tier1",
+      "id": "T1_M2"
+    }
+  ]
+}

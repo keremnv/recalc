@@ -1,0 +1,2438 @@
+[
+ {
+  "workload_id": "Debugging_01_04__542f8461a344",
+  "population_role": "BLOCKED_OTHER",
+  "target_status": false,
+  "base_rep_values": [
+   0.385,
+   0.3953,
+   0.3839
+  ],
+  "off_rep_values": [
+   0.5321,
+   0.4979,
+   0.4824
+  ],
+  "on_rep_values": [
+   0.4764,
+   0.4893,
+   0.5044
+  ],
+  "base_median": 0.385,
+  "off_median": 0.4979,
+  "on_median": 0.4893,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 0.008599999999999997,
+  "saved_s_base_on": -0.1043,
+  "ratio_on_off": 0.9827274553123118,
+  "ratio_on_base": 1.270909090909091,
+  "reduction_off_on": 0.01727254468768824,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "REFERENCE_FAST_PATH",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_served_reads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_iteration_cells_on": [
+   0,
+   0,
+   0
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [],
+   [],
+   []
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Debugging_02_06__7252ca64cf1c",
+  "population_role": "TARGET",
+  "target_status": true,
+  "base_rep_values": [
+   0.4093,
+   0.4246,
+   0.4521
+  ],
+  "off_rep_values": [
+   0.5142,
+   0.6114,
+   0.5577
+  ],
+  "on_rep_values": [
+   0.4409,
+   0.4534,
+   0.3888
+  ],
+  "base_median": 0.4246,
+  "off_median": 0.5577,
+  "on_median": 0.4409,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 0.11679999999999996,
+  "saved_s_base_on": -0.016300000000000037,
+  "ratio_on_off": 0.7905684059530214,
+  "ratio_on_base": 1.0383890720678286,
+  "reduction_off_on": 0.20943159404697864,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   1037,
+   1037,
+   1037
+  ],
+  "direct_iteration_cells_on": [
+   800,
+   800,
+   800
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Debugging_02_06__88edc6528ef0",
+  "population_role": "BLOCKED_OTHER",
+  "target_status": false,
+  "base_rep_values": [
+   0.4422,
+   0.4544,
+   0.4652
+  ],
+  "off_rep_values": [
+   0.5252,
+   0.5286,
+   0.5456
+  ],
+  "on_rep_values": [
+   0.5201,
+   0.5447,
+   0.5219
+  ],
+  "base_median": 0.4544,
+  "off_median": 0.5286,
+  "on_median": 0.5219,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 0.006699999999999928,
+  "saved_s_base_on": -0.0675,
+  "ratio_on_off": 0.9873250094589483,
+  "ratio_on_base": 1.1485475352112675,
+  "reduction_off_on": 0.0126749905410517,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "REFERENCE_FAST_PATH",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_served_reads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_iteration_cells_on": [
+   0,
+   0,
+   0
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [],
+   [],
+   []
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Debugging_04_07__62a7766ef582",
+  "population_role": "TARGET",
+  "target_status": true,
+  "base_rep_values": [
+   2.9095,
+   2.9066,
+   2.8796
+  ],
+  "off_rep_values": [
+   3.2344,
+   3.0668,
+   3.1048
+  ],
+  "on_rep_values": [
+   0.4704,
+   0.5125,
+   0.5077
+  ],
+  "base_median": 2.9066,
+  "off_median": 3.1048,
+  "on_median": 0.5077,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 2.5971,
+  "saved_s_base_on": 2.3989000000000003,
+  "ratio_on_off": 0.16352099974233447,
+  "ratio_on_base": 0.17467143741828942,
+  "reduction_off_on": 0.8364790002576655,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   353,
+   353,
+   353
+  ],
+  "direct_iteration_cells_on": [
+   320,
+   320,
+   320
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Debugging_05_02__f274eaa3cc8e",
+  "population_role": "TARGET",
+  "target_status": true,
+  "base_rep_values": [
+   1.7562,
+   1.7396,
+   1.7456
+  ],
+  "off_rep_values": [
+   1.8285,
+   1.7979,
+   1.9591
+  ],
+  "on_rep_values": [
+   0.4372,
+   0.3733,
+   0.4099
+  ],
+  "base_median": 1.7456,
+  "off_median": 1.8285,
+  "on_median": 0.4099,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 1.4186,
+  "saved_s_base_on": 1.3357,
+  "ratio_on_off": 0.22417281925075197,
+  "ratio_on_base": 0.23481897341888175,
+  "reduction_off_on": 0.7758271807492481,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   2027,
+   2027,
+   2027
+  ],
+  "direct_iteration_cells_on": [
+   1430,
+   1430,
+   1430
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Debugging_09_03__0828d4dfbd13",
+  "population_role": "TARGET",
+  "target_status": true,
+  "base_rep_values": [
+   0.3786,
+   0.3412,
+   0.4335
+  ],
+  "off_rep_values": [
+   0.4969,
+   0.5104,
+   0.4801
+  ],
+  "on_rep_values": [
+   0.3971,
+   0.4471,
+   0.3654
+  ],
+  "base_median": 0.3786,
+  "off_median": 0.4969,
+  "on_median": 0.3971,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 0.0998,
+  "saved_s_base_on": -0.018500000000000016,
+  "ratio_on_off": 0.7991547595089555,
+  "ratio_on_base": 1.048864236661384,
+  "reduction_off_on": 0.20084524049104446,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   1512,
+   1512,
+   1512
+  ],
+  "direct_iteration_cells_on": [
+   1175,
+   1175,
+   1175
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Debugging_09_03__59822a6e11e7",
+  "population_role": "BLOCKED_OTHER",
+  "target_status": false,
+  "base_rep_values": [
+   0.359,
+   0.4056,
+   0.3806
+  ],
+  "off_rep_values": [
+   0.5266,
+   0.5115,
+   0.4805
+  ],
+  "on_rep_values": [
+   0.4581,
+   0.4511,
+   0.4495
+  ],
+  "base_median": 0.3806,
+  "off_median": 0.5115,
+  "on_median": 0.4511,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 0.060399999999999954,
+  "saved_s_base_on": -0.07050000000000001,
+  "ratio_on_off": 0.8819159335288368,
+  "ratio_on_base": 1.1852338413032055,
+  "reduction_off_on": 0.11808406647116321,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "REFERENCE_FAST_PATH",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_served_reads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_iteration_cells_on": [
+   0,
+   0,
+   0
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [],
+   [],
+   []
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Debugging_10_07__6dd8f6d3a4dd",
+  "population_role": "TARGET",
+  "target_status": true,
+  "base_rep_values": [
+   24.2899,
+   23.6886,
+   24.5043
+  ],
+  "off_rep_values": [
+   24.2102,
+   24.0106,
+   24.231
+  ],
+  "on_rep_values": [
+   1.63,
+   1.6284,
+   1.6212
+  ],
+  "base_median": 24.2899,
+  "off_median": 24.2102,
+  "on_median": 1.6284,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 22.5818,
+  "saved_s_base_on": 22.6615,
+  "ratio_on_off": 0.06726090656004494,
+  "ratio_on_base": 0.06704021012848962,
+  "reduction_off_on": 0.9327390934399551,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   1144,
+   1144,
+   1144
+  ],
+  "direct_iteration_cells_on": [
+   820,
+   820,
+   820
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Debugging_10_07__e3a79d24091a",
+  "population_role": "TARGET",
+  "target_status": true,
+  "base_rep_values": [
+   23.9998,
+   23.9737,
+   24.0999
+  ],
+  "off_rep_values": [
+   24.4814,
+   23.969,
+   24.3776
+  ],
+  "on_rep_values": [
+   1.6031,
+   1.7098,
+   1.7872
+  ],
+  "base_median": 23.9998,
+  "off_median": 24.3776,
+  "on_median": 1.7098,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 22.6678,
+  "saved_s_base_on": 22.29,
+  "ratio_on_off": 0.07013815962194801,
+  "ratio_on_base": 0.0712422603521696,
+  "reduction_off_on": 0.929861840378052,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   739,
+   739,
+   739
+  ],
+  "direct_iteration_cells_on": [
+   500,
+   500,
+   500
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Debugging_10_10__c7eca76e6646",
+  "population_role": "TARGET",
+  "target_status": true,
+  "base_rep_values": [
+   24.2062,
+   24.5967,
+   24.6332
+  ],
+  "off_rep_values": [
+   24.7461,
+   24.5964,
+   24.343
+  ],
+  "on_rep_values": [
+   1.6696,
+   1.7292,
+   1.7363
+  ],
+  "base_median": 24.5967,
+  "off_median": 24.5964,
+  "on_median": 1.7292,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 22.8672,
+  "saved_s_base_on": 22.8675,
+  "ratio_on_off": 0.07030297116651217,
+  "ratio_on_base": 0.07030211369817903,
+  "reduction_off_on": 0.9296970288334878,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   14598,
+   14598,
+   14598
+  ],
+  "direct_iteration_cells_on": [
+   10400,
+   10400,
+   10400
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Financial_Model_02_01__79352976d750",
+  "population_role": "ADMITTED_PREEXISTING",
+  "target_status": false,
+  "base_rep_values": [
+   0.5144,
+   0.5428,
+   0.4791
+  ],
+  "off_rep_values": [
+   0.4735,
+   0.4548,
+   0.3793
+  ],
+  "on_rep_values": [
+   0.4565,
+   0.3958,
+   0.523
+  ],
+  "base_median": 0.5144,
+  "off_median": 0.4548,
+  "on_median": 0.4565,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": -0.0017000000000000348,
+  "saved_s_base_on": 0.05789999999999995,
+  "ratio_on_off": 1.0037379067722076,
+  "ratio_on_base": 0.8874416796267497,
+  "reduction_off_on": -0.0037379067722076442,
+  "route_off": "DIRECT_RUNTIME",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   193,
+   193,
+   193
+  ],
+  "direct_iteration_cells_on": [
+   0,
+   0,
+   0
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Financial_Model_02_01__bb15e0fe3832",
+  "population_role": "ADMITTED_PREEXISTING",
+  "target_status": false,
+  "base_rep_values": [
+   0.4668,
+   0.4647,
+   0.4722
+  ],
+  "off_rep_values": [
+   0.4465,
+   0.5196,
+   0.4396
+  ],
+  "on_rep_values": [
+   0.4962,
+   0.5184,
+   0.4634
+  ],
+  "base_median": 0.4668,
+  "off_median": 0.4465,
+  "on_median": 0.4962,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": -0.049699999999999966,
+  "saved_s_base_on": -0.02939999999999998,
+  "ratio_on_off": 1.1113101903695408,
+  "ratio_on_base": 1.062982005141388,
+  "reduction_off_on": -0.11131019036954082,
+  "route_off": "DIRECT_RUNTIME",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   193,
+   193,
+   193
+  ],
+  "direct_iteration_cells_on": [
+   0,
+   0,
+   0
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Financial_Model_02_05__90004332940a",
+  "population_role": "TARGET",
+  "target_status": true,
+  "base_rep_values": [
+   0.4267,
+   0.531,
+   0.4919
+  ],
+  "off_rep_values": [
+   0.5807,
+   0.5143,
+   0.5832
+  ],
+  "on_rep_values": [
+   0.396,
+   0.4227,
+   0.4644
+  ],
+  "base_median": 0.4919,
+  "off_median": 0.5807,
+  "on_median": 0.4227,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 0.15799999999999997,
+  "saved_s_base_on": 0.06919999999999998,
+  "ratio_on_off": 0.7279145858446703,
+  "ratio_on_base": 0.8593210002032934,
+  "reduction_off_on": 0.2720854141553297,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   1955,
+   1955,
+   1955
+  ],
+  "direct_iteration_cells_on": [
+   1331,
+   1331,
+   1331
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Financial_Model_02_05__c75ecb00f745",
+  "population_role": "TARGET",
+  "target_status": true,
+  "base_rep_values": [
+   0.4263,
+   0.4675,
+   0.4658
+  ],
+  "off_rep_values": [
+   0.5783,
+   0.6181,
+   0.5416
+  ],
+  "on_rep_values": [
+   0.3908,
+   0.4344,
+   0.4416
+  ],
+  "base_median": 0.4658,
+  "off_median": 0.5783,
+  "on_median": 0.4344,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 0.14390000000000003,
+  "saved_s_base_on": 0.031399999999999983,
+  "ratio_on_off": 0.7511672142486598,
+  "ratio_on_base": 0.9325890940317734,
+  "reduction_off_on": 0.24883278575134016,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   2388,
+   2388,
+   2388
+  ],
+  "direct_iteration_cells_on": [
+   1804,
+   1804,
+   1804
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Financial_Model_08_01__2ea507d758dc",
+  "population_role": "ADMITTED_PREEXISTING",
+  "target_status": false,
+  "base_rep_values": [
+   5.3758,
+   5.1779,
+   5.2373
+  ],
+  "off_rep_values": [
+   1.5429,
+   1.5655,
+   1.5722
+  ],
+  "on_rep_values": [
+   1.6035,
+   1.6041,
+   1.6174
+  ],
+  "base_median": 5.2373,
+  "off_median": 1.5655,
+  "on_median": 1.6041,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": -0.03860000000000019,
+  "saved_s_base_on": 3.6332000000000004,
+  "ratio_on_off": 1.0246566592143087,
+  "ratio_on_base": 0.3062837721726844,
+  "reduction_off_on": -0.024656659214308707,
+  "route_off": "DIRECT_RUNTIME",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   1611,
+   1611,
+   1611
+  ],
+  "direct_iteration_cells_on": [
+   0,
+   0,
+   0
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Financial_Model_08_02__4ca3ae46295d",
+  "population_role": "TARGET",
+  "target_status": true,
+  "base_rep_values": [
+   5.3035,
+   5.3959,
+   5.2862
+  ],
+  "off_rep_values": [
+   5.5337,
+   5.457,
+   5.4095
+  ],
+  "on_rep_values": [
+   1.6696,
+   1.5753,
+   1.8571
+  ],
+  "base_median": 5.3035,
+  "off_median": 5.457,
+  "on_median": 1.6696,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 3.7874,
+  "saved_s_base_on": 3.6338999999999997,
+  "ratio_on_off": 0.30595565328935315,
+  "ratio_on_base": 0.3148109738851702,
+  "reduction_off_on": 0.6940443467106469,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   8351,
+   8351,
+   8351
+  ],
+  "direct_iteration_cells_on": [
+   4800,
+   4800,
+   4800
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Financial_Model_08_02__625ec1db4acb",
+  "population_role": "TARGET",
+  "target_status": true,
+  "base_rep_values": [
+   5.5383,
+   5.3359,
+   5.4754
+  ],
+  "off_rep_values": [
+   5.4594,
+   5.3159,
+   5.6172
+  ],
+  "on_rep_values": [
+   1.5273,
+   1.56,
+   1.5689
+  ],
+  "base_median": 5.4754,
+  "off_median": 5.4594,
+  "on_median": 1.56,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 3.8993999999999995,
+  "saved_s_base_on": 3.9153999999999995,
+  "ratio_on_off": 0.2857456863391582,
+  "ratio_on_base": 0.28491069145633197,
+  "reduction_off_on": 0.7142543136608418,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   11112,
+   11112,
+   11112
+  ],
+  "direct_iteration_cells_on": [
+   8000,
+   8000,
+   8000
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Financial_Model_08_03__e48ea186deeb",
+  "population_role": "ADMITTED_PREEXISTING",
+  "target_status": false,
+  "base_rep_values": [
+   5.0982,
+   5.2787,
+   5.4575
+  ],
+  "off_rep_values": [
+   1.6178,
+   1.5441,
+   1.6086
+  ],
+  "on_rep_values": [
+   1.5137,
+   1.5902,
+   1.5929
+  ],
+  "base_median": 5.2787,
+  "off_median": 1.6086,
+  "on_median": 1.5902,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 0.018399999999999972,
+  "saved_s_base_on": 3.6884999999999994,
+  "ratio_on_off": 0.9885614820340669,
+  "ratio_on_base": 0.3012484134351261,
+  "reduction_off_on": 0.011438517965933093,
+  "route_off": "DIRECT_RUNTIME",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   627,
+   627,
+   627
+  ],
+  "direct_iteration_cells_on": [
+   0,
+   0,
+   0
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Financial_Model_11_02__a443eee257b4",
+  "population_role": "ADMITTED_PREEXISTING",
+  "target_status": false,
+  "base_rep_values": [
+   1.1727,
+   1.1497,
+   1.1238
+  ],
+  "off_rep_values": [
+   0.5628,
+   0.5599,
+   0.5431
+  ],
+  "on_rep_values": [
+   0.5262,
+   0.5487,
+   0.6288
+  ],
+  "base_median": 1.1497,
+  "off_median": 0.5599,
+  "on_median": 0.5487,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 0.011199999999999988,
+  "saved_s_base_on": 0.601,
+  "ratio_on_off": 0.9799964279335596,
+  "ratio_on_base": 0.4772549360702792,
+  "reduction_off_on": 0.020003572066440434,
+  "route_off": "DIRECT_RUNTIME",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   111,
+   111,
+   111
+  ],
+  "direct_iteration_cells_on": [
+   0,
+   0,
+   0
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Financial_Model_15_03__64092e664e9b",
+  "population_role": "TARGET",
+  "target_status": true,
+  "base_rep_values": [
+   0.7683,
+   0.7818,
+   0.7424
+  ],
+  "off_rep_values": [
+   0.849,
+   0.8845,
+   0.8989
+  ],
+  "on_rep_values": [
+   0.5581,
+   0.5599,
+   0.5021
+  ],
+  "base_median": 0.7683,
+  "off_median": 0.8845,
+  "on_median": 0.5581,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 0.3263999999999999,
+  "saved_s_base_on": 0.21019999999999994,
+  "ratio_on_off": 0.6309779536461279,
+  "ratio_on_base": 0.7264089548353508,
+  "reduction_off_on": 0.36902204635387215,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   10768,
+   10768,
+   10768
+  ],
+  "direct_iteration_cells_on": [
+   8145,
+   8145,
+   8145
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Template_03_03__c76ea596b408",
+  "population_role": "ADMITTED_PREEXISTING",
+  "target_status": false,
+  "base_rep_values": [
+   0.2756,
+   0.2683,
+   0.2665
+  ],
+  "off_rep_values": [
+   0.4065,
+   0.4299,
+   0.413
+  ],
+  "on_rep_values": [
+   0.4125,
+   0.3508,
+   0.4221
+  ],
+  "base_median": 0.2683,
+  "off_median": 0.413,
+  "on_median": 0.4125,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 0.0005000000000000004,
+  "saved_s_base_on": -0.1442,
+  "ratio_on_off": 0.9987893462469734,
+  "ratio_on_base": 1.537458069325382,
+  "reduction_off_on": 0.001210653753026647,
+  "route_off": "DIRECT_RUNTIME",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   43,
+   43,
+   43
+  ],
+  "direct_iteration_cells_on": [
+   0,
+   0,
+   0
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Template_06_02__85fab8c95cea",
+  "population_role": "BLOCKED_OTHER",
+  "target_status": false,
+  "base_rep_values": [
+   0.2664,
+   0.2598,
+   0.3062
+  ],
+  "off_rep_values": [
+   0.4111,
+   0.4133,
+   0.368
+  ],
+  "on_rep_values": [
+   0.4102,
+   0.4062,
+   0.4042
+  ],
+  "base_median": 0.2664,
+  "off_median": 0.4111,
+  "on_median": 0.4062,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 0.0049000000000000155,
+  "saved_s_base_on": -0.13979999999999998,
+  "ratio_on_off": 0.9880807589394307,
+  "ratio_on_base": 1.5247747747747746,
+  "reduction_off_on": 0.011919241060569297,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "REFERENCE_FAST_PATH",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_served_reads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_iteration_cells_on": [
+   0,
+   0,
+   0
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [],
+   [],
+   []
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Template_06_02__c26a4c6508ba",
+  "population_role": "BLOCKED_OTHER",
+  "target_status": false,
+  "base_rep_values": [
+   0.2946,
+   0.2682,
+   0.2671
+  ],
+  "off_rep_values": [
+   0.428,
+   0.3841,
+   0.4433
+  ],
+  "on_rep_values": [
+   0.3772,
+   0.3782,
+   0.3675
+  ],
+  "base_median": 0.2682,
+  "off_median": 0.428,
+  "on_median": 0.3772,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 0.05080000000000001,
+  "saved_s_base_on": -0.10899999999999999,
+  "ratio_on_off": 0.8813084112149533,
+  "ratio_on_base": 1.4064131245339297,
+  "reduction_off_on": 0.11869158878504671,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "REFERENCE_FAST_PATH",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_served_reads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_iteration_cells_on": [
+   0,
+   0,
+   0
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [],
+   [],
+   []
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Template_06_12__3d05a7ee874d",
+  "population_role": "BLOCKED_OTHER",
+  "target_status": false,
+  "base_rep_values": [
+   0.29,
+   0.3215,
+   0.2856
+  ],
+  "off_rep_values": [
+   0.3637,
+   0.3669,
+   0.3731
+  ],
+  "on_rep_values": [
+   0.371,
+   0.3786,
+   0.4121
+  ],
+  "base_median": 0.29,
+  "off_median": 0.3669,
+  "on_median": 0.3786,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": -0.011699999999999988,
+  "saved_s_base_on": -0.08860000000000001,
+  "ratio_on_off": 1.0318887980376124,
+  "ratio_on_base": 1.3055172413793104,
+  "reduction_off_on": -0.031888798037612354,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "REFERENCE_FAST_PATH",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_served_reads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_iteration_cells_on": [
+   0,
+   0,
+   0
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [],
+   [],
+   []
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Template_06_12__83f82ce3f62b",
+  "population_role": "BLOCKED_OTHER",
+  "target_status": false,
+  "base_rep_values": [
+   0.2896,
+   0.3223,
+   0.2794
+  ],
+  "off_rep_values": [
+   0.3695,
+   0.3758,
+   0.4151
+  ],
+  "on_rep_values": [
+   0.3581,
+   0.4316,
+   0.3745
+  ],
+  "base_median": 0.2896,
+  "off_median": 0.3758,
+  "on_median": 0.3745,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 0.0013000000000000234,
+  "saved_s_base_on": -0.08489999999999998,
+  "ratio_on_off": 0.99654071314529,
+  "ratio_on_base": 1.2931629834254144,
+  "reduction_off_on": 0.0034592868547099753,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "REFERENCE_FAST_PATH",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_served_reads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_iteration_cells_on": [
+   0,
+   0,
+   0
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [],
+   [],
+   []
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Template_06_23__fc41ad37c48b",
+  "population_role": "ADMITTED_PREEXISTING",
+  "target_status": false,
+  "base_rep_values": [
+   0.2719,
+   0.3019,
+   0.268
+  ],
+  "off_rep_values": [
+   0.417,
+   0.3609,
+   0.4185
+  ],
+  "on_rep_values": [
+   0.4227,
+   0.3738,
+   0.418
+  ],
+  "base_median": 0.2719,
+  "off_median": 0.417,
+  "on_median": 0.418,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": -0.0010000000000000009,
+  "saved_s_base_on": -0.1461,
+  "ratio_on_off": 1.0023980815347722,
+  "ratio_on_base": 1.5373299006987864,
+  "reduction_off_on": -0.0023980815347721673,
+  "route_off": "DIRECT_WITH_FALLBACK",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_WITH_FALLBACK",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_iteration_cells_on": [
+   0,
+   0,
+   0
+  ],
+  "fallback_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "reference_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Template_15_01__fa75e25f6a90",
+  "population_role": "BLOCKED_OTHER",
+  "target_status": false,
+  "base_rep_values": [
+   0.2965,
+   0.276,
+   0.2917
+  ],
+  "off_rep_values": [
+   0.375,
+   0.4148,
+   0.4263
+  ],
+  "on_rep_values": [
+   0.3702,
+   0.415,
+   0.3619
+  ],
+  "base_median": 0.2917,
+  "off_median": 0.4148,
+  "on_median": 0.3702,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 0.04460000000000003,
+  "saved_s_base_on": -0.07849999999999996,
+  "ratio_on_off": 0.8924783027965284,
+  "ratio_on_base": 1.2691121014741171,
+  "reduction_off_on": 0.1075216972034716,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "REFERENCE_FAST_PATH",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_served_reads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_iteration_cells_on": [
+   0,
+   0,
+   0
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [],
+   [],
+   []
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Template_15_03__5ad5663409d0",
+  "population_role": "BLOCKED_OTHER",
+  "target_status": false,
+  "base_rep_values": [
+   0.2675,
+   0.3418,
+   0.2841
+  ],
+  "off_rep_values": [
+   0.3647,
+   0.3637,
+   0.3687
+  ],
+  "on_rep_values": [
+   0.3839,
+   0.4193,
+   0.3716
+  ],
+  "base_median": 0.2841,
+  "off_median": 0.3647,
+  "on_median": 0.3839,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": -0.019199999999999995,
+  "saved_s_base_on": -0.0998,
+  "ratio_on_off": 1.0526460104195228,
+  "ratio_on_base": 1.3512847588877155,
+  "reduction_off_on": -0.05264601041952277,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "REFERENCE_FAST_PATH",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_served_reads_on": [
+   0,
+   0,
+   0
+  ],
+  "direct_iteration_cells_on": [
+   0,
+   0,
+   0
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [],
+   [],
+   []
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Template_15_03__68f4733f2576",
+  "population_role": "TARGET",
+  "target_status": true,
+  "base_rep_values": [
+   0.2726,
+   0.2684,
+   0.2676
+  ],
+  "off_rep_values": [
+   0.4002,
+   0.4293,
+   0.3944
+  ],
+  "on_rep_values": [
+   0.4589,
+   0.3732,
+   0.3649
+  ],
+  "base_median": 0.2684,
+  "off_median": 0.4002,
+  "on_median": 0.3732,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": 0.027000000000000024,
+  "saved_s_base_on": -0.10479999999999995,
+  "ratio_on_off": 0.9325337331334332,
+  "ratio_on_base": 1.390461997019374,
+  "reduction_off_on": 0.06746626686656676,
+  "route_off": "REFERENCE_FAST_PATH",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   1218,
+   1218,
+   1218
+  ],
+  "direct_iteration_cells_on": [
+   1140,
+   1140,
+   1140
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ },
+ {
+  "workload_id": "Template_16_07__9662584ede5e",
+  "population_role": "ADMITTED_PREEXISTING",
+  "target_status": false,
+  "base_rep_values": [
+   0.2678,
+   0.2928,
+   0.2716
+  ],
+  "off_rep_values": [
+   0.3614,
+   0.3603,
+   0.3817
+  ],
+  "on_rep_values": [
+   0.353,
+   0.4147,
+   0.3879
+  ],
+  "base_median": 0.2716,
+  "off_median": 0.3614,
+  "on_median": 0.3879,
+  "reducer_definition": "median of 3 warm reps (historical R3 reducer)",
+  "saved_s_off_on": -0.026500000000000024,
+  "saved_s_base_on": -0.11630000000000001,
+  "ratio_on_off": 1.0733259546209186,
+  "ratio_on_base": 1.4282032400589102,
+  "reduction_off_on": -0.07332595462091862,
+  "route_off": "DIRECT_RUNTIME",
+  "route_off_unanimous_3reps": true,
+  "route_on": "DIRECT_RUNTIME",
+  "route_on_unanimous_3reps": true,
+  "direct_served_loads_on": [
+   1,
+   1,
+   1
+  ],
+  "direct_served_reads_on": [
+   92,
+   92,
+   92
+  ],
+  "direct_iteration_cells_on": [
+   0,
+   0,
+   0
+  ],
+  "fallback_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "reference_loads_on": [
+   0,
+   0,
+   0
+  ],
+  "artifact_status_on": [
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ],
+   [
+    "REUSED"
+   ]
+  ],
+  "exits_off": [
+   0,
+   0,
+   0
+  ],
+  "exits_on": [
+   0,
+   0,
+   0
+  ],
+  "base_exit": 0,
+  "parity_population_A": true,
+  "included_in_historical_aggregate": true,
+  "source_evidence": "research/full_cell_iteration_product_confirmation/REPRESENTATIVE_RESULTS.jsonl"
+ }
+]

@@ -1,0 +1,25 @@
+# docker build -f spreadsheet.Dockerfile -t spreadsheetbench-v2 .
+FROM python:3.11.10-bullseye  
+
+ARG DEBIAN_FRONTEND=noninteractive  
+ENV TZ=Etc/UTC
+
+WORKDIR /
+
+# Install swe-rex for faster startup
+RUN pip install pipx
+RUN pipx install swe-rex
+RUN pipx ensurepath
+ENV PATH="$PATH:/root/.local/bin/"
+
+# Install any extra dependencies
+RUN pip install flake8
+RUN pip install openpyxl numpy pandas matplotlib xlsxwriter
+RUN printf "deb http://archive.debian.org/debian bullseye main\n" > /etc/apt/sources.list && rm -f /etc/apt/sources.list.d/*.list
+RUN apt-get update
+RUN apt-get install -y --allow-downgrades libpython3.9-minimal=3.9.2-1 libpython3.9-stdlib=3.9.2-1 libpython3.9=3.9.2-1 python3.9-minimal=3.9.2-1 && apt-get install -y libreoffice libreoffice-script-provider-python
+
+# Add LibreOffice UNO library to Python path
+ENV PYTHONPATH="/usr/lib/libreoffice/program:/usr/lib/python3/dist-packages:${PYTHONPATH}"
+
+SHELL ["/bin/bash", "-c"]

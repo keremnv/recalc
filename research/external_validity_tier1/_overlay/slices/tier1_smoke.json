@@ -1,0 +1,1 @@
+{"name":"tier1-smoke-only","purpose":"UNSCORED harness validation only (prereg §5). Debugging:01_01 is not in the Tier 1 manifest. At most 2 runs from this slice; never scored, never in ledgers.","tasks":[{"category":"Debugging","id":"01_01"}]}

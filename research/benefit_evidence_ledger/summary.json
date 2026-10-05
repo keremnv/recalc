@@ -1,0 +1,27 @@
+{
+ "n_rows": 77,
+ "by_status": {
+  "CONDITIONAL_MECHANISM_EFFECT": 2,
+  "DIRECT_BLOCK_BENEFIT": 10,
+  "DIRECT_SERVICE_NO_WHOLE_TASK_BENEFIT": 4,
+  "NO_POPULATION_BENEFIT": 3,
+  "NO_USEFUL_DIRECT_SERVICE": 31,
+  "SUBSTEP_BENEFIT": 18,
+  "SUBSTEP_NO_BENEFIT": 5,
+  "WHOLE_TASK_BENEFIT": 4
+ },
+ "whole_task_positive_trajectories": [
+  "tier1-r01-P-Debugging-07_01",
+  "tier1-r06-O-mimo-Financial_Model-11_05"
+ ],
+ "whole_task_positive_tasks": [
+  "Debugging:07_01",
+  "Financial_Model:11_05"
+ ],
+ "counterexample_trajectories": [
+  "tier1-r14-O-mimo-Debugging-08_06",
+  "tier1-r18-O-mimo-Financial_Model-07_01"
+ ],
+ "direct_blocks": 10,
+ "crosschecks": "tier2_summary OFF/ON sums match to 1e-6; sb2 controlled replay sums match to 1e-6"
+}

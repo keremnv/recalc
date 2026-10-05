@@ -1,0 +1,81 @@
+{
+ "n_workloads": 30,
+ "historical_reducer": "sum of per-workload medians of 3 warm reps",
+ "historical_pair": "OFF (rc3-equivalent predecessor control) -> ON (iteration candidate)",
+ "recomputed_base_sum_medians": 107.4838,
+ "recomputed_off_sum_medians": 102.2582,
+ "recomputed_on_sum_medians": 21.508,
+ "absolute_saved_off_on": 80.7502,
+ "ratio_on_off": 0.2103303206979978,
+ "relative_reduction_off_on": 0.7896696793020022,
+ "historical_rounded": {
+  "off": 102.26,
+  "on": 21.51,
+  "saved": 80.75,
+  "reduction_pct": 79.0
+ },
+ "posthoc_descriptive": {
+  "faster_on_lt_off": 23,
+  "equal": 0,
+  "slower_on_gt_off": 7,
+  "median_ratio_on_off": 0.9125060179649809,
+  "mean_ratio_on_off": 0.7565700429961584,
+  "geomean_ratio_on_off": 0.5964539788664701,
+  "q1_ratio": 0.5497223785569342,
+  "q3_ratio": 0.9996915300689231,
+  "min_ratio": 0.06726090656004494,
+  "min_ratio_workload": "Debugging_10_07__6dd8f6d3a4dd",
+  "max_ratio": 1.1113101903695408,
+  "max_ratio_workload": "Financial_Model_02_01__bb15e0fe3832",
+  "median_saved_s": 0.035800000000000026,
+  "total_saved_s": 80.7502,
+  "largest_saving_s": 22.8672,
+  "largest_saving_workload": "Debugging_10_10__c7eca76e6646",
+  "largest_regression_s": -0.049699999999999966,
+  "largest_regression_workload": "Financial_Model_02_01__bb15e0fe3832",
+  "concentration": {
+   "top1_share_of_positive_savings": 0.28266496577196637,
+   "top3_share_of_positive_savings": 0.8420022101742181,
+   "top5_share_of_positive_savings": 0.9370199237069615,
+   "top10_share_of_positive_savings": 0.9944251198413816,
+   "remaining_share": 0.0055748801586184005,
+   "top3_off_runtime_share": 0.7156805028838763,
+   "top5_off_runtime_share": 0.8224337999299811,
+   "top3_off_workloads_on_runtime_share": 0.23560535614655015
+  },
+  "pearson_off_runtime_vs_saved": 0.9986411100710298,
+  "pearson_off_runtime_vs_ratio": -0.7617609350350132,
+  "spearman_off_runtime_vs_saved": 0.7757508342602892,
+  "spearman_off_runtime_vs_ratio": -0.7779755283648498,
+  "within_workload_variability": {
+   "BASE": {
+    "median_cv_3reps": 0.02459231305125539,
+    "max_cv_3reps": 0.10692483265891381,
+    "max_cv_workload": "Template_15_03__5ad5663409d0"
+   },
+   "OFF": {
+    "median_cv_3reps": 0.025874875392562204,
+    "max_cv_3reps": 0.09342467529623052,
+    "max_cv_workload": "Financial_Model_02_01__79352976d750"
+   },
+   "ON": {
+    "median_cv_3reps": 0.05066134615804531,
+    "max_cv_3reps": 0.11331456559767987,
+    "max_cv_workload": "Financial_Model_02_01__79352976d750"
+   }
+  }
+ },
+ "fm08_02_4ca3": {
+  "member": true,
+  "population_role": "TARGET",
+  "rank_by_base_median_desc": 5,
+  "rank_by_saved_desc": 5,
+  "rank_by_reduction_desc": 7,
+  "base_median": 5.3035,
+  "off_median": 5.457,
+  "on_median": 1.6696,
+  "saved_s_off_on": 3.7874,
+  "ratio_on_off": 0.30595565328935315,
+  "reduction_off_on": 0.6940443467106469
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "T1_M1": {
+  "check": "variance_formulas+top3",
+  "instruction": "Build a Variance sheet with columns Line/Budget/Actual/Variance for all 10 lines, using formulas referencing the Budget and Actuals sheets. Then list the top 3 overspend lines (actual minus budget, largest first) in Variance!A14:A16 with a 'Top overspend' label in A13."
+ },
+ "T1_M2": {
+  "check": "ending_formulas+flags",
+  "instruction": "Build an Inventory sheet with columns SKU/Ending/Flag for all 15 SKUs. Ending must be a formula: Starting + Receipts - Shipments for that row. Flag is 'NEGATIVE' when ending is below zero, else 'OK'."
+ },
+ "T1_R1": {
+  "answer_cells": [
+   "Report!A2",
+   "Report!A3",
+   "Report!A4",
+   "Report!B2",
+   "Report!B3",
+   "Report!B4"
+  ],
+  "instruction": "Using the Sales sheet, find the top 3 products by total Q3 (months 7-9) revenue in region 'West'. Write the product names in Report!A2:A4 (rank order) and their Q3 totals in Report!B2:B4. Do not modify other sheets."
+ },
+ "T1_R2": {
+  "answer_cells": [
+   "Findings!A2",
+   "Findings!A3",
+   "Findings!A4",
+   "Findings!A5",
+   "Findings!A6",
+   "Findings!A7"
+  ],
+  "instruction": "Audit formulas on sheets S1-S4: each Total cell (column D) should equal Qty*Price for its row. List every defective cell as 'Sheet!Addr' (e.g. S1!D5) in Findings!A2 downward, one per row. Do not fix the defects; only report them.",
+  "order_insensitive": true
+ },
+ "T1_W1": {
+  "check": "dates_iso+quarter_formulas+bold_headers",
+  "instruction": "On each monthly sheet (Jan-Jun): convert all column A dates to text format YYYY-MM-DD, fill column C with a formula computing the quarter (Q1-Q4) from the column A date, and make the header row bold. Preserve amounts."
+ },
+ "T1_W2": {
+  "check": "unmerged+filled+total_formulas",
+  "instruction": "On Dept1 and Dept2: unmerge all merged cells, fill the team name down into every row of its block, and add a TOTAL row (row 11) with SUM formulas over B2:B10 and C2:C10. Preserve all numbers."
+ }
+}
