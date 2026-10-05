@@ -26,6 +26,8 @@ unchanged. Full instruction, code, and raw rep timings:
 
 ![Measured vignette: one real read-only inspection step from the SpreadsheetBench-2 FM:08_02 agent trajectory; the frozen Assumptions-tab scan took 3.69 s under plain Python and 0.73 s under warm Recalc, saving 2.95 s (80.1% lower) with identical delivered findings](docs/assets/recalc-performance-vignette.svg)
 
+Also available: a [recorded side-by-side race of this step (GIF)](docs/assets/recalc-side-by-side.gif) — the same frozen script on BASE vs warm Recalc, replayed from real byte-timed captures.
+
 Across the preregistered 30-workload read-heavy representative population used
 to productize certified full-cell iteration, aggregate warm runtime changed
 from **102.26 s** to **21.51 s**; artifact decode (D1) separately moved decode
