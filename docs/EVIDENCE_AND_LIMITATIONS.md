@@ -1,91 +1,191 @@
-# Evidence and limitations — recalc-agent 0.2.0
+# Evidence and limitations — Recalc 0.2.0
 
-Measurements below were established on `0.2.0rc2`. `0.2.0rc3` is a rename
-and release-hygiene candidate only: it changes product identity, licensing,
-and release surfaces without changing the validated mechanism, so the rc2
-evidence stands for rc3. `0.2.0rc4` adds the certified full-cell `iter_rows`
-contract to the direct runtime; rc2/rc3 evidence below still stands, and the
-rc4 iteration confirmation is reported separately under “Established”.
-`0.2.0rc5` keeps the same artifact representation and contracts while
-decoding already-validated typed values directly; its confirmation is
-likewise reported separately under “Established”. `0.2.0` final ships the
-rc5 mechanism set unchanged (release hygiene + version bump only); rc5
-artifacts rebuild once under the rotated version key (cold cost only).
+This document describes the semantic and operational evidence boundary
+for released `recalc-agent 0.2.0`. It covers interface parity,
+direct-read eligibility, fallback behavior, persisted-state integrity,
+observation/assurance behavior, tested execution environments, and
+unsupported cases.
 
-Concise technical boundary for users who care about implementation guarantees.
-Research-oriented readers: full ledgers live in `research/history/product_integration_phase10/`,
-`research/history/product_integration_phase10b/`, `research/history/product_hygiene/`, and `research/history/phase10c_audit/`.
+Performance measurements are intentionally not duplicated here; see
+[`PERFORMANCE.md`](../PERFORMANCE.md). Release history lives in
+[`CHANGELOG.md`](../CHANGELOG.md); the detailed support matrix in
+[`COMPATIBILITY.md`](../COMPATIBILITY.md); historical studies in
+[`research/`](../research/).
 
-Validation host for the cited runs: Ubuntu 26.04.1, kernel 7.0.0-34, Intel
-Core Ultra 5 125H, CPython 3.13.12, openpyxl 3.1.5.
+## What is established
 
-## Established
+### Ordinary Python/openpyxl execution surface
 
-- **Ordinary Python/openpyxl interface.** `run` launches the unchanged script
-  in a real interpreter. 543/543 oracle rows show exit/stream/state parity
-  with plain Python; process-identity fixtures cover argv, cwd, `__main__`,
-  streams, atexit, subprocesses, inherited FDs, and caught SIGINT.
-- **Conditional narrow direct reads.** Whole-script static admission routes
-  uncertain scripts to ordinary openpyxl without loading the direct runtime
-  (audited: no proxy, no artifact lookup, no direct state). Admitted scripts
-  get a narrow surface (sheet names, bounds, literal cell access, value/data
-  type, plus — since rc4 — the certified full-cell `iter_rows` contract);
-  the merged-cell certificate covers only a closed terminal-scalar
-  grammar.
-- **Certified full-cell iteration (rc4).** Bounded or worksheet-dimension
-  `ws.iter_rows()` with nested row → cell consumption and the
-  `.value` / `.coordinate` / `.row` / `.column` / `.data_type` cell
-  surface is served from existing read state. Frozen confirmation:
-  13/13 iteration-only representative workloads converted to direct and
-  stayed direct throughout; 40/40 adversarial and 52/52 A/B differential
-  parity vs pinned openpyxl; representative-30 warm total (median sums)
-  102.26 s → 21.51 s. `iter_cols`, `values_only`, `.values`, range
-  literals, rich attributes, and mixed mutation remain reference-routed.
-- **Direct typed reconstruction (rc5).** Warm decode reconstructs Python
-  values directly from already-validated typed dicts instead of
-  re-serializing/re-parsing each value. Same artifact bytes, format,
-  validation, admission, and API. Frozen confirmation: decode mass
-  5.014 s → 1.896 s, warm total 13.158 s → 10.157 s; 52/52 canonical
-  state, 40/40 adversarial, 52/52 A/B parity, 12/12 corruption reject.
-  The rc5 version bump rotates artifact keys once by existing policy
-  (cold rebuild only); the mechanism itself reuses rc4-built artifacts.
-- **Reference fallback.** Unsupported load modes, proxy escapes, uncertified
-  iteration, and artifact/decoder failures lazily use real openpyxl and are
-  recorded in the receipt. Representative fallback-after-contact behavior is
-  covered.
-- **Persistent derived state.** Content-addressed artifacts (`JSONZ_MEMORY_V1`)
-  keyed by whole-file SHA-256 plus runtime/decoder/contract/format versions,
-  validated before serving, published atomically under a per-key lock.
-  Corrupt/missing/stale/incompatible entries rebuild; a second source hash at
-  first load closes the bootstrap-to-script race.
-- **External process observation.** A native parent launches and waits for the
-  script process, survives tested abrupt exits (`os._exit`, SIGTERM), and
-  records raw exit/signal status separately from assurance status.
-- **Tested changed-file capture.** Five frozen write fixtures: exact package
-  relation, changed-XLSX detection, mechanical validation and delta replay.
-  Full-command cost on those fixtures was ~1.6× plain Python — charged
-  assurance overhead, not acceleration.
-- **Tested Linux installation/process behavior.** Clean wheel install
-  (native launcher + observer executable; doctor/example/run/status green;
-  BUILT then REUSED), 27+ maintained tests, bounded failure-injection battery
-  (corrupt/truncated/missing/stale artifacts, malformed workbook, cache
-  denial, missing observer, helper failure, launch failure).
+`recalc-agent run` executes the user's ordinary Python script in a real
+Python interpreter; Recalc does not require spreadsheet logic to be
+rewritten into a DSL or task IR. Validated: 543/543 oracle rows show
+exit/stream/state parity between plain Python and Recalc execution,
+including route/fallback parity; process-identity fixtures cover argv,
+cwd, `__main__`, streams, atexit, subprocesses, inherited file
+descriptors, and caught SIGINT. Nested interpreters and other Python
+processes are unaffected by design.
 
-## Conditional measurements (host/run-sensitive, not portable)
+### Certified direct-read contract
 
-- **Reference-only overhead.** Fixed 22-script set, second invocation:
-  +18.85 ms median unpinned (Phase-10, archived) vs +6.39 ms median
-  [5.63, 9.71] CPU-pinned (Phase-10B) on the same host. Same code, different
-  run protocol — timing is host identity, never averaged across hosts.
-- **Direct-contact speedups.** Warm reuse only: median 0.608× vs plain Python
-  on 7 frozen representative direct-contact workloads; 0.468× on the fixed-22
-  contact-selected set. Small clustered views; cold runs show no benefit
-  (1.04–1.12×); the all-30 representative median is 1.044 (5 faster/25 slower)
-  because most scripts are reference-only by design.
+Whole-script static admission routes uncertain scripts to genuine
+openpyxl without loading the direct runtime (audited: no proxy, no
+artifact lookup, no direct state on that path). Admitted scripts get a
+narrow surface: workbook/worksheet names and lookup, worksheet
+bounds/dimensions, literal/integer point-cell access, cell value and
+data type, selected merged-cell behavior under a closed
+terminal-scalar grammar, and the certified full-cell `ws.iter_rows()`
+contract (bounded or worksheet-dimension bounds, nested row → cell
+consumption, `.value` / `.coordinate` / `.row` / `.column` /
+`.data_type` cell surface).
 
-## Not claimed
+Representative exclusions: `iter_cols`, `values_only`, `.values`,
+range literals, direct writes/mutation, `data_only`, rich
+attributes/object escape, and dynamic usage static admission cannot
+certify. Certified iteration parity: 40/40 adversarial and 52/52 A/B
+differential vs pinned openpyxl 3.1.5.
 
-Universal speedup; cross-host timing guarantees; cold acceleration; write
-acceleration; token/model-cost savings; benchmark-score improvement; task
-correctness or output certification from capture; broad openpyxl equivalence;
-generic `iter_rows` acceleration beyond the certified contract.
+### Mixed reads and writes, precisely
+
+A script/invocation containing workbook mutation (`.save()`,
+workbook/cell assignment) is reference-routed as a whole by static
+admission. Separately, certified read-only invocations may be directly
+served inside a larger trajectory whose other invocations write —
+each invocation is classified independently, and measured task replays
+include such mixed trajectories. Mutations and uncertified behavior
+always remain genuine-openpyxl/reference execution; a mixed
+trajectory as a whole is neither "supported" nor "unsupported" — the
+unit is the invocation.
+
+### Fail-closed admission and genuine-openpyxl fallback
+
+Uncertainty never causes Recalc to approximate openpyxl semantics.
+Two distinct cases:
+
+- **Not admitted.** The script runs on genuine openpyxl; the direct
+  runtime is never loaded.
+- **Admitted, but a runtime condition prevents direct service.**
+  Unsupported load modes, proxy escapes, uncertified iteration, and
+  missing/stale/corrupt/incompatible read state resolve per the
+  implemented contract — rebuild where the state is at fault, lazy
+  reference fallback where the operation escapes — and the route is
+  recorded in the receipt.
+
+Fallback is a designed outcome, not a semantic failure — and not
+acceleration. Admission does not imply useful direct service:
+admitted invocations have been observed serving zero direct loads.
+Unsupported behavior retains openpyxl ownership throughout.
+
+### Validated persistent workbook read state
+
+The persisted semantic object is validated workbook read state
+(artifact format `JSONZ_MEMORY_V1`), keyed by whole-file SHA-256 plus
+runtime/decoder/contract/format versions, published atomically under
+a per-key lock. Recalc 0.2.0 reconstructs supported Python values
+directly from already-validated typed state while preserving the
+same artifact representation, validation boundary, and direct-read
+contract (semantic parity: 52/52 canonical state, 40/40 adversarial,
+52/52 A/B differential, 12/12 corruption rejection; byte-identical
+artifacts across the decoder change).
+
+### Freshness and corruption handling
+
+Stale, corrupt, truncated, malformed, missing, or incompatible state
+is rejected and rebuilt — never served. Old-version entries are
+orphaned by key rotation, never served. A second source hash at
+first load closes the bootstrap-to-script race. Corrupt-cache
+rebuild, malformed workbooks, cache denial, and related failure
+injection are covered by the maintained battery plus the 12/12
+identical-reject corruption confirmation.
+
+### External observation and assurance
+
+Semantic execution occurs in the child Python process; an external
+native observer independently launches it, waits for it (surviving
+tested abrupt exits: `os._exit`, SIGTERM, uncaught exceptions),
+snapshots workbook state before and after, and records raw exit/signal
+status separately from assurance status. Target status reports the
+script's own outcome; assurance status (`PASS`, `FAILED`,
+`NOT_REQUESTED`) reports the mechanical post-state check. If
+assurance fails while the script succeeded, the command exits `125`;
+if the script failed, its own status is preserved.
+
+### Changed-workbook capture
+
+Five frozen fixtures establish: changed-XLSX detection, exact
+package relation, mechanical validation, and delta capture/replay
+(persisted, serialization valid, relationships preserved, captured ==
+committed, replay reproduces the parts). This establishes mechanics
+only. It does not establish task correctness, semantic intent,
+formula correctness, or business correctness: capture records what
+the script produced, never whether it is what the task wanted.
+
+### Installation and process behavior
+
+Tested: clean wheel install (native launcher + observer), green
+doctor/example/run/status checks, the BUILT→REUSED artifact
+lifecycle, 27+ maintained product/process tests, and a bounded
+failure-injection battery (corrupt/truncated/missing/stale
+artifacts, malformed workbook, cache denial, missing observer,
+helper failure, launch failure). This is release behavior evidence,
+not universal platform support.
+
+## Current contract boundaries
+
+- Narrow direct-read contract only; unsupported/dynamic semantics use
+  genuine openpyxl.
+- Writes are not directly served; cold first touch builds state.
+- No broad object equivalence: proxy objects promise the narrow
+  contract only (no identity, repr, style, or escape equivalence).
+- Not a general openpyxl substitute: out-of-contract behavior stays
+  reference-routed by design.
+- Concurrent editing of the same task/script directory is
+  unsupported; concurrent same-artifact cache builds are safe.
+- No automatic cache eviction: orphaned entries stay inert on disk
+  until deleted; `doctor`/`status` report size and count.
+- No sandbox: scripts run with the user's permissions.
+- Saving formulas does not recalculate them; LibreOffice presence is
+  probed, not orchestrated, by this distribution.
+
+## Platform and operational boundaries
+
+Tested release baseline: Linux x86_64 with glibc, local filesystem,
+CPython 3.13, pinned openpyxl 3.1.5 / lxml 6.1.3 (pins in
+`pyproject.toml`, which accepts CPython 3.11–3.14). macOS and
+Windows carry no validation claim; network filesystems and
+containers are untested per-environment assumptions; other
+openpyxl/lxml versions need re-validation. Full matrix:
+[`COMPATIBILITY.md`](../COMPATIBILITY.md).
+
+## What is not claimed
+
+Recalc 0.2.0 does not claim: broad openpyxl equivalence; task,
+intent, formula, or business correctness from capture or assurance;
+sandbox/security isolation; universal platform support; direct-write
+acceleration; or certified behavior for unsupported object/surface
+usage. Performance claim boundaries — universal speedup, cold
+acceleration, family-wide effects, thresholds — are maintained in
+[`PERFORMANCE.md`](../PERFORMANCE.md).
+
+## Performance evidence
+
+**Performance evidence:** see [`PERFORMANCE.md`](../PERFORMANCE.md)
+for task-replay cases, the released-product inspection example,
+counterexamples, mechanism-population evidence, workload fit,
+cold/write/memory measurements, methodology, and quantitative
+non-claims.
+
+## Evidence and provenance
+
+| claim area | provenance |
+|---|---|
+| Ordinary-execution parity (543/543) | `research/history/phase10c_audit/EVIDENCE_ATTACHMENT_MATRIX.md`, `CURRENT_PRODUCT_ANATOMY.md`; `tests/test_product_hygiene.py`, `tests/test_product_process_semantics.py` |
+| Iteration contract parity (40/40, 52/52) | `research/full_cell_iteration_product_confirmation/` (REPORT.md, ADVERSARIAL_RESULTS.jsonl, parity ledger) |
+| Decoder parity + corruption (52/52, 12/12) | `research/artifact_decode_product_confirmation/PRODUCT_GATE.json`, REPORT.md |
+| Target conversion (13/13) | Mechanism evidence; see PERFORMANCE.md §6, not repeated here |
+| Changed-file fixtures (5/5) | `research/history/product_integration_phase10b/` amendment 3; `src/recalc_agent/_frozen/capture.py`, `delta.py`, `validate.py` |
+| Admission blockers (write/mixed/uncertain) | `src/recalc_agent/_frozen/eligibility.py` (`WRITE_BOUNDARY`, `READ_WRITE_MIXED_BOUNDARY`, load-option boundaries) |
+| Observer/assurance/exit policy | `src/recalc_agent/native/observer.c`, `src/recalc_agent/runner.py`; abrupt-exit fixtures in product tests |
+| Platform baseline | `research/history/phase10c_b/LINUX_RELEASE_BASELINE.md`, COMPATIBILITY.md, `pyproject.toml` pins |
+
+Validation host for the cited runs: Ubuntu 26.04.1, kernel 7.0.0-34,
+Intel Core Ultra 5 125H, CPython 3.13.12, openpyxl 3.1.5.
