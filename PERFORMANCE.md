@@ -2,7 +2,7 @@
 
 This document is the quantitative source of truth for what Recalc has
 measured. It is organized around one trajectory: the cost Recalc
-targets, what it changes, named task replays with proven benefit, a
+targets, what it changes, named task replays with measured benefit, a
 named substep example, boundary cases where local acceleration did not
 move the task, population evidence with distribution context, workload
 fit, methodology, and what is not claimed.
@@ -33,7 +33,7 @@ where that has been measured: two task replays where it moved the
 total, one inspection step where the mechanism is tangible, and the
 cases where local acceleration did not propagate.
 
-## 2. Proven task-replay benefit
+## 2. Measured task-replay benefit
 
 The two strongest user-relevant results come from paired task-execution
 replay in the frozen Tier 1 external-validity study
@@ -46,49 +46,43 @@ model-in-the-loop end-to-end run: no model calls were re-issued.
 
 ### Case A — SpreadsheetBench-2 Debugging:07_01, Claude trajectory
 
-- Trajectory: `tier1-r01-P-Debugging-07_01`
-  (`anthropic/claude-sonnet-4.5`), 13 executed Python invocations.
-- Comparator: BASE (plain Python/openpyxl) vs released 0.2.0, warm,
-  same-window paired replay; single replay per block, summed.
-- BASE task replay: **15.477 s**; Recalc task replay: **13.210 s**;
-  **−2.267 s (−14.6%)**.
-- Direct service: 3 served invocations / 3 served loads / 63 direct
-  reads / 0 iteration cells. Served-block time was 21.3% of BASE task
-  time (descriptive; no threshold implied).
-- Replay validity: 11 `VALID` + 1 `VALID-both-failed` + 1 `MISMATCH`
-  triaged as environment-only per
-  [REPLAY_TRIAGE.json](research/external_validity_tier1/REPLAY_TRIAGE.json).
-- Workbook: 415,162 bytes, 9 sheets (mixed read/write trajectory).
+Trajectory `tier1-r01-P-Debugging-07_01`
+(`anthropic/claude-sonnet-4.5`). Warm paired task replay, BASE vs
+released Recalc 0.2.0.
 
-This proves benefit for this task replay only. It does not show that
-Debugging tasks generally benefit: the sibling Mimo trajectory of the
-same task (r02) regressed +0.361 s with no direct service, and
-Debugging:08_06 regressed despite service (Section 4).
+**15.477 s → 13.210 s**
+**2.267 s saved · 14.6% lower**
+
+3 of 13 invocations were directly served (3 served loads, 63 direct
+reads, no iteration cells). Their BASE time represented 21.3% of the
+replay (descriptive; no threshold implied).
+
+This is a result for this trajectory only, not a Debugging-family
+claim: the sibling Mimo trajectory of the same task (r02) regressed
++0.361 s with no direct service, and Debugging:08_06 regressed
+despite service (Section 4).
 
 ### Case B — SpreadsheetBench-2 Financial_Model:11_05, Mimo trajectory
 
-- Trajectory: `tier1-r06-O-mimo-Financial_Model-11_05`
-  (`xiaomi/mimo-v2.6-pro`), 23 executed Python invocations.
-- Comparator: BASE vs released 0.2.0, warm, same-window paired replay;
-  single replay per block, summed.
-- BASE task replay: **28.001 s**; Recalc task replay: **26.141 s**;
-  **−1.860 s (−6.6%)**.
-- Direct service: 5 served invocations / 5 served loads / 9,271 direct
-  reads / 5,822 iteration cells. Served-block time was 15.8% of BASE
-  task time (descriptive; no threshold implied).
-- Replay validity: 20 `VALID` + 3 `MISMATCH` triaged as
-  environment-only.
-- Workbook: 593,396 bytes, 18 sheets (mixed read/write trajectory).
+Trajectory `tier1-r06-O-mimo-Financial_Model-11_05`
+(`xiaomi/mimo-v2.6-pro`). Warm paired task replay, BASE vs released
+Recalc 0.2.0.
 
-This proves benefit for this task replay only. It does not show that
-Financial Model tasks generally benefit: Financial_Model:07_01
-regressed +7.2% despite direct service (Section 4), and the sibling
-Claude trajectory of this task (r05) regressed +0.986 s with no
-service.
+**28.001 s → 26.141 s**
+**1.860 s saved · 6.6% lower**
+
+5 of 23 invocations were directly served (5 served loads, 9,271 direct
+reads, 5,822 iteration cells). Their BASE time represented 15.8% of
+the replay (descriptive; no threshold implied).
+
+This is a result for this trajectory only, not a Financial
+Model-family claim: Financial_Model:07_01 regressed +7.2% despite
+direct service (Section 4), and the sibling Claude trajectory of this
+task (r05) regressed +0.986 s with no service.
 
 ### Why these cases matter
 
-In both proven task-replay wins, warm certified read work represented
+In both measured task-replay wins, warm certified read work represented
 a meaningful share of total execution cost (served-block BASE shares
 21.3% and 15.8%), so savings inside the direct path were large enough
 to move the overall replay. The current evidence does not establish
@@ -109,13 +103,11 @@ verified unchanged:
 - Full provenance (prompt, code, rep timings, parity standard):
   [docs/evidence/readme_vignette/](docs/evidence/readme_vignette/).
 
-This workload has three distinct measurement windows on different
-hosts, which must not be spliced into one series: R2 probe 3.0459 →
-1.0388 s (BASE vs research probe); R3 confirmation OFF 5.4570 → ON
-1.6696 s (−69.40%, predecessor-control vs rc4 candidate); and this
-0.2.0 window above (BASE vs released product). The existing
+The existing
 [performance vignette](docs/assets/recalc-performance-vignette.svg)
-depicts only this 0.2.0 read-only inspection step.
+depicts only this 0.2.0 read-only inspection step. (This workload has
+separate R2 and R3 measurement windows on different hosts; see
+Section 10. They must not be spliced into one series.)
 
 ## 4. Boundary: local acceleration without task benefit
 
@@ -130,9 +122,12 @@ Trajectory `tier1-r14-O-mimo-Debugging-08_06`, same replay protocol
 - Served-block BASE share: ~5.0%. The remaining 25 reference blocks
   account for the rest of execution and dominate the total.
 
-Lesson: Recalc accelerated the directly served block, but that block
-was too small a share of total task cost to overcome the rest of the
-run. This is not a mechanism failure; it is task-level economics.
+Lesson: the served block represented about 5% of BASE replay time.
+It became faster locally, but the complete task replay was still
+slower because most measured runtime lay outside that served block.
+Direct compatibility is not enough; enough costly work must lie
+inside the direct path. This is not a mechanism failure; it is
+task-level economics.
 
 ### Second counterexample — Financial_Model:07_01, Mimo trajectory
 
@@ -158,7 +153,7 @@ served. All 10 were individually faster paired:
   r14 ×1 (4,607 reads, 3,480 cells), r18 ×1 (48 reads); each served
   exactly 1 load with 0 fallback loads.
 
-This proves that in these observed directly served blocks, Recalc
+This shows that in these observed directly served blocks, Recalc
 reduced block runtime. It does not imply the containing task or
 population becomes faster — two of the four containing trajectories
 regressed (Section 4). Per-block rows:
@@ -218,9 +213,12 @@ win. Reconstructed in
   counts must never denominate workload statements.
 
 Direct service appeared in multiple tasks, but only a small fraction
-of executed Python invocations were directly served. This population
-and the R3 population were selected differently (mixed model-generated
-trajectories vs seeded read-script sample) and must never be pooled.
+of executed Python invocations were directly served. The controlled
+stratum and the R3 mechanism population were selected differently:
+the former contains six mechanically selected original
+SpreadsheetBench-2 tasks with nine model trajectories; the latter
+contains 30 frozen SpreadsheetBench-2 read scripts. They must not be
+pooled.
 
 ## 8. When to expect benefit
 
@@ -230,7 +228,7 @@ workbook-read work that it can serve directly. Reader-facing: Recalc
 helps most when expensive workbook reading — on data already
 validated once — accounts for a meaningful part of the run.
 
-Expect benefit when all of these hold:
+**The strongest fit observed so far has these characteristics:**
 
 - validated workbook state can be reused (warm);
 - workbook-reading work is expensive (large parses, wide scans);
@@ -239,7 +237,7 @@ Expect benefit when all of these hold:
 - served-read cost is enough to matter relative to the rest of
   execution (Sections 2 and 4).
 
-Expect little or no benefit when:
+**Little or no task-replay benefit has been observed when:**
 
 - execution is a cold first touch (state must be built);
 - reads are cheap or small;
@@ -301,6 +299,24 @@ Studies ran on different hosts and windows — never combine them into
 one synthetic time series. Distribution statistics beyond each
 study's preregistered primary are labeled post-hoc descriptives of
 that frozen population, never superpopulation estimates.
+
+**Per-case forensic detail (Sections 2 and 4).** Replay-validity
+mixes; every non-`VALID` row was triaged as environment-only in
+[REPLAY_TRIAGE.json](research/external_validity_tier1/REPLAY_TRIAGE.json):
+r01: 11 `VALID` + 1 `VALID-both-failed` + 1 `MISMATCH`; r06: 20
+`VALID` + 3 `MISMATCH`; r14: 21 `VALID` + 1 `VALID-both-failed` + 4
+`MISMATCH`; r18: 33 `VALID` + 3 `VALID-both-failed` + 6 `MISMATCH` + 1
+`VALID-unchecked-truncated`. Per-task workbook metadata (byte sizes,
+sheet counts) is recorded in
+[WORKBOOK_MANIFEST.json](research/external_validity_tier1/WORKBOOK_MANIFEST.json)
+(r01: 415,162 bytes, 9 sheets; r06: 593,396 bytes, 18 sheets).
+
+**FM:08_02 measurement windows.** The Section 3 step is one of three
+distinct windows for this workload on different hosts, which must not
+be spliced into one series: R2 probe 3.0459 → 1.0388 s (BASE vs
+research probe); R3 confirmation OFF 5.4570 → ON 1.6696 s (−69.40%,
+predecessor-control vs rc4 candidate); released-0.2.0 reproduction
+3.6866 → 0.7320 s (BASE vs released product).
 
 ## 11. What is not claimed
 
