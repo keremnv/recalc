@@ -1,180 +1,105 @@
 # recalc
 
-An agent-native application substrate for spreadsheet work.
+An agent-native application substrate for spreadsheet work: a selective
+execution and observation layer for ordinary Python/openpyxl spreadsheet agents.
 
-The substrate offers two things. First, efficiency on a narrow path:
-supported repeated reads can reuse persistent, validated workbook read
-state, decoded from the source workbook, instead of paying the full
-normal parsing path again — while anything
-unsupported or uncertain falls back to ordinary reference execution.
-Second, execution transparency: an external observer, running outside the
-agent/script process, records what ran, whether fallback occurred, what
-workbook effects occurred, and whether changed workbook state passed
-mechanical assurance — keeping the script's own outcome (target status)
-separate from the post-state check (assurance status). The agent-facing
-surface stays ordinary Python files using ordinary `openpyxl`, with no new
-workbook API to learn.
+Recalc runs your agent's Python scripts unchanged — no rewrites, no new
+workbook API. Supported warm reads can reuse validated workbook read state
+instead of re-parsing the file; anything unsupported or uncertain stays on
+genuine openpyxl. An external observer records how each run executed and what
+workbook effects it produced.
 
-This is `0.2.0`, Linux-first. It is not published to an
-index. The exact boundary of what is established, what is conditional, and
-what is not claimed is [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md).
+`recalc-agent 0.2.0`, Linux-first, not published to an index.
+Quantitative evidence: [PERFORMANCE.md](PERFORMANCE.md) ·
+semantic boundary: [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md) ·
+support matrix: [COMPATIBILITY.md](COMPATIBILITY.md).
 
-## Substrate diagram
+## The cost Recalc targets
 
-```text
-                    AGENT-WRITTEN PROGRAM
-                            │
-                   existing interface
-                    (plain openpyxl)
-                            │
-        ┌───────────────────┴───────────────────┐
-        │          APPLICATION SUBSTRATE         │
-        │                                       │
-        │   EXECUTION              OBSERVATION   │
-        │                                       │
-        │   admission              before state  │
-        │      ↓                       ↓         │
-        │   validated              run observed  │
-        │   workbook read state        ↓         │
-        │      ↓                   after state   │
-        │   supported reads            ↓         │
-        │      │                   effect capture│
-        │      └─ reference fallback   ↓         │
-        │                          validation    │
-        │                               ↓        │
-        │                            receipt     │
-        └───────────────────┬───────────────────┘
-                            │
-                         WORKBOOK
-```
+Spreadsheet agents often execute multiple ordinary Python invocations
+against the same workbook. Each `load_workbook` normally parses and
+materializes workbook state again — even when the workbook has not
+changed since the last invocation. When reading is substantial, that
+repeated work can become a meaningful share of execution time.
 
-The agent-facing surface is the normal program and its existing interface.
-The substrate underneath has two independent sides: execution, which may
-serve supported reads from validated workbook read state or fall back to the
-reference path; and observation, which watches workbook state before and
-after the run and records the outcome in a receipt. Neither side requires
-a recalc-specific workbook-intent API: the execution side changes how
-supported reads may be served, while observation records what happened
-around the run.
+Recalc targets that repeated read cost only. It does not accelerate
+writes, cold first-touch construction, or work outside its certified
+read contract.
 
-## What the substrate adds
+## How Recalc removes that cost
 
-Relative to running the same script directly with plain Python/openpyxl:
-
-| Reference/plain execution | With recalc substrate |
-| --- | --- |
-| workbook follows normal load path | supported warm reads can reuse persistent, validated workbook read state |
-| execution outcome is primarily process status/output | workbook effects are independently observed |
-| unsupported optimization would otherwise require special handling | uncertain/unsupported paths use reference behavior |
-| state reuse/freshness is not supplied by the execution layer | workbook read state is content-addressed and rebuilt when invalid |
-| execution and post-state assurance are not separated | target and assurance outcomes are reported separately |
-
-Nothing here replaces ordinary execution: the reference path remains
-available through conservative admission and lazy fallback, and scripts
-that never touch the supported surface use reference openpyxl behavior,
-with the launcher and observer still surrounding execution.
-
-### What is actually stored
+Each invocation passes conservative admission. Certified reads may be
+served from validated workbook read state; everything else runs on
+genuine openpyxl. Either way the script sees ordinary Python values,
+and the route is recorded in a receipt.
 
 ```text
-persistent, content-addressed workbook read state
-├── workbook identity / freshness
-└── sheets
-    └── Forecast
-        ├── bounds
-        ├── merged ranges
-        └── cells
-            └── D12 → value + data type
+ordinary Python/openpyxl
+          |
+   can this invocation
+   be certified?
+      /       \
+    yes        no
+     |          |
+validated     genuine
+read state    openpyxl
+     \          /
+       execution
+           |
+        receipt
 ```
 
-The current persisted state is deliberately mechanical: it is decoded
-from workbook data for the validated narrow read contract and holds the
-mechanical state that contract needs — sheet names, bounds, merged
-ranges, and sparse coordinate → value/data-type entries. It is
-content-addressed and versioned, so stale or incompatible state is
-rebuilt rather than served. It is not a semantic workbook model: it
-derives no dependency graphs, no formula fingerprints as runtime
-authority, no formula intent, no task semantics, and no plans or
-mutation IR.
+Fallback is a designed outcome, not an error: uncertain or unsupported
+work keeps openpyxl ownership throughout.
 
-For example, in an admitted script with an eligible workbook:
+## Measured on SpreadsheetBench-2
 
-```python
-ws["D12"].value
-```
+Warm paired task-execution replays of specific model trajectories,
+BASE (plain Python) vs released Recalc 0.2.0:
 
-conceptually maps to:
+| SpreadsheetBench-2 replay | BASE | Recalc 0.2.0 | Change |
+| --- | ---: | ---: | ---: |
+| Debugging:07_01 · Claude trajectory | 15.477 s | 13.210 s | −14.6% |
+| Financial_Model:11_05 · Mimo trajectory | 28.001 s | 26.141 s | −6.6% |
 
-```text
-Forecast / D12 / value
-        ↓
-workbook read state
-        ↓
-ordinary Python value
-```
+In the first replay, 3 of 13 invocations were directly served (63
+reads); their BASE time was 21.3% of the replay. In the second, 5 of
+23 were served (9,271 reads, 5,822 iteration cells); 15.8% of BASE
+time. These are specific trajectory results — not model-in-the-loop
+end-to-end timings, and not family-wide claims. Methodology and
+provenance: [PERFORMANCE.md](PERFORMANCE.md).
 
-The operation resolves through the narrow proxy surface to the stored
-workbook read state, and the program receives the ordinary Python value.
-When an operation cannot be served under the narrow contract, execution
-uses genuine reference openpyxl behavior.
+> **Boundary case.** On Debugging:08_06 (Mimo trajectory), the served
+> block improved (0.614 → 0.356 s) but the complete task replay did
+> not (12.254 → 13.176 s, +7.5%): served reads were about 5% of BASE
+> replay time. Recalc can make a directly served block faster without
+> moving the task when most runtime lies elsewhere.
 
-## Current evidence snapshot
+## When Recalc is a good fit
 
-Product evidence below was established on `0.2.0rc2` and carried forward
-through the rename-only `0.2.0rc3`. `0.2.0rc4` added the certified full-cell
-`iter_rows` contract to the direct runtime, and `0.2.0rc5` decodes
-already-validated typed values directly with no representation change (see
-[docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md) and
-[CHANGELOG.md](CHANGELOG.md)). `0.2.0` ships that mechanism set unchanged.
-All timing figures are host- and
-run-sensitive; the validation host is recorded in
-[docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md).
+**Recalc helps most when expensive workbook reading, on state already
+validated once, accounts for a meaningful share of the run.**
 
-| Observation | Scope |
-| --- | --- |
-| 543 / 543 oracle rows show exit/stream/state parity with plain Python | ordinary execution surface |
-| 0.608× median vs plain Python on warm direct-contact workloads | 7 frozen representative workloads, warm reuse only |
-| 1.04–1.12× plain Python on cold direct-contact runs: no cold acceleration | cold runs; first invocation builds state |
-| 5 frozen changed-file fixtures: changed-XLSX detection, mechanical validation, delta replay | changed-file capture/assurance |
+Strong-fit characteristics observed so far:
 
-In short: warm direct-contact acceleration is real on the tested narrow
-surface; cold state construction produces no speedup; the normal execution
-surface has been parity-tested; and assurance is mechanical — it checks
-what the change is and that it replayed, never whether the change is what
-the task wanted.
+- workbook read state can be reused (warm);
+- workbook reading is materially expensive;
+- reads fall inside the certified direct contract;
+- directly served read work represents enough execution cost to matter.
 
-## Scanning assumptions in a real financial model
+Little or no task-replay benefit has been observed when:
 
-Recalc keeps the agent in ordinary Python. On operations inside its certified
-read contract, validated workbook state can be served directly; everything else
-remains genuine openpyxl.
+- execution is a cold first touch;
+- reads are cheap or small;
+- mutation-containing invocations dominate;
+- unsupported or dynamic read semantics dominate;
+- most runtime lies in unrelated Python, LibreOffice/recalculation,
+  XML manipulation, or other reference execution.
 
-![Measured vignette: one real inspection step from the SpreadsheetBench-2 FM:08_02 agent trajectory; the frozen Assumptions-tab scan took 3.69 s under plain Python and 0.73 s under warm Recalc, saving 2.95 s (80.1% lower) with identical delivered findings](docs/assets/recalc-performance-vignette.svg)
-
-One real inspection step from this agent trajectory
-(SpreadsheetBench-2 FM:08_02 · Project Seafood Model). The agent scanned
-`Assumptions - Line 01` using ordinary Python/openpyxl iteration. On the same
-workbook and code, the measured warm step fell from **3.69 s** to **0.73 s**
-(medians of 3 warm reps, same window), saving **2.95 s**, while producing the
-same findings. This step performs no writes; input bytes were verified
-unchanged. Full provenance, prompt, code, and raw rep timings:
-[docs/evidence/readme_vignette/](docs/evidence/readme_vignette/).
-
-Across the preregistered 30-workload read-heavy representative population used
-to productize certified full-cell iteration, aggregate warm runtime changed
-from **102.26 s** to **21.51 s**; artifact decode (D1) separately moved decode
-mass from **5.014 s** to **1.896 s** with warm total **13.158 s** to
-**10.157 s**, and peak RSS on the large confirmation workbook fell from
-**997,968 KB** to **148,296 KB**. These are measured, workload-specific
-results on the validation host — Recalc is not a universal openpyxl
-accelerator.
-
-Recalc materially helps when expensive spreadsheet reads fall within its
-certified direct contract; mixed/dynamic workloads may remain on genuine
-openpyxl and can see little or no speedup. In a later mixed-workflow
-external-validity study, fully direct execution was uncommon and aggregate
-replay showed no speedup; most dynamic and mixed read/write work correctly
-remained on genuine openpyxl.
+Note on units: a mutation-containing invocation is reference-routed,
+but separate certified read-only invocations may still be directly
+served inside a larger trajectory that also contains writes. No
+numeric fit threshold is established.
 
 ## Quick start
 
@@ -206,56 +131,62 @@ recalc-agent status
 `read.py`) plus a commented `runtime.toml`. `run` executes a script and prints
 its normal output; `status` shows the last receipt.
 
-## How it works
+What to notice: the two write scripts run on the reference path, while
+the supported read is served directly — the first read builds validated
+state (`BUILT`). Run `read.py` once more and `recalc-agent status
+--json` reports (excerpt, exact field names):
 
-### Before: admission, identity, observation setup
+```text
+route: DIRECT_RUNTIME
+artifact: [REUSED]
+direct_served_loads: 1
+fallback: []
+target_status: { exit_code: 0, signal: null }
+assurance_status: PASS
+```
 
-- **Admission/eligibility.** A conservative whole-script check (static
-  admission) decides whether the script qualifies for the direct read path.
-  Uncertain or unsupported scripts are routed to ordinary openpyxl without
-  ever loading the direct runtime.
-- **Source/workbook identity.** Workbook read state is keyed by whole-file SHA-256
-  plus runtime/decoder/contract/format versions, so a changed workbook or a
-  new package version rebuilds instead of serving stale data.
-- **Validated reuse or rebuild.** A matching artifact is validated before
-  serving; corrupt, missing, stale, or incompatible entries rebuild, and a
-  second source hash at first load closes the bootstrap-to-script race.
-- **Pre-run observation.** The external observer snapshots workbook bytes
-  before launch.
+Route tells how execution happened; `direct_served_loads` whether
+Recalc actually served workbook loads; `fallback` whether and why
+execution returned to genuine openpyxl; target status is the script's
+own outcome; assurance status is the mechanical post-state check.
 
-### During: one ordinary execution
+## How Recalc works
 
-- The script executes once in a real interpreter, with stdout, stderr, argv,
-  cwd, and exit status preserved. The harness does not rerun failed scripts,
-  and `python task.py` remains valid for reference execution.
-- Supported direct reads — sheet names and literal lookup, worksheet
-  bounds/dimensions, literal/integer cell access, cell value and data type,
-  and the certified full-cell `iter_rows` contract — may be served from the
-  persistent read artifact instead of running the normal workbook parser
-  for that load.
-- Anything outside that narrow surface — unsupported load options,
-  uncertified iteration, rich objects, writes, uncertain syntax — runs on
-  real openpyxl through lazy reference fallback, and the fallback is
-  recorded in the receipt.
+Ordinary Python/openpyxl remains the agent interface; mechanically
+exact complexity lives underneath it. No Recalc-specific workbook
+DSL, no rewritten logic.
 
-### After: observation, capture, receipt
+**Execution.** Conservative whole-script admission decides whether an
+invocation qualifies for the direct path; uncertain scripts never load
+the direct runtime. Supported reads — sheet names and lookup,
+bounds/dimensions, point-cell access, value/data type, and the
+certified full-cell `iter_rows` contract — may be served from
+validated workbook read state instead of re-parsing. Anything else
+runs on genuine openpyxl through lazy reference fallback.
 
-- Final workbook state is observed: the native parent waits for the real
-  script process (surviving tested abrupt exits such as `os._exit`, SIGTERM,
-  and exceptions), then snapshots again.
-- Changed files may be captured: only when bytes changed and capture is
-  enabled, a capture helper derives a package-level delta and mechanically
-  validates it (persisted, serialization valid, relationships preserved,
-  captured == committed, replay reproduces the parts).
-- Effects are mechanically validated and replayed where supported; full
-  details are in [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md).
-- The receipt records two outcomes separately: **target status** (the
-  script's exit code / signal) and **assurance status** (`PASS`, `FAILED`,
-  or `NOT_REQUESTED`).
+**Observation.** An external native observer snapshots workbook bytes
+before launch, waits for the real script process (surviving tested
+abrupt exits), snapshots again, and records the outcome in a receipt:
+target status (exit code/signal) separate from assurance status
+(`PASS`, `FAILED`, `NOT_REQUESTED`).
 
-The supported read surface and fallback boundaries above are the contract.
-There is no broad openpyxl-equivalence claim: proxy objects support the
-narrow contract only (no identity, repr, style, or escape equivalence).
+Persisted state is deliberately mechanical — workbook identity and
+freshness, sheet bounds, merged ranges, sparse coordinate →
+value/data-type entries:
+
+```text
+validated workbook read state
+└── sheets
+    └── Forecast
+        ├── bounds
+        ├── merged ranges
+        └── cells
+            └── D12 → value + data type
+```
+
+It is content-addressed and versioned, so stale or incompatible state
+rebuilds rather than serving. Full semantic boundary:
+[docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md).
 
 ## Public commands
 
@@ -270,76 +201,14 @@ recalc-agent status [--json] [--verbose]
 `--no-runtime` runs with the optional runtime disabled. Harness flags go before
 the script filename; anything after it is passed to the script.
 
-## Ordinary Python execution
-
-Scripts are ordinary Python files. The runtime is scoped to the script
-launched by `run`; nested interpreters and other Python processes are
-unaffected.
-
-## Direct reads and fallback
-
-No extra workbook API is required. As described above, static admission
-routes each script before launch: uncertain or unsupported scripts never
-load the direct runtime, while admitted scripts may have supported reads
-served from the persistent read artifact.
-
-Unsupported load modes, proxy escapes, uncertified iteration, and
-artifact/decoder failures lazily use real openpyxl and are recorded in the
-receipt. Representative fallback-after-contact behavior is covered by tests.
-
-Cold runs are not accelerated: the first invocation builds state. Writes are
-not accelerated. No token, cost, or benchmark-score claim is made.
-
-## Effect observation
-
-Observation covers recursive `*.xlsx` under the workdir, up to 1,000 files /
-512 MiB aggregate.
-
-Capture is assurance, not a correctness verdict: it records what the script
-produced and checks the mechanics of the change; it never judges whether the
-change is what the task wanted. Disabling capture (`capture = false`) or the
-runtime (`--no-runtime`) reports `NOT_REQUESTED` and never implies validation.
-If assurance fails while the script succeeded, the command exits `125`; if the
-script failed, its own status is preserved and assurance failure stays visible
-in the receipt.
-
-## Cache
-
-Default location: `$XDG_CACHE_HOME/recalc-agent`, or
-`~/.cache/recalc-agent`; override with `cache_dir` in `[runtime]`
-(relative paths resolve beside the config file). Layout:
-
-- `read-engine/` — persistent read artifacts (safe to delete while no
-  invocation uses them; they rebuild).
-- `runs/` — per-run receipts and debug bundles; `last_run.json` points at the
-  latest run. Safe to delete; `status` then reports "none recorded".
-
-Cache directories are created user-private (`0700`); symlinked roots are
-rejected. There is **no automatic global eviction yet**: old entries from
-edited workbooks or upgraded versions are orphaned, never served. `doctor`
-and `status` report the location, a bounded size summary, and artifact count
-so growth stays visible. Delete the directory (or the whole cache root) to
-reclaim space.
-
-Upgrading `recalc-agent` orphans prior artifacts by versioned key; the first
-touch under the new version rebuilds automatically. No manual cache migration
-is ever required; stale entries stay inert on disk until deleted.
-
-Concurrency: simultaneous reads, simultaneous same-artifact builds (one
-builder wins under a per-key lock; the other reuses the result), reads
-during a build, and crashes mid-publication are safe — validation plus
-atomic publication mean torn or partial state is never served. Concurrent
-editing of the same task/script directory and external writer races outside
-this model are unsupported (see [COMPATIBILITY.md](COMPATIBILITY.md)).
-
-## Configuration
+## Configuration and cache
 
 Copy `examples/basic/runtime.toml` and pass it with `--config`:
 
 ```toml
 [runtime]
 enabled = true    # master switch for the optional runtime
-reads = true      # direct-read acceleration (needs enabled)
+reads = true      # direct-read serving (needs enabled)
 capture = true    # changed-file effect capture (needs enabled)
 verbosity = "normal"  # quiet | normal | verbose
 # cache_dir = "/your/writable/cache/path"
@@ -349,35 +218,16 @@ An invalid configuration disables the optional runtime for that invocation
 with a loud warning (fail-closed); the script still runs as ordinary Python.
 `--no-runtime` / `RECALC_NO_RUNTIME=1` does the same explicitly.
 
-The old keys `substrate` and `candidate_a` are deprecated aliases of `reads`
-for one window and warn when used; setting both `reads` and an alias is
-invalid. See [CHANGELOG.md](CHANGELOG.md).
+Default cache: `$XDG_CACHE_HOME/recalc-agent`, or `~/.cache/recalc-agent`.
+`read-engine/` holds validated read artifacts (safe to delete while unused;
+they rebuild); `runs/` holds receipts (`last_run.json` points at the latest;
+safe to delete — `status` then reports "none recorded"). Cache roots are
+user-private (`0700`); symlinked roots are rejected. There is no automatic
+eviction: orphaned entries stay inert until deleted. Upgrading `recalc-agent`
+orphans prior artifacts by versioned key; the first touch rebuilds
+automatically.
 
-## Diagnostics
-
-- `doctor` checks Python version, packages, runtime modules, the external
-  observer, cache writability, configuration, and LibreOffice availability —
-  without credentials. Results distinguish `PASS`, `WARNING`, `FAIL`, and
-  `OPTIONAL_NOT_AVAILABLE`.
-- `status` shows effective settings, versions, cache info, and the last
-  recorded run. `--json` (or `--verbose`, which prints the same full report)
-  gives the machine-readable shape; only the compact fields
-  (`route`, `target_status`, `assurance_status`, `artifact`,
-  `direct_served_loads`, `fallback`, capture/validation status, `failure_code`,
-  `run_dir`) are stable. Run-dir internals are explicitly unstable support
-  material.
-- Exit codes: `0` success; `1` doctor/status check failure; `2`
-  usage/config/launcher failure ("no task was run"); `125` assurance failure
-  with a successful target, or observer self-failure; `127` target-exec
-  failure; `128+signal` when the target dies by signal.
-
-LibreOffice Calc matters only for tasks requiring recalculation or
-LibreOffice validation: saving a formula with openpyxl does not calculate its
-result. `--require-libreoffice` (on `doctor` and `run`) makes LibreOffice
-absence a preflight failure; it does not recalculate anything. No UNO bindings
-are required.
-
-## Uninstall / cleanup
+Uninstall:
 
 ```bash
 python -m pip uninstall recalc-agent
@@ -387,101 +237,43 @@ rm -rf ~/.cache/recalc-agent   # or your configured cache_dir
 The cache holds only diagnostics and workbook read state — never workbook
 authority. Deleting it cannot harm your workbooks.
 
-## Security and resources
+## Compatibility and limitations
 
-Bounded by design: ZIP member count and declared expansion, XML part sizes,
-artifact compressed/uncompressed ceilings, sheet/cell/string limits, and
-snapshot file-count/byte limits are enforced per layer; violations fall back
-to reference openpyxl or fail loudly, never silently. Artifact deserialization
-is JSON/zlib with full validation (no executable formats). The observer and
-helpers are invoked by exact path with no shell. See
-[docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md) for scope:
-this review is bounded behavior, not a formal certification — and the harness
-is not a sandbox.
+Tested baseline: Linux x86_64 with glibc, CPython 3.13, pinned
+`openpyxl`/`lxml`, local filesystem. macOS and Windows carry no
+validation claim; concurrently edited task directories are
+unsupported; scripts run with your permissions — the harness is not a
+sandbox. Enforced bounds (package sizes, artifact ceilings, snapshot
+limits) fall back to reference openpyxl or fail loudly, never
+silently. Full matrix: [COMPATIBILITY.md](COMPATIBILITY.md); semantic
+boundary: [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md).
+Recalc is under the MIT License (see [LICENSE](LICENSE)).
 
-## Why this shape?
+## Development
 
-This architecture was reached empirically rather than imposed as a doctrine.
-The underlying idea is simple: preserve a compositional application
-interface, and place mechanically exact infrastructure underneath it when the
-evidence supports doing so.
+```bash
+python -m pytest tests/test_product_hygiene.py tests/test_product_process_semantics.py
+```
 
-During the research program, richer agent-facing structures around
-context, planning, querying, execution, and verification were tested
-rather than assumed beneficial; they generally did not establish enough
-task-level benefit to justify becoming required interface structure.
-Narrower deterministic mechanisms were retained where the evidence
-supported them, and semantic abstractions remain hypotheses rather than
-presumed improvements.
+These two files are the maintained product/process regression gate.
+The wider `tests/` tree largely covers frozen research and benchmark
+history rather than the shipped runtime.
 
-That is a statement about this project's evidence, not a universal rule for
-agent systems. The research record is summarized below; it exists to explain
-the shape, not to relitigate every experiment on this page.
+## Evidence
 
-## Evidence and limitations
-
-The claim boundary for this candidate:
-
-- no universal speedup claim;
-- no cold acceleration claim;
-- no write acceleration claim;
-- no token/model-cost claim;
-- no benchmark-score improvement claim;
-- no task correctness/output certification claim;
-- no broad openpyxl-equivalence claim;
-- timing measurements are host/run-sensitive and never averaged across hosts.
-
-Product limits also include: Linux x86_64 with glibc, CPython 3.13 tested;
-local filesystems only; macOS is future fast-follow, Windows a separate port
-(neither supported); one writer per task directory with concurrently edited
-script sources unsupported; no automatic cache eviction; and no sandbox —
-scripts run with your permissions.
-
-The full boundary is [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md).
-
-## Research background
-
-The architecture emerged from experiments around access/read cost, context
-representation, planning/authority, execution mechanisms, verification,
-evaluation state, and residual failure analysis. The durable outcomes were:
-a narrow direct-read path exact enough to productize, an external observer
-worth keeping as assurance, and a set of richer abstractions that did not
-earn a place in the required interface.
-
-The most useful synthesis and decision documents are:
-
-- [phase13/PROGRAM_SYNTHESIS.md](research/history/phase13/PROGRAM_SYNTHESIS.md) — causal map
-  of where the loss boundary moved and why.
-- [phase13/ARCHITECTURE_DECISION_LEDGER.md](research/history/phase13/ARCHITECTURE_DECISION_LEDGER.md) —
-  adopted/rejected choices with evidence, scope, and reopen conditions.
-- [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md) —
-  the current product claim boundary.
-
-Research supports the architecture; it is not the product. Historical
-records may contain superseded wording and must not be quoted as product
-claims.
-
-## Product and release status
-
-`recalc-agent 0.2.0` is a Linux-first release, not yet
-published to an index, under the MIT License (see [LICENSE](LICENSE) and
-[CHANGELOG.md](CHANGELOG.md)). The tested baseline is Linux x86_64 with
-glibc, CPython 3.13, pinned `openpyxl`/`lxml`, and a local filesystem; see
-[COMPATIBILITY.md](COMPATIBILITY.md) for the full supported/tested boundary,
-including the macOS fast-follow and Windows separate-port posture.
-
-## Repository map
-
-- Current product docs: this file, [COMPATIBILITY.md](COMPATIBILITY.md),
-  [CHANGELOG.md](CHANGELOG.md), [docs/](docs/).
-- Integration records: `research/reports/PRODUCT_INTEGRATION_*.md`,
-  `research/reports/PRODUCT_*_POLICY.md`, `research/reports/PRODUCT_*_DESIGN.md`,
-  `research/history/phase10c_audit/`, `research/history/phase10c_b/`.
-- Historical evidence and research: [research/](research/), `benchmark/`,
-  `read_engine_phase*/`, `research/history/product_integration_phase10*/`,
-  `research/history/product_hygiene/`, and the `research/reports/*-REPORT.md`
-  files. These preserve how the product was validated; they are not user
-  documentation and may contain superseded wording.
-- The old `0.2.0rc1` claim registry ([FINAL_CLAIM_REGISTRY.md](research/reports/FINAL_CLAIM_REGISTRY.md))
-  is retained as history and marked as such; it must not be used to describe
-  this candidate.
+- **Performance:** [PERFORMANCE.md](PERFORMANCE.md) —
+  task-replay cases, the released-product inspection example,
+  counterexamples, mechanism-population evidence, workload fit,
+  cold/write/memory measurements, methodology.
+- **Evidence & limitations:**
+  [docs/EVIDENCE_AND_LIMITATIONS.md](docs/EVIDENCE_AND_LIMITATIONS.md) —
+  semantic parity, certified contract, fallback, persisted-state
+  integrity, observation and assurance.
+- **Compatibility:** [COMPATIBILITY.md](COMPATIBILITY.md) —
+  tested platforms, dependencies, operational support matrix.
+- **Release history:** [CHANGELOG.md](CHANGELOG.md).
+- **Research archive:** [research/](research/) preserves how the
+  product was validated, including the benefit ledger
+  ([research/benefit_evidence_ledger/](research/benefit_evidence_ledger/)).
+  Historical records may contain superseded wording and must not be
+  quoted as product claims.

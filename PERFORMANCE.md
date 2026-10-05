@@ -242,8 +242,8 @@ validated once — accounts for a meaningful part of the run.
 - execution is a cold first touch (state must be built);
 - reads are cheap or small;
 - mutation/write-heavy work dominates;
-- dynamic or unsupported semantics dominate (mixed read/write,
-  `data_only`, rich objects, escape);
+- mutation-containing invocations or other unsupported/dynamic
+  semantics dominate (`data_only`, rich objects, escape, etc.);
 - most runtime lies in other Python work, LibreOffice/recalculation
   waits, XML manipulation, or large reference-path residuals.
 
