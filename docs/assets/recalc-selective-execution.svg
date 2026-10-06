@@ -24,13 +24,13 @@
 <rect x="60" y="300" width="240" height="60" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
 <text x="180.0" y="327.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#1f2328">genuine openpyxl</text>
 <text x="180.0" y="349.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">reference execution</text>
-<rect x="520" y="300" width="240" height="52" rx="8" fill="#ffffff" stroke="#0969da" stroke-width="2"/>
-<text x="640.0" y="323.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#1f2328">supported reads</text>
-<text x="640.0" y="345.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">certified contract</text>
-<line x1="640.0" y1="352.0" x2="640.0" y2="376.0" stroke="#1f2328" stroke-width="2" marker-end="url(#arr)"/>
-<rect x="520" y="380" width="240" height="56" rx="8" fill="#ffffff" stroke="#0969da" stroke-width="2"/>
-<text x="640.0" y="405.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#1f2328">validated workbook</text>
-<text x="640.0" y="427.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">read state · reused when fresh</text>
+<rect x="508" y="300" width="264" height="56" rx="8" fill="#ffffff" stroke="#0969da" stroke-width="2"/>
+<text x="640.0" y="325.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#1f2328">validated workbook read state</text>
+<text x="640.0" y="347.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">reused / rebuilt when needed</text>
+<line x1="640.0" y1="356.0" x2="640.0" y2="376.0" stroke="#1f2328" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="508" y="380" width="264" height="56" rx="8" fill="#ffffff" stroke="#0969da" stroke-width="2"/>
+<text x="640.0" y="405.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#1f2328">supported reads</text>
+<text x="640.0" y="427.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">certified · served from state</text>
 <line x1="180" y1="360" x2="180" y2="478" stroke="#1f2328" stroke-width="2"/>
 <line x1="640" y1="436" x2="640" y2="478" stroke="#1f2328" stroke-width="2"/>
 <line x1="180" y1="478" x2="640" y2="478" stroke="#1f2328" stroke-width="2"/>

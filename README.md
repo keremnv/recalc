@@ -56,14 +56,14 @@ time. These are specific trajectory results — not model-in-the-loop
 end-to-end timings, and not family-wide claims. Methodology and
 provenance: [PERFORMANCE.md](PERFORMANCE.md).
 
+![Measured warm paired task-replay outcomes on a shared seconds axis, BASE vs Recalc 0.2.0: Debugging:07_01 Claude 15.477 s vs 13.210 s; Financial_Model:11_05 Mimo 28.001 s vs 26.141 s; boundary Debugging:08_06 Mimo 12.254 s vs 13.176 s, slower overall despite one locally faster served block.](docs/assets/recalc-task-replay-outcomes.svg)
+
 > **Boundary case.** On Debugging:08_06 (Mimo trajectory), the served
 > block improved (0.614 → 0.356 s) but the complete task replay did
 > not (12.254 → 13.176 s, +7.5%): the served block represented
 > about 5% of BASE replay time. Recalc can make a directly served
 > block faster without moving the task when most runtime lies
 > elsewhere.
-
-![Measured warm paired task-replay outcomes on a shared seconds axis, BASE vs Recalc 0.2.0: Debugging:07_01 Claude 15.477 s vs 13.210 s; Financial_Model:11_05 Mimo 28.001 s vs 26.141 s; boundary Debugging:08_06 Mimo 12.254 s vs 13.176 s, slower overall despite one locally faster served block.](docs/assets/recalc-task-replay-outcomes.svg)
 
 ## When Recalc is a good fit
 

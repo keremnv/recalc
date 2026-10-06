@@ -9,7 +9,7 @@
       "title": "How Recalc handles an invocation",
       "badge": "SCHEMATIC · NO TIMING",
       "evidence_sources": [],
-      "product_semantics": "conservative admission; genuine openpyxl reference path; validated workbook read state; fallback; external observer; receipt",
+      "product_semantics": "conservative admission; genuine openpyxl reference path; validated workbook read state supplying supported reads; fallback; external observer; receipt",
       "measurement_scope": null,
       "comparator": null,
       "regime": null,
@@ -43,6 +43,23 @@
       "population_key": "controlled_subset",
       "comparator": null,
       "regime": "warm paired replay routes (reference / fully direct / admitted-but-fell-back)",
+      "used_in": ["PERFORMANCE.md"]
+    },
+    {
+      "id": "recalc-r3-distribution",
+      "filename": "docs/assets/recalc-r3-distribution.svg",
+      "kind": "measured",
+      "title": "Historical R3 mechanism effect was concentrated",
+      "scope_strip": "MEASURED · HISTORICAL R3 MECHANISM POPULATION · WARM · OFF → ON · 30 WORKLOADS",
+      "evidence_sources": [
+        "research/tier2_distribution_audit/tier2_workloads.json",
+        "research/tier2_distribution_audit/tier2_summary.json"
+      ],
+      "measurement_scope": "per-workload ON/OFF warm runtime ratio, ranked",
+      "population": "R3 full-cell iteration mechanism population",
+      "comparator": "OFF predecessor → ON iteration candidate",
+      "regime": "warm",
+      "denominator": "30 workloads",
       "used_in": ["PERFORMANCE.md"]
     }
   ]

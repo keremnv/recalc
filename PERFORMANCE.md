@@ -188,6 +188,10 @@ population, from
 - Top 3 workloads contributed **84.2%** of positive savings (top 5:
   93.7%); the aggregate benefit is real but heavy-tailed.
 
+The workload-level distribution shows why the aggregate must not be read as a typical-workload effect:
+
+![Ranked per-workload ON/OFF runtime ratios for the historical R3 mechanism population of 30 workloads, OFF predecessor vs ON iteration candidate: 23 faster, 7 slower, median 0.913×, top three workloads supplying 84.2% of positive savings, largest regression 49.7 ms.](docs/assets/recalc-r3-distribution.svg)
+
 The 30 decompose as 13 iteration-only targets + 8 pre-existing direct
 + 9 blocked on other grounds; all 13 targets converted to
 `DIRECT_RUNTIME` and stayed direct (13/13). The aggregate denominator

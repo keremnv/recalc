@@ -29,11 +29,14 @@ ROOT = HERE.parents[2]
 
 LEDGER_PATH = ROOT / "research/benefit_evidence_ledger/benefit_ledger.json"
 AUDIT_PATH = ROOT / "research/spreadsheetbench_applicability_audit/summary.json"
+TIER2_WORKLOADS_PATH = ROOT / "research/tier2_distribution_audit/tier2_workloads.json"
+TIER2_SUMMARY_PATH = ROOT / "research/tier2_distribution_audit/tier2_summary.json"
 MANIFEST_PATH = HERE / "manifest.json"
 
 ASSET_A = ROOT / "docs/assets/recalc-selective-execution.svg"
 ASSET_B = ROOT / "docs/assets/recalc-task-replay-outcomes.svg"
 ASSET_C = ROOT / "docs/assets/recalc-controlled-applicability.svg"
+ASSET_D = ROOT / "docs/assets/recalc-r3-distribution.svg"
 
 # --- Expected display values (tripwires, not authority) ---------------------
 # The ledger is the authority. These constants encode the display strings the
@@ -100,6 +103,21 @@ FIGURE_C_EXPECTED = {
 SCOPE_B = "MEASURED \u00b7 WARM PAIRED TASK REPLAY \u00b7 BASE vs RECALC 0.2.0"
 SCOPE_C = ("MEASURED \u00b7 SPREADSHEETBENCH-2 CONTROLLED STRATUM "
            "\u00b7 6 TASKS \u00b7 9 TRAJECTORIES")
+SCOPE_D = ("MEASURED \u00b7 HISTORICAL R3 MECHANISM POPULATION \u00b7 WARM "
+           "\u00b7 OFF \u2192 ON \u00b7 30 WORKLOADS")
+
+FIGURE_D_EXPECTED = {
+    "n_workloads": 30,
+    "faster": 23,
+    "slower": 7,
+    "median_display": "0.913\u00d7",
+    "median_pct_display": "8.75%",
+    "top3_display": "84.2%",
+    "largest_regression_display": "49.7 ms",
+    "min_display": "0.067\u00d7",
+    "max_display": "1.111\u00d7",
+    "comparator": "OFF (rc3-equivalent predecessor control) -> ON (iteration candidate)",
+}
 BADGE_A = "SCHEMATIC \u00b7 NO TIMING"
 
 FONT_SANS = "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
@@ -312,6 +330,124 @@ def verify_figure_c(audit: dict) -> tuple[bool, dict]:
     return ok, verified
 
 
+# --- Figure D verification ------------------------------------------------------
+
+def verify_figure_d(workloads: list[dict], summary: dict) -> tuple[bool, dict]:
+    """Recompute every displayed Figure D value from workload-level R3 data,
+    cross-checking against tier2_summary.json."""
+    import statistics
+
+    errors: list[str] = []
+    exp = FIGURE_D_EXPECTED
+    if not isinstance(workloads, list) or len(workloads) != exp["n_workloads"]:
+        got = len(workloads) if isinstance(workloads, list) else type(workloads).__name__
+        return fail([f"workload population n={got}, want 30"], "figure D"), {}
+    if summary.get("n_workloads") != exp["n_workloads"]:
+        errors.append(f"summary n_workloads={summary.get('n_workloads')!r}")
+    if summary.get("historical_pair") != exp["comparator"]:
+        errors.append(f"historical_pair={summary.get('historical_pair')!r}")
+    if "median" not in str(summary.get("historical_reducer", "")).lower():
+        errors.append(f"historical_reducer={summary.get('historical_reducer')!r}")
+
+    rows: list[dict] = []
+    for w in workloads:
+        wid = w.get("workload_id", "?")
+        try:
+            off_reps = w["off_rep_values"]
+            on_reps = w["on_rep_values"]
+            off = statistics.median(off_reps)
+            on = statistics.median(on_reps)
+        except (KeyError, TypeError, statistics.StatisticsError):
+            errors.append(f"{wid}: OFF/ON rep values missing")
+            continue
+        if abs(off - w.get("off_median", off)) > 1e-9:
+            errors.append(f"{wid}: off_median inconsistent with reps")
+        if abs(on - w.get("on_median", on)) > 1e-9:
+            errors.append(f"{wid}: on_median inconsistent with reps")
+        if "warm" not in str(w.get("reducer_definition", "")).lower():
+            errors.append(f"{wid}: reducer is not warm")
+        if w.get("included_in_historical_aggregate") is not True:
+            errors.append(f"{wid}: not in historical aggregate")
+        saved = off - on
+        if abs(saved - w.get("saved_s_off_on", saved)) > 1e-9:
+            errors.append(f"{wid}: saved_s_off_on inconsistent with medians")
+        rows.append({"workload_id": wid, "off": off, "on": on,
+                     "ratio": on / off, "saved": saved})
+    if errors:
+        fail(errors, "figure D rows")
+        return False, {}
+    rows.sort(key=lambda r: r["ratio"])
+
+    faster = sum(1 for r in rows if r["on"] < r["off"])
+    slower = sum(1 for r in rows if r["on"] > r["off"])
+    if faster != exp["faster"]:
+        errors.append(f"faster recomputes to {faster}")
+    if slower != exp["slower"]:
+        errors.append(f"slower recomputes to {slower}")
+
+    post = summary.get("posthoc_descriptive", {})
+    median_ratio = statistics.median([r["ratio"] for r in rows])
+    if abs(median_ratio - post.get("median_ratio_on_off", median_ratio)) > 1e-9:
+        errors.append("median ratio disagrees with summary")
+    if f"{median_ratio:.3f}\u00d7" != exp["median_display"]:
+        errors.append(f"median display recomputes to {median_ratio:.3f}x")
+    if f"{100 * (1 - median_ratio):.2f}%" != exp["median_pct_display"]:
+        errors.append("median improvement pct mismatch")
+    if abs(rows[0]["ratio"] - post.get("min_ratio", rows[0]["ratio"])) > 1e-12:
+        errors.append("min ratio disagrees with summary")
+    if abs(rows[-1]["ratio"] - post.get("max_ratio", rows[-1]["ratio"])) > 1e-12:
+        errors.append("max ratio disagrees with summary")
+    if rows[0]["workload_id"] != post.get("min_ratio_workload"):
+        errors.append("min ratio workload mismatch")
+    if rows[-1]["workload_id"] != post.get("max_ratio_workload"):
+        errors.append("max ratio workload mismatch")
+    if f"{rows[0]['ratio']:.3f}\u00d7" != exp["min_display"]:
+        errors.append("min display mismatch")
+    if f"{rows[-1]['ratio']:.3f}\u00d7" != exp["max_display"]:
+        errors.append("max display mismatch")
+
+    positive = sorted((r for r in rows if r["saved"] > 0),
+                      key=lambda r: -r["saved"])
+    top3 = (sum(r["saved"] for r in positive[:3])
+            / sum(r["saved"] for r in positive))
+    conc = post.get("concentration", {})
+    if abs(top3 - conc.get("top3_share_of_positive_savings", top3)) > 1e-12:
+        errors.append("top-3 concentration disagrees with summary")
+    if f"{100 * top3:.1f}%" != exp["top3_display"]:
+        errors.append(f"top-3 display recomputes to {100 * top3:.1f}%")
+
+    worst = min(rows, key=lambda r: r["saved"])
+    if abs(worst["saved"] - post.get("largest_regression_s", worst["saved"])) > 1e-12:
+        errors.append("largest regression disagrees with summary")
+    if worst["workload_id"] != post.get("largest_regression_workload"):
+        errors.append("largest regression workload mismatch")
+    if f"{-1000 * worst['saved']:.1f} ms" != exp["largest_regression_display"]:
+        errors.append("largest regression display mismatch")
+
+    ok = fail(errors, "figure D")
+    data = {
+        "rows": [{"rank": i + 1, "ratio": r["ratio"],
+                  "faster": r["on"] < r["off"]} for i, r in enumerate(rows)],
+        "faster": faster,
+        "slower": slower,
+        "median_ratio": median_ratio,
+        "median_display": exp["median_display"],
+        "median_pct_display": exp["median_pct_display"],
+        "top3_display": exp["top3_display"],
+        "largest_regression_display": exp["largest_regression_display"],
+        "min_display": exp["min_display"],
+        "max_display": exp["max_display"],
+    }
+    if ok:
+        print(f"FIGURE D: n = 30, faster = {faster}, slower = {slower}, "
+              f"median ratio = {median_ratio:.6f}, median improvement = "
+              f"{100 * (1 - median_ratio):.2f}%, top-3 concentration = "
+              f"{100 * top3:.1f}%, largest regression = {-worst['saved']:.4f} s, "
+              f"min ratio = {rows[0]['ratio']:.6f}, "
+              f"max ratio = {rows[-1]['ratio']:.6f}")
+    return ok, data
+
+
 # --- Manifest check ---------------------------------------------------------------
 
 def verify_manifest() -> bool:
@@ -347,30 +483,59 @@ def verify_manifest() -> bool:
         errors.append("manifest omits recalc-selective-execution")
     elif a.get("kind") != "schematic":
         errors.append("figure A kind must be schematic")
+    d = assets.get("recalc-r3-distribution")
+    if d is None:
+        errors.append("manifest omits recalc-r3-distribution")
+    else:
+        if d.get("kind") != "measured":
+            errors.append("figure D kind must be measured")
+        if d.get("population") != "R3 full-cell iteration mechanism population":
+            errors.append("figure D population mismatch")
+        if d.get("denominator") != "30 workloads":
+            errors.append("figure D denominator mismatch")
+        for src in ("research/tier2_distribution_audit/tier2_workloads.json",
+                    "research/tier2_distribution_audit/tier2_summary.json"):
+            if src not in d.get("evidence_sources", []):
+                errors.append(f"figure D omits evidence source {src}")
+        if d.get("used_in") != ["PERFORMANCE.md"]:
+            errors.append("figure D must be PERFORMANCE-only")
     return fail(errors, "manifest")
 
 
-def verify() -> tuple[bool, list[dict], dict]:
+def load_tier2() -> tuple[list[dict], dict]:
+    workloads = json.loads(TIER2_WORKLOADS_PATH.read_text(encoding="utf-8"))
+    summary = json.loads(TIER2_SUMMARY_PATH.read_text(encoding="utf-8"))
+    return workloads, summary
+
+
+def verify() -> tuple[bool, list[dict], dict, dict]:
     """Load evidence, validate scope, recompute every displayed value."""
     try:
         ledger = load_ledger()
     except (OSError, json.JSONDecodeError) as e:
         fail([f"benefit ledger unreadable: {e}"], "figure B")
-        return False, [], {}
+        return False, [], {}, {}
     try:
         audit = load_audit()
     except (OSError, json.JSONDecodeError) as e:
         fail([f"applicability summary unreadable: {e}"], "figure C")
-        return False, [], {}
+        return False, [], {}, {}
+    try:
+        workloads, tier2 = load_tier2()
+    except (OSError, json.JSONDecodeError) as e:
+        fail([f"R3 tier2 evidence unreadable: {e}"], "figure D")
+        return False, [], {}, {}
     ok_b, rows_b = verify_figure_b(ledger)
     ok_c, data_c = verify_figure_c(audit)
+    ok_d, data_d = verify_figure_d(workloads, tier2)
     ok_m = verify_manifest()
-    ok = ok_b and ok_c and ok_m
+    ok = ok_b and ok_c and ok_d and ok_m
     if ok:
         print("VERIFY PASS: 3/3 task-replay trajectories recomputed from benefit ledger; "
               "controlled stratum 136 = 119 + 10 + 7 with 4/6 task and 4/9 trajectory "
-              "exposure; manifest consistent. No workloads executed, no model calls.")
-    return ok, rows_b, data_c
+              "exposure; R3 population n = 30 recomputed from workload reps; "
+              "manifest consistent. No workloads executed, no model calls.")
+    return ok, rows_b, data_c, data_d
 
 
 # --- Shared SVG helpers ----------------------------------------------------------
@@ -512,11 +677,12 @@ def build_figure_a() -> str:
         f'<text x="555" y="216" text-anchor="middle" font-family="{FONT_SANS}" '
         f'font-size="14" fill="{INK}">direct-path eligible</text>')
 
-    # Left: genuine openpyxl. Right: supported reads + validated state.
+    # Left: genuine openpyxl. Right: validated state supplies supported reads.
     box(p, 60, 300, 240, 60, "genuine openpyxl", "reference execution")
-    box(p, 520, 300, 240, 52, "supported reads", "certified contract", accent_edge=True)
-    v_arrow(p, 640, 352, 376)
-    box(p, 520, 380, 240, 56, "validated workbook", "read state \u00b7 reused when fresh",
+    box(p, 508, 300, 264, 56, "validated workbook read state",
+        "reused / rebuilt when needed", accent_edge=True)
+    v_arrow(p, 640, 356, 376)
+    box(p, 508, 380, 264, 56, "supported reads", "certified \u00b7 served from state",
         accent_edge=True)
 
     # Merge into execution.
@@ -650,9 +816,10 @@ def build_figure_b(rows: list[dict]) -> str:
 
     for row, ry in zip(rows, row_ys):
         if row["boundary"]:
+            # Subtle left-side marker only: the row stays symmetric with the rest.
             p.append(
-                f'<rect x="24" y="{ry - 54}" width="1152" height="106" rx="8" '
-                'fill="#e9edf1"/>')
+                f'<rect x="24" y="{ry - 26}" width="5" height="52" rx="2.5" '
+                f'fill="{NEUTRAL_EDGE}"/>')
         # Left identity.
         p.append(
             f'<text x="40" y="{ry - 12}" font-family="{FONT_SANS}" font-size="17" '
@@ -846,16 +1013,211 @@ def build_figure_c(data: dict) -> str:
     return "\n".join(p) + "\n"
 
 
+# --- Figure D: R3 distribution ------------------------------------------------------
+
+FIGURE_D_TITLE = "Historical R3 mechanism effect was concentrated"
+
+FIGURE_D_DESC = (
+    "Historical R3 full-cell iteration mechanism population: 30 workloads ranked "
+    "by ON/OFF warm runtime ratio, OFF rc3-equivalent predecessor control versus "
+    "ON iteration candidate. 23 workloads faster under ON, 7 slower. Median ON/OFF "
+    "ratio 0.913, about 8.75 percent lower. The top three workloads supplied 84.2 "
+    "percent of positive savings; the largest regression was 49.7 milliseconds. "
+    "The aggregate effect was concentrated and must not be interpreted as a "
+    "typical-workload effect. Historical mechanism evidence, not released-product "
+    "task performance."
+)
+
+FIGURE_D_FENCE_1 = "Historical R3 mechanism population \u00b7 OFF \u2192 ON only."
+FIGURE_D_FENCE_2 = ("Heavy-tailed: must not be interpreted as a typical-workload effect.")
+
+D_AXIS_MAX = 1.15
+D_TICKS = (0.0, 0.25, 0.5, 0.75, 1.0, 1.15)
+
+
+def halo_text(x: float, y: float, text: str, size: float = 12.5,
+              anchor: str = "start", weight: int = 400, color: str = INK) -> str:
+    return (
+        f'<text x="{x:.1f}" y="{y:.1f}" text-anchor="{anchor}" '
+        f'font-family="{FONT_SANS}" font-size="{size}" font-weight="{weight}" '
+        f'fill="{color}" stroke="{CANVAS}" stroke-width="3.5" paint-order="stroke">'
+        f"{esc(text)}</text>")
+
+
+def build_figure_d(data: dict) -> str:
+    W, H = 1200, 640
+    PX0, PX1 = 140, 800
+    RY0, STEP = 168.0, 12.5
+
+    def x_of(r: float) -> float:
+        return PX0 + (PX1 - PX0) * r / D_AXIS_MAX
+
+    def y_of(rank: int) -> float:
+        return RY0 + (rank - 1) * STEP
+
+    p = svg_open(W, H, "r3-title", FIGURE_D_TITLE, "r3-desc", FIGURE_D_DESC)
+    p.append(arrow_defs())
+    p.append(f'<rect x="0" y="0" width="{W}" height="{H}" rx="12" fill="{CANVAS}"/>')
+    p.append(
+        f'<text x="40" y="44" font-family="{FONT_SANS}" font-size="25" '
+        f'font-weight="700" fill="{INK}">{esc(FIGURE_D_TITLE)}</text>')
+    scope_strip(p, 40, 58, SCOPE_D, 1120)
+
+    # Column headers.
+    p.append(
+        f'<text x="112" y="150" text-anchor="middle" font-family="{FONT_SANS}" '
+        f'font-size="12.5" fill="{MUTED}">rank</text>')
+    p.append(
+        f'<text x="420" y="150" text-anchor="middle" font-family="{FONT_SANS}" '
+        f'font-size="12.5" fill="{MUTED}">\u2190 faster under ON</text>')
+    p.append(
+        f'<text x="{x_of(1.0):.1f}" y="150" text-anchor="middle" '
+        f'font-family="{FONT_SANS}" font-size="12.5" font-weight="700" fill="{INK}">'
+        "1.0\u00d7 = no change</text>")
+
+    y_top, y_bot = RY0 - 8, y_of(30) + 8
+    for t in (0.0, 0.25, 0.5, 0.75):
+        gx = x_of(t)
+        p.append(
+            f'<line x1="{gx:.1f}" y1="{y_top}" x2="{gx:.1f}" y2="{y_bot}" '
+            f'stroke="{PANEL_EDGE}" stroke-width="1"/>')
+    # Prominent no-change reference.
+    p.append(
+        f'<line x1="{x_of(1.0):.1f}" y1="{y_top}" x2="{x_of(1.0):.1f}" y2="{y_bot}" '
+        f'stroke="{INK}" stroke-width="2.5"/>')
+
+    for row in data["rows"]:
+        ry = y_of(row["rank"])
+        px = x_of(row["ratio"])
+        p.append(
+            f'<text x="112" y="{ry + 4}" text-anchor="middle" '
+            f'font-family="{FONT_SANS}" font-size="11" fill="{MUTED}">'
+            f"{row['rank']}</text>")
+        p.append(
+            f'<line x1="{x_of(1.0):.1f}" y1="{ry:.1f}" x2="{px:.1f}" y2="{ry:.1f}" '
+            f'stroke="{NEUTRAL_EDGE}" stroke-width="1.2"/>')
+        if row["faster"]:
+            p.append(
+                f'<circle cx="{px:.1f}" cy="{ry:.1f}" r="3.5" fill="{INK}"/>')
+        else:
+            p.append(
+                f'<circle cx="{px:.1f}" cy="{ry:.1f}" r="4.2" fill="{PANEL}" '
+                f'stroke="{INK}" stroke-width="1.8"/>')
+
+    # Median marker between ranks 15 and 16.
+    y_med = (y_of(15) + y_of(16)) / 2
+    p.append(
+        f'<line x1="{PX0}" y1="{y_med:.1f}" x2="{PX1}" y2="{y_med:.1f}" '
+        f'stroke="{MUTED}" stroke-width="1.2" stroke-dasharray="5 4"/>')
+    p.append(halo_text(x_of(1.0) - 8, y_med - 5,
+                       f"median {data['median_display']}", size=12,
+                       anchor="end", color=MUTED))
+
+    # Selected end annotations (haloed so stems pass underneath quietly).
+    p.append(halo_text(x_of(data["rows"][0]["ratio"]) + 9, y_of(1) + 4,
+                       f"strongest improvement \u00b7 {data['min_display']}"))
+    p.append(halo_text(x_of(data["rows"][-1]["ratio"]) - 9, y_of(30) + 4,
+                       f"largest regression \u00b7 {data['max_display']} "
+                       f"(+{data['largest_regression_display']})", anchor="end"))
+
+    # Summary panel: concentration context, never a new headline.
+    PX, PW, PY = 830, 330, 168
+    PH = 344
+    p.append(
+        f'<rect x="{PX}" y="{PY}" width="{PW}" height="{PH}" rx="8" '
+        f'fill="{PANEL}" stroke="{PANEL_EDGE}" stroke-width="1.5"/>')
+    tx = PX + 18
+    p.append(
+        f'<text x="{tx}" y="{PY + 30}" font-family="{FONT_SANS}" font-size="16.5" '
+        f'font-weight="700" fill="{INK}">23 / 30 faster \u00b7 7 / 30 slower</text>')
+    p.append(
+        f'<text x="{tx}" y="{PY + 56}" font-family="{FONT_SANS}" font-size="14" '
+        f'fill="{INK}">median ON/OFF {data["median_display"]} '
+        f"(\u2248 {data['median_pct_display']} lower)</text>")
+    p.append(
+        f'<text x="{tx}" y="{PY + 82}" font-family="{FONT_SANS}" font-size="14" '
+        f'font-weight="600" fill="{INK}">top 3 = {data["top3_display"]} '
+        "of positive savings</text>")
+    p.append(
+        f'<text x="{tx}" y="{PY + 108}" font-family="{FONT_SANS}" font-size="14" '
+        f'fill="{INK}">largest regression '
+        f"{data['largest_regression_display']}</text>")
+    p.append(
+        f'<line x1="{tx}" y1="{PY + 124}" x2="{PX + PW - 18}" y2="{PY + 124}" '
+        f'stroke="{PANEL_EDGE}" stroke-width="1"/>')
+    p.append(f'<circle cx="{tx + 5}" cy="{PY + 144}" r="3.5" fill="{INK}"/>')
+    p.append(
+        f'<text x="{tx + 16}" y="{PY + 148}" font-family="{FONT_SANS}" '
+        f'font-size="13" fill="{INK}">faster under ON (23)</text>')
+    p.append(
+        f'<circle cx="{tx + 5}" cy="{PY + 166}" r="4.2" fill="{PANEL}" '
+        f'stroke="{INK}" stroke-width="1.8"/>')
+    p.append(
+        f'<text x="{tx + 16}" y="{PY + 170}" font-family="{FONT_SANS}" '
+        f'font-size="13" fill="{INK}">slower under ON (7)</text>')
+    p.append(
+        f'<line x1="{tx}" y1="{PY + 186}" x2="{PX + PW - 18}" y2="{PY + 186}" '
+        f'stroke="{PANEL_EDGE}" stroke-width="1"/>')
+    p.append(
+        f'<text x="{tx}" y="{PY + 208}" font-family="{FONT_SANS}" font-size="12.5" '
+        f'fill="{MUTED}">OFF predecessor \u2192 ON iteration</text>')
+    p.append(
+        f'<text x="{tx}" y="{PY + 227}" font-family="{FONT_SANS}" font-size="12.5" '
+        f'fill="{MUTED}">candidate \u2014 historical mechanism</text>')
+    p.append(
+        f'<text x="{tx}" y="{PY + 246}" font-family="{FONT_SANS}" font-size="12.5" '
+        f'fill="{MUTED}">evidence, not BASE \u2192 Recalc 0.2.0</text>')
+    p.append(
+        f'<text x="{tx}" y="{PY + 280}" font-family="{FONT_SANS}" font-size="13" '
+        f'font-weight="600" fill="{INK}">must not be interpreted as</text>')
+    p.append(
+        f'<text x="{tx}" y="{PY + 299}" font-family="{FONT_SANS}" font-size="13" '
+        f'font-weight="600" fill="{INK}">a typical-workload effect</text>')
+    p.append(
+        f'<text x="{tx}" y="{PY + 329}" font-family="{FONT_SANS}" font-size="12.5" '
+        f'fill="{MUTED}">30 / 30 workloads shown, ranked by ratio</text>')
+
+    # Axis.
+    ay = 550
+    p.append(
+        f'<line x1="{PX0}" y1="{ay}" x2="{PX1}" y2="{ay}" '
+        f'stroke="{INK}" stroke-width="1.5"/>')
+    for t in D_TICKS:
+        gx = x_of(t)
+        p.append(
+            f'<line x1="{gx:.1f}" y1="{ay}" x2="{gx:.1f}" y2="{ay + 6}" '
+            f'stroke="{INK}" stroke-width="1.5"/>')
+        label = f"{t:g}\u00d7" if t != 1.0 else "1.0\u00d7"
+        p.append(
+            f'<text x="{gx:.1f}" y="{ay + 24}" text-anchor="middle" '
+            f'font-family="{FONT_SANS}" font-size="13" fill="{MUTED}">{label}</text>')
+    p.append(
+        f'<text x="{(PX0 + PX1) / 2}" y="{ay + 44}" text-anchor="middle" '
+        f'font-family="{FONT_SANS}" font-size="13" fill="{MUTED}">'
+        "ON / OFF runtime ratio \u00b7 warm medians of 3 reps</text>")
+
+    p.append(
+        f'<text x="600" y="614" text-anchor="middle" font-family="{FONT_SANS}" '
+        f'font-size="13" fill="{MUTED}">{esc(FIGURE_D_FENCE_1)}</text>')
+    p.append(
+        f'<text x="600" y="632" text-anchor="middle" font-family="{FONT_SANS}" '
+        f'font-size="13" fill="{MUTED}">{esc(FIGURE_D_FENCE_2)}</text>')
+
+    p.append("</svg>")
+    return "\n".join(p) + "\n"
+
+
 # --- Build --------------------------------------------------------------------------
 
 def build() -> bool:
-    ok, rows_b, data_c = verify()
+    ok, rows_b, data_c, data_d = verify()
     if not ok:
         return False
     outputs = (
         (ASSET_A, GENERATED_COMMENT + "\n" + build_figure_a()),
         (ASSET_B, GENERATED_COMMENT + "\n" + build_figure_b(rows_b)),
         (ASSET_C, GENERATED_COMMENT + "\n" + build_figure_c(data_c)),
+        (ASSET_D, GENERATED_COMMENT + "\n" + build_figure_d(data_d)),
     )
     for path, content in outputs:
         path.parent.mkdir(parents=True, exist_ok=True)

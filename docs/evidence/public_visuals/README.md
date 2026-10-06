@@ -1,6 +1,6 @@
 # Public visual evidence bundle
 
-Step 1 of the public visual evidence roadmap: three documentation figures
+Step 1 of the public visual evidence roadmap: four documentation figures
 with a deterministic generator. The figures distinguish schematic mechanism
 from measured evidence, and keep scope boundaries inside the image so each
 figure survives on its own.
@@ -12,6 +12,7 @@ figure survives on its own.
 | `docs/assets/recalc-selective-execution.svg` | schematic | `SCHEMATIC · NO TIMING` | README |
 | `docs/assets/recalc-task-replay-outcomes.svg` | measured | `MEASURED · WARM PAIRED TASK REPLAY · BASE vs RECALC 0.2.0` | README, PERFORMANCE |
 | `docs/assets/recalc-controlled-applicability.svg` | measured | `MEASURED · SPREADSHEETBENCH-2 CONTROLLED STRATUM · 6 TASKS · 9 TRAJECTORIES` | PERFORMANCE |
+| `docs/assets/recalc-r3-distribution.svg` | measured | `MEASURED · HISTORICAL R3 MECHANISM POPULATION · WARM · OFF → ON · 30 WORKLOADS` | PERFORMANCE only |
 
 Machine-readable provenance: [manifest.json](manifest.json).
 
@@ -28,8 +29,15 @@ every displayed number and fails on mismatch:
   invocations = 119 reference + 10 fully direct + 7 admitted-but-zero)
   from `research/spreadsheetbench_applicability_audit/summary.json`.
 - Figure A is schematic: it encodes current product semantics (admission,
-  reference path, validated read state, fallback, external observer,
-  receipt) and carries no measurements.
+  reference path, validated read state supplying supported reads,
+  fallback, external observer, receipt) and carries no measurements.
+- Figure D plots all 30 per-workload ON/OFF ratios from
+  `research/tier2_distribution_audit/tier2_workloads.json`, cross-checked
+  against `tier2_summary.json`. It exists to show
+  distribution/concentration behind the historical R3 aggregate, not to
+  provide a new headline performance claim: OFF→ON is historical
+  mechanism evidence, must not be relabeled BASE→Recalc 0.2.0, and the
+  aggregate is heavy-tailed.
 
 ## Verify and rebuild
 
@@ -62,4 +70,5 @@ consecutive builds with unchanged inputs produce no diff.
 - The existing `docs/assets/recalc-performance-vignette.svg` (FM:08_02
   read-only inspection step) is untouched and stays a PERFORMANCE-only
   secondary figure with its own generator.
-- No aggregate distribution figure is built in this pass (deferred).
+- Figure D is the distribution figure: ranked per-workload ratios with
+  concentration context. No aggregate `−79%` hero graphic is built.
