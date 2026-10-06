@@ -16,9 +16,9 @@ support matrix: [COMPATIBILITY.md](COMPATIBILITY.md).
 
 ## The cost Recalc targets
 
-Spreadsheet agents often execute multiple ordinary Python invocations
-against the same workbook. Each `load_workbook` normally parses and
-materializes workbook state again — even when the workbook has not
+In spreadsheet-agent workflows that execute multiple ordinary Python
+invocations against the same workbook, each `load_workbook` can parse
+and materialize workbook state again even when the workbook has not
 changed since the last invocation. When reading is substantial, that
 repeated work can become a meaningful share of execution time.
 
@@ -30,23 +30,26 @@ read contract.
 
 Each invocation passes conservative admission. Certified reads may be
 served from validated workbook read state; everything else runs on
-genuine openpyxl. Either way the script sees ordinary Python values,
-and the route is recorded in a receipt.
+genuine openpyxl. Either way, the script keeps its ordinary
+Python/openpyxl interface and semantics, and the execution route is
+recorded in a receipt.
 
 ```text
 ordinary Python/openpyxl
           |
-   can this invocation
-   be certified?
-      /       \
-    yes        no
-     |          |
-validated     genuine
-read state    openpyxl
-     \          /
-       execution
-           |
-        receipt
+ conservative admission
+      /          \
+reference      direct path eligible
+openpyxl             |
+     |         supported reads
+     |               |
+     |      validated workbook state
+     |               |
+     +----> execution
+                 |
+       (fallback if needed)
+                 |
+               receipt
 ```
 
 Fallback is a designed outcome, not an error: uncertain or unsupported
@@ -71,9 +74,10 @@ provenance: [PERFORMANCE.md](PERFORMANCE.md).
 
 > **Boundary case.** On Debugging:08_06 (Mimo trajectory), the served
 > block improved (0.614 → 0.356 s) but the complete task replay did
-> not (12.254 → 13.176 s, +7.5%): served reads were about 5% of BASE
-> replay time. Recalc can make a directly served block faster without
-> moving the task when most runtime lies elsewhere.
+> not (12.254 → 13.176 s, +7.5%): the served block represented
+> about 5% of BASE replay time. Recalc can make a directly served
+> block faster without moving the task when most runtime lies
+> elsewhere.
 
 ## When Recalc is a good fit
 
