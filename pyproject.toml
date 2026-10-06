@@ -31,7 +31,7 @@ path = "hatch_build.py"
 "examples/basic" = "recalc_agent/example"
 
 [tool.hatch.build.targets.sdist]
-include = ["/src/recalc_agent", "/pyproject.toml", "/hatch_build.py", "/README.md", "/COMPATIBILITY.md", "/CHANGELOG.md", "/examples/basic", "/docs/EVIDENCE_AND_LIMITATIONS.md", "/LICENSE*"]
+include = ["/src/recalc_agent", "/pyproject.toml", "/hatch_build.py", "/README.md", "/PERFORMANCE.md", "/COMPATIBILITY.md", "/CHANGELOG.md", "/examples/basic", "/docs/EVIDENCE_AND_LIMITATIONS.md", "/LICENSE*"]
 
 [tool.pytest.ini_options]
 # The SWE-agent bundle is not a package; tests reach its instruments directly.
