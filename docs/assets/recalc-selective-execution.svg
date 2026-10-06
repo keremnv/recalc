@@ -1,0 +1,59 @@
+<!-- Generated from frozen Recalc evidence. Do not edit by hand.
+     Rebuild: python docs/evidence/public_visuals/generate.py, build mode -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650" role="img" aria-labelledby="sel-title sel-desc">
+<title id="sel-title">How Recalc handles an invocation</title>
+<desc id="sel-desc">Schematic flowchart with no timing. An ordinary Python openpyxl invocation first passes conservative admission. Not-eligible invocations run on genuine openpyxl reference execution. Direct-path eligible invocations may have supported reads served from validated workbook read state. Both paths merge into execution, where fallback to genuine openpyxl remains possible, and the outcome is recorded in a receipt. A separate external observer panel shows before, run, and after observation recording effects and assurance; it observes only and executes no spreadsheet semantics.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2328"/></marker><marker id="arrMut" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/></marker><pattern id="hatch" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#ffffff"/><line x1="0" y1="0" x2="0" y2="9" stroke="#6e7781" stroke-width="2.4"/></pattern></defs>
+<rect x="0" y="0" width="1200" height="650" rx="12" fill="#f6f8fa"/>
+<text x="40" y="46" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="25" font-weight="700" fill="#1f2328">How Recalc handles an invocation</text>
+<rect x="40" y="60" width="232" height="28" rx="6" fill="#ffffff" stroke="#6e7781" stroke-width="1.2"/>
+<text x="156.0" y="79" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" letter-spacing="1.5" fill="#57606a">SCHEMATIC · NO TIMING</text>
+<rect x="230" y="108" width="340" height="56" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="400.0" y="133.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#1f2328">ordinary Python / openpyxl invocation</text>
+<text x="400.0" y="155.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">user/agent interface — unchanged</text>
+<line x1="400.0" y1="164.0" x2="400.0" y2="182.0" stroke="#1f2328" stroke-width="2" marker-end="url(#arr)"/>
+<polygon points="400,184 470,226 400,268 330,226" fill="#ffffff" stroke="#1f2328" stroke-width="2"/>
+<text x="400" y="222" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="600" fill="#1f2328">conservative</text>
+<text x="400" y="241" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="600" fill="#1f2328">admission</text>
+<line x1="330" y1="226" x2="180" y2="226" stroke="#1f2328" stroke-width="2"/>
+<line x1="180" y1="226" x2="180" y2="296" stroke="#1f2328" stroke-width="2" marker-end="url(#arr)"/>
+<line x1="470" y1="226" x2="640" y2="226" stroke="#1f2328" stroke-width="2"/>
+<line x1="640" y1="226" x2="640" y2="296" stroke="#1f2328" stroke-width="2" marker-end="url(#arr)"/>
+<text x="255" y="216" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#1f2328">not eligible</text>
+<text x="555" y="216" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#1f2328">direct-path eligible</text>
+<rect x="60" y="300" width="240" height="60" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="180.0" y="327.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#1f2328">genuine openpyxl</text>
+<text x="180.0" y="349.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">reference execution</text>
+<rect x="520" y="300" width="240" height="52" rx="8" fill="#ffffff" stroke="#0969da" stroke-width="2"/>
+<text x="640.0" y="323.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#1f2328">supported reads</text>
+<text x="640.0" y="345.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">certified contract</text>
+<line x1="640.0" y1="352.0" x2="640.0" y2="376.0" stroke="#1f2328" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="520" y="380" width="240" height="56" rx="8" fill="#ffffff" stroke="#0969da" stroke-width="2"/>
+<text x="640.0" y="405.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#1f2328">validated workbook</text>
+<text x="640.0" y="427.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">read state · reused when fresh</text>
+<line x1="180" y1="360" x2="180" y2="478" stroke="#1f2328" stroke-width="2"/>
+<line x1="640" y1="436" x2="640" y2="478" stroke="#1f2328" stroke-width="2"/>
+<line x1="180" y1="478" x2="640" y2="478" stroke="#1f2328" stroke-width="2"/>
+<line x1="410.0" y1="478.0" x2="410.0" y2="498.0" stroke="#1f2328" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="230" y="502" width="360" height="56" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="410.0" y="527.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#1f2328">execution</text>
+<text x="410.0" y="549.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">fallback to genuine openpyxl if required</text>
+<line x1="410.0" y1="558.0" x2="410.0" y2="574.0" stroke="#1f2328" stroke-width="2" marker-end="url(#arr)"/>
+<rect x="290" y="578" width="240" height="50" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+<text x="410.0" y="600.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#1f2328">receipt</text>
+<text x="410.0" y="622.0" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">records the outcome</text>
+<text x="606" y="594" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">direct-path eligibility does not keep</text>
+<text x="606" y="611" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">every operation direct</text>
+<rect x="830" y="108" width="330" height="252" rx="8" fill="#ffffff" stroke="#6e7781" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="995" y="140" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="16" font-weight="700" fill="#1f2328">external observer</text>
+<line x1="850" y1="154" x2="1140" y2="154" stroke="#d0d7de" stroke-width="1"/>
+<text x="995" y="186" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" fill="#1f2328">before → run → after</text>
+<text x="995" y="216" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#1f2328">records effects + assurance</text>
+<text x="995" y="258" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">snapshots workbook bytes around</text>
+<text x="995" y="277" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">the real script process;</text>
+<text x="995" y="314" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="600" fill="#57606a">observes only — executes</text>
+<text x="995" y="333" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="600" fill="#57606a">no spreadsheet semantics</text>
+<line x1="900" y1="360" x2="900" y2="530" stroke="#57606a" stroke-width="1.5" stroke-dasharray="2 5" stroke-linecap="round"/>
+<line x1="900" y1="530" x2="592" y2="530" stroke="#57606a" stroke-width="1.5" stroke-dasharray="2 5" stroke-linecap="round"/>
+<text x="746" y="522" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-style="italic" fill="#57606a">observes</text>
+</svg>

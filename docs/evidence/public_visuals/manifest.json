@@ -1,0 +1,49 @@
+{
+  "bundle": "public_visuals",
+  "generator": "docs/evidence/public_visuals/generate.py",
+  "assets": [
+    {
+      "id": "recalc-selective-execution",
+      "filename": "docs/assets/recalc-selective-execution.svg",
+      "kind": "schematic",
+      "title": "How Recalc handles an invocation",
+      "badge": "SCHEMATIC · NO TIMING",
+      "evidence_sources": [],
+      "product_semantics": "conservative admission; genuine openpyxl reference path; validated workbook read state; fallback; external observer; receipt",
+      "measurement_scope": null,
+      "comparator": null,
+      "regime": null,
+      "used_in": ["README.md"]
+    },
+    {
+      "id": "recalc-task-replay-outcomes",
+      "filename": "docs/assets/recalc-task-replay-outcomes.svg",
+      "kind": "measured",
+      "title": "Measured task-replay outcomes",
+      "scope_strip": "MEASURED · WARM PAIRED TASK REPLAY · BASE vs RECALC 0.2.0",
+      "evidence_sources": ["research/benefit_evidence_ledger/benefit_ledger.json"],
+      "measurement_scope": "whole trajectory replay: paired per-block replay summed",
+      "trajectory_ids": [
+        "tier1-r01-P-Debugging-07_01",
+        "tier1-r06-O-mimo-Financial_Model-11_05",
+        "tier1-r14-O-mimo-Debugging-08_06"
+      ],
+      "comparator": "BASE (bare python/openpyxl, same window)",
+      "regime": "warm paired task replay, released recalc-agent 0.2.0",
+      "used_in": ["README.md", "PERFORMANCE.md"]
+    },
+    {
+      "id": "recalc-controlled-applicability",
+      "filename": "docs/assets/recalc-controlled-applicability.svg",
+      "kind": "measured",
+      "title": "Where Recalc directly served work",
+      "scope_strip": "MEASURED · SPREADSHEETBENCH-2 CONTROLLED STRATUM · 6 TASKS · 9 TRAJECTORIES",
+      "evidence_sources": ["research/spreadsheetbench_applicability_audit/summary.json"],
+      "measurement_scope": "executed Python invocations in the controlled stratum",
+      "population_key": "controlled_subset",
+      "comparator": null,
+      "regime": "warm paired replay routes (reference / fully direct / admitted-but-fell-back)",
+      "used_in": ["PERFORMANCE.md"]
+    }
+  ]
+}

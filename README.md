@@ -34,23 +34,7 @@ genuine openpyxl. Either way, the script keeps its ordinary
 Python/openpyxl interface and semantics, and the execution route is
 recorded in a receipt.
 
-```text
-ordinary Python/openpyxl
-          |
- conservative admission
-      /          \
-reference      direct path eligible
-openpyxl             |
-     |         supported reads
-     |               |
-     |      validated workbook state
-     |               |
-     +----> execution
-                 |
-       (fallback if needed)
-                 |
-               receipt
-```
+![Schematic of selective execution: ordinary Python/openpyxl invocations pass conservative admission; non-eligible work stays on genuine openpyxl while supported reads may reuse validated workbook read state; fallback stays possible, an external observer records effects and assurance, and a receipt records the outcome. No timing is shown.](docs/assets/recalc-selective-execution.svg)
 
 Fallback is a designed outcome, not an error: uncertain or unsupported
 work keeps openpyxl ownership throughout.
@@ -78,6 +62,8 @@ provenance: [PERFORMANCE.md](PERFORMANCE.md).
 > about 5% of BASE replay time. Recalc can make a directly served
 > block faster without moving the task when most runtime lies
 > elsewhere.
+
+![Measured warm paired task-replay outcomes on a shared seconds axis, BASE vs Recalc 0.2.0: Debugging:07_01 Claude 15.477 s vs 13.210 s; Financial_Model:11_05 Mimo 28.001 s vs 26.141 s; boundary Debugging:08_06 Mimo 12.254 s vs 13.176 s, slower overall despite one locally faster served block.](docs/assets/recalc-task-replay-outcomes.svg)
 
 ## When Recalc is a good fit
 

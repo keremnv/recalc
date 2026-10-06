@@ -1,0 +1,75 @@
+<!-- Generated from frozen Recalc evidence. Do not edit by hand.
+     Rebuild: python docs/evidence/public_visuals/generate.py, build mode -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="570" viewBox="0 0 1200 570" role="img" aria-labelledby="replay-title replay-desc">
+<title id="replay-title">Measured task-replay outcomes</title>
+<desc id="replay-desc">Paired warm task-replay outcomes, BASE plain Python versus released Recalc 0.2.0, on one shared linear seconds axis from 0 to 30. Debugging:07_01 Claude trajectory: 15.477 seconds BASE versus 13.210 Recalc, 2.267 seconds saved, 14.6 percent lower, 3 of 13 invocations directly served. Financial_Model:11_05 Mimo trajectory: 28.001 versus 26.141 seconds, 1.860 saved, 6.6 percent lower, 5 of 23 directly served. Boundary Debugging:08_06 Mimo trajectory: 12.254 versus 13.176 seconds, slower overall by 0.922 seconds despite local direct acceleration of one served block, 1 of 26 directly served. Served-block BASE shares 21.3, 15.8, and about 5.0 percent; descriptive; no threshold is established.</desc>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#1f2328"/></marker><marker id="arrMut" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#57606a"/></marker><pattern id="hatch" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#ffffff"/><line x1="0" y1="0" x2="0" y2="9" stroke="#6e7781" stroke-width="2.4"/></pattern></defs>
+<rect x="0" y="0" width="1200" height="570" rx="12" fill="#f6f8fa"/>
+<text x="40" y="44" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="25" font-weight="700" fill="#1f2328">Measured task-replay outcomes</text>
+<rect x="40" y="58" width="1120" height="28" rx="6" fill="#1f2328"/>
+<text x="600.0" y="77" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700" letter-spacing="1.2" fill="#ffffff">MEASURED · WARM PAIRED TASK REPLAY · BASE vs RECALC 0.2.0</text>
+<rect x="40" y="110" width="13" height="13" fill="#ffffff" stroke="#1f2328" stroke-width="2.5"/>
+<text x="60" y="122" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#1f2328">BASE (plain Python)</text>
+<circle cx="258" cy="117" r="7" fill="#0969da" stroke="#054da3" stroke-width="1.5"/>
+<text x="272" y="122" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#1f2328">Recalc 0.2.0 (warm paired replay)</text>
+<text x="1160" y="122" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">paired points · one linear axis</text>
+<line x1="360.0" y1="140" x2="360.0" y2="448" stroke="#d0d7de" stroke-width="1"/>
+<line x1="453.3" y1="140" x2="453.3" y2="448" stroke="#d0d7de" stroke-width="1"/>
+<line x1="546.7" y1="140" x2="546.7" y2="448" stroke="#d0d7de" stroke-width="1"/>
+<line x1="640.0" y1="140" x2="640.0" y2="448" stroke="#d0d7de" stroke-width="1"/>
+<line x1="733.3" y1="140" x2="733.3" y2="448" stroke="#d0d7de" stroke-width="1"/>
+<line x1="826.7" y1="140" x2="826.7" y2="448" stroke="#d0d7de" stroke-width="1"/>
+<line x1="920.0" y1="140" x2="920.0" y2="448" stroke="#d0d7de" stroke-width="1"/>
+<text x="40" y="166" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="700" fill="#1f2328">Debugging:07_01 · Claude</text>
+<text x="40" y="188" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" fill="#57606a">tier1-r01-P-Debugging-07_01</text>
+<line x1="648.9" y1="178" x2="606.6" y2="178" stroke="#6e7781" stroke-width="2.5"/>
+<rect x="642.4" y="171.5" width="13" height="13" fill="#ffffff" stroke="#1f2328" stroke-width="2.5"/>
+<circle cx="606.6" cy="178" r="7" fill="#0969da" stroke="#054da3" stroke-width="1.5"/>
+<text x="648.9" y="163" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#1f2328">15.477 s</text>
+<text x="606.6" y="210" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="600" fill="#054da3">13.210 s</text>
+<text x="944" y="156" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#1f2328">2.267 s saved · 14.6% lower</text>
+<text x="944" y="178" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13.5" font-weight="400" fill="#1f2328">3/13 directly served</text>
+<text x="944" y="200" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13.5" font-weight="400" fill="#57606a">21.3% of BASE replay time</text>
+<text x="40" y="286" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="700" fill="#1f2328">Financial_Model:11_05 · Mimo</text>
+<text x="40" y="308" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" fill="#57606a">tier1-r06-O-mimo-Financial_Model-11_05</text>
+<line x1="882.7" y1="298" x2="848.0" y2="298" stroke="#6e7781" stroke-width="2.5"/>
+<rect x="876.2" y="291.5" width="13" height="13" fill="#ffffff" stroke="#1f2328" stroke-width="2.5"/>
+<circle cx="848.0" cy="298" r="7" fill="#0969da" stroke="#054da3" stroke-width="1.5"/>
+<text x="882.7" y="283" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#1f2328">28.001 s</text>
+<text x="848.0" y="330" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="600" fill="#054da3">26.141 s</text>
+<text x="944" y="276" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#1f2328">1.860 s saved · 6.6% lower</text>
+<text x="944" y="298" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13.5" font-weight="400" fill="#1f2328">5/23 directly served</text>
+<text x="944" y="320" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13.5" font-weight="400" fill="#57606a">15.8% of BASE replay time</text>
+<rect x="24" y="364" width="1152" height="106" rx="8" fill="#e9edf1"/>
+<text x="40" y="406" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="17" font-weight="700" fill="#1f2328">Debugging:08_06 · Mimo</text>
+<text x="40" y="428" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5" fill="#57606a">tier1-r14-O-mimo-Debugging-08_06</text>
+<rect x="40" y="438" width="118" height="22" rx="11" fill="#ffffff" stroke="#6e7781" stroke-width="1.2"/>
+<text x="99" y="454" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="12.5" font-weight="600" fill="#57606a">boundary case</text>
+<line x1="588.7" y1="418" x2="606.0" y2="418" stroke="#6e7781" stroke-width="2.5"/>
+<rect x="582.2" y="411.5" width="13" height="13" fill="#ffffff" stroke="#1f2328" stroke-width="2.5"/>
+<circle cx="606.0" cy="418" r="7" fill="#0969da" stroke="#054da3" stroke-width="1.5"/>
+<text x="588.7" y="403" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" fill="#1f2328">12.254 s</text>
+<text x="606.0" y="450" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="14" font-weight="600" fill="#054da3">13.176 s</text>
+<text x="944" y="385" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#1f2328">+0.922 s · +7.5%</text>
+<text x="944" y="407" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13.5" font-weight="700" fill="#1f2328">task replay slower</text>
+<text x="944" y="429" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13.5" font-weight="400" fill="#1f2328">1/26 directly served</text>
+<text x="944" y="451" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13.5" font-weight="400" fill="#57606a">5.0% of BASE replay time</text>
+<line x1="360" y1="462" x2="920" y2="462" stroke="#1f2328" stroke-width="1.5"/>
+<line x1="360.0" y1="462" x2="360.0" y2="468" stroke="#1f2328" stroke-width="1.5"/>
+<text x="360.0" y="486" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">0</text>
+<line x1="453.3" y1="462" x2="453.3" y2="468" stroke="#1f2328" stroke-width="1.5"/>
+<text x="453.3" y="486" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">5</text>
+<line x1="546.7" y1="462" x2="546.7" y2="468" stroke="#1f2328" stroke-width="1.5"/>
+<text x="546.7" y="486" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">10</text>
+<line x1="640.0" y1="462" x2="640.0" y2="468" stroke="#1f2328" stroke-width="1.5"/>
+<text x="640.0" y="486" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">15</text>
+<line x1="733.3" y1="462" x2="733.3" y2="468" stroke="#1f2328" stroke-width="1.5"/>
+<text x="733.3" y="486" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">20</text>
+<line x1="826.7" y1="462" x2="826.7" y2="468" stroke="#1f2328" stroke-width="1.5"/>
+<text x="826.7" y="486" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">25</text>
+<line x1="920.0" y1="462" x2="920.0" y2="468" stroke="#1f2328" stroke-width="1.5"/>
+<text x="920.0" y="486" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">30</text>
+<text x="640.0" y="506" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">replay time in seconds — shared linear axis</text>
+<text x="600" y="536" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">Specific model trajectories. Execution replay, not model-in-the-loop end-to-end timing.</text>
+<text x="600" y="555" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" fill="#57606a">Served-share values are descriptive; no threshold is established.</text>
+</svg>

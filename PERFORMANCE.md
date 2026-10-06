@@ -89,6 +89,10 @@ to move the overall replay. The current evidence does not establish
 any rule of the form "direct share above X% guarantees benefit" —
 Section 4 shows what happens below that uncalibrated region.
 
+The two task-replay wins and the primary boundary case, on one shared axis:
+
+![Measured warm paired task-replay outcomes on a shared seconds axis, BASE vs released Recalc 0.2.0: Debugging:07_01 Claude 15.477 s vs 13.210 s; Financial_Model:11_05 Mimo 28.001 s vs 26.141 s; boundary Debugging:08_06 Mimo 12.254 s vs 13.176 s, slower overall despite one locally faster served block.](docs/assets/recalc-task-replay-outcomes.svg)
+
 ## 3. Released-product substep example
 
 Separate evidence level: one measured read-only inspection step, not
@@ -197,6 +201,8 @@ The Tier 1 controlled stratum (6 original SpreadsheetBench-2 tasks, 9
 trajectories) is a boundary/generalization study, not a performance
 win. Reconstructed in
 [summary.json](research/spreadsheetbench_applicability_audit/summary.json):
+
+![Proportional bar of 136 controlled-stratum executed invocations: 119 reference, 10 fully directly served (7.4%), 7 admitted but zero served (hatched neutral fallback); useful direct service appeared in 4 of 6 tasks.](docs/assets/recalc-controlled-applicability.svg)
 
 - 138 canonical blocks → 137 replayable → **136 executed Python
   invocations**: **119 reference / 10 fully direct / 7
