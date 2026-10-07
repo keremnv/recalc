@@ -15,6 +15,8 @@ figure survives on its own.
 | `docs/assets/recalc-r3-distribution.svg` | measured | `MEASURED · HISTORICAL R3 MECHANISM POPULATION · WARM · OFF → ON · 30 WORKLOADS` | PERFORMANCE only |
 
 Machine-readable provenance: [manifest.json](manifest.json).
+Asset status (current vs secondary vs historical):
+[docs/assets/README.md](../../assets/README.md).
 
 ## Sources
 

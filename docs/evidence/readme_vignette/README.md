@@ -25,3 +25,6 @@ Financial_Model:08_02 (Project Seafood Model), SpreadsheetBench-2.
 No writes occur in this step (input sha identical before/after every measured
 workdir). Selection rationale, rejected candidates, and limitations:
 `docs/evidence/README_VIGNETTE_SELECTION.md`.
+
+Asset status (current vs secondary vs historical):
+`docs/assets/README.md`.
